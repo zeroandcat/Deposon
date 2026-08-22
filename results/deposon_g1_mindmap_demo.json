@@ -1,0 +1,81 @@
+{
+  "task": "G1 真实脑图摄入与转译",
+  "api_consumption": 0,
+  "svg_availability": "/mnt/agents/upload/ 无SVG文件 (仅PNG脑图), 如实说明: 真实图未做视觉自动解析",
+  "deliverables": {
+    "svg_parser_module": "/mnt/agents/output/svg_mindmap_ingest.py — 标准SVG(<text>/<path>/<line>, fill分组, 端点吸附+BFS定向) → brain_graph; 合成SVG自检通过(6节点5边, root定向正确); 未在真实SVG上验证(无样本)",
+    "real_mindmap_method": "人工转译: 由分析工程师读取 AI应当如何思考_脑图.png 后按层级手工录入, 非OCR/视觉自动解析"
+  },
+  "graph": {
+    "source_image": "AI应当如何思考_脑图.png",
+    "n_nodes": 45,
+    "n_edges": 49,
+    "n_branches": 9,
+    "trap_nodes": [
+      "范式转移/仿生瓶颈",
+      "行动窗口/AI够强未自主"
+    ],
+    "answer_node": "GOAL_拓扑智能",
+    "note": "trap/answer标注与诱饵边权重(0.9/0.85, 低势垒0.1)为转译时按语义人工设定"
+  },
+  "scattering_demo": {
+    "mode": "unified",
+    "n_paths": 6,
+    "aggregate_T_R_A": {
+      "transmitted": 0.531,
+      "reflected": 0.3566,
+      "dissipated": 0.1124,
+      "sum": 1.0
+    },
+    "ether_total_dissipated": 0.6744,
+    "ether_absorbed_nodes": {
+      "ROOT": 0.2706,
+      "认知协议": 0.0407,
+      "GOAL_拓扑智能": 0.1474,
+      "专家萃取": 0.0407,
+      "仿光子vsTDA": 0.0407,
+      "组织记忆": 0.0408,
+      "范式转移": 0.0408,
+      "行动窗口": 0.0408
+    },
+    "paths": [
+      {
+        "path": "ROOT→仿光子vsTDA→GOAL_拓扑智能",
+        "fate": "transmitted",
+        "transmitted": 0.7378
+      },
+      {
+        "path": "ROOT→组织记忆→GOAL_拓扑智能",
+        "fate": "transmitted",
+        "transmitted": 0.7372
+      },
+      {
+        "path": "ROOT→认知协议→GOAL_拓扑智能",
+        "fate": "transmitted",
+        "transmitted": 0.7365
+      },
+      {
+        "path": "ROOT→专家萃取→GOAL_拓扑智能",
+        "fate": "transmitted",
+        "transmitted": 0.7365
+      },
+      {
+        "path": "ROOT→范式转移→范式转移/仿生瓶颈→GOAL_拓扑智能",
+        "fate": "blocked",
+        "transmitted": 0.119
+      },
+      {
+        "path": "ROOT→行动窗口→行动窗口/AI够强未自主→GOAL_拓扑智能",
+        "fate": "blocked",
+        "transmitted": 0.119
+      }
+    ]
+  },
+  "observations": [
+    "4条正当结论路径(经 仿光子vsTDA/组织记忆/认知协议/专家萃取)全部 transmitted, t≈0.737",
+    "2条风险诱饵路径(经 仿生瓶颈 / AI够强未自主)被 g_couple=5 反射阻断 (fate=blocked, t=0.119)",
+    "耗散主要来自ROOT(0.27, 出度大→degree修正后g_aether相对贡献)与Goal汇流; 幺正性逐路径守恒",
+    "定性: 场动力学在真实层级脑图上行为与合成集一致, trap阻断机制可迁移到人工转译知识结构"
+  ],
+  "honesty": "PNG→图的转换为人工转译; SVG解析器仅有合成样例自证, 真实SVG适配需另行验证"
+}
