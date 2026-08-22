@@ -236,7 +236,8 @@ class VectorizedDeposonScatter:
 
             max_r = float(np.max(r)) if len(r) > 0 else 0.0
             max_a = float(np.max(a)) if len(a) > 0 else 0.0
-            fate = 'blocked' if max_r > 0.7 else                    ('tunneling' if max_a > 0.5 else 'transmitted')
+            fate = 'blocked' if max_r > 0.7 else \
+                   ('tunneling' if max_a > 0.5 else 'transmitted')
 
             results.append({
                 'fate': fate,
@@ -1106,6 +1107,11 @@ class DeposonField:
         #   'resonant_hybrid': 仅非trap节点用匹配值, trap保持类型强绑定
         self.photon_mode = 'energy'
         self._resonant_fixed: set = set()
+        # v1.3.3: Arrhenius 势垒通道 (G3) —— 边迁移概率 k=exp(-barrier/T_eff)
+        #   None: 关闭 (原行为); 'arrhenius': k=exp(-b/T); 'arrhenius_kramers': k=w*exp(-b/T)
+        self.edge_mode: Optional[str] = None
+        self.arrhenius_T: float = 0.3
+        self._edges: Dict = {}
 
     def spawn_from_graph(self, brain_graph: Dict[str, Any], mode: str = 'unified') -> None:
         nodes = brain_graph.get('nodes', {})
@@ -1149,6 +1155,10 @@ class DeposonField:
         elif mode == 'labelfree':
             # 无标签连续绑定 (M1): g_couple 完全由图结构信号驱动, 忽略 type 标签
             self._apply_labelfree_bindings(nodes, edges)
+        # v1.3.3: Arrhenius 边势垒通道 (与任意绑定模式可叠加)
+        if mode in ('arrhenius', 'arrhenius_hybrid'):
+            self.edge_mode = 'arrhenius' if mode == 'arrhenius' else 'arrhenius_kramers'
+            self._edges = edges
 
     def _apply_labelfree_bindings(self, nodes: Dict[str, Any], edges: Dict) -> None:
         """g_couple(node) = f(结构信号), 不使用任何 type 标签。
@@ -1199,6 +1209,7 @@ class DeposonField:
         total_dissipated = 0.0
         max_r = 0.0
         max_a = 0.0
+        total_barrier = 0.0
         per_node = []
         # v1.3.2: 共轭映射 —— 路径语义嵌入 = 路径上各节点嵌入的归一化均值
         path_emb = None
@@ -1208,7 +1219,7 @@ class DeposonField:
                 m = np.mean(embs, axis=0)
                 nrm = np.linalg.norm(m)
                 path_emb = m / nrm if nrm > 0 else m
-        for node_id in path:
+        for idx, node_id in enumerate(path):
             deposon = self.deposons.get(node_id)
             # E_photon: 共轭映射下取 路径-节点语义匹配度 (1+cos)/2 ∈ [0,1],
             # 与节点energy同量纲; hybrid模式下trap节点保持类型强绑定 (δ=0)
@@ -1228,8 +1239,22 @@ class DeposonField:
             reflected_here = E_prev * r
             dissipated_here = E_prev * a
             E_prev = E_prev * t
+            # v1.3.3: Arrhenius 边迁移 —— 跨过 u->v 边时按 k 损失能量
+            barrier_here = 0.0
+            if self.edge_mode and idx + 1 < len(path):
+                eattrs = self._edges.get((node_id, path[idx + 1]))
+                if eattrs is not None:
+                    b = eattrs.get('migration_barrier', 0.3)
+                    w = eattrs.get('weight', 0.5)
+                    k = math.exp(-b / max(self.arrhenius_T, 1e-9))
+                    if self.edge_mode == 'arrhenius_kramers':
+                        k *= w  # Kramers 尝试频率 ~ 边权
+                    k = min(1.0, k)
+                    barrier_here = E_prev * (1.0 - k)
+                    E_prev = E_prev * k
             total_reflected += reflected_here
             total_dissipated += dissipated_here
+            total_barrier += barrier_here
             per_node.append({
                 'node': node_id, 'transmitted': t, 'reflected': r, 'dissipated': a,
                 'reflected_energy': reflected_here, 'dissipated_energy': dissipated_here,
@@ -1254,6 +1279,7 @@ class DeposonField:
             'dissipated': total_dissipated / path_energy,
             'per_node': per_node,
             'final_energy': final_transmitted,
+            'barrier_loss': total_barrier / path_energy,
             'max_reflection_rate': max_r,
             'max_dissipation_rate': max_a
         }
