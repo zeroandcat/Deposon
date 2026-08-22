@@ -372,7 +372,7 @@ $$\Gamma_{\text{aether}} = \gamma_{\text{ECM}}\cdot\psi(t) \quad(\text{ECM 离�
 
 [14] Hopfield J J. Neural networks and physical systems with emergent collective computational abilities. *Proceedings of the National Academy of Sciences*, 1982, 79(8): 2554–2558.
 
-[15] Krotov D, Hopfield J J. Dense associative memory for pattern recognition. *Advances in Neural Information Processing Systems*, 2016, 29: 1172–1180. arXiv:1606.01164.
+[15] Krotov D, Hopfield J J. Dense associative memory for pattern recognition. *Advances in Neural Information Processing Systems (NeurIPS)*, 2016, 29: 1172–1180. arXiv:1606.01164.
 
 [16] Ramsauer H, Schäfl B, Lehner J, Seidl P, Widrich M, Adler T, et al. Hopfield networks is all you need. *International Conference on Learning Representations (ICLR)*, 2021. arXiv:2008.02217.
 
