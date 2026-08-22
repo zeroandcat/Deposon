@@ -71,3 +71,5 @@ g_eff = g_couple/(1+detuning²)     共振增强
 ## License
 
 MIT — 见 [LICENSE](LICENSE)
+
+> 注：`results/` 中的 details 大文件（如 `deposon_benchmark_v1_3_details.json`）因托管载荷限制未入库，可由 `run_benchmark_v1_3.py` / `run_benchmark_v1_4_gsm8k.py` 脚本结合本地缓存（`deposon_cache/`）完整复现。

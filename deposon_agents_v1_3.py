@@ -236,8 +236,7 @@ class VectorizedDeposonScatter:
 
             max_r = float(np.max(r)) if len(r) > 0 else 0.0
             max_a = float(np.max(a)) if len(a) > 0 else 0.0
-            fate = 'blocked' if max_r > 0.7 else \
-                   ('tunneling' if max_a > 0.5 else 'transmitted')
+            fate = 'blocked' if max_r > 0.7 else                    ('tunneling' if max_a > 0.5 else 'transmitted')
 
             results.append({
                 'fate': fate,
