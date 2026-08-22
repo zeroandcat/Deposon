@@ -1538,4 +1538,317 @@ class DeposonAgentSystem:
     def report_ablation(self, ablation_results):
         lines = ["\n" + "=" * 85, "Deposon Agents v1.3 —— 消融实验报告", "=" * 85]
         lines.append(f"{'变体':<18} {'最佳路径':<32} {'分数':>8} "
-                    f
+                    f"{'命运':>10} {'通过':>5} {'阻塞':>5} {'隧穿':>5} {'耗散':>8}")
+        lines.append("-" * 85)
+        for name, r in ablation_results.items():
+            path_str = '→'.join(r['best_path']) if r['best_path'] else 'None'
+            path_str = path_str[:30]
+            lines.append(f"{name:<18} {path_str:<32} {r['best_score']:>8.4f} "
+                        f"{r['best_fate']:>10} {r['n_passed']:>5} {r['n_blocked']:>5} "
+                        f"{r['n_tunneling']:>5} {r['ether_dissipated']:>8.4f}")
+        lines.append("=" * 85)
+        return "\n".join(lines)
+
+
+# ============================================================
+# 模块十: 评估框架
+# ============================================================
+
+class BenchmarkEvaluator:
+    def __init__(self, agent: DeposonAgentSystem, use_validation: bool = True):
+        self.agent = agent
+        # v1.3: 评测时可关闭逐题LLM验证以控制API消耗
+        self.use_validation = use_validation
+
+    @staticmethod
+    def _apply_op(op: str, a: float, b: float) -> Optional[float]:
+        if op == 'addition':
+            return a + b
+        if op == 'subtraction':
+            return a - b
+        if op == 'multiplication':
+            return a * b
+        if op == 'division':
+            return a / b if b != 0 else None
+        if op == 'percentage':
+            return a * (b / 10.0 if b <= 10 else b / 100.0)
+        return None
+
+    def _compute_answer_from_path(self, graph: Dict, path: Optional[List[str]]):
+        """v1.3: 沿 Deposon 筛选后的存活路径计算答案。
+
+        - 经过 OP 节点: 按 operation_chain 语义折叠 (首运算取两个操作数, 后续运算
+          以累加器 op number 推进), 支持多步链 (先打八折再满减等)。
+        - 经过陷阱节点: 应用该陷阱对应的错误运算 (no_deposon 变体因此被诱饵捕获)。
+        - 无路径/无运算时回退 v1.2 两数单运算逻辑。
+        """
+        nodes = graph['nodes']
+        numbers_meta = []
+        for nid, attrs in nodes.items():
+            if attrs.get('type') == 'number':
+                numbers_meta.append((nid, attrs.get('value')))
+        numbers_meta.sort(key=lambda x: x[0])
+        number_values = [v for _, v in numbers_meta]
+
+        chain = graph.get('operation_chain') or []
+        chain_by_node = {c['node']: c for c in chain}
+        trap_nodes = graph.get('trap_nodes') or {}
+
+        def fold_chain(ops_seq):
+            acc = None
+            for c in ops_seq:
+                op = c['op']
+                raw_ops = [o for o in c.get('operands', []) if 1 <= o <= len(number_values)]
+                ops_idx = []  # v1.4: 折叠时去除连续重复操作数编号
+                for o in raw_ops:
+                    if not ops_idx or ops_idx[-1] != o:
+                        ops_idx.append(o)
+                if acc is None:
+                    if len(ops_idx) >= 2:
+                        acc = number_values[ops_idx[0] - 1]
+                        for o in ops_idx[1:]:
+                            acc = self._apply_op(op, acc, number_values[o - 1])
+                            if acc is None:
+                                return None
+                    elif len(ops_idx) == 1:
+                        acc = number_values[ops_idx[0] - 1]
+                else:
+                    for o in ops_idx:
+                        acc = self._apply_op(op, acc, number_values[o - 1])
+                        if acc is None:
+                            return None
+            return acc
+
+        predicted = None
+        op_type = None
+        path_hit = None
+        if path:
+            seq = []
+            for nid in path:
+                if nid in chain_by_node:
+                    seq.append(chain_by_node[nid])
+                elif nid in trap_nodes:
+                    wop = trap_nodes[nid]
+                    path_hit = nid
+                    if wop == 'wrong_order':
+                        predicted = fold_chain(list(reversed(chain)))
+                        op_type = 'wrong_order'
+                    elif wop in ('addition', 'subtraction', 'multiplication',
+                                 'division', 'percentage') and len(number_values) >= 2:
+                        predicted = self._apply_op(wop, number_values[0], number_values[1])
+                        op_type = wop
+                    break  # 陷阱捕获即终止
+            if path_hit is None and seq:
+                predicted = fold_chain(seq)
+                op_type = seq[-1]['op'] if seq else None
+
+        if predicted is None and path_hit is None:
+            # v1.4: 正确链折叠失败时, 用LLM computed_answer 兜底 (仅限未撞陷阱)
+            ca = graph.get('computed_answer')
+            if ca is not None:
+                try:
+                    predicted = float(ca)
+                    op_type = op_type or 'llm_computed'
+                except (TypeError, ValueError):
+                    predicted = None
+        if predicted is None and path_hit is None:
+            # 回退: v1.2 风格两数单运算
+            ops_available = chain if chain else []
+            if not ops_available:
+                # 从图节点推断
+                for nid, attrs in nodes.items():
+                    if attrs.get('type') == 'operation':
+                        ops_available = [{'op': attrs.get('op_type'), 'operands': [1, 2]}]
+                        break
+            if len(number_values) >= 2 and ops_available:
+                op_type = ops_available[-1]['op']
+                predicted = self._apply_op(op_type, number_values[0], number_values[1])
+            elif len(number_values) == 1:
+                predicted = number_values[0]
+        return predicted, op_type, path_hit
+
+    def evaluate_math(self, question: str, correct_answer: Optional[float] = None) -> Dict:
+        result = self.agent.reason(question, domain_hint='math', n_candidates=10)
+        graph = result['brain_graph']
+        numbers_meta = []
+        for nid, attrs in graph['nodes'].items():
+            if attrs.get('type') == 'number':
+                numbers_meta.append((nid, attrs.get('value')))
+        numbers_meta.sort(key=lambda x: x[0])
+        number_values = [v for _, v in numbers_meta]
+
+        # v1.3: 答案取自 Deposon 场筛选后的最优路径 (通过者优先, 否则全体最高分)
+        if result['passed_candidates']:
+            best_cand = result['passed_candidates'][0]
+        elif result['all_candidates']:
+            best_cand = result['all_candidates'][0]
+        else:
+            best_cand = None
+        best_path = best_cand['path'] if best_cand else None
+        best_score = best_cand['final_score'] if best_cand else 0.0
+        best_fate = best_cand.get('fate', 'none') if best_cand else 'none'
+
+        predicted, op_type, path_hit = self._compute_answer_from_path(graph, best_path)
+
+        is_correct = False
+        if predicted is not None and correct_answer is not None:
+            is_correct = abs(predicted - correct_answer) < 0.01
+
+        validation = None
+        if self.use_validation and self.agent.llm_backend and best_path:
+            validation = self.agent.llm_backend.validate(
+                question, best_path, predicted)
+
+        return {
+            'question': question,
+            'predicted_answer': predicted,
+            'correct_answer': correct_answer,
+            'is_correct': is_correct,
+            'best_path': best_path,
+            'best_fate': best_fate,
+            'path_hit_trap': path_hit,
+            'decompose_source': graph.get('source'),
+            'op_type': op_type,
+            'numbers': number_values,
+            'best_score': best_score,
+            'n_candidates': result['n_total'],
+            'n_passed': result['n_passed'],
+            'ether_dissipated': result['deposon_stats'].get('ether_dissipated', 0.0),
+            'validation': validation
+        }
+
+    def batch_evaluate(self, test_cases: List[Dict]) -> Dict:
+        results = []
+        correct_count = 0
+        total_ether = 0.0
+        for case in test_cases:
+            r = self.evaluate_math(case['question'], case.get('answer'))
+            results.append(r)
+            if r['is_correct']:
+                correct_count += 1
+            total_ether += r['ether_dissipated']
+        n = len(test_cases)
+        return {
+            'n_total': n,
+            'n_correct': correct_count,
+            'accuracy': correct_count / n if n > 0 else 0.0,
+            'avg_ether_dissipated': total_ether / n if n > 0 else 0.0,
+            'details': results
+        }
+
+
+class HundredQuestionBenchmark:
+    TEMPLATES = [
+        {"template": "小明有{A}个苹果，给了小红{B}个，还剩几个？", "op": "subtraction", "answer": lambda a, b: a - b},
+        {"template": "一条绳子长{A}米，剪去{B}米，还剩多少米？", "op": "subtraction", "answer": lambda a, b: a - b},
+        {"template": "停车场有{A}辆车，开走了{B}辆，还剩几辆？", "op": "subtraction", "answer": lambda a, b: a - b},
+        {"template": "小红有{A}本书，小明又给了她{B}本，现在有几本？", "op": "addition", "answer": lambda a, b: a + b},
+        {"template": "树上原来有{A}只鸟，又飞来了{B}只，一共有几只？", "op": "addition", "answer": lambda a, b: a + b},
+        {"template": "每个盒子装{A}个鸡蛋，{B}个盒子一共装几个？", "op": "multiplication", "answer": lambda a, b: a * b},
+        {"template": "一支笔{A}元，买{B}支要多少钱？", "op": "multiplication", "answer": lambda a, b: a * b},
+        {"template": "{A}个苹果平均分给{B}个小朋友，每人几个？", "op": "division", "answer": lambda a, b: a / b if b != 0 else 0},
+        {"template": "一根{A}米的绳子，每{B}米剪一段，可以剪几段？", "op": "division", "answer": lambda a, b: a / b if b != 0 else 0},
+    ]
+
+    def generate_dataset(self, n_questions: int = 100, seed: int = 42) -> List[Dict]:
+        random.seed(seed)
+        dataset = []
+        for i in range(n_questions):
+            t = random.choice(self.TEMPLATES)
+            a = random.randint(5, 100)
+            b = random.randint(2, min(a - 1, 50))
+            dataset.append({
+                'id': i + 1,
+                'question': t['template'].format(A=a, B=b),
+                'answer': float(t['answer'](a, b)),
+                'op': t['op']
+            })
+        return dataset
+
+
+class TrapBenchmark:
+    TRAP_TEMPLATES = [
+        {"template": "小红有{A}本书，图书馆又给了她{B}本，现在一共有几本？",
+         "op": "addition", "answer": lambda a, b: a + b, "trap": "surface_subtraction"},
+        {"template": "小明有{A}元钱，妈妈又给了他{B}元，现在有多少元？",
+         "op": "addition", "answer": lambda a, b: a + b, "trap": "surface_subtraction"},
+        {"template": "班级一共有{A}个学生，转走了{B}个，还剩几个？",
+         "op": "subtraction", "answer": lambda a, b: a - b, "trap": "surface_addition"},
+        {"template": "商店一共进了{A}个苹果，卖出了{B}个，还剩几个？",
+         "op": "subtraction", "answer": lambda a, b: a - b, "trap": "surface_addition"},
+        {"template": "每组有{A}个学生，一共{B}组，平均每个班有几个学生？",
+         "op": "multiplication", "answer": lambda a, b: a * b, "trap": "surface_division"},
+        {"template": "每盒装{A}个鸡蛋，装了{B}盒，平均每个箱子装几个？",
+         "op": "multiplication", "answer": lambda a, b: a * b, "trap": "surface_division"},
+        {"template": "有{A}个苹果，每{B}个装一袋，可以装几袋？",
+         "op": "division", "answer": lambda a, b: a / b if b != 0 else 0, "trap": "surface_multiplication"},
+        {"template": "一根{A}米的绳子，每{B}米剪一段，可以剪几段？",
+         "op": "division", "answer": lambda a, b: a / b if b != 0 else 0, "trap": "surface_multiplication"},
+        {"template": "一件衣服原价{A}元，打八折后再满{B}减10，最终多少钱？",
+         "op": "percentage_subtraction", "answer": lambda a, b: a * 0.8 - 10 if a * 0.8 >= b else a * 0.8, "trap": "wrong_order"},
+        {"template": "一本书原价{A}元，先打五折，再便宜{B}元，最终多少钱？",
+         "op": "percentage_subtraction", "answer": lambda a, b: a * 0.5 - b, "trap": "wrong_order"},
+        {"template": "小明有{A}个苹果，给了小红{B}个，还剩几个？",
+         "op": "subtraction", "answer": lambda a, b: a - b, "trap": "none"},
+        {"template": "小红有{A}本书，小明又给了她{B}本，现在有几本？",
+         "op": "addition", "answer": lambda a, b: a + b, "trap": "none"},
+        {"template": "每个盒子装{A}个鸡蛋，{B}个盒子一共装几个？",
+         "op": "multiplication", "answer": lambda a, b: a * b, "trap": "none"},
+        {"template": "{A}个苹果平均分给{B}个小朋友，每人几个？",
+         "op": "division", "answer": lambda a, b: a / b if b != 0 else 0, "trap": "none"},
+    ]
+
+    def generate_dataset(self, n_questions: int = 100, seed: int = 42) -> List[Dict]:
+        random.seed(seed)
+        dataset = []
+        for i in range(n_questions):
+            t = random.choice(self.TRAP_TEMPLATES)
+            a = random.randint(10, 200)
+            b = random.randint(2, min(a // 2, 50))
+            if t['op'] == 'percentage_subtraction':
+                answer = t['answer'](a, b)
+            else:
+                answer = t['answer'](a, b)
+            dataset.append({
+                'id': i + 1,
+                'question': t['template'].format(A=a, B=b),
+                'answer': float(answer),
+                'op': t['op'],
+                'trap_type': t['trap']
+            })
+        return dataset
+
+
+# ============================================================
+# 使用示例
+# ============================================================
+
+if __name__ == "__main__":
+    print("=" * 70)
+    print("Deposon Agents v1.3 —— 仿物理AGI系统")
+    print("=" * 70)
+
+    # 基础推理示例
+    llm = KimiLLMBackend()
+    system = DeposonAgentSystem(llm_backend=llm, mode='unified')
+
+    math_query = "小明有5个苹果，给了小红2个，还剩几个？"
+    result = system.reason(math_query, domain_hint='math')
+    print(f"\n查询: {math_query}")
+    print(f"最佳路径: {result['best_path']}")
+    print(f"透射分数: {result['best_score']:.4f}")
+    print(f"以太耗散: {result['deposon_stats']['ether_dissipated']:.4f}")
+
+    # 消融实验示例
+    print("\n消融实验:")
+    ablation = system.ablation_study(math_query, domain_hint='math')
+    print(system.report_ablation(ablation))
+
+    # 百题评估示例
+    print("\n百题评估框架 (10题演示):")
+    benchmark = HundredQuestionBenchmark()
+    dataset = benchmark.generate_dataset(10)
+    evaluator = BenchmarkEvaluator(system)
+    batch = evaluator.batch_evaluate(dataset)
+    print(f"准确率: {batch['accuracy'] * 100:.1f}%")
+    print(f"正确数: {batch['n_correct']}/{batch['n_total']}")
