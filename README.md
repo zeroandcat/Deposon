@@ -45,6 +45,8 @@ deposon_agents_v1_3.py     # 核心系统（DeposonState / EtherChannel / Deposo
                            #   DeposonAgentSystem / LLMBackend / BenchmarkEvaluator）
 run_benchmark_v1_3.py      # 百题五变体消融 runner
 results/                   # 评测结果 JSON（含逐题明细引用）
+                           #   注: *details.json 大文件因托管载荷限制未入库,
+                           #   可由 run_benchmark 脚本 + deposon_cache 复现
 docs/                      # 需求文档、验证报告
 paper/                     # 论文（撰写中）
 ```
