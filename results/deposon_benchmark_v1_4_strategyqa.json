@@ -1,0 +1,69 @@
+{
+  "version": "1.4.0",
+  "benchmark": "StrategyQA (train subset, seed=42, n=100)",
+  "n_questions": 99,
+  "excluded_api_blocked": [
+    {
+      "id": 60,
+      "question": "Will Lhamo Thondup be considered by Catholic Church to be a saint?",
+      "reason": "api_blocked(content_filter)"
+    }
+  ],
+  "cot_baseline_accuracy": 0.9292929292929293,
+  "baseline_accuracy": 0.12121212121212122,
+  "unified_accuracy": 0.898989898989899,
+  "effect_size": 0.7777777777777778,
+  "variant_results": {
+    "no_deposon": {
+      "n_total": 99,
+      "n_correct": 12,
+      "accuracy": 0.12121212121212122
+    },
+    "v1_blocking": {
+      "n_total": 99,
+      "n_correct": 89,
+      "accuracy": 0.898989898989899
+    },
+    "v2_tunneling": {
+      "n_total": 99,
+      "n_correct": 20,
+      "accuracy": 0.20202020202020202
+    },
+    "unified": {
+      "n_total": 99,
+      "n_correct": 89,
+      "accuracy": 0.898989898989899
+    },
+    "high_couple": {
+      "n_total": 99,
+      "n_correct": 89,
+      "accuracy": 0.898989898989899
+    }
+  },
+  "mcnemar_unified_vs_cot": {
+    "b": 4,
+    "c": 7,
+    "p_value": 0.548828125
+  },
+  "mcnemar_unified_vs_no_deposon": {
+    "b": 87,
+    "c": 10,
+    "p_value": 1.7877527700122907e-16
+  },
+  "llm_stats": {
+    "calls": 0,
+    "fallbacks": 0,
+    "errors": 0,
+    "cache_hits": 0,
+    "tokens_used": 0
+  },
+  "validate_stats": {
+    "n_validated": 99,
+    "n_real_api": 99,
+    "n_verdict_correct": 95,
+    "agreement_with_unified_is_correct": 91,
+    "agreement_rate": 0.9191919191919192,
+    "note": "validate2: 推理链附步骤文本"
+  },
+  "validate_stats_v1_nodepath": "v1(仅节点id链)一致率36.4%已废弃, 见details的validation字段"
+}
