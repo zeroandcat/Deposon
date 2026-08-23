@@ -80,9 +80,7 @@ $$T + R + A = \frac{1 + g_{\text{eff}} + g_{\text{aether}}}{\Lambda} = 1, \tag{3
 
 即**含环境通道的归一化守恒**：耗散通道被显式纳入后，系统+环境的总能量严格守恒。在振幅层面，可取 $t=\sqrt{T}, r=\sqrt{R}, a=\sqrt{A}$ 并赋予反射振幅 $\pi/2$ 的相位约定；本文全部概率断言只依赖权重 $(T,R,A)$。实现上要求式 (3) 在 $10^{-6}$ 容差内成立（实测最大偏差 $2.2\times10^{-16}$，见 §4.4），并对 $g_{\text{couple}}=g_{\text{aether}}=0$（全透射极限 $\Lambda=1$）无需除零保护以外的特殊分支。
 
-**Feshbach 共振形式化。** 式 (1)–(2) 的构造受 Feshbach 统一散射理论 [27, 28] 的**形式类比**启发。需要强
-
-调逻辑顺序：式 (2) 是构造性定义——$T+R+A=1$ 由构造成立，并非任何 $S$ 矩阵的推论；下面的 Feshbach 形式提供物理动机与词汇，而非推导；归一化步骤尤其是设计选择，其理由在附录 A.3 中如实说明。
+**Feshbach 共振形式化。** 式 (1)–(2) 的构造受 Feshbach 统一散射理论 [27, 28] 的**形式类比**启发。需要强调逻辑顺序：式 (2) 是构造性定义——$T+R+A=1$ 由构造成立，并非任何 $S$ 矩阵的推论；下面的 Feshbach 形式提供物理动机与词汇，而非推导；归一化步骤尤其是设计选择，其理由在附录 A.3 中如实说明。
 
 设背景散射矩阵为 $S_{\text{bg}}(E)$（无以太耦合时的弹性散射），$|W\rangle$ 为光子-凝子耦合态（对应推理路径与陷阱节点的暂时束缚态），$E_0$ 为共振能量，$\Gamma_{\text{aether}}$ 为以太诱导线宽，则有效 $S$ 矩阵为
 
@@ -208,9 +206,7 @@ $$S_k = E^{(k-1)}T_k + E^{(k-1)}(1-T_k) + \sum_{i=1}^{k-1} E^{(i-1)}(R_i+A_i) = 
 | uniform-params（全节点 0.05/0.05） | 去除 | ✓ | 7.0% | 10.0% |
 | no_deposon（贪心，无场） | — | ✗ | 7.0% | 10.0% |
 
-三方对照构成判别性证据：动力学单独（uniform-params）无效（simple 7% / traps 10%），标签无动力学（no_deposon）无效（simple 7% / traps 10%），只有组合有效（100%）。值得点明的是，uniform-p
-
-arams 与 no_deposon 在两个基准上数值重合（7%/7%、10%/10%）——机制为：simple 集候选路径等长（3 节点），均匀参数下透射率相同（≈0.826），分数并列后稳定排序退化为 BFS 顺序，遂被 0.9 权重诱饵边捕获；该重合是上述根因结论的独立佐证。因此 Deposon 层最准确的理解是**换能器（transducer）**——把语义类型标签转换为可审计的能量决策——而非独立判别器：其增量以标签质量为前提（§5.2）。label-shuffle 的 17.2% 略高于 uniform-params 的 10%，与"数量保持的置换下部分节点碰巧获得正确标签"一致。
+三方对照构成判别性证据：动力学单独（uniform-params）无效（simple 7% / traps 10%），标签无动力学（no_deposon）无效（simple 7% / traps 10%），只有组合有效（100%）。值得点明的是，uniform-params 与 no_deposon 在两个基准上数值重合（7%/7%、10%/10%）——机制为：simple 集候选路径等长（3 节点），均匀参数下透射率相同（≈0.826），分数并列后稳定排序退化为 BFS 顺序，遂被 0.9 权重诱饵边捕获；该重合是上述根因结论的独立佐证。因此 Deposon 层最准确的理解是**换能器（transducer）**——把语义类型标签转换为可审计的能量决策——而非独立判别器：其增量以标签质量为前提（§5.2）。label-shuffle 的 17.2% 略高于 uniform-params 的 10%，与"数量保持的置换下部分节点碰巧获得正确标签"一致。
 
 **共振通道激活消融（resonant / resonant_hybrid，P1-1 共轭映射的初步实现）。** 实现：$E_{\text{photon}}(\text{path},\text{node})=(1+\cos(\text{path\_emb},\text{node\_emb}))/2\in[0,1]$，其中路径嵌入为路径节点确定性嵌入（64 维）的归一化均值，节点嵌入取 deposon 的 center 向量；$E_0$ 保持节点构造期 energy 不变。两个新模式：resonant（全部节点散射输入改为 $E_{\text{photon}}$，δ≠0）与 resonant_hybrid（仅非 trap 节点用 $E_{\text{photon}}$，trap 保持类型强绑定 δ=0）。与 unified 完全同图同路径集合，仅散射输入改变；零 API 消耗，幺正性审计 $2.2\times10^{-16}$ 通过，五变体回归不变。结果见 Table 7。
 
@@ -328,9 +324,7 @@ trap 节点的 δ 从恒 0 变为均值 0.655（max 0.82），其余类型均值
 
 ### 4.6 集成机制分析（Boltzmann 退火与路径积分）
 
-本节检验"时间换质量"假设：以更多散射评估换取更高精度。全部实验零 API 消耗，与 unified 变体同图同参数（seed=42）。**诚实声明**：原始一次性实验脚本已丢失，本节数字来自按原 setup 描述忠实重写的可复现实现（`run_g2_ensemble.py`，已入库）；重写版与原记录不一致之处以可复现版为准、如实替换（见 Table 9 表注）。五种方法：(i) **boltzmann_single**——单轨迹、无场筛选，出边按 $p_i\propto e^{(w_i-
-
-b_i)/T}$ 采样（边能 $E_i=b_i-w_i$，$T=0.3$；$T\to0$ 时退化为对边能的贪心 argmin，$T\to\infty$ 时退化为均匀随机选边——贪心与均匀随机构成两个温度极限）；(ii) **boltzmann_annealed**——$K=20$ 条退火轨迹（$T$：1.0→0.05 几何退火）加场透射择优（$K=1$ 时退化为单轨迹采样）；(iii) **path_integral_born**——$K=20$ 条独立轨迹（$T=0.5$），按 Born 规则聚合 $\arg\max_a \sum_p T_p^2$（$K=1$ 时退化为单场 argmax）；(iv) **path_integral_born_by_path**——同 (iii) 但按路径聚合；(v) **majority_vote**——同样 $K=20$ 但不乘 $T^2$ 的多数投票。成本定义为平均每题的场散射节点评估次数（重写版口径；与原记录的绝对值不可直接对齐）。结果见 Table 9。
+本节检验"时间换质量"假设：以更多散射评估换取更高精度。全部实验零 API 消耗，与 unified 变体同图同参数（seed=42）。**诚实声明**：原始一次性实验脚本已丢失，本节数字来自按原 setup 描述忠实重写的可复现实现（`run_g2_ensemble.py`，已入库）；重写版与原记录不一致之处以可复现版为准、如实替换（见 Table 9 表注）。五种方法：(i) **boltzmann_single**——单轨迹、无场筛选，出边按 $p_i\propto e^{(w_i-b_i)/T}$ 采样（边能 $E_i=b_i-w_i$，$T=0.3$；$T\to0$ 时退化为对边能的贪心 argmin，$T\to\infty$ 时退化为均匀随机选边——贪心与均匀随机构成两个温度极限）；(ii) **boltzmann_annealed**——$K=20$ 条退火轨迹（$T$：1.0→0.05 几何退火）加场透射择优（$K=1$ 时退化为单轨迹采样）；(iii) **path_integral_born**——$K=20$ 条独立轨迹（$T=0.5$），按 Born 规则聚合 $\arg\max_a \sum_p T_p^2$（$K=1$ 时退化为单场 argmax）；(iv) **path_integral_born_by_path**——同 (iii) 但按路径聚合；(v) **majority_vote**——同样 $K=20$ 但不乘 $T^2$ 的多数投票。成本定义为平均每题的场散射节点评估次数（重写版口径；与原记录的绝对值不可直接对齐）。结果见 Table 9。
 
 **Table 9. 集成机制分析（可复现重写版，seed=42；simple n=99，traps n=100）。**
 
@@ -415,9 +409,7 @@ $$\Gamma_{\text{aether}} = \gamma_{\text{ECM}}\cdot\psi(t) \quad(\text{ECM 离�
 
 [11] Cobbe K, Kosaraju V, Bavarian M, Chen M, Jun H, Kaiser L, Plappert M, Tworek J, Hilton J, Nakano R, Hesse C, Schulman J. Training verifiers to solve math word problems. arXiv preprint arXiv:2110.14168, 2021.
 
-[12] Geva M, Khashabi D, Segal E, Khot T, Roth D, Berant J. Did Aristotle use a laptop? A question answering
-
-benchmark with implicit reasoning strategies. *Transactions of the Association for Computational Linguistics (TACL)*, 2021, 9: 346–361. arXiv:2101.02235.
+[12] Geva M, Khashabi D, Segal E, Khot T, Roth D, Berant J. Did Aristotle use a laptop? A question answering benchmark with implicit reasoning strategies. *Transactions of the Association for Computational Linguistics (TACL)*, 2021, 9: 346–361. arXiv:2101.02235.
 
 [13] LeCun Y, Chopra S, Hadsell R, Ranzato M, Huang F. A tutorial on energy-based learning. In: Bakir G, Hofmann T, Schölkopf B, Smola A, Taskar B, eds. *Predicting Structured Data*. Cambridge: MIT Press, 2006: 191–246.
 
