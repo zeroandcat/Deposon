@@ -9,3 +9,4 @@
 - v3/ (2026-08-23): v2 的键名修正版(gold_path_top3_hit.mean)，其余判据与 v2 完全相同；首个全绿验收。
 - v4/ (2026-08-23): v3 的远端兼容版——结果文件判据改为“全量 JSON(本地) 或 摘要 JSON(GitHub 克隆) 二选一”，大文件缺失降级为 WARN 而非 FAIL，指标断言兼容摘要扁平结构；其余判据不变。变更原因：>500KB 结果文件因 MCP 传输上限不镜像远端。
 - v5/ (2026-08-23): v1.6 LLM 先验臂基建验收——文件存在、pytest 全绿(109)、成功判据预登记存在、pending_no_key 为合法状态、非 LLM 臂 named_path=0.176 精确复现 v1.5.1、泄漏扫描。与 v4 差异：接受 pending 态，真实评估待 key 就位后用同版本复验（届时判据求值）。注：results/deposon_v16_llm_prior.json 不镜像远端，key 就位后由 run_v16_llm_prior.py 本地重新生成并求值。
+- v6/ (2026-08-23): v1.6 真实评估验收——llm_arms=completed、先验缓存 9 边+prompt_sha 在案、判据已求值且强判据未达如实(any_lambda_pass=false)、融合增益方向(hybrid named 0.294>物理 0.176)、总任务优势(hybrid 0.367 六臂最高)、named 弱于 random 如实保留、109 pytest、泄漏扫描。与 v5 差异：从 pending 基建验收转为 evaluated 结果验收。

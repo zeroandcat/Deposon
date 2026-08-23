@@ -3,3 +3,4 @@
 [2026-08-23 v1.5] cmd: python verifier/v3/check.py exit=0 FAILS=0 WARNS=0 — 103 pytest 全绿; spec_version=v1.5.1; B field_active=48/49 vs maxpath 0/49; A r=0.2 aggregate gold_top3 0.375>random 0.25; 无 key 泄漏
 [2026-08-23 v1.5] cmd: python verifier/v4/check.py exit=0 FAILS=0 WARNS=0 — 远端兼容版全绿(本地全量模式); 103 pytest passed
 [2026-08-23 v1.6] cmd: python verifier/v5/check.py exit=0 FAILS=0 WARNS=0 — 109 pytest 全绿; pending_no_key 合法; named=0.176 复现; 判据预登记在案
+[2026-08-23 v1.6] cmd: python verifier/v6/check.py exit=0 FAILS=0 WARNS=0 — evaluated 态全绿; hybrid named 0.294>0.176, 总 top3 0.367 六臂最高; 强判据未达如实; 无泄漏
