@@ -1,0 +1,209 @@
+{
+ "experiment": "deposon_v16_llm_prior",
+ "spec_version": "v1.6",
+ "llm_arms": "completed",
+ "note": "完整逐边明细未镜像(MCP 传输上限); 有 key 时 run_v16_llm_prior.py 复用 results/llm_prior_cache.json 零成本复现; 无 key 时 LLM 臂无法复现(缓存已镜像)。",
+ "llm_prior": {
+  "source": "live_api",
+  "cache_path": "results/llm_prior_cache.json",
+  "n_prior_edges": 9,
+  "model": "kimi-for-coding",
+  "endpoint": "https://api.kimi.com/coding/v1/chat/completions",
+  "error": null,
+  "note": "key 仅从环境变量读取; 缓存存在则复用, 不重复消耗 API 预算 (≤2 次)。"
+ },
+ "success_criteria_preregistered": {
+  "rule": "hybrid (λ∈{0.25,0.5,1,2}, 预登记全报) 在 named_path 子集 top-3 ≥ 0.4 且 > field_guided 的 named_path top-3",
+  "lambdas": [
+   0.25,
+   0.5,
+   1.0,
+   2.0
+  ],
+  "named_path_min": 0.4,
+  "reference_v151_field_guided_named": 0.176
+ },
+ "success_evaluation": {
+  "status": "evaluated",
+  "field_guided_named_path_top3": 0.17647058823529413,
+  "per_lambda": {
+   "lambda_0.25": {
+    "named_path_top3": 0.29411764705882354,
+    "ge_0.4": false,
+    "gt_field_guided": true,
+    "pass": false
+   },
+   "lambda_0.5": {
+    "named_path_top3": 0.29411764705882354,
+    "ge_0.4": false,
+    "gt_field_guided": true,
+    "pass": false
+   },
+   "lambda_1.0": {
+    "named_path_top3": 0.29411764705882354,
+    "ge_0.4": false,
+    "gt_field_guided": true,
+    "pass": false
+   },
+   "lambda_2.0": {
+    "named_path_top3": 0.29411764705882354,
+    "ge_0.4": false,
+    "gt_field_guided": true,
+    "pass": false
+   }
+  },
+  "any_lambda_pass": false
+ },
+ "experiment_B": {
+  "arms": {
+   "field_guided": {
+    "top3_hit": {
+     "mean": 0.32653061224489793,
+     "std": 0.4689438895133085,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.17647058823529413,
+     "std": 0.3812200410828153,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.40625,
+     "std": 0.4911323014219285,
+     "n": 32
+    }
+   },
+   "random": {
+    "top3_hit": {
+     "mean": 0.32653061224489793,
+     "std": 0.4689438895133085,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.4117647058823529,
+     "std": 0.4921529567847503,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.28125,
+     "std": 0.4496092053105675,
+     "n": 32
+    }
+   },
+   "degree": {
+    "top3_hit": {
+     "mean": 0.12244897959183673,
+     "std": 0.32780364090222464,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.35294117647058826,
+     "std": 0.4778846120374094,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.0,
+     "std": 0.0,
+     "n": 32
+    }
+   },
+   "llm_prior": {
+    "top3_hit": {
+     "mean": 0.24489795918367346,
+     "std": 0.4300266837899077,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.23529411764705882,
+     "std": 0.42418250299576343,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.25,
+     "std": 0.4330127018922193,
+     "n": 32
+    }
+   },
+   "hybrid@0.25": {
+    "top3_hit": {
+     "mean": 0.3673469387755102,
+     "std": 0.482082114735417,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.29411764705882354,
+     "std": 0.4556450995538137,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.40625,
+     "std": 0.4911323014219285,
+     "n": 32
+    }
+   },
+   "hybrid@0.5": {
+    "top3_hit": {
+     "mean": 0.3673469387755102,
+     "std": 0.482082114735417,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.29411764705882354,
+     "std": 0.4556450995538137,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.40625,
+     "std": 0.4911323014219285,
+     "n": 32
+    }
+   },
+   "hybrid@1.0": {
+    "top3_hit": {
+     "mean": 0.3673469387755102,
+     "std": 0.482082114735417,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.29411764705882354,
+     "std": 0.4556450995538137,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.40625,
+     "std": 0.4911323014219285,
+     "n": 32
+    }
+   },
+   "hybrid@2.0": {
+    "top3_hit": {
+     "mean": 0.3673469387755102,
+     "std": 0.482082114735417,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.29411764705882354,
+     "std": 0.4556450995538137,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.40625,
+     "std": 0.4911323014219285,
+     "n": 32
+    }
+   }
+  },
+  "n_edges": 49,
+  "source": "ROOT",
+  "target": "GOAL_拓扑智能"
+ },
+ "honesty": [
+  "本实验只复用 v1.5 实验 B 的留一协议 (同图/同种子 70000+ei/同负采样), reconstruct_mindmap/arm_scores/top3_hit_per_edge 直接 import, 未改写其逻辑。",
+  "零泄漏: LLM 只见 45 个节点标签, prompt 不含任何边/图结构信息 (build_prior_prompt 输入仅有标签列表)。",
+  "API key 仅从环境变量 KIMI_API_KEY 读取, 不写入任何文件/日志/异常消息; LLM 调用预算 ≤2 次 (全局先验 1 次 + 必要时重试 1 次)。",
+  "hybrid 为 post-hoc 融合 W_done + λ·prior_scores, λ∈{0.25,0.5,1,2} 预登记并全部报告, 不挑 λ。",
+  "全部指标由种子固定的实际运行产生, 含负面结果, 无任何手工润色; 严禁 mock 冒充真实 LLM 调用结果。",
+  "LLM 先验来源: live_api (cache=results/llm_prior_cache.json 复用, live_api=本次真实调用), 先验边数=9。",
+  "成功判据求值: field_guided named_path=0.176; λ=0.25: named=0.294 fail; λ=0.5: named=0.294 fail; λ=1.0: named=0.294 fail; λ=2.0: named=0.294 fail。overall any_lambda_pass=False。"
+ ]
+}
