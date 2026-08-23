@@ -1,0 +1,4 @@
+[2026-08-23 v1.4] (据会话记录补记) cmd: python verifier/v1/check.py exit=0 FAILS=0 WARNS=0 — v1.4.0 论文终验; 原始日志行因 .gitignore(*.log) 未入库而遗失, 此行标注为补记
+[2026-08-23 v1.5] cmd: python verifier/v2/check.py (worktree ~/work-v15) exit=1 FAILS=1 WARNS=0 — 失败项为验收脚本自身键名错误(gold_top3_mean 不存在，实际 gold_path_top3_hit.mean)，交付物数据经人工核查属实(0.375>0.25)；按协议不重写 v2，新建 v3
+[2026-08-23 v1.5] cmd: python verifier/v3/check.py exit=0 FAILS=0 WARNS=0 — 103 pytest 全绿; spec_version=v1.5.1; B field_active=48/49 vs maxpath 0/49; A r=0.2 aggregate gold_top3 0.375>random 0.25; 无 key 泄漏
+[2026-08-23 v1.5] cmd: python verifier/v4/check.py exit=0 FAILS=0 WARNS=0 — 远端兼容版全绿(本地全量模式); 103 pytest passed
