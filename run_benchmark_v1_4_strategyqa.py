@@ -190,9 +190,15 @@ def evaluate(llm, sample):
         details = json.load(open(DETAILS_FILE, encoding='utf-8'))
     variant_correct = {v: [] for v in VARIANTS}
     cot_correct = []
+    excluded = []
     for e in sample:
         dec = llm.cache.get(llm._cache_key('decompose_yesno', e['question']))
         cot = llm.cache.get(llm._cache_key('cot_yesno', e['question']))
+        if dec is None or cot is None:
+            # API 拒绝 (如内容过滤 HTTP400) —— 诚实排除并记录, 绝不mock
+            excluded.append({'id': e['id'], 'question': e['question'][:80],
+                             'reason': 'api_blocked(content_filter)'})
+            continue
         rec = details.setdefault(str(e['id']), {'question': e['question'], 'answer': e['answer']})
         rec['decompose'] = dec
         rec['cot'] = cot
@@ -205,7 +211,7 @@ def evaluate(llm, sample):
             rec[f'{vname}_path'] = r['path']
             rec[f'{vname}_trap_hit'] = r['trap_hit']
             variant_correct[vname].append(rec[f'{vname}_is_correct'])
-    n = len(sample)
+    n = len(cot_correct)  # 实际评估题数 (排除 api_blocked)
     variant_results = {v: {'n_total': n, 'n_correct': sum(c),
                            'accuracy': sum(c) / n}
                        for v, c in variant_correct.items()}
@@ -214,6 +220,7 @@ def evaluate(llm, sample):
     out = {
         'version': '1.4.0', 'benchmark': 'StrategyQA (train subset, seed=42, n=100)',
         'n_questions': n,
+        'excluded_api_blocked': excluded,
         'cot_baseline_accuracy': cot_acc,
         'baseline_accuracy': variant_results['no_deposon']['accuracy'],
         'unified_accuracy': variant_results['unified']['accuracy'],
@@ -245,6 +252,63 @@ def main():
         print('cot', 'COMPLETE' if ok else 'PARTIAL', flush=True)
     if mode in ('eval', 'all'):
         evaluate(llm, sample)
+    if mode == 'validate2':
+        # v2: 推理链附带步骤文本 (v1只传节点id, 验证器无法判断内容, 一致率仅36%)
+        details = json.load(open(DETAILS_FILE, encoding='utf-8'))
+        def vneed(e):
+            v = details.get(str(e['id']), {}).get('validation2')
+            return not (isinstance(v, dict) and v.get('source') == 'kimi_api')
+        todo = [e for e in sample
+                if llm.cache.get(llm._cache_key('decompose_yesno', e['question'])) is not None
+                and vneed(e)]
+        print(f"validate2 todo={len(todo)}", flush=True)
+        batch = todo[:max(1, int(WORKERS * budget / 18))]
+        def vwork(e):
+            rec = details[str(e['id'])]
+            steps = (rec.get('decompose') or {}).get('steps') or []
+            chain = [f"step{i+1}: {s}" for i, s in enumerate(steps)] + \
+                    [f"final answer: {rec.get('unified_pred')}"]
+            try:
+                v = llm.validate(e['question'], chain, rec.get('unified_pred'))
+                rec['validation2'] = v
+            except Exception:
+                pass
+        with ThreadPoolExecutor(max_workers=3) as ex:
+            list(ex.map(vwork, batch))
+        tmp = DETAILS_FILE + '.tmp'
+        json.dump(details, open(tmp, 'w', encoding='utf-8'), ensure_ascii=False, indent=2, default=str)
+        os.replace(tmp, DETAILS_FILE)
+        n_done = sum(1 for k in details
+                     if isinstance(details[k].get('validation2'), dict)
+                     and details[k]['validation2'].get('source') == 'kimi_api')
+        print(f"validate2 chunk done, total={n_done}, stats={llm.get_stats()}", flush=True)
+    if mode == 'validate':
+        details = json.load(open(DETAILS_FILE, encoding='utf-8'))
+        def vneed(e):
+            v = details.get(str(e['id']), {}).get('validation')
+            return not (isinstance(v, dict) and v.get('source') == 'kimi_api')
+        todo = [e for e in sample
+                if llm.cache.get(llm._cache_key('decompose_yesno', e['question'])) is not None
+                and vneed(e)]
+        print(f"validate todo={len(todo)}", flush=True)
+        batch = todo[:max(1, int(WORKERS * budget / 18))]
+        def vwork(e):
+            rec = details[str(e['id'])]
+            path = rec.get('unified_path') or []
+            try:
+                v = llm.validate(e['question'], path, rec.get('unified_pred'))
+                rec['validation'] = v
+            except Exception:
+                pass
+        with ThreadPoolExecutor(max_workers=3) as ex:
+            list(ex.map(vwork, batch))
+        tmp = DETAILS_FILE + '.tmp'
+        json.dump(details, open(tmp, 'w', encoding='utf-8'), ensure_ascii=False, indent=2, default=str)
+        os.replace(tmp, DETAILS_FILE)
+        n_done = sum(1 for k in details
+                     if isinstance(details[k].get('validation'), dict)
+                     and details[k]['validation'].get('source') == 'kimi_api')
+        print(f"validate chunk done, total={n_done}, stats={llm.get_stats()}", flush=True)
 
 
 if __name__ == '__main__':
