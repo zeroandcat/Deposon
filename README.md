@@ -1,80 +1,73 @@
-# Deposon (凝子) — Physics-Inspired Reasoning Layer for LLMs
+# Deposon
 
-> **将 LLM 作为认知振幅场的生成器，将 Deposon 统一场作为 LLM 推理的物理约束层。**
+**Physics-constrained scattering layer for auditable LLM reasoning-path selection** — research trace repository (code, experiments, SPECs, independent reviews, verifier).
 
-Deposon（凝子，Deposition + -on）是一个仿物理 AGI 推理框架：把 LLM 分解出的概念图节点绑定为“凝子态”（DeposonState），通过三通道散射（透射/反射/耗散）与无限维正交以太（EtherChannel，能量不可逆沉积）对推理路径进行物理约束筛选，从而阻断陷阱路径、保留正确推理链。
+> Paper drafts are **excluded** from this repository's trace updates pending arXiv endorsement
+> (无论文留痕). The legacy `paper/` directory remains frozen at its v1.4 state.
+> Large result files (>100KB) are not stored here; they are tracked by sha256 + regeneration
+> command in [`results/MANIFEST_large_files.md`](results/MANIFEST_large_files.md).
 
-## 核心结果（v1.4.0）
+## Current status: v1.9 (2026-08)
 
-### 合成基准（seed=42，100 题/集）
-| 数据集 | no_deposon | unified | effect size |
-|---|---|---|---|
-| 简单 100 题 | 7% | **100%** | **+0.93** |
-| 陷阱 100 题（表面关联误导） | 10% | **100%** | **+0.90** |
+- **E9.1 mean-field reverse annealing**: named-edge Hits@3 **17/17 = 1.000** on the anchor map
+  (McNemar p = 1.22e-4 vs the v1.7.1 Dirichlet-random-init arm) — the earlier
+  "field loses to random" result was a **sampler artifact**, not a property of the field.
+  The field is a **skeleton detector**: filler-edge Hits@3 = 0.0625 (boundary disclosed).
+- **E9.2 full-candidate ranking** (MRR / Hits@k, no negative sampling): sampler sensitivity
+  eliminated by construction; sign flips vs the old N_NEG=10 protocol documented.
+- **E9.3 high_couple alias fix**: GSM8K high_couple corrected **0.86 → 0.82**
+  (the v1.4 number was produced by an alias bug, `deposon_agents_v1_4.py:1515`).
+- **E9.4 equal-weight decoy control**: advantage survives weight flattening
+  (0.85 vs 0.04) — v1.4 benchmark effect sizes are **structurally unattributable**
+  (BFS short-path preference + free `type='trap'` labels). Disclosed, not hidden.
+- **E9.5 rule baseline**: a 6-keyword rule filter (**0.87**) ties or beats the full
+  LLM+physics pipeline (0.85) — zero incremental value of the LLM prior on this benchmark.
+- **E9.6 quick wins**: graph-level sign tests (p = 0.0013 / 0.0075), seed scan
+  (named = 1.000 ± 0.000), λ=2 null ablation (confshuffle = real → semantic claim weakened).
 
-### 真实基准（如实报告，含负面结果）
-| 基准 | CoT | unified | no_deposon | 统计 |
-|---|---|---|---|---|
-| GSM8K 100 题 | 97.0% | 85.0% | 2.0% | vs CoT p=4.9e-4；vs nodep p=4.4e-24 |
-| StrategyQA 99 题 | 92.9% | 89.9% | 12.1% | vs CoT p=0.549（无显著差异）；vs nodep p=1.8e-16 |
-| GSM8K SC@5 基线 | 96.0% | 85.0% | — | vs unified p=0.0034（SC@5 更优，如实报告） |
+## Methodology (the real product)
 
-> **诚实声明**：合成基准效应量度量“同一张 LLM 分解图上物理层筛选 vs 贪心选路”的增量；真实基准上约束-保真权衡呈任务依赖性（GSM8K 长链上信息损失代价主导，StrategyQA 上与 CoT 打平）。分层分析（Table 11）证伪了“长链增量更大”预言并如实报告。详见 `paper/` 与 `results/`。
+- **Preregistration + amendments**: every experiment has a SPEC (`docs/SPEC_v*.md`);
+  failed judgments are archived, rules are never rewritten retroactively.
+- **Independent multi-role review**: dual peer reviews (11 Majors each) → independent editor →
+  independent post-edit verification (`reviews/`).
+- **Versioned verifier**: `verifier/v1`–`v11` frozen per iteration, append-only run log
+  (`verifier/runs/`). Latest: **v11, FAILS=0 / 25 PASS, pytest 160/160**.
+- **Negative results are first-class**: `*_negativeresult.json` archives, honesty sections
+  in every result file.
+- **No-API-discipline**: v1.9 ran entirely on cached LLM responses
+  (prompt_sha256 on record, 800/800 cache hits).
 
-- 物理审计：幺正性 T+R+A 与 1 的偏差 ≤ 2.2e-16（四通道扩展 T+R+A+B=1 亦逐路径成立）。
-- 95/95 回归测试（`tests/test_new_modes.py`）：四个条件等效断言（T→∞/K=1/δ=0/T→0 退化）实证通过。
+## Layout
 
-## 快速开始
+| Path | Content |
+|---|---|
+| `deposon_diffusion.py` | diffusion field core (forward thermalize / reverse anneal / row-simplex projection) |
+| `deposon_agents_v1_4.py` | benchmark pipeline (v1.9: `resolve_high_couple_config`, legacy alias behind env flag) |
+| `run_v19_*.py` | v1.9 experiments E9.1–E9.6 |
+| `run_v18_api_supplements.py` | v1.8.1 E1–E4 (permutation invariance / contamination probe / direction robustness / contentless-label abstention) |
+| `docs/` | SPECs (v1.5–v2.0), roadmaps (v1.9 / v2.X), lessons, game-theory pivot |
+| `reviews/` | design probe, literature scan, power analysis, dual peer reviews, post-edit verification |
+| `results/` | experiment JSONs (+ `MANIFEST_large_files.md` for large ones) |
+| `verifier/` | versioned acceptance checks v1–v11 + run records |
+| `corpus/` (soon) | v2.0 multi-map corpus (three-laws design) |
+
+## Roadmap (v2.X)
+
+Multi-map corpus (≥8 maps, three-laws design: quantitative→qualitative sweeps,
+negation-of-negation structural family, unity-of-opposites twin maps) → game-theory turn:
+potential-game convergence (GT-1), adaptive attacker (GT-2), dual-prior signaling (GT-3),
+price of anarchy (GT-4). Every hypothesis ships with a preregistered kill criterion.
+See `docs/Roadmap_v2X.md`, `docs/SPEC_v2.0.md`,
+`docs/CLOSURE_v19_and_v2X_gametheory.md`.
+
+## Reproduce
 
 ```bash
-pip install numpy requests
-export KIMI_API_KEY="your-key"   # 可选；不设置则自动使用规则引擎降级模式
+pip install -r requirements.txt
+pytest -q                      # 160 tests
+python3 run_v19_meanfield.py   # E9.1 (no API calls; reads cached prior)
+python3 verifier/v11/check.py  # acceptance: FAILS=0 expected
 ```
 
-```python
-from deposon_agents_v1_3 import DeposonAgentSystem
-system = DeposonAgentSystem(llm_backend=None, mode='unified')
-result = system.reason("小明有5个苹果，给了小红2个，又买了10个，一共几个？", domain_hint='math')
-print(result['best_path'], result['best_score'])
-```
-
-## 仓库结构
-
-```
-deposon_agents_v1_3.py / v1_4.py     # 核心系统（含 resonant/labelfree/arrhenius 扩展模式）
-run_benchmark_v1_3.py                # 合成百题五变体消融
-run_benchmark_v1_4_gsm8k.py          # GSM8K 100 题评测
-run_benchmark_v1_4_strategyqa.py     # StrategyQA 99 题评测
-run_g2_ensemble.py                   # G2 集成机制实验（重写可复现版）
-svg_mindmap_ingest.py                # SVG 脑图摄入管线
-tests/test_new_modes.py              # 95 项回归与条件等效测试
-results/                             # 评测结果 JSON（details 大文件未入库，可复现）
-docs/                                # 需求、验证报告、Roadmap_v1.5（凝子场扩散生成）
-paper/                               # 论文（见下注）
-verifier/                            # 终验清单 v1（check.py）
-```
-
-> **论文说明**：`paper/deposon_paper_v1.md`（中文版，v1.4.0 终版）在库；**英文终版（deposon_paper_v1_en.md）因 MCP 传输上限未镜像到本仓库**，中英双版的 docx/PDF 终版产物随 v1.4.0 交付渠道发布；如需英文 md 源文件请开 issue 联系维护者。仓库内中文 md 与英文版内容逐节对应（R4 评审 PASS）。
-
-## 物理模型速查
-
-```
-t = 1/(1+g_eff+g_aether)   透射    r = g_eff/(1+g_eff+g_aether)   反射
-a = g_aether/(1+g_eff+g_aether) 耗散（不可逆沉积到以太）
-g_eff = g_couple/(1+detuning²)     共振增强（前置条件 g_couple,g_aether ≥ 0）
-守恒: T+R+A=1（含势垒通道时 T+R+A+B=1，逐路径成立）
-```
-
-## 路线图
-
-- [x] v1.2 统一场框架 + 向量化散射 + 持久缓存
-- [x] v1.3 真实 LLM 后端 + 效应量根因修复 + validate 主环路
-- [x] v1.4 真实基准（GSM8K/StrategyQA/SC@5）+ 双版论文 R4-PASS + G1-G3 算法扩展
-- [ ] v1.5 凝子场扩散生成（Deposon Diffusion，见 docs/Roadmap_v1.5.md）+ 验证层改“独立复算比对”范式
-- [ ] v2.0 硬件映射验证（PCM/MZI/ECM → 光子芯片）
-
-## License
-
-MIT — 见 [LICENSE](LICENSE)
-
-> 注：`results/` 中的 details 大文件因托管载荷限制未入库，可由 run_benchmark 脚本结合本地缓存（`deposon_cache/`）完整复现。
+License: MIT (see LICENSE).
