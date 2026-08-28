@@ -1,0 +1,57 @@
+{
+  "type": "linear",
+  "n_observations": 20,
+  "n_features": 3,
+  "r_squared": 0.628226,
+  "r_squared_adj": 0.558519,
+  "f_statistic": 9.0123,
+  "f_p_value": 0.000997,
+  "aic": -31.4129,
+  "bic": -27.4299,
+  "durbin_watson": 2.0818,
+  "coefficients": {
+    "const": {
+      "coefficient": 0.174319,
+      "std_error": 0.062417,
+      "t_value": 2.7928,
+      "p_value": 0.013033,
+      "ci_lower": 0.042002,
+      "ci_upper": 0.306636
+    },
+    "density": {
+      "coefficient": -3.317867,
+      "std_error": 2.088958,
+      "t_value": -1.5883,
+      "p_value": 0.131784,
+      "ci_lower": -7.74626,
+      "ci_upper": 1.110526
+    },
+    "hub_concentration": {
+      "coefficient": 2.117674,
+      "std_error": 0.457521,
+      "t_value": 4.6286,
+      "p_value": 0.000279,
+      "ci_lower": 1.147772,
+      "ci_upper": 3.087576
+    },
+    "real_semantics": {
+      "coefficient": -0.161827,
+      "std_error": 0.057319,
+      "t_value": -2.8233,
+      "p_value": 0.012239,
+      "ci_lower": -0.283337,
+      "ci_upper": -0.040316
+    }
+  },
+  "vif": {
+    "density": 3.5836,
+    "hub_concentration": 3.6181,
+    "real_semantics": 1.2491
+  },
+  "target": "field_named",
+  "features": [
+    "density",
+    "hub_concentration",
+    "real_semantics"
+  ]
+}
