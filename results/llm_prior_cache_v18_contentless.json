@@ -1,0 +1,10 @@
+{
+ "spec_version": "v1.8.1-E4",
+ "experiment": "contentless_negative_control",
+ "model": "kimi-for-coding",
+ "endpoint": "https://api.kimi.com/coding/v1/chat/completions",
+ "prompt_sha256": "a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2",
+ "status": "abstained",
+ "prior": [],
+ "note": "模型对 45 个无语义占位标签（item_00…item_44）弃权（返回空数组）。按 SPEC v1.8.1 A2 口径 (i)：无语义内容时模型无法产出任何先验——最强形式的支持语义性主张。"
+}

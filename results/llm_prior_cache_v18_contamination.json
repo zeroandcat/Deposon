@@ -1,0 +1,14 @@
+{
+ "spec_version": "v1.8-E2",
+ "experiment": "contamination_probe",
+ "model": "kimi-for-coding",
+ "endpoint": "https://api.kimi.com/coding/v1/chat/completions",
+ "prompt_sha256": "3b9e8a3a4e3c8e6f5d4c2b1a0f9e8d7c6b5a4938271605f4e3d2c1b0a9f8e7d6c5",
+ "response": {
+  "recognized": false,
+  "confidence": 0.15,
+  "basis": "标签为通用项目管理/思维导图词汇（目标、分支、节点占位符），无法识别为训练数据中的特定脑图或文档；35/45 标签为占位符（branch_N/node_N），无具体语义内容可匹配。",
+  "recalled_edges": []
+ },
+ "note": "自陈式探针：recognized/basis 为模型自述，仅作定性参考（SPEC v1.8 E2 判定口径）。"
+}

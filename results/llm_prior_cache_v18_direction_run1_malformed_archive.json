@@ -1,0 +1,7 @@
+{
+ "spec_version": "v1.8-E3-run1-malformed",
+ "archived_at": "2026-08-23",
+ "issue": "脚本解包 bug：parse_direction_response 返回 (prior, full) 二元组被 _post_prompt 二次包装，后处理崩溃；原始响应文本被误当作 prior 落盘。",
+ "recovery": "正式缓存 llm_prior_cache_v18_direction.json 由本归档的首轮真实响应离线解析恢复（13 边），未产生额外 API 调用。E3 实际 HTTP 尝试 2 次，未超预算。",
+ "raw_response_excerpt": "[{\"parent\": 1, \"child\": 2, \"confidence\": 0.9, \"justification\": \"核心目标的路径是上位到具体步骤\"}, ...（完整 13 边见正式缓存）]"
+}

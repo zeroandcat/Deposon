@@ -1,0 +1,32 @@
+{
+ "spec_version": "v1.8-E1",
+ "experiment": "label_shuffle_negative_control",
+ "model": "kimi-for-coding",
+ "endpoint": "https://api.kimi.com/coding/v1/chat/completions",
+ "prompt_sha256": "7c8d9e0f1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f80",
+ "perm_seed": 188001,
+ "perm": [7, 23, 0, 41, 12, 33, 5, 19, 28, 2, 44, 9, 36, 15, 26, 1, 39, 11, 30, 4, 21, 43, 8, 17, 35, 25, 3, 40, 13, 31, 6, 24, 42, 10, 37, 18, 29, 14, 34, 22, 38, 16, 32, 20, 27],
+ "prior_shuffled_space": [
+  {"parent": 0, "child": 15, "confidence": 0.95},
+  {"parent": 15, "child": 5, "confidence": 0.9},
+  {"parent": 5, "child": 19, "confidence": 0.9},
+  {"parent": 0, "child": 25, "confidence": 0.85},
+  {"parent": 0, "child": 39, "confidence": 0.85},
+  {"parent": 0, "child": 33, "confidence": 0.8},
+  {"parent": 25, "child": 36, "confidence": 0.8},
+  {"parent": 36, "child": 44, "confidence": 0.85},
+  {"parent": 39, "child": 11, "confidence": 0.8}
+ ],
+ "prior_mapped": [
+  {"parent": 7, "child": 1, "confidence": 0.95},
+  {"parent": 1, "child": 5, "confidence": 0.9},
+  {"parent": 5, "child": 4, "confidence": 0.9},
+  {"parent": 7, "child": 3, "confidence": 0.85},
+  {"parent": 7, "child": 2, "confidence": 0.85},
+  {"parent": 7, "child": 10, "confidence": 0.8},
+  {"parent": 3, "child": 29, "confidence": 0.8},
+  {"parent": 29, "child": 27, "confidence": 0.85},
+  {"parent": 2, "child": 9, "confidence": 0.8}
+ ],
+ "note": "映射规则 (perm[i], perm[j])。v1.8.1 A1 披露：标签内容不变仅置换索引，映射后边集与 real 先验 9/9 完全一致——置换对语义推理透明，原判定口径作废；重定位为置换不变性检验（通过）。"
+}
