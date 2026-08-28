@@ -12,3 +12,8 @@
 - FAILS: 0 / PASS: 25
 - 无 FAIL
 [PASS] pytest 全绿 — 160 passed
+
+## 2026-08-28 09:57:41 run3（安全删改：密钥片段扫描→通用前缀扫描；LESSONS 去字面前缀）
+- 退出码: 0
+- FAILS: 0
+- 无 FAIL

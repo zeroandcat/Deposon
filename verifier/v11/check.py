@@ -35,7 +35,7 @@ check("LESSONS 仍在", (ROOT / "docs/LESSONS_v19.md").exists())
 check("SPEC v1.9 仍在", (ROOT / "docs/SPEC_v1.9.md").exists())
 
 # 4. 密钥红线（含新 key 模式，拼接构造避免自匹配）
-new_key_frag = "sk-" + "kimi-7BI2"
+watch = "sk-" + "kimi-"  # 通用密钥前缀（安全删改：不再含任何真实 key 片段）
 leak_found = []
 for p in ROOT.rglob("*"):
     if p.is_file() and p.suffix in (".py", ".md", ".json", ".csv", ".txt") and "verifier" not in str(p):
@@ -43,10 +43,10 @@ for p in ROOT.rglob("*"):
             t = p.read_text(encoding="utf-8", errors="ignore")
         except Exception:
             continue
-        if new_key_frag in t or ("sk-" + "kimi-7u1h") in t:
+        if watch in t:
             leak_found.append(str(p))
-check("全仓库无两个 key 泄露", not leak_found, str(leak_found[:3]))
-check("转向文档无 key", new_key_frag not in doc and ("sk-" + "kimi-") not in doc)
+check("全仓库无密钥前缀泄露", not leak_found, str(leak_found[:3]))
+check("转向文档无密钥前缀", watch not in doc)
 
 # 5. pytest 仍全绿
 r = subprocess.run([sys.executable, "-m", "pytest", "-q", "--tb=no"],
