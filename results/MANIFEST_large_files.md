@@ -42,3 +42,9 @@
 - `results/v20_regression_field.json`  
   sha256: `534c121765b132044ea29a05e2ca67723767e0089055193b3747b1a78e4f0ee7`  
   再生: `python3 /app/.agents/skills/regression-insight/scripts/regression_analyzer.py results/v20_graph_features.csv --target field_named --features "N,n_edges,density,hub_concentration,real_semantics"  # v1 全特征版（VIF 问题），v2 精简版已入库`
+- `results/quizbank_v20_big.json`  
+  sha256: `8bb7e0b0ec6a1c2f4caa8d1e2f8d3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e`  
+  再生: `python3 run_v20_bigquiz_eval.py  # 由 BANK_SEED + attacker_xl_cache 确定性再生（sha256 以本地 MANIFEST 最新值为准）`
+- `results/deposon_v20_bigquiz_eval.json`  
+  sha256: `1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2`  
+  再生: `python3 run_v20_bigquiz_eval.py  # 5.5s 再生；accuracy 汇总见 docs/Findings_v2.0_bigquiz.md（sha256 以本地 MANIFEST 最新值为准）`
