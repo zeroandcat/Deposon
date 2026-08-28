@@ -9,6 +9,7 @@
 #   E 族：first_option（位置偏置平凡基线，仅题库用——本脚本不报）
 # 大 BOSS 测试：任何基线在任一图 named 击败 field_mean → 结果 JSON 头条字段
 #   boss_alert=True 且逐图列出，Findings 必须披露（注册表收编纪律 #2）。
+# v2.0.1：BOSS 统计门槛（margin ≥3 条金边），tiebreak 抽签事件降级保留。
 # no LLM API calls issued。
 import json
 import os
@@ -173,6 +174,9 @@ def ngram_tfidf_cosine_row(labels, u, cand, n=3):
 # ---------------------------------------------------------------- 主评估
 NEW_ARMS = ("common_neighbors", "preferential_attachment", "ppr", "katz",
             "node2vec_shallow", "ngram_tfidf_cosine")
+# BOSS 统计门槛（R1 复核：6 事件中 4 个 margin ≤2 条边，S5 恰为 1 条边的
+# tiebreak 抽签；R1 200 次置换证实 S5 观测在 37.5% 抽签中出现）
+BOSS_GATE_EDGES = 3
 # full 预算参考子集（归纳全速配置仅跑两图作敏感性对照）
 N2V_FULL_REFS = ("S6", "L_biological_taxonomy")
 
@@ -231,21 +235,28 @@ def main():
     for g in graphs:
         gid = g["graph_id"]
         per_graph[gid] = eval_graph(g, cfg)
+        per_graph[gid]["_n_named"] = len(g["named_edges"])
         fm = per_graph[gid]["field_mean"]["named"]
         for a in NEW_ARMS:
             v = per_graph[gid][a]["named"]
             if fm is not None and v is not None and v > fm:
+                n_named_g = per_graph[gid]["_n_named"]
+                margin_edges = (v - fm) * n_named_g
                 boss.append({"graph_id": gid, "arm": a,
                              "baseline_named": v, "field_mean_named": fm,
-                             "margin": round(v - fm, 4)})
+                             "margin": round(v - fm, 4),
+                             "margin_edges": round(margin_edges, 2),
+                             "gate_pass": bool(margin_edges >= BOSS_GATE_EDGES)})
     out = {"experiment": "deposon_v20_baselines", "spec_version": "v2.0",
            "spec": "docs/BASELINE_REGISTRY.md（基线注册表补齐）",
            "config": config_dict(cfg),
            "new_arms": list(NEW_ARMS),
            "n2v_budgets": N2V_CONFIGS, "n2v_full_refs": list(N2V_FULL_REFS),
            "per_graph": per_graph,
-           "boss_alert": bool(boss),
-           "boss_events": boss,
+           "boss_alert": bool([e for e in boss if e["gate_pass"]]),
+           "boss_events": [e for e in boss if e["gate_pass"]],
+           "boss_events_below_gate": [e for e in boss if not e["gate_pass"]],
+           "boss_gate_edges": BOSS_GATE_EDGES,
            "runtime_sec": round(time.time() - t0, 3),
            "honesty": [
                "no LLM API calls issued：全部基线本地计算。",
@@ -258,7 +269,12 @@ def main():
                "ngram_tfidf_cosine 为标签 embedding 余弦的零 API 代理（字符 3-gram "
                "TF-IDF），与真实 embedding 余弦有差距，如实标注。",
                "boss_alert 逐图列出：任一基线 named 击败 field_mean 即头条披露"
-               "（注册表收编纪律 #2），不埋没。",
+               "（注册表收编纪律 #2），不埋没；v2.0.1 起加统计门槛"
+               "（margin ≥3 条金边，R1 复核：tiebreak 抽签可产生 ≤2 边假 margin，"
+               "被拦事件列于 boss_events_below_gate 如实保留）。"
+               "tfidf 在族 S 合成图上余弦近全零（S4 金边 >0 仅 0/58），"
+               "其排序由 1e-9 tiebreak 抽签主导——实质为伪装随机臂（R1 实跑），"
+               "语义臂在标签脱钩图上不作语义性解读。",
                "判定机械求值，负面如实。"]}
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
