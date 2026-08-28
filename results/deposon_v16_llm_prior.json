@@ -1,0 +1,210 @@
+{
+ "experiment": "deposon_v16_llm_prior",
+ "spec_version": "v1.6",
+ "config": {
+  "n_steps": 50,
+  "beta_schedule": "linear",
+  "prior": "uniform_out",
+  "lr": 0.1,
+  "lam_smooth": 0.01,
+  "field_guidance": true,
+  "energy_mode": "aggregate",
+  "seed": 0
+ },
+ "llm_prior": {
+  "source": "live_api",
+  "cache": "results/llm_prior_cache.json",
+  "prompt_sha256": "5ff58f657c6c634eae1726e6ea22cd8ae56e1f0c0b23d4892e1bfdfd91c2c43b",
+  "n_prior_edges": 9,
+  "prior_edge_map": {
+   "(6, 7)": 0.95,
+   "(0, 4)": 0.95,
+   "(9, 1)": 0.9,
+   "(1, 2)": 0.9,
+   "(0, 3)": 0.85,
+   "(0, 2)": 0.85,
+   "(8, 9)": 0.85,
+   "(1, 5)": 0.8,
+   "(0, 1)": 0.8
+  }
+ },
+ "experiment_B": {
+  "protocol": "leave-one-out top-3 hit rate, N_NEG=10, seed=70000+ei",
+  "n_edges": 49,
+  "arms": {
+   "field_guided": {
+    "top3_hit": {
+     "mean": 0.32653061224489793,
+     "std": 0.468922186767971,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.17647058823529413,
+     "std": 0.38123134465465608,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.40625,
+     "std": 0.49124046354128924,
+     "n": 32
+    }
+   },
+   "random": {
+    "top3_hit": {
+     "mean": 0.32653061224489793,
+     "std": 0.468922186767971,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.4117647058823529,
+     "std": 0.49223596196227185,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.28125,
+     "std": 0.4496115346384855,
+     "n": 32
+    }
+   },
+   "degree": {
+    "top3_hit": {
+     "mean": 0.12244897959183673,
+     "std": 0.3276739572667575,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.35294117647058826,
+     "std": 0.47784453885338107,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.0,
+     "std": 0.0,
+     "n": 32
+    }
+   },
+   "llm_prior": {
+    "top3_hit": {
+     "mean": 0.24489795918367346,
+     "std": 0.4300266837899077,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.23529411764705882,
+     "std": 0.42432198968187736,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.25,
+     "std": 0.4330127018922193,
+     "n": 32
+    }
+   },
+   "hybrid@0.25": {
+    "top3_hit": {
+     "mean": 0.3673469387755102,
+     "std": 0.48229165558250523,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.29411764705882354,
+     "std": 0.45584230583872585,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.40625,
+     "std": 0.49124046354128924,
+     "n": 32
+    }
+   },
+   "hybrid@0.5": {
+    "top3_hit": {
+     "mean": 0.3673469387755102,
+     "std": 0.48229165558250523,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.29411764705882354,
+     "std": 0.45584230583872585,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.40625,
+     "std": 0.49124046354128924,
+     "n": 32
+    }
+   },
+   "hybrid@1.0": {
+    "top3_hit": {
+     "mean": 0.3673469387755102,
+     "std": 0.48229165558250523,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.29411764705882354,
+     "std": 0.45584230583872585,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.40625,
+     "std": 0.49124046354128924,
+     "n": 32
+    }
+   },
+   "hybrid@2.0": {
+    "top3_hit": {
+     "mean": 0.3673469387755102,
+     "std": 0.48229165558250523,
+     "n": 49
+    },
+    "top3_hit_named_path": {
+     "mean": 0.29411764705882354,
+     "std": 0.45584230583872585,
+     "n": 17
+    },
+    "top3_hit_filler": {
+     "mean": 0.40625,
+     "std": 0.49124046354128924,
+     "n": 32
+    }
+   }
+  }
+ },
+ "success_criteria_evaluation": {
+  "status": "evaluated",
+  "any_lambda_pass": false,
+  "per_lambda": {
+   "0.25": {
+    "named_beats_field": true,
+    "overall_beats_field": true,
+    "named_beats_random": false,
+    "pass_strong": false
+   },
+   "0.5": {
+    "named_beats_field": true,
+    "overall_beats_field": true,
+    "named_beats_random": false,
+    "pass_strong": false
+   },
+   "1.0": {
+    "named_beats_field": true,
+    "overall_beats_field": true,
+    "named_beats_random": false,
+    "pass_strong": false
+   },
+   "2.0": {
+    "named_beats_field": true,
+    "overall_beats_field": true,
+    "named_beats_random": false,
+    "pass_strong": false
+   }
+  },
+  "note": "四档 λ 全等价（量纲饱和，详见 SPEC v1.7.1 诊断）；强判据未达如实记录。"
+ },
+ "honesty": [
+  "LLM 先验来源 live_api（kimi-for-coding，1 次调用），prompt_sha256 在案；",
+  "先验 9 边中方向完全正确 2/9（6→7、8→9），无向骨架 6/9；GOAL 中心 4 边系统性反向；",
+  "named 命中中 (0,4)、(9,1) 来自全零先验行上 1e-6 tiebreak 运气，真实先验驱动命中 2/17；",
+  "预登记强判据 any_lambda_pass=false，不回溯改写。"
+ ]
+}
