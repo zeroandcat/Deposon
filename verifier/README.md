@@ -40,3 +40,6 @@
 ## v16（2026-08-28 创建）
 - 测量：1.X 论文哈希零改动（CN/EN md5 基线锁定）、文献扫描 A/B 存在且含锚点（Monderer/Sandholm/Pigou/Reversal Curse/KitBuild/Tramèr/Underclaiming）、paper/v2 骨架定稿+接续声明、RW 锚点与降级声明、密钥红线、pytest
 - 与 v15 差异：v15 验收基线扫描；v16 验收文献调研与 v2.X 论文准备（含 1.X 论文防覆盖锁）
+## v17（2026-08-28 创建）
+- 测量：deposon_fast 加固层（F1 逐位等价/F2 ≥1.2×/F3 缩放无爆炸）、基线归纳终态（≤250s/BOSS 6 事件/field 15-20/泄漏教训/双预算）、早停拒绝记录、密钥红线、pytest 200
+- 与 v16 差异：v16 验收文献与论文准备；v17 验收算法加固（含转导泄漏事故回退）
