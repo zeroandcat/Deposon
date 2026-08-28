@@ -27,7 +27,13 @@ RESULTS = os.path.join(HERE, "results")
 OUT_PATH = os.path.join(RESULTS, "deposon_v20_baselines.json")
 PPR_ALPHA = 0.85
 KATZ_BETA, KATZ_K = 0.005, 3
-N2V_DIM, N2V_WALKS, N2V_LEN, N2V_EPOCHS = 16, 40, 10, 30
+N2V_DIM, N2V_LEN = 16, 10
+# 双配置（注册表纪律：结果对训练预算的敏感性如实双报）：
+#   full = 逐边归纳训练（30 epochs/40 walks，慢速参考，~500s）
+#   cheap = 逐边归纳训练（5 epochs/10 walks，~10× 提速，默认臂）
+N2V_CONFIGS = {"full": {"walks": 40, "epochs": 30},
+               "cheap": {"walks": 10, "epochs": 5}}
+N2V_DEFAULT = "cheap"
 
 
 # ---------------------------------------------------------------- A 族结构臂
@@ -86,16 +92,22 @@ def katz_row(adj_obs, u, cand, beta=KATZ_BETA, K=KATZ_K):
     return out
 
 
-def node2vec_shallow_row(adj_obs, u, cand, seed):
+def node2vec_shallow_row(adj_obs, u, cand, seed, budget=None):
     """Node2Vec 浅近似（非完整实现，honesty 标注）：无向投影上二阶随机游走
     （p=q=1）+ 负采样 skip-gram 简化（ logistic 内积目标，d=16，5 负样/正样）。
-    供结构邻近性的嵌入代理参考，不作为 KGE 级主张。"""
+    逐边归纳训练（留边图），预算由 N2V_CONFIGS[budget] 决定（cheap 默认 /
+    full 敏感性参考）。2026-08-28 事故记录：曾尝试按图缓存（转导式，训练图
+    含金边），导致 18/20 图「获胜」——纯泄漏 artifact，已回退；归纳协议是
+    该基线有效性的前提，提速不得越过协议纯度。"""
+    budget = budget or N2V_DEFAULT
+    n_walks, n_epochs = N2V_CONFIGS[budget]["walks"], N2V_CONFIGS[budget]["epochs"]
+
     rng = np.random.default_rng(seed)
     U, deg = undirected(adj_obs)
     n = U.shape[0]
     neigh = [np.flatnonzero(U[i]) for i in range(n)]
     walks = []
-    for _ in range(N2V_WALKS):
+    for _ in range(n_walks):
         for start in range(n):
             w = [start]
             for _ in range(N2V_LEN - 1):
@@ -109,7 +121,7 @@ def node2vec_shallow_row(adj_obs, u, cand, seed):
     E1 = rng.normal(0, 0.1, (n, d))
     E2 = rng.normal(0, 0.1, (n, d))
     lr = 0.05
-    for _ in range(N2V_EPOCHS):
+    for _ in range(n_epochs):
         for w in walks[:60]:
             for i in range(1, len(w) - 1):
                 c, o = w[i], w[i + 1]
@@ -122,6 +134,11 @@ def node2vec_shallow_row(adj_obs, u, cand, seed):
                     E1[c] += g * E2[t]
                     E2[t] += g * x
                     x = E1[c]
+    return _n2v_row_from_emb(E1, E2, u, cand)
+
+
+def _n2v_row_from_emb(E1, E2, u, cand):
+    n = E1.shape[0]
     s = np.full(n, -np.inf)
     s[cand] = (E1[u] * E2[cand]).sum(axis=1)
     return s
@@ -156,6 +173,8 @@ def ngram_tfidf_cosine_row(labels, u, cand, n=3):
 # ---------------------------------------------------------------- 主评估
 NEW_ARMS = ("common_neighbors", "preferential_attachment", "ppr", "katz",
             "node2vec_shallow", "ngram_tfidf_cosine")
+# full 预算参考子集（归纳全速配置仅跑两图作敏感性对照）
+N2V_FULL_REFS = ("S6", "L_biological_taxonomy")
 
 
 def eval_graph(graph, cfg):
@@ -167,7 +186,10 @@ def eval_graph(graph, cfg):
         adj[u, v] = 1.0
     W_true = row_normalize(adj)
     g_seed = int(graph["seed"])
-    hits = {a: {"named": [], "filler": []} for a in ("field_mean",) + NEW_ARMS}
+    arms_here = list(NEW_ARMS)
+    if graph["graph_id"] in N2V_FULL_REFS:
+        arms_here.append("node2vec_full")
+    hits = {a: {"named": [], "filler": []} for a in ("field_mean",) + tuple(arms_here)}
     for ei, (u, v) in enumerate(edges):
         rng = np.random.default_rng(g_seed * 100_003 + ei)
         adj_obs = adj.copy(); adj_obs[u, v] = 0.0
@@ -184,9 +206,13 @@ def eval_graph(graph, cfg):
             s = fn(adj_obs, u, cand)
             s[cand] += 1e-9 * tb
             rows[name] = s
-        s = node2vec_shallow_row(adj_obs, u, cand, g_seed + ei)
+        s = node2vec_shallow_row(adj_obs, u, cand, g_seed + ei, budget="cheap")
         s[cand] += 1e-9 * tb
         rows["node2vec_shallow"] = s
+        if "node2vec_full" in hits:
+            s2 = node2vec_shallow_row(adj_obs, u, cand, g_seed + ei, budget="full")
+            s2[cand] += 1e-9 * tb
+            rows["node2vec_full"] = s2
         s = ngram_tfidf_cosine_row(graph["labels"], u, cand)
         s[cand] += 1e-9 * tb
         rows["ngram_tfidf_cosine"] = s
@@ -216,6 +242,7 @@ def main():
            "spec": "docs/BASELINE_REGISTRY.md（基线注册表补齐）",
            "config": config_dict(cfg),
            "new_arms": list(NEW_ARMS),
+           "n2v_budgets": N2V_CONFIGS, "n2v_full_refs": list(N2V_FULL_REFS),
            "per_graph": per_graph,
            "boss_alert": bool(boss),
            "boss_events": boss,
@@ -223,7 +250,11 @@ def main():
            "honesty": [
                "no LLM API calls issued：全部基线本地计算。",
                "node2vec_shallow 为纯 numpy 浅近似（p=q=1 二阶游走 + 简化 skip-gram），"
-               "非完整 Node2Vec 实现，仅作结构邻近嵌入代理，不作 KGE 级主张。",
+               "非完整 Node2Vec 实现，仅作结构邻近嵌入代理，不作 KGE 级主张；"
+               "逐边归纳训练（留边图）。双预算如实双报：cheap（默认臂，~44s 全语料）"
+               "与 full（两图敏感性参考）。曾试按图缓存的转导式（训练图含金边），"
+               "造成 18/20 图假胜利——泄漏 artifact 已回退，教训：归纳协议是该基线"
+               "有效性的前提，提速不得越过协议纯度。",
                "ngram_tfidf_cosine 为标签 embedding 余弦的零 API 代理（字符 3-gram "
                "TF-IDF），与真实 embedding 余弦有差距，如实标注。",
                "boss_alert 逐图列出：任一基线 named 击败 field_mean 即头条披露"
