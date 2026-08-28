@@ -1,0 +1,167 @@
+{
+ "experiment": "deposon_v20_gt",
+ "spec_version": "v2.0",
+ "spec": "docs/SPEC_v2.0.md §3（GT-1 / GT-4，先于族 L 完成）",
+ "config": {
+  "n_steps": 50,
+  "beta_schedule": "linear",
+  "prior": "uniform_out",
+  "lr": 0.1,
+  "lam_smooth": 0.01,
+  "field_guidance": true,
+  "energy_mode": "aggregate",
+  "seed": 0
+ },
+ "GT1_potential_game_convergence": {
+  "graph": "S6",
+  "n_tasks": 10,
+  "task_edges": [
+   [
+    0,
+    10
+   ],
+   [
+    0,
+    11
+   ],
+   [
+    0,
+    3
+   ],
+   [
+    0,
+    8
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    0,
+    5
+   ],
+   [
+    9,
+    1
+   ],
+   [
+    0,
+    6
+   ]
+  ],
+  "sample_seed": 777,
+  "protocol": "同一批 named 留一任务（全候选 E9.2 口径）；dirichlet inst_seed=300000+run*1000+k，T=20 独立运行；mean-field 为确定性极限（与 seed 无关，单次）",
+  "meanfield_named_hits3": 0.4,
+  "dirichlet_named_hits3_per_run": [
+   0.1,
+   0.0,
+   0.2,
+   0.1,
+   0.2,
+   0.1,
+   0.1,
+   0.2,
+   0.1,
+   0.0,
+   0.3,
+   0.0,
+   0.1,
+   0.0,
+   0.1,
+   0.2,
+   0.0,
+   0.0,
+   0.0,
+   0.2
+  ],
+  "verdict": {
+   "supported_potential_game": true,
+   "verdict": "supports_potential_game_framework",
+   "dirichlet_mean_rate": 0.1,
+   "meanfield_rate": 0.4,
+   "gap_meanfield_minus_dirichlet_mean": 0.30000000000000004,
+   "n_runs_below_meanfield": 20,
+   "n_runs": 20,
+   "margin": 0.2,
+   "min_losers": 15
+  }
+ },
+ "GT4_price_of_anarchy": {
+  "selfish_arms": [
+   "random",
+   "degree"
+  ],
+  "selfish_arms_preregistered": [
+   "random",
+   "degree",
+   "llm_prior"
+  ],
+  "deviation": "llm_prior 族 S 不可得（no LLM API calls issued，SPEC §1：先验臂在族 L 才主报）⇒ 自利集退化为 {random, degree}，如实披露",
+  "poa_per_graph": {
+   "L_algorithm_process": 3.0,
+   "L_biological_taxonomy": 1.0,
+   "L_historical_causality": 0.5,
+   "L_physics_concepts": 0.75,
+   "S1": "Infinity",
+   "S1_n35": 1.5000000000000002,
+   "S1_n45": 1.4999999999999998,
+   "S1_n60": 1.0,
+   "S2": "Infinity",
+   "S2_n20": 2.0,
+   "S2_n35": 2.0,
+   "S2_n45": 0.5,
+   "S2_n60": 2.0,
+   "S3": 2.0,
+   "S4": 2.3333333333333335,
+   "S5": "Infinity",
+   "S6": 1.3333333333333333,
+   "S6_n20": 1.3333333333333333,
+   "S6_n35": 1.3333333333333333,
+   "S6_n60": 1.3333333333333333
+  },
+  "verdict": {
+   "verdict": "field_coordination_value_supported",
+   "median_poa": 1.3333333333333333,
+   "poa_per_graph_finite": {
+    "L_algorithm_process": 3.0,
+    "L_biological_taxonomy": 1.0,
+    "L_historical_causality": 0.5,
+    "L_physics_concepts": 0.75,
+    "S1_n35": 1.5000000000000002,
+    "S1_n45": 1.4999999999999998,
+    "S1_n60": 1.0,
+    "S2_n20": 2.0,
+    "S2_n35": 2.0,
+    "S2_n45": 0.5,
+    "S2_n60": 2.0,
+    "S3": 2.0,
+    "S4": 2.3333333333333335,
+    "S6": 1.3333333333333333,
+    "S6_n20": 1.3333333333333333,
+    "S6_n35": 1.3333333333333333,
+    "S6_n60": 1.3333333333333333
+   },
+   "n_poa_inf": 3,
+   "n_poa_undefined": 0,
+   "pass_threshold": 1.2,
+   "dead_threshold": 1.05
+  },
+  "note": "PoA=Infinity：自利臂 named=0 而 field_mean>0（场相对自利臂无穷协调价值，不进入 median，单独计数）"
+ },
+ "runtime_sec": 9.435,
+ "honesty": [
+  "no LLM API calls issued: GT-1/GT-4 全部本地确定性/种子化运行。",
+  "GT-1 判定规则机械求值：dirichlet 均值 < mean-field − 0.2 且 ≥15/20 运行劣于 mean-field → 支持势博弈框架；否则判死。",
+  "GT-4 自利集退化：llm_prior 族 S 不可得，按 {random, degree} 计 PoA，相对预登记自利集为弱化口径（分母只可能更小 ⇒ PoA 只可能偏大），结论方向性如实披露。",
+  "median PoA 落在 (1.05, 1.2] 区间时预登记未定义，报 inconclusive，不向任一方向美化。",
+  "阴性结果如实写入 verdict，不美化。"
+ ]
+}
