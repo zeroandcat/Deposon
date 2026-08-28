@@ -4,6 +4,8 @@
 > 每行记录 sha256 与再生命令，任何人可本地复算校验。
 > 更正（2026-08-28）：quizbank_v20_big 与 bigquiz_eval 两条曾因传输笔误写入占位哈希，
 > 已更正为真实值（本文件为准）。
+> 注（2026-08-29，R2/E1-N2）：语料相关再生命令的产出依赖活语料状态（20→22 图），
+> 「确定性再生」只对语料快照成立；冻结快照以 corpus/v20/index.json 的 sha256 为准钉版。
 
 - `results/deposon_v15_diffusion.json`  
   sha256: `c16d1768d1cad8651a9e852dc7f0e2d3fb42cea17ebdb8c58c0bd43c6e62e56a`  
@@ -27,8 +29,9 @@
   sha256: `556086d9e3bc1c7f85bf76d5dbee0e2126aa0b879f0258023c666900be3d28d8`  
   再生: `python3 run_v17_fusion_fix.py`
 - `results/deposon_v20_corpus_eval.json`  
-  sha256: `c4b04014491669fbf22e97188cb5ed24fb236a21b0c62c4a92a5bcb0427785f3`  
-  再生: `python3 run_v20_corpus_eval.py --families=S,L`
+  sha256: `ca71aa6858e16521...`（22 图重跑后新值，本地为准）  
+  再生: `python3 run_v20_corpus_eval.py --families=S,L`  
+  注: 2026-08-29 22 图重跑后 sha 已更新（语料 20→22 图，快照钉 index.json）
 - `results/deposon_v17_fixed_sampler.json`  
   sha256: `701ad291a714f75c79967f569059c463057a238119668416d156194b4b95f765`  
   再生: `python3 run_v17_fusion_fix.py  # fixed_sampler 由 v1.7.1 管线产生`

@@ -3,10 +3,12 @@
 #   → results/deposon_v20_photonics.json
 # 实验（兑现 v1.4 roadmap「PCM/MZI/ECM → 光子芯片」前瞻）：
 #   P1 等价性：抽象散射 t/r/a vs 硬件级 ring+MZI+PCM 实现（守恒 + 排序一致）；
-#   P2 损耗预算与可行性：22 图逐图最大路径损耗 dB 与可探测性（NEP 判据），
+#   P2 损耗预算与可行性：22 图逐图真实最长路径损耗 dB 与可探测性（NEP 判据），
 #      给出"当前集成工艺可制造的图规模"判定；
 #   P3 拓扑优化：naive/bus/hybrid 三拓扑组件数与总插损对比，推荐配置；
 #   P4 退火=相位斜坡：非理想相位噪声敏感性（保真度曲线）。
+# 修正史（R1 深探实锤）：NEP 单位 bug（1 pW=1e-9 mW，曾误 ×1e-3 下限严 10^6 倍）
+# + max_hops=10 截断 + 索引贪心 → 真最长路径 DP + 单位修正，14/22→18/22、≈27 跳。
 # no LLM API calls issued。
 import json
 import os
@@ -39,7 +41,7 @@ def p1_equivalence(graphs):
 
 
 def p2_feasibility(graphs):
-    """逐图：最长可行路径损耗 + 可探测性（残余功率 vs NEP×√1Hz 的 10× 判据）。"""
+    """逐图：真实最长路径（DAG DP）损耗 + 可探测性（残余功率 vs NEP 判据）。"""
     per_graph = {}
     for gid, g in graphs.items():
         N = g["N"]
@@ -47,21 +49,26 @@ def p2_feasibility(graphs):
         for (u, v) in [tuple(e) for e in g["edges"]]:
             adj[u, v] = 1.0
         nl = ph.compile_graph_to_netlist(adj, g["source"], g["target"])
-        # 用最长 named 链近似最大路径（按 named_edges 估链长）
-        max_hops = max(2, min(10, len(g["named_edges"])))
-        # 构造一条 max_hops 长路径：从 source 沿邻接贪心走
-        path = [g["source"]]
-        cur, seen = g["source"], {g["source"]}
-        while len(path) < max_hops:
-            nxt = [v for v in range(N) if adj[cur, v] > 0 and v not in seen]
-            if not nxt:
-                break
-            cur = nxt[0]
-            seen.add(cur)
-            path.append(cur)
+        # 真实最长路径（DAG 上 DP，从 source 出发；R1 复核修正：原为
+        # min(10, n_named) 任意截断 + 索引贪心，S1 19 跳被截 9 跳）
+        order = sorted(range(N))
+        dist = {g["source"]: 0}
+        parent = {}
+        for u in order:
+            if u not in dist:
+                continue
+            for v in range(N):
+                if adj[u, v] > 0 and dist.get(v, -1) < dist[u] + 1:
+                    dist[v] = dist[u] + 1
+                    parent[v] = u
+        end = max(dist, key=dist.get)
+        path = [end]
+        while path[-1] != g["source"]:
+            path.append(parent[path[-1]])
+        path = path[::-1]
         loss = ph.netlist_loss_db(nl, path)
         residual_mw = ph.path_transmission(nl, path)
-        nep_floor_mw = 10 * ph.P["nep_pw"] * 1e-3  # 10× NEP@1Hz, pW→mW
+        nep_floor_mw = 10 * ph.P["nep_pw"] * 1e-9  # 10× NEP@1Hz, pW→mW（1 pW=1e-9 mW；R1 复核修正：曾误 ×1e-3 使下限严 10^6 倍）
         per_graph[gid] = {"N": N, "path_hops": len(path) - 1,
                           "loss_db": round(loss, 2),
                           "residual_mw": float(f"{residual_mw:.3e}"),
@@ -71,11 +78,15 @@ def p2_feasibility(graphs):
     return {"per_graph": per_graph, "detectable_graphs": f"{n_ok}/{len(per_graph)}",
             "max_path_loss_db": max_loss,
             "detection_rule": "残余功率 > 10×NEP@1Hz（1 pW/√Hz，TYPICAL）",
-            "feasibility_note": "22 图中 14 图可探测、8 图不可探测（长路径累积"
-                              "损耗 >40 dB，残余 <10×NEP）——规模边界是真实的："
-                              "每跳 ~2.9 dB，>14 跳即耗尽 SNR 余量；复杂脑图"
-                              "（长链/深层结构）需中继放大或更低损耗工艺，"
-                              "枢纽型浅层结构（S6 族）天然适配光子实现。"}
+            "feasibility_note": (
+                f"22 图中 {n_ok} 图可探测、{len(per_graph)-n_ok} 图不可探测"
+                "（真最长路径 DP 口径，R1 复核修正后）：规模定律每跳 ~2.9 dB，"
+                "10×NEP@1Hz（正确单位 1 pW=1e-9 mW）对应阈值 ≈27 跳；"
+                "不可探测图 = 长链/深层结构（S1 族长链 34–59 跳、"
+                "L_algorithm_process 29 跳），需中继放大或更低损耗工艺；"
+                "枢纽型浅层结构（S6 族 2 跳、L 多数 ≤20 跳）天然适配光子实现。"
+                "修正史：曾因 NEP 单位错（×1e-3）得 14/22 与「14 跳」伪规则，"
+                "且 max_hops=10 截断掩盖真实链长，经 R1 深探实锤更正。")}
 
 
 def p3_topology(graphs):
