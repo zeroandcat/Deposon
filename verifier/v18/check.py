@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # verifier/v18 — 大型题库验证与空间释放验收（v17 冻结不可变）
+# 注（2026-08-29 R2/E2 整改）：corpus 图数断言改为下界（防语料生长 retroactively 打破）
 import json, re, subprocess, sys, os
 from pathlib import Path
 
@@ -34,7 +35,7 @@ for d in ["geography_world", "project_management"]:
         check(f"{dd}/{d}（sha+response）",
               ok and bool(rec.get("prompt_sha256")) and bool(rec.get("response_text")))
 idx = json.load(open(ROOT / "corpus/v20/index.json"))
-check("corpus index 已重建 22 图", idx["n_graphs"] == 22)
+check("corpus index ≥22 图", idx["n_graphs"] >= 22, str(idx["n_graphs"]))
 
 # 3. 空间释放留痕
 rl = json.load(open(ROOT / "docs/space_release_log.json"))
