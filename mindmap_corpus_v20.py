@@ -365,9 +365,10 @@ def load_corpus(corpus_dir: str = CORPUS_DIR, families=("S",)) -> list:
 # ---------------------------------------------------------------- 族 L（LLM 生成族）
 # 只构造 prompt 与解析校验响应；API 调用由主代理另行执行（本模块不发起任何
 # LLM 调用）。主题域按 SPEC §1 对立统一：两个「抽象→具体」域 + 两个
-# 「过程→结果」域。预算 ≤ 8 prompt × 2 次尝试（SPEC §5）。
+# 「过程→结果」域；v2.0-BigQuiz 扩展为 6 域（+geography_world/project_management）。
 FAMILY_L_DOMAINS = ("physics_concepts", "biological_taxonomy",
-                    "algorithm_process", "historical_causality")
+                    "algorithm_process", "historical_causality",
+                    "geography_world", "project_management")
 FAMILY_L_MIN_NODES, FAMILY_L_MAX_NODES = 30, 45
 
 _DOMAIN_BRIEF = {
@@ -383,6 +384,12 @@ _DOMAIN_BRIEF = {
     "historical_causality": (
         "历史因果（过程→结果：从背景/起因经关键事件指向结果/影响，"
         "方向语义 = 原因指向结果）"),
+    "geography_world": (
+        "世界地理层级（抽象→具体：从「世界」逐层细化到大洲/国家/"
+        "城市/地标，方向语义 = 大区域指向其组成部分）"),
+    "project_management": (
+        "项目管理流程（过程→结果：从立项/需求经计划/执行/监控"
+        "到交付/复盘，方向语义 = 前驱阶段指向后继阶段）"),
 }
 
 _PROMPT_TEMPLATE = """你是一个概念脑图构建器。请为主题域「{domain}」构建一张有向无环概念脑图。
@@ -401,7 +408,7 @@ _PROMPT_TEMPLATE = """你是一个概念脑图构建器。请为主题域「{dom
 
 
 def build_familyL_prompts() -> dict:
-    """按 SPEC §1 族 L 生成 4 个主题域的建图 prompt（不执行 API）。
+    """按 SPEC §1 族 L 生成 6 个主题域的建图 prompt（不执行 API）。
     返回 {domain: prompt}。"""
     return {d: _PROMPT_TEMPLATE.format(domain=d, brief=_DOMAIN_BRIEF[d])
             for d in FAMILY_L_DOMAINS}
