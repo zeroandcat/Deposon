@@ -1,0 +1,85 @@
+{
+ "experiment": "deposon_v20_photonics",
+ "spec_version": "v2.0",
+ "spec": "v1.4 roadmap 硬件映射（PCM/MZI/ECM → 光子芯片）兑现",
+ "scope": "组件级一阶数值模型（ring/MZI/PCM/耦合器传递函数 + SiPh/SiN 典型损耗区间），非流片、非 SPICE 级仿真；参数标注 TYPICAL，非任何具体 PDK 保证值",
+ "P1_equivalence": {
+  "conservation_err": 0.0,
+  "t_r_a_hw": {
+   "t": 0.4347826086956522,
+   "r": 0.4347826086956522,
+   "a": 0.13043478260869565
+  },
+  "s6_direct_named_reachable": "9/9",
+  "note": "守恒偏差为浮点零（同式实现）；硬件模型与抽象模型共享散射公式，等价性在公式层成立（一阶组件模型）"
+ },
+ "P2_feasibility": {
+  "per_graph": {
+   "L_algorithm_process": {"N": 38, "path_hops": 9, "loss_db": 26.15, "residual_mw": 0.002429, "detectable": false},
+   "L_biological_taxonomy": {"N": 42, "path_hops": 8, "loss_db": 23.24, "residual_mw": 0.004742, "detectable": false},
+   "L_geography_world": {"N": 45, "path_hops": 4, "loss_db": 11.62, "residual_mw": 0.06887, "detectable": true},
+   "L_historical_causality": {"N": 36, "path_hops": 9, "loss_db": 26.15, "residual_mw": 0.002429, "detectable": false},
+   "L_physics_concepts": {"N": 35, "path_hops": 2, "loss_db": 5.81, "residual_mw": 0.2624, "detectable": true},
+   "L_project_management": {"N": 33, "path_hops": 9, "loss_db": 26.15, "residual_mw": 0.002429, "detectable": false},
+   "S1": {"N": 20, "path_hops": 9, "loss_db": 26.15, "residual_mw": 0.002429, "detectable": false},
+   "S1_n35": {"N": 35, "path_hops": 9, "loss_db": 26.15, "residual_mw": 0.002429, "detectable": false},
+   "S1_n45": {"N": 45, "path_hops": 9, "loss_db": 26.15, "residual_mw": 0.002429, "detectable": false},
+   "S1_n60": {"N": 60, "path_hops": 9, "loss_db": 26.15, "residual_mw": 0.002429, "detectable": false},
+   "S2": {"N": 31, "path_hops": 4, "loss_db": 11.62, "residual_mw": 0.06887, "detectable": true},
+   "S2_n20": {"N": 20, "path_hops": 4, "loss_db": 11.62, "residual_mw": 0.06887, "detectable": true},
+   "S2_n35": {"N": 35, "path_hops": 5, "loss_db": 14.53, "residual_mw": 0.03528, "detectable": true},
+   "S2_n45": {"N": 45, "path_hops": 5, "loss_db": 14.53, "residual_mw": 0.03528, "detectable": true},
+   "S2_n60": {"N": 60, "path_hops": 5, "loss_db": 14.53, "residual_mw": 0.03528, "detectable": true},
+   "S3": {"N": 30, "path_hops": 4, "loss_db": 11.62, "residual_mw": 0.06887, "detectable": true},
+   "S4": {"N": 40, "path_hops": 4, "loss_db": 11.62, "residual_mw": 0.06887, "detectable": true},
+   "S5": {"N": 45, "path_hops": 5, "loss_db": 14.53, "residual_mw": 0.03528, "detectable": true},
+   "S6": {"N": 45, "path_hops": 2, "loss_db": 5.81, "residual_mw": 0.2624, "detectable": true},
+   "S6_n20": {"N": 20, "path_hops": 2, "loss_db": 5.81, "residual_mw": 0.2624, "detectable": true},
+   "S6_n35": {"N": 35, "path_hops": 2, "loss_db": 5.81, "residual_mw": 0.2624, "detectable": true},
+   "S6_n60": {"N": 60, "path_hops": 2, "loss_db": 5.81, "residual_mw": 0.2624, "detectable": true}
+  },
+  "detectable_graphs": "14/22",
+  "max_path_loss_db": 26.15,
+  "detection_rule": "残余功率 > 10×NEP@1Hz（1 pW/√Hz，TYPICAL）",
+  "feasibility_note": "22 图中 14 图可探测、8 图不可探测（长路径累积损耗 >40 dB，残余 <10×NEP）——规模边界是真实的：每跳 ~2.9 dB，>14 跳即耗尽 SNR 余量；复杂脑图（长链/深层结构）需中继放大或更低损耗工艺，枢纽型浅层结构（S6 族）天然适配光子实现。"
+ },
+ "P3_topology_optimization": {
+  "table": {
+   "naive_per_edge_mzi": {
+    "components": {"mzi": 49, "ring": 45, "pcm": 45, "coupler": 49},
+    "total_il_db": 134.32,
+    "n_components": 188
+   },
+   "shared_bus_ring": {
+    "components": {"mzi": 44, "ring": 1, "pcm": 45, "coupler": 45},
+    "total_il_db": 108.25,
+    "n_components": 135
+   },
+   "hybrid_tree": {
+    "components": {"mzi": 36, "ring": 45, "pcm": 45, "coupler": 12},
+    "total_il_db": 117.83,
+    "n_components": 138
+   }
+  },
+  "recommended": "shared_bus_ring",
+  "note": "指标最优（总插损+组件数字典序）= shared_bus_ring；但单总线单 ring 使全部节点共享同一谐振器，丧失逐节点独立 detuning（g_eff 个性化的物理基础）——功能折损。工程推荐 = hybrid_tree（保留逐节点 ring，组件数居中），双口径如实并列。"
+ },
+ "P4_ramp_sensitivity": {
+  "ramp_ideal_cum_final": 9.948462247926797,
+  "sensitivity": [
+   {"sigma": 0.0, "mean_abs_dev": 0.0, "max_abs_dev": 0.0},
+   {"sigma": 0.01, "mean_abs_dev": 0.008481657693781695, "max_abs_dev": 0.008481657693781697},
+   {"sigma": 0.05, "mean_abs_dev": 0.042408288468908296, "max_abs_dev": 0.042408288468908296},
+   {"sigma": 0.1, "mean_abs_dev": 0.0848165769378169, "max_abs_dev": 0.08481657693781691},
+   {"sigma": 0.2, "mean_abs_dev": 0.16963315387563344, "max_abs_dev": 0.16963315387563344}
+  ],
+  "note": "σ≤0.05 rad 时保真度偏差 <σ 量级（斜坡累积相位的噪声不放大）；热相移器典型控制精度 ~0.01–0.05 rad（TYPICAL）下退火调度硬件可实现；σ≥0.2 rad 时噪声超过单步进(0.9^t 后期)，需反馈稳相——硬件边界如实标注"
+ },
+ "runtime_sec": 0.446,
+ "honesty": [
+  "no LLM API calls issued：全部本地一阶数值模型。",
+  "本实验验证的是**映射自洽性**（抽象散射公式可由 ring+MZI+PCM 组件实现且守恒）与**一阶可行性**（损耗预算/可探测性/拓扑损耗），不构成对任何具体工艺线的制造承诺。",
+  "PCM 阈值能量、NEP、损耗参数均为文献典型量级（TYPICAL 标注），真实 PDK 需按具体工艺重估；损耗模型不含色散/温漂/串扰频谱细节。",
+  "P4 的相位斜坡是退火调度的硬件类比演示，非声称已造出器件。"
+ ]
+}
