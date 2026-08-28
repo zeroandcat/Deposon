@@ -29,9 +29,9 @@
   sha256: `556086d9e3bc1c7f85bf76d5dbee0e2126aa0b879f0258023c666900be3d28d8`  
   再生: `python3 run_v17_fusion_fix.py`
 - `results/deposon_v20_corpus_eval.json`  
-  sha256: `ca71aa6858e16521...`（22 图重跑后新值，本地为准）  
+  sha256: `ca71aa6858e16521419f124cb2d03cc77be2466f02b5b4a03a8ec7bde8f99430`  
   再生: `python3 run_v20_corpus_eval.py --families=S,L`  
-  注: 2026-08-29 22 图重跑后 sha 已更新（语料 20→22 图，快照钉 index.json）
+  注: 2026-08-29 22 图重跑后 sha 已更新为 ca71aa6858e16521…（语料 20→22 图，快照钉 index.json）
 - `results/deposon_v17_fixed_sampler.json`  
   sha256: `701ad291a714f75c79967f569059c463057a238119668416d156194b4b95f765`  
   再生: `python3 run_v17_fusion_fix.py  # fixed_sampler 由 v1.7.1 管线产生`

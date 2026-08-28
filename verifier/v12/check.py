@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # verifier/v12 — v2.0 多图语料 + GT 首批验收（v11 冻结不可变）
+# 注（2026-08-29 R2/E2 整改）：族 L 计数断言改为下界（防语料生长 retroactively 打破）
 import json, re, subprocess, sys
 from pathlib import Path
 
@@ -11,16 +12,44 @@ def check(name, ok, detail=""):
     if not ok:
         FAILS.append(name)
 
-# 1. 语料完整性
+# ---------- 1. v1.9 实验文件与判定 ----------
+spec = (ROOT / "docs/SPEC_v1.9.md").read_text(encoding="utf-8")
+check("SPEC v1.9 Part A 存在", "Part A" in spec and "E9.1" in spec and "E9.6" in spec)
+check("SPEC v1.9 Part B 存在", "Part B" in spec and "E9.3" in spec and "E9.5" in spec)
+
+mf = json.load(open(ROOT / "results/deposon_v19_meanfield.json"))
+se = mf["success_evaluation"]
+check("E9.1 H1 成立", se["H1_random_init_is_root_cause"] is True)
+check("E9.1 field_mean named=1.0", abs(se["field_mean_named"] - 1.0) < 1e-9)
+check("E9.1 filler<0.15 骨架检测器", se["H2_skeleton_detector_filler_below_0.15"] is True)
+check("E9.1 spec_version", mf["spec_version"] == "v1.9")
+
+fr = json.load(open(ROOT / "results/deposon_v19_fullrank.json"))
+check("E9.2 spec_version", fr["spec_version"] == "v1.9")
+qw = json.load(open(ROOT / "results/deposon_v19_quickwins.json"))
+st = qw["E9_6a_sign_tests"]
+k_rh = [k for k in st if k.startswith("random_minus_hybrid")][0]
+k_hf = [k for k in st if "minus_field" in k][0]
+check("E9.6a 符号检验复现 R3 (random≥hybrid)",
+      abs(st[k_rh]["p_exact"] - 0.001312) < 1e-4, str(st[k_rh]["p_exact"]))
+check("E9.6a 符号检验复现 R3 (hybrid>field)",
+      abs(st[k_hf]["p_exact"] - 0.007538) < 1e-4, str(st[k_hf]["p_exact"]))
+bf = json.load(open(ROOT / "results/deposon_v19_benchmark_fixes.json"))
+txt_bf = json.dumps(bf, ensure_ascii=False)
+check("E9.3 high_couple=0.82 在案", "0.82" in txt_bf)
+check("E9.4 等权对照记录在案", "flat" in txt_bf.lower() or "FLAT_WEIGHT" in txt_bf)
+check("E9.5 规则基线在案", "rule" in txt_bf.lower())
+
+# ---------- 2. v2.0 语料与判定 ----------
 idx = json.load(open(ROOT / "corpus/v20/index.json"))
 graphs = idx.get("graphs", idx) if isinstance(idx, dict) else idx
 n_graphs = len(graphs) if isinstance(graphs, list) else idx.get("n_graphs")
-check("语料 ≥20 图（16 S 族 + 4 L 族）", (n_graphs or 0) >= 20, f"n={n_graphs}")
+check("语料 ≥20 图", (n_graphs or 0) >= 20, f"n={n_graphs}")
 L_ids = [g["graph_id"] for g in (graphs if isinstance(graphs, list) else [])
          if str(g.get("graph_id", "")).startswith("L")]
-check("族 L 4 图在册", len(L_ids) == 4, str(L_ids))
+check("族 L ≥4 图在册", len(L_ids) >= 4, str(L_ids))
 
-# 2. 族 L provenance
+# 2b. 族 L provenance
 for d in ["physics_concepts", "biological_taxonomy", "algorithm_process", "historical_causality"]:
     p = ROOT / f"results/familyL_cache/{d}.json"
     ok = p.exists()
@@ -56,17 +85,16 @@ check("GT-4 族L负协调如实披露（≥2 张 PoA<1）",
       sum(1 for x in poa_l.values() if x < 1.0) >= 2, str(poa_l))
 
 # 5. 文档与红线
-watch = "sk-" + "kimi-"  # 通用密钥前缀（安全删改：不再含任何真实 key 片段）
 fd = (ROOT / "docs/Findings_v2.0.md").read_text(encoding="utf-8")
 for kw in ["量变质变", "否定之否定", "对立统一", "斩杀线", "H-A1", "PoA", "同源污染"]:
     check(f"Findings 含「{kw}」", kw in fd)
-spec = (ROOT / "docs/SPEC_v2.0.md").read_text(encoding="utf-8")
-check("SPEC v2.0 预登记在库", "斩杀线" in spec and "GT-1" in spec)
+spec2 = (ROOT / "docs/SPEC_v2.0.md").read_text(encoding="utf-8")
+check("SPEC v2.0 预登记在库", "斩杀线" in spec2 and "GT-1" in spec2)
 leak = []
 for p in list(ROOT.glob("*.py")) + list((ROOT / "results").rglob("*.json")) \
          + list((ROOT / "corpus").rglob("*.json")) + list((ROOT / "docs").glob("*.md")):
     t = p.read_text(encoding="utf-8", errors="ignore")
-    if watch in t:
+    if ("sk-" + "kimi-") in t:
         leak.append(str(p))
 check("v2.0 资产无密钥泄露", not leak, str(leak[:3]))
 
