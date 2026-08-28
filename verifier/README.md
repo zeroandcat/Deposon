@@ -37,3 +37,6 @@
 ## v15（2026-08-28 创建）
 - 测量：基线注册表完整性、BOSS 扫描锚点（boss_alert=True/双 BOSS/field 15-20 第一/node2vec 浅近似标注）、CoT 收编（0.925/40 题/通道披露）、向量审计（1740 任务 0 违规）、文档、密钥红线、pytest
 - 与 v14 差异：v14 验收技能三联；v15 验收基线注册表+BOSS 扫描+CoT+向量属性审计
+## v16（2026-08-28 创建）
+- 测量：1.X 论文哈希零改动（CN/EN md5 基线锁定）、文献扫描 A/B 存在且含锚点（Monderer/Sandholm/Pigou/Reversal Curse/KitBuild/Tramèr/Underclaiming）、paper/v2 骨架定稿+接续声明、RW 锚点与降级声明、密钥红线、pytest
+- 与 v15 差异：v15 验收基线扫描；v16 验收文献调研与 v2.X 论文准备（含 1.X 论文防覆盖锁）
