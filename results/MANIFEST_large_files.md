@@ -2,6 +2,8 @@
 
 > 以下文件体积过大，按「无论文留痕」同原则不推送到 GitHub；
 > 每行记录 sha256 与再生命令，任何人可本地复算校验。
+> 更正（2026-08-28）：quizbank_v20_big 与 bigquiz_eval 两条曾因传输笔误写入占位哈希，
+> 已更正为真实值（本文件为准）。
 
 - `results/deposon_v15_diffusion.json`  
   sha256: `c16d1768d1cad8651a9e852dc7f0e2d3fb42cea17ebdb8c58c0bd43c6e62e56a`  
@@ -43,8 +45,8 @@
   sha256: `534c121765b132044ea29a05e2ca67723767e0089055193b3747b1a78e4f0ee7`  
   再生: `python3 /app/.agents/skills/regression-insight/scripts/regression_analyzer.py results/v20_graph_features.csv --target field_named --features "N,n_edges,density,hub_concentration,real_semantics"  # v1 全特征版（VIF 问题），v2 精简版已入库`
 - `results/quizbank_v20_big.json`  
-  sha256: `8bb7e0b0ec6a1c2f4caa8d1e2f8d3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e`  
-  再生: `python3 run_v20_bigquiz_eval.py  # 由 BANK_SEED + attacker_xl_cache 确定性再生（sha256 以本地 MANIFEST 最新值为准）`
+  sha256: `da6fecdcbbf6f94036f2a0968ce27b0ccdccd699e24e6b868ce75bdbe510aed4`  
+  再生: `python3 run_v20_bigquiz_eval.py  # 由 BANK_SEED + attacker_xl_cache 确定性再生`
 - `results/deposon_v20_bigquiz_eval.json`  
-  sha256: `1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2`  
-  再生: `python3 run_v20_bigquiz_eval.py  # 5.5s 再生；accuracy 汇总见 docs/Findings_v2.0_bigquiz.md（sha256 以本地 MANIFEST 最新值为准）`
+  sha256: `283dbc8c5b638769b6c6ecdb6afb6621c82b7704fb2c9242794a6ca81b724923`  
+  再生: `python3 run_v20_bigquiz_eval.py  # 5.5s 再生；accuracy 汇总见 docs/Findings_v2.0_bigquiz.md`
