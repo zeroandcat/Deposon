@@ -1,5 +1,6 @@
 {
  "experiment": "deposon_v16_llm_prior",
+ "spec": "SPEC v1.6 (LLM 语义先验集成 —— 纯物理/纯LLM/物理×LLM 融合比较)",
  "spec_version": "v1.6",
  "config": {
   "n_steps": 50,
@@ -11,70 +12,207 @@
   "energy_mode": "aggregate",
   "seed": 0
  },
+ "arms": [
+  "field_guided",
+  "llm_prior",
+  "hybrid@0.25",
+  "hybrid@0.5",
+  "hybrid@1.0",
+  "hybrid@2.0",
+  "random",
+  "degree"
+ ],
+ "llm_arms": "completed",
  "llm_prior": {
   "source": "live_api",
-  "cache": "results/llm_prior_cache.json",
-  "prompt_sha256": "5ff58f657c6c634eae1726e6ea22cd8ae56e1f0c0b23d4892e1bfdfd91c2c43b",
+  "cache_path": "results/llm_prior_cache.json",
   "n_prior_edges": 9,
-  "prior_edge_map": {
-   "(6, 7)": 0.95,
-   "(0, 4)": 0.95,
-   "(9, 1)": 0.9,
-   "(1, 2)": 0.9,
-   "(0, 3)": 0.85,
-   "(0, 2)": 0.85,
-   "(8, 9)": 0.85,
-   "(1, 5)": 0.8,
-   "(0, 1)": 0.8
-  }
+  "model": "kimi-for-coding",
+  "endpoint": "https://api.kimi.com/coding/v1/chat/completions",
+  "error": null,
+  "note": "key 仅从环境变量读取; 缓存存在则复用, 不重复消耗 API 预算 (≤2 次)。"
  },
+ "protocol": {
+  "top_k": 3,
+  "n_negatives_per_gold_edge": 10,
+  "seed_B_per_edge": "70000+edge_index",
+  "weighting": "W_true[i,j]=1/outdeg(i) 行归一; 留一边置零不重归一",
+  "mask": "留一真边 + 同行采样负目标 (同 v1.5 实验 B, 无泄漏)",
+  "hybrid": "W_done + λ·prior_scores (post-hoc, 仅掩码位置排序)",
+  "prior_zero_leakage": "LLM 只见节点标签, 不见任何边/结构"
+ },
+ "success_criteria_preregistered": {
+  "rule": "hybrid (λ∈{0.25,0.5,1,2}, 预登记全报) 在 named_path 子集 top-3 ≥ 0.4 且 > field_guided 的 named_path top-3",
+  "lambdas": [
+   0.25,
+   0.5,
+   1.0,
+   2.0
+  ],
+  "named_path_min": 0.4,
+  "reference_v151_field_guided_named": 0.176
+ },
+ "success_evaluation": {
+  "status": "evaluated",
+  "field_guided_named_path_top3": 0.17647058823529413,
+  "per_lambda": {
+   "lambda_0.25": {
+    "named_path_top3": 0.29411764705882354,
+    "ge_0.4": false,
+    "gt_field_guided": true,
+    "pass": false
+   },
+   "lambda_0.5": {
+    "named_path_top3": 0.29411764705882354,
+    "ge_0.4": false,
+    "gt_field_guided": true,
+    "pass": false
+   },
+   "lambda_1.0": {
+    "named_path_top3": 0.29411764705882354,
+    "ge_0.4": false,
+    "gt_field_guided": true,
+    "pass": false
+   },
+   "lambda_2.0": {
+    "named_path_top3": 0.29411764705882354,
+    "ge_0.4": false,
+    "gt_field_guided": true,
+    "pass": false
+   }
+  },
+  "any_lambda_pass": false
+ },
+ "runtime_sec": 103.566,
  "experiment_B": {
-  "protocol": "leave-one-out top-3 hit rate, N_NEG=10, seed=70000+ei",
-  "n_edges": 49,
+  "reconstruction": {
+   "note": "源 JSON 无逐边列表, 本图为满足其全部元数据约束的确定性重建",
+   "source_file": "results/deposon_g1_mindmap_demo.json",
+   "n_nodes": 45,
+   "n_edges": 49,
+   "n_branches": 9,
+   "trap_nodes": [
+    "范式转移/仿生瓶颈",
+    "行动窗口/AI够强未自主"
+   ],
+   "answer_node": "GOAL_拓扑智能",
+   "path_edges_named": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     0,
+     6
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     11
+    ],
+    [
+     0,
+     12
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     5,
+     1
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     7,
+     1
+    ],
+    [
+     8,
+     9
+    ],
+    [
+     9,
+     1
+    ]
+   ]
+  },
+  "source": "ROOT",
+  "target": "GOAL_拓扑智能",
   "arms": {
    "field_guided": {
     "top3_hit": {
      "mean": 0.32653061224489793,
-     "std": 0.468922186767971,
+     "std": 0.4689438895133085,
      "n": 49
     },
     "top3_hit_named_path": {
      "mean": 0.17647058823529413,
-     "std": 0.38123134465465608,
+     "std": 0.3812200410828153,
      "n": 17
     },
     "top3_hit_filler": {
      "mean": 0.40625,
-     "std": 0.49124046354128924,
+     "std": 0.4911323014219285,
      "n": 32
     }
    },
    "random": {
     "top3_hit": {
      "mean": 0.32653061224489793,
-     "std": 0.468922186767971,
+     "std": 0.4689438895133085,
      "n": 49
     },
     "top3_hit_named_path": {
      "mean": 0.4117647058823529,
-     "std": 0.49223596196227185,
+     "std": 0.4921529567847503,
      "n": 17
     },
     "top3_hit_filler": {
      "mean": 0.28125,
-     "std": 0.4496115346384855,
+     "std": 0.4496092053105675,
      "n": 32
     }
    },
    "degree": {
     "top3_hit": {
      "mean": 0.12244897959183673,
-     "std": 0.3276739572667575,
+     "std": 0.32780364090222464,
      "n": 49
     },
     "top3_hit_named_path": {
      "mean": 0.35294117647058826,
-     "std": 0.47784453885338107,
+     "std": 0.4778846120374094,
      "n": 17
     },
     "top3_hit_filler": {
@@ -91,7 +229,7 @@
     },
     "top3_hit_named_path": {
      "mean": 0.23529411764705882,
-     "std": 0.42432198968187736,
+     "std": 0.42418250299576343,
      "n": 17
     },
     "top3_hit_filler": {
@@ -103,108 +241,2287 @@
    "hybrid@0.25": {
     "top3_hit": {
      "mean": 0.3673469387755102,
-     "std": 0.48229165558250523,
+     "std": 0.482082114735417,
      "n": 49
     },
     "top3_hit_named_path": {
      "mean": 0.29411764705882354,
-     "std": 0.45584230583872585,
+     "std": 0.4556450995538137,
      "n": 17
     },
     "top3_hit_filler": {
      "mean": 0.40625,
-     "std": 0.49124046354128924,
+     "std": 0.4911323014219285,
      "n": 32
     }
    },
    "hybrid@0.5": {
     "top3_hit": {
      "mean": 0.3673469387755102,
-     "std": 0.48229165558250523,
+     "std": 0.482082114735417,
      "n": 49
     },
     "top3_hit_named_path": {
      "mean": 0.29411764705882354,
-     "std": 0.45584230583872585,
+     "std": 0.4556450995538137,
      "n": 17
     },
     "top3_hit_filler": {
      "mean": 0.40625,
-     "std": 0.49124046354128924,
+     "std": 0.4911323014219285,
      "n": 32
     }
    },
    "hybrid@1.0": {
     "top3_hit": {
      "mean": 0.3673469387755102,
-     "std": 0.48229165558250523,
+     "std": 0.482082114735417,
      "n": 49
     },
     "top3_hit_named_path": {
      "mean": 0.29411764705882354,
-     "std": 0.45584230583872585,
+     "std": 0.4556450995538137,
      "n": 17
     },
     "top3_hit_filler": {
      "mean": 0.40625,
-     "std": 0.49124046354128924,
+     "std": 0.4911323014219285,
      "n": 32
     }
    },
    "hybrid@2.0": {
     "top3_hit": {
      "mean": 0.3673469387755102,
-     "std": 0.48229165558250523,
+     "std": 0.482082114735417,
      "n": 49
     },
     "top3_hit_named_path": {
      "mean": 0.29411764705882354,
-     "std": 0.45584230583872585,
+     "std": 0.4556450995538137,
      "n": 17
     },
     "top3_hit_filler": {
      "mean": 0.40625,
-     "std": 0.49124046354128924,
+     "std": 0.4911323014219285,
      "n": 32
     }
    }
-  }
- },
- "success_criteria_evaluation": {
-  "status": "evaluated",
-  "any_lambda_pass": false,
-  "per_lambda": {
-   "0.25": {
-    "named_beats_field": true,
-    "overall_beats_field": true,
-    "named_beats_random": false,
-    "pass_strong": false
-   },
-   "0.5": {
-    "named_beats_field": true,
-    "overall_beats_field": true,
-    "named_beats_random": false,
-    "pass_strong": false
-   },
-   "1.0": {
-    "named_beats_field": true,
-    "overall_beats_field": true,
-    "named_beats_random": false,
-    "pass_strong": false
-   },
-   "2.0": {
-    "named_beats_field": true,
-    "overall_beats_field": true,
-    "named_beats_random": false,
-    "pass_strong": false
-   }
   },
-  "note": "四档 λ 全等价（量纲饱和，详见 SPEC v1.7.1 诊断）；强判据未达如实记录。"
+  "per_edge": [
+   {
+    "edge": [
+     0,
+     2
+    ],
+    "edge_label": [
+     "ROOT",
+     "仿光子vsTDA"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 9,
+      "hit": false
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 9,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     3
+    ],
+    "edge_label": [
+     "ROOT",
+     "组织记忆"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 3,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 0,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     4
+    ],
+    "edge_label": [
+     "ROOT",
+     "认知协议"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 8,
+      "hit": false
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@0.25": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 8,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     5
+    ],
+    "edge_label": [
+     "ROOT",
+     "专家萃取"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 9,
+      "hit": false
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 9,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     6
+    ],
+    "edge_label": [
+     "ROOT",
+     "范式转移"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 9,
+      "hit": false
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 9,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     8
+    ],
+    "edge_label": [
+     "ROOT",
+     "行动窗口"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 5,
+      "hit": false
+     },
+     "random": {
+      "rank": 10,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 5,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     10
+    ],
+    "edge_label": [
+     "ROOT",
+     "branch_7"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 6,
+      "hit": false
+     },
+     "random": {
+      "rank": 10,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 6,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     11
+    ],
+    "edge_label": [
+     "ROOT",
+     "branch_8"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 0,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     12
+    ],
+    "edge_label": [
+     "ROOT",
+     "branch_9"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     2,
+     1
+    ],
+    "edge_label": [
+     "仿光子vsTDA",
+     "GOAL_拓扑智能"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 4,
+      "hit": false
+     },
+     "random": {
+      "rank": 8,
+      "hit": false
+     },
+     "degree": {
+      "rank": 0,
+      "hit": true
+     },
+     "llm_prior": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 4,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 4,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 4,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 4,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     3,
+     1
+    ],
+    "edge_label": [
+     "组织记忆",
+     "GOAL_拓扑智能"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 6,
+      "hit": false
+     },
+     "random": {
+      "rank": 7,
+      "hit": false
+     },
+     "degree": {
+      "rank": 0,
+      "hit": true
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 6,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     4,
+     1
+    ],
+    "edge_label": [
+     "认知协议",
+     "GOAL_拓扑智能"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 5,
+      "hit": false
+     },
+     "random": {
+      "rank": 0,
+      "hit": true
+     },
+     "degree": {
+      "rank": 0,
+      "hit": true
+     },
+     "llm_prior": {
+      "rank": 4,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 5,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     5,
+     1
+    ],
+    "edge_label": [
+     "专家萃取",
+     "GOAL_拓扑智能"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 5,
+      "hit": false
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 0,
+      "hit": true
+     },
+     "llm_prior": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 5,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     6,
+     7
+    ],
+    "edge_label": [
+     "范式转移",
+     "范式转移/仿生瓶颈"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 3,
+      "hit": false
+     },
+     "random": {
+      "rank": 0,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@0.25": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 0,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     7,
+     1
+    ],
+    "edge_label": [
+     "范式转移/仿生瓶颈",
+     "GOAL_拓扑智能"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 10,
+      "hit": false
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 0,
+      "hit": true
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 10,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     8,
+     9
+    ],
+    "edge_label": [
+     "行动窗口",
+     "行动窗口/AI够强未自主"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 3,
+      "hit": false
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@0.25": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 0,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     9,
+     1
+    ],
+    "edge_label": [
+     "行动窗口/AI够强未自主",
+     "GOAL_拓扑智能"
+    ],
+    "on_named_path": true,
+    "arms": {
+     "field_guided": {
+      "rank": 8,
+      "hit": false
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 0,
+      "hit": true
+     },
+     "llm_prior": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid@0.25": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 8,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     2,
+     13
+    ],
+    "edge_label": [
+     "仿光子vsTDA",
+     "node_13"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 7,
+      "hit": false
+     },
+     "random": {
+      "rank": 1,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 7,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     3,
+     14
+    ],
+    "edge_label": [
+     "组织记忆",
+     "node_14"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 2,
+      "hit": true
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid@0.25": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 2,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     4,
+     15
+    ],
+    "edge_label": [
+     "认知协议",
+     "node_15"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 8,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     5,
+     16
+    ],
+    "edge_label": [
+     "专家萃取",
+     "node_16"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 3,
+      "hit": false
+     },
+     "random": {
+      "rank": 5,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 3,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     6,
+     17
+    ],
+    "edge_label": [
+     "范式转移",
+     "node_17"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 1,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     8,
+     18
+    ],
+    "edge_label": [
+     "行动窗口",
+     "node_18"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 0,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     10,
+     19
+    ],
+    "edge_label": [
+     "branch_7",
+     "node_19"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 8,
+      "hit": false
+     },
+     "random": {
+      "rank": 7,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 8,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     11,
+     20
+    ],
+    "edge_label": [
+     "branch_8",
+     "node_20"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 5,
+      "hit": false
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid@0.25": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 5,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     12,
+     21
+    ],
+    "edge_label": [
+     "branch_9",
+     "node_21"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 6,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@0.25": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     2,
+     22
+    ],
+    "edge_label": [
+     "仿光子vsTDA",
+     "node_22"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 9,
+      "hit": false
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@0.25": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 9,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     3,
+     23
+    ],
+    "edge_label": [
+     "组织记忆",
+     "node_23"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 5,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 0,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     4,
+     24
+    ],
+    "edge_label": [
+     "认知协议",
+     "node_24"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 8,
+      "hit": false
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 8,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     5,
+     25
+    ],
+    "edge_label": [
+     "专家萃取",
+     "node_25"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 3,
+      "hit": false
+     },
+     "random": {
+      "rank": 8,
+      "hit": false
+     },
+     "degree": {
+      "rank": 8,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 3,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     6,
+     26
+    ],
+    "edge_label": [
+     "范式转移",
+     "node_26"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 7,
+      "hit": false
+     },
+     "random": {
+      "rank": 3,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 7,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     8,
+     27
+    ],
+    "edge_label": [
+     "行动窗口",
+     "node_27"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 0,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     10,
+     28
+    ],
+    "edge_label": [
+     "branch_7",
+     "node_28"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 2,
+      "hit": true
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 2,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     11,
+     29
+    ],
+    "edge_label": [
+     "branch_8",
+     "node_29"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 7,
+      "hit": false
+     },
+     "random": {
+      "rank": 10,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 7,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     12,
+     30
+    ],
+    "edge_label": [
+     "branch_9",
+     "node_30"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 6,
+      "hit": false
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 6,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     2,
+     31
+    ],
+    "edge_label": [
+     "仿光子vsTDA",
+     "node_31"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 7,
+      "hit": false
+     },
+     "random": {
+      "rank": 8,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@0.25": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 7,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     3,
+     32
+    ],
+    "edge_label": [
+     "组织记忆",
+     "node_32"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 4,
+      "hit": false
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 4,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 4,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 4,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 4,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     4,
+     33
+    ],
+    "edge_label": [
+     "认知协议",
+     "node_33"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 5,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     5,
+     34
+    ],
+    "edge_label": [
+     "专家萃取",
+     "node_34"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 3,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     6,
+     35
+    ],
+    "edge_label": [
+     "范式转移",
+     "node_35"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 9,
+      "hit": false
+     },
+     "random": {
+      "rank": 0,
+      "hit": true
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 9,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     8,
+     36
+    ],
+    "edge_label": [
+     "行动窗口",
+     "node_36"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 8,
+      "hit": false
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 8,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     10,
+     37
+    ],
+    "edge_label": [
+     "branch_7",
+     "node_37"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 5,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 0,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     11,
+     38
+    ],
+    "edge_label": [
+     "branch_8",
+     "node_38"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 3,
+      "hit": false
+     },
+     "random": {
+      "rank": 6,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 3,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     12,
+     39
+    ],
+    "edge_label": [
+     "branch_9",
+     "node_39"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 7,
+      "hit": false
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 7,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     2,
+     40
+    ],
+    "edge_label": [
+     "仿光子vsTDA",
+     "node_40"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 10,
+      "hit": false
+     },
+     "random": {
+      "rank": 1,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid@0.25": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 10,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     3,
+     41
+    ],
+    "edge_label": [
+     "组织记忆",
+     "node_41"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 8,
+      "hit": false
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 4,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 8,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     4,
+     42
+    ],
+    "edge_label": [
+     "认知协议",
+     "node_42"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 0,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid@0.25": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     5,
+     43
+    ],
+    "edge_label": [
+     "专家萃取",
+     "node_43"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 5,
+      "hit": false
+     },
+     "random": {
+      "rank": 6,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@0.25": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@0.5": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@1.0": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid@2.0": {
+      "rank": 5,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     6,
+     44
+    ],
+    "edge_label": [
+     "范式转移",
+     "node_44"
+    ],
+    "on_named_path": false,
+    "arms": {
+     "field_guided": {
+      "rank": 2,
+      "hit": true
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid@0.25": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid@0.5": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid@1.0": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid@2.0": {
+      "rank": 2,
+      "hit": true
+     }
+    }
+   }
+  ]
  },
  "honesty": [
-  "LLM 先验来源 live_api（kimi-for-coding，1 次调用），prompt_sha256 在案；",
-  "先验 9 边中方向完全正确 2/9（6→7、8→9），无向骨架 6/9；GOAL 中心 4 边系统性反向；",
-  "named 命中中 (0,4)、(9,1) 来自全零先验行上 1e-6 tiebreak 运气，真实先验驱动命中 2/17；",
-  "预登记强判据 any_lambda_pass=false，不回溯改写。"
+  "本实验只复用 v1.5 实验 B 的留一协议 (同图/同种子 70000+ei/同负采样), reconstruct_mindmap/arm_scores/top3_hit_per_edge 直接 import, 未改写其逻辑。",
+  "零泄漏: LLM 只见 45 个节点标签, prompt 不含任何边/图结构信息 (build_prior_prompt 输入仅有标签列表)。",
+  "API key 仅从环境变量 KIMI_API_KEY 读取, 不写入任何文件/日志/异常消息; LLM 调用预算 ≤2 次 (全局先验 1 次 + 必要时重试 1 次)。",
+  "hybrid 为 post-hoc 融合 W_done + λ·prior_scores, λ∈{0.25,0.5,1,2} 预登记并全部报告, 不挑 λ。",
+  "全部指标由种子固定的实际运行产生, 含负面结果, 无任何手工润色; 严禁 mock 冒充真实 LLM 调用结果。",
+  "LLM 先验来源: live_api (cache=results/llm_prior_cache.json 复用, live_api=本次真实调用), 先验边数=9。",
+  "成功判据求值: field_guided named_path=0.176; λ=0.25: named=0.294 fail; λ=0.5: named=0.294 fail; λ=1.0: named=0.294 fail; λ=2.0: named=0.294 fail。overall any_lambda_pass=False。"
  ]
 }
