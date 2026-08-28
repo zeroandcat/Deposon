@@ -1,0 +1,16 @@
+command: python3 verifier/v6/check.py
+timestamp_utc: 20260823T130405Z
+ok   llm_arms == completed
+ok   先验缓存存在
+ok   缓存 9 条先验 + prompt_sha 在案
+ok   判据已求值
+ok   预登记强判据未达且如实记录 (any_lambda_pass=false)
+ok   融合增益方向: hybrid named > 物理臂 named
+ok   脑图总任务优势: hybrid 总 top3 为六臂最高
+ok   named 弱于 random 如实保留 (0.294<0.412)
+ok   honesty 字段覆盖 LLM 来源与判据求值
+ok   pytest green (109 passed, 1 warning in 1.93s)
+ok   no key leak
+
+FAILS: 0  WARNS: 0
+exit_code: 0

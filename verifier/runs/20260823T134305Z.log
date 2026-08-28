@@ -1,0 +1,33 @@
+command: python3 verifier/v8/check.py
+timestamp_utc: 20260823T134305Z
+PASS review_file 
+PASS exists_results/deposon_v17_fusion_fix.json 
+PASS exists_results/deposon_v17_fixed_sampler.json 
+PASS exists_results/deposon_v17_multigraph.json 
+PASS exists_results/deposon_v17_fusion_fix_tieartifact_negativeresult.json 
+PASS exists_docs/SPEC_v1.7.1.md 
+PASS exists_run_v17_fusion_fix.py 
+PASS exists_run_v17_fixed_sampler.py 
+PASS exists_run_v17_multigraph.py 
+PASS hn2_named_0471 
+PASS fixed_overall_random_0388 
+PASS multigraph_k20 
+PASS cn_header_v171 
+PASS cn_tableC_v171 
+PASS cn_d5 
+PASS cn_honest_nonsig 
+PASS cn_sampler_sensitive 
+PASS cn_synthetic_null 
+PASS cn_no_retro 
+PASS en_header_v171 
+PASS en_tableC_v171 
+PASS en_d5 
+PASS en_honest_nonsig 
+PASS en_sampler_sensitive 
+PASS en_synthetic_null 
+PASS en_no_retro 
+PASS pytest_green 109 passed, 1 warning in 1.80s
+PASS no_key_leak 
+FAILS: 0
+exit_code: 0
+artifacts: docx/pdf regenerated after v1.7.1; leak scan clean
