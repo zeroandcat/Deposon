@@ -27,3 +27,12 @@
 - `results/deposon_v20_corpus_eval.json`  
   sha256: `c4b04014491669fbf22e97188cb5ed24fb236a21b0c62c4a92a5bcb0427785f3`  
   再生: `python3 run_v20_corpus_eval.py --families=S,L`
+- `results/deposon_v17_fixed_sampler.json`  
+  sha256: `701ad291a714f75c79967f569059c463057a238119668416d156194b4b95f765`  
+  再生: `python3 run_v17_fusion_fix.py  # fixed_sampler 由 v1.7.1 管线产生`
+- `results/deposon_v17_fusion_fix.json`  
+  sha256: `af51da229652b84ad908a100d71a9b442fd27214e456b33646d3c48e862bef14`  
+  再生: `python3 run_v17_fusion_fix.py`
+- `audits_outliers.json`  
+  sha256: `3b1c881c4594327ff5878453cfd40b88ee83fcab1ce44ba62debbcdc51ae8954`  
+  再生: `python3 /app/.agents/skills/outlier-scan/scripts/anomaly_detector.py results/v19_edges_audit_input.csv`
