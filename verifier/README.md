@@ -34,3 +34,6 @@
 ## v14（2026-08-28 创建）
 - 测量：新技能三联（auto-stat-test 复核 Wilcoxon p=0.0031、regression-insight 领域鉴定器 hub β=2.12 p<0.001、bloom 题库先验 92.5%/rule≈机会）、产物存在、文档、密钥红线、pytest
 - 与 v13 差异：v13 验收 API 横向对比；v14 验收新技能三联验证（零 API）
+## v15（2026-08-28 创建）
+- 测量：基线注册表完整性、BOSS 扫描锚点（boss_alert=True/双 BOSS/field 15-20 第一/node2vec 浅近似标注）、CoT 收编（0.925/40 题/通道披露）、向量审计（1740 任务 0 违规）、文档、密钥红线、pytest
+- 与 v14 差异：v14 验收技能三联；v15 验收基线注册表+BOSS 扫描+CoT+向量属性审计
