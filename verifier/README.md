@@ -31,3 +31,6 @@
 ## v13（2026-08-28 创建）
 - 测量：横向对比缓存 provenance（8 缓存）、先验臂判定锚点（4/4 第一/biology=1.0/historical≈0.783/融合不增/GOAL 反向=0/方向一致率≥0.95/同源声明）、GT-2 锚点（evasion=1.0/no_separation/field 塌陷=0/rule≈7.5pp）、文档、密钥红线、pytest
 - 与 v12 差异：v12 验收语料与 GT-1/4；v13 验收 API 横向对比（先验臂+GT-2）
+## v14（2026-08-28 创建）
+- 测量：新技能三联（auto-stat-test 复核 Wilcoxon p=0.0031、regression-insight 领域鉴定器 hub β=2.12 p<0.001、bloom 题库先验 92.5%/rule≈机会）、产物存在、文档、密钥红线、pytest
+- 与 v13 差异：v13 验收 API 横向对比；v14 验收新技能三联验证（零 API）

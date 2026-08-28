@@ -36,3 +36,9 @@
 - `audits_outliers.json`  
   sha256: `3b1c881c4594327ff5878453cfd40b88ee83fcab1ce44ba62debbcdc51ae8954`  
   再生: `python3 /app/.agents/skills/outlier-scan/scripts/anomaly_detector.py results/v19_edges_audit_input.csv`
+- `results/quizbank_v20.json`  
+  sha256: `f6035466ff3d478144b0791e7aa5b3a69ce9493ed2bb9410cbf4719fc83c204d`  
+  再生: `python3 run_v20_quizbank.py  # 由 BANK_SEED + gt2_attacker_cache 确定性再生`
+- `results/v20_regression_field.json`  
+  sha256: `534c121765b132044ea29a05e2ca67723767e0089055193b3747b1a78e4f0ee7`  
+  再生: `python3 /app/.agents/skills/regression-insight/scripts/regression_analyzer.py results/v20_graph_features.csv --target field_named --features "N,n_edges,density,hub_concentration,real_semantics"  # v1 全特征版（VIF 问题），v2 精简版已入库`
