@@ -28,3 +28,6 @@
 - v11/v12 check.py 曾含真实 key 的前 9 字符片段（拼接构造）。应 GitHub 留痕前的安全复核，
   已删改为通用 "sk-kimi-" 前缀扫描（更严格，覆盖任意 kimi key）；判定语义不变，复跑均 FAILS=0。
 - docs/LESSONS_v19.md 同步去除字面前缀。
+## v13（2026-08-28 创建）
+- 测量：横向对比缓存 provenance（8 缓存）、先验臂判定锚点（4/4 第一/biology=1.0/historical≈0.783/融合不增/GOAL 反向=0/方向一致率≥0.95/同源声明）、GT-2 锚点（evasion=1.0/no_separation/field 塌陷=0/rule≈7.5pp）、文档、密钥红线、pytest
+- 与 v12 差异：v12 验收语料与 GT-1/4；v13 验收 API 横向对比（先验臂+GT-2）
