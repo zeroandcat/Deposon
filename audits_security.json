@@ -1,0 +1,63 @@
+{
+  "target": "/mnt/agents/output/deposon-repo",
+  "scan_time": "2026-08-28T07:52:30Z",
+  "modules": [
+    "deps",
+    "secrets",
+    "owasp"
+  ],
+  "findings": [
+    {
+      "scanner": "owasp",
+      "name": "Weak Hash (MD5)",
+      "severity": "medium",
+      "file": "deposon_agents_v1_3.py",
+      "line": 295,
+      "snippet": "f\"{hashlib.md5(key.encode()).hexdigest()}.json\")",
+      "category": "A02:CryptoFailure"
+    },
+    {
+      "scanner": "owasp",
+      "name": "Weak Hash (MD5)",
+      "severity": "medium",
+      "file": "deposon_agents_v1_3.py",
+      "line": 314,
+      "snippet": "f\"{hashlib.md5(key.encode()).hexdigest()}.json\")",
+      "category": "A02:CryptoFailure"
+    },
+    {
+      "scanner": "owasp",
+      "name": "Weak Hash (MD5)",
+      "severity": "medium",
+      "file": "deposon_agents_v1_4.py",
+      "line": 295,
+      "snippet": "f\"{hashlib.md5(key.encode()).hexdigest()}.json\")",
+      "category": "A02:CryptoFailure"
+    },
+    {
+      "scanner": "owasp",
+      "name": "Weak Hash (MD5)",
+      "severity": "medium",
+      "file": "deposon_agents_v1_4.py",
+      "line": 314,
+      "snippet": "f\"{hashlib.md5(key.encode()).hexdigest()}.json\")",
+      "category": "A02:CryptoFailure"
+    },
+    {
+      "scanner": "owasp",
+      "name": "Weak Hash (MD5)",
+      "severity": "medium",
+      "file": "run_v19_benchmark_fixes.py",
+      "line": 82,
+      "snippet": "f\"{hashlib.md5(key.encode()).hexdigest()}.json\")",
+      "category": "A02:CryptoFailure"
+    }
+  ],
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 5,
+    "low": 0,
+    "total": 5
+  }
+}

@@ -860,7 +860,7 @@ operations: the calculation steps in order as arithmetic expressions. computed_a
         elif len(oids) == 1:
             for nid in nids:
                 edges[(nid, oids[0])] = {'weight': 0.6, 'migration_barrier': 0.3,
-                                         'allowed_domains': ['math']}
+                                        'allowed_domains': ['math']}
             edges[(oids[0], 'Goal')] = {'weight': 0.8, 'migration_barrier': 0.2,
                                         'allowed_domains': ['math']}
         else:
@@ -1253,6 +1253,18 @@ def deterministic_embedding(node_id: str, feature_dim: int, seed_offset: int = 0
 # 模块八: DeposonField —— 统一场
 # ============================================================
 
+# v1.9 E9.3: high_couple 模式的 g_couple 放大系数 (SPEC v1.9 Part B)
+HIGH_COUPLE_GAIN = 5.0
+
+
+def resolve_high_couple_config() -> Dict[str, Any]:
+    """v1.9 E9.3: 默认返回真修复配置; 仅当显式设置环境变量
+    DEPOSON_V14_HIGH_COUPLE_ALIAS=1 时返回 v1.4 旧别名配置 (历史复现用)。"""
+    if os.environ.get('DEPOSON_V14_HIGH_COUPLE_ALIAS') == '1':
+        return {'mode': 'v1_blocking', 'use_deposon': True}
+    return {'mode': 'high_couple', 'use_deposon': True}
+
+
 class DeposonField:
     def __init__(self, feature_dim: int = 64,
                  default_g_couple: float = 0.05,
@@ -1295,6 +1307,13 @@ class DeposonField:
         if mode == 'v1_blocking':
             for d in self.deposons.values():
                 d.g_aether = 0.0
+        elif mode == 'high_couple':
+            # v1.9 E9.3 真修复: blocking 语义 (g_aether=0) 下真实放大 g_couple 耦合路径,
+            # 取代 v1.4 的 v1_blocking 纯别名。旧别名仅在显式 legacy 开关
+            # DEPOSON_V14_HIGH_COUPLE_ALIAS=1 下由调用方选择复现。
+            for d in self.deposons.values():
+                d.g_aether = 0.0
+                d.g_couple *= HIGH_COUPLE_GAIN
         elif mode == 'v2_tunneling':
             for d in self.deposons.values():
                 d.g_aether = max(d.g_aether, 2.0)
@@ -1512,7 +1531,9 @@ class DeposonAgentSystem:
             'v1_blocking': {'mode': 'v1_blocking', 'use_deposon': True},
             'v2_tunneling': {'mode': 'v2_tunneling', 'use_deposon': True},
             'unified': {'mode': 'unified', 'use_deposon': True},
-            'high_couple': {'mode': 'v1_blocking', 'use_deposon': True},
+            # v1.9 E9.3: 默认真修复 (真实高耦合物理路径); v1.4 旧别名仅在显式
+            # legacy 开关 DEPOSON_V14_HIGH_COUPLE_ALIAS=1 下复现
+            'high_couple': resolve_high_couple_config(),
         }
         for name, config in variants.items():
             agent = DeposonAgentSystem(
