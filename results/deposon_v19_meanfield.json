@@ -1,0 +1,2663 @@
+{
+ "experiment": "deposon_v19_meanfield",
+ "spec_version": "v1.9",
+ "spec": "docs/SPEC_v1.9.md Part A E9.1",
+ "config": {
+  "n_steps": 50,
+  "beta_schedule": "linear",
+  "prior": "uniform_out",
+  "lr": 0.1,
+  "lam_smooth": 0.01,
+  "field_guidance": true,
+  "energy_mode": "aggregate",
+  "seed": 0
+ },
+ "protocol": {
+  "same_as_v171": "同图/同种子70000+ei/同N_NEG=10/top-3/legacy负池",
+  "only_change": "反向去噪起点 init_mode ∈ {dirichlet, prior_mean}；dirichlet 逐位复现 v1.7.1 field_guided（回归测试锁定）",
+  "init_modes": [
+   "dirichlet",
+   "prior_mean"
+  ],
+  "lambdas": [
+   0.5,
+   2.0
+  ],
+  "hybrid_field_component": "field_mean（均值场起点）"
+ },
+ "llm_prior": {
+  "source": "cache",
+  "cache_path": "/mnt/agents/output/deposon-repo/results/llm_prior_cache.json",
+  "n_prior_edges": 9
+ },
+ "arms": [
+  "field_guided",
+  "field_mean",
+  "random",
+  "degree",
+  "llm_prior",
+  "hybrid_norm@0.5",
+  "hybrid_norm@2.0"
+ ],
+ "experiment_B": {
+  "reconstruction": {
+   "note": "源 JSON 无逐边列表, 本图为满足其全部元数据约束的确定性重建",
+   "source_file": "results/deposon_g1_mindmap_demo.json",
+   "n_nodes": 45,
+   "n_edges": 49,
+   "n_branches": 9,
+   "trap_nodes": [
+    "范式转移/仿生瓶颈",
+    "行动窗口/AI够强未自主"
+   ],
+   "answer_node": "GOAL_拓扑智能",
+   "path_edges_named": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     0,
+     6
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     11
+    ],
+    [
+     0,
+     12
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     5,
+     1
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     7,
+     1
+    ],
+    [
+     8,
+     9
+    ],
+    [
+     9,
+     1
+    ]
+   ]
+  },
+  "arms": {
+   "field_guided": {
+    "overall": {
+     "mean": 0.32653061224489793,
+     "std": 0.4689438895133085,
+     "n": 49
+    },
+    "named": {
+     "mean": 0.17647058823529413,
+     "std": 0.3812200410828153,
+     "n": 17
+    },
+    "filler": {
+     "mean": 0.40625,
+     "std": 0.4911323014219285,
+     "n": 32
+    },
+    "named_real_label": {
+     "mean": 0.07142857142857142,
+     "std": 0.25753937681885636,
+     "n": 14
+    },
+    "named_placeholder": {
+     "mean": 0.6666666666666666,
+     "std": 0.4714045207910317,
+     "n": 3
+    }
+   },
+   "field_mean": {
+    "overall": {
+     "mean": 0.3877551020408163,
+     "std": 0.4872382198495233,
+     "n": 49
+    },
+    "named": {
+     "mean": 1.0,
+     "std": 0.0,
+     "n": 17
+    },
+    "filler": {
+     "mean": 0.0625,
+     "std": 0.24206145913796356,
+     "n": 32
+    },
+    "named_real_label": {
+     "mean": 1.0,
+     "std": 0.0,
+     "n": 14
+    },
+    "named_placeholder": {
+     "mean": 1.0,
+     "std": 0.0,
+     "n": 3
+    }
+   },
+   "random": {
+    "overall": {
+     "mean": 0.32653061224489793,
+     "std": 0.4689438895133085,
+     "n": 49
+    },
+    "named": {
+     "mean": 0.4117647058823529,
+     "std": 0.4921529567847503,
+     "n": 17
+    },
+    "filler": {
+     "mean": 0.28125,
+     "std": 0.4496092053105675,
+     "n": 32
+    },
+    "named_real_label": {
+     "mean": 0.42857142857142855,
+     "std": 0.49487165930539345,
+     "n": 14
+    },
+    "named_placeholder": {
+     "mean": 0.3333333333333333,
+     "std": 0.4714045207910317,
+     "n": 3
+    }
+   },
+   "degree": {
+    "overall": {
+     "mean": 0.12244897959183673,
+     "std": 0.32780364090222464,
+     "n": 49
+    },
+    "named": {
+     "mean": 0.35294117647058826,
+     "std": 0.4778846120374094,
+     "n": 17
+    },
+    "filler": {
+     "mean": 0.0,
+     "std": 0.0,
+     "n": 32
+    },
+    "named_real_label": {
+     "mean": 0.42857142857142855,
+     "std": 0.49487165930539345,
+     "n": 14
+    },
+    "named_placeholder": {
+     "mean": 0.0,
+     "std": 0.0,
+     "n": 3
+    }
+   },
+   "llm_prior": {
+    "overall": {
+     "mean": 0.24489795918367346,
+     "std": 0.4300266837899077,
+     "n": 49
+    },
+    "named": {
+     "mean": 0.23529411764705882,
+     "std": 0.42418250299576343,
+     "n": 17
+    },
+    "filler": {
+     "mean": 0.25,
+     "std": 0.4330127018922193,
+     "n": 32
+    },
+    "named_real_label": {
+     "mean": 0.2857142857142857,
+     "std": 0.45175395145262565,
+     "n": 14
+    },
+    "named_placeholder": {
+     "mean": 0.0,
+     "std": 0.0,
+     "n": 3
+    }
+   },
+   "hybrid_norm@0.5": {
+    "overall": {
+     "mean": 0.3469387755102041,
+     "std": 0.475996073048596,
+     "n": 49
+    },
+    "named": {
+     "mean": 0.8235294117647058,
+     "std": 0.3812200410828153,
+     "n": 17
+    },
+    "filler": {
+     "mean": 0.09375,
+     "std": 0.2914805954090255,
+     "n": 32
+    },
+    "named_real_label": {
+     "mean": 1.0,
+     "std": 0.0,
+     "n": 14
+    },
+    "named_placeholder": {
+     "mean": 0.0,
+     "std": 0.0,
+     "n": 3
+    }
+   },
+   "hybrid_norm@2.0": {
+    "overall": {
+     "mean": 0.30612244897959184,
+     "std": 0.46088121594433534,
+     "n": 49
+    },
+    "named": {
+     "mean": 0.11764705882352941,
+     "std": 0.32218973970892123,
+     "n": 17
+    },
+    "filler": {
+     "mean": 0.40625,
+     "std": 0.4911323014219285,
+     "n": 32
+    },
+    "named_real_label": {
+     "mean": 0.14285714285714285,
+     "std": 0.3499271061118826,
+     "n": 14
+    },
+    "named_placeholder": {
+     "mean": 0.0,
+     "std": 0.0,
+     "n": 3
+    }
+   }
+  },
+  "per_edge": [
+   {
+    "edge": [
+     0,
+     2
+    ],
+    "edge_label": [
+     "ROOT",
+     "仿光子vsTDA"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 9,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 10,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     3
+    ],
+    "edge_label": [
+     "ROOT",
+     "组织记忆"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 0,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 3,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 10,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     4
+    ],
+    "edge_label": [
+     "ROOT",
+     "认知协议"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 8,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 8,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     5
+    ],
+    "edge_label": [
+     "ROOT",
+     "专家萃取"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 9,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 10,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     6
+    ],
+    "edge_label": [
+     "ROOT",
+     "范式转移"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 9,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 2,
+      "hit": true
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 9,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     8
+    ],
+    "edge_label": [
+     "ROOT",
+     "行动窗口"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 5,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 10,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 10,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     10
+    ],
+    "edge_label": [
+     "ROOT",
+     "branch_7"
+    ],
+    "on_named_path": true,
+    "placeholder_target": true,
+    "placeholder_named_edge": true,
+    "arms": {
+     "field_guided": {
+      "rank": 6,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 10,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 9,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     11
+    ],
+    "edge_label": [
+     "ROOT",
+     "branch_8"
+    ],
+    "on_named_path": true,
+    "placeholder_target": true,
+    "placeholder_named_edge": true,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 0,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 7,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     0,
+     12
+    ],
+    "edge_label": [
+     "ROOT",
+     "branch_9"
+    ],
+    "on_named_path": true,
+    "placeholder_target": true,
+    "placeholder_named_edge": true,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 9,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     2,
+     1
+    ],
+    "edge_label": [
+     "仿光子vsTDA",
+     "GOAL_拓扑智能"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 4,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 8,
+      "hit": false
+     },
+     "degree": {
+      "rank": 0,
+      "hit": true
+     },
+     "llm_prior": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 10,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     3,
+     1
+    ],
+    "edge_label": [
+     "组织记忆",
+     "GOAL_拓扑智能"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 6,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 7,
+      "hit": false
+     },
+     "degree": {
+      "rank": 0,
+      "hit": true
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 9,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     4,
+     1
+    ],
+    "edge_label": [
+     "认知协议",
+     "GOAL_拓扑智能"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 5,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 0,
+      "hit": true
+     },
+     "degree": {
+      "rank": 0,
+      "hit": true
+     },
+     "llm_prior": {
+      "rank": 4,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 10,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     5,
+     1
+    ],
+    "edge_label": [
+     "专家萃取",
+     "GOAL_拓扑智能"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 5,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 0,
+      "hit": true
+     },
+     "llm_prior": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 10,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     6,
+     7
+    ],
+    "edge_label": [
+     "范式转移",
+     "范式转移/仿生瓶颈"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 3,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 1,
+      "hit": true
+     },
+     "random": {
+      "rank": 0,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 0,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     7,
+     1
+    ],
+    "edge_label": [
+     "范式转移/仿生瓶颈",
+     "GOAL_拓扑智能"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 10,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 0,
+      "hit": true
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 10,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     8,
+     9
+    ],
+    "edge_label": [
+     "行动窗口",
+     "行动窗口/AI够强未自主"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 3,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 0,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     9,
+     1
+    ],
+    "edge_label": [
+     "行动窗口/AI够强未自主",
+     "GOAL_拓扑智能"
+    ],
+    "on_named_path": true,
+    "placeholder_target": false,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 8,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 0,
+      "hit": true
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 0,
+      "hit": true
+     },
+     "llm_prior": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid_norm@0.5": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 10,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     2,
+     13
+    ],
+    "edge_label": [
+     "仿光子vsTDA",
+     "node_13"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 7,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 3,
+      "hit": false
+     },
+     "random": {
+      "rank": 1,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 7,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     3,
+     14
+    ],
+    "edge_label": [
+     "组织记忆",
+     "node_14"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 2,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 2,
+      "hit": true
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid_norm@0.5": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     4,
+     15
+    ],
+    "edge_label": [
+     "认知协议",
+     "node_15"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 5,
+      "hit": false
+     },
+     "random": {
+      "rank": 8,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 4,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     5,
+     16
+    ],
+    "edge_label": [
+     "专家萃取",
+     "node_16"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 3,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 3,
+      "hit": false
+     },
+     "random": {
+      "rank": 5,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 4,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 2,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     6,
+     17
+    ],
+    "edge_label": [
+     "范式转移",
+     "node_17"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 7,
+      "hit": false
+     },
+     "random": {
+      "rank": 1,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 6,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     8,
+     18
+    ],
+    "edge_label": [
+     "行动窗口",
+     "node_18"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 0,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 2,
+      "hit": true
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 5,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     10,
+     19
+    ],
+    "edge_label": [
+     "branch_7",
+     "node_19"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 8,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 4,
+      "hit": false
+     },
+     "random": {
+      "rank": 7,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 6,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     11,
+     20
+    ],
+    "edge_label": [
+     "branch_8",
+     "node_20"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 5,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 6,
+      "hit": false
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 2,
+      "hit": true
+     },
+     "hybrid_norm@0.5": {
+      "rank": 4,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 2,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     12,
+     21
+    ],
+    "edge_label": [
+     "branch_9",
+     "node_21"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 6,
+      "hit": false
+     },
+     "random": {
+      "rank": 6,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid_norm@0.5": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     2,
+     22
+    ],
+    "edge_label": [
+     "仿光子vsTDA",
+     "node_22"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 9,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 4,
+      "hit": false
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 0,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     3,
+     23
+    ],
+    "edge_label": [
+     "组织记忆",
+     "node_23"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 0,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 7,
+      "hit": false
+     },
+     "random": {
+      "rank": 5,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 2,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     4,
+     24
+    ],
+    "edge_label": [
+     "认知协议",
+     "node_24"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 8,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 4,
+      "hit": false
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 7,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     5,
+     25
+    ],
+    "edge_label": [
+     "专家萃取",
+     "node_25"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 3,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 5,
+      "hit": false
+     },
+     "random": {
+      "rank": 8,
+      "hit": false
+     },
+     "degree": {
+      "rank": 8,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 3,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     6,
+     26
+    ],
+    "edge_label": [
+     "范式转移",
+     "node_26"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 7,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 7,
+      "hit": false
+     },
+     "random": {
+      "rank": 3,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 4,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     8,
+     27
+    ],
+    "edge_label": [
+     "行动窗口",
+     "node_27"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 6,
+      "hit": false
+     },
+     "random": {
+      "rank": 0,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 9,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     10,
+     28
+    ],
+    "edge_label": [
+     "branch_7",
+     "node_28"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 2,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 4,
+      "hit": false
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 8,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 7,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     11,
+     29
+    ],
+    "edge_label": [
+     "branch_8",
+     "node_29"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 7,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 8,
+      "hit": false
+     },
+     "random": {
+      "rank": 10,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 2,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     12,
+     30
+    ],
+    "edge_label": [
+     "branch_9",
+     "node_30"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 6,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 5,
+      "hit": false
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 8,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     2,
+     31
+    ],
+    "edge_label": [
+     "仿光子vsTDA",
+     "node_31"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 7,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 6,
+      "hit": false
+     },
+     "random": {
+      "rank": 8,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 0,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     3,
+     32
+    ],
+    "edge_label": [
+     "组织记忆",
+     "node_32"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 4,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 8,
+      "hit": false
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     4,
+     33
+    ],
+    "edge_label": [
+     "认知协议",
+     "node_33"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 8,
+      "hit": false
+     },
+     "random": {
+      "rank": 5,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 10,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 10,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     5,
+     34
+    ],
+    "edge_label": [
+     "专家萃取",
+     "node_34"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 6,
+      "hit": false
+     },
+     "random": {
+      "rank": 3,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 3,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     6,
+     35
+    ],
+    "edge_label": [
+     "范式转移",
+     "node_35"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 9,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 8,
+      "hit": false
+     },
+     "random": {
+      "rank": 0,
+      "hit": true
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 2,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     8,
+     36
+    ],
+    "edge_label": [
+     "行动窗口",
+     "node_36"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 8,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 9,
+      "hit": false
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 3,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     10,
+     37
+    ],
+    "edge_label": [
+     "branch_7",
+     "node_37"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 0,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 6,
+      "hit": false
+     },
+     "random": {
+      "rank": 5,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 4,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     11,
+     38
+    ],
+    "edge_label": [
+     "branch_8",
+     "node_38"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 3,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 8,
+      "hit": false
+     },
+     "random": {
+      "rank": 6,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 5,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     12,
+     39
+    ],
+    "edge_label": [
+     "branch_9",
+     "node_39"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 7,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 7,
+      "hit": false
+     },
+     "random": {
+      "rank": 4,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 9,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 7,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     2,
+     40
+    ],
+    "edge_label": [
+     "仿光子vsTDA",
+     "node_40"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 10,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 8,
+      "hit": false
+     },
+     "random": {
+      "rank": 1,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 0,
+      "hit": true
+     },
+     "hybrid_norm@0.5": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid_norm@2.0": {
+      "rank": 0,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     3,
+     41
+    ],
+    "edge_label": [
+     "组织记忆",
+     "node_41"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 8,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 10,
+      "hit": false
+     },
+     "random": {
+      "rank": 2,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 4,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 5,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 4,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     4,
+     42
+    ],
+    "edge_label": [
+     "认知协议",
+     "node_42"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 1,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 9,
+      "hit": false
+     },
+     "random": {
+      "rank": 0,
+      "hit": true
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 6,
+      "hit": false
+     },
+     "hybrid_norm@0.5": {
+      "rank": 7,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 4,
+      "hit": false
+     }
+    }
+   },
+   {
+    "edge": [
+     5,
+     43
+    ],
+    "edge_label": [
+     "专家萃取",
+     "node_43"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 5,
+      "hit": false
+     },
+     "field_mean": {
+      "rank": 8,
+      "hit": false
+     },
+     "random": {
+      "rank": 6,
+      "hit": false
+     },
+     "degree": {
+      "rank": 9,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid_norm@0.5": {
+      "rank": 4,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   },
+   {
+    "edge": [
+     6,
+     44
+    ],
+    "edge_label": [
+     "范式转移",
+     "node_44"
+    ],
+    "on_named_path": false,
+    "placeholder_target": true,
+    "placeholder_named_edge": false,
+    "arms": {
+     "field_guided": {
+      "rank": 2,
+      "hit": true
+     },
+     "field_mean": {
+      "rank": 10,
+      "hit": false
+     },
+     "random": {
+      "rank": 9,
+      "hit": false
+     },
+     "degree": {
+      "rank": 10,
+      "hit": false
+     },
+     "llm_prior": {
+      "rank": 1,
+      "hit": true
+     },
+     "hybrid_norm@0.5": {
+      "rank": 3,
+      "hit": false
+     },
+     "hybrid_norm@2.0": {
+      "rank": 1,
+      "hit": true
+     }
+    }
+   }
+  ]
+ },
+ "stratified_disclosure": {
+  "placeholder_named_edges": [
+   [
+    0,
+    10
+   ],
+   [
+    0,
+    11
+   ],
+   [
+    0,
+    12
+   ]
+  ],
+  "zero_prior_row_tiebreak_hits": [
+   {
+    "edge": [
+     9,
+     1
+    ],
+    "edge_label": [
+     "行动窗口/AI够强未自主",
+     "GOAL_拓扑智能"
+    ],
+    "rank": 2,
+    "note": "全零先验行 1e-6 tiebreak 运气命中，非先验驱动"
+   }
+  ],
+  "antifield_artifact_hits_lambda2": [
+   {
+    "edge": [
+     3,
+     14
+    ],
+    "edge_label": [
+     "组织记忆",
+     "node_14"
+    ],
+    "on_named_path": false,
+    "note": "λ=2 场系数为 −1，先验空行等价按场降序排反（反场 artifact）"
+   },
+   {
+    "edge": [
+     5,
+     16
+    ],
+    "edge_label": [
+     "专家萃取",
+     "node_16"
+    ],
+    "on_named_path": false,
+    "note": "λ=2 场系数为 −1，先验空行等价按场降序排反（反场 artifact）"
+   },
+   {
+    "edge": [
+     11,
+     20
+    ],
+    "edge_label": [
+     "branch_8",
+     "node_20"
+    ],
+    "on_named_path": false,
+    "note": "λ=2 场系数为 −1，先验空行等价按场降序排反（反场 artifact）"
+   },
+   {
+    "edge": [
+     12,
+     21
+    ],
+    "edge_label": [
+     "branch_9",
+     "node_21"
+    ],
+    "on_named_path": false,
+    "note": "λ=2 场系数为 −1，先验空行等价按场降序排反（反场 artifact）"
+   },
+   {
+    "edge": [
+     2,
+     22
+    ],
+    "edge_label": [
+     "仿光子vsTDA",
+     "node_22"
+    ],
+    "on_named_path": false,
+    "note": "λ=2 场系数为 −1，先验空行等价按场降序排反（反场 artifact）"
+   },
+   {
+    "edge": [
+     3,
+     23
+    ],
+    "edge_label": [
+     "组织记忆",
+     "node_23"
+    ],
+    "on_named_path": false,
+    "note": "λ=2 场系数为 −1，先验空行等价按场降序排反（反场 artifact）"
+   },
+   {
+    "edge": [
+     11,
+     29
+    ],
+    "edge_label": [
+     "branch_8",
+     "node_29"
+    ],
+    "on_named_path": false,
+    "note": "λ=2 场系数为 −1，先验空行等价按场降序排反（反场 artifact）"
+   },
+   {
+    "edge": [
+     2,
+     31
+    ],
+    "edge_label": [
+     "仿光子vsTDA",
+     "node_31"
+    ],
+    "on_named_path": false,
+    "note": "λ=2 场系数为 −1，先验空行等价按场降序排反（反场 artifact）"
+   },
+   {
+    "edge": [
+     3,
+     32
+    ],
+    "edge_label": [
+     "组织记忆",
+     "node_32"
+    ],
+    "on_named_path": false,
+    "note": "λ=2 场系数为 −1，先验空行等价按场降序排反（反场 artifact）"
+   },
+   {
+    "edge": [
+     2,
+     40
+    ],
+    "edge_label": [
+     "仿光子vsTDA",
+     "node_40"
+    ],
+    "on_named_path": false,
+    "note": "λ=2 场系数为 −1，先验空行等价按场降序排反（反场 artifact）"
+   },
+   {
+    "edge": [
+     5,
+     43
+    ],
+    "edge_label": [
+     "专家萃取",
+     "node_43"
+    ],
+    "on_named_path": false,
+    "note": "λ=2 场系数为 −1，先验空行等价按场降序排反（反场 artifact）"
+   }
+  ],
+  "placeholder_named_edge_detail": [
+   {
+    "edge": [
+     0,
+     10
+    ],
+    "field_mean_hit": true,
+    "field_mean_rank": 1,
+    "note": "占位标签 named 边；若命中须核查是否等分 tie artifact（见 honesty）"
+   },
+   {
+    "edge": [
+     0,
+     11
+    ],
+    "field_mean_hit": true,
+    "field_mean_rank": 1,
+    "note": "占位标签 named 边；若命中须核查是否等分 tie artifact（见 honesty）"
+   },
+   {
+    "edge": [
+     0,
+     12
+    ],
+    "field_mean_hit": true,
+    "field_mean_rank": 1,
+    "note": "占位标签 named 边；若命中须核查是否等分 tie artifact（见 honesty）"
+   }
+  ]
+ },
+ "paired_stats": {
+  "overall": {
+   "field_mean_vs_field_guided": {
+    "b": 14,
+    "c": 11,
+    "n_disc": 25,
+    "p_exact": 0.6900379657745361
+   }
+  },
+  "named": {
+   "field_mean_vs_field_guided": {
+    "b": 14,
+    "c": 0,
+    "n_disc": 14,
+    "p_exact": 0.0001220703125
+   }
+  },
+  "filler": {
+   "field_mean_vs_field_guided": {
+    "b": 0,
+    "c": 11,
+    "n_disc": 11,
+    "p_exact": 0.0009765625
+   }
+  }
+ },
+ "success_evaluation": {
+  "H1_random_init_is_root_cause": true,
+  "H1_criteria": "field_mean named>=0.8 且对 field_guided 精确 McNemar p<0.05（边级，LOO 依赖已声明）",
+  "H2_skeleton_detector_filler_below_0.15": true,
+  "field_mean_named": 1.0,
+  "field_mean_filler": 0.0625,
+  "field_mean_overall": 0.3877551020408163,
+  "note": "预登记判定口径（SPEC v1.9 E9.1）；负面如实，不回溯改写旧版结论。"
+ },
+ "runtime_sec": 5.213,
+ "honesty": [
+  "零 API：仅只读 llm_prior_cache.json；无 key、无网络、无 mock。",
+  "deposon_diffusion.py 未改；init_mode 参数化在 v1.9 新脚本内实现，dirichlet 路径与 v1.7.1 field_guided 逐位一致（tests/test_v19.py 回归）。",
+  "图为确定性重建，35/45=78% 占位标签；named 17 边中 0→10/11/12 三条指向占位节点，其命中可能依赖等分 tie artifact，已与真实标签 named 边（14 条）分层报告。",
+  "filler 与场信号反向（场=骨架检测器）：overall 把两者平均，本图不做overall 单信号优效主张（SPEC v1.9 E9.1 H2）。",
+  "λ=2.0 为 λ>1 非凸组合（场系数 −1），先验空行命中属反场排序 artifact，逐边标注。",
+  "探针离线数字（named≈0.994）为探索性证据，一切以本预登记重跑数字为准。"
+ ]
+}
