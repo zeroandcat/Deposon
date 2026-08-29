@@ -307,23 +307,63 @@ def reverse_denoise(WT: np.ndarray, mask: np.ndarray, cfg: DiffusionConfig,
     cfg.seed 固定 (决定论)。先验采样是扩散生成的标准做法, 也是场引导项得以
     检验的前提。
     """
+    W, _steps, _states = denoise(WT, mask, cfg, source, target)
+    return W
+
+
+def denoise(WT: np.ndarray, mask: np.ndarray, cfg: DiffusionConfig,
+            source: int, target: int, *, init_mode: str = "dirichlet",
+            alpha: float | None = None,
+            early_stop: tuple | None = None,
+            record: bool = False):
+    """统一反向退火入口 (候选 1 重构): 原 5 份逐行复制循环的单一实现。
+
+    旋钮 (全部为行为保持参数化, 各历史副本的语义逐项对应):
+    - init_mode: "dirichlet" (Dirichlet 随机起点, 同原 reverse_denoise) |
+      "prior_mean" (跳过采样, 保持前向终态 = mean-field / DDIM η=0 极限,
+      对应原 run_v19_meanfield.reverse_denoise_init 的同名模式)。
+    - alpha: Dirichlet 浓度 (None ⇒ np.ones(m), 与原 dirichlet 逐位一致;
+      对应原 run_v20_gt7.reverse_denoise_traj_alpha 的 α 温度旋钮)。
+    - early_stop: None 或 (rel_tol, min_steps); 步数 ≥ min_steps 且本步掩码上
+      最大相对更新 < rel_tol 时提前退出 (对应原 deposon_fast.reverse_denoise_fast)。
+    - record: True 时记录每步后的 W (共 n_steps+1 个状态, 含起点;
+      对应原 run_v20_gt5.reverse_denoise_traj)。
+
+    返回 (W_final, steps_taken, states):
+    - W_final: 退火末态 (与旧各副本返回值逐位一致);
+    - steps_taken: 实际步数 (early_stop=None 时 = max(n_steps, 0));
+    - states: record=True 时为状态列表, 否则 None。
+
+    n_steps<=0 时恒等返回 (W=WT.copy(), steps=0, record 时 states=[W]),
+    与全部旧副本的提前返回语义一致。
+    """
     WT = np.asarray(WT, dtype=float)
     mask = np.asarray(mask, dtype=bool)
     _check_square(WT, mask)
     if cfg.energy_mode not in ("aggregate", "max_path"):
         raise ValueError(f"unknown energy_mode: {cfg.energy_mode}")
+    if init_mode not in ("dirichlet", "prior_mean"):
+        raise ValueError(f"unknown init_mode: {init_mode}")
+    if alpha is not None and alpha <= 0.0:
+        raise ValueError(f"alpha must be positive or None, got {alpha}")
     W = WT.copy()
     if cfg.n_steps <= 0:
-        return W  # 条件等效 A: n_steps=0 ⇒ 恒等 (边界即 W0 原值)
-    rng = np.random.default_rng(cfg.seed)
-    for i in range(W.shape[0]):
-        idx, m, p = _masked_row_stats(W, mask, i)
-        if m == 0:
-            continue
-        mass = p * m
-        if mass > 0.0:
-            W[i, idx] = mass * rng.dirichlet(np.ones(m))  # x_T ~ 行均匀先验
-    _project_masked(W, mask)
+        return W, 0, ([W] if record else None)  # 条件等效 A: n_steps=0 ⇒ 恒等
+    if init_mode == "dirichlet":
+        rng = np.random.default_rng(cfg.seed)
+        for i in range(W.shape[0]):
+            idx, m, p = _masked_row_stats(W, mask, i)
+            if m == 0:
+                continue
+            mass = p * m
+            if mass > 0.0:
+                conc = np.ones(m) if alpha is None else np.full(m, alpha)
+                W[i, idx] = mass * rng.dirichlet(conc)  # x_T ~ 行均匀先验
+        _project_masked(W, mask)
+    else:  # prior_mean: 前向终态已是行均匀先验均值, 零随机性 (不调 rng)
+        _project_masked(W, mask)
+    states = [W.copy()] if record else None
+    steps_taken = 0
     for _t in range(cfg.n_steps, 0, -1):
         grad = np.zeros_like(W)
         if cfg.field_guidance and source != target:
@@ -346,13 +386,26 @@ def reverse_denoise(WT: np.ndarray, mask: np.ndarray, cfg: DiffusionConfig,
                         grad[i, j] += _G_AETHER / (1.0 + _G_AETHER * w) - 1.0 / w
         if cfg.lam_smooth:
             grad[mask] += 2.0 * cfg.lam_smooth * W[mask]
+        if early_stop is not None:
+            W_prev = W[mask].copy()
         # 单纯形自然梯度 (mirror descent): 等效乘性更新 W *= exp(-lr * W * grad)
         W[mask] *= np.exp(-cfg.lr * W[mask] * grad[mask])
         # 向 W_obs 收缩: W_obs 在掩码处为 0 (观测场不含被掩边), 即乘以 (1-lr) 衰减
         W[mask] = (1.0 - cfg.lr) * W[mask]
         W[~mask] = WT[~mask]  # 边界逐元素冻结
         _project_masked(W, mask)
-    return W
+        steps_taken += 1
+        if record:
+            states.append(W.copy())
+        if early_stop is not None:
+            rel_tol, min_steps = early_stop
+            if steps_taken >= min_steps:
+                denom = np.maximum(np.abs(W_prev), _EPS)
+                rel = (np.max(np.abs(W[mask] - W_prev) / denom)
+                       if W_prev.size else 0.0)
+                if rel < rel_tol:
+                    break
+    return W, steps_taken, states
 
 
 def complete_graph(W_obs: np.ndarray, mask: np.ndarray, cfg: DiffusionConfig,
