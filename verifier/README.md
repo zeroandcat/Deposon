@@ -88,3 +88,6 @@
 ## v32（2026-08-30 创建）
 - 测量：v2.X 学术结构标准化+排版交付（编号节 1-7 齐全/Method 3.1-3.4/Limitations/References [1]-[59] 连续/数字零漂移/口径词/图语言/排版 PDF 17 页首页主线/密钥红线/pytest 255）
 - 与 v31 差异：v31 验收方向校准稿内容；v32 验收 sci-paper-cn 结构契约落地与 kimi-pdf 学术排版（run1 为 References 提取范围修正轨迹）
+## v33（2026-08-30 创建）
+- 测量：重构不变量（pytest≥274/row_normalize 唯一/退火循环体唯一/denoise 统一入口/四文件去复制/import 对象同一）+ 整合包不变量（附录 A 误标清除+S6 追溯/§6.5 硬件同构 18/22/§5.6 1740/§6.4 GT-2B 自由度/§6.3 λ=2 反场/Findings 18/22/_sanitize 错误路径/口径词快照/References [1]-[59]/密钥红线/REVISION_LOG 第 20 条）
+- 与 v32 差异：v32 验收结构与排版；v33 验收 REFACTOR_v2 代码重构与 REVISION_LOG 第 20 条整合包（run1 检出 B6a/B6d 两处正文缺口；run2 节级切片复核全绿 FAILS=0）
