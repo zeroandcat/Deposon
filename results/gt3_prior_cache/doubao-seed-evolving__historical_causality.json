@@ -1,0 +1,11 @@
+{
+ "domain": "historical_causality",
+ "kind": "gt3b_cross_vendor_prior",
+ "prompt_sha256": "584cd276fa021e3dc0f75a703d5f62bac4ffe40b84c0b9092aee0047c7b1458d",
+ "model": "doubao-seed-evolving",
+ "vendor": "volces_ark_bytedance",
+ "response_text": null,
+ "attempts": 3,
+ "last_error": "ReadTimeout: HTTPSConnectionPool(host='ark.cn-beijing.volces.com', port=443): Read timed out. (read timeout=480)",
+ "note": "SPEC_GT3 修正案 A2+A2r（重试轮 max_tokens 16000/timeout 480s，attempts 累计）"
+}

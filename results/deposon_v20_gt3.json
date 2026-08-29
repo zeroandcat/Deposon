@@ -26,6 +26,20 @@
      "filler_hits3": 0.625,
      "field_mean_named_hits3": 0.0967741935483871,
      "attempts": 1
+    },
+    "E3_doubao-seed-evolving": {
+     "status": "ok",
+     "named_hits3": 0.6774193548387096,
+     "filler_hits3": 0.75,
+     "field_mean_named_hits3": 0.0967741935483871,
+     "attempts": 3
+    },
+    "E4_deepseek-v4-pro": {
+     "status": "ok",
+     "named_hits3": 0.5161290322580645,
+     "filler_hits3": 0.625,
+     "field_mean_named_hits3": 0.0967741935483871,
+     "attempts": 1
     }
    }
   },
@@ -47,6 +61,20 @@
      "attempts": 1
     },
     "E2_kimi-k2-thinking": {
+     "status": "ok",
+     "named_hits3": 1.0,
+     "filler_hits3": 0.9473684210526315,
+     "field_mean_named_hits3": 0.13636363636363635,
+     "attempts": 1
+    },
+    "E3_doubao-seed-evolving": {
+     "status": "ok",
+     "named_hits3": 1.0,
+     "filler_hits3": 0.9473684210526315,
+     "field_mean_named_hits3": 0.13636363636363635,
+     "attempts": 1
+    },
+    "E4_deepseek-v4-pro": {
      "status": "ok",
      "named_hits3": 1.0,
      "filler_hits3": 0.9473684210526315,
@@ -75,6 +103,17 @@
     "E2_kimi-k2-thinking": {
      "status": "fetch_failed",
      "named_hits3": null
+    },
+    "E3_doubao-seed-evolving": {
+     "status": "fetch_failed",
+     "named_hits3": null
+    },
+    "E4_deepseek-v4-pro": {
+     "status": "ok",
+     "named_hits3": 0.5172413793103449,
+     "filler_hits3": 0.3684210526315789,
+     "field_mean_named_hits3": 0.10344827586206896,
+     "attempts": 1
     }
    }
   },
@@ -99,6 +138,17 @@
      "status": "ok",
      "named_hits3": 0.6956521739130435,
      "filler_hits3": 0.375,
+     "field_mean_named_hits3": 0.043478260869565216,
+     "attempts": 1
+    },
+    "E3_doubao-seed-evolving": {
+     "status": "fetch_failed",
+     "named_hits3": null
+    },
+    "E4_deepseek-v4-pro": {
+     "status": "ok",
+     "named_hits3": 0.6956521739130435,
+     "filler_hits3": 0.40625,
      "field_mean_named_hits3": 0.043478260869565216,
      "attempts": 1
     }
@@ -127,6 +177,20 @@
      "filler_hits3": 0.9642857142857143,
      "field_mean_named_hits3": 0.1875,
      "attempts": 1
+    },
+    "E3_doubao-seed-evolving": {
+     "status": "ok",
+     "named_hits3": 0.8125,
+     "filler_hits3": 0.9285714285714286,
+     "field_mean_named_hits3": 0.1875,
+     "attempts": 1
+    },
+    "E4_deepseek-v4-pro": {
+     "status": "ok",
+     "named_hits3": 0.8125,
+     "filler_hits3": 0.9285714285714286,
+     "field_mean_named_hits3": 0.1875,
+     "attempts": 1
     }
    }
   },
@@ -147,12 +211,28 @@
     "E2_kimi-k2-thinking": {
      "status": "fetch_failed",
      "named_hits3": null
+    },
+    "E3_doubao-seed-evolving": {
+     "status": "ok",
+     "named_hits3": 0.19444444444444445,
+     "filler_hits3": 0.26666666666666666,
+     "field_mean_named_hits3": 0.05555555555555555,
+     "attempts": 1
+    },
+    "E4_deepseek-v4-pro": {
+     "status": "ok",
+     "named_hits3": 0.4444444444444444,
+     "filler_hits3": 0.26666666666666666,
+     "field_mean_named_hits3": 0.05555555555555555,
+     "attempts": 1
     }
    }
   }
  ],
  "failures": {
   "E2_kimi-k2-thinking__algorithm_process": "fetch_failed",
+  "E3_doubao-seed-evolving__algorithm_process": "fetch_failed",
+  "E3_doubao-seed-evolving__historical_causality": "fetch_failed",
   "E1_moonshot-v1-8k__project_management": "fetch_failed",
   "E2_kimi-k2-thinking__project_management": "fetch_failed"
  },
@@ -168,10 +248,22 @@
    "domains_prior_le_field": 0,
    "criterion_pass_ge4of6": true,
    "kill_triggered_ge3of6": false
+  },
+  "E3_doubao-seed-evolving": {
+   "domains_prior_gt_field": 4,
+   "domains_prior_le_field": 0,
+   "criterion_pass_ge4of6": true,
+   "kill_triggered_ge3of6": false
+  },
+  "E4_deepseek-v4-pro": {
+   "domains_prior_gt_field": 6,
+   "domains_prior_le_field": 0,
+   "criterion_pass_ge4of6": true,
+   "kill_triggered_ge3of6": false
   }
  },
- "kendall_W": 0.9111111111111111,
- "n_domains_all_evaluators_ok": 4,
+ "kendall_W": 1.0,
+ "n_domains_all_evaluators_ok": 3,
  "verdict": {
   "H_GT3_supported": true,
   "H_GT3_dead_triggered": false
@@ -179,13 +271,18 @@
  "budget": {
   "preregistered_max": 27,
   "probe_attempts": 3,
-  "fetch_attempts_recorded_in_caches": 17,
+  "fetch_attempts_recorded_in_caches": 35,
+  "ark_gt3b_attempts": {
+   "doubao": 12,
+   "deepseek": 8,
+   "probes": 3
+  },
   "actual_total_attempts": 28,
   "overrun": 1,
   "note": "修正案 A1：重试轮如实计数致超支 1 次，已披露"
  },
  "honesty": [
-  "降级为族内跨评估者（GT-3a）：生成者 kimi-for-coding，评估者为同厂商不同代际/推理模式模型；不能完全排除同厂商同源污染，GT-3b（跨厂商）待资源。",
+  "GT-3b 已升级为三模型族（Moonshot/ByteDance/DeepSeek）；原声明：降级为族内跨评估者（GT-3a）：生成者 kimi-for-coding，评估者为同厂商不同代际/推理模式模型；不能完全排除同厂商同源污染，GT-3b（跨厂商）待资源。",
   "parse/fetch 失败域不静默剔除，单独披露于 failures。",
   "prompt 与既有先验臂逐字节相同（prompt_sha256 校验），评估协议与 run_v20_crossval_eval 逐位相同。"
  ]
