@@ -10,7 +10,7 @@ import os
 import requests
 
 import llm_prior
-from llm_prior import MAX_ATTEMPTS, build_prior_prompt
+from llm_prior import MAX_ATTEMPTS, _sanitize, build_prior_prompt
 from mindmap_corpus_v20 import CORPUS_DIR, FAMILY_L_DOMAINS
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -62,12 +62,12 @@ def main():
                           "messages": [{"role": "user", "content": prompt}]},
                     timeout=ARK_TIMEOUT)
                 if r.status_code != 200:
-                    raise RuntimeError(f"HTTP {r.status_code}: {r.text[:200]}")
+                    raise RuntimeError(_sanitize(f"HTTP {r.status_code}: {r.text[:200]}", key))
                 content = r.json()["choices"][0]["message"]["content"]
                 if content:
                     break
             except Exception as e:
-                last_err = f"{type(e).__name__}: {str(e)[:120]}"
+                last_err = _sanitize(f"{type(e).__name__}: {str(e)[:120]}", key)
         json.dump({"domain": domain, "kind": "gt3b_cross_vendor_prior",
                    "prompt_sha256": s, "model": ARK_MODEL,
                    "vendor": "volces_ark_bytedance",
