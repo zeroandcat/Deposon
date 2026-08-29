@@ -8,17 +8,13 @@
 # 快路径等价性由 tests/test_fast.py 与 run_v20_fastcheck.py 证明：
 #   早停判据触发时输出与完整 50 步的逐元差 < FAST_TOL（默认 1e-10，
 #   远小于任何排序决策阈值 1e-6 tiebreak 间距）。
-# 实测结论（Findings_v2.0_hardening §二）：本调度下早停从不触发（相对更新
-# 地板 ~10%/步），固定 50 步为正确选择；提速来自轨迹共享（1.34×）。
 # no LLM API calls issued。
 import time
 
 import numpy as np
 
-from deposon_diffusion import (DiffusionConfig, config_dict, forward_diffuse,
-                               _project_masked, _walk_sums, _G_AETHER, _EPS,
-                               _masked_row_stats)
-from run_v19_meanfield import INIT_MODES
+from deposon_diffusion import (DiffusionConfig, config_dict, denoise,
+                               forward_diffuse)
 
 FAST_TOL = 1e-10          # 早停输出与完整步数的最大逐元差硬上限（回归锁定）
 EARLY_STOP_REL = 1e-12    # 相对更新阈值：max|ΔW|/max(W,eps) 低于此值即停
@@ -39,48 +35,13 @@ def reverse_denoise_fast(WT, mask, cfg, source, target, init_mode="dirichlet",
     0.9 收缩下相对更新单调衰减 ⇒ 触发后剩余步数的累计影响 < 1e-10
     （run_v20_fastcheck.py 实测最大逐元差并锁定 FAST_TOL）。
     返回 (W_done, steps_taken)。
+
+    候选 1 重构：实现已统一收敛到 deposon_diffusion.denoise（薄转发，
+    early_stop=(rel_tol, min_steps)，数值逐位不变，tests/test_fast.py 锁定）。
     """
-    WT = np.asarray(WT, dtype=float)
-    mask = np.asarray(mask, dtype=bool)
-    if init_mode not in INIT_MODES:
-        raise ValueError(f"unknown init_mode: {init_mode}")
-    W = WT.copy()
-    if cfg.n_steps <= 0:
-        return W, 0
-    if init_mode == "dirichlet":
-        rng = np.random.default_rng(cfg.seed)
-        for i in range(W.shape[0]):
-            idx, m, p = _masked_row_stats(W, mask, i)
-            if m == 0:
-                continue
-            mass = p * m
-            if mass > 0.0:
-                W[i, idx] = mass * rng.dirichlet(np.ones(m))
-        _project_masked(W, mask)
-    else:
-        _project_masked(W, mask)
-    steps_taken = 0
-    for _t in range(cfg.n_steps, 0, -1):
-        grad = np.zeros_like(W)
-        if cfg.field_guidance and source != target:
-            x, y = _walk_sums(W, source, target)
-            xt = max(float(x[target]), _EPS)
-            wpos = np.maximum(W, _EPS)
-            dtdw = np.where(W > _EPS, 1.0 / (1.0 + _G_AETHER * wpos) ** 2, 0.0)
-            grad -= (x[:, None] * y[None, :]) * (dtdw / xt)
-        if cfg.lam_smooth:
-            grad[mask] += 2.0 * cfg.lam_smooth * W[mask]
-        W_prev = W[mask].copy()
-        W[mask] *= np.exp(-cfg.lr * W[mask] * grad[mask])
-        W[mask] = (1.0 - cfg.lr) * W[mask]
-        W[~mask] = WT[~mask]
-        _project_masked(W, mask)
-        steps_taken += 1
-        if steps_taken >= min_steps:
-            denom = np.maximum(np.abs(W_prev), _EPS)
-            rel = np.max(np.abs(W[mask] - W_prev) / denom) if W_prev.size else 0.0
-            if rel < rel_tol:
-                break
+    W, steps_taken, _states = denoise(WT, mask, cfg, source, target,
+                                      init_mode=init_mode,
+                                      early_stop=(rel_tol, min_steps))
     return W, steps_taken
 
 
