@@ -1,0 +1,192 @@
+{
+ "experiment": "deposon_v20_gt3",
+ "spec": "docs/SPEC_GT3.md",
+ "spec_frozen_before_data": "2026-08-30",
+ "per_domain": [
+  {
+   "domain": "physics_concepts",
+   "evaluators": {
+    "E0_kimi-for-coding": {
+     "status": "ok",
+     "named_hits3": 0.4838709677419355,
+     "filler_hits3": 0.875,
+     "field_mean_named_hits3": 0.0967741935483871,
+     "attempts": 0
+    },
+    "E1_moonshot-v1-8k": {
+     "status": "ok",
+     "named_hits3": 0.45161290322580644,
+     "filler_hits3": 0.75,
+     "field_mean_named_hits3": 0.0967741935483871,
+     "attempts": 1
+    },
+    "E2_kimi-k2-thinking": {
+     "status": "ok",
+     "named_hits3": 0.4838709677419355,
+     "filler_hits3": 0.625,
+     "field_mean_named_hits3": 0.0967741935483871,
+     "attempts": 1
+    }
+   }
+  },
+  {
+   "domain": "biological_taxonomy",
+   "evaluators": {
+    "E0_kimi-for-coding": {
+     "status": "ok",
+     "named_hits3": 1.0,
+     "filler_hits3": 0.9473684210526315,
+     "field_mean_named_hits3": 0.13636363636363635,
+     "attempts": 0
+    },
+    "E1_moonshot-v1-8k": {
+     "status": "ok",
+     "named_hits3": 1.0,
+     "filler_hits3": 0.9473684210526315,
+     "field_mean_named_hits3": 0.13636363636363635,
+     "attempts": 1
+    },
+    "E2_kimi-k2-thinking": {
+     "status": "ok",
+     "named_hits3": 1.0,
+     "filler_hits3": 0.9473684210526315,
+     "field_mean_named_hits3": 0.13636363636363635,
+     "attempts": 1
+    }
+   }
+  },
+  {
+   "domain": "algorithm_process",
+   "evaluators": {
+    "E0_kimi-for-coding": {
+     "status": "ok",
+     "named_hits3": 0.6896551724137931,
+     "filler_hits3": 0.21052631578947367,
+     "field_mean_named_hits3": 0.10344827586206896,
+     "attempts": 0
+    },
+    "E1_moonshot-v1-8k": {
+     "status": "ok",
+     "named_hits3": 0.7586206896551724,
+     "filler_hits3": 0.47368421052631576,
+     "field_mean_named_hits3": 0.10344827586206896,
+     "attempts": 2
+    },
+    "E2_kimi-k2-thinking": {
+     "status": "fetch_failed",
+     "named_hits3": null
+    }
+   }
+  },
+  {
+   "domain": "historical_causality",
+   "evaluators": {
+    "E0_kimi-for-coding": {
+     "status": "ok",
+     "named_hits3": 0.782608695652174,
+     "filler_hits3": 0.40625,
+     "field_mean_named_hits3": 0.043478260869565216,
+     "attempts": 0
+    },
+    "E1_moonshot-v1-8k": {
+     "status": "ok",
+     "named_hits3": 0.7391304347826086,
+     "filler_hits3": 0.40625,
+     "field_mean_named_hits3": 0.043478260869565216,
+     "attempts": 1
+    },
+    "E2_kimi-k2-thinking": {
+     "status": "ok",
+     "named_hits3": 0.6956521739130435,
+     "filler_hits3": 0.375,
+     "field_mean_named_hits3": 0.043478260869565216,
+     "attempts": 1
+    }
+   }
+  },
+  {
+   "domain": "geography_world",
+   "evaluators": {
+    "E0_kimi-for-coding": {
+     "status": "ok",
+     "named_hits3": 0.75,
+     "filler_hits3": 0.8928571428571429,
+     "field_mean_named_hits3": 0.1875,
+     "attempts": 0
+    },
+    "E1_moonshot-v1-8k": {
+     "status": "ok",
+     "named_hits3": 0.75,
+     "filler_hits3": 0.9642857142857143,
+     "field_mean_named_hits3": 0.1875,
+     "attempts": 2
+    },
+    "E2_kimi-k2-thinking": {
+     "status": "ok",
+     "named_hits3": 0.75,
+     "filler_hits3": 0.9642857142857143,
+     "field_mean_named_hits3": 0.1875,
+     "attempts": 1
+    }
+   }
+  },
+  {
+   "domain": "project_management",
+   "evaluators": {
+    "E0_kimi-for-coding": {
+     "status": "ok",
+     "named_hits3": 0.3888888888888889,
+     "filler_hits3": 0.26666666666666666,
+     "field_mean_named_hits3": 0.05555555555555555,
+     "attempts": 0
+    },
+    "E1_moonshot-v1-8k": {
+     "status": "fetch_failed",
+     "named_hits3": null
+    },
+    "E2_kimi-k2-thinking": {
+     "status": "fetch_failed",
+     "named_hits3": null
+    }
+   }
+  }
+ ],
+ "failures": {
+  "E2_kimi-k2-thinking__algorithm_process": "fetch_failed",
+  "E1_moonshot-v1-8k__project_management": "fetch_failed",
+  "E2_kimi-k2-thinking__project_management": "fetch_failed"
+ },
+ "criteria": {
+  "E1_moonshot-v1-8k": {
+   "domains_prior_gt_field": 5,
+   "domains_prior_le_field": 0,
+   "criterion_pass_ge4of6": true,
+   "kill_triggered_ge3of6": false
+  },
+  "E2_kimi-k2-thinking": {
+   "domains_prior_gt_field": 4,
+   "domains_prior_le_field": 0,
+   "criterion_pass_ge4of6": true,
+   "kill_triggered_ge3of6": false
+  }
+ },
+ "kendall_W": 0.9111111111111111,
+ "n_domains_all_evaluators_ok": 4,
+ "verdict": {
+  "H_GT3_supported": true,
+  "H_GT3_dead_triggered": false
+ },
+ "budget": {
+  "preregistered_max": 27,
+  "probe_attempts": 3,
+  "fetch_attempts_recorded_in_caches": 17,
+  "actual_total_attempts": 28,
+  "overrun": 1,
+  "note": "修正案 A1：重试轮如实计数致超支 1 次，已披露"
+ },
+ "honesty": [
+  "降级为族内跨评估者（GT-3a）：生成者 kimi-for-coding，评估者为同厂商不同代际/推理模式模型；不能完全排除同厂商同源污染，GT-3b（跨厂商）待资源。",
+  "parse/fetch 失败域不静默剔除，单独披露于 failures。",
+  "prompt 与既有先验臂逐字节相同（prompt_sha256 校验），评估协议与 run_v20_crossval_eval 逐位相同。"
+ ]
+}
