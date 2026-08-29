@@ -1,0 +1,2890 @@
+{
+ "experiment": "deposon_v20_gt6",
+ "spec_version": "v2.0",
+ "spec": "docs/GT_RECONSTRUCTION.md §5 下一步第 2 条；Candogan et al. 2011（reviews/literature_scan_v2X_A.md 锚点 1-7）流分解：博弈 = 势流 + 循环/调和流，量化非势残余占比",
+ "config": {
+  "n_steps": 50,
+  "beta_schedule": "linear",
+  "prior": "uniform_out",
+  "lr": 0.1,
+  "lam_smooth": 0.01,
+  "field_guidance": true,
+  "energy_mode": "aggregate",
+  "seed": 0
+ },
+ "decomposition": {
+  "flow_definition": "F_e = (x[u]·y[v]/x_t)·dt_e/dW（反向退火场引导梯度的场分量本身，aggregate 口径）",
+  "gradient_space": "有向关联矩阵 B 的列空间：(Bp)_e = p_u − p_v，最小二乘投影 p = pinv(B)F",
+  "residual": "非势残余 = F − B·pinv(B)·F（循环/调和流）",
+  "residual_ratio": "r = ||残余||² / ||F||²",
+  "note": "平滑分量 -2·lam·W 为节点独立自指项，天然属势分量，不计入非势残余；F 全零时 r 定义为 0.0（本语料未出现）"
+ },
+ "preregistered": {
+  "graphs": "全部 22 图（族 S 16 + 族 L 6）",
+  "tasks_per_graph_max": 10,
+  "sample_seed": 606000,
+  "pass_rule": "图级均值 r 的中位数 < 0.1 ⇒ potential_game_explanation_complete",
+  "downgrade_rule": "中位数 > 0.3 ⇒ downgraded_to_approximate_potential_game",
+  "band_rule": "之间 ⇒ inconclusive_band_reported_as_is，如实报区间"
+ },
+ "per_graph_summary": {
+  "L_algorithm_process": {
+   "residual_ratio_mean": 0.7301103409873188,
+   "residual_ratio_median": 0.8260792410593274,
+   "residual_ratio_max": 0.9206449325089018,
+   "residual_ratio_min": 0.14641652895927094
+  },
+  "L_biological_taxonomy": {
+   "residual_ratio_mean": 0.8075153297730933,
+   "residual_ratio_median": 0.8366660069120731,
+   "residual_ratio_max": 0.9192806258500218,
+   "residual_ratio_min": 0.6176579298185367
+  },
+  "L_geography_world": {
+   "residual_ratio_mean": 0.8224768109065205,
+   "residual_ratio_median": 0.848677000205271,
+   "residual_ratio_max": 0.9731527743442548,
+   "residual_ratio_min": 0.46982820117052054
+  },
+  "L_historical_causality": {
+   "residual_ratio_mean": 0.5277729907239138,
+   "residual_ratio_median": 0.5285110347664481,
+   "residual_ratio_max": 0.752194032660497,
+   "residual_ratio_min": 0.28702373736630596
+  },
+  "L_physics_concepts": {
+   "residual_ratio_mean": 0.8272222102026949,
+   "residual_ratio_median": 0.8817675883557292,
+   "residual_ratio_max": 0.9727164388821163,
+   "residual_ratio_min": 0.3980364801161737
+  },
+  "L_project_management": {
+   "residual_ratio_mean": 0.46192162361475606,
+   "residual_ratio_median": 0.5036345983845341,
+   "residual_ratio_max": 0.7453524115234022,
+   "residual_ratio_min": 0.04833540823758535
+  },
+  "S1": {
+   "residual_ratio_mean": 0.4337961301201157,
+   "residual_ratio_median": 0.4373385171553315,
+   "residual_ratio_max": 0.6151516201346271,
+   "residual_ratio_min": 0.15624062865759065
+  },
+  "S1_n35": {
+   "residual_ratio_mean": 0.5836576353250857,
+   "residual_ratio_median": 0.5881996578104301,
+   "residual_ratio_max": 0.7556249704473837,
+   "residual_ratio_min": 0.3546074186292507
+  },
+  "S1_n45": {
+   "residual_ratio_mean": 0.617480100025025,
+   "residual_ratio_median": 0.6304571391900175,
+   "residual_ratio_max": 0.7563804380123417,
+   "residual_ratio_min": 0.4367500287516754
+  },
+  "S1_n60": {
+   "residual_ratio_mean": 0.6522777426088196,
+   "residual_ratio_median": 0.6684051723716746,
+   "residual_ratio_max": 0.8051472409412924,
+   "residual_ratio_min": 0.4052193442651939
+  },
+  "S2": {
+   "residual_ratio_mean": 0.6967082591443557,
+   "residual_ratio_median": 0.7406219524481304,
+   "residual_ratio_max": 0.9120708005234839,
+   "residual_ratio_min": 0.36704518358405354
+  },
+  "S2_n20": {
+   "residual_ratio_mean": 0.5329484784280784,
+   "residual_ratio_median": 0.5464645463901534,
+   "residual_ratio_max": 0.7778323883296613,
+   "residual_ratio_min": 0.0
+  },
+  "S2_n35": {
+   "residual_ratio_mean": 0.6908404632857406,
+   "residual_ratio_median": 0.7025494240432777,
+   "residual_ratio_max": 0.896507556611201,
+   "residual_ratio_min": 0.4594278838155286
+  },
+  "S2_n45": {
+   "residual_ratio_mean": 0.699159062735873,
+   "residual_ratio_median": 0.7308239584853889,
+   "residual_ratio_max": 0.897088824492403,
+   "residual_ratio_min": 0.41839675530513336
+  },
+  "S2_n60": {
+   "residual_ratio_mean": 0.7696616723044836,
+   "residual_ratio_median": 0.7912026624144816,
+   "residual_ratio_max": 0.9135522762272306,
+   "residual_ratio_min": 0.5703577541063457
+  },
+  "S3": {
+   "residual_ratio_mean": 0.6371654336104256,
+   "residual_ratio_median": 0.6982120648686134,
+   "residual_ratio_max": 0.8961486769120628,
+   "residual_ratio_min": 0.23771634074563748
+  },
+  "S4": {
+   "residual_ratio_mean": 0.650939152384534,
+   "residual_ratio_median": 0.6824538193347484,
+   "residual_ratio_max": 0.9520789695180239,
+   "residual_ratio_min": 0.1540890195175081
+  },
+  "S5": {
+   "residual_ratio_mean": 0.7450440951052843,
+   "residual_ratio_median": 0.8406734932967296,
+   "residual_ratio_max": 0.9698702137761426,
+   "residual_ratio_min": 0.3594164588125641
+  },
+  "S6": {
+   "residual_ratio_mean": 0.8450324294592136,
+   "residual_ratio_median": 0.9069687825354171,
+   "residual_ratio_max": 0.999176593405578,
+   "residual_ratio_min": 0.4959598626511075
+  },
+  "S6_n20": {
+   "residual_ratio_mean": 0.7939050270196434,
+   "residual_ratio_median": 0.8701623533619625,
+   "residual_ratio_max": 0.9995814611241094,
+   "residual_ratio_min": 0.37073836464130765
+  },
+  "S6_n35": {
+   "residual_ratio_mean": 0.8265652936675053,
+   "residual_ratio_median": 0.9058134034730169,
+   "residual_ratio_max": 0.9993628350047351,
+   "residual_ratio_min": 0.4443636867326088
+  },
+  "S6_n60": {
+   "residual_ratio_mean": 0.8443900790091622,
+   "residual_ratio_median": 0.9031325529418082,
+   "residual_ratio_max": 0.9992727044694487,
+   "residual_ratio_min": 0.5228057018931887
+  }
+ },
+ "per_graph_detail": {
+  "L_algorithm_process": {
+   "graph_id": "L_algorithm_process",
+   "family": "L",
+   "N": 38,
+   "n_named_edges": 29,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      2,
+      3
+     ],
+     "n_edges_in_flow": 54,
+     "residual_ratio": 0.8761666940789884,
+     "grad_energy": 0.00041819111399776785,
+     "resid_energy": 0.0029576387117369605,
+     "total_energy": 0.0033758298257347284
+    },
+    {
+     "task_edge": [
+      4,
+      6
+     ],
+     "n_edges_in_flow": 54,
+     "residual_ratio": 0.8675460548814283,
+     "grad_energy": 0.0005310609614032652,
+     "resid_energy": 0.0034782781302194677,
+     "total_energy": 0.004009339091622733
+    },
+    {
+     "task_edge": [
+      11,
+      12
+     ],
+     "n_edges_in_flow": 54,
+     "residual_ratio": 0.9034688191348538,
+     "grad_energy": 0.00032929097805697627,
+     "resid_energy": 0.0030807888296211144,
+     "total_energy": 0.0034100798076780906
+    },
+    {
+     "task_edge": [
+      12,
+      13
+     ],
+     "n_edges_in_flow": 54,
+     "residual_ratio": 0.8955774045024782,
+     "grad_energy": 0.0003711482907500047,
+     "resid_energy": 0.003181820784443248,
+     "total_energy": 0.0035529690751932526
+    },
+    {
+     "task_edge": [
+      15,
+      16
+     ],
+     "n_edges_in_flow": 54,
+     "residual_ratio": 0.9021180694285235,
+     "grad_energy": 0.0003512459176122577,
+     "resid_energy": 0.0032352917445971936,
+     "total_energy": 0.0035865376622094513
+    },
+    {
+     "task_edge": [
+      16,
+      17
+     ],
+     "n_edges_in_flow": 54,
+     "residual_ratio": 0.9165997149127211,
+     "grad_energy": 0.00029854488522779464,
+     "resid_energy": 0.003278101828636669,
+     "total_energy": 0.0035766467138644634
+    },
+    {
+     "task_edge": [
+      22,
+      23
+     ],
+     "n_edges_in_flow": 54,
+     "residual_ratio": 0.9206449325089018,
+     "grad_energy": 0.0002907750199552021,
+     "resid_energy": 0.003372547376146577,
+     "total_energy": 0.003663322396101779
+    },
+    {
+     "task_edge": [
+      24,
+      25
+     ],
+     "n_edges_in_flow": 54,
+     "residual_ratio": 0.9187267648147051,
+     "grad_energy": 0.0003014585184079971,
+     "resid_energy": 0.003403875503365293,
+     "total_energy": 0.00370533402177329
+    },
+    {
+     "task_edge": [
+      26,
+      27
+     ],
+     "n_edges_in_flow": 54,
+     "residual_ratio": 0.920782846948063,
+     "grad_energy": 0.0002995852913338592,
+     "resid_energy": 0.003483987661198858,
+     "total_energy": 0.0037835729525327173
+    },
+    {
+     "task_edge": [
+      28,
+      29
+     ],
+     "n_edges_in_flow": 54,
+     "residual_ratio": 0.14641652895927094,
+     "grad_energy": 0.004217379184900158,
+     "resid_energy": 0.0007229460956430929,
+     "total_energy": 0.00494032528054325
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.7301103409873188,
+    "residual_ratio_median": 0.8260792410593274,
+    "residual_ratio_max": 0.9206449325089018,
+    "residual_ratio_min": 0.14641652895927094
+   }
+  },
+  "L_biological_taxonomy": {
+   "graph_id": "L_biological_taxonomy",
+   "family": "L",
+   "N": 42,
+   "n_named_edges": 22,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      4,
+      29
+     ],
+     "n_edges_in_flow": 60,
+     "residual_ratio": 0.8021251665852407,
+     "grad_energy": 0.00037696321811248395,
+     "resid_energy": 0.001525959817035763,
+     "total_energy": 0.001902923035148247
+    },
+    {
+     "task_edge": [
+      8,
+      11
+     ],
+     "n_edges_in_flow": 60,
+     "residual_ratio": 0.8701108149617848,
+     "grad_energy": 0.00017570631156010513,
+     "resid_energy": 0.0011799125889558386,
+     "total_energy": 0.0013556189005159438
+    },
+    {
+     "task_edge": [
+      11,
+      14
+     ],
+     "n_edges_in_flow": 60,
+     "residual_ratio": 0.9192806258500218,
+     "grad_energy": 8.33118019355722e-05,
+     "resid_energy": 0.0009488600965479506,
+     "total_energy": 0.001032171898483523
+    },
+    {
+     "task_edge": [
+      11,
+      15
+     ],
+     "n_edges_in_flow": 60,
+     "residual_ratio": 0.9192806258500218,
+     "grad_energy": 8.33118019355722e-05,
+     "resid_energy": 0.0009488600965479506,
+     "total_energy": 0.001032171898483523
+    },
+    {
+     "task_edge": [
+      15,
+      24
+     ],
+     "n_edges_in_flow": 60,
+     "residual_ratio": 0.846016496683474,
+     "grad_energy": 9.524145808027268e-05,
+     "resid_energy": 0.0005234855795551521,
+     "total_energy": 0.0006187270376354248
+    },
+    {
+     "task_edge": [
+      19,
+      21
+     ],
+     "n_edges_in_flow": 60,
+     "residual_ratio": 0.8273155171406723,
+     "grad_energy": 4.765316952875327e-05,
+     "resid_energy": 0.00022865426323931357,
+     "total_energy": 0.0002763074327680668
+    },
+    {
+     "task_edge": [
+      29,
+      32
+     ],
+     "n_edges_in_flow": 60,
+     "residual_ratio": 0.8032211988623615,
+     "grad_energy": 0.00019733204836070852,
+     "resid_energy": 0.0008048682268635046,
+     "total_energy": 0.0010022002752242132
+    },
+    {
+     "task_edge": [
+      37,
+      39
+     ],
+     "n_edges_in_flow": 60,
+     "residual_ratio": 0.6176579298185367,
+     "grad_energy": 0.00017343115054357205,
+     "resid_energy": 0.00027990004348426843,
+     "total_energy": 0.0004533311940278405
+    },
+    {
+     "task_edge": [
+      39,
+      40
+     ],
+     "n_edges_in_flow": 60,
+     "residual_ratio": 0.6371602926766655,
+     "grad_energy": 0.00010177224100144424,
+     "resid_energy": 0.00017886008024134117,
+     "total_energy": 0.0002806323212427854
+    },
+    {
+     "task_edge": [
+      40,
+      41
+     ],
+     "n_edges_in_flow": 60,
+     "residual_ratio": 0.6329843493027903,
+     "grad_energy": 0.00010009655605755645,
+     "resid_energy": 0.00017285241353755878,
+     "total_energy": 0.00027294896959511525
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.8075153297730933,
+    "residual_ratio_median": 0.8366660069120731,
+    "residual_ratio_max": 0.9192806258500218,
+    "residual_ratio_min": 0.6176579298185367
+   }
+  },
+  "L_geography_world": {
+   "graph_id": "L_geography_world",
+   "family": "L",
+   "N": 45,
+   "n_named_edges": 16,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "n_edges_in_flow": 61,
+     "residual_ratio": 0.8868391472745286,
+     "grad_energy": 0.0007001572576492092,
+     "resid_energy": 0.005495570271190098,
+     "total_energy": 0.006195727528839307
+    },
+    {
+     "task_edge": [
+      0,
+      2
+     ],
+     "n_edges_in_flow": 61,
+     "residual_ratio": 0.8868391472745286,
+     "grad_energy": 0.0007001572576492092,
+     "resid_energy": 0.005495570271190098,
+     "total_energy": 0.006195727528839307
+    },
+    {
+     "task_edge": [
+      0,
+      3
+     ],
+     "n_edges_in_flow": 61,
+     "residual_ratio": 0.8868391472745286,
+     "grad_energy": 0.0007001572576492092,
+     "resid_energy": 0.005495570271190098,
+     "total_energy": 0.006195727528839307
+    },
+    {
+     "task_edge": [
+      0,
+      4
+     ],
+     "n_edges_in_flow": 61,
+     "residual_ratio": 0.8868391472745286,
+     "grad_energy": 0.0007001572576492092,
+     "resid_energy": 0.005495570271190098,
+     "total_energy": 0.006195727528839307
+    },
+    {
+     "task_edge": [
+      1,
+      8
+     ],
+     "n_edges_in_flow": 61,
+     "residual_ratio": 0.886345896716337,
+     "grad_energy": 0.0001857614134793058,
+     "resid_energy": 0.0014498184529097944,
+     "total_energy": 0.0016355798663891002
+    },
+    {
+     "task_edge": [
+      2,
+      11
+     ],
+     "n_edges_in_flow": 61,
+     "residual_ratio": 0.8105148531359855,
+     "grad_energy": 0.00036414924741616085,
+     "resid_energy": 0.0015583196211923494,
+     "total_energy": 0.0019224688686085102
+    },
+    {
+     "task_edge": [
+      8,
+      24
+     ],
+     "n_edges_in_flow": 61,
+     "residual_ratio": 0.9731527743442548,
+     "grad_energy": 1.5892672694623455e-05,
+     "resid_energy": 0.0005766719808354818,
+     "total_energy": 0.0005925646535301052
+    },
+    {
+     "task_edge": [
+      24,
+      38
+     ],
+     "n_edges_in_flow": 61,
+     "residual_ratio": 0.8879922653775146,
+     "grad_energy": 7.101876411276002e-05,
+     "resid_energy": 0.0005625261679853162,
+     "total_energy": 0.0006335449320980762
+    },
+    {
+     "task_edge": [
+      30,
+      44
+     ],
+     "n_edges_in_flow": 61,
+     "residual_ratio": 0.46982820117052054,
+     "grad_energy": 0.00037304762789938654,
+     "resid_energy": 0.0003302858352709071,
+     "total_energy": 0.0007033334631702937
+    },
+    {
+     "task_edge": [
+      32,
+      40
+     ],
+     "n_edges_in_flow": 61,
+     "residual_ratio": 0.46982820117052054,
+     "grad_energy": 0.00037304762789938654,
+     "resid_energy": 0.0003302858352709071,
+     "total_energy": 0.0007033334631702937
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.8224768109065205,
+    "residual_ratio_median": 0.848677000205271,
+    "residual_ratio_max": 0.9731527743442548,
+    "residual_ratio_min": 0.46982820117052054
+   }
+  },
+  "L_historical_causality": {
+   "graph_id": "L_historical_causality",
+   "family": "L",
+   "N": 36,
+   "n_named_edges": 23,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      1,
+      5
+     ],
+     "n_edges_in_flow": 51,
+     "residual_ratio": 0.28702373736630596,
+     "grad_energy": 0.011057509399154522,
+     "resid_energy": 0.004456300179257479,
+     "total_energy": 0.015513809578412
+    },
+    {
+     "task_edge": [
+      9,
+      10
+     ],
+     "n_edges_in_flow": 51,
+     "residual_ratio": 0.3739085161147478,
+     "grad_energy": 0.009319284523399844,
+     "resid_energy": 0.0055658874833593965,
+     "total_energy": 0.01488517200675924
+    },
+    {
+     "task_edge": [
+      14,
+      15
+     ],
+     "n_edges_in_flow": 51,
+     "residual_ratio": 0.5855521579688124,
+     "grad_energy": 0.006571926902800652,
+     "resid_energy": 0.009273798130505896,
+     "total_energy": 0.015845725033306548
+    },
+    {
+     "task_edge": [
+      16,
+      17
+     ],
+     "n_edges_in_flow": 51,
+     "residual_ratio": 0.5699487030383086,
+     "grad_energy": 0.007231446964578117,
+     "resid_energy": 0.009585137796145257,
+     "total_energy": 0.016816584760723375
+    },
+    {
+     "task_edge": [
+      16,
+      18
+     ],
+     "n_edges_in_flow": 51,
+     "residual_ratio": 0.5699487030383086,
+     "grad_energy": 0.007231446964578117,
+     "resid_energy": 0.009585137796145257,
+     "total_energy": 0.016816584760723375
+    },
+    {
+     "task_edge": [
+      17,
+      19
+     ],
+     "n_edges_in_flow": 51,
+     "residual_ratio": 0.752194032660497,
+     "grad_energy": 0.003842329801110806,
+     "resid_energy": 0.01166996150850283,
+     "total_energy": 0.015512291309613636
+    },
+    {
+     "task_edge": [
+      20,
+      21
+     ],
+     "n_edges_in_flow": 51,
+     "residual_ratio": 0.6830954508296683,
+     "grad_energy": 0.005220822929557919,
+     "resid_energy": 0.011261911194928035,
+     "total_energy": 0.016482734124485954
+    },
+    {
+     "task_edge": [
+      21,
+      22
+     ],
+     "n_edges_in_flow": 51,
+     "residual_ratio": 0.4870733664945875,
+     "grad_energy": 0.007162252024848152,
+     "resid_energy": 0.006795565618575668,
+     "total_energy": 0.01395781764342382
+    },
+    {
+     "task_edge": [
+      22,
+      27
+     ],
+     "n_edges_in_flow": 51,
+     "residual_ratio": 0.48487662909326137,
+     "grad_energy": 0.007713124635235991,
+     "resid_energy": 0.007262000917870365,
+     "total_energy": 0.014975125553106356
+    },
+    {
+     "task_edge": [
+      29,
+      35
+     ],
+     "n_edges_in_flow": 51,
+     "residual_ratio": 0.4841089126349357,
+     "grad_energy": 0.008780796207785985,
+     "resid_energy": 0.008249179489442016,
+     "total_energy": 0.017029975697228
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.5277729907239138,
+    "residual_ratio_median": 0.5285110347664481,
+    "residual_ratio_max": 0.752194032660497,
+    "residual_ratio_min": 0.28702373736630596
+   }
+  },
+  "L_physics_concepts": {
+   "graph_id": "L_physics_concepts",
+   "family": "L",
+   "N": 35,
+   "n_named_edges": 31,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      5
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.7349110541746034,
+     "grad_energy": 0.002333912050571885,
+     "resid_energy": 0.006466328033468154,
+     "total_energy": 0.008800240084040039
+    },
+    {
+     "task_edge": [
+      2,
+      11
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.8982212190859463,
+     "grad_energy": 0.00036552279298135574,
+     "resid_energy": 0.003224837490580736,
+     "total_energy": 0.0035903602835620916
+    },
+    {
+     "task_edge": [
+      2,
+      12
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.8982212190859463,
+     "grad_energy": 0.00036552279298135574,
+     "resid_energy": 0.003224837490580736,
+     "total_energy": 0.0035903602835620916
+    },
+    {
+     "task_edge": [
+      5,
+      21
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.8653139576255121,
+     "grad_energy": 0.0004801973372087283,
+     "resid_energy": 0.0030836002799661645,
+     "total_energy": 0.003563797617174893
+    },
+    {
+     "task_edge": [
+      12,
+      14
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.9727164388821163,
+     "grad_energy": 5.548946362690864e-05,
+     "resid_energy": 0.001974475303033108,
+     "total_energy": 0.0020299647666600166
+    },
+    {
+     "task_edge": [
+      25,
+      27
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.9648543062855185,
+     "grad_energy": 6.307299954028197e-05,
+     "resid_energy": 0.001724114085748232,
+     "total_energy": 0.001787187085288514
+    },
+    {
+     "task_edge": [
+      25,
+      30
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.9648543062855185,
+     "grad_energy": 6.307299954028197e-05,
+     "resid_energy": 0.001724114085748232,
+     "total_energy": 0.001787187085288514
+    },
+    {
+     "task_edge": [
+      25,
+      32
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.9648543062855185,
+     "grad_energy": 6.307299954028197e-05,
+     "resid_energy": 0.001724114085748232,
+     "total_energy": 0.001787187085288514
+    },
+    {
+     "task_edge": [
+      26,
+      27
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.3980364801161737,
+     "grad_energy": 0.0014994701328008238,
+     "resid_energy": 0.0009915032523344573,
+     "total_energy": 0.002490973385135281
+    },
+    {
+     "task_edge": [
+      26,
+      29
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.3980364801161737,
+     "grad_energy": 0.0014994701328008238,
+     "resid_energy": 0.0009915032523344573,
+     "total_energy": 0.002490973385135281
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.8272222102026949,
+    "residual_ratio_median": 0.8817675883557292,
+    "residual_ratio_max": 0.9727164388821163,
+    "residual_ratio_min": 0.3980364801161737
+   }
+  },
+  "L_project_management": {
+   "graph_id": "L_project_management",
+   "family": "L",
+   "N": 33,
+   "n_named_edges": 36,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.7453524115234022,
+     "grad_energy": 0.008674729299727342,
+     "resid_energy": 0.02540198537072853,
+     "total_energy": 0.03407671467045587
+    },
+    {
+     "task_edge": [
+      5,
+      6
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.5680523072446058,
+     "grad_energy": 0.007189834839891754,
+     "resid_energy": 0.009448500925230572,
+     "total_energy": 0.016638335765122326
+    },
+    {
+     "task_edge": [
+      6,
+      7
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.5956170289695578,
+     "grad_energy": 0.006731122137041844,
+     "resid_energy": 0.009916322628365232,
+     "total_energy": 0.016647444765407076
+    },
+    {
+     "task_edge": [
+      7,
+      8
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.6447567858196916,
+     "grad_energy": 0.005739166699784309,
+     "resid_energy": 0.010423944405625478,
+     "total_energy": 0.016163111105409787
+    },
+    {
+     "task_edge": [
+      7,
+      10
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.6447567858196916,
+     "grad_energy": 0.005739166699784309,
+     "resid_energy": 0.010423944405625478,
+     "total_energy": 0.016163111105409787
+    },
+    {
+     "task_edge": [
+      8,
+      17
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.5070318420850123,
+     "grad_energy": 0.005388564193706014,
+     "resid_energy": 0.0055456179852159745,
+     "total_energy": 0.010934182178921989
+    },
+    {
+     "task_edge": [
+      15,
+      17
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.5002373546840561,
+     "grad_energy": 0.005538798334721055,
+     "resid_energy": 0.005546793009196733,
+     "total_energy": 0.011085591343917788
+    },
+    {
+     "task_edge": [
+      17,
+      26
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.357435697924892,
+     "grad_energy": 0.00628786875480733,
+     "resid_energy": 0.0034964237807570895,
+     "total_energy": 0.00978429253556442
+    },
+    {
+     "task_edge": [
+      28,
+      30
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.04833540823758535,
+     "grad_energy": 0.00781260120907758,
+     "resid_energy": 0.0003969889514727221,
+     "total_energy": 0.008209590160550302
+    },
+    {
+     "task_edge": [
+      31,
+      32
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.4864399936273537,
+     "grad_energy": 0.00017006020208645044,
+     "resid_energy": 0.00016095299134530842,
+     "total_energy": 0.00033101319343175887
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.46192162361475606,
+    "residual_ratio_median": 0.5036345983845341,
+    "residual_ratio_max": 0.7453524115234022,
+    "residual_ratio_min": 0.04833540823758535
+   }
+  },
+  "S1": {
+   "graph_id": "S1",
+   "family": "S",
+   "N": 20,
+   "n_named_edges": 19,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      1,
+      2
+     ],
+     "n_edges_in_flow": 19,
+     "residual_ratio": 0.15624062865759065,
+     "grad_energy": 0.05822379692539233,
+     "resid_energy": 0.010787974158840358,
+     "total_energy": 0.06901177108423269
+    },
+    {
+     "task_edge": [
+      2,
+      3
+     ],
+     "n_edges_in_flow": 19,
+     "residual_ratio": 0.20780116864314087,
+     "grad_energy": 0.04854436816975433,
+     "resid_energy": 0.012730896680939658,
+     "total_energy": 0.06127526485069399
+    },
+    {
+     "task_edge": [
+      3,
+      4
+     ],
+     "n_edges_in_flow": 19,
+     "residual_ratio": 0.2816374251002461,
+     "grad_energy": 0.03986731523035938,
+     "resid_energy": 0.015617465483805553,
+     "total_energy": 0.05548478071416493
+    },
+    {
+     "task_edge": [
+      6,
+      7
+     ],
+     "n_edges_in_flow": 19,
+     "residual_ratio": 0.44078364135454454,
+     "grad_energy": 0.018265747161320074,
+     "resid_energy": 0.014393174938964402,
+     "total_energy": 0.032658922100284476
+    },
+    {
+     "task_edge": [
+      7,
+      8
+     ],
+     "n_edges_in_flow": 19,
+     "residual_ratio": 0.5096580271668079,
+     "grad_energy": 0.012656188335108322,
+     "resid_energy": 0.013167823612308927,
+     "total_energy": 0.02582401194741725
+    },
+    {
+     "task_edge": [
+      8,
+      9
+     ],
+     "n_edges_in_flow": 19,
+     "residual_ratio": 0.5730641291583197,
+     "grad_energy": 0.007914027111032854,
+     "resid_energy": 0.010626442410898177,
+     "total_energy": 0.01854046952193103
+    },
+    {
+     "task_edge": [
+      11,
+      12
+     ],
+     "n_edges_in_flow": 19,
+     "residual_ratio": 0.6005810837382384,
+     "grad_energy": 0.004822729269285605,
+     "resid_energy": 0.00724958519205092,
+     "total_energy": 0.012072314461336525
+    },
+    {
+     "task_edge": [
+      12,
+      13
+     ],
+     "n_edges_in_flow": 19,
+     "residual_ratio": 0.6151516201346271,
+     "grad_energy": 0.003960669520480173,
+     "resid_energy": 0.006330008343510071,
+     "total_energy": 0.010290677863990244
+    },
+    {
+     "task_edge": [
+      16,
+      17
+     ],
+     "n_edges_in_flow": 19,
+     "residual_ratio": 0.4744726828956797,
+     "grad_energy": 0.001756572831478575,
+     "resid_energy": 0.0015857492067442267,
+     "total_energy": 0.003342322038222802
+    },
+    {
+     "task_edge": [
+      18,
+      19
+     ],
+     "n_edges_in_flow": 19,
+     "residual_ratio": 0.47857049335200656,
+     "grad_energy": 0.0014185995725477088,
+     "resid_energy": 0.0012996741348883656,
+     "total_energy": 0.0027182737074360744
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.4337961301201157,
+    "residual_ratio_median": 0.4373385171553315,
+    "residual_ratio_max": 0.6151516201346271,
+    "residual_ratio_min": 0.15624062865759065
+   }
+  },
+  "S1_n35": {
+   "graph_id": "S1_n35",
+   "family": "S",
+   "N": 35,
+   "n_named_edges": 34,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "n_edges_in_flow": 34,
+     "residual_ratio": 0.3546074186292507,
+     "grad_energy": 0.05856447338079668,
+     "resid_energy": 0.032180967020039315,
+     "total_energy": 0.090745440400836
+    },
+    {
+     "task_edge": [
+      4,
+      5
+     ],
+     "n_edges_in_flow": 34,
+     "residual_ratio": 0.4097162307710489,
+     "grad_energy": 0.03688266487811839,
+     "resid_energy": 0.02560038907895204,
+     "total_energy": 0.06248305395707043
+    },
+    {
+     "task_edge": [
+      5,
+      6
+     ],
+     "n_edges_in_flow": 34,
+     "residual_ratio": 0.42177881873203004,
+     "grad_energy": 0.034521767457859365,
+     "resid_energy": 0.02517744582521358,
+     "total_energy": 0.05969921328307294
+    },
+    {
+     "task_edge": [
+      8,
+      9
+     ],
+     "n_edges_in_flow": 34,
+     "residual_ratio": 0.462841488910638,
+     "grad_energy": 0.027995125366920484,
+     "resid_energy": 0.0240814948279381,
+     "total_energy": 0.05207662019485858
+    },
+    {
+     "task_edge": [
+      10,
+      11
+     ],
+     "n_edges_in_flow": 34,
+     "residual_ratio": 0.505963558689911,
+     "grad_energy": 0.023575344785543754,
+     "resid_energy": 0.024100850810078372,
+     "total_energy": 0.047676195595622125
+    },
+    {
+     "task_edge": [
+      24,
+      25
+     ],
+     "n_edges_in_flow": 34,
+     "residual_ratio": 0.7556249704473837,
+     "grad_energy": 0.001456131510924132,
+     "resid_energy": 0.004497788062883833,
+     "total_energy": 0.005953919573807965
+    },
+    {
+     "task_edge": [
+      26,
+      27
+     ],
+     "n_edges_in_flow": 34,
+     "residual_ratio": 0.7370635008655869,
+     "grad_energy": 0.001234186617611889,
+     "resid_energy": 0.003461894597751059,
+     "total_energy": 0.004696081215362948
+    },
+    {
+     "task_edge": [
+      27,
+      28
+     ],
+     "n_edges_in_flow": 34,
+     "residual_ratio": 0.7393531039749422,
+     "grad_energy": 0.0011249975865773016,
+     "resid_energy": 0.0031829738605619187,
+     "total_energy": 0.00430797144713922
+    },
+    {
+     "task_edge": [
+      28,
+      29
+     ],
+     "n_edges_in_flow": 34,
+     "residual_ratio": 0.7264745378937277,
+     "grad_energy": 0.0010577927313142292,
+     "resid_energy": 0.002810820428062104,
+     "total_energy": 0.003868613159376333
+    },
+    {
+     "task_edge": [
+      29,
+      30
+     ],
+     "n_edges_in_flow": 34,
+     "residual_ratio": 0.7231527243353374,
+     "grad_energy": 0.0009586634599529725,
+     "resid_energy": 0.0025054431685125557,
+     "total_energy": 0.003464106628465528
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.5836576353250857,
+    "residual_ratio_median": 0.5881996578104301,
+    "residual_ratio_max": 0.7556249704473837,
+    "residual_ratio_min": 0.3546074186292507
+   }
+  },
+  "S1_n45": {
+   "graph_id": "S1_n45",
+   "family": "S",
+   "N": 45,
+   "n_named_edges": 44,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      1,
+      2
+     ],
+     "n_edges_in_flow": 44,
+     "residual_ratio": 0.4367500287516754,
+     "grad_energy": 0.0578141262211203,
+     "resid_energy": 0.04484617190694415,
+     "total_energy": 0.10266029812806444
+    },
+    {
+     "task_edge": [
+      4,
+      5
+     ],
+     "n_edges_in_flow": 44,
+     "residual_ratio": 0.4772835266384903,
+     "grad_energy": 0.03772984127328448,
+     "resid_energy": 0.03441844644229078,
+     "total_energy": 0.07214828771557526
+    },
+    {
+     "task_edge": [
+      8,
+      9
+     ],
+     "n_edges_in_flow": 44,
+     "residual_ratio": 0.5157310375138231,
+     "grad_energy": 0.028419349450882635,
+     "resid_energy": 0.030271840585210464,
+     "total_energy": 0.0586911900360931
+    },
+    {
+     "task_edge": [
+      9,
+      10
+     ],
+     "n_edges_in_flow": 44,
+     "residual_ratio": 0.5216814110200223,
+     "grad_energy": 0.027542605316827716,
+     "resid_energy": 0.030013998142316864,
+     "total_energy": 0.05755660345914458
+    },
+    {
+     "task_edge": [
+      13,
+      14
+     ],
+     "n_edges_in_flow": 44,
+     "residual_ratio": 0.5502564480334468,
+     "grad_energy": 0.022567403664900566,
+     "resid_energy": 0.02761779957823099,
+     "total_energy": 0.050185203243131555
+    },
+    {
+     "task_edge": [
+      18,
+      19
+     ],
+     "n_edges_in_flow": 44,
+     "residual_ratio": 0.6044545046642137,
+     "grad_energy": 0.014899108871385975,
+     "resid_energy": 0.022760628880847667,
+     "total_energy": 0.03765973775223364
+    },
+    {
+     "task_edge": [
+      22,
+      23
+     ],
+     "n_edges_in_flow": 44,
+     "residual_ratio": 0.6869177437320875,
+     "grad_energy": 0.008348611331338938,
+     "resid_energy": 0.018318845724008777,
+     "total_energy": 0.026667457055347714
+    },
+    {
+     "task_edge": [
+      23,
+      24
+     ],
+     "n_edges_in_flow": 44,
+     "residual_ratio": 0.7059560851349183,
+     "grad_energy": 0.007354058841224383,
+     "resid_energy": 0.01765748206227221,
+     "total_energy": 0.025011540903496594
+    },
+    {
+     "task_edge": [
+      25,
+      26
+     ],
+     "n_edges_in_flow": 44,
+     "residual_ratio": 0.7193903754470295,
+     "grad_energy": 0.006212443426428928,
+     "resid_energy": 0.01593875814512473,
+     "total_energy": 0.022151201571553658
+    },
+    {
+     "task_edge": [
+      27,
+      28
+     ],
+     "n_edges_in_flow": 44,
+     "residual_ratio": 0.7563804380123417,
+     "grad_energy": 0.004498390036765525,
+     "resid_energy": 0.013981007794684545,
+     "total_energy": 0.01847939783145007
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.617480100025025,
+    "residual_ratio_median": 0.6304571391900175,
+    "residual_ratio_max": 0.7563804380123417,
+    "residual_ratio_min": 0.4367500287516754
+   }
+  },
+  "S1_n60": {
+   "graph_id": "S1_n60",
+   "family": "S",
+   "N": 60,
+   "n_named_edges": 59,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      5,
+      6
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.4052193442651939,
+     "grad_energy": 0.04064546823935896,
+     "resid_energy": 0.027652997253430637,
+     "total_energy": 0.06829846549278959
+    },
+    {
+     "task_edge": [
+      26,
+      27
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.6349281202440232,
+     "grad_energy": 0.009412649199788819,
+     "resid_energy": 0.01636170815090544,
+     "total_energy": 0.02577435735069426
+    },
+    {
+     "task_edge": [
+      27,
+      28
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.6416854390038173,
+     "grad_energy": 0.0089340741067103,
+     "resid_energy": 0.01600863242631257,
+     "total_energy": 0.02494270653302287
+    },
+    {
+     "task_edge": [
+      28,
+      29
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.6489700833473261,
+     "grad_energy": 0.008432179623369175,
+     "resid_energy": 0.01557586030327195,
+     "total_energy": 0.024008039926641125
+    },
+    {
+     "task_edge": [
+      30,
+      31
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.6645458133607431,
+     "grad_energy": 0.007573624208397901,
+     "resid_energy": 0.015004406720511877,
+     "total_energy": 0.022578030928909777
+    },
+    {
+     "task_edge": [
+      35,
+      36
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.6957709391070294,
+     "grad_energy": 0.005852577244921156,
+     "resid_energy": 0.013376186304486176,
+     "total_energy": 0.01922876354940733
+    },
+    {
+     "task_edge": [
+      42,
+      43
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.7504892885765883,
+     "grad_energy": 0.003551703491829118,
+     "resid_energy": 0.010683143957242027,
+     "total_energy": 0.014234847449071145
+    },
+    {
+     "task_edge": [
+      43,
+      44
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.7605057198697314,
+     "grad_energy": 0.003296097799576723,
+     "resid_energy": 0.010465757883494924,
+     "total_energy": 0.013761855683071647
+    },
+    {
+     "task_edge": [
+      50,
+      51
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.8051472409412924,
+     "grad_energy": 0.0018905654029059062,
+     "resid_energy": 0.00781941529035997,
+     "total_energy": 0.009709980693265877
+    },
+    {
+     "task_edge": [
+      57,
+      58
+     ],
+     "n_edges_in_flow": 59,
+     "residual_ratio": 0.5155154373724494,
+     "grad_energy": 0.0009260907669464773,
+     "resid_energy": 0.000985971716116676,
+     "total_energy": 0.0019120624830631533
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.6522777426088196,
+    "residual_ratio_median": 0.6684051723716746,
+    "residual_ratio_max": 0.8051472409412924,
+    "residual_ratio_min": 0.4052193442651939
+   }
+  },
+  "S2": {
+   "graph_id": "S2",
+   "family": "S",
+   "N": 31,
+   "n_named_edges": 14,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "n_edges_in_flow": 45,
+     "residual_ratio": 0.36704518358405354,
+     "grad_energy": 0.020863435682745122,
+     "resid_energy": 0.012096472385997395,
+     "total_energy": 0.03295990806874252
+    },
+    {
+     "task_edge": [
+      0,
+      2
+     ],
+     "n_edges_in_flow": 45,
+     "residual_ratio": 0.36704518358405354,
+     "grad_energy": 0.020863435682745122,
+     "resid_energy": 0.012096472385997395,
+     "total_energy": 0.03295990806874252
+    },
+    {
+     "task_edge": [
+      1,
+      3
+     ],
+     "n_edges_in_flow": 45,
+     "residual_ratio": 0.7615190605847753,
+     "grad_energy": 0.0021207986032173017,
+     "resid_energy": 0.006775758698101805,
+     "total_energy": 0.008896557301319107
+    },
+    {
+     "task_edge": [
+      1,
+      4
+     ],
+     "n_edges_in_flow": 45,
+     "residual_ratio": 0.7615190605847753,
+     "grad_energy": 0.0021207986032173017,
+     "resid_energy": 0.006775758698101805,
+     "total_energy": 0.008896557301319107
+    },
+    {
+     "task_edge": [
+      2,
+      6
+     ],
+     "n_edges_in_flow": 45,
+     "residual_ratio": 0.655653599020741,
+     "grad_energy": 0.004181209595493007,
+     "resid_energy": 0.007957001011718454,
+     "total_energy": 0.01213821060721146
+    },
+    {
+     "task_edge": [
+      3,
+      8
+     ],
+     "n_edges_in_flow": 45,
+     "residual_ratio": 0.8566422410980584,
+     "grad_energy": 0.000585543132720578,
+     "resid_energy": 0.0034952452214682384,
+     "total_energy": 0.004080788354188816
+    },
+    {
+     "task_edge": [
+      4,
+      10
+     ],
+     "n_edges_in_flow": 45,
+     "residual_ratio": 0.8566422410980584,
+     "grad_energy": 0.000585543132720578,
+     "resid_energy": 0.0034952452214682384,
+     "total_energy": 0.004080788354188816
+    },
+    {
+     "task_edge": [
+      5,
+      12
+     ],
+     "n_edges_in_flow": 45,
+     "residual_ratio": 0.8551530012163397,
+     "grad_energy": 0.000585543132720578,
+     "resid_energy": 0.003465044265343667,
+     "total_energy": 0.004050587398064245
+    },
+    {
+     "task_edge": [
+      6,
+      13
+     ],
+     "n_edges_in_flow": 45,
+     "residual_ratio": 0.9120708005234839,
+     "grad_energy": 0.00019566868514553668,
+     "resid_energy": 0.002031400282513838,
+     "total_energy": 0.0022270689676593748
+    },
+    {
+     "task_edge": [
+      6,
+      14
+     ],
+     "n_edges_in_flow": 45,
+     "residual_ratio": 0.9120708005234839,
+     "grad_energy": 0.00019566868514553668,
+     "resid_energy": 0.002031400282513838,
+     "total_energy": 0.0022270689676593748
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.6967082591443557,
+    "residual_ratio_median": 0.7406219524481304,
+    "residual_ratio_max": 0.9120708005234839,
+    "residual_ratio_min": 0.36704518358405354
+   }
+  },
+  "S2_n20": {
+   "graph_id": "S2_n20",
+   "family": "S",
+   "N": 20,
+   "n_named_edges": 9,
+   "n_tasks": 9,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "n_edges_in_flow": 29,
+     "residual_ratio": 0.0,
+     "grad_energy": 0.024807046468660485,
+     "resid_energy": 1.456716680441376e-32,
+     "total_energy": 0.024807046468660485
+    },
+    {
+     "task_edge": [
+      0,
+      2
+     ],
+     "n_edges_in_flow": 29,
+     "residual_ratio": 0.0,
+     "grad_energy": 0.024807046468660485,
+     "resid_energy": 1.456716680441376e-32,
+     "total_energy": 0.024807046468660485
+    },
+    {
+     "task_edge": [
+      1,
+      3
+     ],
+     "n_edges_in_flow": 29,
+     "residual_ratio": 0.5235589619167244,
+     "grad_energy": 0.00643197122266477,
+     "resid_energy": 0.007069305270334435,
+     "total_energy": 0.013501276492999205
+    },
+    {
+     "task_edge": [
+      1,
+      4
+     ],
+     "n_edges_in_flow": 29,
+     "residual_ratio": 0.5235589619167244,
+     "grad_energy": 0.00643197122266477,
+     "resid_energy": 0.007069305270334435,
+     "total_energy": 0.013501276492999205
+    },
+    {
+     "task_edge": [
+      2,
+      5
+     ],
+     "n_edges_in_flow": 29,
+     "residual_ratio": 0.7491020392991539,
+     "grad_energy": 0.002940638599815608,
+     "resid_energy": 0.008774602320523278,
+     "total_energy": 0.011715240920338886
+    },
+    {
+     "task_edge": [
+      2,
+      6
+     ],
+     "n_edges_in_flow": 29,
+     "residual_ratio": 0.7491020392991539,
+     "grad_energy": 0.002940638599815608,
+     "resid_energy": 0.008774602320523278,
+     "total_energy": 0.011715240920338886
+    },
+    {
+     "task_edge": [
+      3,
+      7
+     ],
+     "n_edges_in_flow": 29,
+     "residual_ratio": 0.7778323883296613,
+     "grad_energy": 0.001470947452140898,
+     "resid_energy": 0.005151312314121558,
+     "total_energy": 0.006622259766262456
+    },
+    {
+     "task_edge": [
+      3,
+      8
+     ],
+     "n_edges_in_flow": 29,
+     "residual_ratio": 0.7778323883296613,
+     "grad_energy": 0.001470947452140898,
+     "resid_energy": 0.005151312314121558,
+     "total_energy": 0.006622259766262456
+    },
+    {
+     "task_edge": [
+      4,
+      9
+     ],
+     "n_edges_in_flow": 29,
+     "residual_ratio": 0.6955499167397079,
+     "grad_energy": 0.0012176472428205076,
+     "resid_energy": 0.0027802983262011044,
+     "total_energy": 0.003997945569021612
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.5329484784280784,
+    "residual_ratio_median": 0.5464645463901534,
+    "residual_ratio_max": 0.7778323883296613,
+    "residual_ratio_min": 0.0
+   }
+  },
+  "S2_n35": {
+   "graph_id": "S2_n35",
+   "family": "S",
+   "N": 35,
+   "n_named_edges": 16,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.4594278838155286,
+     "grad_energy": 0.019310375626723938,
+     "resid_energy": 0.016410462779257266,
+     "total_energy": 0.0357208384059812
+    },
+    {
+     "task_edge": [
+      1,
+      3
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.5365846222157419,
+     "grad_energy": 0.012051252835458055,
+     "resid_energy": 0.01393985213133356,
+     "total_energy": 0.025991104966791614
+    },
+    {
+     "task_edge": [
+      1,
+      4
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.5365846222157419,
+     "grad_energy": 0.012051252835458055,
+     "resid_energy": 0.01393985213133356,
+     "total_energy": 0.025991104966791614
+    },
+    {
+     "task_edge": [
+      2,
+      6
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.6892277000106628,
+     "grad_energy": 0.004326337696116808,
+     "resid_energy": 0.009595155660565121,
+     "total_energy": 0.01392149335668193
+    },
+    {
+     "task_edge": [
+      3,
+      8
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.7158711480758909,
+     "grad_energy": 0.002921574824153227,
+     "resid_energy": 0.007349567205133111,
+     "total_energy": 0.010271142029286338
+    },
+    {
+     "task_edge": [
+      4,
+      10
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.8889632852401291,
+     "grad_energy": 0.00045612290326270594,
+     "resid_energy": 0.0036566440499971064,
+     "total_energy": 0.004112766953259812
+    },
+    {
+     "task_edge": [
+      6,
+      13
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.8891787178056352,
+     "grad_energy": 0.0004522501703592651,
+     "resid_energy": 0.0036279496841025477,
+     "total_energy": 0.004080199854461813
+    },
+    {
+     "task_edge": [
+      6,
+      14
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.8891787178056352,
+     "grad_energy": 0.0004522501703592651,
+     "resid_energy": 0.0036279496841025477,
+     "total_energy": 0.004080199854461813
+    },
+    {
+     "task_edge": [
+      7,
+      15
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.896507556611201,
+     "grad_energy": 0.00019834402296322057,
+     "resid_energy": 0.0017175538061599192,
+     "total_energy": 0.0019158978291231397
+    },
+    {
+     "task_edge": [
+      7,
+      16
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.896507556611201,
+     "grad_energy": 0.00019834402296322057,
+     "resid_energy": 0.0017175538061599192,
+     "total_energy": 0.0019158978291231397
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.6908404632857406,
+    "residual_ratio_median": 0.7025494240432777,
+    "residual_ratio_max": 0.896507556611201,
+    "residual_ratio_min": 0.4594278838155286
+   }
+  },
+  "S2_n45": {
+   "graph_id": "S2_n45",
+   "family": "S",
+   "N": 45,
+   "n_named_edges": 21,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "n_edges_in_flow": 66,
+     "residual_ratio": 0.41839675530513336,
+     "grad_energy": 0.020113493430469007,
+     "resid_energy": 0.014478562365449712,
+     "total_energy": 0.03459205579591872
+    },
+    {
+     "task_edge": [
+      1,
+      4
+     ],
+     "n_edges_in_flow": 66,
+     "residual_ratio": 0.479023526795402,
+     "grad_energy": 0.014379078228528912,
+     "resid_energy": 0.013212730672931624,
+     "total_energy": 0.027591808901460536
+    },
+    {
+     "task_edge": [
+      3,
+      7
+     ],
+     "n_edges_in_flow": 66,
+     "residual_ratio": 0.7580931722425576,
+     "grad_energy": 0.0022467277337655083,
+     "resid_energy": 0.007046160692829067,
+     "total_energy": 0.009292888426594576
+    },
+    {
+     "task_edge": [
+      5,
+      12
+     ],
+     "n_edges_in_flow": 66,
+     "residual_ratio": 0.7586764352305244,
+     "grad_energy": 0.002235418553686415,
+     "resid_energy": 0.007020457884445724,
+     "total_energy": 0.009255876438132139
+    },
+    {
+     "task_edge": [
+      6,
+      13
+     ],
+     "n_edges_in_flow": 66,
+     "residual_ratio": 0.7586764352305244,
+     "grad_energy": 0.002235418553686415,
+     "resid_energy": 0.007020457884445724,
+     "total_energy": 0.009255876438132139
+    },
+    {
+     "task_edge": [
+      6,
+      14
+     ],
+     "n_edges_in_flow": 66,
+     "residual_ratio": 0.7586764352305244,
+     "grad_energy": 0.002235418553686415,
+     "resid_energy": 0.007020457884445724,
+     "total_energy": 0.009255876438132139
+    },
+    {
+     "task_edge": [
+      7,
+      15
+     ],
+     "n_edges_in_flow": 66,
+     "residual_ratio": 0.8966349117914461,
+     "grad_energy": 0.0004121100044764243,
+     "resid_energy": 0.0035742814230983725,
+     "total_energy": 0.003986391427574797
+    },
+    {
+     "task_edge": [
+      8,
+      17
+     ],
+     "n_edges_in_flow": 66,
+     "residual_ratio": 0.8966349117914461,
+     "grad_energy": 0.0004121100044764243,
+     "resid_energy": 0.0035742814230983725,
+     "total_energy": 0.003986391427574797
+    },
+    {
+     "task_edge": [
+      8,
+      18
+     ],
+     "n_edges_in_flow": 66,
+     "residual_ratio": 0.8966349117914461,
+     "grad_energy": 0.0004121100044764243,
+     "resid_energy": 0.0035742814230983725,
+     "total_energy": 0.003986391427574797
+    },
+    {
+     "task_edge": [
+      10,
+      21
+     ],
+     "n_edges_in_flow": 66,
+     "residual_ratio": 0.897088824492403,
+     "grad_energy": 0.00022531797217931247,
+     "resid_energy": 0.0019643025566667024,
+     "total_energy": 0.002189620528846015
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.699159062735873,
+    "residual_ratio_median": 0.7308239584853889,
+    "residual_ratio_max": 0.897088824492403,
+    "residual_ratio_min": 0.41839675530513336
+   }
+  },
+  "S2_n60": {
+   "graph_id": "S2_n60",
+   "family": "S",
+   "N": 60,
+   "n_named_edges": 29,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.5703577541063457,
+     "grad_energy": 0.016155831486320756,
+     "resid_energy": 0.02143969992302633,
+     "total_energy": 0.03759553140934708
+    },
+    {
+     "task_edge": [
+      1,
+      4
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.6133358994304545,
+     "grad_energy": 0.01211797477217847,
+     "resid_energy": 0.01923537116526502,
+     "total_energy": 0.03135334593744349
+    },
+    {
+     "task_edge": [
+      4,
+      9
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.7793667410104714,
+     "grad_energy": 0.003502364516569015,
+     "resid_energy": 0.01236589669016134,
+     "total_energy": 0.015868261206730354
+    },
+    {
+     "task_edge": [
+      4,
+      10
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.7793667410104714,
+     "grad_energy": 0.003502364516569015,
+     "resid_energy": 0.01236589669016134,
+     "total_energy": 0.015868261206730354
+    },
+    {
+     "task_edge": [
+      6,
+      14
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.6818415462098757,
+     "grad_energy": 0.005071909794944077,
+     "resid_energy": 0.0108720601403827,
+     "total_energy": 0.015943969935326776
+    },
+    {
+     "task_edge": [
+      7,
+      16
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.911455366104533,
+     "grad_energy": 0.0006582650575253561,
+     "resid_energy": 0.006766917016128741,
+     "total_energy": 0.007425182073654097
+    },
+    {
+     "task_edge": [
+      8,
+      17
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.911455366104533,
+     "grad_energy": 0.0006582650575253561,
+     "resid_energy": 0.006766917016128741,
+     "total_energy": 0.007425182073654097
+    },
+    {
+     "task_edge": [
+      10,
+      21
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.911455366104533,
+     "grad_energy": 0.0006582650575253561,
+     "resid_energy": 0.006766917016128741,
+     "total_energy": 0.007425182073654097
+    },
+    {
+     "task_edge": [
+      12,
+      25
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.9114603676585111,
+     "grad_energy": 0.0006547104250273687,
+     "resid_energy": 0.006729872166381408,
+     "total_energy": 0.007384582591408777
+    },
+    {
+     "task_edge": [
+      13,
+      27
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.9135522762272306,
+     "grad_energy": 0.0006394090523483103,
+     "resid_energy": 0.0067648419785672225,
+     "total_energy": 0.007404251030915533
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.7696616723044836,
+    "residual_ratio_median": 0.7912026624144816,
+    "residual_ratio_max": 0.9135522762272306,
+    "residual_ratio_min": 0.5703577541063457
+   }
+  },
+  "S3": {
+   "graph_id": "S3",
+   "family": "S",
+   "N": 30,
+   "n_named_edges": 21,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      5
+     ],
+     "n_edges_in_flow": 48,
+     "residual_ratio": 0.23771634074563748,
+     "grad_energy": 0.05156645547806304,
+     "resid_energy": 0.016070346537551985,
+     "total_energy": 0.06763680201561502
+    },
+    {
+     "task_edge": [
+      4,
+      9
+     ],
+     "n_edges_in_flow": 48,
+     "residual_ratio": 0.6963774862940236,
+     "grad_energy": 0.004817877447936549,
+     "resid_energy": 0.011049139175072378,
+     "total_energy": 0.01586701662300893
+    },
+    {
+     "task_edge": [
+      5,
+      11
+     ],
+     "n_edges_in_flow": 48,
+     "residual_ratio": 0.7621738631362862,
+     "grad_energy": 0.0019112962331371366,
+     "resid_energy": 0.006119608611723467,
+     "total_energy": 0.008030904844860604
+    },
+    {
+     "task_edge": [
+      5,
+      13
+     ],
+     "n_edges_in_flow": 48,
+     "residual_ratio": 0.7621738631362862,
+     "grad_energy": 0.0019112962331371366,
+     "resid_energy": 0.006119608611723467,
+     "total_energy": 0.008030904844860604
+    },
+    {
+     "task_edge": [
+      6,
+      17
+     ],
+     "n_edges_in_flow": 48,
+     "residual_ratio": 0.7621738631362862,
+     "grad_energy": 0.0019112962331371366,
+     "resid_energy": 0.006119608611723467,
+     "total_energy": 0.008030904844860604
+    },
+    {
+     "task_edge": [
+      9,
+      10
+     ],
+     "n_edges_in_flow": 48,
+     "residual_ratio": 0.8961486769120628,
+     "grad_energy": 0.00010671977920123464,
+     "resid_energy": 0.0009205635308304201,
+     "total_energy": 0.0010272833100316548
+    },
+    {
+     "task_edge": [
+      10,
+      1
+     ],
+     "n_edges_in_flow": 48,
+     "residual_ratio": 0.8667934757356513,
+     "grad_energy": 8.147862489295129e-05,
+     "resid_energy": 0.0005308266554603885,
+     "total_energy": 0.0006123052800533399
+    },
+    {
+     "task_edge": [
+      14,
+      2
+     ],
+     "n_edges_in_flow": 48,
+     "residual_ratio": 0.4926723510340605,
+     "grad_energy": 0.001295496326496893,
+     "resid_energy": 0.0012571780710046473,
+     "total_energy": 0.0025526743975015403
+    },
+    {
+     "task_edge": [
+      16,
+      3
+     ],
+     "n_edges_in_flow": 48,
+     "residual_ratio": 0.5477121084274816,
+     "grad_energy": 0.0006160790566464764,
+     "resid_energy": 0.0007467629263049777,
+     "total_energy": 0.001362841982951454
+    },
+    {
+     "task_edge": [
+      18,
+      3
+     ],
+     "n_edges_in_flow": 48,
+     "residual_ratio": 0.5477121084274816,
+     "grad_energy": 0.0006160790566464764,
+     "resid_energy": 0.0007467629263049777,
+     "total_energy": 0.001362841982951454
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.6371654336104256,
+    "residual_ratio_median": 0.6982120648686134,
+    "residual_ratio_max": 0.8961486769120628,
+    "residual_ratio_min": 0.23771634074563748
+   }
+  },
+  "S4": {
+   "graph_id": "S4",
+   "family": "S",
+   "N": 40,
+   "n_named_edges": 58,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      6,
+      10
+     ],
+     "n_edges_in_flow": 58,
+     "residual_ratio": 0.6560008340594455,
+     "grad_energy": 0.005407842136563266,
+     "resid_energy": 0.010307417822279352,
+     "total_energy": 0.015715259958842618
+    },
+    {
+     "task_edge": [
+      7,
+      15
+     ],
+     "n_edges_in_flow": 58,
+     "residual_ratio": 0.6560008340594455,
+     "grad_energy": 0.005407842136563266,
+     "resid_energy": 0.010307417822279352,
+     "total_energy": 0.015715259958842618
+    },
+    {
+     "task_edge": [
+      9,
+      16
+     ],
+     "n_edges_in_flow": 58,
+     "residual_ratio": 0.7667673197029728,
+     "grad_energy": 0.002532226116672902,
+     "resid_energy": 0.008324940914261723,
+     "total_energy": 0.010857167030934625
+    },
+    {
+     "task_edge": [
+      9,
+      21
+     ],
+     "n_edges_in_flow": 58,
+     "residual_ratio": 0.7667673197029728,
+     "grad_energy": 0.002532226116672902,
+     "resid_energy": 0.008324940914261723,
+     "total_energy": 0.010857167030934625
+    },
+    {
+     "task_edge": [
+      11,
+      18
+     ],
+     "n_edges_in_flow": 58,
+     "residual_ratio": 0.6560008340594455,
+     "grad_energy": 0.005407842136563266,
+     "resid_energy": 0.010307417822279352,
+     "total_energy": 0.015715259958842618
+    },
+    {
+     "task_edge": [
+      16,
+      27
+     ],
+     "n_edges_in_flow": 58,
+     "residual_ratio": 0.6738124915278325,
+     "grad_energy": 0.001857938551039646,
+     "resid_energy": 0.0038380566232013164,
+     "total_energy": 0.005695995174240962
+    },
+    {
+     "task_edge": [
+      16,
+      29
+     ],
+     "n_edges_in_flow": 58,
+     "residual_ratio": 0.6738124915278325,
+     "grad_energy": 0.001857938551039646,
+     "resid_energy": 0.0038380566232013164,
+     "total_energy": 0.005695995174240962
+    },
+    {
+     "task_edge": [
+      19,
+      27
+     ],
+     "n_edges_in_flow": 58,
+     "residual_ratio": 0.6910951471416643,
+     "grad_energy": 0.0015243024574844574,
+     "resid_energy": 0.0034095607976142737,
+     "total_energy": 0.004933863255098731
+    },
+    {
+     "task_edge": [
+      24,
+      33
+     ],
+     "n_edges_in_flow": 58,
+     "residual_ratio": 0.9520789695180239,
+     "grad_energy": 2.1549975564457868e-05,
+     "resid_energy": 0.0004286339001213312,
+     "total_energy": 0.00045018387568578905
+    },
+    {
+     "task_edge": [
+      31,
+      34
+     ],
+     "n_edges_in_flow": 58,
+     "residual_ratio": 0.1540890195175081,
+     "grad_energy": 0.0005318308945227546,
+     "resid_energy": 9.69241183899779e-05,
+     "total_energy": 0.0006287550129127325
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.650939152384534,
+    "residual_ratio_median": 0.6824538193347484,
+    "residual_ratio_max": 0.9520789695180239,
+    "residual_ratio_min": 0.1540890195175081
+   }
+  },
+  "S5": {
+   "graph_id": "S5",
+   "family": "S",
+   "N": 45,
+   "n_named_edges": 7,
+   "n_tasks": 7,
+   "tasks": [
+    {
+     "task_edge": [
+      1,
+      4
+     ],
+     "n_edges_in_flow": 64,
+     "residual_ratio": 0.3594164588125641,
+     "grad_energy": 0.034446215024454104,
+     "resid_energy": 0.01932164296222959,
+     "total_energy": 0.0537678579866837
+    },
+    {
+     "task_edge": [
+      4,
+      6
+     ],
+     "n_edges_in_flow": 64,
+     "residual_ratio": 0.6103318191503888,
+     "grad_energy": 0.015939706301959068,
+     "resid_energy": 0.024975658307777797,
+     "total_energy": 0.04091536460973686
+    },
+    {
+     "task_edge": [
+      6,
+      15
+     ],
+     "n_edges_in_flow": 64,
+     "residual_ratio": 0.8406734932967296,
+     "grad_energy": 0.0028151394652624095,
+     "resid_energy": 0.014867319684121966,
+     "total_energy": 0.017682459149384375
+    },
+    {
+     "task_edge": [
+      15,
+      28
+     ],
+     "n_edges_in_flow": 64,
+     "residual_ratio": 0.9698702137761426,
+     "grad_energy": 0.00010265664762588763,
+     "resid_energy": 0.0033066546503306557,
+     "total_energy": 0.0034093112979565433
+    },
+    {
+     "task_edge": [
+      15,
+      38
+     ],
+     "n_edges_in_flow": 64,
+     "residual_ratio": 0.9698702137761426,
+     "grad_energy": 0.00010265664762588763,
+     "resid_energy": 0.0033066546503306557,
+     "total_energy": 0.0034093112979565433
+    },
+    {
+     "task_edge": [
+      28,
+      36
+     ],
+     "n_edges_in_flow": 64,
+     "residual_ratio": 0.9552018848153173,
+     "grad_energy": 7.154201616082078e-05,
+     "resid_energy": 0.001527745304415712,
+     "total_energy": 0.0015992873205765328
+    },
+    {
+     "task_edge": [
+      38,
+      39
+     ],
+     "n_edges_in_flow": 64,
+     "residual_ratio": 0.5099450011078066,
+     "grad_energy": 0.00037594888469472646,
+     "resid_energy": 0.00039106384996207463,
+     "total_energy": 0.0007670127346568011
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.7450440951052843,
+    "residual_ratio_median": 0.8406734932967296,
+    "residual_ratio_max": 0.9698702137761426,
+    "residual_ratio_min": 0.3594164588125641
+   }
+  },
+  "S6": {
+   "graph_id": "S6",
+   "family": "S",
+   "N": 45,
+   "n_named_edges": 17,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      2
+     ],
+     "n_edges_in_flow": 63,
+     "residual_ratio": 0.7159223653579358,
+     "grad_energy": 0.0020728558245257464,
+     "resid_energy": 0.005214733526521236,
+     "total_energy": 0.007287589351046982
+    },
+    {
+     "task_edge": [
+      0,
+      3
+     ],
+     "n_edges_in_flow": 63,
+     "residual_ratio": 0.7159223653579358,
+     "grad_energy": 0.0020728558245257464,
+     "resid_energy": 0.005214733526521236,
+     "total_energy": 0.007287589351046982
+    },
+    {
+     "task_edge": [
+      0,
+      4
+     ],
+     "n_edges_in_flow": 63,
+     "residual_ratio": 0.7159223653579358,
+     "grad_energy": 0.0020728558245257464,
+     "resid_energy": 0.005214733526521236,
+     "total_energy": 0.007287589351046982
+    },
+    {
+     "task_edge": [
+      0,
+      6
+     ],
+     "n_edges_in_flow": 63,
+     "residual_ratio": 0.7159223653579358,
+     "grad_energy": 0.0020728558245257464,
+     "resid_energy": 0.005214733526521236,
+     "total_energy": 0.007287589351046982
+    },
+    {
+     "task_edge": [
+      0,
+      12
+     ],
+     "n_edges_in_flow": 63,
+     "residual_ratio": 0.7159223653579358,
+     "grad_energy": 0.0020728558245257464,
+     "resid_energy": 0.005214733526521236,
+     "total_energy": 0.007287589351046982
+    },
+    {
+     "task_edge": [
+      2,
+      1
+     ],
+     "n_edges_in_flow": 63,
+     "residual_ratio": 0.999176593405578,
+     "grad_energy": 1.906549172404309e-07,
+     "resid_energy": 0.00023137743527341812,
+     "total_energy": 0.00023156809019065855
+    },
+    {
+     "task_edge": [
+      3,
+      1
+     ],
+     "n_edges_in_flow": 63,
+     "residual_ratio": 0.999176593405578,
+     "grad_energy": 1.906549172404309e-07,
+     "resid_energy": 0.00023137743527341812,
+     "total_energy": 0.00023156809019065855
+    },
+    {
+     "task_edge": [
+      5,
+      1
+     ],
+     "n_edges_in_flow": 63,
+     "residual_ratio": 0.999176593405578,
+     "grad_energy": 1.906549172404309e-07,
+     "resid_energy": 0.00023137743527341812,
+     "total_energy": 0.00023156809019065855
+    },
+    {
+     "task_edge": [
+      7,
+      1
+     ],
+     "n_edges_in_flow": 63,
+     "residual_ratio": 0.9987748138262045,
+     "grad_energy": 1.6329172946848775e-07,
+     "resid_energy": 0.00013315529737625668,
+     "total_energy": 0.00013331858910572516
+    },
+    {
+     "task_edge": [
+      9,
+      1
+     ],
+     "n_edges_in_flow": 63,
+     "residual_ratio": 0.4959598626511075,
+     "grad_energy": 8.857270415219672e-05,
+     "resid_energy": 8.711849615541155e-05,
+     "total_energy": 0.00017569120030760827
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.8450324294592136,
+    "residual_ratio_median": 0.9069687825354171,
+    "residual_ratio_max": 0.999176593405578,
+    "residual_ratio_min": 0.4959598626511075
+   }
+  },
+  "S6_n20": {
+   "graph_id": "S6_n20",
+   "family": "S",
+   "N": 20,
+   "n_named_edges": 17,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      2
+     ],
+     "n_edges_in_flow": 28,
+     "residual_ratio": 0.5679623220570194,
+     "grad_energy": 0.003971509573132105,
+     "resid_energy": 0.005222535396919015,
+     "total_energy": 0.00919404497005112
+    },
+    {
+     "task_edge": [
+      0,
+      3
+     ],
+     "n_edges_in_flow": 28,
+     "residual_ratio": 0.5679623220570194,
+     "grad_energy": 0.003971509573132105,
+     "resid_energy": 0.005222535396919015,
+     "total_energy": 0.00919404497005112
+    },
+    {
+     "task_edge": [
+      0,
+      4
+     ],
+     "n_edges_in_flow": 28,
+     "residual_ratio": 0.5679623220570194,
+     "grad_energy": 0.003971509573132105,
+     "resid_energy": 0.005222535396919015,
+     "total_energy": 0.00919404497005112
+    },
+    {
+     "task_edge": [
+      0,
+      5
+     ],
+     "n_edges_in_flow": 28,
+     "residual_ratio": 0.5679623220570194,
+     "grad_energy": 0.003971509573132105,
+     "resid_energy": 0.005222535396919015,
+     "total_energy": 0.00919404497005112
+    },
+    {
+     "task_edge": [
+      0,
+      6
+     ],
+     "n_edges_in_flow": 28,
+     "residual_ratio": 0.5679623220570194,
+     "grad_energy": 0.003971509573132105,
+     "resid_energy": 0.005222535396919015,
+     "total_energy": 0.00919404497005112
+    },
+    {
+     "task_edge": [
+      0,
+      8
+     ],
+     "n_edges_in_flow": 28,
+     "residual_ratio": 0.5679623220570194,
+     "grad_energy": 0.003971509573132105,
+     "resid_energy": 0.005222535396919015,
+     "total_energy": 0.00919404497005112
+    },
+    {
+     "task_edge": [
+      0,
+      10
+     ],
+     "n_edges_in_flow": 28,
+     "residual_ratio": 0.5679623220570194,
+     "grad_energy": 0.003971509573132105,
+     "resid_energy": 0.005222535396919015,
+     "total_energy": 0.00919404497005112
+    },
+    {
+     "task_edge": [
+      0,
+      12
+     ],
+     "n_edges_in_flow": 28,
+     "residual_ratio": 0.5679623220570194,
+     "grad_energy": 0.003971509573132105,
+     "resid_energy": 0.005222535396919015,
+     "total_energy": 0.00919404497005112
+    },
+    {
+     "task_edge": [
+      7,
+      1
+     ],
+     "n_edges_in_flow": 28,
+     "residual_ratio": 0.9995814611241094,
+     "grad_energy": 1.1645261819968992e-07,
+     "resid_energy": 0.00027783106246543577,
+     "total_energy": 0.00027794751508363545
+    },
+    {
+     "task_edge": [
+      9,
+      1
+     ],
+     "n_edges_in_flow": 28,
+     "residual_ratio": 0.37073836464130765,
+     "grad_energy": 0.00019441933055916518,
+     "resid_energy": 0.00011456560367310102,
+     "total_energy": 0.0003089849342322662
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.7939050270196434,
+    "residual_ratio_median": 0.8701623533619625,
+    "residual_ratio_max": 0.9995814611241094,
+    "residual_ratio_min": 0.37073836464130765
+   }
+  },
+  "S6_n35": {
+   "graph_id": "S6_n35",
+   "family": "S",
+   "N": 35,
+   "n_named_edges": 17,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      3
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.6600482249123921,
+     "grad_energy": 0.002841458867618021,
+     "resid_energy": 0.0055148683126852715,
+     "total_energy": 0.008356327180303292
+    },
+    {
+     "task_edge": [
+      0,
+      4
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.6600482249123921,
+     "grad_energy": 0.002841458867618021,
+     "resid_energy": 0.0055148683126852715,
+     "total_energy": 0.008356327180303292
+    },
+    {
+     "task_edge": [
+      0,
+      5
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.6600482249123921,
+     "grad_energy": 0.002841458867618021,
+     "resid_energy": 0.0055148683126852715,
+     "total_energy": 0.008356327180303292
+    },
+    {
+     "task_edge": [
+      0,
+      6
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.6600482249123921,
+     "grad_energy": 0.002841458867618021,
+     "resid_energy": 0.0055148683126852715,
+     "total_energy": 0.008356327180303292
+    },
+    {
+     "task_edge": [
+      0,
+      8
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.6600482249123921,
+     "grad_energy": 0.002841458867618021,
+     "resid_energy": 0.0055148683126852715,
+     "total_energy": 0.008356327180303292
+    },
+    {
+     "task_edge": [
+      2,
+      1
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.9993628350047351,
+     "grad_energy": 1.362297896607654e-07,
+     "resid_energy": 0.00021365683589348638,
+     "total_energy": 0.00021379306568314715
+    },
+    {
+     "task_edge": [
+      3,
+      1
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.9993628350047351,
+     "grad_energy": 1.362297896607654e-07,
+     "resid_energy": 0.00021365683589348638,
+     "total_energy": 0.00021379306568314715
+    },
+    {
+     "task_edge": [
+      4,
+      1
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.9993628350047351,
+     "grad_energy": 1.362297896607654e-07,
+     "resid_energy": 0.00021365683589348638,
+     "total_energy": 0.00021379306568314715
+    },
+    {
+     "task_edge": [
+      5,
+      1
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.9993628350047351,
+     "grad_energy": 1.362297896607654e-07,
+     "resid_energy": 0.00021365683589348638,
+     "total_energy": 0.00021379306568314715
+    },
+    {
+     "task_edge": [
+      8,
+      9
+     ],
+     "n_edges_in_flow": 52,
+     "residual_ratio": 0.4443636867326088,
+     "grad_energy": 0.00013325979295047527,
+     "resid_energy": 0.00010651259882621627,
+     "total_energy": 0.00023977239177669154
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.8265652936675053,
+    "residual_ratio_median": 0.9058134034730169,
+    "residual_ratio_max": 0.9993628350047351,
+    "residual_ratio_min": 0.4443636867326088
+   }
+  },
+  "S6_n60": {
+   "graph_id": "S6_n60",
+   "family": "S",
+   "N": 60,
+   "n_named_edges": 17,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      3
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.7097457606360008,
+     "grad_energy": 0.0022168226820234765,
+     "resid_energy": 0.005428245549701905,
+     "total_energy": 0.007645068231725381
+    },
+    {
+     "task_edge": [
+      0,
+      4
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.7097457606360008,
+     "grad_energy": 0.0022168226820234765,
+     "resid_energy": 0.005428245549701905,
+     "total_energy": 0.007645068231725381
+    },
+    {
+     "task_edge": [
+      0,
+      5
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.7097457606360008,
+     "grad_energy": 0.0022168226820234765,
+     "resid_energy": 0.005428245549701905,
+     "total_energy": 0.007645068231725381
+    },
+    {
+     "task_edge": [
+      0,
+      8
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.7097457606360008,
+     "grad_energy": 0.0022168226820234765,
+     "resid_energy": 0.005428245549701905,
+     "total_energy": 0.007645068231725381
+    },
+    {
+     "task_edge": [
+      0,
+      10
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.7097457606360008,
+     "grad_energy": 0.0022168226820234765,
+     "resid_energy": 0.005428245549701905,
+     "total_energy": 0.007645068231725381
+    },
+    {
+     "task_edge": [
+      0,
+      11
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.7097457606360008,
+     "grad_energy": 0.0022168226820234765,
+     "resid_energy": 0.005428245549701905,
+     "total_energy": 0.007645068231725381
+    },
+    {
+     "task_edge": [
+      4,
+      1
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.9992727044694487,
+     "grad_energy": 1.4269214374276564e-07,
+     "resid_energy": 0.00019615375126420214,
+     "total_energy": 0.00019629644340794492
+    },
+    {
+     "task_edge": [
+      5,
+      1
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.9992727044694487,
+     "grad_energy": 1.4269214374276564e-07,
+     "resid_energy": 0.00019615375126420214,
+     "total_energy": 0.00019629644340794492
+    },
+    {
+     "task_edge": [
+      8,
+      9
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.9978917298914526,
+     "grad_energy": 3.645640233457422e-07,
+     "resid_energy": 0.00017272963755774288,
+     "total_energy": 0.00017309420158108863
+    },
+    {
+     "task_edge": [
+      9,
+      1
+     ],
+     "n_edges_in_flow": 87,
+     "residual_ratio": 0.5228057018931887,
+     "grad_energy": 0.00010852941712989862,
+     "resid_energy": 0.00011892735035235418,
+     "total_energy": 0.0002274567674822528
+    }
+   ],
+   "summary": {
+    "residual_ratio_mean": 0.8443900790091622,
+    "residual_ratio_median": 0.9031325529418082,
+    "residual_ratio_max": 0.9992727044694487,
+    "residual_ratio_min": 0.5228057018931887
+   }
+  }
+ },
+ "verdict": {
+  "verdict": "downgraded_to_approximate_potential_game",
+  "median_residual_ratio": 0.7145246104093218,
+  "n_graphs": 22,
+  "thresholds": {
+   "complete_median": 0.1,
+   "approx_median": 0.3
+  }
+ },
+ "runtime_sec": 0.406,
+ "honesty": [
+  "no LLM API calls issued: 全语料从 corpus/v20 只读加载，全部实验为本地种子化 numpy 线性代数运算。",
+  "本分解是 Candogan 2011 博弈流分解的**可操作性类比**：原定理分解的是效用函数空间，这里分解的是图上边效用（场得分）向量——「每个任务是独立玩家」的博弈构造是建模选择（docs/GT_RECONSTRUCTION.md §3 已披露），非唯一。",
+  "边效用取 W_obs（留一后、正向扩散前）上的静态场得分；未沿反向轨迹积分——轨迹依赖的分解留作后续工作，不混入本次预登记判定。",
+  "判定规则为纯函数 gt6_verdict 机械求值，tests/test_v20_gt6.py 锁定；落在中报区间时报 inconclusive_band_reported_as_is，不美化。",
+  "deposon_diffusion.py / run_v20_gt5.py 等既有文件一行不动；本文件为新建。",
+  "总运行 0.406s（预算 600s 内）"
+ ]
+}
