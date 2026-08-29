@@ -5,9 +5,7 @@
 # 协议同 v1.7.1：同图/同种子 70000+ei/同 N_NEG=10/top-3/legacy 负池。零 API，缓存只读。
 import json, os, time
 import numpy as np
-from deposon_diffusion import DiffusionConfig, config_dict, forward_diffuse
-from deposon_diffusion import (_masked_row_stats, _project_masked, _walk_sums,
-                               _G_AETHER, _EPS)
+from deposon_diffusion import DiffusionConfig, config_dict, denoise, forward_diffuse
 from run_v15_experiment import (N_NEG, TOP_K, arm_scores, mean_std,
                                 reconstruct_mindmap, row_normalize,
                                 top3_hit_per_edge)
@@ -38,54 +36,18 @@ def reverse_denoise_init(WT, mask, cfg, source, target, init_mode="dirichlet"):
       先验均值，mean-field / 确定性反向，等价 DDIM η=0）；不调 rng ⇒ 对
       cfg.seed 不变（确定性）。
     反向退火主体（梯度/收缩/投影）与原函数逐行相同。
+
+    候选 1 重构：实现已统一收敛到 deposon_diffusion.denoise（薄转发，
+    数值逐位不变，tests/test_v19.py 回归断言锁定）。
     """
-    WT = np.asarray(WT, dtype=float)
-    mask = np.asarray(mask, dtype=bool)
-    if init_mode not in INIT_MODES:
-        raise ValueError(f"unknown init_mode: {init_mode}")
-    W = WT.copy()
-    if cfg.n_steps <= 0:
-        return W
-    if init_mode == "dirichlet":
-        rng = np.random.default_rng(cfg.seed)
-        for i in range(W.shape[0]):
-            idx, m, p = _masked_row_stats(W, mask, i)
-            if m == 0:
-                continue
-            mass = p * m
-            if mass > 0.0:
-                W[i, idx] = mass * rng.dirichlet(np.ones(m))  # x_T ~ 行均匀先验
-        _project_masked(W, mask)
-    else:  # prior_mean：前向终态已是行均匀先验均值，零随机性
-        _project_masked(W, mask)
-    for _t in range(cfg.n_steps, 0, -1):
-        grad = np.zeros_like(W)
-        if cfg.field_guidance and source != target:
-            x, y = _walk_sums(W, source, target)
-            xt = max(float(x[target]), _EPS)
-            wpos = np.maximum(W, _EPS)
-            dtdw = np.where(W > _EPS, 1.0 / (1.0 + _G_AETHER * wpos) ** 2, 0.0)
-            grad -= (x[:, None] * y[None, :]) * (dtdw / xt)
-        if cfg.lam_smooth:
-            grad[mask] += 2.0 * cfg.lam_smooth * W[mask]
-        W[mask] *= np.exp(-cfg.lr * W[mask] * grad[mask])
-        W[mask] = (1.0 - cfg.lr) * W[mask]
-        W[~mask] = WT[~mask]
-        _project_masked(W, mask)
+    W, _steps, _states = denoise(WT, mask, cfg, source, target,
+                                 init_mode=init_mode)
     return W
 
 
-def field_scores_init(W_obs, mask, cfg, source, target, inst_seed, init_mode):
-    """完整臂打分（aggregate 能量），起点由 init_mode 决定。"""
-    cfg_arm = DiffusionConfig(**{**config_dict(cfg), "seed": inst_seed,
-                                 "energy_mode": "aggregate",
-                                 "field_guidance": True})
-    traj = forward_diffuse(W_obs, mask, cfg_arm)
-    W_done = reverse_denoise_init(traj[-1], mask, cfg_arm, source, target,
-                                  init_mode=init_mode)
-    out = np.full_like(W_obs, -np.inf, dtype=float)
-    out[mask] = W_done[mask]
-    return out
+# field_scores_init 已迁入 deposon_protocol（候选 2 重构）; 此处薄转发,
+# 保持 11 个下游脚本 "from run_v19_meanfield import field_scores_init" 不破。
+from deposon_protocol import field_scores_init  # noqa: F401
 
 
 def is_placeholder(label):

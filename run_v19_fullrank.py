@@ -21,12 +21,9 @@ ARMS = ("field_mean", "field_guided", "random", "degree", "llm_prior",
         "hybrid_norm@0.5", "hybrid_norm@2.0")
 
 
-def full_candidate_mask(N, u):
-    """全候选 mask：行 u 的全部非自身列（含其他观测出边——raw 口径，预登记）。"""
-    mask = np.zeros((N, N), bool)
-    mask[u, :] = True
-    mask[u, u] = False
-    return mask
+# full_candidate_mask / gold_rank 已迁入 deposon_protocol（候选 2 重构）;
+# 此处薄转发, 保持 14/8 个下游脚本的既有 import 不破。
+from deposon_protocol import full_candidate_mask, gold_rank  # noqa: F401
 
 
 def rank_metrics(ranks):
@@ -39,12 +36,6 @@ def rank_metrics(ranks):
             "hits@1": float(np.mean(r < 1)), "hits@3": float(np.mean(r < 3)),
             "n": int(r.size), "mean_rank": float(r.mean()),
             "median_rank": float(np.median(r))}
-
-
-def gold_rank(scores_row, cand, v):
-    """金边 v 在候选 cand 中按 scores_row 降序（mergesort 稳定）的秩（0 基）。"""
-    order = cand[np.argsort(-scores_row[cand], kind="mergesort")]
-    return int(np.flatnonzero(order == v)[0])
 
 
 def main():
