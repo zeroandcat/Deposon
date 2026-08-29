@@ -557,7 +557,7 @@ real_semantics 轴复现判 inconclusive（单有效域方向性证据 + 幸存�
 | GT-8b fetch_failed（9 次 HTTP 预算用尽） | `docs/Findings_GT8B.md` §3–§4；`deposon_v20_gt8b.json` → `cache_missing`（prior_chemical_elements.json 缺失在案） |
 | GT-2B 0.15/0.275/0.20 inconclusive；场 0.375/0.525/1.000 | `deposon_v20_gt2b.json` → `verdict="inconclusive"`、`per_T.*.per_domain.*.accuracy` 聚合 |
 | GT-3b doubao 4/4、deepseek 6/6、0 败绩、W=1.0 | `deposon_v20_gt3.json` → `verdict.H_GT3_supported=true`、顶层 `kendall_W=1.0`（位于 `verdict` 之外）；逐域矩阵见 `docs/Findings_GT3.md` |
-| Wilcoxon p=0.0031 / \|r\|=0.83；配对 t p<0.0001 / d=2.05 | `v20_statcheck_fm_vs_rand.json`（p_value=0.003052）、`v20_statcheck_fm_vs_deg.json`（p_value=2.13e-08, d=2.0478） |
+| Wilcoxon p=0.0031 / |r|=0.83；配对 t p<0.0001 / d=2.05 | `v20_statcheck_fm_vs_rand.json`（p_value=0.003052）、`v20_statcheck_fm_vs_deg.json`（p_value=2.13e-08, d=2.0478） |
 | 大题库 89.5%/54.2%/50.9%/19.6% | `deposon_v20_bigquiz_eval.json` → `overall`（prior 0.8947、tfidf 0.5417、field 0.5091、rule 0.1964） |
 | 方向一致率 ≥0.96、hub 反向 0 | `deposon_v20_crossval.json` → `direction_kind_summary`（1.0 / 0.9627，total_hub_reversed=0） |
 | 融合稀释（0.484→0.452、0.783→0.739） | `deposon_v20_crossval.json` → hybrid λ=0.5 档 `hybrid_lambda_convex=0.5` 逐图字段 |
