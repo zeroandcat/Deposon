@@ -218,3 +218,31 @@
        （mean 口径，避免复算者误取 median=0.0）。
     自检：数字零改动；[12]/[13] 正文各 ≥1 引用不再孤儿；grep「crossval §三」
     零残留；无密钥串；不涉 git。
+
+20. **废稿整合与安全加固（2026-08-30）**：按 docs/SALVAGE_v2.md 择优清单执行四项：
+    1. 附录 A GT-5 条目更正文档-数据漂移误标：`results/deposon_v20_gt5.json`
+       实际存在且含 `per_graph_detail`（S6 gap=−0.31 逐图明细），原「results/ 下无」
+       标注改为 JSON 字段追溯（19.3 的历史记录如实保留，本条即其更正）；
+    2. docs/Findings_v2.0_photonics.md 过期数值更正：14/22→18/22 图可探测、
+       「14 跳规则」→阈值 ≈27 跳、~2.9dB/跳不变，与
+       `results/deposon_v20_photonics.json` `P2_feasibility`（NEP 单位 bug 更正后
+       口径）一致，并追加 2026-08-30 更正注记；
+    3. 安全加固：`run_v20_gt3b_fetch.py`、`run_v20_gt3c_fetch.py` 的 HTTP 错误路径
+       （`HTTP {status}: {r.text[:200]}`）与 last_error 统一过 `llm_prior._sanitize`
+       兜底剔除潜在 key 回显后再落盘；请求逻辑、预算计数、超时参数零改动；
+    4. 废稿成果与模型论证择优入论文（数字全部机械追溯，正文新增 <600 字）：
+       (a) §5.6 追加 vector_audit 一句（1740 任务 V1–V4 全 0 违规）；
+       (b) 新增 §6.5「硬件同构可行性（方向性证据）」（photonics 18/22、
+           ~2.9dB/跳、P1 公式级等价、P4 相位斜坡，强度档仅「仅有动机/方向性」）；
+       (c) §6.4 教训复盘补 GT-2B 剂量-反应设计教训（免疫判据须对选项自由度稳健，
+           docs/Findings_GT2B.md §4）；
+       (d) §6.3 补 λ=2 反场 artifact 教训（融合系数出凸包，E9.6，列为融合权重
+           审计条款）；
+       (e) 附录 A 追加 vector_audit 追溯行；
+       (f) 吸收 docs/MODEL_ARGUMENTATION_v2.md 两点：§5.6「构造性定义收窄审计
+           攻击面」一句、§6 引言论证强度三档方法声明一句。
+    自检：口径词计数（判死 9 / inconclusive 14 / no_separation 7 / consistency 4 /
+    探索性 6 / 观察性规律 3 / [待核] 19）前后一致；无密钥串；pytest 255 passed；
+    不涉 git。
+    20-补：§6.5 与 §6.3 λ=2 段因前次实施遗漏，经 verifier v33 run1 检出后补写（2026-08-30）。
+    20-补2：§6.4 GT-2B 剂量-反应教训句因前次实施遗漏（verifier B6c 误报掩盖），经独立复审检出后补写（2026-08-30）。
