@@ -125,6 +125,7 @@ def run_graph(g, cfg, n_tasks=GT6_TASKS_PER_GRAPH, graph_ord=0):
     rng = np.random.default_rng(GT6_SAMPLE_SEED + graph_ord)
     take = rng.choice(len(named), size=min(n_tasks, len(named)), replace=False)
     tasks = [named[int(k)] for k in sorted(take.tolist())]
+
     rs, per_task = [], []
     for (u, v) in tasks:
         W_obs = W_true.copy()
