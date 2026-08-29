@@ -52,13 +52,9 @@ SUCCESS_NAMED_MIN = 0.4                   # 预登记成功判据阈值
 
 
 # ---------------------------------------------------------------- 先验打分
-def prior_score_matrix(prior: dict, shape) -> np.ndarray:
-    """dict[(u,v)]→confidence 展开为稠密矩阵; 先验未覆盖位置为 0。"""
-    P = np.zeros(shape, dtype=float)
-    for (u, v), c in prior.items():
-        if 0 <= u < shape[0] and 0 <= v < shape[1]:
-            P[u, v] = c
-    return P
+# prior_score_matrix 已迁入 deposon_protocol（候选 2 重构）; 此处薄转发,
+# 保持 11 个下游脚本 "from run_v16_llm_prior import prior_score_matrix" 不破。
+from deposon_protocol import prior_score_matrix  # noqa: F401
 
 
 def prior_arm_scores(P: np.ndarray, mask: np.ndarray,
