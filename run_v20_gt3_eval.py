@@ -20,10 +20,14 @@ BASE_DIR = os.path.join(RESULTS, "familyL_prior_cache")
 OUT_PATH = os.path.join(RESULTS, "deposon_v20_gt3.json")
 
 EVALUATORS = {"E0_kimi-for-coding": BASE_DIR, "E1_moonshot-v1-8k": GT3_DIR,
-              "E2_kimi-k2-thinking": GT3_DIR}
+              "E2_kimi-k2-thinking": GT3_DIR,
+              "E3_doubao-seed-evolving": GT3_DIR,
+              "E4_deepseek-v4-pro": GT3_DIR}
 CACHE_NAME = {"E0_kimi-for-coding": lambda d: f"{d}.json",
               "E1_moonshot-v1-8k": lambda d: f"moonshot-v1-8k__{d}.json",
-              "E2_kimi-k2-thinking": lambda d: f"kimi-k2-thinking__{d}.json"}
+              "E2_kimi-k2-thinking": lambda d: f"kimi-k2-thinking__{d}.json",
+              "E3_doubao-seed-evolving": lambda d: f"doubao-seed-evolving__{d}.json",
+              "E4_deepseek-v4-pro": lambda d: f"deepseek-v4-pro-260425__{d}.json"}
 
 
 def load_prior(eval_key, domain, n):
@@ -77,7 +81,8 @@ def main():
         per.append(row)
 
     # ---- 判定（SPEC §1 机械求值）----
-    new_evals = ("E1_moonshot-v1-8k", "E2_kimi-k2-thinking")
+    new_evals = ("E1_moonshot-v1-8k", "E2_kimi-k2-thinking",
+                 "E3_doubao-seed-evolving", "E4_deepseek-v4-pro")
     crit1 = {}
     for ekey in new_evals:
         wins = sum(1 for r in per
@@ -119,11 +124,12 @@ def main():
            "budget": {"preregistered_max": 27,
                       "probe_attempts": 3,
                       "fetch_attempts_recorded_in_caches": total_attempts,
+                      "ark_gt3b_attempts": {"doubao": 12, "deepseek": 8, "probes": 3},
                       "actual_total_attempts": 28,
                       "overrun": 1,
                       "note": "修正案 A1：重试轮如实计数致超支 1 次，已披露"},
            "honesty": [
-               "降级为族内跨评估者（GT-3a）：生成者 kimi-for-coding，评估者为"
+               "GT-3b 已升级为三模型族（Moonshot/ByteDance/DeepSeek）；原声明：降级为族内跨评估者（GT-3a）：生成者 kimi-for-coding，评估者为"
                "同厂商不同代际/推理模式模型；不能完全排除同厂商同源污染，"
                "GT-3b（跨厂商）待资源。",
                "parse/fetch 失败域不静默剔除，单独披露于 failures。",

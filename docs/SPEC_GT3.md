@@ -56,3 +56,30 @@ parse_failure 清单、预算实耗）。
 - **预算实耗 28 次**（探测 3 + run1 17 + run2 8），**超出预登记 27 次 1 次**。
   超支原因：重试轮的 attempts 落盘机制如实计数（LESSONS #26 执行成本）。
   处理：如实披露，不追溯修改预算；后续 GT-3b 预算应按 1.5× 超时系数估算。
+
+## 修正案 A2（2026-08-30，GT-3b 跨厂商扩展，数据前冻结）
+
+用户提供火山引擎 Ark/Doubao API（第二厂商）。GT-3b 正式启动：
+- **评估者 E3 = doubao-seed-evolving**（字节跳动，与 Kimi 不同厂商、不同模型族）——
+  本实验升级为**真·跨厂商验证**，直接检验「先验优势是否同厂商同源污染 artifact」。
+- 协议与 GT-3a 逐位相同：同一 build_prior_prompt、prompt_sha256 校验、
+  同一 eval_prior_arm 协议；缓存 `results/gt3_prior_cache/doubao-seed-evolving__{domain}.json`。
+- 判定（机械求值）：
+  1. E3 在 ≥4/6 域 named Hits@3 > field_mean ⇒ 跨厂商稳健；
+  2. 四评估者 Kendall W ≥ 0.5（仅四者全 ok 的域）；
+  3. 斩杀线：E3 在 ≥3/6 域 ≤ field_mean ⇒ 先验优势判为同源 artifact，全面降级。
+- 预算：探测 2 次（已发生）+ 6 域 × MAX_ATTEMPTS=2 ≤ 12 ⇒ **≤14 次 HTTP**；
+  attempts 落盘。超时风险高（实测需 >60s），TIMEOUT=240s。
+- key 纪律：Ark key 与 Kimi key 同规——仅主代理单次命令内联环境变量，
+  不落任何文件/日志/prompt；用户任务后删除。
+
+## 修正案 A3（2026-08-30，第三模型族扩展，数据前冻结）
+
+用户在 Ark 端点追加提供 deepseek-v4-pro-260425（DeepSeek 权重——
+与 Moonshot、ByteDance 均为不同模型族）。新增评估者 **E4=deepseek-v4-pro-260425**，
+GT-3b 升级为**三模型族交叉验证**（生成者 Moonshot kimi-for-coding；
+评估者 Moonshot×2 / ByteDance×1 / DeepSeek×1）。
+- 协议与判定同 A2（E4 适用同一 ≥4/6 判据与 ≥3/6 斩杀线；W 在五评估者
+  全 ok 的域上计算）。
+- 预算：探测 1 次（已发生）+ 6 域 × MAX_ATTEMPTS=2 ≤ 12 ⇒ **≤13 次 HTTP**。
+- 注：E4 为推理模型，max_tokens=8000（探测显示小额度会被 reasoning 耗尽）。
