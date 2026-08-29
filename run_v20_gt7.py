@@ -39,9 +39,8 @@ import time
 
 import numpy as np
 
-from deposon_diffusion import (DiffusionConfig, config_dict, forward_diffuse,
-                               _masked_row_stats, _project_masked, _walk_sums,
-                               _G_AETHER, _EPS)
+from deposon_diffusion import (DiffusionConfig, config_dict, denoise,
+                               forward_diffuse)
 from mindmap_corpus_v20 import CORPUS_DIR, load_corpus
 from run_v15_experiment import row_normalize
 from run_v19_fullrank import full_candidate_mask, gold_rank
@@ -69,42 +68,15 @@ def reverse_denoise_traj_alpha(WT, mask, cfg, source, target, alpha):
     算法主体逐行对应；唯一差异：dirichlet 起点浓度 np.ones(m) →
     np.full(m, alpha)。alpha=1.0 与原 dirichlet 逐位一致
     （tests/test_v20_gt7.py 回归断言锁定）。
+
+    候选 1 重构：实现已统一收敛到 deposon_diffusion.denoise（薄转发，
+    alpha + record=True，数值逐位不变）。
     """
-    WT = np.asarray(WT, dtype=float)
-    mask = np.asarray(mask, dtype=bool)
     if alpha is not None and alpha <= 0.0:
         raise ValueError(f"alpha must be positive or None, got {alpha}")
-    W = WT.copy()
-    if cfg.n_steps <= 0:
-        return [W]
-    if alpha is not None:  # dirichlet 起点，浓度 α = 等效温度旋钮
-        rng = np.random.default_rng(cfg.seed)
-        for i in range(W.shape[0]):
-            idx, m, p = _masked_row_stats(W, mask, i)
-            if m == 0:
-                continue
-            mass = p * m
-            if mass > 0.0:
-                W[i, idx] = mass * rng.dirichlet(np.full(m, alpha))
-        _project_masked(W, mask)
-    else:  # mean-field：T=0 确定性极限，保持前向终态，不调 rng
-        _project_masked(W, mask)
-    states = [W.copy()]
-    for _t in range(cfg.n_steps, 0, -1):
-        grad = np.zeros_like(W)
-        if cfg.field_guidance and source != target:
-            x, y = _walk_sums(W, source, target)
-            xt = max(float(x[target]), _EPS)
-            wpos = np.maximum(W, _EPS)
-            dtdw = np.where(W > _EPS, 1.0 / (1.0 + _G_AETHER * wpos) ** 2, 0.0)
-            grad -= (x[:, None] * y[None, :]) * (dtdw / xt)
-        if cfg.lam_smooth:
-            grad[mask] += 2.0 * cfg.lam_smooth * W[mask]
-        W[mask] *= np.exp(-cfg.lr * W[mask] * grad[mask])
-        W[mask] = (1.0 - cfg.lr) * W[mask]
-        W[~mask] = WT[~mask]
-        _project_masked(W, mask)
-        states.append(W.copy())
+    init_mode = "prior_mean" if alpha is None else "dirichlet"
+    _W, _steps, states = denoise(WT, mask, cfg, source, target,
+                                 init_mode=init_mode, alpha=alpha, record=True)
     return states
 
 

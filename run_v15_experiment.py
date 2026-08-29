@@ -44,13 +44,9 @@ ARM_ENERGY_MODE = {"field_guided": "aggregate", "field_guided_maxpath": "max_pat
 
 
 # ---------------------------------------------------------------- 公共工具
-def row_normalize(adj: np.ndarray) -> np.ndarray:
-    """出边权重行归一 (1/outdeg); 零出度节点保持零行。"""
-    W = np.zeros_like(adj, dtype=float)
-    outdeg = adj.sum(axis=1)
-    nz = outdeg > 0
-    W[nz] = adj[nz] / outdeg[nz, None]
-    return W
+# row_normalize 已迁入 deposon_protocol（候选 2 重构）; 此处薄转发,
+# 保持 18 个下游脚本 "from run_v15_experiment import row_normalize" 不破。
+from deposon_protocol import row_normalize  # noqa: F401
 
 
 def auc_rank(pos: np.ndarray, neg: np.ndarray) -> float | None:
