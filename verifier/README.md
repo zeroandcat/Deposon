@@ -70,3 +70,6 @@
 ## v26（2026-08-30 创建）
 - 测量：GT-8 领域鉴定器 v0 新图复现（verdict supports/≥2 对 0 反转/SPEC 判死线/real_semantics deferred 声明/Findings 双披露/特征公式锚点/密钥红线/pytest 237）
 - 与 v25 差异：v25 验收图语言与 GT-7；v26 验收鉴定器 hub 轴预登记复现（评审 Top-5 第⑤项）
+## v27（2026-08-30 创建）
+- 测量：GT-2B 多陷阱升级（verdict=inconclusive 不美化/T∈{1,2,3} 三档/rule_filter 0.15-0.275-0.20 非单调/T=2 逐点复现 27.5%/场免疫破坏如实记录/SPEC 判死线/Findings 披露判据缺陷/密钥红线/pytest 246）
+- 与 v26 差异：v26 验收鉴定器 v0 复现；v27 验收 GT-2B 预登记 inconclusive（含场免疫判据被破坏的诚实披露）
