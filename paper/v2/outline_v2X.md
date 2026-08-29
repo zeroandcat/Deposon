@@ -4,20 +4,23 @@
 > 与 1.X 论文（paper/deposon_paper_v1.md / _en.md）的关系：**接续而非覆盖**——
 > v2.X 论文是独立新稿，引用 1.X 作为前序工作；1.X 论文冻结于 v1.9 状态（arXiv 背书待办）。
 
-## 0. 定位声明（三选一，文献调研后定夺）
+## 0. 定位声明（方向校准后定稿，2026-08-30）
 
-- **首选定位：分工与边界（division-of-labor + boundary mapping）**（文献已确认，2026-08-28）。
-  体裁先例三层齐备（Lipton CACM 2019 宣言 / Recht-D'Amour 等顶会模板 / Negative Results
-  workshop 六届）；Bowman ACL 2022「Dangers of Underclaiming」作自我设防。
-- 备选定位 A：博弈论重构（场=势博弈最好响应极限）——若 A 路文献显示该空位真实存在。
+- **现定位：可审计优势的博弈论实证**——1.9 提出可审计优势命题（守恒账+可归因），
+  本文（v2.X）的博弈论证据链是该命题的动力学层实证，而非独立方向；划界/分工
+  降为「可审计优势价值域」的推论（论文 §4.5）。
+- 原首选定位（分工与边界划界，boundary analysis）降为主线内的体裁组件，
+  先例三层（Lipton / Recht-D'Amour 等 / Negative Results workshop）仍用于 §4/§6；
+  Bowman ACL 2022 作自我设防。
 - 备选定位 B：方法论论文（预登记+独立多角色评审+版本化 verifier 的科研工程范式）。
 
 ## 1. 标题候选
 
-1. "Structure or Semantics? Mapping the Domains of Physical-Field and LLM-Prior Signals for Concept-Map Completion"
-2. "A Structure-Sensitive Ranker vs a Label-Reading Prior: A Boundary Study of Physics-Constrained Diffusion and LLM Priors with Preregistered Kill Criteria"
-   （原候选 "The Field Detects Skeletons…" 已弃用——H-B1 两例违规后措辞过强，见评审 m1）
-3. "Potential Games on Mind Maps: Best-Response Limits of a Physics-Constrained Scattering Layer"（博弈论主线备选）
+1. **（现用）**"Game-Theoretic Evidence for the Auditability Advantage: Potential, Price of Anarchy, and Audit Boundaries of a Physics-Constrained Scattering Layer"
+   中文题：可审计优势的博弈论实证：物理约束散射层的势、协调价值与审计边界
+2. "Potential Games on Mind Maps: Best-Response Limits of a Physics-Constrained Scattering Layer"（博弈论主线备选）
+3. "Structure or Semantics? Mapping the Domains of Physical-Field and LLM-Prior Signals for Concept-Map Completion"
+   （原划界主线题，2026-08-30 方向校准后降为历史候选）
 
 ## 2. 摘要骨架（≤250 词，要素已全）
 
@@ -62,17 +65,18 @@ deepseek（DeepSeek）6/6，三模型族合计 0 败绩、全 ok 域 Kendall W=1
 | §2 Related Work | 结构补全 / LLM KGC / 博弈论图算法 / 边界论文范式 | reviews/literature_scan_v2X_A/B.md（回填） |
 | §3 Methods | 场（mean-field 反向）+ 先验 + 全候选协议 + 三大规律语料设计 | SPEC v2.0、mindmap_corpus_v20.py |
 | §4 Experiments | 4.1 场 vs 结构基线（H-A1/A2）；4.2 先验 vs 全部臂（族 L）；4.3 融合稀释；4.4 GT-2 自适应攻击；4.5 领域鉴定器；4.6 题库效度；4.7 CoT 收编 | results/deposon_v20_*.json、quizbank |
-| §5 Game-theoretic analysis | GT-1 势博弈收敛（consistency 口径，除非补形式化命题+证明，见评审 m4）、GT-4 PoA（操作化定义与经典 PoA 差异如实声明；median 1.5 / 13 图；族 L 2 图 PoA<1 并列披露，见评审 M4）、向量属性审计 | results/deposon_v20_gt.json、vector_audit |
+| §5 可审计优势的博弈论实证（核心节，方向校准后升级） | 命题承接（1.9）→ 审计标量存在性（GT-5b 22/22 单调、GT-6 残差中位 1.6e-29 + 3 例外）→ 审计定量化（分布级 PoA，全 17 图 median 1.333，族 L 2 图 PoA<1 并列披露）→ 审计边界（GT-7 mixed）；GT-1 收敛为弱一致背景（consistency 口径不放松，见评审 m4） | results/deposon_v20_gt.json、deposon_v20_gt5b/gt6/gt7.json |
 | §6 Boundary & Discussion | H-B1 违规 2 例、相变阴性、同源污染（GT-3b 后口径：跨厂商削弱、中文优化族残余局限）、领域鉴定器适用范围 | Findings 全文 |
 | §7 Methodology artifact | 预登记/修正案/阴性归档/独立评审/verifier 工程 | SPEC、reviews、verifier/ |
 | Appendix | 基线注册表、逐图数字、缓存 provenance、攻击者标签样例 | BASELINE_REGISTRY、familyL caches |
 
 ## 4. 与 1.X 论文的衔接声明（写入 §1）
 
-1.X 建立了散射层框架与基准纪律，并在整改中证明：基准效应量结构性不可归因、
-规则基线可追平管线（v1.9）。v2.X 把这些阴性结果转化为研究问题本身：
-信号的价值域在哪里？——否定之否定作为方法论（1.X 为正题，v1.9 为反题，
-本稿为合题）。
+「命题 → 实证」叙事（2026-08-30 方向校准后口径）：1.X 出题——建立散射层框架与
+基准纪律，并在整改中证明基准效应量结构性不可归因、规则基线可追平管线（v1.9）；
+v1.9 定命题——价值定位于可审计表征与守恒保证，准确率优势显式放弃；v2.X 给机制层
+实证——博弈论证据链回答「反向动力学是否真有一个可对标审计的标量」。
+「否定之否定」（1.X 正题 / v1.9 反题 / 本稿合题）如保留只作一句背景，不作结构主线。
 
 ## 5. 目标 venue 分析（文献调研后定稿，2026-08-28）
 
