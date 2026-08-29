@@ -1,0 +1,74 @@
+{
+ "experiment": "deposon_v20_gt8b",
+ "spec": "docs/SPEC_GT8B.md",
+ "config": {
+  "n_steps": 50,
+  "beta_schedule": "linear",
+  "prior": "uniform_out",
+  "lr": 0.1,
+  "lam_smooth": 0.01,
+  "field_guidance": true,
+  "energy_mode": "aggregate",
+  "seed": 0
+ },
+ "domains_frozen": [
+  "chemical_elements",
+  "chinese_dynasties"
+ ],
+ "per_domain": {
+  "L_chinese_dynasties": {
+   "arms": {
+    "field_mean": {
+     "named": 0.07317073170731707,
+     "filler": 0.0625
+    },
+    "random": {
+     "named": 0.024390243902439025,
+     "filler": 0.0
+    },
+    "degree": {
+     "named": 0.04878048780487805,
+     "filler": 0.0625
+    },
+    "llm_prior": {
+     "named": 0.7804878048780488,
+     "filler": 0.5
+    }
+   },
+   "named_summary": {
+    "field_mean": 0.0732,
+    "random": 0.0244,
+    "degree": 0.0488,
+    "llm_prior": 0.7805
+   },
+   "real_semantics": 1,
+   "prior_named_minus_field_named": 0.7073,
+   "prior_named_minus_random_named": 0.7561,
+   "prior_cache_prompt_sha256": "d3874fb599faf1709e3de8b77e30731e17ec8553889b1b2fe22ff6f18332435d",
+   "graph_sha256": "7a7b397c2ca6bd6ed3fd6e9bba302a377c6011f5f6aecc192cdf5cc6ee462168"
+  }
+ },
+ "cache_missing": {
+  "chemical_elements": "GT-8b prior cache missing: /mnt/agents/output/deposon-repo/results/gt8b_cache/prior_chemical_elements.json — 请先由主代理执行 run_v20_gt8b_fetch.py（先验臂阶段）。"
+ },
+ "gt8b_verdict": {
+  "verdict": "inconclusive",
+  "supported_H_GT8B": false,
+  "n_valid_domains": 1,
+  "domains_satisfied": [
+   "chinese_dynasties"
+  ],
+  "domains_unsatisfied": [],
+  "thresholds": {
+   "prior_named_min": 0.6,
+   "margin_over_field": 0.2,
+   "min_domains": 2
+  }
+ },
+ "runtime_sec": 2.83,
+ "honesty": [
+  "no LLM API calls issued: 只读 results/gt8b_cache/；缓存缺失域记 cache_missing，不计入判定分母，绝不伪造数据。",
+  "先验为零泄漏 labels-only（build_prior_prompt，与族 L 同构造器同模型）；先验臂与生成臂同模型族 ⇒ 同源污染风险在案。",
+  "判定规则机械求值；负面结果如实写入 verdict，不美化。"
+ ]
+}
