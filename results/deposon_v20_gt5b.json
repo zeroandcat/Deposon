@@ -1,0 +1,2438 @@
+{
+ "experiment": "deposon_v20_gt5b",
+ "spec_version": "v2.0",
+ "spec": "docs/GT_RECONSTRUCTION.md §2/§5：GT-5 终点条件 inconclusive 不可回溯；本实验为新版预登记，主张收窄为「mean-field 反向动态的势函数轨迹单调不减」",
+ "config": {
+  "n_steps": 50,
+  "beta_schedule": "linear",
+  "prior": "uniform_out",
+  "lr": 0.1,
+  "lam_smooth": 0.01,
+  "field_guidance": true,
+  "energy_mode": "aggregate",
+  "seed": 0
+ },
+ "preregistered": {
+  "graphs": "全部 22 图（族 S 16 + 族 L 6）",
+  "tasks_per_graph_max": 10,
+  "sample_seed": 505500,
+  "arm": "mean-field only（收窄后主张不涉及 dirichlet 臂）",
+  "tol": 1e-09,
+  "pass_rule": "单调率=100% 的图占比 ≥ 0.8 ⇒ supports_narrowed_monotonicity",
+  "kill_rule": "单调率 < 0.5 的图 ≥ 3 ⇒ H_GT5b_dead，如实宣布"
+ },
+ "per_graph_summary": {
+  "L_algorithm_process": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 1.0559798613307692e-07,
+   "meanfield_mean_endpoint": -1.7038056822704515
+  },
+  "L_biological_taxonomy": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0030879750074115364,
+   "meanfield_mean_endpoint": -5.0540668034168466
+  },
+  "L_geography_world": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.00027373235166550103,
+   "meanfield_mean_endpoint": -2.780719118991579
+  },
+  "L_historical_causality": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 3.471395482179673e-08,
+   "meanfield_mean_endpoint": -1.0338792285673464
+  },
+  "L_physics_concepts": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.00016204175365253093,
+   "meanfield_mean_endpoint": -2.789492179993979
+  },
+  "L_project_management": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 1.0418124651856431e-07,
+   "meanfield_mean_endpoint": -0.9365315310389384
+  },
+  "S1": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0011933100385879136,
+   "meanfield_mean_endpoint": -1.519340395457534
+  },
+  "S1_n35": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0019401796105555924,
+   "meanfield_mean_endpoint": -2.8769970089291355
+  },
+  "S1_n45": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0023621801729016845,
+   "meanfield_mean_endpoint": -3.0235795132210117
+  },
+  "S1_n60": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0029690588394846174,
+   "meanfield_mean_endpoint": -5.2548371114052514
+  },
+  "S2": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0016090039848224436,
+   "meanfield_mean_endpoint": -1.8637837171942113
+  },
+  "S2_n20": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0015054715446818356,
+   "meanfield_mean_endpoint": -1.5156704254375712
+  },
+  "S2_n35": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.003925221817933089,
+   "meanfield_mean_endpoint": -2.1985595962740785
+  },
+  "S2_n45": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.000882703213432201,
+   "meanfield_mean_endpoint": -2.8757758106684164
+  },
+  "S2_n60": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0002486078070336184,
+   "meanfield_mean_endpoint": -2.86469592769431
+  },
+  "S3": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.00015129588181261866,
+   "meanfield_mean_endpoint": -2.877678315826745
+  },
+  "S4": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0,
+   "meanfield_mean_endpoint": -1.3146364371743828
+  },
+  "S5": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0001822634660832989,
+   "meanfield_mean_endpoint": -3.4911828409817636
+  },
+  "S6": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 3.5032924934341736e-06,
+   "meanfield_mean_endpoint": -1.8661884781948828
+  },
+  "S6_n20": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 2.030341950454151e-05,
+   "meanfield_mean_endpoint": -1.0086374697889773
+  },
+  "S6_n35": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.00010262569606678262,
+   "meanfield_mean_endpoint": -1.6277520065906814
+  },
+  "S6_n60": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 2.3922771967832546e-06,
+   "meanfield_mean_endpoint": -2.0281428221401385
+  }
+ },
+ "per_graph_detail": {
+  "L_algorithm_process": {
+   "graph_id": "L_algorithm_process",
+   "family": "L",
+   "N": 38,
+   "n_named_edges": 29,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      2,
+      3
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0007171618352714848,
+     "meanfield_endpoint_phi": -1.2819043784250217
+    },
+    {
+     "task_edge": [
+      4,
+      6
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0007746094857483676,
+     "meanfield_endpoint_phi": -1.4747336800374506
+    },
+    {
+     "task_edge": [
+      11,
+      12
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 4.0114555521997275e-05,
+     "meanfield_endpoint_phi": -1.7230767903327597
+    },
+    {
+     "task_edge": [
+      12,
+      13
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00010983704812428385,
+     "meanfield_endpoint_phi": -1.6697871738868506
+    },
+    {
+     "task_edge": [
+      15,
+      16
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00010072484010392735,
+     "meanfield_endpoint_phi": -1.7503100222815355
+    },
+    {
+     "task_edge": [
+      16,
+      17
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 9.033896783749995e-06,
+     "meanfield_endpoint_phi": -1.793643394261569
+    },
+    {
+     "task_edge": [
+      22,
+      23
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 5.238354344294649e-06,
+     "meanfield_endpoint_phi": -1.8224635648668945
+    },
+    {
+     "task_edge": [
+      24,
+      25
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 4.105271987686621e-06,
+     "meanfield_endpoint_phi": -1.838110125561392
+    },
+    {
+     "task_edge": [
+      26,
+      27
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 6.763010043098205e-07,
+     "meanfield_endpoint_phi": -1.8464365078577811
+    },
+    {
+     "task_edge": [
+      28,
+      29
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 1.0559798613307692e-07,
+     "meanfield_endpoint_phi": -1.8375911851932603
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 1.0559798613307692e-07,
+    "meanfield_mean_endpoint": -1.7038056822704515
+   }
+  },
+  "L_biological_taxonomy": {
+   "graph_id": "L_biological_taxonomy",
+   "family": "L",
+   "N": 42,
+   "n_named_edges": 22,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      4,
+      29
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.029827238929903466,
+     "meanfield_endpoint_phi": -2.7060301905896615
+    },
+    {
+     "task_edge": [
+      8,
+      11
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.03535950593306314,
+     "meanfield_endpoint_phi": -3.776955763794741
+    },
+    {
+     "task_edge": [
+      11,
+      14
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.036782402041772855,
+     "meanfield_endpoint_phi": -4.8953078975599595
+    },
+    {
+     "task_edge": [
+      11,
+      15
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.036782402041772855,
+     "meanfield_endpoint_phi": -4.8953078975599595
+    },
+    {
+     "task_edge": [
+      15,
+      24
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0030879750074115364,
+     "meanfield_endpoint_phi": -6.960061181382484
+    },
+    {
+     "task_edge": [
+      19,
+      21
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.020560473542314384,
+     "meanfield_endpoint_phi": -7.217124645419918
+    },
+    {
+     "task_edge": [
+      29,
+      32
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.02558627493976484,
+     "meanfield_endpoint_phi": -3.5088410975832094
+    },
+    {
+     "task_edge": [
+      37,
+      39
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.011675670187361042,
+     "meanfield_endpoint_phi": -5.409256660173617
+    },
+    {
+     "task_edge": [
+      39,
+      40
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.010933764473917584,
+     "meanfield_endpoint_phi": -5.526241722809773
+    },
+    {
+     "task_edge": [
+      40,
+      41
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.010196448977468187,
+     "meanfield_endpoint_phi": -5.645540977295146
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.0030879750074115364,
+    "meanfield_mean_endpoint": -5.0540668034168466
+   }
+  },
+  "L_geography_world": {
+   "graph_id": "L_geography_world",
+   "family": "L",
+   "N": 45,
+   "n_named_edges": 16,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.02567287268678875,
+     "meanfield_endpoint_phi": -1.589238988031128
+    },
+    {
+     "task_edge": [
+      0,
+      2
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.02567287268678875,
+     "meanfield_endpoint_phi": -1.589238988031128
+    },
+    {
+     "task_edge": [
+      0,
+      3
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.02567287268678875,
+     "meanfield_endpoint_phi": -1.589238988031128
+    },
+    {
+     "task_edge": [
+      0,
+      4
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.02567287268678875,
+     "meanfield_endpoint_phi": -1.589238988031128
+    },
+    {
+     "task_edge": [
+      1,
+      8
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.026954396130937752,
+     "meanfield_endpoint_phi": -3.4928527488775463
+    },
+    {
+     "task_edge": [
+      2,
+      11
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0010859602087451847,
+     "meanfield_endpoint_phi": -3.192982487935447
+    },
+    {
+     "task_edge": [
+      8,
+      24
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.035423636580137696,
+     "meanfield_endpoint_phi": -4.293694173823547
+    },
+    {
+     "task_edge": [
+      24,
+      38
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.02152218761380631,
+     "meanfield_endpoint_phi": -3.74968053909567
+    },
+    {
+     "task_edge": [
+      30,
+      44
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00027373235166550103,
+     "meanfield_endpoint_phi": -3.3605126440295323
+    },
+    {
+     "task_edge": [
+      32,
+      40
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00027373235166550103,
+     "meanfield_endpoint_phi": -3.3605126440295328
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.00027373235166550103,
+    "meanfield_mean_endpoint": -2.780719118991579
+   }
+  },
+  "L_historical_causality": {
+   "graph_id": "L_historical_causality",
+   "family": "L",
+   "N": 36,
+   "n_named_edges": 23,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      1,
+      5
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 2.5741474585894153e-05,
+     "meanfield_endpoint_phi": -0.8805270139312745
+    },
+    {
+     "task_edge": [
+      9,
+      10
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 3.1492203540262054e-05,
+     "meanfield_endpoint_phi": -0.9109280843504567
+    },
+    {
+     "task_edge": [
+      14,
+      15
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 8.377027633788003e-06,
+     "meanfield_endpoint_phi": -1.043406299913955
+    },
+    {
+     "task_edge": [
+      16,
+      17
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 4.4665092319373656e-05,
+     "meanfield_endpoint_phi": -1.0719715550123845
+    },
+    {
+     "task_edge": [
+      16,
+      18
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 4.4665092319373656e-05,
+     "meanfield_endpoint_phi": -1.0719715550123845
+    },
+    {
+     "task_edge": [
+      17,
+      19
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 1.8789540094932278e-06,
+     "meanfield_endpoint_phi": -1.0447395325038418
+    },
+    {
+     "task_edge": [
+      20,
+      21
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 8.729064921331187e-06,
+     "meanfield_endpoint_phi": -1.0663768885632658
+    },
+    {
+     "task_edge": [
+      21,
+      22
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 2.522662164849976e-05,
+     "meanfield_endpoint_phi": -1.1239573944046541
+    },
+    {
+     "task_edge": [
+      22,
+      27
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 1.4525397142861607e-06,
+     "meanfield_endpoint_phi": -1.074710828350726
+    },
+    {
+     "task_edge": [
+      29,
+      35
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 3.471395482179673e-08,
+     "meanfield_endpoint_phi": -1.0502031336305206
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 3.471395482179673e-08,
+    "meanfield_mean_endpoint": -1.0338792285673464
+   }
+  },
+  "L_physics_concepts": {
+   "graph_id": "L_physics_concepts",
+   "family": "L",
+   "N": 35,
+   "n_named_edges": 31,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      5
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.03155814597988815,
+     "meanfield_endpoint_phi": -1.045634394883424
+    },
+    {
+     "task_edge": [
+      2,
+      11
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.001181929923847136,
+     "meanfield_endpoint_phi": -2.8471584966085524
+    },
+    {
+     "task_edge": [
+      2,
+      12
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.001181929923847136,
+     "meanfield_endpoint_phi": -2.8471584966085524
+    },
+    {
+     "task_edge": [
+      5,
+      21
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.001181929923847136,
+     "meanfield_endpoint_phi": -2.845491829941886
+    },
+    {
+     "task_edge": [
+      12,
+      14
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00016204175365253093,
+     "meanfield_endpoint_phi": -3.045071827141626
+    },
+    {
+     "task_edge": [
+      25,
+      27
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00016204175365253093,
+     "meanfield_endpoint_phi": -3.0536432557130544
+    },
+    {
+     "task_edge": [
+      25,
+      30
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00016204175365253093,
+     "meanfield_endpoint_phi": -3.0536432557130544
+    },
+    {
+     "task_edge": [
+      25,
+      32
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00016204175365253093,
+     "meanfield_endpoint_phi": -3.0536432557130544
+    },
+    {
+     "task_edge": [
+      26,
+      27
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00016204175365253093,
+     "meanfield_endpoint_phi": -3.0517384938082923
+    },
+    {
+     "task_edge": [
+      26,
+      29
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00016204175365253093,
+     "meanfield_endpoint_phi": -3.0517384938082923
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.00016204175365253093,
+    "meanfield_mean_endpoint": -2.789492179993979
+   }
+  },
+  "L_project_management": {
+   "graph_id": "L_project_management",
+   "family": "L",
+   "N": 33,
+   "n_named_edges": 36,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0002746928847749963,
+     "meanfield_endpoint_phi": -0.7249357538677994
+    },
+    {
+     "task_edge": [
+      5,
+      6
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 1.3369318908607042e-06,
+     "meanfield_endpoint_phi": -0.8642062106826701
+    },
+    {
+     "task_edge": [
+      6,
+      7
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 1.1895708311726594e-06,
+     "meanfield_endpoint_phi": -0.8707588866727003
+    },
+    {
+     "task_edge": [
+      7,
+      8
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 6.074205359474227e-06,
+     "meanfield_endpoint_phi": -0.8771620911273759
+    },
+    {
+     "task_edge": [
+      7,
+      10
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 6.074205359474227e-06,
+     "meanfield_endpoint_phi": -0.8771620911273759
+    },
+    {
+     "task_edge": [
+      8,
+      17
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 1.0418124651856431e-07,
+     "meanfield_endpoint_phi": -0.8867338112617827
+    },
+    {
+     "task_edge": [
+      15,
+      17
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 1.051146433228567e-07,
+     "meanfield_endpoint_phi": -0.8877093244376004
+    },
+    {
+     "task_edge": [
+      17,
+      26
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 4.4357030067443404e-05,
+     "meanfield_endpoint_phi": -0.866957459201439
+    },
+    {
+     "task_edge": [
+      28,
+      30
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.010335319906569662,
+     "meanfield_endpoint_phi": -1.3667653061224398
+    },
+    {
+     "task_edge": [
+      31,
+      32
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 8.019795673752661e-05,
+     "meanfield_endpoint_phi": -1.1429243758882004
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 1.0418124651856431e-07,
+    "meanfield_mean_endpoint": -0.9365315310389384
+   }
+  },
+  "S1": {
+   "graph_id": "S1",
+   "family": "S",
+   "N": 20,
+   "n_named_edges": 19,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      1,
+      2
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0012844654533360478,
+     "meanfield_endpoint_phi": -0.9021245498246137
+    },
+    {
+     "task_edge": [
+      2,
+      3
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.001230817565296416,
+     "meanfield_endpoint_phi": -0.9756371350260225
+    },
+    {
+     "task_edge": [
+      3,
+      4
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0011933100385879136,
+     "meanfield_endpoint_phi": -1.0532963237433164
+    },
+    {
+     "task_edge": [
+      6,
+      7
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0012926785284033127,
+     "meanfield_endpoint_phi": -1.310478901229727
+    },
+    {
+     "task_edge": [
+      7,
+      8
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0014518219624670703,
+     "meanfield_endpoint_phi": -1.4039681680632734
+    },
+    {
+     "task_edge": [
+      8,
+      9
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.001714860218392289,
+     "meanfield_endpoint_phi": -1.5011135126534265
+    },
+    {
+     "task_edge": [
+      11,
+      12
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0035891909306553504,
+     "meanfield_endpoint_phi": -1.8112428596772367
+    },
+    {
+     "task_edge": [
+      12,
+      13
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.004672356595273097,
+     "meanfield_endpoint_phi": -1.9182738741352936
+    },
+    {
+     "task_edge": [
+      16,
+      17
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.013218104866355773,
+     "meanfield_endpoint_phi": -2.246430902082543
+    },
+    {
+     "task_edge": [
+      18,
+      19
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.006503867430239119,
+     "meanfield_endpoint_phi": -2.0708377281398875
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.0011933100385879136,
+    "meanfield_mean_endpoint": -1.519340395457534
+   }
+  },
+  "S1_n35": {
+   "graph_id": "S1_n35",
+   "family": "S",
+   "N": 35,
+   "n_named_edges": 34,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00219624500969684,
+     "meanfield_endpoint_phi": -1.3799508854282787
+    },
+    {
+     "task_edge": [
+      4,
+      5
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0020200760205575374,
+     "meanfield_endpoint_phi": -1.691487589618043
+    },
+    {
+     "task_edge": [
+      5,
+      6
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.001987057583006324,
+     "meanfield_endpoint_phi": -1.7741880957658367
+    },
+    {
+     "task_edge": [
+      8,
+      9
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0019401796105555924,
+     "meanfield_endpoint_phi": -2.0323982884648535
+    },
+    {
+     "task_edge": [
+      10,
+      11
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0019694371668457222,
+     "meanfield_endpoint_phi": -2.212291443727603
+    },
+    {
+     "task_edge": [
+      24,
+      25
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.005928889875284504,
+     "meanfield_endpoint_phi": -3.632522636821798
+    },
+    {
+     "task_edge": [
+      26,
+      27
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.007821810720426203,
+     "meanfield_endpoint_phi": -3.8551159232003918
+    },
+    {
+     "task_edge": [
+      27,
+      28
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.009140267243815003,
+     "meanfield_endpoint_phi": -3.964334456005219
+    },
+    {
+     "task_edge": [
+      28,
+      29
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.010881771628966419,
+     "meanfield_endpoint_phi": -4.068144967715534
+    },
+    {
+     "task_edge": [
+      29,
+      30
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.013258637025684195,
+     "meanfield_endpoint_phi": -4.1595358025437985
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.0019401796105555924,
+    "meanfield_mean_endpoint": -2.8769970089291355
+   }
+  },
+  "S1_n45": {
+   "graph_id": "S1_n45",
+   "family": "S",
+   "N": 45,
+   "n_named_edges": 44,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      1,
+      2
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0025865185810030056,
+     "meanfield_endpoint_phi": -1.768047495645797
+    },
+    {
+     "task_edge": [
+      4,
+      5
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0024797600812531684,
+     "meanfield_endpoint_phi": -2.011198156693348
+    },
+    {
+     "task_edge": [
+      8,
+      9
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0023767780726480225,
+     "meanfield_endpoint_phi": -2.353635932237455
+    },
+    {
+     "task_edge": [
+      9,
+      10
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0023621801729016845,
+     "meanfield_endpoint_phi": -2.4419740419471414
+    },
+    {
+     "task_edge": [
+      13,
+      14
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0023647371348558544,
+     "meanfield_endpoint_phi": -2.8045298119509354
+    },
+    {
+     "task_edge": [
+      18,
+      19
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0025507465318193034,
+     "meanfield_endpoint_phi": -3.2760396152951627
+    },
+    {
+     "task_edge": [
+      22,
+      23
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0029167204155990945,
+     "meanfield_endpoint_phi": -3.6672857330338258
+    },
+    {
+     "task_edge": [
+      23,
+      24
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0030510361265245756,
+     "meanfield_endpoint_phi": -3.767177502010461
+    },
+    {
+     "task_edge": [
+      25,
+      26
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.003388771243576727,
+     "meanfield_endpoint_phi": -3.9697036323516466
+    },
+    {
+     "task_edge": [
+      27,
+      28
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.003844805945804275,
+     "meanfield_endpoint_phi": -4.176203211044341
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.0023621801729016845,
+    "meanfield_mean_endpoint": -3.0235795132210117
+   }
+  },
+  "S1_n60": {
+   "graph_id": "S1_n60",
+   "family": "S",
+   "N": 60,
+   "n_named_edges": 59,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      5,
+      6
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0029690588394846174,
+     "meanfield_endpoint_phi": -2.5154469150195427
+    },
+    {
+     "task_edge": [
+      26,
+      27
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.002996908537215681,
+     "meanfield_endpoint_phi": -4.451702142758977
+    },
+    {
+     "task_edge": [
+      27,
+      28
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0030352667216266838,
+     "meanfield_endpoint_phi": -4.548143020315734
+    },
+    {
+     "task_edge": [
+      28,
+      29
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.003079112761897207,
+     "meanfield_endpoint_phi": -4.644932669762192
+    },
+    {
+     "task_edge": [
+      30,
+      31
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.003185598908663323,
+     "meanfield_endpoint_phi": -4.839616628508509
+    },
+    {
+     "task_edge": [
+      35,
+      36
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0036001258187132734,
+     "meanfield_endpoint_phi": -5.333813488448955
+    },
+    {
+     "task_edge": [
+      42,
+      43
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.004851883716692207,
+     "meanfield_endpoint_phi": -6.050880194945209
+    },
+    {
+     "task_edge": [
+      43,
+      44
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.005149302990659521,
+     "meanfield_endpoint_phi": -6.156593301350261
+    },
+    {
+     "task_edge": [
+      50,
+      51
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.009435487688196353,
+     "meanfield_endpoint_phi": -6.921726780889295
+    },
+    {
+     "task_edge": [
+      57,
+      58
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.03744412649480733,
+     "meanfield_endpoint_phi": -7.0855159720538445
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.0029690588394846174,
+    "meanfield_mean_endpoint": -5.2548371114052514
+   }
+  },
+  "S2": {
+   "graph_id": "S2",
+   "family": "S",
+   "N": 31,
+   "n_named_edges": 14,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.03141579589625376,
+     "meanfield_endpoint_phi": -0.5985064468390551
+    },
+    {
+     "task_edge": [
+      0,
+      2
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.03141579589625376,
+     "meanfield_endpoint_phi": -0.5985064468390551
+    },
+    {
+     "task_edge": [
+      1,
+      3
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.004588301626980762,
+     "meanfield_endpoint_phi": -2.10222446183749
+    },
+    {
+     "task_edge": [
+      1,
+      4
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.004588301626980762,
+     "meanfield_endpoint_phi": -2.10222446183749
+    },
+    {
+     "task_edge": [
+      2,
+      6
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0293250987162752,
+     "meanfield_endpoint_phi": -1.3014995560263183
+    },
+    {
+     "task_edge": [
+      3,
+      8
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0016090039848224436,
+     "meanfield_endpoint_phi": -2.662874386839919
+    },
+    {
+     "task_edge": [
+      4,
+      10
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0016090039848224436,
+     "meanfield_endpoint_phi": -2.662874386839919
+    },
+    {
+     "task_edge": [
+      5,
+      12
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.001617921244121856,
+     "meanfield_endpoint_phi": -2.662301140952264
+    },
+    {
+     "task_edge": [
+      6,
+      13
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.02517438213713663,
+     "meanfield_endpoint_phi": -1.9734129419653008
+    },
+    {
+     "task_edge": [
+      6,
+      14
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.02517438213713663,
+     "meanfield_endpoint_phi": -1.9734129419653008
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.0016090039848224436,
+    "meanfield_mean_endpoint": -1.8637837171942113
+   }
+  },
+  "S2_n20": {
+   "graph_id": "S2_n20",
+   "family": "S",
+   "N": 20,
+   "n_named_edges": 9,
+   "n_tasks": 9,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.022576587728922348,
+     "meanfield_endpoint_phi": -0.7677085458153166
+    },
+    {
+     "task_edge": [
+      0,
+      2
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.022576587728922348,
+     "meanfield_endpoint_phi": -0.7677085458153166
+    },
+    {
+     "task_edge": [
+      1,
+      3
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.02238729295343389,
+     "meanfield_endpoint_phi": -1.457152240239092
+    },
+    {
+     "task_edge": [
+      1,
+      4
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.02238729295343389,
+     "meanfield_endpoint_phi": -1.457152240239092
+    },
+    {
+     "task_edge": [
+      2,
+      5
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.004001511994736973,
+     "meanfield_endpoint_phi": -1.56285628949568
+    },
+    {
+     "task_edge": [
+      2,
+      6
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.004001511994736973,
+     "meanfield_endpoint_phi": -1.56285628949568
+    },
+    {
+     "task_edge": [
+      3,
+      7
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0015054715446818356,
+     "meanfield_endpoint_phi": -1.9862934691897403
+    },
+    {
+     "task_edge": [
+      3,
+      8
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0015054715446818356,
+     "meanfield_endpoint_phi": -1.9862934691897403
+    },
+    {
+     "task_edge": [
+      4,
+      9
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.021782933414740135,
+     "meanfield_endpoint_phi": -2.0930127394584837
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.0015054715446818356,
+    "meanfield_mean_endpoint": -1.5156704254375712
+   }
+  },
+  "S2_n35": {
+   "graph_id": "S2_n35",
+   "family": "S",
+   "N": 35,
+   "n_named_edges": 16,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.034240835127590685,
+     "meanfield_endpoint_phi": -0.6697323709716364
+    },
+    {
+     "task_edge": [
+      1,
+      3
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.033775267938698006,
+     "meanfield_endpoint_phi": -1.3887044885522033
+    },
+    {
+     "task_edge": [
+      1,
+      4
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.033775267938698006,
+     "meanfield_endpoint_phi": -1.3887044885522033
+    },
+    {
+     "task_edge": [
+      2,
+      6
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.009083880196666172,
+     "meanfield_endpoint_phi": -2.016986069717597
+    },
+    {
+     "task_edge": [
+      3,
+      8
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.03179774835260085,
+     "meanfield_endpoint_phi": -2.0921233159903148
+    },
+    {
+     "task_edge": [
+      4,
+      10
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.003934349179548935,
+     "meanfield_endpoint_phi": -2.969971615557782
+    },
+    {
+     "task_edge": [
+      6,
+      13
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.003925221817933089,
+     "meanfield_endpoint_phi": -2.9704591279261767
+    },
+    {
+     "task_edge": [
+      6,
+      14
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.003925221817933089,
+     "meanfield_endpoint_phi": -2.9704591279261767
+    },
+    {
+     "task_edge": [
+      7,
+      15
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.027519460857341027,
+     "meanfield_endpoint_phi": -2.759227678773345
+    },
+    {
+     "task_edge": [
+      7,
+      16
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.027519460857341027,
+     "meanfield_endpoint_phi": -2.759227678773345
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.003925221817933089,
+    "meanfield_mean_endpoint": -2.1985595962740785
+   }
+  },
+  "S2_n45": {
+   "graph_id": "S2_n45",
+   "family": "S",
+   "N": 45,
+   "n_named_edges": 21,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.034963383218250765,
+     "meanfield_endpoint_phi": -0.7987154848043097
+    },
+    {
+     "task_edge": [
+      1,
+      4
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.036975705500776,
+     "meanfield_endpoint_phi": -1.515306266506674
+    },
+    {
+     "task_edge": [
+      3,
+      7
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.002807063057981729,
+     "meanfield_endpoint_phi": -3.212277423863355
+    },
+    {
+     "task_edge": [
+      5,
+      12
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0028021477185742327,
+     "meanfield_endpoint_phi": -3.2125814514991027
+    },
+    {
+     "task_edge": [
+      6,
+      13
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0028021477185742327,
+     "meanfield_endpoint_phi": -3.2125814514991027
+    },
+    {
+     "task_edge": [
+      6,
+      14
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0028021477185742327,
+     "meanfield_endpoint_phi": -3.2125814514991027
+    },
+    {
+     "task_edge": [
+      7,
+      15
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.000882703213432201,
+     "meanfield_endpoint_phi": -3.5759843267300893
+    },
+    {
+     "task_edge": [
+      8,
+      17
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.000882703213432201,
+     "meanfield_endpoint_phi": -3.5759843267300893
+    },
+    {
+     "task_edge": [
+      8,
+      18
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.000882703213432201,
+     "meanfield_endpoint_phi": -3.5759843267300893
+    },
+    {
+     "task_edge": [
+      10,
+      21
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.03286653594366662,
+     "meanfield_endpoint_phi": -2.8657615968222476
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.000882703213432201,
+    "meanfield_mean_endpoint": -2.8757758106684164
+   }
+  },
+  "S2_n60": {
+   "graph_id": "S2_n60",
+   "family": "S",
+   "N": 60,
+   "n_named_edges": 29,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.027749588229746713,
+     "meanfield_endpoint_phi": -1.6266883017429186
+    },
+    {
+     "task_edge": [
+      1,
+      4
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00272650733861024,
+     "meanfield_endpoint_phi": -2.62437051025963
+    },
+    {
+     "task_edge": [
+      4,
+      9
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0008947470600584317,
+     "meanfield_endpoint_phi": -2.9532568274638193
+    },
+    {
+     "task_edge": [
+      4,
+      10
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0008947470600584317,
+     "meanfield_endpoint_phi": -2.9532568274638193
+    },
+    {
+     "task_edge": [
+      6,
+      14
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.03487742788338721,
+     "meanfield_endpoint_phi": -3.00203716443653
+    },
+    {
+     "task_edge": [
+      7,
+      16
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0002486078070336184,
+     "meanfield_endpoint_phi": -3.0974893241118067
+    },
+    {
+     "task_edge": [
+      8,
+      17
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0002486078070336184,
+     "meanfield_endpoint_phi": -3.0974893241118067
+    },
+    {
+     "task_edge": [
+      10,
+      21
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0002486078070336184,
+     "meanfield_endpoint_phi": -3.0974893241118067
+    },
+    {
+     "task_edge": [
+      12,
+      25
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00024887093415015826,
+     "meanfield_endpoint_phi": -3.09747452927649
+    },
+    {
+     "task_edge": [
+      13,
+      27
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0002500317029614507,
+     "meanfield_endpoint_phi": -3.0974071439644755
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.0002486078070336184,
+    "meanfield_mean_endpoint": -2.86469592769431
+   }
+  },
+  "S3": {
+   "graph_id": "S3",
+   "family": "S",
+   "N": 30,
+   "n_named_edges": 21,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      5
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.020673834974325178,
+     "meanfield_endpoint_phi": -0.924338783752519
+    },
+    {
+     "task_edge": [
+      4,
+      9
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.02326811433613951,
+     "meanfield_endpoint_phi": -2.2745758992429574
+    },
+    {
+     "task_edge": [
+      5,
+      11
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0028926077268938144,
+     "meanfield_endpoint_phi": -2.7202889467890627
+    },
+    {
+     "task_edge": [
+      5,
+      13
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0028926077268938144,
+     "meanfield_endpoint_phi": -2.7202889467890627
+    },
+    {
+     "task_edge": [
+      6,
+      17
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0028926077268938144,
+     "meanfield_endpoint_phi": -2.7202889467890627
+    },
+    {
+     "task_edge": [
+      9,
+      10
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0017226345408110078,
+     "meanfield_endpoint_phi": -3.692973442761923
+    },
+    {
+     "task_edge": [
+      10,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0004953584334081995,
+     "meanfield_endpoint_phi": -3.9625514343074784
+    },
+    {
+     "task_edge": [
+      14,
+      2
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00015129588181261866,
+     "meanfield_endpoint_phi": -3.3212317613728772
+    },
+    {
+     "task_edge": [
+      16,
+      3
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0004895677434801904,
+     "meanfield_endpoint_phi": -3.2201224982312557
+    },
+    {
+     "task_edge": [
+      18,
+      3
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0004895677434801904,
+     "meanfield_endpoint_phi": -3.2201224982312557
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.00015129588181261866,
+    "meanfield_mean_endpoint": -2.877678315826745
+   }
+  },
+  "S4": {
+   "graph_id": "S4",
+   "family": "S",
+   "N": 40,
+   "n_named_edges": 58,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      6,
+      10
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0,
+     "meanfield_endpoint_phi": -1.282652290556055
+    },
+    {
+     "task_edge": [
+      7,
+      15
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0,
+     "meanfield_endpoint_phi": -1.282652290556055
+    },
+    {
+     "task_edge": [
+      9,
+      16
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00016922919723749708,
+     "meanfield_endpoint_phi": -1.4191142877365601
+    },
+    {
+     "task_edge": [
+      9,
+      21
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00016922919723749708,
+     "meanfield_endpoint_phi": -1.4191142877365601
+    },
+    {
+     "task_edge": [
+      11,
+      18
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0,
+     "meanfield_endpoint_phi": -1.282652290556055
+    },
+    {
+     "task_edge": [
+      16,
+      27
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 1.1442388768934109e-05,
+     "meanfield_endpoint_phi": -1.204192446866857
+    },
+    {
+     "task_edge": [
+      16,
+      29
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 1.1442388768934109e-05,
+     "meanfield_endpoint_phi": -1.204192446866857
+    },
+    {
+     "task_edge": [
+      19,
+      27
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 1.3439064372233744e-05,
+     "meanfield_endpoint_phi": -1.2544360598131215
+    },
+    {
+     "task_edge": [
+      24,
+      33
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00013383917131681855,
+     "meanfield_endpoint_phi": -1.516372347166321
+    },
+    {
+     "task_edge": [
+      31,
+      34
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0,
+     "meanfield_endpoint_phi": -1.2809856238893882
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.0,
+    "meanfield_mean_endpoint": -1.3146364371743828
+   }
+  },
+  "S5": {
+   "graph_id": "S5",
+   "family": "S",
+   "N": 45,
+   "n_named_edges": 7,
+   "n_tasks": 7,
+   "tasks": [
+    {
+     "task_edge": [
+      1,
+      4
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.011065761103484562,
+     "meanfield_endpoint_phi": -1.6704589092059703
+    },
+    {
+     "task_edge": [
+      4,
+      6
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.011339351122049646,
+     "meanfield_endpoint_phi": -2.404852967135686
+    },
+    {
+     "task_edge": [
+      6,
+      15
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.012602029908818757,
+     "meanfield_endpoint_phi": -3.52628457636556
+    },
+    {
+     "task_edge": [
+      15,
+      28
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.01525256355278426,
+     "meanfield_endpoint_phi": -4.250522865469285
+    },
+    {
+     "task_edge": [
+      15,
+      38
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.01525256355278426,
+     "meanfield_endpoint_phi": -4.250522865469285
+    },
+    {
+     "task_edge": [
+      28,
+      36
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.02310227525714037,
+     "meanfield_endpoint_phi": -4.853131090189773
+    },
+    {
+     "task_edge": [
+      38,
+      39
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0001822634660832989,
+     "meanfield_endpoint_phi": -3.482506613036783
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.0001822634660832989,
+    "meanfield_mean_endpoint": -3.4911828409817636
+   }
+  },
+  "S6": {
+   "graph_id": "S6",
+   "family": "S",
+   "N": 45,
+   "n_named_edges": 17,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      2
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.015698849614961485,
+     "meanfield_endpoint_phi": -1.5334580004049014
+    },
+    {
+     "task_edge": [
+      0,
+      3
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.015698849614961485,
+     "meanfield_endpoint_phi": -1.5334580004049014
+    },
+    {
+     "task_edge": [
+      0,
+      4
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.015698849614961485,
+     "meanfield_endpoint_phi": -1.5334580004049014
+    },
+    {
+     "task_edge": [
+      0,
+      6
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.015698849614961485,
+     "meanfield_endpoint_phi": -1.5334580004049014
+    },
+    {
+     "task_edge": [
+      0,
+      12
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.015698849614961485,
+     "meanfield_endpoint_phi": -1.5334580004049014
+    },
+    {
+     "task_edge": [
+      2,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00011148872846167279,
+     "meanfield_endpoint_phi": -2.1697118302904927
+    },
+    {
+     "task_edge": [
+      3,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00011148872846167279,
+     "meanfield_endpoint_phi": -2.1697118302904927
+    },
+    {
+     "task_edge": [
+      5,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00011148872846167279,
+     "meanfield_endpoint_phi": -2.1697118302904927
+    },
+    {
+     "task_edge": [
+      7,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 3.5032924934341736e-06,
+     "meanfield_endpoint_phi": -2.2225607170437467
+    },
+    {
+     "task_edge": [
+      9,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 5.853046485704283e-06,
+     "meanfield_endpoint_phi": -2.2628985720090977
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 3.5032924934341736e-06,
+    "meanfield_mean_endpoint": -1.8661884781948828
+   }
+  },
+  "S6_n20": {
+   "graph_id": "S6_n20",
+   "family": "S",
+   "N": 20,
+   "n_named_edges": 17,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      2
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.007241448760975988,
+     "meanfield_endpoint_phi": -0.9204204685564006
+    },
+    {
+     "task_edge": [
+      0,
+      3
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.007241448760975988,
+     "meanfield_endpoint_phi": -0.9204204685564006
+    },
+    {
+     "task_edge": [
+      0,
+      4
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.007241448760975988,
+     "meanfield_endpoint_phi": -0.9204204685564006
+    },
+    {
+     "task_edge": [
+      0,
+      5
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.007241448760975988,
+     "meanfield_endpoint_phi": -0.9204204685564006
+    },
+    {
+     "task_edge": [
+      0,
+      6
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.007241448760975988,
+     "meanfield_endpoint_phi": -0.9204204685564006
+    },
+    {
+     "task_edge": [
+      0,
+      8
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.007241448760975988,
+     "meanfield_endpoint_phi": -0.9204204685564006
+    },
+    {
+     "task_edge": [
+      0,
+      10
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.007241448760975988,
+     "meanfield_endpoint_phi": -0.9204204685564006
+    },
+    {
+     "task_edge": [
+      0,
+      12
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.007241448760975988,
+     "meanfield_endpoint_phi": -0.9204204685564006
+    },
+    {
+     "task_edge": [
+      7,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 2.030341950454151e-05,
+     "meanfield_endpoint_phi": -1.3615054747192838
+    },
+    {
+     "task_edge": [
+      9,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 2.030341950454151e-05,
+     "meanfield_endpoint_phi": -1.3615054747192838
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 2.030341950454151e-05,
+    "meanfield_mean_endpoint": -1.0086374697889773
+   }
+  },
+  "S6_n35": {
+   "graph_id": "S6_n35",
+   "family": "S",
+   "N": 35,
+   "n_named_edges": 17,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      3
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.012953790839539625,
+     "meanfield_endpoint_phi": -1.3627400256925883
+    },
+    {
+     "task_edge": [
+      0,
+      4
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.012953790839539625,
+     "meanfield_endpoint_phi": -1.3627400256925883
+    },
+    {
+     "task_edge": [
+      0,
+      5
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.012953790839539625,
+     "meanfield_endpoint_phi": -1.3627400256925883
+    },
+    {
+     "task_edge": [
+      0,
+      6
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.012953790839539625,
+     "meanfield_endpoint_phi": -1.3627400256925883
+    },
+    {
+     "task_edge": [
+      0,
+      8
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.012953790839539625,
+     "meanfield_endpoint_phi": -1.3627400256925883
+    },
+    {
+     "task_edge": [
+      2,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00010262569606678262,
+     "meanfield_endpoint_phi": -1.8858236997483044
+    },
+    {
+     "task_edge": [
+      3,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00010262569606678262,
+     "meanfield_endpoint_phi": -1.8858236997483044
+    },
+    {
+     "task_edge": [
+      4,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00010262569606678262,
+     "meanfield_endpoint_phi": -1.8858236997483047
+    },
+    {
+     "task_edge": [
+      5,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00010262569606678262,
+     "meanfield_endpoint_phi": -1.8858236997483047
+    },
+    {
+     "task_edge": [
+      8,
+      9
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0001096327939436037,
+     "meanfield_endpoint_phi": -1.9205251384506536
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 0.00010262569606678262,
+    "meanfield_mean_endpoint": -1.6277520065906814
+   }
+  },
+  "S6_n60": {
+   "graph_id": "S6_n60",
+   "family": "S",
+   "N": 60,
+   "n_named_edges": 17,
+   "n_tasks": 10,
+   "tasks": [
+    {
+     "task_edge": [
+      0,
+      3
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.01837214324346892,
+     "meanfield_endpoint_phi": -1.7396181683518948
+    },
+    {
+     "task_edge": [
+      0,
+      4
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.01837214324346892,
+     "meanfield_endpoint_phi": -1.7396181683518948
+    },
+    {
+     "task_edge": [
+      0,
+      5
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.01837214324346892,
+     "meanfield_endpoint_phi": -1.7396181683518948
+    },
+    {
+     "task_edge": [
+      0,
+      8
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.01837214324346892,
+     "meanfield_endpoint_phi": -1.7396181683518948
+    },
+    {
+     "task_edge": [
+      0,
+      10
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.01837214324346892,
+     "meanfield_endpoint_phi": -1.7396181683518948
+    },
+    {
+     "task_edge": [
+      0,
+      11
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.01837214324346892,
+     "meanfield_endpoint_phi": -1.7396181683518948
+    },
+    {
+     "task_edge": [
+      4,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00011247613362863618,
+     "meanfield_endpoint_phi": -2.453652221814889
+    },
+    {
+     "task_edge": [
+      5,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00011247613362863618,
+     "meanfield_endpoint_phi": -2.453652221814889
+    },
+    {
+     "task_edge": [
+      8,
+      9
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00010847462871144131,
+     "meanfield_endpoint_phi": -2.435203830316104
+    },
+    {
+     "task_edge": [
+      9,
+      1
+     ],
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 2.3922771967832546e-06,
+     "meanfield_endpoint_phi": -2.5012109373441347
+    }
+   ],
+   "summary": {
+    "meanfield_monotone_rate": 1.0,
+    "meanfield_min_step_delta": 2.3922771967832546e-06,
+    "meanfield_mean_endpoint": -2.0281428221401385
+   }
+  }
+ },
+ "verdict": {
+  "verdict": "supports_narrowed_monotonicity",
+  "supported_narrowed_claim": true,
+  "graphs_with_full_monotonicity": [
+   "L_algorithm_process",
+   "L_biological_taxonomy",
+   "L_geography_world",
+   "L_historical_causality",
+   "L_physics_concepts",
+   "L_project_management",
+   "S1",
+   "S1_n35",
+   "S1_n45",
+   "S1_n60",
+   "S2",
+   "S2_n20",
+   "S2_n35",
+   "S2_n45",
+   "S2_n60",
+   "S3",
+   "S4",
+   "S5",
+   "S6",
+   "S6_n20",
+   "S6_n35",
+   "S6_n60"
+  ],
+  "frac_graphs_full_monotonicity": 1.0,
+  "graphs_below_50pct_monotonicity": [],
+  "n_graphs": 22,
+  "thresholds": {
+   "pass_graph_frac": 0.8,
+   "mono_full": 1.0,
+   "mono_dead": 0.5,
+   "dead_min_graphs": 3,
+   "tol": 1e-09
+  }
+ },
+ "runtime_sec": 7.12,
+ "honesty": [
+  "no LLM API calls issued: 全语料从 corpus/v20 只读加载，全部实验为本地种子化 numpy 运行。",
+  "本实验是新版预登记（常量冻结于脚本，先于本实验数据）；GT-5 的终点条件按原预登记判 inconclusive，未回溯改写；GT-5 的 dirichlet终点反转（3/4 图噪声臂终点 Φ 更高）继续在 docs/GT_RECONSTRUCTION.md §2 披露，不因主张收窄而删除。",
+  "Φ 定义与 GT-5 逐字相同（Φ=-scatter_energy(aggregate)），函数经只读 import 复用，未为重跑全语料而改函数。",
+  "每图任务数降采样为 ≤10（GT-5 为 5，图数 4→22）；named 边不足10 的图全取，n_tasks 逐图披露。",
+  "判定规则为纯函数 gt5b_verdict 机械求值，tests/test_v20_gt5b.py 锁定；落在预登记未定义区间时报 inconclusive，不美化。",
+  "反向动态含向 W_obs 的收缩步与单纯形投影，理论上不保证 Φ 逐步单调；任何非单调步均计入单调率，不剔除。",
+  "总运行 7.12s（预算 600s 内）"
+ ]
+}
