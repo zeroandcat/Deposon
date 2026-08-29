@@ -94,7 +94,8 @@ deepseek（DeepSeek）6/6，三模型族合计 0 败绩、全 ok 域 Kendall W=1
 - [x] ~~文献定位回填（A/B 扫描）与 Related Work 成稿~~（related_work_v2X.md 已成稿）
 - [x] ~~GT-3 跨模型先验~~（GT-3b 完成，2026-08-30，见 docs/Findings_GT3.md；
   残余局限为三族均中文优化模型，§6 保留如实声明而非降级）
-- [ ] 领域鉴定器 v0 新图复现（≥2 张）
+- [x] ~~领域鉴定器 v0 新图复现~~（GT-8 完成，2026-08-30：2 对语料外新图
+  2/2 同向 supports_H_GT8，见 docs/Findings_GT8.md；real_semantics 轴 deferred）
 - [ ] 双语稿（CN/EN 同步，沿用 1.X 的独立编辑+独立复核流程）
 - [ ] arXiv 背书（1.X 遗留，两稿可共用一次背书通道）
 - [ ] 空位 1 阴性文献宣称的可审计检索协议（查询式/库/日期/命中数）入附录，
