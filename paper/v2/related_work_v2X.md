@@ -21,7 +21,12 @@ LLM 用于知识图谱补全的近三年证据链给出我们数字的横向坐�
 （ICASSP 2025）显示零样本 GPT-4 弱于微调 6-7B 模型；Wadhwa et al.（ACL 2023）
 表明即使精心 prompt，GPT-3 也仅接近全监督关系抽取。我们 labels-only 先验在真实
 语义图上的 named Hits@3（0.484–1.000）高于上述零样本区间，但须声明两点降级：
-图与先验同模型族（同源污染），且图为 30–45 节点的小规模 DAG。
+原口径「图与先验同模型族（同源污染）」须按 GT-3b 后口径更新——跨厂商检验
+已完成，E3 doubao（ByteDance）4/4、E4 deepseek（DeepSeek）6/6，三模型族
+合计 0 域先验 ≤ 场（0 败绩）、全 ok 域 Kendall W=1.0（docs/Findings_GT3.md），
+「同源污染 artifact」假说被实质性削弱但**未排除**（残余局限：三族均为中文优化
+大模型，训练语料可能共享公开中文知识）；另一降级声明不变：图为 30–45 节点的
+小规模 DAG。
 
 方向语义上，Reversal Curse（Berglund et al., ICLR 2024）及其机制解释
 （Wang & Sun, ICLR 2026）预言 LLM 对「A→B 成立」无法推出「B→A」，而我们实测
@@ -30,7 +35,9 @@ LLM 用于知识图谱补全的近三年证据链给出我们数字的横向坐�
 系统性方向反转（占位标签特异现象），两种现象并存恰说明方向表现的条件性。
 MKGL（NeurIPS 2024）关于标签文本自带结构信号的「三词语言」论证，与我们的
 n-gram 词法基线获胜现象互相印证。Zhang et al.（ACL 2025）对 KGC prompt 结论
-泛化性的系统复测提醒我们：所有 prompt 相关结论都限定在单模型族内。
+泛化性的系统复测提醒我们：prompt 相关结论的泛化面须按 GT-3b 后口径标注——
+已扩展至三个模型族（Kimi 系、ByteDance doubao、DeepSeek），但三族均为
+中文优化大模型，非中文模型族的检验仍为开放局限。
 
 ## 2.3 概念图与脑图：任务与评估
 
@@ -60,9 +67,14 @@ Fabrikant et al.（2003）奠基，Ma et al.（TCS 2014）「挖掘隐藏链以�
 对抗性边操作场景；我们与 adversarial robustness 赛道显式划界：攻击者不是
 扰动输入以翻转模型输出，而是在规则已知下生成语义陷阱（见 §2.5）。
 PoA 方面，Koutsoupias & Papadimitriou（1999）与 Roughgarden & Tardos（2002）
-的仿射拥塞 PoA=4/3 界是经典锚点——**我们实测 median PoA=1.33 几乎精确落在
-Pigou 界上**，并以 Christodoulou et al.（2014）把守恒账挂接为「降低有效 PoA
-的协调机制」（空位 3 的实证叙事）。
+的仿射拥塞 PoA=4/3 界是经典锚点。我们的实证是**分布级 PoA 报告**（应用文献
+稀少，Benita 2020 为例外）：median PoA=1.5（13 张有限值图）。必须如实声明：
+操作化 PoA=field_mean/max(自利臂) 与经典 worst-case-NE/社会最优比值是
+**不同度量**，成本结构是否仿射/可分的前提未闭合，故中位数数值上与 Pigou 4/3
+的对齐仅为**巧合性对齐，不主张「实例级复现」**；且族 L 4 张真实语义图中
+2 张 PoA<1（0.5、0.75）并列披露，构成该叙事自带的边界证据。在此限定下，
+我们以 Christodoulou et al.（2014）把守恒账挂接为「降低有效 PoA 的协调机制」
+（空位 3 的实证叙事）。
 
 ## 2.5 机制设计、审计与自适应攻击
 
@@ -75,8 +87,12 @@ Pigou 界上**，并以 Christodoulou et al.（2014）把守恒账挂接为「�
 的自适应攻击宣言与 Nasr et al.（USENIX Sec 2026）的「攻击者后手」分析提供了
 方法学合法性；规则防线的失效有五条独立证据链：Gröndahl et al.（AISec 2018）、
 Hosseini et al.（2017）、Kahu & Ahuja（2025）、Jain et al.（2023）与 HateBench
-（USENIX Sec 2025）。我们的 GT-2（攻击者 100% 绕过关键词表、规则基线降至
-机会水平 27.5%）与该证据链一致，按 Tramèr/Nasr 口径升级为方法学主张。
+（USENIX Sec 2025）。我们的 GT-2 结果须按**双轨口径**如实并述：预登记主 LOO 协议
+（crossval §三）的机械判定为 **no_separation**——rule_filter 仅 −7.5pp，
+未达 20pp 阈值，「攻击强度未达决定性强度」如实归档；另一条题库轨
+（skills §三）则为 rule=27.5%≈机会水平（25%）。故「规则防线失效」目前
+仅在题库轨成立，与上述五条证据链方向一致但强度未定；GT-2 升级（多陷阱
+强度）列为 v2.1 候选后再谈防御结论，此处不升级为方法学主张。
 
 ## 2.6 边界分析与阴性结果体裁
 
@@ -94,7 +110,14 @@ Results workshop（已办六届）。Bowman（ACL 2022）「The Dangers of Under
 1. **理论空位**：势博弈/随机稳定/群体极限/图流分解/graphon 极限五簇理论与
    扩散生成模型互不引用——「场=势函数最好响应极限」落于交集（A 路空位 1）。
 2. **系统空位**：守恒账处于承诺计算—组织审计—可验证计算三层之间（A 路空位 2）。
-3. **实证空位**：median PoA=1.33 为 Pigou 4/3 界的实例级复现；方向一致率 ≥0.96
-   与 Reversal Curse 的直接对照；规则防线在自适应攻击下失效的第六个独立实例。
+3. **实证空位**：分布级 PoA 报告（median PoA=1.5，13 图有限值；操作化口径与
+   经典 PoA 不同度量，与 Pigou 4/3 的对齐仅为巧合性对齐，不主张实例级复现；
+   族 L 2/4 图 PoA<1 并列披露）；方向一致率 ≥0.96 与 Reversal Curse 的直接对照；
+   规则防线失效在题库轨（rule=27.5%≈机会）与五条外部证据链一致，主协议
+   no_separation 如实归档。
 4. **体裁声明**：boundary analysis + division-of-labor，配合预登记判死刑则与
    「Dangers of Underclaiming」自我设防。
+
+---
+
+*修订记录（2026-08-30）：按 reviews/review_coach_v2X_outline.md 闭合 M3/M4/M5——§2.2 同源污染改「削弱但未排除（残余=三族均中文优化模型）」口径并同步 prompt 泛化面（GT-3b：doubao 4/4、deepseek 6/6、0 败绩、W=1.0，docs/Findings_GT3.md）；§2.4 PoA 撤回「median 1.33 实例级复现 Pigou 界」，改为分布级报告（median 1.5/13 图）+操作化差异声明+巧合性对齐+族 L 2/4 图 PoA<1（0.5、0.75）并列披露；§2.5 规则基线改双轨口径（主 LOO 协议 no_separation、−7.5pp / 题库轨 27.5%≈机会），不再升级为方法学主张；定位声明第 3 条同步。数字均追溯 outline_v2X.md 修订段与 docs/Findings_GT3.md。*
