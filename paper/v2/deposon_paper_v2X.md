@@ -458,11 +458,15 @@ GT-7 温度前沿判 mixed：α∈{0.3,…,20} × 4 图 × 5 seed。GT-5 反转�
 守恒账（运行期逐实例不变量）定位为机制设计中的承诺装置（§2.6 空层），GT-2 实证
 其必要性：规则防线在自适应攻击下渗漏（题库轨 27.5%，与机会不可区分），而机制性
 免疫（不读标签）的臂不受影响。小图类「均值场反向=无噪声最好响应动态」的形式化
-命题尚未补齐；补齐前本节维持 consistency 口径。
+命题尚未补齐；补齐前本节维持 consistency 口径。构造性定义本身即审计性质：守恒
+恒等式不抵押于任何未验证的物理理论，审计链在构造处终止、攻击面因此收窄
+（docs/MODEL_ARGUMENTATION_v2.md §1.4）。分值域全程约束于 [0,1] 单纯形的全链路
+审计亦已闭合：1740 任务 V1–V4 全 0 违规（`deposon_v20_vector_audit.json` →
+`violation_counts.*=0`、`all_pass=true`）。
 
 ## 6. Discussion & Boundary（边界与讨论）
 
-本节限定的是划界推论（§4.4）的成立范围，并集中交代方法学局限与随稿交付的工程工件；主线结论（§5 的审计标量存在性与定量化）的口径限定已在各节随行给出。
+本节限定的是划界推论（§4.4）的成立范围，并集中交代方法学局限与随稿交付的工程工件；主线结论（§5 的审计标量存在性与定量化）的口径限定已在各节随行给出。全文论证强度按三档区分——已证（构造保证或预登记判定闭合）、一致性证据、仅有动机——不混档表述（docs/MODEL_ARGUMENTATION_v2.md）。
 
 ### 6.1 成立域与边界
 
@@ -491,7 +495,9 @@ real_semantics 轴复现判 inconclusive（单有效域方向性证据 + 幸存�
 问题已由 GT-3b 处理，但图生成器单一厂商的问题未闭合；人工标注图被公认为最彻底
 检验，尚未排期。其二，题库轨 n=40/格（±1 题=±2.5pp）与机会噪声同阶，该轨全部
 数字按小样本宽区间解读。理论空位表述统一为「尚未发现」的阴性口径（未附可审计
-检索协议，列为投稿前待办），不宣称排他性空白。
+检索协议，列为投稿前待办），不宣称排他性空白。其三，λ=2 阴性消融（E9.6）暴露反场
+artifact：融合系数出凸包时场系数为 −1，先验空行按场降序排列即反向；教训列为
+「融合权重审计」条款——融合权重出凸包须作为审计红线。
 
 ### 6.4 方法论工件
 
@@ -512,7 +518,18 @@ real_semantics 轴复现判 inconclusive（单有效域方向性证据 + 幸存�
   钉定、断点续传幂等设计、版本化 verifier（冻结文件走 erratum 不覆写）、全套
   pytest（最新批次 255 passed 无回归）。
 - **教训复盘**（corrections §D）：「文档手写 vs 数据机械」是最富矿 bug 类别；单位
-  与截断是第二富矿；冻结数据可信、散文不可信。
+  与截断是第二富矿；冻结数据可信、散文不可信。GT-2B 给出剂量-反应实验的设计教训：
+  固定 4 选项使图内候选数随陷阱强度 T 反比变化，「场免疫」判据被选项构成污染——
+  免疫判据须对选项自由度稳健（docs/Findings_GT2B.md §4）。
+
+### 6.5 硬件同构可行性（方向性证据）
+
+散射层组件到光子芯片（ring/MZI/PCM）的映射经一阶数值模型检验：硬件模型与抽象
+模型共享散射公式，等价性在公式层成立（P1，守恒偏差浮点零）；18/22 图在
+~2.9dB/跳损耗预算下可探测，阈值约 27 跳（P2）；退火调度对应相位斜坡可实现
+（P4）。本档仅有动机/方向性：非流片、非 SPICE 级仿真，参数为文献典型量级而非
+PDK 保证值（results/deposon_v20_photonics.json；与
+docs/Findings_v2.0_photonics.md 的 18/22 口径一致）。
 
 ## 7. Conclusion（结论）
 
@@ -609,7 +626,8 @@ real_semantics 轴复现判 inconclusive（单有效域方向性证据 + 幸存�
 | evasion 100% | `deposon_v20_crossval.json` → `gt2_attacker_meta.*.evasion_rate=1.0` |
 | GT-1 gap 0.30、20/20（0.10 vs 0.40） | `deposon_v20_gt.json` → `GT1_potential_game_convergence.verdict`（gap=0.30, n_runs_below_meanfield=20） |
 | GT-5b 22/22 | `deposon_v20_gt5b.json` → `per_graph_summary.*.meanfield_monotone_rate=1.0`（22 图） |
-| GT-5 终点反转 S6 gap=−0.31（3/4 图 inconclusive） | **文档级**：`docs/GT_RECONSTRUCTION.md` §2（results/ 下无 `deposon_v20_gt5.json`，历史结果保留在案；标注方式与 GT-7 corr −0.87 文档级条目对齐） |
+| GT-5 终点反转 S6 gap=−0.31（3/4 图 inconclusive） | `deposon_v20_gt5.json` → `per_graph_detail.S6`（含逐图反转明细，S6 gap=−0.31 在案；叙事锚 `docs/GT_RECONSTRUCTION.md` §2，标注方式与 GT-7 corr −0.87 条目对齐） |
+| vector_audit 1740 任务 V1–V4 全 0 违规 | `deposon_v20_vector_audit.json` → `n_tasks=1740`、`violation_counts.*=0`、`all_pass=true`（分值域 [0,1] 单纯形全链路审计） |
 | GT-6 残余中位 ≈1.6e-29、3 例外 | `deposon_v20_gt6.json` → `verdict.median_residual_ratio=1.594e-29`；例外 `per_graph_summary.*.residual_ratio_mean`（S4 0.148 / L_algorithm_process 0.136 / S5 0.121） |
 | GT-7 mixed、corr −0.87、S6 0.4→0.08 | `deposon_v20_gt7.json` → `per_graph`（hits/Φ 走向支持；corr −0.87 为文档汇总值，叙事锚 GT_RECONSTRUCTION §7） |
 | PoA median 1.333（全 17 有限值图）/ 1.5（族 S 13 图）；族 L PoA<1（0.5、0.75）；∞×3 | `deposon_v20_gt.json` → `GT4_price_of_anarchy.verdict.poa_per_graph_finite`（族 S 13 项中位 1.5，全 17 项中位 1.333；`L_historical_causality=0.5`、`L_physics_concepts=0.75`；∞ 3 张单独计数） |
