@@ -246,3 +246,82 @@
     不涉 git。
     20-补：§6.5 与 §6.3 λ=2 段因前次实施遗漏，经 verifier v33 run1 检出后补写（2026-08-30）。
     20-补2：§6.4 GT-2B 剂量-反应教训句因前次实施遗漏（verifier B6c 误报掩盖），经独立复审检出后补写（2026-08-30）。
+
+21. **GT-8b 补数转正（2026-08-30）**：real_semantics 轴 verdict 由 inconclusive
+    翻转为 supports_H_GT8B，全文口径对齐。
+    1. 根因诊断：chemical_elements 先验臂初轮连续超时/空响应（B1 的 240s 重试
+       仍空 content）；修正案 B2（TIMEOUT 300s、MAX_ATTEMPTS=3 诊断性重试）仍空
+       响应，但响应 usage 显示 completion_tokens 全耗于 reasoning_tokens、
+       finish_reason=length——根因定位为推理模型 reasoning 耗尽 max_tokens
+       （默认 4000）致空响应，非网络事故；修正案 B3 仅放宽 max_tokens=32000，
+       一次成功（response_text 长 1510，缓存落盘）。追加预算经用户授权适当
+       放宽，如实登记于 SPEC_GT8B B2/B3；fetch 纪律未变（key 仅 env、
+       labels-only 零泄漏 prompt、缓存带 prompt_sha256 落盘、脚本未改）。
+    2. 数字（重跑 ingest+eval，eval 零 API，`deposon_v20_gt8b.json`）：
+       verdict="supports_H_GT8B"、n_valid_domains=2/2；
+       chemical_elements llm_prior 0.6429 vs field_mean 0.1429（diff=0.5000）；
+       chinese_dynasties 0.7805 vs 0.0732（diff=0.7073）；两域均满足冻结阈值
+       （prior_named≥0.6 且 >field+0.2），翻转依据为 SPEC_GT8B §5 机械规则
+       （2/2 有效域满足 ⇒ supports_H_GT8B），非手写裁定。
+    3. 改动面：§4.5 GT-8b 段改写为最终口径（初判 inconclusive 与修正案链
+       B1–B3 如实归档）；§6.2/§7.1 局限句、§6.4 阴性结果归档条（GT-8b 移出
+       阴性枚举、注明转正与归档）、附录 A GT-8b 追溯行（补 L_chemical_elements
+       字段路径）与附录 C 预算句一并更新；docs/Findings_GT8B.md 追加 §7
+       「更正/翻转注记」（§1–§6 历史记录不回溯改写）；
+       docs/MODEL_ARGUMENTATION_v2.md O4 与 #14 缺口列更新（强度档不变，
+       仍【仅有动机 + 方向性观察】）；outline_v2X.md 待办勾选。
+    自检：口径词计数 inconclusive 14→13（−1，§4.5/§6.2/§6.4/§7.1/附录 A 的
+    GT-8b 现行判定表述改为 supports_H_GT8B，历史提及保留「初判 inconclusive」）；
+    判死 9 / no_separation 7 / consistency 4 / 探索性 6 / 观察性规律 3 /
+    [待核] 19 不变；pytest tests/test_v20_gt8b.py 9 passed；无密钥串；不涉 git。
+
+22. **文献核实落地与五图接入（2026-08-30）**：
+    1. 文献核实（依据 docs/REF_VERIFICATION_v2.md）：[52]–[59] 八条
+       homophily/GNN 文献核实结论全部 VERIFIED，正文（§2.2）与文献表成对
+       出现的 16 处「[待核：条目需文献核实]」统一改为「（已核实 2026-08-30，
+       见 docs/REF_VERIFICATION_v2.md）」；[21] 核实结论 CORRECTED——原标注
+       USENIX Security 2025 不存在，按引用上下文（与 Tramèr et al. NeurIPS
+       2020 并列于自适应攻击/审计方法学）修正为 Nasr, M., Jagielski, M.,
+       Carlini, N., Tramèr, F. 等 "Tight Auditing of Differentially Private
+       Machine Learning", USENIX Security 2023, pp. 1631–1648，正文（§2.6）
+       与文献表成对落盘并加核实注记；References 占位说明行同步更新。
+       参考文献总数仍 59 条、编号 [1]–[59] 不变。
+    2. 附录 D 五图接入（figures/ 由图件代理产出，数据源记录见
+       docs/FIGURES_v2.md）：5 条「图待中文版制作」全部改为「图已制作」并
+       嵌入 markdown 图片（figures/fig1..fig5 *.png，5 文件均存在）；描述与
+       FIGURES_v2.md 对齐，图 5 注明冻结集 20 图 + 2 图（L_geography_world、
+       L_project_management）按冻结公式现算补充、不计入中位数的披露，PoA<1
+       红框如实含族 S 的 S2_n45=0.5；附录 D 标题与引言同步更新为已接入口径。
+    自检：[待核] 19→0（§2.2 八处、§2.6 一处、References 占位行一处、文献表
+    九处逐条落地）；「图待中文版制作」5→0；References 编号 [1]–[59] 完整、
+    59 条；图片链接 5 条全部指向存在的文件；口径词计数不变（判死 9 /
+    inconclusive 13 / no_separation 7 / consistency 4 / 探索性 6 /
+    观察性规律 3）；无密钥串（grep 仅 max_tokens 等既有良性命中）；未动代码，
+    pytest 无需跑；不涉 git。
+
+23. **复审 Minor 收尾（2026-08-30）**：闭合 docs/reviews/review_sprint_v2X.md 的
+    M1–M5 五条 Minor（一致性/卫生类，不触碰判据与数字）。
+    1. M1（图链接基准路径）：附录 D 五条图片链接由 `figures/figN_*.png` 改为以
+       `paper/v2/` 为渲染基准的 `../../figures/figN_*.png`，五处逐一以
+       `test -f paper/v2/../../figures/...` 验证可解析到真实文件；约定记录进
+       paper/FIGURE_LANGUAGE_POLICY.md。
+    2. M2（图命名后缀）：五张中文图按 FIGURE_LANGUAGE_POLICY 规则 3/5 重命名加
+       `_cn` 后缀（fig1_boundary_map_cn.png … fig5_poa_distribution_cn.png），
+       同步更新论文附录 D 引用、tools/make_figures_v2.py 输出名（5 处 savefig
+       与头注）、docs/FIGURES_v2.md 五个章节标题；policy 追加 v2X 记录段。
+    3. M3（§5.4 交叉引用）：在「族 L 2 张图 PoA<1（0.5、0.75）」句后补一行
+       「冻结集中另有族 S 的 S2_n45=0.5 亦 PoA<1（见附录 D 图 5 披露）」，
+       族 L 计数与口径表述不变。
+    4. M4（[21] 作者序）：bib 未落库（paper/references.bib 无 Nasr 条目），
+       不强行重排；在 docs/REF_VERIFICATION_v2.md 备注补第 4 条待办注记
+       （bib 落库时按原文作者序 Nasr, Hayes, Steinke, Balle, Tramèr, Jagielski,
+       Carlini, Terzis 著录或只留首作者 + et al.）。
+    5. M5（converted.md 陈旧快照）：选择在文件头加「陈旧快照，现行口径以
+       deposon_paper_v2X.md 为准（2026-08-30 前转换产物）」警告行而非删除——
+       该文件被 docs/reviews/review_realign_v2X.md 引用为校准前 diff 基线，
+       删除会破坏审计链，且未发现任何构建/分发流程消费该文件（pdfbuild 产物
+       仅 v1/v19）。
+    自检：口径词计数不变（判死 9 / inconclusive 13 / no_separation 7 /
+    consistency 4 / 探索性 6 / 观察性规律 3 / 待核 0）；参考文献 59 条与全部
+    实验数字零改动；图片链接 5 条自 paper/v2/ 可解析；pytest tests/ -q 全绿；
+    无密钥串；不涉 git。
