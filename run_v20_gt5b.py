@@ -18,8 +18,9 @@
 #   斩杀线 H_GT5b_dead：单调率 < 50% 的图 ≥ 3 张 ⇒ 收窄后主张判死；
 #   其余：inconclusive（预登记未定义区间，如实报）。
 #
-# 零 LLM API；复用 run_v20_gt5.py 的 Φ 定义/轨迹记录/单调率函数（只读 import，
-# 既有文件一行不动）。
+# 零 LLM API；复用 gt_common 的 Φ 定义/轨迹记录/单调率函数（候选 5 重构：
+# 不再 import run_v20_gt5 的常数，口径常数在本文件显式钉定，切断静默传导；
+# 与 GT-5 的对齐由 tests/test_gt_common.py 显式断言锁定）。
 import json
 import os
 import time
@@ -27,11 +28,10 @@ import time
 import numpy as np
 
 from deposon_diffusion import DiffusionConfig, config_dict, forward_diffuse
+from gt_common import monotone_rate, phi_trajectory, reverse_denoise_traj
 from mindmap_corpus_v20 import CORPUS_DIR, load_corpus
 from run_v15_experiment import row_normalize
 from run_v19_fullrank import full_candidate_mask
-from run_v20_gt5 import (ENERGY_MODE, GT5_TOL, monotone_rate, phi_trajectory,
-                         reverse_denoise_traj)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESULTS = os.path.join(HERE, "results")
@@ -44,6 +44,10 @@ GT5B_PASS_GRAPH_FRAC = 0.8       # 单调率=100% 的图占比 ≥ 0.8 ⇒ 支�
 GT5B_MONO_FULL = 1.0             # 「单调率=100%」满分线
 GT5B_MONO_DEAD = 0.5             # 单调率 < 50% 计为判死图
 GT5B_DEAD_MIN_GRAPHS = 3         # 判死图 ≥ 3 ⇒ H_GT5b_dead
+# 口径常数显式钉定（本文件冻结副本，不再经 run_v20_gt5 传导；
+# 与 GT-5 的数值一致性由 tests/test_gt_common.py 断言）
+GT5B_TOL = 1e-9                  # 单调性数值容差（同 GT-5 的 GT5_TOL）
+GT5B_ENERGY_MODE = "aggregate"   # Φ=-scatter_energy(aggregate)，同 GT-5
 
 
 # ------------------------------------------------------------ 判定规则（冻结）
@@ -80,7 +84,7 @@ def gt5b_verdict(per_graph, pass_frac=GT5B_PASS_GRAPH_FRAC,
             "thresholds": {"pass_graph_frac": pass_frac,
                            "mono_full": mono_full, "mono_dead": mono_dead,
                            "dead_min_graphs": dead_min_graphs,
-                           "tol": GT5_TOL}}
+                           "tol": GT5B_TOL}}
 
 
 # ------------------------------------------------------------ 实验主体
@@ -104,13 +108,13 @@ def run_graph(g, cfg, n_tasks=GT5B_TASKS_PER_GRAPH, graph_ord=0):
         W_obs[u, v] = 0.0
         mask = full_candidate_mask(N, u)
         cfg_arm = DiffusionConfig(**{**config_dict(cfg), "seed": 0,
-                                     "energy_mode": ENERGY_MODE,
+                                     "energy_mode": GT5B_ENERGY_MODE,
                                      "field_guidance": True})
         WT = forward_diffuse(W_obs, mask, cfg_arm)[-1]
         states = reverse_denoise_traj(WT, mask, cfg_arm, src, tgt,
                                       init_mode="prior_mean")
-        phi = phi_trajectory(states, src, tgt)
-        mf_rates.append(monotone_rate(phi))
+        phi = phi_trajectory(states, src, tgt, energy_mode=GT5B_ENERGY_MODE)
+        mf_rates.append(monotone_rate(phi, tol=GT5B_TOL))
         mf_endpoints.append(phi[-1])
         mf_deltas_min.append(float(np.min(np.diff(phi)))
                              if len(phi) > 1 else 0.0)
@@ -148,7 +152,7 @@ def main():
                "tasks_per_graph_max": GT5B_TASKS_PER_GRAPH,
                "sample_seed": GT5B_SAMPLE_SEED,
                "arm": "mean-field only（收窄后主张不涉及 dirichlet 臂）",
-               "tol": GT5_TOL,
+               "tol": GT5B_TOL,
                "pass_rule": (f"单调率=100% 的图占比 ≥ {GT5B_PASS_GRAPH_FRAC} "
                              "⇒ supports_narrowed_monotonicity"),
                "kill_rule": (f"单调率 < {GT5B_MONO_DEAD} 的图 ≥ "

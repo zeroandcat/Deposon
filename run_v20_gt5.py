@@ -38,8 +38,12 @@ import time
 
 import numpy as np
 
-from deposon_diffusion import (DiffusionConfig, config_dict, denoise,
-                               forward_diffuse, scatter_energy)
+from deposon_diffusion import DiffusionConfig, config_dict, forward_diffuse
+from gt_common import graph_tasks as _graph_tasks
+from gt_common import monotone_rate as _mono_rate
+from gt_common import phi_potential as _phi_potential
+from gt_common import phi_trajectory as _phi_trajectory
+from gt_common import reverse_denoise_traj  # 薄再导出（无本文件常数介入）
 from mindmap_corpus_v20 import CORPUS_DIR, load_corpus
 from run_v15_experiment import row_normalize
 from run_v19_fullrank import full_candidate_mask
@@ -63,45 +67,24 @@ GT5_DEAD_MIN_GRAPHS = 2     # 判死图 ≥ 2 ⇒ H_GT5_dead
 ENERGY_MODE = "aggregate"   # 与默认配置及 reverse_denoise 解析梯度一致
 
 
+# 候选 5 重构：函数实现已收敛到 gt_common（逐字搬运，数值逐位不变，
+# tests/test_v20_gt5.py / test_gt_common.py 锁定）；以下为保留原签名与
+# 本文件冻结常数默认绑定的薄转发，既有 import 路径全部不破。
 def phi_potential(W, source, target, energy_mode=ENERGY_MODE):
-    """势函数 Φ(W) = -scatter_energy(W)（聚合透射率对数 − 平滑正则）。
-
-    理由：反向退火动态正是 scatter_energy 的（自然）梯度下降，故其 Lyapunov
-    函数为 -E。gold_edges 参数按 SPEC 防泄漏契约传 None（函数体不读取）。
-    """
-    val = -scatter_energy(np.asarray(W, dtype=float), None, source, target,
-                          energy_mode=energy_mode)
-    return float(val)
-
-
-def reverse_denoise_traj(WT, mask, cfg, source, target, init_mode):
-    """reverse_denoise_init（run_v19_meanfield.py）的轨迹记录副本。
-
-    算法主体逐行对应：init_mode="dirichlet" 与原 reverse_denoise 相同的
-    Dirichlet(1) 随机起点；init_mode="prior_mean" 为确定性 mean-field 极限。
-    唯一新增：每步后把当前 W 追加到 states（共 n_steps+1 个状态，含起点）。
-    deposon_diffusion.py / run_v19_meanfield.py 一行不动。
-
-    候选 1 重构：实现已统一收敛到 deposon_diffusion.denoise（薄转发，
-    record=True，数值逐位不变，tests/test_v20_gt5.py 锁定）。
-    """
-    _W, _steps, states = denoise(WT, mask, cfg, source, target,
-                                 init_mode=init_mode, record=True)
-    return states
+    """势函数 Φ(W) = -scatter_energy(W)（实现见 gt_common；默认
+    energy_mode 钉定为本文件冻结常量 ENERGY_MODE）。"""
+    return _phi_potential(W, source, target, energy_mode)
 
 
 def phi_trajectory(states, source, target):
-    """逐状态求 Φ，返回长度 len(states) 的列表。"""
-    return [phi_potential(W, source, target) for W in states]
+    """逐状态求 Φ，返回长度 len(states) 的列表（实现见 gt_common）。"""
+    return _phi_trajectory(states, source, target, energy_mode=ENERGY_MODE)
 
 
 def monotone_rate(traj, tol=GT5_TOL):
-    """单调不减率：ΔΦ_t ≥ -tol 的步数占比；空/单点轨迹定义为 1.0。"""
-    traj = [float(v) for v in traj]
-    if len(traj) < 2:
-        return 1.0
-    diffs = np.diff(traj)
-    return float(np.mean(diffs >= -tol))
+    """单调不减率：ΔΦ_t ≥ -tol 的步数占比；空/单点轨迹定义为 1.0
+    （实现见 gt_common；默认 tol 钉定为本文件冻结常量 GT5_TOL）。"""
+    return _mono_rate(traj, tol=tol)
 
 
 # ------------------------------------------------------------ 判定规则（冻结）
@@ -150,14 +133,6 @@ def gt5_verdict(per_graph, pass_frac=GT5_PASS_GRAPH_FRAC,
 
 
 # ------------------------------------------------------------ 实验主体
-def _graph_tasks(g, n_tasks, sample_seed):
-    """每图抽 n_tasks 条 named 留一任务（种子化，可复现）。"""
-    named = [tuple(e) for e in g["named_edges"]]
-    rng = np.random.default_rng(sample_seed)
-    take = rng.choice(len(named), size=min(n_tasks, len(named)), replace=False)
-    return [named[int(k)] for k in sorted(take.tolist())]
-
-
 def run_graph(g, cfg, n_tasks=GT5_TASKS_PER_GRAPH, n_seeds=GT5_SEEDS,
               graph_ord=0):
     """单图：逐任务 mean-field / dirichlet 反向，逐点记录 Φ。"""
