@@ -6,10 +6,11 @@
 #      → results/gt2_attacker_cache/{domain}.json
 # key 仅从环境变量 KIMI_API_KEY 读取，不打印不落盘；错误经 llm_prior._sanitize。
 # 预算: 8 prompt × MAX_ATTEMPTS；缓存新鲜(prompt_sha256 一致)则跳过。
-import hashlib, json, os
-import requests
+# 候选 3 重构：HTTP 重试/缓存机制收敛到 llm_fetch，行为逐位不变。
+import json, os
 import llm_prior
-from llm_prior import ENDPOINT, MODEL, MAX_ATTEMPTS, TIMEOUT, _sanitize, build_prior_prompt
+from llm_fetch import EndpointSpec, fetch_text, is_fresh, save_record, sha
+from llm_prior import ENDPOINT, MODEL, MAX_ATTEMPTS, TIMEOUT, build_prior_prompt
 from mindmap_corpus_v20 import CORPUS_DIR, FAMILY_L_DOMAINS
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -18,7 +19,8 @@ PRIOR_DIR = os.path.join(RESULTS, "familyL_prior_cache")
 ATK_DIR = os.path.join(RESULTS, "gt2_attacker_cache")
 RULE_KEYWORDS = ("trap", "dead", "end", "impossible", "guess", "wrong")
 
-def sha(t): return hashlib.sha256(t.encode("utf-8")).hexdigest()
+CROSSVAL_SPEC = EndpointSpec(endpoint=ENDPOINT, model=MODEL, timeout=TIMEOUT,
+                             max_tokens=8000, max_attempts=MAX_ATTEMPTS)
 
 def build_gt2_prompt(domain, labels):
     """GT-2 攻击者 prompt（SPEC v2.0 §4）：给定关键词表与节点标签，
@@ -40,32 +42,12 @@ def build_gt2_prompt(domain, labels):
         '[{"label": "陷阱标签", "mislead": "一句中文说明它为何看似合理实则错误"}, ...]'
     )
 
-def post(prompt, key, counter):
-    headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
-    payload = {"model": MODEL, "max_tokens": 8000,
-               "messages": [{"role": "user", "content": prompt}]}
-    last = None
-    for _ in range(MAX_ATTEMPTS):
-        counter["n"] += 1
-        try:
-            r = requests.post(ENDPOINT, headers=headers, json=payload, timeout=TIMEOUT)
-            if r.status_code != 200:
-                raise RuntimeError(_sanitize(f"HTTP {r.status_code}: {r.text[:200]}", key))
-            c = r.json()["choices"][0]["message"]["content"]
-            if c:
-                return c
-        except Exception as e:
-            last = _sanitize(f"{type(e).__name__}: {e}", key)
-    raise RuntimeError(f"API failed after {MAX_ATTEMPTS} attempts: {last}")
-
-def fresh(path, s):
-    if not os.path.exists(path):
-        return False
-    try:
-        rec = json.load(open(path, encoding="utf-8"))
-    except Exception:
-        return False
-    return rec.get("prompt_sha256") == s and bool(rec.get("response_text"))
+def post(prompt, key, counter, transport=None):
+    out = fetch_text(CROSSVAL_SPEC, prompt, key, counter=counter,
+                     transport=transport)
+    if out.content:
+        return out.content
+    raise RuntimeError(f"API failed after {MAX_ATTEMPTS} attempts: {out.last_err}")
 
 def main():
     key = os.environ.get("KIMI_API_KEY")
@@ -80,27 +62,27 @@ def main():
         # A) 先验（labels-only，零泄漏，与 v1.6 同 prompt 构造器）
         p1 = build_prior_prompt(labels)
         s1, path1 = sha(p1), os.path.join(PRIOR_DIR, f"{domain}.json")
-        if fresh(path1, s1):
+        if is_fresh(path1, s1):
             print(f"{domain} prior: fresh cache")
         else:
             c = post(p1, key, counter)
-            json.dump({"domain": domain, "kind": "labels_only_prior",
-                       "prompt_sha256": s1, "model": MODEL, "response_text": c,
-                       "note": "零泄漏: prompt 只含标签列表; key 仅在运行时环境变量"},
-                      open(path1, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+            save_record(path1, {"domain": domain, "kind": "labels_only_prior",
+                                "prompt_sha256": s1, "model": MODEL,
+                                "response_text": c,
+                                "note": "零泄漏: prompt 只含标签列表; key 仅在运行时环境变量"})
             print(f"{domain} prior: cached {len(c)} chars")
         # B) GT-2 攻击者
         p2 = build_gt2_prompt(domain, labels)
         s2, path2 = sha(p2), os.path.join(ATK_DIR, f"{domain}.json")
-        if fresh(path2, s2):
+        if is_fresh(path2, s2):
             print(f"{domain} attacker: fresh cache")
         else:
             c = post(p2, key, counter)
-            json.dump({"domain": domain, "kind": "gt2_adaptive_attacker",
-                       "rule_keywords": list(RULE_KEYWORDS),
-                       "prompt_sha256": s2, "model": MODEL, "response_text": c,
-                       "note": "SPEC v2.0 §4 自适应攻击者; key 仅在运行时环境变量"},
-                      open(path2, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+            save_record(path2, {"domain": domain, "kind": "gt2_adaptive_attacker",
+                                "rule_keywords": list(RULE_KEYWORDS),
+                                "prompt_sha256": s2, "model": MODEL,
+                                "response_text": c,
+                                "note": "SPEC v2.0 §4 自适应攻击者; key 仅在运行时环境变量"})
             print(f"{domain} attacker: cached {len(c)} chars")
     print(f"total_http_attempts={counter['n']}")
 

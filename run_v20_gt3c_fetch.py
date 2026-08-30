@@ -3,14 +3,13 @@
 #   评估者 E3=doubao-seed-evolving（火山引擎 Ark，第二厂商）
 # key 仅从环境变量 ARK_API_KEY 读取，不打印不落盘；attempts 逐缓存落盘。
 # 预算：6 域 × MAX_ATTEMPTS=2 ≤ 12 次（探测 1 次另计，修正案 A3）。
-import hashlib
+# 候选 3 重构：与 gt3b 的差异收敛为 GT3C_SPEC 一处（模型/max_tokens），
+# HTTP 重试/缓存机制收敛到 llm_fetch，行为逐位不变。
 import json
 import os
 
-import requests
-
-import llm_prior
-from llm_prior import MAX_ATTEMPTS, _sanitize, build_prior_prompt
+from llm_fetch import EndpointSpec, fetch_text, is_fresh, save_record, sha
+from llm_prior import MAX_ATTEMPTS, build_prior_prompt
 from mindmap_corpus_v20 import CORPUS_DIR, FAMILY_L_DOMAINS
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -22,9 +21,10 @@ ARK_ENDPOINT = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
 ARK_MODEL = "deepseek-v4-pro-260425"
 ARK_TIMEOUT = 240.0  # 修正案 A3：实测 60s 不足，推理模型响应慢
 
-
-def sha(text: str) -> str:
-    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+GT3C_SPEC = EndpointSpec(endpoint=ARK_ENDPOINT, model=ARK_MODEL,
+                         timeout=ARK_TIMEOUT,
+                         max_tokens=16000,  # A3-errata: 推理模型 8000 会被 reasoning 耗尽
+                         max_attempts=MAX_ATTEMPTS, err_msg_chars=120)
 
 
 def main():
@@ -32,7 +32,7 @@ def main():
     if not key:
         raise SystemExit("ARK_API_KEY 未设置，GT-3b 挂起")
     os.makedirs(GT3_DIR, exist_ok=True)
-    total_attempts = 0
+    counter = {"n": 0}
     for domain in FAMILY_L_DOMAINS:
         g = json.load(open(os.path.join(CORPUS_DIR, f"L_{domain}.json"),
                            encoding="utf-8"))
@@ -44,41 +44,21 @@ def main():
             print(f"{domain}: prompt_mismatch, skipped")
             continue
         path = os.path.join(GT3_DIR, f"{ARK_MODEL}__{domain}.json")
-        if os.path.exists(path):
-            rec = json.load(open(path, encoding="utf-8"))
-            if (rec.get("prompt_sha256") == s and rec.get("response_text")):
-                print(f"{domain}: fresh cache, 0 attempts")
-                continue
-        content, last_err, attempts = None, None, 0
-        for _ in range(MAX_ATTEMPTS):
-            attempts += 1
-            total_attempts += 1
-            try:
-                r = requests.post(
-                    ARK_ENDPOINT,
-                    headers={"Authorization": f"Bearer {key}",
-                             "Content-Type": "application/json"},
-                    json={"model": ARK_MODEL, "max_tokens": 16000,  # A3-errata: 推理模型 8000 会被 reasoning 耗尽
-                          "messages": [{"role": "user", "content": prompt}]},
-                    timeout=ARK_TIMEOUT)
-                if r.status_code != 200:
-                    raise RuntimeError(_sanitize(f"HTTP {r.status_code}: {r.text[:200]}", key))
-                content = r.json()["choices"][0]["message"]["content"]
-                if content:
-                    break
-            except Exception as e:
-                last_err = _sanitize(f"{type(e).__name__}: {str(e)[:120]}", key)
-        json.dump({"domain": domain, "kind": "gt3b2_deepseek_prior",
-                   "prompt_sha256": s, "model": ARK_MODEL,
-                   "vendor": "volces_ark_deepseek",
-                   "response_text": content, "attempts": attempts,
-                   "last_error": last_err if not content else None,
-                   "note": ("SPEC_GT3 修正案 A3；跨厂商评估者；"
-                            "key 仅在运行时环境变量")},
-                  open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        if is_fresh(path, s, strict=False):
+            print(f"{domain}: fresh cache, 0 attempts")
+            continue
+        out = fetch_text(GT3C_SPEC, prompt, key, counter=counter)
+        content, last_err, attempts = out
+        save_record(path, {"domain": domain, "kind": "gt3b2_deepseek_prior",
+                           "prompt_sha256": s, "model": ARK_MODEL,
+                           "vendor": "volces_ark_deepseek",
+                           "response_text": content, "attempts": attempts,
+                           "last_error": last_err if not content else None,
+                           "note": ("SPEC_GT3 修正案 A3；跨厂商评估者；"
+                                    "key 仅在运行时环境变量")})
         print(f"{domain}: attempts={attempts} "
               f"{'cached ' + str(len(content)) + ' chars' if content else 'FAILED ' + str(last_err)}")
-    print(f"total_http_attempts={total_attempts} (修正案预算 ≤12)")
+    print(f"total_http_attempts={counter['n']} (修正案预算 ≤12)")
 
 
 if __name__ == "__main__":

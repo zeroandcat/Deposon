@@ -10,15 +10,16 @@
 # 缓存新鲜(prompt_sha256 一致)则跳过；超时/失败如实记 fetch_failed。
 # B 阶段依赖 A 阶段缓存中的标签：A 缓存缺失/失效 → 该域先验挂起并清晰报告，
 # 绝不伪造标签（与 run_v20_crossval_fetch.py 同一纪律）。
-import hashlib
+# 候选 3 重构（2026-08-30 冲刺波，GT-8b fetch 进程结束后实施）：sha/fresh/
+# post 收敛为 llm_fetch 薄转发；公开名（CACHE_DIR/GT8B_DOMAINS/
+# build_gt8b_prompts/gt8b_prompt_manifest/load_labels_from_graph_cache/main）
+# 与全部落盘/打印/预算语义逐位不变。
 import json
 import os
 
-import requests
-
 import llm_prior
-from llm_prior import (ENDPOINT, MAX_ATTEMPTS, MODEL, TIMEOUT, _sanitize,
-                       build_prior_prompt)
+from llm_fetch import EndpointSpec, fetch_text, is_fresh, save_record, sha
+from llm_prior import ENDPOINT, MAX_ATTEMPTS, MODEL, TIMEOUT, build_prior_prompt
 from mindmap_corpus_v20 import (_PROMPT_TEMPLATE, CacheMissingError,
                                 parse_familyL_response)
 
@@ -38,8 +39,8 @@ GT8B_DOMAIN_BRIEF = {
 }
 
 
-def sha(t):
-    return hashlib.sha256(t.encode("utf-8")).hexdigest()
+GT8B_SPEC = EndpointSpec(endpoint=ENDPOINT, model=MODEL, timeout=TIMEOUT,
+                         max_tokens=8000, max_attempts=MAX_ATTEMPTS)
 
 
 def build_gt8b_prompts() -> dict:
@@ -56,35 +57,16 @@ def gt8b_prompt_manifest() -> dict:
 
 
 def fresh(path, s):
-    if not os.path.exists(path):
-        return False
-    try:
-        rec = json.load(open(path, encoding="utf-8"))
-    except Exception:
-        return False
-    return rec.get("prompt_sha256") == s and bool(rec.get("response_text"))
+    return is_fresh(path, s)
 
 
-def post(prompt, key, counter):
+def post(prompt, key, counter, transport=None):
     """单 prompt 调用，≤ MAX_ATTEMPTS 次尝试；失败抛 RuntimeError（已 sanitize）。"""
-    headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
-    payload = {"model": MODEL, "max_tokens": 8000,
-               "messages": [{"role": "user", "content": prompt}]}
-    last = None
-    for _ in range(MAX_ATTEMPTS):
-        counter["n"] += 1
-        try:
-            r = requests.post(ENDPOINT, headers=headers, json=payload,
-                              timeout=TIMEOUT)
-            if r.status_code != 200:
-                raise RuntimeError(
-                    _sanitize(f"HTTP {r.status_code}: {r.text[:200]}", key))
-            c = r.json()["choices"][0]["message"]["content"]
-            if c:
-                return c
-        except Exception as e:
-            last = _sanitize(f"{type(e).__name__}: {e}", key)
-    raise RuntimeError(f"API failed after {MAX_ATTEMPTS} attempts: {last}")
+    out = fetch_text(GT8B_SPEC, prompt, key, counter=counter,
+                     transport=transport)
+    if out.content:
+        return out.content
+    raise RuntimeError(f"API failed after {MAX_ATTEMPTS} attempts: {out.last_err}")
 
 
 def load_labels_from_graph_cache(domain):

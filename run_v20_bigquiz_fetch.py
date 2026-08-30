@@ -6,10 +6,12 @@
 #   (c) CoT 大题库抽样作答（每域 1 prompt × ≤10 题）→ results/cot_bigquiz_cache/{domain}.json
 # key 仅从环境变量读取；错误经 llm_prior._sanitize；指数退避；缓存幂等。
 # 预算: 16 prompt × MAX_ATTEMPTS。
-import hashlib, json, os, time as _t
-import requests
+# 候选 3 重构：HTTP 重试（含 3·2^i 指数退避与空 content 口径）经
+# EndpointSpec 钉定后收敛到 llm_fetch，行为逐位不变。
+import json, os
 import llm_prior
-from llm_prior import ENDPOINT, MODEL, MAX_ATTEMPTS, TIMEOUT, _sanitize, build_prior_prompt
+from llm_fetch import EndpointSpec, fetch_text, is_fresh, save_record, sha
+from llm_prior import ENDPOINT, MODEL, MAX_ATTEMPTS, TIMEOUT, build_prior_prompt
 from mindmap_corpus_v20 import CORPUS_DIR, FAMILY_L_DOMAINS
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -36,7 +38,10 @@ _TEMPLATE = """你是一个概念脑图构建器。请为主题域「{domain}」
 输出格式：只输出一个 JSON 对象，不要输出任何其他文字、不要用代码围栏：
 {{"nodes": ["标签0", "标签1", ...], "edges": [[0, 1], [0, 2], ...]}}"""
 
-def sha(t): return hashlib.sha256(t.encode("utf-8")).hexdigest()
+BIGQUIZ_SPEC = EndpointSpec(
+    endpoint=ENDPOINT, model=MODEL, timeout=TIMEOUT, max_tokens=16000,
+    max_attempts=MAX_ATTEMPTS, err_text_chars=150, backoff_base=3,
+    empty_err="empty content (finish_reason=length, reasoning overflow)")
 
 def build_attack_xl_prompt(domain, labels):
     lines = [f"{i}: {lab}" for i, lab in enumerate(labels)]
@@ -64,41 +69,20 @@ def build_cot_prompt(items):
             + "\n\n只输出 JSON 数组（不要其他文字、不要代码围栏）："
             '[{"q": 1, "answer": "A"}, ...] answer 为选项字母 A/B/C/D。')
 
-def post(prompt, key, counter):
-    last = None
-    for i in range(MAX_ATTEMPTS):
-        counter["n"] += 1
-        try:
-            r = requests.post(ENDPOINT,
-                              headers={"Authorization": f"Bearer {key}",
-                                       "Content-Type": "application/json"},
-                              json={"model": MODEL, "max_tokens": 16000,
-                                    "messages": [{"role": "user", "content": prompt}]},
-                              timeout=TIMEOUT)
-            if r.status_code != 200:
-                raise RuntimeError(_sanitize(f"HTTP {r.status_code}: {r.text[:150]}", key))
-            c = r.json()["choices"][0]["message"]["content"]
-            if c:
-                return c
-            last = "empty content (finish_reason=length, reasoning overflow)"
-        except Exception as e:
-            last = _sanitize(f"{type(e).__name__}: {e}", key)
-            _t.sleep(3 * (2 ** i))
-    raise RuntimeError(f"failed: {last}")
+def post(prompt, key, counter, transport=None):
+    out = fetch_text(BIGQUIZ_SPEC, prompt, key, counter=counter,
+                     transport=transport)
+    if out.content:
+        return out.content
+    raise RuntimeError(f"failed: {out.last_err}")
 
 def save(path, rec, s, counter_note=""):
     rec["prompt_sha256"] = s
     rec["model"] = MODEL
-    json.dump(rec, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    save_record(path, rec)
 
 def fresh(path, s):
-    if not os.path.exists(path):
-        return False
-    try:
-        rec = json.load(open(path, encoding="utf-8"))
-    except Exception:
-        return False
-    return rec.get("prompt_sha256") == s and bool(rec.get("response_text"))
+    return is_fresh(path, s)
 
 def main():
     key = os.environ.get("KIMI_API_KEY")
@@ -136,7 +120,7 @@ def main():
             print(f"{d} prior: fresh")
     # (b) 攻击者扩池（全部 6 域，40 标签）
     from mindmap_corpus_v20 import build_familyL_prompts
-    all_domains = list(FAMILY_L_DOMAINS)
+    all_domains = list(FAMILY_L_DOMAINS) + list(NEW_DOMAINS)
     os.makedirs(os.path.join(RESULTS, "attacker_xl_cache"), exist_ok=True)
     for d in all_domains:
         g = json.load(open(os.path.join(CORPUS_DIR, f"L_{d}.json"), encoding="utf-8"))
@@ -151,6 +135,8 @@ def main():
             print(f"{d} attacker_xl: cached {len(c)}")
         else:
             print(f"{d} attacker_xl: fresh")
+    # (c) 新域 CoT（既有 4 域 CoT 缓存已有；新 2 域补；抽样在评估脚本做，
+    #     此处仅为新域各取 1 prompt 占位——若题库未建则跳过，由评估阶段决定）
     print(f"total_http_attempts={counter['n']}")
 
 if __name__ == "__main__":

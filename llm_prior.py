@@ -14,18 +14,26 @@
 # - LLM 调用总预算 <= 2 次 (全局先验 1 次 + 必要时重试 1 次, SPEC v1.6 §4)。
 # - 响应 JSON 落盘缓存 (results/llm_prior_cache.json) 供复现。
 # ============================================================
-import hashlib
 import json
 import os
-import re
 
-import requests
+import requests  # 保持 llm_prior.requests 属性存在（旧测试经其 monkeypatch
+                 # requests.post；实际调用在 llm_fetch 内于调用时解析，桩仍生效）
+
+from llm_fetch import (EndpointSpec, parse_json_array, post_once,
+                       sanitize_secret, sha)
 
 ENDPOINT = "https://api.kimi.com/coding/v1/chat/completions"  # 与 deposon_agents_v1_4 一致
 MODEL = "kimi-for-coding"
 MAX_ATTEMPTS = 2          # SPEC v1.6 §4: 全局先验一次 + 必要时重试一次
 TIMEOUT = 120.0
 NO_KEY_MSG = "KIMI_API_KEY 未设置，LLM 臂挂起"
+
+# 候选 3 重构：HTTP 机制收敛到 llm_fetch（endpoint/model/timeout/预算为
+# 本模块显式钉定的 EndpointSpec；transport 依赖注入，默认可被
+# monkeypatch requests.post 的旧测试路径覆盖）。
+_FETCH_SPEC = EndpointSpec(endpoint=ENDPOINT, model=MODEL, timeout=TIMEOUT,
+                           max_tokens=4000, max_attempts=MAX_ATTEMPTS)
 
 
 # ---------------------------------------------------------------- prompt
@@ -53,14 +61,9 @@ def build_prior_prompt(labels: list) -> str:
 
 
 # ---------------------------------------------------------------- 解析
-def _extract_json_array(text: str) -> list:
-    """从 LLM 响应中抽出 JSON 数组 (容忍 markdown 围栏与前后杂文本)。"""
-    t = text.strip()
-    t = re.sub(r"^```(?:json)?\s*|\s*```$", "", t, flags=re.MULTILINE).strip()
-    i, j = t.find("["), t.rfind("]")
-    if i < 0 or j <= i:
-        raise ValueError("响应中未找到 JSON 数组")
-    return json.loads(t[i:j + 1])
+# 薄别名（候选 3）：唯一实现为 llm_fetch.parse_json_array；既有
+# "from llm_prior import _extract_json_array" 的 5 处 import 路径不破。
+_extract_json_array = parse_json_array
 
 
 def _validate_prior(items: list, n_labels: int) -> dict:
@@ -81,13 +84,14 @@ def _validate_prior(items: list, n_labels: int) -> dict:
     return out
 
 
-def _sanitize(msg: str, secret: str) -> str:
-    """兜底: 异常/HTTP 回显中若意外含有 secret, 一律剔除 (key 不写入日志/异常)。"""
-    return msg.replace(secret, "***") if secret else msg
+# 薄别名（候选 3）：唯一实现为 llm_fetch.sanitize_secret；既有
+# "from llm_prior import _sanitize" 的 9 处 import 路径不破。
+_sanitize = sanitize_secret
 
 
 # ---------------------------------------------------------------- 调用
-def call_llm_prior(cache_path: str, labels: list = None) -> dict:
+def call_llm_prior(cache_path: str, labels: list = None,
+                   transport=None) -> dict:
     """调用 Kimi API 获取全局语义先验, 响应 JSON 落盘 cache_path 供复现。
 
     返回 dict[(int,int), float]。labels=None 时用实验 B 脑图的 45 个标签
@@ -95,6 +99,7 @@ def call_llm_prior(cache_path: str, labels: list = None) -> dict:
     确定性重建, 非任何外部文件)。
     无 KIMI_API_KEY 时抛 RuntimeError —— 严禁 mock 冒充真实调用结果。
     预算: 最多 MAX_ATTEMPTS=2 次 HTTP 尝试 (SPEC v1.6 §4)。
+    transport 依赖注入（候选 3）：None 时经 llm_fetch 解析为 requests.post。
     """
     key = os.environ.get("KIMI_API_KEY")
     if not key:
@@ -103,18 +108,10 @@ def call_llm_prior(cache_path: str, labels: list = None) -> dict:
         from run_v15_experiment import reconstruct_mindmap
         labels = reconstruct_mindmap()[3]
     prompt = build_prior_prompt(labels)
-    headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
-    payload = {"model": MODEL, "max_tokens": 4000,
-               "messages": [{"role": "user", "content": prompt}]}
     last_err = None
     for _attempt in range(MAX_ATTEMPTS):
         try:
-            resp = requests.post(ENDPOINT, headers=headers, json=payload,
-                                 timeout=TIMEOUT)
-            if resp.status_code != 200:
-                raise RuntimeError(
-                    _sanitize(f"HTTP {resp.status_code}: {resp.text[:200]}", key))
-            content = resp.json()["choices"][0]["message"]["content"]
+            content = post_once(_FETCH_SPEC, prompt, key, transport=transport)
             if not content:
                 raise RuntimeError("空 content 响应")
             prior = _validate_prior(_extract_json_array(content), len(labels))
@@ -123,8 +120,7 @@ def call_llm_prior(cache_path: str, labels: list = None) -> dict:
                 "model": MODEL,
                 "endpoint": ENDPOINT,
                 "n_labels": len(labels),
-                "prompt_sha256": hashlib.sha256(
-                    prompt.encode("utf-8")).hexdigest(),
+                "prompt_sha256": sha(prompt),
                 "n_prior_edges": len(prior),
                 "prior": [{"parent": int(u), "child": int(v), "confidence": float(c)}
                           for (u, v), c in sorted(prior.items())],
