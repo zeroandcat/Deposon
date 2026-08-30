@@ -32,7 +32,9 @@
 #   其余：mixed，如实报逐图形态。
 #
 # 零 LLM API；deposon_diffusion.py / run_v20_gt5.py 等既有文件一行不动
-# （Φ/轨迹/单调率经只读 import 复用；α 参数化反向为本文件内的逐行副本）。
+# （Φ/轨迹/任务抽样经 gt_common 复用——候选 5 重构：不再 import
+# run_v20_gt5 的常数，口径常数在本文件显式钉定，切断静默传导；与 GT-5
+# 的图集/抽样种子对齐由 tests/test_gt_common.py 显式断言锁定）。
 import json
 import os
 import time
@@ -41,11 +43,10 @@ import numpy as np
 
 from deposon_diffusion import (DiffusionConfig, config_dict, denoise,
                                forward_diffuse)
+from gt_common import graph_tasks, phi_potential
 from mindmap_corpus_v20 import CORPUS_DIR, load_corpus
 from run_v15_experiment import row_normalize
 from run_v19_fullrank import full_candidate_mask, gold_rank
-from run_v20_gt5 import (ENERGY_MODE, GT5_GRAPHS, GT5_SAMPLE_SEED,
-                         phi_potential, _graph_tasks)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESULTS = os.path.join(HERE, "results")
@@ -60,6 +61,12 @@ GT7_HIT_FRAC = 0.9             # 命中率 ≥ 90% × mean-field
 GT7_PASS_GRAPH_FRAC = 0.75     # 满足双条件的图占比 ≥ 3/4 ⇒ 支持前沿存在
 GT7_COVAR_TOL = 1e-12          # 「同向变化」数值容差（(Δhits)(ΔΦ) ≥ -tol）
 MEANFIELD_LABEL = "mean_field_T0"   # T=0 确定性极限端点
+# 口径常数显式钉定（本文件冻结副本，不再经 run_v20_gt5 传导；与 GT-5 的
+# 逐任务对齐是协议要求，数值一致性由 tests/test_gt_common.py 断言锁定）
+GT7_GRAPHS = ("S6", "L_physics_concepts",
+              "L_biological_taxonomy", "L_algorithm_process")  # 同 GT-5 图集
+GT7_SAMPLE_SEED = 505_000      # 同 GT-5 抽样种子（+图序）⇒ 任务集逐任务对齐
+GT7_ENERGY_MODE = "aggregate"  # Φ=-scatter_energy(aggregate)，同 GT-5
 
 
 def reverse_denoise_traj_alpha(WT, mask, cfg, source, target, alpha):
@@ -174,7 +181,7 @@ def run_graph(g, cfg, graph_ord=0, n_tasks=GT7_TASKS_PER_GRAPH,
     for (u, v) in g["edges"]:
         adj[u, v] = 1.0
     W_true = row_normalize(adj)
-    tasks = _graph_tasks(g, n_tasks, GT5_SAMPLE_SEED + graph_ord)  # 同 GT-5
+    tasks = graph_tasks(g, n_tasks, GT7_SAMPLE_SEED + graph_ord)  # 同 GT-5
 
     # 前向终态逐任务预计算（与温度无关；seed=0 同 GT-5）
     task_data = []
@@ -183,7 +190,7 @@ def run_graph(g, cfg, graph_ord=0, n_tasks=GT7_TASKS_PER_GRAPH,
         W_obs[u, v] = 0.0
         mask = full_candidate_mask(N, u)
         cfg_arm = DiffusionConfig(**{**config_dict(cfg), "seed": 0,
-                                     "energy_mode": ENERGY_MODE,
+                                     "energy_mode": GT7_ENERGY_MODE,
                                      "field_guidance": True})
         WT = forward_diffuse(W_obs, mask, cfg_arm)[-1]
         task_data.append((u, v, mask, cfg_arm, WT))
@@ -192,7 +199,8 @@ def run_graph(g, cfg, graph_ord=0, n_tasks=GT7_TASKS_PER_GRAPH,
         u, v, mask, cfg_arm, WT = task_data[k]
         cfg_r = DiffusionConfig(**{**config_dict(cfg_arm), "seed": seed})
         states = reverse_denoise_traj_alpha(WT, mask, cfg_r, src, tgt, alpha)
-        phi_end = phi_potential(states[-1], src, tgt)
+        phi_end = phi_potential(states[-1], src, tgt,
+                                energy_mode=GT7_ENERGY_MODE)
         hit = hit_at_3(states[-1], mask, u, v)
         return hit, phi_end
 
@@ -233,7 +241,7 @@ def run_graph(g, cfg, graph_ord=0, n_tasks=GT7_TASKS_PER_GRAPH,
 
     return {"graph_id": g["graph_id"], "N": int(N), "source": int(src),
             "target": int(tgt), "n_tasks": len(tasks),
-            "sample_seed": GT5_SAMPLE_SEED + graph_ord,
+            "sample_seed": GT7_SAMPLE_SEED + graph_ord,
             "task_edges": [[int(u), int(v)] for (u, v) in tasks],
             "meanfield": meanfield, "temperatures": temperatures,
             "frontier_shape": frontier_shape(temperatures),
@@ -246,11 +254,11 @@ def main():
     cfg = DiffusionConfig()
     graphs = {g["graph_id"]: g
               for g in load_corpus(CORPUS_DIR, families=("S", "L"))}
-    missing = [g for g in GT5_GRAPHS if g not in graphs]
+    missing = [g for g in GT7_GRAPHS if g not in graphs]
     if missing:
         raise RuntimeError(f"corpus missing {missing} — 先运行语料生成/摄入")
     per_graph, details = {}, {}
-    for ord_, gid in enumerate(GT5_GRAPHS):
+    for ord_, gid in enumerate(GT7_GRAPHS):
         res = run_graph(graphs[gid], cfg, graph_ord=ord_)
         details[gid] = res
         per_graph[gid] = {"meanfield": res["meanfield"],
@@ -268,9 +276,9 @@ def main():
                "alphas": list(GT7_ALPHAS),
                "alpha1_equals_gt5_dirichlet": True},
            "preregistered": {
-               "graphs": list(GT5_GRAPHS),
+               "graphs": list(GT7_GRAPHS),
                "tasks_per_graph": GT7_TASKS_PER_GRAPH,
-               "sample_seed": GT5_SAMPLE_SEED,
+               "sample_seed": GT7_SAMPLE_SEED,
                "seeds_per_temperature": GT7_SEEDS,
                "seed_base": GT7_SEED_BASE,
                "pass_rule": (f"存在中间温度档满足 命中率 ≥ {GT7_HIT_FRAC}×"

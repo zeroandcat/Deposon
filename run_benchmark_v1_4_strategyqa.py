@@ -14,7 +14,10 @@ from concurrent.futures import ThreadPoolExecutor
 
 OUT = "/mnt/agents/output"
 sys.path.insert(0, OUT)
-from deposon_agents_v1_4 import KimiLLMBackend, DeposonAgentSystem, BenchmarkEvaluator, DeposonField
+# 候选④修复: 仓库目录须优先于 OUT —— 原顺序命中 OUT 下重构前的旧副本
+# (无 resolve_high_couple_config), 导致本脚本 ImportError (重构前即存在的缺口)。
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from deposon_agents_v1_4 import KimiLLMBackend, DeposonAgentSystem, BenchmarkEvaluator, DeposonField, resolve_high_couple_config
 
 RESULT_FILE = os.path.join(OUT, 'deposon_benchmark_v1_4_strategyqa.json')
 DETAILS_FILE = os.path.join(OUT, 'deposon_benchmark_v1_4_strategyqa_details.json')
@@ -28,7 +31,8 @@ VARIANTS = {
     'v1_blocking': {'mode': 'v1_blocking', 'use_deposon': True},
     'v2_tunneling': {'mode': 'v2_tunneling', 'use_deposon': True},
     'unified': {'mode': 'unified', 'use_deposon': True},
-    'high_couple': {'mode': 'v1_blocking', 'use_deposon': True},
+    # v1.9 E9.3: 默认真修复; 旧别名仅在 DEPOSON_V14_HIGH_COUPLE_ALIAS=1 下复现
+    'high_couple': resolve_high_couple_config(),
 }
 
 YESNO_DECOMPOSE_SUFFIX = """
