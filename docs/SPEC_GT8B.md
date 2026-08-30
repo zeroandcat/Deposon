@@ -94,3 +94,29 @@ run_v20_gt8b_fetch.gt8b_prompt_manifest() 落盘，tests/test_v20_gt8b.py
   verdict 按 SPEC §5 落 inconclusive，如实披露。
 - 纪律：本修正案写于重试之前；run_v20_gt8b_fetch.py 文件本身不改（由主代理
   运行时 monkeypatch llm_prior.TIMEOUT，脚本 provenance 保持冻结）。
+
+## 修正案 B2（2026-08-30，诊断性重试，数据后登记、理由如实）
+
+- 现象：B1 的 240s 重试返回空 content，根因未明；为区分「网络事故」与
+  「推理耗尽」，登记一次诊断性重试：TIMEOUT 提至 **300s**、MAX_ATTEMPTS=3。
+- 结果：仍返回空 content。**诊断证据落盘**：响应 usage 显示
+  completion_tokens 全耗于 reasoning_tokens，finish_reason=**length**——
+  根因定位为推理模型内部 reasoning 耗尽 max_tokens（默认 4000），尚未产出
+  可见 content 即被截断；与 Findings §3 的「长 reasoning」推测一致，本轮
+  由推测升级为有 usage 证据的诊断结论。
+- 纪律：模型与 endpoint 不变；key 仅从环境变量读取，不打印不落盘。
+
+## 修正案 B3（2026-08-30，补数成功，数据后登记、理由如实）
+
+- 裁定：按 B2 诊断结论，仅放宽 max_tokens 至 **32000**（TIMEOUT 300s 不变），
+  对 chemical_elements 先验臂补取一次。
+- 结果：**一次成功**，response_text 长度 1510，缓存落盘
+  results/gt8b_cache/prior_chemical_elements.json（prompt_sha256 =
+  a1f01ba0…721a1f，note 字段注明「修正案B3 max_tokens=32000」）。随后重跑 ingest+eval（全程零 API），结果写入
+  results/deposon_v20_gt8b.json。
+- 预算：B1 上限 9 次已用尽；B2 诊断（≤3 次尝试）与 B3 补取（1 次）为追加
+  预算，**经用户授权适当放宽**，如实登记，不隐瞒超原预算事实。
+- fetch 纪律未变：key 仅从环境变量 KIMI_API_KEY 读取、不打印不落盘；
+  labels-only 零泄漏 prompt（build_prior_prompt 同构造器同模型）；缓存带
+  prompt_sha256 内容寻址落盘，新鲜即跳过；fetch 脚本本身不改（参数经运行时
+  monkeypatch 注入，脚本 provenance 保持冻结）；错误经 _sanitize 兜底剔除。

@@ -5,6 +5,8 @@
 > 结果：results/deposon_v20_gt8b.json（eval 零 API，runtime 2.83s）；
 > 摄入：results/deposon_v20_gt8b_ingest.json；
 > 缓存：results/gt8b_cache/（原始响应 + graphs/ 独立目录）。
+> **2026-08-30 翻转注记：verdict 已由 inconclusive 翻转为
+> supports_H_GT8B，见 §7；§1–§6 为历史记录，不回溯改写。**
 
 ## 1. 结果
 
@@ -112,3 +114,42 @@ key 仅从环境变量读取，不打印不落盘；错误信息经 _sanitize �
   run_v20_corpus_eval 逐行同式）；全边留一、全候选 raw 口径。
 - 测试：tests/test_v20_gt8b.py 9 项（冻结域名哨兵等）；全套
   **pytest 255 passed**（36.73s），无回归。
+
+## 7. 更正/翻转注记（2026-08-30）：verdict 由 inconclusive 翻转为 supports_H_GT8B
+
+§1–§6 为初轮（修正案 B1 为止）历史记录，如实保留、不回溯改写；本节追加
+补数后的最终口径。
+
+- **补数经过**：chemical_elements 先验臂经修正案 B2（TIMEOUT 300s、
+  MAX_ATTEMPTS=3 诊断性重试）仍返回空 content，诊断证据落盘——响应 usage
+  显示 completion_tokens 全耗于 reasoning_tokens、finish_reason=length，
+  根因定位为推理模型 reasoning 耗尽 max_tokens（默认 4000）；修正案 B3 仅
+  放宽 max_tokens=32000，**一次成功**（response_text 长 1510），缓存落盘
+  results/gt8b_cache/prior_chemical_elements.json（文件 sha256 =
+  68abf13024673d3e9300352b4e58770d7e8abac75274a6fe8f94c9625acf5b05，
+  prompt_sha256 = a1f01ba0…721a1f）。追加预算经用户授权适当放宽，如实
+  登记。随后重跑 ingest+eval（全程零 API，只读缓存），结果覆写
+  results/deposon_v20_gt8b.json。
+- **最终判定**（机械求值，非手写）：**verdict = supports_H_GT8B**，
+  n_valid_domains = 2/2，domains_satisfied = [chemical_elements,
+  chinese_dynasties]，domains_unsatisfied = []：
+
+  | 域 | llm_prior | field_mean | random | degree | prior−field | 逐域判定 |
+  |---|---|---|---|---|---|---|
+  | chemical_elements | **0.6429** | 0.1429 | 0.0357 | 0.0000 | **+0.5000** | **满足**（≥0.6 且 > field+0.2） |
+  | chinese_dynasties | **0.7805** | 0.0732 | 0.0244 | 0.0488 | **+0.7073** | **满足**（≥0.6 且 > field+0.2） |
+
+  两域均满足 SPEC §1 冻结阈值（prior_named ≥ 0.6 且 prior_named >
+  field_named + 0.2），2/2 有效域 ⇒ 按 SPEC §5 机械落
+  **supports_H_GT8B**；结果 JSON 的 cache_missing 字段现已为空（{}）。
+- **对 §2/§5 历史讨论的处置**：初轮 inconclusive 的机械原因
+  （n_valid=1<2）随补数不再成立；§5.2 的幸存者偏差讨论针对「失败可能
+  与难度相关」的假设，B2/B3 诊断把失败归因于 max_tokens 耗尽的截断事故
+  （finish_reason=length），而非先验臂在该域系统性更弱——补数后该域
+  prior_named=0.6429 同样越过阈值，与「难度相关失败」假设不同向。§5.2
+  原文保留为历史记录。
+- **仍有效的限定**：样本仅 2 张新图，方向性证据非效应量估计；0.6/0.2
+  阈值为预登记工作阈值，非统计显著性检验；同源污染风险在案（§5.5）。
+- **纪律复核**：补数全程 key 仅从环境变量读取、labels-only 零泄漏
+  prompt、缓存带 prompt_sha256 落盘；fetch 脚本未改（参数运行时
+  monkeypatch）；eval 零 API；tests/test_v20_gt8b.py 9 项全绿。
