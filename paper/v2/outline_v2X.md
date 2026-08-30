@@ -100,11 +100,14 @@ v1.9 定命题——价值定位于可审计表征与守恒保证，准确率优
   残余局限为三族均中文优化模型，§6 保留如实声明而非降级）
 - [x] ~~领域鉴定器 v0 新图复现~~（GT-8 完成，2026-08-30：2 对语料外新图
   2/2 同向 supports_H_GT8，见 docs/Findings_GT8.md；real_semantics 轴由 GT-8b
-  接续并判 inconclusive——n_valid=1<2，chinese_dynasties 0.7805 满足阈值、
-  chemical_elements fetch_failed，见 docs/Findings_GT8B.md；成稿中鉴定器已降级为
-  「观察性分工规律」表述，见论文 §4.5）
-- [ ] real_semantics 轴复现补取（chemical_elements 先验臂待后续预算窗口 fetch，
-      或换域重试并登记新修正案；当前判定 inconclusive 在案）
+  接续，初判 inconclusive（n_valid=1<2），2026-08-30 经修正案 B2/B3 补数转正
+  supports_H_GT8B——n_valid=2/2，chemical_elements 0.6429 vs field 0.1429、
+  chinese_dynasties 0.7805 vs 0.0732，见 docs/Findings_GT8B.md §7；成稿中鉴定器
+  已降级为「观察性分工规律」表述，见论文 §4.5）
+- [x] ~~real_semantics 轴复现补取~~（chemical_elements 先验臂 2026-08-30 经
+      修正案 B2 诊断（reasoning_tokens 耗尽 max_tokens、finish_reason=length）
+      与 B3（max_tokens=32000 一次成功）补数完成，判定转正 supports_H_GT8B，
+      见 docs/Findings_GT8B.md §7）
 - [ ] 斩杀线→边界推论的预登记化（当前为 post-hoc 方向性观察：复合类超几何
       p=0.187 不显著、族 L 富集 p=0.046 边界显著，论文 §4.1/附录 E）
 - [ ] 双语稿（CN/EN 同步，沿用 1.X 的独立编辑+独立复核流程）
