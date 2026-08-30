@@ -16,6 +16,37 @@
   "chinese_dynasties"
  ],
  "per_domain": {
+  "L_chemical_elements": {
+   "arms": {
+    "field_mean": {
+     "named": 0.14285714285714285,
+     "filler": 0.02857142857142857
+    },
+    "random": {
+     "named": 0.03571428571428571,
+     "filler": 0.08571428571428572
+    },
+    "degree": {
+     "named": 0.0,
+     "filler": 0.0
+    },
+    "llm_prior": {
+     "named": 0.6428571428571429,
+     "filler": 0.37142857142857144
+    }
+   },
+   "named_summary": {
+    "field_mean": 0.1429,
+    "random": 0.0357,
+    "degree": 0.0,
+    "llm_prior": 0.6429
+   },
+   "real_semantics": 1,
+   "prior_named_minus_field_named": 0.5,
+   "prior_named_minus_random_named": 0.6071,
+   "prior_cache_prompt_sha256": "a1f01ba0fe0437e2c806492d8d2d5d5935730a49f73069bc71fa4ae9722e1a1f",
+   "graph_sha256": "021ded78803b16036c6a3673f93fed591d121a59396019b130bde4e72598d3ec"
+  },
   "L_chinese_dynasties": {
    "arms": {
     "field_mean": {
@@ -48,14 +79,13 @@
    "graph_sha256": "7a7b397c2ca6bd6ed3fd6e9bba302a377c6011f5f6aecc192cdf5cc6ee462168"
   }
  },
- "cache_missing": {
-  "chemical_elements": "GT-8b prior cache missing: /mnt/agents/output/deposon-repo/results/gt8b_cache/prior_chemical_elements.json — 请先由主代理执行 run_v20_gt8b_fetch.py（先验臂阶段）。"
- },
+ "cache_missing": {},
  "gt8b_verdict": {
-  "verdict": "inconclusive",
-  "supported_H_GT8B": false,
-  "n_valid_domains": 1,
+  "verdict": "supports_H_GT8B",
+  "supported_H_GT8B": true,
+  "n_valid_domains": 2,
   "domains_satisfied": [
+   "chemical_elements",
    "chinese_dynasties"
   ],
   "domains_unsatisfied": [],
@@ -65,7 +95,7 @@
    "min_domains": 2
   }
  },
- "runtime_sec": 2.83,
+ "runtime_sec": 4.319,
  "honesty": [
   "no LLM API calls issued: 只读 results/gt8b_cache/；缓存缺失域记 cache_missing，不计入判定分母，绝不伪造数据。",
   "先验为零泄漏 labels-only（build_prior_prompt，与族 L 同构造器同模型）；先验臂与生成臂同模型族 ⇒ 同源污染风险在案。",
