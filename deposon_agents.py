@@ -1390,501 +1390,749 @@ def resolve_high_couple_config() -> Dict[str, Any]:
 
 
 class DeposonField:
-    """Deposon统一场 (v1.3/v1.4 合并, version 钉定)"""
+    # 候选④: version 类属性 (=shim 钉定位); 构造函数 version=None -> 类属性值
+    version = "1.4"
 
     def __init__(self, feature_dim: int = 64,
                  default_g_couple: float = 0.05,
                  default_g_aether: float = 0.05,
                  version=None):
-        self.version = _resolve_version(
-            version, getattr(type(self), 'version', '1.4'))
+        self.version = _resolve_version(version, type(self).version)
         self.feature_dim = feature_dim
         self.default_g_couple = default_g_couple
         self.default_g_aether = default_g_aether
         self.deposons: Dict[str, DeposonState] = {}
-        self.aether = EtherChannel()
-        self._stats = {'spawned': 0, 'blocked': 0, 'tunneled': 0,
-                       'transmitted': 0, 'total_paths': 0,
-                       'reflected': 0.0, 'dissipated': 0.0}
+        self.ether = EtherChannel()
+        self.energy_budget = {'total_in': 0.0, 'transmitted': 0.0,
+                              'reflected': 0.0, 'dissipated': 0.0}
+        self.node_energies: Dict[str, float] = {}
+        self.stats = {'n_deposons': 0, 'n_paths_processed': 0, 'total_dissipated': 0.0}
+        # v1.3.2: 共轭映射 (M2) —— 散射输入E_photon的来源 (仅 version="1.3" 可激活)
+        #   'energy': 节点自身resonance_energy (delta≡0, 共振休眠, 原行为)
+        #   'resonant': 路径-节点语义匹配 (delta≠0, 激活共振通道)
+        #   'resonant_hybrid': 仅非trap节点用匹配值, trap保持类型强绑定
+        self.photon_mode = 'energy'
+        self._resonant_fixed: set = set()
+        # v1.3.3: Arrhenius 势垒通道 (G3) —— 边迁移概率 k=exp(-barrier/T_eff)
+        #   None: 关闭 (原行为); 'arrhenius': k=exp(-b/T); 'arrhenius_kramers': k=w*exp(-b/T)
+        self.edge_mode: Optional[str] = None
+        self.arrhenius_T: float = 0.3
+        self._edges: Dict = {}
 
-    def spawn_from_graph(self, graph: Dict, mode: str = 'unified',
-                         node_energies: Optional[Dict[str, float]] = None):
-        """
-        从知识图谱生成Deposon场
-
-        模式:
-        - 'unified'/'v1_blocking'/'v2_tunneling': 基于节点类型绑定 (原v1.2)
-        - 'energy': 节点自身resonance_energy (delta≡0, 共振休眠, 原行为)
-        - 'resonant': 路径-节点语义匹配 (delta≠0, 激活共振通道)
-        - 'resonant_hybrid': 仅非trap节点用匹配值, trap保持类型强绑定
-        - 'high_couple': v1.3=g_couple×3 / v1.4(E9.3)=g_aether=0+g_couple×HIGH_COUPLE_GAIN
-        - 'arrhenius': v1.3 专属, Arrhenius势垒 k=exp(-b/T) 散射
-        """
-        nodes = graph.get('nodes', {})
-        for node_id, attrs in nodes.items():
-            node_type = attrs.get('type', 'unknown')
-            energy = attrs.get('energy', 0.0)
-            if node_energies and node_id in node_energies:
-                energy = node_energies[node_id]
-            center = deterministic_embedding(node_id, self.feature_dim)
-
-            g_couple = self.default_g_couple
-            g_aether = self.default_g_aether
+    def spawn_from_graph(self, brain_graph: Dict[str, Any], mode: str = 'unified') -> None:
+        nodes = brain_graph.get('nodes', {})
+        edges = brain_graph.get('edges', {})
+        for nid, attrs in nodes.items():
+            energy = attrs.get('energy', 0.5)
+            node_type = attrs.get('type', 'concept')
             if node_type == 'trap':
-                g_couple, g_aether = 5.0, 0.0
+                g_c, g_a = 5.0, 0.0
             elif node_type == 'answer':
-                g_couple, g_aether = 0.01, 0.0
+                g_c, g_a = 0.05, 0.05
             elif node_type == 'operation':
                 if self.version == "1.3":
-                    # v1.3: 度数越大绑定越强
-                    degree = sum(1 for (u, v) in graph.get('edges', {})
-                                 if u == node_id or v == node_id)
-                    g_couple = 0.3 * (1 + 0.02 * degree)
-                    g_aether = 0.2
+                    g_c, g_a = 0.3, 0.2
                 else:
-                    # v1.4: operation 绑定下调, 减小过阻塞
-                    degree = sum(1 for (u, v) in graph.get('edges', {})
-                                 if u == node_id or v == node_id)
-                    g_couple = 0.15 * (1 + 0.02 * degree)
-                    g_aether = 0.05
-            elif node_type == 'number':
-                g_couple, g_aether = 0.05, 0.05
-
-            if mode == 'v1_blocking':
-                g_aether = 0.0
-                if node_type == 'trap':
-                    g_couple = 5.0
-            elif mode == 'v2_tunneling':
-                if node_type == 'trap':
-                    g_couple = 0.1
-                    g_aether = 2.0
-            elif mode == 'high_couple':
-                if self.version == "1.3":
-                    g_couple = g_couple * 3.0
-                else:
-                    # v1.9 E9.3 真修复: 全节点 g_aether=0 (无隧穿耗散) + g_couple 放大
-                    g_aether = 0.0
-                    g_couple = g_couple * HIGH_COUPLE_GAIN
-            elif mode in ('resonant', 'resonant_hybrid') and self.version == "1.3":
-                pass  # v1.3: 共振模式在 process_path 中按路径匹配覆盖 resonance_energy
-            elif mode in ('labelfree', 'arrhenius', 'arrhenius_hybrid') and self.version == "1.3":
-                pass  # v1.3: 实验模式 (arrhenius 在 process_path 中生效)
-            # v1.4: resonant/labelfree/arrhenius 等 v1.3 专属模式无分支 -> fallthrough (= 原 v1_4 行为)
-
-            self.deposons[node_id] = DeposonState(
-                id=node_id, center=center,
-                g_couple=g_couple, g_aether=g_aether,
+                    # v1.4 bugfix: 0.3/0.2 使每个运算节点仅透射~2/3, 长链(5-8步, GSM8K)
+                    # 总分跌破0.1阈值, 反而输给2节点的陷阱路径(0.145)。
+                    # 改为0.15/0.05 (透射~0.83): 8步链仍>0.2, 陷阱节点g_c=5反射不变。
+                    g_c, g_a = 0.15, 0.05
+            else:
+                g_c, g_a = self.default_g_couple, self.default_g_aether
+            degree = sum(1 for (u, v) in edges if u == nid or v == nid)
+            g_c *= (1.0 + 0.02 * degree)
+            center = deterministic_embedding(nid, self.feature_dim)
+            self.deposons[nid] = DeposonState(
+                id=nid, center=center, g_couple=g_c, g_aether=g_a,
                 resonance_energy=energy)
-            self._stats['spawned'] += 1
+            self.node_energies[nid] = energy
+            self.stats['n_deposons'] += 1
+        if mode == 'v1_blocking':
+            for d in self.deposons.values():
+                d.g_aether = 0.0
+        elif mode == 'high_couple':
+            if self.version == "1.3":
+                # v1.3 高耦合消融: 类型绑定与degree修正之后, 所有节点 g_couple x3,
+                # g_aether 不变
+                for d in self.deposons.values():
+                    d.g_couple *= 3.0
+            else:
+                # v1.9 E9.3 真修复: blocking 语义 (g_aether=0) 下真实放大 g_couple 耦合路径,
+                # 取代 v1.4 的 v1_blocking 纯别名。旧别名仅在显式 legacy 开关
+                # DEPOSON_V14_HIGH_COUPLE_ALIAS=1 下由调用方选择复现。
+                for d in self.deposons.values():
+                    d.g_aether = 0.0
+                    d.g_couple *= HIGH_COUPLE_GAIN
+        elif mode == 'v2_tunneling':
+            for d in self.deposons.values():
+                d.g_aether = max(d.g_aether, 2.0)
+                d.g_couple = min(d.g_couple, 0.5)
+        if self.version == "1.3":
+            # ---- 以下模式仅 version="1.3" 存在 (原 v1_4 对这些 mode 无分支, 等同跳过) ----
+            # v1.3.2: 共轭映射模式 (M2) —— 绑定与unified相同, 仅散射输入改为路径-节点匹配
+            if mode in ('resonant', 'resonant_hybrid'):
+                self.photon_mode = mode
+                self._resonant_fixed = ({nid for nid, attrs in nodes.items()
+                                         if attrs.get('type') == 'trap'}
+                                        if mode == 'resonant_hybrid' else set())
+            elif mode == 'labelfree':
+                # 无标签连续绑定 (M1): g_couple 完全由图结构信号驱动, 忽略 type 标签
+                self._apply_labelfree_bindings(nodes, edges)
+            # v1.3.3: Arrhenius 边势垒通道 (与任意绑定模式可叠加)
+            if mode in ('arrhenius', 'arrhenius_hybrid'):
+                self.edge_mode = 'arrhenius' if mode == 'arrhenius' else 'arrhenius_kramers'
+                self._edges = edges
 
-    def process_path(self, path: List[str],
-                     initial_energy: float = 1.0) -> Dict[str, Any]:
-        """处理单条路径, 返回散射结果 (version 钉定记录键)"""
-        self._stats['total_paths'] += 1
-        E = initial_energy
+    def _apply_labelfree_bindings(self, nodes: Dict[str, Any], edges: Dict) -> None:
+        """g_couple(node) = f(结构信号), 不使用任何 type 标签。
+
+        信号 (均为可本地计算的图结构量, 见 variant_params_table.md C.5):
+        - s_weight: 来自起点的入边权重异常。诱饵边必须高于正确链边(0.9>0.6)才能
+          捕获贪心游走者, 该权重膨胀本身即可检测: s=clip((w-0.75)/0.15,0,1)
+        - s_dead: 死胡同检测。out_degree=0 且全部入边来自起点 (区别于Goal:
+          Goal的入边来自OP/陷阱等非起点节点)
+        trapness = max(s_weight, s_dead) 连续取值 [0,1]
+        g_couple = 0.05 + 4.95*trapness (对齐类型绑定的0.05~5.0量程)
+        g_aether = 0.5*energy (连续, 截断至0.25)
+        最后施加与类型绑定一致的 degree 修正 (1+0.02*degree)
+        """
+        indeg = {nid: 0 for nid in nodes}
+        outdeg = {nid: 0 for nid in nodes}
+        for (u, v) in edges:
+            outdeg[u] = outdeg.get(u, 0) + 1
+            indeg[v] = indeg.get(v, 0) + 1
+        # 起点: 无入边节点中出度最大者 (等价于类型标签下的 N1, 但不使用标签)
+        start = None
+        zero_in = [nid for nid in nodes if indeg.get(nid, 0) == 0]
+        if zero_in:
+            start = max(zero_in, key=lambda n: outdeg.get(n, 0))
+        for nid, d in self.deposons.items():
+            energy = self.node_energies.get(nid, 0.5)
+            w_from_start = max((a.get('weight', 0.5)
+                                for (u, v), a in edges.items()
+                                if v == nid and u == start), default=0.0)
+            s_weight = min(1.0, max(0.0, (w_from_start - 0.75) / 0.15))
+            s_dead = 0.0
+            if outdeg.get(nid, 0) == 0:
+                in_edges = [(u, a) for (u, v), a in edges.items() if v == nid]
+                if in_edges and all(u == start and a.get('weight', 0.5) >= 0.75
+                                    for u, a in in_edges):
+                    s_dead = 1.0
+            trapness = max(s_weight, s_dead)
+            degree = indeg.get(nid, 0) + outdeg.get(nid, 0)
+            d.g_couple = (0.05 + 4.95 * trapness) * (1.0 + 0.02 * degree)
+            d.g_aether = min(0.25, 0.5 * energy)
+
+    def process_path(self, path: List[str], path_energy: float = 1.0) -> Dict[str, Any]:
+        if not path:
+            return {'fate': 'empty', 'transmitted': 0.0, 'reflected': 0.0,
+                    'dissipated': 0.0, 'per_node': [], 'final_energy': 0.0}
+        E_prev = path_energy
         total_reflected = 0.0
         total_dissipated = 0.0
+        max_r = 0.0
+        max_a = 0.0
+        total_barrier = 0.0
         per_node = []
-        fate = 'transmitted'
-
-        for node_id in path:
+        # v1.3.2 (仅 version="1.3" 可激活): 共轭映射 —— 路径语义嵌入 =
+        # 路径上各节点嵌入的归一化均值 (v1.4 场 photon_mode 恒为 'energy', path_emb=None)
+        path_emb = None
+        if self.photon_mode in ('resonant', 'resonant_hybrid'):
+            embs = [self.deposons[nid].center for nid in path if nid in self.deposons]
+            if embs:
+                m = np.mean(embs, axis=0)
+                nrm = np.linalg.norm(m)
+                path_emb = m / nrm if nrm > 0 else m
+        for idx, node_id in enumerate(path):
             deposon = self.deposons.get(node_id)
-            if deposon is None:
-                continue
-            photon_energy = deposon.resonance_energy
-            sr = deposon.scatter(photon_energy)
-            t, r, a = sr['transmitted'], sr['reflected'], sr['dissipated']
-
-            # v1.3 arrhenius 模式: 边势垒修正 (g_aether -> arrhenius 透射率)
-            barrier_loss = 0.0
-            if (self.version == "1.3" and getattr(self, '_arrhenius_mode', False)
-                    and node_id in self._edge_barrier):
-                b = self._edge_barrier[node_id]
-                w = self._edge_weight.get(node_id, 1.0)
-                k = math.exp(-b / self._arrhenius_T)
-                if getattr(self, '_arrhenius_kramers', False):
-                    k *= w  # Kramers 尝试频率 ~ 边权
-                k = min(1.0, k)
-                barrier_loss = E * t * (1 - k)
-                E = E * t * k
+            # E_photon: 共轭映射下取 路径-节点语义匹配度 (1+cos)/2 ∈ [0,1],
+            # 与节点energy同量纲; hybrid模式下trap节点保持类型强绑定 (δ=0)
+            if (path_emb is not None and deposon is not None
+                    and not (self.photon_mode == 'resonant_hybrid'
+                             and node_id in self._resonant_fixed)):
+                node_energy = float((1.0 + np.dot(path_emb, deposon.center)) / 2.0)
             else:
-                E = E * t
-
-            reflected_here = (initial_energy if not per_node else per_node[-1]['E_in']) * r
-            dissipated_here = (initial_energy if not per_node else per_node[-1]['E_in']) * a
+                node_energy = self.node_energies.get(node_id, 0.0)
+            if deposon:
+                sr = deposon.scatter(node_energy)
+                t, r, a = sr['transmitted'], sr['reflected'], sr['dissipated']
+            else:
+                t, r, a = 1.0, 0.0, 0.0
+            max_r = max(max_r, r)
+            max_a = max(max_a, a)
+            reflected_here = E_prev * r
+            dissipated_here = E_prev * a
+            E_prev = E_prev * t
+            # v1.3.3 (仅 version="1.3"): Arrhenius 边迁移 —— 跨过 u->v 边时按 k 损失能量
+            barrier_here = 0.0
+            if self.edge_mode and idx + 1 < len(path):
+                eattrs = self._edges.get((node_id, path[idx + 1]))
+                if eattrs is not None:
+                    b = eattrs.get('migration_barrier', 0.3)
+                    w = eattrs.get('weight', 0.5)
+                    k = math.exp(-b / max(self.arrhenius_T, 1e-9))
+                    if self.edge_mode == 'arrhenius_kramers':
+                        k *= w  # Kramers 尝试频率 ~ 边权
+                    k = min(1.0, k)
+                    barrier_here = E_prev * (1.0 - k)
+                    E_prev = E_prev * k
             total_reflected += reflected_here
             total_dissipated += dissipated_here
-            if barrier_loss > 0:
-                total_dissipated += barrier_loss
-
-            per_node.append({'node': node_id, 'E_in': E / t if t > 0 else 0.0,
-                             't': t, 'r': r, 'a': a, 'E_out': E})
-
-            if r > 0.7 and fate == 'transmitted':
-                fate = 'blocked'
-            elif a > 0.5 and fate == 'transmitted':
-                fate = 'tunneling'
-
-        transmitted_frac = E / initial_energy if initial_energy > 0 else 0.0
-        if fate == 'transmitted' and transmitted_frac < 0.3:
-            fate = 'blocked'
-
-        self._stats[fate if fate in ('blocked', 'tunneled', 'transmitted') else 'transmitted'] += 1
-        self._stats['reflected'] += total_reflected
-        self._stats['dissipated'] += total_dissipated
+            total_barrier += barrier_here
+            rec = {
+                'node': node_id, 'transmitted': t, 'reflected': r, 'dissipated': a,
+                'reflected_energy': reflected_here, 'dissipated_energy': dissipated_here
+            }
+            if self.version == "1.3":
+                rec['delta'] = abs(node_energy -
+                                   (deposon.resonance_energy if deposon else 0.0))
+            per_node.append(rec)
+        final_transmitted = E_prev
+        fate = 'blocked' if max_r > 0.7 else ('tunneling' if max_a > 0.5 else 'transmitted')
+        self.energy_budget['total_in'] += path_energy
+        self.energy_budget['transmitted'] += final_transmitted
+        self.energy_budget['reflected'] += total_reflected
+        self.energy_budget['dissipated'] += total_dissipated
         if total_dissipated > 0:
-            self.aether.deposit(total_dissipated,
-                                source=f"path_{'_'.join(path)}",
-                                metadata={'path': path, 'fate': fate})
-
-        result = {
+            self.ether.deposit(total_dissipated,
+                               source=f"path_{'_'.join(path)}",
+                               metadata={'path': path, 'fate': fate})
+            self.stats['total_dissipated'] += total_dissipated
+        self.stats['n_paths_processed'] += 1
+        out = {
             'fate': fate,
-            'transmitted': transmitted_frac,
-            'reflected': total_reflected / initial_energy if initial_energy > 0 else 0.0,
-            'dissipated': total_dissipated / initial_energy if initial_energy > 0 else 0.0,
-            'final_energy': E,
-            'per_node': per_node
+            'transmitted': final_transmitted / path_energy,
+            'reflected': total_reflected / path_energy,
+            'dissipated': total_dissipated / path_energy,
+            'per_node': per_node,
+            'final_energy': final_transmitted,
         }
         if self.version == "1.3":
-            result['barrier_loss'] = barrier_loss if 'barrier_loss' in dir() else 0.0
-            for rec in per_node:
-                rec['delta'] = abs(rec['E_in'] - rec['E_out'])
-        return result
+            out['barrier_loss'] = total_barrier / path_energy
+        out['max_reflection_rate'] = max_r
+        out['max_dissipation_rate'] = max_a
+        return out
 
     def get_stats(self) -> Dict:
-        return dict(self._stats)
+        stats = dict(self.stats)
+        stats['ether_dissipated'] = self.ether.get_total_dissipated()
+        stats['energy_report'] = dict(self.energy_budget)
+        return stats
 
 
 # ============================================================
-# 模块九: DeposonAgentSystem —— 顶层系统
+# 模块九: DeposonAgentSystem —— 主系统
 # ============================================================
 
 class DeposonAgentSystem:
-    """Deposon Agent 系统 (v1.3/v1.4 合并, version 钉定)"""
+    # 候选④: version 类属性 (=shim 钉定位); 内部创建的 DeposonField 继承同一 version
+    version = "1.4"
 
-    def __init__(self, llm_backend=None, mode: str = 'unified',
-                 feature_dim: int = 64,
+    def __init__(self, llm_backend=None, feature_dim: int = 64, mode: str = 'unified',
                  version=None):
-        self.version = _resolve_version(
-            version, getattr(type(self), 'version', '1.4'))
+        self.version = _resolve_version(version, type(self).version)
+        self.decomposer = ConceptDecomposer(llm_backend=llm_backend)
+        self.field = DeposonField(feature_dim=feature_dim, version=self.version)
         self.mode = mode
-        self.llm = llm_backend or LLMBackend(mode='mock')
-        self.decomposer = ConceptDecomposer(llm_backend=self.llm)
-        self.feature_dim = feature_dim
-
-    def reason(self, query: str, domain_hint: Optional[str] = None) -> Dict[str, Any]:
-        """完整推理管线: 分解 -> 建图 -> 生成场 -> 路径评估"""
-        decomposition = self.decomposer.decompose(query, domain_hint)
-        graph = self.decomposer.to_brain_graph(decomposition)
-
-        field_obj = DeposonField(feature_dim=self.feature_dim,
-                                 version=self.version)
-        field_obj.spawn_from_graph(graph, mode=self.mode)
-
-        paths = self._generate_paths(graph)
-        results = []
-        for p in paths:
-            r = field_obj.process_path(p)
-            r['path'] = p
-            results.append(r)
-
-        results.sort(key=lambda x: x['transmitted'], reverse=True)
-        best = results[0] if results else None
-
-        return {
-            'query': query,
-            'decomposition': decomposition,
-            'graph_stats': {'n_nodes': len(graph.get('nodes', {})),
-                            'n_edges': len(graph.get('edges', {}))},
-            'n_paths': len(paths),
-            'best_path': best['path'] if best else None,
-            'best_transmitted': best['transmitted'] if best else 0.0,
-            'best_fate': best['fate'] if best else 'none',
-            'all_candidates': [{'path': r['path'],
-                                'transmitted': r['transmitted'],
-                                'fate': r['fate']} for r in results[:5]],
-            'field_stats': field_obj.get_stats(),
-            'aether_dissipated': field_obj.aether.get_total_dissipated()
+        self.llm_backend = llm_backend
+        self.use_deposon = True
+        self.use_vectorized = False
+        self.vectorized_engine = VectorizedDeposonScatter()
+        self.stats = {
+            'n_queries': 0, 'n_paths_generated': 0,
+            'n_paths_blocked': 0, 'n_paths_transmitted': 0,
+            'total_ether_dissipated': 0.0
         }
 
-    def _generate_paths(self, graph: Dict, max_paths: int = 30) -> List[List[str]]:
-        """贪心生成候选路径 (从起点到Goal)"""
-        nodes = graph.get('nodes', {})
-        edges = graph.get('edges', {})
-        start_nodes = [nid for nid, attrs in nodes.items()
-                       if attrs.get('type') == 'number']
-        if not start_nodes:
-            start_nodes = [nid for nid in nodes if nid != 'Goal'][:1]
-        if not start_nodes:
-            return []
-        start = sorted(start_nodes)[0]
-        goal = 'Goal'
-        paths = []
-        queue = deque([(start, [start])])
-        while queue and len(paths) < max_paths:
-            cur, pth = queue.popleft()
-            if cur == goal:
-                paths.append(pth)
-                continue
-            outs = []
-            for (u, v), attrs in edges.items():
-                if u == cur and (v not in pth or v == goal):
-                    outs.append((v, attrs.get('weight', 0.5),
-                                 attrs.get('migration_barrier', 0.3)))
-            outs.sort(key=lambda x: x[1], reverse=True)
-            for neighbor, weight, barrier in outs[:8]:  # v1.3: 4->8, 防止陷阱边挤占正确链入口
-                queue.append((neighbor, pth + [neighbor]))
-        return paths
+    def configure_mode(self, mode: str):
+        self.mode = mode
 
-    def ablation_study(self, query: str, domain_hint: Optional[str] = None) -> Dict[str, Any]:
-        """消融实验: 对比 no_deposon / v1_blocking / v2_tunneling / unified / high_couple"""
-        decomposition = self.decomposer.decompose(query, domain_hint)
-        graph = self.decomposer.to_brain_graph(decomposition)
-        results = {}
+    def reason(self, query, domain_hint=None, n_candidates=10):
+        decomposition = self.decomposer.decompose(query)
+        brain_graph = self.decomposer.to_brain_graph(decomposition)
+        if self.use_deposon:
+            self.field = DeposonField(feature_dim=self.field.feature_dim,
+                                      version=self.version)
+            self.field.spawn_from_graph(brain_graph, mode=self.mode)
+        candidates = self._generate_paths(brain_graph, n_candidates * 3)
+        self.stats['n_paths_generated'] += len(candidates)
 
-        for mode_name, use_field in [('no_deposon', False),
-                                     ('v1_blocking', True),
-                                     ('v2_tunneling', True),
-                                     ('unified', True)]:
-            paths = self._generate_paths(graph)
-            if not use_field:
-                scored = [(p, 1.0) for p in paths]
+        if self.use_vectorized and len(candidates) > 10 and self.use_deposon:
+            processed = self._process_vectorized(candidates)
+        else:
+            processed = self._process_sequential(candidates)
+
+        processed.sort(key=lambda x: x['final_score'], reverse=True)
+        passed = [c for c in processed if c['passed']]
+        self.stats['n_queries'] += 1
+        if self.use_deposon:
+            self.stats['total_ether_dissipated'] = self.field.ether.get_total_dissipated()
+        return {
+            'query': query,
+            'brain_graph': brain_graph,
+            'all_candidates': processed,
+            'passed_candidates': passed,
+            'best_path': passed[0]['path'] if passed else None,
+            'best_score': passed[0]['final_score'] if passed else 0.0,
+            'best_fate': passed[0]['fate'] if passed else 'none',
+            'n_total': len(candidates),
+            'n_passed': len(passed),
+            'n_blocked': sum(1 for c in processed if c.get('fate') == 'blocked'),
+            'n_tunneling': sum(1 for c in processed if c.get('fate') == 'tunneling'),
+            'deposon_stats': self.field.get_stats() if self.use_deposon else {'ether_dissipated': 0.0},
+            'system_stats': dict(self.stats)
+        }
+
+    def _process_sequential(self, candidates: List[Dict]) -> List[Dict]:
+        processed = []
+        for cand in candidates:
+            path = cand['path']
+            if self.use_deposon:
+                result = self.field.process_path(path, path_energy=1.0)
+                cand['deposon'] = result
+                cand['final_score'] = result['transmitted']
+                cand['fate'] = result['fate']
+                if result['fate'] == 'blocked':
+                    self.stats['n_paths_blocked'] += 1
+                elif result['fate'] == 'transmitted':
+                    self.stats['n_paths_transmitted'] += 1
             else:
-                f = DeposonField(feature_dim=self.feature_dim,
-                                 version=self.version)
-                f.spawn_from_graph(graph, mode=mode_name)
-                scored = [(p, f.process_path(p)['transmitted']) for p in paths]
-            scored.sort(key=lambda x: x[1], reverse=True)
-            best = scored[0] if scored else (None, 0.0)
-            results[mode_name] = {
-                'best_path': best[0],
-                'best_score': best[1],
-                'n_paths': len(paths)
-            }
+                cand['deposon'] = {'fate': 'transmitted', 'transmitted': 1.0,
+                                   'reflected': 0.0, 'dissipated': 0.0}
+                cand['final_score'] = 1.0
+                cand['fate'] = 'transmitted'
+            cand['passed'] = cand['final_score'] > 0.1
+            processed.append(cand)
+        return processed
 
-        # high_couple 变体 (version 钉定语义)
-        hc_cfg = resolve_high_couple_config() if self.version != "1.3" else \
-            {'mode': 'high_couple', 'use_deposon': True}
-        f = DeposonField(feature_dim=self.feature_dim, version=self.version)
-        f.spawn_from_graph(graph, mode=hc_cfg['mode'])
-        paths = self._generate_paths(graph)
-        scored = [(p, f.process_path(p)['transmitted']) for p in paths]
-        scored.sort(key=lambda x: x[1], reverse=True)
-        best = scored[0] if scored else (None, 0.0)
-        results['high_couple'] = {'best_path': best[0], 'best_score': best[1],
-                                  'n_paths': len(paths)}
+    def _process_vectorized(self, candidates: List[Dict]) -> List[Dict]:
+        paths = [c['path'] for c in candidates]
+        path_energies = np.ones(len(paths))
+        node_ids = list(self.field.deposons.keys())
+        g_couple = np.array([d.g_couple for d in self.field.deposons.values()])
+        g_aether = np.array([d.g_aether for d in self.field.deposons.values()])
+        resonance = np.array([d.resonance_energy for d in self.field.deposons.values()])
+        results = self.vectorized_engine.process_paths_batch(
+            paths, path_energies, node_ids,
+            g_couple, g_aether, resonance, self.field.node_energies)
+        processed = []
+        for i, cand in enumerate(candidates):
+            result = results[i]
+            cand['deposon'] = result
+            cand['final_score'] = result['transmitted']
+            cand['fate'] = result['fate']
+            if result['fate'] == 'blocked':
+                self.stats['n_paths_blocked'] += 1
+            elif result['fate'] == 'transmitted':
+                self.stats['n_paths_transmitted'] += 1
+            cand['passed'] = cand['final_score'] > 0.1
+            processed.append(cand)
+        return processed
+
+    def _generate_paths(self, brain_graph: Dict, max_paths: int) -> List[Dict]:
+        nodes = brain_graph['nodes']
+        edges = brain_graph['edges']
+        start = goal = None
+        for nid in nodes:
+            if nodes[nid].get('type') == 'number':
+                if start is None:
+                    start = nid
+            if nodes[nid].get('type') == 'answer':
+                goal = nid
+        if not start:
+            start = list(nodes.keys())[0]
+        if not goal:
+            goal = list(nodes.keys())[-1]
+        paths = []
+        queue = deque([(start, [start], 0.0)])
+        visited = set()
+        while queue and len(paths) < max_paths:
+            current, path, acc_weight = queue.popleft()
+            if current == goal:
+                paths.append({'path': path, 'score': 1.0, 'acc_weight': acc_weight})
+                continue
+            neighbors = []
+            for (u, v), attrs in edges.items():
+                if u == current and (v not in path or nodes.get(v, {}).get('type') == 'answer'):
+                    neighbors.append((v, attrs.get('weight', 0.5),
+                                     attrs.get('migration_barrier', 0.3)))
+            neighbors.sort(key=lambda x: x[1], reverse=True)
+            for neighbor, weight, barrier in neighbors[:8]:  # v1.3: 4->8, 防止陷阱边挤占正确链入口
+                new_path = path + [neighbor]
+                pkey = tuple(new_path)
+                if pkey not in visited:
+                    visited.add(pkey)
+                    queue.append((neighbor, new_path, acc_weight + weight - barrier))
+        unique = []
+        seen = set()
+        for p in paths:
+            k = tuple(p['path'])
+            if k not in seen:
+                seen.add(k)
+                unique.append(p)
+        return unique[:max_paths]
+
+    def ablation_study(self, query, domain_hint=None):
+        results = {}
+        variants = {
+            'no_deposon': {'mode': 'unified', 'use_deposon': False},
+            'v1_blocking': {'mode': 'v1_blocking', 'use_deposon': True},
+            'v2_tunneling': {'mode': 'v2_tunneling', 'use_deposon': True},
+            'unified': {'mode': 'unified', 'use_deposon': True},
+            # v1.3: 固定真高耦合配置; v1.4: v1.9 E9.3 默认真修复, 旧别名仅在显式
+            # legacy 开关 DEPOSON_V14_HIGH_COUPLE_ALIAS=1 下复现
+            'high_couple': ({'mode': 'high_couple', 'use_deposon': True}
+                            if self.version == "1.3"
+                            else resolve_high_couple_config()),
+        }
+        for name, config in variants.items():
+            agent = DeposonAgentSystem(
+                llm_backend=self.llm_backend,
+                feature_dim=self.field.feature_dim,
+                mode=config['mode'],
+                version=self.version)
+            agent.use_deposon = config['use_deposon']
+            result = agent.reason(query, domain_hint, n_candidates=10)
+            results[name] = {
+                'best_path': result['best_path'],
+                'best_score': result['best_score'],
+                'best_fate': result['best_fate'],
+                'n_total': result['n_total'],
+                'n_passed': result['n_passed'],
+                'n_blocked': result['n_blocked'],
+                'n_tunneling': result['n_tunneling'],
+                'ether_dissipated': result['deposon_stats'].get('ether_dissipated', 0.0),
+                'all_paths': [(c['path'], c['fate'], c['final_score'])
+                              for c in result['all_candidates'][:5]]
+            }
         return results
 
-    def report_ablation(self, results: Dict[str, Any]) -> str:
-        lines = ["Deposon 消融实验报告", "=" * 40]
-        for mode, r in results.items():
-            lines.append(f"[{mode}] best_path={' -> '.join(r['best_path'] or [])} "
-                         f"score={r['best_score']:.4f} n_paths={r['n_paths']}")
+    def report_ablation(self, ablation_results):
+        lines = ["\n" + "=" * 85, "Deposon Agents v1.3 —— 消融实验报告", "=" * 85]
+        lines.append(f"{'变体':<18} {'最佳路径':<32} {'分数':>8} "
+                    f"{'命运':>10} {'通过':>5} {'阻塞':>5} {'隧穿':>5} {'耗散':>8}")
+        lines.append("-" * 85)
+        for name, r in ablation_results.items():
+            path_str = '→'.join(r['best_path']) if r['best_path'] else 'None'
+            path_str = path_str[:30]
+            lines.append(f"{name:<18} {path_str:<32} {r['best_score']:>8.4f} "
+                        f"{r['best_fate']:>10} {r['n_passed']:>5} {r['n_blocked']:>5} "
+                        f"{r['n_tunneling']:>5} {r['ether_dissipated']:>8.4f}")
+        lines.append("=" * 85)
         return "\n".join(lines)
 
 
 # ============================================================
-# 模块十: BenchmarkEvaluator —— 基准评估器
+# 模块十: 评估框架
 # ============================================================
 
 class BenchmarkEvaluator:
-    """基准评估 (v1.3/v1.4 合并, version 跟随 agent 或 shim 钉定)"""
+    # 候选④: version 解析优先级 —— 显式形参 > 类属性(shim 钉定) > agent.version > "1.4"
+    version = None
 
     def __init__(self, agent: DeposonAgentSystem, use_validation: bool = True,
                  version=None):
-        self.version = _resolve_version(
-            version, getattr(type(self), 'version', agent.version))
         self.agent = agent
+        if version is None:
+            version = type(self).version
+        if version is None:
+            version = getattr(agent, 'version', None)
+        self.version = _resolve_version(version, "1.4")
+        # v1.3: 评测时可关闭逐题LLM验证以控制API消耗
         self.use_validation = use_validation
 
-    def evaluate_math(self, query: str, correct_answer: Optional[float] = None,
-                      **kwargs) -> Dict[str, Any]:
-        """评估单道数学题 (沿最优存活路径计算答案)"""
-        result = self.agent.reason(query, domain_hint='math')
-        dec = result['decomposition']
-        graph = {'nodes': dec['nodes'], 'edges': dec['edges'],
-                 'operation_chain': dec.get('operation_chain', []),
-                 'trap_nodes': dec.get('trap_nodes', {}),
-                 'computed_answer': dec.get('computed_answer')}
-        best_path = result['best_path']
-        predicted, path_detail, trap_hit = self._compute_answer_from_path(graph, best_path)
-        is_correct = (predicted is not None and correct_answer is not None
-                      and abs(predicted - correct_answer) < 1e-6)
-        rec = {
-            'query': query,
-            'correct_answer': correct_answer,
-            'predicted_answer': predicted,
-            'is_correct': bool(is_correct),
-            'best_path': best_path,
-            'best_fate': result['best_fate'],
-            'trap_hit': trap_hit,
-            'decompose_source': dec.get('source', 'unknown'),
-            'all_candidates': [{'path': c['path'], 'transmitted': c['transmitted'],
-                                'fate': c['fate']}
-                               for c in result['all_candidates'][:5]]
-        }
-        if self.use_validation:
-            try:
-                v = self.agent.llm.validate(query, best_path or [], predicted)
-                rec['validation'] = v
-            except Exception:
-                rec['validation'] = {'error': 'validate failed'}
-        return rec
+    @staticmethod
+    def _apply_op(op: str, a: float, b: float) -> Optional[float]:
+        if op == 'addition':
+            return a + b
+        if op == 'subtraction':
+            return a - b
+        if op == 'multiplication':
+            return a * b
+        if op == 'division':
+            return a / b if b != 0 else None
+        if op == 'percentage':
+            return a * (b / 10.0 if b <= 10 else b / 100.0)
+        return None
 
     def _compute_answer_from_path(self, graph: Dict, path: Optional[List[str]]):
-        """沿路径推进运算链 (v1.3: 不去重 / v1.4: 连续重复折叠)。
+        """v1.3: 沿 Deposon 筛选后的存活路径计算答案。
 
-        返回 (predicted, detail, trap_hit)。
+        - 经过 OP 节点: 按 operation_chain 语义折叠 (首运算取两个操作数, 后续运算
+          以累加器 op number 推进), 支持多步链 (先打八折再满减等)。
+        - 经过陷阱节点: 应用该陷阱对应的错误运算 (no_deposon 变体因此被诱饵捕获)。
+        - 无路径/无运算时回退 v1.2 两数单运算逻辑。
         """
-        chain = graph.get('operation_chain') or []
-        trap_nodes = graph.get('trap_nodes') or {}
-        numbers = {}
-        for nid, attrs in (graph.get('nodes') or {}).items():
+        nodes = graph['nodes']
+        numbers_meta = []
+        for nid, attrs in nodes.items():
             if attrs.get('type') == 'number':
-                try:
-                    numbers[int(nid[1:])] = float(attrs.get('value'))
-                except Exception:
-                    pass
-        number_values = [numbers[k] for k in sorted(numbers)]
+                numbers_meta.append((nid, attrs.get('value')))
+        numbers_meta.sort(key=lambda x: x[0])
+        number_values = [v for _, v in numbers_meta]
 
-        trap_hit = False
+        chain = graph.get('operation_chain') or []
+        chain_by_node = {c['node']: c for c in chain}
+        trap_nodes = graph.get('trap_nodes') or {}
+
+        def fold_chain(ops_seq):
+            acc = None
+            for c in ops_seq:
+                op = c['op']
+                raw_ops = [o for o in c.get('operands', []) if 1 <= o <= len(number_values)]
+                if self.version == "1.3":
+                    ops_idx = raw_ops  # v1.3: 不去重
+                else:
+                    ops_idx = []  # v1.4: 折叠时去除连续重复操作数编号
+                    for o in raw_ops:
+                        if not ops_idx or ops_idx[-1] != o:
+                            ops_idx.append(o)
+                if acc is None:
+                    if len(ops_idx) >= 2:
+                        acc = number_values[ops_idx[0] - 1]
+                        for o in ops_idx[1:]:
+                            acc = self._apply_op(op, acc, number_values[o - 1])
+                            if acc is None:
+                                return None
+                    elif len(ops_idx) == 1:
+                        acc = number_values[ops_idx[0] - 1]
+                else:
+                    for o in ops_idx:
+                        acc = self._apply_op(op, acc, number_values[o - 1])
+                        if acc is None:
+                            return None
+            return acc
+
+        predicted = None
+        op_type = None
+        path_hit = None
         if path:
+            seq = []
             for nid in path:
-                if nid in trap_nodes or (graph.get('nodes', {}).get(nid, {}).get('type') == 'trap'):
-                    trap_hit = True
-                    break
-
-        if not chain:
-            ca = graph.get('computed_answer')
-            try:
-                return (float(ca) if ca is not None else None), {'mode': 'computed_answer'}, trap_hit
-            except Exception:
-                return None, {'mode': 'none'}, trap_hit
-
-        # 选择要执行的运算: 路径上的 OP 节点; 无路径则全链
-        if path:
-            ops_on_path = [c for c in chain if c['node'] in path]
-        else:
-            ops_on_path = list(chain)
-        if not ops_on_path:
-            ops_on_path = list(chain)
-
-        raw_ops = []
-        for c in ops_on_path:
-            for o in c.get('operands', []):
-                raw_ops.append(o)
-        if self.version == "1.3":
-            ops_idx = raw_ops  # v1.3: 不去重
-        else:
-            ops_idx = []  # v1.4: 折叠时去除连续重复操作数编号
-            for o in raw_ops:
-                if not ops_idx or ops_idx[-1] != o:
-                    ops_idx.append(o)
-
-        # 陷阱路径: 用错误运算替换
-        op_list = [c['op'] for c in ops_on_path]
-        if trap_hit and path:
-            for nid in path:
-                if nid in trap_nodes:
-                    wrong = trap_nodes[nid]
-                    if wrong in ('addition', 'subtraction', 'multiplication', 'division'):
-                        op_list = [wrong] * len(op_list)
-                    break
-
-        # 执行链: acc = numbers[ops_idx[0]]; 逐步 op numbers[next]
-        detail = {'mode': 'chain', 'ops': op_list, 'ops_idx': ops_idx}
-        if not number_values:
-            return None, detail, trap_hit
-        try:
-            acc = number_values[0]
-            if len(number_values) >= 2 and op_list:
-                acc = number_values[0]
-                nxt = 1
-                for op in op_list:
-                    if nxt >= len(number_values):
-                        break
-                    b = number_values[nxt]
-                    if op == 'addition':
-                        acc = acc + b
-                    elif op == 'subtraction':
-                        acc = acc - b
-                    elif op == 'multiplication':
-                        acc = acc * b
-                    elif op == 'division':
-                        acc = acc / b if b != 0 else float('nan')
-                    elif op == 'percentage':
-                        acc = acc * b
-                    nxt += 1
-                    if op in ('multiplication', 'addition',
-                              'subtraction',
+                if nid in chain_by_node:
+                    seq.append(chain_by_node[nid])
+                elif nid in trap_nodes:
+                    wop = trap_nodes[nid]
+                    path_hit = nid
+                    if wop == 'wrong_order':
+                        predicted = fold_chain(list(reversed(chain)))
+                        op_type = 'wrong_order'
+                    elif wop in ('addition', 'subtraction', 'multiplication',
                                  'division', 'percentage') and len(number_values) >= 2:
-                        pass
-                return acc, detail, trap_hit
-            return acc, detail, trap_hit
-        except Exception:
-            return None, detail, trap_hit
+                        predicted = self._apply_op(wop, number_values[0], number_values[1])
+                        op_type = wop
+                    break  # 陷阱捕获即终止
+            if path_hit is None and seq:
+                predicted = fold_chain(seq)
+                op_type = seq[-1]['op'] if seq else None
 
+        if self.version != "1.3" and predicted is None and path_hit is None:
+            # v1.4: 正确链折叠失败时, 用LLM computed_answer 兜底 (仅限未撞陷阱)
+            ca = graph.get('computed_answer')
+            if ca is not None:
+                try:
+                    predicted = float(ca)
+                    op_type = op_type or 'llm_computed'
+                except (TypeError, ValueError):
+                    predicted = None
+        if predicted is None and path_hit is None:
+            # 回退: v1.2 风格两数单运算
+            ops_available = chain if chain else []
+            if not ops_available:
+                # 从图节点推断
+                for nid, attrs in nodes.items():
+                    if attrs.get('type') == 'operation':
+                        ops_available = [{'op': attrs.get('op_type'), 'operands': [1, 2]}]
+                        break
+            if len(number_values) >= 2 and ops_available:
+                op_type = ops_available[-1]['op']
+                predicted = self._apply_op(op_type, number_values[0], number_values[1])
+            elif len(number_values) == 1:
+                predicted = number_values[0]
+        return predicted, op_type, path_hit
 
-# ============================================================
-# 模块十一: 百题基准
-# ============================================================
+    def evaluate_math(self, question: str, correct_answer: Optional[float] = None) -> Dict:
+        result = self.agent.reason(question, domain_hint='math', n_candidates=10)
+        graph = result['brain_graph']
+        numbers_meta = []
+        for nid, attrs in graph['nodes'].items():
+            if attrs.get('type') == 'number':
+                numbers_meta.append((nid, attrs.get('value')))
+        numbers_meta.sort(key=lambda x: x[0])
+        number_values = [v for _, v in numbers_meta]
+
+        # v1.3: 答案取自 Deposon 场筛选后的最优路径 (通过者优先, 否则全体最高分)
+        if result['passed_candidates']:
+            best_cand = result['passed_candidates'][0]
+        elif result['all_candidates']:
+            best_cand = result['all_candidates'][0]
+        else:
+            best_cand = None
+        best_path = best_cand['path'] if best_cand else None
+        best_score = best_cand['final_score'] if best_cand else 0.0
+        best_fate = best_cand.get('fate', 'none') if best_cand else 'none'
+
+        predicted, op_type, path_hit = self._compute_answer_from_path(graph, best_path)
+
+        is_correct = False
+        if predicted is not None and correct_answer is not None:
+            is_correct = abs(predicted - correct_answer) < 0.01
+
+        validation = None
+        if self.use_validation and self.agent.llm_backend and best_path:
+            validation = self.agent.llm_backend.validate(
+                question, best_path, predicted)
+
+        return {
+            'question': question,
+            'predicted_answer': predicted,
+            'correct_answer': correct_answer,
+            'is_correct': is_correct,
+            'best_path': best_path,
+            'best_fate': best_fate,
+            'path_hit_trap': path_hit,
+            'decompose_source': graph.get('source'),
+            'op_type': op_type,
+            'numbers': number_values,
+            'best_score': best_score,
+            'n_candidates': result['n_total'],
+            'n_passed': result['n_passed'],
+            'ether_dissipated': result['deposon_stats'].get('ether_dissipated', 0.0),
+            'validation': validation
+        }
+
+    def batch_evaluate(self, test_cases: List[Dict]) -> Dict:
+        results = []
+        correct_count = 0
+        total_ether = 0.0
+        for case in test_cases:
+            r = self.evaluate_math(case['question'], case.get('answer'))
+            results.append(r)
+            if r['is_correct']:
+                correct_count += 1
+            total_ether += r['ether_dissipated']
+        n = len(test_cases)
+        return {
+            'n_total': n,
+            'n_correct': correct_count,
+            'accuracy': correct_count / n if n > 0 else 0.0,
+            'avg_ether_dissipated': total_ether / n if n > 0 else 0.0,
+            'details': results
+        }
+
 
 class HundredQuestionBenchmark:
-    """百题基准测试集 (内置样例)"""
-
-    SAMPLE_QUESTIONS = [
-        {"q": "小明有5个苹果，给了小红2个，还剩几个？", "a": 3.0, "domain": "math"},
-        {"q": "一件商品原价120元，先打八折再减10元，现价多少元？", "a": 86.0, "domain": "math"},
-        {"q": "每组6个橙子，一共7组，平均每个篮子装几个？", "a": 42.0, "domain": "math"},
+    TEMPLATES = [
+        {"template": "小明有{A}个苹果，给了小红{B}个，还剩几个？", "op": "subtraction", "answer": lambda a, b: a - b},
+        {"template": "一条绳子长{A}米，剪去{B}米，还剩多少米？", "op": "subtraction", "answer": lambda a, b: a - b},
+        {"template": "停车场有{A}辆车，开走了{B}辆，还剩几辆？", "op": "subtraction", "answer": lambda a, b: a - b},
+        {"template": "小红有{A}本书，小明又给了她{B}本，现在有几本？", "op": "addition", "answer": lambda a, b: a + b},
+        {"template": "树上原来有{A}只鸟，又飞来了{B}只，一共有几只？", "op": "addition", "answer": lambda a, b: a + b},
+        {"template": "每个盒子装{A}个鸡蛋，{B}个盒子一共装几个？", "op": "multiplication", "answer": lambda a, b: a * b},
+        {"template": "一支笔{A}元，买{B}支要多少钱？", "op": "multiplication", "answer": lambda a, b: a * b},
+        {"template": "{A}个苹果平均分给{B}个小朋友，每人几个？", "op": "division", "answer": lambda a, b: a / b if b != 0 else 0},
+        {"template": "一根{A}米的绳子，每{B}米剪一段，可以剪几段？", "op": "division", "answer": lambda a, b: a / b if b != 0 else 0},
     ]
 
-    def __init__(self, agent: DeposonAgentSystem):
-        self.agent = agent
-        self.evaluator = BenchmarkEvaluator(agent)
-
-    def run(self, questions: Optional[List[Dict]] = None) -> Dict[str, Any]:
-        questions = questions or self.SAMPLE_QUESTIONS
-        records = []
-        for item in questions:
-            rec = self.evaluator.evaluate_math(item['q'], correct_answer=item['a'])
-            rec['domain'] = item.get('domain', 'math')
-            records.append(rec)
-        n = len(records)
-        n_correct = sum(1 for r in records if r['is_correct'])
-        return {'n_total': n, 'n_correct': n_correct,
-                'accuracy': n_correct / n if n else 0.0,
-                'records': records}
+    def generate_dataset(self, n_questions: int = 100, seed: int = 42) -> List[Dict]:
+        random.seed(seed)
+        dataset = []
+        for i in range(n_questions):
+            t = random.choice(self.TEMPLATES)
+            a = random.randint(5, 100)
+            b = random.randint(2, min(a - 1, 50))
+            dataset.append({
+                'id': i + 1,
+                'question': t['template'].format(A=a, B=b),
+                'answer': float(t['answer'](a, b)),
+                'op': t['op']
+            })
+        return dataset
 
 
 class TrapBenchmark:
-    """陷阱题基准 (v1.3 保留)"""
-
-    TRAPS = [
-        {"q": "树上10只鸟，猎人打死1只，还剩几只？",
-         "naive": "9只", "correct": "0只（其他全飞走）",
-         "trap": "surface_subtraction"},
-        {"q": "1公斤铁和1公斤棉花哪个重？",
-         "naive": "铁重", "correct": "一样重",
-         "trap": "density_intuition"},
+    TRAP_TEMPLATES = [
+        {"template": "小红有{A}本书，图书馆又给了她{B}本，现在一共有几本？",
+         "op": "addition", "answer": lambda a, b: a + b, "trap": "surface_subtraction"},
+        {"template": "小明有{A}元钱，妈妈又给了他{B}元，现在有多少元？",
+         "op": "addition", "answer": lambda a, b: a + b, "trap": "surface_subtraction"},
+        {"template": "班级一共有{A}个学生，转走了{B}个，还剩几个？",
+         "op": "subtraction", "answer": lambda a, b: a - b, "trap": "surface_addition"},
+        {"template": "商店一共进了{A}个苹果，卖出了{B}个，还剩几个？",
+         "op": "subtraction", "answer": lambda a, b: a - b, "trap": "surface_addition"},
+        {"template": "每组有{A}个学生，一共{B}组，平均每个班有几个学生？",
+         "op": "multiplication", "answer": lambda a, b: a * b, "trap": "surface_division"},
+        {"template": "每盒装{A}个鸡蛋，装了{B}盒，平均每个箱子装几个？",
+         "op": "multiplication", "answer": lambda a, b: a * b, "trap": "surface_division"},
+        {"template": "有{A}个苹果，每{B}个装一袋，可以装几袋？",
+         "op": "division", "answer": lambda a, b: a / b if b != 0 else 0, "trap": "surface_multiplication"},
+        {"template": "一根{A}米的绳子，每{B}米剪一段，可以剪几段？",
+         "op": "division", "answer": lambda a, b: a / b if b != 0 else 0, "trap": "surface_multiplication"},
+        {"template": "一件衣服原价{A}元，打八折后再满{B}减10，最终多少钱？",
+         "op": "percentage_subtraction", "answer": lambda a, b: a * 0.8 - 10 if a * 0.8 >= b else a * 0.8, "trap": "wrong_order"},
+        {"template": "一本书原价{A}元，先打五折，再便宜{B}元，最终多少钱？",
+         "op": "percentage_subtraction", "answer": lambda a, b: a * 0.5 - b, "trap": "wrong_order"},
+        {"template": "小明有{A}个苹果，给了小红{B}个，还剩几个？",
+         "op": "subtraction", "answer": lambda a, b: a - b, "trap": "none"},
+        {"template": "小红有{A}本书，小明又给了她{B}本，现在有几本？",
+         "op": "addition", "answer": lambda a, b: a + b, "trap": "none"},
+        {"template": "每个盒子装{A}个鸡蛋，{B}个盒子一共装几个？",
+         "op": "multiplication", "answer": lambda a, b: a * b, "trap": "none"},
+        {"template": "{A}个苹果平均分给{B}个小朋友，每人几个？",
+         "op": "division", "answer": lambda a, b: a / b if b != 0 else 0, "trap": "none"},
     ]
 
-    def __init__(self, agent: DeposonAgentSystem):
-        self.agent = agent
+    def generate_dataset(self, n_questions: int = 100, seed: int = 42) -> List[Dict]:
+        random.seed(seed)
+        dataset = []
+        for i in range(n_questions):
+            t = random.choice(self.TRAP_TEMPLATES)
+            a = random.randint(10, 200)
+            b = random.randint(2, min(a // 2, 50))
+            if t['op'] == 'percentage_subtraction':
+                answer = t['answer'](a, b)
+            else:
+                answer = t['answer'](a, b)
+            dataset.append({
+                'id': i + 1,
+                'question': t['template'].format(A=a, B=b),
+                'answer': float(answer),
+                'op': t['op'],
+                'trap_type': t['trap']
+            })
+        return dataset
 
-    def run(self) -> Dict[str, Any]:
-        results = []
-        for item in self.TRAPS:
-            r = self.agent.reason(item['q'])
-            results.append({'question': item['q'], 'naive': item['naive'],
-                            'correct': item['correct'],
-                            'agent_best_path': r['best_path'],
-                            'agent_fate': r['best_fate']})
-        return {'n': len(results), 'results': results}
 
+# ============================================================
+# 使用示例
+# ============================================================
 
-if __name__ == '__main__':
-    agent = DeposonAgentSystem(llm_backend=LLMBackend(mode='mock'))
-    r = agent.reason("小明有5个苹果，给了小红2个，还剩几个？")
-    print(json.dumps({'best_path': r['best_path'],
-                      'transmitted': r['best_transmitted']},
-                     ensure_ascii=False, indent=1))
+if __name__ == "__main__":
+    print("=" * 70)
+    print("Deposon Agents v1.3 —— 仿物理AGI系统")
+    print("=" * 70)
+
+    # 基础推理示例
+    llm = KimiLLMBackend()
+    system = DeposonAgentSystem(llm_backend=llm, mode='unified')
+
+    math_query = "小明有5个苹果，给了小红2个，还剩几个？"
+    result = system.reason(math_query, domain_hint='math')
+    print(f"\n查询: {math_query}")
+    print(f"最佳路径: {result['best_path']}")
+    print(f"透射分数: {result['best_score']:.4f}")
+    print(f"以太耗散: {result['deposon_stats']['ether_dissipated']:.4f}")
+
+    # 消融实验示例
+    print("\n消融实验:")
+    ablation = system.ablation_study(math_query, domain_hint='math')
+    print(system.report_ablation(ablation))
+
+    # 百题评估示例
+    print("\n百题评估框架 (10题演示):")
+    benchmark = HundredQuestionBenchmark()
+    dataset = benchmark.generate_dataset(10)
+    evaluator = BenchmarkEvaluator(system)
+    batch = evaluator.batch_evaluate(dataset)
+    print(f"准确率: {batch['accuracy'] * 100:.1f}%")
+    print(f"正确数: {batch['n_correct']}/{batch['n_total']}")
