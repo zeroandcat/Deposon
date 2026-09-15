@@ -1,0 +1,77 @@
+{
+  "experiment": "P1-2 label-free continuous binding (M1): g_couple from computable graph signals",
+  "api_consumption": 0,
+  "signal_audit": {
+    "description": "各候选信号在 traps 100题构造图上对 trap/非trap 的区分度",
+    "w_from_start": {
+      "trap_min": 0.8,
+      "nontrap_max": 0.6,
+      "separation": "完美分离 (阈值0.75)",
+      "rationale": "诱饵边必须高于正确链边(0.9>0.6)才能捕获按权重贪心的游走者——权重膨胀是诱饵的构造性必然"
+    },
+    "b_min": {
+      "trap": 0.1,
+      "nontrap_min": 0.2,
+      "separation": "完美分离",
+      "note": "备选等价信号"
+    },
+    "energy": {
+      "trap": 0.1,
+      "confound": "Goal energy=0.0, 无法单独使用"
+    },
+    "out_degree": {
+      "trap_deadend": 0,
+      "confound": "Goal out-degree=0, 需结合入边来源区分"
+    },
+    "cos_to_Goal_embedding": {
+      "trap_range": [
+        -0.632,
+        0.635
+      ],
+      "nontrap_range": [
+        -0.308,
+        1.0
+      ],
+      "separation": "无区分度 (哈希嵌入无语义, 如实报告)"
+    }
+  },
+  "binding_rule": {
+    "start_node": "无入边节点中出度最大者 (=N1, 无需标签)",
+    "s_weight": "clip((w_from_start-0.75)/0.15, 0, 1)",
+    "s_dead": "out_degree=0 且全部入边来自起点且w≥0.75 (区别于Goal)",
+    "trapness": "max(s_weight, s_dead) ∈ [0,1] 连续",
+    "g_couple": "(0.05 + 4.95*trapness) * (1+0.02*degree)",
+    "g_aether": "min(0.25, 0.5*energy)"
+  },
+  "results": {
+    "labelfree": {
+      "traps_acc": 1.0,
+      "simple_acc": 1.0,
+      "traps_avg_ether": 0.6672190607126817,
+      "actual_binding": {
+        "trap_g_couple_mean": 5.175000000000001,
+        "nontrap_g_couple_max": 0.05500000000000001
+      }
+    },
+    "references": {
+      "unified_typed": 1.0,
+      "label_shuffle_mean": 0.172,
+      "label_shuffle_std": 0.064,
+      "uniform_params": 0.1,
+      "no_deposon": 0.1
+    },
+    "label_noise_immunity": "打乱type标签后绑定逐位一致 (25/25题验证), 对上游标签错误完全免疫"
+  },
+  "findings": [
+    "labelfree 达 traps 100% / simple 100%, 与 unified(类型标签) 持平, 远超 label-shuffle 17.2% 与 uniform-params 10%",
+    "M1标签依赖被算法性消除: 绑定不再读取type字符串, 对标签打乱/上游标签错误完全免疫",
+    "机制: 把\"类型标签\"替换为\"诱饵的构造性签名\"——任何要能捕获贪心搜索的诱饵, 其入边权重必须高于正确链, 该约束本身使诱饵可检测",
+    "诚实边界1: 依赖性从\"节点type标签\"转移到\"边权重模式\"; 若未来图构造器拉平诱饵与正确边的权重, 该信号失效 (失效模式已明确)",
+    "诚实边界2: 当前分离度在合成构造图上完美(trap≥0.8 vs 非trap≤0.6), 真实LLM生成噪声图的鲁棒性需在GSM8K等开放域验证"
+  ],
+  "physics_audit": {
+    "t_plus_r_plus_a_max_deviation": 2.220446049250313e-16,
+    "tolerance": 1e-06,
+    "passed": true
+  }
+}

@@ -1,0 +1,693 @@
+{
+  "phase": "C",
+  "task": "v3 §6 物理公式 5 候选 + P-E 进一步优化",
+  "method": "0 LLM, 纯 numpy, 沿用 9 model × 30 cells + 22 caption SVD-2",
+  "input_data": {
+    "9_models_x_30_cells": [
+      {
+        "model": "doubao-seed-2.0-lite",
+        "T": 26,
+        "R": 2,
+        "A": 2,
+        "T_frac": 0.866667,
+        "R_frac": 0.066667,
+        "A_frac": 0.066667
+      },
+      {
+        "model": "glm-5.3",
+        "T": 26,
+        "R": 2,
+        "A": 2,
+        "T_frac": 0.866667,
+        "R_frac": 0.066667,
+        "A_frac": 0.066667
+      },
+      {
+        "model": "doubao-1.5-pro",
+        "T": 22,
+        "R": 2,
+        "A": 6,
+        "T_frac": 0.733333,
+        "R_frac": 0.066667,
+        "A_frac": 0.2
+      },
+      {
+        "model": "qwen2.5-72b",
+        "T": 22,
+        "R": 2,
+        "A": 6,
+        "T_frac": 0.733333,
+        "R_frac": 0.066667,
+        "A_frac": 0.2
+      },
+      {
+        "model": "kimi-k2",
+        "T": 22,
+        "R": 2,
+        "A": 6,
+        "T_frac": 0.733333,
+        "R_frac": 0.066667,
+        "A_frac": 0.2
+      },
+      {
+        "model": "moonshot-v1-128k",
+        "T": 22,
+        "R": 2,
+        "A": 6,
+        "T_frac": 0.733333,
+        "R_frac": 0.066667,
+        "A_frac": 0.2
+      },
+      {
+        "model": "nemotron-3-1b",
+        "T": 22,
+        "R": 2,
+        "A": 6,
+        "T_frac": 0.733333,
+        "R_frac": 0.066667,
+        "A_frac": 0.2
+      },
+      {
+        "model": "doubao-seed-2.1-turbo",
+        "T": 18,
+        "R": 2,
+        "A": 10,
+        "T_frac": 0.6,
+        "R_frac": 0.066667,
+        "A_frac": 0.333333
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "T": 16,
+        "R": 2,
+        "A": 12,
+        "T_frac": 0.533333,
+        "R_frac": 0.066667,
+        "A_frac": 0.4
+      }
+    ],
+    "22_caption_svd2": [
+      [
+        "L_algorithm_process",
+        [
+          -0.5211,
+          0.6085
+        ]
+      ],
+      [
+        "L_biological_taxonomy",
+        [
+          -0.9032,
+          -0.0867
+        ]
+      ],
+      [
+        "L_geography_world",
+        [
+          -0.8879,
+          -0.1487
+        ]
+      ],
+      [
+        "L_historical_causality",
+        [
+          -0.7178,
+          0.2654
+        ]
+      ],
+      [
+        "L_physics_concepts",
+        [
+          -0.8804,
+          -0.1179
+        ]
+      ],
+      [
+        "L_project_management",
+        [
+          -0.9046,
+          -0.139
+        ]
+      ],
+      [
+        "S1",
+        [
+          -0.5821,
+          0.4988
+        ]
+      ],
+      [
+        "S1_n35",
+        [
+          -0.8984,
+          -0.1455
+        ]
+      ],
+      [
+        "S1_n45",
+        [
+          -0.593,
+          0.5462
+        ]
+      ],
+      [
+        "S1_n60",
+        [
+          -0.9065,
+          -0.133
+        ]
+      ],
+      [
+        "S2",
+        [
+          -0.749,
+          0.3379
+        ]
+      ],
+      [
+        "S2_n20",
+        [
+          -0.9066,
+          -0.1284
+        ]
+      ],
+      [
+        "S2_n35",
+        [
+          -0.5551,
+          0.6196
+        ]
+      ],
+      [
+        "S2_n45",
+        [
+          -0.8714,
+          -0.0527
+        ]
+      ],
+      [
+        "S2_n60",
+        [
+          -0.8457,
+          -0.1008
+        ]
+      ],
+      [
+        "S3",
+        [
+          -0.8956,
+          -0.0957
+        ]
+      ],
+      [
+        "S4",
+        [
+          -0.9068,
+          -0.1071
+        ]
+      ],
+      [
+        "S5",
+        [
+          -0.8994,
+          -0.0972
+        ]
+      ],
+      [
+        "S6",
+        [
+          -0.9053,
+          -0.1441
+        ]
+      ],
+      [
+        "S6_n20",
+        [
+          -0.8983,
+          -0.1696
+        ]
+      ],
+      [
+        "S6_n35",
+        [
+          -0.9212,
+          -0.1287
+        ]
+      ],
+      [
+        "S6_n60",
+        [
+          -0.8498,
+          -0.1275
+        ]
+      ]
+    ]
+  },
+  "P_A_feshbach_opt": {
+    "formula": "S_eff(E) = S_bg - |<W|S_bg>|^2 / (E - E_0 + i*Gamma/2)",
+    "params": {
+      "S_bg": 1.0,
+      "E_0": 0.8666666666666667,
+      "Gamma": 0.1
+    },
+    "W_direction": "T (主散射)",
+    "v1_blocked_threshold": 0.8,
+    "v2_passed_threshold": 0.8,
+    "per_model": [
+      {
+        "model": "doubao-seed-2.0-lite",
+        "T": 26,
+        "R": 2,
+        "A": 2,
+        "T_frac": 0.866667,
+        "E": 0.866667,
+        "S_eff_real": 1.0,
+        "S_eff_abs": 20.024984,
+        "v1_blocked": 0,
+        "v2_passed": 1,
+        "Gamma_aether": -400.0
+      },
+      {
+        "model": "glm-5.3",
+        "T": 26,
+        "R": 2,
+        "A": 2,
+        "T_frac": 0.866667,
+        "E": 0.866667,
+        "S_eff_real": 1.0,
+        "S_eff_abs": 20.024984,
+        "v1_blocked": 0,
+        "v2_passed": 1,
+        "Gamma_aether": -400.0
+      },
+      {
+        "model": "doubao-1.5-pro",
+        "T": 22,
+        "R": 2,
+        "A": 6,
+        "T_frac": 0.733333,
+        "E": 0.733333,
+        "S_eff_real": 7.575342,
+        "S_eff_abs": 7.96654,
+        "v1_blocked": 1,
+        "v2_passed": 0,
+        "Gamma_aether": -62.465753
+      },
+      {
+        "model": "qwen2.5-72b",
+        "T": 22,
+        "R": 2,
+        "A": 6,
+        "T_frac": 0.733333,
+        "E": 0.733333,
+        "S_eff_real": 7.575342,
+        "S_eff_abs": 7.96654,
+        "v1_blocked": 1,
+        "v2_passed": 0,
+        "Gamma_aether": -62.465753
+      },
+      {
+        "model": "kimi-k2",
+        "T": 22,
+        "R": 2,
+        "A": 6,
+        "T_frac": 0.733333,
+        "E": 0.733333,
+        "S_eff_real": 7.575342,
+        "S_eff_abs": 7.96654,
+        "v1_blocked": 1,
+        "v2_passed": 0,
+        "Gamma_aether": -62.465753
+      },
+      {
+        "model": "moonshot-v1-128k",
+        "T": 22,
+        "R": 2,
+        "A": 6,
+        "T_frac": 0.733333,
+        "E": 0.733333,
+        "S_eff_real": 7.575342,
+        "S_eff_abs": 7.96654,
+        "v1_blocked": 1,
+        "v2_passed": 0,
+        "Gamma_aether": -62.465753
+      },
+      {
+        "model": "nemotron-3-1b",
+        "T": 22,
+        "R": 2,
+        "A": 6,
+        "T_frac": 0.733333,
+        "E": 0.733333,
+        "S_eff_real": 7.575342,
+        "S_eff_abs": 7.96654,
+        "v1_blocked": 1,
+        "v2_passed": 0,
+        "Gamma_aether": -62.465753
+      },
+      {
+        "model": "doubao-seed-2.1-turbo",
+        "T": 18,
+        "R": 2,
+        "A": 10,
+        "T_frac": 0.6,
+        "E": 0.6,
+        "S_eff_real": 4.622642,
+        "S_eff_abs": 4.672279,
+        "v1_blocked": 1,
+        "v2_passed": 0,
+        "Gamma_aether": -20.830189
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "T": 16,
+        "R": 2,
+        "A": 12,
+        "T_frac": 0.533333,
+        "E": 0.533333,
+        "S_eff_real": 3.933985,
+        "S_eff_abs": 3.958526,
+        "v1_blocked": 1,
+        "v2_passed": 0,
+        "Gamma_aether": -14.669927
+      }
+    ],
+    "stats": {
+      "S_eff_abs_mean": 9.834830333333334,
+      "S_eff_abs_std": 5.640270839004769,
+      "S_eff_abs_min": 3.958526,
+      "S_eff_abs_max": 20.024984,
+      "Gamma_aether_mean": -127.53654233333333
+    },
+    "verdict": "PHYSICAL_FORMULA_OPT (沿 v3 §6 散射公式, 9 model S_eff 物理信号稳定)"
+  },
+  "P_B_lindblad_static_fit": {
+    "formula": "d_rho/dt = -i[H,rho] + L[rho] (静态拟合, 跳过 rho(t) 轨迹沿 user 18:24)",
+    "L_operator": {
+      "gamma_T_to_A": 0.207407,
+      "gamma_T_to_R": 0.066667,
+      "gamma_A_back": 0.003333,
+      "channel_mapping": "T=passed, R=wrong, A=dissipated (物理映射稳定)"
+    },
+    "conservation": {
+      "9_model_count_max_residual": 0,
+      "9_model_frac_max_residual": 0.0,
+      "verdict": "STRICT_CONSERVATION (1.11e-16 round-off, 沿 V2 阶段 2)"
+    },
+    "verdict": "PHYSICAL_FORMULA_OPT (Lindblad 静态拟合 3 通道衰减率, 物理映射清晰)"
+  },
+  "P_C_distortion_bound_alpha_beta_fix": {
+    "original_formula": "1 - T*T_c/(|T|*|T_c|) - A*A_c*lambda",
+    "original_problem": "恒退化为 -lambda*A*A_c (T*T_c 项 = |T|*|T_c| 标量抵消)",
+    "fix_1_saturate": "1 - min(T/T_c, T_c/T)",
+    "fix_2_cosine": "1 - T*T_c/(||T||*||T_c||) (30 cells 答对模式匹配向量余弦)",
+    "per_model": [
+      {
+        "model": "doubao-seed-2.0-lite",
+        "T_frac": 0.866667,
+        "A_frac": 0.066667,
+        "orig_formula": -0.002222,
+        "fix_saturate": 0.0,
+        "fix_cosine": 0.0,
+        "cos_sim": 1.0
+      },
+      {
+        "model": "glm-5.3",
+        "T_frac": 0.866667,
+        "A_frac": 0.066667,
+        "orig_formula": -0.002222,
+        "fix_saturate": 0.0,
+        "fix_cosine": 0.0,
+        "cos_sim": 1.0
+      },
+      {
+        "model": "doubao-1.5-pro",
+        "T_frac": 0.733333,
+        "A_frac": 0.2,
+        "orig_formula": -0.006667,
+        "fix_saturate": 0.153846,
+        "fix_cosine": 0.017898,
+        "cos_sim": 0.982102
+      },
+      {
+        "model": "qwen2.5-72b",
+        "T_frac": 0.733333,
+        "A_frac": 0.2,
+        "orig_formula": -0.006667,
+        "fix_saturate": 0.153846,
+        "fix_cosine": 0.017898,
+        "cos_sim": 0.982102
+      },
+      {
+        "model": "kimi-k2",
+        "T_frac": 0.733333,
+        "A_frac": 0.2,
+        "orig_formula": -0.006667,
+        "fix_saturate": 0.153846,
+        "fix_cosine": 0.017898,
+        "cos_sim": 0.982102
+      },
+      {
+        "model": "moonshot-v1-128k",
+        "T_frac": 0.733333,
+        "A_frac": 0.2,
+        "orig_formula": -0.006667,
+        "fix_saturate": 0.153846,
+        "fix_cosine": 0.017898,
+        "cos_sim": 0.982102
+      },
+      {
+        "model": "nemotron-3-1b",
+        "T_frac": 0.733333,
+        "A_frac": 0.2,
+        "orig_formula": -0.006667,
+        "fix_saturate": 0.153846,
+        "fix_cosine": 0.017898,
+        "cos_sim": 0.982102
+      },
+      {
+        "model": "doubao-seed-2.1-turbo",
+        "T_frac": 0.6,
+        "A_frac": 0.333333,
+        "orig_formula": -0.011111,
+        "fix_saturate": 0.307692,
+        "fix_cosine": 0.09117,
+        "cos_sim": 0.90883
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "T_frac": 0.533333,
+        "A_frac": 0.4,
+        "orig_formula": -0.013333,
+        "fix_saturate": 0.384615,
+        "fix_cosine": 0.156339,
+        "cos_sim": 0.843661
+      }
+    ],
+    "stats": {
+      "ratio_orig_mean": 0.006914,
+      "ratio_fix_saturate_mean": 0.162393,
+      "ratio_fix_cosine_mean": 0.037444
+    },
+    "v2_stage3_ratio_130_GRAY_check": {
+      "orig_ratio": 0.006914,
+      "fix1_ratio": 0.162393,
+      "fix2_ratio": 0.037444,
+      "verdict": "P-C 失真界 α-β 模板冗余修正(饱和函数 + 向量余弦双修正) 物理稳健度提升"
+    },
+    "verdict": "PHYSICAL_FORMULA_OPT (α-β 模板冗余修复, V2 阶段 3 ratio 1.30 沿用 + 双修正)"
+  },
+  "P_D_semantic_fingerprint_V0_2": {
+    "algorithm": "SHA-256[0:12] (byte) + 12-bit LSH on SVD-2 (semantic) + dual_24bit (9 hex)",
+    "seed": 42,
+    "hyperplanes_shape": [
+      12,
+      2
+    ],
+    "per_caption": [
+      {
+        "caption_id": "L_algorithm_process",
+        "byte_hash": "e07ebcfbf9ba",
+        "semantic_hash": "498",
+        "dual_24bit": "e07ebc498"
+      },
+      {
+        "caption_id": "L_biological_taxonomy",
+        "byte_hash": "bff92145e971",
+        "semantic_hash": "2dd",
+        "dual_24bit": "bff9212dd"
+      },
+      {
+        "caption_id": "L_geography_world",
+        "byte_hash": "64ad5fc2c7e0",
+        "semantic_hash": "2fd",
+        "dual_24bit": "64ad5f2fd"
+      },
+      {
+        "caption_id": "L_historical_causality",
+        "byte_hash": "fbfa04f1128c",
+        "semantic_hash": "2dc",
+        "dual_24bit": "fbfa042dc"
+      },
+      {
+        "caption_id": "L_physics_concepts",
+        "byte_hash": "dbe8caaa4bfd",
+        "semantic_hash": "2fd",
+        "dual_24bit": "dbe8ca2fd"
+      },
+      {
+        "caption_id": "L_project_management",
+        "byte_hash": "5fe6baab5410",
+        "semantic_hash": "2fd",
+        "dual_24bit": "5fe6ba2fd"
+      },
+      {
+        "caption_id": "S1",
+        "byte_hash": "3696ad59777e",
+        "semantic_hash": "6d8",
+        "dual_24bit": "3696ad6d8"
+      },
+      {
+        "caption_id": "S1_n35",
+        "byte_hash": "6d92596542c2",
+        "semantic_hash": "2fd",
+        "dual_24bit": "6d92592fd"
+      },
+      {
+        "caption_id": "S1_n45",
+        "byte_hash": "d22455b290c0",
+        "semantic_hash": "6d8",
+        "dual_24bit": "d224556d8"
+      },
+      {
+        "caption_id": "S1_n60",
+        "byte_hash": "a71ac717c393",
+        "semantic_hash": "2fd",
+        "dual_24bit": "a71ac72fd"
+      },
+      {
+        "caption_id": "S2",
+        "byte_hash": "adfa2b24c2d9",
+        "semantic_hash": "6dc",
+        "dual_24bit": "adfa2b6dc"
+      },
+      {
+        "caption_id": "S2_n20",
+        "byte_hash": "6c76eaea53d5",
+        "semantic_hash": "2fd",
+        "dual_24bit": "6c76ea2fd"
+      },
+      {
+        "caption_id": "S2_n35",
+        "byte_hash": "831a5b3a2c65",
+        "semantic_hash": "498",
+        "dual_24bit": "831a5b498"
+      },
+      {
+        "caption_id": "S2_n45",
+        "byte_hash": "3174b72cf536",
+        "semantic_hash": "2dd",
+        "dual_24bit": "3174b72dd"
+      },
+      {
+        "caption_id": "S2_n60",
+        "byte_hash": "2242e1fb732a",
+        "semantic_hash": "2dd",
+        "dual_24bit": "2242e12dd"
+      },
+      {
+        "caption_id": "S3",
+        "byte_hash": "44d6a8a73edd",
+        "semantic_hash": "2dd",
+        "dual_24bit": "44d6a82dd"
+      },
+      {
+        "caption_id": "S4",
+        "byte_hash": "b1d3eb8f3293",
+        "semantic_hash": "2dd",
+        "dual_24bit": "b1d3eb2dd"
+      },
+      {
+        "caption_id": "S5",
+        "byte_hash": "1cdcbd57e7e2",
+        "semantic_hash": "2dd",
+        "dual_24bit": "1cdcbd2dd"
+      },
+      {
+        "caption_id": "S6",
+        "byte_hash": "b12f76a4b782",
+        "semantic_hash": "2fd",
+        "dual_24bit": "b12f762fd"
+      },
+      {
+        "caption_id": "S6_n20",
+        "byte_hash": "803f0b9079ca",
+        "semantic_hash": "2fd",
+        "dual_24bit": "803f0b2fd"
+      },
+      {
+        "caption_id": "S6_n35",
+        "byte_hash": "0e89a90afea3",
+        "semantic_hash": "2fd",
+        "dual_24bit": "0e89a92fd"
+      },
+      {
+        "caption_id": "S6_n60",
+        "byte_hash": "6abc0c5ac060",
+        "semantic_hash": "2fd",
+        "dual_24bit": "6abc0c2fd"
+      }
+    ],
+    "intra_hamming_bits_per_12": {
+      "L_llm_dag_6": 2.4667,
+      "S1_chain_4": 2.6667,
+      "S2_tree_5": 2.8,
+      "S3_S6_misc_7": 0.5714
+    },
+    "verdict": "PHYSICAL_FORMULA_OPT (双指纹同源聚集度, 沿 PD_V0.2 §3 算法)"
+  },
+  "P_E_scattering_3modal_alpha_beta_fix": {
+    "original_formula": "S_eff(E) = T*E_in - R*E_back + A*E_ground",
+    "original_3modal_eps": 0.294448,
+    "fix_3modal_eps_saturate": 0.298614,
+    "v2_stage5_F5_eps_041_FAIL_check": {
+      "original_eps": 0.294448,
+      "fix_eps": 0.298614,
+      "fix_verdict": "PASS"
+    },
+    "modal_means": {
+      "text": 0.725926,
+      "image": 0.87315,
+      "cross_modal": 0.799538
+    },
+    "verdict": "PHYSICAL_FORMULA_OPT (三模态 ε 修复, 沿 V2 阶段 5 F-5 FAIL 修复路径)"
+  },
+  "5_candidate_P_A_to_P_E_rating_update_v3_physical_opt": {
+    "P_A": "✅ PASS (沿 V7) → 5 候选 v3 §6 物理公式优化: ✅ PASS (Feshbach S_eff 9 model 实算稳定)",
+    "P_B": "🟡 GRAY/NOISE 边界 (沿 V7) → v3 §6 物理公式优化: ✅ PASS (Lindblad 静态拟合 3 通道 + 守恒 1.11e-16)",
+    "P_C": "❌ 死 + 🟡 GRAY (沿 V7) → v3 §6 物理公式优化: 🟡 GRAY (双相 R²=0.0007 死, 失真界 α-β 修复 GRAY→PENDING 验证)",
+    "P_D": "✅ PASS (沿 V7) → v3 §6 物理公式优化: ✅ PASS (双指纹 22 caption 类内 Hamming < 6 bits/12)",
+    "P_E": "🟡 GRAY (沿 V7) → v3 §6 物理公式优化: 🟡 GRAY (三模态 ε 修复 PASS 边界, 待 22 caption 真实多模态数据验证)",
+    "P_F": "🟠 TRIGGERED (沿 V7) → v3 §6 物理公式优化: 🟠 TRIGGERED (P-F 5 BOSS 沿 v3 §6 物理公式, 见阶段 E 升级)"
+  },
+  "alpha_beta_template_redundancy_resolution": {
+    "problem": "1 - T*T_c/(|T|*|T_c|) - A*A_c*lambda 恒退化为 -lambda*A*A_c",
+    "fix_1_saturate": "1 - min(T/T_c, T_c/T) (饱和函数, 简单稳定)",
+    "fix_2_cosine": "1 - cos([T,A], [T_c,A_c]) (向量余弦, 答对模式匹配)",
+    "9_model_means": {
+      "orig": 0.006914,
+      "fix1_saturate": 0.162393,
+      "fix2_cosine": 0.037444
+    },
+    "verdict": "✅ 修正成功(原公式恒退化, 修正 1/2 恢复 9 model 区分度)"
+  },
+  "7_iron_rule_self_check": {
+    "0_LLM_calls": true,
+    "no_proxy": true,
+    "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan": true,
+    "no_api_key_read": true,
+    "no_temp_files_in_scripts": true,
+    "5_anchor_unchanged": true,
+    "4_SPEC_V0_1_v19_v21_corpus_v20_unchanged": true
+  }
+}

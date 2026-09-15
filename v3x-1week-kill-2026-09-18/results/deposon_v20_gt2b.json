@@ -1,0 +1,4990 @@
+{
+ "experiment": "deposon_v20_gt2b",
+ "spec": "docs/SPEC_GT2B.md",
+ "spec_version": "v2.0",
+ "bank_seed": 20260828,
+ "T_levels": [
+  1,
+  2,
+  3
+ ],
+ "n_options_fixed": 4,
+ "chance_level": 0.25,
+ "config": {
+  "n_steps": 50,
+  "beta_schedule": "linear",
+  "prior": "uniform_out",
+  "lr": 0.1,
+  "lam_smooth": 0.01,
+  "field_guidance": true,
+  "energy_mode": "aggregate",
+  "seed": 0
+ },
+ "domains": [
+  "algorithm_process",
+  "biological_taxonomy",
+  "historical_causality",
+  "physics_concepts"
+ ],
+ "traps_available_per_domain": {
+  "algorithm_process": 12,
+  "biological_taxonomy": 12,
+  "historical_causality": 12,
+  "physics_concepts": 12
+ },
+ "per_T": {
+  "1": {
+   "per_domain": {
+    "algorithm_process": {
+     "accuracy": {
+      "rule_filter": 0.2,
+      "field_mean": 0.3,
+      "random": 0.4
+     },
+     "n_items": 10,
+     "records": [
+      {
+       "item_id": "algorithm_process#q22",
+       "gold": "在线推理",
+       "answers": {
+        "field_mean": "在线推理",
+        "rule_filter": "资源释放",
+        "random": "在线推理"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "algorithm_process#q17",
+       "gold": "后处理规则",
+       "answers": {
+        "field_mean": "后处理规则",
+        "rule_filter": "数据预处理",
+        "random": "输出报告"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q08",
+       "gold": "梯度计算",
+       "answers": {
+        "field_mean": "算法选择",
+        "rule_filter": "多数表决初始化",
+        "random": "后处理规则"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q11",
+       "gold": "早停机制",
+       "answers": {
+        "field_mean": "后处理规则",
+        "rule_filter": "熵权法调参",
+        "random": "熵权法调参"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q03",
+       "gold": "算法选择",
+       "answers": {
+        "field_mean": "日志监控",
+        "rule_filter": "欧氏距离收敛",
+        "random": "数据预处理"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q12",
+       "gold": "验证评估",
+       "answers": {
+        "field_mean": "收敛判断",
+        "rule_filter": "验证评估",
+        "random": "打孔卡读入"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q25",
+       "gold": "数据再采集",
+       "answers": {
+        "field_mean": "数据再采集",
+        "rule_filter": "样本划分",
+        "random": "数据再采集"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "algorithm_process#q14",
+       "gold": "超参调优",
+       "answers": {
+        "field_mean": "流程审计",
+        "rule_filter": "零假设拒绝",
+        "random": "超参调优"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": true
+       }
+      },
+      {
+       "item_id": "algorithm_process#q10",
+       "gold": "收敛判断",
+       "answers": {
+        "field_mean": "部署上线",
+        "rule_filter": "准确率反向传播",
+        "random": "验证评估"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q05",
+       "gold": "损失函数",
+       "answers": {
+        "field_mean": "决策输出",
+        "rule_filter": "损失函数",
+        "random": "损失函数"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": false,
+        "random": true
+       }
+      }
+     ]
+    },
+    "biological_taxonomy": {
+     "accuracy": {
+      "rule_filter": 0.0,
+      "field_mean": 0.4,
+      "random": 0.5
+     },
+     "n_items": 10,
+     "records": [
+      {
+       "item_id": "biological_taxonomy#q01",
+       "gold": "动物界",
+       "answers": {
+        "field_mean": "动物界",
+        "rule_filter": "病毒域",
+        "random": "蔷薇目"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q03",
+       "gold": "脊索动物门",
+       "answers": {
+        "field_mean": "脊索动物门",
+        "rule_filter": "鱼类纲",
+        "random": "鱼纲"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q09",
+       "gold": "人科",
+       "answers": {
+        "field_mean": "猫科",
+        "rule_filter": "狮",
+        "random": "人科"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": true
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q00",
+       "gold": "真核生物",
+       "answers": {
+        "field_mean": "猫科",
+        "rule_filter": "原生生物界",
+        "random": "真核生物"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": true
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q07",
+       "gold": "灵长目",
+       "answers": {
+        "field_mean": "鸟纲",
+        "rule_filter": "鸟纲",
+        "random": "鸟纲"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q06",
+       "gold": "食肉目",
+       "answers": {
+        "field_mean": "食肉目",
+        "rule_filter": "脊索动物门",
+        "random": "食肉目"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q14",
+       "gold": "家猫",
+       "answers": {
+        "field_mean": "节肢动物门",
+        "rule_filter": "节肢动物门",
+        "random": "节肢动物门"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q20",
+       "gold": "苹果属",
+       "answers": {
+        "field_mean": "灵长目",
+        "rule_filter": "灵长目",
+        "random": "苹果属"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": true
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q12",
+       "gold": "虎",
+       "answers": {
+        "field_mean": "虎",
+        "rule_filter": "狮",
+        "random": "狮"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q02",
+       "gold": "植物界",
+       "answers": {
+        "field_mean": "古菌域",
+        "rule_filter": "古菌域",
+        "random": "植物界"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": true
+       }
+      }
+     ]
+    },
+    "historical_causality": {
+     "accuracy": {
+      "rule_filter": 0.1,
+      "field_mean": 0.3,
+      "random": 0.4
+     },
+     "n_items": 10,
+     "records": [
+      {
+       "item_id": "historical_causality#q08",
+       "gold": "德国宣战",
+       "answers": {
+        "field_mean": "阵地战消耗",
+        "rule_filter": "阵地战消耗",
+        "random": "德国宣战"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": true
+       }
+      },
+      {
+       "item_id": "historical_causality#q03",
+       "gold": "萨拉热窝事件",
+       "answers": {
+        "field_mean": "阵地战消耗",
+        "rule_filter": "七月危机",
+        "random": "七月危机"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q06",
+       "gold": "俄国总动员",
+       "answers": {
+        "field_mean": "德国失败",
+        "rule_filter": "索姆河战役",
+        "random": "德国失败"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q16",
+       "gold": "德国失败",
+       "answers": {
+        "field_mean": "二战根源",
+        "rule_filter": "美国参战",
+        "random": "德国失败"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": true
+       }
+      },
+      {
+       "item_id": "historical_causality#q04",
+       "gold": "奥匈帝国最后通牒",
+       "answers": {
+        "field_mean": "美国参战",
+        "rule_filter": "美国参战",
+        "random": "三国同盟破裂"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q20",
+       "gold": "法西斯主义兴起",
+       "answers": {
+        "field_mean": "法西斯主义兴起",
+        "rule_filter": "奥匈帝国改革",
+        "random": "法西斯主义兴起"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "historical_causality#q22",
+       "gold": "全球秩序重塑",
+       "answers": {
+        "field_mean": "全球秩序重塑",
+        "rule_filter": "军备竞赛升级",
+        "random": "民族自决确立"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q02",
+       "gold": "巴尔干危机",
+       "answers": {
+        "field_mean": "一战全面爆发",
+        "rule_filter": "巴尔干危机",
+        "random": "巴尔干危机"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": false,
+        "random": true
+       }
+      },
+      {
+       "item_id": "historical_causality#q00",
+       "gold": "帝国主义竞争",
+       "answers": {
+        "field_mean": "法西斯主义兴起",
+        "rule_filter": "民族主义高涨",
+        "random": "民族主义高涨"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q15",
+       "gold": "俄国退出一战",
+       "answers": {
+        "field_mean": "俄国退出一战",
+        "rule_filter": "施里芬计划成功",
+        "random": "施里芬计划成功"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      }
+     ]
+    },
+    "physics_concepts": {
+     "accuracy": {
+      "rule_filter": 0.3,
+      "field_mean": 0.5,
+      "random": 0.1
+     },
+     "n_items": 10,
+     "records": [
+      {
+       "item_id": "physics_concepts#q23",
+       "gold": "光子",
+       "answers": {
+        "field_mean": "动力学",
+        "rule_filter": "光子",
+        "random": "动力学"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q02",
+       "gold": "量子力学",
+       "answers": {
+        "field_mean": "量子力学",
+        "rule_filter": "量子力学",
+        "random": "强相互作用"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q22",
+       "gold": "轻子",
+       "answers": {
+        "field_mean": "粒子物理",
+        "rule_filter": "粒子物理",
+        "random": "绝对时空观"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q18",
+       "gold": "薛定谔方程",
+       "answers": {
+        "field_mean": "动力学",
+        "rule_filter": "地心说引力模型",
+        "random": "动力学"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q24",
+       "gold": "强相互作用",
+       "answers": {
+        "field_mean": "强相互作用",
+        "rule_filter": "标准模型",
+        "random": "标准模型"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q25",
+       "gold": "弱相互作用",
+       "answers": {
+        "field_mean": "动力学",
+        "rule_filter": "温度",
+        "random": "温度"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q05",
+       "gold": "动力学",
+       "answers": {
+        "field_mean": "动力学",
+        "rule_filter": "波函数",
+        "random": "夸克"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q28",
+       "gold": "夸克",
+       "answers": {
+        "field_mean": "夸克",
+        "rule_filter": "夸克",
+        "random": "夸克"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "physics_concepts#q07",
+       "gold": "电场",
+       "answers": {
+        "field_mean": "电场",
+        "rule_filter": "超距作用原理",
+        "random": "电磁波"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q06",
+       "gold": "麦克斯韦方程组",
+       "answers": {
+        "field_mean": "粒子物理",
+        "rule_filter": "地心说引力模型",
+        "random": "粒子物理"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      }
+     ]
+    }
+   },
+   "overall": {
+    "rule_filter": 0.15000000000000002,
+    "field_mean": 0.375,
+    "random": 0.35000000000000003
+   },
+   "items": [
+    {
+     "item_id": "algorithm_process#q22",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「部署上线」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      25,
+      26
+     ],
+     "gold_label": "在线推理",
+     "options": [
+      "资源释放",
+      "收敛判断",
+      "准确率反向传播",
+      "在线推理"
+     ],
+     "answer_index": 3,
+     "n_traps": 1,
+     "trap_labels": [
+      "准确率反向传播"
+     ],
+     "random_node_labels": [
+      "收敛判断",
+      "资源释放"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q17",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「决策输出」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      20,
+      21
+     ],
+     "gold_label": "后处理规则",
+     "options": [
+      "数据预处理",
+      "后处理规则",
+      "输出报告",
+      "遗传交叉操作"
+     ],
+     "answer_index": 1,
+     "n_traps": 1,
+     "trap_labels": [
+      "遗传交叉操作"
+     ],
+     "random_node_labels": [
+      "输出报告",
+      "数据预处理"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q08",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「反向传播」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      10,
+      11
+     ],
+     "gold_label": "梯度计算",
+     "options": [
+      "多数表决初始化",
+      "算法选择",
+      "后处理规则",
+      "梯度计算"
+     ],
+     "answer_index": 3,
+     "n_traps": 1,
+     "trap_labels": [
+      "多数表决初始化"
+     ],
+     "random_node_labels": [
+      "算法选择",
+      "后处理规则"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q11",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「收敛判断」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      13,
+      14
+     ],
+     "gold_label": "早停机制",
+     "options": [
+      "熵权法调参",
+      "后处理规则",
+      "早停机制",
+      "特征工程"
+     ],
+     "answer_index": 2,
+     "n_traps": 1,
+     "trap_labels": [
+      "熵权法调参"
+     ],
+     "random_node_labels": [
+      "后处理规则",
+      "特征工程"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q03",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「样本划分」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      3,
+      4
+     ],
+     "gold_label": "算法选择",
+     "options": [
+      "欧氏距离收敛",
+      "算法选择",
+      "数据预处理",
+      "日志监控"
+     ],
+     "answer_index": 1,
+     "n_traps": 1,
+     "trap_labels": [
+      "欧氏距离收敛"
+     ],
+     "random_node_labels": [
+      "日志监控",
+      "数据预处理"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q12",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「早停机制」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      14,
+      15
+     ],
+     "gold_label": "验证评估",
+     "options": [
+      "验证评估",
+      "收敛判断",
+      "特征重要性",
+      "打孔卡读入"
+     ],
+     "answer_index": 0,
+     "n_traps": 1,
+     "trap_labels": [
+      "打孔卡读入"
+     ],
+     "random_node_labels": [
+      "特征重要性",
+      "收敛判断"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q25",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「反馈回流」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      28,
+      29
+     ],
+     "gold_label": "数据再采集",
+     "options": [
+      "样本划分",
+      "磁带归档",
+      "数据再采集",
+      "部署上线"
+     ],
+     "answer_index": 2,
+     "n_traps": 1,
+     "trap_labels": [
+      "磁带归档"
+     ],
+     "random_node_labels": [
+      "部署上线",
+      "样本划分"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q14",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「交叉验证」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      16,
+      17
+     ],
+     "gold_label": "超参调优",
+     "options": [
+      "零假设拒绝",
+      "流程审计",
+      "资源释放",
+      "超参调优"
+     ],
+     "answer_index": 3,
+     "n_traps": 1,
+     "trap_labels": [
+      "零假设拒绝"
+     ],
+     "random_node_labels": [
+      "资源释放",
+      "流程审计"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q10",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「参数更新」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      12,
+      13
+     ],
+     "gold_label": "收敛判断",
+     "options": [
+      "准确率反向传播",
+      "验证评估",
+      "部署上线",
+      "收敛判断"
+     ],
+     "answer_index": 3,
+     "n_traps": 1,
+     "trap_labels": [
+      "准确率反向传播"
+     ],
+     "random_node_labels": [
+      "验证评估",
+      "部署上线"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q05",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「参数配置」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      6,
+      7
+     ],
+     "gold_label": "损失函数",
+     "options": [
+      "损失函数",
+      "决策输出",
+      "遗传交叉操作",
+      "反向传播"
+     ],
+     "answer_index": 0,
+     "n_traps": 1,
+     "trap_labels": [
+      "遗传交叉操作"
+     ],
+     "random_node_labels": [
+      "决策输出",
+      "反向传播"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q01",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「真核生物」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      1,
+      3
+     ],
+     "gold_label": "动物界",
+     "options": [
+      "病毒域",
+      "蔷薇目",
+      "动物界",
+      "鱼纲"
+     ],
+     "answer_index": 2,
+     "n_traps": 1,
+     "trap_labels": [
+      "病毒域"
+     ],
+     "random_node_labels": [
+      "鱼纲",
+      "蔷薇目"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q03",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「动物界」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      3,
+      8
+     ],
+     "gold_label": "脊索动物门",
+     "options": [
+      "鱼类纲",
+      "脊索动物门",
+      "鱼纲",
+      "古菌域"
+     ],
+     "answer_index": 1,
+     "n_traps": 1,
+     "trap_labels": [
+      "鱼类纲"
+     ],
+     "random_node_labels": [
+      "鱼纲",
+      "古菌域"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q09",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「灵长目」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      15,
+      24
+     ],
+     "gold_label": "人科",
+     "options": [
+      "狮",
+      "猫科",
+      "人科",
+      "双子叶植物目"
+     ],
+     "answer_index": 2,
+     "n_traps": 1,
+     "trap_labels": [
+      "双子叶植物目"
+     ],
+     "random_node_labels": [
+      "狮",
+      "猫科"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q00",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「生物」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      0,
+      1
+     ],
+     "gold_label": "真核生物",
+     "options": [
+      "原生生物界",
+      "猫科",
+      "细菌域",
+      "真核生物"
+     ],
+     "answer_index": 3,
+     "n_traps": 1,
+     "trap_labels": [
+      "原生生物界"
+     ],
+     "random_node_labels": [
+      "细菌域",
+      "猫科"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q07",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「哺乳纲」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      11,
+      15
+     ],
+     "gold_label": "灵长目",
+     "options": [
+      "鸟纲",
+      "百合目",
+      "灵长目",
+      "裸子植物亚门"
+     ],
+     "answer_index": 2,
+     "n_traps": 1,
+     "trap_labels": [
+      "裸子植物亚门"
+     ],
+     "random_node_labels": [
+      "百合目",
+      "鸟纲"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q06",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「哺乳纲」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      11,
+      14
+     ],
+     "gold_label": "食肉目",
+     "options": [
+      "脊索动物门",
+      "软体动物亚门",
+      "家猫",
+      "食肉目"
+     ],
+     "answer_index": 3,
+     "n_traps": 1,
+     "trap_labels": [
+      "软体动物亚门"
+     ],
+     "random_node_labels": [
+      "家猫",
+      "脊索动物门"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q14",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「猫属」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      20,
+      23
+     ],
+     "gold_label": "家猫",
+     "options": [
+      "节肢动物门",
+      "恐龙纲",
+      "古菌域",
+      "家猫"
+     ],
+     "answer_index": 3,
+     "n_traps": 1,
+     "trap_labels": [
+      "恐龙纲"
+     ],
+     "random_node_labels": [
+      "古菌域",
+      "节肢动物门"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q20",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「蔷薇科」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      39,
+      40
+     ],
+     "gold_label": "苹果属",
+     "options": [
+      "灵长目",
+      "苹果属",
+      "禾本科",
+      "单子叶植物目"
+     ],
+     "answer_index": 1,
+     "n_traps": 1,
+     "trap_labels": [
+      "单子叶植物目"
+     ],
+     "random_node_labels": [
+      "禾本科",
+      "灵长目"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q12",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「豹属」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      19,
+      21
+     ],
+     "gold_label": "虎",
+     "options": [
+      "狮",
+      "原生生物界",
+      "蔷薇科",
+      "虎"
+     ],
+     "answer_index": 3,
+     "n_traps": 1,
+     "trap_labels": [
+      "原生生物界"
+     ],
+     "random_node_labels": [
+      "狮",
+      "蔷薇科"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q02",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「真核生物」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      1,
+      4
+     ],
+     "gold_label": "植物界",
+     "options": [
+      "古菌域",
+      "苹果属",
+      "恐龙纲",
+      "植物界"
+     ],
+     "answer_index": 3,
+     "n_traps": 1,
+     "trap_labels": [
+      "恐龙纲"
+     ],
+     "random_node_labels": [
+      "古菌域",
+      "苹果属"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q08",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「德国战争计划」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      12,
+      13
+     ],
+     "gold_label": "德国宣战",
+     "options": [
+      "阵地战消耗",
+      "奥匈帝国改革",
+      "七月危机",
+      "德国宣战"
+     ],
+     "answer_index": 3,
+     "n_traps": 1,
+     "trap_labels": [
+      "奥匈帝国改革"
+     ],
+     "random_node_labels": [
+      "阵地战消耗",
+      "七月危机"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q03",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「巴尔干危机」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      7,
+      8
+     ],
+     "gold_label": "萨拉热窝事件",
+     "options": [
+      "七月危机",
+      "萨拉热窝事件",
+      "施里芬计划成功",
+      "阵地战消耗"
+     ],
+     "answer_index": 1,
+     "n_traps": 1,
+     "trap_labels": [
+      "施里芬计划成功"
+     ],
+     "random_node_labels": [
+      "阵地战消耗",
+      "七月危机"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q06",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「七月危机」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      10,
+      11
+     ],
+     "gold_label": "俄国总动员",
+     "options": [
+      "索姆河战役",
+      "俄国总动员",
+      "大萧条加剧",
+      "德国失败"
+     ],
+     "answer_index": 1,
+     "n_traps": 1,
+     "trap_labels": [
+      "大萧条加剧"
+     ],
+     "random_node_labels": [
+      "索姆河战役",
+      "德国失败"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q16",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「美国参战」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      19,
+      21
+     ],
+     "gold_label": "德国失败",
+     "options": [
+      "美国参战",
+      "三国同盟破裂",
+      "二战根源",
+      "德国失败"
+     ],
+     "answer_index": 3,
+     "n_traps": 1,
+     "trap_labels": [
+      "三国同盟破裂"
+     ],
+     "random_node_labels": [
+      "美国参战",
+      "二战根源"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q04",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「萨拉热窝事件」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      8,
+      9
+     ],
+     "gold_label": "奥匈帝国最后通牒",
+     "options": [
+      "美国参战",
+      "奥匈帝国最后通牒",
+      "英国参战",
+      "三国同盟破裂"
+     ],
+     "answer_index": 1,
+     "n_traps": 1,
+     "trap_labels": [
+      "三国同盟破裂"
+     ],
+     "random_node_labels": [
+      "美国参战",
+      "英国参战"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q20",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「经济危机隐患」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      27,
+      28
+     ],
+     "gold_label": "法西斯主义兴起",
+     "options": [
+      "奥匈帝国改革",
+      "索姆河战役",
+      "法西斯主义兴起",
+      "英国参战"
+     ],
+     "answer_index": 2,
+     "n_traps": 1,
+     "trap_labels": [
+      "奥匈帝国改革"
+     ],
+     "random_node_labels": [
+      "英国参战",
+      "索姆河战役"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q22",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「二战根源」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      29,
+      35
+     ],
+     "gold_label": "全球秩序重塑",
+     "options": [
+      "军备竞赛升级",
+      "七月危机",
+      "全球秩序重塑",
+      "民族自决确立"
+     ],
+     "answer_index": 2,
+     "n_traps": 1,
+     "trap_labels": [
+      "民族自决确立"
+     ],
+     "random_node_labels": [
+      "七月危机",
+      "军备竞赛升级"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q02",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「殖民地争夺激化」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      5,
+      7
+     ],
+     "gold_label": "巴尔干危机",
+     "options": [
+      "巴尔干危机",
+      "一战全面爆发",
+      "资本主义扩张",
+      "凡尔登和谈"
+     ],
+     "answer_index": 0,
+     "n_traps": 1,
+     "trap_labels": [
+      "凡尔登和谈"
+     ],
+     "random_node_labels": [
+      "资本主义扩张",
+      "一战全面爆发"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q00",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「资本主义扩张」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      0,
+      1
+     ],
+     "gold_label": "帝国主义竞争",
+     "options": [
+      "民族主义高涨",
+      "普法战争赔款",
+      "法西斯主义兴起",
+      "帝国主义竞争"
+     ],
+     "answer_index": 3,
+     "n_traps": 1,
+     "trap_labels": [
+      "普法战争赔款"
+     ],
+     "random_node_labels": [
+      "民族主义高涨",
+      "法西斯主义兴起"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q15",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「索姆河战役」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      18,
+      20
+     ],
+     "gold_label": "俄国退出一战",
+     "options": [
+      "施里芬计划成功",
+      "俄国退出一战",
+      "德国宣战",
+      "七月危机"
+     ],
+     "answer_index": 1,
+     "n_traps": 1,
+     "trap_labels": [
+      "施里芬计划成功"
+     ],
+     "random_node_labels": [
+      "德国宣战",
+      "七月危机"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q23",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「标准模型」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      25,
+      29
+     ],
+     "gold_label": "光子",
+     "options": [
+      "光子",
+      "引力子已被发现",
+      "温度",
+      "动力学"
+     ],
+     "answer_index": 0,
+     "n_traps": 1,
+     "trap_labels": [
+      "引力子已被发现"
+     ],
+     "random_node_labels": [
+      "动力学",
+      "温度"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q02",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「物理学」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      0,
+      4
+     ],
+     "gold_label": "量子力学",
+     "options": [
+      "量子力学",
+      "原子不可再分",
+      "磁场",
+      "强相互作用"
+     ],
+     "answer_index": 0,
+     "n_traps": 1,
+     "trap_labels": [
+      "原子不可再分"
+     ],
+     "random_node_labels": [
+      "磁场",
+      "强相互作用"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q22",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「标准模型」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      25,
+      28
+     ],
+     "gold_label": "轻子",
+     "options": [
+      "粒子物理",
+      "轻子",
+      "绝对时空观",
+      "万有引力定律"
+     ],
+     "answer_index": 1,
+     "n_traps": 1,
+     "trap_labels": [
+      "绝对时空观"
+     ],
+     "random_node_labels": [
+      "万有引力定律",
+      "粒子物理"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q18",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「波函数」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      18,
+      19
+     ],
+     "gold_label": "薛定谔方程",
+     "options": [
+      "地心说引力模型",
+      "薛定谔方程",
+      "动力学",
+      "麦克斯韦方程组"
+     ],
+     "answer_index": 1,
+     "n_traps": 1,
+     "trap_labels": [
+      "地心说引力模型"
+     ],
+     "random_node_labels": [
+      "动力学",
+      "麦克斯韦方程组"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q24",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「标准模型」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      25,
+      30
+     ],
+     "gold_label": "强相互作用",
+     "options": [
+      "标准模型",
+      "伽利略坐标变换",
+      "强相互作用",
+      "量子力学"
+     ],
+     "answer_index": 2,
+     "n_traps": 1,
+     "trap_labels": [
+      "伽利略坐标变换"
+     ],
+     "random_node_labels": [
+      "量子力学",
+      "标准模型"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q25",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「标准模型」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      25,
+      31
+     ],
+     "gold_label": "弱相互作用",
+     "options": [
+      "温度",
+      "以太假说",
+      "弱相互作用",
+      "动力学"
+     ],
+     "answer_index": 2,
+     "n_traps": 1,
+     "trap_labels": [
+      "以太假说"
+     ],
+     "random_node_labels": [
+      "温度",
+      "动力学"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q05",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「经典力学」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      1,
+      8
+     ],
+     "gold_label": "动力学",
+     "options": [
+      "波函数",
+      "夸克",
+      "经典黑体辐射公式",
+      "动力学"
+     ],
+     "answer_index": 3,
+     "n_traps": 1,
+     "trap_labels": [
+      "经典黑体辐射公式"
+     ],
+     "random_node_labels": [
+      "夸克",
+      "波函数"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q28",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「基本粒子」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      26,
+      27
+     ],
+     "gold_label": "夸克",
+     "options": [
+      "夸克",
+      "热质说",
+      "弱相互作用",
+      "麦克斯韦方程组"
+     ],
+     "answer_index": 0,
+     "n_traps": 1,
+     "trap_labels": [
+      "热质说"
+     ],
+     "random_node_labels": [
+      "弱相互作用",
+      "麦克斯韦方程组"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q07",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「电磁学」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      2,
+      12
+     ],
+     "gold_label": "电场",
+     "options": [
+      "超距作用原理",
+      "电场",
+      "磁场",
+      "电磁波"
+     ],
+     "answer_index": 1,
+     "n_traps": 1,
+     "trap_labels": [
+      "超距作用原理"
+     ],
+     "random_node_labels": [
+      "磁场",
+      "电磁波"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q06",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「电磁学」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      2,
+      11
+     ],
+     "gold_label": "麦克斯韦方程组",
+     "options": [
+      "地心说引力模型",
+      "粒子物理",
+      "麦克斯韦方程组",
+      "广义相对论"
+     ],
+     "answer_index": 2,
+     "n_traps": 1,
+     "trap_labels": [
+      "地心说引力模型"
+     ],
+     "random_node_labels": [
+      "粒子物理",
+      "广义相对论"
+     ]
+    }
+   ]
+  },
+  "2": {
+   "per_domain": {
+    "algorithm_process": {
+     "accuracy": {
+      "rule_filter": 0.4,
+      "field_mean": 0.4,
+      "random": 0.3
+     },
+     "n_items": 10,
+     "records": [
+      {
+       "item_id": "algorithm_process#q22",
+       "gold": "在线推理",
+       "answers": {
+        "field_mean": "在线推理",
+        "rule_filter": "混淆矩阵训练",
+        "random": "收敛判断"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q17",
+       "gold": "后处理规则",
+       "answers": {
+        "field_mean": "后处理规则",
+        "rule_filter": "后处理规则",
+        "random": "准确率反向传播"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q08",
+       "gold": "梯度计算",
+       "answers": {
+        "field_mean": "样本划分",
+        "rule_filter": "贝叶斯先验更新",
+        "random": "梯度计算"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": true
+       }
+      },
+      {
+       "item_id": "algorithm_process#q11",
+       "gold": "早停机制",
+       "answers": {
+        "field_mean": "版本回退",
+        "rule_filter": "版本回退",
+        "random": "版本回退"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q03",
+       "gold": "算法选择",
+       "answers": {
+        "field_mean": "在线推理",
+        "rule_filter": "在线推理",
+        "random": "聚类伪标注"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q12",
+       "gold": "验证评估",
+       "answers": {
+        "field_mean": "验证评估",
+        "rule_filter": "反向传播",
+        "random": "磁带归档"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q25",
+       "gold": "数据再采集",
+       "answers": {
+        "field_mean": "数据再采集",
+        "rule_filter": "数据再采集",
+        "random": "欧氏距离收敛"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q14",
+       "gold": "超参调优",
+       "answers": {
+        "field_mean": "在线推理",
+        "rule_filter": "超参调优",
+        "random": "在线推理"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q10",
+       "gold": "收敛判断",
+       "answers": {
+        "field_mean": "日志监控",
+        "rule_filter": "混淆矩阵训练",
+        "random": "收敛判断"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": true
+       }
+      },
+      {
+       "item_id": "algorithm_process#q05",
+       "gold": "损失函数",
+       "answers": {
+        "field_mean": "模型重训练",
+        "rule_filter": "损失函数",
+        "random": "损失函数"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": false,
+        "random": true
+       }
+      }
+     ]
+    },
+    "biological_taxonomy": {
+     "accuracy": {
+      "rule_filter": 0.1,
+      "field_mean": 0.7,
+      "random": 0.5
+     },
+     "n_items": 10,
+     "records": [
+      {
+       "item_id": "biological_taxonomy#q09",
+       "gold": "人科",
+       "answers": {
+        "field_mean": "人科",
+        "rule_filter": "人科",
+        "random": "偶蹄目"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q10",
+       "gold": "豹属",
+       "answers": {
+        "field_mean": "豹属",
+        "rule_filter": "双子叶植物目",
+        "random": "豹属"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q00",
+       "gold": "真核生物",
+       "answers": {
+        "field_mean": "真核生物",
+        "rule_filter": "原生生物界",
+        "random": "病毒域"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q18",
+       "gold": "蔷薇目",
+       "answers": {
+        "field_mean": "蔷薇目",
+        "rule_filter": "原生生物界",
+        "random": "原生生物界"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q14",
+       "gold": "家猫",
+       "answers": {
+        "field_mean": "家猫",
+        "rule_filter": "单细胞植物门",
+        "random": "单细胞植物门"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q19",
+       "gold": "蔷薇科",
+       "answers": {
+        "field_mean": "智人",
+        "rule_filter": "鱼类纲",
+        "random": "蔷薇科"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": true
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q08",
+       "gold": "猫科",
+       "answers": {
+        "field_mean": "猫科",
+        "rule_filter": "狮",
+        "random": "猫科"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q06",
+       "gold": "食肉目",
+       "answers": {
+        "field_mean": "食肉目",
+        "rule_filter": "原生生物界",
+        "random": "食肉目"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q16",
+       "gold": "智人",
+       "answers": {
+        "field_mean": "脊索动物门",
+        "rule_filter": "脊索动物门",
+        "random": "脊索动物门"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q04",
+       "gold": "被子植物门",
+       "answers": {
+        "field_mean": "古菌域",
+        "rule_filter": "古菌域",
+        "random": "被子植物门"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": true
+       }
+      }
+     ]
+    },
+    "historical_causality": {
+     "accuracy": {
+      "rule_filter": 0.3,
+      "field_mean": 0.5,
+      "random": 0.2
+     },
+     "n_items": 10,
+     "records": [
+      {
+       "item_id": "historical_causality#q08",
+       "gold": "德国宣战",
+       "answers": {
+        "field_mean": "一战全面爆发",
+        "rule_filter": "德国宣战",
+        "random": "三国同盟破裂"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q10",
+       "gold": "一战全面爆发",
+       "answers": {
+        "field_mean": "一战全面爆发",
+        "rule_filter": "殖民地瓜分完成",
+        "random": "殖民地瓜分完成"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q07",
+       "gold": "德国战争计划",
+       "answers": {
+        "field_mean": "英国参战",
+        "rule_filter": "德国战争计划",
+        "random": "凡尔登和谈"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q04",
+       "gold": "奥匈帝国最后通牒",
+       "answers": {
+        "field_mean": "殖民地争夺激化",
+        "rule_filter": "奥匈帝国改革",
+        "random": "奥匈帝国最后通牒"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": true
+       }
+      },
+      {
+       "item_id": "historical_causality#q06",
+       "gold": "俄国总动员",
+       "answers": {
+        "field_mean": "索姆河战役",
+        "rule_filter": "索姆河战役",
+        "random": "普法战争赔款"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q17",
+       "gold": "德国失败",
+       "answers": {
+        "field_mean": "德国失败",
+        "rule_filter": "德国失败",
+        "random": "民族自决确立"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q15",
+       "gold": "俄国退出一战",
+       "answers": {
+        "field_mean": "俄国退出一战",
+        "rule_filter": "慕尼黑协定",
+        "random": "慕尼黑协定"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q19",
+       "gold": "经济危机隐患",
+       "answers": {
+        "field_mean": "经济危机隐患",
+        "rule_filter": "凡尔登和谈",
+        "random": "凡尔登和谈"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q13",
+       "gold": "索姆河战役",
+       "answers": {
+        "field_mean": "凡尔赛条约",
+        "rule_filter": "凡尔赛条约",
+        "random": "索姆河战役"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": true
+       }
+      },
+      {
+       "item_id": "historical_causality#q12",
+       "gold": "凡尔登战役",
+       "answers": {
+        "field_mean": "凡尔登战役",
+        "rule_filter": "萨拉热窝审判",
+        "random": "萨拉热窝审判"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      }
+     ]
+    },
+    "physics_concepts": {
+     "accuracy": {
+      "rule_filter": 0.3,
+      "field_mean": 0.5,
+      "random": 0.3
+     },
+     "n_items": 10,
+     "records": [
+      {
+       "item_id": "physics_concepts#q01",
+       "gold": "电磁学",
+       "answers": {
+        "field_mean": "电磁学",
+        "rule_filter": "原子不可再分",
+        "random": "电磁学"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "physics_concepts#q19",
+       "gold": "质能方程",
+       "answers": {
+        "field_mean": "质能方程",
+        "rule_filter": "质能方程",
+        "random": "质能方程"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "physics_concepts#q24",
+       "gold": "强相互作用",
+       "answers": {
+        "field_mean": "强相互作用",
+        "rule_filter": "伽利略坐标变换",
+        "random": "伽利略坐标变换"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q08",
+       "gold": "磁场",
+       "answers": {
+        "field_mean": "热力学",
+        "rule_filter": "经典黑体辐射公式",
+        "random": "经典黑体辐射公式"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q29",
+       "gold": "轻子",
+       "answers": {
+        "field_mean": "粒子物理",
+        "rule_filter": "轻子",
+        "random": "引力子已被发现"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q05",
+       "gold": "动力学",
+       "answers": {
+        "field_mean": "动力学",
+        "rule_filter": "引力子已被发现",
+        "random": "动力学"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "physics_concepts#q23",
+       "gold": "光子",
+       "answers": {
+        "field_mean": "电磁相互作用",
+        "rule_filter": "电磁相互作用",
+        "random": "引力子已被发现"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q20",
+       "gold": "时空弯曲",
+       "answers": {
+        "field_mean": "动力学",
+        "rule_filter": "动力学",
+        "random": "动力学"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q06",
+       "gold": "麦克斯韦方程组",
+       "answers": {
+        "field_mean": "动力学",
+        "rule_filter": "麦克斯韦方程组",
+        "random": "以太假说"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": false,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q14",
+       "gold": "牛顿定律",
+       "answers": {
+        "field_mean": "牛顿定律",
+        "rule_filter": "热质说",
+        "random": "引力"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      }
+     ]
+    }
+   },
+   "overall": {
+    "rule_filter": 0.275,
+    "field_mean": 0.525,
+    "random": 0.325
+   },
+   "items": [
+    {
+     "item_id": "algorithm_process#q22",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「部署上线」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      25,
+      26
+     ],
+     "gold_label": "在线推理",
+     "options": [
+      "混淆矩阵训练",
+      "多数表决初始化",
+      "在线推理",
+      "收敛判断"
+     ],
+     "answer_index": 2,
+     "n_traps": 2,
+     "trap_labels": [
+      "多数表决初始化",
+      "混淆矩阵训练"
+     ],
+     "random_node_labels": [
+      "收敛判断"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q17",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「决策输出」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      20,
+      21
+     ],
+     "gold_label": "后处理规则",
+     "options": [
+      "后处理规则",
+      "熵权法调参",
+      "准确率反向传播",
+      "决策输出"
+     ],
+     "answer_index": 0,
+     "n_traps": 2,
+     "trap_labels": [
+      "准确率反向传播",
+      "熵权法调参"
+     ],
+     "random_node_labels": [
+      "决策输出"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q08",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「反向传播」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      10,
+      11
+     ],
+     "gold_label": "梯度计算",
+     "options": [
+      "贝叶斯先验更新",
+      "样本划分",
+      "梯度计算",
+      "遗传交叉操作"
+     ],
+     "answer_index": 2,
+     "n_traps": 2,
+     "trap_labels": [
+      "贝叶斯先验更新",
+      "遗传交叉操作"
+     ],
+     "random_node_labels": [
+      "样本划分"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q11",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「收敛判断」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      13,
+      14
+     ],
+     "gold_label": "早停机制",
+     "options": [
+      "版本回退",
+      "准确率反向传播",
+      "早停机制",
+      "熵权法调参"
+     ],
+     "answer_index": 2,
+     "n_traps": 2,
+     "trap_labels": [
+      "准确率反向传播",
+      "熵权法调参"
+     ],
+     "random_node_labels": [
+      "版本回退"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q03",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「样本划分」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      3,
+      4
+     ],
+     "gold_label": "算法选择",
+     "options": [
+      "在线推理",
+      "独热归一化",
+      "聚类伪标注",
+      "算法选择"
+     ],
+     "answer_index": 3,
+     "n_traps": 2,
+     "trap_labels": [
+      "独热归一化",
+      "聚类伪标注"
+     ],
+     "random_node_labels": [
+      "在线推理"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q12",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「早停机制」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      14,
+      15
+     ],
+     "gold_label": "验证评估",
+     "options": [
+      "反向传播",
+      "打孔卡读入",
+      "验证评估",
+      "磁带归档"
+     ],
+     "answer_index": 2,
+     "n_traps": 2,
+     "trap_labels": [
+      "打孔卡读入",
+      "磁带归档"
+     ],
+     "random_node_labels": [
+      "反向传播"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q25",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「反馈回流」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      28,
+      29
+     ],
+     "gold_label": "数据再采集",
+     "options": [
+      "数据再采集",
+      "收敛判断",
+      "欧氏距离收敛",
+      "零假设拒绝"
+     ],
+     "answer_index": 0,
+     "n_traps": 2,
+     "trap_labels": [
+      "零假设拒绝",
+      "欧氏距离收敛"
+     ],
+     "random_node_labels": [
+      "收敛判断"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q14",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「交叉验证」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      16,
+      17
+     ],
+     "gold_label": "超参调优",
+     "options": [
+      "超参调优",
+      "贝叶斯先验更新",
+      "遗传交叉操作",
+      "在线推理"
+     ],
+     "answer_index": 0,
+     "n_traps": 2,
+     "trap_labels": [
+      "贝叶斯先验更新",
+      "遗传交叉操作"
+     ],
+     "random_node_labels": [
+      "在线推理"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q10",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「参数更新」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      12,
+      13
+     ],
+     "gold_label": "收敛判断",
+     "options": [
+      "混淆矩阵训练",
+      "收敛判断",
+      "多数表决初始化",
+      "日志监控"
+     ],
+     "answer_index": 1,
+     "n_traps": 2,
+     "trap_labels": [
+      "多数表决初始化",
+      "混淆矩阵训练"
+     ],
+     "random_node_labels": [
+      "日志监控"
+     ]
+    },
+    {
+     "item_id": "algorithm_process#q05",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「参数配置」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      6,
+      7
+     ],
+     "gold_label": "损失函数",
+     "options": [
+      "损失函数",
+      "准确率反向传播",
+      "模型重训练",
+      "熵权法调参"
+     ],
+     "answer_index": 0,
+     "n_traps": 2,
+     "trap_labels": [
+      "准确率反向传播",
+      "熵权法调参"
+     ],
+     "random_node_labels": [
+      "模型重训练"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q09",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「灵长目」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      15,
+      24
+     ],
+     "gold_label": "人科",
+     "options": [
+      "人科",
+      "软体动物亚门",
+      "偶蹄目",
+      "裸子植物亚门"
+     ],
+     "answer_index": 0,
+     "n_traps": 2,
+     "trap_labels": [
+      "软体动物亚门",
+      "裸子植物亚门"
+     ],
+     "random_node_labels": [
+      "偶蹄目"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q10",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「猫科」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      17,
+      19
+     ],
+     "gold_label": "豹属",
+     "options": [
+      "双子叶植物目",
+      "单子叶植物目",
+      "动物界",
+      "豹属"
+     ],
+     "answer_index": 3,
+     "n_traps": 2,
+     "trap_labels": [
+      "单子叶植物目",
+      "双子叶植物目"
+     ],
+     "random_node_labels": [
+      "动物界"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q00",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「生物」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      0,
+      1
+     ],
+     "gold_label": "真核生物",
+     "options": [
+      "原生生物界",
+      "蔷薇目",
+      "真核生物",
+      "病毒域"
+     ],
+     "answer_index": 2,
+     "n_traps": 2,
+     "trap_labels": [
+      "原生生物界",
+      "病毒域"
+     ],
+     "random_node_labels": [
+      "蔷薇目"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q18",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「双子叶植物纲」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      32,
+      37
+     ],
+     "gold_label": "蔷薇目",
+     "options": [
+      "原生生物界",
+      "蔷薇目",
+      "鸟纲",
+      "病毒域"
+     ],
+     "answer_index": 1,
+     "n_traps": 2,
+     "trap_labels": [
+      "原生生物界",
+      "病毒域"
+     ],
+     "random_node_labels": [
+      "鸟纲"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q14",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「猫属」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      20,
+      23
+     ],
+     "gold_label": "家猫",
+     "options": [
+      "单细胞植物门",
+      "家猫",
+      "狮",
+      "原核动物界"
+     ],
+     "answer_index": 1,
+     "n_traps": 2,
+     "trap_labels": [
+      "原核动物界",
+      "单细胞植物门"
+     ],
+     "random_node_labels": [
+      "狮"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q19",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「蔷薇目」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      37,
+      39
+     ],
+     "gold_label": "蔷薇科",
+     "options": [
+      "鱼类纲",
+      "智人",
+      "恐龙纲",
+      "蔷薇科"
+     ],
+     "answer_index": 3,
+     "n_traps": 2,
+     "trap_labels": [
+      "恐龙纲",
+      "鱼类纲"
+     ],
+     "random_node_labels": [
+      "智人"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q08",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「食肉目」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      14,
+      17
+     ],
+     "gold_label": "猫科",
+     "options": [
+      "狮",
+      "原核动物界",
+      "单细胞植物门",
+      "猫科"
+     ],
+     "answer_index": 3,
+     "n_traps": 2,
+     "trap_labels": [
+      "原核动物界",
+      "单细胞植物门"
+     ],
+     "random_node_labels": [
+      "狮"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q06",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「哺乳纲」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      11,
+      14
+     ],
+     "gold_label": "食肉目",
+     "options": [
+      "原生生物界",
+      "病毒域",
+      "生物",
+      "食肉目"
+     ],
+     "answer_index": 3,
+     "n_traps": 2,
+     "trap_labels": [
+      "原生生物界",
+      "病毒域"
+     ],
+     "random_node_labels": [
+      "生物"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q16",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「人属」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      26,
+      28
+     ],
+     "gold_label": "智人",
+     "options": [
+      "脊索动物门",
+      "单子叶植物目",
+      "双子叶植物目",
+      "智人"
+     ],
+     "answer_index": 3,
+     "n_traps": 2,
+     "trap_labels": [
+      "单子叶植物目",
+      "双子叶植物目"
+     ],
+     "random_node_labels": [
+      "脊索动物门"
+     ]
+    },
+    {
+     "item_id": "biological_taxonomy#q04",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「植物界」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      4,
+      29
+     ],
+     "gold_label": "被子植物门",
+     "options": [
+      "古菌域",
+      "双子叶植物目",
+      "被子植物门",
+      "单子叶植物目"
+     ],
+     "answer_index": 2,
+     "n_traps": 2,
+     "trap_labels": [
+      "单子叶植物目",
+      "双子叶植物目"
+     ],
+     "random_node_labels": [
+      "古菌域"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q08",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「德国战争计划」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      12,
+      13
+     ],
+     "gold_label": "德国宣战",
+     "options": [
+      "德国宣战",
+      "一战全面爆发",
+      "华盛顿海军条约",
+      "三国同盟破裂"
+     ],
+     "answer_index": 0,
+     "n_traps": 2,
+     "trap_labels": [
+      "三国同盟破裂",
+      "华盛顿海军条约"
+     ],
+     "random_node_labels": [
+      "一战全面爆发"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q10",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「英国参战」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      14,
+      15
+     ],
+     "gold_label": "一战全面爆发",
+     "options": [
+      "殖民地瓜分完成",
+      "巴尔干危机",
+      "奥匈帝国改革",
+      "一战全面爆发"
+     ],
+     "answer_index": 3,
+     "n_traps": 2,
+     "trap_labels": [
+      "奥匈帝国改革",
+      "殖民地瓜分完成"
+     ],
+     "random_node_labels": [
+      "巴尔干危机"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q07",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「俄国总动员」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      11,
+      12
+     ],
+     "gold_label": "德国战争计划",
+     "options": [
+      "德国战争计划",
+      "凡尔登和谈",
+      "施里芬计划成功",
+      "英国参战"
+     ],
+     "answer_index": 0,
+     "n_traps": 2,
+     "trap_labels": [
+      "凡尔登和谈",
+      "施里芬计划成功"
+     ],
+     "random_node_labels": [
+      "英国参战"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q04",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「萨拉热窝事件」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      8,
+      9
+     ],
+     "gold_label": "奥匈帝国最后通牒",
+     "options": [
+      "奥匈帝国改革",
+      "殖民地争夺激化",
+      "殖民地瓜分完成",
+      "奥匈帝国最后通牒"
+     ],
+     "answer_index": 3,
+     "n_traps": 2,
+     "trap_labels": [
+      "奥匈帝国改革",
+      "殖民地瓜分完成"
+     ],
+     "random_node_labels": [
+      "殖民地争夺激化"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q06",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「七月危机」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      10,
+      11
+     ],
+     "gold_label": "俄国总动员",
+     "options": [
+      "索姆河战役",
+      "萨拉热窝审判",
+      "俄国总动员",
+      "普法战争赔款"
+     ],
+     "answer_index": 2,
+     "n_traps": 2,
+     "trap_labels": [
+      "普法战争赔款",
+      "萨拉热窝审判"
+     ],
+     "random_node_labels": [
+      "索姆河战役"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q17",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「俄国退出一战」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      20,
+      21
+     ],
+     "gold_label": "德国失败",
+     "options": [
+      "德国失败",
+      "民族自决确立",
+      "法西斯主义兴起",
+      "美国中立终结"
+     ],
+     "answer_index": 0,
+     "n_traps": 2,
+     "trap_labels": [
+      "民族自决确立",
+      "美国中立终结"
+     ],
+     "random_node_labels": [
+      "法西斯主义兴起"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q15",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「索姆河战役」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      18,
+      20
+     ],
+     "gold_label": "俄国退出一战",
+     "options": [
+      "慕尼黑协定",
+      "俄国退出一战",
+      "军事同盟形成",
+      "大萧条加剧"
+     ],
+     "answer_index": 1,
+     "n_traps": 2,
+     "trap_labels": [
+      "大萧条加剧",
+      "慕尼黑协定"
+     ],
+     "random_node_labels": [
+      "军事同盟形成"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q19",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「凡尔赛条约」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      22,
+      27
+     ],
+     "gold_label": "经济危机隐患",
+     "options": [
+      "凡尔登和谈",
+      "美国参战",
+      "经济危机隐患",
+      "施里芬计划成功"
+     ],
+     "answer_index": 2,
+     "n_traps": 2,
+     "trap_labels": [
+      "凡尔登和谈",
+      "施里芬计划成功"
+     ],
+     "random_node_labels": [
+      "美国参战"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q13",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「阵地战消耗」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      16,
+      18
+     ],
+     "gold_label": "索姆河战役",
+     "options": [
+      "凡尔赛条约",
+      "施里芬计划成功",
+      "凡尔登和谈",
+      "索姆河战役"
+     ],
+     "answer_index": 3,
+     "n_traps": 2,
+     "trap_labels": [
+      "凡尔登和谈",
+      "施里芬计划成功"
+     ],
+     "random_node_labels": [
+      "凡尔赛条约"
+     ]
+    },
+    {
+     "item_id": "historical_causality#q12",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「阵地战消耗」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      16,
+      17
+     ],
+     "gold_label": "凡尔登战役",
+     "options": [
+      "萨拉热窝审判",
+      "德国战争计划",
+      "普法战争赔款",
+      "凡尔登战役"
+     ],
+     "answer_index": 3,
+     "n_traps": 2,
+     "trap_labels": [
+      "普法战争赔款",
+      "萨拉热窝审判"
+     ],
+     "random_node_labels": [
+      "德国战争计划"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q01",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「物理学」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      0,
+      2
+     ],
+     "gold_label": "电磁学",
+     "options": [
+      "原子不可再分",
+      "永动机",
+      "电磁学",
+      "熵"
+     ],
+     "answer_index": 2,
+     "n_traps": 2,
+     "trap_labels": [
+      "原子不可再分",
+      "永动机"
+     ],
+     "random_node_labels": [
+      "熵"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q19",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「狭义相对论」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      21,
+      23
+     ],
+     "gold_label": "质能方程",
+     "options": [
+      "质能方程",
+      "原子不可再分",
+      "永动机",
+      "希格斯玻色子"
+     ],
+     "answer_index": 0,
+     "n_traps": 2,
+     "trap_labels": [
+      "原子不可再分",
+      "永动机"
+     ],
+     "random_node_labels": [
+      "希格斯玻色子"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q24",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「标准模型」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      25,
+      30
+     ],
+     "gold_label": "强相互作用",
+     "options": [
+      "伽利略坐标变换",
+      "强相互作用",
+      "狭义相对论",
+      "以太假说"
+     ],
+     "answer_index": 1,
+     "n_traps": 2,
+     "trap_labels": [
+      "伽利略坐标变换",
+      "以太假说"
+     ],
+     "random_node_labels": [
+      "狭义相对论"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q08",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「电磁学」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      2,
+      13
+     ],
+     "gold_label": "磁场",
+     "options": [
+      "经典黑体辐射公式",
+      "热力学",
+      "磁场",
+      "热质说"
+     ],
+     "answer_index": 2,
+     "n_traps": 2,
+     "trap_labels": [
+      "热质说",
+      "经典黑体辐射公式"
+     ],
+     "random_node_labels": [
+      "热力学"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q29",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「基本粒子」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      26,
+      28
+     ],
+     "gold_label": "轻子",
+     "options": [
+      "轻子",
+      "粒子物理",
+      "引力子已被发现",
+      "绝对时空观"
+     ],
+     "answer_index": 0,
+     "n_traps": 2,
+     "trap_labels": [
+      "绝对时空观",
+      "引力子已被发现"
+     ],
+     "random_node_labels": [
+      "粒子物理"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q05",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「经典力学」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      1,
+      8
+     ],
+     "gold_label": "动力学",
+     "options": [
+      "引力子已被发现",
+      "动力学",
+      "绝对时空观",
+      "质能方程"
+     ],
+     "answer_index": 1,
+     "n_traps": 2,
+     "trap_labels": [
+      "绝对时空观",
+      "引力子已被发现"
+     ],
+     "random_node_labels": [
+      "质能方程"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q23",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「标准模型」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      25,
+      29
+     ],
+     "gold_label": "光子",
+     "options": [
+      "电磁相互作用",
+      "绝对时空观",
+      "光子",
+      "引力子已被发现"
+     ],
+     "answer_index": 2,
+     "n_traps": 2,
+     "trap_labels": [
+      "绝对时空观",
+      "引力子已被发现"
+     ],
+     "random_node_labels": [
+      "电磁相互作用"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q20",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「广义相对论」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      22,
+      24
+     ],
+     "gold_label": "时空弯曲",
+     "options": [
+      "动力学",
+      "时空弯曲",
+      "经典黑体辐射公式",
+      "热质说"
+     ],
+     "answer_index": 1,
+     "n_traps": 2,
+     "trap_labels": [
+      "热质说",
+      "经典黑体辐射公式"
+     ],
+     "random_node_labels": [
+      "动力学"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q06",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「电磁学」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      2,
+      11
+     ],
+     "gold_label": "麦克斯韦方程组",
+     "options": [
+      "麦克斯韦方程组",
+      "以太假说",
+      "动力学",
+      "伽利略坐标变换"
+     ],
+     "answer_index": 0,
+     "n_traps": 2,
+     "trap_labels": [
+      "伽利略坐标变换",
+      "以太假说"
+     ],
+     "random_node_labels": [
+      "动力学"
+     ]
+    },
+    {
+     "item_id": "physics_concepts#q14",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「动力学」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      8,
+      9
+     ],
+     "gold_label": "牛顿定律",
+     "options": [
+      "热质说",
+      "经典黑体辐射公式",
+      "牛顿定律",
+      "引力"
+     ],
+     "answer_index": 2,
+     "n_traps": 2,
+     "trap_labels": [
+      "热质说",
+      "经典黑体辐射公式"
+     ],
+     "random_node_labels": [
+      "引力"
+     ]
+    }
+   ]
+  },
+  "3": {
+   "per_domain": {
+    "algorithm_process": {
+     "accuracy": {
+      "rule_filter": 0.3,
+      "field_mean": 1.0,
+      "random": 0.3
+     },
+     "n_items": 10,
+     "records": [
+      {
+       "item_id": "algorithm_process#q22",
+       "gold": "在线推理",
+       "answers": {
+        "field_mean": "在线推理",
+        "rule_filter": "聚类伪标注",
+        "random": "多数表决初始化"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q17",
+       "gold": "后处理规则",
+       "answers": {
+        "field_mean": "后处理规则",
+        "rule_filter": "后处理规则",
+        "random": "欧氏距离收敛"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q08",
+       "gold": "梯度计算",
+       "answers": {
+        "field_mean": "梯度计算",
+        "rule_filter": "梯度计算",
+        "random": "零假设拒绝"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q11",
+       "gold": "早停机制",
+       "answers": {
+        "field_mean": "早停机制",
+        "rule_filter": "混淆矩阵训练",
+        "random": "混淆矩阵训练"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q03",
+       "gold": "算法选择",
+       "answers": {
+        "field_mean": "算法选择",
+        "rule_filter": "熵权法调参",
+        "random": "算法选择"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "algorithm_process#q12",
+       "gold": "验证评估",
+       "answers": {
+        "field_mean": "验证评估",
+        "rule_filter": "打孔卡读入",
+        "random": "验证评估"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "algorithm_process#q25",
+       "gold": "数据再采集",
+       "answers": {
+        "field_mean": "数据再采集",
+        "rule_filter": "欧氏距离收敛",
+        "random": "贝叶斯先验更新"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q14",
+       "gold": "超参调优",
+       "answers": {
+        "field_mean": "超参调优",
+        "rule_filter": "聚类伪标注",
+        "random": "超参调优"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "algorithm_process#q10",
+       "gold": "收敛判断",
+       "answers": {
+        "field_mean": "收敛判断",
+        "rule_filter": "收敛判断",
+        "random": "聚类伪标注"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "algorithm_process#q05",
+       "gold": "损失函数",
+       "answers": {
+        "field_mean": "损失函数",
+        "rule_filter": "遗传交叉操作",
+        "random": "遗传交叉操作"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      }
+     ]
+    },
+    "biological_taxonomy": {
+     "accuracy": {
+      "rule_filter": 0.0,
+      "field_mean": 1.0,
+      "random": 0.1
+     },
+     "n_items": 10,
+     "records": [
+      {
+       "item_id": "biological_taxonomy#q18",
+       "gold": "蔷薇目",
+       "answers": {
+        "field_mean": "蔷薇目",
+        "rule_filter": "裸子植物亚门",
+        "random": "裸子植物亚门"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q19",
+       "gold": "蔷薇科",
+       "answers": {
+        "field_mean": "蔷薇科",
+        "rule_filter": "竹属",
+        "random": "苹果目"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q13",
+       "gold": "狮",
+       "answers": {
+        "field_mean": "狮",
+        "rule_filter": "单细胞植物门",
+        "random": "鱼类纲"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q09",
+       "gold": "人科",
+       "answers": {
+        "field_mean": "人科",
+        "rule_filter": "单细胞植物门",
+        "random": "人科"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q11",
+       "gold": "猫属",
+       "answers": {
+        "field_mean": "猫属",
+        "rule_filter": "竹属",
+        "random": "竹属"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q21",
+       "gold": "苹果",
+       "answers": {
+        "field_mean": "苹果",
+        "rule_filter": "单细胞植物门",
+        "random": "原核动物界"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q01",
+       "gold": "动物界",
+       "answers": {
+        "field_mean": "动物界",
+        "rule_filter": "鱼类纲",
+        "random": "原核动物界"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q12",
+       "gold": "虎",
+       "answers": {
+        "field_mean": "虎",
+        "rule_filter": "原生生物界",
+        "random": "原生生物界"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q14",
+       "gold": "家猫",
+       "answers": {
+        "field_mean": "家猫",
+        "rule_filter": "单子叶植物目",
+        "random": "单子叶植物目"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "biological_taxonomy#q07",
+       "gold": "灵长目",
+       "answers": {
+        "field_mean": "灵长目",
+        "rule_filter": "竹属",
+        "random": "竹属"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      }
+     ]
+    },
+    "historical_causality": {
+     "accuracy": {
+      "rule_filter": 0.4,
+      "field_mean": 1.0,
+      "random": 0.2
+     },
+     "n_items": 10,
+     "records": [
+      {
+       "item_id": "historical_causality#q17",
+       "gold": "德国失败",
+       "answers": {
+        "field_mean": "德国失败",
+        "rule_filter": "德国失败",
+        "random": "三国同盟破裂"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q09",
+       "gold": "英国参战",
+       "answers": {
+        "field_mean": "英国参战",
+        "rule_filter": "华盛顿海军条约",
+        "random": "华盛顿海军条约"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q04",
+       "gold": "奥匈帝国最后通牒",
+       "answers": {
+        "field_mean": "奥匈帝国最后通牒",
+        "rule_filter": "普法战争赔款",
+        "random": "凡尔登和谈"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q12",
+       "gold": "凡尔登战役",
+       "answers": {
+        "field_mean": "凡尔登战役",
+        "rule_filter": "萨拉热窝审判",
+        "random": "萨拉热窝审判"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q00",
+       "gold": "帝国主义竞争",
+       "answers": {
+        "field_mean": "帝国主义竞争",
+        "rule_filter": "萨拉热窝审判",
+        "random": "萨拉热窝审判"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q07",
+       "gold": "德国战争计划",
+       "answers": {
+        "field_mean": "德国战争计划",
+        "rule_filter": "德国战争计划",
+        "random": "美国中立终结"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q14",
+       "gold": "美国参战",
+       "answers": {
+        "field_mean": "美国参战",
+        "rule_filter": "美国参战",
+        "random": "奥匈帝国改革"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q13",
+       "gold": "索姆河战役",
+       "answers": {
+        "field_mean": "索姆河战役",
+        "rule_filter": "三国同盟破裂",
+        "random": "索姆河战役"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "historical_causality#q01",
+       "gold": "殖民地争夺激化",
+       "answers": {
+        "field_mean": "殖民地争夺激化",
+        "rule_filter": "华盛顿海军条约",
+        "random": "三国同盟破裂"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "historical_causality#q05",
+       "gold": "七月危机",
+       "answers": {
+        "field_mean": "七月危机",
+        "rule_filter": "七月危机",
+        "random": "七月危机"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": true
+       }
+      }
+     ]
+    },
+    "physics_concepts": {
+     "accuracy": {
+      "rule_filter": 0.1,
+      "field_mean": 1.0,
+      "random": 0.2
+     },
+     "n_items": 10,
+     "records": [
+      {
+       "item_id": "physics_concepts#q17",
+       "gold": "电磁波",
+       "answers": {
+        "field_mean": "电磁波",
+        "rule_filter": "永动机",
+        "random": "经典黑体辐射公式"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q11",
+       "gold": "广义相对论",
+       "answers": {
+        "field_mean": "广义相对论",
+        "rule_filter": "绝对时空观",
+        "random": "绝对时空观"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q07",
+       "gold": "电场",
+       "answers": {
+        "field_mean": "电场",
+        "rule_filter": "绝对时空观",
+        "random": "光速可变假说"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q08",
+       "gold": "磁场",
+       "answers": {
+        "field_mean": "磁场",
+        "rule_filter": "原子不可再分",
+        "random": "原子不可再分"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q29",
+       "gold": "轻子",
+       "answers": {
+        "field_mean": "轻子",
+        "rule_filter": "永动机",
+        "random": "轻子"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "physics_concepts#q12",
+       "gold": "标准模型",
+       "answers": {
+        "field_mean": "标准模型",
+        "rule_filter": "以太假说",
+        "random": "标准模型"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": true
+       }
+      },
+      {
+       "item_id": "physics_concepts#q15",
+       "gold": "电磁波",
+       "answers": {
+        "field_mean": "电磁波",
+        "rule_filter": "光速可变假说",
+        "random": "绝对时空观"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q25",
+       "gold": "弱相互作用",
+       "answers": {
+        "field_mean": "弱相互作用",
+        "rule_filter": "经典黑体辐射公式",
+        "random": "经典黑体辐射公式"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q13",
+       "gold": "基本粒子",
+       "answers": {
+        "field_mean": "基本粒子",
+        "rule_filter": "基本粒子",
+        "random": "经典黑体辐射公式"
+       },
+       "correct": {
+        "rule_filter": true,
+        "field_mean": true,
+        "random": false
+       }
+      },
+      {
+       "item_id": "physics_concepts#q23",
+       "gold": "光子",
+       "answers": {
+        "field_mean": "光子",
+        "rule_filter": "光速可变假说",
+        "random": "引力子已被发现"
+       },
+       "correct": {
+        "rule_filter": false,
+        "field_mean": true,
+        "random": false
+       }
+      }
+     ]
+    }
+   },
+   "overall": {
+    "rule_filter": 0.19999999999999998,
+    "field_mean": 1.0,
+    "random": 0.2
+   },
+   "items": [
+    {
+     "item_id": "algorithm_process#q22",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「部署上线」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      25,
+      26
+     ],
+     "gold_label": "在线推理",
+     "options": [
+      "聚类伪标注",
+      "独热归一化",
+      "在线推理",
+      "多数表决初始化"
+     ],
+     "answer_index": 2,
+     "n_traps": 3,
+     "trap_labels": [
+      "独热归一化",
+      "聚类伪标注",
+      "多数表决初始化"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "algorithm_process#q17",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「决策输出」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      20,
+      21
+     ],
+     "gold_label": "后处理规则",
+     "options": [
+      "后处理规则",
+      "贝叶斯先验更新",
+      "欧氏距离收敛",
+      "遗传交叉操作"
+     ],
+     "answer_index": 0,
+     "n_traps": 3,
+     "trap_labels": [
+      "欧氏距离收敛",
+      "贝叶斯先验更新",
+      "遗传交叉操作"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "algorithm_process#q08",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「反向传播」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      10,
+      11
+     ],
+     "gold_label": "梯度计算",
+     "options": [
+      "梯度计算",
+      "打孔卡读入",
+      "零假设拒绝",
+      "磁带归档"
+     ],
+     "answer_index": 0,
+     "n_traps": 3,
+     "trap_labels": [
+      "打孔卡读入",
+      "磁带归档",
+      "零假设拒绝"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "algorithm_process#q11",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「收敛判断」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      13,
+      14
+     ],
+     "gold_label": "早停机制",
+     "options": [
+      "混淆矩阵训练",
+      "准确率反向传播",
+      "熵权法调参",
+      "早停机制"
+     ],
+     "answer_index": 3,
+     "n_traps": 3,
+     "trap_labels": [
+      "混淆矩阵训练",
+      "准确率反向传播",
+      "熵权法调参"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "algorithm_process#q03",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「样本划分」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      3,
+      4
+     ],
+     "gold_label": "算法选择",
+     "options": [
+      "熵权法调参",
+      "混淆矩阵训练",
+      "算法选择",
+      "准确率反向传播"
+     ],
+     "answer_index": 2,
+     "n_traps": 3,
+     "trap_labels": [
+      "混淆矩阵训练",
+      "准确率反向传播",
+      "熵权法调参"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "algorithm_process#q12",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「早停机制」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      14,
+      15
+     ],
+     "gold_label": "验证评估",
+     "options": [
+      "打孔卡读入",
+      "磁带归档",
+      "零假设拒绝",
+      "验证评估"
+     ],
+     "answer_index": 3,
+     "n_traps": 3,
+     "trap_labels": [
+      "打孔卡读入",
+      "磁带归档",
+      "零假设拒绝"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "algorithm_process#q25",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「反馈回流」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      28,
+      29
+     ],
+     "gold_label": "数据再采集",
+     "options": [
+      "欧氏距离收敛",
+      "数据再采集",
+      "贝叶斯先验更新",
+      "遗传交叉操作"
+     ],
+     "answer_index": 1,
+     "n_traps": 3,
+     "trap_labels": [
+      "欧氏距离收敛",
+      "贝叶斯先验更新",
+      "遗传交叉操作"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "algorithm_process#q14",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「交叉验证」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      16,
+      17
+     ],
+     "gold_label": "超参调优",
+     "options": [
+      "聚类伪标注",
+      "多数表决初始化",
+      "独热归一化",
+      "超参调优"
+     ],
+     "answer_index": 3,
+     "n_traps": 3,
+     "trap_labels": [
+      "独热归一化",
+      "聚类伪标注",
+      "多数表决初始化"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "algorithm_process#q10",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「参数更新」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      12,
+      13
+     ],
+     "gold_label": "收敛判断",
+     "options": [
+      "收敛判断",
+      "聚类伪标注",
+      "独热归一化",
+      "多数表决初始化"
+     ],
+     "answer_index": 0,
+     "n_traps": 3,
+     "trap_labels": [
+      "独热归一化",
+      "聚类伪标注",
+      "多数表决初始化"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "algorithm_process#q05",
+     "domain": "algorithm_process",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「algorithm_process」中，与「参数配置」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      6,
+      7
+     ],
+     "gold_label": "损失函数",
+     "options": [
+      "遗传交叉操作",
+      "欧氏距离收敛",
+      "损失函数",
+      "贝叶斯先验更新"
+     ],
+     "answer_index": 2,
+     "n_traps": 3,
+     "trap_labels": [
+      "欧氏距离收敛",
+      "贝叶斯先验更新",
+      "遗传交叉操作"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "biological_taxonomy#q18",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「双子叶植物纲」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      32,
+      37
+     ],
+     "gold_label": "蔷薇目",
+     "options": [
+      "裸子植物亚门",
+      "蔷薇目",
+      "单子叶植物目",
+      "软体动物亚门"
+     ],
+     "answer_index": 1,
+     "n_traps": 3,
+     "trap_labels": [
+      "软体动物亚门",
+      "裸子植物亚门",
+      "单子叶植物目"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "biological_taxonomy#q19",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「蔷薇目」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      37,
+      39
+     ],
+     "gold_label": "蔷薇科",
+     "options": [
+      "竹属",
+      "蔷薇科",
+      "双子叶植物目",
+      "苹果目"
+     ],
+     "answer_index": 1,
+     "n_traps": 3,
+     "trap_labels": [
+      "双子叶植物目",
+      "竹属",
+      "苹果目"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "biological_taxonomy#q13",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「豹属」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      19,
+      22
+     ],
+     "gold_label": "狮",
+     "options": [
+      "单细胞植物门",
+      "狮",
+      "原核动物界",
+      "鱼类纲"
+     ],
+     "answer_index": 1,
+     "n_traps": 3,
+     "trap_labels": [
+      "鱼类纲",
+      "原核动物界",
+      "单细胞植物门"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "biological_taxonomy#q09",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「灵长目」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      15,
+      24
+     ],
+     "gold_label": "人科",
+     "options": [
+      "单细胞植物门",
+      "原核动物界",
+      "人科",
+      "鱼类纲"
+     ],
+     "answer_index": 2,
+     "n_traps": 3,
+     "trap_labels": [
+      "鱼类纲",
+      "原核动物界",
+      "单细胞植物门"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "biological_taxonomy#q11",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「猫科」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      17,
+      20
+     ],
+     "gold_label": "猫属",
+     "options": [
+      "竹属",
+      "双子叶植物目",
+      "猫属",
+      "苹果目"
+     ],
+     "answer_index": 2,
+     "n_traps": 3,
+     "trap_labels": [
+      "双子叶植物目",
+      "竹属",
+      "苹果目"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "biological_taxonomy#q21",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「苹果属」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      40,
+      41
+     ],
+     "gold_label": "苹果",
+     "options": [
+      "单细胞植物门",
+      "苹果",
+      "原核动物界",
+      "鱼类纲"
+     ],
+     "answer_index": 1,
+     "n_traps": 3,
+     "trap_labels": [
+      "鱼类纲",
+      "原核动物界",
+      "单细胞植物门"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "biological_taxonomy#q01",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「真核生物」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      1,
+      3
+     ],
+     "gold_label": "动物界",
+     "options": [
+      "鱼类纲",
+      "原核动物界",
+      "单细胞植物门",
+      "动物界"
+     ],
+     "answer_index": 3,
+     "n_traps": 3,
+     "trap_labels": [
+      "鱼类纲",
+      "原核动物界",
+      "单细胞植物门"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "biological_taxonomy#q12",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「豹属」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      19,
+      21
+     ],
+     "gold_label": "虎",
+     "options": [
+      "原生生物界",
+      "虎",
+      "病毒域",
+      "恐龙纲"
+     ],
+     "answer_index": 1,
+     "n_traps": 3,
+     "trap_labels": [
+      "原生生物界",
+      "病毒域",
+      "恐龙纲"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "biological_taxonomy#q14",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「猫属」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      20,
+      23
+     ],
+     "gold_label": "家猫",
+     "options": [
+      "单子叶植物目",
+      "裸子植物亚门",
+      "软体动物亚门",
+      "家猫"
+     ],
+     "answer_index": 3,
+     "n_traps": 3,
+     "trap_labels": [
+      "软体动物亚门",
+      "裸子植物亚门",
+      "单子叶植物目"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "biological_taxonomy#q07",
+     "domain": "biological_taxonomy",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「biological_taxonomy」中，与「哺乳纲」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      11,
+      15
+     ],
+     "gold_label": "灵长目",
+     "options": [
+      "竹属",
+      "双子叶植物目",
+      "苹果目",
+      "灵长目"
+     ],
+     "answer_index": 3,
+     "n_traps": 3,
+     "trap_labels": [
+      "双子叶植物目",
+      "竹属",
+      "苹果目"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "historical_causality#q17",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「俄国退出一战」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      20,
+      21
+     ],
+     "gold_label": "德国失败",
+     "options": [
+      "德国失败",
+      "三国同盟破裂",
+      "施里芬计划成功",
+      "华盛顿海军条约"
+     ],
+     "answer_index": 0,
+     "n_traps": 3,
+     "trap_labels": [
+      "施里芬计划成功",
+      "三国同盟破裂",
+      "华盛顿海军条约"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "historical_causality#q09",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「德国宣战」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      13,
+      14
+     ],
+     "gold_label": "英国参战",
+     "options": [
+      "华盛顿海军条约",
+      "施里芬计划成功",
+      "英国参战",
+      "三国同盟破裂"
+     ],
+     "answer_index": 2,
+     "n_traps": 3,
+     "trap_labels": [
+      "施里芬计划成功",
+      "三国同盟破裂",
+      "华盛顿海军条约"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "historical_causality#q04",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「萨拉热窝事件」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      8,
+      9
+     ],
+     "gold_label": "奥匈帝国最后通牒",
+     "options": [
+      "普法战争赔款",
+      "萨拉热窝审判",
+      "奥匈帝国最后通牒",
+      "凡尔登和谈"
+     ],
+     "answer_index": 2,
+     "n_traps": 3,
+     "trap_labels": [
+      "普法战争赔款",
+      "萨拉热窝审判",
+      "凡尔登和谈"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "historical_causality#q12",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「阵地战消耗」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      16,
+      17
+     ],
+     "gold_label": "凡尔登战役",
+     "options": [
+      "萨拉热窝审判",
+      "凡尔登战役",
+      "凡尔登和谈",
+      "普法战争赔款"
+     ],
+     "answer_index": 1,
+     "n_traps": 3,
+     "trap_labels": [
+      "普法战争赔款",
+      "萨拉热窝审判",
+      "凡尔登和谈"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "historical_causality#q00",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「资本主义扩张」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      0,
+      1
+     ],
+     "gold_label": "帝国主义竞争",
+     "options": [
+      "萨拉热窝审判",
+      "凡尔登和谈",
+      "普法战争赔款",
+      "帝国主义竞争"
+     ],
+     "answer_index": 3,
+     "n_traps": 3,
+     "trap_labels": [
+      "普法战争赔款",
+      "萨拉热窝审判",
+      "凡尔登和谈"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "historical_causality#q07",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「俄国总动员」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      11,
+      12
+     ],
+     "gold_label": "德国战争计划",
+     "options": [
+      "德国战争计划",
+      "美国中立终结",
+      "殖民地瓜分完成",
+      "民族自决确立"
+     ],
+     "answer_index": 0,
+     "n_traps": 3,
+     "trap_labels": [
+      "殖民地瓜分完成",
+      "民族自决确立",
+      "美国中立终结"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "historical_causality#q14",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「凡尔登战役」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      17,
+      19
+     ],
+     "gold_label": "美国参战",
+     "options": [
+      "美国参战",
+      "奥匈帝国改革",
+      "慕尼黑协定",
+      "大萧条加剧"
+     ],
+     "answer_index": 0,
+     "n_traps": 3,
+     "trap_labels": [
+      "大萧条加剧",
+      "慕尼黑协定",
+      "奥匈帝国改革"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "historical_causality#q13",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「阵地战消耗」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      16,
+      18
+     ],
+     "gold_label": "索姆河战役",
+     "options": [
+      "三国同盟破裂",
+      "施里芬计划成功",
+      "华盛顿海军条约",
+      "索姆河战役"
+     ],
+     "answer_index": 3,
+     "n_traps": 3,
+     "trap_labels": [
+      "施里芬计划成功",
+      "三国同盟破裂",
+      "华盛顿海军条约"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "historical_causality#q01",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「帝国主义竞争」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      1,
+      5
+     ],
+     "gold_label": "殖民地争夺激化",
+     "options": [
+      "华盛顿海军条约",
+      "三国同盟破裂",
+      "施里芬计划成功",
+      "殖民地争夺激化"
+     ],
+     "answer_index": 3,
+     "n_traps": 3,
+     "trap_labels": [
+      "施里芬计划成功",
+      "三国同盟破裂",
+      "华盛顿海军条约"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "historical_causality#q05",
+     "domain": "historical_causality",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「historical_causality」中，与「奥匈帝国最后通牒」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      9,
+      10
+     ],
+     "gold_label": "七月危机",
+     "options": [
+      "七月危机",
+      "华盛顿海军条约",
+      "施里芬计划成功",
+      "三国同盟破裂"
+     ],
+     "answer_index": 0,
+     "n_traps": 3,
+     "trap_labels": [
+      "施里芬计划成功",
+      "三国同盟破裂",
+      "华盛顿海军条约"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "physics_concepts#q17",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「磁场」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      13,
+      14
+     ],
+     "gold_label": "电磁波",
+     "options": [
+      "永动机",
+      "经典黑体辐射公式",
+      "热质说",
+      "电磁波"
+     ],
+     "answer_index": 3,
+     "n_traps": 3,
+     "trap_labels": [
+      "永动机",
+      "热质说",
+      "经典黑体辐射公式"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "physics_concepts#q11",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「相对论」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      5,
+      22
+     ],
+     "gold_label": "广义相对论",
+     "options": [
+      "绝对时空观",
+      "光速可变假说",
+      "引力子已被发现",
+      "广义相对论"
+     ],
+     "answer_index": 3,
+     "n_traps": 3,
+     "trap_labels": [
+      "光速可变假说",
+      "绝对时空观",
+      "引力子已被发现"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "physics_concepts#q07",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「电磁学」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      2,
+      12
+     ],
+     "gold_label": "电场",
+     "options": [
+      "绝对时空观",
+      "电场",
+      "引力子已被发现",
+      "光速可变假说"
+     ],
+     "answer_index": 1,
+     "n_traps": 3,
+     "trap_labels": [
+      "光速可变假说",
+      "绝对时空观",
+      "引力子已被发现"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "physics_concepts#q08",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「电磁学」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      2,
+      13
+     ],
+     "gold_label": "磁场",
+     "options": [
+      "原子不可再分",
+      "以太假说",
+      "磁场",
+      "伽利略坐标变换"
+     ],
+     "answer_index": 2,
+     "n_traps": 3,
+     "trap_labels": [
+      "伽利略坐标变换",
+      "以太假说",
+      "原子不可再分"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "physics_concepts#q29",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「基本粒子」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      26,
+      28
+     ],
+     "gold_label": "轻子",
+     "options": [
+      "永动机",
+      "热质说",
+      "轻子",
+      "经典黑体辐射公式"
+     ],
+     "answer_index": 2,
+     "n_traps": 3,
+     "trap_labels": [
+      "永动机",
+      "热质说",
+      "经典黑体辐射公式"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "physics_concepts#q12",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「粒子物理」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      6,
+      25
+     ],
+     "gold_label": "标准模型",
+     "options": [
+      "以太假说",
+      "伽利略坐标变换",
+      "原子不可再分",
+      "标准模型"
+     ],
+     "answer_index": 3,
+     "n_traps": 3,
+     "trap_labels": [
+      "伽利略坐标变换",
+      "以太假说",
+      "原子不可再分"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "physics_concepts#q15",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「麦克斯韦方程组」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      11,
+      14
+     ],
+     "gold_label": "电磁波",
+     "options": [
+      "光速可变假说",
+      "绝对时空观",
+      "电磁波",
+      "引力子已被发现"
+     ],
+     "answer_index": 2,
+     "n_traps": 3,
+     "trap_labels": [
+      "光速可变假说",
+      "绝对时空观",
+      "引力子已被发现"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "physics_concepts#q25",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「标准模型」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      25,
+      31
+     ],
+     "gold_label": "弱相互作用",
+     "options": [
+      "经典黑体辐射公式",
+      "永动机",
+      "弱相互作用",
+      "热质说"
+     ],
+     "answer_index": 2,
+     "n_traps": 3,
+     "trap_labels": [
+      "永动机",
+      "热质说",
+      "经典黑体辐射公式"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "physics_concepts#q13",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「粒子物理」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      6,
+      26
+     ],
+     "gold_label": "基本粒子",
+     "options": [
+      "基本粒子",
+      "永动机",
+      "热质说",
+      "经典黑体辐射公式"
+     ],
+     "answer_index": 0,
+     "n_traps": 3,
+     "trap_labels": [
+      "永动机",
+      "热质说",
+      "经典黑体辐射公式"
+     ],
+     "random_node_labels": []
+    },
+    {
+     "item_id": "physics_concepts#q23",
+     "domain": "physics_concepts",
+     "bloom_level": "L4_analyze",
+     "stem": "在概念体系「physics_concepts」中，与「标准模型」存在最直接合理后继关系的是哪一个？",
+     "gold_edge": [
+      25,
+      29
+     ],
+     "gold_label": "光子",
+     "options": [
+      "光速可变假说",
+      "绝对时空观",
+      "光子",
+      "引力子已被发现"
+     ],
+     "answer_index": 2,
+     "n_traps": 3,
+     "trap_labels": [
+      "光速可变假说",
+      "绝对时空观",
+      "引力子已被发现"
+     ],
+     "random_node_labels": []
+    }
+   ]
+  }
+ },
+ "accuracy_by_T": {
+  "rule_filter": {
+   "1": 0.15000000000000002,
+   "2": 0.275,
+   "3": 0.19999999999999998
+  },
+  "field_mean": {
+   "1": 0.375,
+   "2": 0.525,
+   "3": 1.0
+  },
+  "random": {
+   "1": 0.35000000000000003,
+   "2": 0.325,
+   "3": 0.2
+  }
+ },
+ "verdict": "inconclusive",
+ "verdict_detail": {
+  "rule_filter_acc_by_T": [
+   0.15000000000000002,
+   0.275,
+   0.19999999999999998
+  ],
+  "field_mean_acc_by_T": [
+   0.375,
+   0.525,
+   1.0
+  ],
+  "field_immunity_ok": false,
+  "field_tol": 0.05
+ },
+ "honesty": [
+  "no LLM API calls issued：仅复用 results/gt2_attacker_cache 既有缓存；未合成/改写任何陷阱标签。",
+  "缓存降级披露：geography_world / project_management 无攻击者缓存，本轮仅 4 域（与既有 quizbank_v20 一致）。",
+  "机制性免疫披露：陷阱标签不在图节点集内，field_mean 对其打 -inf，不被骗是排序对象域的机制结果，不等价于语义识别能力。",
+  "llm_prior 属 API 轨，本轮零 API 不跑（Findings §三先验臂 92.5% 为上轮缓存结果，不重复主张）。",
+  "判定机械求值（verdict() 纯函数），反转/判死如实。",
+  "题库仅供横向对比（题型效度），不作为独立基准主张。"
+ ]
+}

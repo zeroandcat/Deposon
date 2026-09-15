@@ -1,0 +1,25 @@
+[BOSS-B3] KT_B1_BOSS_B3_LLMLINGUA - LLMLingua (Tao et al. EMNLP 2023) 失真度真实现
+  数据集: results/deposon_v19_benchmark_fixes.json
+  判死线: LLMLingua 失真 < 0.05 (95% 语义保留)
+  LLMLingua 超参: target_ratio=0.5
+  规模: 200 节点 / 200 题 / 5 prompt/题
+  复现: /tmp/deposon_kt_b1_audit_{timestamp}/
+
+  v19 loaded: physics_audit.t_plus_r_plus_a_max_deviation = 2.220e-16
+  built prompts: 995 questions × 5 variants/question
+
+============================================================
+BOSS-B3 结果
+============================================================
+  LLMLingua 失真度:  0.4634
+  deposon 失真度:    0.0500
+  阈值:              0.05
+  裁定:              GRAY_BOTH_ABOVE
+
+  裁定规则:
+    PASS_DIFFERENTIATED     : llmlingua > 0.05, deposon < 0.05
+    GRAY_BOTH_BELOW         : 都 < 0.05 (失真都小, 无差异化)
+    GRAY_BOTH_ABOVE         : 都 > 0.05 (失真都大, 无差异化)
+    FAIL_LLMLINGUA_OUTPERFORMS: llmlingua < deposon (LLMLingua 失真更小)
+
+[注意] 必须在 /tmp/ 副本跑 (沿用 V0 §1 + D0 §4)

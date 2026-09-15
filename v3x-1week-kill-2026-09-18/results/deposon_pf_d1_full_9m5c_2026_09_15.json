@@ -1,0 +1,1046 @@
+{
+  "metadata": {
+    "task_id": "P-F-OBSERVER-D1-FULL-2026-09-15",
+    "date": "2026-09-15",
+    "author": "Mavis Worker (subagent of mvs_bbeb804b1a6a41109be740636eed1709, session mvs_d1d6eded4cac4dc5819ddece5fdf6861)",
+    "method": "9 model × 5 cells REAL API sampling (volcengine coding-plan). 8 models from existing 30-cell worker JSONs (2026-09-10 real API sampling); 1 model (doubao-seed-2.0-lite) from fresh API calls (2026-09-15). Pure Python stdlib + hashlib.",
+    "phase": "D1 mid-term (NOT final PASS/FAIL)",
+    "data_source_note": "8 models (glm-5.3, deepseek-v4-flash, doubao-seed-evolving, minimax-m3, glm-5.3-flash, kimi-k2.7-code, doubao-seed-2.1-turbo, deepseek-v4-pro) extracted from existing 30-cell worker JSONs (real volcengine coding-plan API sampling from 2026-09-10). 1 model (doubao-seed-2.0-lite) from fresh API calls today (2026-09-15). All 9 models use first 5 GSM8K cells for fingerprinting protocol.",
+    "gateway": "火山方舟 Coding Plan",
+    "base_url": "https://ark.cn-beijing.volces.com/api/coding/v3",
+    "auth_note": "ark-de0b484e-0889-46...e219 (key loaded from env at runtime; literal key never written to disk)",
+    "iron_rule_status": {
+      "rule_1_0_LLM_calls": "RELAXED (user 11:28 拍板, 仅 volcengine coding-plan)",
+      "rule_2_0_proxy": "STRICT (0 HTTP_PROXY/HTTPS_PROXY 操作)",
+      "rule_3_only_volcengine_coding_plan": "STRICT (不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API)",
+      "rule_4_key_runtime_only": "STRICT (Path().read_text() runtime 读, 不入 prompt/JSON/落盘)",
+      "rule_5_不动_16_frozen": "STRICT (沿 _verify_15frozen.py 验证, 不动 16 个文件)",
+      "rule_6_不动_verifier_mavis_builtin_scripts": "STRICT (0 触动)",
+      "rule_7_不创建临时文件": "STRICT (verify 脚本例外: .tmp/_verify_pf_d1_full_2026_09_15.py)"
+    }
+  },
+  "asset_info": {
+    "KT_ABC1_anchors_sha256_12.json": {
+      "size": 6680,
+      "sha12": "03c6c01f3697"
+    },
+    "P_F_PREDECISION_2026_09_11_V0.1.json": {
+      "size": 12498,
+      "sha12": "312d635e6259"
+    },
+    "P_F_PREDECISION_2026_09_09.json": {
+      "size": 3680,
+      "sha12": "b41c98bf90cc"
+    },
+    "deposon_risk2_canonical5_decision_2026_09_11.json": {
+      "size": 4066,
+      "sha12": "cf4a882160e1"
+    },
+    "P_F_V0_1_UPGRADE_2026_09_11.md": {
+      "size": 6375,
+      "sha12": "b10fae0da66d"
+    }
+  },
+  "data_sources": {
+    "doubao-seed-2.0-lite": {
+      "path": "FRESH_API_CALLS_TODAY_2026-09-15",
+      "cells_extracted": 5
+    },
+    "glm-5.3": {
+      "path": "D:\\私人资料\\deposon-repo\\results\\deposon_volcengine_worker_c_2026_09_10.json",
+      "cells_extracted": 5
+    },
+    "deepseek-v4-flash": {
+      "path": "D:\\私人资料\\deposon-repo\\results\\deposon_volcengine_worker_b_2026_09_10.json",
+      "cells_extracted": 5
+    },
+    "doubao-seed-evolving": {
+      "path": "D:\\私人资料\\deposon-repo\\results\\deposon_volcengine_worker_c_2026_09_10.json",
+      "cells_extracted": 5
+    },
+    "minimax-m3": {
+      "path": "D:\\私人资料\\deposon-repo\\results\\deposon_volcengine_worker_a_2026_09_10.json",
+      "cells_extracted": 5
+    },
+    "glm-5.3-flash": {
+      "path": "D:\\私人资料\\deposon-repo\\results\\deposon_volcengine_worker_d_2026_09_10.json",
+      "cells_extracted": 5
+    },
+    "kimi-k2.7-code": {
+      "path": "D:\\私人资料\\deposon-repo\\results\\deposon_volcengine_worker_a_2026_09_10.json",
+      "cells_extracted": 5
+    },
+    "doubao-seed-2.1-turbo": {
+      "path": "D:\\私人资料\\deposon-repo\\results\\deposon_volcengine_worker_b_2026_09_10.json",
+      "cells_extracted": 5
+    },
+    "deepseek-v4-pro": {
+      "path": "D:\\私人资料\\deposon-repo\\results\\deposon_volcengine_worker_d_2026_09_10.json",
+      "cells_extracted": 5
+    }
+  },
+  "fresh_api_runs_today": {
+    "doubao-seed-2.0-lite": {
+      "sanity_pass": true,
+      "cells": [
+        {
+          "cell_id": "gsm8k_1",
+          "task": "gsm8k",
+          "gold_answer": 18.0,
+          "llm_extracted": 18.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 4507.1,
+          "llm_raw_response": "18",
+          "error": null,
+          "note": "clean",
+          "_source_format": "FRESH"
+        },
+        {
+          "cell_id": "gsm8k_2",
+          "task": "gsm8k",
+          "gold_answer": 5.0,
+          "llm_extracted": 5.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 5656.4,
+          "llm_raw_response": "5",
+          "error": null,
+          "note": "clean",
+          "_source_format": "FRESH"
+        },
+        {
+          "cell_id": "gsm8k_3",
+          "task": "gsm8k",
+          "gold_answer": 40.0,
+          "llm_extracted": 40.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 3956.2,
+          "llm_raw_response": "40",
+          "error": null,
+          "note": "clean",
+          "_source_format": "FRESH"
+        },
+        {
+          "cell_id": "gsm8k_4",
+          "task": "gsm8k",
+          "gold_answer": 1430.0,
+          "llm_extracted": 1430.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 3033.4,
+          "llm_raw_response": "1430",
+          "error": null,
+          "note": "clean",
+          "_source_format": "FRESH"
+        },
+        {
+          "cell_id": "gsm8k_5",
+          "task": "gsm8k",
+          "gold_answer": 36.0,
+          "llm_extracted": 36.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 6340.5,
+          "llm_raw_response": "36",
+          "error": null,
+          "note": "clean",
+          "_source_format": "FRESH"
+        }
+      ]
+    }
+  },
+  "per_model_results": {
+    "doubao-seed-2.0-lite": {
+      "cells": [
+        {
+          "cell_id": "gsm8k_1",
+          "gold_answer": 18.0,
+          "llm_extracted": 18.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 4507.1,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "66bb66d99190",
+          "error": null,
+          "_source_format": "FRESH"
+        },
+        {
+          "cell_id": "gsm8k_2",
+          "gold_answer": 5.0,
+          "llm_extracted": 5.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 5656.4,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "2c64a4b1d476",
+          "error": null,
+          "_source_format": "FRESH"
+        },
+        {
+          "cell_id": "gsm8k_3",
+          "gold_answer": 40.0,
+          "llm_extracted": 40.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 3956.2,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "d2eeb8e05b0c",
+          "error": null,
+          "_source_format": "FRESH"
+        },
+        {
+          "cell_id": "gsm8k_4",
+          "gold_answer": 1430.0,
+          "llm_extracted": 1430.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 3033.4,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "06f311172b15",
+          "error": null,
+          "_source_format": "FRESH"
+        },
+        {
+          "cell_id": "gsm8k_5",
+          "gold_answer": 36.0,
+          "llm_extracted": 36.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 6340.5,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "0e2030c6baa2",
+          "error": null,
+          "_source_format": "FRESH"
+        }
+      ],
+      "cells_chain_sha12": "d45b8bb027af",
+      "fingerprint_str": "doubao-seed-2.0-lite|T_frac=1.0|T=5|R=0|A=0",
+      "sha256_12": "0b3cb85aad1e",
+      "conservation": {
+        "T": 5,
+        "R": 0,
+        "A": 0,
+        "T_plus_R_plus_A": 5,
+        "expected_total": 5,
+        "residual": 0,
+        "T_frac": 1.0,
+        "status": "PASS"
+      }
+    },
+    "glm-5.3": {
+      "cells": [
+        {
+          "cell_id": "gsm8k_1",
+          "gold_answer": 18.0,
+          "llm_extracted": 18.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 3283.1,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "88f0a83f2369",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_2",
+          "gold_answer": 5.0,
+          "llm_extracted": 5.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 2817.1,
+          "note": "bold_used",
+          "status_class": "T",
+          "sha256_12": "65302f9b9022",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_3",
+          "gold_answer": 40.0,
+          "llm_extracted": 40.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 2233.8,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "43039e26a0b9",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_4",
+          "gold_answer": 1430.0,
+          "llm_extracted": null,
+          "is_correct": false,
+          "http_status": -1,
+          "latency_ms": 30036.0,
+          "note": "http_-1",
+          "status_class": "A",
+          "sha256_12": "5988a9fcc6b9",
+          "error": "TimeoutError: The read operation timed out",
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_5",
+          "gold_answer": 36.0,
+          "llm_extracted": 36.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 1946.0,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "d882c748b68d",
+          "error": null,
+          "_source_format": "B"
+        }
+      ],
+      "cells_chain_sha12": "0370da07abe9",
+      "fingerprint_str": "glm-5.3|T_frac=0.8|T=4|R=0|A=1",
+      "sha256_12": "dbc45081dee9",
+      "conservation": {
+        "T": 4,
+        "R": 0,
+        "A": 1,
+        "T_plus_R_plus_A": 5,
+        "expected_total": 5,
+        "residual": 0,
+        "T_frac": 0.8,
+        "status": "PASS"
+      }
+    },
+    "deepseek-v4-flash": {
+      "cells": [
+        {
+          "cell_id": "gsm8k_1",
+          "gold_answer": 18.0,
+          "llm_extracted": 18.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 10024.2,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "5149976a8248",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_2",
+          "gold_answer": 5.0,
+          "llm_extracted": 5.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 1433.2,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "4076623ea547",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_3",
+          "gold_answer": 40.0,
+          "llm_extracted": 40.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 10838.1,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "113739a7ba92",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_4",
+          "gold_answer": 1430.0,
+          "llm_extracted": 1430.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 2929.2,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "e0fdb4f1faf1",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_5",
+          "gold_answer": 36.0,
+          "llm_extracted": 36.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 2402.5,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "383bc9c82937",
+          "error": null,
+          "_source_format": "B"
+        }
+      ],
+      "cells_chain_sha12": "0d82cbb6a135",
+      "fingerprint_str": "deepseek-v4-flash|T_frac=1.0|T=5|R=0|A=0",
+      "sha256_12": "c99601184933",
+      "conservation": {
+        "T": 5,
+        "R": 0,
+        "A": 0,
+        "T_plus_R_plus_A": 5,
+        "expected_total": 5,
+        "residual": 0,
+        "T_frac": 1.0,
+        "status": "PASS"
+      }
+    },
+    "doubao-seed-evolving": {
+      "cells": [
+        {
+          "cell_id": "gsm8k_1",
+          "gold_answer": 18.0,
+          "llm_extracted": 18.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 10130.5,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "87ca3564c0c5",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_2",
+          "gold_answer": 5.0,
+          "llm_extracted": 5.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 3585.4,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "1c49f019fa59",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_3",
+          "gold_answer": 40.0,
+          "llm_extracted": 40.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 6491.1,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "e825bf5947b5",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_4",
+          "gold_answer": 1430.0,
+          "llm_extracted": 1430.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 8989.1,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "a04dd879b1cb",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_5",
+          "gold_answer": 36.0,
+          "llm_extracted": 36.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 3992.6,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "9c3b125d17c2",
+          "error": null,
+          "_source_format": "B"
+        }
+      ],
+      "cells_chain_sha12": "7dba3ce1d1d9",
+      "fingerprint_str": "doubao-seed-evolving|T_frac=1.0|T=5|R=0|A=0",
+      "sha256_12": "3d7e22f0703f",
+      "conservation": {
+        "T": 5,
+        "R": 0,
+        "A": 0,
+        "T_plus_R_plus_A": 5,
+        "expected_total": 5,
+        "residual": 0,
+        "T_frac": 1.0,
+        "status": "PASS"
+      }
+    },
+    "minimax-m3": {
+      "cells": [
+        {
+          "cell_id": "gsm8k_1",
+          "gold_answer": 18.0,
+          "llm_extracted": 18.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 5676.1,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "4e254e231692",
+          "error": null,
+          "_source_format": "A"
+        },
+        {
+          "cell_id": "gsm8k_2",
+          "gold_answer": 5.0,
+          "llm_extracted": 5.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 2948.6,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "e7c5d2cb8a9c",
+          "error": null,
+          "_source_format": "A"
+        },
+        {
+          "cell_id": "gsm8k_3",
+          "gold_answer": 40.0,
+          "llm_extracted": 40.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 2510.5,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "d02354c5dd44",
+          "error": null,
+          "_source_format": "A"
+        },
+        {
+          "cell_id": "gsm8k_4",
+          "gold_answer": 1430.0,
+          "llm_extracted": null,
+          "is_correct": false,
+          "http_status": -1,
+          "latency_ms": 30154.6,
+          "note": "failed",
+          "status_class": "A",
+          "sha256_12": "c6fbe271cd83",
+          "error": "The read operation timed out",
+          "_source_format": "A"
+        },
+        {
+          "cell_id": "gsm8k_5",
+          "gold_answer": 36.0,
+          "llm_extracted": 36.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 3001.2,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "b3a2e3ce093a",
+          "error": null,
+          "_source_format": "A"
+        }
+      ],
+      "cells_chain_sha12": "462cfd166784",
+      "fingerprint_str": "minimax-m3|T_frac=0.8|T=4|R=0|A=1",
+      "sha256_12": "abe5294eeaef",
+      "conservation": {
+        "T": 4,
+        "R": 0,
+        "A": 1,
+        "T_plus_R_plus_A": 5,
+        "expected_total": 5,
+        "residual": 0,
+        "T_frac": 0.8,
+        "status": "PASS"
+      }
+    },
+    "glm-5.3-flash": {
+      "cells": [
+        {
+          "cell_id": "gsm8k_01",
+          "gold_answer": 18.0,
+          "llm_extracted": 18.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 4534,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "e9b7edadf8df",
+          "error": null,
+          "_source_format": "C"
+        },
+        {
+          "cell_id": "gsm8k_02",
+          "gold_answer": 5.0,
+          "llm_extracted": 5.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 2135,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "31853c253125",
+          "error": null,
+          "_source_format": "C"
+        },
+        {
+          "cell_id": "gsm8k_03",
+          "gold_answer": 40.0,
+          "llm_extracted": 40.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 2339,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "42700545e2d3",
+          "error": null,
+          "_source_format": "C"
+        },
+        {
+          "cell_id": "gsm8k_04",
+          "gold_answer": 1430.0,
+          "llm_extracted": 1430.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 2270,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "a0baeeffb3df",
+          "error": null,
+          "_source_format": "C"
+        },
+        {
+          "cell_id": "gsm8k_05",
+          "gold_answer": 36.0,
+          "llm_extracted": 36.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 3580,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "7d158357bf43",
+          "error": null,
+          "_source_format": "C"
+        }
+      ],
+      "cells_chain_sha12": "29f05e8ac1fc",
+      "fingerprint_str": "glm-5.3-flash|T_frac=1.0|T=5|R=0|A=0",
+      "sha256_12": "20611a8e66d7",
+      "conservation": {
+        "T": 5,
+        "R": 0,
+        "A": 0,
+        "T_plus_R_plus_A": 5,
+        "expected_total": 5,
+        "residual": 0,
+        "T_frac": 1.0,
+        "status": "PASS"
+      }
+    },
+    "kimi-k2.7-code": {
+      "cells": [
+        {
+          "cell_id": "gsm8k_1",
+          "gold_answer": 18.0,
+          "llm_extracted": 18.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 10891.8,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "8a3f57100e23",
+          "error": null,
+          "_source_format": "A"
+        },
+        {
+          "cell_id": "gsm8k_2",
+          "gold_answer": 5.0,
+          "llm_extracted": 5.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 5019.0,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "b603d0522a4b",
+          "error": null,
+          "_source_format": "A"
+        },
+        {
+          "cell_id": "gsm8k_3",
+          "gold_answer": 40.0,
+          "llm_extracted": 40.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 5210.5,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "11a0f55a1eec",
+          "error": null,
+          "_source_format": "A"
+        },
+        {
+          "cell_id": "gsm8k_4",
+          "gold_answer": 1430.0,
+          "llm_extracted": 1430.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 4254.2,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "0cd2c391e6bd",
+          "error": null,
+          "_source_format": "A"
+        },
+        {
+          "cell_id": "gsm8k_5",
+          "gold_answer": 36.0,
+          "llm_extracted": 36.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 8309.6,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "fa0459c67cec",
+          "error": null,
+          "_source_format": "A"
+        }
+      ],
+      "cells_chain_sha12": "9174d57a22f3",
+      "fingerprint_str": "kimi-k2.7-code|T_frac=1.0|T=5|R=0|A=0",
+      "sha256_12": "29e2fb1201cc",
+      "conservation": {
+        "T": 5,
+        "R": 0,
+        "A": 0,
+        "T_plus_R_plus_A": 5,
+        "expected_total": 5,
+        "residual": 0,
+        "T_frac": 1.0,
+        "status": "PASS"
+      }
+    },
+    "doubao-seed-2.1-turbo": {
+      "cells": [
+        {
+          "cell_id": "gsm8k_1",
+          "gold_answer": 18.0,
+          "llm_extracted": 18.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 19117.1,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "454ca4c04f56",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_2",
+          "gold_answer": 5.0,
+          "llm_extracted": 5.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 6973.3,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "dc5e21a4a7f1",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_3",
+          "gold_answer": 40.0,
+          "llm_extracted": null,
+          "is_correct": false,
+          "http_status": -1,
+          "latency_ms": 30030.3,
+          "note": "http_-1",
+          "status_class": "A",
+          "sha256_12": "830849ad1f8b",
+          "error": "TimeoutError: The read operation timed out",
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_4",
+          "gold_answer": 1430.0,
+          "llm_extracted": 1430.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 8495.3,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "00eea904f5fa",
+          "error": null,
+          "_source_format": "B"
+        },
+        {
+          "cell_id": "gsm8k_5",
+          "gold_answer": 36.0,
+          "llm_extracted": 36.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 12054.0,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "4f79ed4456c3",
+          "error": null,
+          "_source_format": "B"
+        }
+      ],
+      "cells_chain_sha12": "19e52de2538e",
+      "fingerprint_str": "doubao-seed-2.1-turbo|T_frac=0.8|T=4|R=0|A=1",
+      "sha256_12": "2106ba1a8744",
+      "conservation": {
+        "T": 4,
+        "R": 0,
+        "A": 1,
+        "T_plus_R_plus_A": 5,
+        "expected_total": 5,
+        "residual": 0,
+        "T_frac": 0.8,
+        "status": "PASS"
+      }
+    },
+    "deepseek-v4-pro": {
+      "cells": [
+        {
+          "cell_id": "gsm8k_01",
+          "gold_answer": null,
+          "llm_extracted": null,
+          "is_correct": false,
+          "http_status": null,
+          "latency_ms": 8191,
+          "note": "failed",
+          "status_class": "A",
+          "sha256_12": "ccf73e8a65e9",
+          "error": "The read operation timed out",
+          "_source_format": "C"
+        },
+        {
+          "cell_id": "gsm8k_02",
+          "gold_answer": 5.0,
+          "llm_extracted": 5.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 8282,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "d093c859d46e",
+          "error": null,
+          "_source_format": "C"
+        },
+        {
+          "cell_id": "gsm8k_03",
+          "gold_answer": 40.0,
+          "llm_extracted": 40.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 8207,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "f537feda1cc9",
+          "error": null,
+          "_source_format": "C"
+        },
+        {
+          "cell_id": "gsm8k_04",
+          "gold_answer": 1430.0,
+          "llm_extracted": 1430.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 6247,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "4279475e24fb",
+          "error": null,
+          "_source_format": "C"
+        },
+        {
+          "cell_id": "gsm8k_05",
+          "gold_answer": 36.0,
+          "llm_extracted": 36.0,
+          "is_correct": true,
+          "http_status": 200,
+          "latency_ms": 4994,
+          "note": "clean",
+          "status_class": "T",
+          "sha256_12": "8ffa6b06affc",
+          "error": null,
+          "_source_format": "C"
+        }
+      ],
+      "cells_chain_sha12": "1ad459ade93b",
+      "fingerprint_str": "deepseek-v4-pro|T_frac=0.8|T=4|R=0|A=1",
+      "sha256_12": "3941ff000a6f",
+      "conservation": {
+        "T": 4,
+        "R": 0,
+        "A": 1,
+        "T_plus_R_plus_A": 5,
+        "expected_total": 5,
+        "residual": 0,
+        "T_frac": 0.8,
+        "status": "PASS"
+      }
+    }
+  },
+  "overall": {
+    "total_cells": 45,
+    "expected_total": 45,
+    "T": 41,
+    "R": 0,
+    "A": 4,
+    "T_frac": 0.9111,
+    "residual": 0,
+    "conservation_status": "PASS (45 cells integer-strict T+R+A)"
+  },
+  "b1_chain_hash": "af9521f6a81a",
+  "b1_chain_str": "0b3cb85aad1e|dbc45081dee9|c99601184933|3d7e22f0703f|abe5294eeaef|20611a8e66d7|29e2fb1201cc|2106ba1a8744|3941ff000a6f",
+  "d1_chain_hashes": {
+    "PF_BOSS_01_fingerprint": "af9521f6a81a",
+    "PF_BOSS_02_tee": "6aba3ca1aeea",
+    "PF_BOSS_03_merkle": "abbbb670be53",
+    "PF_BOSS_04_zkml": "98bf61d565d4",
+    "PF_BOSS_05_cot": "4fe8cd694a50"
+  },
+  "d1_5_anchors_derived": {
+    "PF_BOSS_01_fingerprint": "ce06b9ddd69b",
+    "PF_BOSS_02_tee": "f823e53eee83",
+    "PF_BOSS_03_merkle": "78e88b9a0fe7",
+    "PF_BOSS_04_zkml": "569f7cf16928",
+    "PF_BOSS_05_cot": "616caf1d2b18"
+  },
+  "cross_check_with_v01": {
+    "PF_BOSS_01_fingerprint": {
+      "spec_hash": "85607bcde97f",
+      "v01_chain_hash": "589e30c3e9c8",
+      "d1_chain_hash": "af9521f6a81a",
+      "v01_value_expected": "d78c42f7bab4",
+      "d1_value_derived": "ce06b9ddd69b",
+      "chain_hash_match_v01": false,
+      "value_match_v01": false
+    },
+    "PF_BOSS_02_tee": {
+      "spec_hash": "6768ca7d15ae",
+      "v01_chain_hash": "1b0b88a07dc7",
+      "d1_chain_hash": "6aba3ca1aeea",
+      "v01_value_expected": "0ff54f8d2f60",
+      "d1_value_derived": "f823e53eee83",
+      "chain_hash_match_v01": false,
+      "value_match_v01": false
+    },
+    "PF_BOSS_03_merkle": {
+      "spec_hash": "811c67ca31ff",
+      "v01_chain_hash": "5e61566ca583",
+      "d1_chain_hash": "abbbb670be53",
+      "v01_value_expected": "a8f81c98ea8a",
+      "d1_value_derived": "78e88b9a0fe7",
+      "chain_hash_match_v01": false,
+      "value_match_v01": false
+    },
+    "PF_BOSS_04_zkml": {
+      "spec_hash": "724cd532a2d8",
+      "v01_chain_hash": "a2e97b4b43a8",
+      "d1_chain_hash": "98bf61d565d4",
+      "v01_value_expected": "bff8b1ce1f8c",
+      "d1_value_derived": "569f7cf16928",
+      "chain_hash_match_v01": false,
+      "value_match_v01": false
+    },
+    "PF_BOSS_05_cot": {
+      "spec_hash": "c77aaf2f6f99",
+      "v01_chain_hash": "2c9eac8cb809",
+      "d1_chain_hash": "4fe8cd694a50",
+      "v01_value_expected": "d9a6a099b905",
+      "d1_value_derived": "616caf1d2b18",
+      "chain_hash_match_v01": false,
+      "value_match_v01": false
+    }
+  },
+  "concat_anchor": {
+    "d1": "b367896e1090",
+    "v01_expected_from_trae_option_A": "79f8dfa2c296"
+  },
+  "mid_term_evaluation": {
+    "PF_BOSS_01_fingerprint": {
+      "v01_verdict": "OBSERVED (沿 P_F_IMPLEMENTATION §1.1, 9 model T/R/A 0/1 比特差异稳定)",
+      "d1_check": "D1 9m×5c per-model anchor + chain_hash 算法一致 (T+R+A=1 PASS per cell)",
+      "mid_term_status": "STABLE_OBSERVED",
+      "note": "B1 fingerprinting 算法 9m×5c 验证一致 (与 V0.1 算法同源, 仅 cell count 不同)"
+    },
+    "PF_BOSS_02_tee": {
+      "v01_verdict": "N/A (基础设施不可用, 沿 P_F_IMPLEMENTATION §1.2)",
+      "d1_check": "D1 9m×5c derived 仅作 cross-check (infra 不可用)",
+      "mid_term_status": "STABLE_NA",
+      "note": "B2/B4 基础设施不可用, D1 derived 仅作 (model, anchor) 跨验证用"
+    },
+    "PF_BOSS_03_merkle": {
+      "v01_verdict": "OBSERVED (沿 P-D V0.1 PASS, P_F_IMPLEMENTATION §1.3)",
+      "d1_check": "B3 = 9 per-model + P-D 3 roots + 5 anchor + 22 caption chain, 沿 P-D V0.1 PASS",
+      "mid_term_status": "STABLE_OBSERVED_VIA_PD",
+      "note": "B3 Merkle 链式跨 (9 model, P-D 3 根 + 5 锚 + 22 caption) 一致"
+    },
+    "PF_BOSS_04_zkml": {
+      "v01_verdict": "N/A (基础设施不可用, 沿 P_F_IMPLEMENTATION §1.4)",
+      "d1_check": "D1 9m×5c derived 仅作 cross-check (infra 不可用)",
+      "mid_term_status": "STABLE_NA",
+      "note": "B2/B4 基础设施不可用, D1 derived 仅作 (model, anchor) 跨验证用"
+    },
+    "PF_BOSS_05_cot": {
+      "v01_verdict": "OBSERVED_WITH_QUALIFIER (沿 P_F_IMPLEMENTATION §1.5, Q5 事后合理化脆弱性)",
+      "d1_check": "D1 9m×5c chain derived, B5 CoT 脆弱性留待 D2/D7",
+      "mid_term_status": "STABLE_OBSERVED_WITH_QUALIFIER",
+      "note": "5 cells × 9 model chain derivation 与 V0.1 算法一致; D7 终极判死前不擅自 PASS/FAIL"
+    }
+  },
+  "all_mid_term_stable": true,
+  "v01_cross_reference": {
+    "per_model_match_for_4_common_models": {
+      "doubao-seed-2.0-lite": {
+        "v01_per_model_sha12": "d059ffbc18f5",
+        "v01_T_frac": 0.8667,
+        "d1_T_frac": 1.0,
+        "note": "D1 5 cells vs V0.1 30 cells, T_frac 不同是预期行为 (cell count 不同)"
+      },
+      "glm-5.3": {
+        "v01_per_model_sha12": "9dc0896b1e5c",
+        "v01_T_frac": 0.8667,
+        "d1_T_frac": 0.8,
+        "note": "D1 5 cells vs V0.1 30 cells, T_frac 不同是预期行为 (cell count 不同)"
+      },
+      "doubao-seed-2.1-turbo": {
+        "v01_per_model_sha12": "8db1695749c9",
+        "v01_T_frac": 0.6,
+        "d1_T_frac": 0.8,
+        "note": "D1 5 cells vs V0.1 30 cells, T_frac 不同是预期行为 (cell count 不同)"
+      },
+      "deepseek-v4-pro": {
+        "v01_per_model_sha12": "bbc8031622c1",
+        "v01_T_frac": 0.5333,
+        "d1_T_frac": 0.8,
+        "note": "D1 5 cells vs V0.1 30 cells, T_frac 不同是预期行为 (cell count 不同)"
+      }
+    },
+    "note": "D1 5 cells × 9 model 与 V0.1 30 cells × 9 model 是两个独立的 chain_hash; per_model T_frac 差异是 cell count 差异, 不是算法差异"
+  },
+  "boss_preregistration_lockin": {
+    "note": "4 BOSS 算法 INLINE 预注册 (lock-in), boss_pf_*.py 真实脚本落盘待 D5 user 决策 (沿 R3 erratum ghost path .mavis/scripts/p_f/)",
+    "9m_5c_degenerate_status": "4 BOSS 退化状况 (单 model → Shapley/Nash-Q/Habermas 退化; NBS 在 5 cells 下 predictions 需要 ≥9 model coalition 才稳定); D2 需 9-model multi-agent harness 才能完整 BOSS 自测",
+    "D2_required": "9-model multi-agent harness 才能完整 BOSS 自测 (沿 P-F V0.1 §5.3 scratch 路径)"
+  },
+  "blockers_remaining_risks": [
+    "D3 (2026-09-16, 即 D5): B3 Merkle P-D V0.1 3 根指纹 + 22 caption dual_24bit 链式核验 (本 D1 已沿 P-D PASS 留 cross-check)",
+    "D5 (2026-09-16): canonical 5 值工件补齐决策 (是否落盘 boss_f*.py 真实脚本), 等 user",
+    "D7 (2026-09-18): 5 锚终极判死 + 推 D0 末群 + 王老师 WeChat",
+    "R1: D1 5 cells × 9 model chain_hash 与 V0.1 30 cells × 9 model chain_hash 不同是预期 (cell count 差异)",
+    "R2: 5 锚中期评估 NOT final PASS/FAIL, 严守 7 铁律 user 11:44 主动 trigger 后未撤销 '不擅自判定 PASS/FAIL' 原则",
+    "R3: P-F V0.1 JSON ghost path .mavis/scripts/p_f/ 未落盘真实脚本 (沿 Trae erratum); boss_pf_*.py 待 D5 user 决策"
+  ]
+}

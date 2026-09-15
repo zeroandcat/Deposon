@@ -1,0 +1,19 @@
+KT-B1 全量攻击运行日志 (V0.2)
+时间: 20260910_095517
+参数: n=200/类, 总攻击=600, seed=42
+数据: results/deposon_v19_benchmark_fixes.json (只读, 攻击仅内存深拷贝, 不写回)
+检测器: verifier/audit/conservation.py check_conservation (SPEC §2.4)
+
+语义(SPEC §3.4, 注意反转): 攻击者成功率 = 漏检率; 审计抓出率 = 1 - 攻击者成功率
+判死线(SPEC §1.1): 审计抓出 ≥ 50% → PASS; < 50% → FAIL
+
+deletion: n=200, attack_targets=1592, audit_detected=200, attacker_success=0 (漏检率 0.000, 抓出率 1.000)
+manifest_swap: n=200, attack_targets=1592, audit_detected=200, attacker_success=0 (漏检率 0.000, 抓出率 1.000)
+chain_modify: n=200, attack_targets=1592, audit_detected=65, attacker_success=135 (漏检率 0.675, 抓出率 0.325)
+
+总计: total_n=600, audit_detected=465, attacker_success=135
+overall_attacker_success_rate=0.2250
+verdict=PASS
+
+SPEC §3.3 副指标预期对照(抓出率): deletion 100% / manifest_swap 70-90% / chain_modify 30-60%
+若某类抓出率 < 30% → 报"该攻击类型检测器盲点"(SPEC §3.3, 如实报告)

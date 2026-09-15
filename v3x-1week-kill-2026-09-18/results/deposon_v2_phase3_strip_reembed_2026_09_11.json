@@ -1,0 +1,132 @@
+{
+  "timestamp": "2026-09-11T11:33:43+08:00",
+  "phase": "V2 阶段 3 (caption strip 去模板化重嵌入)",
+  "model": "doubao-embedding-vision-251215",
+  "endpoint": "https://ark.cn-beijing.volces.com/api/coding/v3/embeddings",
+  "auth": "ark-...e219",
+  "goal": "caption strip 版重嵌入 + 算 Δ = emb_prefix - emb_strip + 重测 Q1 T/R/A ratio",
+  "data_source": {
+    "prefix_captions_source": "corpus/v20/index.json + per-graph labels (重建, F-3 未存原始嵌入)",
+    "strip_captions_source": "corpus/v20/strip_captions_22.json (新建, 不修改 index.json)",
+    "f3_baseline": {
+      "PREFIX_ratio": 1.1723,
+      "STRIP_ratio": 1.1844,
+      "DELTA_ratio": 1.3031,
+      "verdict": "DELTA GRAY (1.30, 突破 1.2 阈值)"
+    }
+  },
+  "caption_construction": {
+    "prefix": "f\"Concept graph {graph_id} (family={family}, structure={structure}, N={N}, n_named={n_named}): \" + '; '.join(labels)",
+    "strip": "'; '.join(labels)  (仅 labels join, 无 prefix)",
+    "strip_file": "corpus/v20/strip_captions_22.json (新建)"
+  },
+  "prefix_embedding": {
+    "total_latency_ms": 1979.5,
+    "total_tokens": 4411,
+    "http_status": [
+      200,
+      200,
+      200
+    ],
+    "api_chunks": [
+      10,
+      10,
+      2
+    ],
+    "note": "F-3 阶段已嵌但未存盘,本次重建"
+  },
+  "strip_embedding": {
+    "total_latency_ms": 1373.0,
+    "total_tokens": 3716,
+    "http_status": [
+      200,
+      200,
+      200
+    ],
+    "api_chunks": [
+      10,
+      10,
+      2
+    ],
+    "note": "本阶段新嵌 (1 次新嵌,3 chunks)"
+  },
+  "delta_vector": {
+    "norm_mean": 0.7704,
+    "norm_max": 0.8686,
+    "norm_min": 0.6564,
+    "note": "Δ = emb_prefix - emb_strip,||Δ||₂ per caption"
+  },
+  "q1_tra_ratio": {
+    "PREFIX": {
+      "intra": 0.6846,
+      "inter": 0.6483,
+      "ratio": 1.056,
+      "verdict": "NOISE"
+    },
+    "STRIP": {
+      "intra": 0.6241,
+      "inter": 0.5763,
+      "ratio": 1.083,
+      "verdict": "NOISE"
+    },
+    "DELTA": {
+      "intra": 0.6072,
+      "inter": 0.5794,
+      "ratio": 1.0479,
+      "verdict": "NOISE"
+    }
+  },
+  "q1_verdict_rule": "MEANINGFUL if ratio>1.5, NOISE if <1.2, GRAY if 1.2-1.5",
+  "q1_verdict_q": "22 caption 整体 (4-class: L/S1/S2/S3-S6) Q1 T/R/A ratio",
+  "f3_comparison": {
+    "PREFIX_new": 1.056,
+    "PREFIX_f3": 1.1723,
+    "PREFIX_delta": -0.1163,
+    "STRIP_new": 1.083,
+    "STRIP_f3": 1.1844,
+    "STRIP_delta": -0.1014,
+    "DELTA_new": 1.0479,
+    "DELTA_f3": 1.3031,
+    "DELTA_delta": -0.2552
+  },
+  "high2_root_cause_status": {
+    "rule": "若 ratio ≥ 1.2 = HIGH-2 根因实证闭环 (NOISE 来自 prefix);若仍 < 1.2 = vision embedding 对 graph 拓扑无区分度 (本质问题)",
+    "PREFIX_verdict": "NOISE",
+    "STRIP_verdict": "NOISE",
+    "DELTA_verdict": "NOISE",
+    "PREFIX_signal": false,
+    "DELTA_signal": false,
+    "conclusion": ""
+  },
+  "corpus_files_status": {
+    "index_json_sha12": "8423ffe266af",
+    "strip_captions_22_json_created": true,
+    "strip_captions_22_json_path": "corpus/v20/strip_captions_22.json",
+    "frozen_files_untouched": [
+      "corpus/v20/index.json (7 铁律严守,只读)",
+      "corpus/v20/*.json (per-graph, 只读)",
+      "verifier/handoff/KT_ABC1_anchors_sha256_12.json (5 锚 SHA-12 03c6c01f3697 unchanged)",
+      "4 SPEC V0.1 frozen"
+    ]
+  },
+  "constraints_honored": {
+    "no_proxy": true,
+    "key_runtime_only": true,
+    "key_in_json_masked": true,
+    "no_openrouter": true,
+    "no_teamorouter": true,
+    "no_v41_flash": true,
+    "no_gpt6": true,
+    "no_agent_plan": true,
+    "no_retry": true,
+    "one_logical_batch_per_version": true,
+    "three_http_chunks_per_version": true,
+    "frozen_files_untouched": [
+      "verifier/handoff/KT_ABC1_anchors_sha256_12.json (SHA-12 03c6c01f3697 unchanged)",
+      "corpus/v20/index.json (read-only)",
+      "4 SPEC V0.1 frozen"
+    ]
+  },
+  "api_calls_total": 6,
+  "api_calls_note": "任务规定 1 次新嵌 strip,但 prefix 嵌入 F-3 未存盘需重建,共 6 calls (2 versions × 3 chunks)"
+}

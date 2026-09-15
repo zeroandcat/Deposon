@@ -1,0 +1,253 @@
+{
+  "P_F_PRE_DECISION_V01": {
+    "spec_sha256_first12": "de90faf362c5",
+    "research_sha256_first12": "98085df7811a",
+    "5_anchors_v0_placeholders": [
+      "000000000000",
+      "000000000000",
+      "000000000000",
+      "000000000000",
+      "000000000000"
+    ],
+    "5_anchors_v01_true_values": [
+      "d78c42f7bab4",
+      "0ff54f8d2f60",
+      "a8f81c98ea8a",
+      "bff8b1ce1f8c",
+      "d9a6a099b905"
+    ],
+    "5_boss_keys": [
+      "PF_BOSS_01_fingerprint",
+      "PF_BOSS_02_tee",
+      "PF_BOSS_03_merkle",
+      "PF_BOSS_04_zkml",
+      "PF_BOSS_05_cot"
+    ],
+    "phase": "V0.1",
+    "trigger_from_v0": "user 2026-09-11 11:55 选 C>D>E 串行, 阶段 E 触发 V0 → V0.1 升级",
+    "method": "0 LLM, 0 网络, 纯 SHA-256 链式 hash, 沿用 9 model × 30 cells + 22 caption SVD-2 + P-D V0.1 3 根指纹 + 5 锚 03c6c01f3697"
+  },
+  "metadata": {
+    "date": "2026-09-11",
+    "author": "Mavis Worker (subagent of mvs_bbeb804b1a6a41109be740636eed1709, session mvs_5573f0f842574ac98c1fe7819259639c)",
+    "method": "SHA-256 全文 + 前 12 位 + 链式拼接",
+    "spec_versions": {
+      "P-F_SPEC": "V0 (沿 P_F_SPEC_V0.md SHA-12 de90faf362c5, 未动)",
+      "P-F_RESEARCH": "V0 (沿 P_F_RESEARCH_2026_09_09.md SHA-12 98085df7811a, 未动)",
+      "P-F_PREDECISION": "V0 → V0.1 (本报告)",
+      "P-D V0.1": "PASS (沿 P_F_IMPLEMENTATION §1.3, 3 根指纹 7d6d3d39fad8 / f88d855aaf83 / e66e44e63f5a)",
+      "5 锚 JSON": "03c6c01f3697 (实算验证, 未动)"
+    },
+    "input_data": {
+      "9_models_x_30_cells": "沿 V7 §2.1 + P_F_IMPLEMENTATION §2.1",
+      "22_caption_svd2": "沿 volcengine_22caption_embedding_2026_09_10.json 实测真实坐标",
+      "P-D V0.1 3 根指纹": "7d6d3d39fad8 / f88d855aaf83 / e66e44e63f5a (沿 P_F_IMPLEMENTATION §1.3)"
+    },
+    "note": "P-F V0 → V0.1 升级: 5 锚从占位 000000000000 升级为真值(compute 不只预登记)。B1/B2/B3/B4/B5 各自的真值都是 spec_hash + chain_hash 拼接后再 SHA-256[0:12]。0 LLM, 0 网络, 严守 7 铁律。"
+  },
+  "5_boss_anchor_spec_v01": {
+    "PF_BOSS_01_fingerprint": {
+      "object": "boss_f1_model_fingerprinting.py",
+      "path": ".mavis/scripts/p_f/boss_f1_model_fingerprinting.py",
+      "algorithm": "sha256_first_12 + chain",
+      "value_v0": "000000000000",
+      "value_v01": "d78c42f7bab4",
+      "spec_hash": "85607bcde97f",
+      "chain_hash": "589e30c3e9c8",
+      "per_model_anchors": {
+        "doubao-seed-2.0-lite": {
+          "fingerprint_str": "doubao-seed-2.0-lite|T_frac=0.8667|T=26|R=2|A=2",
+          "sha256_12": "d059ffbc18f5",
+          "T_frac": 0.8667
+        },
+        "glm-5.3": {
+          "fingerprint_str": "glm-5.3|T_frac=0.8667|T=26|R=2|A=2",
+          "sha256_12": "9dc0896b1e5c",
+          "T_frac": 0.8667
+        },
+        "doubao-1.5-pro": {
+          "fingerprint_str": "doubao-1.5-pro|T_frac=0.7333|T=22|R=2|A=6",
+          "sha256_12": "3453bb08d22e",
+          "T_frac": 0.7333
+        },
+        "qwen2.5-72b": {
+          "fingerprint_str": "qwen2.5-72b|T_frac=0.7333|T=22|R=2|A=6",
+          "sha256_12": "993eb0af494b",
+          "T_frac": 0.7333
+        },
+        "kimi-k2": {
+          "fingerprint_str": "kimi-k2|T_frac=0.7333|T=22|R=2|A=6",
+          "sha256_12": "de59f6abfb57",
+          "T_frac": 0.7333
+        },
+        "moonshot-v1-128k": {
+          "fingerprint_str": "moonshot-v1-128k|T_frac=0.7333|T=22|R=2|A=6",
+          "sha256_12": "96fd1530d33b",
+          "T_frac": 0.7333
+        },
+        "nemotron-3-1b": {
+          "fingerprint_str": "nemotron-3-1b|T_frac=0.7333|T=22|R=2|A=6",
+          "sha256_12": "459f6d26e6cc",
+          "T_frac": 0.7333
+        },
+        "doubao-seed-2.1-turbo": {
+          "fingerprint_str": "doubao-seed-2.1-turbo|T_frac=0.6|T=18|R=2|A=10",
+          "sha256_12": "8db1695749c9",
+          "T_frac": 0.6
+        },
+        "deepseek-v4-pro": {
+          "fingerprint_str": "deepseek-v4-pro|T_frac=0.5333|T=16|R=2|A=12",
+          "sha256_12": "bbc8031622c1",
+          "T_frac": 0.5333
+        }
+      },
+      "verdict_v01": "OBSERVED (沿 P_F_IMPLEMENTATION §1.1, 9 model T/R/A 0/1 比特差异稳定)",
+      "field": "B1 fingerprinting 锚真值: 9 model × 30 cells 输出 hash 链式"
+    },
+    "PF_BOSS_02_tee": {
+      "object": "boss_f2_tee_sgx.py",
+      "path": ".mavis/scripts/p_f/boss_f2_tee_sgx.py",
+      "algorithm": "sha256_first_12 + chain",
+      "value_v0": "000000000000",
+      "value_v01": "0ff54f8d2f60",
+      "spec_hash": "6768ca7d15ae",
+      "chain_hash": "1b0b88a07dc7",
+      "per_fact_anchors": {
+        "intel_sgx_2023_eol_server": "9a18abb7b816",
+        "amd_sev_snp_2021": "ebbc13c664b6",
+        "nvidia_h100_cc_2023_2024": "b9bcd6a9c49f",
+        "azure_aws_industrial": "ad0cf6c9e656",
+        "verifier_root_of_trust": "aa18742fea99"
+      },
+      "verdict_v01": "N/A (基础设施不可用, 沿 P_F_IMPLEMENTATION §1.2)",
+      "field": "B2 TEE 锚真值: 沿 P_F_RESEARCH §2.2 A. 高置信事实 5 条 chain"
+    },
+    "PF_BOSS_03_merkle": {
+      "object": "boss_f3_merkle_inference_log.py",
+      "path": ".mavis/scripts/p_f/boss_f3_merkle_inference_log.py",
+      "algorithm": "sha256_first_12 + chain",
+      "value_v0": "000000000000",
+      "value_v01": "a8f81c98ea8a",
+      "spec_hash": "811c67ca31ff",
+      "chain_hash": "5e61566ca583",
+      "p_d_v01_3_fingerprints": [
+        "7d6d3d39fad8",
+        "f88d855aaf83",
+        "e66e44e63f5a"
+      ],
+      "p_d_5_anchors": "03c6c01f3697",
+      "22_caption_chain_hash": "64021507415c",
+      "verdict_v01": "OBSERVED (沿 P-D V0.1 PASS, P_F_IMPLEMENTATION §1.3)",
+      "field": "B3 Merkle 锚真值: 沿 P-D V0.1 SHA-256[0:12] 链式 5 锚真值 + 22 caption dual_24bit"
+    },
+    "PF_BOSS_04_zkml": {
+      "object": "boss_f4_zkml.py",
+      "path": ".mavis/scripts/p_f/boss_f4_zkml.py",
+      "algorithm": "sha256_first_12 + chain",
+      "value_v0": "000000000000",
+      "value_v01": "bff8b1ce1f8c",
+      "spec_hash": "724cd532a2d8",
+      "chain_hash": "a2e97b4b43a8",
+      "per_fact_anchors": {
+        "modulus_2022_2023": "c08ad6a97ff2",
+        "ezkl_halo2_plonky2": "b1a674536887",
+        "llama7b_proof_time": "99a9baec376a",
+        "zkml_no_accuracy_loss": "10674922b8bc"
+      },
+      "verdict_v01": "N/A (基础设施不可用, 沿 P_F_IMPLEMENTATION §1.4)",
+      "field": "B4 ZKML 锚真值: 沿 P_F_RESEARCH §2.4 A. 高置信事实 4 条 chain"
+    },
+    "PF_BOSS_05_cot": {
+      "object": "boss_f5_cot_transparency.py",
+      "path": ".mavis/scripts/p_f/boss_f5_cot_transparency.py",
+      "algorithm": "sha256_first_12 + chain",
+      "value_v0": "000000000000",
+      "value_v01": "d9a6a099b905",
+      "spec_hash": "c77aaf2f6f99",
+      "chain_hash": "2c9eac8cb809",
+      "per_fact_anchors": {
+        "wei_2022_cot_google": "5bc86a5a05a9",
+        "anthropic_2023_2025_interpretability": "c2c80a1894cd",
+        "openai_o1_o3_semi_transparent": "cb3b106e0ae9",
+        "cot_post_hoc_rationalization_q5": "6851ab802ba9"
+      },
+      "verdict_v01": "OBSERVED_WITH_QUALIFIER (沿 P_F_IMPLEMENTATION §1.5, Q5 事后合理化脆弱性)",
+      "field": "B5 CoT 锚真值: 沿 P_F_RESEARCH §2.5 A. 高置信事实 3 条 + Q5 脆弱性 1 条 chain"
+    }
+  },
+  "5_boss_anchor_spec_v0_compat": {
+    "PF_BOSS_01_fingerprint": {
+      "object": "boss_f1_model_fingerprinting.py",
+      "path": ".mavis/scripts/p_f/boss_f1_model_fingerprinting.py",
+      "algorithm": "sha256_first_12",
+      "value": "000000000000 (V0 占位, 已被 V0.1 真值 d78c42f7bab4 覆盖)",
+      "field": "5 BOSS 测法占位脚本 D2 实现 (V0 占位 → V0.1 真值)"
+    },
+    "PF_BOSS_02_tee": {
+      "object": "boss_f2_tee_sgx.py",
+      "path": ".mavis/scripts/p_f/boss_f2_tee_sgx.py",
+      "algorithm": "sha256_first_12",
+      "value": "000000000000 (V0 占位, 已被 V0.1 真值 0ff54f8d2f60 覆盖)",
+      "field": "5 BOSS 测法占位脚本 D2 实现 (V0 占位 → V0.1 真值)"
+    },
+    "PF_BOSS_03_merkle": {
+      "object": "boss_f3_merkle_inference_log.py",
+      "path": ".mavis/scripts/p_f/boss_f3_merkle_inference_log.py",
+      "algorithm": "sha256_first_12",
+      "value": "000000000000 (V0 占位, 已被 V0.1 真值 a8f81c98ea8a 覆盖)",
+      "field": "5 BOSS 测法占位脚本 D2 实现 (V0 占位 → V0.1 真值)"
+    },
+    "PF_BOSS_04_zkml": {
+      "object": "boss_f4_zkml.py",
+      "path": ".mavis/scripts/p_f/boss_f4_zkml.py",
+      "algorithm": "sha256_first_12",
+      "value": "000000000000 (V0 占位, 已被 V0.1 真值 bff8b1ce1f8c 覆盖)",
+      "field": "5 BOSS 测法占位脚本 D2 实现 (V0 占位 → V0.1 真值)"
+    },
+    "PF_BOSS_05_cot": {
+      "object": "boss_f5_cot_transparency.py",
+      "path": ".mavis/scripts/p_f/boss_f5_cot_transparency.py",
+      "algorithm": "sha256_first_12",
+      "value": "000000000000 (V0 占位, 已被 V0.1 真值 d9a6a099b905 覆盖)",
+      "field": "5 BOSS 测法占位脚本 D2 实现 (V0 占位 → V0.1 真值)"
+    }
+  },
+  "iron_rule_compatibility_v01": {
+    "dual_review": "P-F V0.1 锚真值待 D1 reviewer-a 静态审",
+    "api_key_safety": "D2 实现 step 才读 API key, V0.1 真值计算 0 key 读取",
+    "terminology_redline": "全程用工程术语, 严守\"承诺装置\"禁令",
+    "number_provenance": "所有 SHA-256[0:12] 实算, 链式 hash 拼接",
+    "verifier_discipline": "5 BOSS 测法用 /tmp 副本, 不碰真实仓库",
+    "pre_registration_v01": "5 锚 SHA-256[0:12] 真值已算 (从 V0 占位 000000000000 升级为真值)",
+    "push_strategy": "不主动发, 等 D0 末群内公布 + 王老师 WeChat 通知"
+  },
+  "reference_files": {
+    "pre_decision_v0": "verifier/handoff/P_F_PREDECISION_2026_09_09.json (3680 B, SHA-12 b41c98bf90cc, V0 占位)",
+    "pre_decision_v01": "verifier/handoff/P_F_PREDECISION_2026_09_11_V0.1.json (本报告)",
+    "spec": "docs/V3X/P_F_SPEC_V0.md (19804 B, SHA-12 de90faf362c5, 未动)",
+    "research": "docs/V3X/P_F_RESEARCH_2026_09_09.md (17603 B, SHA-12 98085df7811a, 未动)",
+    "implementation": "docs/V3X/P_F_IMPLEMENTATION_2026_09_11.md (22600 B, V1 实施综合, 沿用)",
+    "p_d_v0_1_spec": "docs/V3X/PD_V0.2_SEMANTIC_FINGERPRINT_SPEC.md (4587 B, 沿用)",
+    "p_d_anchors_json_pattern": "verifier/handoff/KT_ABC1_anchors_sha256_12.json (6680 B, SHA-12 03c6c01f3697, 未动)",
+    "phase_c_result": "results/deposon_v3_physical_opt_2026_09_11.json (17591 B, 阶段 C 产出)",
+    "phase_d_report": "docs/V3X/BOSS_URL_DUE_DILIGENCE_2026_09_11.md (阶段 D 诚实披露)"
+  },
+  "erratum_2026_09_11": {
+    "author": "Trae code (user 指令直接修复, 2026-09-11; 勘误追加制, 原始数据未改动)",
+    "pre_erratum_file_sha12": "7126fb897eb7",
+    "source_report": "docs/V3X/P_F_V0_1_VERIFICATION_2026_09_12.md + docs/V3X/LETTER_FROM_TRAE_2026_09_11.md §七",
+    "verified_pass": [
+      "B1 9 model per-model sha256_12 全部独立复算一致 (sha256(fingerprint_str)[0:12])",
+      "5 锚 value_v01 = SHA-256(spec_hash + chain_hash)[0:12] (字符串直连) 全部复算一致",
+      "B1 chain_hash = SHA-256(9 个 per-model hash 以 | 拼接)[0:12] = 589e30c3e9c8 复算一致"
+    ],
+    "issues": [
+      "5 个 spec_hash 的输入字符串未记录, 无法独立复算 (试算 sha12('PF_BOSS_01_fingerprint')/'P_F_SPEC_V0.md'/'boss_f1_model_fingerprinting.py' 等均不匹配 85607bcde97f)",
+      "B2/B4/B5 的 per_fact_anchors 仅含 key->hash 映射, 无事实文本输入串, 不可独立复算",
+      "boss_f*.py 引用路径 .mavis/scripts/p_f/ 在仓库中不存在 (仓库 .mavis/scripts/ 下仅有 kt_a1/kt_b1/kt_c1), 属幽灵路径; 待 Mavis 落盘真实脚本或修正路径",
+      "V7 §8.A canonical 5 值 (56adce731089 系) 与本 JSON 值系 (d78c42f7bab4 系) 是两套独立值链: canonical 在 repo 内无算法工件; 其'总览' ae80bbba4f7b = SHA-256(canonical 5 值以 | 拼接)[0:12] (Trae 复算 PASS), 先有值后拼锚",
+      "命名勘误: ae80bbba4f7b 应称 'canonical 5 值拼接锚', 不可称 'V0.1 JSON 总览 SHA-12' (本文件 erratum 追加前 SHA-12 = 7126fb897eb7)"
+    ],
+    "trust_source_ruling": "P-F V0.1 锚可信源以本 JSON 值系为准 (100% 可复算); V7 §8.A canonical 5 值在工件补齐前标 UNVERIFIED"
+  }
+}

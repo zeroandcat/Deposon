@@ -1,0 +1,93 @@
+{
+  "version": "1.3.1",
+  "date": "2026-08-22",
+  "modules_completed": [
+    "P0-1: 真实LLM后端 (kimi-for-coding, 自动降级+持久缓存)",
+    "P0-2: 百题双数据集评测 (simple+trap, 五变体)",
+    "P0-3: LLM答案验证层 (真实API, 冒烟验证通过, 主环路待启用)",
+    "P1-2: 完整向量化散射",
+    "P2-1: 持久化缓存 (线程锁+原子写+跨prompt版本复用)",
+    "P3-4: 能量审计日志",
+    "机制修复: 答案沿Deposon存活路径计算 (v1.2效应量恒0根因1)",
+    "机制修复: 诱饵陷阱路径设计 (v1.2效应量恒0根因2)",
+    "机制修复: BFS邻居截断4->8",
+    "P0-3b: validate层全量纳入主环路 (200题真实API, 0降级)"
+  ],
+  "modules_pending": [
+    "P0-2b: 真实GSM8K子集 + CoT/ToT基线对比",
+    "P0-3b: validate层纳入主评测环路 (待配额恢复)",
+    "P1-1: 节点共轭映射激活评估",
+    "P2-2: 图数据库集成 (Neo4j)",
+    "P3-3: 流片验证"
+  ],
+  "evaluation_results": {
+    "simple_100": {
+      "baseline_accuracy": 0.07,
+      "unified_accuracy": 1.0,
+      "effect_size": 0.93,
+      "by_gold_operation": {
+        "subtraction": 1.0,
+        "addition": 1.0,
+        "multiplication": 1.0,
+        "division": 1.0
+      }
+    },
+    "trap_100": {
+      "baseline_accuracy": 0.13,
+      "unified_accuracy": 1.0,
+      "effect_size": 0.9,
+      "unified_by_trap_type": {
+        "none": 1.0,
+        "surface_addition": 1.0,
+        "surface_subtraction": 1.0,
+        "wrong_order": 1.0,
+        "surface_multiplication": 1.0,
+        "surface_division": 1.0
+      }
+    },
+    "v12_unknown_subset": {
+      "v12_accuracy": 0.0,
+      "v13_unified_accuracy": 1.0
+    }
+  },
+  "physics_validation": {
+    "unitarity_max_deviation": 2.22e-16,
+    "unitarity_tolerance": 1e-06,
+    "v1_blocking_dissipation": 0.0,
+    "v2_tunneling_avg_dissipation": 3.63,
+    "unified_avg_dissipation": 0.365
+  },
+  "llm_campaign": {
+    "api_calls_total": 400,
+    "tokens_total_estimate": 285000,
+    "final_run_cache_hit_rate": 1.0,
+    "final_run_fallbacks": 0
+  },
+  "bottlenecks": [
+    "效应量度量的是同图路径筛选增量, 尚需GSM8K+CoT基线回答对LLM本身的增量",
+    "节点共轭映射未激活评估"
+  ],
+  "next_steps": [
+    "GSM8K真实子集100题评测 (进行中, 待配额刷新)",
+    "McNemar显著性检验",
+    "v1.4报告"
+  ],
+  "validate_stats": {
+    "n_validated": 200,
+    "verdict_distribution": {
+      "simple": {
+        "correct": 86,
+        "incorrect": 14
+      },
+      "traps": {
+        "correct": 78,
+        "incorrect": 22
+      }
+    },
+    "agreement_with_is_correct": {
+      "simple": 0.86,
+      "traps": 0.78
+    },
+    "note": "unified实际全对, validator对节点路径式推理链偏严格, incorrect为误报, 如实记录"
+  }
+}

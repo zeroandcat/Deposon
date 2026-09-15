@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-09-11T11:19:55+08:00",
+  "phase": "V2 阶段 3 (F-3 Prefix/Strip 差分向量)",
+  "model": "doubao-embedding-vision-251215",
+  "n_captions": 22,
+  "concept_ids": [
+    "L_algorithm_process",
+    "L_biological_taxonomy",
+    "L_geography_world",
+    "L_historical_causality",
+    "L_physics_concepts",
+    "L_project_management",
+    "S1",
+    "S1_n35",
+    "S1_n45",
+    "S1_n60",
+    "S2",
+    "S2_n20",
+    "S2_n35",
+    "S2_n45",
+    "S2_n60",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S6_n20",
+    "S6_n35",
+    "S6_n60"
+  ],
+  "prefix_total_ms": 1285.5,
+  "strip_total_ms": 1248.6,
+  "delta_norm": {
+    "mean": 0.7696412801742554,
+    "max": 0.8757025003433228,
+    "min": 0.6629035472869873,
+    "per_caption": {
+      "L_algorithm_process": 0.6629035472869873,
+      "L_biological_taxonomy": 0.7276273965835571,
+      "L_geography_world": 0.8038845062255859,
+      "L_historical_causality": 0.7299286127090454,
+      "L_physics_concepts": 0.7530791163444519,
+      "L_project_management": 0.735888659954071,
+      "S1": 0.8384583592414856,
+      "S1_n35": 0.7991629838943481,
+      "S1_n45": 0.7469531297683716,
+      "S1_n60": 0.7201080918312073,
+      "S2": 0.7800682783126831,
+      "S2_n20": 0.8112699389457703,
+      "S2_n35": 0.7505837678909302,
+      "S2_n45": 0.7926769256591797,
+      "S2_n60": 0.7802107930183411,
+      "S3": 0.8757025003433228,
+      "S4": 0.7470280528068542,
+      "S5": 0.8086960315704346,
+      "S6": 0.743377149105072,
+      "S6_n20": 0.7927096486091614,
+      "S6_n35": 0.8052617907524109,
+      "S6_n60": 0.7265294194221497
+    }
+  },
+  "tra_ratio": {
+    "prefix": {
+      "intra": 0.7402,
+      "inter": 0.6314,
+      "ratio": 1.1723,
+      "verdict": "NOISE"
+    },
+    "strip": {
+      "intra": 0.6677,
+      "inter": 0.5637,
+      "ratio": 1.1844,
+      "verdict": "NOISE"
+    },
+    "delta": {
+      "intra": 0.7123,
+      "inter": 0.5467,
+      "ratio": 1.3031,
+      "verdict": "GRAY"
+    }
+  },
+  "root_cause": "P-D V0.2 应引入 DELTA 差分(去除 prefix 后 NOISE 仍在,但差分向量含信号)",
+  "constraints_honored": {
+    "no_proxy": true,
+    "key_runtime_only": true,
+    "key_in_json_masked": true,
+    "no_openrouter": true,
+    "no_teamorouter": true,
+    "no_v41_flash": true,
+    "no_gpt6": true,
+    "no_agent_plan": true,
+    "no_retry": true,
+    "no_corpus_v20_modify": true
+  }
+}

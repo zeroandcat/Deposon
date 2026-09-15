@@ -1,0 +1,26 @@
+﻿[BOSS-B2] KT_B1_BOSS_B2_KD - KD (Hinton 2015) ʧ�����ʵ��
+  ���ݼ�: results/deposon_v19_benchmark_fixes.json
+  ������: KD ʧ���Ͻ� >= 0.95
+  KD ����: T=2.0, alpha=0.5, lr=0.001, epochs=50, batch=32
+  ��ģ: 200 �ڵ� / 200 �� / 100 ����/��
+  ����: /tmp/deposon_kt_b1_audit_{timestamp}/
+
+  v19 loaded: physics_audit.t_plus_r_plus_a_max_deviation = 2.220e-16
+python : Traceback (most recent call last):
+所在位置 行:1 字符: 36
++ ... \deposon-repo; python .mavis\scripts\kt_b1\boss_b2_kd.py 2>&1 | Out-F ...
++                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\˽������\deposon-repo\.mavis\scripts\kt_b1\boss_b2_kd.py", line 408, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "D:\˽������\deposon-repo\.mavis\scripts\kt_b1\boss_b2_kd.py", line 373, in main
+    teacher_samples = sample_teacher_distribution(v19_data)
+  File "D:\˽������\deposon-repo\.mavis\scripts\kt_b1\boss_b2_kd.py", line 129, in sample_teacher_distribution
+    questions = _extract_200_questions(v19_data)
+  File "D:\˽������\deposon-repo\.mavis\scripts\kt_b1\boss_b2_kd.py", line 95, in _extract_200_questions
+    "predicted": float(p.get("predicted", 0.0)),
+                 ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'

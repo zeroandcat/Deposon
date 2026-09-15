@@ -1,0 +1,123 @@
+{
+  "version": "1.4.0",
+  "benchmark": "GSM8K official test split, seed=42 sample 100",
+  "llm_backend": "kimi-for-coding (real API, persistent cache)",
+  "n_questions": 100,
+  "cot_baseline_accuracy": 0.97,
+  "baseline_accuracy": 0.02,
+  "unified_accuracy": 0.85,
+  "effect_size_unified_vs_no_deposon": 0.83,
+  "effect_size_unified_vs_cot": -0.12,
+  "is_better_than_no_deposon": true,
+  "is_better_than_cot": false,
+  "mcnemar_unified_vs_cot": {
+    "b": 0,
+    "c": 12,
+    "p_value": 0.00048828125
+  },
+  "mcnemar_unified_vs_no_deposon": {
+    "b": 84,
+    "c": 1,
+    "p_value": 4.446095792472524e-24
+  },
+  "variant_results": {
+    "no_deposon": {
+      "n_total": 100,
+      "n_correct": 2,
+      "accuracy": 0.02,
+      "avg_ether_dissipated": 0.0
+    },
+    "v1_blocking": {
+      "n_total": 100,
+      "n_correct": 86,
+      "accuracy": 0.86,
+      "avg_ether_dissipated": 0.0
+    },
+    "v2_tunneling": {
+      "n_total": 100,
+      "n_correct": 4,
+      "accuracy": 0.04,
+      "avg_ether_dissipated": 3.445930904559349
+    },
+    "unified": {
+      "n_total": 100,
+      "n_correct": 85,
+      "accuracy": 0.85,
+      "avg_ether_dissipated": 0.3085743219513346
+    },
+    "high_couple": {
+      "n_total": 100,
+      "n_correct": 86,
+      "accuracy": 0.86,
+      "avg_ether_dissipated": 0.0
+    }
+  },
+  "validate_stats": {
+    "n_validated": 100,
+    "verdict_distribution": {
+      "correct": 88,
+      "incorrect": 12
+    },
+    "agreement_with_is_correct": 0.97
+  },
+  "llm_stats_final_run": {
+    "calls": 600,
+    "fallbacks": 0,
+    "errors": 0,
+    "cache_hits": 600,
+    "tokens_used": 0
+  },
+  "physics_audit": {
+    "t_plus_r_plus_a_max_deviation": 2.220446049250313e-16,
+    "tolerance": 1e-06,
+    "passed": true
+  },
+  "sensitivity_analysis": {
+    "note": "事后敏感性分析: 干净OP链路径采用分解computed_answer(修复fold_chain反向操作数缺陷); 主口径accuracy为沿路径折叠, 未改动",
+    "accuracy_primary_unified": 0.85,
+    "accuracy_sensitivity": {
+      "no_deposon": 0.02,
+      "v1_blocking": 0.95,
+      "v2_tunneling": 0.04,
+      "unified": 0.94,
+      "high_couple": 0.95
+    },
+    "mcnemar_sensitivity_unified_vs_cot": {
+      "b": 0,
+      "c": 3,
+      "p_value": 0.25
+    },
+    "unified_failure_attribution_primary": {
+      "trap_capture": {
+        "n": 2,
+        "ids": [
+          26,
+          46
+        ]
+      },
+      "fold_defect": {
+        "n": 10,
+        "ids": [
+          45,
+          61,
+          62,
+          65,
+          66,
+          71,
+          72,
+          78,
+          85,
+          94
+        ]
+      },
+      "decomposer_error": {
+        "n": 3,
+        "ids": [
+          7,
+          87,
+          98
+        ]
+      }
+    }
+  }
+}

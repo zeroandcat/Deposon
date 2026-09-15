@@ -1,0 +1,343 @@
+{
+  "timestamp": "2026-09-10T22:25:00+08:00",
+  "gateway": "OpenRouter",
+  "base_url": "https://openrouter.ai/api/v1",
+  "auth": "sk-or-v1-... (key loaded from env at runtime; literal key never written to disk)",
+  "user_constraint_override": "user 22:21 implicitly revokes 17:41 \"只走 coding-plan\" (OpenRouter 测试必须)",
+  "parent_constraint_active": "17:38 火山 catalog 内 + 22:21 OpenRouter 必须(海外开源 gateway 不违反 17:38)",
+  "api_call_budget": {
+    "sanity": 5,
+    "embedding": 9,
+    "total": 14
+  },
+  "sanity_check": [
+    {
+      "model": "liquid/lfm-2.5-embedding-350m:free",
+      "http_status": 200,
+      "latency_ms": 2511.8,
+      "dimension": 1024,
+      "response_head": "[0.026690185070037842, -0.01644306071102619, 0.0298675876110",
+      "usage": {
+        "prompt_tokens": 8,
+        "total_tokens": 8,
+        "cost": 0,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "sanity_response_ok": true
+    },
+    {
+      "model": "nvidia/nemotron-3-embed-1b:free",
+      "http_status": 200,
+      "latency_ms": 1278.6,
+      "dimension": 2048,
+      "response_head": "[0.1414403, -0.011388423, -0.047729857, -0.0003748418, 0.003",
+      "usage": {
+        "prompt_tokens": 9,
+        "total_tokens": 9,
+        "cost": 0,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "sanity_response_ok": true
+    },
+    {
+      "model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+      "http_status": 200,
+      "latency_ms": 1709.4,
+      "dimension": 2048,
+      "response_head": "[0.0009889602661132812, -0.01404571533203125, -0.01283264160",
+      "usage": {
+        "prompt_tokens": 10,
+        "total_tokens": 10,
+        "cost": 0,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "sanity_response_ok": true
+    },
+    {
+      "model": "thenlper/gte-base",
+      "http_status": 200,
+      "latency_ms": 2248.3,
+      "dimension": 768,
+      "response_head": "[0.0026308405213057995, 0.0006975164287723601, -0.0022036877",
+      "usage": {
+        "prompt_tokens": 8,
+        "total_tokens": 8,
+        "cost": 4e-08,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4e-08,
+          "upstream_inference_prompt_cost": 4e-08,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "sanity_response_ok": true
+    },
+    {
+      "model": "voyageai/voyage-4",
+      "http_status": 200,
+      "latency_ms": 1182.2,
+      "dimension": 1024,
+      "response_head": "[-0.047661498, -0.019385122, -0.028885417, 0.037232131, 0.02",
+      "usage": {
+        "prompt_tokens": 7,
+        "total_tokens": 7,
+        "cost": 4.2e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 4.2e-07,
+          "upstream_inference_prompt_cost": 4.2e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "sanity_response_ok": true
+    }
+  ],
+  "three_cells_embedding": [
+    {
+      "cell_id": 1,
+      "model": "nvidia/nemotron-3-embed-1b:free",
+      "http_status": 200,
+      "latency_ms": 1352.9,
+      "dimension": 2048,
+      "first_4": [
+        0.076067664,
+        0.025127426,
+        -0.021943817,
+        0.0048326934
+      ],
+      "usage": {
+        "prompt_tokens": 38,
+        "total_tokens": 38,
+        "cost": 0,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "ok": true
+    },
+    {
+      "cell_id": 2,
+      "model": "nvidia/nemotron-3-embed-1b:free",
+      "http_status": 200,
+      "latency_ms": 1647.9,
+      "dimension": 2048,
+      "first_4": [
+        0.11052872,
+        0.028685072,
+        -0.05298359,
+        -0.012328895
+      ],
+      "usage": {
+        "prompt_tokens": 42,
+        "total_tokens": 42,
+        "cost": 0,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "ok": true
+    },
+    {
+      "cell_id": 3,
+      "model": "nvidia/nemotron-3-embed-1b:free",
+      "http_status": 200,
+      "latency_ms": 1333.3,
+      "dimension": 2048,
+      "first_4": [
+        0.10671291,
+        0.039733563,
+        -0.018623993,
+        -0.0094382465
+      ],
+      "usage": {
+        "prompt_tokens": 34,
+        "total_tokens": 34,
+        "cost": 0,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "ok": true
+    },
+    {
+      "cell_id": 1,
+      "model": "liquid/lfm-2.5-embedding-350m:free",
+      "http_status": 200,
+      "latency_ms": 2599.0,
+      "dimension": 1024,
+      "first_4": [
+        0.01988719403743744,
+        0.015775179490447044,
+        0.02556924894452095,
+        0.021831056103110313
+      ],
+      "usage": {
+        "prompt_tokens": 39,
+        "total_tokens": 39,
+        "cost": 0,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "ok": true
+    },
+    {
+      "cell_id": 2,
+      "model": "liquid/lfm-2.5-embedding-350m:free",
+      "http_status": 200,
+      "latency_ms": 1843.0,
+      "dimension": 1024,
+      "first_4": [
+        0.04527893662452698,
+        0.04064813628792763,
+        0.021481767296791077,
+        0.02727026864886284
+      ],
+      "usage": {
+        "prompt_tokens": 41,
+        "total_tokens": 41,
+        "cost": 0,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "ok": true
+    },
+    {
+      "cell_id": 3,
+      "model": "liquid/lfm-2.5-embedding-350m:free",
+      "http_status": 200,
+      "latency_ms": 2278.7,
+      "dimension": 1024,
+      "first_4": [
+        0.0089620565995574,
+        0.05611026659607887,
+        0.03558845445513725,
+        0.026626398786902428
+      ],
+      "usage": {
+        "prompt_tokens": 35,
+        "total_tokens": 35,
+        "cost": 0,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "ok": true
+    },
+    {
+      "cell_id": 1,
+      "model": "thenlper/gte-base",
+      "http_status": 200,
+      "latency_ms": 2219.8,
+      "dimension": 768,
+      "first_4": [
+        0.0010798996081575751,
+        1.7790500351111405e-05,
+        -0.002317848615348339,
+        0.0138546172529459
+      ],
+      "usage": {
+        "prompt_tokens": 41,
+        "total_tokens": 41,
+        "cost": 2.05e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.05e-07,
+          "upstream_inference_prompt_cost": 2.05e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "ok": true
+    },
+    {
+      "cell_id": 2,
+      "model": "thenlper/gte-base",
+      "http_status": 200,
+      "latency_ms": 2123.5,
+      "dimension": 768,
+      "first_4": [
+        0.01695755496621132,
+        -0.0003587429237086326,
+        -0.015661410987377167,
+        0.018549684435129166
+      ],
+      "usage": {
+        "prompt_tokens": 41,
+        "total_tokens": 41,
+        "cost": 2.05e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 2.05e-07,
+          "upstream_inference_prompt_cost": 2.05e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "ok": true
+    },
+    {
+      "cell_id": 3,
+      "model": "thenlper/gte-base",
+      "http_status": 200,
+      "latency_ms": 2098.6,
+      "dimension": 768,
+      "first_4": [
+        -0.002066143788397312,
+        -0.009195537306368351,
+        -0.00138594931922853,
+        -0.002548928838223219
+      ],
+      "usage": {
+        "prompt_tokens": 35,
+        "total_tokens": 35,
+        "cost": 1.75e-07,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 1.75e-07,
+          "upstream_inference_prompt_cost": 1.75e-07,
+          "upstream_inference_completions_cost": 0
+        }
+      },
+      "ok": true
+    }
+  ],
+  "summary": {
+    "total_models_tested": 5,
+    "models_passed_sanity": 5,
+    "models_passed_3cells": 3,
+    "total_cells_passed": 9
+  }
+}

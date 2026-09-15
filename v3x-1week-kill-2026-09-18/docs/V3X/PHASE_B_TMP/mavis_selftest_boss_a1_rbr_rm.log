@@ -1,0 +1,29 @@
+[KT-A1 BOSS-A1] RBR/RM baseline 真实现
+  数据集: results/deposon_v20_baselines.json
+  理论引用: Hart & Mas-Colell 2000
+  迭代轮数: 200
+
+  5 锚验证: SKIP(D0 准备阶段)
+
+  加载 22 受控概念图
+
+============================================================
+KT-A1 BOSS-A1 结果
+============================================================
+  RBR 总切换:        22
+  RM 总迭代:         4400
+  Bayesian baseline: 0.0
+  成本倍数 RBR:      22.000
+  成本倍数 RM:       4400.000
+  RBR 95% CI:        (1.000, 1.000)
+  RM 95% CI:         (200.000, 200.000)
+
+  裁定: DIFFERENTIATED
+
+  裁定规则(沿用 §4.1):
+    RBR/RM <= 1.3x -> 主张降级为'工程化系统'
+    RBR/RM > 2.0x  -> deposon 散射层有差异化
+    1.3 < RBR/RM < 2.0 -> 灰区, 看 BOSS-A2/A3 综合裁定
+
+[注意] 必须在 /tmp/deposon_kt_a1_audit_<timestamp>/ 副本中跑
+[注意] 不得诱导删除 5 锚(沿用 P-A V0 spec §0.5)

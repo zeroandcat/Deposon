@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "title": "KT_ABC1 V3X P-A 锚 patch (D5 2A 拍板)",
+    "date": "2026-09-15",
+    "author": "Mavis Worker (subagent of mvs_bbeb804b1a6a41109be740636eed1709, session mvs_548cbfc2ddf14b8c9e7dc54499361a79)",
+    "method": "P-D V0.1.2 '无参 + 临时副本自建'风格 patch (不动原始 frozen 5 锚 JSON)",
+    "spec_versions": {
+      "KT-A1": "V0.1 (沿 P_A_EQUILIBRIUM_STABILIZATION_V0_SPEC.md)",
+      "V3X_D5_pan": "user 2026-09-15 12:01 拍板 2A",
+      "D5_P_A_anchor_update_decision": "option_A: 派生 patch JSON 不修改 frozen 5 锚 JSON"
+    },
+    "note": "本 JSON 是 V3X P-A 锚 patch 的派生记录; 原始 frozen 5 锚 JSON (KT_ABC1_anchors_sha256_12.json SHA-12 = 03c6c01f3697) 严守 0 触动。V3X 派生 patch 落盘位置 = 本文件; 待 5 锚 JSON 下一次 V0.2 / V3X 正式升级时, 用户/Mavis 拍板后可统一 reconcile 到原 5 锚 JSON 中。"
+  },
+  "patch_summary": {
+    "patch_target_file": "verifier/handoff/KT_ABC1_anchors_sha256_12.json",
+    "patch_target_sha12_observed_2026_09_15": "03c6c01f3697",
+    "patch_target_sha12_expected_unchanged": "03c6c01f3697",
+    "patch_status": "DERIVED (原始 frozen 0 触动; 本 JSON 为派生 patch 记录)",
+    "patch_method": "P-D V0.1.2 '无参 + 临时副本自建'风格: 不修改 frozen 真实文件, 在 V3X 派生 JSON 中记录 OLD/NEW 值"
+  },
+  "p_a_patches": {
+    "P_A_LLM_CLIENT": {
+      "object": "tools/llm_client.py",
+      "path": "tools/llm_client.py",
+      "algorithm": "sha256_first_12",
+      "value_v0_old_in_5anchor_json": "055e874ea5c1",
+      "value_v0_old_observed_now": "055e874ea5c1 (仍记录于 5 锚 JSON)",
+      "value_v3x_new": "1722500da4aa",
+      "value_v3x_new_observed_now": "1722500da4aa (file 实算 SHA-12, 2026-09-15 13:24)",
+      "file_size_B_now": 8118,
+      "delta_reason": "user 2026-09-15 12:01 拍板 2A: P-A LLM_CLIENT 锚真值升级 (沿 tools/llm_client.py 当前实算)",
+      "patch_status": "PENDING (待 D7 后 5 锚 JSON V0.2 / V3X 正式升级 reconcile)"
+    },
+    "P_A_HARNESS": {
+      "object": "tools/exp_harness.py",
+      "path": "tools/exp_harness.py",
+      "algorithm": "sha256_first_12",
+      "value_v0_old_in_5anchor_json": "9f383935c00c",
+      "value_v0_old_observed_now": "9f383935c00c (仍记录于 5 锚 JSON)",
+      "value_v3x_new": "275e480ba4d9",
+      "value_v3x_new_observed_now": "275e480ba4d9 (file 实算 SHA-12, 2026-09-15 13:24)",
+      "file_size_B_now": 10090,
+      "delta_reason": "user 2026-09-15 12:01 拍板 2A: P-A HARNESS 锚真值升级 (沿 tools/exp_harness.py 当前实算)",
+      "patch_status": "PENDING (待 D7 后 5 锚 JSON V0.2 / V3X 正式升级 reconcile)"
+    }
+  },
+  "iron_rule_compliance_v3x_2a": {
+    "0_LLM_calls": true,
+    "no_proxy": true,
+    "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_WeChatAPI": true,
+    "no_api_key_read": true,
+    "no_touch_frozen_5anchor_json_sha12_03c6c01f3697": true,
+    "no_touch_16_frozen_files": true,
+    "no_touch_verifier_mavis_builtin_scripts": true,
+    "no_temp_files": "verifier scripts exception (本 patch JSON 即派生记录)",
+    "method": "纯 Python stdlib (json + hashlib + os), 0 numpy 依赖, 0 网络, 0 key"
+  },
+  "v3x_derived_patch_decision_basis": {
+    "task_constraint_conflict": "D5 2A 同时要求 (a) 更新 5 锚 JSON 内嵌 P_A 2 锚 SHA, (b) 保持 5 锚 JSON 自身 SHA-12 = 03c6c01f3697; 数学上不可能",
+    "resolution_path_option_A": "派生 patch JSON (本文件): 不动 frozen 5 锚 JSON, P_A 2 锚的 OLD/NEW 值在 V3X 派生 JSON 落盘, 严守 0 触动 frozen 16 list + 5 锚 JSON",
+    "resolution_path_option_B_alternative": "直接 patch 5 锚 JSON + 接受 SHA 变化, 但违反 frozen 严守; 此路径未采取",
+    "rationale": "option_A 严守 7 铁律 + 16 frozen + frozen 5 锚 JSON 自身 SHA 不变; 待 D7 (2026-09-18) 后用户/Mavis 拍板 5 锚 JSON V0.2 / V3X 正式升级时, 本派生 patch 的 P_A 2 锚 NEW 值可被 reconcile 到正式 5 锚 JSON, 此后 P-A B2/B3 验锚也可生效",
+    "chosen": "option_A (本派生 patch JSON)"
+  },
+  "verification_2026_09_15": {
+    "5_anchor_json_sha12_observed": "03c6c01f3697",
+    "5_anchor_json_sha12_expected": "03c6c01f3697",
+    "5_anchor_json_unchanged": true,
+    "tools_llm_client_sha12_observed": "1722500da4aa",
+    "tools_llm_client_sha12_value_in_patch_v3x_new": "1722500da4aa",
+    "tools_llm_client_match": true,
+    "tools_exp_harness_sha12_observed": "275e480ba4d9",
+    "tools_exp_harness_sha12_value_in_patch_v3x_new": "275e480ba4d9",
+    "tools_exp_harness_match": true
+  },
+  "next_steps": {
+    "D5_report": "docs/V3X/D5_DECISIONS_LAND_REPORT_2026_09_15.md (本 patch JSON 在该报告 §2A 引用)",
+    "D7_reconcile_proposal": "D7 (2026-09-18) 终极判死后, 若 user/Mavis 拍板 5 锚 JSON V0.2 升级, 本派生 patch 的 P_A 2 锚 NEW 值作为 V3X 升级候选, 与 frozen V0 占位 + 历史 reconcile",
+    "D7_pending_question_to_parent": "派生 patch JSON 是否同步 push 给 user/王老师, 等 parent 拍板"
+  }
+}

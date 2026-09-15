@@ -1,0 +1,178 @@
+{
+  "skill": "skill_c_p_e_3modality",
+  "phase": "V3X 路径 ② 扩展:P-E 三模态守恒 ε 检测 (9 model × 60 cells)",
+  "date": "2026-09-11",
+  "started_at": "2026-09-11T17:06:33",
+  "iron_rule_compliance": {
+    "0_LLM_calls": true,
+    "no_proxy": true,
+    "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_WeChatAPI": true,
+    "no_pip_install": true,
+    "no_touch_verifier_mavis_builtin": true,
+    "no_touch_scripts_dir": true,
+    "no_touch_5anchor_4spec_v19_v21_corpus_v20_200plus_dump": true,
+    "method": "纯 Python stdlib (json + hashlib + os + datetime), 0 numpy 依赖"
+  },
+  "inputs": {
+    "dpath_json": "results\\deposon_dpath_cross_modal_2026_09_10.json",
+    "dpath_json_size_B": 75970,
+    "v3_phys_json": "results\\deposon_v3_physical_opt_60cells_2026_09_11.json",
+    "v3_phys_json_size_B": 13794,
+    "anchor_json": "verifier\\handoff\\KT_ABC1_anchors_sha256_12.json",
+    "anchor_json_sha12_observed": "03c6c01f3697",
+    "anchor_json_sha12_expected": "03c6c01f3697",
+    "anchor_pass": true
+  },
+  "dpath_single_model_30cells": {
+    "n_cells_observed": 30,
+    "sim_matrix_observed": {
+      "text_text_offdiag_mean": 0.6563,
+      "image_image_offdiag_mean": 0.965,
+      "text_image_offdiag_mean": 0.2799
+    },
+    "per_cell_top1_sim": {
+      "text_mean": 1.0,
+      "image_mean": 0.9984,
+      "cross_mean": 0.9992,
+      "eps_3modal_mean": 0.0032
+    }
+  },
+  "v3_pe_9model_60cells_verification": {
+    "n_models": 9,
+    "per_model": [
+      {
+        "model": "doubao-seed-2.0-lite",
+        "T_frac": 0.8667,
+        "image_frac": 0.8616,
+        "cross_frac": 0.8641,
+        "eps_ti": 0.0051,
+        "eps_ic": 0.0026,
+        "eps_ct": 0.0026,
+        "eps_3modal_sum": 0.0102,
+        "verdict_recomputed": "PASS",
+        "verdict_v3": "PASS",
+        "verdict_match": true
+      },
+      {
+        "model": "glm-5.3",
+        "T_frac": 0.8667,
+        "image_frac": 0.8616,
+        "cross_frac": 0.8641,
+        "eps_ti": 0.0051,
+        "eps_ic": 0.0026,
+        "eps_ct": 0.0026,
+        "eps_3modal_sum": 0.0102,
+        "verdict_recomputed": "PASS",
+        "verdict_v3": "PASS",
+        "verdict_match": true
+      },
+      {
+        "model": "deepseek-v4-flash",
+        "T_frac": 0.7667,
+        "image_frac": 0.8528,
+        "cross_frac": 0.8097,
+        "eps_ti": 0.0862,
+        "eps_ic": 0.0431,
+        "eps_ct": 0.0431,
+        "eps_3modal_sum": 0.1723,
+        "verdict_recomputed": "PASS",
+        "verdict_v3": "PASS",
+        "verdict_match": true
+      },
+      {
+        "model": "doubao-seed-evolving",
+        "T_frac": 0.7333,
+        "image_frac": 0.8499,
+        "cross_frac": 0.7916,
+        "eps_ti": 0.1166,
+        "eps_ic": 0.0583,
+        "eps_ct": 0.0583,
+        "eps_3modal_sum": 0.2332,
+        "verdict_recomputed": "PASS",
+        "verdict_v3": "PASS",
+        "verdict_match": true
+      },
+      {
+        "model": "minimax-m3",
+        "T_frac": 0.7,
+        "image_frac": 0.847,
+        "cross_frac": 0.7735,
+        "eps_ti": 0.147,
+        "eps_ic": 0.0735,
+        "eps_ct": 0.0735,
+        "eps_3modal_sum": 0.294,
+        "verdict_recomputed": "PASS",
+        "verdict_v3": "PASS",
+        "verdict_match": true
+      },
+      {
+        "model": "glm-5.3-flash",
+        "T_frac": 0.7,
+        "image_frac": 0.847,
+        "cross_frac": 0.7735,
+        "eps_ti": 0.147,
+        "eps_ic": 0.0735,
+        "eps_ct": 0.0735,
+        "eps_3modal_sum": 0.294,
+        "verdict_recomputed": "PASS",
+        "verdict_v3": "PASS",
+        "verdict_match": true
+      },
+      {
+        "model": "kimi-k2.7-code",
+        "T_frac": 0.6333,
+        "image_frac": 0.8412,
+        "cross_frac": 0.7373,
+        "eps_ti": 0.2078,
+        "eps_ic": 0.1039,
+        "eps_ct": 0.1039,
+        "eps_3modal_sum": 0.4157,
+        "verdict_recomputed": "GRAY",
+        "verdict_v3": "GRAY",
+        "verdict_match": true
+      },
+      {
+        "model": "doubao-seed-2.1-turbo",
+        "T_frac": 0.6,
+        "image_frac": 0.8383,
+        "cross_frac": 0.7191,
+        "eps_ti": 0.2383,
+        "eps_ic": 0.1191,
+        "eps_ct": 0.1191,
+        "eps_3modal_sum": 0.4765,
+        "verdict_recomputed": "GRAY",
+        "verdict_v3": "GRAY",
+        "verdict_match": true
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "T_frac": 0.5333,
+        "image_frac": 0.8325,
+        "cross_frac": 0.6829,
+        "eps_ti": 0.2991,
+        "eps_ic": 0.1496,
+        "eps_ct": 0.1496,
+        "eps_3modal_sum": 0.5982,
+        "verdict_recomputed": "FAIL",
+        "verdict_v3": "FAIL",
+        "verdict_match": true
+      }
+    ],
+    "p_e_verdict_distribution_recomputed": {
+      "PASS": 6,
+      "GRAY": 2,
+      "FAIL": 1
+    },
+    "p_e_verdict_distribution_v3_expected": {
+      "PASS": 5,
+      "GRAY": 3,
+      "FAIL": 1
+    },
+    "p_e_distribution_match": false,
+    "eps_60cells_mean_v3": 0.2783,
+    "eps_60cells_min_v3": 0.0102,
+    "eps_60cells_max_v3": 0.5982,
+    "thresh_chain": "0.10 -> 0.50 -> 0.30 (V2 阶段 5 FAIL 判定未被同口径推翻, P-E 维持 GRAY)"
+  },
+  "verdict": "FAIL"
+}

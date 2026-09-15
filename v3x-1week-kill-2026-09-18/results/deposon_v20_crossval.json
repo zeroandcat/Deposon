@@ -1,0 +1,384 @@
+{
+ "experiment": "deposon_v20_crossval",
+ "spec_version": "v2.0",
+ "spec": "docs/SPEC_v2.0.md §2（族 L 先验臂）/ §4（GT-2）",
+ "config": {
+  "n_steps": 50,
+  "beta_schedule": "linear",
+  "prior": "uniform_out",
+  "lr": 0.1,
+  "lam_smooth": 0.01,
+  "field_guidance": true,
+  "energy_mode": "aggregate",
+  "seed": 0
+ },
+ "hybrid_lambda_convex": 0.5,
+ "prior_arm_eval": {
+  "L_physics_concepts": {
+   "field_mean": {
+    "named": 0.0967741935483871,
+    "filler": 0.0
+   },
+   "llm_prior": {
+    "named": 0.4838709677419355,
+    "filler": 0.875
+   },
+   "hybrid_norm@0.5": {
+    "named": 0.45161290322580644,
+    "filler": 0.25
+   },
+   "random": {
+    "named": 0.12903225806451613,
+    "filler": 0.125
+   },
+   "degree": {
+    "named": 0.0967741935483871,
+    "filler": 0.0
+   },
+   "adamic_adar": {
+    "named": 0.03225806451612903,
+    "filler": 0.0
+   },
+   "jaccard": {
+    "named": 0.03225806451612903,
+    "filler": 0.0
+   },
+   "rule_filter": {
+    "named": 0.16129032258064516,
+    "filler": 0.125
+   }
+  },
+  "L_biological_taxonomy": {
+   "field_mean": {
+    "named": 0.13636363636363635,
+    "filler": 0.0
+   },
+   "llm_prior": {
+    "named": 1.0,
+    "filler": 0.9473684210526315
+   },
+   "hybrid_norm@0.5": {
+    "named": 1.0,
+    "filler": 0.8947368421052632
+   },
+   "random": {
+    "named": 0.13636363636363635,
+    "filler": 0.0
+   },
+   "degree": {
+    "named": 0.0,
+    "filler": 0.0
+   },
+   "adamic_adar": {
+    "named": 0.0,
+    "filler": 0.0
+   },
+   "jaccard": {
+    "named": 0.0,
+    "filler": 0.0
+   },
+   "rule_filter": {
+    "named": 0.045454545454545456,
+    "filler": 0.05263157894736842
+   }
+  },
+  "L_algorithm_process": {
+   "field_mean": {
+    "named": 0.10344827586206896,
+    "filler": 0.15789473684210525
+   },
+   "llm_prior": {
+    "named": 0.6896551724137931,
+    "filler": 0.21052631578947367
+   },
+   "hybrid_norm@0.5": {
+    "named": 0.6896551724137931,
+    "filler": 0.2631578947368421
+   },
+   "random": {
+    "named": 0.034482758620689655,
+    "filler": 0.05263157894736842
+   },
+   "degree": {
+    "named": 0.0,
+    "filler": 0.2631578947368421
+   },
+   "adamic_adar": {
+    "named": 0.06896551724137931,
+    "filler": 0.05263157894736842
+   },
+   "jaccard": {
+    "named": 0.10344827586206896,
+    "filler": 0.05263157894736842
+   },
+   "rule_filter": {
+    "named": 0.034482758620689655,
+    "filler": 0.05263157894736842
+   }
+  },
+  "L_historical_causality": {
+   "field_mean": {
+    "named": 0.043478260869565216,
+    "filler": 0.34375
+   },
+   "llm_prior": {
+    "named": 0.782608695652174,
+    "filler": 0.40625
+   },
+   "hybrid_norm@0.5": {
+    "named": 0.7391304347826086,
+    "filler": 0.625
+   },
+   "random": {
+    "named": 0.08695652173913043,
+    "filler": 0.09375
+   },
+   "degree": {
+    "named": 0.043478260869565216,
+    "filler": 0.28125
+   },
+   "adamic_adar": {
+    "named": 0.17391304347826086,
+    "filler": 0.28125
+   },
+   "jaccard": {
+    "named": 0.21739130434782608,
+    "filler": 0.1875
+   },
+   "rule_filter": {
+    "named": 0.043478260869565216,
+    "filler": 0.125
+   }
+  }
+ },
+ "direction_analysis": {
+  "L_physics_concepts": {
+   "n_prior_edges": 41,
+   "undirected_overlap": 33,
+   "undirected_jaccard": 0.7021,
+   "direction_agreement_on_shared": 1.0,
+   "hub_node": 14,
+   "hub_prior_edges": 1,
+   "hub_reversed_edges": 0,
+   "domain_kind": "abstract_to_specific"
+  },
+  "L_biological_taxonomy": {
+   "n_prior_edges": 41,
+   "undirected_overlap": 40,
+   "undirected_jaccard": 0.9524,
+   "direction_agreement_on_shared": 1.0,
+   "hub_node": 37,
+   "hub_prior_edges": 2,
+   "hub_reversed_edges": 0,
+   "domain_kind": "abstract_to_specific"
+  },
+  "L_algorithm_process": {
+   "n_prior_edges": 37,
+   "undirected_overlap": 23,
+   "undirected_jaccard": 0.371,
+   "direction_agreement_on_shared": 0.9565,
+   "hub_node": 35,
+   "hub_prior_edges": 1,
+   "hub_reversed_edges": 0,
+   "domain_kind": "process_to_result"
+  },
+  "L_historical_causality": {
+   "n_prior_edges": 51,
+   "undirected_overlap": 32,
+   "undirected_jaccard": 0.4324,
+   "direction_agreement_on_shared": 0.9688,
+   "hub_node": 35,
+   "hub_prior_edges": 3,
+   "hub_reversed_edges": 0,
+   "domain_kind": "process_to_result"
+  }
+ },
+ "direction_kind_summary": {
+  "abstract_to_specific": {
+   "n_graphs": 2,
+   "mean_direction_agreement": 1.0,
+   "total_hub_reversed": 0
+  },
+  "process_to_result": {
+   "n_graphs": 2,
+   "mean_direction_agreement": 0.9627,
+   "total_hub_reversed": 0
+  }
+ },
+ "gt2_attacker_meta": {
+  "L_physics_concepts": {
+   "n_raw": 12,
+   "n_evading": 12,
+   "n_novel": 12,
+   "evasion_rate": 1.0,
+   "labels_used": [
+    "伽利略坐标变换",
+    "以太假说",
+    "原子不可再分",
+    "永动机",
+    "热质说",
+    "经典黑体辐射公式",
+    "地心说引力模型",
+    "超距作用原理",
+    "弦论标准模型",
+    "光速可变假说",
+    "绝对时空观",
+    "引力子已被发现"
+   ]
+  },
+  "L_biological_taxonomy": {
+   "n_raw": 12,
+   "n_evading": 12,
+   "n_novel": 12,
+   "evasion_rate": 1.0,
+   "labels_used": [
+    "原生生物界",
+    "病毒域",
+    "恐龙纲",
+    "鱼类纲",
+    "原核动物界",
+    "单细胞植物门",
+    "软体动物亚门",
+    "裸子植物亚门",
+    "单子叶植物目",
+    "双子叶植物目",
+    "竹属",
+    "苹果目"
+   ]
+  },
+  "L_algorithm_process": {
+   "n_raw": 12,
+   "n_evading": 12,
+   "n_novel": 12,
+   "evasion_rate": 1.0,
+   "labels_used": [
+    "打孔卡读入",
+    "磁带归档",
+    "零假设拒绝",
+    "欧氏距离收敛",
+    "贝叶斯先验更新",
+    "遗传交叉操作",
+    "独热归一化",
+    "聚类伪标注",
+    "多数表决初始化",
+    "混淆矩阵训练",
+    "准确率反向传播",
+    "熵权法调参"
+   ]
+  },
+  "L_historical_causality": {
+   "n_raw": 12,
+   "n_evading": 12,
+   "n_novel": 12,
+   "evasion_rate": 1.0,
+   "labels_used": [
+    "普法战争赔款",
+    "萨拉热窝审判",
+    "凡尔登和谈",
+    "施里芬计划成功",
+    "三国同盟破裂",
+    "华盛顿海军条约",
+    "大萧条加剧",
+    "慕尼黑协定",
+    "奥匈帝国改革",
+    "殖民地瓜分完成",
+    "民族自决确立",
+    "美国中立终结"
+   ]
+  }
+ },
+ "gt2_eval": {
+  "L_physics_concepts": {
+   "n_injected": 10,
+   "baseline": {
+    "field_mean": 0.1,
+    "rule_filter": 0.1
+   },
+   "attacked": {
+    "field_mean": 0.1,
+    "rule_filter": 0.0
+   },
+   "collapse_pp": {
+    "field_mean": 0.0,
+    "rule_filter": 0.1
+   }
+  },
+  "L_biological_taxonomy": {
+   "n_injected": 10,
+   "baseline": {
+    "field_mean": 0.1,
+    "rule_filter": 0.2
+   },
+   "attacked": {
+    "field_mean": 0.1,
+    "rule_filter": 0.2
+   },
+   "collapse_pp": {
+    "field_mean": 0.0,
+    "rule_filter": 0.0
+   }
+  },
+  "L_algorithm_process": {
+   "n_injected": 10,
+   "baseline": {
+    "field_mean": 0.0,
+    "rule_filter": 0.2
+   },
+   "attacked": {
+    "field_mean": 0.0,
+    "rule_filter": 0.1
+   },
+   "collapse_pp": {
+    "field_mean": 0.0,
+    "rule_filter": 0.1
+   }
+  },
+  "L_historical_causality": {
+   "n_injected": 10,
+   "baseline": {
+    "field_mean": 0.0,
+    "rule_filter": 0.2
+   },
+   "attacked": {
+    "field_mean": 0.0,
+    "rule_filter": 0.1
+   },
+   "collapse_pp": {
+    "field_mean": 0.0,
+    "rule_filter": 0.1
+   }
+  }
+ },
+ "gt2_verdict": {
+  "verdict": "no_separation_adaptive_attack_not_decisive",
+  "rule_collapse_mean_pp": 0.075,
+  "field_mean_collapse_mean_pp": 0.0,
+  "threshold_pp": 0.2,
+  "per_graph_collapse": {
+   "L_physics_concepts": {
+    "field_mean": 0.0,
+    "rule_filter": 0.1
+   },
+   "L_biological_taxonomy": {
+    "field_mean": 0.0,
+    "rule_filter": 0.0
+   },
+   "L_algorithm_process": {
+    "field_mean": 0.0,
+    "rule_filter": 0.1
+   },
+   "L_historical_causality": {
+    "field_mean": 0.0,
+    "rule_filter": 0.1
+   }
+  }
+ },
+ "runtime_sec": 9.0,
+ "honesty": [
+  "no LLM API calls issued: 只读 familyL_prior_cache 与 gt2_attacker_cache；全部评估本地确定性/种子化。",
+  "先验为零泄漏 labels-only（v1.6 同 prompt 构造器）；先验臂与生成臂同模型族（kimi-for-coding），同源污染风险在案（SPEC §1）。",
+  "hybrid 用 λ=0.5 凸组合（v1.9 λ>1 反场 artifact 教训）；不探索 λ 网格。",
+  "GT-2 攻击有效性以 evasion_rate=1.0 为前提；若 <1.0 则攻击非完全自适应，如实报告不美化。",
+  "判定规则机械求值；负面结果如实写入 verdict，不美化。"
+ ]
+}

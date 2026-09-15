@@ -1,0 +1,72 @@
+{
+  "task": "G2 时间换质量 (重写版, 依据 deposon_g2_boltzmann_pathintegral.json setup)",
+  "rewrite": true,
+  "api_consumption": 0,
+  "seed": 42,
+  "cost_note": "重写版cost=场散射节点评估次数(single/vote无场=0); 原始记录的argmax_field=12.1等口径未完全可考, 绝对值不可直接对齐, 倍数关系可比",
+  "reproduction_note": "Table 9 复现情况 (重写版, seed=42): argmax_field 100/100 ✓; boltzmann_single ~1-2% ✓; majority_vote 同量级 ✓ (原文19/17, 重写版13/8, 抽样细节不可考); path_integral_born ✗ —— 按setup文字\"答案聚合\"仅 26/17; 按路径聚合更差 (1-2%, 因正确轨迹同路径虽集中但极少被采到)。两种口径均无法复现原文 Born=100%/100%; boltzmann_annealed ✗ traps 84% vs 原文100% (16道两步题正确链在退火低温段几乎不被采样: 陷阱边w-b=0.8 vs 正确边0.3, T=0.05时 P(正确边)~e^-16)。结论: 原一次性脚本已丢失, 按其setup文字忠实重写的实现无法复现 Born/annealed 的100%数字; 原实现很可能含有未记录的细节 (如轨迹集合含BFS候选或场引导采样)。建议: 论文 Table 9 的 Born/annealed 行标注\"原始脚本丢失, 重写版未复现\" 并改用本重写版数字, 或补充实现细节后重跑。",
+  "results": {
+    "simple": {
+      "benchmark": "simple",
+      "n": 99,
+      "n_skipped_no_cache": 0,
+      "methods": {
+        "argmax_field": {
+          "accuracy": 1.0,
+          "avg_cost": 12.0
+        },
+        "boltzmann_single": {
+          "accuracy": 0.010101010101010102,
+          "avg_cost": 0.0
+        },
+        "boltzmann_annealed": {
+          "accuracy": 1.0,
+          "avg_cost": 56.0
+        },
+        "path_integral_born": {
+          "accuracy": 0.26262626262626265,
+          "avg_cost": 56.0
+        },
+        "path_integral_born_by_path": {
+          "accuracy": 0.010101010101010102,
+          "avg_cost": 56.0
+        },
+        "majority_vote": {
+          "accuracy": 0.13131313131313133,
+          "avg_cost": 0.0
+        }
+      }
+    },
+    "traps": {
+      "benchmark": "traps",
+      "n": 100,
+      "n_skipped_no_cache": 0,
+      "methods": {
+        "argmax_field": {
+          "accuracy": 1.0,
+          "avg_cost": 12.16
+        },
+        "boltzmann_single": {
+          "accuracy": 0.02,
+          "avg_cost": 0.0
+        },
+        "boltzmann_annealed": {
+          "accuracy": 0.84,
+          "avg_cost": 56.0
+        },
+        "path_integral_born": {
+          "accuracy": 0.17,
+          "avg_cost": 56.0
+        },
+        "path_integral_born_by_path": {
+          "accuracy": 0.02,
+          "avg_cost": 56.0
+        },
+        "majority_vote": {
+          "accuracy": 0.08,
+          "avg_cost": 0.0
+        }
+      }
+    }
+  }
+}

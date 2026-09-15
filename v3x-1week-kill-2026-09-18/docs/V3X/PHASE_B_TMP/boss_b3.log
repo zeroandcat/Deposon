@@ -1,0 +1,26 @@
+﻿[BOSS-B3] KT_B1_BOSS_B3_LLMLINGUA - LLMLingua (Tao et al. EMNLP 2023) ʧ�����ʵ��
+  ���ݼ�: results/deposon_v19_benchmark_fixes.json
+  ������: LLMLingua ʧ�� < 0.05 (95% ���屣��)
+  LLMLingua ����: target_ratio=0.5
+  ��ģ: 200 �ڵ� / 200 �� / 5 prompt/��
+  ����: /tmp/deposon_kt_b1_audit_{timestamp}/
+
+  v19 loaded: physics_audit.t_plus_r_plus_a_max_deviation = 2.220e-16
+python : Traceback (most recent call last):
+所在位置 行:1 字符: 36
++ ... poson-repo; python .mavis\scripts\kt_b1\boss_b3_llmlingua.py 2>&1 | O ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\˽������\deposon-repo\.mavis\scripts\kt_b1\boss_b3_llmlingua.py", line 401, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "D:\˽������\deposon-repo\.mavis\scripts\kt_b1\boss_b3_llmlingua.py", line 356, in main
+    original_prompts = build_prompts(v19_data)
+  File "D:\˽������\deposon-repo\.mavis\scripts\kt_b1\boss_b3_llmlingua.py", line 135, in build_prompts
+    questions = _extract_200_questions(v19_data)
+  File "D:\˽������\deposon-repo\.mavis\scripts\kt_b1\boss_b3_llmlingua.py", line 88, in _extract_200_questions
+    "predicted": float(p.get("predicted", 0.0)),
+                 ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'

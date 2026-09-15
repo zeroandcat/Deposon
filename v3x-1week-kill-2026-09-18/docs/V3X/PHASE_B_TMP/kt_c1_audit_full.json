@@ -1,0 +1,55 @@
+{
+  "n_cells": 5,
+  "cells": [
+    {
+      "cell_idx": 1,
+      "cell_type": "Main log-log fit (完整 10000 bootstrap)",
+      "n": 328,
+      "slope_b": 0.2838075572185165,
+      "r2": 0.0006567780568772497,
+      "b_95ci_bootstrap": [
+        -0.8523392388297247,
+        1.5760386252644019
+      ],
+      "b_95ci_parametric": [
+        -0.9179565954901618,
+        1.485571709927195
+      ],
+      "verdict": "DEAD (R^2 < 0.3)"
+    },
+    {
+      "cell_idx": 2,
+      "cell_type": "Dual eta scan",
+      "eta_crit_05": 0.3333333333333333,
+      "eta_crit_03": 0.7777777777777778,
+      "n_eta_steps": 8
+    },
+    {
+      "cell_idx": 3,
+      "cell_type": "BOSS-C1 2D Ising",
+      "deposon_T_c": 2.1,
+      "predicted_T_c": 2.081685314213022,
+      "diff_pct": 0.8798008835404537,
+      "within_20pct": true,
+      "verdict": "FAIL (BOSS-C1 撞上, 主张被拍平)"
+    },
+    {
+      "cell_idx": 4,
+      "cell_type": "BOSS-C2 Transverse Ising",
+      "mapping_valid": false,
+      "g_over_J_v1": 1.020204061220407,
+      "g_over_J_v2": 3.1797973380564852,
+      "diff_pct": 67.91606656781582,
+      "verdict": "PASS (BOSS-C2 抵御)"
+    },
+    {
+      "cell_idx": 5,
+      "cell_type": "BOSS-C3 Reservoir (ESN)",
+      "bistable": false,
+      "mean_first": -0.0018210061743081285,
+      "mean_second": 1.591319668629391e-18,
+      "diff": 0.00182100617430813,
+      "verdict": "PASS (BOSS-C3 抵御)"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "timestamp": "2026-09-10T21:04:24+08:00",
+  "gateway": "火山方舟 Coding Plan",
+  "base_url": "https://ark.cn-beijing.volces.com/api/coding/v3",
+  "auth": "ark-de0b484e-... (key loaded from env at runtime; literal key never written to disk)",
+  "max_tokens": 2048,
+  "timeout_s": 60,
+  "temperature": 0.0,
+  "note": "PARTIAL RUN: 9 model full run timed out at 85 min wall-clock. 1 model complete (doubao-seed-2.0-lite), 1 partial (kimi-k2.7-code GSM done, STQ#01 PASS, STQ#02 timeout, rest not reached). 7 models not started. Re-run with --limit flag or smaller cells to complete.",
+  "models": [
+    {
+      "model": "doubao-seed-2.0-lite",
+      "gsm8k_passed": 14,
+      "gsm8k_attempted": 15,
+      "strategyqa_passed": 12,
+      "strategyqa_attempted": 15,
+      "total_passed": 26,
+      "cells_done": 30,
+      "pass_rate_30": 0.8667,
+      "avg_ms": 13263,
+      "sanity": {
+        "http_status": 200,
+        "latency_ms": 3998,
+        "sanity_pass": true
+      },
+      "status": "COMPLETE",
+      "elapsed_s": 397
+    },
+    {
+      "model": "kimi-k2.7-code",
+      "gsm8k_passed": 12,
+      "gsm8k_attempted": 15,
+      "strategyqa_passed": 1,
+      "strategyqa_attempted": 2,
+      "total_passed": 13,
+      "cells_done": 17,
+      "pass_rate_30": 0.7647,
+      "avg_ms": 7560,
+      "sanity": {
+        "http_status": 200,
+        "latency_ms": 1739,
+        "sanity_pass": true
+      },
+      "status": "PARTIAL (17/30)",
+      "elapsed_s": 0
+    },
+    {
+      "model": "minimax-m3",
+      "gsm8k_passed": 0,
+      "gsm8k_attempted": 0,
+      "strategyqa_passed": 0,
+      "strategyqa_attempted": 0,
+      "total_passed": 0,
+      "cells_done": 0,
+      "pass_rate_30": 0.0,
+      "avg_ms": 0,
+      "sanity": {
+        "http_status": 200,
+        "latency_ms": 2051,
+        "sanity_pass": true
+      },
+      "status": "PARTIAL (0/30)",
+      "elapsed_s": 0
+    },
+    {
+      "model": "doubao-seed-2.1-turbo",
+      "gsm8k_passed": 0,
+      "gsm8k_attempted": 0,
+      "strategyqa_passed": 0,
+      "strategyqa_attempted": 0,
+      "total_passed": 0,
+      "cells_done": 0,
+      "pass_rate_30": 0.0,
+      "avg_ms": 0,
+      "sanity": {
+        "http_status": 200,
+        "latency_ms": 3023,
+        "sanity_pass": true
+      },
+      "status": "PARTIAL (0/30)",
+      "elapsed_s": 0
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "gsm8k_passed": 0,
+      "gsm8k_attempted": 0,
+      "strategyqa_passed": 0,
+      "strategyqa_attempted": 0,
+      "total_passed": 0,
+      "cells_done": 0,
+      "pass_rate_30": 0.0,
+      "avg_ms": 0,
+      "sanity": {
+        "http_status": 200,
+        "latency_ms": 1813,
+        "sanity_pass": true
+      },
+      "status": "PARTIAL (0/30)",
+      "elapsed_s": 0
+    },
+    {
+      "model": "glm-5.3",
+      "gsm8k_passed": 0,
+      "gsm8k_attempted": 0,
+      "strategyqa_passed": 0,
+      "strategyqa_attempted": 0,
+      "total_passed": 0,
+      "cells_done": 0,
+      "pass_rate_30": 0.0,
+      "avg_ms": 0,
+      "sanity": {
+        "http_status": 200,
+        "latency_ms": 1483,
+        "sanity_pass": true
+      },
+      "status": "PARTIAL (0/30)",
+      "elapsed_s": 0
+    },
+    {
+      "model": "doubao-seed-evolving",
+      "gsm8k_passed": 0,
+      "gsm8k_attempted": 0,
+      "strategyqa_passed": 0,
+      "strategyqa_attempted": 0,
+      "total_passed": 0,
+      "cells_done": 0,
+      "pass_rate_30": 0.0,
+      "avg_ms": 0,
+      "sanity": {
+        "http_status": 200,
+        "latency_ms": 3409,
+        "sanity_pass": true
+      },
+      "status": "PARTIAL (0/30)",
+      "elapsed_s": 0
+    },
+    {
+      "model": "glm-5.3-flash",
+      "gsm8k_passed": 0,
+      "gsm8k_attempted": 0,
+      "strategyqa_passed": 0,
+      "strategyqa_attempted": 0,
+      "total_passed": 0,
+      "cells_done": 0,
+      "pass_rate_30": 0.0,
+      "avg_ms": 0,
+      "sanity": {
+        "http_status": 200,
+        "latency_ms": 1725,
+        "sanity_pass": true
+      },
+      "status": "PARTIAL (0/30)",
+      "elapsed_s": 0
+    },
+    {
+      "model": "deepseek-v4-pro",
+      "gsm8k_passed": 0,
+      "gsm8k_attempted": 0,
+      "strategyqa_passed": 0,
+      "strategyqa_attempted": 0,
+      "total_passed": 0,
+      "cells_done": 0,
+      "pass_rate_30": 0.0,
+      "avg_ms": 0,
+      "sanity": {
+        "http_status": 200,
+        "latency_ms": 1691,
+        "sanity_pass": true
+      },
+      "status": "PARTIAL (0/30)",
+      "elapsed_s": 0
+    }
+  ],
+  "best_model": "doubao-seed-2.0-lite",
+  "best_pass_rate": "26/30",
+  "summary": {
+    "total_models_tested_full": 1,
+    "total_models_tested_partial": 8,
+    "total_models_not_started": 0,
+    "best_model_complete": "doubao-seed-2.0-lite",
+    "best_pass_count": 26
+  }
+}

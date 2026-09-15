@@ -1,0 +1,238 @@
+{
+  "timestamp": "2026-09-10T22:00:00+08:00",
+  "task": "0 LLM Feshbach + Lindblad Simulation (pure numpy)",
+  "method": "v3 section 6 Feshbach resonance + Lindblad master equation (no LLM, no proxy, no network)",
+  "data_source_note": "Used SVD 2D projection (svd2_coords, var_explained=0.765) as S_bg proxy because 22caption JSON stored only sim stats + 2D coords, not raw 2048-d arrays",
+  "constraints_honored": {
+    "no_llm_call": true,
+    "no_proxy": true,
+    "no_network": true,
+    "no_temp_files": true,
+    "no_script_files": true,
+    "frozen_files_untouched": [
+      "verifier/handoff/KT_ABC1_anchors_sha256_12.json",
+      "4 SPEC V0.1 + v19 + v21 + corpus/v20"
+    ]
+  },
+  "stage1_feshbach": {
+    "caption_embedding_source": "SVD 2D projection from 22caption JSON (var_explained=0.765)",
+    "caption_projection_dim": 2,
+    "n_captions": 22,
+    "caption_classes": 4,
+    "E_0": 0.8731498544849667,
+    "W_norm": 1.0,
+    "Sw_stats": {
+      "min": 0.552569887889155,
+      "max": 0.9130989019269075,
+      "mean": 0.8192933549132196
+    },
+    "gammas_tested": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "results_per_gamma": {
+      "0.1": {
+        "gamma": 0.1,
+        "intra_mean": 2.6640091885244006,
+        "inter_mean": 2.57069667405862,
+        "ratio": 1.0362985316032867,
+        "sim_diag_mean": 0.9999999999499998,
+        "sim_offdiag_mean": 2.5917020885703974,
+        "n_intra_pairs": 52,
+        "n_inter_pairs": 179
+      },
+      "1.0": {
+        "gamma": 1.0,
+        "intra_mean": 1.4616375134928523,
+        "inter_mean": 1.4111915098916399,
+        "ratio": 1.035747099700937,
+        "sim_diag_mean": 0.9999999999499998,
+        "sim_offdiag_mean": 1.4225473202261123,
+        "n_intra_pairs": 52,
+        "n_inter_pairs": 179
+      },
+      "10.0": {
+        "gamma": 10.0,
+        "intra_mean": 0.9048727705373041,
+        "inter_mean": 0.8742763379119596,
+        "ratio": 1.0349962949911446,
+        "sim_diag_mean": 0.9999999999499998,
+        "sim_offdiag_mean": 0.8811638465548942,
+        "n_intra_pairs": 52,
+        "n_inter_pairs": 179
+      }
+    },
+    "baseline_no_feshbach": {
+      "intra_mean": 0.8910514189637357,
+      "inter_mean": 0.8609477400598855,
+      "ratio": 1.0349657447288918
+    },
+    "best_gamma": 0.1,
+    "best_ratio": 1.0362985316032867,
+    "verdict": "NOISE",
+    "verdict_rule": "MEANINGFUL if ratio>1.5, NOISE if <1.2, GRAY if 1.2-1.5",
+    "improvement_vs_baseline": 0.0013327868743948645,
+    "improvement_pct": 0.1287759407673894
+  },
+  "stage2_lindblad": {
+    "n_models": 8,
+    "model_results": {
+      "deepseek-v4-flash": {
+        "model": "deepseek-v4-flash",
+        "n_total": 30,
+        "T_passed": 23,
+        "R_wrong": 5,
+        "A_dissipated": 2,
+        "t_rate": 0.7666666666666667,
+        "r_rate": 0.16666666666666666,
+        "a_rate": 0.06666666666666667,
+        "gamma_fit": 0.13333333333333333,
+        "h_eff": 0.6000000000000001,
+        "l_op": 0.3651483716701107,
+        "conservation_check": true
+      },
+      "deepseek-v4-pro": {
+        "model": "deepseek-v4-pro",
+        "n_total": 30,
+        "T_passed": 0,
+        "R_wrong": 0,
+        "A_dissipated": 30,
+        "t_rate": 0.0,
+        "r_rate": 0.0,
+        "a_rate": 1.0,
+        "gamma_fit": 2.0,
+        "h_eff": 0.0,
+        "l_op": 1.4142135623730951,
+        "conservation_check": true
+      },
+      "doubao-seed-2.1-turbo": {
+        "model": "doubao-seed-2.1-turbo",
+        "n_total": 30,
+        "T_passed": 18,
+        "R_wrong": 2,
+        "A_dissipated": 10,
+        "t_rate": 0.6,
+        "r_rate": 0.06666666666666667,
+        "a_rate": 0.3333333333333333,
+        "gamma_fit": 0.6666666666666666,
+        "h_eff": 0.5333333333333333,
+        "l_op": 0.816496580927726,
+        "conservation_check": true
+      },
+      "doubao-seed-evolving": {
+        "model": "doubao-seed-evolving",
+        "n_total": 30,
+        "T_passed": 22,
+        "R_wrong": 6,
+        "A_dissipated": 2,
+        "t_rate": 0.7333333333333333,
+        "r_rate": 0.2,
+        "a_rate": 0.06666666666666667,
+        "gamma_fit": 0.13333333333333333,
+        "h_eff": 0.5333333333333332,
+        "l_op": 0.3651483716701107,
+        "conservation_check": true
+      },
+      "glm-5.3": {
+        "model": "glm-5.3",
+        "n_total": 30,
+        "T_passed": 26,
+        "R_wrong": 3,
+        "A_dissipated": 1,
+        "t_rate": 0.8666666666666667,
+        "r_rate": 0.1,
+        "a_rate": 0.03333333333333333,
+        "gamma_fit": 0.06666666666666667,
+        "h_eff": 0.7666666666666667,
+        "l_op": 0.2581988897471611,
+        "conservation_check": true
+      },
+      "glm-5.3-flash": {
+        "model": "glm-5.3-flash",
+        "n_total": 30,
+        "T_passed": 0,
+        "R_wrong": 0,
+        "A_dissipated": 30,
+        "t_rate": 0.0,
+        "r_rate": 0.0,
+        "a_rate": 1.0,
+        "gamma_fit": 2.0,
+        "h_eff": 0.0,
+        "l_op": 1.4142135623730951,
+        "conservation_check": true
+      },
+      "kimi-k2.7-code": {
+        "model": "kimi-k2.7-code",
+        "n_total": 30,
+        "T_passed": 19,
+        "R_wrong": 8,
+        "A_dissipated": 3,
+        "t_rate": 0.6333333333333333,
+        "r_rate": 0.26666666666666666,
+        "a_rate": 0.1,
+        "gamma_fit": 0.2,
+        "h_eff": 0.36666666666666664,
+        "l_op": 0.4472135954999579,
+        "conservation_check": true
+      },
+      "minimax-m3": {
+        "model": "minimax-m3",
+        "n_total": 30,
+        "T_passed": 21,
+        "R_wrong": 7,
+        "A_dissipated": 2,
+        "t_rate": 0.7,
+        "r_rate": 0.23333333333333334,
+        "a_rate": 0.06666666666666667,
+        "gamma_fit": 0.13333333333333333,
+        "h_eff": 0.4666666666666666,
+        "l_op": 0.3651483716701107,
+        "conservation_check": true
+      }
+    },
+    "method_note": "T=passed (transmitted), R=wrong (reflected), A=timeout/err (dissipated); physical observation vs statistical observation",
+    "p_abc_indicators": {
+      "P_A_conservation_all_models": true,
+      "P_B_T_dominance": {
+        "deepseek-v4-flash": true,
+        "deepseek-v4-pro": false,
+        "doubao-seed-2.1-turbo": true,
+        "doubao-seed-evolving": true,
+        "glm-5.3": true,
+        "glm-5.3-flash": false,
+        "kimi-k2.7-code": true,
+        "minimax-m3": true
+      },
+      "P_C_A_under_30pct": {
+        "deepseek-v4-flash": true,
+        "deepseek-v4-pro": false,
+        "doubao-seed-2.1-turbo": false,
+        "doubao-seed-evolving": true,
+        "glm-5.3": true,
+        "glm-5.3-flash": false,
+        "kimi-k2.7-code": true,
+        "minimax-m3": true
+      },
+      "P_D_cross_model_T_std": 0.3194776552784595
+    }
+  },
+  "models_in_4worker": [
+    "deepseek-v4-flash",
+    "deepseek-v4-pro",
+    "doubao-seed-2.1-turbo",
+    "doubao-seed-evolving",
+    "glm-5.3",
+    "glm-5.3-flash",
+    "kimi-k2.7-code",
+    "minimax-m3"
+  ],
+  "total_cells_extracted": 240,
+  "n_models_complete_30cells": 8,
+  "first_model_with_30cells": "deepseek-v4-flash",
+  "sha12_anchors_unmodified": {
+    "KT-A1_P_A_ECR_BASELINE": "bd1caab42b4c",
+    "KT-B1_V19_BENCHMARK": "910c4333eead",
+    "KT-C1_V21_FROZEN": "9d9ae5001c57"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "task": "G3 Arrhenius 势垒通道 (激活闲置的 migration_barrier 字段)",
+  "api_consumption": 0,
+  "implementation": {
+    "modes": {
+      "arrhenius": "k=exp(-barrier/T_eff) 逐边乘性衰减",
+      "arrhenius_hybrid": "Kramers修正 k=min(1, w·exp(-barrier/T_eff)), 尝试频率∝边权"
+    },
+    "code": "deposon_agents_v1_3.py DeposonField.process_path 边跨越损失, barrier_loss单独记账",
+    "energy_accounting": "t+r+a+barrier_loss=1.000000 (逐路径验证, 10题×全部候选)",
+    "note": "barrier值为构图时人工设定(正确边0.2-0.3, 诱饵边0.1), 非学习所得 —— 诚实局限"
+  },
+  "results": {
+    "arrhenius": {
+      "T=0.1": {
+        "simple_acc": 1.0,
+        "traps_acc": 0.84
+      },
+      "T=0.3": {
+        "simple_acc": 1.0,
+        "traps_acc": 0.84
+      },
+      "T=0.5": {
+        "simple_acc": 1.0,
+        "traps_acc": 1.0
+      },
+      "T=1.0": {
+        "simple_acc": 1.0,
+        "traps_acc": 1.0
+      }
+    },
+    "arrhenius_hybrid": {
+      "T=0.1": {
+        "simple_acc": 1.0,
+        "traps_acc": 0.84
+      },
+      "T=0.3": {
+        "simple_acc": 1.0,
+        "traps_acc": 0.84
+      },
+      "T=0.5": {
+        "simple_acc": 1.0,
+        "traps_acc": 1.0
+      },
+      "T=1.0": {
+        "simple_acc": 1.0,
+        "traps_acc": 1.0
+      }
+    },
+    "reference_unified": {
+      "simple_acc": 1.0,
+      "traps_acc": 1.0
+    }
+  },
+  "findings": [
+    "T≥0.5 时两模式两集均100%, 与unified持平 —— 势垒通道在高温极限无害",
+    "T≤0.3 时traps降至84%: 失败全部集中在16道两步题(percentage_subtraction), 机制=正确链比诱饵路径多1条边, 多付一次exp(-b/T)过垒税, 低温下长链被指数惩罚 → 路径长度偏置",
+    "Kramers修正(w·exp(-b/T))未改变任何精度: 边权比(0.9/0.55诱饵 vs 0.6-0.8正确)不足以翻转低温长度偏置",
+    "诚实结论: Arrhenius通道在Adversarial构造(诱饵边反而低势垒0.1)下物理图像自洽(势垒低=易迁移=更可疑), 但因\"正确多步链必更长\"产生反效果; 该通道若要有用需 势垒与语义风险正相关 的图构造, 当前构造恰好相反(低势垒是诱饵设计的一部分) → 负面结果, 建议作为§5局限讨论而非主结果"
+  ]
+}

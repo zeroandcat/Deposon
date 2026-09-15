@@ -1,0 +1,42 @@
+{
+  "n_cells": 5,
+  "cells": [
+    {
+      "cell_idx": 1,
+      "cell_type": "BOSS-A1 RBR/RM",
+      "cost_mult_rbr": 22.0,
+      "cost_mult_rm": 4400.0,
+      "verdict": "DIFFERENTIATED"
+    },
+    {
+      "cell_idx": 2,
+      "cell_type": "BOSS-A2 Potential Game",
+      "n_potential_game": 22,
+      "n_total": 22,
+      "h1_proved": true
+    },
+    {
+      "cell_idx": 3,
+      "cell_type": "BOSS-A3 Replicator",
+      "mean_distance": 0.6873768110029606,
+      "max_distance": 0.9311786491470034,
+      "min_distance": 0.16632254379610245,
+      "verdict": "DIFFERENTIATED"
+    },
+    {
+      "cell_idx": 4,
+      "cell_type": "Bayesian baseline cost_mult",
+      "deposon_r_ga0.1": 0.6437,
+      "bayesian_mean_field": 0,
+      "cost_mult": 0.35629999999999995,
+      "verdict": "PASS (H1)"
+    },
+    {
+      "cell_idx": 5,
+      "cell_type": "5 锚验证",
+      "n_anchors": 5,
+      "anchor_path": "D:\\私人资料\\deposon-repo\\verifier\\handoff\\KT_ABC1_anchors_sha256_12.json",
+      "verdict": "PASS"
+    }
+  ]
+}
