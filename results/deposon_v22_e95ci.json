@@ -1,0 +1,62 @@
+{
+  "spec_version": "v22-e95ci-1",
+  "method": "newcomb_unpaired_conservative",
+  "note": "Unpaired Newcombe hybrid (score) intervals via statsmodels confint_proportions_2indep(method='newcomb', compare='diff'). Paired discordant pairs are only (b,c)=(0,2) for GSM8K and (0,0) for StrategyQA, so paired intervals degenerate; we report the unpaired conservative bound. Group2 = unified (scattering layer), group1 = rule filter (E9.5) or CoT (unified_vs_cot). ci_pp = 95% CI in percentage points, rounded to 0.1pp.",
+  "source": "results/deposon_v19_benchmark_fixes.json",
+  "gsm8k": {
+    "n2": 100,
+    "x2": 85,
+    "p2": 0.85,
+    "n1": 100,
+    "x1": 87,
+    "p1": 0.87,
+    "diff": -0.020000000000000018,
+    "ci": [
+      -0.11803298061410704,
+      0.07803459220962006
+    ],
+    "ci_pp": [
+      -11.8,
+      7.8
+    ],
+    "mcnemar_b": 0,
+    "mcnemar_c": 2
+  },
+  "strategyqa": {
+    "n2": 99,
+    "x2": 89,
+    "p2": 0.898989898989899,
+    "n1": 99,
+    "x1": 89,
+    "p1": 0.898989898989899,
+    "diff": 0.0,
+    "ci": [
+      -0.08759186321113159,
+      0.08759186321113159
+    ],
+    "ci_pp": [
+      -8.8,
+      8.8
+    ],
+    "mcnemar_b": 0,
+    "mcnemar_c": 0
+  },
+  "unified_vs_cot": {
+    "n2": 100,
+    "x2": 85,
+    "p2": 0.85,
+    "n1": 100,
+    "x1": 97,
+    "p1": 0.97,
+    "diff": -0.12,
+    "ci": [
+      -0.20515644292127488,
+      -0.041167637092138665
+    ],
+    "ci_pp": [
+      -20.5,
+      -4.1
+    ],
+    "source": "results/deposon_benchmark_v1_4_gsm8k.json"
+  }
+}

@@ -1,0 +1,29 @@
+{
+ "spec": "docs/GT_FORMALIZATION_v1.md §2 P1c + 本文件头预登记判死线",
+ "seed": 210021,
+ "tau_grid": [
+  0.0,
+  4.0,
+  81
+ ],
+ "n_states": 6760,
+ "verdict": {
+  "strong_global_tau": "killed",
+  "weak_state_dependent": "killed",
+  "verdict": "killed",
+  "tau_star_global": null,
+  "min_cos_at_best_global_tau": -1.0000000000000002,
+  "min_cos_per_state_best_tau": -1.0
+ },
+ "descriptive": {
+  "tau_star_per_state": {
+   "median": 0.0,
+   "p10": 0.0,
+   "p90": 0.15,
+   "frac_at_tau0": 0.8597633136094674
+  },
+  "sign_agreement_at_best_tau_median": 1.0
+ },
+ "runtime_sec": 7.79,
+ "note": "判定纯函数 verdict_p1c 先于运行承诺并测试锁定；τ 网格冻结；零向量按平凡对齐披露；survives_state_dependent 如实收窄主张。"
+}
