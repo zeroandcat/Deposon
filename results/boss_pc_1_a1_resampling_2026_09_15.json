@@ -1,0 +1,46 @@
+{
+  "boss_id": "BOSS-PC-1",
+  "boss_name": "Attack A1 - 图族重采样",
+  "status": "REAL_RUN",
+  "date": "2026-09-15",
+  "spec_source": "P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md §5 攻击 A1",
+  "pre_registered_threshold": {
+    "r2_change_threshold": 0.15,
+    "n_resample_trials": 5
+  },
+  "data_source": "deposon_v3_physical_opt_60cells_2026_09_11.json",
+  "n_model_available": 9,
+  "trials": [
+    {
+      "trial_seed": 42,
+      "r2": 0.6221
+    },
+    {
+      "trial_seed": 137,
+      "r2": 0.7355
+    },
+    {
+      "trial_seed": 256,
+      "r2": 0.6522
+    },
+    {
+      "trial_seed": 521,
+      "r2": 0.73
+    },
+    {
+      "trial_seed": 1024,
+      "r2": 0.5906
+    }
+  ],
+  "r2_mean": 0.6661,
+  "r2_range": 0.1449,
+  "verdict": "PASS",
+  "iron_rule_compliance": {
+    "0_LLM": true,
+    "no_proxy": true,
+    "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan": true,
+    "no_api_key_read": true,
+    "no_touch_16_frozen": true,
+    "no_temp_files": true
+  }
+}
