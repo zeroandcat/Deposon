@@ -1,0 +1,5709 @@
+{
+  "summary": {
+    "total_rows": 49,
+    "columns_analyzed": [
+      "degree_hit",
+      "degree_rank",
+      "edge_u",
+      "edge_v",
+      "field_guided_hit",
+      "field_guided_rank",
+      "field_mean_hit",
+      "field_mean_rank",
+      "hybrid_norm@0.5_hit",
+      "hybrid_norm@0.5_rank",
+      "hybrid_norm@2.0_hit",
+      "hybrid_norm@2.0_rank",
+      "llm_prior_hit",
+      "llm_prior_rank",
+      "on_named_path",
+      "placeholder_target",
+      "random_hit",
+      "random_rank"
+    ],
+    "methods_used": [
+      "z-score",
+      "iqr",
+      "moving-avg"
+    ],
+    "total_anomalies": 284,
+    "needs_attention": 19,
+    "explainable": 265
+  },
+  "anomalies": [
+    {
+      "row": 9,
+      "column": "degree_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.2773,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 14,
+      "column": "degree_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.2773,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 19,
+      "column": "degree_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.2773,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 24,
+      "column": "degree_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.2773,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "degree_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.2773,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "degree_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.2773,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 9,
+      "column": "degree_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "iqr",
+        "moving-avg"
+      ],
+      "num_methods": 2,
+      "details": {
+        "iqr": {
+          "iqr_bounds": [
+            7.5,
+            11.5
+          ],
+          "q1": 9.0,
+          "q3": 10.0,
+          "iqr": 1.0
+        },
+        "moving-avg": {
+          "moving_avg": 8.0,
+          "deviation": 8.0,
+          "deviation_ratio": 3.3722,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "被 2 种方法同时检出（IQR, 移动平均偏离）；偏离程度极端"
+    },
+    {
+      "row": 14,
+      "column": "degree_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "iqr",
+        "moving-avg"
+      ],
+      "num_methods": 2,
+      "details": {
+        "iqr": {
+          "iqr_bounds": [
+            7.5,
+            11.5
+          ],
+          "q1": 9.0,
+          "q3": 10.0,
+          "iqr": 1.0
+        },
+        "moving-avg": {
+          "moving_avg": 8.0,
+          "deviation": 8.0,
+          "deviation_ratio": 3.3722,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "被 2 种方法同时检出（IQR, 移动平均偏离）；偏离程度极端"
+    },
+    {
+      "row": 19,
+      "column": "degree_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "iqr",
+        "moving-avg"
+      ],
+      "num_methods": 2,
+      "details": {
+        "iqr": {
+          "iqr_bounds": [
+            7.5,
+            11.5
+          ],
+          "q1": 9.0,
+          "q3": 10.0,
+          "iqr": 1.0
+        },
+        "moving-avg": {
+          "moving_avg": 7.8,
+          "deviation": 7.8,
+          "deviation_ratio": 3.2879,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "被 2 种方法同时检出（IQR, 移动平均偏离）；偏离程度极端"
+    },
+    {
+      "row": 24,
+      "column": "degree_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "iqr",
+        "moving-avg"
+      ],
+      "num_methods": 2,
+      "details": {
+        "iqr": {
+          "iqr_bounds": [
+            7.5,
+            11.5
+          ],
+          "q1": 9.0,
+          "q3": 10.0,
+          "iqr": 1.0
+        },
+        "moving-avg": {
+          "moving_avg": 7.8,
+          "deviation": 7.8,
+          "deviation_ratio": 3.2879,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "被 2 种方法同时检出（IQR, 移动平均偏离）；偏离程度极端"
+    },
+    {
+      "row": 34,
+      "column": "degree_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "iqr",
+        "moving-avg"
+      ],
+      "num_methods": 2,
+      "details": {
+        "iqr": {
+          "iqr_bounds": [
+            7.5,
+            11.5
+          ],
+          "q1": 9.0,
+          "q3": 10.0,
+          "iqr": 1.0
+        },
+        "moving-avg": {
+          "moving_avg": 7.8,
+          "deviation": 7.8,
+          "deviation_ratio": 3.2879,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "被 2 种方法同时检出（IQR, 移动平均偏离）；偏离程度极端"
+    },
+    {
+      "row": 39,
+      "column": "degree_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "iqr",
+        "moving-avg"
+      ],
+      "num_methods": 2,
+      "details": {
+        "iqr": {
+          "iqr_bounds": [
+            7.5,
+            11.5
+          ],
+          "q1": 9.0,
+          "q3": 10.0,
+          "iqr": 1.0
+        },
+        "moving-avg": {
+          "moving_avg": 7.8,
+          "deviation": 7.8,
+          "deviation_ratio": 3.2879,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "被 2 种方法同时检出（IQR, 移动平均偏离）；偏离程度极端"
+    },
+    {
+      "row": 9,
+      "column": "edge_u",
+      "value": 2.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 1.6,
+          "deviation_ratio": 4.4396,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "偏离程度极端"
+    },
+    {
+      "row": 10,
+      "column": "edge_u",
+      "value": 2.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.8,
+          "deviation": 1.2,
+          "deviation_ratio": 3.3297,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 11,
+      "column": "edge_u",
+      "value": 2.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 1.2,
+          "deviation": 0.8,
+          "deviation_ratio": 2.2198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 14,
+      "column": "edge_u",
+      "value": 3.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 2.2,
+          "deviation": 0.8,
+          "deviation_ratio": 2.2198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 19,
+      "column": "edge_u",
+      "value": 4.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.2,
+          "deviation": 0.8,
+          "deviation_ratio": 2.2198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 24,
+      "column": "edge_u",
+      "value": 5.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.2,
+          "deviation": 0.8,
+          "deviation_ratio": 2.2198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 29,
+      "column": "edge_u",
+      "value": 6.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.2,
+          "deviation": 0.8,
+          "deviation_ratio": 2.2198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "edge_u",
+      "value": 7.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 6.2,
+          "deviation": 0.8,
+          "deviation_ratio": 2.2198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 35,
+      "column": "edge_u",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 6.6,
+          "deviation": 1.4,
+          "deviation_ratio": 3.8847,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 36,
+      "column": "edge_u",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 7.0,
+          "deviation": 1.0,
+          "deviation_ratio": 2.7748,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "edge_u",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 8.2,
+          "deviation": 0.8,
+          "deviation_ratio": 2.2198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 40,
+      "column": "edge_u",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 8.6,
+          "deviation": 1.4,
+          "deviation_ratio": 3.8847,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 41,
+      "column": "edge_u",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 9.0,
+          "deviation": 1.0,
+          "deviation_ratio": 2.7748,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 43,
+      "column": "edge_u",
+      "value": 11.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 10.0,
+          "deviation": 1.0,
+          "deviation_ratio": 2.7748,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 46,
+      "column": "edge_u",
+      "value": 12.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 11.0,
+          "deviation": 1.0,
+          "deviation_ratio": 2.7748,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 12,
+      "column": "edge_v",
+      "value": 31.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 15.8,
+          "deviation": 15.2,
+          "deviation_ratio": 2.1355,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 13,
+      "column": "edge_v",
+      "value": 40.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 21.4,
+          "deviation": 18.6,
+          "deviation_ratio": 2.6132,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 14,
+      "column": "edge_v",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 21.4,
+          "deviation": 20.4,
+          "deviation_ratio": 2.8661,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 18,
+      "column": "edge_v",
+      "value": 41.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 22.2,
+          "deviation": 18.8,
+          "deviation_ratio": 2.6413,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 19,
+      "column": "edge_v",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 22.2,
+          "deviation": 21.2,
+          "deviation_ratio": 2.9785,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 23,
+      "column": "edge_v",
+      "value": 42.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 23.0,
+          "deviation": 19.0,
+          "deviation_ratio": 2.6694,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 24,
+      "column": "edge_v",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 23.0,
+          "deviation": 22.0,
+          "deviation_ratio": 3.0909,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 28,
+      "column": "edge_v",
+      "value": 43.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 23.8,
+          "deviation": 19.2,
+          "deviation_ratio": 2.6975,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 29,
+      "column": "edge_v",
+      "value": 7.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 25.0,
+          "deviation": 18.0,
+          "deviation_ratio": 2.5289,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 33,
+      "column": "edge_v",
+      "value": 44.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 25.8,
+          "deviation": 18.2,
+          "deviation_ratio": 2.557,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "edge_v",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 24.6,
+          "deviation": 23.6,
+          "deviation_ratio": 3.3157,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 38,
+      "column": "edge_v",
+      "value": 36.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 18.2,
+          "deviation": 17.8,
+          "deviation_ratio": 2.5008,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "edge_v",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 18.2,
+          "deviation": 17.2,
+          "deviation_ratio": 2.4165,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 1,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.5,
+          "deviation": 0.5,
+          "deviation_ratio": 3.014,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 2,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.3333,
+          "deviation": 0.3333,
+          "deviation_ratio": 2.0094,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 7,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 4.8225,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "偏离程度极端"
+    },
+    {
+      "row": 8,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.6168,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 9,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 10,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 11,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 15,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 4.8225,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "偏离程度极端"
+    },
+    {
+      "row": 16,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.6168,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 17,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 18,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 19,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 20,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.6168,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 22,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.6168,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 23,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 24,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 3.6168,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 25,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 26,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 27,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.6168,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 30,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.6168,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 31,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 33,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.6168,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 36,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.6168,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 37,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 38,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 40,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 41,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.6168,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 42,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.6168,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 43,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 44,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 45,
+      "column": "field_guided_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4112,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 46,
+      "column": "field_guided_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.6168,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 1,
+      "column": "field_guided_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.5,
+          "deviation": 4.5,
+          "deviation_ratio": 3.2221,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 7,
+      "column": "field_guided_rank",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 6.0,
+          "deviation": 5.0,
+          "deviation_ratio": 3.5802,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 8,
+      "column": "field_guided_rank",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.4,
+          "deviation": 3.4,
+          "deviation_ratio": 2.4345,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 10,
+      "column": "field_guided_rank",
+      "value": 7.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.8,
+          "deviation": 3.2,
+          "deviation_ratio": 2.2913,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 11,
+      "column": "field_guided_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.4,
+          "deviation": 4.6,
+          "deviation_ratio": 3.2937,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 15,
+      "column": "field_guided_rank",
+      "value": 2.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 6.8,
+          "deviation": 4.8,
+          "deviation_ratio": 3.4369,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 16,
+      "column": "field_guided_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.0,
+          "deviation": 5.0,
+          "deviation_ratio": 3.5802,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 18,
+      "column": "field_guided_rank",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.0,
+          "deviation": 4.0,
+          "deviation_ratio": 2.8641,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 21,
+      "column": "field_guided_rank",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.2,
+          "deviation": 2.8,
+          "deviation_ratio": 2.0049,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 22,
+      "column": "field_guided_rank",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.6,
+          "deviation": 3.6,
+          "deviation_ratio": 2.5777,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 31,
+      "column": "field_guided_rank",
+      "value": 7.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.4,
+          "deviation": 3.6,
+          "deviation_ratio": 2.5777,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 32,
+      "column": "field_guided_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.0,
+          "deviation": 4.0,
+          "deviation_ratio": 2.8641,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "field_guided_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.8,
+          "deviation": 4.2,
+          "deviation_ratio": 3.0073,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 35,
+      "column": "field_guided_rank",
+      "value": 3.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 6.2,
+          "deviation": 3.2,
+          "deviation_ratio": 2.2913,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 36,
+      "column": "field_guided_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.8,
+          "deviation": 4.8,
+          "deviation_ratio": 3.4369,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 38,
+      "column": "field_guided_rank",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.4,
+          "deviation": 3.6,
+          "deviation_ratio": 2.5777,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "field_guided_rank",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.0,
+          "deviation": 4.0,
+          "deviation_ratio": 2.8641,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 40,
+      "column": "field_guided_rank",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.0,
+          "deviation": 3.0,
+          "deviation_ratio": 2.1481,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 41,
+      "column": "field_guided_rank",
+      "value": 2.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.4,
+          "deviation": 3.4,
+          "deviation_ratio": 2.4345,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 42,
+      "column": "field_guided_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.2,
+          "deviation": 5.2,
+          "deviation_ratio": 3.7234,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 10,
+      "column": "field_mean_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.8,
+          "deviation": 0.8,
+          "deviation_ratio": 3.5456,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 11,
+      "column": "field_mean_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 2.6592,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 14,
+      "column": "field_mean_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.5456,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 15,
+      "column": "field_mean_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 2.6592,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 19,
+      "column": "field_mean_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 2.6592,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 24,
+      "column": "field_mean_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.5456,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 29,
+      "column": "field_mean_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.5456,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "field_mean_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.5456,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 35,
+      "column": "field_mean_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 2.6592,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 37,
+      "column": "field_mean_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 2.6592,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 38,
+      "column": "field_mean_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 2.6592,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 12,
+      "column": "field_mean_rank",
+      "value": 6.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 2.8,
+          "deviation": 3.2,
+          "deviation_ratio": 2.005,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 13,
+      "column": "field_mean_rank",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.2,
+          "deviation": 3.8,
+          "deviation_ratio": 2.381,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 14,
+      "column": "field_mean_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.2,
+          "deviation": 4.2,
+          "deviation_ratio": 2.6316,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 18,
+      "column": "field_mean_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.4,
+          "deviation": 4.6,
+          "deviation_ratio": 2.8822,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 19,
+      "column": "field_mean_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.4,
+          "deviation": 5.4,
+          "deviation_ratio": 3.3835,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 23,
+      "column": "field_mean_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.2,
+          "deviation": 3.8,
+          "deviation_ratio": 2.381,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 24,
+      "column": "field_mean_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.2,
+          "deviation": 5.2,
+          "deviation_ratio": 3.2581,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 28,
+      "column": "field_mean_rank",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.4,
+          "deviation": 3.6,
+          "deviation_ratio": 2.2556,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 29,
+      "column": "field_mean_rank",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.6,
+          "deviation": 3.6,
+          "deviation_ratio": 2.2556,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 33,
+      "column": "field_mean_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 6.6,
+          "deviation": 3.4,
+          "deviation_ratio": 2.1303,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "field_mean_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 6.4,
+          "deviation": 6.4,
+          "deviation_ratio": 4.01,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "偏离程度极端"
+    },
+    {
+      "row": 35,
+      "column": "field_mean_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.0,
+          "deviation": 5.0,
+          "deviation_ratio": 3.1328,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 38,
+      "column": "field_mean_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.4,
+          "deviation": 5.6,
+          "deviation_ratio": 3.5088,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "field_mean_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.4,
+          "deviation": 3.4,
+          "deviation_ratio": 2.1303,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 6,
+      "column": "hybrid_norm@0.5_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.8,
+          "deviation": 0.8,
+          "deviation_ratio": 3.4446,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 7,
+      "column": "hybrid_norm@0.5_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 2.5834,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 9,
+      "column": "hybrid_norm@0.5_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 2.5834,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 11,
+      "column": "hybrid_norm@0.5_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 2.5834,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 15,
+      "column": "hybrid_norm@0.5_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.8,
+          "deviation": 0.8,
+          "deviation_ratio": 3.4446,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 16,
+      "column": "hybrid_norm@0.5_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 2.5834,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 19,
+      "column": "hybrid_norm@0.5_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.4446,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 24,
+      "column": "hybrid_norm@0.5_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.4446,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 29,
+      "column": "hybrid_norm@0.5_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.4446,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "hybrid_norm@0.5_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.4446,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 35,
+      "column": "hybrid_norm@0.5_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 2.5834,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "hybrid_norm@0.5_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 2.5834,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 6,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 2.6,
+          "deviation": 6.4,
+          "deviation_ratio": 3.6751,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 7,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.0,
+          "deviation": 4.0,
+          "deviation_ratio": 2.2969,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 8,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.8,
+          "deviation": 4.2,
+          "deviation_ratio": 2.4118,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 9,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.4,
+          "deviation": 5.4,
+          "deviation_ratio": 3.1008,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 11,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.6,
+          "deviation": 4.6,
+          "deviation_ratio": 2.6415,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 19,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.6,
+          "deviation": 3.6,
+          "deviation_ratio": 2.0672,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 22,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 6.0,
+          "deviation": 4.0,
+          "deviation_ratio": 2.2969,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 24,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 6.4,
+          "deviation": 6.4,
+          "deviation_ratio": 3.6751,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 29,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.2,
+          "deviation": 4.2,
+          "deviation_ratio": 2.4118,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 30,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.4,
+          "deviation": 4.6,
+          "deviation_ratio": 2.6415,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.0,
+          "deviation": 5.0,
+          "deviation_ratio": 2.8712,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 37,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.8,
+          "deviation": 6.2,
+          "deviation_ratio": 3.5602,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.4,
+          "deviation": 4.4,
+          "deviation_ratio": 2.5266,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 47,
+      "column": "hybrid_norm@0.5_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.6,
+          "deviation": 4.4,
+          "deviation_ratio": 2.5266,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 11,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 4.296,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "偏离程度极端"
+    },
+    {
+      "row": 12,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.222,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 13,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.148,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 14,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 3.222,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 18,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 3.222,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 19,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 3.222,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 20,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.148,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 25,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 4.296,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "偏离程度极端"
+    },
+    {
+      "row": 28,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.222,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 29,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.148,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 30,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.148,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 31,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.148,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 32,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.148,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 33,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.148,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.148,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 35,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.148,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 36,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 3.222,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 37,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.148,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 43,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 4.296,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "偏离程度极端"
+    },
+    {
+      "row": 44,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.222,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 45,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.148,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 46,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.148,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 47,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 3.222,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 48,
+      "column": "hybrid_norm@2.0_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.148,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 11,
+      "column": "hybrid_norm@2.0_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 6.6,
+          "deviation": 6.6,
+          "deviation_ratio": 3.7705,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 12,
+      "column": "hybrid_norm@2.0_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.2,
+          "deviation": 5.2,
+          "deviation_ratio": 2.9707,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 14,
+      "column": "hybrid_norm@2.0_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.2,
+          "deviation": 5.8,
+          "deviation_ratio": 3.3135,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 19,
+      "column": "hybrid_norm@2.0_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.6,
+          "deviation": 6.4,
+          "deviation_ratio": 3.6563,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 25,
+      "column": "hybrid_norm@2.0_rank",
+      "value": 2.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 6.6,
+          "deviation": 4.6,
+          "deviation_ratio": 2.6279,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "hybrid_norm@2.0_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.6,
+          "deviation": 5.4,
+          "deviation_ratio": 3.085,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 37,
+      "column": "hybrid_norm@2.0_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.0,
+          "deviation": 4.0,
+          "deviation_ratio": 2.2852,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "hybrid_norm@2.0_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.4,
+          "deviation": 4.6,
+          "deviation_ratio": 2.6279,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 43,
+      "column": "hybrid_norm@2.0_rank",
+      "value": 2.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.8,
+          "deviation": 3.8,
+          "deviation_ratio": 2.1709,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 47,
+      "column": "hybrid_norm@2.0_rank",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.6,
+          "deviation": 4.4,
+          "deviation_ratio": 2.5137,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 2,
+      "column": "llm_prior_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.3333,
+          "deviation": 0.6667,
+          "deviation_ratio": 3.3664,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 11,
+      "column": "llm_prior_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 4.0397,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "偏离程度极端"
+    },
+    {
+      "row": 12,
+      "column": "llm_prior_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.0298,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 13,
+      "column": "llm_prior_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.0198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 14,
+      "column": "llm_prior_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 3.0298,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 16,
+      "column": "llm_prior_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 3.0298,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 17,
+      "column": "llm_prior_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.0198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 28,
+      "column": "llm_prior_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 4.0397,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "偏离程度极端"
+    },
+    {
+      "row": 29,
+      "column": "llm_prior_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.0298,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 30,
+      "column": "llm_prior_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.0198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 31,
+      "column": "llm_prior_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.0198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 32,
+      "column": "llm_prior_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.0198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 33,
+      "column": "llm_prior_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.0298,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 35,
+      "column": "llm_prior_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.0298,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 36,
+      "column": "llm_prior_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.0198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 37,
+      "column": "llm_prior_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.0198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "llm_prior_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.0298,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 43,
+      "column": "llm_prior_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.0298,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 46,
+      "column": "llm_prior_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.0298,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 47,
+      "column": "llm_prior_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.0198,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 2,
+      "column": "llm_prior_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.6667,
+          "deviation": 3.6667,
+          "deviation_ratio": 2.3466,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 5,
+      "column": "llm_prior_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.6,
+          "deviation": 4.4,
+          "deviation_ratio": 2.8159,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 11,
+      "column": "llm_prior_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 7.2,
+          "deviation": 7.2,
+          "deviation_ratio": 4.6079,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "偏离程度极端"
+    },
+    {
+      "row": 12,
+      "column": "llm_prior_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.6,
+          "deviation": 5.6,
+          "deviation_ratio": 3.5839,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 13,
+      "column": "llm_prior_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.6,
+          "deviation": 3.6,
+          "deviation_ratio": 2.3039,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 22,
+      "column": "llm_prior_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 6.6,
+          "deviation": 3.4,
+          "deviation_ratio": 2.1759,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 25,
+      "column": "llm_prior_rank",
+      "value": 3.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 6.6,
+          "deviation": 3.6,
+          "deviation_ratio": 2.3039,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 30,
+      "column": "llm_prior_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.0,
+          "deviation": 5.0,
+          "deviation_ratio": 3.1999,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 35,
+      "column": "llm_prior_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.6,
+          "deviation": 3.6,
+          "deviation_ratio": 2.3039,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 37,
+      "column": "llm_prior_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.8,
+          "deviation": 5.2,
+          "deviation_ratio": 3.3279,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 43,
+      "column": "llm_prior_rank",
+      "value": 2.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.2,
+          "deviation": 3.2,
+          "deviation_ratio": 2.0479,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 47,
+      "column": "llm_prior_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.4,
+          "deviation": 5.6,
+          "deviation_ratio": 3.5839,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 10,
+      "column": "on_named_path",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.8,
+          "deviation": 0.8,
+          "deviation_ratio": 3.3538,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 11,
+      "column": "on_named_path",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 2.5154,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 14,
+      "column": "on_named_path",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.3538,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 19,
+      "column": "on_named_path",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.3538,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 24,
+      "column": "on_named_path",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.3538,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 29,
+      "column": "on_named_path",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.3538,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "on_named_path",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.3538,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 35,
+      "column": "on_named_path",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 2.5154,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "on_named_path",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 2.5154,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 6,
+      "column": "placeholder_target",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 3.4301,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 7,
+      "column": "placeholder_target",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 2.5726,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 9,
+      "column": "placeholder_target",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 2.5726,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 14,
+      "column": "placeholder_target",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.8,
+          "deviation": 0.8,
+          "deviation_ratio": 3.4301,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 19,
+      "column": "placeholder_target",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.8,
+          "deviation": 0.8,
+          "deviation_ratio": 3.4301,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 24,
+      "column": "placeholder_target",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.8,
+          "deviation": 0.8,
+          "deviation_ratio": 3.4301,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 29,
+      "column": "placeholder_target",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.8,
+          "deviation": 0.8,
+          "deviation_ratio": 3.4301,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "placeholder_target",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.8,
+          "deviation": 0.8,
+          "deviation_ratio": 3.4301,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 35,
+      "column": "placeholder_target",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 2.5726,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "placeholder_target",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 2.5726,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 1,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.5,
+          "deviation": 0.5,
+          "deviation_ratio": 3.0903,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 2,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.3333,
+          "deviation": 0.3333,
+          "deviation_ratio": 2.0602,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 3,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.5,
+          "deviation": 0.5,
+          "deviation_ratio": 3.0903,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 4,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 7,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.7084,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 10,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.7084,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 11,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 12,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 13,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 14,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 3.7084,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 15,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 18,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 4.9445,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "偏离程度极端"
+    },
+    {
+      "row": 19,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.7084,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 20,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 21,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 22,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 23,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.7084,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 24,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.7084,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 25,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 26,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 27,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 29,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.2,
+          "deviation": 0.8,
+          "deviation_ratio": 4.9445,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "偏离程度极端"
+    },
+    {
+      "row": 30,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.7084,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 31,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 32,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 33,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 3.7084,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 34,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 35,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.6,
+          "deviation_ratio": 3.7084,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 36,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 37,
+      "column": "random_hit",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 38,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 3.7084,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.6,
+          "deviation": 0.6,
+          "deviation_ratio": 3.7084,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 40,
+      "column": "random_hit",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 0.4,
+          "deviation": 0.4,
+          "deviation_ratio": 2.4723,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 2,
+      "column": "random_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.6667,
+          "deviation": 4.3333,
+          "deviation_ratio": 2.9166,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 5,
+      "column": "random_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.6,
+          "deviation": 4.4,
+          "deviation_ratio": 2.9615,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 6,
+      "column": "random_rank",
+      "value": 10.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 7.0,
+          "deviation": 3.0,
+          "deviation_ratio": 2.0192,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 7,
+      "column": "random_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.2,
+          "deviation": 5.2,
+          "deviation_ratio": 3.4999,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 10,
+      "column": "random_rank",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.6,
+          "deviation": 3.6,
+          "deviation_ratio": 2.423,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 12,
+      "column": "random_rank",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.6,
+          "deviation": 3.4,
+          "deviation_ratio": 2.2884,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 13,
+      "column": "random_rank",
+      "value": 1.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.0,
+          "deviation": 3.0,
+          "deviation_ratio": 2.0192,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 14,
+      "column": "random_rank",
+      "value": 7.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.8,
+          "deviation": 3.2,
+          "deviation_ratio": 2.1538,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 15,
+      "column": "random_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.4,
+          "deviation": 3.6,
+          "deviation_ratio": 2.423,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 18,
+      "column": "random_rank",
+      "value": 2.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.4,
+          "deviation": 3.4,
+          "deviation_ratio": 2.2884,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 19,
+      "column": "random_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.0,
+          "deviation": 4.0,
+          "deviation_ratio": 2.6923,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 20,
+      "column": "random_rank",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.8,
+          "deviation": 4.2,
+          "deviation_ratio": 2.8269,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 23,
+      "column": "random_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.4,
+          "deviation": 3.4,
+          "deviation_ratio": 2.2884,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 26,
+      "column": "random_rank",
+      "value": 8.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.0,
+          "deviation": 4.0,
+          "deviation_ratio": 2.6923,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 29,
+      "column": "random_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.4,
+          "deviation": 4.4,
+          "deviation_ratio": 2.9615,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 33,
+      "column": "random_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 2.6,
+          "deviation": 6.4,
+          "deviation_ratio": 4.3076,
+          "window": 5
+        }
+      },
+      "classification": "needs_attention",
+      "reason": "偏离程度极端"
+    },
+    {
+      "row": 34,
+      "column": "random_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.4,
+          "deviation": 4.6,
+          "deviation_ratio": 3.0961,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 37,
+      "column": "random_rank",
+      "value": 0.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 4.4,
+          "deviation": 4.4,
+          "deviation_ratio": 2.9615,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 39,
+      "column": "random_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 3.4,
+          "deviation": 5.6,
+          "deviation_ratio": 3.7692,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 41,
+      "column": "random_rank",
+      "value": 9.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 5.8,
+          "deviation": 3.2,
+          "deviation_ratio": 2.1538,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    },
+    {
+      "row": 47,
+      "column": "random_rank",
+      "value": 4.0,
+      "methods_detected": [
+        "moving-avg"
+      ],
+      "num_methods": 1,
+      "details": {
+        "moving-avg": {
+          "moving_avg": 7.0,
+          "deviation": 3.0,
+          "deviation_ratio": 2.0192,
+          "window": 5
+        }
+      },
+      "classification": "explainable",
+      "reason": "仅被单一方法检出，偏离程度温和"
+    }
+  ],
+  "column_stats": {
+    "degree_hit": {
+      "mean": 0.122449,
+      "std": 0.331201,
+      "min": 0.0,
+      "max": 1.0,
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 0.0,
+      "iqr": 0.0,
+      "count": 49,
+      "anomaly_count": 6
+    },
+    "degree_rank": {
+      "mean": 8.510204,
+      "std": 3.247579,
+      "min": 0.0,
+      "max": 10.0,
+      "q1": 9.0,
+      "median": 10.0,
+      "q3": 10.0,
+      "iqr": 1.0,
+      "count": 49,
+      "anomaly_count": 6
+    },
+    "edge_u": {
+      "mean": 5.040816,
+      "std": 3.780207,
+      "min": 0.0,
+      "max": 12.0,
+      "q1": 2.0,
+      "median": 5.0,
+      "q3": 8.0,
+      "iqr": 6.0,
+      "count": 49,
+      "anomaly_count": 15
+    },
+    "edge_v": {
+      "mean": 20.306122,
+      "std": 13.82209,
+      "min": 1.0,
+      "max": 44.0,
+      "q1": 8.0,
+      "median": 20.0,
+      "q3": 32.0,
+      "iqr": 24.0,
+      "count": 49,
+      "anomaly_count": 13
+    },
+    "field_guided_hit": {
+      "mean": 0.326531,
+      "std": 0.473804,
+      "min": 0.0,
+      "max": 1.0,
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 1.0,
+      "iqr": 1.0,
+      "count": 49,
+      "anomaly_count": 34
+    },
+    "field_guided_rank": {
+      "mean": 4.673469,
+      "std": 3.21058,
+      "min": 0.0,
+      "max": 10.0,
+      "q1": 1.0,
+      "median": 5.0,
+      "q3": 8.0,
+      "iqr": 7.0,
+      "count": 49,
+      "anomaly_count": 20
+    },
+    "field_mean_hit": {
+      "mean": 0.387755,
+      "std": 0.492287,
+      "min": 0.0,
+      "max": 1.0,
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 1.0,
+      "iqr": 1.0,
+      "count": 49,
+      "anomaly_count": 11
+    },
+    "field_mean_rank": {
+      "mean": 4.22449,
+      "std": 3.299402,
+      "min": 0.0,
+      "max": 10.0,
+      "q1": 1.0,
+      "median": 4.0,
+      "q3": 7.0,
+      "iqr": 6.0,
+      "count": 49,
+      "anomaly_count": 14
+    },
+    "hybrid_norm@0.5_hit": {
+      "mean": 0.346939,
+      "std": 0.480929,
+      "min": 0.0,
+      "max": 1.0,
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 1.0,
+      "iqr": 1.0,
+      "count": 49,
+      "anomaly_count": 12
+    },
+    "hybrid_norm@0.5_rank": {
+      "mean": 4.510204,
+      "std": 3.559743,
+      "min": 0.0,
+      "max": 10.0,
+      "q1": 1.0,
+      "median": 5.0,
+      "q3": 8.0,
+      "iqr": 7.0,
+      "count": 49,
+      "anomaly_count": 14
+    },
+    "hybrid_norm@2.0_hit": {
+      "mean": 0.306122,
+      "std": 0.465657,
+      "min": 0.0,
+      "max": 1.0,
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 1.0,
+      "iqr": 1.0,
+      "count": 49,
+      "anomaly_count": 24
+    },
+    "hybrid_norm@2.0_rank": {
+      "mean": 5.346939,
+      "std": 3.626011,
+      "min": 0.0,
+      "max": 10.0,
+      "q1": 2.0,
+      "median": 5.0,
+      "q3": 9.0,
+      "iqr": 7.0,
+      "count": 49,
+      "anomaly_count": 10
+    },
+    "llm_prior_hit": {
+      "mean": 0.244898,
+      "std": 0.434483,
+      "min": 0.0,
+      "max": 1.0,
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 0.0,
+      "iqr": 0.0,
+      "count": 49,
+      "anomaly_count": 20
+    },
+    "llm_prior_rank": {
+      "mean": 5.081633,
+      "std": 3.315599,
+      "min": 0.0,
+      "max": 10.0,
+      "q1": 3.0,
+      "median": 5.0,
+      "q3": 8.0,
+      "iqr": 5.0,
+      "count": 49,
+      "anomaly_count": 12
+    },
+    "on_named_path": {
+      "mean": 0.346939,
+      "std": 0.480929,
+      "min": 0.0,
+      "max": 1.0,
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 1.0,
+      "iqr": 1.0,
+      "count": 49,
+      "anomaly_count": 9
+    },
+    "placeholder_target": {
+      "mean": 0.714286,
+      "std": 0.456435,
+      "min": 0.0,
+      "max": 1.0,
+      "q1": 0.0,
+      "median": 1.0,
+      "q3": 1.0,
+      "iqr": 1.0,
+      "count": 49,
+      "anomaly_count": 10
+    },
+    "random_hit": {
+      "mean": 0.326531,
+      "std": 0.473804,
+      "min": 0.0,
+      "max": 1.0,
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 1.0,
+      "iqr": 1.0,
+      "count": 49,
+      "anomaly_count": 33
+    },
+    "random_rank": {
+      "mean": 4.714286,
+      "std": 3.259601,
+      "min": 0.0,
+      "max": 10.0,
+      "q1": 2.0,
+      "median": 4.0,
+      "q3": 8.0,
+      "iqr": 6.0,
+      "count": 49,
+      "anomaly_count": 21
+    }
+  }
+}

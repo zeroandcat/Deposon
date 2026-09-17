@@ -1,0 +1,21 @@
+COMPILE SUMMARY - deposon v2 FINAL (2026-09-09 build of the 2026-09-08 v2 sources)
+Scope of this revision vs previous evidence:
+  - Footnote rewritten (brief, moderator-safe): project version separated from the
+    author-supplied Deposon definition; core = unification of two limiting states
+    (blocking g_aether=0 / tunneling g_aether>>0) of one two-parameter entity.
+  - H1 fix: brand name removed from BODY text (en GT-3b sentence / cn equivalent);
+    AI-tool names now appear ONLY inside the standalone AI-use disclosure section.
+  - H3 fix: Chinese package affiliation line fully sinicized.
+  - Verifier hardened (case-insensitive Kimi scan); rebuild 63/63 PASS.
+  - Second FRESH independent read-only audit: ALL PASS (items A-J).
+Compiler: pdfLaTeX (MiKTeX 24.1 Portable), -interaction=batchmode -recorder -file-line-error
+Runs: EN_P1=0 EN_P2=0 CN_P1=0 CN_P2=0 (DONE.flag; all exit codes 0)
+EN PDF: 22 pages, 1,882,848 bytes, sha256=c3b20a1fcefa5bd46f7b29c0aa2b39be679c59795b5735f75b7ba2e217cc54ce
+CN PDF: 17 pages, 2,591,555 bytes, sha256=a8a7841f939a0c5125c36c8e30281b221566dc3e5bb749dc22c523cfcca63ca2
+EN final-pass log: 0 fatal(!), 0 undefined, 0 Missing character, 0 LaTeX Warning; 29 Overfull (cosmetic)
+CN final-pass log: 0 fatal(!), 0 undefined, 0 Missing character, 0 LaTeX Warning; 56 Overfull (cosmetic)
+CN CJK: CJKutf8 + gbsn, pdfLaTeX-embedded; \pdfoutput=1 line 1; no Xe/Lua-only packages
+Deliverable tars (upload ONLY the EN package to arXiv):
+  en 1,636,854 bytes sha256=57e298186e155559ed9f99475a164747ad12c6261c2a441ec93156540b8eca08
+  cn 1,658,684 bytes sha256=9c9ddb5ffef62702b9d169aa1604cccff32282d153ccde96645eee2b61a74711
+Date: 2026-09-09

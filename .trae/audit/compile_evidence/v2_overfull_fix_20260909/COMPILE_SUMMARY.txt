@@ -1,0 +1,33 @@
+Deposon v2 arXiv — Overfull \hbox fix round — compile evidence
+Generated: 2026-09-09 14:18 (Asia/Shanghai)
+Compiler: MiKTeX portable pdfLaTeX, -interaction=batchmode -recorder -file-line-error
+Each language compiled 2 passes (fresh extraction of the NEW deliverable tars into C:\deposon_compile).
+
+## Deliverables verified (sha256 of tar.gz)
+deposon_arxiv_en.tar.gz  d95be2a059903cd9a1d5dc9566837ace2be8e557d6b39cb86ce42b2f902275b4
+deposon_arxiv_cn.tar.gz  9d7351e73652283c0905baf33756c5183e471b45a1f77c202cfb8b554e8e2df6
+(tex_sha256: en 00f7ae49d632acc55418bccaffd9d48338c474fe45d905dbb1d8022bf6bf28c6
+             cn 6a48367cb59c32e8e8fe9610ca7bc219cbe3f991e5eaf9beab42b46bc3bd9f6a)
+
+## Result (per final pass log)
+EN: Overfull=0  Underfull=115  Errors=0  pages=22  pdf=1,883,218 bytes
+CN: Overfull=0  Underfull=124  Errors=0  pages=18  pdf=2,594,013 bytes
+Exit codes: EN_P1=0 EN_P2=0 CN_P1=0 CN_P2=0 (see DONE.flag)
+
+## What changed vs v2pre_h1h3_20260909
+Fix method: \allowbreak inserted inside long \texttt tokens (JSON paths, hashes,
+run identifiers) + one \emergencystretch=3em in each preamble.
+EN: 415 \allowbreak sites; CN: 465 sites. Visible text unchanged — proven by
+inverse-transform check (strip \allowbreak + consumed space == original source).
+Round 2 added CN sites at L189/282/287/291/293 to clear the last 5 small
+overfulls (2.66–22.54pt).
+
+## Underfull note
+Remaining Underfull \hbox warnings are loose-line notices (badness), mostly in
+the references/appendix region and ragged token lists. They do not cross the
+text margin and are accepted by arXiv. CN version is not submitted.
+
+## Abstract length counter fix (same session)
+verify script bug: re.sub(r"%.*") treated LaTeX-escaped \% as comment start,
+truncating abstract counts (EN 1795→759, CN 976→265 chars). Fixed with
+(?<!\\)%.* regex. True visible lengths: EN 1775, CN 912 — both < 1920 cap.
