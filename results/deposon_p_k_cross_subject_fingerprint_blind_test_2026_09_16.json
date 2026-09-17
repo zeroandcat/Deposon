@@ -1,0 +1,387 @@
+{
+  "task": "P-K 跨主体指纹盲测 (自家 vs KIMI 外来替身, GLM 槽位 pending)",
+  "preregistration": {
+    "ts_utc": "2026-09-16T10:39:54.995557+00:00",
+    "algorithm": "两级指纹 + 自家原型归一化距离判别",
+    "level1_byte_fingerprint": "SHA-256(raw_bytes)[0:12]",
+    "level2_struct_signature": "JSON: 排序键路径集合哈希; 文本: 行数|字节数|字符分布分桶向量哈希",
+    "features": [
+      "log_bytes",
+      "log_lines",
+      "is_json",
+      "log_keys",
+      "json_depth",
+      "key_vocab_overlap",
+      "cjk_ratio",
+      "ws_ratio",
+      "digit_ratio",
+      "alpha_ratio",
+      "punct_ratio",
+      "byte_entropy8",
+      "log_mean_line"
+    ],
+    "distance": "逐特征 z=|x-mu|/max(sd,1e-6), z 截断于 8, 取 13 特征均值 d; d<T 判自家, 否则判外来(KIMI 替身)",
+    "z_cap": 8,
+    "std_floor": 1e-06,
+    "threshold_T": 2.0,
+    "prototype": "自家 26 件 JSON 的逐特征均值/标准差; key_vocab_overlap 词表 = 自家 26 件键路径并集",
+    "decision_lines": {
+      "SP_t": ">=0.7",
+      "FPR": "<1/100",
+      "FNR": "<1/20",
+      "anti_whitewash": ">=0.6"
+    },
+    "definitions": {
+      "FPR": "外来判自家件数 / 外来总件数",
+      "FNR": "自家判外来件数 / 自家总件数",
+      "SP_t": "成对分离率 = 全部(自家,外来)对中 d(外来)>d(自家) 的比例(并列计 0.5); 仓内无既有定义, 本口径为自定义并预登记",
+      "anti_whitewash": "外来制品经格式洗白后仍判外来的比例(总)及分变换比例",
+      "alive_increment": "3 类洗白变换中分变换保持率>=0.6 的类数, 记 x/3; 仓内无既有定义, 本口径为自定义并预登记"
+    },
+    "sanitation": {
+      "kimi_side": "全部 KIMI 侧输入先剔除命中令牌模式的整行再取指纹(防泄漏); 自家侧可信原文取指纹",
+      "design_doc_extra": "V3X_FULL_EXPERIMENT_DESIGN 另剔除文首署名/引用块(含 2026-09-18 后日期文件引用, 属他人追加改写痕迹); 尾部追加段边界仓内不可考, 见报告局限节"
+    },
+    "exclusions": [
+      "github_staging/push_result.json: API 转储非脚本/文档, 未纳入; JSON 型外来制品判别留待 GLM 接入补测",
+      "results/deposon_volcengine_glm_* 与 deposon_volcengine_minimax_*: 与 9 model 主源同源, 防泄漏避开"
+    ],
+    "glm_slot": {
+      "status": "pending",
+      "interface": "GLM 日后自供制品, 按 kimi_artifact_v 同 schema 落 glm_artifact_v JSON, 重跑本 runner 即扩为三方判别"
+    },
+    "minimax_slot": {
+      "status": "replaced_by_kimi_artifacts",
+      "note": "沿 user 17:59 拍板: minimax 槽位由 KIMI 制品顶替, 三方设计变为 自家 vs KIMI(外来替身), GLM 槽位 pending"
+    }
+  },
+  "own_artifacts": [
+    {
+      "rel_path": "verifier/handoff/KT_ABC1_anchors_sha256_12.json",
+      "byte_sha12": "03c6c01f3697",
+      "d": 0.30761147144304246,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "verifier/handoff/KT_ABC1_anchors_sha256_12_V3X_P_A_PATCH_2026_09_15.json",
+      "byte_sha12": "da517c115f3c",
+      "d": 1.2960105649014737,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/deposon_v3_physical_opt_2026_09_11.json",
+      "byte_sha12": "27f9bd5cc260",
+      "d": 0.7226265263051511,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/deposon_v3_physical_opt_60cells_2026_09_11.json",
+      "byte_sha12": "c659695aa23c",
+      "d": 0.5210976368798979,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/deposon_pg_v01_9m60c_2026_09_15.json",
+      "byte_sha12": "ab75889ee738",
+      "d": 0.4554878313853124,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/deposon_d_fix2_metric_verify_9m60c_2026_09_15.json",
+      "byte_sha12": "9f88a212a77c",
+      "d": 1.226856937888954,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/deposon_pa_d1_d3_2026_09_15.json",
+      "byte_sha12": "e221792715f8",
+      "d": 0.5887365931569203,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/deposon_pe_d1_d3_2026_09_15.json",
+      "byte_sha12": "594d7a8d3de8",
+      "d": 0.7102665467171853,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/deposon_boss_pe_3_reservoir_verify_9m60c_2026_09_15.json",
+      "byte_sha12": "4e4a17d43adf",
+      "d": 0.29679433428761903,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/boss_pa_1_rbr_rm_result_2026_09_15.json",
+      "byte_sha12": "c7c59e0d2f6c",
+      "d": 0.500358423166359,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/boss_pa_2_potential_game_result_2026_09_15.json",
+      "byte_sha12": "5c76137d6430",
+      "d": 0.3058755379309011,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/boss_pa_3_replicator_dynamics_result_2026_09_15.json",
+      "byte_sha12": "d6f233d73c45",
+      "d": 0.48562511136233627,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/boss_pc_1_real_2d_ising_2026_09_15.json",
+      "byte_sha12": "43d9ce160fc8",
+      "d": 0.625454598114838,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/boss_pc_2_real_transverse_ising_2026_09_15.json",
+      "byte_sha12": "8933d61b180a",
+      "d": 0.6250733546039449,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/boss_pc_3_real_reservoir_2026_09_15.json",
+      "byte_sha12": "94b5398be76c",
+      "d": 0.6828930601879757,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/attack_pc_a1_resampling_2026_09_15.json",
+      "byte_sha12": "d21912a05d79",
+      "d": 0.8058889185402645,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/attack_pc_a2_fitting_2026_09_15.json",
+      "byte_sha12": "5a880678c386",
+      "d": 0.8261311451101234,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/attack_pc_a3_clipping_2026_09_15.json",
+      "byte_sha12": "d74d6b39d1b0",
+      "d": 0.6354755680309794,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/skill_a_p_a_60cells_result_2026_09_11.json",
+      "byte_sha12": "f4a210d69220",
+      "d": 0.6759525936307443,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/skill_b_p_c_alpha_beta_result_2026_09_11.json",
+      "byte_sha12": "b921002e4dfb",
+      "d": 0.6319914481574932,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/skill_c_p_e_3modality_result_2026_09_11.json",
+      "byte_sha12": "470425a8c77d",
+      "d": 0.22987214825840935,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/skill_d_p_f_observer_result_2026_09_11.json",
+      "byte_sha12": "0207c01b9562",
+      "d": 0.3816592976068509,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/deposon_pf_implementation_2026_09_11.json",
+      "byte_sha12": "509dcee3b139",
+      "d": 1.083666497681777,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/deposon_pf_d1_full_9m5c_2026_09_15.json",
+      "byte_sha12": "fcb5105df0b6",
+      "d": 0.6929140679157538,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/deposon_v3_v7_summary_2026_09_11.json",
+      "byte_sha12": "063ac8d00542",
+      "d": 1.1200923792124642,
+      "pred": "自家"
+    },
+    {
+      "rel_path": "results/deposon_v2_phase4_f4_2026_09_11.json",
+      "byte_sha12": "cf7682348617",
+      "d": 0.6185646427138372,
+      "pred": "自家"
+    }
+  ],
+  "kimi_artifacts_ref": "deposon_team/products/kimi_artifact_v_2026_09_16.json",
+  "blind_results": {
+    "confusion_matrix": {
+      "自家->自家": 26,
+      "自家->KIMI": 0,
+      "KIMI->自家": 0,
+      "KIMI->KIMI": 22
+    },
+    "n_own": 26,
+    "n_kimi": 22,
+    "kimi_predictions": [
+      {
+        "artifact_id": "KIMI-N01",
+        "d": 4.015463001572583,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-N02",
+        "d": 3.829563573418797,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-N03",
+        "d": 3.760960668760662,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-N04",
+        "d": 3.8059961342886774,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-N05",
+        "d": 3.4271486183689253,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-N06",
+        "d": 3.536088932725081,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-N07",
+        "d": 3.318447967108693,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-N08",
+        "d": 3.524218756950318,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-N09",
+        "d": 3.1463995597360435,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-N10",
+        "d": 3.3548356164028132,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-N11",
+        "d": 3.5708052279687275,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-N12",
+        "d": 3.095386549171114,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-N13",
+        "d": 3.2858235378716305,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-N14",
+        "d": 3.036635972990873,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-S01",
+        "d": 4.164437957996472,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-S02",
+        "d": 4.337652701295222,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-S03",
+        "d": 4.538944165358375,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-S04",
+        "d": 4.023824136531611,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-S05",
+        "d": 4.010812281554227,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-S06",
+        "d": 3.946178698150031,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-S07",
+        "d": 4.060047603128682,
+        "pred": "KIMI"
+      },
+      {
+        "artifact_id": "KIMI-S08",
+        "d": 4.306100705464544,
+        "pred": "KIMI"
+      }
+    ]
+  },
+  "metrics": {
+    "FPR": 0.0,
+    "FNR": 0.0,
+    "SP_t": 1.0,
+    "anti_whitewash_total": 1.0,
+    "anti_whitewash_per_transform": {
+      "W1_key_reorder": {
+        "held": 22,
+        "total": 22,
+        "rate": 1.0
+      },
+      "W2_newline_inject": {
+        "held": 22,
+        "total": 22,
+        "rate": 1.0
+      },
+      "W3_comment_inject": {
+        "held": 22,
+        "total": 22,
+        "rate": 1.0
+      }
+    },
+    "alive_increment": "3/3"
+  },
+  "decision_lines": [
+    {
+      "line": "SP_t >= 0.7",
+      "measured": 1.0,
+      "pass": true
+    },
+    {
+      "line": "FPR < 1/100",
+      "measured": 0.0,
+      "pass": true
+    },
+    {
+      "line": "FNR < 1/20",
+      "measured": 0.0,
+      "pass": true
+    },
+    {
+      "line": "anti_whitewash >= 0.6",
+      "measured": 1.0,
+      "pass": true
+    }
+  ],
+  "overall_verdict": "PASS",
+  "computed_ts_utc": "2026-09-16T10:39:55.617539+00:00"
+}

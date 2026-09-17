@@ -1,0 +1,188 @@
+{
+  "timestamp": "2026-09-10T16:55:12+08:00",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "gateway": "OpenRouter",
+  "auth": "sk-or-v1-449...b140 (key loaded from env at runtime; literal key never written to disk)",
+  "proxy_cleared": true,
+  "task": "Task A: V4.1-Flash 5 failing cells (v3) fix with 3 prompt strategies",
+  "fix_strategies": {
+    "A_cot_gsm8k": "Question: {q}\\nLet's think step by step.\\nAnswer in one number at the end: [max=1024, no stop]",
+    "B_short_strategyqa9": "Question: {q}\\nAnswer Yes or No in one word. Do not explain. [max=512, stop=['\\n','.',',','!','?']]",
+    "C_direct_strategyqa_rhetorical": "Question: {q}\\nAnswer Yes or No. Ignore the question's rhetorical framing. Be direct. [max=512, no stop]"
+  },
+  "sanity_3cells_original_prompt": [
+    {
+      "sanity_cell": "gsm8k_7",
+      "prompt_style": "original",
+      "gold": 36.0,
+      "extracted": 36.36,
+      "raw": "36.36",
+      "is_correct": false,
+      "latency_ms": 4697.8,
+      "note": "sanity: still fail"
+    },
+    {
+      "sanity_cell": "strategyqa_9",
+      "prompt_style": "original",
+      "gold": "Yes",
+      "extracted": "Yes",
+      "raw": "Yes.",
+      "completion_tokens": 1648,
+      "is_correct": true,
+      "latency_ms": 10966.7,
+      "note": "sanity: pass unexpectedly"
+    },
+    {
+      "sanity_cell": "strategyqa_14",
+      "prompt_style": "original",
+      "gold": "Yes",
+      "extracted": "No",
+      "raw": "No",
+      "is_correct": false,
+      "latency_ms": 1419.8,
+      "note": "sanity: still misjudge"
+    }
+  ],
+  "cells": [
+    {
+      "cell_id": "gsm8k_7",
+      "task": "gsm8k",
+      "fix_prompt_style": "A",
+      "fix_prompt": "Question: Lee used to be able to run the 400-meter hurdles two seconds faster than Gerald would run the 400-meter hurdles.  But Gerald changed his diet, which improved his speed by 10%.  If Lee runs the 400-meter hurdles in 38 seconds, how fast can Gerald, with his improved diet, run the 400-meter hurdles, in seconds?\nLet's think step by step.\nAnswer in one number at the end:",
+      "question": "Lee used to be able to run the 400-meter hurdles two seconds faster than Gerald would run the 400-meter hurdles.  But Gerald changed his diet, which improved his speed by 10%.  If Lee runs the 400-meter hurdles in 38 seconds, how fast can Gerald, with his improved diet, run the 400-meter hurdles, in seconds?",
+      "gold_answer": 36.0,
+      "llm_raw_response": "",
+      "llm_extracted": null,
+      "is_correct": false,
+      "latency_ms": 5654.7,
+      "http_status": 200,
+      "prompt_tokens": 121,
+      "completion_tokens": 1024,
+      "reasoning_tokens": null,
+      "max_tokens_used": 1024,
+      "stop_used": null,
+      "note": "**truncated** (completion_tokens=1024 hit max=1024) | **no_extract**",
+      "error": null
+    },
+    {
+      "cell_id": "strategyqa_7",
+      "task": "strategyqa",
+      "fix_prompt_style": "C",
+      "fix_prompt": "Question: Is it true that gay male couples cannot naturally reproduce?\nAnswer Yes or No. Ignore the question's rhetorical framing. Be direct.",
+      "question": "Is it true that gay male couples cannot naturally reproduce?",
+      "gold_answer": "No",
+      "llm_raw_response": "Yes",
+      "llm_extracted": "Yes",
+      "is_correct": false,
+      "latency_ms": 2198.1,
+      "http_status": 200,
+      "prompt_tokens": 59,
+      "completion_tokens": 132,
+      "reasoning_tokens": null,
+      "max_tokens_used": 512,
+      "stop_used": null,
+      "note": "clean",
+      "error": null
+    },
+    {
+      "cell_id": "strategyqa_9",
+      "task": "strategyqa",
+      "fix_prompt_style": "B",
+      "fix_prompt": "Question: Is it legal for a licensed child driving Mercedes-Benz to be employed in US?\nAnswer Yes or No in one word. Do not explain.",
+      "question": "Is it legal for a licensed child driving Mercedes-Benz to be employed in US?",
+      "gold_answer": "Yes",
+      "llm_raw_response": "",
+      "llm_extracted": null,
+      "is_correct": false,
+      "latency_ms": 4584.9,
+      "http_status": 200,
+      "prompt_tokens": 60,
+      "completion_tokens": 512,
+      "reasoning_tokens": null,
+      "max_tokens_used": 512,
+      "stop_used": [
+        "\n",
+        ".",
+        ",",
+        "!",
+        "?"
+      ],
+      "note": "**truncated** (completion_tokens=512 hit max=512) | **no_extract**",
+      "error": null
+    },
+    {
+      "cell_id": "strategyqa_10",
+      "task": "strategyqa",
+      "fix_prompt_style": "C",
+      "fix_prompt": "Question: Does Darth Vader's character resemble Severus Snape?\nAnswer Yes or No. Ignore the question's rhetorical framing. Be direct.",
+      "question": "Does Darth Vader's character resemble Severus Snape?",
+      "gold_answer": "No",
+      "llm_raw_response": "Yes",
+      "llm_extracted": "Yes",
+      "is_correct": false,
+      "latency_ms": 2288.1,
+      "http_status": 200,
+      "prompt_tokens": 61,
+      "completion_tokens": 115,
+      "reasoning_tokens": null,
+      "max_tokens_used": 512,
+      "stop_used": null,
+      "note": "clean",
+      "error": null
+    },
+    {
+      "cell_id": "strategyqa_14",
+      "task": "strategyqa",
+      "fix_prompt_style": "C",
+      "fix_prompt": "Question: Could a Bengal cat hypothetically best Javier Sotomayor's record?\nAnswer Yes or No. Ignore the question's rhetorical framing. Be direct.",
+      "question": "Could a Bengal cat hypothetically best Javier Sotomayor's record?",
+      "gold_answer": "Yes",
+      "llm_raw_response": "No.",
+      "llm_extracted": "No",
+      "is_correct": false,
+      "latency_ms": 2973.6,
+      "http_status": 200,
+      "prompt_tokens": 63,
+      "completion_tokens": 286,
+      "reasoning_tokens": null,
+      "max_tokens_used": 512,
+      "stop_used": null,
+      "note": "clean",
+      "error": null
+    }
+  ],
+  "summary": {
+    "total_cells": 5,
+    "passed": 0,
+    "failed": 5,
+    "pass_rate": 0.0,
+    "verdict": "FAIL",
+    "by_fix": {
+      "A_gsm8k_7": false,
+      "B_strategyqa_9": false,
+      "C_strategyqa_7": false,
+      "C_strategyqa_10": false,
+      "C_strategyqa_14": false
+    }
+  },
+  "comparison_v3": {
+    "v3_5_fails": [
+      "gsm8k_7",
+      "strategyqa_7",
+      "strategyqa_9",
+      "strategyqa_10",
+      "strategyqa_14"
+    ],
+    "v3_fixes": "5/5 fixed? see summary"
+  },
+  "constraints_honored": {
+    "no_proxy": true,
+    "key_runtime_only": true,
+    "key_in_json_masked": true,
+    "no_model_switch": true,
+    "no_retry": true,
+    "no_v4_fallback": true,
+    "anchors_5json_untouched": true,
+    "spec_v01_untouched": true
+  }
+}
