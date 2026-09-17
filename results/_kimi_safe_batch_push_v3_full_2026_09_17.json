@@ -1,0 +1,254 @@
+{
+  "manifest_version": "v3.0",
+  "batch_version": "3.0",
+  "purpose": "KIMI 凝子-agent safe batch push v3 镜像 (file_content 字节级一致, 目录沿现状)",
+  "author": "KIMI (凝子-agent, 沿 _letter_to_kimi_push_v3_委托_2026_09_17.md)",
+  "generated_at": "2026-09-17 22:05 CST",
+  "commit": "ee0b82fc025dd516bac5497c355db110c88f95f1",
+  "file_count": 48,
+  "total_bytes": 16665329,
+  "big_file_strategy": "A 直推 (最大 3.9MB < 50MB 限, 未用 LFS)",
+  "verify": "push 后 git-tree SHA1 全量比对 ALL_PASS 48/48 (contents API 对 >1MB 返回空 content, 改用 tree 比对, 字节级等效)",
+  "files": [
+    {
+      "path": "deposon_team/plugins/_fix_adendum_c_erratum_2026_09_17.py",
+      "sha12": "eb44de412de5",
+      "size": 1820
+    },
+    {
+      "path": "deposon_team/plugins/_goal_completion_audit_2026_09_17.py",
+      "sha12": "5c18b72e7bb3",
+      "size": 3752
+    },
+    {
+      "path": "docs/V3X/P_D_FINGERPRINT_V0_3_SPEC.md",
+      "sha12": "f119f2f30287",
+      "size": 34393
+    },
+    {
+      "path": "docs/V3X/P_D_FINGERPRINT_V0_3_SPEC_CHANGELOG.md",
+      "sha12": "fc73cab85d8f",
+      "size": 15021
+    },
+    {
+      "path": "docs/V3X/TRAE_CODE_IMPROVEMENT_LETTER_2026_09_17.md",
+      "sha12": "53a90b9efbb9",
+      "size": 5154
+    },
+    {
+      "path": "results/_adendum_C_pm_attack_surface_v2_20260917_133726.json",
+      "sha12": "193ba7d66412",
+      "size": 4123
+    },
+    {
+      "path": "results/_adendum_C_pm_attack_surface_v2_20260917_133852.json",
+      "sha12": "6eba63788ca8",
+      "size": 4122
+    },
+    {
+      "path": "results/_adendum_FGK_complete_20260917_143033.md",
+      "sha12": "958188c83cf0",
+      "size": 14005
+    },
+    {
+      "path": "results/_adendum_F_pe_3modal_v2_20260917_143033.json",
+      "sha12": "afab79249be7",
+      "size": 38622
+    },
+    {
+      "path": "results/_adendum_G_pf_dfix2_v2_20260917_143033.json",
+      "sha12": "bf8db2ad255b",
+      "size": 95292
+    },
+    {
+      "path": "results/_adendum_K_qwen3_087_cluster_v2_20260917_143033.json",
+      "sha12": "43477c8ea2d6",
+      "size": 32481
+    },
+    {
+      "path": "results/_letter_to_coze_paper_v1_委托_2026_09_17.md",
+      "sha12": "6d72e74b3482",
+      "size": 12786
+    },
+    {
+      "path": "results/_letter_to_kimi_push_v3_委托_2026_09_17.md",
+      "sha12": "042fa374a63f",
+      "size": 13586
+    },
+    {
+      "path": "results/_letter_to_trae_code_2026_09_17_final.md",
+      "sha12": "c1791a7811f3",
+      "size": 10690
+    },
+    {
+      "path": "results/_p_d_v03_22caption_verification_20260917_163757.json",
+      "sha12": "dfbcc5d6fc34",
+      "size": 13775
+    },
+    {
+      "path": "results/_p_d_v03_verification_report_20260917_163757.md",
+      "sha12": "67aafb57a8ed",
+      "size": 9799
+    },
+    {
+      "path": "results/_p_k_v3_glm_fpr_audit_report_2026-09-17T08-23-41Z.md",
+      "sha12": "71d5c23d9f76",
+      "size": 8558
+    },
+    {
+      "path": "results/_p_k_v3_glm_json_audit_2026-09-17T08-23-41Z.json",
+      "sha12": "f236e88f22ca",
+      "size": 6678
+    },
+    {
+      "path": "results/_p_k_v3_three_way_rerun_2026-09-17T08-23-41Z.json",
+      "sha12": "05ff758ae921",
+      "size": 12992
+    },
+    {
+      "path": "results/_p_l_v3_phase2_closedsource_report_20260917_175544.md",
+      "sha12": "02443dd300ce",
+      "size": 5909
+    },
+    {
+      "path": "results/_p_l_v3_phase2_closedsource_summary_20260917_175544.json",
+      "sha12": "a3eafaf9ba03",
+      "size": 3286
+    },
+    {
+      "path": "results/_p_l_v3_phase2_doubao_v2_summary_20260917_172206.json",
+      "sha12": "e3dccddaed87",
+      "size": 14469
+    },
+    {
+      "path": "results/_p_l_v3_phase2_or_embedding_v3_report_20260917_162614.md",
+      "sha12": "fa5da7a307bd",
+      "size": 8102
+    },
+    {
+      "path": "results/_p_l_v3_phase2_or_embedding_v3_summary_20260917_162614.json",
+      "sha12": "21c9f23699a8",
+      "size": 8308
+    },
+    {
+      "path": "results/_p_l_v3_robustness_claude_sonnet5_L30_20260917_174011.json",
+      "sha12": "9d329721f67d",
+      "size": 30772
+    },
+    {
+      "path": "results/_p_l_v3_robustness_claude_sonnet5_L60_20260917_174011.json",
+      "sha12": "28e462c11692",
+      "size": 1292
+    },
+    {
+      "path": "results/_p_l_v3_robustness_gemini_37flash_L30_20260917_175003.json",
+      "sha12": "0f5c80a8a4ae",
+      "size": 30514
+    },
+    {
+      "path": "results/_p_l_v3_robustness_gemini_37flash_L60_20260917_175003.json",
+      "sha12": "e2590651f9c0",
+      "size": 1288
+    },
+    {
+      "path": "results/_p_l_v3_robustness_gpt56sol_L30_20260917_173159.json",
+      "sha12": "3865d7a61ca1",
+      "size": 30347
+    },
+    {
+      "path": "results/_p_l_v3_robustness_gpt56sol_L60_20260917_173159.json",
+      "sha12": "8c79e9a289fb",
+      "size": 1266
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao-text-240715_L30_20260917_172206.json",
+      "sha12": "2d4827f9cda2",
+      "size": 18509
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao-vision-241215_L30_20260917_172206.json",
+      "sha12": "e836a04a04d8",
+      "size": 1670172
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao-vision-250328_L30_20260917_172206.json",
+      "sha12": "0432f25cf6c3",
+      "size": 1669285
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao-vision-250615_L30_20260917_172206.json",
+      "sha12": "710b7f291355",
+      "size": 1671116
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao-vision-251215_L30_20260917_172206.json",
+      "sha12": "a00976c6f87b",
+      "size": 1670482
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_or_bge-large_L30_20260917_162614.json",
+      "sha12": "aff028e8506c",
+      "size": 1017974
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_or_e5-multi_L30_20260917_162614.json",
+      "sha12": "8676b519a031",
+      "size": 1017684
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_or_gte-large_L30_20260917_162614.json",
+      "sha12": "07561d4d23d1",
+      "size": 1017381
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_or_qwen3-emb-8b_L30_20260917_162614.json",
+      "sha12": "a4bd70c02aaa",
+      "size": 3929893
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_qwen3-emb-4b_L30_20260917_172206.json",
+      "sha12": "bebee5346543",
+      "size": 2452273
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_172206.md",
+      "sha12": "2e3ec17259e2",
+      "size": 19548
+    },
+    {
+      "path": "results/_trae_5audit_aggregated_2026_09_17.md",
+      "sha12": "43265e4bf2be",
+      "size": 11465
+    },
+    {
+      "path": "results/_trae_anchor_18_audit_20260917_193000.md",
+      "sha12": "4af67e6cbe71",
+      "size": 3449
+    },
+    {
+      "path": "results/_trae_corpus_5_audit_20260917_193000.md",
+      "sha12": "f2a655cd5e54",
+      "size": 3467
+    },
+    {
+      "path": "results/_trae_d7_v1_audit_20260917_190000.json",
+      "sha12": "3184b30b7b0d",
+      "size": 4253
+    },
+    {
+      "path": "results/_trae_d7_v1_audit_20260917_190000.md",
+      "sha12": "e240ca712be6",
+      "size": 7855
+    },
+    {
+      "path": "results/_trae_kimi_push_v3_audit_20260917_193000.md",
+      "sha12": "8ece24be6b8a",
+      "size": 3281
+    },
+    {
+      "path": "results/_trae_paper_8ch_双审_20260917_200000.md",
+      "sha12": "bec666969ffc",
+      "size": 4040
+    }
+  ]
+}
