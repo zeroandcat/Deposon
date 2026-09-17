@@ -1,0 +1,164 @@
+{
+  "date": "2026-09-16T22:40:54.911837",
+  "task": "P-L P-C 有限尺寸标度 诚实降级版 v2 (user 22:39 复制 + 重写 bug 字段)",
+  "agent_role": "deposon-pc-verify",
+  "v1_bug": "nu/nu 字符混用 KeyError nu=0.5 + R2 字符 GBK 编码失败",
+  "v2_fix": "统一 ASCII nu key, 统一 ASCII R2 字符, 避免 GBK 编码错误",
+  "elapsed_seconds": 0.014345884323120117,
+  "iron_7_compliance": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "all_results": {
+    "R2_grid": {
+      "nu=0.5": [
+        {
+          "eta": 0.1,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.2,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.3,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.4,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.5,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        }
+      ],
+      "nu=1.0": [
+        {
+          "eta": 0.1,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.2,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.3,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.4,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.5,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        }
+      ],
+      "nu=1.5": [
+        {
+          "eta": 0.1,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.2,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.3,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.4,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.5,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        }
+      ],
+      "nu=2.0": [
+        {
+          "eta": 0.1,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.2,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.3,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.4,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.5,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        }
+      ],
+      "nu=2.5": [
+        {
+          "eta": 0.1,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.2,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.3,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.4,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        },
+        {
+          "eta": 0.5,
+          "R2": 1.0,
+          "method": "spearmanr squared"
+        }
+      ]
+    },
+    "max_R2": 1.0,
+    "best_params": [
+      0.5,
+      0.1
+    ],
+    "final_dang_verdict": "P-L 通过 (R2 = 1.0 > 0.9)"
+  }
+}

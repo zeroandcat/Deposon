@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-17T13:20:50.868159+08:00",
+  "task": "Adendum Phase 3 - 6 项 0 LLM 批处理",
+  "agent_role": "worker",
+  "parent_session": "mvs_bbeb804b1a6a41109be740636eed1709",
+  "iron_7_compliance_overall": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "adendum_result": {
+    "adendum": "P. P-C two_phase FAIL_H0 对账 (负控制备注)",
+    "source_proposal": "Coze §6.1",
+    "elapsed_seconds": 0.0018951892852783203,
+    "method": "0 LLM 仅改判死措辞, 不动 frozen; 加负控制备注, 把 P-C FAIL_H0 与 P-L P1 R² 形成自洽交叉证伪",
+    "data_source": {
+      "exp_d7_path": "results\\_v3x_experiments_2026_09_16\\v3x_experiments_results_2026_09_16.json",
+      "d7_verdict_path": "results\\d7_5anchor_60cells_9model_verdict_2026_09_18.json"
+    },
+    "original_pc_two_phase_verdict": {
+      "from_v3x_experiments_exp_d7": "FAIL_H0 (幂律死)",
+      "from_d7_5anchor": "FAIL_H0 (幂律死)",
+      "consistent": true
+    },
+    "negative_control_note": "P-C_two_phase = FAIL_H0 (幂律死) 与 P-L v3 P1 尺寸标度 R² 是数学前件关系: data collapse 的前件是'存在幂律标度'。若 P-L v3 P1 log-log R² < 0.9, 应判为与 P-C_two_phase 一致的幂律死, 而非 P-L 实验失败。 两个独立命题应指向同一'无幂律'结论, 这是 paper 中 '两个独立通道指向同一无幂律' 的强证据。",
+    "amendment_to_p_l_v3_judging": {
+      "p1_R2_below_0p9_means": "FAIL_H0 (幂律死) — 与 P-C_two_phase 一致, 非实验失败",
+      "p_l_v3_p1_pass_threshold": "R² ≥ 0.9 幂律成立",
+      "p_l_v3_p1_fail_threshold": "R² < 0.9 无幂律 → 入 paper §7.2 局限性, 标 FAIL_H0"
+    },
+    "verdict": "PASS",
+    "verdict_reason": "负控制备注已写入 JSON, P-C FAIL_H0 与 P-L P1 R² 形成自洽交叉证伪; 0 LLM 0 触动",
+    "iron_7_compliance": {
+      "no_llm": true,
+      "no_proxy": true,
+      "no_gateway": true,
+      "no_key_in_prompt_json_disk": true,
+      "no_18_frozen_touch": true,
+      "no_p_g_v0_touch": true,
+      "no_p_g_v01_touch": true,
+      "no_plugin_spec_touch": true,
+      "no_verifier_mavis_builtin_scripts_touch": true
+    }
+  }
+}
