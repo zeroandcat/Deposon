@@ -25,7 +25,7 @@ ok = (abs(float(rows["S1"]["hub_concentration"]) - 1/19) < 1e-4 and
       abs(float(rows["S3"]["hub_concentration"]) - 2/32) < 1e-4)
 check("hub_concentration 公式锚点（max_in_degree/n_edges）", ok)
 # 密钥红线
-bad = subprocess.run(["grep","-rn","-E","sk-kimi-|ark-589571","docs/SPEC_GT8.md","docs/Findings_GT8.md","run_v20_gt8.py","tests/test_v20_gt8.py","results/deposon_v20_gt8.json"],
+bad = subprocess.run(["grep","-rn","-E","sk-kimi-|ark-[REDACTED]","docs/SPEC_GT8.md","docs/Findings_GT8.md","run_v20_gt8.py","tests/test_v20_gt8.py","results/deposon_v20_gt8.json"],
                      capture_output=True, cwd=R)
 check("GT-8 新文件无密钥串", bad.returncode == 1)
 # 1.X 论文锁

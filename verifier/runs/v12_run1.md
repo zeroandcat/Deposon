@@ -26,3 +26,8 @@
 - 退出码: 0
 - FAILS: 0
 - 无 FAIL
+
+## 2026-08-28 12:01:49 run6-final（GitHub 留痕完成后交付前终跑）
+- 退出码: 0
+- FAILS: 0 / PASS: 25
+- 无 FAIL

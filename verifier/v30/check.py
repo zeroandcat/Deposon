@@ -30,7 +30,7 @@ check("PoA 全 17 图 median 1.333 + 族 L 0.5/0.75", "1.333" in md and "0.5" in
 check("无英文图引用（图语言纪律）", not re.search(r"!\[.*\]\(.*_en\.(png|jpg)", md))
 ai = [w for w in ("值得注意的是","综上所述","赋能","抓手","至关重要") if w in md]
 check("AI 腔高频词零残留", not ai)
-bad = subprocess.run(["grep","-rn","-E","sk-kimi-[A-Za-z0-9]|ark-589571[0-9]","paper/v2/"], capture_output=True, cwd=R)
+bad = subprocess.run(["grep","-rn","-E","sk-kimi-[A-Za-z0-9]|ark-[REDACTED][0-9]","paper/v2/"], capture_output=True, cwd=R)
 check("paper/v2 无密钥串", bad.returncode == 1)
 p = subprocess.run([sys.executable,"-m","pytest","tests/","-q"], capture_output=True, text=True, cwd=R)
 check("pytest 255 全绿", "255 passed" in p.stdout and "failed" not in p.stdout)

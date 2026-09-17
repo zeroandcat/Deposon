@@ -28,7 +28,7 @@ spec = (R/"docs/SPEC_GT2B.md").read_text(encoding="utf-8")
 check("SPEC 含判死线/单调判据/零 API 声明", "H_GT2B_dead" in spec and "单调" in spec and "零 LLM API" in spec)
 find = (R/"docs/Findings_GT2B.md").read_text(encoding="utf-8")
 check("Findings 披露选项构成假象（判据设计缺陷）", "假象" in find or "缺陷" in find)
-bad = subprocess.run(["grep","-rn","-E","sk-kimi-[A-Za-z0-9]|ark-589571[0-9]",
+bad = subprocess.run(["grep","-rn","-E","sk-kimi-[A-Za-z0-9]|ark-[REDACTED][0-9]",
     "docs/SPEC_GT2B.md","docs/Findings_GT2B.md","run_v20_gt2b.py","tests/test_v20_gt2b.py","results/deposon_v20_gt2b.json"],
     capture_output=True, cwd=R)
 check("GT-2B 新文件无密钥串", bad.returncode == 1)

@@ -21,7 +21,7 @@ find = (R/"docs/Findings_GT8B.md").read_text(encoding="utf-8")
 check("Findings 披露 fetch_failed 全细节", "ReadTimeout" in find and "fetch_failed" in find)
 check("Findings 披露自选择偏差局限", "自选择" in find or "选择偏差" in find)
 check("Findings 含预算台账 9 次", "9" in find and "预算" in find)
-bad = subprocess.run(["grep","-rn","-E","sk-kimi-[A-Za-z0-9]|ark-589571[0-9]",
+bad = subprocess.run(["grep","-rn","-E","sk-kimi-[A-Za-z0-9]|ark-[REDACTED][0-9]",
     "docs/SPEC_GT8B.md","docs/Findings_GT8B.md","run_v20_gt8b_fetch.py","run_v20_gt8b_ingest.py",
     "run_v20_gt8b_eval.py","tests/test_v20_gt8b.py","results/deposon_v20_gt8b.json","results/gt8b_cache"],
     capture_output=True, cwd=R)

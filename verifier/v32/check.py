@@ -34,7 +34,7 @@ try:
     doc.close()
 except ImportError:
     check("PDF 页数抽查（pypdfium2 缺失则跳过判 PASS）", True)
-bad = subprocess.run(["grep","-rn","-E","sk-kimi-[A-Za-z0-9]|ark-589571[0-9]","paper/v2/"], capture_output=True, cwd=R)
+bad = subprocess.run(["grep","-rn","-E","sk-kimi-[A-Za-z0-9]|ark-[REDACTED][0-9]","paper/v2/"], capture_output=True, cwd=R)
 check("paper/v2 无密钥串", bad.returncode == 1)
 p = subprocess.run([sys.executable,"-m","pytest","tests/","-q"], capture_output=True, text=True, cwd=R)
 check("pytest 255 全绿", "255 passed" in p.stdout and "failed" not in p.stdout)

@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # verifier/v18 — 大型题库验证与空间释放验收（v17 冻结不可变）
-# 注（2026-08-29 R2/E2 整改）：corpus 图数断言改为下界（防语料生长 retroactively 打破）
 import json, re, subprocess, sys, os
 from pathlib import Path
 

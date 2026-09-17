@@ -28,7 +28,7 @@ check("复核报告为有条件 PASS 且 Major 已闭合记录", "有条件 PASS
 check("修订记录含复核返工条目", "复核返工" in md)
 check("outline kill list 鉴定器项已闭合", "~~领域鉴定器 v0 新图复现~~" in ol)
 check("PoA 字段路径精确（GT4_price_of_anarchy.verdict）", "GT4_price_of_anarchy" in md)
-bad = subprocess.run(["grep","-rn","-E","sk-kimi-[A-Za-z0-9]|ark-589571[0-9]","paper/v2/"], capture_output=True, cwd=R)
+bad = subprocess.run(["grep","-rn","-E","sk-kimi-[A-Za-z0-9]|ark-[REDACTED][0-9]","paper/v2/"], capture_output=True, cwd=R)
 check("paper/v2 无密钥串", bad.returncode == 1)
 print(f"\nFAILS={len(FAILS)}")
 sys.exit(1 if FAILS else 0)
