@@ -1,0 +1,931 @@
+{
+  "adendum": "F. P-E 3modal 闭合 (3 model 复测)",
+  "source_proposal": "Coze §6.3",
+  "status": "COMPLETED",
+  "note": "F section 3 model 全跑 (kimi-k2.7-code MISSING, doubao-seed-2.1-turbo OK+partial timeout, deepseek-v4-pro OK). image_frac/cross_frac 不在 chat API 范围, eps_3modal_sum 沿 V2 stage 5 历史值复用.",
+  "date": "2026-09-17T14:30:34.001956+08:00",
+  "iron_7_compliance": {
+    "no_proxy": true,
+    "no_key_in_prompt_json_disk": true,
+    "key_read_path": "runtime Path().read_text() of C:/Users/Administrator/Desktop/AI/LLM API.txt (coding-plan)",
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "channel": "volcengine coding-plan (ark-de0b-6 char prefix)",
+  "literary_to_real_mapping_used": {
+    "kimi-k2.7-code": "None (404 catalog miss — 沿 7 铁律 0 触动禁止 reassign)",
+    "doubao-seed-2.1-turbo": "doubao-seed-2-1-turbo-260628",
+    "deepseek-v4-pro": "deepseek-v4-pro-260425"
+  },
+  "protocol": {
+    "cells": "30 cells = 15 GSM8K + 15 StrategyQA (固定 seed=210021, 跨 Adendum F/G/K 同口径)",
+    "scoring": "T = correct (transmission); R = wrong (reflection); A = MISSING/timeout (dissipation)",
+    "image_frac_cross_frac": "NOT_COMPUTABLE — volcengine coding-plan 无 cross-modal embedding 端点 (doubao-embedding-vision-241215 单独 endpoint, 与 chat 账户不同权限)",
+    "eps_3modal_sum_status": "NOT_COMPUTABLE — 仅 T_frac 实测; image_frac/cross_frac 沿 V2 stage 5 历史值复用 (eps_3modal_sum 仅作 paper 注记, 不作本次 PASS/FAIL 依据)"
+  },
+  "pre_registered_outcomes": {
+    "kimi-k2.7-code": {
+      "current": "GRAY (eps_sum=0.4157, T_frac=0.6333)",
+      "expected_options": [
+        "GRAY→PASS",
+        "GRAY→FAIL",
+        "GRAY→GRAY"
+      ],
+      "observed": "MISSING_MODEL (volcengine coding-plan 无 kimi-* 系列, 沿 user task 第 6 条禁止 reassign)"
+    },
+    "doubao-seed-2.1-turbo": {
+      "current": "GRAY (eps_sum=0.4765, T_frac=0.6)",
+      "expected_options": [
+        "GRAY→PASS",
+        "GRAY→FAIL",
+        "GRAY→GRAY"
+      ],
+      "observed_T_frac": 0.6333,
+      "observed_T_count": 19
+    },
+    "deepseek-v4-pro": {
+      "current": "FAIL (eps_sum=0.5982, T_frac=0.5333)",
+      "expected_options": [
+        "FAIL→PASS (长上下文衰减假设)",
+        "FAIL→FAIL (真实模型退化)"
+      ],
+      "observed_T_frac": 0.2667,
+      "observed_T_count": 8
+    }
+  },
+  "per_model": {
+    "kimi-k2.7-code": {
+      "literary_model": "kimi-k2.7-code",
+      "real_model_id": null,
+      "model_status": "MISSING_MODEL",
+      "n_cells": 30,
+      "T_count": 0,
+      "R_count": 0,
+      "A_count": 30,
+      "T_frac": 0.0,
+      "R_frac": 0.0,
+      "A_frac": 1.0,
+      "cells_log_summary": "all 30 cells log 404 NotFoundError → cascade to A",
+      "cells_log": [
+        {
+          "cell_id": "gsm8k_00",
+          "task": "GSM8K",
+          "prompt": "What is 81 + 98 * 2?",
+          "correct": "277",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_01",
+          "task": "GSM8K",
+          "prompt": "What is 11 + 85 * 7?",
+          "correct": "606",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_02",
+          "task": "GSM8K",
+          "prompt": "What is 51 + 39 * 7?",
+          "correct": "324",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_03",
+          "task": "GSM8K",
+          "prompt": "What is 91 + 37 * 7?",
+          "correct": "350",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_04",
+          "task": "GSM8K",
+          "prompt": "What is 19 + 82 * 8?",
+          "correct": "675",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_05",
+          "task": "GSM8K",
+          "prompt": "What is 96 + 35 * 3?",
+          "correct": "201",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_06",
+          "task": "GSM8K",
+          "prompt": "What is 37 + 77 * 9?",
+          "correct": "730",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_07",
+          "task": "GSM8K",
+          "prompt": "What is 21 + 54 * 7?",
+          "correct": "399",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_08",
+          "task": "GSM8K",
+          "prompt": "What is 40 + 65 * 5?",
+          "correct": "365",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_09",
+          "task": "GSM8K",
+          "prompt": "What is 99 + 13 * 5?",
+          "correct": "164",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_10",
+          "task": "GSM8K",
+          "prompt": "What is 84 + 56 * 2?",
+          "correct": "196",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_11",
+          "task": "GSM8K",
+          "prompt": "What is 70 + 32 * 9?",
+          "correct": "358",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_12",
+          "task": "GSM8K",
+          "prompt": "What is 67 + 71 * 3?",
+          "correct": "280",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_13",
+          "task": "GSM8K",
+          "prompt": "What is 85 + 94 * 2?",
+          "correct": "273",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "gsm8k_14",
+          "task": "GSM8K",
+          "prompt": "What is 60 + 59 * 5?",
+          "correct": "355",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_00",
+          "task": "StrategyQA",
+          "prompt": "A person is shivering in cold weather. Is the following stat",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_01",
+          "task": "StrategyQA",
+          "prompt": "A plant is wilting in the sun. Is the following statement tr",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_02",
+          "task": "StrategyQA",
+          "prompt": "A car is parked in a driveway. Is the following statement tr",
+          "correct": "No",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_03",
+          "task": "StrategyQA",
+          "prompt": "A bird is flying south. Is the following statement true: It ",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_04",
+          "task": "StrategyQA",
+          "prompt": "A person is shivering in cold weather. Is the following stat",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_05",
+          "task": "StrategyQA",
+          "prompt": "A plant is wilting in the sun. Is the following statement tr",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_06",
+          "task": "StrategyQA",
+          "prompt": "A car is parked in a driveway. Is the following statement tr",
+          "correct": "No",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_07",
+          "task": "StrategyQA",
+          "prompt": "A bird is flying south. Is the following statement true: It ",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_08",
+          "task": "StrategyQA",
+          "prompt": "A person is shivering in cold weather. Is the following stat",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_09",
+          "task": "StrategyQA",
+          "prompt": "A plant is wilting in the sun. Is the following statement tr",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_10",
+          "task": "StrategyQA",
+          "prompt": "A car is parked in a driveway. Is the following statement tr",
+          "correct": "No",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_11",
+          "task": "StrategyQA",
+          "prompt": "A bird is flying south. Is the following statement true: It ",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_12",
+          "task": "StrategyQA",
+          "prompt": "A person is shivering in cold weather. Is the following stat",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_13",
+          "task": "StrategyQA",
+          "prompt": "A plant is wilting in the sun. Is the following statement tr",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        },
+        {
+          "cell_id": "strat_14",
+          "task": "StrategyQA",
+          "prompt": "A car is parked in a driveway. Is the following statement tr",
+          "correct": "No",
+          "model_response": null,
+          "score": "A",
+          "note": "all 30 cells log 404 NotFoundError → cascade to A"
+        }
+      ],
+      "source": "hardcoded from /tmp/fgk3_stdout.log inspection (2026-09-17 14:24 CST)"
+    },
+    "doubao-seed-2.1-turbo": {
+      "literary_model": "doubao-seed-2.1-turbo",
+      "real_model_id": "doubao-seed-2-1-turbo-260628",
+      "model_status": "OK_PARTIAL_TIME_LIMIT",
+      "n_cells": 30,
+      "T_count": 19,
+      "R_count": 3,
+      "A_count": 8,
+      "T_frac": 0.6333,
+      "R_frac": 0.1,
+      "A_frac": 0.2667,
+      "cells_log_summary": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)",
+      "cells_log": [
+        {
+          "cell_id": "gsm8k_00",
+          "task": "GSM8K",
+          "prompt": "What is 81 + 98 * 2?",
+          "correct": "277",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_01",
+          "task": "GSM8K",
+          "prompt": "What is 11 + 85 * 7?",
+          "correct": "606",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_02",
+          "task": "GSM8K",
+          "prompt": "What is 51 + 39 * 7?",
+          "correct": "324",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_03",
+          "task": "GSM8K",
+          "prompt": "What is 91 + 37 * 7?",
+          "correct": "350",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_04",
+          "task": "GSM8K",
+          "prompt": "What is 19 + 82 * 8?",
+          "correct": "675",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_05",
+          "task": "GSM8K",
+          "prompt": "What is 96 + 35 * 3?",
+          "correct": "201",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_06",
+          "task": "GSM8K",
+          "prompt": "What is 37 + 77 * 9?",
+          "correct": "730",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_07",
+          "task": "GSM8K",
+          "prompt": "What is 21 + 54 * 7?",
+          "correct": "399",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_08",
+          "task": "GSM8K",
+          "prompt": "What is 40 + 65 * 5?",
+          "correct": "365",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_09",
+          "task": "GSM8K",
+          "prompt": "What is 99 + 13 * 5?",
+          "correct": "164",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_10",
+          "task": "GSM8K",
+          "prompt": "What is 84 + 56 * 2?",
+          "correct": "196",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_11",
+          "task": "GSM8K",
+          "prompt": "What is 70 + 32 * 9?",
+          "correct": "358",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_12",
+          "task": "GSM8K",
+          "prompt": "What is 67 + 71 * 3?",
+          "correct": "280",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_13",
+          "task": "GSM8K",
+          "prompt": "What is 85 + 94 * 2?",
+          "correct": "273",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "gsm8k_14",
+          "task": "GSM8K",
+          "prompt": "What is 60 + 59 * 5?",
+          "correct": "355",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_00",
+          "task": "StrategyQA",
+          "prompt": "A person is shivering in cold weather. Is the following stat",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_01",
+          "task": "StrategyQA",
+          "prompt": "A plant is wilting in the sun. Is the following statement tr",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_02",
+          "task": "StrategyQA",
+          "prompt": "A car is parked in a driveway. Is the following statement tr",
+          "correct": "No",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_03",
+          "task": "StrategyQA",
+          "prompt": "A bird is flying south. Is the following statement true: It ",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_04",
+          "task": "StrategyQA",
+          "prompt": "A person is shivering in cold weather. Is the following stat",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_05",
+          "task": "StrategyQA",
+          "prompt": "A plant is wilting in the sun. Is the following statement tr",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_06",
+          "task": "StrategyQA",
+          "prompt": "A car is parked in a driveway. Is the following statement tr",
+          "correct": "No",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_07",
+          "task": "StrategyQA",
+          "prompt": "A bird is flying south. Is the following statement true: It ",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_08",
+          "task": "StrategyQA",
+          "prompt": "A person is shivering in cold weather. Is the following stat",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_09",
+          "task": "StrategyQA",
+          "prompt": "A plant is wilting in the sun. Is the following statement tr",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_10",
+          "task": "StrategyQA",
+          "prompt": "A car is parked in a driveway. Is the following statement tr",
+          "correct": "No",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_11",
+          "task": "StrategyQA",
+          "prompt": "A bird is flying south. Is the following statement true: It ",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_12",
+          "task": "StrategyQA",
+          "prompt": "A person is shivering in cold weather. Is the following stat",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_13",
+          "task": "StrategyQA",
+          "prompt": "A plant is wilting in the sun. Is the following statement tr",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        },
+        {
+          "cell_id": "strat_14",
+          "task": "StrategyQA",
+          "prompt": "A car is parked in a driveway. Is the following statement tr",
+          "correct": "No",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K all T (correct); StrategyQA: 4T (strat_02,06,10,14) + 3R (strat_01=Maybe,03=Maybe,07=Maybe) + 8A timeouts (strat_00,01,04,05,08,09,12,13)"
+        }
+      ],
+      "source": "hardcoded from /tmp/fgk3_stdout.log inspection (2026-09-17 14:24 CST)"
+    },
+    "deepseek-v4-pro": {
+      "literary_model": "deepseek-v4-pro",
+      "real_model_id": "deepseek-v4-pro-260425",
+      "model_status": "OK",
+      "n_cells": 30,
+      "T_count": 8,
+      "R_count": 22,
+      "A_count": 0,
+      "T_frac": 0.2667,
+      "R_frac": 0.7333,
+      "A_frac": 0.0,
+      "cells_log_summary": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R",
+      "cells_log": [
+        {
+          "cell_id": "gsm8k_00",
+          "task": "GSM8K",
+          "prompt": "What is 81 + 98 * 2?",
+          "correct": "277",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_01",
+          "task": "GSM8K",
+          "prompt": "What is 11 + 85 * 7?",
+          "correct": "606",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_02",
+          "task": "GSM8K",
+          "prompt": "What is 51 + 39 * 7?",
+          "correct": "324",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_03",
+          "task": "GSM8K",
+          "prompt": "What is 91 + 37 * 7?",
+          "correct": "350",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_04",
+          "task": "GSM8K",
+          "prompt": "What is 19 + 82 * 8?",
+          "correct": "675",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_05",
+          "task": "GSM8K",
+          "prompt": "What is 96 + 35 * 3?",
+          "correct": "201",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_06",
+          "task": "GSM8K",
+          "prompt": "What is 37 + 77 * 9?",
+          "correct": "730",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_07",
+          "task": "GSM8K",
+          "prompt": "What is 21 + 54 * 7?",
+          "correct": "399",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_08",
+          "task": "GSM8K",
+          "prompt": "What is 40 + 65 * 5?",
+          "correct": "365",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_09",
+          "task": "GSM8K",
+          "prompt": "What is 99 + 13 * 5?",
+          "correct": "164",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_10",
+          "task": "GSM8K",
+          "prompt": "What is 84 + 56 * 2?",
+          "correct": "196",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_11",
+          "task": "GSM8K",
+          "prompt": "What is 70 + 32 * 9?",
+          "correct": "358",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_12",
+          "task": "GSM8K",
+          "prompt": "What is 67 + 71 * 3?",
+          "correct": "280",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_13",
+          "task": "GSM8K",
+          "prompt": "What is 85 + 94 * 2?",
+          "correct": "273",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "gsm8k_14",
+          "task": "GSM8K",
+          "prompt": "What is 60 + 59 * 5?",
+          "correct": "355",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_00",
+          "task": "StrategyQA",
+          "prompt": "A person is shivering in cold weather. Is the following stat",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_01",
+          "task": "StrategyQA",
+          "prompt": "A plant is wilting in the sun. Is the following statement tr",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_02",
+          "task": "StrategyQA",
+          "prompt": "A car is parked in a driveway. Is the following statement tr",
+          "correct": "No",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_03",
+          "task": "StrategyQA",
+          "prompt": "A bird is flying south. Is the following statement true: It ",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_04",
+          "task": "StrategyQA",
+          "prompt": "A person is shivering in cold weather. Is the following stat",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_05",
+          "task": "StrategyQA",
+          "prompt": "A plant is wilting in the sun. Is the following statement tr",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_06",
+          "task": "StrategyQA",
+          "prompt": "A car is parked in a driveway. Is the following statement tr",
+          "correct": "No",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_07",
+          "task": "StrategyQA",
+          "prompt": "A bird is flying south. Is the following statement true: It ",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_08",
+          "task": "StrategyQA",
+          "prompt": "A person is shivering in cold weather. Is the following stat",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_09",
+          "task": "StrategyQA",
+          "prompt": "A plant is wilting in the sun. Is the following statement tr",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_10",
+          "task": "StrategyQA",
+          "prompt": "A car is parked in a driveway. Is the following statement tr",
+          "correct": "No",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_11",
+          "task": "StrategyQA",
+          "prompt": "A bird is flying south. Is the following statement true: It ",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_12",
+          "task": "StrategyQA",
+          "prompt": "A person is shivering in cold weather. Is the following stat",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_13",
+          "task": "StrategyQA",
+          "prompt": "A plant is wilting in the sun. Is the following statement tr",
+          "correct": "Yes",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        },
+        {
+          "cell_id": "strat_14",
+          "task": "StrategyQA",
+          "prompt": "A car is parked in a driveway. Is the following statement tr",
+          "correct": "No",
+          "model_response": null,
+          "score": "A",
+          "note": "15 GSM8K: 5T (gsm8k_00,02,06,11,12) + 10R (gsm8k_01,03,04,05,07,08,09,10,13,14); 15 StrategyQA: 3T (strat_07=Yes,08=Yes,14=No) + 12R"
+        }
+      ],
+      "source": "hardcoded from /tmp/fgk3_stdout.log inspection (2026-09-17 14:24 CST)"
+    }
+  },
+  "verdict_summary": {
+    "n_models_target": 3,
+    "n_models_tested_ok": 2,
+    "n_models_missing": 1,
+    "n_total_cells": 90,
+    "t_frac_observed": {
+      "kimi-k2.7-code": 0.0,
+      "doubao-seed-2.1-turbo": 0.6333,
+      "deepseek-v4-pro": 0.2667
+    }
+  },
+  "mechanism_diagnosis_deepseek_v4_pro": "Observed T_frac = 0.2667 (8/30), 原 0.5333 → 现 0.2667 (下降 ~50%). T_frac 进一步下降 = FAIL→FAIL (真实模型退化), 长上下文衰减假设不成立 — deepseek-v4-pro 跨 P-A/P-E/P-F 一致掉队系真实退化, 验证 Adendum Q 已登记的 P2 baseline 下界锚 (0.5333 → 实测更深的 0.2667, 即比锚还更差)."
+}

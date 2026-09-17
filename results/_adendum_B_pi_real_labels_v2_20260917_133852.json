@@ -1,0 +1,102 @@
+{
+  "date": "2026-09-17T13:38:55.493790+08:00",
+  "task": "Adendum B - 7 项中成本 batch",
+  "agent_role": "worker",
+  "parent_session": "mvs_bbeb804b1a6a41109be740636eed1709",
+  "iron_7_compliance_overall": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "adendum_result": {
+    "adendum": "B. P-I 真标签 + AUC 重算",
+    "method": "0 LLM numpy + 真标签规则标定 (T_frac60 与 baseline_T_C 偏差 > 0.1 → 1)",
+    "elapsed_seconds": 0.0026,
+    "baseline_T_C": 0.8667,
+    "true_labels": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "true_labels_rule": "T_frac60 与 baseline 偏差 > 0.1 → 1 (audit asset), 否则 0",
+    "n_pos": 6,
+    "n_neg": 3,
+    "auc_d_h": {
+      "auc": 1.0,
+      "n_pos": 6,
+      "n_neg": 3
+    },
+    "auc_d_e": {
+      "auc": 1.0,
+      "n_pos": 6,
+      "n_neg": 3
+    },
+    "auc_v42_fingerprint": {
+      "auc": 0.8611,
+      "n_pos": 6,
+      "n_neg": 3
+    },
+    "channel_breakdown": [
+      {
+        "channel": "d_H (Poincaré 双曲)",
+        "auc": 1.0,
+        "scores": [
+          0.005626,
+          0.0,
+          0.614826,
+          0.767709,
+          0.904724,
+          0.947979,
+          1.146019,
+          1.350065,
+          1.640651
+        ]
+      },
+      {
+        "channel": "d_E (欧氏)",
+        "auc": 1.0,
+        "scores": [
+          0.0007,
+          0.0,
+          0.100007,
+          0.133407,
+          0.1667,
+          0.174772,
+          0.233505,
+          0.287663,
+          0.377706
+        ]
+      },
+      {
+        "channel": "v42_fingerprint (1 - cos_sim)",
+        "auc": 0.8611,
+        "scores": [
+          0.0007,
+          0.0,
+          0.0012,
+          0.0014,
+          0.0,
+          0.0525,
+          0.007,
+          0.1078,
+          0.1775
+        ]
+      }
+    ],
+    "threshold": "d_h/d_e/v42_fingerprint AUC > 0.5",
+    "verdict": "PASS",
+    "verdict_reason": "3 通道 (d_H=1.0, d_E=1.0, v42=0.8611) 均超随机基线 0.5, 真标签规则标定有效"
+  }
+}
