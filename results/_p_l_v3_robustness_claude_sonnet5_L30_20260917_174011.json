@@ -1,0 +1,978 @@
+{
+  "L": 30,
+  "primary_backbone": "claude_sonnet5",
+  "chain": [
+    "claude_sonnet5",
+    "gpt56sol",
+    "gemini_37flash"
+  ],
+  "vendor_label": "anthropic",
+  "model": "claude-sonnet-5",
+  "api_vendor": "TeamoRouter (proxy 127.0.0.1:1018)",
+  "base_url": "https://api.teamorouter.com/v1",
+  "task": "P-L v3 Phase 2 L=30 档 (PRIMARY=claude_sonnet5, chain fallback, 30s × 3 retries)",
+  "role": "P-L v3 Phase 2 闭源 2: Anthropic frontier (claude-sonnet-5 via TeamoRouter)",
+  "cells_total": 30,
+  "cells_pass": 22,
+  "cells_missing": 0,
+  "accuracy": 0.7333,
+  "cells_breakdown": {
+    "gsm8k": 15,
+    "strategyqa": 15
+  },
+  "answered_by_distribution": {
+    "claude_sonnet5": 29,
+    "gpt56sol": 1
+  },
+  "spearman_vs_baseline": 0.452267,
+  "spearman_p_value": 0.012099,
+  "spearman_definition": "rank correlation between backbone per-cell score (1/0) and baseline (doubao-seed-code-preview-251028) per-cell score",
+  "elapsed_s": 516.7,
+  "n_total_attempts_across_cells": 33,
+  "n_downgrade_detected_in_any_cell": 0,
+  "sanity_check_chain": {
+    "claude_sonnet5": {
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "content": "2\n\n**2**",
+      "latency_ms": 4140.0,
+      "sanity_pass": true,
+      "downgrade_detected": false
+    }
+  },
+  "downgrade_fraud_check": {
+    "enabled": true,
+    "method": "response.model == request.model? (per cell, in chain)",
+    "downgrade_detected_in_any_cell": false,
+    "request_model": "claude-sonnet-5",
+    "response_models_observed": [
+      "claude-sonnet-5",
+      "gpt-5.6-sol"
+    ],
+    "all_cells_passed": true
+  },
+  "v3_improvements": {
+    "hard_timeout_per_cell_s": 30,
+    "first_attempt_grace_s": 20,
+    "retries_per_backbone": 3,
+    "backoff_schedule_s": "1, 2",
+    "max_tokens_cap": 512,
+    "warmup_call_per_primary": true,
+    "fallback_chain": [
+      "claude_sonnet5",
+      "gpt56sol",
+      "gemini_37flash"
+    ],
+    "per_cell_incremental_save": true,
+    "note": "v3 相对 v1 改进: 30s timeout + 3 retries + backoff + max_tokens=512 cap + warmup + chain fallback + per-cell incremental save"
+  },
+  "proxy_config": {
+    "HTTPS_PROXY": "http://127.0.0.1:1018",
+    "HTTP_PROXY": "http://127.0.0.1:1018",
+    "note": "port 1018 only; ALL_PROXY intentionally unset"
+  },
+  "per_cell_detail": [
+    {
+      "cell_id": "gsm8k_1",
+      "task": "gsm8k",
+      "gold_answer": 18.0,
+      "llm_extracted": 18.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 9847.5,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me work backwards from the 5 vacuum cleaners Melanie has left.  Let's say Melanie started with x vacuum cleaners.  *",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 9847.5,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_2",
+      "task": "gsm8k",
+      "gold_answer": 5.0,
+      "llm_extracted": 5.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 9003.3,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me work through this step by step.  **Step 1: Calculate the distance traveled from 1 to 4 PM** - Time traveled: 1 PM",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 9003.3,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_3",
+      "task": "gsm8k",
+      "gold_answer": 40.0,
+      "llm_extracted": 40.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 4847.6,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me work through this step by step.  **Step 1: Count the adopted kittens** The Doubtfire sisters adopted 7 kittens fr",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 4847.6,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_4",
+      "task": "gsm8k",
+      "gold_answer": 1430.0,
+      "llm_extracted": 430.0,
+      "is_correct": false,
+      "baseline_correct": true,
+      "latency_ms": 7965.2,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me work through this step by step.  **Step 1: Calculate the total cost of making the brooch** - Material cost: $500 ",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 7965.2,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_5",
+      "task": "gsm8k",
+      "gold_answer": 36.0,
+      "llm_extracted": 36.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 8345.8,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me break this down step by step.  **Step 1: Calculate time spent in one session** - TV watching: 2 hours - Reading: ",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 8345.8,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_6",
+      "task": "gsm8k",
+      "gold_answer": 8000.0,
+      "llm_extracted": 8000.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 9684.1,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me work through this step by step.  Let's define variables: - Let H = number of copies Harald sold - Let M = number ",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 9684.1,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_7",
+      "task": "gsm8k",
+      "gold_answer": 36.0,
+      "llm_extracted": 36.0,
+      "is_correct": true,
+      "baseline_correct": false,
+      "latency_ms": 11033.4,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me work through this step by step.  **Given information:** - Lee currently runs the 400-meter hurdles in 38 seconds ",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 11033.4,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_8",
+      "task": "gsm8k",
+      "gold_answer": 6.0,
+      "llm_extracted": 6.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 9442.1,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "I'll work through this step by step.  **Given information:** - Jamal's phone can hold 6 times more photographs than Brit",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 9442.1,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_9",
+      "task": "gsm8k",
+      "gold_answer": 40.0,
+      "llm_extracted": 40.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 7964.5,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me work through this step by step.  First, I need to figure out how many video games Brian has at the time of compar",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 7964.5,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_10",
+      "task": "gsm8k",
+      "gold_answer": 140.0,
+      "llm_extracted": 140.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 7748.5,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me work through this step by step.  **Step 1:** Find out how many hours Jordan plays video games per day. - Jordan p",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 7748.5,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_11",
+      "task": "gsm8k",
+      "gold_answer": 2125.0,
+      "llm_extracted": 2125.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 16455.7,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "**Step by step:**  1. First set: 500 pieces. 2. Second set: \"3 times more than the 500 piece one\" → 3 × 500 = 1,500 piec",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 16455.7,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_12",
+      "task": "gsm8k",
+      "gold_answer": 32.0,
+      "llm_extracted": 32.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 7982.2,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me work through this step by step.  **Anakin's catch:** - Starfish: 10 - Sea horses: 6 - Clownfish: 3 - Total: 10 + ",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 7982.2,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_13",
+      "task": "gsm8k",
+      "gold_answer": 50.0,
+      "llm_extracted": 50.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 8293.5,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me work through this step by step.  **Given information:** - 5 red cars - 3 action figures - 1 doll - 1 red car cost",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 8293.5,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_14",
+      "task": "gsm8k",
+      "gold_answer": 122.0,
+      "llm_extracted": 122.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 7662.1,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me work through this step by step.  **Given information:** - Bo has 40 crabs - Monic has 4 fewer crabs than Bo - Ran",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 7662.1,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_15",
+      "task": "gsm8k",
+      "gold_answer": 34.0,
+      "llm_extracted": 34.0,
+      "is_correct": true,
+      "baseline_correct": false,
+      "latency_ms": 7666.1,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "**Step 1 — Tickets:** 3 tickets cost $20.25.  **Step 2 — Food:** $4.50 less than the tickets → $20.25 − $4.50 = $15.75. ",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 7666.1,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_1",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": "Yes",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 11388.7,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me think through this step by step.  Lord Voldemort is the main antagonist in the Harry Potter series. I need to con",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 11388.7,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_2",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "No",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 9625.9,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me think through this step by step.  1. **What is injera?**    Injera is a spongy, sourdough flatbread that is a sta",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 9625.9,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_3",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": "Yes",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 13727.8,
+      "http_status": 200,
+      "request_model": "gpt-5.6-sol",
+      "response_model": "gpt-5.6-sol",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "1. **Technological mismatch:** The Battle of Actium in 31 BCE involved wooden, oar-powered galleys using ramming, boardi",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 3,
+          "ms_total": 111182.5,
+          "ok": false,
+          "response_model": null,
+          "downgrade": false,
+          "error": "all 3 retries failed: TimeoutError: The read operation timed out"
+        },
+        {
+          "bb": "gpt56sol",
+          "attempts": 1,
+          "ms_total": 13727.8,
+          "ok": true,
+          "response_model": "gpt-5.6-sol",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gpt56sol",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_4",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": null,
+      "is_correct": false,
+      "baseline_correct": true,
+      "latency_ms": 25490.9,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "**Breaking it down:**  1. **\"Retail\" isn't one job.** It's a whole category: cashier, stockroom, floor associate, visual",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 25490.9,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_5",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": "No",
+      "is_correct": false,
+      "baseline_correct": true,
+      "latency_ms": 11570.5,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me think through this step by step.  First, I need to identify which John Gall we're talking about, as there are sev",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 11570.5,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_6",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "No",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 31049.3,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "**Step-by-step reasoning:**  1. **What \"unpopular\" means here.** A name is unpopular if few people have it and few paren",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 31049.3,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_7",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "Yes",
+      "is_correct": false,
+      "baseline_correct": false,
+      "latency_ms": 9091.4,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "I'll address this straightforward biological question.  Step by step:  1. Natural reproduction requires both sperm (from",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 9091.4,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_8",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "No",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 10291.9,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me think through this step by step.  **Martin Luther** (1483-1546): - German theologian and religious reformer - Ori",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 10291.9,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_9",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": "No",
+      "is_correct": false,
+      "baseline_correct": false,
+      "latency_ms": 17184.3,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me break down this question step by step:  1. **\"licensed child\"** - In the US, you must typically be at least 16 ye",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 17184.3,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_10",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "Yes",
+      "is_correct": false,
+      "baseline_correct": false,
+      "latency_ms": 14555.2,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me analyze the similarities and differences between Darth Vader and Severus Snape systematically.  **Character Arc S",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 14555.2,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_11",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "No",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 10406.2,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me think through this step by step.  1. **When were the 2008 Summer Olympics?**    - The 2008 Summer Olympics were h",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 10406.2,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_12",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "No",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 10757.5,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me think through this step by step.  **What is tonsillitis?** Tonsillitis is an inflammation of the tonsils, which a",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 10757.5,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_13",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": "Yes",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 9966.9,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me think through this step by step.  First, I need to find out how many wives Tony Bennett had: - Tony Bennett was m",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 9966.9,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_14",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": "No",
+      "is_correct": false,
+      "baseline_correct": false,
+      "latency_ms": 8319.8,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let me think through this step by step.  First, I need to identify what Javier Sotomayor's record is: - Javier Sotomayor",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 8319.8,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_15",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": null,
+      "is_correct": false,
+      "baseline_correct": true,
+      "latency_ms": 14451.7,
+      "http_status": 200,
+      "request_model": "claude-sonnet-5",
+      "response_model": "claude-sonnet-5",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "**Step by step:**  1. **What Snowdon is** — Snowdon (Yr Wyddfa) is the highest peak in Wales at 1,085 m / 3,560 ft. Its ",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "claude_sonnet5",
+          "attempts": 1,
+          "ms_total": 14451.7,
+          "ok": true,
+          "response_model": "claude-sonnet-5",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "claude_sonnet5",
+      "marked_missing": false
+    }
+  ],
+  "iron_7_compliance": {
+    "no_llm_rehash": true,
+    "no_extra_proxy_setup_beyond_1018": true,
+    "teamorouter_only": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_5_artifact_json_touch": true,
+    "no_schema_v1_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "_meta": {
+    "timestamp": "2026-09-17T17:49:05.939903+08:00",
+    "runner_version": "v3",
+    "baseline_json_sha256_12": "5149f5cafcf9",
+    "phys60_json_sha256_12": "c659695aa23c",
+    "phase": "P-L v3 Phase 2",
+    "subphase": "closed-source (TeamoRouter) retry v3",
+    "sanity_chain_active": [
+      "claude_sonnet5"
+    ],
+    "incremental_path": "D:\\私人资料\\deposon-repo\\results\\_p_l_v3_robustness_claude_sonnet5_L30_20260917_174011_incremental.json"
+  }
+}

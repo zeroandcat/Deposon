@@ -1,0 +1,70 @@
+{
+  "audit_meta": {
+    "delegate_source": "results/_letter_to_trae_code_2026_09_17_final.md (Mavis 18:18 CST)",
+    "executor": "Trae code (read-only co-auditor)",
+    "completed_at": "2026-09-17 20:00 CST",
+    "discipline": "0 LLM recompute / 7 iron rules 0 touch / 18 frozen + 5 P-G + 5 artifacts + schema v1 + 4 plugin spec + verifier/mavis/.builtin/scripts/ all untouched",
+    "incremental_walkthrough_scope": "264 files added/changed since 2026-09-16 18:00 baseline (results 102, root 56 P-L v3 runners, _worker_temp 42, plugins 5 new verify/schema, by_model rebuilt, FTFB review 3)"
+  },
+  "audit_1_d7_letter": {
+    "verdict": "PASS_WITH_3_NUMERIC_FIXES",
+    "four_anchor_points_complete": true,
+    "fixes": [
+      "Adendum distribution 13+2+1=16 -> 11 PASS + 2 GRAY + 1 UNVERIFIED + 2 PARTIAL + 1 FAIL_NO_MODEL = 17",
+      "P-L Phase 1 four-size table missing (L30=0.8000/L45=0.5111/L60=0.7111-ref/L100=0.4600; R2=0.7447 is 3-point fit n=3 p=0.337)",
+      "'P2 strong robustness' -> 'P2 PASS (beta CI 3/3 overlap, 3/5 backbone complete, beta is proxy slope)'"
+    ]
+  },
+  "audit_2_kimi_push_batch3": {
+    "verdict": "PASS_WITH_1_BLOCKER",
+    "candidates": 84,
+    "placeholder_hits": 0,
+    "disease_check": {
+      "p_j_convergence_constant": "FIXED (Adendum M, var>0)",
+      "p_m_detection_zero_vs_pass": "RECURRED-BLOCKER (_adendum_C_pm_attack_surface_v2_133852+133726: detection_rate 0.0 x8 with verdict PASS, self-violates threshold >=0.5)",
+      "p_c_r2_identical": "FIXED (Adendum D, unique=7)",
+      "p_o_closure": "26/26 PASS (Adendum I 22/22)",
+      "p_f_v01_vs_v0": "CONSISTENT (V0 pure prereg placeholder; note latest D_fix2 = FAIL_EXPOSURE_PARTIAL, push narrative must not claim P-F all-PASS)"
+    }
+  },
+  "audit_3_paper_8ch_outline": {
+    "verdict": "PASS_WITH_3_MUST_FIX",
+    "must_fix": [
+      "S3: 87.0% has NO on-disk basis -> real value 85.0% (51/60, all artifacts consistent)",
+      "S5: 13+2+1=16 misses 1 -> 11+2+1+2+1=17 (F=PARTIAL_COMPLETED, G=FAIL_EXPOSURE_PARTIAL not PASS)",
+      "S4: 'strong robustness' overstated -> 3/5 backbone, beta is cell-level proxy slope not size-scaling exponent"
+    ],
+    "secondary": "S3 add P-C_two_phase FAIL_H0 negative-control note (dual independent no-power-law channels)"
+  },
+  "audit_4_artifacts_5": {
+    "verdict": "SHA_5_OF_5_PASS__SCHEMA_CONSISTENCY_FAIL",
+    "sha12_recomputed": {
+      "KIMI": "efe05ad775de", "GLM_1": "268ab1239a8a", "GLM_2": "39732a92b5c9",
+      "coze": "fee04170aa73", "minimax": "9e1ccbdceacc"
+    },
+    "placeholder": 0, "hardcoded_contradiction": 0,
+    "inconsistency": "top-level keys 11/15/5/10/3 mutually distinct; timestamp fields 4 naming schemes; content-hash naming 4 schemes",
+    "stale_refs": "GLM_1.glm_artifacts_ref -> nonexistent products/glm_artifact_v; KIMI blind-test artifact (1f8612344592) not in by_model"
+  },
+  "audit_5_18frozen_schema": {
+    "verdict": "22_OF_22_ANCHORS_PASS",
+    "recomputed_all": true,
+    "archive_fallback": "verifier/ moved to D:/私人资料/_archive_deposon_2026_09_17/ (schema path_fallback closes; pd_v0.jsonl exists there sha12=5042869bdf85)",
+    "placeholder_anchor_layer": {
+      "KT_ABC1_json": "real-value anchor set (15+9 boss, 0 placeholder; 3 drifted + 5+9 pointing to dead .mavis/scripts/)",
+      "P_F_PREDECISION_V0": "all placeholder by design (preregistration)",
+      "P_G_5": "seed placeholders sha256('P_G_V0_PLACEHOLDER_{id}_2026_09_15')[:12], 0/5 file-real (by design, spec declared)"
+    },
+    "open_gray": "anchor[0]=7d6d3d39fad8 != pd_v0.jsonl file hash; derivation chain needs P-D V0.3 SPEC closure"
+  },
+  "cross_audit_summary": {
+    "asset_layer": "CONSISTENT-INTACT (18 frozen / 5 artifacts / schema v1 / P-L v3 data)",
+    "narrative_layer": "3 numeric drifts + 1 contradiction recurrence, ALL fixable with on-disk real values",
+    "anchor_hookback": {
+      "KT-A1": "conservation chain intact, narrative drifts do not touch anchors",
+      "KT-B1": "75-attack testimony unaffected; P-M recurrence is Adendum C new product, does not pollute B1 chain",
+      "KT-C1": "naming restored, P-O 26/26 closed, attack_pc_* axis clean",
+      "KT-D0": "3 numeric fixes REQUIRED before D7 push (85.0% / 17-item distribution / P2 downgrade)"
+    }
+  }
+}
