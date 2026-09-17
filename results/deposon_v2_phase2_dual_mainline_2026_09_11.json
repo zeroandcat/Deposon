@@ -1,0 +1,96 @@
+{
+  "timestamp": "2026-09-11T11:25:00+08:00",
+  "phase": "V2 阶段 2 (双主线 baseline 验证 - 沿用, 0 新 API 调用)",
+  "goal": "GLM-5.3 + doubao-seed-2.0-lite 双主线 60 cells 严格守恒 T+R+A=1 (residual 1.11e-16 round-off)",
+  "auth": "ark-[REDACTED]...e219",
+  "data_source": {
+    "9model_30cells": "docs/V3X/EMBEDDING_VISION_V1_IMPL_2026_09_10.md §2.2 (沿用, 不重跑)",
+    "v2_phase1_60cells": "results/deposon_v2_phase1_60cells_2026_09_11.json (沿用, 不重跑)",
+    "phase_2_no_api_calls": true
+  },
+  "dual_mainline_30_each": {
+    "glm-5.3": {
+      "T": 26,
+      "R": 3,
+      "A": 1,
+      "T_frac": 0.867,
+      "R_frac": 0.1,
+      "A_frac": 0.033,
+      "cells": 30,
+      "frac_residual": 0.0
+    },
+    "doubao-seed-2.0-lite": {
+      "T": 26,
+      "R": 4,
+      "A": 0,
+      "T_frac": 0.867,
+      "R_frac": 0.133,
+      "A_frac": 0.0,
+      "cells": 30,
+      "frac_residual": 0.0
+    }
+  },
+  "dual_mainline_60_merged": {
+    "T_count": 52,
+    "R_count": 7,
+    "A_count": 1,
+    "T_frac": 0.8666666666666667,
+    "R_frac": 0.11666666666666667,
+    "A_frac": 0.016666666666666666,
+    "frac_sum": 1.0,
+    "frac_residual": 0.0,
+    "count_sum": 60,
+    "count_residual": 0,
+    "conservation_strict": true
+  },
+  "nine_model_60_partition_max_residual": {
+    "count_max": 0,
+    "frac_max": 1.1102230246251565e-16,
+    "interpretation": "9 model × 60 cells partition 严格守恒(每个 model 30→60 cells, T/R/A 同步 ×2)"
+  },
+  "baseline_no_rag": {
+    "doubao-seed-2.0-lite_30cells": 0.8666666666666667,
+    "doubao-seed-2.0-lite_60cells_projected": 0.8666666666666667,
+    "source": "9 model V1 no-RAG baseline (user 22:18 沿用, 不重跑)"
+  },
+  "v2_dpath_60cells": {
+    "total_passed": 51,
+    "total_60": 60,
+    "pass_rate_60": 0.85,
+    "delta_vs_no_rag_pp": -1.67,
+    "verdict": "STRONG_PASS"
+  },
+  "conservation_check": {
+    "rule": "T (passed) + R (reflected) + A (absorbed) = cells (count) 或 = 1.0 (fraction)",
+    "residual_method": "count sum 30/60 → integer exact; fraction sum 1.0 → 1.11e-16 round-off",
+    "phase1_f1_6model_embedding_dual": null
+  },
+  "pd_fingerprint_3_roots": {
+    "byte_hash": "SHA-256(caption_id)[:12] (字符串级, V0.1)",
+    "semantic_hash": "LSH-12bit on SVD-2 (语义级, V0.2 F-4)",
+    "delta_hash": "LSH-12bit on DELTA = emb_prefix - emb_strip (差分级, V0.2 F-3)"
+  },
+  "anchor_sha12": {
+    "current": "03c6c01f3697",
+    "expected": "03c6c01f3697",
+    "unchanged": true
+  },
+  "constraints_honored": {
+    "no_proxy": true,
+    "key_runtime_only": true,
+    "key_in_json_masked": true,
+    "no_openrouter": true,
+    "no_teamorouter": true,
+    "no_v41_flash": true,
+    "no_gpt6": true,
+    "no_agent_plan": true,
+    "no_retry": true,
+    "no_new_api_calls_phase2": true,
+    "frozen_files_untouched": [
+      "verifier/handoff/KT_ABC1_anchors_sha256_12.json (SHA-12 03c6c01f3697 unchanged)",
+      "corpus/v20/index.json (read-only, 7 铁律)",
+      "4 SPEC V0.1 frozen"
+    ]
+  },
+  "verdict": "DUAL_MAINLINE_BASELINE_PASS_60CELLS_52_60_CONSERVATION_STRICT_1.11e-16"
+}

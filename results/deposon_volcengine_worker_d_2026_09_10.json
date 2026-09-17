@@ -1,0 +1,613 @@
+{
+  "worker_id": "D",
+  "timestamp": "2026-09-10T21:25:19+08:00",
+  "gateway": "Huoshan Coding Plan",
+  "base_url": "https://ark.cn-beijing.volces.com/api/coding/v3",
+  "auth": "ark-[REDACTED]... (key loaded from env at runtime; literal key never written to disk)",
+  "max_tokens": 512,
+  "timeout_s": 15,
+  "temperature": 0.0,
+  "note": "Worker D re-test: glm-5.3-flash + deepseek-v4-pro 30 cells each, filling 0/30 gap from 9model partial run",
+  "models": [
+    {
+      "model": "glm-5.3-flash",
+      "gsm8k_passed": 13,
+      "gsm8k_attempted": 15,
+      "strategyqa_passed": 8,
+      "strategyqa_attempted": 15,
+      "total_passed": 21,
+      "pass_rate": 0.7,
+      "avg_ms": 3239,
+      "cells": [
+        {
+          "cell": "gsm8k/01",
+          "ok": true,
+          "http": 200,
+          "ms": 4534,
+          "pred": "18",
+          "gold": 18.0,
+          "passed": true,
+          "content": "# Solving Step by Step\n\nLet me work backwards from the 5 vacuum cleaners left.\n\n**Step 1: Work backwards from the orange house.**\nMelanie sold half of what was "
+        },
+        {
+          "cell": "gsm8k/02",
+          "ok": true,
+          "http": 200,
+          "ms": 2135,
+          "pred": "5",
+          "gold": 5.0,
+          "passed": true,
+          "content": "**Step 1: Find the distance traveled.**\n\nTom sails from 1 PM to 4 PM, which is 3 hours, at a speed of 10 miles per hour.\n\nDistance = Speed × Time = 10 × 3 = 30 "
+        },
+        {
+          "cell": "gsm8k/03",
+          "ok": true,
+          "http": 200,
+          "ms": 2339,
+          "pred": "40",
+          "gold": 40.0,
+          "passed": true,
+          "content": "**Step 1:** Find the number of kittens Patchy had.\nPatchy had thrice the number of adopted kittens: 3 × 7 = 21 kittens\n\n**Step 2:** Find the number of kittens T"
+        },
+        {
+          "cell": "gsm8k/04",
+          "ok": true,
+          "http": 200,
+          "ms": 2270,
+          "pred": "1430",
+          "gold": 1430.0,
+          "passed": true,
+          "content": "**Step 1:** Find the cost of the material and construction.\n- Material: $500\n- Jeweler: $800\n- Total so far: $500 + $800 = $1,300\n\n**Step 2:** Calculate the ins"
+        },
+        {
+          "cell": "gsm8k/05",
+          "ok": true,
+          "http": 200,
+          "ms": 3580,
+          "pred": "36",
+          "gold": 36.0,
+          "passed": true,
+          "content": "# Step-by-Step Solution\n\n**Step 1: Find the reading time.**\nJim reads for half as long as he watches TV:\n- TV time = 2 hours\n- Reading time = 2 ÷ 2 = 1 hour\n\n**"
+        },
+        {
+          "cell": "gsm8k/06",
+          "ok": true,
+          "http": 200,
+          "ms": 2494,
+          "pred": "8000",
+          "gold": 8000.0,
+          "passed": true,
+          "content": "# Solution\n\n**Step 1: Define variables**\n\nLet H = the number of copies Harald sold.\n\nSince Marilyn sold 10 times as many copies as Harald:\n- Marilyn's sales = 1"
+        },
+        {
+          "cell": "gsm8k/07",
+          "ok": true,
+          "http": 200,
+          "ms": 3982,
+          "pred": "36",
+          "gold": 36.0,
+          "passed": true,
+          "content": "# Step-by-Step Solution\n\n**Step 1: Find Gerald's original time.**\n\nLee runs the 400-meter hurdles in 38 seconds, and Lee is 2 seconds *faster* than Gerald's ori"
+        },
+        {
+          "cell": "gsm8k/08",
+          "ok": true,
+          "http": 200,
+          "ms": 3664,
+          "pred": "6",
+          "gold": 6.0,
+          "passed": true,
+          "content": "# Step-by-Step Solution\n\n**Step 1: Find how many photographs Brittany's phone can hold.**\n\nJamal's phone holds 6 times more photographs than Brittany's phone, a"
+        },
+        {
+          "cell": "gsm8k/09",
+          "ok": true,
+          "http": 200,
+          "ms": 2752,
+          "pred": "40",
+          "gold": 40.0,
+          "passed": true,
+          "content": "# Step-by-Step Solution\n\n**Step 1: Find how many video games Brian has after losing some.**\n\nBrian started with 20 video games but lost 5:\n$$20 - 5 = 15 \\text{ "
+        },
+        {
+          "cell": "gsm8k/10",
+          "ok": false,
+          "http": null,
+          "ms": 15063,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "gsm8k/11",
+          "ok": true,
+          "http": 200,
+          "ms": 2791,
+          "pred": "2125",
+          "gold": 2125.0,
+          "passed": true,
+          "content": "# Solving Step by Step\n\n**Step 1: Find the pieces in the first set.**\nThe first lego set has **500 pieces**.\n\n**Step 2: Find the pieces in the second set.**\nThe"
+        },
+        {
+          "cell": "gsm8k/12",
+          "ok": false,
+          "http": null,
+          "ms": 15184,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "gsm8k/13",
+          "ok": true,
+          "http": 200,
+          "ms": 3819,
+          "pred": "50",
+          "gold": 50.0,
+          "passed": true,
+          "content": "# Solving Step by Step\n\n## Given Information\n- 5 red cars\n- 3 action figures\n- 1 doll\n- Each action figure costs **$5**\n- Each red car costs **$4**\n- The doll c"
+        },
+        {
+          "cell": "gsm8k/14",
+          "ok": true,
+          "http": 200,
+          "ms": 2085,
+          "pred": "122",
+          "gold": 122.0,
+          "passed": true,
+          "content": "# Solution\n\n**Step 1: Find Bo's crabs**\nBo has 40 crabs.\n\n**Step 2: Find Monic's crabs**\nMonic has 4 fewer crabs than Bo:\n$$40 - 4 = 36 \\text{ crabs}$$\n\n**Step "
+        },
+        {
+          "cell": "gsm8k/15",
+          "ok": true,
+          "http": 200,
+          "ms": 3059,
+          "pred": "34",
+          "gold": 34.0,
+          "passed": true,
+          "content": "# Step-by-Step Solution\n\n**Step 1: Find the cost of tickets.**\nThe 3 tickets cost $20.25.\n\n**Step 2: Find the cost of food.**\nThey spent $4.50 less on food than"
+        },
+        {
+          "cell": "stq/01",
+          "ok": false,
+          "http": null,
+          "ms": 15577,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "stq/02",
+          "ok": true,
+          "http": 200,
+          "ms": 2215,
+          "pred": "No",
+          "gold": "No",
+          "passed": true,
+          "content": "No\n\nInjera is an Ethiopian sourdough flatbread, and Taco Bell serves Mexican-inspired fast food, so it does not offer any dishes made with injera."
+        },
+        {
+          "cell": "stq/03",
+          "ok": true,
+          "http": 200,
+          "ms": 3912,
+          "pred": "Yes",
+          "gold": "Yes",
+          "passed": true,
+          "content": "Yes\n\nAny modern warship's guns, missiles, and sensors would allow even a single Brazilian vessel to annihilate the entire ancient fleet of wooden galleys from b"
+        },
+        {
+          "cell": "stq/04",
+          "ok": true,
+          "http": 200,
+          "ms": 2921,
+          "pred": "No",
+          "gold": "No",
+          "passed": true,
+          "content": "No\n\nRetail requires specific skills and traits—such as strong customer service abilities, patience, physical stamina, and comfort with fast-paced environments—t"
+        },
+        {
+          "cell": "stq/05",
+          "ok": true,
+          "http": 200,
+          "ms": 3268,
+          "pred": null,
+          "gold": "Yes",
+          "passed": false,
+          "content": ""
+        },
+        {
+          "cell": "stq/06",
+          "ok": true,
+          "http": 200,
+          "ms": 2396,
+          "pred": "No",
+          "gold": "No",
+          "passed": true,
+          "content": "No\n\nMichael has been one of the most popular boys' names in the United States for decades, ranking as the #1 name from the mid-1950s through the late 1990s and "
+        },
+        {
+          "cell": "stq/07",
+          "ok": true,
+          "http": 200,
+          "ms": 4163,
+          "pred": "Yes",
+          "gold": "No",
+          "passed": false,
+          "content": "Yes\n\nBiological reproduction requires both an egg and sperm, so two men cannot conceive a child together without the involvement of donor eggs and surrogacy or "
+        },
+        {
+          "cell": "stq/08",
+          "ok": true,
+          "http": 200,
+          "ms": 3315,
+          "pred": "No",
+          "gold": "No",
+          "passed": true,
+          "content": "No\n\nMartin Luther founded Lutheranism during the Protestant Reformation, while Martin Luther King Jr. was a Baptist minister, making them members of different P"
+        },
+        {
+          "cell": "stq/09",
+          "ok": true,
+          "http": 200,
+          "ms": 4191,
+          "pred": null,
+          "gold": "Yes",
+          "passed": false,
+          "content": ""
+        },
+        {
+          "cell": "stq/10",
+          "ok": true,
+          "http": 200,
+          "ms": 3996,
+          "pred": null,
+          "gold": "No",
+          "passed": false,
+          "content": ""
+        },
+        {
+          "cell": "stq/11",
+          "ok": true,
+          "http": 200,
+          "ms": 1744,
+          "pred": "No",
+          "gold": "No",
+          "passed": true,
+          "content": "No\n\nBoris Yeltsin died in April 2007, more than a year before the 2008 Summer Olympics were held in Beijing."
+        },
+        {
+          "cell": "stq/12",
+          "ok": false,
+          "http": null,
+          "ms": 15045,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "stq/13",
+          "ok": true,
+          "http": 200,
+          "ms": 4216,
+          "pred": "Yes",
+          "gold": "Yes",
+          "passed": true,
+          "content": "Yes\n\nTony Bennett had four children (D'Andrea, Daegal, Joanna, and Antonia) and was married three times (Patricia Beech, Sandra Grant, and Susan Crow)."
+        },
+        {
+          "cell": "stq/14",
+          "ok": true,
+          "http": 200,
+          "ms": 4432,
+          "pred": null,
+          "gold": "Yes",
+          "passed": false,
+          "content": ""
+        },
+        {
+          "cell": "stq/15",
+          "ok": true,
+          "http": 200,
+          "ms": 3942,
+          "pred": "Yes",
+          "gold": "Yes",
+          "passed": true,
+          "content": "Yes\n\nTenzing Norgay was one of the first climbers to summit Mount Everest (8,848m), so Snowdon (1,085m), a modest Welsh peak, would be trivially easy for him."
+        }
+      ],
+      "cells_attempted": 30
+    },
+    {
+      "model": "deepseek-v4-pro",
+      "gsm8k_passed": 7,
+      "gsm8k_attempted": 15,
+      "strategyqa_passed": 9,
+      "strategyqa_attempted": 15,
+      "total_passed": 16,
+      "pass_rate": 0.5333,
+      "avg_ms": 5592,
+      "cells": [
+        {
+          "cell": "gsm8k/01",
+          "ok": false,
+          "http": null,
+          "ms": 8191,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "gsm8k/02",
+          "ok": true,
+          "http": 200,
+          "ms": 8282,
+          "pred": "5",
+          "gold": 5.0,
+          "passed": true,
+          "content": "Tom sails from 1 PM to 4 PM, which is:\n\n4 - 1 = 3 hours\n\nAt 10 miles per hour, the distance traveled is:\n\n10 × 3 = 30 miles\n\nOn the return trip, he travels at 6"
+        },
+        {
+          "cell": "gsm8k/03",
+          "ok": true,
+          "http": 200,
+          "ms": 8207,
+          "pred": "40",
+          "gold": 40.0,
+          "passed": true,
+          "content": "The family has 7 adopted kittens.\n\nPatchy had thrice the number of adopted kittens:  \n\\(3 \\times 7 = 21\\)\n\nTrixie had 12 kittens.\n\nTotal kittens:  \n\\(7 + 21 + 1"
+        },
+        {
+          "cell": "gsm8k/04",
+          "ok": true,
+          "http": 200,
+          "ms": 6247,
+          "pred": "1430",
+          "gold": 1430.0,
+          "passed": true,
+          "content": "First, add the cost of the material and the jeweler’s work:\n\n\\[\n500 + 800 = 1300\n\\]\n\nNext, calculate 10% of that amount for insurance:\n\n\\[\n0.10 \\times 1300 = 13"
+        },
+        {
+          "cell": "gsm8k/05",
+          "ok": true,
+          "http": 200,
+          "ms": 4994,
+          "pred": "36",
+          "gold": 36.0,
+          "passed": true,
+          "content": "Jim watches TV for 2 hours each time.\n\nHe reads for half as long as he watches TV:\n\n\\[\n2 \\div 2 = 1 \\text{ hour reading}\n\\]\n\nTotal per day:\n\n\\[\n2 + 1 = 3 \\text{"
+        },
+        {
+          "cell": "gsm8k/06",
+          "ok": true,
+          "http": 200,
+          "ms": 4214,
+          "pred": "8000",
+          "gold": 8000.0,
+          "passed": true,
+          "content": "Let Harald's copies be \\( H \\).\n\nMarilyn sold 10 times as many, so Marilyn sold \\( 10H \\).\n\nCombined:\n\\[\nH + 10H = 88,000\n\\]\n\\[\n11H = 88,000\n\\]\n\\[\nH = \\frac{88,"
+        },
+        {
+          "cell": "gsm8k/07",
+          "ok": false,
+          "http": null,
+          "ms": 8050,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "gsm8k/08",
+          "ok": false,
+          "http": null,
+          "ms": 8109,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "gsm8k/09",
+          "ok": false,
+          "http": null,
+          "ms": 9153,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "gsm8k/10",
+          "ok": true,
+          "http": 200,
+          "ms": 4518,
+          "pred": "140",
+          "gold": 140.0,
+          "passed": true,
+          "content": "Jordan plays video games for 2 hours each day.\n\nIn one week, that is:\n\n2 hours/day × 7 days = 14 hours\n\nHe earns $10 per hour, so:\n\n14 hours × $10/hour = $140\n\n"
+        },
+        {
+          "cell": "gsm8k/11",
+          "ok": false,
+          "http": null,
+          "ms": 8345,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "gsm8k/12",
+          "ok": false,
+          "http": null,
+          "ms": 8052,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "gsm8k/13",
+          "ok": false,
+          "http": null,
+          "ms": 8128,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "gsm8k/14",
+          "ok": true,
+          "http": 200,
+          "ms": 3816,
+          "pred": "122",
+          "gold": 122.0,
+          "passed": true,
+          "content": "Bo has 40 crabs.\n\nMonic has 4 fewer crabs than Bo:  \n40 − 4 = 36 crabs\n\nRani has 10 more crabs than Monic:  \n36 + 10 = 46 crabs\n\nTotal crabs:  \n40 + 36 + 46 = 1"
+        },
+        {
+          "cell": "gsm8k/15",
+          "ok": false,
+          "http": null,
+          "ms": 8176,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "stq/01",
+          "ok": true,
+          "http": 200,
+          "ms": 5027,
+          "pred": "Yes",
+          "gold": "Yes",
+          "passed": true,
+          "content": "Yes\nLord Voldemort was associated with Igor Karkaroff, a former Death Eater who became Headmaster of Durmstrang."
+        },
+        {
+          "cell": "stq/02",
+          "ok": true,
+          "http": 200,
+          "ms": 2120,
+          "pred": "No",
+          "gold": "No",
+          "passed": true,
+          "content": "No\nTaco Bell's menu focuses on Mexican-inspired items and does not include injera or Ethiopian dishes."
+        },
+        {
+          "cell": "stq/03",
+          "ok": false,
+          "http": null,
+          "ms": 8062,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "stq/04",
+          "ok": true,
+          "http": 200,
+          "ms": 5374,
+          "pred": "No",
+          "gold": "No",
+          "passed": true,
+          "content": "No\nRetail often requires strong people skills, patience, and adaptability that not everyone possesses or enjoys."
+        },
+        {
+          "cell": "stq/05",
+          "ok": true,
+          "http": 200,
+          "ms": 6636,
+          "pred": null,
+          "gold": "Yes",
+          "passed": false,
+          "content": ""
+        },
+        {
+          "cell": "stq/06",
+          "ok": true,
+          "http": 200,
+          "ms": 2949,
+          "pred": "No",
+          "gold": "No",
+          "passed": true,
+          "content": "No\nMichael has historically been one of the most popular male names in the United States."
+        },
+        {
+          "cell": "stq/07",
+          "ok": false,
+          "http": null,
+          "ms": 8047,
+          "err": "The read operation timed out",
+          "passed": false
+        },
+        {
+          "cell": "stq/08",
+          "ok": true,
+          "http": 200,
+          "ms": 5593,
+          "pred": "No",
+          "gold": "No",
+          "passed": true,
+          "content": "No\nMartin Luther was a Protestant Reformer associated with Lutheranism, while Martin Luther King Jr. was a Baptist minister."
+        },
+        {
+          "cell": "stq/09",
+          "ok": true,
+          "http": 200,
+          "ms": 7510,
+          "pred": null,
+          "gold": "Yes",
+          "passed": false,
+          "content": ""
+        },
+        {
+          "cell": "stq/10",
+          "ok": true,
+          "http": 200,
+          "ms": 11695,
+          "pred": "Yes",
+          "gold": "No",
+          "passed": false,
+          "content": "Yes\nBoth are brooding, dark-[REDACTED] figures whose apparent villainy masks a tragic love-driven secret and eventual redemptive sacrifice."
+        },
+        {
+          "cell": "stq/11",
+          "ok": true,
+          "http": 200,
+          "ms": 3581,
+          "pred": "No",
+          "gold": "No",
+          "passed": true,
+          "content": "No\nBoris Yeltsin died in April 2007, more than a year before the 2008 Summer Olympics took place."
+        },
+        {
+          "cell": "stq/12",
+          "ok": true,
+          "http": 200,
+          "ms": 4283,
+          "pred": "No",
+          "gold": "No",
+          "passed": true,
+          "content": "No\nFish do not have tonsils, so they cannot develop tonsillitis."
+        },
+        {
+          "cell": "stq/13",
+          "ok": true,
+          "http": 200,
+          "ms": 4523,
+          "pred": "Yes",
+          "gold": "Yes",
+          "passed": true,
+          "content": "Yes\nTony Bennett had four children and was married three times."
+        },
+        {
+          "cell": "stq/14",
+          "ok": true,
+          "http": 200,
+          "ms": 6245,
+          "pred": "No",
+          "gold": "Yes",
+          "passed": false,
+          "content": "No.\nA Bengal cat's jumping ability is far below Javier Sotomayor's 2.45-meter high jump world record."
+        },
+        {
+          "cell": "stq/15",
+          "ok": true,
+          "http": 200,
+          "ms": 6042,
+          "pred": "Yes",
+          "gold": "Yes",
+          "passed": true,
+          "content": "Yes\nAs one of the first climbers of Mount Everest, Tenzing Norgay would find the relatively small and easy Snowdon mountain extremely easy."
+        }
+      ],
+      "cells_attempted": 30
+    }
+  ],
+  "elapsed_s": 194,
+  "elapsed_s_total": 339
+}
