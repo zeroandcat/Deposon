@@ -3,12 +3,10 @@
 #   → results/deposon_v20_photonics.json
 # 实验（兑现 v1.4 roadmap「PCM/MZI/ECM → 光子芯片」前瞻）：
 #   P1 等价性：抽象散射 t/r/a vs 硬件级 ring+MZI+PCM 实现（守恒 + 排序一致）；
-#   P2 损耗预算与可行性：22 图逐图真实最长路径损耗 dB 与可探测性（NEP 判据），
+#   P2 损耗预算与可行性：22 图逐图最大路径损耗 dB 与可探测性（NEP 判据），
 #      给出"当前集成工艺可制造的图规模"判定；
 #   P3 拓扑优化：naive/bus/hybrid 三拓扑组件数与总插损对比，推荐配置；
 #   P4 退火=相位斜坡：非理想相位噪声敏感性（保真度曲线）。
-# 修正史（R1 深探实锤）：NEP 单位 bug（1 pW=1e-9 mW，曾误 ×1e-3 下限严 10^6 倍）
-# + max_hops=10 截断 + 索引贪心 → 真最长路径 DP + 单位修正，14/22→18/22、≈27 跳。
 # no LLM API calls issued。
 import json
 import os
@@ -41,7 +39,7 @@ def p1_equivalence(graphs):
 
 
 def p2_feasibility(graphs):
-    """逐图：真实最长路径（DAG DP）损耗 + 可探测性（残余功率 vs NEP 判据）。"""
+    """逐图：最长可行路径损耗 + 可探测性（残余功率 vs NEP×√1Hz 的 10× 判据）。"""
     per_graph = {}
     for gid, g in graphs.items():
         N = g["N"]

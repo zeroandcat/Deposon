@@ -11,7 +11,8 @@ from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from deposon_agents_v1_4 import (KimiLLMBackend, DeposonAgentSystem,
-                                 BenchmarkEvaluator, DeposonState)
+                                 BenchmarkEvaluator, DeposonState,
+                                 resolve_high_couple_config)
 
 OUT_DIR = "/mnt/agents/output"
 GSM8K = os.path.join(OUT_DIR, "gsm8k_test.jsonl")
@@ -24,7 +25,8 @@ VARIANTS = {
     'v1_blocking': {'mode': 'v1_blocking', 'use_deposon': True},
     'v2_tunneling': {'mode': 'v2_tunneling', 'use_deposon': True},
     'unified': {'mode': 'unified', 'use_deposon': True},
-    'high_couple': {'mode': 'v1_blocking', 'use_deposon': True},
+    # v1.9 E9.3: 默认真修复; 旧别名仅在 DEPOSON_V14_HIGH_COUPLE_ALIAS=1 下复现
+    'high_couple': resolve_high_couple_config(),
 }
 
 

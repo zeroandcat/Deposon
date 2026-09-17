@@ -9,8 +9,6 @@
 #     {"domain": "physics_concepts", "attempt": 1,
 #      "prompt_sha256": "<build_familyL_prompts 对应哈希>",
 #      "model": "<生成模型名>", "response_text": "<LLM 原始响应>"}
-# 修正（R2/E3/N5，2026-08-29）：ingest_domain 成功写图后立即 build_index——
-# 消除「写图」与「建索引」可分离的事务窗口（曾致 41 分钟静默漏 2 域）。
 import hashlib
 import json
 import os
@@ -32,8 +30,7 @@ def cache_path_for(domain: str, cache_dir: str = CACHE_DIR) -> str:
 
 def ingest_domain(domain: str, cache_dir: str = CACHE_DIR,
                   corpus_dir: str = CORPUS_DIR) -> dict:
-    """单域摄入：缓存 → 校验 → corpus/v20/L_{domain}.json。返回图记录。
-    成功写图后立即重建 index（R2/E3 防复发契约：不存在「图在目录、不在册」半态）。"""
+    """单域摄入：缓存 → 校验 → corpus/v20/L_{domain}.json。返回图记录。"""
     if domain not in FAMILY_L_DOMAINS:
         raise ValueError(f"unknown family L domain: {domain}")
     path = cache_path_for(domain, cache_dir)

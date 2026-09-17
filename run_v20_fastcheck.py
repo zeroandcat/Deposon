@@ -97,7 +97,7 @@ def main():
     t_s = time.time(); run_slow(); sec_slow = time.time() - t_s
     t_f = time.time(); run_fast(); sec_fast = time.time() - t_f
 
-    # ---- F3 缩放（合成 N∈{100,150} S6 同型 + 既有图）----
+    # ---- F3 缩放（合成 N∈{20,45,60,100,150} S6 同型）----
     from mindmap_corpus_v20 import _struct_S6, _assign_labels, _canonical_sha256
     scale_graphs = []
     for Nbig in (100, 150):

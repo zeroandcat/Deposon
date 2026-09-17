@@ -129,8 +129,7 @@ def cot_coverage(bank):
                 if letter in "ABCD":
                     oi = ord(letter) - 65
                     if 0 <= oi < len(ob["options"]):
-                        cot_by_edge[(ob["domain"], tuple(ob["gold_edge"]))] = \
-                            ob["options"][oi]  # 映射为选中**文本**（选项序不同库不同）
+                        cot_by_edge[(ob["domain"], tuple(ob["gold_edge"]))] =                             ob["options"][oi]  # 映射为选中**文本**（选项序不同库不同）
     per_domain, total = {}, 0
     for q in bank:
         chosen = cot_by_edge.get((q["domain"], tuple(q["gold_edge"])))

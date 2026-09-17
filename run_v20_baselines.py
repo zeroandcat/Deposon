@@ -9,7 +9,6 @@
 #   E 族：first_option（位置偏置平凡基线，仅题库用——本脚本不报）
 # 大 BOSS 测试：任何基线在任一图 named 击败 field_mean → 结果 JSON 头条字段
 #   boss_alert=True 且逐图列出，Findings 必须披露（注册表收编纪律 #2）。
-# v2.0.1：BOSS 统计门槛（margin ≥3 条金边），tiebreak 抽签事件降级保留。
 # no LLM API calls issued。
 import json
 import os
@@ -91,6 +90,8 @@ def katz_row(adj_obs, u, cand, beta=KATZ_BETA, K=KATZ_K):
     out = np.full(n, -np.inf)
     out[cand] = s[cand]
     return out
+
+
 
 
 def node2vec_shallow_row(adj_obs, u, cand, seed, budget=None):

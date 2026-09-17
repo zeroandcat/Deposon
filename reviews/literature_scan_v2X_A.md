@@ -77,7 +77,7 @@
    分类器与被分类者的 Stackelberg 博弈；incentive-aware ML 的标志性文献。
 4. **Optimal Auctions Through Deep Learning (RegretNet)** — P. Dütting, Z. Feng, H. Narasimhan, D. C. Parkes, S. S. Ravindranath, 2019, ICML, pp. 1706–1715；期刊版 *Journal of the ACM* 71(1):1–53, 2024. [经典]
    用神经网络做自动化机制设计（近似激励兼容）——「可微经济学」路线，说明机制约束可以嵌入训练目标（与我们把守恒约束嵌入重构目标同构）。
-5. **Incomplete Contracting and AI Alignment** — D. Hadfield-Menell, G. Hadfield, 2019, AAAI/ACM AIES, pp. 417–422.
+5. **Incomplete Contracting and AI Alignment** — D. Hadfield-Menell, G. K. Hadfield, 2019, AAAI/ACM AIES, pp. 417–422.
    把 AI 对齐表述为人-AI 之间的不完备契约问题；为「算法内承诺/契约装置」提供概念框架。
 6. **Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing** — I. D. Raji 等, 2020, ACM FAT*, pp. 33–44. [经典]
    内部算法审计的端到端框架；守恒账作为「可审计内部工件（artifact）」挂接此脉络。DOI: 10.1145/3351095.3372873

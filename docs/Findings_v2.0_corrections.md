@@ -11,7 +11,7 @@
 - **旧**：Findings_v2.0.md「H_A_dead：未触发（H-A1 显著；反转仅 1 张 <3）」。
 - **实锤**：冻结结果 JSON `H_A_dead.triggered=true`（20 图 3 反转、22 图 4 反转：
   L_historical/L_physics/L_project_management/S2_n45）；「16/20」与
-  15+/3−/2= 的文数不符；verifier 全版本从未检查 kill_lines 字段。
+  15+/3−/2= 文数不符；verifier 全版本从未检查 kill_lines 字段。
 - **新**：按预登记析取规则（不显著 **或** ≥3 反转），**H-A（vs random）判死**。
   收缩后存活：① field_mean > degree 跨口径稳健（Holm 过；R1 代表 10 张
   p=0.0078）；② 高 hub 结构图的局部优势（S6 族 0.471）；③ 反转图全部位于
