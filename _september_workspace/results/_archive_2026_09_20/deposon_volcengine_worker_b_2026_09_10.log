@@ -1,0 +1,44 @@
+[21:25:53] KEY_OK enc=gb18030 truncated=ark-de0b484e-0889-46...e219 proxy_cleared
+[21:25:53] BENCHMARK_LOADED gsm8k=100 stq=99
+[21:25:53] CELLS_BUILT total=30 (gsm8k=15 stq=15)
+[21:25:53] [INIT] JSON stub written
+[21:25:53] === MODEL doubao-seed-2.1-turbo START ===
+[21:26:13]   SANITY status=-1 ms=20380.1 text='' pass=False
+[21:26:13]   [SANITY FAIL] skip 30 cells for doubao-seed-2.1-turbo
+[21:26:13] === MODEL deepseek-v4-flash START ===
+[21:26:15]   SANITY status=200 ms=1291.0 text='1+1 = 2' pass=True
+[21:26:19]   CELL gsm8k_1 status=200 ms=4644.9 pred=18.0 gold=18.0 correct=True
+[21:26:22]   CELL gsm8k_2 status=200 ms=2285.7 pred=5.0 gold=5.0 correct=True
+[21:26:24]   CELL gsm8k_3 status=200 ms=2666.3 pred=40.0 gold=40.0 correct=True
+[21:26:25]   CELL gsm8k_4 status=200 ms=810.3 pred=1430.0 gold=1430.0 correct=True
+[21:26:27]   CELL gsm8k_5 status=200 ms=2159.7 pred=36.0 gold=36.0 correct=True
+[21:26:29]   CELL gsm8k_6 status=200 ms=1717.4 pred=8000.0 gold=8000.0 correct=True
+[21:26:38]   CELL gsm8k_7 status=200 ms=8622.3 pred=36.36 gold=36.0 correct=False
+[21:26:45]   CELL gsm8k_8 status=200 ms=7330.2 pred=6.0 gold=6.0 correct=True
+[21:26:47]   CELL gsm8k_9 status=200 ms=1939.4 pred=40.0 gold=40.0 correct=True
+[21:26:49]   CELL gsm8k_10 status=200 ms=2356.6 pred=140.0 gold=140.0 correct=True
+[21:27:19]   CELL gsm8k_11 status=-1 ms=30040.9 pred=None gold=2125.0 correct=False
+[21:27:28]   CELL gsm8k_12 status=200 ms=9219.8 pred=17.0 gold=32.0 correct=False
+[21:27:33]   CELL gsm8k_13 status=200 ms=4741.3 pred=54.0 gold=50.0 correct=False
+[21:27:36]   CELL gsm8k_14 status=200 ms=2770.9 pred=122.0 gold=122.0 correct=True
+[21:27:40]   CELL gsm8k_15 status=200 ms=3543.6 pred=34.0 gold=34.0 correct=True
+[21:27:43]   CELL stq_1 status=200 ms=3059.6 pred='Yes' gold='Yes' correct=True
+[21:28:14]   CELL stq_2 status=-1 ms=31249.8 pred=None gold='No' correct=False
+[21:28:17]   CELL stq_3 status=200 ms=2756.4 pred='Yes' gold='Yes' correct=True
+[21:28:22]   CELL stq_4 status=200 ms=5008.5 pred='No' gold='No' correct=True
+[21:28:29]   CELL stq_5 status=200 ms=7249.6 pred='Yes' gold='Yes' correct=True
+[21:28:31]   CELL stq_6 status=200 ms=2299.6 pred='No' gold='No' correct=True
+[21:28:33]   CELL stq_7 status=200 ms=1645.0 pred='Yes' gold='No' correct=False
+[21:28:35]   CELL stq_8 status=200 ms=1878.0 pred='No' gold='No' correct=True
+[21:29:05]   CELL stq_9 status=-1 ms=30182.7 pred=None gold='Yes' correct=False
+[21:29:07]   CELL stq_10 status=200 ms=1910.4 pred='Yes' gold='No' correct=False
+[21:29:08]   CELL stq_11 status=200 ms=1449.2 pred='No' gold='No' correct=True
+[21:29:10]   CELL stq_12 status=200 ms=2038.6 pred='No' gold='No' correct=True
+[21:29:16]   CELL stq_13 status=200 ms=6081.0 pred='Yes' gold='Yes' correct=True
+[21:29:25]   CELL stq_14 status=200 ms=8450.6 pred='Yes' gold='Yes' correct=True
+[21:29:27]   CELL stq_15 status=200 ms=2105.5 pred='Yes' gold='Yes' correct=True
+[21:29:27]   MODEL deepseek-v4-flash DONE gsm=11/15 stq=11/15 avg_ms=6407.1 elapsed_s=193.5
+[21:29:27]   [WROTE] partial JSON after deepseek-v4-flash
+[21:29:27] [DONE] overall_elapsed_s=213.9
+[21:29:27]   doubao-seed-2.1-turbo: 0/0 pass_rate=0.0 avg_ms=0 status=SANITY_FAIL
+[21:29:27]   deepseek-v4-flash: 22/30 pass_rate=0.7333 avg_ms=6407.1 status=COMPLETE

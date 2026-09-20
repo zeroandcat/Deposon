@@ -1,0 +1,24 @@
+[17:16:40] === P-L v3 Phase 2 closed-source runner v2 | TS=20260917_171640 ===
+[17:16:40]   teamo_key[:18] = sk-teamo-bc291a64c... (mask only; real key never persisted)
+[17:16:40]   env HTTPS_PROXY = http://127.0.0.1:1018
+[17:16:40]   env HTTP_PROXY = http://127.0.0.1:1018
+[17:16:40] === Loading 30 baseline cells (15 GSM8K + 15 StrategyQA) ===
+[17:16:40]   Loaded 30 cells: gsm8k=15, sqa=15
+[17:16:40] === Loading L=60 frozen per_model (9 model × 60 cells) ===
+[17:16:40]   L=60 per_model T_frac60 count = 9, mean = 0.7111
+[17:16:40] === Sanity check per backbone (1+1=2) ===
+[17:16:40]   [sanity] try gpt56sol (gpt-5.6-sol)...
+[17:16:43]   [sanity] gpt56sol PASS (3067ms, rm=gpt-5.6-sol)
+[17:16:43]   [sanity] Primary backbone for this run = gpt56sol (gpt-5.6-sol)
+[17:16:43] 
+========== backbone (PRIMARY) = gpt56sol (gpt-5.6-sol) ==========
+[17:16:43]   chain = [gpt56sol] + ['claude_sonnet5', 'gemini_37flash']
+[17:16:43]   [warmup] priming gpt56sol...
+[17:16:47]   [warmup] gpt56sol OK (3771ms, rm=gpt-5.6-sol)
+[17:16:47]   [warmup] primary OK; chain fallback only invoked on per-cell fail
+[17:16:47] === Running 30 cells; chain = ['gpt56sol', 'claude_sonnet5', 'gemini_37flash'] ===
+[17:17:23]   [progress] 5/30 pass=4 missing=0 elapsed=36s
+[17:18:10]   [progress] 10/30 pass=8 missing=0 elapsed=84s
+[17:18:47]   [progress] 15/30 pass=13 missing=0 elapsed=120s
+[17:19:43]   [progress] 20/30 pass=18 missing=0 elapsed=177s
+[17:20:59]   [progress] 25/30 pass=21 missing=0 elapsed=252s

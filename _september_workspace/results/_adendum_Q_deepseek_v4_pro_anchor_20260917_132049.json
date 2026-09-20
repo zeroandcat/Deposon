@@ -1,0 +1,115 @@
+{
+  "date": "2026-09-17T13:20:50.868159+08:00",
+  "task": "Adendum Phase 3 - 6 项 0 LLM 批处理",
+  "agent_role": "worker",
+  "parent_session": "mvs_bbeb804b1a6a41109be740636eed1709",
+  "iron_7_compliance_overall": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "adendum_result": {
+    "adendum": "Q. deepseek-v4-pro 作 P2 baseline 锚",
+    "source_proposal": "Coze §6.2",
+    "elapsed_seconds": 0.002037525177001953,
+    "method": "零成本, 仅记录; 不动 frozen; 把 deepseek-v4-pro (跨命题一致掉队) 标为 P2 baseline 下界锚",
+    "data_source": {
+      "d7_verdict_path": "results\\d7_5anchor_60cells_9model_verdict_2026_09_18.json",
+      "v3_60cells_path": "results\\deposon_v3_physical_opt_60cells_2026_09_11.json",
+      "pg_v01_path": "results\\deposon_pg_v01_9m60c_2026_09_15.json"
+    },
+    "anchor_observation": {
+      "model": "deepseek-v4-pro",
+      "p_a_verdict": "GRAY",
+      "p_e_verdict": "FAIL",
+      "p_g_ratio_H_over_E": 4.4396,
+      "p_f_implied": "0+0+1 (deepseek-v4-pro 仅 anchor 不进 PARTIAL_PASS)",
+      "cross_proposition_consistent_lag": true
+    },
+    "anchor_table_9_models": [
+      {
+        "model": "doubao-seed-2.0-lite",
+        "p_a_verdict": "PASS",
+        "p_e_verdict": "PASS",
+        "p_g_ratio_H_over_E": 8.0316,
+        "is_deepseek_v4_pro_anchor": false
+      },
+      {
+        "model": "glm-5.3",
+        "p_a_verdict": "PASS",
+        "p_e_verdict": "PASS",
+        "p_g_ratio_H_over_E": 0.0,
+        "is_deepseek_v4_pro_anchor": false
+      },
+      {
+        "model": "deepseek-v4-flash",
+        "p_a_verdict": "PASS",
+        "p_e_verdict": "PASS",
+        "p_g_ratio_H_over_E": 6.183,
+        "is_deepseek_v4_pro_anchor": false
+      },
+      {
+        "model": "doubao-seed-evolving",
+        "p_a_verdict": "PASS",
+        "p_e_verdict": "PASS",
+        "p_g_ratio_H_over_E": 5.785,
+        "is_deepseek_v4_pro_anchor": false
+      },
+      {
+        "model": "minimax-m3",
+        "p_a_verdict": "PASS",
+        "p_e_verdict": "PASS",
+        "p_g_ratio_H_over_E": 5.4442,
+        "is_deepseek_v4_pro_anchor": false
+      },
+      {
+        "model": "glm-5.3-flash",
+        "p_a_verdict": "PASS",
+        "p_e_verdict": "PASS",
+        "p_g_ratio_H_over_E": 5.483,
+        "is_deepseek_v4_pro_anchor": false
+      },
+      {
+        "model": "kimi-k2.7-code",
+        "p_a_verdict": "PASS",
+        "p_e_verdict": "GRAY",
+        "p_g_ratio_H_over_E": 4.9356,
+        "is_deepseek_v4_pro_anchor": false
+      },
+      {
+        "model": "doubao-seed-2.1-turbo",
+        "p_a_verdict": "PASS",
+        "p_e_verdict": "GRAY",
+        "p_g_ratio_H_over_E": 4.765,
+        "is_deepseek_v4_pro_anchor": false
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "p_a_verdict": "GRAY",
+        "p_e_verdict": "FAIL",
+        "p_g_ratio_H_over_E": 4.4396,
+        "is_deepseek_v4_pro_anchor": true
+      }
+    ],
+    "use_case": "P-L v3 新 backbone (Nemotron 5 / Qwen3) 的 T_frac60 / cos_sim / D_fix2 与 deepseek-v4-pro 锚点对齐比较, 判断新 backbone 是否落在该锚点邻域之外; 若 > 锚点邻域 → 实现稳健性命题 PASS",
+    "verdict": "PASS",
+    "verdict_reason": "deepseek-v4-pro 跨命题一致掉队, 天然 P2 baseline 下界锚; 0 新增成本, 直接服务 P2 实现稳健性",
+    "iron_7_compliance": {
+      "no_llm": true,
+      "no_proxy": true,
+      "no_gateway": true,
+      "no_key_in_prompt_json_disk": true,
+      "no_18_frozen_touch": true,
+      "no_p_g_v0_touch": true,
+      "no_p_g_v01_touch": true,
+      "no_plugin_spec_touch": true,
+      "no_verifier_mavis_builtin_scripts_touch": true
+    }
+  }
+}

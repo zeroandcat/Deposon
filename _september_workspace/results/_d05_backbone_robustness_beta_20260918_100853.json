@@ -1,0 +1,52 @@
+{
+  "task": "D+0.5 β bootstrap + cross-backbone pairwise (n_boot=1000, 95% CI)",
+  "TS": "20260918_100853",
+  "timestamp": "2026-09-18T10:14:58.764519+08:00",
+  "method": "β = slope of per-cell score (1/0) vs cell_index, P2 §4 bootstrap 测法",
+  "iron_compliance": {
+    "no_llm_rehash": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "beta_per_backbone": {
+    "deepseek_v4": {
+      "lo": -0.02900612649137577,
+      "med": -0.012256967032214204,
+      "hi": 0.002678742858122753,
+      "n_cells": 30,
+      "accuracy": 0.8
+    },
+    "nemotron_3.5": {
+      "lo": -0.02966817931927689,
+      "med": -0.011739800086845779,
+      "hi": 0.009679743371894797,
+      "n_cells": 30,
+      "accuracy": 0.4333
+    }
+  },
+  "pairwise_overlap": {
+    "deepseek_v4_vs_nemotron_3.5": {
+      "a_CI": [
+        -0.02900612649137577,
+        0.002678742858122753
+      ],
+      "b_CI": [
+        -0.02966817931927689,
+        0.009679743371894797
+      ],
+      "overlap": true
+    }
+  },
+  "qwen3_32b_status": "FAIL_UNREACHABLE (HTTP 400, no model ID) — β N/A",
+  "_meta": {
+    "deepseek_v4_main_sha12": "0a933d7c8d7a",
+    "qwen3_32b_main_sha12": "427b18da8114",
+    "nemotron_main_sha12": "1b1b6ad67c39"
+  }
+}

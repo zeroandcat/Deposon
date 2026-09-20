@@ -1,0 +1,81 @@
+[Step 1] key loaded, len=57, prefix=sk-teamo-356...
+[Step 1.1] GET /v1/models ...
+  status=200 models_count=40 gpt6_astra=True
+    - claude-fable-5
+    - claude-fable-5-1
+    - claude-haiku-4-5
+    - claude-haiku-4-5-20251001
+    - claude-opus-4-6
+    - claude-opus-4-7
+    - claude-opus-4-8
+    - claude-opus-5
+[Step 1.2] sanity chat "What is 1+1?" ...
+  status=200 ms=1902 text='1 + 1 = 2.'
+
+[Step 2] loading datasets ...
+  GSM8K total: 100; StrategyQA total: 99
+  [GSM8K 01] Melanie is a door-to-door saleswoman. She sold a third ... gold=18.0
+    -> pred='18' ok=True ms=15309
+  [GSM8K 02] Tom's ship can travel at 10 miles per hour.  He is sail... gold=5.0
+    -> pred='5' ok=True ms=9747
+  [GSM8K 03] The Doubtfire sisters are driving home with 7 kittens a... gold=40.0
+    -> pred='40' ok=True ms=14667
+  [GSM8K 04] Janet buys a brooch for her daughter.  She pays $500 fo... gold=1430.0
+    -> pred='1430' ok=True ms=3686
+  [GSM8K 05] Jim spends 2 hours watching TV and then decides to go t... gold=36.0
+    -> pred='36' ok=True ms=19226
+  [GSM8K 06] Marilyn's first record sold 10 times as many copies as ... gold=8000.0
+    -> pred=None ok=False ms=120097
+  [GSM8K 07] Lee used to be able to run the 400-meter hurdles two se... gold=36.0
+    -> pred='36' ok=True ms=3030
+  [GSM8K 08] Jamal's phone can hold 6 times more photographs than ca... gold=6.0
+    -> pred='6' ok=True ms=2682
+  [GSM8K 09] Brian's friend Bobby has 5 fewer than 3 times as many v... gold=40.0
+    -> pred='40' ok=True ms=1896
+  [GSM8K 10] Jordan plays video games for 2 hours every day. He also... gold=140.0
+    -> pred=None ok=False ms=120074
+  [GSM8K 11] Johnny is picking up the toys on the floor of his room.... gold=2125.0
+    -> pred=None ok=False ms=120025
+  [GSM8K 12] Anakin and Locsin went to the beach today. Anakin caugh... gold=32.0
+    -> pred='32' ok=True ms=57972
+  [GSM8K 13] In a room, there are various toys: 5 red cars, 3 action... gold=50.0
+    -> pred='50' ok=True ms=8033
+  [GSM8K 14] Rani has ten more crabs than Monic, who has 4 fewer cra... gold=122.0
+    -> pred='122' ok=True ms=8692
+  [GSM8K 15] Three friends spent $20.25 on 3 tickets to the fair. Th... gold=34.0
+    -> pred='34' ok=True ms=4424
+  [StrategyQA 01] Is Lord Voldemort associated with a staff member of Dur... gold=Yes
+    -> pred=None ok=False ms=120034
+  [StrategyQA 02] Can you purchase a dish with injera at Taco Bell?... gold=No
+    -> pred=None ok=False ms=120007
+  [StrategyQA 03] Could modern Brazilian Navy have hypothetically turned ... gold=Yes
+    -> pred=None ok=False ms=120016
+  [StrategyQA 04] Is retail a job anybody can be suited for?... gold=No
+    -> pred='No' ok=True ms=4236
+  [StrategyQA 05] Was John Gall from same city as Stanford University?... gold=Yes
+    -> pred='Yes' ok=True ms=24849
+  [StrategyQA 06] Is Michael an unpopular name in the United States?... gold=No
+    -> pred='No' ok=True ms=3086
+  [StrategyQA 07] Is it true that gay male couples cannot naturally repro... gold=No
+    -> pred='Yes' ok=False ms=4530
+  [StrategyQA 08] Was Martin Luther same sect as Martin Luther King Jr.?... gold=No
+    -> pred='No' ok=True ms=3367
+  [StrategyQA 09] Is it legal for a licensed child driving Mercedes-Benz ... gold=Yes
+    -> pred='Yes' ok=True ms=51535
+  [StrategyQA 10] Does Darth Vader's character resemble Severus Snape?... gold=No
+    -> pred='Yes' ok=False ms=40541
+  [StrategyQA 11] Did Boris Yeltsin watch the 2008 Summer Olympics?... gold=No
+    -> pred='No' ok=True ms=18151
+  [StrategyQA 12] Can fish get Tonsillitis?... gold=No
+    -> pred='No' ok=True ms=3298
+  [StrategyQA 13] Did Tony Bennett have more children than he had wives?... gold=Yes
+    -> pred='Yes' ok=True ms=3154
+  [StrategyQA 14] Could a Bengal cat hypothetically best Javier Sotomayor... gold=Yes
+    -> pred='Yes' ok=True ms=40938
+  [StrategyQA 15] Would Snowdon mountain be a piece of cake for Tenzing N... gold=Yes
+    -> pred='Yes' ok=True ms=6162
+
+[Step 3] JSON written: D:\ÀΩ»À◊ ¡œ\deposon-repo\results\deposon_gpt6_teamorouter_30cells_2026_09_10.json
+  size: 18290 bytes
+  total_passed: 22/30, verdict: GRAY
+  GSM8K: 12/15, StrategyQA: 10/15

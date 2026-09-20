@@ -1,0 +1,38 @@
+[21:34:45] OUTPUT_JSON=D:\私人资料\deposon-repo\results\deposon_volcengine_minimax_m3_30cells_2026_09_10.json
+[21:34:45] OUTPUT_LOG=D:\私人资料\deposon-repo\results\deposon_volcengine_minimax_m3_30cells_2026_09_10.log
+[21:34:45] === MODEL minimax-m3 START ===
+[21:34:49]   SANITY status=200 ms=3743.8 text='1 + 1 = **2**' pass=True
+[21:35:19]   CELL gsm8k_1 status=-1 ms=30536.8 pred=None gold=18.0 correct=False note=timeout_30s
+[21:35:25]   CELL gsm8k_2 status=200 ms=5790.9 pred=5.0 gold=5.0 correct=True note=clean
+[21:35:29]   CELL gsm8k_3 status=200 ms=3410.9 pred=40.0 gold=40.0 correct=True note=clean
+[21:35:32]   CELL gsm8k_4 status=200 ms=3225.8 pred=430.0 gold=1430.0 correct=False note=clean
+[21:35:36]   CELL gsm8k_5 status=200 ms=3752.1 pred=36.0 gold=36.0 correct=True note=clean
+[21:35:37]   CELL gsm8k_6 status=200 ms=1830.9 pred=8000.0 gold=8000.0 correct=True note=clean
+[21:35:42]   CELL gsm8k_7 status=200 ms=4175.5 pred=36.0 gold=36.0 correct=True note=clean
+[21:35:45]   CELL gsm8k_8 status=200 ms=3662.4 pred=6.0 gold=6.0 correct=True note=clean
+[21:35:55]   CELL gsm8k_9 status=200 ms=9546.3 pred=40.0 gold=40.0 correct=True note=clean
+[21:35:58]   CELL gsm8k_10 status=200 ms=2877.7 pred=140.0 gold=140.0 correct=True note=clean
+[21:36:01]   CELL gsm8k_11 status=200 ms=3077.4 pred=2125.0 gold=2125.0 correct=True note=clean
+[21:36:08]   CELL gsm8k_12 status=200 ms=7426.4 pred=17.0 gold=32.0 correct=False note=clean
+[21:36:11]   CELL gsm8k_13 status=200 ms=2394.2 pred=50.0 gold=50.0 correct=True note=clean
+[21:36:14]   CELL gsm8k_14 status=200 ms=3093.8 pred=122.0 gold=122.0 correct=True note=clean
+[21:36:17]   CELL gsm8k_15 status=200 ms=3068.7 pred=34.0 gold=34.0 correct=True note=bold_used
+[21:36:28]   CELL stq_1 status=200 ms=11047.8 pred='Yes' gold='Yes' correct=True note=clean
+[21:36:32]   CELL stq_2 status=200 ms=4275.2 pred='No' gold='No' correct=True note=clean
+[21:36:35]   CELL stq_3 status=200 ms=2780.2 pred='Yes' gold='Yes' correct=True note=clean
+[21:36:37]   CELL stq_4 status=200 ms=2005.2 pred='No' gold='No' correct=True note=clean
+[21:36:43]   CELL stq_5 status=200 ms=5654.4 pred='No' gold='Yes' correct=False note=clean
+[21:36:44]   CELL stq_6 status=200 ms=1818.5 pred='No' gold='No' correct=True note=clean
+[21:36:48]   CELL stq_7 status=200 ms=3825.6 pred='Yes' gold='No' correct=False note=clean
+[21:36:54]   CELL stq_8 status=200 ms=5828.4 pred='No' gold='No' correct=True note=clean
+[21:36:59]   CELL stq_9 status=200 ms=4713.8 pred='No' gold='Yes' correct=False note=clean
+[21:37:02]   CELL stq_10 status=200 ms=3068.9 pred='Yes' gold='No' correct=False note=clean
+[21:37:03]   CELL stq_11 status=200 ms=1393.4 pred='No' gold='No' correct=True note=clean
+[21:37:09]   CELL stq_12 status=200 ms=5592.0 pred='No' gold='No' correct=True note=clean
+[21:37:16]   CELL stq_13 status=200 ms=7322.3 pred='No' gold='Yes' correct=False note=clean
+[21:37:19]   CELL stq_14 status=200 ms=3241.5 pred='No' gold='Yes' correct=False note=clean
+[21:37:27]   CELL stq_15 status=200 ms=7969.5 pred='Yes' gold='Yes' correct=True note=clean
+[21:37:27]   MODEL minimax-m3 DONE gsm=12/15 stq=9/15 avg_ms=5280.2 elapsed_s=158.4
+[21:37:27] [WROTE] D:\私人资料\deposon-repo\results\deposon_volcengine_minimax_m3_30cells_2026_09_10.json
+[21:37:27] [DONE] overall_elapsed_s=162.2
+[21:37:27]   minimax-m3: 21/30 pass_rate=0.7 avg_ms=5280.2 status=COMPLETE

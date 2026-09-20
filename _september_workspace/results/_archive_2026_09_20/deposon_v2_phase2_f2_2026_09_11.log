@@ -1,0 +1,24 @@
+[11:19:20] KEY_OK truncated=ark-de0b484e-0889-46...e219 proxy_cleared
+[11:19:20] ANCHOR_OK SHA-12=03c6c01f3697
+[11:19:20] CAPTIONS_BUILT n=22
+[11:19:20] RUN_START [1/3]
+[11:19:21]   EMB_TEXT chunk 1/3 n=10 status=200 ms=564.4
+[11:19:21]   EMB_TEXT chunk 2/3 n=10 status=200 ms=387.9
+[11:19:22]   EMB_TEXT chunk 3/3 n=2 status=200 ms=274.6
+[11:19:22] RUN_DONE [1/3] dim=2048 ms=1243.3
+[11:19:22] RUN_START [2/3]
+[11:19:22]   EMB_TEXT chunk 1/3 n=10 status=200 ms=406.9
+[11:19:23]   EMB_TEXT chunk 2/3 n=10 status=200 ms=927.4
+[11:19:23]   EMB_TEXT chunk 3/3 n=2 status=200 ms=270.2
+[11:19:23] RUN_DONE [2/3] dim=2048 ms=1628.9
+[11:19:23] RUN_START [3/3]
+[11:19:24]   EMB_TEXT chunk 1/3 n=10 status=200 ms=487.8
+[11:19:24]   EMB_TEXT chunk 2/3 n=10 status=200 ms=364.5
+[11:19:24]   EMB_TEXT chunk 3/3 n=2 status=200 ms=293.0
+[11:19:24] RUN_DONE [3/3] dim=2048 ms=1160.4
+[11:19:24] COMPUTING_DRIFT n_captions=22 n_runs=3
+[11:19:24] DRIFT_STATS mean=3.9549e-02 p99=7.7016e-02 max=7.7016e-02
+[11:19:24] CROSS_STATS mean=8.0567e-01 p95=1.0925e+00
+[11:19:24] VERDICT drift_mean=3.9549e-02 → POOR (drift >= 1e-2, P-B 守恒审计需重审)
+[11:19:24] OUTPUT_SAVED D:\私人资料\deposon-repo\results\deposon_v2_phase2_f2_2026_09_11.json
+[11:19:24] DONE

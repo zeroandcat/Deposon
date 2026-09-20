@@ -1,0 +1,73 @@
+[22:04:27] KEY_OK enc=gb18030 truncated=ark-de0b484e-0889-46...e219 proxy_cleared
+[22:04:27] BENCHMARK_LOADED gsm8k=100 stq=99
+[22:04:27] EMB_LOADED captions=22 dim=2 svd_var=0.765
+[22:04:27] FESHBACH_PARAMS E_0=0.8731 gamma=0.1 W_norm=0.8193
+[22:04:27] CELLS_BUILT total=30 (gsm8k=15 strategyqa=15)
+[22:04:27] RAG_PRERANKED top-3 for 30 cells
+[22:04:27] SANITY_START prompt="What is 1+1?" model=doubao-seed-2.0-lite
+[22:04:34] SANITY_DONE status=200 ms=7645.9 pass=True preview="In standard elementary arithmetic, the answer to 1 + 1 is **2**.
+
+Depending on d"
+[22:04:34] CELL_LOOP_START total=30
+[22:04:34] CELL_START [1/30] gsm8k_1 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:04:45] CELL_DONE [1/30] gsm8k_1 pred=18.0 gold=18.0 correct=True status=200 ms=10424.7
+[22:04:45] CELL_START [2/30] gsm8k_2 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:04:52] CELL_DONE [2/30] gsm8k_2 pred=5.0 gold=5.0 correct=True status=200 ms=6932.6
+[22:04:52] CELL_START [3/30] gsm8k_3 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:05:01] CELL_DONE [3/30] gsm8k_3 pred=40.0 gold=40.0 correct=True status=200 ms=9132.8
+[22:05:01] CELL_START [4/30] gsm8k_4 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:05:09] CELL_DONE [4/30] gsm8k_4 pred=1430.0 gold=1430.0 correct=True status=200 ms=8519.3
+[22:05:09] CELL_START [5/30] gsm8k_5 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:05:20] CELL_DONE [5/30] gsm8k_5 pred=36.0 gold=36.0 correct=True status=200 ms=10339.6
+[22:05:20] CELL_START [6/30] gsm8k_6 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:05:30] CELL_DONE [6/30] gsm8k_6 pred=8000.0 gold=8000.0 correct=True status=200 ms=9875.0
+[22:05:30] CELL_START [7/30] gsm8k_7 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:05:59] CELL_DONE [7/30] gsm8k_7 pred=36.36 gold=36.0 correct=False status=200 ms=29128.1
+[22:05:59] CELL_START [8/30] gsm8k_8 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:06:09] CELL_DONE [8/30] gsm8k_8 pred=6.0 gold=6.0 correct=True status=200 ms=9890.8
+[22:06:09] CELL_START [9/30] gsm8k_9 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:06:20] CELL_DONE [9/30] gsm8k_9 pred=40.0 gold=40.0 correct=True status=200 ms=11090.5
+[22:06:20] CELL_START [10/30] gsm8k_10 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:06:25] CELL_DONE [10/30] gsm8k_10 pred=140.0 gold=140.0 correct=True status=200 ms=5015.9
+[22:06:25] CELL_START [11/30] gsm8k_11 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:06:36] CELL_DONE [11/30] gsm8k_11 pred=2125.0 gold=2125.0 correct=True status=200 ms=11428.2
+[22:06:36] CELL_START [12/30] gsm8k_12 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:06:47] CELL_DONE [12/30] gsm8k_12 pred=32.0 gold=32.0 correct=True status=200 ms=10945.7
+[22:06:47] CELL_START [13/30] gsm8k_13 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:06:57] CELL_DONE [13/30] gsm8k_13 pred=50.0 gold=50.0 correct=True status=200 ms=9841.3
+[22:06:57] CELL_START [14/30] gsm8k_14 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:07:02] CELL_DONE [14/30] gsm8k_14 pred=122.0 gold=122.0 correct=True status=200 ms=4789.8
+[22:07:02] CELL_START [15/30] gsm8k_15 task=gsm8k top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:07:09] CELL_DONE [15/30] gsm8k_15 pred=34.0 gold=34.0 correct=True status=200 ms=7766.5
+[22:07:09] CELL_START [16/30] strategyqa_1 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:07:19] CELL_DONE [16/30] strategyqa_1 pred=Yes gold=Yes correct=True status=200 ms=9401.3
+[22:07:19] CELL_START [17/30] strategyqa_2 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:07:24] CELL_DONE [17/30] strategyqa_2 pred=No gold=No correct=True status=200 ms=5208.7
+[22:07:24] CELL_START [18/30] strategyqa_3 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:07:31] CELL_DONE [18/30] strategyqa_3 pred=Yes gold=Yes correct=True status=200 ms=7140.7
+[22:07:31] CELL_START [19/30] strategyqa_4 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:07:38] CELL_DONE [19/30] strategyqa_4 pred=No gold=No correct=True status=200 ms=6831.5
+[22:07:38] CELL_START [20/30] strategyqa_5 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:07:47] CELL_DONE [20/30] strategyqa_5 pred=No gold=Yes correct=False status=200 ms=8567.6
+[22:07:47] CELL_START [21/30] strategyqa_6 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:07:55] CELL_DONE [21/30] strategyqa_6 pred=No gold=No correct=True status=200 ms=8503.4
+[22:07:55] CELL_START [22/30] strategyqa_7 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:08:07] CELL_DONE [22/30] strategyqa_7 pred=Yes gold=No correct=False status=200 ms=11660.0
+[22:08:07] CELL_START [23/30] strategyqa_8 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:08:15] CELL_DONE [23/30] strategyqa_8 pred=No gold=No correct=True status=200 ms=8670.1
+[22:08:15] CELL_START [24/30] strategyqa_9 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:08:27] CELL_DONE [24/30] strategyqa_9 pred=No gold=Yes correct=False status=200 ms=11228.8
+[22:08:27] CELL_START [25/30] strategyqa_10 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:08:35] CELL_DONE [25/30] strategyqa_10 pred=Yes gold=No correct=False status=200 ms=7986.6
+[22:08:35] CELL_START [26/30] strategyqa_11 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:08:39] CELL_DONE [26/30] strategyqa_11 pred=No gold=No correct=True status=200 ms=4726.9
+[22:08:39] CELL_START [27/30] strategyqa_12 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:08:45] CELL_DONE [27/30] strategyqa_12 pred=No gold=No correct=True status=200 ms=5733.6
+[22:08:45] CELL_START [28/30] strategyqa_13 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:08:49] CELL_DONE [28/30] strategyqa_13 pred=Yes gold=Yes correct=True status=200 ms=4243.9
+[22:08:49] CELL_START [29/30] strategyqa_14 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:09:11] CELL_DONE [29/30] strategyqa_14 pred=Yes gold=Yes correct=True status=200 ms=21976.6
+[22:09:11] CELL_START [30/30] strategyqa_15 task=strategyqa top_captions=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:09:17] CELL_DONE [30/30] strategyqa_15 pred=Yes gold=Yes correct=True status=200 ms=5525.8
+[22:09:17] SUMMARY_DONE gsm8k=14/15 strategyqa=11/15 total=25/30 verdict=PASS
+[22:09:17] DONE

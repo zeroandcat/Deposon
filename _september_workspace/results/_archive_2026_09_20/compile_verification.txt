@@ -1,0 +1,138 @@
+================================================================
+FTFB v3 正式版 编译验证记录 (compile_verification.txt)
+生成者：戴夫-格式专家 | 2026-09-17
+================================================================
+
+[1] 链头与工件指纹（SHA-256 全量）
+  源稿（编辑工件未剥离）: 7a0a98289588dded5c0543bd3d0267fad4a387e24e42c2cff5e33f457ae38f1b
+    shared/鲍勃_FTFB全稿R2修订版_2026-09-17.md（416 行）
+  剥离后论文正文（383 行，L9–L391）: 543479649b3e507a3d7d24d398b81b4ada5ccaa7a807b9dbcaef82fe9217647b
+  交付 tex:  d060f75dbe9ff19061acb91ee0eeac2cbf4dd9a8bbedcf9e7483cb18cc6f7afe
+    ftfb_v3.tex（93324→ 版本行数见下）
+  交付 PDF:  2d9edc8c7303fe7c97b2ee4a887619b2827ec8cfa67473d26e23f8f6f416741b
+    ftfb_v3.pdf（23 页，356123 字节，pdfTeX-1.40.29 / TeX Live 2026）
+
+[2] 编辑工件剔除边界（送审纪律）
+  首部工件：L1–L8（blockquote「R2 修订版说明」+ 空行 + '---' 分隔行，
+    自声明"本块与文末附录为编辑工件，非稿文；送审/提交时整块移除"）。
+  尾部工件：L392–L416（'---' + 空行 + '## 附录：R2 修订逐条对照表' 整节，
+    自声明"编辑工件，非稿文；送审/提交时整节移除"）。
+  剥离边界断言（build_ftfb_tex_v3_official.py 行级钉死）：
+    L9 = '# Fiction That Feeds Back: ...'（论文 H1 标题）；
+    L391 = '- R54.' 条目（References 末条）；L392/393 = 空/'---'；
+    附录头 '## 附录：R2 修订逐条对照表' 精确匹配。
+  剔除完备性断言：'修订版说明'/'逐条对照表'/'META_REVIEW_REPORT'/
+    'REVIEW_RB'/'编辑工件' 在交付 tex/PDF 中零命中。
+  边界正确性交叉验证：剥离正文与上一链头（查理_FTFB全稿文献合并版，
+    SHA 76eef1dd…）diff 差异恰为 R2 对照表申报的 C-1–C-4 触点 +
+    References 计数同步 + R53/R54 新池，无第 17 处以外差异。
+
+[3] 编译流程
+  引擎：pdflatex（TeX Live 2026，v8_pdflatex 树，环境隔离 TEXMFCONFIG/
+    TEXMFVAR 指向树内）-interaction=nonstopmode -file-line-error × 3 遍。
+  收敛：pass2.log 与 pass3.log 逐字节一致（S1 PASS）。
+
+[4] T-1 视觉门（visual_gate.py，阴阳双实现）
+[PASS] G1a-环境配对: \begin{abstract}=1, \end{abstract}=1（期望 1/1）
+[PASS] G1b-闭合先于首节: begin L69 → end L74 → 首个 \section L76（要求 end < section）
+[PASS] G1c-环境内无结构块: abstract 内部结构块: 无
+[PASS] G2-第2页起无abstract排版: 总页数=23；报警页=无；逐页(页:行数/窄栏签名行数) p1:43行/窄18 p2:49行/窄0 p3:49行/窄0 p4:49行/窄0 p5:48行/窄0 p6:46行/窄0 p7:47行/窄0 p8:50行/窄0 p9:47行/窄0 p10:48行/窄0 p11:47行/窄0 p12:34行/窄0 p13:51行/窄0 p14:45行/窄0 p15:53行/窄0 p16:49行/窄0 p17:46行/窄0 p18:48行/窄0 p19:53行/窄0 p20:47行/窄0 p21:46行/窄0 p22:45行/窄0 p23:4行/窄0
+VISUAL GATE RESULT: PASS
+
+
+[5] 质量门全量输出（Z 四零 / S 结构 / C 引用 54 条 / G 字形页面级 / D 双盲）
+[PASS] Z1-编译错误: count=0
+[PASS] Z2-Overfull: count=0
+[PASS] Z3-缺字形: count=0
+[PASS] Z4-未定义引用: count=0
+[PASS] S1-编译收敛: pass2.log == pass3.log 逐字节一致
+[PASS] S2-标题单现: 全文 1 次 / 首页 1 次（期望 1/1）
+[PASS] S3-无#残留: PDF文本层 markdown # 行=0；tex 正文 \# 计数=0
+[PASS] S4-五锚不变式: aeefb8ef6972:1 9bbe43f41fa8:1 6e9673205dc0:1 68a5b08ef007:1 6b09de9911c0:1
+[PASS] S5-表头改写: M1–M5 表头首列渲染为 "No."
+[PASS] S6-双盲合规: /Author=""；CJK字符=0；身份token={'deposon': 0, 'keep-the-books': 0, 'keep the books': 0, 'zhipu': 0, '智谱': 0, '清言': 0, '壳亘域': 0, '转轮君': 0}
+[PASS] C1-54条全列: References 列表 54 条；缺失=无 多余=无
+[PASS] C2-指针全覆盖: 正文引用 54/54；未在正文引用=无；正文有而未列=无
+[PASS] C3a-R37访问日期: R37 新访问日期格式渲染: accessed 2026-09-17 (entry updated 7 April 2025)
+[PASS] C3b-R53渲染: R53 Riemann 题录+emis URL+捕获日期
+[PASS] C3c-R54渲染: R54 Clifford 题录+wikisource URL+1876 works
+[PASS] C3d-条目标签: PDF 文本层 Rnn. 条目标签唯一数 54（期望 54；enumitem 描述列表渲染标签本体，方括号为语法定界符不渲染，与 v1/v2/试排管线一致）
+[PASS] G1-σ抽检: σ 在 md 源记法中 0 次（源即无），PDF 出现页=无，N/A 申报
+[PASS] G2-τ抽检: τ 出现页=[15]（源 4 次）
+[PASS] G3-Σ抽检: Σ 出现页=[8]（源 2 次）
+[PASS] G4-×10⁻¹⁶: 科学记数 ×10⁻¹⁶ 出现页=[15]
+[PASS] G5-五锚哈希串: aeefb8ef6972→p[15] 9bbe43f41fa8→p[15] 6e9673205dc0→p[15] 68a5b08ef007→p[15] 6b09de9911c0→p[15]
+[PASS] G6-新直引渲染: 新直引内引号渲染页：only to be deduced from experi→p[4]；Hard Again→p[11]；1876 works→p[23]
+[PASS] G7-弯引号字形: Steele 引语两端渲染为弯引号 “…”
+[PASS] D1-身份与致谢token: tex 全文命中={}
+[PASS] D2-作者/日期栏: \author{}/\date{} 均空；无致谢节
+[PASS] D3-PDF元数据: /Author=""；Creator="LaTeX with hyperref"（工具链自述，非身份信息）
+[PASS] D4-批注/附件: PDF 无注释/附件（pdfinfo 无 Annots 行）
+[PASS] D5-CJK文本层: PDF 文本层 CJK 字符 0
+[PASS] D6-邮箱零命中: 全文邮箱=无
+[DISC] D-Underfull: count=3 lines 324-325 badness 2103; lines 467-468 badness 5548; lines 467-468 badness 1990
+[DISC] D-其他警告: count=0 （无）
+[DISC] D-字形抽检: 'τ':4 'Σ':2 '×':1 '–':47 '—':190 '§':105 '“':53 '”':53（σ 源即无，N/A）
+[DISC] 页数=23；源md指纹=7a0a98289588dded…；tex指纹=d060f75dbe9ff190…；pdf指纹=2d9edc8c7303fe7c…
+
+RESULT: 全门禁 PASS（四零全绿＋结构＋54 条引用＋字形页面级＋D1–D6 双盲）
+
+
+[6] Underfull 披露（不入门禁，F10 申报纪律）
+  count=3：
+    lines 324-325 badness 2103 —— §7 段（试排同值 2103，回全宽重排固有）；
+    lines 467-468 badness 5548 —— R37 条目（试排同值 5548）；
+    lines 467-468 badness 1990 —— R37 条目新增断行（条目加入访问日期
+      "accessed 2026-09-17 (entry updated 7 April 2025)" 后多折一行，
+      内容层新增，排版层零 Overfull）。
+  Overfull 全零（Z2）。无其他警告（LaTeX/Package/pdfTeX/Class Warning 均零）。
+
+[7] 引用渲染与 [Rnn] 指针核验（54 条）
+  C1：References 列表恰 54 条（R01–R54，零缺失零多余）。
+  C2：正文 [Rnn] 指针覆盖 54/54；正文引用与列表条目一一对应。
+  C3a：R37 新访问日期格式渲染 = "accessed 2026-09-17 (entry updated
+      7 April 2025)"（页面级验证）。
+  C3b：R53 渲染 = Riemann 题录 + emis 全文 URL + retrieved 2026-09-17。
+  C3c：R54 渲染 = Clifford 题录 + wikisource URL + "1876 works"。
+  C3d：PDF 文本层 Rnn. 条目标签唯一数 54/54（enumitem 描述列表渲染
+      标签本体，方括号为语法定界符不渲染——与 v1/v2/试排管线行为一致）。
+  首现序（md 正文）：R01, R54, R13, R14, R42, R45, R46, R52, R53, R02, R03, R04, R05, R06, R07, R09, R08, R10, R43, R44, R40, R41, R11, R12, R15, R37, R36, R38, R39, R32, R33, R47, R48, R49, R50, R51, R30, R31, R35, R34, R20, R16, R17, R18, R19, R21, R22, R23, R24, R25, R26, R27, R28, R29
+
+[8] 特殊字符页面级抽检
+  σ：源记法 0 次（N/A 申报；PDF 文本层亦 0）。
+  τ：源 4 次 → PDF p15；Σ：源 2 次 → PDF p8；
+  ×10⁻¹⁶：源 1 次 → PDF p15；
+  五锚哈希串（aeefb8ef6972/9bbe43f41fa8/6e9673205dc0/68a5b08ef007/
+    6b09de9911c0）：各恰 1 次，全部 p15；
+  新直引内引号（R2 新增）：Riemann "only to be deduced from experience,"
+    → p4；Steele "Hard Again" → p11；R54 "1876 works" → p23；
+    两端均渲染为弯引号 “…”（“ ” 各 53，配对平衡）。
+
+[9] 双盲合规扫描 D1–D6
+  D1 身份/致谢 token（deposon/keep-the-books/zhipu/智谱/清言/壳亘域/
+     转轮君/orcid/github/邮箱域/acknowledg/funded by/grant no）：tex 全文零命中。
+  D2 \author{} 与 \date{} 均空；无致谢节。
+  D3 PDF 元数据：/Author=""；Creator="LaTeX with hyperref"（工具链自述，
+     非身份信息）。
+  D4 无批注/附件（pdfinfo 无 Annots）。
+  D5 PDF 文本层 CJK 字符 0。
+  D6 全文邮箱零命中。
+
+[10] 渲染层一致性（对照试验版 ftfb_v3_trial.tex）
+  前导区（preamble 至 \thispagestyle{empty}）与试排版逐字节一致。
+  正文差异 = R2 内容层触点（C-1–C-4 + 计数同步 + R37 访问日期 +
+  R53/R54 新池），共 17 个 diff 块，逐一对照 R2 对照表确认，无排版层
+  意外差异。管线新增唯一渲染规则：https?:// 整体入 \url{}（R53/R54
+  三条新 URL 的断行与下划线保护；旧管线只护裸 .com 域，不护则 R54 URL
+  内 "of_Matter" 会被 snake_case 规则局部 \texttt 包裹）。
+
+[11] 纪律执行
+  源文件零改动（读校验 SHA 与交付时一致）；论文正文逐字不动（生成期
+  引用/F-C 多重集、五锚不变式断言）；断言失败即停（本轮全过）。
+
+================================================================
+记录结束
+================================================================
+
+[Trae TRAE_FIXED_2026_09_18 勘误] 上文 [1] 处 tex 字节数 89657 为 v2 口径残留, v3 实测 93324 B
+(见 SHA256_MANIFEST.txt 与盘上实算); 已就地更正。

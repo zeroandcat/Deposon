@@ -1,0 +1,34 @@
+[17:40:11] === P-L v3 Phase 2 closed-source runner v3 | TS=20260917_174011 | PRIMARY=claude_sonnet5 | chain=['claude_sonnet5', 'gpt56sol', 'gemini_37flash'] ===
+[17:40:11]   teamo_key[:18] = sk-teamo-bc291a64c... (mask only; never persisted)
+[17:40:11]   baseline cells = 30 (gsm8k=15, sqa=15)
+[17:40:11]   L=60 per_model T_frac60 mean = 0.7111
+[17:40:11] === Sanity check (chain: ['claude_sonnet5', 'gpt56sol', 'gemini_37flash']) ===
+[17:40:11]   [sanity] try claude_sonnet5...
+[17:40:15]   [sanity] claude_sonnet5 PASS (4140ms)
+[17:40:15] === Warmup claude_sonnet5 ===
+[17:40:22]   [warmup] claude_sonnet5 OK (6855ms, rm=claude-sonnet-5)
+[17:40:22]   warmup_result = True
+[17:40:22] === Running 30 cells | chain = ['claude_sonnet5', 'gpt56sol', 'gemini_37flash'] | start_idx=0 ===
+[17:40:50]   [progress] 3/30 pass=3 missing=0 elapsed=28s
+[17:41:22]   [progress] 6/30 pass=5 missing=0 elapsed=60s
+[17:41:56]   [progress] 9/30 pass=8 missing=0 elapsed=94s
+[17:42:35]   [progress] 12/30 pass=11 missing=0 elapsed=132s
+[17:43:04]   [progress] 15/30 pass=14 missing=0 elapsed=162s
+[17:44:22]     [retry] claude_sonnet5 attempt 1 fail (timeout_used=50s): TimeoutError: The read operation timed out... backoff 1s
+[17:44:53]     [retry] claude_sonnet5 attempt 2 fail (timeout_used=30s): TimeoutError: The read operation timed out... backoff 2s
+[17:45:26]   [18/30] strategyqa_3 chain[0] claude_sonnet5 all-retry-fail → next
+[17:45:40]   [progress] 18/30 pass=17 missing=0 elapsed=317s
+[17:46:54]   [progress] 21/30 pass=18 missing=0 elapsed=392s
+[17:47:36]   [progress] 24/30 pass=19 missing=0 elapsed=434s
+[17:48:18]   [progress] 27/30 pass=21 missing=0 elapsed=476s
+[17:48:57]   [progress] 30/30 pass=22 missing=0 elapsed=515s
+[17:49:05]   L=30 final JSON -> _p_l_v3_robustness_claude_sonnet5_L30_20260917_174011.json  size=30772B
+[17:49:05]   L=60 JSON -> _p_l_v3_robustness_claude_sonnet5_L60_20260917_174011.json  size=1292B
+[17:49:05] === DONE for PRIMARY=claude_sonnet5 | pass=22/30 missing=0 elapsed=516.7s ===
+[17:49:05]   Final outputs:
+[17:49:05]     L=30: D:\私人资料\deposon-repo\results\_p_l_v3_robustness_claude_sonnet5_L30_20260917_174011.json
+[17:49:05]     L=60: D:\私人资料\deposon-repo\results\_p_l_v3_robustness_claude_sonnet5_L60_20260917_174011.json
+[17:49:05]     incremental (will be removed): D:\私人资料\deposon-repo\results\_p_l_v3_robustness_claude_sonnet5_L30_20260917_174011_incremental.json
+[17:49:05]   removed incremental: _p_l_v3_robustness_claude_sonnet5_L30_20260917_174011_incremental.json
+[17:49:05]   log -> _p_l_v3_phase2_closedsource_runner_v2_20260917_174011_claude_sonnet5.log
+[17:49:05] === END ===

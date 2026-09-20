@@ -1,0 +1,94 @@
+[22:55:59] KEY_OK enc=gb18030 truncated=ark-de0b484e-0889-46...e219 proxy_cleared
+[22:55:59] CORPUS_LOADED n_graphs=22 concept_ids[0:3]=['L_algorithm_process', 'L_biological_taxonomy', 'L_geography_world']
+[22:55:59] CAPTIONS_BUILT n=22 sample_len=328
+[22:55:59] SANITY_START model=doubao-seed-2.0-lite
+[22:56:04] SANITY_DONE status=200 ms=5032.4 pass=True preview="In standard basic arithmetic, the answer to 1 + 1 is **2**.
+
+That said, the resu"
+[22:56:04] SVD2_LOADED n=22 E_0=0.8731 ratio_intra_inter=1.0562
+[22:56:04] STEP1_TEXT_EMB_START
+[22:56:05]   EMB_TEXT chunk 1/3 n=10 status=200 ms=407.7 usage={'prompt_tokens': 2060, 'total_tokens': 2060}
+[22:56:05]   EMB_TEXT chunk 2/3 n=10 status=200 ms=416.7 usage={'prompt_tokens': 1879, 'total_tokens': 1879}
+[22:56:05]   EMB_TEXT chunk 3/3 n=2 status=200 ms=254.5 usage={'prompt_tokens': 472, 'total_tokens': 472}
+[22:56:05] STEP1_TEXT_EMB_DONE dim=2048 total_ms=1102.9
+[22:56:05] STEP2_IMAGE_EMB_START
+[22:56:18]   EMB_IMAGE chunk 1/3 n=10 status=200 ms=11688.3 usage={'prompt_tokens': 436646, 'total_tokens': 436646}
+[22:56:31]   EMB_IMAGE chunk 2/3 n=10 status=200 ms=12459.8 usage={'prompt_tokens': 446542, 'total_tokens': 446542}
+[22:56:41]   EMB_IMAGE chunk 3/3 n=2 status=200 ms=10501.9 usage={'prompt_tokens': 108520, 'total_tokens': 108520}
+[22:56:41] STEP2_IMAGE_EMB_DONE dim=2048 total_ms=35924.6
+[22:56:41] SIM_MATRIX text_tt_diag=1.0000 image_ii_diag=1.0000
+[22:56:41] SIM_CROSS text_image offdiag_mean=0.2799 min=0.2152 max=0.3170
+[22:56:41] CELLS_LOADED total=30 gsm8k=15 strategyqa=15
+[22:56:41] CELL_LOOP_START total=30
+[22:56:46] CELL_START [1/30] gsm8k_1 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:56:56] CELL_DONE [1/30] gsm8k_1 pred=18.0 gold=18.0 correct=True status=200 ms=10040.4
+[22:56:56] CELL_START [2/30] gsm8k_2 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:57:01] CELL_DONE [2/30] gsm8k_2 pred=5.0 gold=5.0 correct=True status=200 ms=5515.2
+[22:57:01] CELL_START [3/30] gsm8k_3 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:57:08] CELL_DONE [3/30] gsm8k_3 pred=40.0 gold=40.0 correct=True status=200 ms=6453.6
+[22:57:08] CELL_START [4/30] gsm8k_4 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:57:13] CELL_DONE [4/30] gsm8k_4 pred=1430.0 gold=1430.0 correct=True status=200 ms=5058.6
+[22:57:13] CELL_START [5/30] gsm8k_5 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:57:20] CELL_DONE [5/30] gsm8k_5 pred=36.0 gold=36.0 correct=True status=200 ms=7177.5
+[22:57:20] CELL_START [6/30] gsm8k_6 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:57:26] CELL_DONE [6/30] gsm8k_6 pred=8000.0 gold=8000.0 correct=True status=200 ms=5696.4
+[22:57:26] CELL_START [7/30] gsm8k_7 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:57:43] CELL_DONE [7/30] gsm8k_7 pred=36.36 gold=36.0 correct=False status=200 ms=16879.2
+[22:57:43] CELL_START [8/30] gsm8k_8 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:57:49] CELL_DONE [8/30] gsm8k_8 pred=6.0 gold=6.0 correct=True status=200 ms=5977.5
+[22:57:49] CELL_START [9/30] gsm8k_9 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:57:55] CELL_DONE [9/30] gsm8k_9 pred=40.0 gold=40.0 correct=True status=200 ms=5932.2
+[22:57:55] CELL_START [10/30] gsm8k_10 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:57:58] CELL_DONE [10/30] gsm8k_10 pred=140.0 gold=140.0 correct=True status=200 ms=3490.2
+[22:57:58] CELL_START [11/30] gsm8k_11 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:58:04] CELL_DONE [11/30] gsm8k_11 pred=2125.0 gold=2125.0 correct=True status=200 ms=5749.9
+[22:58:04] CELL_START [12/30] gsm8k_12 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:58:16] CELL_DONE [12/30] gsm8k_12 pred=32.0 gold=32.0 correct=True status=200 ms=11982.1
+[22:58:16] CELL_START [13/30] gsm8k_13 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:58:28] CELL_DONE [13/30] gsm8k_13 pred=50.0 gold=50.0 correct=True status=200 ms=12454.8
+[22:58:28] CELL_START [14/30] gsm8k_14 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:58:34] CELL_DONE [14/30] gsm8k_14 pred=122.0 gold=122.0 correct=True status=200 ms=5404.0
+[22:58:34] CELL_START [15/30] gsm8k_15 task=gsm8k chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:58:41] CELL_DONE [15/30] gsm8k_15 pred=34.0 gold=34.0 correct=True status=200 ms=7162.3
+[22:58:41] CELL_START [16/30] strategyqa_1 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:58:56] CELL_DONE [16/30] strategyqa_1 pred=Yes gold=Yes correct=True status=200 ms=15365.3
+[22:58:56] CELL_START [17/30] strategyqa_2 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:59:02] CELL_DONE [17/30] strategyqa_2 pred=No gold=No correct=True status=200 ms=5914.0
+[22:59:02] CELL_START [18/30] strategyqa_3 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:59:16] CELL_DONE [18/30] strategyqa_3 pred=Yes gold=Yes correct=True status=200 ms=13582.9
+[22:59:16] CELL_START [19/30] strategyqa_4 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:59:24] CELL_DONE [19/30] strategyqa_4 pred=No gold=No correct=True status=200 ms=7754.5
+[22:59:24] CELL_START [20/30] strategyqa_5 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:59:39] CELL_DONE [20/30] strategyqa_5 pred=No gold=Yes correct=False status=200 ms=14966.0
+[22:59:39] CELL_START [21/30] strategyqa_6 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[22:59:45] CELL_DONE [21/30] strategyqa_6 pred=No gold=No correct=True status=200 ms=6095.6
+[22:59:45] CELL_START [22/30] strategyqa_7 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[23:00:00] CELL_DONE [22/30] strategyqa_7 pred=Yes gold=No correct=False status=200 ms=14930.6
+[23:00:00] CELL_START [23/30] strategyqa_8 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[23:00:09] CELL_DONE [23/30] strategyqa_8 pred=No gold=No correct=True status=200 ms=9528.2
+[23:00:09] CELL_START [24/30] strategyqa_9 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[23:00:25] CELL_DONE [24/30] strategyqa_9 pred=Yes gold=Yes correct=True status=200 ms=15689.0
+[23:00:25] CELL_START [25/30] strategyqa_10 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[23:00:34] CELL_DONE [25/30] strategyqa_10 pred=Yes gold=No correct=False status=200 ms=9337.6
+[23:00:34] CELL_START [26/30] strategyqa_11 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[23:00:39] CELL_DONE [26/30] strategyqa_11 pred=No gold=No correct=True status=200 ms=4650.8
+[23:00:39] CELL_START [27/30] strategyqa_12 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[23:00:44] CELL_DONE [27/30] strategyqa_12 pred=No gold=No correct=True status=200 ms=5346.9
+[23:00:45] CELL_START [28/30] strategyqa_13 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[23:00:54] CELL_DONE [28/30] strategyqa_13 pred=Yes gold=Yes correct=True status=200 ms=9388.5
+[23:00:54] CELL_START [29/30] strategyqa_14 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[23:01:17] CELL_DONE [29/30] strategyqa_14 pred=No gold=Yes correct=False status=200 ms=23472.7
+[23:01:17] CELL_START [30/30] strategyqa_15 task=strategyqa chosen=text top3_ids=['S2_n35', 'L_algorithm_process', 'S1_n45']
+[23:01:25] CELL_DONE [30/30] strategyqa_15 pred=Yes gold=Yes correct=True status=200 ms=8041.9
+[23:01:25] SUMMARY_DONE gsm8k=14/15 strategyqa=11/15 total=25/30 verdict=PASS
+[23:01:25] CHANNEL_USAGE text=30 image=0 (image > text = False)
+[23:01:25] FROZEN_SHA_CHECK (5 anchors, 4 SPEC V0.1, v19, v21, corpus/v20/index.json):
+[23:01:25]   KT_ABC1_anchors_sha256_12.json           SHA-12=03c6c01f3697
+[23:01:25]   KT_A1_SPEC_V0.1.md                       SHA-12=78b71d404366
+[23:01:25]   KT_B1_SPEC_V0.1.md                       SHA-12=0410ca0fbdae
+[23:01:25]   KT_C1_SPEC_V0.1.md                       SHA-12=59d8f56347d5
+[23:01:25]   KT_D0_SPEC_V0.1.md                       SHA-12=cce8e9a1b00e
+[23:01:25]   deposon_v19_benchmark_fixes.json         SHA-12=910c4333eead
+[23:01:25]   deposon_v21_gtformal.json                SHA-12=9d9ae5001c57
+[23:01:26]   index.json                               SHA-12=8423ffe266af
+[23:01:26] DONE

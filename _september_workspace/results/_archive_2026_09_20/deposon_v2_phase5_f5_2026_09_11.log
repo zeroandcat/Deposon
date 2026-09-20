@@ -1,0 +1,14 @@
+[11:16:45] ANCHOR_OK SHA-12=03c6c01f3697
+[11:16:45] text_text_offdiag=0.6563  image_image_offdiag=0.965  text_image_offdiag=0.2799
+[11:16:45] text_text_diag=1.0  image_image_diag=1.0
+[11:16:45] Sum1: (1-tt_off=0.3437) + ii_off(0.9650) + ti_off(0.2799) = 1.5886
+[11:16:45] Sum2: (tt_diag-tt_off=0.3437) + ii_off(0.9650) + ti_off(0.2799) = 1.5886
+[11:16:45]   H[Fresnel-like T+R+A=1]: value=1.5886 target=1.0 dev=0.5886
+[11:16:45]   H[Quantum-like T+R+A=2]: value=1.5886 target=2.0 dev=0.4114
+[11:16:45]   H[Ratio tt_off/(ii_off+ti_off)]: value=0.5272 target=None dev=None
+[11:16:45]   H[Scattering σ_text + σ_image = σ_cross]: value=1.6213 target=0.2799 dev=1.3414
+[11:16:45]   H[Info-flow tt_off = 1 - R_text]: value=0.6563 target=None dev=None
+[11:16:45]   H[Conservation 1 - tt_off - ii_off = ti_off]: value=-0.6213 target=0.2799 dev=0.9012
+[11:16:45] BEST_CONSERVATION: Quantum-like T+R+A=2 deviation=0.4114
+[11:16:45] P-B VERDICT: FAIL (P-B 守恒不成立) (epsilon=0.4114)
+[11:16:45] OUTPUT_SAVED D:\私人资料\deposon-repo\results\deposon_v2_phase5_f5_2026_09_11.json

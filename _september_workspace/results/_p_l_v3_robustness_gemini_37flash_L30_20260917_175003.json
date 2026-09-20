@@ -1,0 +1,967 @@
+{
+  "L": 30,
+  "primary_backbone": "gemini_37flash",
+  "chain": [
+    "gemini_37flash",
+    "gpt56sol",
+    "claude_sonnet5"
+  ],
+  "vendor_label": "google",
+  "model": "gemini-3.7-flash",
+  "api_vendor": "TeamoRouter (proxy 127.0.0.1:1018)",
+  "base_url": "https://api.teamorouter.com/v1",
+  "task": "P-L v3 Phase 2 L=30 档 (PRIMARY=gemini_37flash, chain fallback, 30s × 3 retries)",
+  "role": "P-L v3 Phase 2 闭源 3: Google frontier (gemini-3.7-flash via TeamoRouter)",
+  "cells_total": 30,
+  "cells_pass": 26,
+  "cells_missing": 0,
+  "accuracy": 0.8667,
+  "cells_breakdown": {
+    "gsm8k": 15,
+    "strategyqa": 15
+  },
+  "answered_by_distribution": {
+    "gemini_37flash": 30
+  },
+  "spearman_vs_baseline": 0.539319,
+  "spearman_p_value": 0.002102,
+  "spearman_definition": "rank correlation between backbone per-cell score (1/0) and baseline (doubao-seed-code-preview-251028) per-cell score",
+  "elapsed_s": 220.3,
+  "n_total_attempts_across_cells": 30,
+  "n_downgrade_detected_in_any_cell": 0,
+  "sanity_check_chain": {
+    "gemini_37flash": {
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "content": "1 + 1 = **2**",
+      "latency_ms": 2682.2,
+      "sanity_pass": true,
+      "downgrade_detected": false
+    }
+  },
+  "downgrade_fraud_check": {
+    "enabled": true,
+    "method": "response.model == request.model? (per cell, in chain)",
+    "downgrade_detected_in_any_cell": false,
+    "request_model": "gemini-3.7-flash",
+    "response_models_observed": [
+      "gemini-3.7-flash"
+    ],
+    "all_cells_passed": true
+  },
+  "v3_improvements": {
+    "hard_timeout_per_cell_s": 30,
+    "first_attempt_grace_s": 20,
+    "retries_per_backbone": 3,
+    "backoff_schedule_s": "1, 2",
+    "max_tokens_cap": 512,
+    "warmup_call_per_primary": true,
+    "fallback_chain": [
+      "gemini_37flash",
+      "gpt56sol",
+      "claude_sonnet5"
+    ],
+    "per_cell_incremental_save": true,
+    "note": "v3 相对 v1 改进: 30s timeout + 3 retries + backoff + max_tokens=512 cap + warmup + chain fallback + per-cell incremental save"
+  },
+  "proxy_config": {
+    "HTTPS_PROXY": "http://127.0.0.1:1018",
+    "HTTP_PROXY": "http://127.0.0.1:1018",
+    "note": "port 1018 only; ALL_PROXY intentionally unset"
+  },
+  "per_cell_detail": [
+    {
+      "cell_id": "gsm8k_1",
+      "task": "gsm8k",
+      "gold_answer": 18.0,
+      "llm_extracted": 18.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 3301.5,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let's work backward from the number of vacuum cleaners Melanie has left:  1. Melanie has 5 vacuum cleaners left after se",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 3301.5,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_2",
+      "task": "gsm8k",
+      "gold_answer": 5.0,
+      "llm_extracted": 5.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 7878.2,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "First, calculate the time Tom spent sailing away: From 1 PM to 4 PM is 4 - 1 = 3 hours.  Next, calculate the distance he",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 7878.2,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_3",
+      "task": "gsm8k",
+      "gold_answer": 40.0,
+      "llm_extracted": 40.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 3814.6,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let's break down the number of kittens step by step:  1. The sisters adopted 7 kittens from the shelter. 2. Patchy had t",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 3814.6,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_4",
+      "task": "gsm8k",
+      "gold_answer": 1430.0,
+      "llm_extracted": 1430.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 10509.0,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "First, let's find the combined cost of the material and the construction: $500 (material) + $800 (construction) = $1,300",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 10509.0,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_5",
+      "task": "gsm8k",
+      "gold_answer": 36.0,
+      "llm_extracted": 36.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 4604.0,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let's break down the problem step by step:  1. **Calculate the time Jim spends reading per session:**    He reads for ha",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 4604.0,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_6",
+      "task": "gsm8k",
+      "gold_answer": 8000.0,
+      "llm_extracted": 8000.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 3120.0,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let $H$ be the number of copies Harald sold.   Since Marilyn sold 10 times as many copies as Harald, she sold $10H$ copi",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 3120.0,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_7",
+      "task": "gsm8k",
+      "gold_answer": 36.0,
+      "llm_extracted": 36.0,
+      "is_correct": true,
+      "baseline_correct": false,
+      "latency_ms": 8907.7,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "First, let's find Gerald's original time for the 400-meter hurdles: * Lee's time = 38 seconds * Lee was 2 seconds faster",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 8907.7,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_8",
+      "task": "gsm8k",
+      "gold_answer": 6.0,
+      "llm_extracted": 6.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 4187.3,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let's break down the problem step-by-step:  1. **Find how many photographs Brittany's phone can hold:**    Jamal's phone",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 4187.3,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_9",
+      "task": "gsm8k",
+      "gold_answer": 40.0,
+      "llm_extracted": 40.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 2891.5,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "First, we determine how many video games Brian has at the time of the comparison: Brian had 20 games and lost 5, so he h",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 2891.5,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_10",
+      "task": "gsm8k",
+      "gold_answer": 140.0,
+      "llm_extracted": 140.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 7039.4,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "First, we need to calculate how many hours Jordan spends playing video games in one week: 2 hours/day × 7 days/week = 14",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 7039.4,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_11",
+      "task": "gsm8k",
+      "gold_answer": 2125.0,
+      "llm_extracted": 2125.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 4248.8,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Here's the step-by-step calculation:  1. **First boxed set:** 500 pieces 2. **Second boxed set:** 3 times the first set ",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 4248.8,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_12",
+      "task": "gsm8k",
+      "gold_answer": 32.0,
+      "llm_extracted": 32.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 4828.9,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let's calculate the number of creatures each person caught:  1. **Anakin's catch:**    - Starfish: 10    - Sea horses: 6",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 4828.9,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_13",
+      "task": "gsm8k",
+      "gold_answer": 50.0,
+      "llm_extracted": 50.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 3181.7,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let's break down the cost of each type of toy:  1. **Red cars:** There are 5 red cars, and each costs $4.    $5 \\times \\",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 3181.7,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_14",
+      "task": "gsm8k",
+      "gold_answer": 122.0,
+      "llm_extracted": 122.0,
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 3347.6,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let's think step by step:  1. **Bo's crabs:** Bo has 40 crabs. 2. **Monic's crabs:** Monic has 4 fewer crabs than Bo, so",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 3347.6,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "gsm8k_15",
+      "task": "gsm8k",
+      "gold_answer": 34.0,
+      "llm_extracted": 34.0,
+      "is_correct": true,
+      "baseline_correct": false,
+      "latency_ms": 6950.9,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "To find out how much each friend paid, let's calculate the total cost of all the expenses step by step:  1. **Tickets:**",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 6950.9,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_1",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": "Yes",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 3025.7,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let's think step by step:  1. Lord Voldemort had followers known as Death Eaters. 2. Igor Karkaroff was a former Death E",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 3025.7,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_2",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "No",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 4281.2,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "1. Injera is a traditional sourdough-risen flatbread made from teff flour, which is a staple in Ethiopian and Eritrean c",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 4281.2,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_3",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": "Yes",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 6016.8,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "To determine if the modern Brazilian Navy could have hypothetically turned the tide in the Battle of Actium, let's look ",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 6016.8,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_4",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "No",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 4511.7,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "To determine if retail is a job anybody can be suited for, let's look at the requirements and demands of the role:  1. *",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 4511.7,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_5",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": "No",
+      "is_correct": false,
+      "baseline_correct": true,
+      "latency_ms": 4436.4,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Step-by-step thinking:  1. **John Gall's origin**: John Gall (the author and pediatrician known for Gall's law) was born",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 4436.4,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_6",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "No",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 7907.1,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "To determine if Michael is an unpopular name in the United States, let's look at historical and current naming trends:  ",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 7907.1,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_7",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "Yes",
+      "is_correct": false,
+      "baseline_correct": false,
+      "latency_ms": 2917.9,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let's think step by step:  1. Biological human reproduction naturally requires the combination of a male gamete (sperm) ",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 2917.9,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_8",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "No",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 7690.6,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Step-by-step thinking:  1. **Martin Luther** (1483–1546) was a German monk and the seminal figure of the Protestant Refo",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 7690.6,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_9",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": "Yes",
+      "is_correct": true,
+      "baseline_correct": false,
+      "latency_ms": 5065.7,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let's think step by step.  1. **Child labor laws in the US**: Under the Fair Labor Standards Act (FLSA), minors (childre",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 5065.7,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_10",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "Yes",
+      "is_correct": false,
+      "baseline_correct": false,
+      "latency_ms": 6922.6,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let's think step by step:  1. **Aesthetic and Presence:** Both characters are visually defined by a menacing, dark appea",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 6922.6,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_11",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "No",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 2523.2,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Step 1: Determine the dates of the 2008 Summer Olympics. The games took place from August 8 to August 24, 2008, in Beiji",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 2523.2,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_12",
+      "task": "strategyqa",
+      "gold_answer": "No",
+      "llm_extracted": "No",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 10379.0,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "To determine whether fish can get tonsillitis, let's look at the biology and anatomy:  1. **What is Tonsillitis?** Tonsi",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 10379.0,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_13",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": "Yes",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 3737.9,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "To determine if Tony Bennett had more children than wives, let's look at the numbers:  1. **Number of wives:** Tony Benn",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 3737.9,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_14",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": "No",
+      "is_correct": false,
+      "baseline_correct": false,
+      "latency_ms": 5553.1,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "To determine if a Bengal cat could hypothetically beat Javier Sotomayor's record, we need to compare the jumping capacit",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 5553.1,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    },
+    {
+      "cell_id": "strategyqa_15",
+      "task": "strategyqa",
+      "gold_answer": "Yes",
+      "llm_extracted": "Yes",
+      "is_correct": true,
+      "baseline_correct": true,
+      "latency_ms": 6347.3,
+      "http_status": 200,
+      "request_model": "gemini-3.7-flash",
+      "response_model": "gemini-3.7-flash",
+      "downgrade_detected": false,
+      "error": null,
+      "content_head": "Let's think step by step:  1. **Who was Tenzing Norgay?**     Tenzing Norgay was a legendary Nepali-Indian Sherpa mounta",
+      "attempts": 1,
+      "chain_log": [
+        {
+          "bb": "gemini_37flash",
+          "attempts": 1,
+          "ms_total": 6347.3,
+          "ok": true,
+          "response_model": "gemini-3.7-flash",
+          "downgrade": false,
+          "error": null
+        }
+      ],
+      "answered_by": "gemini_37flash",
+      "marked_missing": false
+    }
+  ],
+  "iron_7_compliance": {
+    "no_llm_rehash": true,
+    "no_extra_proxy_setup_beyond_1018": true,
+    "teamorouter_only": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_5_artifact_json_touch": true,
+    "no_schema_v1_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "_meta": {
+    "timestamp": "2026-09-17T17:53:55.033756+08:00",
+    "runner_version": "v3",
+    "baseline_json_sha256_12": "5149f5cafcf9",
+    "phys60_json_sha256_12": "c659695aa23c",
+    "phase": "P-L v3 Phase 2",
+    "subphase": "closed-source (TeamoRouter) retry v3",
+    "sanity_chain_active": [
+      "gemini_37flash"
+    ],
+    "incremental_path": "D:\\私人资料\\deposon-repo\\results\\_p_l_v3_robustness_gemini_37flash_L30_20260917_175003_incremental.json"
+  }
+}

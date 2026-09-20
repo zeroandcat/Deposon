@@ -1,0 +1,34 @@
+[17:31:59] === P-L v3 Phase 2 closed-source runner v3 | TS=20260917_173159 | PRIMARY=gpt56sol | chain=['gpt56sol', 'claude_sonnet5', 'gemini_37flash'] ===
+[17:31:59]   teamo_key[:18] = sk-teamo-bc291a64c... (mask only; never persisted)
+[17:31:59]   baseline cells = 30 (gsm8k=15, sqa=15)
+[17:31:59]   L=60 per_model T_frac60 mean = 0.7111
+[17:31:59] === Sanity check (chain: ['gpt56sol', 'claude_sonnet5', 'gemini_37flash']) ===
+[17:31:59]   [sanity] try gpt56sol...
+[17:32:03]   [sanity] gpt56sol PASS (3133ms)
+[17:32:03]   [resume] resumed from cell index 14/30 (pass=13 missing=0)
+[17:32:03] === Warmup gpt56sol ===
+[17:32:05]   [warmup] gpt56sol OK (2076ms, rm=gpt-5.6-sol)
+[17:32:05]   warmup_result = True
+[17:32:05] === Running 30 cells | chain = ['gpt56sol', 'claude_sonnet5', 'gemini_37flash'] | start_idx=14 ===
+[17:32:12]   [progress] 15/30 pass=14 missing=0 elapsed=7s
+[17:32:45]   [progress] 18/30 pass=17 missing=0 elapsed=41s
+[17:33:24]   [progress] 21/30 pass=19 missing=0 elapsed=79s
+[17:33:54]   [progress] 24/30 pass=21 missing=0 elapsed=110s
+[17:34:22]   [progress] 27/30 pass=23 missing=0 elapsed=138s
+[17:35:49]     [retry] gpt56sol attempt 1 fail (timeout_used=50s): TimeoutError: The read operation timed out... backoff 1s
+[17:36:20]     [retry] gpt56sol attempt 2 fail (timeout_used=30s): TimeoutError: The read operation timed out... backoff 2s
+[17:36:52]   [29/30] strategyqa_14 chain[0] gpt56sol all-retry-fail → next
+[17:37:43]     [retry] claude_sonnet5 attempt 1 fail (timeout_used=50s): TimeoutError: The read operation timed out... backoff 1s
+[17:38:15]     [retry] claude_sonnet5 attempt 2 fail (timeout_used=30s): TimeoutError: The read operation timed out... backoff 2s
+[17:38:47]   [29/30] strategyqa_14 chain[1] claude_sonnet5 all-retry-fail → next
+[17:39:06]   [progress] 30/30 pass=25 missing=0 elapsed=421s
+[17:39:13]   L=30 final JSON -> _p_l_v3_robustness_gpt56sol_L30_20260917_173159.json  size=30347B
+[17:39:13]   L=60 JSON -> _p_l_v3_robustness_gpt56sol_L60_20260917_173159.json  size=1266B
+[17:39:13] === DONE for PRIMARY=gpt56sol | pass=25/30 missing=0 elapsed=423.1s ===
+[17:39:13]   Final outputs:
+[17:39:13]     L=30: D:\私人资料\deposon-repo\results\_p_l_v3_robustness_gpt56sol_L30_20260917_173159.json
+[17:39:13]     L=60: D:\私人资料\deposon-repo\results\_p_l_v3_robustness_gpt56sol_L60_20260917_173159.json
+[17:39:13]     incremental (will be removed): D:\私人资料\deposon-repo\results\_p_l_v3_robustness_gpt56sol_L30_20260917_173159_incremental.json
+[17:39:13]   removed incremental: _p_l_v3_robustness_gpt56sol_L30_20260917_173159_incremental.json
+[17:39:13]   log -> _p_l_v3_phase2_closedsource_runner_v2_20260917_173159_gpt56sol.log
+[17:39:13] === END ===

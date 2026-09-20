@@ -1,0 +1,261 @@
+{
+  "phase": "P-L v3 Phase 2 OR embedding via 1018 proxy (v3 retry)",
+  "timestamp": "2026-09-17T16:29:34.567885+08:00",
+  "task_id": "PL-OR-RETRY",
+  "proxy": "http://127.0.0.1:1018 (HTTPS/HTTP) + socks5://127.0.0.1:1018",
+  "sanity_probe_results": {
+    "oai-3-small": {
+      "model": "openai/text-embedding-3-small",
+      "expected_dim": 1536,
+      "desc": "OAI text-embedding-3-small (task §1 prio 1)",
+      "source": "task_spec_prio1",
+      "ok": false,
+      "dim": null,
+      "error": "HTTP 403: {\"error\":{\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\",\"code\":403},\"user_id\":\"user_3J7P6ghveKjYjvgV8u3JEyBq4Dm\"}",
+      "status": 403,
+      "resp_model": null,
+      "latency_ms": 1151.8,
+      "downgrade_detected": null
+    },
+    "oai-3-large": {
+      "model": "openai/text-embedding-3-large",
+      "expected_dim": 3072,
+      "desc": "OAI text-embedding-3-large (task §1 prio 2)",
+      "source": "task_spec_prio2",
+      "ok": false,
+      "dim": null,
+      "error": "HTTP 403: {\"error\":{\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\",\"code\":403},\"user_id\":\"user_3J7P6ghveKjYjvgV8u3JEyBq4Dm\"}",
+      "status": 403,
+      "resp_model": null,
+      "latency_ms": 651.0,
+      "downgrade_detected": null
+    },
+    "oai-ada-002": {
+      "model": "openai/text-embedding-ada-002",
+      "expected_dim": 1536,
+      "desc": "OAI text-embedding-ada-002 (task §1 prio 3)",
+      "source": "task_spec_prio3",
+      "ok": false,
+      "dim": null,
+      "error": "HTTP 403: {\"error\":{\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\",\"code\":403},\"user_id\":\"user_3J7P6ghveKjYjvgV8u3JEyBq4Dm\"}",
+      "status": 403,
+      "resp_model": null,
+      "latency_ms": 862.4,
+      "downgrade_detected": null
+    },
+    "qwen3-emb-8b": {
+      "model": "Qwen/Qwen3-Embedding-8B",
+      "expected_dim": 4096,
+      "desc": "Qwen3-Embedding-8B (task §1 prio 4)",
+      "source": "task_spec_prio4",
+      "ok": true,
+      "dim": 4096,
+      "error": null,
+      "status": 200,
+      "resp_model": "Qwen/Qwen3-Embedding-8B",
+      "latency_ms": 2460.6,
+      "downgrade_detected": false
+    },
+    "mistral-emb": {
+      "model": "mistralai/mistral-embed",
+      "expected_dim": 1024,
+      "desc": "Mistral embed (task §1 prio 5, may not exist)",
+      "source": "task_spec_prio5",
+      "ok": false,
+      "dim": null,
+      "error": "HTTP 400: {\"error\":{\"message\":\"Model mistralai/mistral-embed does not exist\",\"code\":400}}",
+      "status": 400,
+      "resp_model": null,
+      "latency_ms": 581.3,
+      "downgrade_detected": null
+    },
+    "bge-large": {
+      "model": "BAAI/bge-large-en-v1.5",
+      "expected_dim": 1024,
+      "desc": "BAAI/bge-large-en-v1.5 (fallback A, 1018 ok)",
+      "source": "fallback_v2_ok",
+      "ok": true,
+      "dim": 1024,
+      "error": null,
+      "status": 200,
+      "resp_model": "BAAI/bge-large-en-v1.5",
+      "latency_ms": 1110.0,
+      "downgrade_detected": false
+    },
+    "e5-multi": {
+      "model": "intfloat/multilingual-e5-large",
+      "expected_dim": 1024,
+      "desc": "intfloat/multilingual-e5-large (fallback B)",
+      "source": "fallback_v2_ok",
+      "ok": true,
+      "dim": 1024,
+      "error": null,
+      "status": 200,
+      "resp_model": "intfloat/multilingual-e5-large",
+      "latency_ms": 1297.8,
+      "downgrade_detected": false
+    },
+    "gte-large": {
+      "model": "thenlper/gte-large",
+      "expected_dim": 1024,
+      "desc": "thenlper/gte-large (fallback C)",
+      "source": "fallback_v2_ok",
+      "ok": true,
+      "dim": 1024,
+      "error": null,
+      "status": 200,
+      "resp_model": "thenlper/gte-large",
+      "latency_ms": 1220.1,
+      "downgrade_detected": false
+    }
+  },
+  "backbones": {
+    "qwen3-emb-8b": {
+      "embedding_model": "Qwen/Qwen3-Embedding-8B",
+      "expected_dim": 4096,
+      "actual_dims": [
+        4096
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": 0.001469837139114706,
+      "beta_median": 0.0027189587838196776,
+      "beta_hi": 0.0043016347974554545,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "source_json": "_p_l_v3_vector_embedding_or_qwen3-emb-8b_L30_20260917_162614.json"
+    },
+    "bge-large": {
+      "embedding_model": "BAAI/bge-large-en-v1.5",
+      "expected_dim": 1024,
+      "actual_dims": [
+        1024
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": 0.0002449777595146731,
+      "beta_median": 0.0011045411423546933,
+      "beta_hi": 0.002217018583215221,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "source_json": "_p_l_v3_vector_embedding_or_bge-large_L30_20260917_162614.json"
+    },
+    "e5-multi": {
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "expected_dim": 1024,
+      "actual_dims": [
+        1024
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": -0.0010732347645950567,
+      "beta_median": -0.000755978013444142,
+      "beta_hi": -0.0004448778923500781,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "source_json": "_p_l_v3_vector_embedding_or_e5-multi_L30_20260917_162614.json"
+    },
+    "gte-large": {
+      "embedding_model": "thenlper/gte-large",
+      "expected_dim": 1024,
+      "actual_dims": [
+        1024
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": -0.00033293931182952247,
+      "beta_median": -9.49751918929618e-05,
+      "beta_hi": 0.00017565273665788993,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "source_json": "_p_l_v3_vector_embedding_or_gte-large_L30_20260917_162614.json"
+    }
+  },
+  "cross_backbone_beta_ci_overlap": {
+    "qwen3-emb-8b_vs_bge-large": {
+      "r1_CI": [
+        0.001469837139114706,
+        0.0043016347974554545
+      ],
+      "r2_CI": [
+        0.0002449777595146731,
+        0.002217018583215221
+      ],
+      "overlap": true
+    },
+    "qwen3-emb-8b_vs_e5-multi": {
+      "r1_CI": [
+        0.001469837139114706,
+        0.0043016347974554545
+      ],
+      "r2_CI": [
+        -0.0010732347645950567,
+        -0.0004448778923500781
+      ],
+      "overlap": false
+    },
+    "qwen3-emb-8b_vs_gte-large": {
+      "r1_CI": [
+        0.001469837139114706,
+        0.0043016347974554545
+      ],
+      "r2_CI": [
+        -0.00033293931182952247,
+        0.00017565273665788993
+      ],
+      "overlap": false
+    },
+    "bge-large_vs_e5-multi": {
+      "r1_CI": [
+        0.0002449777595146731,
+        0.002217018583215221
+      ],
+      "r2_CI": [
+        -0.0010732347645950567,
+        -0.0004448778923500781
+      ],
+      "overlap": false
+    },
+    "bge-large_vs_gte-large": {
+      "r1_CI": [
+        0.0002449777595146731,
+        0.002217018583215221
+      ],
+      "r2_CI": [
+        -0.00033293931182952247,
+        0.00017565273665788993
+      ],
+      "overlap": false
+    },
+    "e5-multi_vs_gte-large": {
+      "r1_CI": [
+        -0.0010732347645950567,
+        -0.0004448778923500781
+      ],
+      "r2_CI": [
+        -0.00033293931182952247,
+        0.00017565273665788993
+      ],
+      "overlap": false
+    }
+  },
+  "p2_embedding_overlap_verdict": "GRAY (some β CI 不重叠)",
+  "iron_7_compliance": {
+    "no_llm_rehash": true,
+    "proxy_used": "http://127.0.0.1:1018 (HTTPS_PROXY/HTTP_PROXY) + socks5://127.0.0.1:1018 (all_proxy)",
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "key_loaded_runtime_from": "C:\\Users\\Administrator\\Desktop\\AI\\LLM API.txt",
+    "key_storage": "runtime env var OPENROUTER_API_KEY only, never written to disk/log",
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true,
+    "response_model_eq_request_model_verified_per_cell": true
+  }
+}

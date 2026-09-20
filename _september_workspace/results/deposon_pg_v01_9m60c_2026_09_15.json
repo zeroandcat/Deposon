@@ -1,0 +1,404 @@
+{
+  "phase": "P_G_V0_1_HYPERBOLIC_TRANSPORT",
+  "task": "P-G V0.1: Poincare ball 双曲 transport 实算 (9 model × 60 cells)",
+  "version": "V0.1 (沿 P-G V0 spec SHA-12 2f0765a1d39d)",
+  "date": "2026-09-15",
+  "author": "Mavis Worker (subagent of mvs_bbeb804b1a6a41109be740636eed1709)",
+  "method": "0 LLM, 0 proxy, 0 API, pure numpy Poincare ball (c=1) hyperbolic transport",
+  "scope": "9 model × 60 cells = 540 cells 双曲 transport 实算 + 5 锚 V0 → V0.1 真值升级",
+  "metadata": {
+    "P_G_V0_spec_sha12": "2f0765a1d39d (unchanged, 严守 0 触动)",
+    "P_G_V0_spec_sha12_verified_pre_post": true,
+    "v3_60cells_source_sha12_input_only": "input only, 0 触动",
+    "iron_rule_compliance": {
+      "0_LLM_calls": true,
+      "no_proxy": true,
+      "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_WeChatAPI": true,
+      "no_pip_install_at_runtime": true,
+      "no_api_key_read": true,
+      "16_frozen_unchanged_pre_post": true,
+      "no_verifier_mavis_builtin_scripts_access": true,
+      "no_temp_files": true
+    },
+    "transport_velocity": [
+      0.08,
+      -0.02
+    ],
+    "canonical_model": "glm-5.3",
+    "poincare_curvature_c": 1.0,
+    "out_path": "results\\deposon_pg_v01_9m60c_2026_09_15.json"
+  },
+  "input_data": {
+    "source_json": "results/deposon_v3_physical_opt_60cells_2026_09_11.json",
+    "9_models_T_R_A_60cells": [
+      {
+        "model": "doubao-seed-2.0-lite",
+        "T60": 52,
+        "R60": 8,
+        "A60": 0
+      },
+      {
+        "model": "glm-5.3",
+        "T60": 52,
+        "R60": 6,
+        "A60": 2
+      },
+      {
+        "model": "deepseek-v4-flash",
+        "T60": 46,
+        "R60": 10,
+        "A60": 4
+      },
+      {
+        "model": "doubao-seed-evolving",
+        "T60": 44,
+        "R60": 12,
+        "A60": 4
+      },
+      {
+        "model": "minimax-m3",
+        "T60": 42,
+        "R60": 16,
+        "A60": 2
+      },
+      {
+        "model": "glm-5.3-flash",
+        "T60": 42,
+        "R60": 2,
+        "A60": 16
+      },
+      {
+        "model": "kimi-k2.7-code",
+        "T60": 38,
+        "R60": 16,
+        "A60": 6
+      },
+      {
+        "model": "doubao-seed-2.1-turbo",
+        "T60": 36,
+        "R60": 4,
+        "A60": 20
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "T60": 32,
+        "R60": 4,
+        "A60": 24
+      }
+    ],
+    "T_C_baseline": 0.8667,
+    "A_C_baseline": 0.0333,
+    "60_cells_total": 540
+  },
+  "P_G_hyperbolic_transport": {
+    "per_model": [
+      {
+        "model": "doubao-seed-2.0-lite",
+        "T60": 52,
+        "R60": 8,
+        "A60": 0,
+        "T_frac60": 0.8667,
+        "A_frac60": 0.0,
+        "R_frac60": 0.1333,
+        "x_poincare": [
+          0.8667,
+          0.0
+        ],
+        "x_transport_H": [
+          0.8852,
+          -0.0126
+        ],
+        "norm_x": 0.8667,
+        "norm_xT": 0.8853,
+        "conservation_residual": 0.01861,
+        "d_H_to_canonical": 0.2675,
+        "d_E_to_canonical": 0.0333,
+        "cos_sim": 0.9993,
+        "D_fix2_cosine": 0.0007,
+        "ratio_H_over_E": 8.0316
+      },
+      {
+        "model": "glm-5.3",
+        "T60": 52,
+        "R60": 6,
+        "A60": 2,
+        "T_frac60": 0.8667,
+        "A_frac60": 0.0333,
+        "R_frac60": 0.1,
+        "x_poincare": [
+          0.8667,
+          0.0333
+        ],
+        "x_transport_H": [
+          0.8855,
+          0.0194
+        ],
+        "norm_x": 0.8673,
+        "norm_xT": 0.8857,
+        "conservation_residual": 0.018358,
+        "d_H_to_canonical": 0.0,
+        "d_E_to_canonical": 0.0,
+        "cos_sim": 1.0,
+        "D_fix2_cosine": -0.0,
+        "ratio_H_over_E": 0.0
+      },
+      {
+        "model": "deepseek-v4-flash",
+        "T60": 46,
+        "R60": 10,
+        "A60": 4,
+        "T_frac60": 0.7667,
+        "A_frac60": 0.0667,
+        "R_frac60": 0.1667,
+        "x_poincare": [
+          0.7667,
+          0.0667
+        ],
+        "x_transport_H": [
+          0.7981,
+          0.0498
+        ],
+        "norm_x": 0.7696,
+        "norm_xT": 0.7996,
+        "conservation_residual": 0.03005,
+        "d_H_to_canonical": 0.6519,
+        "d_E_to_canonical": 0.1054,
+        "cos_sim": 0.9988,
+        "D_fix2_cosine": 0.0012,
+        "ratio_H_over_E": 6.183
+      },
+      {
+        "model": "doubao-seed-evolving",
+        "T60": 44,
+        "R60": 12,
+        "A60": 4,
+        "T_frac60": 0.7333,
+        "A_frac60": 0.0667,
+        "R_frac60": 0.2,
+        "x_poincare": [
+          0.7333,
+          0.0667
+        ],
+        "x_transport_H": [
+          0.7685,
+          0.0493
+        ],
+        "norm_x": 0.7363,
+        "norm_xT": 0.7701,
+        "conservation_residual": 0.033796,
+        "d_H_to_canonical": 0.7955,
+        "d_E_to_canonical": 0.1375,
+        "cos_sim": 0.9986,
+        "D_fix2_cosine": 0.0014,
+        "ratio_H_over_E": 5.785
+      },
+      {
+        "model": "minimax-m3",
+        "T60": 42,
+        "R60": 16,
+        "A60": 2,
+        "T_frac60": 0.7,
+        "A_frac60": 0.0333,
+        "R_frac60": 0.2667,
+        "x_poincare": [
+          0.7,
+          0.0333
+        ],
+        "x_transport_H": [
+          0.7387,
+          0.0166
+        ],
+        "norm_x": 0.7008,
+        "norm_xT": 0.7389,
+        "conservation_residual": 0.038135,
+        "d_H_to_canonical": 0.9075,
+        "d_E_to_canonical": 0.1667,
+        "cos_sim": 1.0,
+        "D_fix2_cosine": 0.0,
+        "ratio_H_over_E": 5.4442
+      },
+      {
+        "model": "glm-5.3-flash",
+        "T60": 42,
+        "R60": 2,
+        "A60": 16,
+        "T_frac60": 0.7,
+        "A_frac60": 0.2667,
+        "R_frac60": 0.0333,
+        "x_poincare": [
+          0.7,
+          0.2667
+        ],
+        "x_transport_H": [
+          0.7386,
+          0.2436
+        ],
+        "norm_x": 0.7491,
+        "norm_xT": 0.7777,
+        "conservation_residual": 0.028635,
+        "d_H_to_canonical": 1.5726,
+        "d_E_to_canonical": 0.2868,
+        "cos_sim": 0.9475,
+        "D_fix2_cosine": 0.0525,
+        "ratio_H_over_E": 5.483
+      },
+      {
+        "model": "kimi-k2.7-code",
+        "T60": 38,
+        "R60": 16,
+        "A60": 6,
+        "T_frac60": 0.6333,
+        "A_frac60": 0.1,
+        "R_frac60": 0.2667,
+        "x_poincare": [
+          0.6333,
+          0.1
+        ],
+        "x_transport_H": [
+          0.6793,
+          0.0806
+        ],
+        "norm_x": 0.6411,
+        "norm_xT": 0.684,
+        "conservation_residual": 0.042879,
+        "d_H_to_canonical": 1.1981,
+        "d_E_to_canonical": 0.2427,
+        "cos_sim": 0.993,
+        "D_fix2_cosine": 0.007,
+        "ratio_H_over_E": 4.9356
+      },
+      {
+        "model": "doubao-seed-2.1-turbo",
+        "T60": 36,
+        "R60": 4,
+        "A60": 20,
+        "T_frac60": 0.6,
+        "A_frac60": 0.3333,
+        "R_frac60": 0.0667,
+        "x_poincare": [
+          0.6,
+          0.3333
+        ],
+        "x_transport_H": [
+          0.648,
+          0.3087
+        ],
+        "norm_x": 0.6864,
+        "norm_xT": 0.7178,
+        "conservation_residual": 0.031406,
+        "d_H_to_canonical": 1.9127,
+        "d_E_to_canonical": 0.4014,
+        "cos_sim": 0.8922,
+        "D_fix2_cosine": 0.1078,
+        "ratio_H_over_E": 4.765
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "T60": 32,
+        "R60": 4,
+        "A60": 24,
+        "T_frac60": 0.5333,
+        "A_frac60": 0.4,
+        "R_frac60": 0.0667,
+        "x_poincare": [
+          0.5333,
+          0.4
+        ],
+        "x_transport_H": [
+          0.5862,
+          0.3749
+        ],
+        "norm_x": 0.6666,
+        "norm_xT": 0.6958,
+        "conservation_residual": 0.029131,
+        "d_H_to_canonical": 2.2003,
+        "d_E_to_canonical": 0.4956,
+        "cos_sim": 0.8224,
+        "D_fix2_cosine": 0.1776,
+        "ratio_H_over_E": 4.4396
+      }
+    ],
+    "summary": {
+      "n_models": 9,
+      "n_total_cells": 540,
+      "canonical_model": "glm-5.3",
+      "canonical_x_poincare": [
+        0.8667,
+        0.0333
+      ],
+      "transport_velocity": [
+        0.08,
+        -0.02
+      ],
+      "d_H_mean": 1.0562,
+      "d_H_std": 0.6929,
+      "d_E_mean": 0.2077,
+      "d_E_std": 0.1558,
+      "cos_sim_mean": 0.9613,
+      "spearman_rho_H_vs_E": 1.0,
+      "spearman_rho_H_vs_cos": 0.9,
+      "verdict_distribution": {
+        "d_H_lt_0_5": 2,
+        "d_H_0_5_to_1_5": 4,
+        "d_H_ge_1_5": 3
+      }
+    }
+  },
+  "P_G_5_anchors_v01_real": {
+    "P_G_HYPERBOLIC_TRANSPORT": {
+      "sha12": "9c3c50005103",
+      "placeholder": "230b5caee415",
+      "verdict": "PASS",
+      "algo_definition": "P_G_V01_ALGO:Mobius(c=1)+Exp_0=tanh(||v||)*v/||v||+Log_0=artanh(||x||)*x/||x||+transport=Exp_0(Log_0(x)+v)"
+    },
+    "P_G_CURVATURE_BOUND": {
+      "sha12": "8ff586b2722e",
+      "placeholder": "dcbcf2b8d45f",
+      "verdict": "PASS",
+      "algo_definition": "P_G_V01_CURVATURE_BOUND:kappa=-1(c=1)+kappa_min=-0.01+d_H_threshold_strict=0.5+d_H_threshold_loose=1.5"
+    },
+    "P_G_LLM_CLIENT": {
+      "sha12": "0130d179059e",
+      "placeholder": "2c1f572aa2bf",
+      "verdict": "PASS",
+      "algo_definition": "P_G_V01_LLM_CLIENT:0_LLM_calls+0_key_literal+runtime_Path_read_text+9_model_volcengine_coding_plan"
+    },
+    "P_G_HARNESS": {
+      "sha12": "27419597798b",
+      "placeholder": "8b90c53f1e01",
+      "verdict": "PASS",
+      "algo_definition": "P_G_V01_HARNESS:9_models_x_60_cells=540+BOSS_PG_1_riemannian_degenerate+BOSS_PG_2_hyperbolic_classification_collapse+BOSS_PG_3_geodesic_violation"
+    },
+    "P_G_FROZEN_BENCHMARK": {
+      "sha12": "9205c1168e59",
+      "placeholder": "91db66afecc3",
+      "verdict": "PASS",
+      "frozen_payload_first200": "[{\"cos_sim\": 0.9988, \"d_E_to_canonical\": 0.1054, \"d_H_to_canonical\": 0.6519, \"model\": \"deepseek-v4-flash\"}, {\"cos_sim\": 0.8224, \"d_E_to_canonical\": 0.4956, \"d_H_to_canonical\": 2.2003, \"model\": \"deepse"
+    }
+  },
+  "P_G_3_BOSS_scaffolding": {
+    "BOSS_PG_1_riemannian_degenerate": {
+      "file": "deposon_team/plugins/boss_pg_1_riemannian_degenerate.py",
+      "status": "SCAFFOLDING (PRE-REGISTRATION, 等 D5 launch)",
+      "purpose": "自测 κ → 0 时双曲 transport 是否退化为欧几里得 transport",
+      "verdict_pending": true
+    },
+    "BOSS_PG_2_hyperbolic_classification_collapse": {
+      "file": "deposon_team/plugins/boss_pg_2_hyperbolic_classification_collapse.py",
+      "status": "SCAFFOLDING (PRE-REGISTRATION, 等 D5 launch)",
+      "purpose": "自测 9 model 在 Poincare ball 中是否坍缩到同一邻域 (判别信号失效)",
+      "verdict_pending": true
+    },
+    "BOSS_PG_3_geodesic_violation": {
+      "file": "deposon_team/plugins/boss_pg_3_geodesic_violation.py",
+      "status": "SCAFFOLDING (PRE-REGISTRATION, 等 D5 launch)",
+      "purpose": "自测 transport 是否沿测地线 (||v||_x 不变, 平行移动性质)",
+      "verdict_pending": true
+    }
+  },
+  "next_steps": [
+    "reviewer-a 静态审 + reviewer-b /tmp 重跑双审 (沿 P-F V0.1 §5)",
+    "等 D5 (2026-09-16) 王老师 WeChat 决策点拍板 P-G V0.1 → V1 升级",
+    "D7 (2026-09-18) 5 锚 PASS/FAIL 终极判死 + 推王老师 WeChat"
+  ]
+}

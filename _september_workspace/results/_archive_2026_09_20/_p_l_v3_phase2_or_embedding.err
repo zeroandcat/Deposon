@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\私人资料\deposon-repo\_p_l_v3_phase2_or_embedding_2026_09_17.py", line 561, in <module>
+    main()
+    ~~~~^^
+  File "D:\私人资料\deposon-repo\_p_l_v3_phase2_or_embedding_2026_09_17.py", line 313, in main
+    log(f"  [{bb_alias}] uniqueness β median={med:.6f if med is not None else 'NA'}, "
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Invalid format specifier '.6f if med is not None else 'NA'' for object of type 'float'

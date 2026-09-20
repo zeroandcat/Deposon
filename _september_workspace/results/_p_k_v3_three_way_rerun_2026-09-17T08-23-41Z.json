@@ -1,0 +1,523 @@
+{
+  "task": "Step 2: 3 方盲测重跑 (沿 frozen d/pred, 0 重算)",
+  "ts_utc": "2026-09-17T08:23:41.421815+00:00",
+  "constraint": "0 重算 d, 0 触动 18 frozen + 5 制品 JSON + schema v1 + 4 plugin spec + runner 代码",
+  "method": "沿 twoway_glm.glm_predictions + kimi_results.kimi_predictions 直接读取冻结 d/pred, 仅重排三方制品列表 (按 origin + artifact_id 升序), 重算混淆矩阵与 4 判死线",
+  "input_refs": {
+    "twoway_glm_json": {
+      "path": "D:\\私人资料\\deposon-repo\\corpus\\v20\\by_model\\GLM_1\\three_way_glm_slot_blind_test_2026_09_16.json",
+      "sha12": "268ab1239a8a"
+    },
+    "glm_artifact_json": {
+      "path": "D:\\私人资料\\deposon-repo\\corpus\\v20\\by_model\\GLM_2\\glm_artifact_v_2026_09_16.json",
+      "sha12": "39732a92b5c9"
+    },
+    "kimi_results_json": {
+      "path": "D:\\私人资料\\deposon-repo\\results\\deposon_p_k_cross_subject_fingerprint_blind_test_2026_09_16.json",
+      "sha12": "576eaf8d7431"
+    }
+  },
+  "rerun_summary": {
+    "n_own": 26,
+    "n_glm": 23,
+    "n_kimi": 22,
+    "n_foreign": 45,
+    "all_self_pred_self": true,
+    "all_kimi_pred_foreign": true,
+    "glm_to_own": 2,
+    "glm_to_foreign": 21,
+    "kimi_to_own": 0,
+    "kimi_to_foreign": 22
+  },
+  "confusion_matrix_3way": {
+    "rows": [
+      "自家",
+      "GLM",
+      "KIMI"
+    ],
+    "cols": [
+      "判自家",
+      "判外来"
+    ],
+    "cells": {
+      "自家->自家": 26,
+      "自家->外来": 0,
+      "GLM->自家": 2,
+      "GLM->外来": 21,
+      "KIMI->自家": 0,
+      "KIMI->外来": 22
+    }
+  },
+  "metrics": {
+    "FPR": 0.044444444444444446,
+    "FNR": 0.0,
+    "SP_t": 1.0,
+    "anti_whitewash_total": 0.9555555555555556,
+    "anti_whitewash_per_transform": {
+      "W1_key_reorder": {
+        "held": 43,
+        "total": 45,
+        "rate": 0.9555555555555556,
+        "glm_measured": 0.9130434782608695,
+        "kimi_frozen_ref": 22
+      },
+      "W2_newline_inject": {
+        "held": 43,
+        "total": 45,
+        "rate": 0.9555555555555556,
+        "glm_measured": 0.9130434782608695,
+        "kimi_frozen_ref": 22
+      },
+      "W3_comment_inject": {
+        "held": 43,
+        "total": 45,
+        "rate": 0.9555555555555556,
+        "glm_measured": 0.9130434782608695,
+        "kimi_frozen_ref": 22
+      }
+    },
+    "alive_increment": "3/3"
+  },
+  "observational_addon": {
+    "glm_d_range": [
+      1.3136729647200367,
+      4.501999209010987
+    ],
+    "kimi_d_range": [
+      3.036635972990873,
+      4.538944165358375
+    ],
+    "glm_vs_kimi_pairwise_separation": 0.6146245059288538
+  },
+  "decision_lines": [
+    {
+      "line": "SP_t >= 0.7",
+      "measured": 1.0,
+      "pass": true
+    },
+    {
+      "line": "FPR < 1/100",
+      "measured": 0.044444444444444446,
+      "pass": false
+    },
+    {
+      "line": "FNR < 1/20",
+      "measured": 0.0,
+      "pass": true
+    },
+    {
+      "line": "anti_whitewash >= 0.6",
+      "measured": 0.9555555555555556,
+      "pass": true
+    }
+  ],
+  "overall_verdict": "FAIL",
+  "rerun_note": "0 重算 d; 仅读取 twoway_glm.frozen + kimi_results.frozen d/pred; 三方制品列表重排 (按 origin + artifact_id 字典序), 不重算特征",
+  "foreign_artifacts_sorted": [
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N01",
+      "d": 3.7369195482087108,
+      "pred_frozen": "外来",
+      "byte_sha12": "eae43f73fc40",
+      "n_bytes": 17053,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N02",
+      "d": 3.6346550393271224,
+      "pred_frozen": "外来",
+      "byte_sha12": "3e72c29ff04f",
+      "n_bytes": 7711,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N03",
+      "d": 3.8771825934459443,
+      "pred_frozen": "外来",
+      "byte_sha12": "50663d8d10d0",
+      "n_bytes": 7333,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N04",
+      "d": 3.6287065388212985,
+      "pred_frozen": "外来",
+      "byte_sha12": "e638e2f19543",
+      "n_bytes": 17013,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N05",
+      "d": 3.6160688443651288,
+      "pred_frozen": "外来",
+      "byte_sha12": "a204e494dc79",
+      "n_bytes": 3533,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N06",
+      "d": 2.989547218908395,
+      "pred_frozen": "外来",
+      "byte_sha12": "b4d377efd9ee",
+      "n_bytes": 1666,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N07",
+      "d": 3.101229824474653,
+      "pred_frozen": "外来",
+      "byte_sha12": "1e068060e3d7",
+      "n_bytes": 4437,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N08",
+      "d": 3.062367255191816,
+      "pred_frozen": "外来",
+      "byte_sha12": "45f56598c2dc",
+      "n_bytes": 8796,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N09",
+      "d": 2.985461928413095,
+      "pred_frozen": "外来",
+      "byte_sha12": "d1b7d1bf7718",
+      "n_bytes": 11641,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N10",
+      "d": 1.3136729647200367,
+      "pred_frozen": "自家",
+      "byte_sha12": "392c2ac0daf4",
+      "n_bytes": 11785,
+      "is_json": 1.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N11",
+      "d": 1.883229680827938,
+      "pred_frozen": "自家",
+      "byte_sha12": "4ffd8652f2e9",
+      "n_bytes": 2612,
+      "is_json": 1.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N12",
+      "d": 2.515733525606732,
+      "pred_frozen": "外来",
+      "byte_sha12": "a9efc1761aa0",
+      "n_bytes": 2033,
+      "is_json": 1.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N13",
+      "d": 2.536908347981021,
+      "pred_frozen": "外来",
+      "byte_sha12": "113f927f54be",
+      "n_bytes": 2289,
+      "is_json": 1.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N14",
+      "d": 2.7808693604206676,
+      "pred_frozen": "外来",
+      "byte_sha12": "6295bf1c5d0b",
+      "n_bytes": 1200,
+      "is_json": 1.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-N15",
+      "d": 2.6659219908466536,
+      "pred_frozen": "外来",
+      "byte_sha12": "bee9b6b99faa",
+      "n_bytes": 1274,
+      "is_json": 1.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-S01",
+      "d": 4.237677053265701,
+      "pred_frozen": "外来",
+      "byte_sha12": "c4b7468a3508",
+      "n_bytes": 1102,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-S02",
+      "d": 3.8021571053243925,
+      "pred_frozen": "外来",
+      "byte_sha12": "80b4caace724",
+      "n_bytes": 5035,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-S03",
+      "d": 4.501999209010987,
+      "pred_frozen": "外来",
+      "byte_sha12": "145b26f866e8",
+      "n_bytes": 652,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-S04",
+      "d": 4.160400130491372,
+      "pred_frozen": "外来",
+      "byte_sha12": "5111d1549f0c",
+      "n_bytes": 933,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-S05",
+      "d": 4.274164595879265,
+      "pred_frozen": "外来",
+      "byte_sha12": "37d6ecf4b186",
+      "n_bytes": 658,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-S06",
+      "d": 4.146316704042778,
+      "pred_frozen": "外来",
+      "byte_sha12": "280ffccff02b",
+      "n_bytes": 1720,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-S07",
+      "d": 4.327768348567064,
+      "pred_frozen": "外来",
+      "byte_sha12": "47ae153ebfc5",
+      "n_bytes": 1002,
+      "is_json": 0.0
+    },
+    {
+      "origin": "GLM",
+      "artifact_id": "GLM-S08",
+      "d": 3.9104688331558326,
+      "pred_frozen": "外来",
+      "byte_sha12": "04a0d267b787",
+      "n_bytes": 3324,
+      "is_json": 0.0
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N01",
+      "d": 4.015463001572583,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N02",
+      "d": 3.829563573418797,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N03",
+      "d": 3.760960668760662,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N04",
+      "d": 3.8059961342886774,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N05",
+      "d": 3.4271486183689253,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N06",
+      "d": 3.536088932725081,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N07",
+      "d": 3.318447967108693,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N08",
+      "d": 3.524218756950318,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N09",
+      "d": 3.1463995597360435,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N10",
+      "d": 3.3548356164028132,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N11",
+      "d": 3.5708052279687275,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N12",
+      "d": 3.095386549171114,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N13",
+      "d": 3.2858235378716305,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-N14",
+      "d": 3.036635972990873,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-S01",
+      "d": 4.164437957996472,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-S02",
+      "d": 4.337652701295222,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-S03",
+      "d": 4.538944165358375,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-S04",
+      "d": 4.023824136531611,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-S05",
+      "d": 4.010812281554227,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-S06",
+      "d": 3.946178698150031,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-S07",
+      "d": 4.060047603128682,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    },
+    {
+      "origin": "KIMI",
+      "artifact_id": "KIMI-S08",
+      "d": 4.306100705464544,
+      "pred_frozen": "KIMI",
+      "byte_sha12": null,
+      "n_bytes": null,
+      "is_json": null
+    }
+  ]
+}

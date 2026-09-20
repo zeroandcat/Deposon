@@ -1,0 +1,127 @@
+{
+  "date": "2026-09-16T17:37:31.532455",
+  "task": "P-I 曲率审计探针(沿 deposon-physics-formula README 角色边界)",
+  "agent_role": "deposon-physics-formula",
+  "elapsed_seconds": 0.023018598556518555,
+  "iron_7_compliance": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "all_results": {
+    "perturbation_results": {
+      "gradient_index": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "d_h_mean_per_gradient": [
+        0.0,
+        0.152336,
+        0.338909,
+        0.43261,
+        0.750588,
+        0.688574,
+        1.380566,
+        0.927209,
+        5.176434,
+        1.153638
+      ],
+      "d_e_mean_per_gradient": [
+        0.0,
+        0.028284,
+        0.056569,
+        0.084853,
+        0.113137,
+        0.141421,
+        0.169706,
+        0.19799,
+        0.217883,
+        0.254558
+      ]
+    },
+    "detection_auc": {
+      "d_h_auc_per_gradient": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.125,
+        0.0,
+        0.25
+      ],
+      "d_e_auc_per_gradient": [
+        0.0,
+        0.0,
+        0.0,
+        0.375,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.625
+      ],
+      "v42_fingerprint_auc_per_gradient": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.125,
+        0.0,
+        0.25
+      ],
+      "max_d_h_auc": 0.25,
+      "max_d_e_auc": 0.625,
+      "max_v42_auc": 0.25
+    },
+    "cell_amplification_first_3": [
+      {
+        "gradient_index": 1,
+        "cell_index": 0,
+        "d_h": 0.230462,
+        "d_e": 0.028284,
+        "amplification_ratio": 8.1481
+      },
+      {
+        "gradient_index": 1,
+        "cell_index": 1,
+        "d_h": 0.230462,
+        "d_e": 0.028284,
+        "amplification_ratio": 8.1481
+      },
+      {
+        "gradient_index": 1,
+        "cell_index": 2,
+        "d_h": 0.153623,
+        "d_e": 0.028284,
+        "amplification_ratio": 5.4314
+      }
+    ],
+    "probe_cost": {
+      "cost_d_h": 99.0078,
+      "cost_d_e": 11.3796,
+      "cost_v42": 118.8093
+    },
+    "final_dang_verdict": "P-I 判死(5x 仅是几何现象不是审计资产)"
+  }
+}

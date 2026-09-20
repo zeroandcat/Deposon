@@ -1,0 +1,14 @@
+[17:29:28] === P-L v3 Phase 2 closed-source runner v3 | TS=20260917_172928 | PRIMARY=gpt56sol | chain=['gpt56sol', 'claude_sonnet5', 'gemini_37flash'] ===
+[17:29:28]   teamo_key[:18] = sk-teamo-bc291a64c... (mask only; never persisted)
+[17:29:28]   baseline cells = 30 (gsm8k=15, sqa=15)
+[17:29:28]   L=60 per_model T_frac60 mean = 0.7111
+[17:29:28] === Sanity check (chain: ['gpt56sol', 'claude_sonnet5', 'gemini_37flash']) ===
+[17:29:28]   [sanity] try gpt56sol...
+[17:29:32]   [sanity] gpt56sol PASS (4010ms)
+[17:29:32]   [resume] resumed from cell index 14/30 (pass=13 missing=0)
+[17:29:32] === Warmup gpt56sol ===
+[17:29:34]   [warmup] gpt56sol OK (2668ms, rm=gpt-5.6-sol)
+[17:29:34]   warmup_result = True
+[17:29:34] === Running 30 cells | chain = ['gpt56sol', 'claude_sonnet5', 'gemini_37flash'] | start_idx=14 ===
+[17:29:40]   [progress] 15/30 pass=14 missing=0 elapsed=5s
+[17:30:18]   [progress] 18/30 pass=17 missing=0 elapsed=44s

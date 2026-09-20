@@ -1,0 +1,24 @@
+import json
+# Quick check the 4 worker JSONs' top-level structure to count cells
+for w in ['a', 'b', 'c', 'd']:
+    path = rf'D:\私人资料\deposon-repo\results\deposon_volcengine_worker_{w}_2026_09_10.json'
+    with open(path, 'r', encoding='utf-8') as f:
+        d = json.load(f)
+    if 'models' in d:
+        for m in d['models']:
+            print(f"=== W{w} {m.get('model','?')} ===")
+            for tk in ['gsm8k', 'strategyqa', 'cells', 'total_passed', 'gsm8k_passed', 'strategyqa_passed']:
+                if tk in m:
+                    v = m[tk]
+                    if isinstance(v, list):
+                        print(f"  {tk}: list[{len(v)}]")
+                        if len(v) > 0:
+                            print(f"    sample keys: {list(v[0].keys())[:8]}")
+                    else:
+                        print(f"  {tk}: {v}")
+            if 'detailed' in d:
+                for k, v in d['detailed'].items():
+                    if k == m.get('model'):
+                        for sub in ['gsm8k', 'strategyqa']:
+                            if sub in v:
+                                print(f"  detailed.{sub}: list[{len(v[sub])}]")

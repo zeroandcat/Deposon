@@ -1,0 +1,137 @@
+{
+  "batch": "verifier21-sync",
+  "commit": "cc3c92d068fdf37d56460d91a242ca1d9c1763a9",
+  "base": "85fa9978996aeaf5bde388883dab3b42fba88b59",
+  "purpose": "21 件本地新版 verifier 文件同步远端(user 23:46 裁决选项 a)",
+  "secret_scan": "8 generalized patterns, 0 hits",
+  "file_count": 21,
+  "files": [
+    {
+      "path": "verifier/README.md",
+      "sha12": "d76f2dc473be",
+      "size": 14360,
+      "gitsha": "fabfcff23c0a2464f64ac84d4ddc7f709f077f9f"
+    },
+    {
+      "path": "verifier/runs/v12_run1.md",
+      "sha12": "927eafcb3b0b",
+      "size": 788,
+      "gitsha": "96f5d4a5686f13b049f03d8bfea883b89b515c54"
+    },
+    {
+      "path": "verifier/runs/v15_run1.md",
+      "sha12": "634ef5fa4ef8",
+      "size": 475,
+      "gitsha": "c8506b02150948d7cf4e4d23c7e2460c78294270"
+    },
+    {
+      "path": "verifier/runs/v16_run1.md",
+      "sha12": "e6bf3b753ff6",
+      "size": 359,
+      "gitsha": "d6e6ee8aaab061f82623f102b164910f709d6923"
+    },
+    {
+      "path": "verifier/runs/v17_run1.md",
+      "sha12": "9d0332c44044",
+      "size": 283,
+      "gitsha": "bf3e743772b82179efdcc6e393489cf894514212"
+    },
+    {
+      "path": "verifier/runs/v18_run1.md",
+      "sha12": "4a3ce944cce3",
+      "size": 276,
+      "gitsha": "e44f48d6f391011de205fe8f3256027af350aa0d"
+    },
+    {
+      "path": "verifier/runs/v19_run1.md",
+      "sha12": "7b95dbd3f168",
+      "size": 297,
+      "gitsha": "48145630fc7905d93db99fd5eb4ee284da806191"
+    },
+    {
+      "path": "verifier/runs/v20_run1.md",
+      "sha12": "41d3d7f4a148",
+      "size": 295,
+      "gitsha": "13285acf3d4b1585a3248ac772a5862d4eca0f70"
+    },
+    {
+      "path": "verifier/runs/v21_run1.md",
+      "sha12": "36b69e195f06",
+      "size": 247,
+      "gitsha": "b02d1ee174df839cc375c801ff71ae881b7a0884"
+    },
+    {
+      "path": "verifier/runs/v21_run2.md",
+      "sha12": "3246c7d46480",
+      "size": 448,
+      "gitsha": "86e1d1441c2e136d88d3c8251513cdaae718133a"
+    },
+    {
+      "path": "verifier/v12/check.py",
+      "sha12": "87c9c883e3bf",
+      "size": 4142,
+      "gitsha": "f7bb005e2207836c6bf510ff02adccfb3d3f393e"
+    },
+    {
+      "path": "verifier/v17/erratum.md",
+      "sha12": "50f15f7ea3dc",
+      "size": 438,
+      "gitsha": "1d426cc461aea1477c7375b88ecf75a64056ae71"
+    },
+    {
+      "path": "verifier/v18/check.py",
+      "sha12": "6abdda4f7400",
+      "size": 3180,
+      "gitsha": "46be5f16468a69f1e0662ceba748ed1e2858620d"
+    },
+    {
+      "path": "verifier/v20/erratum.md",
+      "sha12": "35081d39f35b",
+      "size": 316,
+      "gitsha": "df5d40624d6a4dd6c43217b0f2e9cc4b5cdf3ac6"
+    },
+    {
+      "path": "verifier/v26/check.py",
+      "sha12": "c58a9652a42a",
+      "size": 2595,
+      "gitsha": "baf5b34576c9cfecc10b28b6938022d50a3ae4ee"
+    },
+    {
+      "path": "verifier/v27/check.py",
+      "sha12": "118524c7e808",
+      "size": 2132,
+      "gitsha": "aeaeec1292090cefd611758b3dc18c6668b2e375"
+    },
+    {
+      "path": "verifier/v28/check.py",
+      "sha12": "b73a6b268f64",
+      "size": 2201,
+      "gitsha": "9e794aa75f7e63160cc82996edf9ec951a3c4fcd"
+    },
+    {
+      "path": "verifier/v29/check.py",
+      "sha12": "5923e2c379f6",
+      "size": 2124,
+      "gitsha": "fe2ac00e4ac1947c9f35641689aa44eae9904684"
+    },
+    {
+      "path": "verifier/v30/check.py",
+      "sha12": "2cf46f79a669",
+      "size": 2565,
+      "gitsha": "99d8ea991e4d8569ce5fbf2afbe52d31caae0daf"
+    },
+    {
+      "path": "verifier/v31/check.py",
+      "sha12": "e5bb0020e500",
+      "size": 2185,
+      "gitsha": "e524ffc450986fb2790b21f8b7159baae84f8496"
+    },
+    {
+      "path": "verifier/v32/check.py",
+      "sha12": "399bfc743f24",
+      "size": 2551,
+      "gitsha": "09e740b7c955a281f2ab3b8a5e045ee5356a08ca"
+    }
+  ],
+  "trae_note_2026_09_18": "链断注记: 本 manifest base=85fa99789... 与 _kimi_push_v3_manifest_batch10 commit=1b753116... 不衔接, 两条推送链无法拼成单一线性历史 (本批为 verifier v12-v32 同步, batch1-10 为全量镜像, 属不同推送批次)。"
+}

@@ -1,0 +1,23 @@
+import json
+# Check standalone minimax-m3 30cells
+path = r'D:\私人资料\deposon-repo\results\deposon_volcengine_minimax_m3_30cells_2026_09_10.json'
+with open(path, 'r', encoding='utf-8') as f:
+    d = json.load(f)
+print('keys:', list(d.keys()))
+if 'cells' in d:
+    print(f'cells list len: {len(d["cells"])}')
+    # count by task
+    gsm = [c for c in d['cells'] if c.get('task') == 'gsm8k']
+    stq = [c for c in d['cells'] if c.get('task') == 'strategyqa']
+    print(f'gsm8k: {len(gsm)}, passed: {sum(1 for c in gsm if c.get("is_correct"))}')
+    print(f'strategyqa: {len(stq)}, passed: {sum(1 for c in stq if c.get("is_correct"))}')
+    print(f'total passed: {sum(1 for c in d["cells"] if c.get("is_correct"))}')
+
+# Also check the 9model partial for doubao-seed-2.0-lite (only complete model)
+path2 = r'D:\私人资料\deposon-repo\results\deposon_volcengine_9model_30cells_2026_09_10.json'
+with open(path2, 'r', encoding='utf-8') as f:
+    d2 = json.load(f)
+print('=== 9model partial ===')
+for m in d2.get('models', []):
+    if m.get('status') == 'COMPLETE':
+        print(f'  {m["model"]}: total_passed={m["total_passed"]}, pass_rate_30={m.get("pass_rate_30")}')

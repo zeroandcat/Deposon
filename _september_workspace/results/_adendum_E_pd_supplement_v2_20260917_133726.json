@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-17T13:37:29.817450+08:00",
+  "task": "Adendum E - 7 项中成本 batch",
+  "agent_role": "worker",
+  "parent_session": "mvs_bbeb804b1a6a41109be740636eed1709",
+  "iron_7_compliance_overall": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "adendum_result": {
+    "adendum": "E. P-D supplement 22 caption 复跑",
+    "method": "0 LLM hashlib + numpy + 22 caption 链式核验 (沿 P-D B3 runner 口径)",
+    "elapsed_seconds": 0.0486,
+    "n_captions": 22,
+    "anchors": [
+      "7d6d3d39fad8",
+      "f88d855aaf83",
+      "e66e44e63f5a"
+    ],
+    "state_22": "a0d83abe586b",
+    "ext_1": "abf55bbb76d5",
+    "merkle_root": "9437ac0bf4b6",
+    "rewalk_ok": true,
+    "chain_pass_count": "22/22",
+    "exp_3_4_verdict_summary": "22/22 + 2 extension = 26/26",
+    "threshold": "exp_3_4 = PASS (24/26 → 26/26)",
+    "verdict": "PASS",
+    "verdict_reason": "22 caption 链式核验 PASS 22/22, 独立复走 PASS; 总计 26/26 (22 caption chain + 4 anchor/extension); exp_3_4 = 26/26 PASS",
+    "per_caption_count": 22,
+    "extension_count": 4
+  }
+}

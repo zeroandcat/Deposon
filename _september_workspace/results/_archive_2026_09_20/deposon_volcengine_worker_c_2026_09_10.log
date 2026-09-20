@@ -1,0 +1,72 @@
+[21:16:24] OUTPUT_JSON=D:\私人资料\deposon-repo\results\deposon_volcengine_worker_c_2026_09_10.json
+[21:16:24] OUTPUT_LOG=D:\私人资料\deposon-repo\results\deposon_volcengine_worker_c_2026_09_10.log
+[21:16:24] === MODEL glm-5.3 START ===
+[21:16:27]   SANITY status=200 ms=2828.4 text='1 + 1 = 2' pass=True
+[21:16:30]   CELL gsm8k_1 status=200 ms=3283.1 pred=18.0 gold=18.0 correct=True
+[21:16:33]   CELL gsm8k_2 status=200 ms=2817.1 pred=5.0 gold=5.0 correct=True
+[21:16:35]   CELL gsm8k_3 status=200 ms=2233.8 pred=40.0 gold=40.0 correct=True
+[21:17:06]   CELL gsm8k_4 status=-1 ms=30036.0 pred=None gold=1430.0 correct=False
+[21:17:07]   CELL gsm8k_5 status=200 ms=1946.0 pred=36.0 gold=36.0 correct=True
+[21:17:09]   CELL gsm8k_6 status=200 ms=1447.1 pred=8000.0 gold=8000.0 correct=True
+[21:17:14]   CELL gsm8k_7 status=200 ms=4860.9 pred=36.0 gold=36.0 correct=True
+[21:17:16]   CELL gsm8k_8 status=200 ms=1906.9 pred=6.0 gold=6.0 correct=True
+[21:17:18]   CELL gsm8k_9 status=200 ms=2649.8 pred=40.0 gold=40.0 correct=True
+[21:17:20]   CELL gsm8k_10 status=200 ms=1446.2 pred=140.0 gold=140.0 correct=True
+[21:17:22]   CELL gsm8k_11 status=200 ms=1767.6 pred=2125.0 gold=2125.0 correct=True
+[21:17:24]   CELL gsm8k_12 status=200 ms=2147.5 pred=32.0 gold=32.0 correct=True
+[21:17:26]   CELL gsm8k_13 status=200 ms=2336.3 pred=50.0 gold=50.0 correct=True
+[21:17:28]   CELL gsm8k_14 status=200 ms=1627.0 pred=122.0 gold=122.0 correct=True
+[21:17:30]   CELL gsm8k_15 status=200 ms=2076.8 pred=34.0 gold=34.0 correct=True
+[21:17:33]   CELL stq_1 status=200 ms=2927.4 pred='Yes' gold='Yes' correct=True
+[21:17:34]   CELL stq_2 status=200 ms=1713.9 pred='No' gold='No' correct=True
+[21:17:41]   CELL stq_3 status=200 ms=6193.6 pred='Yes' gold='Yes' correct=True
+[21:17:44]   CELL stq_4 status=200 ms=3417.6 pred='No' gold='No' correct=True
+[21:17:53]   CELL stq_5 status=200 ms=8833.8 pred='No' gold='Yes' correct=False
+[21:17:56]   CELL stq_6 status=200 ms=3300.5 pred='No' gold='No' correct=True
+[21:17:59]   CELL stq_7 status=200 ms=2894.4 pred='Yes' gold='No' correct=False
+[21:18:01]   CELL stq_8 status=200 ms=2449.5 pred='No' gold='No' correct=True
+[21:18:08]   CELL stq_9 status=200 ms=6873.0 pred='Yes' gold='Yes' correct=True
+[21:18:15]   CELL stq_10 status=200 ms=7135.4 pred='Yes' gold='No' correct=False
+[21:18:18]   CELL stq_11 status=200 ms=2245.9 pred='No' gold='No' correct=True
+[21:18:21]   CELL stq_12 status=200 ms=3637.9 pred='No' gold='No' correct=True
+[21:18:26]   CELL stq_13 status=200 ms=4359.7 pred='Yes' gold='Yes' correct=True
+[21:18:35]   CELL stq_14 status=200 ms=9208.3 pred='Yes' gold='Yes' correct=True
+[21:18:40]   CELL stq_15 status=200 ms=5146.3 pred='Yes' gold='Yes' correct=True
+[21:18:40]   MODEL glm-5.3 DONE gsm=14/15 stq=12/15 avg_ms=4430.6 elapsed_s=132.9
+[21:18:40] === MODEL doubao-seed-evolving START ===
+[21:18:43]   SANITY status=200 ms=2553.2 text='### Solution\n\n\\(1 + 1 = 2\\)\n\n### Final Answer\n\n**2**' pass=True
+[21:18:53]   CELL gsm8k_1 status=200 ms=10130.5 pred=18.0 gold=18.0 correct=True
+[21:18:56]   CELL gsm8k_2 status=200 ms=3585.4 pred=5.0 gold=5.0 correct=True
+[21:19:03]   CELL gsm8k_3 status=200 ms=6491.1 pred=40.0 gold=40.0 correct=True
+[21:19:12]   CELL gsm8k_4 status=200 ms=8989.1 pred=1430.0 gold=1430.0 correct=True
+[21:19:16]   CELL gsm8k_5 status=200 ms=3992.6 pred=36.0 gold=36.0 correct=True
+[21:19:19]   CELL gsm8k_6 status=200 ms=3617.0 pred=0.0 gold=8000.0 correct=False
+[21:19:29]   CELL gsm8k_7 status=200 ms=9145.2 pred=36.36 gold=36.0 correct=False
+[21:19:43]   CELL gsm8k_8 status=200 ms=13980.0 pred=6.0 gold=6.0 correct=True
+[21:19:52]   CELL gsm8k_9 status=200 ms=9671.1 pred=40.0 gold=40.0 correct=True
+[21:19:57]   CELL gsm8k_10 status=200 ms=4320.6 pred=140.0 gold=140.0 correct=True
+[21:20:02]   CELL gsm8k_11 status=200 ms=5270.4 pred=2125.0 gold=2125.0 correct=True
+[21:20:07]   CELL gsm8k_12 status=200 ms=5151.4 pred=32.0 gold=32.0 correct=True
+[21:20:19]   CELL gsm8k_13 status=200 ms=11718.5 pred=50.0 gold=50.0 correct=True
+[21:20:22]   CELL gsm8k_14 status=200 ms=3167.9 pred=122.0 gold=122.0 correct=True
+[21:20:52]   CELL gsm8k_15 status=-1 ms=30043.9 pred=None gold=34.0 correct=False
+[21:20:55]   CELL stq_1 status=200 ms=3332.7 pred='Yes' gold='Yes' correct=True
+[21:20:59]   CELL stq_2 status=200 ms=3877.7 pred='No' gold='No' correct=True
+[21:21:22]   CELL stq_3 status=200 ms=22713.7 pred='Yes' gold='Yes' correct=True
+[21:21:26]   CELL stq_4 status=200 ms=4380.1 pred='No' gold='No' correct=True
+[21:21:56]   CELL stq_5 status=-1 ms=30029.5 pred=None gold='Yes' correct=False
+[21:22:01]   CELL stq_6 status=200 ms=4793.2 pred='No' gold='No' correct=True
+[21:22:05]   CELL stq_7 status=200 ms=3598.3 pred='Yes' gold='No' correct=False
+[21:22:19]   CELL stq_8 status=200 ms=14683.1 pred='No' gold='No' correct=True
+[21:22:39]   CELL stq_9 status=200 ms=20032.7 pred='No' gold='Yes' correct=False
+[21:22:45]   CELL stq_10 status=200 ms=5162.3 pred='Yes' gold='No' correct=False
+[21:22:49]   CELL stq_11 status=200 ms=4431.2 pred='No' gold='No' correct=True
+[21:22:58]   CELL stq_12 status=200 ms=8592.9 pred='No' gold='No' correct=True
+[21:23:04]   CELL stq_13 status=200 ms=5960.3 pred='Yes' gold='Yes' correct=True
+[21:23:33]   CELL stq_14 status=200 ms=29080.5 pred='No' gold='Yes' correct=False
+[21:23:35]   CELL stq_15 status=200 ms=2693.1 pred='Yes' gold='Yes' correct=True
+[21:23:35]   MODEL doubao-seed-evolving DONE gsm=12/15 stq=10/15 avg_ms=9754.5 elapsed_s=292.7
+[21:23:35] [WROTE] D:\私人资料\deposon-repo\results\deposon_volcengine_worker_c_2026_09_10.json
+[21:23:35] [DONE] overall_elapsed_s=431.0
+[21:23:35]   glm-5.3: 26/30 pass_rate=0.8667 avg_ms=4430.6 status=COMPLETE
+[21:23:35]   doubao-seed-evolving: 22/30 pass_rate=0.7333 avg_ms=9754.5 status=COMPLETE

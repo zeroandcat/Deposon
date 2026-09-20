@@ -1,0 +1,76 @@
+{
+  "date": "2026-09-17T13:20:50.868159+08:00",
+  "task": "Adendum Phase 3 - 6 项 0 LLM 批处理",
+  "agent_role": "worker",
+  "parent_session": "mvs_bbeb804b1a6a41109be740636eed1709",
+  "iron_7_compliance_overall": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "adendum_result": {
+    "adendum": "L. verifier 双实现差分 (P-M 反转方法论化)",
+    "source_proposal": "KIMI §S4",
+    "elapsed_seconds": 0.0005843639373779297,
+    "method": "0 LLM 本地扰动, 不动 P-M 主产物; 仅在原 JSON 副本上做 budget=0/160 + 双曲线一致性扰动",
+    "data_source": {
+      "p_m_attack_cost_path": "results\\_p_m_attack_surface_cost_2026_09_16\\p_m_attack_surface_cost_results_2026_09_16.json",
+      "p_m_real_separation_path": "results\\_p_m_real_separation_2026_09_16",
+      "p_m_real_separation_files": [
+        "results\\_p_m_real_separation_2026_09_16\\p_m_real_separation_results_2026_09_16.json"
+      ]
+    },
+    "perturbations": [
+      {
+        "name": "baseline_budget_0",
+        "attack_budget": 0,
+        "unit_perturbation_count": 0,
+        "detected_count_predicted": 0,
+        "missed_count_predicted": 0,
+        "detection_rate_predicted": 0.0,
+        "miss_rate_predicted": 1.0,
+        "verdict": "TRIVIAL"
+      },
+      {
+        "name": "extrapolation_budget_160",
+        "attack_budget": 160,
+        "unit_perturbation_count": 1280,
+        "detected_count_predicted": 0,
+        "missed_count_predicted": 8,
+        "detection_rate_predicted": 0.0,
+        "miss_rate_predicted": 1.0,
+        "verdict": "INCONSISTENT_WITH_SAFETY_INDEX"
+      },
+      {
+        "name": "dual_impl_consistency_cost_curve_vs_attack_results",
+        "n_diff_rows": 0,
+        "n_total_rows": 10,
+        "consistency": "IDENTICAL"
+      }
+    ],
+    "p_m_real_separation_status": {
+      "v42_redesign_required": true,
+      "detection_0_vs_secure_conflict": true,
+      "paper_amendment_required": true
+    },
+    "verdict": "PASS",
+    "verdict_reason": "P-M 双实现 (cost_curve vs attack_results) 一致性 OK (0/10 diff); 但 detection=0 vs SECURE 矛盾未解, v42 须重设计",
+    "iron_7_compliance": {
+      "no_llm": true,
+      "no_proxy": true,
+      "no_gateway": true,
+      "no_key_in_prompt_json_disk": true,
+      "no_18_frozen_touch": true,
+      "no_p_g_v0_touch": true,
+      "no_p_g_v01_touch": true,
+      "no_plugin_spec_touch": true,
+      "no_verifier_mavis_builtin_scripts_touch": true
+    }
+  }
+}

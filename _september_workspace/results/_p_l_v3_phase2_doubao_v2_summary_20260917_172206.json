@@ -1,0 +1,426 @@
+{
+  "phase": "P-L v3 Phase 2 Doubao v2 retry (consolidated)",
+  "timestamp": "2026-09-17T17:55:08.906265+08:00",
+  "task_id": "PL-DOUBAO-V2",
+  "proxy": "http://127.0.0.1:1018 (HTTPS_PROXY/HTTP_PROXY only, no socks5)",
+  "L": 30,
+  "n_endpoints_target": 6,
+  "cells_source": "_p_l_v3_vector_embedding_mistral_L30_20260917_142748.json",
+  "backbones": {
+    "doubao-vision-241215": {
+      "alias": "doubao-vision-241215",
+      "embedding_model": "doubao-embedding-vision-241215",
+      "channel": "coding_plan",
+      "expected_dim": 2048,
+      "actual_dims_observed": [
+        2048
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": -0.002900834811830097,
+      "beta_median": -0.002332791565376955,
+      "beta_hi": -0.001550687000998005,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "response_model_match_note": "family-prefix match (volcengine returns family name)",
+      "source_json": "_p_l_v3_vector_embedding_doubao-vision-241215_L30_20260917_172206.json",
+      "json_path": "_p_l_v3_vector_embedding_doubao-vision-241215_L30_20260917_172206.json",
+      "sha12": "e836a04a04d8",
+      "elapsed_s": 31.7
+    },
+    "doubao-vision-250328": {
+      "alias": "doubao-vision-250328",
+      "embedding_model": "doubao-embedding-vision-250328",
+      "channel": "coding_plan",
+      "expected_dim": 2048,
+      "actual_dims_observed": [
+        2048
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": -0.0029261146379142853,
+      "beta_median": -0.0023621061147299847,
+      "beta_hi": -0.001571883451650699,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "response_model_match_note": "family-prefix match (volcengine returns family name)",
+      "source_json": "_p_l_v3_vector_embedding_doubao-vision-250328_L30_20260917_172206.json",
+      "json_path": "_p_l_v3_vector_embedding_doubao-vision-250328_L30_20260917_172206.json",
+      "sha12": "0432f25cf6c3",
+      "elapsed_s": 33.0
+    },
+    "doubao-vision-250615": {
+      "alias": "doubao-vision-250615",
+      "embedding_model": "doubao-embedding-vision-250615",
+      "channel": "coding_plan",
+      "expected_dim": 2048,
+      "actual_dims_observed": [
+        2048
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": -0.0029161333362816193,
+      "beta_median": -0.0023342254404011813,
+      "beta_hi": -0.0015814752994011967,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "response_model_match_note": "family-prefix match (volcengine returns family name)",
+      "source_json": "_p_l_v3_vector_embedding_doubao-vision-250615_L30_20260917_172206.json",
+      "json_path": "_p_l_v3_vector_embedding_doubao-vision-250615_L30_20260917_172206.json",
+      "sha12": "710b7f291355",
+      "elapsed_s": 31.9
+    },
+    "doubao-vision-251215": {
+      "alias": "doubao-vision-251215",
+      "embedding_model": "doubao-embedding-vision-251215",
+      "channel": "coding_plan",
+      "expected_dim": 2048,
+      "actual_dims_observed": [
+        2048
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": -0.0029260853586961432,
+      "beta_median": -0.0023418716789146412,
+      "beta_hi": -0.001591844597036503,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "response_model_match_note": "family-prefix match (volcengine returns family name)",
+      "source_json": "_p_l_v3_vector_embedding_doubao-vision-251215_L30_20260917_172206.json",
+      "json_path": "_p_l_v3_vector_embedding_doubao-vision-251215_L30_20260917_172206.json",
+      "sha12": "a00976c6f87b",
+      "elapsed_s": 31.5
+    },
+    "doubao-text-240715": {
+      "alias": "doubao-text-240715",
+      "embedding_model": "doubao-embedding-text-240715",
+      "channel": "coding_plan",
+      "expected_dim": 2048,
+      "actual_dims_observed": [],
+      "cells_embedded": 0,
+      "cells_total": 30,
+      "status": "FAILED",
+      "beta_lo": null,
+      "beta_median": null,
+      "beta_hi": null,
+      "n_boot": null,
+      "response_model_match": null,
+      "response_model_match_note": "family-prefix match (volcengine returns family name)",
+      "source_json": "_p_l_v3_vector_embedding_doubao-text-240715_L30_20260917_172206.json",
+      "json_path": "_p_l_v3_vector_embedding_doubao-text-240715_L30_20260917_172206.json",
+      "sha12": "2d4827f9cda2",
+      "elapsed_s": 23.3
+    },
+    "qwen3-emb-4b": {
+      "alias": "qwen3-emb-4b",
+      "embedding_model": "Qwen/Qwen3-Embedding-4B",
+      "channel": "openrouter",
+      "expected_dim": 2560,
+      "actual_dims_observed": [
+        2560
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": -0.002452534820138264,
+      "beta_median": -0.0012060443248027135,
+      "beta_hi": -0.00018763984205744642,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "response_model_match_note": "exact match",
+      "source_json": "_p_l_v3_vector_embedding_qwen3-emb-4b_L30_20260917_172206.json",
+      "json_path": "_p_l_v3_vector_embedding_qwen3-emb-4b_L30_20260917_172206.json",
+      "sha12": "bebee5346543",
+      "elapsed_s": 44.3
+    }
+  },
+  "backbones_list": [
+    {
+      "alias": "doubao-vision-241215",
+      "embedding_model": "doubao-embedding-vision-241215",
+      "channel": "coding_plan",
+      "expected_dim": 2048,
+      "actual_dims_observed": [
+        2048
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": -0.002900834811830097,
+      "beta_median": -0.002332791565376955,
+      "beta_hi": -0.001550687000998005,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "response_model_match_note": "family-prefix match (volcengine returns family name)",
+      "source_json": "_p_l_v3_vector_embedding_doubao-vision-241215_L30_20260917_172206.json",
+      "json_path": "_p_l_v3_vector_embedding_doubao-vision-241215_L30_20260917_172206.json",
+      "sha12": "e836a04a04d8",
+      "elapsed_s": 31.7
+    },
+    {
+      "alias": "doubao-vision-250328",
+      "embedding_model": "doubao-embedding-vision-250328",
+      "channel": "coding_plan",
+      "expected_dim": 2048,
+      "actual_dims_observed": [
+        2048
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": -0.0029261146379142853,
+      "beta_median": -0.0023621061147299847,
+      "beta_hi": -0.001571883451650699,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "response_model_match_note": "family-prefix match (volcengine returns family name)",
+      "source_json": "_p_l_v3_vector_embedding_doubao-vision-250328_L30_20260917_172206.json",
+      "json_path": "_p_l_v3_vector_embedding_doubao-vision-250328_L30_20260917_172206.json",
+      "sha12": "0432f25cf6c3",
+      "elapsed_s": 33.0
+    },
+    {
+      "alias": "doubao-vision-250615",
+      "embedding_model": "doubao-embedding-vision-250615",
+      "channel": "coding_plan",
+      "expected_dim": 2048,
+      "actual_dims_observed": [
+        2048
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": -0.0029161333362816193,
+      "beta_median": -0.0023342254404011813,
+      "beta_hi": -0.0015814752994011967,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "response_model_match_note": "family-prefix match (volcengine returns family name)",
+      "source_json": "_p_l_v3_vector_embedding_doubao-vision-250615_L30_20260917_172206.json",
+      "json_path": "_p_l_v3_vector_embedding_doubao-vision-250615_L30_20260917_172206.json",
+      "sha12": "710b7f291355",
+      "elapsed_s": 31.9
+    },
+    {
+      "alias": "doubao-vision-251215",
+      "embedding_model": "doubao-embedding-vision-251215",
+      "channel": "coding_plan",
+      "expected_dim": 2048,
+      "actual_dims_observed": [
+        2048
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": -0.0029260853586961432,
+      "beta_median": -0.0023418716789146412,
+      "beta_hi": -0.001591844597036503,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "response_model_match_note": "family-prefix match (volcengine returns family name)",
+      "source_json": "_p_l_v3_vector_embedding_doubao-vision-251215_L30_20260917_172206.json",
+      "json_path": "_p_l_v3_vector_embedding_doubao-vision-251215_L30_20260917_172206.json",
+      "sha12": "a00976c6f87b",
+      "elapsed_s": 31.5
+    },
+    {
+      "alias": "doubao-text-240715",
+      "embedding_model": "doubao-embedding-text-240715",
+      "channel": "coding_plan",
+      "expected_dim": 2048,
+      "actual_dims_observed": [],
+      "cells_embedded": 0,
+      "cells_total": 30,
+      "status": "FAILED",
+      "beta_lo": null,
+      "beta_median": null,
+      "beta_hi": null,
+      "n_boot": null,
+      "response_model_match": null,
+      "response_model_match_note": "family-prefix match (volcengine returns family name)",
+      "source_json": "_p_l_v3_vector_embedding_doubao-text-240715_L30_20260917_172206.json",
+      "json_path": "_p_l_v3_vector_embedding_doubao-text-240715_L30_20260917_172206.json",
+      "sha12": "2d4827f9cda2",
+      "elapsed_s": 23.3
+    },
+    {
+      "alias": "qwen3-emb-4b",
+      "embedding_model": "Qwen/Qwen3-Embedding-4B",
+      "channel": "openrouter",
+      "expected_dim": 2560,
+      "actual_dims_observed": [
+        2560
+      ],
+      "cells_embedded": 30,
+      "cells_total": 30,
+      "status": "EMBEDDED",
+      "beta_lo": -0.002452534820138264,
+      "beta_median": -0.0012060443248027135,
+      "beta_hi": -0.00018763984205744642,
+      "n_boot": 1000,
+      "response_model_match": true,
+      "response_model_match_note": "exact match",
+      "source_json": "_p_l_v3_vector_embedding_qwen3-emb-4b_L30_20260917_172206.json",
+      "json_path": "_p_l_v3_vector_embedding_qwen3-emb-4b_L30_20260917_172206.json",
+      "sha12": "bebee5346543",
+      "elapsed_s": 44.3
+    }
+  ],
+  "cross_backbone_beta_ci_overlap": {
+    "doubao-vision-241215_vs_doubao-vision-250328": {
+      "r1_CI": [
+        -0.002900834811830097,
+        -0.001550687000998005
+      ],
+      "r2_CI": [
+        -0.0029261146379142853,
+        -0.001571883451650699
+      ],
+      "overlap": true
+    },
+    "doubao-vision-241215_vs_doubao-vision-250615": {
+      "r1_CI": [
+        -0.002900834811830097,
+        -0.001550687000998005
+      ],
+      "r2_CI": [
+        -0.0029161333362816193,
+        -0.0015814752994011967
+      ],
+      "overlap": true
+    },
+    "doubao-vision-241215_vs_doubao-vision-251215": {
+      "r1_CI": [
+        -0.002900834811830097,
+        -0.001550687000998005
+      ],
+      "r2_CI": [
+        -0.0029260853586961432,
+        -0.001591844597036503
+      ],
+      "overlap": true
+    },
+    "doubao-vision-241215_vs_doubao-text-240715": {
+      "r1_CI": null,
+      "r2_CI": null,
+      "overlap": null
+    },
+    "doubao-vision-241215_vs_qwen3-emb-4b": {
+      "r1_CI": [
+        -0.002900834811830097,
+        -0.001550687000998005
+      ],
+      "r2_CI": [
+        -0.002452534820138264,
+        -0.00018763984205744642
+      ],
+      "overlap": true
+    },
+    "doubao-vision-250328_vs_doubao-vision-250615": {
+      "r1_CI": [
+        -0.0029261146379142853,
+        -0.001571883451650699
+      ],
+      "r2_CI": [
+        -0.0029161333362816193,
+        -0.0015814752994011967
+      ],
+      "overlap": true
+    },
+    "doubao-vision-250328_vs_doubao-vision-251215": {
+      "r1_CI": [
+        -0.0029261146379142853,
+        -0.001571883451650699
+      ],
+      "r2_CI": [
+        -0.0029260853586961432,
+        -0.001591844597036503
+      ],
+      "overlap": true
+    },
+    "doubao-vision-250328_vs_doubao-text-240715": {
+      "r1_CI": null,
+      "r2_CI": null,
+      "overlap": null
+    },
+    "doubao-vision-250328_vs_qwen3-emb-4b": {
+      "r1_CI": [
+        -0.0029261146379142853,
+        -0.001571883451650699
+      ],
+      "r2_CI": [
+        -0.002452534820138264,
+        -0.00018763984205744642
+      ],
+      "overlap": true
+    },
+    "doubao-vision-250615_vs_doubao-vision-251215": {
+      "r1_CI": [
+        -0.0029161333362816193,
+        -0.0015814752994011967
+      ],
+      "r2_CI": [
+        -0.0029260853586961432,
+        -0.001591844597036503
+      ],
+      "overlap": true
+    },
+    "doubao-vision-250615_vs_doubao-text-240715": {
+      "r1_CI": null,
+      "r2_CI": null,
+      "overlap": null
+    },
+    "doubao-vision-250615_vs_qwen3-emb-4b": {
+      "r1_CI": [
+        -0.0029161333362816193,
+        -0.0015814752994011967
+      ],
+      "r2_CI": [
+        -0.002452534820138264,
+        -0.00018763984205744642
+      ],
+      "overlap": true
+    },
+    "doubao-vision-251215_vs_doubao-text-240715": {
+      "r1_CI": null,
+      "r2_CI": null,
+      "overlap": null
+    },
+    "doubao-vision-251215_vs_qwen3-emb-4b": {
+      "r1_CI": [
+        -0.0029260853586961432,
+        -0.001591844597036503
+      ],
+      "r2_CI": [
+        -0.002452534820138264,
+        -0.00018763984205744642
+      ],
+      "overlap": true
+    },
+    "doubao-text-240715_vs_qwen3-emb-4b": {
+      "r1_CI": null,
+      "r2_CI": null,
+      "overlap": null
+    }
+  },
+  "p2_embedding_overlap_verdict": "GRAY (10/10 β CI pairs overlap, -4 pairs are SKIP due to text-240715 failure)",
+  "iron_7_compliance": {
+    "no_llm_rehash": true,
+    "proxy_used": "http://127.0.0.1:1018 (HTTPS_PROXY/HTTP_PROXY)",
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "key_loaded_runtime_from": "C:\\Users\\Administrator\\Desktop\\AI\\LLM API.txt",
+    "key_storage": "runtime env var (in-memory only, never written to disk/log)",
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true,
+    "response_model_eq_request_model_verified_per_cell": true,
+    "per_cell_timeout_s": 30
+  }
+}

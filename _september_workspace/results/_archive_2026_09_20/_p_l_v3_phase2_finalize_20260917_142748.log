@@ -1,0 +1,17 @@
+[14:27:48] === P-L v3 Phase 2 finalize ===
+[14:27:48]   TS = 20260917_142748
+[14:27:48]   Found backbone L=30 files: [('glm53', '_p_l_v3_robustness_glm53_L30_20260917_142011.json'), ('qwen3', '_p_l_v3_robustness_qwen3_L30_20260917_140017.json')]
+[14:27:48]   Mistral L=30 (Phase 1) included
+[14:27:48] === β bootstrap CI per backbone ===
+[14:27:52]   [glm53] acc=0.7667 β median=-0.0092, CI=[-0.0262, 0.0080], n_boot=1000
+[14:27:53]   [qwen3] acc=0.6 β median=-0.0184, CI=[-0.0369, 0.0001], n_boot=1000
+[14:27:54]   [mistral] acc=0.8 β median=-0.0158, CI=[-0.0315, -0.0033], n_boot=1000
+[14:27:54] === β CI overlap check ===
+[14:27:54]   glm53 vs qwen3: overlap=True
+[14:27:54]   glm53 vs mistral: overlap=True
+[14:27:54]   qwen3 vs mistral: overlap=True
+[14:27:54] === Mistral L=60 复用 Phase 1 ===
+[14:27:54]   Mistral L=60 -> D:\私人资料\deposon-repo\results\_p_l_v3_robustness_mistral_L60_20260917_142748.json size=1071B
+[14:27:54]   β summary -> D:\私人资料\deposon-repo\results\_p_l_v3_phase2_beta_summary_20260917_142748.json
+[14:27:54] === Generating aggregated MD report ===
+[14:27:54]   MD -> D:\私人资料\deposon-repo\results\_p_l_v3_phase2_report_20260917_142748.md  size=7854B

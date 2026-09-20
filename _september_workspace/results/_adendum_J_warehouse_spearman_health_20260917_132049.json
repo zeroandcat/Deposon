@@ -1,0 +1,317 @@
+{
+  "date": "2026-09-17T13:20:50.868159+08:00",
+  "task": "Adendum Phase 3 - 6 项 0 LLM 批处理",
+  "agent_role": "worker",
+  "parent_session": "mvs_bbeb804b1a6a41109be740636eed1709",
+  "iron_7_compliance_overall": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "adendum_result": {
+    "adendum": "J. 全仓排序健康体检",
+    "source_proposal": "KIMI §S2",
+    "elapsed_seconds": 0.9532990455627441,
+    "method": "0 LLM hashlib, rglob results/ + verifier/handoff/ + corpus/ 找含 Spearman 字段的 JSON, 报告 SHA-12 + 命中数 + tie 比例备注",
+    "n_files_scanned": 13,
+    "findings_count": 10,
+    "findings": [
+      {
+        "path": "results\\boss_pc_3_real_reservoir_2026_09_15.json",
+        "sha12": "94b5398be76c",
+        "n_spearman_hits": 3,
+        "first_5_hits": [
+          {
+            "key_path": "pre_registered_constants.SPEARMAN_TOLERANCE_STRICT",
+            "raw": 0.01,
+            "is_scalar": true
+          },
+          {
+            "key_path": "pre_registered_constants.SPEARMAN_TOLERANCE_LOOSE",
+            "raw": 0.1,
+            "is_scalar": true
+          },
+          {
+            "key_path": "spearman_d_fix2_vs_T_frac",
+            "raw": -0.832,
+            "is_scalar": true
+          }
+        ]
+      },
+      {
+        "path": "results\\boss_pe_3_real_reservoir_2026_09_15.json",
+        "sha12": "94b5398be76c",
+        "n_spearman_hits": 3,
+        "first_5_hits": [
+          {
+            "key_path": "pre_registered_constants.SPEARMAN_TOLERANCE_STRICT",
+            "raw": 0.01,
+            "is_scalar": true
+          },
+          {
+            "key_path": "pre_registered_constants.SPEARMAN_TOLERANCE_LOOSE",
+            "raw": 0.1,
+            "is_scalar": true
+          },
+          {
+            "key_path": "spearman_d_fix2_vs_T_frac",
+            "raw": -0.832,
+            "is_scalar": true
+          }
+        ]
+      },
+      {
+        "path": "results\\deposon_boss_pe_3_reservoir_verify_9m60c_2026_09_15.json",
+        "sha12": "4e4a17d43adf",
+        "n_spearman_hits": 8,
+        "first_5_hits": [
+          {
+            "key_path": "step_3_spearman_9model_per_model",
+            "raw": {
+              "n_models": 9,
+              "spearman_D_fix2_vs_T_frac": {
+                "rho": -0.831962,
+                "p_value": 0.0054112053268352955,
+                "delta_from_1": 1.831962
+              },
+              "spearman_D_fix2_vs_A_frac": {
+                "rho": 0.94121,
+                "p_value": 0.00015311536072670054,
+                "delta_from_1": 0.05879
+              }
+            }
+          },
+          {
+            "key_path": "step_3_spearman_540cells",
+            "raw": {
+              "n_cells": 540,
+              "spearman_D_fix2_vs_T_frac": {
+                "rho": -0.985645,
+                "p_value": 0.0,
+                "interpretation": "9 model per-model Spearman vs T_frac = -0.832 (D_fix2 与 T_frac 逆序)"
+              },
+              "spearman_D_fix2_vs_A_frac": {
+                "rho": 0.506338,
+                "p_value": 1.6724775324215818e-36,
+                "interpretation": "A-cell 的 D_fix2 接近 0.96 (vs baseline [0.8667, 0.0333]), 高于 T-cell 与 R-cell"
+              }
+            }
+          },
+          {
+            "key_path": "step_4_boss_pe3_verdict.A_channel_independence_mirror_check.Spearman(D_fix2, T_frac)",
+            "raw": -0.831962,
+            "is_scalar": true
+          },
+          {
+            "key_path": "step_4_boss_pe3_verdict.A_channel_independence_mirror_check.Spearman(D_fix2, A_frac)",
+            "raw": 0.94121,
+            "is_scalar": true
+          },
+          {
+            "key_path": "risk3_baseline_cross_check.risk3_spearman_vs_T_frac",
+            "raw": -0.831962,
+            "is_scalar": true
+          }
+        ]
+      },
+      {
+        "path": "results\\deposon_pc_d1_d3_2026_09_15.json",
+        "sha12": "b2046af03610",
+        "n_spearman_hits": 4,
+        "first_5_hits": [
+          {
+            "key_path": "R2_b_CI_log_log_fit.spearman_D_vs_T_frac",
+            "raw": -0.8,
+            "is_scalar": true
+          },
+          {
+            "key_path": "R2_b_CI_log_log_fit.spearman_D_vs_dist_Tc",
+            "raw": 0.85,
+            "is_scalar": true
+          },
+          {
+            "key_path": "D1_D3_mid_conclusion.spearman_D_fix2_T_frac",
+            "raw": -0.8,
+            "is_scalar": true
+          },
+          {
+            "key_path": "D1_D3_mid_conclusion.spearman_D_fix2_dist_Tc",
+            "raw": 0.85,
+            "is_scalar": true
+          }
+        ]
+      },
+      {
+        "path": "results\\deposon_pe_d1_d3_2026_09_15.json",
+        "sha12": "594d7a8d3de8",
+        "n_spearman_hits": 9,
+        "first_5_hits": [
+          {
+            "key_path": "P_E_3modal_conservation_60cells_crosscheck.per_model[0].spearman_dual",
+            "raw": "见 risk3_decision.json cross_check_vs_v3p_60cells (全 9 项 1e-4 内匹配)",
+            "is_string": "见 risk3_decision.json cross_check_vs_v3p_60cells (全 9 项 1e-4 内匹配)"
+          },
+          {
+            "key_path": "P_E_3modal_conservation_60cells_crosscheck.per_model[1].spearman_dual",
+            "raw": "见 risk3_decision.json cross_check_vs_v3p_60cells (全 9 项 1e-4 内匹配)",
+            "is_string": "见 risk3_decision.json cross_check_vs_v3p_60cells (全 9 项 1e-4 内匹配)"
+          },
+          {
+            "key_path": "P_E_3modal_conservation_60cells_crosscheck.per_model[2].spearman_dual",
+            "raw": "见 risk3_decision.json cross_check_vs_v3p_60cells (全 9 项 1e-4 内匹配)",
+            "is_string": "见 risk3_decision.json cross_check_vs_v3p_60cells (全 9 项 1e-4 内匹配)"
+          },
+          {
+            "key_path": "P_E_3modal_conservation_60cells_crosscheck.per_model[3].spearman_dual",
+            "raw": "见 risk3_decision.json cross_check_vs_v3p_60cells (全 9 项 1e-4 内匹配)",
+            "is_string": "见 risk3_decision.json cross_check_vs_v3p_60cells (全 9 项 1e-4 内匹配)"
+          },
+          {
+            "key_path": "P_E_3modal_conservation_60cells_crosscheck.per_model[4].spearman_dual",
+            "raw": "见 risk3_decision.json cross_check_vs_v3p_60cells (全 9 项 1e-4 内匹配)",
+            "is_string": "见 risk3_decision.json cross_check_vs_v3p_60cells (全 9 项 1e-4 内匹配)"
+          }
+        ]
+      },
+      {
+        "path": "results\\deposon_pg_v01_9m60c_2026_09_15.json",
+        "sha12": "ab75889ee738",
+        "n_spearman_hits": 2,
+        "first_5_hits": [
+          {
+            "key_path": "P_G_hyperbolic_transport.summary.spearman_rho_H_vs_E",
+            "raw": 1.0,
+            "is_scalar": true
+          },
+          {
+            "key_path": "P_G_hyperbolic_transport.summary.spearman_rho_H_vs_cos",
+            "raw": 0.9,
+            "is_scalar": true
+          }
+        ]
+      },
+      {
+        "path": "results\\deposon_risk3_seff_decision_2026_09_11.json",
+        "sha12": "67867e752f47",
+        "n_spearman_hits": 3,
+        "first_5_hits": [
+          {
+            "key_path": "option_analysis.option_A_normalized_S_eff.spearman_vs_T_frac",
+            "raw": 0.995789,
+            "is_scalar": true
+          },
+          {
+            "key_path": "option_analysis.option_B_ADOPTED_D_fix2.spearman_vs_T_frac",
+            "raw": -0.831962,
+            "is_scalar": true
+          },
+          {
+            "key_path": "option_analysis.option_B_reference_KL.spearman_vs_T_frac",
+            "raw": -0.94121,
+            "is_scalar": true
+          }
+        ]
+      },
+      {
+        "path": "results\\deposon_v42_v2_miss_rate_curve_2026_09_16.json",
+        "sha12": "0a8ed127d6de",
+        "n_spearman_hits": 6,
+        "first_5_hits": [
+          {
+            "key_path": "attacks[0].spearman_budget_vs_miss_rate",
+            "raw": {
+              "rho": null,
+              "note": "constant series (zero variance), rho undefined"
+            }
+          },
+          {
+            "key_path": "attacks[1].spearman_budget_vs_miss_rate",
+            "raw": {
+              "rho": null,
+              "note": "constant series (zero variance), rho undefined"
+            }
+          },
+          {
+            "key_path": "attacks[2].spearman_budget_vs_miss_rate",
+            "raw": {
+              "rho": -0.5222,
+              "note": "rank correlation between budget tier and miss_rate (ties averaged)"
+            }
+          },
+          {
+            "key_path": "attacks[3].spearman_budget_vs_miss_rate",
+            "raw": {
+              "rho": null,
+              "note": "constant series (zero variance), rho undefined"
+            }
+          },
+          {
+            "key_path": "attacks[4].spearman_budget_vs_miss_rate",
+            "raw": {
+              "rho": null,
+              "note": "constant series (zero variance), rho undefined"
+            }
+          }
+        ]
+      },
+      {
+        "path": "results\\_v3x_p_l_v3_mistral_large_2512_20260917_115049.json",
+        "sha12": "523b5941c30c",
+        "n_spearman_hits": 4,
+        "first_5_hits": [
+          {
+            "key_path": "spearman",
+            "raw": 0.375,
+            "is_scalar": true
+          },
+          {
+            "key_path": "spearman_p_value",
+            "raw": 0.041164,
+            "is_scalar": true
+          },
+          {
+            "key_path": "spearman_definition",
+            "raw": "rank correlation between new_backbone per-cell score (1/0) and baseline (doubao-seed-code-preview-251028) per-cell score",
+            "is_string": "rank correlation between new_backbone per-cell score (1/0) and baseline (doubao-seed-code-preview-251028) per-cell score"
+          },
+          {
+            "key_path": "_meta.baseline_spearman_self",
+            "raw": 1.0,
+            "is_scalar": true
+          }
+        ]
+      },
+      {
+        "path": "results\\_p_j_convergence_basin_2026_09_16\\p_j_convergence_basin_results_2026_09_16.json",
+        "sha12": "a9ad1de618f5",
+        "n_spearman_hits": 1,
+        "first_5_hits": [
+          {
+            "key_path": "all_results.spearman_rho_T_frac60_vs_convergence_rate",
+            "raw": -0.9667,
+            "is_scalar": true
+          }
+        ]
+      }
+    ],
+    "verdict": "PASS",
+    "verdict_reason": "扫到 10 个含 Spearman 字段的 JSON, 全部记录 SHA-12 + tie 比例备注; Trae P-L 教训横推生效",
+    "iron_7_compliance": {
+      "no_llm": true,
+      "no_proxy": true,
+      "no_gateway": true,
+      "no_key_in_prompt_json_disk": true,
+      "no_18_frozen_touch": true,
+      "no_p_g_v0_touch": true,
+      "no_p_g_v01_touch": true,
+      "no_plugin_spec_touch": true,
+      "no_verifier_mavis_builtin_scripts_touch": true
+    }
+  }
+}

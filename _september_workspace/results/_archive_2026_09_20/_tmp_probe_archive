@@ -1,0 +1,25 @@
+import urllib.request
+import json
+import re
+
+content = open(r'C:\Users\Administrator\Desktop\AI\LLM API.txt', 'r', encoding='gb18030').read()
+ark_matches = list(re.finditer(r'ark-[a-zA-Z0-9-]+', content))
+ark_key = ark_matches[1].group(0)
+
+# Test with text-only model
+for model in ['doubao-embedding-large-text-250515', 'doubao-embedding-text-240715', 'doubao-embedding-large-text-240915']:
+    url = 'https://ark.cn-beijing.volces.com/api/v3/embeddings'
+    data = json.dumps({'model': model, 'input': 'Hello world test'}).encode('utf-8')
+    req = urllib.request.Request(url, data=data, headers={'Authorization': f'Bearer {ark_key}', 'Content-Type': 'application/json'}, method='POST')
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            body = json.loads(resp.read().decode())
+            if 'data' in body and len(body['data']) > 0:
+                emb = body['data'][0].get('embedding', [])
+                print(f'[{model}] SUCCESS dim={len(emb)} first3={emb[:3]}')
+            else:
+                print(f'[{model}] NO EMB: {str(body)[:200]}')
+    except urllib.error.HTTPError as e:
+        print(f'[{model}] HTTPERR {e.code}: {e.read().decode()[:200]}')
+    except Exception as e:
+        print(f'[{model}] EXC: {str(e)[:200]}')

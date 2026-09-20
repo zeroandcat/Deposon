@@ -1,0 +1,46 @@
+[16:00:53] === P-L v3 Phase 2 — volcengine embedding via 1018 proxy ===
+[16:00:53]   TS = 20260917_160053
+[16:00:53]   [PROXY] 127.0.0.1:1018 reachable OK
+[16:00:53]   [KEY] coding-plan key: ark-3ae14873-6134-...
+[16:00:53] 
+=== 1-cell sanity probe × 4 task-spec slots + 4 vision versions ===
+[16:00:54]   slot1 doubao-embedding-text-240715                     FAIL[404] ms=751 dim=0 resp_model=None err={"error":{"code":"UnsupportedModel","message":"The requested model does not supp
+[16:00:54]   slot2 doubao-embedding-large-text-240515               FAIL[404] ms=765 dim=0 resp_model=None err={"error":{"code":"UnsupportedModel","message":"The requested model does not supp
+[16:00:55]   slot3 doubao-embedding-vision-241215                   OK ms=1012 dim=2048 resp_model='doubao-embedding-vision' err=
+[16:00:56]   slot4 doubao-embedding                                 FAIL[404] ms=823 dim=0 resp_model=None err={"error":{"code":"UnsupportedModel","message":"The requested model does not supp
+[16:00:56] 
+--- 4 vision versions probe (bonus, for completeness) ---
+[16:00:58]   vision doubao-embedding-vision-241215                   OK ms=1439 dim=2048 resp_model='doubao-embedding-vision'
+[16:00:59]   vision doubao-embedding-vision-250328                   OK ms=1044 dim=2048 resp_model='doubao-embedding-vision'
+[16:01:00]   vision doubao-embedding-vision-250615                   OK ms=1007 dim=2048 resp_model='doubao-embedding-vision'
+[16:01:01]   vision doubao-embedding-vision-251215                   OK ms=1090 dim=2048 resp_model='doubao-embedding-vision'
+[16:01:01] 
+=== Loading 30 baseline cells ===
+[16:01:01]   Loaded 30 cells: gsm8k=15, sqa=15
+[16:01:01] 
+=== Full 30-cell × embedding per slot (REAL only for working endpoints) ===
+[16:01:01] 
+--- slot 1 (doubao-embedding-text-240715) ---
+[16:01:01]   [SKIP] sanity FAILED for slot 1 — endpoint UnsupportedModel on coding-plan. Producing INCOMPLETE stub.
+[16:01:01] 
+--- slot 2 (doubao-embedding-large-text-240515) ---
+[16:01:01]   [SKIP] sanity FAILED for slot 2 — endpoint UnsupportedModel on coding-plan. Producing INCOMPLETE stub.
+[16:01:01] 
+--- slot 3 (doubao-embedding-vision-241215) ---
+[16:01:01]   [RUN] doubao-embedding-vision-241215 × 30 cells ...
+[16:01:12]     10/30 done
+[16:01:23]     20/30 done
+[16:01:33]     30/30 done
+[16:01:33]   [SUMMARY] 30/30 passed for slot 3
+[16:01:33]   [β] lo=0.001572 med=0.002308 hi=0.002887 n_boot=1000
+[16:01:33] 
+--- slot 4 (doubao-embedding) ---
+[16:01:33]   [SKIP] sanity FAILED for slot 4 — endpoint UnsupportedModel on coding-plan. Producing INCOMPLETE stub.
+[16:01:33] 
+=== BONUS: 4 vision versions × 30 cells (for completeness) ===
+[16:01:33] 
+--- doubao-embedding-vision-241215 ---
+[16:02:05]   [SUMMARY] 30/30 passed
+[16:02:05]   [β] lo=0.001555 med=0.002299 hi=0.002869 n_boot=1000
+[16:02:05] 
+--- doubao-embedding-vision-250328 ---

@@ -1,0 +1,150 @@
+{
+  "date": "2026-09-16T23:32:09.052865",
+  "task": "V3X 18 frozen 复算 (user 23:21 Q1 拍板 18 frozen + Q2 reconcile)",
+  "elapsed_seconds": 0.04178309440612793,
+  "iron_7_compliance": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "all_results": [
+    {
+      "path": "verifier/handoff/KT_ABC1_anchors_sha256_12.json",
+      "expected_sha12": "03c6c01f3697",
+      "actual_sha12": "03c6c01f3697",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "verifier/handoff/KT_ABC1_anchors_sha256_12_V3X_P_A_PATCH_2026_09_15.json",
+      "expected_sha12": "da517c115f3c",
+      "actual_sha12": "da517c115f3c",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "verifier/handoff/P_F_PREDECISION_2026_09_09.json",
+      "expected_sha12": "b41c98bf90cc",
+      "actual_sha12": "b41c98bf90cc",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "verifier/handoff/P_F_PREDECISION_2026_09_11_V0.1.json",
+      "expected_sha12": "312d635e6259",
+      "actual_sha12": "312d635e6259",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/V3X/P_F_SPEC_V0.md",
+      "expected_sha12": "de90faf362c5",
+      "actual_sha12": "de90faf362c5",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/V3X/P_F_RESEARCH_2026_09_09.md",
+      "expected_sha12": "98085df7811a",
+      "actual_sha12": "98085df7811a",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/V3X/P_F_IMPLEMENTATION_2026_09_11.md",
+      "expected_sha12": "edd048eaa721",
+      "actual_sha12": "edd048eaa721",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/V3X/P_F_V0_1_UPGRADE_2026_09_11.md",
+      "expected_sha12": "b10fae0da66d",
+      "actual_sha12": "b10fae0da66d",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/V3X/P_F_V0_1_VERIFICATION_2026_09_12.md",
+      "expected_sha12": "4d970e9c0aec",
+      "actual_sha12": "4d970e9c0aec",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/V3X/BOSS_URL_2026_09_11.md",
+      "expected_sha12": "1ba7419178a1",
+      "actual_sha12": "1ba7419178a1",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/V3X/BOSS_URL_DUE_DILIGENCE_2026_09_11.md",
+      "expected_sha12": "0fb588bb0c2e",
+      "actual_sha12": "0fb588bb0c2e",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/V3X/V3X_D7_V3_FINAL_REPORT_2026_09_11_V7.md",
+      "expected_sha12": "4a08521f8de1",
+      "actual_sha12": "4a08521f8de1",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/V3X/KT_A1_SPEC_V0.1.md",
+      "expected_sha12": "78b71d404366",
+      "actual_sha12": "78b71d404366",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/V3X/KT_B1_SPEC_V0.1.md",
+      "expected_sha12": "0410ca0fbdae",
+      "actual_sha12": "0410ca0fbdae",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/V3X/KT_C1_SPEC_V0.1.md",
+      "expected_sha12": "59d8f56347d5",
+      "actual_sha12": "59d8f56347d5",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/V3X/KT_D0_SPEC_V0.1.md",
+      "expected_sha12": "cce8e9a1b00e",
+      "actual_sha12": "cce8e9a1b00e",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/V3X/P_G_NON_EUCLIDEAN_SCATTERING_V0_SPEC.md",
+      "expected_sha12": "2f0765a1d39d",
+      "actual_sha12": "2f0765a1d39d",
+      "match": true,
+      "status": "PASS"
+    },
+    {
+      "path": "verifier/audit/conservation.py",
+      "expected_sha12": "4bdec2683f06",
+      "actual_sha12": "4bdec2683f06",
+      "match": true,
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "total": 18,
+    "pass": 18,
+    "fail": 0,
+    "missing": 0
+  }
+}

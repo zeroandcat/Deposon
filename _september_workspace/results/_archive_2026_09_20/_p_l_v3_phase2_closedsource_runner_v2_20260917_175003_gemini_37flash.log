@@ -1,0 +1,31 @@
+[17:50:03] === P-L v3 Phase 2 closed-source runner v3 | TS=20260917_175003 | PRIMARY=gemini_37flash | chain=['gemini_37flash', 'gpt56sol', 'claude_sonnet5'] ===
+[17:50:03]   teamo_key[:18] = sk-teamo-bc291a64c... (mask only; never persisted)
+[17:50:03]   baseline cells = 30 (gsm8k=15, sqa=15)
+[17:50:03]   L=60 per_model T_frac60 mean = 0.7111
+[17:50:03] === Sanity check (chain: ['gemini_37flash', 'gpt56sol', 'claude_sonnet5']) ===
+[17:50:03]   [sanity] try gemini_37flash...
+[17:50:06]   [sanity] gemini_37flash PASS (2682ms)
+[17:50:06] === Warmup gemini_37flash ===
+[17:50:09]   [warmup] gemini_37flash OK (2825ms, rm=gemini-3.7-flash)
+[17:50:09]   warmup_result = True
+[17:50:09] === Running 30 cells | chain = ['gemini_37flash', 'gpt56sol', 'claude_sonnet5'] | start_idx=0 ===
+[17:50:28]   [progress] 3/30 pass=3 missing=0 elapsed=19s
+[17:50:52]   [progress] 6/30 pass=6 missing=0 elapsed=43s
+[17:51:14]   [progress] 9/30 pass=9 missing=0 elapsed=65s
+[17:51:36]   [progress] 12/30 pass=12 missing=0 elapsed=87s
+[17:51:56]   [progress] 15/30 pass=15 missing=0 elapsed=107s
+[17:52:15]   [progress] 18/30 pass=18 missing=0 elapsed=126s
+[17:52:38]   [progress] 21/30 pass=20 missing=0 elapsed=149s
+[17:53:00]   [progress] 24/30 pass=22 missing=0 elapsed=171s
+[17:53:25]   [progress] 27/30 pass=24 missing=0 elapsed=197s
+[17:53:47]   [progress] 30/30 pass=26 missing=0 elapsed=218s
+[17:53:55]   L=30 final JSON -> _p_l_v3_robustness_gemini_37flash_L30_20260917_175003.json  size=30514B
+[17:53:55]   L=60 JSON -> _p_l_v3_robustness_gemini_37flash_L60_20260917_175003.json  size=1288B
+[17:53:55] === DONE for PRIMARY=gemini_37flash | pass=26/30 missing=0 elapsed=220.3s ===
+[17:53:55]   Final outputs:
+[17:53:55]     L=30: D:\私人资料\deposon-repo\results\_p_l_v3_robustness_gemini_37flash_L30_20260917_175003.json
+[17:53:55]     L=60: D:\私人资料\deposon-repo\results\_p_l_v3_robustness_gemini_37flash_L60_20260917_175003.json
+[17:53:55]     incremental (will be removed): D:\私人资料\deposon-repo\results\_p_l_v3_robustness_gemini_37flash_L30_20260917_175003_incremental.json
+[17:53:55]   removed incremental: _p_l_v3_robustness_gemini_37flash_L30_20260917_175003_incremental.json
+[17:53:55]   log -> _p_l_v3_phase2_closedsource_runner_v2_20260917_175003_gemini_37flash.log
+[17:53:55] === END ===

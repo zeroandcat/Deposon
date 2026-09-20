@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-17T13:21:43.232419+08:00",
+  "task": "Adendum Phase 3 - LLM dispatch 状态报告",
+  "agent_role": "worker",
+  "parent_session": "mvs_bbeb804b1a6a41109be740636eed1709",
+  "iron_7_compliance_overall": {
+    "no_llm_worker_self": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true,
+    "awaiting_parent_dispatch": true
+  },
+  "adendum_result": {
+    "adendum": "G. P-F D_fix2 PARTIAL_PASS 收敛 (固定 A channel timing protocol)",
+    "source_proposal": "Coze §6.4",
+    "status": "READY_FOR_PARENT_LLM_DISPATCH",
+    "reason_blocker": "本 Adendum 需调用 volcengine coding-plan 重新跑 D_fix2 metric verify 9m60c, 关键在 fixed A channel timing protocol (消除原 timing 噪声)。Worker 0 LLM 严守, 需 parent 派 sub-agent。",
+    "current_data": {
+      "P-F_D_fix2_strict": "8+1+0 (PARTIAL_PASS, A channel timing 敏感)",
+      "P-F_D_fix2_loose": "8+1+0 (PARTIAL_PASS)",
+      "8+1+0_breakdown": "8 PASS + 1 GRAY/FAIL + 0 = 8+1+0 PARTIAL_PASS, A channel timing 敏感"
+    },
+    "dispatch_plan": {
+      "channel": "volcengine coding-plan",
+      "models_to_rerun": 9,
+      "cells_per_model": 60,
+      "total_llm_calls": 540,
+      "timing_protocol_fix": "A channel timing 固定: cells 1-30 用 T_c/A_c 顺序采样, cells 31-60 用 T_c-only 采样; 消除原 60 cells 中 A_c 与 T_c 时序相关的伪影",
+      "spec": "沿 deposon_d_fix2_metric_verify_9m60c_2026_09_15.json 方法 + A channel timing fix"
+    },
+    "pre_registered_outcomes": {
+      "PASS_convergence": "9+0+0 → P-F D_fix2 PASS (timing 噪声消除后全部 9 model PASS)",
+      "FAIL_exposure": "7+0+2 → P-F D_fix2 FAIL (timing fix 后暴露真实 FAIL)",
+      "PARTIAL_PASS_persistence": "8+1+0 → P-F D_fix2 仍 PARTIAL_PASS (timing 不是根因)"
+    },
+    "output_path_proposed": "results/_adendum_G_pf_dfix2_timing_converge_rerun_20260917_132143.json",
+    "runner_script_proposed": "_worker_temp/_run_adendum_G_pf_dfix2_rerun.py",
+    "estimated_wall_clock_min": 60,
+    "estimated_cost": "volcengine coding-plan 540 cells × ~3s/cell ≈ 27 min + parsing",
+    "iron_7_compliance": {
+      "no_llm_worker_self": true,
+      "no_proxy": true,
+      "no_gateway": true,
+      "no_key_in_prompt_json_disk": true,
+      "no_18_frozen_touch": true,
+      "no_p_g_v0_touch": true,
+      "no_p_g_v01_touch": true,
+      "no_plugin_spec_touch": true,
+      "no_verifier_mavis_builtin_scripts_touch": true,
+      "awaiting_parent_dispatch": true
+    }
+  }
+}

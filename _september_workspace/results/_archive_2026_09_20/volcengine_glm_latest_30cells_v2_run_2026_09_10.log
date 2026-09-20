@@ -1,0 +1,93 @@
+[KEY] encoding=gb18030 key_truncated=ark-de0b484e-0889-46...e219
+[BENCH] gsm8k_ids=100 strategyqa_ids=99
+============================================================
+[STAGE 1] 1-cell sanity (30s timeout)
+============================================================
+  status=200 ms=2267.0 text='1 + 1 = 2' pass=True
+[STAGE 1 OK] sanity PASS in 2267.0ms
+============================================================
+[STAGE 2] 5 cells GSM8K id 1-5 (60s timeout each)
+============================================================
+[CELL id=1] expected=18.0 q_len=237
+  status=200 ms=4888.7 pred=18.0 correct=True
+[CELL id=2] expected=5.0 q_len=156
+  status=200 ms=2121.7 pred=5.0 correct=True
+[CELL id=3] expected=40.0 q_len=356
+  status=200 ms=1757.0 pred=40.0 correct=True
+[CELL id=4] expected=1430.0 q_len=211
+  status=200 ms=1390.5 pred=1430.0 correct=True
+[CELL id=5] expected=36.0 q_len=178
+  status=200 ms=1543.5 pred=36.0 correct=True
+[WROTE] D:\私人资料\deposon-repo\results\deposon_volcengine_glm_latest_5cells_v2_2026_09_10.json (size=6472B)
+============================================================
+[STAGE 3] 30 cells (15 GSM8K + 15 StrategyQA) (90s timeout each)
+============================================================
+[GSM8K id=1] expected=18.0
+  status=200 ms=4699.9 pred=5.0 correct=False
+[GSM8K id=2] expected=5.0
+  status=200 ms=3335.8 pred=5.0 correct=True
+[GSM8K id=3] expected=40.0
+  status=200 ms=2044.1 pred=40.0 correct=True
+[GSM8K id=4] expected=1430.0
+  status=200 ms=3697.3 pred=1430.0 correct=True
+[GSM8K id=5] expected=36.0
+  status=200 ms=2997.4 pred=36.0 correct=True
+[GSM8K id=6] expected=8000.0
+  status=200 ms=1555.8 pred=0.0 correct=False
+[GSM8K id=7] expected=36.0
+  status=200 ms=2861.3 pred=36.0 correct=True
+[GSM8K id=8] expected=6.0
+  status=200 ms=2079.7 pred=6.0 correct=True
+[GSM8K id=9] expected=40.0
+  status=200 ms=2866.2 pred=40.0 correct=True
+[GSM8K id=10] expected=140.0
+  status=200 ms=1767.7 pred=140.0 correct=True
+[GSM8K id=11] expected=2125.0
+  status=200 ms=2363.3 pred=2125.0 correct=True
+[GSM8K id=12] expected=32.0
+  status=200 ms=2302.6 pred=32.0 correct=True
+[GSM8K id=13] expected=50.0
+  status=200 ms=3219.7 pred=50.0 correct=True
+[GSM8K id=14] expected=122.0
+  status=200 ms=1635.9 pred=122.0 correct=True
+[GSM8K id=15] expected=34.0
+  status=200 ms=4129.3 pred=34.0 correct=True
+[StrategyQA id=1] expected=Yes
+  status=200 ms=4861.2 pred=Yes correct=True
+[StrategyQA id=2] expected=No
+  status=200 ms=3030.3 pred=No correct=True
+[StrategyQA id=3] expected=Yes
+  status=200 ms=7262.4 pred=Yes correct=True
+[StrategyQA id=4] expected=No
+  status=200 ms=8565.6 pred=No correct=True
+[StrategyQA id=5] expected=Yes
+  status=200 ms=10133.2 pred=No correct=False
+[StrategyQA id=6] expected=No
+  status=200 ms=5239.0 pred=No correct=True
+[StrategyQA id=7] expected=No
+  status=200 ms=5887.5 pred=Yes correct=False
+[StrategyQA id=8] expected=No
+  status=200 ms=3731.2 pred=No correct=True
+[StrategyQA id=9] expected=Yes
+  status=200 ms=22812.1 pred=No correct=False
+[StrategyQA id=10] expected=No
+  status=200 ms=10971.8 pred=Yes correct=False
+[StrategyQA id=11] expected=No
+  status=200 ms=4808.9 pred=No correct=True
+[StrategyQA id=12] expected=No
+  status=200 ms=5837.3 pred=No correct=True
+[StrategyQA id=13] expected=Yes
+  status=200 ms=16247.4 pred=Yes correct=True
+[StrategyQA id=14] expected=Yes
+  status=200 ms=38944.4 pred=None correct=False
+[StrategyQA id=15] expected=Yes
+  status=-1 ms=90278.0 pred=None correct=False
+[WROTE] D:\私人资料\deposon-repo\results\deposon_volcengine_glm_latest_30cells_v2_2026_09_10.json (size=33001B)
+[WROTE] D:\私人资料\deposon-repo\docs\V3X\VOLCENGINE_GLM_LATEST_30CELLS_V2_2026_09_10.md (size=3292B)
+============================================================
+[ALL DONE] verdict=PARTIAL (30 cells V2 接入但准确率 <80%,需人工复审)
+  5cells:  5/5
+  30cells: 22/30 (gsm8k=13/15, strategyqa=9/15)
+  http_200: 29/30
+  total_elapsed: 294.2s
+============================================================

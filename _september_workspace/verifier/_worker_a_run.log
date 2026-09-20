@@ -1,0 +1,84 @@
+[OK] key loaded: ark-de0b484e-08...e219 (len=46)
+[OK] base_url: https://ark.cn-beijing.volces.com/api/coding/v3
+[OK] proxy cleared
+[OK] GSM8K loaded: 15
+[OK] StrategyQA loaded: 15
+
+=== Sanity (2 model x 1 cell) ===
+  [kimi-k2.7-code] status=200 ok=True ms=1685.5 has_2=True text='2'
+  [minimax-m3] status=200 ok=True ms=8096.0 has_2=True text='2'
+
+=== 60 cells (2 model x 30) ===
+
+--- kimi-k2.7-code ---
+  [kimi-k2.7-code|gsm|1] PASS ms=10891.8 pred=18.0 gold=18.0
+  [kimi-k2.7-code|gsm|2] PASS ms=5019.0 pred=5.0 gold=5.0
+  [kimi-k2.7-code|gsm|3] PASS ms=5210.5 pred=40.0 gold=40.0
+  [kimi-k2.7-code|gsm|4] PASS ms=4254.2 pred=1430.0 gold=1430.0
+  [kimi-k2.7-code|gsm|5] PASS ms=8309.6 pred=36.0 gold=36.0
+  [kimi-k2.7-code|gsm|6] PASS ms=3052.2 pred=8000.0 gold=8000.0
+  [kimi-k2.7-code|gsm|7] FAIL ms=8126.1 pred=36.4 gold=36.0
+  [kimi-k2.7-code|gsm|8] PASS ms=10545.6 pred=6.0 gold=6.0
+  [kimi-k2.7-code|gsm|9] PASS ms=4399.7 pred=40.0 gold=40.0
+  [kimi-k2.7-code|gsm|10] PASS ms=6150.0 pred=140.0 gold=140.0
+  [kimi-k2.7-code|gsm|11] PASS ms=13689.4 pred=2125.0 gold=2125.0
+  [kimi-k2.7-code|gsm|12] FAIL ms=10620.5 pred=17.0 gold=32.0
+  [kimi-k2.7-code|gsm|13] FAIL ms=4631.5 pred=54.0 gold=50.0
+  [kimi-k2.7-code|gsm|14] FAIL ms=3121.6 pred=40.0 gold=122.0
+  [kimi-k2.7-code|gsm|15] FAIL status=-1 ms=30151.0 err=The read operation timed out
+  [kimi-k2.7-code|str|1] PASS ms=2563.7 pred=yes gold=Yes
+  [kimi-k2.7-code|str|2] PASS ms=2350.6 pred=no gold=No
+  [kimi-k2.7-code|str|3] PASS ms=5626.7 pred=yes gold=Yes
+  [kimi-k2.7-code|str|4] PASS ms=2978.2 pred=no gold=No
+  [kimi-k2.7-code|str|5] FAIL status=-1 ms=30061.6 err=The read operation timed out
+  [kimi-k2.7-code|str|6] PASS ms=2516.4 pred=no gold=No
+  [kimi-k2.7-code|str|7] FAIL ms=1825.4 pred=yes gold=No
+  [kimi-k2.7-code|str|8] PASS ms=2144.8 pred=no gold=No
+  [kimi-k2.7-code|str|9] FAIL ms=27041.1 pred= gold=Yes
+  [kimi-k2.7-code|str|10] FAIL ms=4963.1 pred=yes gold=No
+  [kimi-k2.7-code|str|11] PASS ms=3215.0 pred=no gold=No
+  [kimi-k2.7-code|str|12] FAIL status=-1 ms=30096.2 err=The read operation timed out
+  [kimi-k2.7-code|str|13] PASS ms=3519.3 pred=yes gold=Yes
+  [kimi-k2.7-code|str|14] FAIL ms=27371.7 pred= gold=Yes
+  [kimi-k2.7-code|str|15] PASS ms=3689.3 pred=yes gold=Yes
+
+--- minimax-m3 ---
+  [minimax-m3|gsm|1] PASS ms=5676.1 pred=18.0 gold=18.0
+  [minimax-m3|gsm|2] PASS ms=2948.6 pred=5.0 gold=5.0
+  [minimax-m3|gsm|3] PASS ms=2510.5 pred=40.0 gold=40.0
+  [minimax-m3|gsm|4] FAIL status=-1 ms=30154.6 err=The read operation timed out
+  [minimax-m3|gsm|5] PASS ms=3001.2 pred=36.0 gold=36.0
+  [minimax-m3|gsm|6] PASS ms=2958.5 pred=8000.0 gold=8000.0
+  [minimax-m3|gsm|7] FAIL ms=18689.0 pred=None gold=36.0
+  [minimax-m3|gsm|8] PASS ms=3542.7 pred=6.0 gold=6.0
+  [minimax-m3|gsm|9] PASS ms=2506.2 pred=40.0 gold=40.0
+  [minimax-m3|gsm|10] PASS ms=3472.6 pred=140.0 gold=140.0
+  [minimax-m3|gsm|11] PASS ms=5086.2 pred=2125.0 gold=2125.0
+  [minimax-m3|gsm|12] PASS ms=8500.2 pred=32.0 gold=32.0
+  [minimax-m3|gsm|13] PASS ms=5005.3 pred=50.0 gold=50.0
+  [minimax-m3|gsm|14] FAIL ms=2665.3 pred=1.0 gold=122.0
+  [minimax-m3|gsm|15] PASS ms=4161.7 pred=34.0 gold=34.0
+  [minimax-m3|str|1] FAIL ms=5678.0 pred=no gold=Yes
+  [minimax-m3|str|2] PASS ms=1986.1 pred=no gold=No
+  [minimax-m3|str|3] PASS ms=2860.2 pred=yes gold=Yes
+  [minimax-m3|str|4] PASS ms=4580.4 pred=no gold=No
+  [minimax-m3|str|5] FAIL ms=4056.4 pred=no gold=Yes
+  [minimax-m3|str|6] PASS ms=1738.6 pred=no gold=No
+  [minimax-m3|str|7] FAIL ms=2298.8 pred=yes gold=No
+  [minimax-m3|str|8] PASS ms=3076.6 pred=no gold=No
+  [minimax-m3|str|9] FAIL ms=2955.9 pred=no gold=Yes
+  [minimax-m3|str|10] FAIL ms=2717.4 pred=yes gold=No
+  [minimax-m3|str|11] PASS ms=2251.5 pred=no gold=No
+  [minimax-m3|str|12] PASS ms=2982.9 pred=no gold=No
+  [minimax-m3|str|13] PASS ms=2817.8 pred=yes gold=Yes
+  [minimax-m3|str|14] FAIL ms=3756.6 pred=no gold=Yes
+  [minimax-m3|str|15] PASS ms=3380.8 pred=yes gold=Yes
+
+[OK] JSON written: D:\私人资料\deposon-repo\results\deposon_volcengine_worker_a_2026_09_10.json
+[OK] size: 25465 bytes
+[OK] MD written: D:\私人资料\deposon-repo\docs\V3X\VOLCENGINE_9MODEL_30CELLS_WORKER_A_2026_09_10.md
+[OK] size: 4869 bytes
+[HASH] D:\私人资料\deposon-repo\results\deposon_volcengine_worker_a_2026_09_10.json -> 32cacfeb550e3367...
+[HASH] D:\私人资料\deposon-repo\docs\V3X\VOLCENGINE_9MODEL_30CELLS_WORKER_A_2026_09_10.md -> c073741329ee3742...
+
+=== DONE ===

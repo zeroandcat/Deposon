@@ -1,0 +1,102 @@
+{
+  "date": "2026-09-17T13:21:43.232419+08:00",
+  "task": "Adendum Phase 3 - LLM dispatch 状态报告",
+  "agent_role": "worker",
+  "parent_session": "mvs_bbeb804b1a6a41109be740636eed1709",
+  "iron_7_compliance_overall": {
+    "no_llm_worker_self": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true,
+    "awaiting_parent_dispatch": true
+  },
+  "adendum_result": {
+    "adendum": "F. P-E 3modal 闭合",
+    "source_proposal": "Coze §6.3",
+    "status": "READY_FOR_PARENT_LLM_DISPATCH",
+    "reason_blocker": "本 Adendum 需调用 volcengine coding-plan 或 OpenRouter 复测 3 model 的 P-E 3modal。Worker session 0 LLM 严守, 不擅自 dispatch。需 parent session 派 sub-agent 持 ark-* / openrouter 密钥执行。",
+    "current_data": {
+      "swing_models_3": [
+        "kimi-k2.7-code",
+        "doubao-seed-2.1-turbo",
+        "deepseek-v4-pro"
+      ],
+      "kimi-k2.7-code": {
+        "eps_3modal_sum": 0.4157,
+        "strict_verdict": "FAIL"
+      },
+      "doubao-seed-2.1-turbo": {
+        "eps_3modal_sum": 0.4765,
+        "strict_verdict": "FAIL"
+      },
+      "deepseek-v4-pro": {
+        "eps_3modal_sum": 0.5982,
+        "strict_verdict": "FAIL"
+      }
+    },
+    "dispatch_plan": {
+      "models_to_rerun": [
+        "kimi-k2.7-code",
+        "doubao-seed-2.1-turbo",
+        "deepseek-v4-pro"
+      ],
+      "cells_per_model": 30,
+      "total_llm_calls": 90,
+      "channel_recommended": "volcengine coding-plan (国内, ark-* key 沿 user 17:21+17:26 验证, 节省)",
+      "alternative_channel": "OpenRouter (Mistral Large 2512 / Llama 3.4 等 backbone)",
+      "spec": "docs/V3X/P_E_3MODALITY_SPEC.md (沿 skill_c_p_e_3modality.py)",
+      "strict_threshold": 0.05,
+      "gray_threshold_lower": 0.05,
+      "gray_threshold_upper": 0.5
+    },
+    "pre_registered_outcomes": {
+      "kimi-k2.7-code": {
+        "current": "GRAY (eps_sum=0.4157)",
+        "expected_options": [
+          "GRAY→PASS",
+          "GRAY→FAIL",
+          "GRAY→GRAY"
+        ],
+        "pass_criterion": "eps_sum < 0.05 (strict)"
+      },
+      "doubao-seed-2.1-turbo": {
+        "current": "GRAY (eps_sum=0.4765)",
+        "expected_options": [
+          "GRAY→PASS",
+          "GRAY→FAIL",
+          "GRAY→GRAY"
+        ],
+        "pass_criterion": "eps_sum < 0.05 (strict)"
+      },
+      "deepseek-v4-pro": {
+        "current": "FAIL (eps_sum=0.5982)",
+        "expected_options": [
+          "FAIL→PASS (长上下文衰减假设)",
+          "FAIL→FAIL (真实模型退化)"
+        ],
+        "mechanism_diagnosis": "长上下文衰减 vs 真实模型退化 — 需 30 cells 重跑"
+      }
+    },
+    "output_path_proposed": "results/_adendum_F_pe_3modal_closure_rerun_20260917_132143.json",
+    "runner_script_proposed": "_worker_temp/_run_adendum_F_pe_3modal_rerun.py",
+    "estimated_wall_clock_min": 30,
+    "estimated_cost": "volcengine coding-plan 90 cells × ~3s/cell ≈ 4.5 min + parsing",
+    "iron_7_compliance": {
+      "no_llm_worker_self": true,
+      "no_proxy": true,
+      "no_gateway": true,
+      "no_key_in_prompt_json_disk": true,
+      "no_18_frozen_touch": true,
+      "no_p_g_v0_touch": true,
+      "no_p_g_v01_touch": true,
+      "no_plugin_spec_touch": true,
+      "no_verifier_mavis_builtin_scripts_touch": true,
+      "awaiting_parent_dispatch": true
+    }
+  }
+}
