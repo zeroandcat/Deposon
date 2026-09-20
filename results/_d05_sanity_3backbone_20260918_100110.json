@@ -1,0 +1,65 @@
+{
+  "task": "D+0.5 sanity check 3 backbone reachability",
+  "TS": "20260918_100110",
+  "timestamp": "2026-09-18T10:01:15.973142+08:00",
+  "I2_prompt": "Question: What is 1+1?\\nAnswer with one number only:",
+  "I5_sampling": "temperature=0.0, max_tokens=64, timeout=30s, no_retry, no_swap",
+  "iron_7_compliance": {
+    "no_llm_rehash": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "results": [
+    {
+      "name": "deepseek_v4",
+      "model": "deepseek-v4-pro-ga-260813",
+      "vendor": "volcengine coding-plan",
+      "base_url": "https://ark.cn-beijing.volces.com/api/v3",
+      "key": "ark-3ae14873***REDACTED***",
+      "note": "主推 (task spec)",
+      "reachability": "OK",
+      "sanity_pass": true,
+      "response_model": "deepseek-v4-pro-ga-260813",
+      "status": 200,
+      "latency_ms": 1995.6,
+      "content": "2",
+      "error": null
+    },
+    {
+      "name": "qwen3_32b",
+      "model": "qwen3-32b-20250429",
+      "vendor": "OpenRouter",
+      "base_url": "https://openrouter.ai/api/v1",
+      "key": "sk-or-v1-24d65c58***REDACTED***",
+      "note": "备 1 (OpenRouter)",
+      "reachability": "FAIL",
+      "sanity_pass": false,
+      "response_model": null,
+      "status": 400,
+      "latency_ms": 1065.7,
+      "content": "",
+      "error": "{\"error\":{\"message\":\"qwen3-32b-20250429 is not a valid model ID\",\"code\":400},\"user_id\":\"user_3J7P6ghveKjYjvgV8u3JEyBq4Dm\"}"
+    },
+    {
+      "name": "nemotron_35",
+      "model": "nvidia/nemotron-3.5-lightning",
+      "vendor": "OpenRouter",
+      "base_url": "https://openrouter.ai/api/v1",
+      "key": "sk-or-v1-24d65c58***REDACTED***",
+      "note": "备 2 (OpenRouter reference_only)",
+      "reachability": "OK",
+      "sanity_pass": false,
+      "response_model": "nvidia/nemotron-3.5-lightning",
+      "status": 200,
+      "latency_ms": 2257.5,
+      "content": "",
+      "error": null
+    }
+  ]
+}
