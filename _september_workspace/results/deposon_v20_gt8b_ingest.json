@@ -1,0 +1,29 @@
+{
+ "experiment": "deposon_v20_gt8b_ingest",
+ "spec": "docs/SPEC_GT8B.md §3",
+ "ingested": [
+  {
+   "graph_id": "L_chemical_elements",
+   "N": 37,
+   "n_edges": 63,
+   "n_named": 28,
+   "real_semantics": 1,
+   "sha256": "021ded78803b16036c6a3673f93fed591d121a59396019b130bde4e72598d3ec"
+  },
+  {
+   "graph_id": "L_chinese_dynasties",
+   "N": 45,
+   "n_edges": 57,
+   "n_named": 41,
+   "real_semantics": 1,
+   "sha256": "7a7b397c2ca6bd6ed3fd6e9bba302a377c6011f5f6aecc192cdf5cc6ee462168"
+  }
+ ],
+ "cache_errors": {},
+ "graph_dir": "/mnt/agents/output/deposon-repo/results/gt8b_cache/graphs",
+ "honesty": [
+  "no LLM API calls issued: 本脚本只读 results/gt8b_cache/；缓存缺失域显式报错（CacheMissingError），绝不伪造数据。",
+  "named/filler 按族 L 冻结口径（DAG 最长路径族）划分；prompt_sha256 与预登记 manifest 不一致时如实标记，不阻断摄入。",
+  "图写入 results/gt8b_cache/graphs/ 独立目录，不污染 corpus/v20。"
+ ]
+}

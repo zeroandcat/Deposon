@@ -1,0 +1,1453 @@
+{
+  "schema": "v4_l14v3_n26/1",
+  "batch": 9,
+  "round": 5,
+  "metadata": {
+    "task": "L14V3_batch9_round5_coze_distill_side_reask4_finish_round_independent_counting",
+    "prereg_sha12": "05b975a86989",
+    "prereg_path": "results/_v4_supp_prereg_v02_add_L14V3_2026_09_24.md",
+    "activation_path": "results/_v4_supp_prereg_v02_add_L14V3_activation_2026_09_24.md",
+    "predecessor_sha12": {
+      "batch9_r4_executor_sha12": "1b3fcfbacd59",
+      "batch9_r4_executor_path": "results/_v4_supp_l14v3_batch9_r4_executor.py",
+      "batch9_r4_result_sha12": "eb8b13d9f592",
+      "batch9_r4_result_path": "results/_v4_supp_l14v3_batch9_r4_result.json",
+      "batch9_r3_executor_sha12": "cfe41dd4fe62",
+      "batch9_r3_executor_path": "results/_v4_supp_l14v3_batch9_r3_executor.py",
+      "batch9_r3_result_sha12": "29e0d865a7bf",
+      "batch9_r3_result_path": "results/_v4_supp_l14v3_batch9_r3_result.json",
+      "batch9_r2_executor_sha12": "7eec235a9ca2",
+      "batch9_r2_executor_path": "results/_v4_supp_l14v3_batch9_r2_executor.py",
+      "batch9_r2_result_sha12": "08b0aaaae726",
+      "batch9_r2_result_path": "results/_v4_supp_l14v3_batch9_r2_result.json",
+      "batch9_r1_executor_sha12": "e78ca71bd077",
+      "batch9_r1_executor_path": "results/_v4_supp_l14v3_batch9_r1_executor.py",
+      "batch9_r1_result_sha12": "7e8dfe0156cd",
+      "batch9_r1_result_path": "results/_v4_supp_l14v3_batch9_r1_result.json",
+      "batch8_r5_executor_sha12": "6961281824ae",
+      "batch8_r5_executor_path": "results/_v4_supp_l14v3_batch8_r5_executor.py",
+      "batch8_r5_result_sha12": "3620a7daf9c1",
+      "batch8_r5_result_path": "results/_v4_supp_l14v3_batch8_r5_result.json",
+      "batch8_r4_executor_sha12": "6b69ec8406d4",
+      "batch8_r4_executor_path": "results/_v4_supp_l14v3_batch8_r4_executor.py",
+      "batch8_r4_result_sha12": "c7d5aa2a9b00",
+      "batch8_r4_result_path": "results/_v4_supp_l14v3_batch8_r4_result.json",
+      "batch8_r3_executor_sha12": "0f654d945f12",
+      "batch8_r3_executor_path": "results/_v4_supp_l14v3_batch8_r3_executor.py",
+      "batch8_r3_result_sha12": "56faf9324fba",
+      "batch8_r3_result_path": "results/_v4_supp_l14v3_batch8_r3_result.json",
+      "batch8_r2_executor_sha12": "6a9bbc43c808",
+      "batch8_r2_executor_path": "results/_v4_supp_l14v3_batch8_r2_executor.py",
+      "batch8_r2_result_sha12": "7b23996b5f4c",
+      "batch8_r2_result_path": "results/_v4_supp_l14v3_batch8_r2_result.json",
+      "batch8_r1_executor_sha12": "1e5f2249c517",
+      "batch8_r1_executor_path": "results/_v4_supp_l14v3_batch8_r1_executor.py",
+      "batch8_r1_result_sha12": "e6a94a0a13b7",
+      "batch8_r1_result_path": "results/_v4_supp_l14v3_batch8_r1_result.json",
+      "batch6_r5_executor_sha12": "8a8babb911b8",
+      "batch6_r5_executor_path": "results/_v4_supp_l14v3_batch6_r5_executor.py",
+      "batch6_r5_result_sha12": "e40424bf8abe",
+      "batch6_r5_result_path": "results/_v4_supp_l14v3_batch6_r5_result.json",
+      "batch6_r4_executor_sha12": "08f329b36e9d",
+      "batch6_r4_executor_path": "results/_v4_supp_l14v3_batch6_r4_executor.py",
+      "batch6_r4_result_sha12": "b7377ba019a1",
+      "batch6_r4_result_path": "results/_v4_supp_l14v3_batch6_r4_result.json",
+      "batch6_r3_executor_sha12": "1385d2ca356f",
+      "batch6_r3_executor_path": "results/_v4_supp_l14v3_batch6_r3_executor.py",
+      "batch6_r3_result_sha12": "15a7fecdffe7",
+      "batch6_r3_result_path": "results/_v4_supp_l14v3_batch6_r3_result.json",
+      "batch6_r2_executor_sha12": "93c931fc3b1c",
+      "batch6_r2_executor_path": "results/_v4_supp_l14v3_batch6_r2_executor.py",
+      "batch6_r2_result_sha12": "96e1de46ed30",
+      "batch6_r2_result_path": "results/_v4_supp_l14v3_batch6_r2_result.json",
+      "batch6_r1_executor_sha12": "ad35565f1ec9",
+      "batch6_r1_executor_path": "results/_v4_supp_l14v3_batch6_r1_executor.py",
+      "batch6_r1_result_sha12": "0d29e1ab4ae2",
+      "batch6_r1_result_path": "results/_v4_supp_l14v3_batch6_r1_result.json",
+      "batch4_r6_executor_sha12": "7f2c5e26e6c5",
+      "batch4_r6_executor_path": "results/_v4_supp_l14v3_batch4_r6_executor.py",
+      "batch4_r6_result_sha12": "6b8093ff8962",
+      "batch4_r6_result_path": "results/_v4_supp_l14v3_batch4_r6_result.json",
+      "batch4_r5_executor_sha12": "8a505613b476",
+      "batch4_r5_executor_path": "results/_v4_supp_l14v3_batch4_r5_executor.py",
+      "batch4_r5_result_sha12": "bad01f2b89fd",
+      "batch4_r5_result_path": "results/_v4_supp_l14v3_batch4_r5_result.json",
+      "mapping_sha12": "98a779d61c1e",
+      "mapping_path": "results/_v4_supp_l14v3_model_mapping_2026_09_24.md",
+      "captions_sha12": "6a2656878745",
+      "captions_path": "corpus/v20_caption_surface/strip_captions_22.json"
+    },
+    "date": "2026-09-26",
+    "freeze_day": "V4 L14+ N-26 真审唯一路径 batch 9 round 5 coze distill side reask=4 收官棒",
+    "is_finish_round": true,
+    "is_round_5_finish_round": true,
+    "night_authorization": "PI 2026-09-25 00:46「今晚保守口径下先斩后奏」",
+    "prompt_construction_basis": {
+      "v3_distill_original_prompt_on_disk": false,
+      "v3_distill_original_prompt_path": null,
+      "reproduction_caliber": true,
+      "reproduction_source_anchor_sha12": "8a8babb911b8",
+      "reproduction_source_anchor_path": "results/_v4_supp_l14v3_batch6_r5_executor.py",
+      "reproduction_source_anchor_role": "coze_representative_distill_prompt_沿_batch6_r5（coze 底层 model 不可考 → 代表采样 = 蒸馏 prompt 不变）",
+      "v3_distill_pipeline_style_inherited": "V3-style concept-graph distillation continuation prompt (沿 batch6 r5 executor 8a8babb911b8);prompt_text = Caption ID + Caption (sequence of concept labels) + Task (3-5 NEW related concept labels);coze 代表采样同模型 = 蒸馏任务 prompt 不变；teacher 身份由 teacher_label='coze' + representative_for_coze=true 字段标识"
+    },
+    "spec_conformance": "PI 2026-09-25 同 agent 唤醒 (task_append) 接力棒 + 沿 r4 口径续跑 + coze = agent 平台封装 (沿 mapping §1.1 第三栏 + ask_748d9242 Q3 拍板) + 代表采样 = deepseek-v4-flash (teamo; 沿 r1+r2+r3+r4 88 caption 88 OK 实测) + retry 修复沿 r4 + 每 caption successful 计数终盘点 + K-N26-N2 累计监控 + coze 蒸馏侧独立计数（沿 r4 counting_scope_correction） + 收官判定块 coze_distill_side_finish (沿 batch6 r5 kimi_distill_side_finish 字面惯例) + representative/substitute 标注 (沿 r4 字面)",
+    "teacher": "coze",
+    "side": "distill",
+    "round_index": 5,
+    "target_successful_per_caption_round5": 5,
+    "target_successful_per_caption_final": 5,
+    "n_captions_total": 22,
+    "planned_total": 22,
+    "actual_total": 22,
+    "endpoint_selected": "https://api.teamorouter.cn/v1",
+    "endpoint_selection_method": "coze = agent 平台封装 → 代表采样 = teamo deepseek-v4-flash (沿 mapping §1.1 第三栏 PI 拍板 + r1+r2+r3+r4 88 caption 88 OK + batch4 r6 smoke ok=200)",
+    "model_id_sent": "deepseek-v4-flash",
+    "representative_for_coze": true,
+    "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+    "model_id_inconsistency_honest_disclosure": "V3 字面锚 coze (V3 公开产品名 / 端点名) 不在 9-backbone 字段；制品层 by_model/coze/ 同样无 model 字段；teamo /v1/models 探活清单 (44 models) 字面亦无 coze 字段；coze 底层大模型 API 不可考 = 如实不可考 (沿诚实 = 不误导); 本棒选定 = deepseek-v4-flash (teamo 端点; 沿 r1+r2+r3+r4 88 caption 88 OK 实测; 代表采样选择 deepseek-v4-flash 理由 = 团队现行 6 模型补跑锚定 + teamo /v1/models 探活清单字面可考); 代表采样 ≠ coze 背后模型; result 内 metadata 字段强制标注 representative_for_coze=true + substitute_origin=coze_agent_platform_underlying_model_not_documented; 本映射选择 = PI 拍板代表采样 (沿 ask_748d9242 Q3 字面), 非 V3 字面继承, 非断层真实 mapping 断言; 沿 user memory 2026-09-08「V3 端点名 vs 公开产品名不一致时直接问」—— worker 不直接问 PI，记录为待 PI 复核项",
+    "proxy_settings": {
+      "http": "http://127.0.0.1:1018",
+      "socks5": "socks5://127.0.0.1:1018",
+      "applied_to_teamo": true,
+      "preflight_tun_check_passed": true
+    },
+    "key_discipline": {
+      "source": "C:/Users/Administrator/Desktop/AI/LLM API.txt",
+      "key_index_1based": 15,
+      "method": "runtime memory read",
+      "redacted_in_products": true
+    },
+    "inter_call_sleep_s": 2.5,
+    "temperature": 0.7,
+    "max_tokens": 2000,
+    "tools_fault_param_correction": {
+      "read_timeout_initial_s": 60,
+      "read_timeout_retry_s": 90,
+      "network_error_categories_retry": [
+        "connection_error",
+        "proxy_error",
+        "ssl_error",
+        "timeout"
+      ],
+      "r5_status_anchor": "retry 修复 + tracking 改进沿 batch6 r5 (沿 8a8babb911b8)",
+      "r1_status": "retry 修复沿 batch6 r5; r1 22 caption 22 OK + 0 empty + S6_n60 retries=1",
+      "r2_status": "retry 修复沿 r1; r2 22 caption 22 OK + 0 empty + 3 retries (S1_n45/S2_n35/S6_n60 timeout)",
+      "r3_status": "retry 修复沿 r2; r3 22 caption 22 OK + 0 empty + 4 retries (S1_n35/S2_n35/S5/S6_n60 timeout)",
+      "r4_status": "retry 修复沿 r3; r4 22 caption 22 OK + 0 empty + 4 retries (S1_n45/S2_n35/S2_n60/S4 timeout)",
+      "r5_status": "retry 修复沿 r4; r5 收官棒仅按 22 caption × 1 call 续采; hard fail 保持 fail path 立即返回",
+      "rationale": "沿 r4 修复 + tracking 改进；r5 收官棒仅按 22 caption × 1 call 续采；hard fail 保持 fail path 立即返回"
+    },
+    "inner_retry_max": 3,
+    "wall_time_budget_s": 1500,
+    "k_n26_n2_cumulative_threshold": 0.5,
+    "diff_vs_r4_executor": [
+      "1. ROUND=5/REASK_R1=4 参数化 (r4 = 4/3; 本棒 = 5/4)",
+      "2. prompt_id 后缀切换: _r4 → _r5 (distill 侧 coze 域 r5 收官)",
+      "3. phase_label 切换: r4_coze_distill_* → r5_coze_distill_*",
+      "4. is_round_4 → is_round_5 字段更新",
+      "5. baseline 切换: 跨批累计 = r4 终态 cumulative (406/9/397/2.22%); coze 蒸馏侧独立 = 22 caption 各 4/5 successful (r1+r2+r3+r4 quadruples 累计 = 88 calls)",
+      "6. target 切换: ≥4 successful/caption (r4 收官前 1 棒接力阈值) → ≥5 successful/caption (r5 收官阈值; 沿 batch6 r5 / batch8 r5 同惯例)",
+      "7. 收官判定块命名: coze_distill_side_round4_progress (r4 接力; pre_finish) → coze_distill_side_finish (本棒收官; 沿 batch6 r5 kimi_distill_side_finish 字面惯例); dispatch_target_progress_coze_distill 块沿 r4 不变（仅更新 met_count_post_r5 + remaining_count_to_final=0）",
+      "8. is_finish_round 标记: metadata.is_finish_round = True + is_round_5_finish_round = True (本棒 r5 = 收官棒; 沿 batch6 r5 / batch8 r5 同惯例)",
+      "9. predecessor_sha12 链新增: r4 双件 (1b3fcfbacd59 / eb8b13d9f592)",
+      "10. r5 收官判定字段新增: all_22_captions_met_target / distill_side_target_met_at_round='r5' / finish_disposition / rounds_to_reach_target_actual = '5 棒 (r1+r2+r3+r4+r5) = 22 caption × 5 calls = 110 coze 蒸馏侧 calls'",
+      "11. 慢响应 caption 处理: S6_n60/S4/S2_n60/S1_n45 等已知慢响应沿 r4 同 retry 路径消化; 实测延迟如实记录"
+    ],
+    "iron_rules": {
+      "R1_no_llm": false,
+      "R2_no_proxy": false,
+      "R3_no_gateway": false,
+      "R4_key_never_in_plaintext": true,
+      "R5_v4_frozen_append_only": true,
+      "R6_pg_v0_v01_untouched": true,
+      "R7_plugin_spec_untouched": true,
+      "v1_v3_readonly": true,
+      "tun_compliance_teamo_endpoint": true,
+      "serial_interval_ge_2_5_s": true,
+      "empty_response_counted_not_dropped": true,
+      "kill_line_locked_K_N26_1_2_3_N1_N2": true,
+      "no_threshold_adjustment": true,
+      "no_existing_file_modified": true,
+      "no_merge_of_derived_json": true,
+      "no_overwrite_prior_results": true,
+      "retry_bug_fix_applied": true
+    },
+    "run_window_cst": "2026-09-26T17:34:59+08:00",
+    "wall_time_actual_s": 343.3,
+    "stop_reason": null
+  },
+  "quadruples": [
+    {
+      "prompt_id": "coze_t01_distill_L_algorithm_process_r5",
+      "prompt_text": "Caption ID: L_algorithm_process\nCaption (sequence of concept labels in the graph):\n问题输入; 数据预处理; 特征工程; 样本划分; 算法选择; 模型初始化; 参数配置; 损失函数; 优化器; 前向传播; 反向传播; 梯度计算; 参数更新; 收敛判断; 早停机制; 验证评估; 交叉验证; 超参调优; 特征重要性; 模型集成; 决策输出; 后处理规则; 置信度估计; 结果解释; 可视化展示; 部署上线; 在线推理; 日志监控; 反馈回流; 数据再采集; 模型重训练; 性能衰减检测; 版本回退; 终止状态; 流程审计; 异常处理; 资源释放; 输出报告\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "模型注册, 灰度发布, A/B测试, 数据漂移检测, 模型归档",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 7543.4,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790414953429aef91fec3a81c53339a5720099214cdec981f6",
+        "usage": {
+          "completion_tokens": 563,
+          "prompt_tokens": 360,
+          "total_tokens": 923,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 542
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "L_algorithm_process",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_L_algorithm_process",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_L_biological_taxonomy_r5",
+      "prompt_text": "Caption ID: L_biological_taxonomy\nCaption (sequence of concept labels in the graph):\n生物; 真核生物; 原核生物; 动物界; 植物界; 真菌界; 细菌域; 古菌域; 脊索动物门; 节肢动物门; 软体动物门; 哺乳纲; 鸟纲; 鱼纲; 食肉目; 灵长目; 偶蹄目; 猫科; 犬科; 豹属; 猫属; 虎; 狮; 家猫; 人科; 猴科; 人属; 黑猩猩属; 智人; 被子植物门; 裸子植物门; 单子叶植物纲; 双子叶植物纲; 禾本目; 百合目; 禾本科; 竹亚科; 蔷薇目; 菊目; 蔷薇科; 苹果属; 苹果\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "爬行纲, 两栖纲, 犬属, 猕猴属, 小麦属",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 30755.4,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790414963513ecb0d1ecabc2ef46c8096e92eb2855827f2069",
+        "usage": {
+          "completion_tokens": 2768,
+          "prompt_tokens": 388,
+          "total_tokens": 3156,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2747
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "L_biological_taxonomy",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_L_biological_taxonomy",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_L_geography_world_r5",
+      "prompt_text": "Caption ID: L_geography_world\nCaption (sequence of concept labels in the graph):\n世界; 亚洲; 欧洲; 非洲; 北美洲; 南美洲; 大洋洲; 南极洲; 中国; 日本; 印度; 法国; 德国; 英国; 埃及; 南非; 美国; 加拿大; 巴西; 阿根廷; 澳大利亚; 新西兰; 南极大陆; 长城站; 北京; 东京; 新德里; 巴黎; 柏林; 伦敦; 开罗; 约翰内斯堡; 纽约; 多伦多; 里约热内卢; 布宜诺斯艾利斯; 悉尼; 奥克兰; 故宫; 埃菲尔铁塔; 自由女神像; 大堡礁; 富士山; 泰姬陵; 金字塔\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "俄罗斯, 意大利, 韩国, 墨西哥, 悉尼歌剧院",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 6005.5,
+        "model_returned": "deepseek-v4-flash-0731",
+        "id": "chatcmpl-b89a5bf1-dba9-450e-ac6a-4a79b5029235",
+        "usage": {
+          "completion_tokens": 421,
+          "prompt_tokens": 368,
+          "total_tokens": 789,
+          "completion_tokens_details": {
+            "reasoning_tokens": 405
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "L_geography_world",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_L_geography_world",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_L_historical_causality_r5",
+      "prompt_text": "Caption ID: L_historical_causality\nCaption (sequence of concept labels in the graph):\n资本主义扩张; 帝国主义竞争; 工业革命深化; 民族主义高涨; 军事同盟形成; 殖民地争夺激化; 军备竞赛升级; 巴尔干危机; 萨拉热窝事件; 奥匈帝国最后通牒; 七月危机; 俄国总动员; 德国战争计划; 德国宣战; 英国参战; 一战全面爆发; 阵地战消耗; 凡尔登战役; 索姆河战役; 美国参战; 俄国退出一战; 德国失败; 凡尔赛条约; 国际联盟成立; 奥斯曼帝国瓦解; 奥匈帝国解体; 民族国家涌现; 经济危机隐患; 法西斯主义兴起; 二战根源; 女性地位提升; 工人运动发展; 社会主义革命; 十月革命; 殖民体系松动; 全球秩序重塑\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "民族自决原则, 巴黎和会, 委任统治制度, 大萧条, 绥靖政策",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 4558.0,
+        "model_returned": "deepseek-v4-flash-0731",
+        "id": "chatcmpl-fa06f247-b70c-4e58-ad51-5545117bb623",
+        "usage": {
+          "completion_tokens": 235,
+          "prompt_tokens": 387,
+          "total_tokens": 622,
+          "completion_tokens_details": {
+            "reasoning_tokens": 210
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "L_historical_causality",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_L_historical_causality",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_L_physics_concepts_r5",
+      "prompt_text": "Caption ID: L_physics_concepts\nCaption (sequence of concept labels in the graph):\n物理学; 经典力学; 电磁学; 热力学; 量子力学; 相对论; 粒子物理; 运动学; 动力学; 牛顿定律; 万有引力定律; 麦克斯韦方程组; 电场; 磁场; 电磁波; 温度; 熵; 热力学第二定律; 波函数; 薛定谔方程; 海森堡不确定性原理; 狭义相对论; 广义相对论; 质能方程; 时空弯曲; 标准模型; 基本粒子; 夸克; 轻子; 光子; 强相互作用; 弱相互作用; 电磁相互作用; 希格斯玻色子; 引力\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "宇宙学, 大爆炸, 暗物质, 暗能量, 黑洞",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 4553.9,
+        "model_returned": "deepseek-v4-flash-0731",
+        "id": "chatcmpl-d0ff0aad-7aa6-4c1a-acfd-e52d615c97f2",
+        "usage": {
+          "completion_tokens": 208,
+          "prompt_tokens": 349,
+          "total_tokens": 557,
+          "completion_tokens_details": {
+            "reasoning_tokens": 190
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "L_physics_concepts",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_L_physics_concepts",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_L_project_management_r5",
+      "prompt_text": "Caption ID: L_project_management\nCaption (sequence of concept labels in the graph):\n项目立项; 需求收集; 需求分析; 需求确认; 项目范围; WBS分解; 范围确认; 项目计划; 进度计划; 成本预算; 资源计划; 风险识别; 风险应对计划; 质量计划; 沟通计划; 采购计划; 干系人管理; 任务执行; 团队管理; 质量保证; 风险监控; 质量控制; 进度监控; 成本控制; 变更控制; 沟通汇报; 采购实施; 产品交付; 验收确认; 文档归档; 项目复盘; 经验总结; 项目关闭\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "项目章程, 里程碑, 挣值管理, 配置管理, 项目审计",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 5116.6,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790415019340ecb0d1ecabc2ef46c8096e92eb2855825134f7",
+        "usage": {
+          "completion_tokens": 405,
+          "prompt_tokens": 332,
+          "total_tokens": 737,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 386
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "L_project_management",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_L_project_management",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S1_r5",
+      "prompt_text": "Caption ID: S1\nCaption (sequence of concept labels in the graph):\n玻尔模型; 波函数; 酵母菌; 蝗虫; 电磁波; 偏振; 蝙蝠; 青蛙; 偶蹄目; 豆科; 折射; 鹰; 电磁学; 声学; 熊科; 不确定性原理; 电场; 脊索动物门; 热容量; 光学\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "干涉, 衍射, 哺乳纲, 鸟纲, 量子力学",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 8056.1,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790415026950aef91fec3a81c53339a5720099214cdecd28ae",
+        "usage": {
+          "completion_tokens": 808,
+          "prompt_tokens": 273,
+          "total_tokens": 1081,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 791
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S1",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S1_n35_r5",
+      "prompt_text": "Caption ID: S1_n35\nCaption (sequence of concept labels in the graph):\n蜘蛛; 虎; 不确定性原理; 折射; 灵长目; 电磁学; 牛顿运动定律; 豆科; 狗; 角动量; 蛛形纲; 麦克斯韦方程组; 青蛙; 脊索动物门; 犬科; 鸟纲; 时空弯曲; 电磁波; 波函数; 熊科; 鲤鱼; 动量守恒; 偶蹄目; 电流; 麻雀; 动物界; 衍射; 量子力学; 生物; 硬骨鱼纲; 狭义相对论; 软体动物门; 两栖纲; 引力波; 真菌界\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "哺乳纲, 节肢动物门, 广义相对论, 量子纠缠, 光电效应",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 8060.3,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790415037476ecb0d1ecabc2ef46c8096e92eb2855827f8b25",
+        "usage": {
+          "completion_tokens": 698,
+          "prompt_tokens": 342,
+          "total_tokens": 1040,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 676
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S1_n35",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S1_n35",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S1_n45_r5",
+      "prompt_text": "Caption ID: S1_n45\nCaption (sequence of concept labels in the graph):\n节肢动物门; 偏振; 折射; 真菌界; 牛顿运动定律; 麦克斯韦方程组; 哺乳纲; 物理学; 酵母菌; 偶蹄目; 鲤鱼; 大豆; 声学; 单子叶植物纲; 能量守恒; 原生生物界; 衍射; 虎; 电压; 青蛙; 猫; 环节动物门; 雀形目; 蝗虫; 爬行纲; 脊索动物门; 禾本科; 熊科; 不确定性原理; 原子核; 两栖纲; 植物界; 量子力学; 水稻; 电磁波; 猫科; 电磁学; 热力学; 波函数; 质子; 熵; 蔷薇科; 普朗克常数; 干涉; 豆科\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "食肉目, 昆虫纲, 光学, 力学, 被子植物门",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 11474.2,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790415048046aef91fec3a81c53339a5720099214cdeb0bf09",
+        "usage": {
+          "completion_tokens": 1174,
+          "prompt_tokens": 382,
+          "total_tokens": 1556,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1155
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S1_n45",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S1_n45",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S1_n60_r5",
+      "prompt_text": "Caption ID: S1_n60\nCaption (sequence of concept labels in the graph):\n青蛙; 物理学; 单子叶植物纲; 热容量; 电压; 雀形目; 玻尔模型; 熊科; 鲤鱼; 电磁学; 蔷薇科; 不确定性原理; 相对论; 熵; 蘑菇; 广义相对论; 能量守恒; 薛定谔方程; 温度; 动量守恒; 蝗虫; 酵母菌; 狼; 电磁波; 引力波; 声学; 统计物理; 犬科; 真菌界; 双子叶植物纲; 爬行纲; 禾本科; 经典力学; 脊索动物门; 折射; 黑洞; 生物; 偶蹄目; 中子; 两栖纲; 玫瑰; 鸟纲; 虎; 大豆; 哺乳纲; 波函数; 时空弯曲; 质子; 磁场; 水稻; 蛇; 麻雀; 量子力学; 衍射; 原生生物界; 量子纠缠; 食肉目; 动物界; 偏振; 硬骨鱼纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "电子, 万有引力, 标准模型, 被子植物门, 灵长目",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 7685.3,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790415062024aef91fec3a81c53339a5720099214cde4dd45e",
+        "usage": {
+          "completion_tokens": 554,
+          "prompt_tokens": 436,
+          "total_tokens": 990,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 533
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S1_n60",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S1_n60",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S2_r5",
+      "prompt_text": "Caption ID: S2\nCaption (sequence of concept labels in the graph):\n牛顿运动定律; 量子力学; 质子; 偶蹄目; 单子叶植物纲; 热容量; 环节动物门; 相对论; 水稻; 青蛙; 光子; 声学; 蛛形纲; 动量守恒; 麻雀; 电阻; 狼; 禾本科; 原生生物界; 鲸; 引力波; 鸟纲; 原子核; 时空弯曲; 鲤鱼; 衍射; 干涉; 万有引力; 统计物理; 两栖纲; 哺乳纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "节肢动物门, 爬行纲, 双子叶植物纲, 熵, 电磁波",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 6560.7,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790415072220ecb0d1ecabc2ef46c8096e92eb28558251e170",
+        "usage": {
+          "completion_tokens": 537,
+          "prompt_tokens": 319,
+          "total_tokens": 856,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 514
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S2",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S2",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S2_n20_r5",
+      "prompt_text": "Caption ID: S2_n20\nCaption (sequence of concept labels in the graph):\n蔷薇科; 物理学; 禾本科; 能量守恒; 动量守恒; 两栖纲; 虎; 真菌界; 量子力学; 原生生物界; 万有引力; 生物; 偏振; 蝙蝠; 节肢动物门; 经典力学; 电流; 热力学; 蜘蛛; 普朗克常数\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "哺乳纲, 昆虫纲, 牛顿第二定律, 薛定谔方程, 光速",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 5186.9,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790415081332aef91fec3a81c53339a5720099214cde5958ef",
+        "usage": {
+          "completion_tokens": 421,
+          "prompt_tokens": 278,
+          "total_tokens": 699,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 398
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S2_n20",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S2_n20",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S2_n35_r5",
+      "prompt_text": "Caption ID: S2_n35\nCaption (sequence of concept labels in the graph):\n棘皮动物门; 量子纠缠; 青蛙; 环节动物门; 大豆; 万有引力; 角动量; 黑洞; 统计物理; 能量守恒; 动量守恒; 虎; 热容量; 真菌界; 猫科; 狗; 衍射; 蘑菇; 电压; 动物界; 经典力学; 温度; 麻雀; 电磁波; 薛定谔方程; 偏振; 鲤鱼; 声学; 蛛形纲; 不确定性原理; 鹰; 蝙蝠; 玫瑰; 质子; 昆虫纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子力学, 熵, 节肢动物门, 脊索动物门, 植物界",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 18080.4,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790415088952ecb0d1ecabc2ef46c8096e92eb285582e6ea74",
+        "usage": {
+          "completion_tokens": 1352,
+          "prompt_tokens": 330,
+          "total_tokens": 1682,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1330
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S2_n35",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S2_n35",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S2_n45_r5",
+      "prompt_text": "Caption ID: S2_n45\nCaption (sequence of concept labels in the graph):\n真菌界; 青蛙; 广义相对论; 动量守恒; 能量守恒; 哺乳纲; 统计物理; 光子; 原子核; 猫科; 熊科; 单子叶植物纲; 节肢动物门; 磁场; 蘑菇; 犬科; 昆虫纲; 麻雀; 蔷薇科; 食肉目; 衍射; 万有引力; 狭义相对论; 蝗虫; 热容量; 生物; 软体动物门; 原生生物界; 热力学; 电磁学; 电流; 温度; 大豆; 引力波; 量子力学; 角动量; 反射; 偏振; 折射; 双子叶植物纲; 薛定谔方程; 相对论; 不确定性原理; 电子; 量子纠缠\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "熵, 黑洞, 波粒二象性, 鸟纲, 脊索动物门",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 6766.0,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790415172247aef91fec3a81c53339a5720099214cde500bdb",
+        "usage": {
+          "completion_tokens": 569,
+          "prompt_tokens": 381,
+          "total_tokens": 950,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 547
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S2_n45",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S2_n45",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 1,
+        "read_timeout_s": 90,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S2_n60_r5",
+      "prompt_text": "Caption ID: S2_n60\nCaption (sequence of concept labels in the graph):\n光学; 玻尔模型; 热容量; 生物; 蛇; 折射; 大豆; 动物界; 电流; 量子力学; 电磁学; 时空弯曲; 引力波; 相对论; 电阻; 软体动物门; 食肉目; 爬行纲; 熊科; 薛定谔方程; 鲤鱼; 波函数; 衍射; 单子叶植物纲; 物理学; 真菌界; 节肢动物门; 猫; 广义相对论; 黑洞; 蔷薇科; 水稻; 蝗虫; 能量守恒; 雀形目; 蝙蝠; 双子叶植物纲; 青蛙; 统计物理; 猫科; 光子; 鸟纲; 电压; 牛顿运动定律; 禾本科; 鹰; 角动量; 质子; 热力学; 硬骨鱼纲; 犬科; 原子核; 蘑菇; 电场; 昆虫纲; 原生生物界; 万有引力; 狭义相对论; 植物界; 哺乳纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子场论, 麦克斯韦方程组, 光合作用, 脊索动物门, 进化论",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 12952.2,
+        "model_returned": "deepseek-v4-flash-0731",
+        "id": "chatcmpl-5d6a2c4d-6723-4ea2-847c-35efee6a239e",
+        "usage": {
+          "completion_tokens": 1130,
+          "prompt_tokens": 440,
+          "total_tokens": 1570,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1106
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S2_n60",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S2_n60",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S3_r5",
+      "prompt_text": "Caption ID: S3\nCaption (sequence of concept labels in the graph):\n原生生物界; 蘑菇; 薛定谔方程; 熵; 物理学; 鸟纲; 猫科; 蛇; 玻尔模型; 熊科; 犬科; 棘皮动物门; 鹰; 爬行纲; 电磁波; 广义相对论; 电流; 偏振; 光子; 禾本科; 不确定性原理; 时空弯曲; 植物界; 雀形目; 波函数; 双子叶植物纲; 干涉; 青蛙; 万有引力; 磁场\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子力学, 波粒二象性, 普朗克常数, 电子, 观测",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 3614.1,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790415196843ecb0d1ecabc2ef46c8096e92eb2855824dec60",
+        "usage": {
+          "completion_tokens": 315,
+          "prompt_tokens": 318,
+          "total_tokens": 633,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 293
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S3",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S3",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S4_r5",
+      "prompt_text": "Caption ID: S4\nCaption (sequence of concept labels in the graph):\n热力学; 狼; 青蛙; 酵母菌; 鸟纲; 量子纠缠; 相对论; 光学; 鹰; 磁场; 虎; 棘皮动物门; 水稻; 折射; 蝗虫; 薛定谔方程; 原生生物界; 熵; 麦克斯韦方程组; 电压; 蝙蝠; 统计物理; 黑洞; 蔷薇科; 双子叶植物纲; 蛇; 麻雀; 熊科; 中子; 电磁波; 经典力学; 偏振; 真菌界; 植物界; 能量守恒; 声学; 温度; 猫科; 反射; 蜘蛛\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "哺乳纲, 爬行纲, 节肢动物门, 量子力学, 热力学第二定律",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 17623.6,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790415203006aef91fec3a81c53339a5720099214cdeadb445",
+        "usage": {
+          "completion_tokens": 1711,
+          "prompt_tokens": 347,
+          "total_tokens": 2058,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1687
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S4",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S4",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S5_r5",
+      "prompt_text": "Caption ID: S5\nCaption (sequence of concept labels in the graph):\n生物; 植物界; 棘皮动物门; 青蛙; 玻尔模型; 玫瑰; 光学; 爬行纲; 动物界; 真菌界; 水稻; 统计物理; 相对论; 光子; 蛛形纲; 角动量; 不确定性原理; 蔷薇科; 脊索动物门; 声学; 质子; 猫科; 蝙蝠; 引力波; 硬骨鱼纲; 鸟纲; 鹰; 电磁波; 经典力学; 熵; 虎; 电子; 黑洞; 电压; 电流; 狗; 热力学; 禾本科; 熊科; 原子核; 热容量; 鲤鱼; 电场; 偏振; 蛇\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子力学, 哺乳纲, 两栖纲, 节肢动物门, 电动力学",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 7304.7,
+        "model_returned": "deepseek-v4-flash-0731",
+        "id": "chatcmpl-123d2761-d03b-4dee-959e-d0feb32a9512",
+        "usage": {
+          "completion_tokens": 460,
+          "prompt_tokens": 365,
+          "total_tokens": 825,
+          "completion_tokens_details": {
+            "reasoning_tokens": 438
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S5",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S5",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S6_r5",
+      "prompt_text": "Caption ID: S6\nCaption (sequence of concept labels in the graph):\n磁场; 虎; 节肢动物门; 真菌界; 蛇; 禾本科; 衍射; 原子核; 原生生物界; 两栖纲; 电压; 蜘蛛; 统计物理; 硬骨鱼纲; 不确定性原理; 动物界; 鸟纲; 猫科; 生物; 蝗虫; 蛛形纲; 量子力学; 豆科; 犬科; 牛顿运动定律; 电场; 脊索动物门; 雀形目; 鲤鱼; 狗; 鹰; 玫瑰; 引力波; 动量守恒; 昆虫纲; 软体动物门; 广义相对论; 棘皮动物门; 普朗克常数; 蔷薇科; 热力学; 狼; 大豆; 中子; 环节动物门\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "哺乳纲, 爬行纲, 被子植物门, 原核生物界, 麦克斯韦方程组",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 6464.6,
+        "model_returned": "deepseek-v4-flash-0731",
+        "id": "chatcmpl-62204878-8e3f-48f6-a9a9-a3adf1db6387",
+        "usage": {
+          "completion_tokens": 349,
+          "prompt_tokens": 380,
+          "total_tokens": 729,
+          "completion_tokens_details": {
+            "reasoning_tokens": 324
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S6",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S6",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 1,
+        "read_timeout_s": 90,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S6_n20_r5",
+      "prompt_text": "Caption ID: S6_n20\nCaption (sequence of concept labels in the graph):\n硬骨鱼纲; 环节动物门; 生物; 植物界; 黑洞; 软体动物门; 真菌界; 干涉; 玫瑰; 偏振; 中子; 引力波; 折射; 反射; 电压; 偶蹄目; 猫; 动量守恒; 蔷薇科; 双子叶植物纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "脊索动物门, 哺乳纲, 被子植物门, 电磁波, 广义相对论",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 2959.7,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790415264568ecb0d1ecabc2ef46c8096e92eb285582a7c75a",
+        "usage": {
+          "completion_tokens": 250,
+          "prompt_tokens": 276,
+          "total_tokens": 526,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 227
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S6_n20",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S6_n20",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S6_n35_r5",
+      "prompt_text": "Caption ID: S6_n35\nCaption (sequence of concept labels in the graph):\n猫; 禾本科; 昆虫纲; 爬行纲; 单子叶植物纲; 玻尔模型; 硬骨鱼纲; 酵母菌; 电压; 食肉目; 温度; 水稻; 麻雀; 动物界; 环节动物门; 热力学; 蝙蝠; 牛顿运动定律; 蜘蛛; 虎; 不确定性原理; 引力波; 经典力学; 电场; 鲤鱼; 鲸; 广义相对论; 哺乳纲; 熊科; 植物界; 电阻; 鹰; 软体动物门; 质子; 狗\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子力学, 中子, 两栖纲, 节肢动物门, 电磁学",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 5930.0,
+        "model_returned": "deepseek-v4-flash-0731",
+        "id": "chatcmpl-524e7283-77af-46ba-adae-86e77b752973",
+        "usage": {
+          "completion_tokens": 278,
+          "prompt_tokens": 336,
+          "total_tokens": 614,
+          "completion_tokens_details": {
+            "reasoning_tokens": 257
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S6_n35",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S6_n35",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    },
+    {
+      "prompt_id": "coze_t01_distill_S6_n60_r5",
+      "prompt_text": "Caption ID: S6_n60\nCaption (sequence of concept labels in the graph):\n猫; 薛定谔方程; 波函数; 动物界; 灵长目; 衍射; 光学; 哺乳纲; 植物界; 统计物理; 青蛙; 虎; 能量守恒; 狭义相对论; 动量守恒; 蝗虫; 原生生物界; 热容量; 偶蹄目; 电磁波; 软体动物门; 鹰; 脊索动物门; 犬科; 棘皮动物门; 蘑菇; 电场; 雀形目; 量子力学; 蔷薇科; 广义相对论; 单子叶植物纲; 狼; 经典力学; 量子纠缠; 温度; 硬骨鱼纲; 蛇; 麦克斯韦方程组; 时空弯曲; 猫科; 生物; 玻尔模型; 食肉目; 豆科; 电压; 麻雀; 热力学; 昆虫纲; 鲤鱼; 真菌界; 电流; 中子; 节肢动物门; 玫瑰; 普朗克常数; 原子核; 环节动物门; 电阻; 狗\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "薛定谔的猫, 不确定性原理, 熵, 电子, 磁场",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 18315.7,
+        "model_returned": "deepseek-v4-flash-ga-260731",
+        "id": "021790415278438aef91fec3a81c53339a5720099214cde9f6885",
+        "usage": {
+          "completion_tokens": 1736,
+          "prompt_tokens": 447,
+          "total_tokens": 2183,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1716
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "distill",
+        "teacher_label": "coze",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+        "caption_id": "S6_n60",
+        "reask_idx": 4,
+        "round_index": 5,
+        "is_round_5": true,
+        "phase_label": "r5_coze_distill_S6_n60",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": ""
+      }
+    }
+  ],
+  "retry_validation": {
+    "r5_retry_count_distribution": {
+      "0": 20,
+      "1": 2
+    },
+    "r5_retry_triggered_count": 2,
+    "r5_retry_trigger_categories_tracker": [
+      "timeout"
+    ],
+    "r5_retry_trigger_categories_distribution": {
+      "timeout": 1
+    },
+    "r5_retry_bug_fix_applied_in_all_calls": true,
+    "r5_empty_rate_with_fix": 0.0,
+    "slow_caption_special_note": "S6_n60/S4/S2_n60/S1_n45 等已知慢响应 caption 沿 r4 同 retry 路径消化 (timeout_initial=60 / retry=90 / max=3);r1-r4 实测 S6_n60: 52s/11s/57s/7.5s (retries=1/1/1/0); S1_n45: 13s/12s/11s/33s (retries=1/0/0/1);S2_n35: 5s/13s/13s/9s (retries=1/1/1/1); S4: 14s/14s/13s/37s (retries=0/0/0/1);S2_n60: 10s/10s/4s/36s (retries=0/0/0/1); S1_n60: 18s/30s/16s/4s (retries=0/0/0/0);r5 实测延迟如实记录，不预测不擅自补 call"
+  },
+  "per_caption_coze_distill_only_successful_calls": {
+    "L_algorithm_process": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "L_biological_taxonomy": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "L_geography_world": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "L_historical_causality": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "L_physics_concepts": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "L_project_management": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S1": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S1_n35": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S1_n45": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S1_n60": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S2": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S2_n20": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S2_n35": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S2_n45": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S2_n60": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S3": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S4": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S5": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S6": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S6_n20": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S6_n35": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    },
+    "S6_n60": {
+      "succ_count": 5,
+      "target_round5": 5,
+      "target_final": 5,
+      "need_more_for_round5": 0,
+      "met_target_round5": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round5_updated": true
+    }
+  },
+  "coze_distill_side_finish": {
+    "all_22_captions_met_target": true,
+    "distill_side_target_met_at_round": "r5",
+    "finish_disposition": "coze 蒸馏侧全 22 caption 5/5 successful 达标 → batch9 蒸馏侧收官 ✓",
+    "met_count_post_r5": 22,
+    "rounds_to_reach_target": 5,
+    "rounds_to_reach_target_actual": "5 棒 (r1+r2+r3+r4+r5) = 22 caption × 5 calls = 110 coze 蒸馏侧 calls",
+    "still_pending": [],
+    "total_captions": 22,
+    "finish_caliber_anchor": "沿 batch6 r5 `kimi_distill_side_finish` 字面惯例；batch9 = coze 蒸馏侧收官棒 (沿 batch8 r5 `glm2_distill_side_finish` 同惯例)"
+  },
+  "dispatch_target_progress_coze_distill": {
+    "target_round5": ">=5 successful calls/caption (coze distill side only; r5 收官阈值)",
+    "target_final": ">=5 successful calls/caption (coze distill side only; 最终收官阈值)",
+    "met_count_post_r5": 22,
+    "total_captions": 22,
+    "remaining_count_round5": 0,
+    "remaining_count_to_final": 0,
+    "met_percentage_round5": 100.0,
+    "still_pending_round5_captions": [],
+    "is_finish_round": true,
+    "is_round5_finish_round": true
+  },
+  "coze_representative_caliber": {
+    "v3_anchor_api_name": "coze",
+    "v3_anchor_9backbone_name": null,
+    "v4_current_model_id_sent": "deepseek-v4-flash（代表采样）",
+    "v4_current_model_returned": "deepseek-v4-flash 系 family 实例",
+    "representative_for_coze": true,
+    "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+    "pi_decision_source": "ask_748d9242c7a6be3d83de63a0 Q3 字面（2026-09-24 23:08）",
+    "pi_decision_quote": "coze 与 trea 都只是 agent 平台，我都是接的大模型 API（沿 mapping §1.1 第三栏 PI 拍板字面引用；coze 底层大模型 API 不可考）",
+    "mapping_sha12": "98a779d61c1e",
+    "mapping_path": "results/_v4_supp_l14v3_model_mapping_2026_09_24.md",
+    "smoke_anchor_teacher_side": "batch4 r6 / r5 沿 coze 教师侧 deepseek-v4-flash 实测 (1-call smoke ok=200 + 22 caption 21 OK + S6_n60 空响应已知)",
+    "smoke_anchor_distill_side_r1_r2_r3_r4": "batch9 r1+r2+r3+r4 沿 coze 蒸馏侧 deepseek-v4-flash 实测 (r1: 22 caption 22 OK + 0 empty + wall 328.1s; r2: 22 caption 22 OK + 0 empty + wall 430.9s + 3 retries; r3: 22 caption 22 OK + 0 empty + wall 400.1s + 4 retries; r4: 22 caption 22 OK + 0 empty + wall 492.7s + 4 retries)",
+    "note": "本棒 teacher_label='coze' + representative_for_coze=true + substitute_origin 字面标注 coze 教师身份；model_id_sent = deepseek-v4-flash (代表采样；coze 底层 model 不可考即如实不可考)；result 内字段须明示 representative_for_coze=true 而非 model_id_sent 区分——避免误读为 coze 背后真实模型（沿 mapping §1.1 + 诚实 = 不误导）"
+  },
+  "aggregate": {
+    "r5_total_calls": 22,
+    "r5_ok_count": 22,
+    "r5_empty_response_count": 0,
+    "r5_fail_count": 0,
+    "r5_empty_response_rate": 0.0,
+    "r5_total_prompt_tokens": 7834,
+    "r5_total_completion_tokens": 16942,
+    "r5_total_tokens": 24776,
+    "tun_compliance": true,
+    "tun_used_count": 22,
+    "tun_target_count": 22,
+    "cumulative": {
+      "prior_total": 406,
+      "prior_empty": 9,
+      "prior_ok": 397,
+      "prior_rate": 0.0222,
+      "post_total": 428,
+      "post_empty": 9,
+      "post_ok": 419,
+      "post_rate": 0.021,
+      "delta_total": 22,
+      "delta_empty": 0,
+      "delta_ok": 22,
+      "k_n26_n2_threshold": 0.5,
+      "k_n26_n2_triggered_this_batch": false
+    },
+    "r5_empty_response_rate_threshold_K_N26_N2_single_batch": 0.5,
+    "r5_empty_response_above_threshold_single_batch": false
+  },
+  "K_N26_observability_only": {
+    "K_N26_1_computed": false,
+    "K_N26_2_computed": false,
+    "K_N26_3_computed": false,
+    "K_N26_N1_observation": {
+      "round_5_n_distinct_sample_note": "round 5 收官棒第 5 call per caption 实测；coze 蒸馏侧独立计数累计 = 22 caption 各 26 successful (r1+r2+r3+r4+r5 quadruples 累计, prompt_id 前缀 coze_t01_distill_ filter 域)；**coze 蒸馏侧 r5 收官判定**: 22/22 caption 达 ≥5 successful;**coze 蒸馏侧 22/22 caption 5/5 successful 收官** ✓ (沿 batch6 r5 kimi 蒸馏侧 22/22 caption 5/5 successful 收官块惯例类比);由 verdict-keeper 5 教师批齐后统裁 (本棒 0 写 verdict)"
+    },
+    "K_N26_N2_observation": {
+      "teamo_tun_used_for_all_calls": true,
+      "single_batch_empty_response_rate": 0.0,
+      "cumulative_empty_response_rate": 0.021,
+      "cumulative_threshold": 0.5,
+      "single_batch_trigger_K_N26_N2_pass_False": false,
+      "cumulative_trigger": {
+        "triggered": false,
+        "trigger_at_call_idx": null,
+        "trigger_cum_rate": null,
+        "stop_reason": null
+      },
+      "monitor_disposition": "本棒 K-N26-N2 累计 empty_rate 监控 = 已实施；本棒未触发 K-N26-N2 累计阈值；跑至 343s watchdog / 全 22 calls 完成 (r5 收官态)"
+    },
+    "verdict_pending": "5 教师批齐后由 verdict-keeper 统裁 (本棒 0 写 verdict)"
+  },
+  "breakpoint_status": {
+    "planned_calls": 22,
+    "actual_calls": 22,
+    "actual_wall_time_s": 343.3,
+    "checkpoint_file": null,
+    "hit_wall_time_budget": false,
+    "k_n26_n2_cumulative_triggered": false,
+    "next_resume_via": "本棒 r5 收官棒已完成（22/22 calls）；coze 蒸馏侧 22/22 caption 5/5 successful 收官 ✓ — 无 next 棒（batch9 蒸馏侧收官）",
+    "note": "本棒 r5 收官棒已完成（22/22 calls）；coze 蒸馏侧 r5 收官 达成 ✓",
+    "stop_reason": null
+  },
+  "self_scan": {
+    "scan_executed": true,
+    "scan_method": "json.dumps(sort_keys=True) + 9 sensitive patterns",
+    "hits_count": 0,
+    "hits_detail": [],
+    "note": "本 result 自扫 0 命中 (沿 r4 同口径); key 仅 runtime memory 读取不入产物"
+  }
+}

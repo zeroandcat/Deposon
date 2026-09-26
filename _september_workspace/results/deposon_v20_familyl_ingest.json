@@ -1,0 +1,42 @@
+{
+ "experiment": "deposon_v20_familyL_ingest",
+ "spec_version": "v2.0",
+ "spec": "docs/SPEC_v2.0.md §1 族 L / §5",
+ "ingested": [
+  {
+   "graph_id": "L_physics_concepts",
+   "N": 35,
+   "n_edges": 39,
+   "n_named": 31,
+   "sha256": "f63039c8ec1ebdebb9a34d7b226d6328a1c771564ce99789b5c64a924da7267b"
+  },
+  {
+   "graph_id": "L_biological_taxonomy",
+   "N": 42,
+   "n_edges": 41,
+   "n_named": 22,
+   "sha256": "8c269435d4339713d36b979b75b7b856ae606ee5f3f8a35fadf112995edc9dd5"
+  },
+  {
+   "graph_id": "L_algorithm_process",
+   "N": 38,
+   "n_edges": 48,
+   "n_named": 29,
+   "sha256": "3c2d15fa088bf6282bebd12e7816a757db35b6c1ca0556cc12999b0def0df572"
+  },
+  {
+   "graph_id": "L_historical_causality",
+   "N": 36,
+   "n_edges": 55,
+   "n_named": 23,
+   "sha256": "619aad94a784f30d2ba8c01885be89a6e729b7fd00dfea9b8944ca1500068ba7"
+  }
+ ],
+ "cache_errors": {},
+ "corpus_n_graphs": 20,
+ "honesty": [
+  "no LLM API calls issued: 本脚本只读 results/familyL_cache/；缓存缺失域显式报错（CacheMissingError），绝不伪造数据。",
+  "族 L 图 named/filler 按冻结口径（DAG 最长路径族）划分；prompt_sha256 与预登记 manifest 不一致时如实标记，不阻断摄入。",
+  "同源污染风险：生成臂与（后续）先验臂同模型族（SPEC §1 声明）。"
+ ]
+}

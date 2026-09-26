@@ -1,0 +1,977 @@
+{
+  "metadata": {
+    "task": "track2_multimodel_rerun",
+    "date": "2026-09-23",
+    "author": "Mavis worker (Track 2 多模型补跑 子任务)",
+    "freeze_day": "V5 补强 D1 (件 3 续, 多模型补跑)",
+    "spec_conformance": "PI 2026-09-23 ask_3ee5edf74be2d6ef53fbc4b4 Q4 + 补充 1 + 补充 2",
+    "proxy_settings": {
+      "http": "http://127.0.0.1:1018",
+      "socks5": "socks5://127.0.0.1:1018",
+      "rationale": "PI 2026-09-23 补充 2: teamo/openrouter 类端点必走代理防封号"
+    },
+    "serial_policy": {
+      "inter_route_sleep_s": 2.5,
+      "inter_call_sleep_s": 1.5,
+      "rationale": "PI 2026-09-23 补充 2: 串行 + 间隔防封号"
+    },
+    "endpoint_set_discrepancy": {
+      "pi_authoritative_urls": [
+        "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+        "https://token-plan-cn.xiaomimimo.com/v1",
+        "https://api.teamorouter.cn/v1"
+      ],
+      "file_authoritative_urls_legacy": [
+        "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions (qwen_plan, 旧)",
+        "https://api.mioplus.mi.com/v1/chat/completions (mimo, 旧)",
+        "https://api.teamo.ai/v1/chat/completions (teamo, 旧)"
+      ],
+      "file_source": "_v4_v5_multimodel_probe.py",
+      "discrepancy_resolution": "按 PI 当条派工三 URL 探活 (PI 2026-09-23 ask_3ee5edf74be2d6ef53fbc4b4 Q4 + 补充 1); probe 文件未触动 (SHA-12 5FE4CBD93D92)"
+    },
+    "predecessor_chain_sha12": {
+      "track2_runner_template": "900A6D1E50AF",
+      "track2_multimodel_runner_template": "306FA79A7C27",
+      "measure_function": "21771E66AF67",
+      "teacher_paths": "D2BD7521D651",
+      "track2_product_openrouter": "61EDBE39A618",
+      "track2_product_deepseek_direct": "1B05EBA8639B",
+      "track2_product_qwen": "AE541E34781E",
+      "track2_measure_v5": "7CCBE2C3E248",
+      "track2_ablation_v5": "DC35655F8E7C",
+      "track2_verdict_v5": "83D8E7A8BA12",
+      "ablation_verdict_v5": "C2920AA9923A",
+      "multimodel_compare_v5": "356BD6647796",
+      "multimodel_verdict_v5": "C386251D94D6",
+      "probe_template_v5": "5FE4CBD93D92",
+      "endpoints_probe": "c846f7fc79ee"
+    }
+  },
+  "experiment_parameters": {
+    "bootstrap_seed": 42,
+    "delta_min_factor": 0.1,
+    "histogram_n_bins": 50,
+    "n_bootstrap_resamples": 1000,
+    "n_permutations": 1000,
+    "n_projections": 128,
+    "neg_control_seed": 42,
+    "perm_seed": 42,
+    "projection_seed": 42,
+    "temperature": 0.7,
+    "max_tokens": 1500,
+    "n_in_context_per_call": 2,
+    "n_calls_per_teacher": 3
+  },
+  "gt_constructive_declaration": "正类 = 各模型 LLM 上下文蒸馏产物 (15 条 generated_artifact 每模型); 负类 = 独立构造对照 (token 级随机重排合成负对照, seed=42); 结论不外推真实学生。",
+  "constraints_compliance": {
+    "key_never_in_prompt_or_json": true,
+    "key_never_on_disk": true,
+    "no_proxy_regen": true,
+    "serial_with_min_2s_gap": true,
+    "proxy_for_teamo_endpoint": true,
+    "probe_template_unchanged": true,
+    "track_2_llm_path_only": true,
+    "no_18_frozen_touch": true,
+    "no_9_grid_touch": true,
+    "no_pg_v0_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_builtin_script_touch": true,
+    "rationale": "PI 2026-09-22 铁律沿用口径 (R1-R7 + R8 沿用 + V4 frozen only-read)"
+  },
+  "call_time_cst": "2026-09-23T15:26:47+08:00",
+  "models": [
+    {
+      "label": "qwen_plan",
+      "provider": "qwen_token_plan",
+      "model_id": "qwen3.7-max",
+      "endpoint_base": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+      "use_proxy": false,
+      "product_path": "D:/私人资料/deposon-repo\\results\\_v4_proxy_student_llm_qwen3_7_max.json",
+      "product_sha12": "30b7783cf310",
+      "product_bytes": 29014,
+      "n_total_calls": 15,
+      "n_ok_calls": 15,
+      "n_parsed_ok": 15,
+      "measure": {
+        "cells": {
+          "kimi": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 44,
+            "D1_JS": 0.044269088542058535,
+            "D2_JS": 0.046095270612324414,
+            "D1_symKL": 0.09923277771789256,
+            "D2_symKL": 0.09114063726485327,
+            "margin_JS": {
+              "D1": 0.044269088542058535,
+              "D2": 0.046095270612324414,
+              "delta": 0.001826182070265879,
+              "delta_min": 0.004609527061232441,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.09923277771789256,
+              "D2": 0.09114063726485327,
+              "delta": -0.008092140453039284,
+              "delta_min": 0.009114063726485327,
+              "margin_hit": false
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.04345687279124712,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.013875139503115728,
+              "percentile_95": 0.06941974108879748,
+              "p_one_sided_lower": 0.7902097902097902,
+              "p_one_sided_upper": 0.21078921078921078,
+              "p_two_sided": 0.42157842157842157,
+              "in_central_90pct": true,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": false
+            },
+            "bootstrap_JS": {
+              "mean": 0.04909499905595548,
+              "ci_lower_95": 0.03306824747985827,
+              "ci_upper_95": 0.06941222961494856,
+              "n_resamples": 1000
+            }
+          },
+          "GLM_1": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 71,
+            "D1_JS": 0.020418134597095492,
+            "D2_JS": 0.020418134597095492,
+            "D1_symKL": 0.11945935507694028,
+            "D2_symKL": 0.11945935507694028,
+            "margin_JS": {
+              "D1": 0.020418134597095492,
+              "D2": 0.020418134597095492,
+              "delta": 0.0,
+              "delta_min": 0.0020418134597095495,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.11945935507694028,
+              "D2": 0.11945935507694028,
+              "delta": 0.0,
+              "delta_min": 0.011945935507694029,
+              "margin_hit": false
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.021166707215646327,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.013496395651296976,
+              "percentile_95": 0.06343097234036398,
+              "p_one_sided_lower": 0.4075924075924076,
+              "p_one_sided_upper": 0.5934065934065934,
+              "p_two_sided": 0.8151848151848152,
+              "in_central_90pct": true,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": false
+            },
+            "bootstrap_JS": {
+              "mean": 0.03709326578754961,
+              "ci_lower_95": 0.017031444746077144,
+              "ci_upper_95": 0.07269077763231623,
+              "n_resamples": 1000
+            }
+          },
+          "GLM_2": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 23,
+            "D1_JS": 0.025442800293563408,
+            "D2_JS": 0.024960431115327426,
+            "D1_symKL": 0.095540963877526,
+            "D2_symKL": 0.11023799726407775,
+            "margin_JS": {
+              "D1": 0.025442800293563408,
+              "D2": 0.024960431115327426,
+              "delta": -0.0004823691782359814,
+              "delta_min": 0.002496043111532743,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.095540963877526,
+              "D2": 0.11023799726407775,
+              "delta": 0.014697033386551747,
+              "delta_min": 0.011023799726407775,
+              "margin_hit": true
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.024883541786280567,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.012555266664318304,
+              "percentile_95": 0.024383626764880602,
+              "p_one_sided_lower": 0.9560439560439561,
+              "p_one_sided_upper": 0.04495504495504495,
+              "p_two_sided": 0.0899100899100899,
+              "in_central_90pct": false,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": true
+            },
+            "bootstrap_JS": {
+              "mean": 0.03426350309790944,
+              "ci_lower_95": 0.023447510581336786,
+              "ci_upper_95": 0.05462241425816511,
+              "n_resamples": 1000
+            }
+          },
+          "coze": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 29,
+            "D1_JS": 0.014139488924020989,
+            "D2_JS": 0.014139488924020989,
+            "D1_symKL": 0.07313796179697356,
+            "D2_symKL": 0.07313796179697356,
+            "margin_JS": {
+              "D1": 0.014139488924020989,
+              "D2": 0.014139488924020989,
+              "delta": 0.0,
+              "delta_min": 0.001413948892402099,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.07313796179697356,
+              "D2": 0.07313796179697356,
+              "delta": 0.0,
+              "delta_min": 0.007313796179697356,
+              "margin_hit": false
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.014104083993166455,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.009925143529508136,
+              "percentile_95": 0.023347474885991294,
+              "p_one_sided_lower": 0.36563436563436563,
+              "p_one_sided_upper": 0.6353646353646354,
+              "p_two_sided": 0.7312687312687313,
+              "in_central_90pct": true,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": false
+            },
+            "bootstrap_JS": {
+              "mean": 0.024118404451118677,
+              "ci_lower_95": 0.014500608245514118,
+              "ci_upper_95": 0.04550875927289251,
+              "n_resamples": 1000
+            }
+          },
+          "minimax": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 30,
+            "D1_JS": 0.03829071656240992,
+            "D2_JS": 0.03843273674437073,
+            "D1_symKL": 0.2861948305937463,
+            "D2_symKL": 0.24414114537684894,
+            "margin_JS": {
+              "D1": 0.03829071656240992,
+              "D2": 0.03843273674437073,
+              "delta": 0.00014202018196080718,
+              "delta_min": 0.003843273674437073,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.2861948305937463,
+              "D2": 0.24414114537684894,
+              "delta": -0.04205368521689734,
+              "delta_min": 0.024414114537684897,
+              "margin_hit": false
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.034502083033510204,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.012377950700257899,
+              "percentile_95": 0.028476475194744333,
+              "p_one_sided_lower": 0.983016983016983,
+              "p_one_sided_upper": 0.017982017982017984,
+              "p_two_sided": 0.03596403596403597,
+              "in_central_90pct": false,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": true
+            },
+            "bootstrap_JS": {
+              "mean": 0.047202720884629665,
+              "ci_lower_95": 0.02511356830792651,
+              "ci_upper_95": 0.08758344386128253,
+              "n_resamples": 1000
+            }
+          }
+        },
+        "judgments": {
+          "kimi": {
+            "branch_a_hit": true,
+            "branch_b_hit": true,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          },
+          "GLM_1": {
+            "branch_a_hit": true,
+            "branch_b_hit": true,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          },
+          "GLM_2": {
+            "branch_a_hit": false,
+            "branch_b_hit": true,
+            "branch_c_hit": true,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          },
+          "coze": {
+            "branch_a_hit": true,
+            "branch_b_hit": true,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          },
+          "minimax": {
+            "branch_a_hit": false,
+            "branch_b_hit": true,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          }
+        },
+        "summary": {
+          "n_main_fail": 5,
+          "n_main_pass": 0,
+          "n_alt_fail": 5,
+          "n_alt_pass": 0,
+          "main_verdict": "FAIL",
+          "alt_verdict": "FAIL"
+        }
+      },
+      "summary": {
+        "n_main_fail": 5,
+        "n_main_pass": 0,
+        "n_alt_fail": 5,
+        "n_alt_pass": 0,
+        "main_verdict": "FAIL",
+        "alt_verdict": "FAIL"
+      }
+    },
+    {
+      "label": "mimo",
+      "provider": "xiaomi_mimo_token_plan",
+      "model_id": "mimo-v2.6-pro",
+      "endpoint_base": "https://token-plan-cn.xiaomimimo.com/v1",
+      "use_proxy": false,
+      "product_path": "D:/私人资料/deposon-repo\\results\\_v4_proxy_student_llm_mimo_v2_6_pro.json",
+      "product_sha12": "0698f2fa88d0",
+      "product_bytes": 28483,
+      "n_total_calls": 15,
+      "n_ok_calls": 15,
+      "n_parsed_ok": 15,
+      "measure": {
+        "cells": {
+          "kimi": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 44,
+            "D1_JS": 0.04118632512779845,
+            "D2_JS": 0.04223363566828975,
+            "D1_symKL": 0.07205491614417894,
+            "D2_symKL": 0.059161098490014385,
+            "margin_JS": {
+              "D1": 0.04118632512779845,
+              "D2": 0.04223363566828975,
+              "delta": 0.0010473105404913002,
+              "delta_min": 0.004223363566828975,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.07205491614417894,
+              "D2": 0.059161098490014385,
+              "delta": -0.012893817654164558,
+              "delta_min": 0.005916109849001439,
+              "margin_hit": false
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.04088025370721679,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.013708484083903526,
+              "percentile_95": 0.06903492335543024,
+              "p_one_sided_lower": 0.7762237762237763,
+              "p_one_sided_upper": 0.22477522477522477,
+              "p_two_sided": 0.44955044955044954,
+              "in_central_90pct": true,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": false
+            },
+            "bootstrap_JS": {
+              "mean": 0.04699332142970879,
+              "ci_lower_95": 0.03266296324315399,
+              "ci_upper_95": 0.06582551265440051,
+              "n_resamples": 1000
+            }
+          },
+          "GLM_1": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 71,
+            "D1_JS": 0.01439139196607115,
+            "D2_JS": 0.01439139196607115,
+            "D1_symKL": 0.08895103619414252,
+            "D2_symKL": 0.08895103619414252,
+            "margin_JS": {
+              "D1": 0.01439139196607115,
+              "D2": 0.01439139196607115,
+              "delta": 0.0,
+              "delta_min": 0.001439139196607115,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.08895103619414252,
+              "D2": 0.08895103619414252,
+              "delta": 0.0,
+              "delta_min": 0.008895103619414252,
+              "margin_hit": false
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.014924969919372248,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.013629937790476847,
+              "percentile_95": 0.0624915730437077,
+              "p_one_sided_lower": 0.0959040959040959,
+              "p_one_sided_upper": 0.9050949050949051,
+              "p_two_sided": 0.1918081918081918,
+              "in_central_90pct": true,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": false
+            },
+            "bootstrap_JS": {
+              "mean": 0.02322734581356714,
+              "ci_lower_95": 0.013294179228796534,
+              "ci_upper_95": 0.042771070509465006,
+              "n_resamples": 1000
+            }
+          },
+          "GLM_2": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 23,
+            "D1_JS": 0.02254594821717453,
+            "D2_JS": 0.022214314817740062,
+            "D1_symKL": 0.15858650140683594,
+            "D2_symKL": 0.1477223441256533,
+            "margin_JS": {
+              "D1": 0.02254594821717453,
+              "D2": 0.022214314817740062,
+              "delta": -0.00033163339943446946,
+              "delta_min": 0.0022214314817740064,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.15858650140683594,
+              "D2": 0.1477223441256533,
+              "delta": -0.010864157281182646,
+              "delta_min": 0.014772234412565331,
+              "margin_hit": false
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.02202922325890854,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.013043274597929293,
+              "percentile_95": 0.024441058872745645,
+              "p_one_sided_lower": 0.8961038961038961,
+              "p_one_sided_upper": 0.1048951048951049,
+              "p_two_sided": 0.2097902097902098,
+              "in_central_90pct": true,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": false
+            },
+            "bootstrap_JS": {
+              "mean": 0.03152986399255189,
+              "ci_lower_95": 0.02072379860564236,
+              "ci_upper_95": 0.05052284548796948,
+              "n_resamples": 1000
+            }
+          },
+          "coze": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 29,
+            "D1_JS": 0.02033708511955373,
+            "D2_JS": 0.02033708511955373,
+            "D1_symKL": 0.09140607399415075,
+            "D2_symKL": 0.09140607399415075,
+            "margin_JS": {
+              "D1": 0.02033708511955373,
+              "D2": 0.02033708511955373,
+              "delta": 0.0,
+              "delta_min": 0.002033708511955373,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.09140607399415075,
+              "D2": 0.09140607399415075,
+              "delta": 0.0,
+              "delta_min": 0.009140607399415076,
+              "margin_hit": false
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.019326654447287005,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.010932259773713423,
+              "percentile_95": 0.023869380808958472,
+              "p_one_sided_lower": 0.7652347652347652,
+              "p_one_sided_upper": 0.23576423576423577,
+              "p_two_sided": 0.47152847152847155,
+              "in_central_90pct": true,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": false
+            },
+            "bootstrap_JS": {
+              "mean": 0.03217686397106441,
+              "ci_lower_95": 0.01919870036068981,
+              "ci_upper_95": 0.05478743172257583,
+              "n_resamples": 1000
+            }
+          },
+          "minimax": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 30,
+            "D1_JS": 0.022121376907074386,
+            "D2_JS": 0.02373368135564842,
+            "D1_symKL": 0.17447094513225075,
+            "D2_symKL": 0.15304945094597633,
+            "margin_JS": {
+              "D1": 0.022121376907074386,
+              "D2": 0.02373368135564842,
+              "delta": 0.001612304448574034,
+              "delta_min": 0.002373368135564842,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.17447094513225075,
+              "D2": 0.15304945094597633,
+              "delta": -0.021421494186274426,
+              "delta_min": 0.015304945094597634,
+              "margin_hit": false
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.02014445750498181,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.011856736427604087,
+              "percentile_95": 0.026167714101698148,
+              "p_one_sided_lower": 0.7282717282717283,
+              "p_one_sided_upper": 0.2727272727272727,
+              "p_two_sided": 0.5454545454545454,
+              "in_central_90pct": true,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": false
+            },
+            "bootstrap_JS": {
+              "mean": 0.035106755228923675,
+              "ci_lower_95": 0.01896529849858085,
+              "ci_upper_95": 0.07871516892495325,
+              "n_resamples": 1000
+            }
+          }
+        },
+        "judgments": {
+          "kimi": {
+            "branch_a_hit": true,
+            "branch_b_hit": true,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          },
+          "GLM_1": {
+            "branch_a_hit": true,
+            "branch_b_hit": true,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          },
+          "GLM_2": {
+            "branch_a_hit": true,
+            "branch_b_hit": true,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          },
+          "coze": {
+            "branch_a_hit": true,
+            "branch_b_hit": true,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          },
+          "minimax": {
+            "branch_a_hit": true,
+            "branch_b_hit": true,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          }
+        },
+        "summary": {
+          "n_main_fail": 5,
+          "n_main_pass": 0,
+          "n_alt_fail": 5,
+          "n_alt_pass": 0,
+          "main_verdict": "FAIL",
+          "alt_verdict": "FAIL"
+        }
+      },
+      "summary": {
+        "n_main_fail": 5,
+        "n_main_pass": 0,
+        "n_alt_fail": 5,
+        "n_alt_pass": 0,
+        "main_verdict": "FAIL",
+        "alt_verdict": "FAIL"
+      }
+    },
+    {
+      "label": "teamo",
+      "provider": "teamorouter",
+      "model_id": "deepseek-v4-flash",
+      "endpoint_base": "https://api.teamorouter.cn/v1",
+      "use_proxy": true,
+      "product_path": "D:/私人资料/deposon-repo\\results\\_v4_proxy_student_llm_deepseek_v4_flash_teamo.json",
+      "product_sha12": "4bfb49fc75eb",
+      "product_bytes": 27233,
+      "n_total_calls": 15,
+      "n_ok_calls": 15,
+      "n_parsed_ok": 14,
+      "measure": {
+        "cells": {
+          "kimi": {
+            "n_in_proxy": 2,
+            "n_in_teacher": 44,
+            "D1_JS": 0.055786723667878166,
+            "D2_JS": 0.04983813166706835,
+            "D1_symKL": 0.13612285972887617,
+            "D2_symKL": 0.12350673154958919,
+            "margin_JS": {
+              "D1": 0.055786723667878166,
+              "D2": 0.04983813166706835,
+              "delta": -0.005948592000809813,
+              "delta_min": 0.004983813166706836,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.13612285972887617,
+              "D2": 0.12350673154958919,
+              "delta": -0.012616128179286978,
+              "delta_min": 0.01235067315495892,
+              "margin_hit": false
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.055786723667878166,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.01782346108436257,
+              "percentile_95": 0.08532511272466965,
+              "p_one_sided_lower": 0.7362637362637363,
+              "p_one_sided_upper": 0.2647352647352647,
+              "p_two_sided": 0.5294705294705294,
+              "in_central_90pct": true,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": false
+            },
+            "bootstrap_JS": {
+              "mean": 0.06806368812341622,
+              "ci_lower_95": 0.03886308205527853,
+              "ci_upper_95": 0.12175583875087581,
+              "n_resamples": 1000
+            }
+          },
+          "GLM_1": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 71,
+            "D1_JS": 0.02100279365500026,
+            "D2_JS": 0.02100279365500026,
+            "D1_symKL": 0.13485797388697798,
+            "D2_symKL": 0.13485797388697798,
+            "margin_JS": {
+              "D1": 0.02100279365500026,
+              "D2": 0.02100279365500026,
+              "delta": 0.0,
+              "delta_min": 0.002100279365500026,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.13485797388697798,
+              "D2": 0.13485797388697798,
+              "delta": 0.0,
+              "delta_min": 0.013485797388697799,
+              "margin_hit": false
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.020774259899717037,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.013945758671199047,
+              "percentile_95": 0.06493034194320556,
+              "p_one_sided_lower": 0.3756243756243756,
+              "p_one_sided_upper": 0.6253746253746254,
+              "p_two_sided": 0.7512487512487512,
+              "in_central_90pct": true,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": false
+            },
+            "bootstrap_JS": {
+              "mean": 0.03509781231845928,
+              "ci_lower_95": 0.01715731754528583,
+              "ci_upper_95": 0.07502127624676846,
+              "n_resamples": 1000
+            }
+          },
+          "GLM_2": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 23,
+            "D1_JS": 0.018145201040483724,
+            "D2_JS": 0.02046904912369857,
+            "D1_symKL": 0.09406616517038321,
+            "D2_symKL": 0.12625694339563662,
+            "margin_JS": {
+              "D1": 0.018145201040483724,
+              "D2": 0.02046904912369857,
+              "delta": 0.0023238480832148446,
+              "delta_min": 0.0020469049123698567,
+              "margin_hit": true
+            },
+            "margin_symKL": {
+              "D1": 0.09406616517038321,
+              "D2": 0.12625694339563662,
+              "delta": 0.0321907782252534,
+              "delta_min": 0.012625694339563662,
+              "margin_hit": true
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.01867725679830187,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.012512600419960487,
+              "percentile_95": 0.023700253818043387,
+              "p_one_sided_lower": 0.6553446553446554,
+              "p_one_sided_upper": 0.34565434565434566,
+              "p_two_sided": 0.6913086913086913,
+              "in_central_90pct": true,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": false
+            },
+            "bootstrap_JS": {
+              "mean": 0.028871281675390173,
+              "ci_lower_95": 0.018744502225927072,
+              "ci_upper_95": 0.04770435016155327,
+              "n_resamples": 1000
+            }
+          },
+          "coze": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 29,
+            "D1_JS": 0.01287731278773633,
+            "D2_JS": 0.01287731278773633,
+            "D1_symKL": 0.09425442713452989,
+            "D2_symKL": 0.09425442713452989,
+            "margin_JS": {
+              "D1": 0.01287731278773633,
+              "D2": 0.01287731278773633,
+              "delta": 0.0,
+              "delta_min": 0.001287731278773633,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.09425442713452989,
+              "D2": 0.09425442713452989,
+              "delta": 0.0,
+              "delta_min": 0.00942544271345299,
+              "margin_hit": false
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.013983807747213573,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.01052884510949562,
+              "percentile_95": 0.02411320865208741,
+              "p_one_sided_lower": 0.32867132867132864,
+              "p_one_sided_upper": 0.6723276723276723,
+              "p_two_sided": 0.6573426573426573,
+              "in_central_90pct": true,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": false
+            },
+            "bootstrap_JS": {
+              "mean": 0.023775065933814045,
+              "ci_lower_95": 0.01324281616179214,
+              "ci_upper_95": 0.04806462596152752,
+              "n_resamples": 1000
+            }
+          },
+          "minimax": {
+            "n_in_proxy": 3,
+            "n_in_teacher": 30,
+            "D1_JS": 0.02602204692713741,
+            "D2_JS": 0.026666372577932963,
+            "D1_symKL": 0.12733200435054506,
+            "D2_symKL": 0.10845598634309633,
+            "margin_JS": {
+              "D1": 0.02602204692713741,
+              "D2": 0.026666372577932963,
+              "delta": 0.000644325650795554,
+              "delta_min": 0.0026666372577932966,
+              "margin_hit": false
+            },
+            "margin_symKL": {
+              "D1": 0.12733200435054506,
+              "D2": 0.10845598634309633,
+              "delta": -0.01887601800744873,
+              "delta_min": 0.010845598634309634,
+              "margin_hit": false
+            },
+            "permutation_test_JS": {
+              "observed_JS": 0.025777401594676078,
+              "n_permutations": 1000,
+              "perm_seed": 42,
+              "percentile_5": 0.013325657438196022,
+              "percentile_95": 0.02620766519514629,
+              "p_one_sided_lower": 0.9410589410589411,
+              "p_one_sided_upper": 0.059940059940059943,
+              "p_two_sided": 0.11988011988011989,
+              "in_central_90pct": true,
+              "extreme_lower_5pct": false,
+              "extreme_upper_5pct": false
+            },
+            "bootstrap_JS": {
+              "mean": 0.034321148815363446,
+              "ci_lower_95": 0.021759955103264842,
+              "ci_upper_95": 0.05618028706921921,
+              "n_resamples": 1000
+            }
+          }
+        },
+        "judgments": {
+          "kimi": {
+            "branch_a_hit": true,
+            "branch_b_hit": true,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          },
+          "GLM_1": {
+            "branch_a_hit": true,
+            "branch_b_hit": true,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          },
+          "GLM_2": {
+            "branch_a_hit": true,
+            "branch_b_hit": false,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          },
+          "coze": {
+            "branch_a_hit": true,
+            "branch_b_hit": true,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          },
+          "minimax": {
+            "branch_a_hit": true,
+            "branch_b_hit": true,
+            "branch_c_hit": false,
+            "main_verdict": "FAIL",
+            "alt_verdict": "FAIL",
+            "root_cause": "工具或构造层面失灵"
+          }
+        },
+        "summary": {
+          "n_main_fail": 5,
+          "n_main_pass": 0,
+          "n_alt_fail": 5,
+          "n_alt_pass": 0,
+          "main_verdict": "FAIL",
+          "alt_verdict": "FAIL"
+        }
+      },
+      "summary": {
+        "n_main_fail": 5,
+        "n_main_pass": 0,
+        "n_alt_fail": 5,
+        "n_alt_pass": 0,
+        "main_verdict": "FAIL",
+        "alt_verdict": "FAIL"
+      }
+    }
+  ],
+  "comparison_table": [
+    {
+      "label": "qwen_plan",
+      "model_id": "qwen3.7-max",
+      "provider": "qwen_token_plan",
+      "endpoint_base": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+      "use_proxy": false,
+      "product_sha12": "30b7783cf310",
+      "n_fail": 5,
+      "n_pass": 0,
+      "main_verdict": "FAIL",
+      "mean_D1_JS": 0.02851204578382967,
+      "mean_D2_JS": 0.028809212398627815,
+      "mean_margin_delta": 0.00029716661479814097,
+      "root_cause_dist": {
+        "工具或构造层面失灵": 5
+      }
+    },
+    {
+      "label": "mimo",
+      "model_id": "mimo-v2.6-pro",
+      "provider": "xiaomi_mimo_token_plan",
+      "endpoint_base": "https://token-plan-cn.xiaomimimo.com/v1",
+      "use_proxy": false,
+      "product_sha12": "0698f2fa88d0",
+      "n_fail": 5,
+      "n_pass": 0,
+      "main_verdict": "FAIL",
+      "mean_D1_JS": 0.02411642546753445,
+      "mean_D2_JS": 0.024582021785460623,
+      "mean_margin_delta": 0.00046559631792617294,
+      "root_cause_dist": {
+        "工具或构造层面失灵": 5
+      }
+    },
+    {
+      "label": "teamo",
+      "model_id": "deepseek-v4-flash",
+      "provider": "teamorouter",
+      "endpoint_base": "https://api.teamorouter.cn/v1",
+      "use_proxy": true,
+      "product_sha12": "4bfb49fc75eb",
+      "n_fail": 5,
+      "n_pass": 0,
+      "main_verdict": "FAIL",
+      "mean_D1_JS": 0.02676681561564718,
+      "mean_D2_JS": 0.026170731962287298,
+      "mean_margin_delta": -0.0005960836533598829,
+      "root_cause_dist": {
+        "工具或构造层面失灵": 5
+      }
+    }
+  ]
+}
