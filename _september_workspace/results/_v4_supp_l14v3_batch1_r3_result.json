@@ -1,0 +1,985 @@
+{
+  "K_N26_observability_only": {
+    "K_N26_1_computed": false,
+    "K_N26_2_computed": false,
+    "K_N26_3_computed": false,
+    "K_N26_N1_observation": {
+      "round_3_n_distinct_sample_note": "round 3 第 3 call 实测；与 r2 第 2 call + batch1 第 1 call 同 caption 比对 → n_distinct≥3（每 caption 同 caption 历次 response_text 取并集 → n_distinct 上限 ≥3 但因样本 N=3 受限）；充分判定需 ≥5 calls/caption（round 4-5 后由 verdict-keeper 统裁）"
+    },
+    "K_N26_N2_observation": {
+      "cumulative_empty_response_rate": 0.1579,
+      "cumulative_threshold": 0.5,
+      "cumulative_trigger": {
+        "stop_reason": null,
+        "trigger_at_call_idx": null,
+        "trigger_cum_rate": null,
+        "triggered": false
+      },
+      "monitor_disposition": "本棒 K-N26-N2 累计 empty_rate 监控 = 已实施；本棒未触发 K-N26-N2 累计阈值；跑至 600s watchdog 提前停批 / 全 27 calls 完成",
+      "single_batch_empty_response_rate": 0.2353,
+      "single_batch_trigger_K_N26_N2_pass_False": false,
+      "teamo_tun_used_for_all_calls": true
+    },
+    "verdict_pending": "5 教师批齐后由 verdict-keeper 统裁 (本棒 0 写 verdict)"
+  },
+  "aggregate": {
+    "cumulative": {
+      "delta_empty": 4,
+      "delta_total": 17,
+      "k_n26_n2_threshold": 0.5,
+      "k_n26_n2_triggered_this_batch": false,
+      "post_empty": 9,
+      "post_ok": 48,
+      "post_rate": 0.1579,
+      "post_total": 57,
+      "prior_empty": 5,
+      "prior_ok": 35,
+      "prior_rate": 0.125,
+      "prior_total": 40
+    },
+    "missing_for_round_3_after_watchdog": [
+      "S2_n35",
+      "S2_n45",
+      "S2_n60",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S6_n20",
+      "S6_n35",
+      "S6_n60"
+    ],
+    "r3_carry_over_retry_count": 1,
+    "r3_empty_response_above_threshold_single_batch": false,
+    "r3_empty_response_count": 4,
+    "r3_empty_response_rate": 0.2353,
+    "r3_empty_response_rate_threshold_K_N26_N2_single_batch": 0.5,
+    "r3_fail_count": 0,
+    "r3_ok_count": 13,
+    "r3_round_2_makeup_count": 4,
+    "r3_round_3_count": 12,
+    "r3_total_calls": 17,
+    "r3_total_completion_tokens": 8962,
+    "r3_total_prompt_tokens": 4655,
+    "r3_total_tokens": 13617,
+    "s6_n60_status": {
+      "is_carry_over_retry_ran": true,
+      "is_round_2_makeup_ran": true,
+      "is_round_3_ran": false,
+      "note": "S6_n60 当前棒 successful calls 计数；本棒成功 ≥1 → 不再是 0 successful call 状态；round 3-5 后续 ≥5 calls/caption 留待 worker 接力",
+      "records_in_this_batch": 2,
+      "successful_count_this_batch": 1
+    },
+    "tun_compliance": true,
+    "tun_target_count": 17,
+    "tun_used_count": 17
+  },
+  "batch": 1,
+  "breakpoint_status": {
+    "actual_calls": 17,
+    "actual_wall_time_s": 600.2,
+    "carry_over_retry_actual": 1,
+    "checkpoint_file": null,
+    "hit_wall_time_budget": true,
+    "k_n26_n2_cumulative_triggered": false,
+    "missing_for_round_3_after_watchdog": [
+      "S2_n35",
+      "S2_n45",
+      "S2_n60",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S6_n20",
+      "S6_n35",
+      "S6_n60"
+    ],
+    "next_resume_via": "同 agent 唤醒 (task_append 续跑) — 沿 prereg §1.6.4",
+    "note": "本棒 round 3 已完成（carry-over retry 1/1 + round 2 makeup 4/4 + round 3 12/22）；撞 600s watchdog 提前停批，剩余 round 3 待采 10 caption 走 task_append 接力棒",
+    "planned_calls": 27,
+    "round_2_makeup_actual": 4,
+    "round_3_actual": 12,
+    "stop_reason": "wall_time_600s"
+  },
+  "empty_rate_trend": {
+    "batch1_round1": {
+      "calls": 21,
+      "empty": 1,
+      "rate": 0.0476
+    },
+    "batch1_round2": {
+      "calls": 19,
+      "empty": 4,
+      "rate": 0.2105
+    },
+    "batch1_round3": {
+      "calls": 17,
+      "empty": 4,
+      "rate": 0.2353
+    },
+    "cumulative_through_r3": {
+      "calls": 57,
+      "empty": 9,
+      "k_n26_n2_threshold": 0.5,
+      "k_n26_n2_triggered": false,
+      "ok": 48,
+      "rate": 0.1579
+    }
+  },
+  "metadata": {
+    "activation_path": "results/_v4_supp_prereg_v02_add_L14V3_activation_2026_09_24.md",
+    "actual_total": 17,
+    "call_timeout_s": 60,
+    "calls_per_caption_target": 5,
+    "date": "2026-09-24",
+    "diff_vs_r2_executor": [
+      "1. 新增 ROUND=3 / CARRYOVER_RETRY_S6_N60=True 参数化",
+      "2. 新增调度: [S6_n60 carry-over retry reask=0] + [4 round 2 补缺 reask=1] + [22 round 3 reask=2] = 27 calls",
+      "3. 工具失灵族参数修正: read_timeout_initial_s=60 / read_timeout_retry_s=90 (沿 dispatch §3)",
+      "4. K-N26-N2 累计 empty_rate 监控: cumulative rate > 0.50 立即停采（沿 dispatch §3）",
+      "5. 每 quadruple 增 is_round_2_makeup / is_round_3 / read_timeout_s 字段",
+      "6. prompt_id 增 _carryover_r0_retry / _r2_makeup / _r3 三相后缀",
+      "7. aggregate 增 cumulative 字段 (prior_total / prior_empty / prior_rate / post_total / post_empty / post_rate)",
+      "8. K_N26_N2_observation 增 cumulative_trigger 字段",
+      "9. tools_fault_param_correction 显式记录（沿 v0.2 §0 同口径）",
+      "10. predecessor_sha12 链新增 r2_executor/r2_result/batch1_executor/batch1_result 全链"
+    ],
+    "endpoint_selected": "https://api.teamorouter.cn/v1",
+    "endpoint_selection_method": "沿上棒 executor b48019494530 实测 (kimi-k3 唯一可达)",
+    "freeze_day": "V4 L14+ N-26 真审唯一路径 batch 1 round 3",
+    "inner_retry_max": 3,
+    "inter_call_sleep_s": 2.5,
+    "iron_rules": {
+      "R1_no_llm": false,
+      "R2_no_proxy": false,
+      "R3_no_gateway": false,
+      "R4_key_never_in_plaintext": true,
+      "R5_v4_frozen_append_only": true,
+      "R6_pg_v0_v01_untouched": true,
+      "R7_plugin_spec_untouched": true,
+      "empty_response_counted_not_dropped": true,
+      "kill_line_locked_K_N26_1_2_3_N1_N2": true,
+      "no_existing_file_modified": true,
+      "no_merge_of_derived_json": true,
+      "no_overwrite_batch1_result_or_r2_result": true,
+      "no_threshold_adjustment": true,
+      "serial_interval_ge_2_5_s": true,
+      "tun_compliance_teamo_endpoint": true,
+      "v1_v3_readonly": true
+    },
+    "k_n26_n2_cumulative_threshold": 0.5,
+    "key_discipline": {
+      "key_index_1based": 15,
+      "method": "runtime memory read",
+      "redacted_in_products": true,
+      "source": "C:/Users/Administrator/Desktop/AI/LLM API.txt"
+    },
+    "max_tokens": 2000,
+    "max_tokens_rationale": "prereg §1.4 工具失灵修正条款 (L4 verdict 74B5B37F7EEA §2 构造失灵族补构造; 非擅调阈值)",
+    "model_id_inconsistency_honest_disclosure": "prereg §1.2 字面 model_id = kimi (API 端点名 = kimi-for-coding); teamo 实测不接受 kimi-for-coding (400 model_not_available), 仅接受 kimi-k3; 沿 user memory 2026-09-08「代码里默认 kimi-for-coding (API 端点名), 公开产品名 KIMI-K3——两个不一致时直接问」+ 端点策略即用即探 = 用 teamo 实际可接受 model_id kimi-k3",
+    "model_id_sent": "kimi-k3",
+    "n_captions_total": 22,
+    "n_carry_over_retry_actual": 1,
+    "n_carry_over_retry_planned": 1,
+    "n_round_2_makeup_actual": 4,
+    "n_round_2_makeup_planned": 4,
+    "n_round_3_actual": 12,
+    "n_round_3_planned": 22,
+    "planned_total": 27,
+    "predecessor_sha12": {
+      "batch1_executor_path": "results/_v4_supp_l14v3_batch1_executor.py",
+      "batch1_executor_sha12": "b48019494530",
+      "batch1_result_path": "results/_v4_supp_l14v3_batch1_result.json",
+      "batch1_result_sha12": "22eb01144062",
+      "executor_path": "results/_v4_supp_l14v3_batch1_r2_executor.py",
+      "executor_sha12": "2bdb5163400f",
+      "r2_result_path": "results/_v4_supp_l14v3_batch1_r2_result.json",
+      "r2_result_sha12": "00c7b545c397"
+    },
+    "prereg_path": "results/_v4_supp_prereg_v02_add_L14V3_2026_09_24.md",
+    "prereg_sha12": "05B975A86989",
+    "proxy_settings": {
+      "applied_to_teamo": true,
+      "http": "http://127.0.0.1:1018",
+      "socks5": "socks5://127.0.0.1:1018"
+    },
+    "round_index": 3,
+    "run_window_cst": "2026-09-24T21:25:24+08:00",
+    "side": "teacher",
+    "spec_conformance": "PI 2026-09-24 同 agent 唤醒 (task_append) 接力棒 + 沿 r2 executor/口径直接续跑 + empty_rate 累计监控 + 工具失灵族参数修正",
+    "stop_reason": "wall_time_600s",
+    "task": "L14V3_batch1_round3_kimi_teacher_side",
+    "teacher": "kimi",
+    "temperature": 0.7,
+    "tools_fault_param_correction": {
+      "dispensation": "dispatch 2026-09-24 §3 字面授权（『若 timeout 频发可在重试中把 read timeout 提至 90s』）",
+      "rationale": "r2 EMPTY 4/4 = 100% 同源于 teamo+tun 网络层 60s read timeout；empty_rate 升幅显著 (4.76% → 21.05%) → 工具失灵族参数修正（非阈值私设，沿 prereg §1.4 工具失灵修正条款类同 max_tokens=2000）：内层重试 read timeout 由 60s 提至 90s",
+      "read_timeout_initial_s": 60,
+      "read_timeout_retry_s": 90,
+      "scope": "本棒 executor 仅；不改上棒既有件；不改 prereg 字面",
+      "trigger": "timeout 频发 (r2 empty_rate 21.05% > 5% 经验阈值)"
+    },
+    "wall_time_actual_s": 600.2,
+    "wall_time_budget_s": 600
+  },
+  "quadruples": [
+    {
+      "per_call_metadata": {
+        "caption_id": "S6_n60",
+        "carry_over": true,
+        "empty_response": true,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": "timeout",
+        "error_snippet": "HTTPSConnectionPool(host='api.teamorouter.cn', port=443): Read timed out. (read timeout=60)",
+        "id": "",
+        "is_round_2_makeup": false,
+        "is_round_3": false,
+        "latency_ms": 60077.9,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "",
+        "ok": false,
+        "read_timeout_s": 60,
+        "reask_idx": 0,
+        "retry_count": 0,
+        "round_index": 1,
+        "side": "teacher",
+        "status_code": null,
+        "temperature": 0.7,
+        "usage": {}
+      },
+      "prompt_id": "kimi_t01_teacher_S6_n60_carryover_r0_retry",
+      "prompt_text": "Caption ID: S6_n60\nCaption (sequence of concept labels in the graph):\n猫; 薛定谔方程; 波函数; 动物界; 灵长目; 衍射; 光学; 哺乳纲; 植物界; 统计物理; 青蛙; 虎; 能量守恒; 狭义相对论; 动量守恒; 蝗虫; 原生生物界; 热容量; 偶蹄目; 电磁波; 软体动物门; 鹰; 脊索动物门; 犬科; 棘皮动物门; 蘑菇; 电场; 雀形目; 量子力学; 蔷薇科; 广义相对论; 单子叶植物纲; 狼; 经典力学; 量子纠缠; 温度; 硬骨鱼纲; 蛇; 麦克斯韦方程组; 时空弯曲; 猫科; 生物; 玻尔模型; 食肉目; 豆科; 电压; 麻雀; 热力学; 昆虫纲; 鲤鱼; 真菌界; 电流; 中子; 节肢动物门; 玫瑰; 普朗克常数; 原子核; 环节动物门; 电阻; 狗\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": ""
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S6",
+        "carry_over": false,
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "chatcmpl-f8501e72e4a847778ae0b3d3dd9dfb63",
+        "is_round_2_makeup": true,
+        "is_round_3": false,
+        "latency_ms": 13381.9,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "FW-Kimi-K3",
+        "ok": true,
+        "read_timeout_s": 60,
+        "reask_idx": 1,
+        "retry_count": 0,
+        "round_index": 2,
+        "side": "teacher",
+        "status_code": 200,
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 419,
+          "completion_tokens_details": {
+            "reasoning_tokens": 390
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 390
+          },
+          "prompt_tokens": 391,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 810
+        }
+      },
+      "prompt_id": "kimi_t01_teacher_S6_r2_makeup",
+      "prompt_text": "Caption ID: S6\nCaption (sequence of concept labels in the graph):\n磁场; 虎; 节肢动物门; 真菌界; 蛇; 禾本科; 衍射; 原子核; 原生生物界; 两栖纲; 电压; 蜘蛛; 统计物理; 硬骨鱼纲; 不确定性原理; 动物界; 鸟纲; 猫科; 生物; 蝗虫; 蛛形纲; 量子力学; 豆科; 犬科; 牛顿运动定律; 电场; 脊索动物门; 雀形目; 鲤鱼; 狗; 鹰; 玫瑰; 引力波; 动量守恒; 昆虫纲; 软体动物门; 广义相对论; 棘皮动物门; 普朗克常数; 蔷薇科; 热力学; 狼; 大豆; 中子; 环节动物门\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "质子, 电磁波, 哺乳纲, 植物界, 爬行纲"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S6_n20",
+        "carry_over": false,
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "chatcmpl-a0de1944ac13487da98876df3f1fb2fd",
+        "is_round_2_makeup": true,
+        "is_round_3": false,
+        "latency_ms": 40122.1,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "FW-Kimi-K3",
+        "ok": true,
+        "read_timeout_s": 60,
+        "reask_idx": 1,
+        "retry_count": 0,
+        "round_index": 2,
+        "side": "teacher",
+        "status_code": 200,
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 731,
+          "completion_tokens_details": {
+            "reasoning_tokens": 703
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 703
+          },
+          "prompt_tokens": 288,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1019
+        }
+      },
+      "prompt_id": "kimi_t01_teacher_S6_n20_r2_makeup",
+      "prompt_text": "Caption ID: S6_n20\nCaption (sequence of concept labels in the graph):\n硬骨鱼纲; 环节动物门; 生物; 植物界; 黑洞; 软体动物门; 真菌界; 干涉; 玫瑰; 偏振; 中子; 引力波; 折射; 反射; 电压; 偶蹄目; 猫; 动量守恒; 蔷薇科; 双子叶植物纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "哺乳纲,食肉目,被子植物门,衍射,事件视界"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S6_n35",
+        "carry_over": false,
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "chatcmpl-49b8dc098702",
+        "is_round_2_makeup": true,
+        "is_round_3": false,
+        "latency_ms": 35311.3,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "kimi-k3",
+        "ok": true,
+        "read_timeout_s": 60,
+        "reask_idx": 1,
+        "retry_count": 0,
+        "round_index": 2,
+        "side": "teacher",
+        "status_code": 200,
+        "temperature": 0.7,
+        "usage": {
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cached_tokens": 0,
+          "completion_thinking_tokens": 903,
+          "completion_tokens": 936,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "reasoning_tokens": 903,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 338,
+          "prompt_cache_write_tokens": 0,
+          "prompt_tokens": 338,
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "total_tokens": 1274
+        }
+      },
+      "prompt_id": "kimi_t01_teacher_S6_n35_r2_makeup",
+      "prompt_text": "Caption ID: S6_n35\nCaption (sequence of concept labels in the graph):\n猫; 禾本科; 昆虫纲; 爬行纲; 单子叶植物纲; 玻尔模型; 硬骨鱼纲; 酵母菌; 电压; 食肉目; 温度; 水稻; 麻雀; 动物界; 环节动物门; 热力学; 蝙蝠; 牛顿运动定律; 蜘蛛; 虎; 不确定性原理; 引力波; 经典力学; 电场; 鲤鱼; 鲸; 广义相对论; 哺乳纲; 熊科; 植物界; 电阻; 鹰; 软体动物门; 质子; 狗\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "鸟纲, 量子力学, 电子, 节肢动物门, 电流"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S6_n60",
+        "carry_over": false,
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "chatcmpl-173da4501b1145b080f20d482ec93f26",
+        "is_round_2_makeup": true,
+        "is_round_3": false,
+        "latency_ms": 18224.3,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "FW-Kimi-K3",
+        "ok": true,
+        "read_timeout_s": 60,
+        "reask_idx": 1,
+        "retry_count": 0,
+        "round_index": 2,
+        "side": "teacher",
+        "status_code": 200,
+        "temperature": 0.7,
+        "usage": {
+          "claude_cache_creation_1_h_tokens": 0,
+          "claude_cache_creation_5_m_tokens": 0,
+          "completion_tokens": 944,
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "reasoning_tokens": 914,
+            "text_tokens": 0
+          },
+          "input_tokens": 0,
+          "input_tokens_details": null,
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "reasoning_tokens": 914,
+            "text_tokens": 0
+          },
+          "prompt_tokens": 456,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 455,
+            "image_tokens": 0,
+            "text_tokens": 0
+          },
+          "total_tokens": 1400
+        }
+      },
+      "prompt_id": "kimi_t01_teacher_S6_n60_r2_makeup",
+      "prompt_text": "Caption ID: S6_n60\nCaption (sequence of concept labels in the graph):\n猫; 薛定谔方程; 波函数; 动物界; 灵长目; 衍射; 光学; 哺乳纲; 植物界; 统计物理; 青蛙; 虎; 能量守恒; 狭义相对论; 动量守恒; 蝗虫; 原生生物界; 热容量; 偶蹄目; 电磁波; 软体动物门; 鹰; 脊索动物门; 犬科; 棘皮动物门; 蘑菇; 电场; 雀形目; 量子力学; 蔷薇科; 广义相对论; 单子叶植物纲; 狼; 经典力学; 量子纠缠; 温度; 硬骨鱼纲; 蛇; 麦克斯韦方程组; 时空弯曲; 猫科; 生物; 玻尔模型; 食肉目; 豆科; 电压; 麻雀; 热力学; 昆虫纲; 鲤鱼; 真菌界; 电流; 中子; 节肢动物门; 玫瑰; 普朗克常数; 原子核; 环节动物门; 电阻; 狗\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "光子, 不确定性原理, 质子, 双子叶植物纲, 狮子"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "L_algorithm_process",
+        "carry_over": false,
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "chatcmpl-43d792456993",
+        "is_round_2_makeup": false,
+        "is_round_3": true,
+        "latency_ms": 31958.0,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "kimi-k3",
+        "ok": true,
+        "read_timeout_s": 60,
+        "reask_idx": 2,
+        "retry_count": 0,
+        "round_index": 3,
+        "side": "teacher",
+        "status_code": 200,
+        "temperature": 0.7,
+        "usage": {
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cached_tokens": 0,
+          "completion_thinking_tokens": 780,
+          "completion_tokens": 820,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "reasoning_tokens": 780,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 365,
+          "prompt_cache_write_tokens": 0,
+          "prompt_tokens": 365,
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "total_tokens": 1185
+        }
+      },
+      "prompt_id": "kimi_t01_teacher_L_algorithm_process_r3",
+      "prompt_text": "Caption ID: L_algorithm_process\nCaption (sequence of concept labels in the graph):\n问题输入; 数据预处理; 特征工程; 样本划分; 算法选择; 模型初始化; 参数配置; 损失函数; 优化器; 前向传播; 反向传播; 梯度计算; 参数更新; 收敛判断; 早停机制; 验证评估; 交叉验证; 超参调优; 特征重要性; 模型集成; 决策输出; 后处理规则; 置信度估计; 结果解释; 可视化展示; 部署上线; 在线推理; 日志监控; 反馈回流; 数据再采集; 模型重训练; 性能衰减检测; 版本回退; 终止状态; 流程审计; 异常处理; 资源释放; 输出报告\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "数据标注, 数据增强, 学习率调度, 正则化约束, 模型压缩, 灰度发布"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "L_biological_taxonomy",
+        "carry_over": false,
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "chatcmpl-9196b6d4f0764448a8092e7e144a9b3e",
+        "is_round_2_makeup": false,
+        "is_round_3": true,
+        "latency_ms": 21135.3,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "FW-Kimi-K3",
+        "ok": true,
+        "read_timeout_s": 60,
+        "reask_idx": 2,
+        "retry_count": 0,
+        "round_index": 3,
+        "side": "teacher",
+        "status_code": 200,
+        "temperature": 0.7,
+        "usage": {
+          "claude_cache_creation_1_h_tokens": 0,
+          "claude_cache_creation_5_m_tokens": 0,
+          "completion_tokens": 1160,
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "reasoning_tokens": 1130,
+            "text_tokens": 0
+          },
+          "input_tokens": 0,
+          "input_tokens_details": null,
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "reasoning_tokens": 1130,
+            "text_tokens": 0
+          },
+          "prompt_tokens": 393,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "image_tokens": 0,
+            "text_tokens": 0
+          },
+          "total_tokens": 1553
+        }
+      },
+      "prompt_id": "kimi_t01_teacher_L_biological_taxonomy_r3",
+      "prompt_text": "Caption ID: L_biological_taxonomy\nCaption (sequence of concept labels in the graph):\n生物; 真核生物; 原核生物; 动物界; 植物界; 真菌界; 细菌域; 古菌域; 脊索动物门; 节肢动物门; 软体动物门; 哺乳纲; 鸟纲; 鱼纲; 食肉目; 灵长目; 偶蹄目; 猫科; 犬科; 豹属; 猫属; 虎; 狮; 家猫; 人科; 猴科; 人属; 黑猩猩属; 智人; 被子植物门; 裸子植物门; 单子叶植物纲; 双子叶植物纲; 禾本目; 百合目; 禾本科; 竹亚科; 蔷薇目; 菊目; 蔷薇科; 苹果属; 苹果\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "犬属, 狼, 大猩猩属, 昆虫纲, 水稻"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "L_geography_world",
+        "carry_over": false,
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "chatcmpl-9837cc5bede04678883b0446da8257e7",
+        "is_round_2_makeup": false,
+        "is_round_3": true,
+        "latency_ms": 7685.0,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "FW-Kimi-K3",
+        "ok": true,
+        "read_timeout_s": 60,
+        "reask_idx": 2,
+        "retry_count": 0,
+        "round_index": 3,
+        "side": "teacher",
+        "status_code": 200,
+        "temperature": 0.7,
+        "usage": {
+          "claude_cache_creation_1_h_tokens": 0,
+          "claude_cache_creation_5_m_tokens": 0,
+          "completion_tokens": 440,
+          "completion_tokens_details": {
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "reasoning_tokens": 411,
+            "text_tokens": 0
+          },
+          "input_tokens": 0,
+          "input_tokens_details": null,
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "audio_tokens": 0,
+            "image_tokens": 0,
+            "reasoning_tokens": 411,
+            "text_tokens": 0
+          },
+          "prompt_tokens": 368,
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "image_tokens": 0,
+            "text_tokens": 0
+          },
+          "total_tokens": 808
+        }
+      },
+      "prompt_id": "kimi_t01_teacher_L_geography_world_r3",
+      "prompt_text": "Caption ID: L_geography_world\nCaption (sequence of concept labels in the graph):\n世界; 亚洲; 欧洲; 非洲; 北美洲; 南美洲; 大洋洲; 南极洲; 中国; 日本; 印度; 法国; 德国; 英国; 埃及; 南非; 美国; 加拿大; 巴西; 阿根廷; 澳大利亚; 新西兰; 南极大陆; 长城站; 北京; 东京; 新德里; 巴黎; 柏林; 伦敦; 开罗; 约翰内斯堡; 纽约; 多伦多; 里约热内卢; 布宜诺斯艾利斯; 悉尼; 奥克兰; 故宫; 埃菲尔铁塔; 自由女神像; 大堡礁; 富士山; 泰姬陵; 金字塔\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "俄罗斯, 莫斯科, 悉尼歌剧院, 太平洋, 珠穆朗玛峰"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "L_historical_causality",
+        "carry_over": false,
+        "empty_response": true,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": "timeout",
+        "error_snippet": "HTTPSConnectionPool(host='api.teamorouter.cn', port=443): Read timed out. (read timeout=60)",
+        "id": "",
+        "is_round_2_makeup": false,
+        "is_round_3": true,
+        "latency_ms": 60040.0,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "",
+        "ok": false,
+        "read_timeout_s": 60,
+        "reask_idx": 2,
+        "retry_count": 0,
+        "round_index": 3,
+        "side": "teacher",
+        "status_code": null,
+        "temperature": 0.7,
+        "usage": {}
+      },
+      "prompt_id": "kimi_t01_teacher_L_historical_causality_r3",
+      "prompt_text": "Caption ID: L_historical_causality\nCaption (sequence of concept labels in the graph):\n资本主义扩张; 帝国主义竞争; 工业革命深化; 民族主义高涨; 军事同盟形成; 殖民地争夺激化; 军备竞赛升级; 巴尔干危机; 萨拉热窝事件; 奥匈帝国最后通牒; 七月危机; 俄国总动员; 德国战争计划; 德国宣战; 英国参战; 一战全面爆发; 阵地战消耗; 凡尔登战役; 索姆河战役; 美国参战; 俄国退出一战; 德国失败; 凡尔赛条约; 国际联盟成立; 奥斯曼帝国瓦解; 奥匈帝国解体; 民族国家涌现; 经济危机隐患; 法西斯主义兴起; 二战根源; 女性地位提升; 工人运动发展; 社会主义革命; 十月革命; 殖民体系松动; 全球秩序重塑\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": ""
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "L_physics_concepts",
+        "carry_over": false,
+        "empty_response": true,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": "timeout",
+        "error_snippet": "HTTPSConnectionPool(host='api.teamorouter.cn', port=443): Read timed out. (read timeout=60)",
+        "id": "",
+        "is_round_2_makeup": false,
+        "is_round_3": true,
+        "latency_ms": 60077.2,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "",
+        "ok": false,
+        "read_timeout_s": 60,
+        "reask_idx": 2,
+        "retry_count": 0,
+        "round_index": 3,
+        "side": "teacher",
+        "status_code": null,
+        "temperature": 0.7,
+        "usage": {}
+      },
+      "prompt_id": "kimi_t01_teacher_L_physics_concepts_r3",
+      "prompt_text": "Caption ID: L_physics_concepts\nCaption (sequence of concept labels in the graph):\n物理学; 经典力学; 电磁学; 热力学; 量子力学; 相对论; 粒子物理; 运动学; 动力学; 牛顿定律; 万有引力定律; 麦克斯韦方程组; 电场; 磁场; 电磁波; 温度; 熵; 热力学第二定律; 波函数; 薛定谔方程; 海森堡不确定性原理; 狭义相对论; 广义相对论; 质能方程; 时空弯曲; 标准模型; 基本粒子; 夸克; 轻子; 光子; 强相互作用; 弱相互作用; 电磁相互作用; 希格斯玻色子; 引力\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": ""
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "L_project_management",
+        "carry_over": false,
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "chatcmpl-1ee5fe4c098742fab858c179d6d65fc7",
+        "is_round_2_makeup": false,
+        "is_round_3": true,
+        "latency_ms": 51883.7,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "accounts/fireworks/models/kimi-k3",
+        "ok": true,
+        "read_timeout_s": 60,
+        "reask_idx": 2,
+        "retry_count": 0,
+        "round_index": 3,
+        "side": "teacher",
+        "status_code": 200,
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 280,
+          "completion_tokens_details": {
+            "reasoning_tokens": 251
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 251
+          },
+          "prompt_tokens": 335,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 615
+        }
+      },
+      "prompt_id": "kimi_t01_teacher_L_project_management_r3",
+      "prompt_text": "Caption ID: L_project_management\nCaption (sequence of concept labels in the graph):\n项目立项; 需求收集; 需求分析; 需求确认; 项目范围; WBS分解; 范围确认; 项目计划; 进度计划; 成本预算; 资源计划; 风险识别; 风险应对计划; 质量计划; 沟通计划; 采购计划; 干系人管理; 任务执行; 团队管理; 质量保证; 风险监控; 质量控制; 进度监控; 成本控制; 变更控制; 沟通汇报; 采购实施; 产品交付; 验收确认; 文档归档; 项目复盘; 经验总结; 项目关闭\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "项目章程,里程碑管理,挣值分析,问题跟踪,客户满意度评估"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S1",
+        "carry_over": false,
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "chatcmpl-a4eef3257a8240bd8638ade8013c9a2e",
+        "is_round_2_makeup": false,
+        "is_round_3": true,
+        "latency_ms": 16352.4,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "FW-Kimi-K3",
+        "ok": true,
+        "read_timeout_s": 60,
+        "reask_idx": 2,
+        "retry_count": 0,
+        "round_index": 3,
+        "side": "teacher",
+        "status_code": 200,
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 781,
+          "completion_tokens_details": {
+            "reasoning_tokens": 752
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 752
+          },
+          "prompt_tokens": 281,
+          "prompt_tokens_details": {
+            "cached_tokens": 280
+          },
+          "total_tokens": 1062
+        }
+      },
+      "prompt_id": "kimi_t01_teacher_S1_r3",
+      "prompt_text": "Caption ID: S1\nCaption (sequence of concept labels in the graph):\n玻尔模型; 波函数; 酵母菌; 蝗虫; 电磁波; 偏振; 蝙蝠; 青蛙; 偶蹄目; 豆科; 折射; 鹰; 电磁学; 声学; 熊科; 不确定性原理; 电场; 脊索动物门; 热容量; 光学\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子力学, 磁场, 哺乳动物, 回声定位, 衍射"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S1_n35",
+        "carry_over": false,
+        "empty_response": true,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": "timeout",
+        "error_snippet": "HTTPSConnectionPool(host='api.teamorouter.cn', port=443): Read timed out. (read timeout=60)",
+        "id": "",
+        "is_round_2_makeup": false,
+        "is_round_3": true,
+        "latency_ms": 60055.0,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "",
+        "ok": false,
+        "read_timeout_s": 60,
+        "reask_idx": 2,
+        "retry_count": 0,
+        "round_index": 3,
+        "side": "teacher",
+        "status_code": null,
+        "temperature": 0.7,
+        "usage": {}
+      },
+      "prompt_id": "kimi_t01_teacher_S1_n35_r3",
+      "prompt_text": "Caption ID: S1_n35\nCaption (sequence of concept labels in the graph):\n蜘蛛; 虎; 不确定性原理; 折射; 灵长目; 电磁学; 牛顿运动定律; 豆科; 狗; 角动量; 蛛形纲; 麦克斯韦方程组; 青蛙; 脊索动物门; 犬科; 鸟纲; 时空弯曲; 电磁波; 波函数; 熊科; 鲤鱼; 动量守恒; 偶蹄目; 电流; 麻雀; 动物界; 衍射; 量子力学; 生物; 硬骨鱼纲; 狭义相对论; 软体动物门; 两栖纲; 引力波; 真菌界\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": ""
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S1_n45",
+        "carry_over": false,
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "chatcmpl-a1e05a1f3fd74ba38010026c9b1cd4a1",
+        "is_round_2_makeup": false,
+        "is_round_3": true,
+        "latency_ms": 12255.9,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "FW-Kimi-K3",
+        "ok": true,
+        "read_timeout_s": 60,
+        "reask_idx": 2,
+        "retry_count": 0,
+        "round_index": 3,
+        "side": "teacher",
+        "status_code": 200,
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 509,
+          "completion_tokens_details": {
+            "reasoning_tokens": 477
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 477
+          },
+          "prompt_tokens": 391,
+          "prompt_tokens_details": {
+            "cached_tokens": 390
+          },
+          "total_tokens": 900
+        }
+      },
+      "prompt_id": "kimi_t01_teacher_S1_n45_r3",
+      "prompt_text": "Caption ID: S1_n45\nCaption (sequence of concept labels in the graph):\n节肢动物门; 偏振; 折射; 真菌界; 牛顿运动定律; 麦克斯韦方程组; 哺乳纲; 物理学; 酵母菌; 偶蹄目; 鲤鱼; 大豆; 声学; 单子叶植物纲; 能量守恒; 原生生物界; 衍射; 虎; 电压; 青蛙; 猫; 环节动物门; 雀形目; 蝗虫; 爬行纲; 脊索动物门; 禾本科; 熊科; 不确定性原理; 原子核; 两栖纲; 植物界; 量子力学; 水稻; 电磁波; 猫科; 电磁学; 热力学; 波函数; 质子; 熵; 蔷薇科; 普朗克常数; 干涉; 豆科\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "电子, 反射, 欧姆定律, 鸟纲, 双子叶植物纲"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S1_n60",
+        "carry_over": false,
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "chatcmpl-8f24ca3bfa6f",
+        "is_round_2_makeup": false,
+        "is_round_3": true,
+        "latency_ms": 41815.3,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "kimi-k3",
+        "ok": true,
+        "read_timeout_s": 60,
+        "reask_idx": 2,
+        "retry_count": 0,
+        "round_index": 3,
+        "side": "teacher",
+        "status_code": 200,
+        "temperature": 0.7,
+        "usage": {
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cached_tokens": 0,
+          "completion_thinking_tokens": 1210,
+          "completion_tokens": 1241,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "reasoning_tokens": 1210,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 439,
+          "prompt_cache_write_tokens": 0,
+          "prompt_tokens": 439,
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "total_tokens": 1680
+        }
+      },
+      "prompt_id": "kimi_t01_teacher_S1_n60_r3",
+      "prompt_text": "Caption ID: S1_n60\nCaption (sequence of concept labels in the graph):\n青蛙; 物理学; 单子叶植物纲; 热容量; 电压; 雀形目; 玻尔模型; 熊科; 鲤鱼; 电磁学; 蔷薇科; 不确定性原理; 相对论; 熵; 蘑菇; 广义相对论; 能量守恒; 薛定谔方程; 温度; 动量守恒; 蝗虫; 酵母菌; 狼; 电磁波; 引力波; 声学; 统计物理; 犬科; 真菌界; 双子叶植物纲; 爬行纲; 禾本科; 经典力学; 脊索动物门; 折射; 黑洞; 生物; 偶蹄目; 中子; 两栖纲; 玫瑰; 鸟纲; 虎; 大豆; 哺乳纲; 波函数; 时空弯曲; 质子; 磁场; 水稻; 蛇; 麻雀; 量子力学; 衍射; 原生生物界; 量子纠缠; 食肉目; 动物界; 偏振; 硬骨鱼纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "电子, 光电效应, 猫科, 光合作用, 热力学"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S2",
+        "carry_over": false,
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "chatcmpl-d1f6d6da5ea3",
+        "is_round_2_makeup": false,
+        "is_round_3": true,
+        "latency_ms": 19257.7,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "kimi-k3",
+        "ok": true,
+        "read_timeout_s": 60,
+        "reask_idx": 2,
+        "retry_count": 0,
+        "round_index": 3,
+        "side": "teacher",
+        "status_code": 200,
+        "temperature": 0.7,
+        "usage": {
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cached_tokens": 0,
+          "completion_thinking_tokens": 358,
+          "completion_tokens": 395,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "reasoning_tokens": 358,
+            "rejected_prediction_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 322,
+          "prompt_cache_write_tokens": 0,
+          "prompt_tokens": 322,
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "cached_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+          },
+          "total_tokens": 717
+        }
+      },
+      "prompt_id": "kimi_t01_teacher_S2_r3",
+      "prompt_text": "Caption ID: S2\nCaption (sequence of concept labels in the graph):\n牛顿运动定律; 量子力学; 质子; 偶蹄目; 单子叶植物纲; 热容量; 环节动物门; 相对论; 水稻; 青蛙; 光子; 声学; 蛛形纲; 动量守恒; 麻雀; 电阻; 狼; 禾本科; 原生生物界; 鲸; 引力波; 鸟纲; 原子核; 时空弯曲; 鲤鱼; 衍射; 干涉; 万有引力; 统计物理; 两栖纲; 哺乳纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "爬行纲, 双子叶植物纲, 电磁学, 热力学, 节肢动物门"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S2_n20",
+        "carry_over": false,
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "chatcmpl-43cf3adfaddc460da5cb4c0b318bbf60",
+        "is_round_2_makeup": false,
+        "is_round_3": true,
+        "latency_ms": 8063.0,
+        "max_tokens": 2000,
+        "model_id_sent": "kimi-k3",
+        "model_returned": "FW-Kimi-K3",
+        "ok": true,
+        "read_timeout_s": 60,
+        "reask_idx": 2,
+        "retry_count": 0,
+        "round_index": 3,
+        "side": "teacher",
+        "status_code": 200,
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 306,
+          "completion_tokens_details": {
+            "reasoning_tokens": 275
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 275
+          },
+          "prompt_tokens": 288,
+          "prompt_tokens_details": {
+            "cached_tokens": 287
+          },
+          "total_tokens": 594
+        }
+      },
+      "prompt_id": "kimi_t01_teacher_S2_n20_r3",
+      "prompt_text": "Caption ID: S2_n20\nCaption (sequence of concept labels in the graph):\n蔷薇科; 物理学; 禾本科; 能量守恒; 动量守恒; 两栖纲; 虎; 真菌界; 量子力学; 原生生物界; 万有引力; 生物; 偏振; 蝙蝠; 节肢动物门; 经典力学; 电流; 热力学; 蜘蛛; 普朗克常数\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "熵, 牛顿运动定律, 电磁波, 哺乳纲, 植物界"
+    }
+  ],
+  "round": 3,
+  "schema": "v4_l14v3_n26/1",
+  "self_scan": {
+    "key_pattern_hits_in_product": [],
+    "scanned_at": "2026-09-24T21:25:24+08:00"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "v4_l14v3_n26/1",
+  "batch": 2,
+  "round": 2,
+  "metadata": {
+    "task": "L14V3_batch2_round2_GLM1_teacher_side_round1_retry",
+    "prereg_sha12": "05B975A86989",
+    "prereg_path": "results/_v4_supp_prereg_v02_add_L14V3_2026_09_24.md",
+    "predecessor_sha12": {
+      "r1_executor_sha12": "E52F930654D3",
+      "r1_executor_path": "results/_v4_supp_l14v3_batch2_r1_executor.py",
+      "r1_result_sha12": "D245AE4CE385",
+      "r1_result_path": "results/_v4_supp_l14v3_batch2_r1_result.json",
+      "batch1_r6_executor_sha12": "5f02c7e0f094",
+      "batch1_r6_executor_path": "results/_v4_supp_l14v3_batch1_r6_executor.py",
+      "batch1_r6_result_sha12": "a4f851154551",
+      "batch1_r6_result_path": "results/_v4_supp_l14v3_batch1_r6_result.json",
+      "models_probe_sha12": "3C9DC60B5071",
+      "models_probe_path": "results/_v4_supp_l14v3_batch2_r2_models_probe.json"
+    },
+    "date": "2026-09-24",
+    "teacher": "GLM_1",
+    "side": "teacher",
+    "round_index": 2,
+    "stop_reason": "probe_glm_candidates_all_failed"
+  },
+  "models_listing_summary": {
+    "endpoint": "https://api.teamorouter.cn/v1/models",
+    "model_count_total": 44,
+    "glm_like_ids": [
+      "glm-5.2",
+      "glm-5.3",
+      "glm-5.3-flash",
+      "glm-5.3-flash-free"
+    ],
+    "glm_like_count": 4
+  },
+  "probe_phase": {
+    "selected_model_id": null,
+    "selected_record": null,
+    "probe_records": [
+      {
+        "candidate_model_id": "glm-5.3",
+        "candidate_idx": 0,
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 2740.5,
+        "model_returned": "glm-5.3",
+        "error_category": null,
+        "error_snippet": "",
+        "content_preview": "",
+        "phase_label": "probe_glm_model_id"
+      },
+      {
+        "candidate_model_id": "glm-5.3-flash",
+        "candidate_idx": 1,
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 2309.2,
+        "model_returned": "glm-5.3-flash",
+        "error_category": null,
+        "error_snippet": "",
+        "content_preview": "",
+        "phase_label": "probe_glm_model_id"
+      },
+      {
+        "candidate_model_id": "glm-5.2",
+        "candidate_idx": 2,
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 3447.2,
+        "model_returned": "glm-5.2",
+        "error_category": null,
+        "error_snippet": "",
+        "content_preview": "",
+        "phase_label": "probe_glm_model_id"
+      }
+    ],
+    "probe_attempted_count": 3
+  },
+  "probe_wall_time_s": 13.5,
+  "run_window_cst": "2026-09-24T22:43:10+08:00"
+}

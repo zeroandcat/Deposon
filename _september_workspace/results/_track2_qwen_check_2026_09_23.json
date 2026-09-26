@@ -1,0 +1,56 @@
+{
+  "task": "Track 2 qwen_plan 401 校验",
+  "task_id": "V3X-DIAG-2026-09-23-B1",
+  "date": "2026-09-23",
+  "scope": "1 次最小 ping-style 请求 (max_tokens=1) 到 qwen_plan endpoint, 不调业务",
+  "iron_rule_compliance": {
+    "no_key_in_json_log_prompt": true,
+    "key_in_memory_only": true,
+    "no_business_llm_call": true,
+    "key_field_in_product": "runtime-env (redacted)"
+  },
+  "endpoint_config": {
+    "endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+    "model": "qwen-turbo",
+    "proxy": "http://127.0.0.1:1018",
+    "key_source_line_1based": 17,
+    "key_source_note": "C:/Users/Administrator/Desktop/AI/LLM API.txt (workspace 外, runtime read, in-memory only)"
+  },
+  "qwen_plan_result": {
+    "ok": false,
+    "stage": "http",
+    "status_code": 401,
+    "latency_ms": 210.1,
+    "error_class": "401_unauthorized",
+    "body_snippet": "{\"error\":{\"message\":\"Incorrect API key provided. For details, see: https://help.aliyun.com/zh/model-studio/error-code#apikey-error\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"invalid_api_key\"},\"request_id\":\"eab09c3d-ffd3-96be-b24e-685e6ecf7f56\"}",
+    "key_field": "runtime-env (redacted)",
+    "key_source_line": 17
+  },
+  "qwen_401_conclusion": "401 仍在 (HTTP 401, key 不被 dart-scope provider 接受)",
+  "teamo_mimo_gap_declaration": {
+    "teamo": {
+      "url_provided_by_pi": null,
+      "prior_observation": "prior probe (`results/_v4_v5_multimodel_probe.log`): teamo → ssl_error (https://api.teamo.ai 443 unreachable through proxy 127.0.0.1:1018)",
+      "status": "缺 PI 提供 URL, 未起跑",
+      "key_field": "runtime-env (redacted)"
+    },
+    "mimo": {
+      "url_provided_by_pi": null,
+      "prior_observation": "prior probe (`results/_v4_v5_multimodel_probe.log`): mimo → conn_error (ConnectionResetError 10054, 远程主机强迫关闭)",
+      "status": "缺 PI 提供 URL, 未起跑",
+      "key_field": "runtime-env (redacted)"
+    }
+  },
+  "prior_baseline_reference": {
+    "log_file": "results/_v4_v5_multimodel_probe.log",
+    "prior_qwen_plan_status": "401 (key_index=20 错指 mimo 行, 实因非 endpoint/key 真值)",
+    "prior_qwen_status": "200 OK (key_index=17 = Qwen-plan 真值)"
+  },
+  "boundary_declaration": {
+    "modified_files": 0,
+    "new_files": [
+      "results/_track2_qwen_check_2026_09_23.py"
+    ],
+    "output_landed_in": "results/_track2_qwen_check_2026_09_23.json"
+  }
+}

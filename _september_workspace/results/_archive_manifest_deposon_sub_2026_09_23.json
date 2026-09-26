@@ -1,0 +1,1827 @@
+{
+  "generated_at": "2026-09-23T15:11:29",
+  "source_dir": "D:\\私人资料\\deposon-sub",
+  "file_count": 364,
+  "files": [
+    {
+      "path": ".trae/audit/compare_versions.py",
+      "size": 7958,
+      "sha12": "03e22a91bc0c"
+    },
+    {
+      "path": ".trae/audit/compile_evidence/compile_runner.ps1",
+      "size": 2022,
+      "sha12": "1fc5f3ab3f93"
+    },
+    {
+      "path": ".trae/audit/compile_evidence/COMPILE_SUMMARY.txt",
+      "size": 1693,
+      "sha12": "1bad41b3929f"
+    },
+    {
+      "path": ".trae/audit/compile_evidence/extract_tars.py",
+      "size": 1141,
+      "sha12": "befdd577adce"
+    },
+    {
+      "path": ".trae/audit/compile_evidence/v1_62refs_20260908/compile_runner.ps1",
+      "size": 1469,
+      "sha12": "51d29cb72b68"
+    },
+    {
+      "path": ".trae/audit/compile_evidence/v1_62refs_20260908/COMPILE_SUMMARY.txt",
+      "size": 255,
+      "sha12": "967ae49b3d5f"
+    },
+    {
+      "path": ".trae/audit/compile_evidence/v2_overfull_fix_20260909/compile_runner.ps1",
+      "size": 2022,
+      "sha12": "1fc5f3ab3f93"
+    },
+    {
+      "path": ".trae/audit/compile_evidence/v2_overfull_fix_20260909/COMPILE_SUMMARY.txt",
+      "size": 1887,
+      "sha12": "fe6f9872a2fe"
+    },
+    {
+      "path": ".trae/audit/compile_evidence/v2pre_h1h3_20260909/compile_runner.ps1",
+      "size": 2022,
+      "sha12": "1fc5f3ab3f93"
+    },
+    {
+      "path": ".trae/audit/compile_evidence/v2pre_h1h3_20260909/COMPILE_SUMMARY.txt",
+      "size": 1693,
+      "sha12": "1bad41b3929f"
+    },
+    {
+      "path": ".trae/audit/compile_evidence/v2pre_h1h3_20260909/extract_tars.py",
+      "size": 1141,
+      "sha12": "befdd577adce"
+    },
+    {
+      "path": ".trae/audit/identify_dedicated.py",
+      "size": 3806,
+      "sha12": "3feb84107c02"
+    },
+    {
+      "path": ".trae/audit/inspect_current_tars.py",
+      "size": 2501,
+      "sha12": "291877043221"
+    },
+    {
+      "path": ".trae/audit/rebuild_trae_home.py",
+      "size": 8554,
+      "sha12": "7bd38b8e70d4"
+    },
+    {
+      "path": ".trae/deliverables/deposon_arxiv_cn.tar.gz",
+      "size": 1659286,
+      "sha12": "9d7351e73652"
+    },
+    {
+      "path": ".trae/deliverables/deposon_arxiv_en.tar.gz",
+      "size": 1637413,
+      "sha12": "d95be2a05990"
+    },
+    {
+      "path": ".trae/deliverables/MANIFEST.sha256.txt",
+      "size": 1282,
+      "sha12": "3ab185e6c047"
+    },
+    {
+      "path": ".trae/scripts/_md_to_tex.py",
+      "size": 48627,
+      "sha12": "f55da6fe7aea"
+    },
+    {
+      "path": ".trae/scripts/_split_packages.py",
+      "size": 7755,
+      "sha12": "872530d93a7f"
+    },
+    {
+      "path": "_list_teamo_models.py",
+      "size": 1273,
+      "sha12": "c51f3d2005fe"
+    },
+    {
+      "path": "_merge_or_stub_overlap_table_v3_2026_09_17.py",
+      "size": 5050,
+      "sha12": "300daa32f7be"
+    },
+    {
+      "path": "_movedout_manifest_2026_09_21.json",
+      "size": 291551,
+      "sha12": "d1ee21f3f6ae"
+    },
+    {
+      "path": "_p_l_v3_phase1_finalize_2026_09_17.py",
+      "size": 19226,
+      "sha12": "cf8fd1178ab1"
+    },
+    {
+      "path": "_p_l_v3_phase1_runner_2026_09_17.py",
+      "size": 35425,
+      "sha12": "d5e74a98c44b"
+    },
+    {
+      "path": "_p_l_v3_phase2_closedsource_finalize_2026_09_17.py",
+      "size": 14700,
+      "sha12": "20f038a7a8dd"
+    },
+    {
+      "path": "_p_l_v3_phase2_closedsource_runner_2026_09_17.py",
+      "size": 28344,
+      "sha12": "e6005733ca7c"
+    },
+    {
+      "path": "_p_l_v3_phase2_closedsource_runner_v2_2026_09_17.py",
+      "size": 26716,
+      "sha12": "090d34377c9d"
+    },
+    {
+      "path": "_p_l_v3_phase2_finalize_2026_09_17.py",
+      "size": 19901,
+      "sha12": "eaa04c5713d6"
+    },
+    {
+      "path": "_p_l_v3_phase2_glm53_only_2026_09_17.py",
+      "size": 12604,
+      "sha12": "c88608c7a26b"
+    },
+    {
+      "path": "_p_l_v3_phase2_or_embedding_2026_09_17.py",
+      "size": 26300,
+      "sha12": "e7353ffbb94f"
+    },
+    {
+      "path": "_p_l_v3_phase2_or_embedding_v3_2026_09_17.py",
+      "size": 27863,
+      "sha12": "5edc460b35d3"
+    },
+    {
+      "path": "_p_l_v3_phase2_runner_2026_09_17.py",
+      "size": 21868,
+      "sha12": "ac780b206cae"
+    },
+    {
+      "path": "_p_l_v3_phase2_vector_emb_2026_09_17.py",
+      "size": 3810,
+      "sha12": "f5e51b83541a"
+    },
+    {
+      "path": "_p_l_v3_phase2_vector_emb_doubao_2026_09_17.py",
+      "size": 37263,
+      "sha12": "b0a59c92a3e6"
+    },
+    {
+      "path": "_print_sha_2026_09_17.py",
+      "size": 1227,
+      "sha12": "51d33faa22b9"
+    },
+    {
+      "path": "_show_teamo_ownedby.py",
+      "size": 1342,
+      "sha12": "3c8175c35d82"
+    },
+    {
+      "path": "_test_3bb_vary.py",
+      "size": 3541,
+      "sha12": "a7046b2dd65e"
+    },
+    {
+      "path": "_test_gpt56sol_real.py",
+      "size": 2060,
+      "sha12": "19a48c278183"
+    },
+    {
+      "path": "deposon_team/_designs/D7_PRE_DISPATCH_EXECUTION_REPORT_2026_09_16.md",
+      "size": 12667,
+      "sha12": "3fbc7f4dfd22"
+    },
+    {
+      "path": "deposon_team/_designs/DELEGATION_CONFIGS_FOR_USER_B_2026_09_16.md",
+      "size": 12844,
+      "sha12": "23bb7d39bf58"
+    },
+    {
+      "path": "deposon_team/_designs/EXTERNAL_AGENT_PROMPTS_2026_09_16.md",
+      "size": 12326,
+      "sha12": "6a7b0c20a133"
+    },
+    {
+      "path": "deposon_team/_designs/V3X_CLOSURE_REPORT_REQUIREMENTS_FOR_EXTERNAL_AGENT.md",
+      "size": 8714,
+      "sha12": "2185433b1f32"
+    },
+    {
+      "path": "deposon_team/_designs/v3x_dispatch_log_2026_09_16.md",
+      "size": 8429,
+      "sha12": "85c3a5cfd84d"
+    },
+    {
+      "path": "deposon_team/_designs/V3X_FULL_CLOSEOUT_REPORT_2026_09_16.md",
+      "size": 12878,
+      "sha12": "95925a562597"
+    },
+    {
+      "path": "deposon_team/_designs/V3X_GAME_THEORY_NON_EUCLIDEAN_MASTER_NARRATIVE_2026_09_16.py",
+      "size": 9244,
+      "sha12": "7f6563d22ce7"
+    },
+    {
+      "path": "deposon_team/_designs/V3X_KIMI_7_DIRECTIONS_FULL_ACCEPT_2026_09_16.md",
+      "size": 10936,
+      "sha12": "eecbe2b1341d"
+    },
+    {
+      "path": "deposon_team/_designs/V3X_PATCH_5ANCHOR_RECONCILE_2026_09_16.md",
+      "size": 8222,
+      "sha12": "27db4950f710"
+    },
+    {
+      "path": "deposon_team/_designs/V3X_PATCH_5ANCHOR_RECONCILE_V2_2026_09_17.md",
+      "size": 6799,
+      "sha12": "c41c1d6aa794"
+    },
+    {
+      "path": "deposon_team/_designs/V3X_TEAM_IMPROVEMENT_PLAN_2026_09_16.md",
+      "size": 11232,
+      "sha12": "11cd57800bd6"
+    },
+    {
+      "path": "deposon_team/plugins/_audit_minimax_extract_2026_09_16.py",
+      "size": 4364,
+      "sha12": "da1c38940b6c"
+    },
+    {
+      "path": "deposon_team/plugins/_audit_v3_runners_2026_09_16.py",
+      "size": 3145,
+      "sha12": "b490f695841c"
+    },
+    {
+      "path": "deposon_team/plugins/_build_minimax_artifact_2026_09_16.py",
+      "size": 7361,
+      "sha12": "d0d188c60a62"
+    },
+    {
+      "path": "deposon_team/plugins/_d7_5anchor_60cells_2026_09_18.py",
+      "size": 10049,
+      "sha12": "568d30cf6d92"
+    },
+    {
+      "path": "deposon_team/plugins/_d7_post_anchor_rotation_remediation_2026_09_16.py",
+      "size": 6241,
+      "sha12": "821fd0b19eb3"
+    },
+    {
+      "path": "deposon_team/plugins/_d7_post_anchor_rotation_remediation_2026_09_18.py",
+      "size": 9152,
+      "sha12": "b0a450752a97"
+    },
+    {
+      "path": "deposon_team/plugins/_fix_adendum_c_erratum_2026_09_17.py",
+      "size": 1820,
+      "sha12": "eb44de412de5"
+    },
+    {
+      "path": "deposon_team/plugins/_fix_minimax_extract_2026_09_16.py",
+      "size": 5103,
+      "sha12": "8a722b0a4aea"
+    },
+    {
+      "path": "deposon_team/plugins/_fix_v3_selfcheck_2026_09_16.py",
+      "size": 7401,
+      "sha12": "b9a414293ebe"
+    },
+    {
+      "path": "deposon_team/plugins/_goal_completion_audit_2026_09_17.py",
+      "size": 3752,
+      "sha12": "5c18b72e7bb3"
+    },
+    {
+      "path": "deposon_team/plugins/_p_d_b3_merkle_22caption_runner_2026_09_16.py",
+      "size": 18596,
+      "sha12": "d2cd7acb29a1"
+    },
+    {
+      "path": "deposon_team/plugins/_p_i_real_labels_runner_2026_09_16.py",
+      "size": 7055,
+      "sha12": "8678e5083b41"
+    },
+    {
+      "path": "deposon_team/plugins/_p_j_convergence_basin_runner_2026_09_16.py",
+      "size": 9143,
+      "sha12": "877b9415a217"
+    },
+    {
+      "path": "deposon_team/plugins/_p_k_blind_test_runner_2026_09_16.py",
+      "size": 19031,
+      "sha12": "70e34edc0926"
+    },
+    {
+      "path": "deposon_team/plugins/_p_l_p_c_finite_size_scaling_runner_2026_09_16.py",
+      "size": 9177,
+      "sha12": "bca06b3cc2f7"
+    },
+    {
+      "path": "deposon_team/plugins/_p_l_real_data_collapse_runner_2026_09_16.py",
+      "size": 5663,
+      "sha12": "daff134b8e0b"
+    },
+    {
+      "path": "deposon_team/plugins/_p_l_real_data_collapse_runner_2026_09_16_v2.py",
+      "size": 5778,
+      "sha12": "ed9d066f3ea3"
+    },
+    {
+      "path": "deposon_team/plugins/_p_m_attack_surface_cost_runner_2026_09_16.py",
+      "size": 10622,
+      "sha12": "9e054e93982b"
+    },
+    {
+      "path": "deposon_team/plugins/_p_m_real_separation_runner_2026_09_16.py",
+      "size": 7316,
+      "sha12": "d5133ecca740"
+    },
+    {
+      "path": "deposon_team/plugins/_p_n_curvature_potential_coupling_runner_2026_09_16.py",
+      "size": 9473,
+      "sha12": "7355795bbc67"
+    },
+    {
+      "path": "deposon_team/plugins/_p_o_stranger_verification_runner_2026_09_16.py",
+      "size": 13230,
+      "sha12": "d1bc564264ef"
+    },
+    {
+      "path": "deposon_team/plugins/_transfer_2026_09_15.ps1",
+      "size": 2485,
+      "sha12": "4b724f65286a"
+    },
+    {
+      "path": "deposon_team/plugins/_transfer_2026_09_15.py",
+      "size": 2253,
+      "sha12": "0f98b38169dd"
+    },
+    {
+      "path": "deposon_team/plugins/_v3x_18frozen_remeasure_2026_09_16.py",
+      "size": 5216,
+      "sha12": "94686cf517f4"
+    },
+    {
+      "path": "deposon_team/plugins/_v3x_experiments_runner_2026_09_16.py",
+      "size": 18555,
+      "sha12": "0fac09bec7c4"
+    },
+    {
+      "path": "deposon_team/plugins/_v3x_p_k_verify_2026_09_16.py",
+      "size": 5373,
+      "sha12": "e516675e3db5"
+    },
+    {
+      "path": "deposon_team/plugins/_v42_v2_runner_2026_09_16.py",
+      "size": 22460,
+      "sha12": "cf8a1f5fd383"
+    },
+    {
+      "path": "deposon_team/plugins/attack_pc_a1_resampling.py",
+      "size": 4834,
+      "sha12": "b3ff941c9b9e"
+    },
+    {
+      "path": "deposon_team/plugins/attack_pc_a2_fitting.py",
+      "size": 4502,
+      "sha12": "1861aecfbfe2"
+    },
+    {
+      "path": "deposon_team/plugins/attack_pc_a3_clipping.py",
+      "size": 4469,
+      "sha12": "3a62ad10abf7"
+    },
+    {
+      "path": "deposon_team/plugins/fix_boss_naming_2026_09_16.py",
+      "size": 17479,
+      "sha12": "21ad055e7e06"
+    },
+    {
+      "path": "deposon_team/plugins/fix_proactive_audit_2026_09_16.py",
+      "size": 15444,
+      "sha12": "f5704c9b4497"
+    },
+    {
+      "path": "deposon_team/plugins/fix_risk1_02940_boundary.py",
+      "size": 7125,
+      "sha12": "1017671173cb"
+    },
+    {
+      "path": "deposon_team/plugins/fix_risk2_canonical5.py",
+      "size": 8871,
+      "sha12": "cbdbfa029f70"
+    },
+    {
+      "path": "deposon_team/plugins/fix_risk3_s_eff_normalization.py",
+      "size": 13429,
+      "sha12": "ba347f5d9982"
+    },
+    {
+      "path": "deposon_team/plugins/fix_selfcheck_bug_n1_2026_09_15.py",
+      "size": 4680,
+      "sha12": "fb571653df6c"
+    },
+    {
+      "path": "deposon_team/plugins/fix_selfcheck_bug_n2_2026_09_15.py",
+      "size": 3412,
+      "sha12": "eba2d444f4da"
+    },
+    {
+      "path": "deposon_team/plugins/fix_selfcheck_bug_n3_2026_09_15.py",
+      "size": 5134,
+      "sha12": "47fc588b3cae"
+    },
+    {
+      "path": "deposon_team/plugins/fix_verify_freeze_policy_2026_09_16.py",
+      "size": 7122,
+      "sha12": "fa521fe37da0"
+    },
+    {
+      "path": "deposon_team/plugins/git_commit_msg_2026_09_18.txt",
+      "size": 3223,
+      "sha12": "b2841d12a444"
+    },
+    {
+      "path": "deposon_team/plugins/runner_pa_d1_d3.py",
+      "size": 27712,
+      "sha12": "1b9578eadc14"
+    },
+    {
+      "path": "deposon_team/products/kimi_artifact_v_2026_09_16.json",
+      "size": 9938,
+      "sha12": "1f8612344592"
+    },
+    {
+      "path": "deposon_team/products/minimax_artifact_v_2026_09_16.json",
+      "size": 25347,
+      "sha12": "9e1ccbdceacc"
+    },
+    {
+      "path": "deposon_team/verifier/v42_v2_2026_09_16.py",
+      "size": 17363,
+      "sha12": "c5598b13c139"
+    },
+    {
+      "path": "deposon_team/verifier/v42_v2_baseline_2026_09_16.json",
+      "size": 1879,
+      "sha12": "483602856618"
+    },
+    {
+      "path": "deposon_team/verifier/v42_v2_runs_2026_09_16.jsonl",
+      "size": 770,
+      "sha12": "b471190e579c"
+    },
+    {
+      "path": "Deposon_凝子_统一场论报告_一致性核对_20260907.md",
+      "size": 3441,
+      "sha12": "125998731621"
+    },
+    {
+      "path": "docs/FTFB_EXTERNAL_REVIEW_R2_2026_09_17/META_REVIEW_REPORT_2026_09_17.md",
+      "size": 12218,
+      "sha12": "0fda737a2203"
+    },
+    {
+      "path": "docs/FTFB_EXTERNAL_REVIEW_R2_2026_09_17/REVIEW_RB1.md",
+      "size": 22982,
+      "sha12": "3594378e7d1d"
+    },
+    {
+      "path": "docs/FTFB_EXTERNAL_REVIEW_R2_2026_09_17/REVIEW_RB2.md",
+      "size": 27839,
+      "sha12": "d8eafdd67119"
+    },
+    {
+      "path": "results/_adendum_A_degradation_precheck_20260917_132049.json",
+      "size": 4248,
+      "sha12": "38fabeb19691"
+    },
+    {
+      "path": "results/_adendum_B_pi_real_labels_v2_20260917_133726.json",
+      "size": 2374,
+      "sha12": "3d344711cf8c"
+    },
+    {
+      "path": "results/_adendum_B_pi_real_labels_v2_20260917_133852.json",
+      "size": 2374,
+      "sha12": "c725e08e0a1c"
+    },
+    {
+      "path": "results/_adendum_C_pm_attack_surface_v2_20260917_133726.json",
+      "size": 4123,
+      "sha12": "193ba7d66412"
+    },
+    {
+      "path": "results/_adendum_C_pm_attack_surface_v2_20260917_133852.json",
+      "size": 4122,
+      "sha12": "6eba63788ca8"
+    },
+    {
+      "path": "results/_adendum_D_pc_r2_per_model_v2_20260917_133726.json",
+      "size": 4605,
+      "sha12": "6fe706750823"
+    },
+    {
+      "path": "results/_adendum_D_pc_r2_per_model_v2_20260917_133852.json",
+      "size": 4605,
+      "sha12": "d66792eea40e"
+    },
+    {
+      "path": "results/_adendum_E_pd_supplement_v2_20260917_133726.json",
+      "size": 1353,
+      "sha12": "2c4790ffb6e3"
+    },
+    {
+      "path": "results/_adendum_E_pd_supplement_v2_20260917_133852.json",
+      "size": 1353,
+      "sha12": "46d8dacb4721"
+    },
+    {
+      "path": "results/_adendum_F_pe_3modal_closure_llm_dispatch_20260917_132143.json",
+      "size": 3646,
+      "sha12": "879494ed8fb9"
+    },
+    {
+      "path": "results/_adendum_F_pe_3modal_v2_20260917_143033.json",
+      "size": 38622,
+      "sha12": "afab79249be7"
+    },
+    {
+      "path": "results/_adendum_FGK_complete_20260917_143033.md",
+      "size": 14005,
+      "sha12": "958188c83cf0"
+    },
+    {
+      "path": "results/_adendum_G_pf_dfix2_timing_converge_llm_dispatch_20260917_132143.json",
+      "size": 2757,
+      "sha12": "d10462080832"
+    },
+    {
+      "path": "results/_adendum_G_pf_dfix2_v2_20260917_143033.json",
+      "size": 95292,
+      "sha12": "bf8db2ad255b"
+    },
+    {
+      "path": "results/_adendum_I_po_captions_closure_20260917_132049.json",
+      "size": 4429,
+      "sha12": "18165008bef6"
+    },
+    {
+      "path": "results/_adendum_J_warehouse_spearman_health_20260917_132049.json",
+      "size": 11337,
+      "sha12": "df661d62426a"
+    },
+    {
+      "path": "results/_adendum_K_087_cluster_cross_backbone_llm_dispatch_20260917_132143.json",
+      "size": 2911,
+      "sha12": "acdf933f68e0"
+    },
+    {
+      "path": "results/_adendum_K_qwen3_087_cluster_v2_20260917_143033.json",
+      "size": 32481,
+      "sha12": "43477c8ea2d6"
+    },
+    {
+      "path": "results/_adendum_L_verifier_dual_impl_diff_20260917_132049.json",
+      "size": 2783,
+      "sha12": "1532607ded80"
+    },
+    {
+      "path": "results/_adendum_M_pj_convergence_basin_v2_20260917_133726.json",
+      "size": 3694,
+      "sha12": "ea7ffda97e20"
+    },
+    {
+      "path": "results/_adendum_M_pj_convergence_basin_v2_20260917_133852.json",
+      "size": 3686,
+      "sha12": "8ab01a1e42ae"
+    },
+    {
+      "path": "results/_adendum_N_pn_coupling_v2_20260917_133726.json",
+      "size": 2012,
+      "sha12": "1b91cc25ca57"
+    },
+    {
+      "path": "results/_adendum_N_pn_coupling_v2_20260917_133852.json",
+      "size": 2011,
+      "sha12": "a32f3c8ba520"
+    },
+    {
+      "path": "results/_adendum_O_pk_v2_three_way_v2_20260917_133726.json",
+      "size": 1971,
+      "sha12": "725fd7b961f8"
+    },
+    {
+      "path": "results/_adendum_O_pk_v2_three_way_v2_20260917_133852.json",
+      "size": 1970,
+      "sha12": "a30ff093305d"
+    },
+    {
+      "path": "results/_adendum_P_pc_two_phase_fail_h0_20260917_132049.json",
+      "size": 2456,
+      "sha12": "6b26daddc92c"
+    },
+    {
+      "path": "results/_adendum_Q_deepseek_v4_pro_anchor_20260917_132049.json",
+      "size": 4003,
+      "sha12": "ab5d9ae6e42a"
+    },
+    {
+      "path": "results/_archive_2026_09_18/_trae_5audit_aggregated_2026_09_17.md",
+      "size": 11465,
+      "sha12": "43265e4bf2be"
+    },
+    {
+      "path": "results/_archive_2026_09_18/_trae_anchor_18_audit_20260917_193000.md",
+      "size": 3449,
+      "sha12": "4af67e6cbe71"
+    },
+    {
+      "path": "results/_archive_2026_09_18/_trae_code_improvement_v2_2026_09_18.md",
+      "size": 20938,
+      "sha12": "e151e48ab4b4"
+    },
+    {
+      "path": "results/_archive_2026_09_18/_trae_corpus_5_audit_20260917_193000.md",
+      "size": 3467,
+      "sha12": "f2a655cd5e54"
+    },
+    {
+      "path": "results/_archive_2026_09_18/_trae_d7_v1_audit_20260917_190000.json",
+      "size": 4253,
+      "sha12": "3184b30b7b0d"
+    },
+    {
+      "path": "results/_archive_2026_09_18/_trae_d7_v1_audit_20260917_190000.md",
+      "size": 7855,
+      "sha12": "e240ca712be6"
+    },
+    {
+      "path": "results/_archive_2026_09_18/_trae_kimi_push_v3_audit_20260917_193000.md",
+      "size": 3281,
+      "sha12": "8ece24be6b8a"
+    },
+    {
+      "path": "results/_archive_2026_09_18/_trae_paper_8ch_双审_20260917_200000.md",
+      "size": 4040,
+      "sha12": "bec666969ffc"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_audit_secret_2026_09_20_anchor_guard.py",
+      "size": 6433,
+      "sha12": "19b4174f6339"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_coze_paper_v1_双审报告_2026_09_17.md",
+      "size": 85573,
+      "sha12": "c3de25e6df57"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_coze_wechat_v3_d7format_2026_09_18.pdf",
+      "size": 454307,
+      "sha12": "adc99e04ac53"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_d05_main_runner_2026_09_18.py",
+      "size": 41446,
+      "sha12": "f3d4ec483599"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_d05_md_report_only_2026_09_18.py",
+      "size": 13694,
+      "sha12": "7a5be4aef9ac"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json",
+      "size": 2289,
+      "sha12": "5d583c612d07"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_d05_sanity_3backbone_2026_09_18.py",
+      "size": 5458,
+      "sha12": "a29291a60956"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_d05_verify_sha_2026_09_18.py",
+      "size": 2938,
+      "sha12": "0b7e50a8a036"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_deposon_v2scripts_reverify_worker_2026_09_18.py",
+      "size": 34134,
+      "sha12": "18984b04c45e"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_final_sha_2026_09_18.py",
+      "size": 2678,
+      "sha12": "0769f60a0504"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_fix_batch2_2026_09_18.py",
+      "size": 4100,
+      "sha12": "81bb1751be4c"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_fix_batch3_2026_09_18.py",
+      "size": 3207,
+      "sha12": "01e63e488ce2"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_fix_batch4_2026_09_18.py",
+      "size": 8225,
+      "sha12": "2efcd5ff42f1"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_fix_batch6_2026_09_18.py",
+      "size": 2214,
+      "sha12": "1c59e7b803fe"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_fix_batch7_2026_09_18.py",
+      "size": 4261,
+      "sha12": "389283c51275"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_fix_batch8_2026_09_18.py",
+      "size": 2249,
+      "sha12": "5057ccf97d6b"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_fix_d05_rescue_2026_09_18.py",
+      "size": 3524,
+      "sha12": "2c2cc3ff542a"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_ftfb_pass2_results_limitations_audit_2026_09_17.md",
+      "size": 11390,
+      "sha12": "cfab992cf939"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_letter_to_coze_paper_v1_委托_2026_09_17.md",
+      "size": 12786,
+      "sha12": "6d72e74b3482"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_letter_to_coze_wechat_v2_2026_09_18.md",
+      "size": 18596,
+      "sha12": "ecdbf3a7a9c2"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_letter_to_glm_ftfb_deep_revision_2026_09_18.md",
+      "size": 26990,
+      "sha12": "3de722dc9e39"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_letter_to_kimi_push_v3_final_2026_09_17.md",
+      "size": 10304,
+      "sha12": "e6f8ded3c4ff"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_letter_to_kimi_push_v3_final_v2_2026_09_17.md",
+      "size": 13964,
+      "sha12": "40dda52e5d92"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_letter_to_kimi_push_v3_委托_2026_09_17.md",
+      "size": 13586,
+      "sha12": "042fa374a63f"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_letter_to_kimi_upload_requirements_2026_09_18.md",
+      "size": 22591,
+      "sha12": "6e23b54727e6"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_letter_to_mavis_full_mirror_request_2026_09_17.md",
+      "size": 9717,
+      "sha12": "f2934e5279e6"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_letter_to_trae_code_2026_09_17_final.md",
+      "size": 10690,
+      "sha12": "c1791a7811f3"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_openrouter_emb_runner.bak.note",
+      "size": 5,
+      "sha12": "f01a374e9c81"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_p_i_curvature_audit_probe_runner_2026_09_16.py",
+      "size": 12919,
+      "sha12": "e05555deb611"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_probe_doubao_4versions_diff_2026_09_17.json",
+      "size": 1393,
+      "sha12": "49dde3059959"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_probe_doubao_4versions_diff_2026_09_17.py",
+      "size": 2720,
+      "sha12": "93527eb7b2f7"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_probe_doubao_emb_direct_2026_09_17.py",
+      "size": 2371,
+      "sha12": "9bcfe80c0dd0"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_probe_doubao_emb_via_proxy_2026_09_17.py",
+      "size": 2589,
+      "sha12": "f2818fc2ddff"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_probe_teamo_via_proxy.py",
+      "size": 2841,
+      "sha12": "dce965058076"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_reviewer_a_audit_tmp.py",
+      "size": 4397,
+      "sha12": "268225ccbb76"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_sanity_openai_more.py",
+      "size": 2187,
+      "sha12": "e11319f32dc5"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_sanity_teamo_one.py",
+      "size": 2119,
+      "sha12": "63eb0a0aa102"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_sanity_teamo_three.py",
+      "size": 3540,
+      "sha12": "888d02cd1443"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_teamorouter_smoke_tmp.json",
+      "size": 277,
+      "sha12": "4181a24c9ca1"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_temp_volc_test.py",
+      "size": 6687,
+      "sha12": "264f2bf5a3f2"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_tmp_inspect_22cap.py",
+      "size": 675,
+      "sha12": "0c9addf4a70f"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_tmp_inspect_5model.py",
+      "size": 1029,
+      "sha12": "048ebc99177c"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_tmp_probe_archive",
+      "size": 1270,
+      "sha12": "a6689025804c"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_v41_flash_rag_caption_embs.bak.json",
+      "size": 612511,
+      "sha12": "25f745609658"
+    },
+    {
+      "path": "results/_archive_2026_09_20/_v41_flash_rag_partial.bak.json",
+      "size": 88584,
+      "sha12": "b0e2673f4a56"
+    },
+    {
+      "path": "results/_archive_2026_09_20/compile_verification.txt",
+      "size": 9663,
+      "sha12": "463fc7575663"
+    },
+    {
+      "path": "results/_archive_2026_09_20/fiction_that_feeds_back.pdf",
+      "size": 356123,
+      "sha12": "2d9edc8c7303"
+    },
+    {
+      "path": "results/_archive_2026_09_20/fiction_that_feeds_back.tex",
+      "size": 93324,
+      "sha12": "d060f75dbe9f"
+    },
+    {
+      "path": "results/_archive_2026_09_20/fiction_that_feeds_back_source.md",
+      "size": 84388,
+      "sha12": "543479649b3e"
+    },
+    {
+      "path": "results/_archive_2026_09_20/ftfb_pass1_background_methodology_audit_2026_09_17.md",
+      "size": 8257,
+      "sha12": "70bd41d9722d"
+    },
+    {
+      "path": "results/_archive_2026_09_20/LETTER_TO_KIMI_GITHUB_UPLOAD_2026_09_18.md",
+      "size": 13286,
+      "sha12": "8875bf0bc50d"
+    },
+    {
+      "path": "results/_archive_2026_09_20/LETTER_TO_TRAE_2026_09_11.md",
+      "size": 22776,
+      "sha12": "7a95307a3293"
+    },
+    {
+      "path": "results/_archive_2026_09_20/LETTER_TO_TRAE_FIX_SELFCHECK_2026_09_15.md",
+      "size": 7855,
+      "sha12": "c0d629df69d8"
+    },
+    {
+      "path": "results/_archive_2026_09_20/LETTER_TO_TRAE_REVIEW_2026_09_16.md",
+      "size": 12668,
+      "sha12": "1c0885d2b1fa"
+    },
+    {
+      "path": "results/_archive_2026_09_20/LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md",
+      "size": 10562,
+      "sha12": "7d4b5dd967e2"
+    },
+    {
+      "path": "results/_archive_2026_09_20/p_i_curvature_audit_probe_results_2026_09_16.json",
+      "size": 2637,
+      "sha12": "ae07f5551e87"
+    },
+    {
+      "path": "results/_archive_2026_09_20/review_content_A1_dsv4pro.md",
+      "size": 20082,
+      "sha12": "5198a7059c06"
+    },
+    {
+      "path": "results/_archive_2026_09_20/review_content_A1_glm51.md",
+      "size": 7617,
+      "sha12": "fd38a2a1ea05"
+    },
+    {
+      "path": "results/_archive_2026_09_20/review_content_A2_kimik3.md",
+      "size": 24843,
+      "sha12": "a964defb923d"
+    },
+    {
+      "path": "results/_archive_2026_09_20/review_tech_B1_dsv4pro.md",
+      "size": 30494,
+      "sha12": "0d36d7cd0589"
+    },
+    {
+      "path": "results/_archive_2026_09_20/review_tech_B1_grok46.md",
+      "size": 18923,
+      "sha12": "09784ff172b3"
+    },
+    {
+      "path": "results/_archive_2026_09_20/review_tech_B2_grok46.md",
+      "size": 13726,
+      "sha12": "fe80bad08eef"
+    },
+    {
+      "path": "results/_archive_2026_09_20/review_tech_B2_qwen3max.md",
+      "size": 8098,
+      "sha12": "8d00c6d4a242"
+    },
+    {
+      "path": "results/_archive_2026_09_20/REVIEWER_B_TMP_RERUN_2026_09_15.md",
+      "size": 21645,
+      "sha12": "8cd736ba9f91"
+    },
+    {
+      "path": "results/_archive_2026_09_20/SHA256_MANIFEST.txt",
+      "size": 552,
+      "sha12": "416dda94cb63"
+    },
+    {
+      "path": "results/_archive_2026_09_20/TRAE_CODE_FIX_LIST_2026_09_18.md",
+      "size": 9343,
+      "sha12": "ace3c6b390cb"
+    },
+    {
+      "path": "results/_archive_2026_09_20/TRAE_DAILY_AUDIT_LETTER_2026_09_18.md",
+      "size": 11575,
+      "sha12": "0011b7924dfb"
+    },
+    {
+      "path": "results/_archive_2026_09_20/TRAE_FIX_RECEIPT_2026_09_18.md",
+      "size": 4784,
+      "sha12": "2e6a31af5e4b"
+    },
+    {
+      "path": "results/_archive_2026_09_20/戴夫_FTFB双审包简报v3_2026-09-17.md",
+      "size": 8419,
+      "sha12": "6952b3b02b96"
+    },
+    {
+      "path": "results/_coze_paper_v1_draft_2026_09_17.md",
+      "size": 29484,
+      "sha12": "c08e7abf5ee3"
+    },
+    {
+      "path": "results/_coze_paper_v1_summary_2026_09_17.md",
+      "size": 3624,
+      "sha12": "2efdc3d7741d"
+    },
+    {
+      "path": "results/_coze_wechat_v3_2026_09_18.md",
+      "size": 7466,
+      "sha12": "229d76e1b86f"
+    },
+    {
+      "path": "results/_coze_wechat_v3_d7format_2026_09_18.md",
+      "size": 8715,
+      "sha12": "905544775aee"
+    },
+    {
+      "path": "results/_coze_wechat_v3_final_2026_09_18.md",
+      "size": 11657,
+      "sha12": "deee45f45c5d"
+    },
+    {
+      "path": "results/_cpath_sim_runner.py",
+      "size": 18783,
+      "sha12": "6074d83944dc"
+    },
+    {
+      "path": "results/_d05_backbone_robustness_beta_20260918_100853.json",
+      "size": 1490,
+      "sha12": "9b6f085d96dc"
+    },
+    {
+      "path": "results/_d05_combined_report_20260918_100853.md",
+      "size": 10555,
+      "sha12": "c87eb8974268"
+    },
+    {
+      "path": "results/_D05_DATA_RESCUE_NOTE_2026_09_18.md",
+      "size": 1181,
+      "sha12": "120295a19655"
+    },
+    {
+      "path": "results/_d05_i1i5_invariants_check_20260918_100853.json",
+      "size": 1920,
+      "sha12": "f12af5435928"
+    },
+    {
+      "path": "results/_d05_main_run_results_20260918_100853.json",
+      "size": 15243,
+      "sha12": "0a933d7c8d7a"
+    },
+    {
+      "path": "results/_d05_main_run_results_nemotron_3.5_20260918_100853.json",
+      "size": 15111,
+      "sha12": "1b1b6ad67c39"
+    },
+    {
+      "path": "results/_d05_main_run_results_qwen3_failed_20260918_100853.json",
+      "size": 18358,
+      "sha12": "427b18da8114"
+    },
+    {
+      "path": "results/_d05_opt_5_directions_results_20260918_100853.json",
+      "size": 5614,
+      "sha12": "e5979133195a"
+    },
+    {
+      "path": "results/_d7_wang_teacher_wechat_publish_v1_20260918.md",
+      "size": 9891,
+      "sha12": "f4d5b755736a"
+    },
+    {
+      "path": "results/_deposon_v2scripts_kimi7_audit_20260918_105219.json",
+      "size": 2096,
+      "sha12": "3da62b979053"
+    },
+    {
+      "path": "results/_deposon_v2scripts_reverify_20260918_105219.json",
+      "size": 12888,
+      "sha12": "8ac002ccb082"
+    },
+    {
+      "path": "results/_deposon_v2scripts_reverify_20260918_105219.md",
+      "size": 5347,
+      "sha12": "ee005ea1f031"
+    },
+    {
+      "path": "results/_deposon_v2scripts_summary_挂点回扣_20260918_105219.json",
+      "size": 404,
+      "sha12": "2ca5870e4659"
+    },
+    {
+      "path": "results/_ftfb_v3_pass1_audit_2026_09_18_corrected.md",
+      "size": 20117,
+      "sha12": "ecb406570615"
+    },
+    {
+      "path": "results/_ftfb_v3_pass2_audit_2026_09_18_corrected.md",
+      "size": 28579,
+      "sha12": "413ddb0bd00e"
+    },
+    {
+      "path": "results/_glm_response_v2_template_2026_09_18.md",
+      "size": 44191,
+      "sha12": "972401e056f6"
+    },
+    {
+      "path": "results/_glm_v3_双审报告_2026_09_18.md",
+      "size": 20632,
+      "sha12": "26537967db82"
+    },
+    {
+      "path": "results/_inspect_captions.py",
+      "size": 591,
+      "sha12": "dfb02ade1474"
+    },
+    {
+      "path": "results/_kimi_ftfb_s7_independent_recompute_2026_09_18.json",
+      "size": 3605,
+      "sha12": "879db0217f04"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch10_1b753116.json",
+      "size": 5007,
+      "sha12": "326adca520f1"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch11_7d6a7c8f.json",
+      "size": 2573,
+      "sha12": "383446f24707"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch12_a2853574.json",
+      "size": 1246,
+      "sha12": "6be21f9586ec"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch13_83f895f9.json",
+      "size": 739,
+      "sha12": "0694838f66a8"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch14_e5952130.json",
+      "size": 1055,
+      "sha12": "64aa9d8a5c7d"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch15_0e65fe2f.json",
+      "size": 385,
+      "sha12": "cfc345d10c7d"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch1_77e2f952.json",
+      "size": 2534,
+      "sha12": "b5f517a321a3"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch2_e18c17bb.json",
+      "size": 9260,
+      "sha12": "f14341b8a1a1"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch3_01ecf050.json",
+      "size": 9656,
+      "sha12": "fd64909ea1d8"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch4_2f872d54.json",
+      "size": 9720,
+      "sha12": "d35453f21049"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch5_34439e1e.json",
+      "size": 9511,
+      "sha12": "2769b83f5b1d"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch6_28055e59.json",
+      "size": 10107,
+      "sha12": "f3eb7a38ae7d"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch7_0903df7e.json",
+      "size": 9748,
+      "sha12": "7bda1fecd7c4"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch8_7468a23b.json",
+      "size": 9880,
+      "sha12": "5a38fc02978c"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_batch9_f7d9cf1d.json",
+      "size": 9745,
+      "sha12": "968d7c6c43ca"
+    },
+    {
+      "path": "results/_kimi_push_v3_manifest_verifier21_cc3c92d0.json",
+      "size": 4159,
+      "sha12": "5a6601f47632"
+    },
+    {
+      "path": "results/_kimi_safe_batch_push_v1_2026_09_17.json",
+      "size": 7280,
+      "sha12": "4a204fb0d682"
+    },
+    {
+      "path": "results/_kimi_safe_batch_push_v2_full_2026_09_17.json",
+      "size": 47954,
+      "sha12": "adf3a8017e26"
+    },
+    {
+      "path": "results/_kimi_safe_batch_push_v3_full_2026_09_17.json",
+      "size": 7954,
+      "sha12": "058099c10cfb"
+    },
+    {
+      "path": "results/_mavis_skill_inventory_2026_09_18.md",
+      "size": 99702,
+      "sha12": "90ba7f7a7fbe"
+    },
+    {
+      "path": "results/_p_d_v03_22caption_verification_20260917_163757.json",
+      "size": 13775,
+      "sha12": "dfbcc5d6fc34"
+    },
+    {
+      "path": "results/_p_d_v03_verification_report_20260917_163757.md",
+      "size": 9799,
+      "sha12": "67aafb57a8ed"
+    },
+    {
+      "path": "results/_p_i_real_labels_2026_09_16/p_i_real_labels_results_2026_09_16.json",
+      "size": 1043,
+      "sha12": "e934819ee9ed"
+    },
+    {
+      "path": "results/_p_j_convergence_basin_2026_09_16/p_j_convergence_basin_results_2026_09_16.json",
+      "size": 1669,
+      "sha12": "a9ad1de618f5"
+    },
+    {
+      "path": "results/_p_k_v3_glm_fpr_audit_report_2026-09-17T08-23-41Z.md",
+      "size": 8558,
+      "sha12": "71d5c23d9f76"
+    },
+    {
+      "path": "results/_p_k_v3_glm_json_audit_2026-09-17T08-23-41Z.json",
+      "size": 6678,
+      "sha12": "f236e88f22ca"
+    },
+    {
+      "path": "results/_p_k_v3_three_way_rerun_2026-09-17T08-23-41Z.json",
+      "size": 12992,
+      "sha12": "05ff758ae921"
+    },
+    {
+      "path": "results/_p_l_p_c_finite_size_scaling_2026_09_16/p_l_p_c_finite_size_scaling_results_2026_09_16.json",
+      "size": 9076,
+      "sha12": "664e7cc05aec"
+    },
+    {
+      "path": "results/_p_l_real_data_collapse_2026_09_16/p_l_real_data_collapse_results_v2_2026_09_16.json",
+      "size": 3761,
+      "sha12": "afe975606d40"
+    },
+    {
+      "path": "results/_p_l_v3_phase1_report_20260917_132341.md",
+      "size": 11035,
+      "sha12": "b41a17eda169"
+    },
+    {
+      "path": "results/_p_l_v3_phase2_beta_summary_20260917_142748.json",
+      "size": 2417,
+      "sha12": "86d4cb146241"
+    },
+    {
+      "path": "results/_p_l_v3_phase2_closedsource_report_20260917_175544.md",
+      "size": 5909,
+      "sha12": "02443dd300ce"
+    },
+    {
+      "path": "results/_p_l_v3_phase2_closedsource_summary_20260917_175544.json",
+      "size": 3286,
+      "sha12": "a3eafaf9ba03"
+    },
+    {
+      "path": "results/_p_l_v3_phase2_doubao_v2_summary_20260917_170828.json",
+      "size": 4357,
+      "sha12": "c366f4e30b6b"
+    },
+    {
+      "path": "results/_p_l_v3_phase2_doubao_v2_summary_20260917_172206.json",
+      "size": 14469,
+      "sha12": "e3dccddaed87"
+    },
+    {
+      "path": "results/_p_l_v3_phase2_or_embedding_v3_report_20260917_162614.md",
+      "size": 8102,
+      "sha12": "fa5da7a307bd"
+    },
+    {
+      "path": "results/_p_l_v3_phase2_or_embedding_v3_summary_20260917_162614.json",
+      "size": 8308,
+      "sha12": "21c9f23699a8"
+    },
+    {
+      "path": "results/_p_l_v3_phase2_report_20260917_142748.md",
+      "size": 9056,
+      "sha12": "58e15c07af33"
+    },
+    {
+      "path": "results/_p_l_v3_phase3_adendum_summary_20260917_132143.md",
+      "size": 16612,
+      "sha12": "8c07ab5aa968"
+    },
+    {
+      "path": "results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133358.md",
+      "size": 6637,
+      "sha12": "54859cf2217a"
+    },
+    {
+      "path": "results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133512.md",
+      "size": 6337,
+      "sha12": "c350e420eca6"
+    },
+    {
+      "path": "results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133705.md",
+      "size": 6434,
+      "sha12": "772112cf5bd4"
+    },
+    {
+      "path": "results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133726.md",
+      "size": 6435,
+      "sha12": "d7f03fde4067"
+    },
+    {
+      "path": "results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133852.md",
+      "size": 6616,
+      "sha12": "d66388b6532d"
+    },
+    {
+      "path": "results/_p_l_v3_real_collapse_mistral_L100_20260917_132341.json",
+      "size": 43903,
+      "sha12": "4657b210782a"
+    },
+    {
+      "path": "results/_p_l_v3_real_collapse_mistral_L30_20260917_132341.json",
+      "size": 16545,
+      "sha12": "f6ab84f27d9a"
+    },
+    {
+      "path": "results/_p_l_v3_real_collapse_mistral_L45_20260917_132341.json",
+      "size": 20108,
+      "sha12": "dc37ee54781c"
+    },
+    {
+      "path": "results/_p_l_v3_real_collapse_mistral_L60_20260917_132341.json",
+      "size": 1174,
+      "sha12": "e3fb4f775e22"
+    },
+    {
+      "path": "results/_p_l_v3_robustness_claude_sonnet5_L30_20260917_174011.json",
+      "size": 30772,
+      "sha12": "9d329721f67d"
+    },
+    {
+      "path": "results/_p_l_v3_robustness_claude_sonnet5_L60_20260917_174011.json",
+      "size": 1292,
+      "sha12": "28e462c11692"
+    },
+    {
+      "path": "results/_p_l_v3_robustness_gemini_37flash_L30_20260917_175003.json",
+      "size": 30514,
+      "sha12": "0f5c80a8a4ae"
+    },
+    {
+      "path": "results/_p_l_v3_robustness_gemini_37flash_L60_20260917_175003.json",
+      "size": 1288,
+      "sha12": "e2590651f9c0"
+    },
+    {
+      "path": "results/_p_l_v3_robustness_glm53_L30_20260917_142011.json",
+      "size": 18281,
+      "sha12": "2deadd7be100"
+    },
+    {
+      "path": "results/_p_l_v3_robustness_glm53_L60_20260917_142011.json",
+      "size": 1037,
+      "sha12": "31556b58caa1"
+    },
+    {
+      "path": "results/_p_l_v3_robustness_gpt56sol_L30_20260917_173159.json",
+      "size": 30347,
+      "sha12": "3865d7a61ca1"
+    },
+    {
+      "path": "results/_p_l_v3_robustness_gpt56sol_L60_20260917_173159.json",
+      "size": 1266,
+      "sha12": "8c79e9a289fb"
+    },
+    {
+      "path": "results/_p_l_v3_robustness_mistral_L60_20260917_142748.json",
+      "size": 1071,
+      "sha12": "ba41a0d4b927"
+    },
+    {
+      "path": "results/_p_l_v3_robustness_qwen3_L30_20260917_140017.json",
+      "size": 18595,
+      "sha12": "e9bac1743a2a"
+    },
+    {
+      "path": "results/_p_l_v3_robustness_qwen3_L60_20260917_140017.json",
+      "size": 1057,
+      "sha12": "f79f1b00e5d3"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao-text-240715_L30_20260917_172206.json",
+      "size": 18509,
+      "sha12": "2d4827f9cda2"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao-vision-241215_L30_20260917_171614.json",
+      "size": 1669762,
+      "sha12": "2b91eb1dbbcf"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao-vision-241215_L30_20260917_172206.json",
+      "size": 1670172,
+      "sha12": "e836a04a04d8"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao-vision-250328_L30_20260917_171614.json",
+      "size": 1670501,
+      "sha12": "46c99397f01b"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao-vision-250328_L30_20260917_172206.json",
+      "size": 1669285,
+      "sha12": "0432f25cf6c3"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao-vision-250615_L30_20260917_171614.json",
+      "size": 1670027,
+      "sha12": "6b8af7d8bca9"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao-vision-250615_L30_20260917_172206.json",
+      "size": 1671116,
+      "sha12": "710b7f291355"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao-vision-251215_L30_20260917_172206.json",
+      "size": 1670482,
+      "sha12": "a00976c6f87b"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao_L30_20260917_142748.json",
+      "size": 11834,
+      "sha12": "b9488e2b01ae"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_doubao_L30_20260917_170828.json",
+      "size": 18468,
+      "sha12": "198f8fe39f94"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_glm53_L30_20260917_142748.json",
+      "size": 11833,
+      "sha12": "d91b0c5f642f"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_mistral_L30_20260917_142748.json",
+      "size": 11835,
+      "sha12": "33d0259073dc"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_or_bge-large_L30_20260917_162614.json",
+      "size": 1017974,
+      "sha12": "aff028e8506c"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_or_e5-multi_L30_20260917_162614.json",
+      "size": 1017684,
+      "sha12": "8676b519a031"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_or_gte-large_L30_20260917_162614.json",
+      "size": 1017381,
+      "sha12": "07561d4d23d1"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_or_qwen3-emb-8b_L30_20260917_162614.json",
+      "size": 3929893,
+      "sha12": "a4bd70c02aaa"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_qwen3-emb-4b_L30_20260917_170828.json",
+      "size": 2452705,
+      "sha12": "1928ada51527"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_qwen3-emb-4b_L30_20260917_172206.json",
+      "size": 2452273,
+      "sha12": "bebee5346543"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_qwen3_L30_20260917_142748.json",
+      "size": 11833,
+      "sha12": "26f7493f1c95"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_170828.md",
+      "size": 17833,
+      "sha12": "fa9cd7ffa3f2"
+    },
+    {
+      "path": "results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_172206.md",
+      "size": 19548,
+      "sha12": "2e3ec17259e2"
+    },
+    {
+      "path": "results/_p_m_attack_surface_cost_2026_09_16/p_m_attack_surface_cost_results_2026_09_16.json",
+      "size": 5266,
+      "sha12": "fbcb60cf5102"
+    },
+    {
+      "path": "results/_p_m_real_separation_2026_09_16/p_m_real_separation_results_2026_09_16.json",
+      "size": 2042,
+      "sha12": "a4b12d1cfedc"
+    },
+    {
+      "path": "results/_p_n_curvature_potential_coupling_2026_09_16/p_n_curvature_potential_coupling_results_2026_09_16.json",
+      "size": 4276,
+      "sha12": "088f28524a1d"
+    },
+    {
+      "path": "results/_p_o_stranger_verification_2026_09_16/p_o_stranger_verification_results_2026_09_16.json",
+      "size": 5916,
+      "sha12": "1e4c065da058"
+    },
+    {
+      "path": "results/_pc_d1_d3_2026_09_15.py",
+      "size": 43019,
+      "sha12": "09c7c4ddbb39"
+    },
+    {
+      "path": "results/_tra_v0_2026_09_10.json",
+      "size": 3695,
+      "sha12": "0b096048e01d"
+    },
+    {
+      "path": "results/_tra_v0_2026_09_10.py",
+      "size": 12125,
+      "sha12": "d80a8f75a122"
+    },
+    {
+      "path": "results/_v2_setup.py",
+      "size": 3483,
+      "sha12": "73f2b8712a90"
+    },
+    {
+      "path": "results/_v2_show_summary.py",
+      "size": 1200,
+      "sha12": "0012b38ce438"
+    },
+    {
+      "path": "results/_v2_smoketest.py",
+      "size": 2040,
+      "sha12": "0b6c22c8f379"
+    },
+    {
+      "path": "results/_v2_stage1_60cells.py",
+      "size": 31556,
+      "sha12": "8c7bd12c3a8c"
+    },
+    {
+      "path": "results/_v2_stage2_f2_drift.py",
+      "size": 10798,
+      "sha12": "7e9b2fc57d80"
+    },
+    {
+      "path": "results/_v2_stage3_f3_strip.py",
+      "size": 11803,
+      "sha12": "ce4362e325ca"
+    },
+    {
+      "path": "results/_v2_stage4_f4_pdv2.py",
+      "size": 10355,
+      "sha12": "b84f5aab6faf"
+    },
+    {
+      "path": "results/_v2_stage5_f5_dpath.py",
+      "size": 6480,
+      "sha12": "e8871b829d89"
+    },
+    {
+      "path": "results/_v2_verify_outputs.py",
+      "size": 2656,
+      "sha12": "eb0107dd79b5"
+    },
+    {
+      "path": "results/_v3x_18frozen_remeasure_2026_09_16/v3x_18frozen_remeasure_results_2026_09_16.json",
+      "size": 4202,
+      "sha12": "928794710241"
+    },
+    {
+      "path": "results/_v3x_conservation_anchor_2026_09_17.txt",
+      "size": 940,
+      "sha12": "f331a9c2bd22"
+    },
+    {
+      "path": "results/_v3x_d0_5_aggregation_2026_09_17.md",
+      "size": 12010,
+      "sha12": "ddf0d1aa96d2"
+    },
+    {
+      "path": "results/_v3x_d0_5_experiment_invitation_2026_09_17.md",
+      "size": 7617,
+      "sha12": "d8f2b99aa527"
+    },
+    {
+      "path": "results/_v3x_d0_5_proposal_coze_2026_09_17.md",
+      "size": 13200,
+      "sha12": "759c25b21ed4"
+    },
+    {
+      "path": "results/_v3x_d0_5_proposal_trae_2026_09_17.md",
+      "size": 13254,
+      "sha12": "b1c227d54a82"
+    },
+    {
+      "path": "results/_v3x_experiments_2026_09_16/v3x_experiments_results_2026_09_16.json",
+      "size": 17053,
+      "sha12": "f39412103366"
+    },
+    {
+      "path": "results/_v3x_p_k_verify_2026_09_16/v3x_p_k_verify_results_2026_09_16.json",
+      "size": 2059,
+      "sha12": "59c2113b7c71"
+    },
+    {
+      "path": "results/_v3x_p_l_v3_external_spec_2026_09_17.md",
+      "size": 5769,
+      "sha12": "6a5b6eb635f0"
+    },
+    {
+      "path": "results/_v3x_p_l_v3_mistral_large_2512_20260917_115049.json",
+      "size": 16835,
+      "sha12": "523b5941c30c"
+    },
+    {
+      "path": "results/_v3x_p_l_v3_summary_mistral_large_2512_20260917_115049.md",
+      "size": 9570,
+      "sha12": "183205baa9ac"
+    },
+    {
+      "path": "results/_volc_22cap_emb.py",
+      "size": 11105,
+      "sha12": "15904ecae629"
+    },
+    {
+      "path": "results/_worker_openrouter_rag_run.py",
+      "size": 24113,
+      "sha12": "4458ccf3d64a"
+    },
+    {
+      "path": "results/attack_pc_a1_resampling_2026_09_15.json",
+      "size": 1017,
+      "sha12": "d21912a05d79"
+    },
+    {
+      "path": "results/attack_pc_a2_fitting_2026_09_15.json",
+      "size": 1024,
+      "sha12": "5a880678c386"
+    },
+    {
+      "path": "results/attack_pc_a3_clipping_2026_09_15.json",
+      "size": 1265,
+      "sha12": "d74d6b39d1b0"
+    },
+    {
+      "path": "results/boss_pa_1_rbr_rm_result_2026_09_15.json",
+      "size": 8753,
+      "sha12": "c7c59e0d2f6c"
+    },
+    {
+      "path": "results/boss_pa_2_potential_game_result_2026_09_15.json",
+      "size": 7530,
+      "sha12": "5c76137d6430"
+    },
+    {
+      "path": "results/boss_pa_3_replicator_dynamics_result_2026_09_15.json",
+      "size": 9098,
+      "sha12": "d6f233d73c45"
+    },
+    {
+      "path": "results/boss_pc_1_a1_resampling_2026_09_15.json",
+      "size": 1017,
+      "sha12": "d21912a05d79"
+    },
+    {
+      "path": "results/boss_pc_1_real_2d_ising_2026_09_15.json",
+      "size": 2460,
+      "sha12": "43d9ce160fc8"
+    },
+    {
+      "path": "results/boss_pc_2_a2_fitting_2026_09_15.json",
+      "size": 1024,
+      "sha12": "5a880678c386"
+    },
+    {
+      "path": "results/boss_pc_2_real_transverse_ising_2026_09_15.json",
+      "size": 3553,
+      "sha12": "8933d61b180a"
+    },
+    {
+      "path": "results/boss_pc_3_a3_clipping_2026_09_15.json",
+      "size": 1265,
+      "sha12": "d74d6b39d1b0"
+    },
+    {
+      "path": "results/boss_pc_3_real_reservoir_2026_09_15.json",
+      "size": 2364,
+      "sha12": "94b5398be76c"
+    },
+    {
+      "path": "results/boss_pe_1_real_2d_ising_2026_09_15.json",
+      "size": 2460,
+      "sha12": "43d9ce160fc8"
+    },
+    {
+      "path": "results/boss_pe_2_real_transverse_ising_2026_09_15.json",
+      "size": 3553,
+      "sha12": "8933d61b180a"
+    },
+    {
+      "path": "results/boss_pe_3_real_reservoir_2026_09_15.json",
+      "size": 2364,
+      "sha12": "94b5398be76c"
+    },
+    {
+      "path": "results/d7_5anchor_60cells_9model_verdict_2026_09_18.json",
+      "size": 2456,
+      "sha12": "4505cca79c15"
+    },
+    {
+      "path": "results/deposon_dpath_cross_modal_runner_2026_09_10.py",
+      "size": 27930,
+      "sha12": "fb20a6ba5ec6"
+    },
+    {
+      "path": "results/deposon_feshbach_rag_30cells_2026_09_10.py",
+      "size": 14343,
+      "sha12": "a072e4184e83"
+    },
+    {
+      "path": "results/deposon_v1_implementation_calculator_2026_09_10.py",
+      "size": 10751,
+      "sha12": "121f104012f4"
+    },
+    {
+      "path": "results/deposon_volcengine_glm_latest_5cells_2026_09_10.py",
+      "size": 8112,
+      "sha12": "a3ca05aec6fb"
+    },
+    {
+      "path": "results/deposon_volcengine_minimax_m3_30cells_2026_09_10.py",
+      "size": 11703,
+      "sha12": "218ef1a99f97"
+    },
+    {
+      "path": "results/deposon_volcengine_worker_b_2026_09_10.py",
+      "size": 13232,
+      "sha12": "401dfd3c27f3"
+    },
+    {
+      "path": "results/deposon_volcengine_worker_c_2026_09_10.py",
+      "size": 11692,
+      "sha12": "b5eeef1e9bd7"
+    },
+    {
+      "path": "results/skill_a_p_a_60cells_result_2026_09_11.json",
+      "size": 2220,
+      "sha12": "f4a210d69220"
+    },
+    {
+      "path": "results/skill_b_p_c_alpha_beta_result_2026_09_11.json",
+      "size": 12609,
+      "sha12": "b921002e4dfb"
+    },
+    {
+      "path": "results/skill_c_p_e_3modality_result_2026_09_11.json",
+      "size": 5271,
+      "sha12": "470425a8c77d"
+    },
+    {
+      "path": "results/skill_d_p_f_observer_result_2026_09_11.json",
+      "size": 11010,
+      "sha12": "0207c01b9562"
+    }
+  ]
+}

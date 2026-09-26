@@ -1,0 +1,830 @@
+{
+ "schema": "v4_pi_cot_v2_result_v2/1",
+ "task": "PI 思维链蒸馏 v2.2 · 规则学习 + 检验管线 v2 (正式判定)",
+ "generated_utc": "2026-09-26T18:42:50+08:00",
+ "prereg_ref": {
+  "path": "results/_v4_pi_cot_v2_prereg.md",
+  "sha12": "CC25C5149CE1"
+ },
+ "dataset_ref": {
+  "path": "results/_v4_pi_cot_v2_dataset.json",
+  "sha12": "7B01CD835A41",
+  "schema": "v4_pi_cot_v2_dataset/1.1",
+  "n_v11": 37,
+  "n_addendum_loaded": 35,
+  "n_total_actual": 72,
+  "n_total_theoretical": 80,
+  "n_correction": 16,
+  "addendum_counts": {
+   "D1_supp": 3,
+   "D2_w1": 4,
+   "D2_w2": 4,
+   "D2_w3": 4,
+   "D2_w4": 4,
+   "D2_w5": 4,
+   "D3_w1": 4,
+   "D3_w2": 4,
+   "D3_w3": 4
+  },
+  "addendum_source_files": [
+   "_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+   "_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d2b_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json"
+  ],
+  "addendum_sha_actual": {
+   "ADDENDUM_D1": "172093A23E4B",
+   "ADDENDUM_D2": "439721007AAF",
+   "ADDENDUM_D2B": "41D6C28CA87C",
+   "ADDENDUM_D2C": "99C58906F792",
+   "ADDENDUM_D2D": "C6D092F77932",
+   "ADDENDUM_D2E": "26F110A6E571",
+   "ADDENDUM_D3A": "6E104E2DB038",
+   "ADDENDUM_D3B": "D96B747BFC6C",
+   "ADDENDUM_D3C": "401BD614CDF7"
+  },
+  "addendum_sha_drift": {},
+  "missing_d1_rf_fill": 8,
+  "missing_d1_note": "盘外 D1 推理补填 8 件未在本棒视野; 如实声明缺位, 不补造"
+ },
+ "coding_review_ref": {
+  "path": "results/_v4_pi_cot_v2_coding_review_2026_09_26.md",
+  "sha12": "5FBEC21E0AD2",
+  "encoding_version": "v2"
+ },
+ "constraint": {
+  "no_llm": true,
+  "no_proxy": true,
+  "no_gateway": true,
+  "hash_lib": "zlib.crc32 + hashlib.sha256 (禁内建 hash())",
+  "seed": 42,
+  "tree_depth_max": 4,
+  "n_perm": 1000,
+  "alpha": 0.05,
+  "n_boot": 1000,
+  "ci_floor": 0.5,
+  "th_similarity": 0.8,
+  "th_blind_obey": 0.1,
+  "th_critical_cov": 1.0
+ },
+ "operationalization_v2": {
+  "judgment_type_extraction": "6 类 (KILL_LINE/COST/CRITERIA/RISK/TIMING/DELEGATE); 对 reasoning_full 字符串做确定性格式扫描 (v2 关键词表); 类型按关键词首现位置序排序后去重; primary = 首元素; 空序列归 UNKNOWN (相似度=0)",
+  "structural_similarity": "单事件 = |pred ∩ actual| / |actual| (实际序列召回率); 整体 = held-out per-event 均值",
+  "critical_reflection_markers": [
+   "不",
+   "却",
+   "反而",
+   "然而",
+   "但是",
+   "但",
+   "其实",
+   "区别",
+   "修正",
+   "纠",
+   "错",
+   "未必",
+   "不可",
+   "不应",
+   "误",
+   "批判",
+   "反思",
+   "避免",
+   "慎重",
+   "慎",
+   "重新",
+   "未必",
+   "未必是",
+   "可疑",
+   "重新考虑",
+   "区别于",
+   "不一定",
+   "硬核",
+   "诚实边界",
+   "判死线先于",
+   "判死先于",
+   "大一统",
+   "虚实闭合",
+   "虚实回路",
+   "FTFB",
+   "准则"
+  ],
+  "v2_keyword_table": {
+   "KILL_LINE": [
+    "判死线",
+    "判死",
+    "判对死因",
+    "通过",
+    "不通过",
+    "PASS",
+    "FAIL",
+    "阈值",
+    "边界",
+    "达标",
+    "不达标",
+    "kill",
+    "Kill",
+    "KILL",
+    "立案",
+    "完工",
+    "跑完",
+    "跑通",
+    "判据",
+    "判据序列",
+    "真证伪",
+    "假证伪",
+    "实证",
+    "证伪",
+    "死兆",
+    "否决",
+    "PASS判定",
+    "FAIL判定",
+    "FALSIFY",
+    "PASS 立案",
+    "完工标准",
+    "通过门槛"
+   ],
+   "COST": [
+    "成本",
+    "贵",
+    "便宜",
+    "廉价",
+    "量化",
+    "投入",
+    "开销",
+    "费用",
+    "价格",
+    "付费",
+    "花费",
+    "算力",
+    "消耗",
+    "资源",
+    "资金",
+    "经费",
+    "算账",
+    "无尽资源",
+    "资金有限",
+    "财力",
+    "花钱",
+    "收费",
+    "资源留给",
+    "资源不够",
+    "没钱",
+    "省钱"
+   ],
+   "CRITERIA": [
+    "准则",
+    "原则",
+    "口径",
+    "规范",
+    "约束",
+    "标准",
+    "大材小用",
+    "落到实处",
+    "与死同行",
+    "虚实回路",
+    "FTFB",
+    "诚实",
+    "不误导",
+    "价值观",
+    "世界观",
+    "道德",
+    "伦理",
+    "顶层",
+    "根",
+    "接口",
+    "协议",
+    "deposon",
+    "凝子",
+    "大一统",
+    "大一统定义",
+    "硬核",
+    "客观",
+    "区别于",
+    "区别",
+    "区分",
+    "庖丁解牛",
+    "数学等价",
+    "物理唯一",
+    "哲学命题",
+    "虚实闭合",
+    "时代铁律",
+    "PI铁律",
+    "PI 铁律",
+    "唯物主义",
+    "唯物史观",
+    "朴素哲学",
+    "马哲",
+    "一视同仁",
+    "一杆进洞",
+    "落地",
+    "实操",
+    "优雅",
+    "优雅回归",
+    "外审",
+    "反哺",
+    "判据结构",
+    "判据优先序",
+    "顶层设计",
+    "准则应用",
+    "诚实边界",
+    "判死先于",
+    "可判",
+    "可证伪",
+    "判死线先于",
+    "F-C3",
+    "T/D/R",
+    "接口协议",
+    "万物理论",
+    "大一统理论",
+    "大一统命题",
+    "严谨",
+    "求是",
+    "数学恒等",
+    "软化",
+    "不软化",
+    "派工单",
+    "规则集",
+    "判据类型",
+    "结构相似度"
+   ],
+   "RISK": [
+    "风险",
+    "误报",
+    "假fail",
+    "假pass",
+    "假 FAIL",
+    "假 PASS",
+    "危害",
+    "危机",
+    "过敏",
+    "不稳定",
+    "陷阱",
+    "可疑",
+    "漏洞",
+    "危险",
+    "隐患",
+    "瑕疵",
+    "假",
+    "过敏反应",
+    "误导",
+    "误导性",
+    "不一致",
+    "冲突",
+    "不一",
+    "错定",
+    "错位",
+    "假fail",
+    "假pass",
+    "假证",
+    "过敏感",
+    "BUG",
+    "bug",
+    "假证伪",
+    "不可靠",
+    "不可信",
+    "不安全",
+    "不稳",
+    "不可"
+   ],
+   "TIMING": [
+    "时机",
+    "暂缓",
+    "立即",
+    "后续",
+    "步骤",
+    "中途",
+    "分批",
+    "抽样",
+    "全量",
+    "两步",
+    "三步",
+    "现在",
+    "未来",
+    "当下",
+    "过去",
+    "今天",
+    "昨天",
+    "明天",
+    "近",
+    "远",
+    "近期",
+    "远期",
+    "先斩后奏",
+    "补测",
+    "续采",
+    "重判",
+    "重做",
+    "续做",
+    "实时",
+    "等待",
+    "轮询",
+    "初稿先行",
+    "回收站",
+    "补一晚",
+    "几天后",
+    "三读",
+    "跨日",
+    "续",
+    "判后再判",
+    "分批上线",
+    "不宣称",
+    "按计划",
+    "逐步",
+    "迭代",
+    "接续",
+    "待",
+    "分阶段",
+    "阶段"
+   ],
+   "DELEGATE": [
+    "委托",
+    "分派",
+    "派单",
+    "受托",
+    "起草",
+    "转交",
+    "GLM",
+    "coze",
+    "kimi",
+    "agent",
+    "主轴",
+    "共同体",
+    "受托方",
+    "派出",
+    "我派",
+    "代为",
+    "代理",
+    "派工",
+    "Mavis",
+    "mavis",
+    "sub-agent",
+    "subagent",
+    "VS code",
+    "VSCode",
+    "vs code",
+    "外援",
+    "第三方",
+    "第三方汇总",
+    "verifier",
+    "组织行为学",
+    "集群",
+    "转派",
+    "派给",
+    "派去",
+    "协助",
+    "求助",
+    "派兼职",
+    "起草类",
+    "委派",
+    "托付",
+    "交代",
+    "worker",
+    "doc-writer",
+    "agent 集群",
+    "Mavis 永不",
+    "Mavis自撰"
+   ]
+  },
+  "v1_to_v2_diff_summary": "v1 105 词 (6 类) + 28 批判反思 = 133 → v2 201 词 (6 类) + 35 批判反思 = 236 (扩词率 +77%); 沿 coding_review §2.2 字面定稿",
+  "div_critical_coverage": "#(分歧∧含批判反思标志词) / #(分歧); 无分歧 → 1.0",
+  "blind_obey_rate": "#(一致∧不含批判反思标志词) / #(一致); 无一致 → 0.0",
+  "stratified_split": "0.30 分层: 纠偏子集 (R-pair + read_flip + case1 disposition) + 正常子集 各自 round(N*0.30); max(1, ...) 防 0 划分; held-out 必含纠偏事件",
+  "permutation_test": "shuffle 标签 n=1000, 重训决策树, 计 perm_sim ≥ obs_mean 比例; p_perm = (ge+1)/(N_PERM+1)",
+  "bootstrap_ci": "percentile method; resample held-out per-event sim n=1000; CI 95% = [2.5%, 97.5%]",
+  "double_read_method": "主读法 = 全 72 (含 R-pair + read_flip + case1 disposition); 替代读法 = 剔除 correction 子集 (R-pair + read_flip + case1 disposition) 仅用 normal; 两读法结果如实并报, 不合并, 不择优"
+ },
+ "preflight_conditions": {
+  "unmet": [],
+  "partial": [],
+  "met": [
+   {
+    "id": "TH-v2-1",
+    "rule": "N_min=50",
+    "observed": 72,
+    "required": 50,
+    "met": true,
+    "note": "按理论 80 件 / 实测 72 件 (D1 推理补填 8 件盘外待采标注)"
+   },
+   {
+    "id": "TH-v2-2",
+    "rule": "纠正/反转事件 ≥5",
+    "observed": 16,
+    "required": 5,
+    "met": true,
+    "note": "7 对 R 反转 + D3 read_flip + case1 disposition 全部闭合"
+   },
+   {
+    "id": "TH-v2-3",
+    "rule": "跨日 ≥3 天, 单日占比 ≤60%",
+    "observed_days": 2,
+    "required_days": 3,
+    "observed_d1_share_actual": 0.6667,
+    "observed_d1_share_theoretical": 0.6,
+    "met": true,
+    "pi_caliber": "span_3days_per_PI_ask_822b1e27",
+    "note": "实测 distinct_days=2 (D1=09-24 + D2/D3=09-26); 按 PI 2026-09-26 18:42 ask_822b1e27a43f2bf8ff86785d th23_span=跨度 3 天解读达标 supersede; 单日占比 D1=48/72=66.7% (实测) 或 48/80=60.0% (理论, 边缘态)"
+   }
+  ],
+  "pi_caliber_th23": "span_3days_per_PI_ask_822b1e27",
+  "supersession_note": "PI ask_822b1e27 拍板 supersede protocol-keeper §1.2 「跨日 2 天」字面; 本棒严守 th23_span=跨度 3 天解读达标口径"
+ },
+ "main_reading": {
+  "held_out_count": 22,
+  "held_out_idx": [
+   0,
+   2,
+   5,
+   6,
+   7,
+   12,
+   13,
+   16,
+   21,
+   23,
+   27,
+   28,
+   34,
+   36,
+   37,
+   50,
+   53,
+   56,
+   59,
+   66,
+   67,
+   69
+  ],
+  "n_correction_in_held": 5,
+  "mean_similarity": 0.0909,
+  "div_critical_coverage": 0.6842,
+  "n_divergent": 19,
+  "n_critical_among_divergent": 13,
+  "blind_obey_rate": 0.3333,
+  "n_agree": 3,
+  "n_blind_obey": 1,
+  "perm_p": 0.7912,
+  "perm_n": 1000,
+  "alpha": 0.05,
+  "bootstrap_ci": [
+   0.0,
+   0.2045
+  ],
+  "bootstrap_n": 1000,
+  "label_distribution": {
+   "RISK": 12,
+   "COST": 3,
+   "UNKNOWN": 17,
+   "KILL_LINE": 4,
+   "CRITERIA": 19,
+   "TIMING": 11,
+   "DELEGATE": 6
+  },
+  "per_event": [
+   {
+    "held_idx": 0,
+    "sim": 0.0,
+    "pred": "COST",
+    "actual": [
+     "RISK"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 2,
+    "sim": 0.0,
+    "pred": "KILL_LINE",
+    "actual": [],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 5,
+    "sim": 0.0,
+    "pred": "UNKNOWN",
+    "actual": [
+     "KILL_LINE"
+    ],
+    "divergent": true,
+    "has_critical_reflection": false
+   },
+   {
+    "held_idx": 6,
+    "sim": 0.0,
+    "pred": "UNKNOWN",
+    "actual": [
+     "CRITERIA",
+     "RISK"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 7,
+    "sim": 0.0,
+    "pred": "UNKNOWN",
+    "actual": [
+     "CRITERIA"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 12,
+    "sim": 0.0,
+    "pred": "UNKNOWN",
+    "actual": [
+     "TIMING"
+    ],
+    "divergent": true,
+    "has_critical_reflection": false
+   },
+   {
+    "held_idx": 13,
+    "sim": 0.0,
+    "pred": "UNKNOWN",
+    "actual": [
+     "RISK",
+     "CRITERIA"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 16,
+    "sim": 1.0,
+    "pred": "CRITERIA",
+    "actual": [
+     "CRITERIA"
+    ],
+    "divergent": false,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 21,
+    "sim": 0.0,
+    "pred": "CRITERIA",
+    "actual": [
+     "RISK"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 23,
+    "sim": 0.5,
+    "pred": "CRITERIA",
+    "actual": [
+     "TIMING",
+     "CRITERIA"
+    ],
+    "divergent": false,
+    "has_critical_reflection": false
+   },
+   {
+    "held_idx": 27,
+    "sim": 0.5,
+    "pred": "CRITERIA",
+    "actual": [
+     "CRITERIA",
+     "RISK"
+    ],
+    "divergent": false,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 28,
+    "sim": 0.0,
+    "pred": "CRITERIA",
+    "actual": [
+     "RISK"
+    ],
+    "divergent": true,
+    "has_critical_reflection": false
+   },
+   {
+    "held_idx": 34,
+    "sim": 0.0,
+    "pred": "CRITERIA",
+    "actual": [
+     "RISK"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 36,
+    "sim": 0.0,
+    "pred": "CRITERIA",
+    "actual": [
+     "TIMING"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 37,
+    "sim": 0.0,
+    "pred": "CRITERIA",
+    "actual": [],
+    "divergent": true,
+    "has_critical_reflection": false
+   },
+   {
+    "held_idx": 50,
+    "sim": 0.0,
+    "pred": "UNKNOWN",
+    "actual": [],
+    "divergent": true,
+    "has_critical_reflection": false
+   },
+   {
+    "held_idx": 53,
+    "sim": 0.0,
+    "pred": "CRITERIA",
+    "actual": [],
+    "divergent": true,
+    "has_critical_reflection": false
+   },
+   {
+    "held_idx": 56,
+    "sim": 0.0,
+    "pred": "CRITERIA",
+    "actual": [
+     "KILL_LINE"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 59,
+    "sim": 0.0,
+    "pred": "UNKNOWN",
+    "actual": [],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 66,
+    "sim": 0.0,
+    "pred": "CRITERIA",
+    "actual": [
+     "TIMING"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 67,
+    "sim": 0.0,
+    "pred": "CRITERIA",
+    "actual": [
+     "COST",
+     "RISK",
+     "TIMING"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 69,
+    "sim": 0.0,
+    "pred": "RISK",
+    "actual": [
+     "TIMING"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   }
+  ]
+ },
+ "alt_reading": {
+  "subset": "剔除 R-pair + read_flip + case1 disposition → normal events only",
+  "held_out_count": 17,
+  "held_out_idx": [
+   10,
+   12,
+   16,
+   34,
+   35,
+   36,
+   39,
+   46,
+   47,
+   48,
+   54,
+   55,
+   57,
+   61,
+   65,
+   69,
+   70
+  ],
+  "mean_similarity": 0.1618,
+  "div_critical_coverage": 0.6923,
+  "blind_obey_rate": 0.0,
+  "perm_p": 0.4346,
+  "bootstrap_ci": [
+   0.0294,
+   0.3382
+  ],
+  "disagreement_vs_main": {
+   "mean_similarity_delta": 0.0709,
+   "blind_obey_delta": -0.3333,
+   "note": "如实并报; 不合并, 不择优"
+  }
+ },
+ "kill_lines": [
+  {
+   "id": "K-V2-a",
+   "name": "学习线",
+   "rule": "结构相似度 < 0.80 → FAIL",
+   "observed": 0.0909,
+   "threshold": 0.8,
+   "hit_direction": "结构相似度 < 阈值 即触发",
+   "hit": true
+  },
+  {
+   "id": "K-V2-b1",
+   "name": "批判线-分歧批判理由覆盖率",
+   "rule": "分歧批判理由覆盖率 < 100% → FAIL",
+   "observed": 0.6842,
+   "threshold": 1.0,
+   "hit_direction": "覆盖率 < 1.00 即触发",
+   "hit": true
+  },
+  {
+   "id": "K-V2-b2",
+   "name": "批判线-盲从率",
+   "rule": "盲从率 > 0.10 → FAIL",
+   "observed": 0.3333,
+   "threshold": 0.1,
+   "hit_direction": "盲从率 > 阈值 即触发",
+   "hit": true
+  },
+  {
+   "id": "K-V2-c",
+   "name": "稳健线",
+   "rule": "bootstrap CI 下界 < 0.50 → FAIL",
+   "observed_ci": [
+    0.0,
+    0.2045
+   ],
+   "threshold": 0.5,
+   "hit_direction": "CI 下界 < 0.50 即触发",
+   "hit": true
+  }
+ ],
+ "any_hit": true,
+ "verdict": "FAIL (formal v2, 正式判定)",
+ "root_cause_3class": "命题层面被证伪（真证伪）",
+ "root_cause_per_row": [
+  {
+   "kill_line_id": "K-V2-a",
+   "kill_line_name": "学习线",
+   "hit": true,
+   "root_cause_3class": "命题层面被证伪（真证伪）"
+  },
+  {
+   "kill_line_id": "K-V2-b1",
+   "kill_line_name": "批判线-分歧批判理由覆盖率",
+   "hit": true,
+   "root_cause_3class": "命题层面被证伪（真证伪）"
+  },
+  {
+   "kill_line_id": "K-V2-b2",
+   "kill_line_name": "批判线-盲从率",
+   "hit": true,
+   "root_cause_3class": "命题层面被证伪（真证伪）"
+  },
+  {
+   "kill_line_id": "K-V2-c",
+   "kill_line_name": "稳健线",
+   "hit": true,
+   "root_cause_3class": "命题层面被证伪（真证伪）"
+  }
+ ],
+ "formal_meta": {
+  "formal_judgment": true,
+  "coding_version": "v2",
+  "th23_caliber": "span_3days_per_PI_ask_822b1e27",
+  "exploratory": false,
+  "coding_review_anchor": {
+   "path": "results/_v4_pi_cot_v2_coding_review_2026_09_26.md",
+   "sha12": "5FBEC21E0AD2"
+  },
+  "pi_caliber_reference": "ask_822b1e27a43f2bf8ff86785d (formal_go=放行, th23_span=跨度 3 天解读达标)",
+  "v1_retired": true,
+  "v1_pieces_preserved": {
+   "ruleset": "_v4_pi_cot_v2_ruleset.json (821465001819) — 字面冻结",
+   "result": "_v4_pi_cot_v2_result.json (1665F367B2C4) — 字面冻结",
+   "verdict": "_v4_pi_cot_v2_verdict.md (EB9AD4193CF2) — 字面冻结"
+  }
+ },
+ "boundary_statement": "v2.2 §7: 非画像 (不预测 PI 行为/不做个人模型外传); 产物=方法规则集供 AI 内化; 推理全文隐私面仅入本地件; 0 LLM 采集; key 0 相关; 生效即锁不重开; v2 正式判定 = 沿 PI ask_822b1e27 拍板口径"
+}

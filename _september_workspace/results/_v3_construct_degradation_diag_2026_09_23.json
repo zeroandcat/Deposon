@@ -1,0 +1,329 @@
+{
+  "task": "V3 构造退化诊断",
+  "task_id": "V3X-DIAG-2026-09-23-A1",
+  "date": "2026-09-23",
+  "scope": "5 线索 (C1-C5) 逐项, 只读调用 V3 runner / 读既有 JSON, 不修改任何 V3 资产",
+  "seeds_used": {
+    "boss_pa_1_sweep": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "lsh_hyperplane_sweep": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "primary_evidence_seed": 210021
+  },
+  "iron_rule_compliance": {
+    "V1_V3_assets_read_only": true,
+    "no_key_in_json_log_prompt": true,
+    "no_modify_frozen_verifier_PG": true,
+    "input_files_sha12": {
+      "boss_pa_1_rbr_rm.py": "5cc594147e00",
+      "boss_pa_1_rbr_rm_result_2026_09_15.json": "c7c59e0d2f6c",
+      "deposon_v2_phase4_f4_2026_09_11.json": "cf7682348617",
+      "deposon_volcengine_22caption_embedding_2026_09_10.json": "c4b774c8e34c"
+    }
+  },
+  "summary": {
+    "n_clues": 5,
+    "degenerate_count": 4,
+    "not_degenerate_count": 1,
+    "uncertain_count": 0,
+    "diagnosis": [
+      {
+        "clue": "C1",
+        "name": "simulate_rm 恒同值 6",
+        "evidence": {
+          "stored_22_graphs_distinct": [
+            6
+          ],
+          "stored_22_graphs_distribution": {
+            "6": 22
+          },
+          "stored_count_6": 22,
+          "stored_count_total": 22,
+          "stored_pct_6": 100.0,
+          "stored_constant_6": true,
+          "sweep_7seeds_154calls_distinct": [
+            6
+          ],
+          "sweep_distribution": {
+            "6": 154
+          },
+          "sweep_constant_6": true,
+          "sweep_payoff_caveat": "v20_baselines.json 真缺件, sweep 用 1-x 重构 payoff; 主证据用 stored (seed=210021)",
+          "control_non_degenerate_n_distinct_50samples": 46,
+          "control_sample_first10": [
+            142,
+            49,
+            181,
+            83,
+            87,
+            128,
+            92,
+            196,
+            32,
+            197
+          ]
+        },
+        "judgment": "退化实锤",
+        "verdict_construction": "退化实锤 (stored 22/22 = 6; sweep 154/154 = 6)",
+        "root_cause": "构造性常量 (RM regret threshold 1e-3 + 简单 2x2 博弈 + 同 payoff → 第 6 步 regret < 2e-3 必然触发 return; 任 seed 都同)",
+        "v3_conclusion_label_suggestion": "假成立 (P-A1 倍数结论立于此常量读数, V3 review 标 #1 同)"
+      },
+      {
+        "clue": "C2",
+        "name": "simulate_rbr 常量 200",
+        "evidence": {
+          "stored_22_graphs_distinct": [
+            2,
+            200
+          ],
+          "stored_22_graphs_distribution": {
+            "200": 20,
+            "2": 2
+          },
+          "stored_count_200": 20,
+          "stored_count_2": 2,
+          "stored_count_total": 22,
+          "stored_pct_200": 90.91,
+          "stored_pct_2": 9.09,
+          "sweep_7seeds_154calls_distinct": [
+            200
+          ],
+          "sweep_distribution": {
+            "200": 154
+          },
+          "sweep_payoff_caveat": "v20_baselines.json 真缺件, sweep 用 1-x 重构 payoff (主证据为 stored seed=210021)",
+          "control_non_degenerate_n_distinct_50samples": 45,
+          "control_sample_first10": [
+            17,
+            102,
+            186,
+            125,
+            1,
+            191,
+            131,
+            134,
+            162,
+            97
+          ]
+        },
+        "judgment": "未退化",
+        "verdict_construction": "未退化 (stored {2, 200} 真分布, 20/22=200 + 2/22=2; sweep 因 payoff 重构差异分布不同)",
+        "root_cause": "未退化 (RBR 在 2x2 博弈下: 双 stable 必 200, 单边 stable 必 2; S1_n60 / S2_n20 因 a_named<0.5 且 b_named=0, 双方均偏好 filler → 早收敛; 其余 20 个图偏好相反 → 振荡 200)",
+        "v3_conclusion_label_suggestion": "真成立 (rbr_iter 二值 {2, 200} 是真分布, 非构造常量; P-A1 倍数结论的根因在 C1 / C3 不在此)"
+      },
+      {
+        "clue": "C3",
+        "name": "bayesian_nash_iter 二值返回",
+        "evidence": {
+          "stored_22_graphs_distinct": [
+            1,
+            200
+          ],
+          "stored_22_graphs_distribution": {
+            "200": 4,
+            "1": 18
+          },
+          "stored_count_1": 18,
+          "stored_count_200": 4,
+          "stored_count_total": 22,
+          "stored_binary_only": true,
+          "sweep_154calls_distinct": [
+            1
+          ],
+          "sweep_distribution": {
+            "1": 154
+          },
+          "sweep_binary_only": false,
+          "control_non_degenerate_n_distinct_50samples": 32,
+          "control_sample_first10": [
+            89,
+            179,
+            89,
+            210,
+            132,
+            1,
+            230,
+            1,
+            94,
+            1
+          ]
+        },
+        "judgment": "退化实锤",
+        "verdict_construction": "退化实锤 (stored 二值 {1, 200}; 函数体 L189: `return 1 if nash else 200` — 名为迭代实为闭式解 + 失败哨兵)",
+        "root_cause": "构造性常量 (bayesian_nash_iter L189 显式二值; 与 V3 报告「Bayesian 解析解 1 步到位」自述一致; 中间值域缺失, 不构成「迭代次数」分布)",
+        "v3_conclusion_label_suggestion": "假成立 (Bayesian '迭代次数' 退化为 {1, 200}; 倍数比 rbr_t/bayes_t 必有 200 等大值, 主导 P-A1 倍数差异结论)"
+      },
+      {
+        "clue": "C4",
+        "name": "rbr_mult 仅 3 个不同值",
+        "evidence": {
+          "stored_22_graphs_distinct": [
+            1.0,
+            2.0,
+            200.0
+          ],
+          "stored_22_graphs_distribution": {
+            "1.0": 4,
+            "200.0": 16,
+            "2.0": 2
+          },
+          "stored_three_only": true,
+          "stored_count_total": 22,
+          "sweep_154calls_distinct": [
+            200.0
+          ],
+          "sweep_distribution": {
+            "200.0": 154
+          },
+          "derivation": "rbr_mult = rbr_t / bayes_t; rbr_t ∈ {2, 200} ∩ bayes_t ∈ {1, 200} → 乘积组合 {2/1=2.0, 2/200=0.01, 200/1=200.0, 200/200=1.0}; 实际 22 graphs 中 0.01 未出现, 因所有 rbr=2 配 bayes=1 (S1_n60 / S2_n20), 不出现 2/200 组合"
+        },
+        "judgment": "退化实锤",
+        "verdict_construction": "退化实锤 (stored rbr_mult ∈ {1.0, 2.0, 200.0}, 22 graphs 中三值分布 4/2/16; 这是 C2+C3 派生的退化解)",
+        "root_cause": "派生退化 (rbr_mult = rbr_t / bayes_t 的代数派生物; rbr_t 真分布 {2, 200} + bayes_t 真分布 {1, 200} → rbr_mult 退化为 {1.0, 2.0, 200.0} 三值, 无中间值)",
+        "v3_conclusion_label_suggestion": "假成立 (P-A1 倍数结论 'RBR 倍数均值 = 145.8×' 立于此 3 值; 这是 C2+C3 派生的退化解, 应按派生源 (C2 + C3) 收口, 不必单独改 rbr_mult 函数)"
+      },
+      {
+        "clue": "C5",
+        "name": "12-bit LSH 22→6 码退化",
+        "evidence": {
+          "stored_n_captions": 22,
+          "stored_algorithm": "12-bit LSH on SVD-2 coords (random hyperplanes, seed=42)",
+          "stored_n_distinct_codes": 6,
+          "stored_distribution": {
+            "498": 2,
+            "2dd": 6,
+            "2fd": 10,
+            "2dc": 1,
+            "6d8": 2,
+            "6dc": 1
+          },
+          "computed_seed42_match_stored": true,
+          "lsh_per_seed": [
+            {
+              "seed": 42,
+              "n_distinct": 6,
+              "n_distinct_pct": 27.27,
+              "distribution": {
+                "498": 2,
+                "2dd": 6,
+                "2fd": 10,
+                "2dc": 1,
+                "6d8": 2,
+                "6dc": 1
+              }
+            },
+            {
+              "seed": 43,
+              "n_distinct": 4,
+              "n_distinct_pct": 18.18,
+              "distribution": {
+                "164": 4,
+                "466": 15,
+                "564": 2,
+                "464": 1
+              }
+            },
+            {
+              "seed": 44,
+              "n_distinct": 4,
+              "n_distinct_pct": 18.18,
+              "distribution": {
+                "8f2": 4,
+                "a73": 15,
+                "af2": 2,
+                "af3": 1
+              }
+            },
+            {
+              "seed": 45,
+              "n_distinct": 4,
+              "n_distinct_pct": 18.18,
+              "distribution": {
+                "cf9": 4,
+                "63f": 16,
+                "e7b": 1,
+                "ef9": 1
+              }
+            },
+            {
+              "seed": 46,
+              "n_distinct": 4,
+              "n_distinct_pct": 18.18,
+              "distribution": {
+                "8d1": 4,
+                "1d3": 4,
+                "153": 12,
+                "0d1": 2
+              }
+            },
+            {
+              "seed": 47,
+              "n_distinct": 3,
+              "n_distinct_pct": 13.64,
+              "distribution": {
+                "b56": 2,
+                "be6": 18,
+                "b76": 2
+              }
+            },
+            {
+              "seed": 48,
+              "n_distinct": 5,
+              "n_distinct_pct": 22.73,
+              "distribution": {
+                "704": 2,
+                "f32": 9,
+                "d32": 7,
+                "f02": 2,
+                "f04": 2
+              }
+            }
+          ],
+          "hamming_pairs_total": 231,
+          "hamming_pairs_zero": 62,
+          "hamming_mean_observed": 1.961,
+          "hamming_expected_random_12bit": 6.0,
+          "control_n_distinct_random_12bit": 22,
+          "control_hamming_mean": 5.848,
+          "control_hamming_zero_count": 0,
+          "control_class_intra_hamming": {
+            "L(llm_dag)": 2.47,
+            "S1(chain)": 2.67,
+            "S2(tree)": 2.8,
+            "S3-S6(misc)": 0.57
+          }
+        },
+        "judgment": "退化实锤",
+        "verdict_construction": "退化实锤 (22→6, Hamming 平均 1.961 vs 期望 6.0, 62/231 对 Hamming=0)",
+        "root_cause": "SVD-2 坐标坍缩 + 12-bit 边界 (22 caption SVD-2 坐标大量聚集在 [-0.9, -0.1] 区, 仅 L 类与 S1/S2_n35 类偏离; 12 个随机超平面无法把 22 聚成 ~22 个码; multi-seed sweep 也稳定在 3-6 码)",
+        "v3_conclusion_label_suggestion": "假成立 (LSH 分辨率不足; 用作链锚时「同码 = 同 caption」不可证伪; 类内 Hamming S3-S6=0.57 vs 期望 6.0, 类间区分力严重不足)"
+      }
+    ]
+  },
+  "method": {
+    "C1_C4_main": "读 boss_pa_1 既有 22-graph 结果 JSON (seed=210021, V3 报告口径) + 7-seed sweep 在 1-x 重构 payoff 上 (因 v20_baselines.json 真缺件, sweep 仅补充)",
+    "C5": "读 phase4_f4 既有 22 semantic_hash + SVD-2 坐标 + 7 个不同 hyperplane seeds 复算 12-bit LSH (numpy), 验证 seed=42 与 stored 完全一致",
+    "control_impl": "对每条线索构造非退化对照实现 (numpy RandomState 均匀分布), 给 n_distinct 样本"
+  },
+  "boundary_declaration": {
+    "modified_v3_files": "0",
+    "new_diagnostic_files": [
+      "deposon_team/plugins/_v3_construct_diag_2026_09_23.py"
+    ],
+    "all_outputs_landed_in": "results/_v3_construct_degradation_diag_2026_09_23.json"
+  }
+}

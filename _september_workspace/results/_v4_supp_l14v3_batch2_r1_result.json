@@ -1,0 +1,102 @@
+{
+  "schema": "v4_l14v3_n26/1",
+  "batch": 2,
+  "round": 1,
+  "metadata": {
+    "task": "L14V3_batch2_round1_GLM1_teacher_side",
+    "prereg_sha12": "05B975A86989",
+    "prereg_path": "results/_v4_supp_prereg_v02_add_L14V3_2026_09_24.md",
+    "predecessor_sha12": {
+      "batch1_r6_executor_sha12": "5f02c7e0f094",
+      "batch1_r6_executor_path": "results/_v4_supp_l14v3_batch1_r6_executor.py",
+      "batch1_r6_result_sha12": "a4f851154551",
+      "batch1_r6_result_path": "results/_v4_supp_l14v3_batch1_r6_result.json"
+    },
+    "date": "2026-09-24",
+    "teacher": "GLM_1",
+    "side": "teacher",
+    "round_index": 1,
+    "stop_reason": "probe_all_candidates_failed"
+  },
+  "probe_phase": {
+    "selected_model_id": null,
+    "selected_record": null,
+    "probe_records": [
+      {
+        "candidate_model_id": "GLM_1",
+        "candidate_idx": 0,
+        "ok": false,
+        "status_code": 400,
+        "latency_ms": 211.2,
+        "model_returned": "",
+        "error_category": "client_error_4xx",
+        "error_snippet": "{\"error\":{\"message\":\"模型 'GLM_1' 暂不可用，请稍后重试。\",\"type\":\"model_not_available\",\"code\":400},\"trace_id\":\"c711275d-a48c-41a2-8821-4d733e225209\"}",
+        "content_preview": "",
+        "phase_label": "probe_model_id"
+      },
+      {
+        "candidate_model_id": "glm-1",
+        "candidate_idx": 1,
+        "ok": false,
+        "status_code": 400,
+        "latency_ms": 130.6,
+        "model_returned": "",
+        "error_category": "client_error_4xx",
+        "error_snippet": "{\"error\":{\"message\":\"模型 'glm-1' 暂不可用，请稍后重试。\",\"type\":\"model_not_available\",\"code\":400},\"trace_id\":\"183359bb-6e96-4be7-b405-5537d90c40ed\"}",
+        "content_preview": "",
+        "phase_label": "probe_model_id"
+      },
+      {
+        "candidate_model_id": "glm4",
+        "candidate_idx": 2,
+        "ok": false,
+        "status_code": 400,
+        "latency_ms": 175.8,
+        "model_returned": "",
+        "error_category": "client_error_4xx",
+        "error_snippet": "{\"error\":{\"message\":\"模型 'glm4' 暂不可用，请稍后重试。\",\"type\":\"model_not_available\",\"code\":400},\"trace_id\":\"b91ff3d3-2656-4ba2-9915-a531b12b14aa\"}",
+        "content_preview": "",
+        "phase_label": "probe_model_id"
+      },
+      {
+        "candidate_model_id": "glm-4",
+        "candidate_idx": 3,
+        "ok": false,
+        "status_code": 400,
+        "latency_ms": 251.1,
+        "model_returned": "",
+        "error_category": "client_error_4xx",
+        "error_snippet": "{\"error\":{\"message\":\"模型 'glm-4' 暂不支持调用，请改用 GET /v1/models 中的其他模型。\",\"type\":\"model_not_supported\",\"code\":400},\"trace_id\":\"50cb7934-48cc-499f-8934-084123b9158e\"}",
+        "content_preview": "",
+        "phase_label": "probe_model_id"
+      },
+      {
+        "candidate_model_id": "GLM4",
+        "candidate_idx": 4,
+        "ok": false,
+        "status_code": 400,
+        "latency_ms": 171.4,
+        "model_returned": "",
+        "error_category": "client_error_4xx",
+        "error_snippet": "{\"error\":{\"message\":\"模型 'GLM4' 暂不可用，请稍后重试。\",\"type\":\"model_not_available\",\"code\":400},\"trace_id\":\"0db852b7-83ac-444e-b758-c3859af0c03e\"}",
+        "content_preview": "",
+        "phase_label": "probe_model_id"
+      },
+      {
+        "candidate_model_id": "glm_4",
+        "candidate_idx": 5,
+        "ok": false,
+        "status_code": 400,
+        "latency_ms": 160.1,
+        "model_returned": "",
+        "error_category": "client_error_4xx",
+        "error_snippet": "{\"error\":{\"message\":\"模型 'glm_4' 暂不可用，请稍后重试。\",\"type\":\"model_not_available\",\"code\":400},\"trace_id\":\"fcd87058-f1b5-46db-b8ae-0183721e3e6f\"}",
+        "content_preview": "",
+        "phase_label": "probe_model_id"
+      }
+    ],
+    "probe_attempted_count": 6
+  },
+  "probe_wall_time_s": 13.6,
+  "run_window_cst": "2026-09-24T22:35:43+08:00"
+}

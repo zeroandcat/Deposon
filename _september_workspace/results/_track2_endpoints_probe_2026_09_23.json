@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "task": "track2_endpoints_probe",
+    "date": "2026-09-23",
+    "author": "Mavis worker (Track 2 多模型补跑 子任务)",
+    "freeze_day": "V5 补强 D1 (件 3 续, 端点探活)",
+    "spec_conformance": "PI 2026-09-23 ask_3ee5edf74be2d6ef53fbc4b4 Q4 + 补充 1 (teamo) + 补充 2 (代理 + 串行)",
+    "proxy_settings": {
+      "http": "http://127.0.0.1:1018",
+      "socks5": "socks5://127.0.0.1:1018",
+      "rationale": "PI 2026-09-23 补充 2: teamo/openrouter 类端点必走代理防封号"
+    },
+    "serial_policy": {
+      "inter_probe_sleep_s": 2.5,
+      "rationale": "PI 2026-09-23 补充 2: 串行 ≥2s 防封号"
+    },
+    "key_discipline": {
+      "source": "C:/Users/Administrator/Desktop/AI/LLM API.txt",
+      "method": "runtime memory read",
+      "redacted_in_products": "true",
+      "rationale": "R4 key 永不明文 (无例外)"
+    },
+    "endpoint_set_discrepancy": {
+      "pi_authoritative_urls": [
+        "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+        "https://token-plan-cn.xiaomimimo.com/v1",
+        "https://api.teamorouter.cn/v1"
+      ],
+      "file_authoritative_urls": [
+        "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions (qwen_plan, 旧)",
+        "https://api.mioplus.mi.com/v1/chat/completions (mimo, 旧)",
+        "https://api.teamo.ai/v1/chat/completions (teamo, 旧)"
+      ],
+      "file_source": "_v4_v5_multimodel_probe.py",
+      "discrepancy_resolution": "按 PI 当条派工三 URL 探活 (PI 2026-09-23 ask_3ee5edf74be2d6ef53fbc4b4 Q4 + 补充 1); probe 文件未触动 (沿用 SHA-12 5FE4CBD93D92); verdict MD 显式声明差异",
+      "probe_file_sha12_before": "5FE4CBD93D92"
+    },
+    "predecessor_chain_sha12": {
+      "track2_runner_template": "900A6D1E50AF",
+      "measure_function": "21771E66AF67",
+      "teacher_paths": "D2BD7521D651",
+      "track2_product_openrouter": "61EDBE39A618",
+      "track2_product_deepseek_direct": "1B05EBA8639B",
+      "track2_product_qwen": "AE541E34781E",
+      "track2_measure_v5": "7CCBE2C3E248",
+      "track2_ablation_v5": "DC35655F8E7C",
+      "track2_verdict_v5": "83D8E7A8BA12",
+      "ablation_verdict_v5": "C2920AA9923A",
+      "multimodel_compare_v5": "356BD6647796",
+      "multimodel_verdict_v5": "C386251D94D6",
+      "probe_template_v5": "5FE4CBD93D92"
+    }
+  },
+  "results": [
+    {
+      "label": "qwen_plan",
+      "endpoint_base": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+      "use_proxy": false,
+      "key_index_1based": 23,
+      "key_source": "runtime-env (redacted)",
+      "ok": true,
+      "stage": "ping",
+      "ok_attempt": {
+        "model_id": "qwen3.7-max",
+        "status_code": 200,
+        "latency_ms": 6927.6,
+        "model_returned": "qwen3.7-max",
+        "endpoint_chat_url": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1/chat/completions",
+        "content_preview": "Pong! 🏓\n\nHow can I help"
+      },
+      "attempts": [
+        {
+          "model_id": "qwen3.7-max",
+          "ok": true,
+          "status_code": 200,
+          "error_category": null,
+          "latency_ms": 6927.6,
+          "model_returned": "qwen3.7-max",
+          "error_body_snippet": "",
+          "error_snippet": ""
+        }
+      ],
+      "mapped_slot": "qwen_plan",
+      "mapped_model_id": "qwen3.7-max",
+      "slot_mapping_method": "实测认证 (PI 拍板三 URL ↔ 槽位)"
+    },
+    {
+      "label": "mimo",
+      "endpoint_base": "https://token-plan-cn.xiaomimimo.com/v1",
+      "use_proxy": false,
+      "key_index_1based": 27,
+      "key_source": "runtime-env (redacted)",
+      "ok": true,
+      "stage": "ping",
+      "ok_attempt": {
+        "model_id": "mimo-v2.6-pro",
+        "status_code": 200,
+        "latency_ms": 3818.5,
+        "model_returned": "mimo-v2.6-pro",
+        "endpoint_chat_url": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "content_preview": ""
+      },
+      "attempts": [
+        {
+          "model_id": "mimo-v2.6-pro",
+          "ok": true,
+          "status_code": 200,
+          "error_category": null,
+          "latency_ms": 3818.5,
+          "model_returned": "mimo-v2.6-pro",
+          "error_body_snippet": "",
+          "error_snippet": ""
+        }
+      ],
+      "mapped_slot": "mimo",
+      "mapped_model_id": "mimo-v2.6-pro",
+      "slot_mapping_method": "实测认证 (PI 拍板三 URL ↔ 槽位)"
+    },
+    {
+      "label": "teamo",
+      "endpoint_base": "https://api.teamorouter.cn/v1",
+      "use_proxy": true,
+      "key_index_1based": 15,
+      "key_source": "runtime-env (redacted)",
+      "ok": true,
+      "stage": "ping",
+      "ok_attempt": {
+        "model_id": "deepseek-v4-flash",
+        "status_code": 200,
+        "latency_ms": 2126.5,
+        "model_returned": "deepseek-v4-flash-0731",
+        "endpoint_chat_url": "https://api.teamorouter.cn/v1/chat/completions",
+        "content_preview": ""
+      },
+      "attempts": [
+        {
+          "model_id": "deepseek-v4-flash",
+          "ok": true,
+          "status_code": 200,
+          "error_category": null,
+          "latency_ms": 2126.5,
+          "model_returned": "deepseek-v4-flash-0731",
+          "error_body_snippet": "",
+          "error_snippet": ""
+        }
+      ],
+      "mapped_slot": "teamo",
+      "mapped_model_id": "deepseek-v4-flash-0731",
+      "slot_mapping_method": "实测认证 (PI 拍板三 URL ↔ 槽位)"
+    }
+  ],
+  "constraints_compliance": {
+    "key_never_in_prompt_or_json": true,
+    "key_never_on_disk": true,
+    "no_proxy_regen": true,
+    "serial_with_min_2s_gap": true,
+    "proxy_for_teamo_endpoint": true,
+    "probe_template_unchanged": true,
+    "rationale": "PI 2026-09-23 补充 2 硬要求; R4 沿用"
+  },
+  "call_time_cst": "2026-09-23T15:15:30+08:00"
+}
