@@ -1,0 +1,15 @@
+﻿--- raw bytes (utf-8) of each cell 0 kimi record ---
+  caption=L_biological_taxonomy, r=0: bytes=b'\xe6\xa2\xa8\xe5\xb1\x9e', len=2
+  caption=L_biological_taxonomy, r=1: bytes=b'\xe6\xa2\xa8', len=1
+  caption=S5, r=0: bytes=b'\xe7\xa3\x81\xe5\x9c\xba', len=2
+  caption=S5, r=1: bytes=b'\xe6\x9c\x89\xe9\xb3\x9e\xe7\x9b\xae', len=3
+
+--- computing per-teacher jaccard pairs ---
+
+  cell 0 / teacher kimi: 4 records
+    rec0 (cap=L_biological_taxonomy, r=0) vs rec1 (cap=L_biological_taxonomy, r=1): ti bytes=b'\xe6\xa2\xa8\xe5\xb1\x9e', tj bytes=b'\xe6\xa2\xa8', |ti_tok|=2, |tj_tok|=1, |inter|=1, |union|=2, J=0.5
+    rec0 (cap=L_biological_taxonomy, r=0) vs rec2 (cap=S5, r=0): ti bytes=b'\xe6\xa2\xa8\xe5\xb1\x9e', tj bytes=b'\xe7\xa3\x81\xe5\x9c\xba', |ti_tok|=2, |tj_tok|=2, |inter|=0, |union|=4, J=0.0
+    rec0 (cap=L_biological_taxonomy, r=0) vs rec3 (cap=S5, r=1): ti bytes=b'\xe6\xa2\xa8\xe5\xb1\x9e', tj bytes=b'\xe6\x9c\x89\xe9\xb3\x9e\xe7\x9b\xae', |ti_tok|=2, |tj_tok|=3, |inter|=0, |union|=5, J=0.0
+    rec1 (cap=L_biological_taxonomy, r=1) vs rec2 (cap=S5, r=0): ti bytes=b'\xe6\xa2\xa8', tj bytes=b'\xe7\xa3\x81\xe5\x9c\xba', |ti_tok|=1, |tj_tok|=2, |inter|=0, |union|=3, J=0.0
+    rec1 (cap=L_biological_taxonomy, r=1) vs rec3 (cap=S5, r=1): ti bytes=b'\xe6\xa2\xa8', tj bytes=b'\xe6\x9c\x89\xe9\xb3\x9e\xe7\x9b\xae', |ti_tok|=1, |tj_tok|=3, |inter|=0, |union|=4, J=0.0
+    rec2 (cap=S5, r=0) vs rec3 (cap=S5, r=1): ti bytes=b'\xe7\xa3\x81\xe5\x9c\xba', tj bytes=b'\xe6\x9c\x89\xe9\xb3\x9e\xe7\x9b\xae', |ti_tok|=2, |tj_tok|=3, |inter|=0, |union|=5, J=0.0

@@ -1,0 +1,105 @@
+{
+  "main_full": {
+    "subset": [
+      "kimi",
+      "GLM_1",
+      "GLM_2",
+      "coze",
+      "minimax"
+    ],
+    "k1_per_teacher": {
+      "kimi": 0.751219512195122,
+      "GLM_1": 0.3954545454545455,
+      "GLM_2": 0.6363636363636364,
+      "coze": 0.5344444444444444,
+      "minimax": 0.4909090909090909
+    },
+    "k1_mean": 0.5616782458733678,
+    "k1_hit": false,
+    "k2_auc": 0.5662720095771461,
+    "k2_hit": true,
+    "n_below_060": 3,
+    "k3_hit": false,
+    "N_total": 1090
+  },
+  "drop_coze": {
+    "subset": [
+      "kimi",
+      "GLM_1",
+      "GLM_2",
+      "minimax"
+    ],
+    "k1_per_teacher": {
+      "kimi": 0.751219512195122,
+      "GLM_1": 0.3954545454545455,
+      "GLM_2": 0.6363636363636364,
+      "minimax": 0.4909090909090909
+    },
+    "k1_mean": 0.5684866962305987,
+    "k1_hit": false,
+    "k2_auc": 0.58438715181656,
+    "k2_hit": true,
+    "n_below_060": 2,
+    "k3_hit": false,
+    "N_total": 869
+  },
+  "drop_glm2": {
+    "subset": [
+      "kimi",
+      "GLM_1",
+      "coze",
+      "minimax"
+    ],
+    "k1_per_teacher": {
+      "kimi": 0.751219512195122,
+      "GLM_1": 0.3954545454545455,
+      "coze": 0.5344444444444444,
+      "minimax": 0.4909090909090909
+    },
+    "k1_mean": 0.5430068982508006,
+    "k1_hit": false,
+    "k2_auc": 0.5915773319205323,
+    "k2_hit": true,
+    "n_below_060": 3,
+    "k3_hit": false,
+    "N_total": 870
+  },
+  "drop_kimi": {
+    "subset": [
+      "GLM_1",
+      "GLM_2",
+      "coze",
+      "minimax"
+    ],
+    "k1_per_teacher": {
+      "GLM_1": 0.3954545454545455,
+      "GLM_2": 0.6363636363636364,
+      "coze": 0.5344444444444444,
+      "minimax": 0.4909090909090909
+    },
+    "k1_mean": 0.5142929292929292,
+    "k1_hit": false,
+    "k2_auc": 0.5346553185068251,
+    "k2_hit": true,
+    "n_below_060": 3,
+    "k3_hit": false,
+    "N_total": 881
+  },
+  "drop_all3": {
+    "subset": [
+      "GLM_1",
+      "minimax"
+    ],
+    "k1_per_teacher": {
+      "GLM_1": 0.3954545454545455,
+      "minimax": 0.4909090909090909
+    },
+    "k1_mean": 0.44318181818181823,
+    "k1_hit": false,
+    "k2_auc": 0.44586776859504135,
+    "k2_hit": true,
+    "n_below_060": 2,
+    "k3_hit": false,
+    "N_total": 440
+  }
+}

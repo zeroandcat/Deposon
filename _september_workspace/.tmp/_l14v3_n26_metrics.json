@@ -1,0 +1,55 @@
+{
+  "seed": 42,
+  "n_splits": 5,
+  "feature_names": [
+    "log1p_latency_ms",
+    "log1p_prompt_tokens",
+    "log1p_completion_tokens",
+    "log1p_total_tokens",
+    "log1p_reasoning_tokens",
+    "log1p_cached_tokens"
+  ],
+  "classifier": "sklearn.linear_model.LogisticRegression(random_state=42, max_iter=1000, solver='lbfgs')",
+  "thresholds": {
+    "K_N26_1_ACC": 0.7,
+    "K_N26_2_AUC": 0.75,
+    "K_N26_3_TEACHERS_LT": 0.6
+  },
+  "K_N26_1": {
+    "per_teacher_acc": {
+      "kimi": null,
+      "GLM_1": 0.5,
+      "GLM_2": 0.6861111111111111,
+      "coze": 0.8347578347578347,
+      "minimax": 0.725
+    },
+    "mean_teacher_acc": 0.6864672364672365,
+    "hit": false,
+    "rule": "teacher_acc >= 0.70 -> hit=True -> 真证伪 (metadata 可区分)"
+  },
+  "K_N26_2": {
+    "per_fold_auc": [
+      0.8888888888888888,
+      0.7544973544973544,
+      0.8012820512820513,
+      0.7884615384615384,
+      0.7494505494505495
+    ],
+    "pooled_auc": 0.7965160765160764,
+    "hit": false,
+    "rule": "pooled_auc < 0.75 -> hit=True -> 真证伪 (metadata 不可区分)"
+  },
+  "K_N26_3": {
+    "n_teachers_below_0_60": 1,
+    "hit": false,
+    "rule": "n_teachers_with_acc<0.60 >= 4 -> hit=True -> 真证伪 (多数教师 metadata 不可区分)"
+  },
+  "n_cells_total": 309,
+  "n_cells_per_teacher": {
+    "kimi": 44,
+    "GLM_1": 44,
+    "GLM_2": 44,
+    "coze": 133,
+    "minimax": 44
+  }
+}

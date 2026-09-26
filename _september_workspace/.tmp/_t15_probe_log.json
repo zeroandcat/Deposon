@@ -1,0 +1,25 @@
+{
+  "task": "t15_endpoint_probe_2026_09_24",
+  "date_label": "2026-09-24",
+  "generated_utc": "2026-09-24T23:58:16.179241+08:00",
+  "rationale": "T1.5 §1.1 Q1 + 即用即探 纪律 (PI 2026-09-24 派工单 t15)",
+  "endpoints": [
+    {
+      "endpoint_label": "qwen_plan",
+      "endpoint": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+      "model_id": "qwen3.7-max",
+      "use_proxy": false,
+      "ok": true,
+      "status_code": 200,
+      "latency_ms": 5130.0,
+      "model_returned": "qwen3.7-max",
+      "error_category": null,
+      "error_body_snippet": "",
+      "error_snippet": ""
+    }
+  ],
+  "key_shape_self_scan": {
+    "hits": [],
+    "status": "clean"
+  }
+}
