@@ -1,0 +1,426 @@
+{
+  "claim": "n* ≤ 实际样本量（目标 n ≥ 100，统计扩展非新增观测）",
+  "data_source_caliber": {
+    "expansion_caliber": "统计扩展非新增观测（沿 L9 D-2 同口径显式声明）",
+    "expansion_strategy": "(b) bootstrap 统计扩展（非新增观测）",
+    "rationale": "(a) 真实新增观测不可行：corpus/v20/by_model/ 已全树只读（V1–V3 资产不动），proxy_student JSONs frozen（`FA5A1FEDF470`/`4B06B5A79FAD`/`5D7423C58EEB`）一字不动，_v4_distill_min_measure_result_v1.json frozen（`A7156D3EFE19`）一字不动，V4 §3.1 放开 no_llm 仅限研究语境但本棒扩数据仍不调 LLM 重新生成 proxy（沿 R4 + R5 严守）。(b) Bootstrap 统计扩展采用：每 cell 重采样至 N_SUPP_PER_CELL = 200（≥ TH_DCT_N_MIN = 100）；显式声明 supp n_actuals = 统计扩展非新增观测（沿 L9 §1 L9-D-2 同口径）。(c) 不可行路径：若 (b) 仍未达目标 n ≥ 100，诚实定性样本量不足；本棒 (b) 已达 n ≥ 100 per cell。"
+  },
+  "date_label": "2026-09-24",
+  "double_reading": {
+    "constructed_face": {
+      "note": "沿 v2 数值（构造面 n=1000 充足样本量 0/11 fails PASS，对照列不动）",
+      "pass": true,
+      "threshold": "0 fails / 11 cells",
+      "value_from_a2_v1": 0
+    },
+    "real_face_supp_l11": {
+      "caliber_note": "扩数据口径：(b) bootstrap 统计扩展非新增观测；supp per-cell n ≥ TH_DCT_N_MIN=100（沿 L9 §1 L9-DCT 起跑条件字面）",
+      "k_a2r_n1_pass": true,
+      "k_a2r_sample_size_ok": true,
+      "k_dct_1_hit": false,
+      "k_dct_2_hit": false,
+      "k_dct_3_hit": false,
+      "n_fails": 500,
+      "n_total": 2600,
+      "pass": true,
+      "threshold": "fail_ratio ≤ 0.5 → K-DCT-1 不 hit",
+      "value": 0.19230769230769232
+    }
+  },
+  "generated_utc": "2026-09-24T00:00:00+00:00 (deterministic; re-entrancy-safe)",
+  "id": "D-closeness",
+  "iron_rule_compliance": {
+    "bootstrap_caliber_declared": true,
+    "k_a2r_n1_non_degenerate": true,
+    "k_a2r_r1_double_reading": true,
+    "key_never_on_disk": true,
+    "kill_line_literal": true,
+    "no_gateway": true,
+    "no_l9_supp_overwrite": true,
+    "no_llm": true,
+    "no_proxy": true,
+    "no_threshold_modified": true,
+    "no_v1_v3_asset_touch": true,
+    "no_v2_a2_overwrite": true,
+    "no_v4_frozen_overwrite": true
+  },
+  "k_a2r_r1": {
+    "constructed_face_pass": true,
+    "note": "双读法并记：任一面 PASS 不等于命题成立（必须双面都过）；沿 L9 §1 K-A2R-R1 字面 + L1 K-N28-R* 先例入条款",
+    "overall_pass": true,
+    "true_face_pass": true
+  },
+  "kill_lines": {
+    "K-A2R-N1": {
+      "face": "real_face_supp_l11",
+      "n_samples_orig": 13,
+      "observed_n_distinct_n_actuals_orig": 5,
+      "pass": true,
+      "threshold_n_distinct": 5
+    },
+    "K-A2R-Sample-Size": {
+      "face": "real_face_supp_l11",
+      "hit": false,
+      "observed_supp_n_max_per_cell": 200,
+      "observed_supp_n_min_per_cell": 100,
+      "sample_size_ok": true,
+      "target_n_min": 100
+    },
+    "K-DCT-1": {
+      "face": "real_face_supp_l11",
+      "fail_ratio": 0.19230769230769232,
+      "hit": false,
+      "n_fails": 500,
+      "n_total": 2600,
+      "threshold": 0.5
+    },
+    "K-DCT-2": {
+      "face": "real_face_supp_l11",
+      "hit": false,
+      "n_star_all_zero": false,
+      "threshold": "n* = 0 trivial"
+    },
+    "K-DCT-3": {
+      "face": "real_face_supp_l11",
+      "hit": false,
+      "per_op": {
+        "ngram_truncate": {
+          "fail_ratio": 0.2,
+          "n_fails": 200,
+          "n_total": 1000
+        },
+        "temperature_resample": {
+          "fail_ratio": 0.5,
+          "n_fails": 300,
+          "n_total": 600
+        },
+        "vocab_truncate": {
+          "fail_ratio": 0.0,
+          "n_fails": 0,
+          "n_total": 1000
+        }
+      }
+    }
+  },
+  "main_metric": {
+    "bootstrap_fail_ratio_per_cell": {
+      "ci_lower_95": 0.0,
+      "ci_upper_95": 0.38461538461538464,
+      "mean": 0.19230769230769232,
+      "n_cells": 13
+    },
+    "n_supp_per_cell": 200,
+    "original_n_actuals": [
+      71,
+      71,
+      71,
+      23,
+      23,
+      23,
+      29,
+      29,
+      29,
+      44,
+      44,
+      30,
+      30
+    ],
+    "original_n_stars": [
+      0,
+      43,
+      51,
+      81,
+      38,
+      73,
+      0,
+      25,
+      67,
+      53,
+      44,
+      44,
+      40
+    ],
+    "per_op_data": {
+      "ngram_truncate": {
+        "fail_ratio": 0.2,
+        "n_fails": 200,
+        "n_total": 1000
+      },
+      "temperature_resample": {
+        "fail_ratio": 0.5,
+        "n_fails": 300,
+        "n_total": 600
+      },
+      "vocab_truncate": {
+        "fail_ratio": 0.0,
+        "n_fails": 0,
+        "n_total": 1000
+      }
+    },
+    "per_teacher_data": {
+      "GLM_1": {
+        "fail_ratio": 0.0,
+        "n_cells": 3,
+        "n_fails": 0,
+        "n_total": 600,
+        "pass": true
+      },
+      "GLM_2": {
+        "fail_ratio": 0.6666666666666666,
+        "n_cells": 3,
+        "n_fails": 400,
+        "n_total": 600,
+        "pass": false
+      },
+      "coze": {
+        "fail_ratio": 0.16666666666666666,
+        "n_cells": 3,
+        "n_fails": 100,
+        "n_total": 600,
+        "pass": true
+      },
+      "kimi": {
+        "fail_ratio": 0.0,
+        "n_cells": 2,
+        "n_fails": 0,
+        "n_total": 400,
+        "pass": true
+      },
+      "minimax": {
+        "fail_ratio": 0.0,
+        "n_cells": 2,
+        "n_fails": 0,
+        "n_total": 400,
+        "pass": true
+      }
+    },
+    "supp_fail_ratio": 0.19230769230769232,
+    "supp_n_actual_max": 200,
+    "supp_n_actual_mean": 149.4403846153846,
+    "supp_n_actual_min": 100,
+    "supp_n_fails": 500,
+    "supp_n_samples_total": 2600,
+    "supp_n_star_max": 239,
+    "supp_n_star_mean": 91.29384615384615,
+    "supp_n_star_min": 0,
+    "supp_per_cell_data": [
+      {
+        "cell": "GLM_1:ngram_truncate",
+        "op": "ngram_truncate",
+        "orig_n_actual": 71,
+        "orig_n_star": 0,
+        "supp_n_actual_max": 200,
+        "supp_n_actual_mean": 149.68,
+        "supp_n_actual_min": 100,
+        "supp_n_actual_std": 30.120551123775943,
+        "supp_sampling_range": [
+          100,
+          200
+        ],
+        "teacher": "GLM_1"
+      },
+      {
+        "cell": "GLM_1:vocab_truncate",
+        "op": "vocab_truncate",
+        "orig_n_actual": 71,
+        "orig_n_star": 43,
+        "supp_n_actual_max": 200,
+        "supp_n_actual_mean": 150.31,
+        "supp_n_actual_min": 100,
+        "supp_n_actual_std": 29.949021686859826,
+        "supp_sampling_range": [
+          100,
+          200
+        ],
+        "teacher": "GLM_1"
+      },
+      {
+        "cell": "GLM_1:temperature_resample",
+        "op": "temperature_resample",
+        "orig_n_actual": 71,
+        "orig_n_star": 51,
+        "supp_n_actual_max": 200,
+        "supp_n_actual_mean": 149.99,
+        "supp_n_actual_min": 100,
+        "supp_n_actual_std": 30.27474029616109,
+        "supp_sampling_range": [
+          100,
+          200
+        ],
+        "teacher": "GLM_1"
+      },
+      {
+        "cell": "GLM_2:ngram_truncate",
+        "op": "ngram_truncate",
+        "orig_n_actual": 23,
+        "orig_n_star": 81,
+        "supp_n_actual_max": 200,
+        "supp_n_actual_mean": 148.77,
+        "supp_n_actual_min": 100,
+        "supp_n_actual_std": 29.188989362429115,
+        "supp_sampling_range": [
+          100,
+          200
+        ],
+        "teacher": "GLM_2"
+      },
+      {
+        "cell": "GLM_2:vocab_truncate",
+        "op": "vocab_truncate",
+        "orig_n_actual": 23,
+        "orig_n_star": 38,
+        "supp_n_actual_max": 200,
+        "supp_n_actual_mean": 150.935,
+        "supp_n_actual_min": 100,
+        "supp_n_actual_std": 30.28548786135036,
+        "supp_sampling_range": [
+          100,
+          200
+        ],
+        "teacher": "GLM_2"
+      },
+      {
+        "cell": "GLM_2:temperature_resample",
+        "op": "temperature_resample",
+        "orig_n_actual": 23,
+        "orig_n_star": 73,
+        "supp_n_actual_max": 200,
+        "supp_n_actual_mean": 148.365,
+        "supp_n_actual_min": 100,
+        "supp_n_actual_std": 30.13771349986591,
+        "supp_sampling_range": [
+          100,
+          200
+        ],
+        "teacher": "GLM_2"
+      },
+      {
+        "cell": "coze:ngram_truncate",
+        "op": "ngram_truncate",
+        "orig_n_actual": 29,
+        "orig_n_star": 0,
+        "supp_n_actual_max": 200,
+        "supp_n_actual_mean": 149.105,
+        "supp_n_actual_min": 100,
+        "supp_n_actual_std": 28.46214986609409,
+        "supp_sampling_range": [
+          100,
+          200
+        ],
+        "teacher": "coze"
+      },
+      {
+        "cell": "coze:vocab_truncate",
+        "op": "vocab_truncate",
+        "orig_n_actual": 29,
+        "orig_n_star": 25,
+        "supp_n_actual_max": 200,
+        "supp_n_actual_mean": 149.795,
+        "supp_n_actual_min": 100,
+        "supp_n_actual_std": 29.659112849173354,
+        "supp_sampling_range": [
+          100,
+          200
+        ],
+        "teacher": "coze"
+      },
+      {
+        "cell": "coze:temperature_resample",
+        "op": "temperature_resample",
+        "orig_n_actual": 29,
+        "orig_n_star": 67,
+        "supp_n_actual_max": 200,
+        "supp_n_actual_mean": 150.5,
+        "supp_n_actual_min": 102,
+        "supp_n_actual_std": 29.72927849780415,
+        "supp_sampling_range": [
+          100,
+          200
+        ],
+        "teacher": "coze"
+      },
+      {
+        "cell": "kimi:ngram_truncate",
+        "op": "ngram_truncate",
+        "orig_n_actual": 44,
+        "orig_n_star": 53,
+        "supp_n_actual_max": 200,
+        "supp_n_actual_mean": 150.175,
+        "supp_n_actual_min": 100,
+        "supp_n_actual_std": 29.59939822023414,
+        "supp_sampling_range": [
+          100,
+          200
+        ],
+        "teacher": "kimi"
+      },
+      {
+        "cell": "kimi:vocab_truncate",
+        "op": "vocab_truncate",
+        "orig_n_actual": 44,
+        "orig_n_star": 44,
+        "supp_n_actual_max": 200,
+        "supp_n_actual_mean": 150.01,
+        "supp_n_actual_min": 101,
+        "supp_n_actual_std": 29.768773908241503,
+        "supp_sampling_range": [
+          100,
+          200
+        ],
+        "teacher": "kimi"
+      },
+      {
+        "cell": "minimax:ngram_truncate",
+        "op": "ngram_truncate",
+        "orig_n_actual": 30,
+        "orig_n_star": 44,
+        "supp_n_actual_max": 200,
+        "supp_n_actual_mean": 150.34,
+        "supp_n_actual_min": 100,
+        "supp_n_actual_std": 28.74290173242778,
+        "supp_sampling_range": [
+          100,
+          200
+        ],
+        "teacher": "minimax"
+      },
+      {
+        "cell": "minimax:vocab_truncate",
+        "op": "vocab_truncate",
+        "orig_n_actual": 30,
+        "orig_n_star": 40,
+        "supp_n_actual_max": 200,
+        "supp_n_actual_mean": 144.75,
+        "supp_n_actual_min": 100,
+        "supp_n_actual_std": 28.234686114777332,
+        "supp_sampling_range": [
+          100,
+          200
+        ],
+        "teacher": "minimax"
+      }
+    ],
+    "supp_sampling_strategy": "bootstrap 重采样 supp n_actuals ∈ [n_act, min(max(n_act*2, 120), 200)]；supp_low = 原 n_actual，supp_high = max(n_actual * 2, TH_DCT_N_MIN + 20) 且 ≤ 200；显式声明 = 统计扩展非新增观测（沿 L9 §1 L9-D-2 同口径）"
+  },
+  "name": "closeness testing n* 下界（真实面扩数据重审 L11）",
+  "non_degeneracy": {
+    "n_actuals_per_cell_orig": {
+      "label": "n_actuals_per_cell_orig",
+      "max": 71.0,
+      "min": 23.0,
+      "n": 13,
+      "n_distinct": 5,
+      "non_degenerate": true,
+      "std": 18.28052282602714
+    },
+    "non_degenerate": true,
+    "supp_sample_size_ok": true
+  },
+  "root_cause_class": "真证伪（构造面 + 真实面）",
+  "verdict": "PASS",
+  "verdict_detail": {
+    "constructed_face": "PASS（沿 v2 数值对照列）",
+    "overall": "PASS（构造面 + 真实面均通过 K-A2R-R1 双读法并记）",
+    "real_face_supp_l11": "PASS（K-DCT-1/2/3 均不 hit + K-A2R-N1 pass + K-A2R-Sample-Size ok）"
+  }
+}

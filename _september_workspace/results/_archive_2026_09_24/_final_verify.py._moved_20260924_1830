@@ -1,0 +1,58 @@
+# -*- coding: utf-8 -*-
+import hashlib
+import re
+
+# Compare all V4 frozen + v2 + L9 件 between L9 post-snapshot and L11 post-snapshot
+with open(r'D:/私人资料/deposon-repo/results/_v4_supp_l9_a2r_post_hashes_2026_09_24.txt', 'r', encoding='utf-8') as f:
+    l9_post = f.read()
+with open(r'D:/私人资料/deposon-repo/results/_v4_supp_l11_dct100_post_hashes_2026_09_24.txt', 'r', encoding='utf-8') as f:
+    l11_post = f.read()
+
+def parse_hashes(content):
+    hashes = {}
+    for line in content.split('\n'):
+        m = re.search(r'sha12=(\w+)', line)
+        if m:
+            name = line.split('  ')[0].split('/')[-1].split('\\')[-1]
+            hashes[name] = m.group(1)
+    return hashes
+
+l9_h = parse_hashes(l9_post)
+l11_h = parse_hashes(l11_post)
+
+# Check all l9 files vs l11
+print('=== L9 post-snapshot vs L11 post-snapshot SHA-12 对照 ===')
+all_match = True
+files_checked = 0
+for name in sorted(l9_h.keys()):
+    l9_sha = l9_h.get(name, '???')
+    l11_sha = l11_h.get(name, '???')
+    match = l9_sha == l11_sha and l9_sha != '???'
+    if l9_sha != '???' and l11_sha != '???':
+        files_checked += 1
+    if not match and l9_sha != '???':
+        all_match = False
+        print(f'  {name}: L9_post={l9_sha} L11_post={l11_sha} FAIL')
+if all_match:
+    print(f'  所有 {files_checked} 件 SHA-12 一致 (OK)')
+else:
+    print('  发现不一致!')
+
+# Also check L9件 + L9 post/pre/verdict in L11 post
+print('\n=== L9 件 in L11 post-hashes ===')
+for name in sorted(l11_h.keys()):
+    if '_v4_supp_l9_a2r_' in name:
+        print(f'  {name}: {l11_h[name]}')
+
+# Compare with L9 post-hashes for the L9 件 that should match
+l9_l9_pieces = {k: v for k, v in l9_h.items() if '_v4_supp_l9_a2r_' in k}
+l11_l9_pieces = {k: v for k, v in l11_h.items() if '_v4_supp_l9_a2r_' in k}
+print(f'\nL9 件 {len(l9_l9_pieces)} in L9 post vs {len(l11_l9_pieces)} in L11 post')
+print('Match check:')
+for name in sorted(l11_l9_pieces.keys()):
+    l9_sha = l9_l9_pieces.get(name, 'NOT IN L9')
+    l11_sha = l11_l9_pieces.get(name, '???')
+    if l9_sha == 'NOT IN L9':
+        print(f'  {name}: {l11_sha} (L9 post 没记录此件，因 L9 post 时该件可能未生成)')
+    else:
+        print(f'  {name}: L9_post={l9_sha} L11_post={l11_sha} {"OK" if l9_sha == l11_sha else "FAIL"}')
