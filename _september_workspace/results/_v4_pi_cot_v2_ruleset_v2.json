@@ -1,0 +1,341 @@
+{
+ "schema": "v4_pi_cot_v2_ruleset_v2/1",
+ "task": "PI 思维链蒸馏 v2.2 · 判据结构规则集 v2 (v2 词表替代 v1)",
+ "generated_utc": "2026-09-26T18:42:50+08:00",
+ "prereg_ref": {
+  "path": "results/_v4_pi_cot_v2_prereg.md",
+  "sha12": "CC25C5149CE1"
+ },
+ "dataset_ref": {
+  "path": "results/_v4_pi_cot_v2_dataset.json",
+  "sha12": "7B01CD835A41",
+  "schema": "v4_pi_cot_v2_dataset/1.1",
+  "n_v11": 37,
+  "n_addendum_loaded": 35,
+  "n_total_actual": 72,
+  "n_total_theoretical": 80,
+  "n_correction": 16,
+  "addendum_counts": {
+   "D1_supp": 3,
+   "D2_w1": 4,
+   "D2_w2": 4,
+   "D2_w3": 4,
+   "D2_w4": 4,
+   "D2_w5": 4,
+   "D3_w1": 4,
+   "D3_w2": 4,
+   "D3_w3": 4
+  },
+  "addendum_source_files": [
+   "_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+   "_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d2b_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+   "_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json"
+  ],
+  "addendum_sha_actual": {
+   "ADDENDUM_D1": "172093A23E4B",
+   "ADDENDUM_D2": "439721007AAF",
+   "ADDENDUM_D2B": "41D6C28CA87C",
+   "ADDENDUM_D2C": "99C58906F792",
+   "ADDENDUM_D2D": "C6D092F77932",
+   "ADDENDUM_D2E": "26F110A6E571",
+   "ADDENDUM_D3A": "6E104E2DB038",
+   "ADDENDUM_D3B": "D96B747BFC6C",
+   "ADDENDUM_D3C": "401BD614CDF7"
+  },
+  "addendum_sha_drift": {},
+  "missing_d1_rf_fill": 8,
+  "missing_d1_note": "盘外 D1 推理补填 8 件未在本棒视野; 据 protocol-keeper §1.2 字面 d2e honesty_note 「D1=48 事件」反推 8 件未采; 如实声明缺位, 不补造"
+ },
+ "coding_review_ref": {
+  "path": "results/_v4_pi_cot_v2_coding_review_2026_09_26.md",
+  "sha12": "5FBEC21E0AD2",
+  "encoding_version": "v2"
+ },
+ "judgment_type_taxonomy": {
+  "types": [
+   "KILL_LINE",
+   "COST",
+   "CRITERIA",
+   "RISK",
+   "TIMING",
+   "DELEGATE"
+  ],
+  "encoding": "确定性格式扫描 + 首现位置序; v2 关键词表 (沿 coding_review §2.2 字面)",
+  "operationalization_note": "v2.2 §1 '判据类型确定性编码表' 实操定义; v2 关键词表 (扩 105→201 词 + 批判反思 28→35 词) 替代 v1; 首现位置序 → 序列; 0 类则 primary = UNKNOWN",
+  "v2_keyword_count": 263,
+  "v2_critical_marker_count": 36
+ },
+ "seed": 42,
+ "tree_depth_limit": 4,
+ "features": [
+  "judge_type_J1",
+  "judge_type_J2",
+  "judge_type_J3",
+  "judge_type_J4",
+  "judge_type_J6",
+  "scene_bucket_8",
+  "opt_bucket_8",
+  "is_corr_pair",
+  "rf_len_bucket"
+ ],
+ "label_distribution": {
+  "RISK": 12,
+  "COST": 3,
+  "UNKNOWN": 17,
+  "KILL_LINE": 4,
+  "CRITERIA": 19,
+  "TIMING": 11,
+  "DELEGATE": 6
+ },
+ "tree_depth_observed_main": 4,
+ "rules": [
+  {
+   "if": [
+    [
+     "judge_type_J1",
+     "<=",
+     0
+    ],
+    [
+     "rf_len_bucket",
+     "<=",
+     0
+    ],
+    [
+     "opt_bucket_8",
+     "<=",
+     1
+    ]
+   ],
+   "then": "RISK"
+  },
+  {
+   "if": [
+    [
+     "judge_type_J1",
+     "<=",
+     0
+    ],
+    [
+     "rf_len_bucket",
+     "<=",
+     0
+    ],
+    [
+     "opt_bucket_8",
+     ">",
+     1
+    ],
+    [
+     "judge_type_J2",
+     "<=",
+     0
+    ]
+   ],
+   "then": "CRITERIA"
+  },
+  {
+   "if": [
+    [
+     "judge_type_J1",
+     "<=",
+     0
+    ],
+    [
+     "rf_len_bucket",
+     "<=",
+     0
+    ],
+    [
+     "opt_bucket_8",
+     ">",
+     1
+    ],
+    [
+     "judge_type_J2",
+     ">",
+     0
+    ]
+   ],
+   "then": "RISK"
+  },
+  {
+   "if": [
+    [
+     "judge_type_J1",
+     "<=",
+     0
+    ],
+    [
+     "rf_len_bucket",
+     ">",
+     0
+    ],
+    [
+     "is_corr_pair",
+     "<=",
+     0
+    ],
+    [
+     "scene_bucket_8",
+     "<=",
+     3
+    ]
+   ],
+   "then": "CRITERIA"
+  },
+  {
+   "if": [
+    [
+     "judge_type_J1",
+     "<=",
+     0
+    ],
+    [
+     "rf_len_bucket",
+     ">",
+     0
+    ],
+    [
+     "is_corr_pair",
+     "<=",
+     0
+    ],
+    [
+     "scene_bucket_8",
+     ">",
+     3
+    ]
+   ],
+   "then": "UNKNOWN"
+  },
+  {
+   "if": [
+    [
+     "judge_type_J1",
+     "<=",
+     0
+    ],
+    [
+     "rf_len_bucket",
+     ">",
+     0
+    ],
+    [
+     "is_corr_pair",
+     ">",
+     0
+    ],
+    [
+     "scene_bucket_8",
+     "<=",
+     2
+    ]
+   ],
+   "then": "UNKNOWN"
+  },
+  {
+   "if": [
+    [
+     "judge_type_J1",
+     "<=",
+     0
+    ],
+    [
+     "rf_len_bucket",
+     ">",
+     0
+    ],
+    [
+     "is_corr_pair",
+     ">",
+     0
+    ],
+    [
+     "scene_bucket_8",
+     ">",
+     2
+    ]
+   ],
+   "then": "CRITERIA"
+  },
+  {
+   "if": [
+    [
+     "judge_type_J1",
+     ">",
+     0
+    ],
+    [
+     "opt_bucket_8",
+     "<=",
+     5
+    ],
+    [
+     "rf_len_bucket",
+     "<=",
+     0
+    ]
+   ],
+   "then": "COST"
+  },
+  {
+   "if": [
+    [
+     "judge_type_J1",
+     ">",
+     0
+    ],
+    [
+     "opt_bucket_8",
+     "<=",
+     5
+    ],
+    [
+     "rf_len_bucket",
+     ">",
+     0
+    ]
+   ],
+   "then": "UNKNOWN"
+  },
+  {
+   "if": [
+    [
+     "judge_type_J1",
+     ">",
+     0
+    ],
+    [
+     "opt_bucket_8",
+     ">",
+     5
+    ]
+   ],
+   "then": "KILL_LINE"
+  }
+ ],
+ "formal_meta": {
+  "formal_judgment": true,
+  "coding_version": "v2",
+  "th23_caliber": "span_3days_per_PI_ask_822b1e27",
+  "exploratory": false,
+  "coding_review_anchor": {
+   "path": "results/_v4_pi_cot_v2_coding_review_2026_09_26.md",
+   "sha12": "5FBEC21E0AD2"
+  },
+  "pi_caliber_reference": "ask_822b1e27a43f2bf8ff86785d (formal_go=放行, th23_span=跨度 3 天解读达标)",
+  "v1_retired": true,
+  "v1_pieces_preserved": {
+   "ruleset": "_v4_pi_cot_v2_ruleset.json (821465001819) — 字面冻结",
+   "result": "_v4_pi_cot_v2_result.json (1665F367B2C4) — 字面冻结",
+   "verdict": "_v4_pi_cot_v2_verdict.md (EB9AD4193CF2) — 字面冻结"
+  }
+ }
+}
