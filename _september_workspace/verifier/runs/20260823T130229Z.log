@@ -1,0 +1,35 @@
+command: python3 verifier/v7/check.py
+timestamp_utc: 20260823T130229Z
+PASS cn_header_v16 
+PASS en_header_v16 
+PASS cn_table_title_v16 
+PASS en_table_title_v16 
+PASS cn_table_row_| v1.5 | 
+PASS en_table_row_| v1.5 | 
+PASS cn_table_row_| v1.5.1 | 
+PASS en_table_row_| v1.5.1 | 
+PASS cn_table_row_| v1.6 | 
+PASS en_table_row_| v1.6 | 
+PASS cn_future_v17 
+PASS en_future_v17 
+PASS cn_sec47 
+PASS en_sec47 
+PASS cn_table13 
+PASS en_table13 
+PASS cn_47_before_5 
+PASS en_47_before_5 
+PASS cn_outlook_pointer 
+PASS en_outlook_pointer 
+PASS cn_no_long_results_in_53 
+PASS en_no_long_results_in_54 
+PASS cn_d4 
+PASS en_d4 
+PASS stats_json_exists 
+PASS stats_values 
+PASS honesty_any_lambda_false 
+PASS honesty_named_below_random 
+PASS honesty_inverted 
+PASS honesty_manual_transcription 
+FAIL no_key_leak verifier/v7/check.py
+FAILS: 1
+exit_code: 1
