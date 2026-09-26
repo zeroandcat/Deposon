@@ -1,0 +1,1639 @@
+{
+  "schema": "v4_l14v3_n26/1",
+  "batch": 5,
+  "round": 4,
+  "metadata": {
+    "task": "L14V3_batch5_round4_minimax_teacher_side_round4_reask3",
+    "prereg_sha12": "05B975A86989",
+    "prereg_path": "results/_v4_supp_prereg_v02_add_L14V3_2026_09_24.md",
+    "predecessor_sha12": {
+      "b5_r3_executor_sha12": "027EF71C0668",
+      "b5_r3_executor_path": "results/_v4_supp_l14v3_batch5_r3_executor.py",
+      "b5_r3_result_sha12": "8E2ACDACFA1E",
+      "b5_r3_result_path": "results/_v4_supp_l14v3_batch5_r3_result.json",
+      "b5_r2_executor_sha12": "F97E46E3739E",
+      "b5_r2_executor_path": "results/_v4_supp_l14v3_batch5_r2_executor.py",
+      "b5_r2_result_sha12": "B0F76B5C3522",
+      "b5_r2_result_path": "results/_v4_supp_l14v3_batch5_r2_result.json",
+      "b5_r1_executor_sha12": "EF26ADF4669F",
+      "b5_r1_executor_path": "results/_v4_supp_l14v3_batch5_r1_executor.py",
+      "b5_r1_result_sha12": "120D45D1774F",
+      "b5_r1_result_path": "results/_v4_supp_l14v3_batch5_r1_result.json",
+      "b2_r3_executor_sha12": "72FD2BB3838E",
+      "b2_r3_executor_path": "results/_v4_supp_l14v3_batch2_r3_executor.py",
+      "b2_r3_result_sha12": "25251ACA6D79",
+      "b2_r3_result_path": "results/_v4_supp_l14v3_batch2_r3_result.json",
+      "b2_r2_executor_sha12": "E7418F47A130",
+      "b2_r2_executor_path": "results/_v4_supp_l14v3_batch2_r2_executor.py",
+      "b2_r2_result_sha12": "8C125E257AF8",
+      "b2_r2_result_path": "results/_v4_supp_l14v3_batch2_r2_result.json",
+      "batch1_r6_executor_sha12": "5F02C7E0F094",
+      "batch1_r6_executor_path": "results/_v4_supp_l14v3_batch1_r6_executor.py",
+      "batch1_r6_result_sha12": "A4F851154551",
+      "batch1_r6_result_path": "results/_v4_supp_l14v3_batch1_r6_result.json",
+      "b2_r1_executor_sha12": "E52F930654D3",
+      "b2_r1_executor_path": "results/_v4_supp_l14v3_batch2_r1_executor.py",
+      "b2_r1_result_sha12": "D245AE4CE385",
+      "b2_r1_result_path": "results/_v4_supp_l14v3_batch2_r1_result.json",
+      "models_probe_sha12": "3C9DC60B5071",
+      "models_probe_path": "results/_v4_supp_l14v3_batch2_r2_models_probe.json",
+      "mapping_sha12": "98A779D61C1E",
+      "mapping_path": "results/_v4_supp_l14v3_model_mapping_2026_09_24.md"
+    },
+    "date": "2026-09-25",
+    "spec_conformance": "PI 2026-09-25 batch5 minimax 教师侧 round 4 续采 (reask=3); 沿 r3 mimo-v2.6-pro 1-call smoke ok=200 结论；r4 仅 1-call smoke; 22 caption × 1 call = 22 calls (按 caption_id 字母序); 目标 ≥4 successful/caption; endpoint_migrated=true / lineage_discontinuity=true; 新拍板 prompt_repro=accept_repro (ask_249ba8854ee343f7d9aa34de 2026-09-24 23:38) → data_validity_statement = V4 复现口径（非 V3 原文复刻）声明沿用; predecessor 命名沿 b5_* 前缀防冲突",
+    "teacher": "minimax",
+    "side": "teacher",
+    "round_index": 4,
+    "batch_index": 5,
+    "round4_target_per_caption": 4,
+    "round4_reask_idx": 3,
+    "target_successful_per_caption": 5,
+    "n_captions_total": 22,
+    "planned_total": 22,
+    "actual_total": 22,
+    "endpoint_selected": "https://token-plan-cn.xiaomimimo.com/v1",
+    "endpoint_selection_method": "沿 r3 实测 (mimo 端点); r4 沿用 mimo 端点; /v1/models 探活清单沿 r3 models_probe.json (sha12=3C9DC60B5071) 仅作 reference; r4 仅 1-call smoke 防端点飘移",
+    "endpoint_migrated": true,
+    "lineage_discontinuity": true,
+    "v3_origin_endpoint": "火山方舟 (V3 字面 minimax-m3 已下线)",
+    "v4_current_endpoint": "mimo (token-plan-cn.xiaomimimo.com/v1)",
+    "model_id_sent": "mimo-v2.6-pro",
+    "model_id_inconsistency_honest_disclosure": "mapping §1.1 minimax 行第三栏 PI 拍板 = mimo 端点 mimo-v2.6-pro (V3 字面锚 minimax-m3 火山方舟已下线；命名映射依据 = PI 拍板本身，非字面继承；非「minimax-m3 升级版 = mimo-v2.6-pro」字面继承关系)；mapping §0.5 边界声明：本棒口径仅覆盖现行 V4 重跑采样的 model 映射，非 V3 历史模型身份断言；endpoint_migrated=true (V3 火山方舟 → V4 mimo 跨端点跨厂商)；lineage_discontinuity=true (V3 minimax-m3 ≠ V4 mimo-v2.6-pro，端点名不同、模型家族不同；映射依据=本拍板本身)。",
+    "prompt_repro": "accept_repro",
+    "data_validity_statement": "蒸馏/采样数据效力 = V4 复现口径（非 V3 原文复刻）声明沿用",
+    "proxy_settings": {
+      "http": "http://127.0.0.1:1018",
+      "socks5": "socks5://127.0.0.1:1018",
+      "applied_to_mimo": false,
+      "note": "mimo 端点 = 无代理 (沿 L7 + add_T1 §1.6.2)"
+    },
+    "key_discipline": {
+      "source": "C:/Users/Administrator/Desktop/AI/LLM API.txt",
+      "key_index_1based": 27,
+      "method": "runtime memory read",
+      "redacted_in_products": true,
+      "note": "KEY_INDEX_MIMO_1BASED=27 = mimo-plan key (沿 Track 2 endpoints probe C846F7FC79EE)"
+    },
+    "inter_call_sleep_s": 2.5,
+    "temperature": 0.7,
+    "max_tokens": 2000,
+    "tools_fault_param_correction": {
+      "read_timeout_initial_s": 60,
+      "read_timeout_retry_s": 90,
+      "network_error_categories_retry": [
+        "connection_error",
+        "proxy_error",
+        "ssl_error",
+        "timeout"
+      ],
+      "r6_status_沿": "retry 修复沿 batch1 r6 (沿 5F02C7E0F094)",
+      "r3_b5_status": "r3 沿 r2 结论 mimo-v2.6-pro 1-call smoke ok=200",
+      "r4_b5_status": "r4 沿 r3 结论仅做 1-call smoke 防端点飘移；未做 3-candidate probe fallback",
+      "rationale": "沿 r3 mimo-v2.6-pro smoke 结论；r4 节省预算避免重复 probe；smoke 失败立即 abort 不重探"
+    },
+    "inner_retry_max": 3,
+    "wall_time_budget_s": 600,
+    "wall_time_budget_remaining_after_smoke_s": 599.3,
+    "wall_time_actual_caption_s": 147.0,
+    "wall_time_actual_smoke_s": 0.7,
+    "wall_time_actual_total_s": 147.7,
+    "k_n26_n2_cumulative_threshold": 0.5,
+    "diff_vs_r3_executor": [
+      "1. ROUND=4 (升 r4 命名)；BATCH=5 不变",
+      "2. prompt_id 后缀 _b5_r4；t04_teacher (取代 r3 的 t03_teacher round 3 reask=2)",
+      "3. reask_idx=3 (本棒每 caption 第 4 call；取代 r3 的 reask_idx=2)",
+      "4. phase_label: b5_r4_need1 (取代 r3 的 b5_r3_need1)",
+      "5. is_round_4=True (语义: minimax 教师侧 data collection round 4)",
+      "6. is_round_3=False (语义: 已过 round 3)",
+      "7. 新增 is_round_4 字段 (取代 r3 的 is_round_3=True)",
+      "8. smoke_call_only=True (沿 r3 结论；不再做 3-candidate probe)",
+      "9. predecessor_sha12 链: b5_r3_executor 027EF71C0668 + b5_r3_result 8E2ACDACFA1E (新增；r3 链的 b5_r2_executor + b5_r2_result 仍保留)",
+      "10. baseline prior: r3 终态 minimax 66 calls / 0 empty / 66 ok / 0.0000 rate (取代 r3 链的 44/0/44)",
+      "11. 跨批累计 baseline: r3 终态 229 calls / 9 empty / 220 ok / 3.93% (取代 r3 链的 207/9/198/4.35%)",
+      "12. 新增 minimax_teacher_side_round4_progress 块 (round 4 完成度 ≥4 successful/caption)",
+      "13. K-N26-N2 触发阈值 0.50 不变；监控 baseline 更新为 229/9/3.93%",
+      "14. spec_conformance 重写: minimax 教师侧 round 4 续采 (reask=3)",
+      "15. per_caption_successful_calls 字段新增 round4_target=4 / round4_met",
+      "16. 调度注释: round 4 续采 (reask=3) 22 caption × 1 call",
+      "17. predecessor 命名沿 b5_* 前缀防冲突 (沿 r3 修复先例)"
+    ],
+    "iron_rules": {
+      "R1_no_llm": false,
+      "R2_no_proxy": false,
+      "R3_no_gateway": false,
+      "R4_key_never_in_plaintext": true,
+      "R5_v4_frozen_append_only": true,
+      "R6_pg_v0_v01_untouched": true,
+      "R7_plugin_spec_untouched": true,
+      "v1_v3_readonly": true,
+      "mimo_no_proxy_compliance": true,
+      "serial_interval_ge_2_5_s": true,
+      "empty_response_counted_not_dropped": true,
+      "kill_line_locked_K_N26_1_2_3_N1_N2": true,
+      "no_threshold_adjustment": true,
+      "no_existing_file_modified": true,
+      "no_merge_of_derived_json": true,
+      "no_overwrite_prior_results": true,
+      "retry_bug_fix_applied": true,
+      "smoke_only_no_full_probe": true,
+      "endpoint_migrated_disclosed": true,
+      "lineage_discontinuity_disclosed": true,
+      "data_validity_disclosed": true,
+      "prompt_repro_disclosed": true,
+      "is_round_4_disclosed": true
+    },
+    "run_window_cst": "2026-09-25T01:04:23+08:00",
+    "stop_reason": null,
+    "interruption_recovery_note": "r4 沿 r3 mimo-v2.6-pro smoke 结论；不再做 3-candidate probe fallback；1-call smoke 失败立即 abort；r4 与 r3/r2/r1/b2_r3/b2_r2/b2_r1/batch1_r6 派生 JSON 独立 (不合并)"
+  },
+  "models_listing_summary_ref": {
+    "endpoint": "https://api.teamorouter.cn/v1/models",
+    "model_count_total": 44,
+    "model_count_glm_like": 4,
+    "glm_like_ids": [
+      "glm-5.2",
+      "glm-5.3",
+      "glm-5.3-flash",
+      "glm-5.3-flash-free"
+    ],
+    "fetched_at_cst": "2026-09-24T22:40:12+08:00",
+    "note": "r4 不重探 /v1/models；仅引用 r3 探活清单 (sha12=3C9DC60B5071) 作 reference；minimax 不在 teamo 清单；本棒走 mimo 端点 (沿 mapping 拍板)"
+  },
+  "smoke_phase": {
+    "selected_model_id": "mimo-v2.6-pro",
+    "smoke_record": {
+      "candidate_model_id": "mimo-v2.6-pro",
+      "ok": true,
+      "status_code": 200,
+      "latency_ms": 707.3,
+      "model_returned": "mimo-v2.6-pro",
+      "error_category": null,
+      "error_snippet": "",
+      "content_preview": "ok",
+      "content_empty_reasoning_only": false,
+      "phase_label": "smoke_mimo_model_id",
+      "wall_time_s": 0.7
+    },
+    "smoke_wall_time_s": 0.7
+  },
+  "quadruples": [
+    {
+      "prompt_id": "minimax_t04_teacher_L_algorithm_process_b5_r4",
+      "prompt_text": "Caption ID: L_algorithm_process\nCaption (sequence of concept labels in the graph):\n问题输入; 数据预处理; 特征工程; 样本划分; 算法选择; 模型初始化; 参数配置; 损失函数; 优化器; 前向传播; 反向传播; 梯度计算; 参数更新; 收敛判断; 早停机制; 验证评估; 交叉验证; 超参调优; 特征重要性; 模型集成; 决策输出; 后处理规则; 置信度估计; 结果解释; 可视化展示; 部署上线; 在线推理; 日志监控; 反馈回流; 数据再采集; 模型重训练; 性能衰减检测; 版本回退; 终止状态; 流程审计; 异常处理; 资源释放; 输出报告\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "归档存储, 复盘总结, 知识库沉淀, 自动化流水线, 合规审查",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 3830.7,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "021b4100-3158-4a7a-8787-2788946440df_881f541dfe6e4261be2d8b3b4addc759",
+        "usage": {
+          "completion_tokens": 125,
+          "prompt_tokens": 311,
+          "total_tokens": 436,
+          "completion_tokens_details": {
+            "reasoning_tokens": 98
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "L_algorithm_process",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_L_biological_taxonomy_b5_r4",
+      "prompt_text": "Caption ID: L_biological_taxonomy\nCaption (sequence of concept labels in the graph):\n生物; 真核生物; 原核生物; 动物界; 植物界; 真菌界; 细菌域; 古菌域; 脊索动物门; 节肢动物门; 软体动物门; 哺乳纲; 鸟纲; 鱼纲; 食肉目; 灵长目; 偶蹄目; 猫科; 犬科; 豹属; 猫属; 虎; 狮; 家猫; 人科; 猴科; 人属; 黑猩猩属; 智人; 被子植物门; 裸子植物门; 单子叶植物纲; 双子叶植物纲; 禾本目; 百合目; 禾本科; 竹亚科; 蔷薇目; 菊目; 蔷薇科; 苹果属; 苹果\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "桃属, 梨属, 菊科, 稻属, 小麦属",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 7077.0,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "6b636242-d801-4745-8ae3-3a6e1de8b781_bfb8c19eb11e4e299c162439c440b02a",
+        "usage": {
+          "completion_tokens": 104,
+          "prompt_tokens": 348,
+          "total_tokens": 452,
+          "completion_tokens_details": {
+            "reasoning_tokens": 80
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "L_biological_taxonomy",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_L_geography_world_b5_r4",
+      "prompt_text": "Caption ID: L_geography_world\nCaption (sequence of concept labels in the graph):\n世界; 亚洲; 欧洲; 非洲; 北美洲; 南美洲; 大洋洲; 南极洲; 中国; 日本; 印度; 法国; 德国; 英国; 埃及; 南非; 美国; 加拿大; 巴西; 阿根廷; 澳大利亚; 新西兰; 南极大陆; 长城站; 北京; 东京; 新德里; 巴黎; 柏林; 伦敦; 开罗; 约翰内斯堡; 纽约; 多伦多; 里约热内卢; 布宜诺斯艾利斯; 悉尼; 奥克兰; 故宫; 埃菲尔铁塔; 自由女神像; 大堡礁; 富士山; 泰姬陵; 金字塔\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "尼罗河, 亚马逊河, 喜马拉雅山脉, 撒哈拉沙漠, 罗马斗兽场",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 9421.4,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "1d655d6f-7cdc-473b-963d-b816e5aed78d_e473188ff79e4752a7a98f1e0dcf1f0a",
+        "usage": {
+          "completion_tokens": 175,
+          "prompt_tokens": 330,
+          "total_tokens": 505,
+          "completion_tokens_details": {
+            "reasoning_tokens": 144
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "L_geography_world",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_L_historical_causality_b5_r4",
+      "prompt_text": "Caption ID: L_historical_causality\nCaption (sequence of concept labels in the graph):\n资本主义扩张; 帝国主义竞争; 工业革命深化; 民族主义高涨; 军事同盟形成; 殖民地争夺激化; 军备竞赛升级; 巴尔干危机; 萨拉热窝事件; 奥匈帝国最后通牒; 七月危机; 俄国总动员; 德国战争计划; 德国宣战; 英国参战; 一战全面爆发; 阵地战消耗; 凡尔登战役; 索姆河战役; 美国参战; 俄国退出一战; 德国失败; 凡尔赛条约; 国际联盟成立; 奥斯曼帝国瓦解; 奥匈帝国解体; 民族国家涌现; 经济危机隐患; 法西斯主义兴起; 二战根源; 女性地位提升; 工人运动发展; 社会主义革命; 十月革命; 殖民体系松动; 全球秩序重塑\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "大萧条爆发, 法西斯轴心国形成, 军国主义扩张, 绥靖政策破产, 二战全面爆发",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 3445.4,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "d9b1f4b8-3756-46b2-8664-8d38ddf92451_9f84a36b14004ad59c9b363153fac91d",
+        "usage": {
+          "completion_tokens": 79,
+          "prompt_tokens": 351,
+          "total_tokens": 430,
+          "completion_tokens_details": {
+            "reasoning_tokens": 47
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "L_historical_causality",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_L_physics_concepts_b5_r4",
+      "prompt_text": "Caption ID: L_physics_concepts\nCaption (sequence of concept labels in the graph):\n物理学; 经典力学; 电磁学; 热力学; 量子力学; 相对论; 粒子物理; 运动学; 动力学; 牛顿定律; 万有引力定律; 麦克斯韦方程组; 电场; 磁场; 电磁波; 温度; 熵; 热力学第二定律; 波函数; 薛定谔方程; 海森堡不确定性原理; 狭义相对论; 广义相对论; 质能方程; 时空弯曲; 标准模型; 基本粒子; 夸克; 轻子; 光子; 强相互作用; 弱相互作用; 电磁相互作用; 希格斯玻色子; 引力\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子场论, 规范对称性, 大统一理论, 暗物质, 弦理论",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 2949.4,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "1e33d331-70a8-446f-a548-cfd8a18ec9c7_09aeb7d0f926402c8d3b480656e6264b",
+        "usage": {
+          "completion_tokens": 55,
+          "prompt_tokens": 303,
+          "total_tokens": 358,
+          "completion_tokens_details": {
+            "reasoning_tokens": 29
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "L_physics_concepts",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_L_project_management_b5_r4",
+      "prompt_text": "Caption ID: L_project_management\nCaption (sequence of concept labels in the graph):\n项目立项; 需求收集; 需求分析; 需求确认; 项目范围; WBS分解; 范围确认; 项目计划; 进度计划; 成本预算; 资源计划; 风险识别; 风险应对计划; 质量计划; 沟通计划; 采购计划; 干系人管理; 任务执行; 团队管理; 质量保证; 风险监控; 质量控制; 进度监控; 成本控制; 变更控制; 沟通汇报; 采购实施; 产品交付; 验收确认; 文档归档; 项目复盘; 经验总结; 项目关闭\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "PMO建设, 项目组合管理, 敏捷转型, 组织过程资产沉淀, 项目度量指标体系, 项目经理能力模型",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 2723.6,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "ddd4a469-4209-421d-b02f-40264426c871_e1ee539f6cfd40ad99dc0fc075cb22b2",
+        "usage": {
+          "completion_tokens": 69,
+          "prompt_tokens": 287,
+          "total_tokens": 356,
+          "completion_tokens_details": {
+            "reasoning_tokens": 35
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "L_project_management",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S1_b5_r4",
+      "prompt_text": "Caption ID: S1\nCaption (sequence of concept labels in the graph):\n玻尔模型; 波函数; 酵母菌; 蝗虫; 电磁波; 偏振; 蝙蝠; 青蛙; 偶蹄目; 豆科; 折射; 鹰; 电磁学; 声学; 熊科; 不确定性原理; 电场; 脊索动物门; 热容量; 光学\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子力学, 波粒二象性, 哺乳纲, 折射率, 光合作用",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 2069.4,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "19175946-c2c7-4534-9698-70d08cf40b4d_76b01a8d505240969e077cbb3b24ba28",
+        "usage": {
+          "completion_tokens": 144,
+          "prompt_tokens": 214,
+          "total_tokens": 358,
+          "completion_tokens_details": {
+            "reasoning_tokens": 117
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S1",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S1_n35_b5_r4",
+      "prompt_text": "Caption ID: S1_n35\nCaption (sequence of concept labels in the graph):\n蜘蛛; 虎; 不确定性原理; 折射; 灵长目; 电磁学; 牛顿运动定律; 豆科; 狗; 角动量; 蛛形纲; 麦克斯韦方程组; 青蛙; 脊索动物门; 犬科; 鸟纲; 时空弯曲; 电磁波; 波函数; 熊科; 鲤鱼; 动量守恒; 偶蹄目; 电流; 麻雀; 动物界; 衍射; 量子力学; 生物; 硬骨鱼纲; 狭义相对论; 软体动物门; 两栖纲; 引力波; 真菌界\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "哺乳纲, 节肢动物门, 广义相对论, 昆虫纲, 光合作用",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 6995.5,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "10488de9-aa2e-4b24-9533-d744408303c7_54758af273514973b0add761d997546d",
+        "usage": {
+          "completion_tokens": 275,
+          "prompt_tokens": 298,
+          "total_tokens": 573,
+          "completion_tokens_details": {
+            "reasoning_tokens": 248
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S1_n35",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S1_n45_b5_r4",
+      "prompt_text": "Caption ID: S1_n45\nCaption (sequence of concept labels in the graph):\n节肢动物门; 偏振; 折射; 真菌界; 牛顿运动定律; 麦克斯韦方程组; 哺乳纲; 物理学; 酵母菌; 偶蹄目; 鲤鱼; 大豆; 声学; 单子叶植物纲; 能量守恒; 原生生物界; 衍射; 虎; 电压; 青蛙; 猫; 环节动物门; 雀形目; 蝗虫; 爬行纲; 脊索动物门; 禾本科; 熊科; 不确定性原理; 原子核; 两栖纲; 植物界; 量子力学; 水稻; 电磁波; 猫科; 电磁学; 热力学; 波函数; 质子; 熵; 蔷薇科; 普朗克常数; 干涉; 豆科\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "双子叶植物纲, 光合作用, 狭义相对论, 脱氧核糖核酸, 光学",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 3527.7,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "3a04261c-a550-490c-a542-712de49bbd56_4dafd5a8d275474eb450497cd1311153",
+        "usage": {
+          "completion_tokens": 123,
+          "prompt_tokens": 358,
+          "total_tokens": 481,
+          "completion_tokens_details": {
+            "reasoning_tokens": 92
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S1_n45",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S1_n60_b5_r4",
+      "prompt_text": "Caption ID: S1_n60\nCaption (sequence of concept labels in the graph):\n青蛙; 物理学; 单子叶植物纲; 热容量; 电压; 雀形目; 玻尔模型; 熊科; 鲤鱼; 电磁学; 蔷薇科; 不确定性原理; 相对论; 熵; 蘑菇; 广义相对论; 能量守恒; 薛定谔方程; 温度; 动量守恒; 蝗虫; 酵母菌; 狼; 电磁波; 引力波; 声学; 统计物理; 犬科; 真菌界; 双子叶植物纲; 爬行纲; 禾本科; 经典力学; 脊索动物门; 折射; 黑洞; 生物; 偶蹄目; 中子; 两栖纲; 玫瑰; 鸟纲; 虎; 大豆; 哺乳纲; 波函数; 时空弯曲; 质子; 磁场; 水稻; 蛇; 麻雀; 量子力学; 衍射; 原生生物界; 量子纠缠; 食肉目; 动物界; 偏振; 硬骨鱼纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "植物界, 光合作用, 中微子, 强相互作用, 孢子",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 3940.8,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "aa22941a-eaa3-4509-a2be-eafc6a393c2b_ef3162ca44e24ed8bf7bef84a8a38aec",
+        "usage": {
+          "completion_tokens": 104,
+          "prompt_tokens": 421,
+          "total_tokens": 525,
+          "completion_tokens_details": {
+            "reasoning_tokens": 82
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S1_n60",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S2_b5_r4",
+      "prompt_text": "Caption ID: S2\nCaption (sequence of concept labels in the graph):\n牛顿运动定律; 量子力学; 质子; 偶蹄目; 单子叶植物纲; 热容量; 环节动物门; 相对论; 水稻; 青蛙; 光子; 声学; 蛛形纲; 动量守恒; 麻雀; 电阻; 狼; 禾本科; 原生生物界; 鲸; 引力波; 鸟纲; 原子核; 时空弯曲; 鲤鱼; 衍射; 干涉; 万有引力; 统计物理; 两栖纲; 哺乳纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "电磁波, 能量守恒, 波粒二象性, 爬行纲, 硬骨鱼纲",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 4645.8,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "c387a6ae-97d5-4379-b497-e782faa4c538_e6e4fa046dd24f47a97adbb2114b9119",
+        "usage": {
+          "completion_tokens": 166,
+          "prompt_tokens": 275,
+          "total_tokens": 441,
+          "completion_tokens_details": {
+            "reasoning_tokens": 136
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S2",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S2_n20_b5_r4",
+      "prompt_text": "Caption ID: S2_n20\nCaption (sequence of concept labels in the graph):\n蔷薇科; 物理学; 禾本科; 能量守恒; 动量守恒; 两栖纲; 虎; 真菌界; 量子力学; 原生生物界; 万有引力; 生物; 偏振; 蝙蝠; 节肢动物门; 经典力学; 电流; 热力学; 蜘蛛; 普朗克常数\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "麦克斯韦方程组, 熵, 哺乳纲, 狭义相对论, 昆虫纲",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 3375.2,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "97c81933-9c6a-4825-89e9-f85b2a43402a_921cf1d369014cd480de973f570f2995",
+        "usage": {
+          "completion_tokens": 108,
+          "prompt_tokens": 224,
+          "total_tokens": 332,
+          "completion_tokens_details": {
+            "reasoning_tokens": 79
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S2_n20",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S2_n35_b5_r4",
+      "prompt_text": "Caption ID: S2_n35\nCaption (sequence of concept labels in the graph):\n棘皮动物门; 量子纠缠; 青蛙; 环节动物门; 大豆; 万有引力; 角动量; 黑洞; 统计物理; 能量守恒; 动量守恒; 虎; 热容量; 真菌界; 猫科; 狗; 衍射; 蘑菇; 电压; 动物界; 经典力学; 温度; 麻雀; 电磁波; 薛定谔方程; 偏振; 鲤鱼; 声学; 蛛形纲; 不确定性原理; 鹰; 蝙蝠; 玫瑰; 质子; 昆虫纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "鸟纲, 哺乳纲, 电子, 波粒二象性, 被子植物门",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 9168.1,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "74011534-accf-4741-a9d2-b060d6b12300_503b7dbaa6784d1fb360fa46678de63b",
+        "usage": {
+          "completion_tokens": 108,
+          "prompt_tokens": 294,
+          "total_tokens": 402,
+          "completion_tokens_details": {
+            "reasoning_tokens": 81
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S2_n35",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S2_n45_b5_r4",
+      "prompt_text": "Caption ID: S2_n45\nCaption (sequence of concept labels in the graph):\n真菌界; 青蛙; 广义相对论; 动量守恒; 能量守恒; 哺乳纲; 统计物理; 光子; 原子核; 猫科; 熊科; 单子叶植物纲; 节肢动物门; 磁场; 蘑菇; 犬科; 昆虫纲; 麻雀; 蔷薇科; 食肉目; 衍射; 万有引力; 狭义相对论; 蝗虫; 热容量; 生物; 软体动物门; 原生生物界; 热力学; 电磁学; 电流; 温度; 大豆; 引力波; 量子力学; 角动量; 反射; 偏振; 折射; 双子叶植物纲; 薛定谔方程; 相对论; 不确定性原理; 电子; 量子纠缠\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子场论, 波粒二象性, 爬行纲, 苔藓植物门, 电动力学",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 1711.4,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "4853625b-72f5-4570-a668-4e131a41d1c0_3155d98de6a84a7bbd7dcdcf21f855c1",
+        "usage": {
+          "completion_tokens": 105,
+          "prompt_tokens": 352,
+          "total_tokens": 457,
+          "completion_tokens_details": {
+            "reasoning_tokens": 76
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S2_n45",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S2_n60_b5_r4",
+      "prompt_text": "Caption ID: S2_n60\nCaption (sequence of concept labels in the graph):\n光学; 玻尔模型; 热容量; 生物; 蛇; 折射; 大豆; 动物界; 电流; 量子力学; 电磁学; 时空弯曲; 引力波; 相对论; 电阻; 软体动物门; 食肉目; 爬行纲; 熊科; 薛定谔方程; 鲤鱼; 波函数; 衍射; 单子叶植物纲; 物理学; 真菌界; 节肢动物门; 猫; 广义相对论; 黑洞; 蔷薇科; 水稻; 蝗虫; 能量守恒; 雀形目; 蝙蝠; 双子叶植物纲; 青蛙; 统计物理; 猫科; 光子; 鸟纲; 电压; 牛顿运动定律; 禾本科; 鹰; 角动量; 质子; 热力学; 硬骨鱼纲; 犬科; 原子核; 蘑菇; 电场; 昆虫纲; 原生生物界; 万有引力; 狭义相对论; 植物界; 哺乳纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "磁场, 光合作用, 神经系统, 粒子物理, 进化论",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 6781.7,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "8461fed1-8912-4de1-b802-5cff36b6dce5_f1dba721452e4a1cac967d1209d4dd76",
+        "usage": {
+          "completion_tokens": 146,
+          "prompt_tokens": 426,
+          "total_tokens": 572,
+          "completion_tokens_details": {
+            "reasoning_tokens": 121
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S2_n60",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S3_b5_r4",
+      "prompt_text": "Caption ID: S3\nCaption (sequence of concept labels in the graph):\n原生生物界; 蘑菇; 薛定谔方程; 熵; 物理学; 鸟纲; 猫科; 蛇; 玻尔模型; 熊科; 犬科; 棘皮动物门; 鹰; 爬行纲; 电磁波; 广义相对论; 电流; 偏振; 光子; 禾本科; 不确定性原理; 时空弯曲; 植物界; 雀形目; 波函数; 双子叶植物纲; 干涉; 青蛙; 万有引力; 磁场\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "波粒二象性, 衍射, 哺乳纲, 热力学第二定律, 光合作用",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 3663.1,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "675c7b3c-31fe-427e-8239-2f947f10e6c6_6cbfaee8a3bf4f38a24351e56fd3ccb6",
+        "usage": {
+          "completion_tokens": 125,
+          "prompt_tokens": 269,
+          "total_tokens": 394,
+          "completion_tokens_details": {
+            "reasoning_tokens": 96
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S3",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S4_b5_r4",
+      "prompt_text": "Caption ID: S4\nCaption (sequence of concept labels in the graph):\n热力学; 狼; 青蛙; 酵母菌; 鸟纲; 量子纠缠; 相对论; 光学; 鹰; 磁场; 虎; 棘皮动物门; 水稻; 折射; 蝗虫; 薛定谔方程; 原生生物界; 熵; 麦克斯韦方程组; 电压; 蝙蝠; 统计物理; 黑洞; 蔷薇科; 双子叶植物纲; 蛇; 麻雀; 熊科; 中子; 电磁波; 经典力学; 偏振; 真菌界; 植物界; 能量守恒; 声学; 温度; 猫科; 反射; 蜘蛛\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "波粒二象性, 光合作用, 爬行纲, 核力, 昆虫纲",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 3310.0,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "07e8726f-448b-4234-b875-33613ff72c7d_2de338522bbb47d0a35a91955701c177",
+        "usage": {
+          "completion_tokens": 69,
+          "prompt_tokens": 317,
+          "total_tokens": 386,
+          "completion_tokens_details": {
+            "reasoning_tokens": 42
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S4",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S5_b5_r4",
+      "prompt_text": "Caption ID: S5\nCaption (sequence of concept labels in the graph):\n生物; 植物界; 棘皮动物门; 青蛙; 玻尔模型; 玫瑰; 光学; 爬行纲; 动物界; 真菌界; 水稻; 统计物理; 相对论; 光子; 蛛形纲; 角动量; 不确定性原理; 蔷薇科; 脊索动物门; 声学; 质子; 猫科; 蝙蝠; 引力波; 硬骨鱼纲; 鸟纲; 鹰; 电磁波; 经典力学; 熵; 虎; 电子; 黑洞; 电压; 电流; 狗; 热力学; 禾本科; 熊科; 原子核; 热容量; 鲤鱼; 电场; 偏振; 蛇\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子力学, 磁场, 两栖纲, 光合作用, 犬科",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 4404.1,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "04a7d4e0-776a-46ef-bf05-f18026f4d447_b9f4a24f08984349b0d0b213bbdb4fe8",
+        "usage": {
+          "completion_tokens": 93,
+          "prompt_tokens": 336,
+          "total_tokens": 429,
+          "completion_tokens_details": {
+            "reasoning_tokens": 69
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S5",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S6_b5_r4",
+      "prompt_text": "Caption ID: S6\nCaption (sequence of concept labels in the graph):\n磁场; 虎; 节肢动物门; 真菌界; 蛇; 禾本科; 衍射; 原子核; 原生生物界; 两栖纲; 电压; 蜘蛛; 统计物理; 硬骨鱼纲; 不确定性原理; 动物界; 鸟纲; 猫科; 生物; 蝗虫; 蛛形纲; 量子力学; 豆科; 犬科; 牛顿运动定律; 电场; 脊索动物门; 雀形目; 鲤鱼; 狗; 鹰; 玫瑰; 引力波; 动量守恒; 昆虫纲; 软体动物门; 广义相对论; 棘皮动物门; 普朗克常数; 蔷薇科; 热力学; 狼; 大豆; 中子; 环节动物门\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "电磁感应, 薛定谔方程, 哺乳纲, 爬行纲, 被子植物门",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 4746.2,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "f62342e0-5912-4f35-aa59-dd3f349d5389_d8301f4d07464cceaac10e692434819e",
+        "usage": {
+          "completion_tokens": 169,
+          "prompt_tokens": 350,
+          "total_tokens": 519,
+          "completion_tokens_details": {
+            "reasoning_tokens": 138
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S6",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S6_n20_b5_r4",
+      "prompt_text": "Caption ID: S6_n20\nCaption (sequence of concept labels in the graph):\n硬骨鱼纲; 环节动物门; 生物; 植物界; 黑洞; 软体动物门; 真菌界; 干涉; 玫瑰; 偏振; 中子; 引力波; 折射; 反射; 电压; 偶蹄目; 猫; 动量守恒; 蔷薇科; 双子叶植物纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "角动量守恒, 折射率, 光的色散, 菊科, 辐射",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 1491.8,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "d5751c18-a62b-4d85-8033-9b54e6351868_57f9780761e1488e91140e1d8d098025",
+        "usage": {
+          "completion_tokens": 69,
+          "prompt_tokens": 221,
+          "total_tokens": 290,
+          "completion_tokens_details": {
+            "reasoning_tokens": 42
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S6_n20",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S6_n35_b5_r4",
+      "prompt_text": "Caption ID: S6_n35\nCaption (sequence of concept labels in the graph):\n猫; 禾本科; 昆虫纲; 爬行纲; 单子叶植物纲; 玻尔模型; 硬骨鱼纲; 酵母菌; 电压; 食肉目; 温度; 水稻; 麻雀; 动物界; 环节动物门; 热力学; 蝙蝠; 牛顿运动定律; 蜘蛛; 虎; 不确定性原理; 引力波; 经典力学; 电场; 鲤鱼; 鲸; 广义相对论; 哺乳纲; 熊科; 植物界; 电阻; 鹰; 软体动物门; 质子; 狗\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "鸟纲, 中子, 电子, 量子力学, 犬科",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 3332.3,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "cc9fbd70-bc38-4f99-a3ef-6d94926ec2c9_39dc98b63c2346f5ba436cc2c48fe5da",
+        "usage": {
+          "completion_tokens": 127,
+          "prompt_tokens": 299,
+          "total_tokens": 426,
+          "completion_tokens_details": {
+            "reasoning_tokens": 108
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S6_n35",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    },
+    {
+      "prompt_id": "minimax_t04_teacher_S6_n60_b5_r4",
+      "prompt_text": "Caption ID: S6_n60\nCaption (sequence of concept labels in the graph):\n猫; 薛定谔方程; 波函数; 动物界; 灵长目; 衍射; 光学; 哺乳纲; 植物界; 统计物理; 青蛙; 虎; 能量守恒; 狭义相对论; 动量守恒; 蝗虫; 原生生物界; 热容量; 偶蹄目; 电磁波; 软体动物门; 鹰; 脊索动物门; 犬科; 棘皮动物门; 蘑菇; 电场; 雀形目; 量子力学; 蔷薇科; 广义相对论; 单子叶植物纲; 狼; 经典力学; 量子纠缠; 温度; 硬骨鱼纲; 蛇; 麦克斯韦方程组; 时空弯曲; 猫科; 生物; 玻尔模型; 食肉目; 豆科; 电压; 麻雀; 热力学; 昆虫纲; 鲤鱼; 真菌界; 电流; 中子; 节肢动物门; 玫瑰; 普朗克常数; 原子核; 环节动物门; 电阻; 狗\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "电子, 熵, 进化论, 光合作用, 染色体",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 1800.2,
+        "model_returned": "mimo-v2.6-pro",
+        "id": "f7d602dd-f388-40df-b6a5-46d7bd8b5390_cfa3d7bde1c548498deb664846752d41",
+        "usage": {
+          "completion_tokens": 100,
+          "prompt_tokens": 435,
+          "total_tokens": 535,
+          "completion_tokens_details": {
+            "reasoning_tokens": 78
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://token-plan-cn.xiaomimimo.com/v1/chat/completions",
+        "model_id_sent": "mimo-v2.6-pro",
+        "side": "teacher",
+        "caption_id": "S6_n60",
+        "reask_idx": 3,
+        "round_index": 4,
+        "is_round_3": false,
+        "is_round_4": true,
+        "phase_label": "b5_r4_need1",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "endpoint_migrated": true,
+        "lineage_discontinuity": true,
+        "proxy_used": false,
+        "teacher_v3_anchor": "minimax-m3 (火山方舟已下线)"
+      }
+    }
+  ],
+  "retry_validation": {
+    "r4_retry_count_distribution": {
+      "0": 22
+    },
+    "r4_retry_triggered_count": 0,
+    "r4_retry_trigger_categories_tracker": [],
+    "r4_retry_trigger_categories_distribution": {},
+    "r4_retry_bug_fix_applied_in_all_calls": true,
+    "r4_empty_rate_with_fix": 0.0
+  },
+  "per_caption_successful_calls": {
+    "L_algorithm_process": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "L_biological_taxonomy": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "L_geography_world": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "L_historical_causality": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "L_physics_concepts": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "L_project_management": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S1": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S1_n35": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S1_n45": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S1_n60": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S2": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S2_n20": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S2_n35": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S2_n45": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S2_n60": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S3": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S4": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S5": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S6": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S6_n20": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S6_n35": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    },
+    "S6_n60": {
+      "succ_count": 4,
+      "round4_target": 4,
+      "round4_met": true,
+      "succ_count_cumulative_to_target": 4,
+      "target": 5,
+      "need_more_to_target": 1,
+      "met_target": false,
+      "total_calls_so_far": 4,
+      "empty_count_so_far": 0
+    }
+  },
+  "minimax_teacher_side_round4_progress": {
+    "round4_target": ">=4 successful call/caption (round 4 reask=3)",
+    "met_count_post_r4_round4": 22,
+    "total_captions": 22,
+    "remaining_count_round4": 0,
+    "met_percentage_round4": 100.0,
+    "still_pending_captions_round4": [],
+    "met_count_cumulative_to_target": 0,
+    "still_pending_captions_to_target": [
+      "L_algorithm_process",
+      "L_biological_taxonomy",
+      "L_geography_world",
+      "L_historical_causality",
+      "L_physics_concepts",
+      "L_project_management",
+      "S1",
+      "S1_n35",
+      "S1_n45",
+      "S1_n60",
+      "S2",
+      "S2_n20",
+      "S2_n35",
+      "S2_n45",
+      "S2_n60",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S6_n20",
+      "S6_n35",
+      "S6_n60"
+    ]
+  },
+  "dispatch_target_progress": {
+    "target_round4": ">=4 successful calls/caption (round 4 reask=3)",
+    "target_cumulative": ">=5 successful calls/caption (跨轮累计)",
+    "met_count_post_r4_round4": 22,
+    "met_count_post_r4_cumulative_to_target": 0,
+    "total_captions": 22,
+    "remaining_count_round4": 0,
+    "remaining_count_cumulative_to_target": 22,
+    "met_percentage_round4": 100.0,
+    "met_percentage_cumulative_to_target": 0.0,
+    "still_pending_captions_round4": [],
+    "still_pending_captions_cumulative_to_target": [
+      "L_algorithm_process",
+      "L_biological_taxonomy",
+      "L_geography_world",
+      "L_historical_causality",
+      "L_physics_concepts",
+      "L_project_management",
+      "S1",
+      "S1_n35",
+      "S1_n45",
+      "S1_n60",
+      "S2",
+      "S2_n20",
+      "S2_n35",
+      "S2_n45",
+      "S2_n60",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S6_n20",
+      "S6_n35",
+      "S6_n60"
+    ]
+  },
+  "aggregate": {
+    "r4_total_calls": 22,
+    "r4_ok_count": 22,
+    "r4_empty_response_count": 0,
+    "r4_fail_count": 0,
+    "r4_empty_response_rate": 0.0,
+    "r4_total_prompt_tokens": 7019,
+    "r4_total_completion_tokens": 2638,
+    "r4_total_tokens": 9657,
+    "proxy_used": false,
+    "smoke_total_calls": 1,
+    "smoke_attempted_model_id": "mimo-v2.6-pro",
+    "minimax_cumulative": {
+      "prior_total": 66,
+      "prior_empty": 0,
+      "prior_ok": 66,
+      "prior_rate": 0.0,
+      "post_total": 88,
+      "post_empty": 0,
+      "post_ok": 88,
+      "post_rate": 0.0,
+      "delta_total": 22,
+      "delta_empty": 0,
+      "delta_ok": 22,
+      "k_n26_n2_threshold": 0.5,
+      "k_n26_n2_triggered_this_batch": false
+    },
+    "cross_batch_with_r3_baseline": {
+      "r3_baseline_total": 229,
+      "r3_baseline_empty": 9,
+      "r3_baseline_ok": 220,
+      "r3_baseline_rate": 0.0393,
+      "batch5_minimax_post_total": 88,
+      "batch5_minimax_post_empty": 0,
+      "batch5_minimax_post_ok": 88,
+      "cross_total": 251,
+      "cross_empty": 9,
+      "cross_ok": 242,
+      "cross_rate": 0.0359,
+      "cross_k_n26_n2_threshold": 0.5,
+      "cross_k_n26_n2_triggered": false,
+      "note": "K-N26-N2 字面 per 教师; 本字段仅作 cross-batch sanity check; minimax 教师侧 K-N26-N2 判定 = minimax_cumulative.post_rate"
+    },
+    "r4_empty_response_rate_threshold_K_N26_N2_single_batch": 0.5,
+    "r4_empty_response_above_threshold_single_batch": false
+  },
+  "empty_rate_trend": {
+    "batch1_round6_cumulative": {
+      "calls": 120,
+      "empty": 9,
+      "ok": 111,
+      "rate": 0.075
+    },
+    "batch2_round1_probe_fail": {
+      "calls": 0,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "b2_r1 探活 6 候选 400 全 fail; 0 caption call"
+    },
+    "batch2_round2_round1_retry_GLM_1": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "b2_r2 GLM_1 round 1 retry 22 caption × 1 call; all OK"
+    },
+    "batch2_round3_round2_reask1_GLM_1": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "b2_r3 GLM_1 round 2 reask=1 22 caption × 1 call; all OK"
+    },
+    "batch5_round1_round1_reask0_minimax": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "b5_r1 minimax round 1 reask=0 22 caption × 1 call; all OK"
+    },
+    "batch5_round2_round2_reask1_minimax": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "b5_r2 minimax round 2 reask=1 22 caption × 1 call; all OK"
+    },
+    "batch5_round3_round3_reask2_minimax": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "b5_r3 minimax round 3 reask=2 22 caption × 1 call; all OK"
+    },
+    "batch5_round4_round4_reask3_minimax": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0
+    },
+    "batch5_round4_cumulative_minimax": {
+      "calls": 88,
+      "empty": 0,
+      "ok": 88,
+      "rate": 0.0,
+      "k_n26_n2_threshold": 0.5,
+      "k_n26_n2_triggered": false
+    },
+    "cross_batch_cumulative_post_r4": {
+      "calls": 251,
+      "empty": 9,
+      "ok": 242,
+      "rate": 0.0359,
+      "note": "r3 baseline 229/9/3.93% + r4 minimax 增量"
+    }
+  },
+  "K_N26_observability_only": {
+    "K_N26_1_computed": false,
+    "K_N26_2_computed": false,
+    "K_N26_3_computed": false,
+    "K_N26_N1_observation": {
+      "round4_reask3_n_distinct_sample_note": "round 4 reask=3 第 4 call 实测；本棒后 minimax 教师侧 round 4 = 22/22 caption met round 4 目标; 需后续 round 接力达 ≥5 successful/caption"
+    },
+    "K_N26_N2_observation": {
+      "mimo_no_proxy_used_for_all_calls": true,
+      "single_batch_empty_response_rate": 0.0,
+      "cumulative_empty_response_rate_minimax_only": 0.0,
+      "cumulative_threshold": 0.5,
+      "single_batch_trigger_K_N26_N2_pass_False": false,
+      "cumulative_trigger_K_N26_N2_pass_False": false,
+      "monitor_disposition": "本棒 K-N26-N2 minimax 自身累计 empty_rate 监控 = 已实施; minimax 自身累计 = 88 calls / 0 empty / 0.0000; r3 baseline minimax = 66 calls / 0 empty / 0.0000; r3 baseline cross batch = 229 calls / 9 empty / 0.0393; cross-batch rate = 0.0359",
+      "cross_batch_with_r2_baseline_rate": 0.0359
+    },
+    "verdict_pending": "5 教师批齐后由 verdict-keeper 统裁 (本棒 0 写 verdict)"
+  },
+  "mapping_disclosure": {
+    "v3_anchor_api_name": "minimax",
+    "v3_anchor_9backbone_name": "minimax-m3",
+    "v3_origin_endpoint": "火山方舟 (已下线)",
+    "v4_current_endpoint": "mimo (token-plan-cn.xiaomimimo.com/v1)",
+    "v4_current_model_id_sent": "mimo-v2.6-pro",
+    "endpoint_migrated": true,
+    "lineage_discontinuity": true,
+    "pi_decision_source": "ask_748d9242c7a6be3d83de63a0 Q4 (2026-09-24 23:08)",
+    "mapping_doc_sha12": "98A779D61C1E",
+    "mapping_doc_path": "results/_v4_supp_l14v3_model_mapping_2026_09_24.md",
+    "honest_disclosure": "V3 字面 minimax-m3 火山方舟端点已下线；现行 mimo 端点 (token-plan-cn.xiaomimimo.com/v1) 对应 mimo-v2.6-pro 命名映射依据 = PI 拍板本身，非字面继承，非「minimax-m3 升级版 = mimo-v2.6-pro」字面继承关系；endpoint_migrated=true (跨端点跨厂商)；lineage_discontinuity=true (端点名不同、模型家族不同)。"
+  },
+  "data_validity_disclosure": {
+    "prompt_repro": "accept_repro",
+    "data_validity_statement": "蒸馏/采样数据效力 = V4 复现口径（非 V3 原文复刻）声明沿用",
+    "pi_decision_source": "ask_249ba8854ee343f7d9aa34de (2026-09-24 23:38)",
+    "decision_disposition": "声明沿用",
+    "honest_disclosure": "本棒 minimax 教师侧 round 4 (reask=3) 22 caption × 1 call 全部产出 均按 V4 复现口径采样（沿 L14+ 预登记 + mapping §1.1 minimax 拍板）；声明沿用 = 不声称本棒产出等价 V3 minimax-m3 火山方舟原 model 原文复刻；产出数据效力以 V4 现行采样模型 mimo-v2.6-pro（mimo 端点）为口径锚；V3 字面 minimax-m3 仅作 lineage_discontinuity 字段锚定，不参与产出数据效力的实证断言。",
+    "scope_boundary": "本声明仅覆盖本棒产出数据效力口径声明；不动 N-26 主预登记 / K-N26-* 字面 / 既有阈值 / 既定结论；不动 L4 verdict `74B5B37F7EEA` §11「FAIL · 构造不可行 · 4/5 教师 metadata 缺位」字面；不动 L13 verdict `E105EC1362DB` 三元组基底字面。"
+  },
+  "breakpoint_status": {
+    "actual_calls": 22,
+    "planned_calls": 22,
+    "actual_wall_time_s": 147.0,
+    "wall_time_budget_remaining_after_smoke_s": 599.3,
+    "actual_wall_time_total_s": 147.7,
+    "checkpoint_file": null,
+    "hit_wall_time_budget": false,
+    "k_n26_n2_cumulative_triggered": false,
+    "k_n26_n2_trigger_at_call_idx": null,
+    "k_n26_n2_trigger_cum_rate": null,
+    "next_resume_via": "task_append 续跑 — 沿 prereg §1.6.4 同 agent 唤醒; 本棒 round 4 (reask=3) 已完; 下棒可接力 minimax 教师侧 round 5 (>=1 more successful/caption, 目标 ≥5 cumulative/caption)",
+    "note": "本棒 round 4 (reask=3): actual=22/22 calls; minimax 教师侧 round 4 完成度 = 22/22 caption met round 4 目标 (≥4 successful/caption); stop_reason=None; minimax model_id 沿 mapping §1.1 拍板 = mimo-v2.6-pro (1-call smoke 确认仍可用); 拍板 ask_249ba8854ee343f7d9aa34de prompt_repro=accept_repro 已沿 r3 入 metadata + data_validity_disclosure 块",
+    "planned_total": 22,
+    "stop_reason": null
+  }
+}

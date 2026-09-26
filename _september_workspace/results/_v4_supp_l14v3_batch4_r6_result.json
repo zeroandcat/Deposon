@@ -1,0 +1,725 @@
+{
+  "schema": "v4_l14v3_n26/1",
+  "batch": 4,
+  "round": 6,
+  "metadata": {
+    "task": "L14V3_batch4_round6_coze_teacher_side_s6_n60_supplement_reask5",
+    "prereg_sha12": "05b975a86989",
+    "prereg_path": "results/_v4_supp_prereg_v02_add_L14V3_2026_09_24.md",
+    "predecessor_sha12": {
+      "model_mapping_sha12": "98a779d61c1e",
+      "model_mapping_path": "results/_v4_supp_l14v3_model_mapping_2026_09_24.md",
+      "b4_r5_executor_sha12": "8a505613b476",
+      "b4_r5_executor_path": "results/_v4_supp_l14v3_batch4_r5_executor.py",
+      "b4_r5_result_sha12": "bad01f2b89fd",
+      "b4_r5_result_path": "results/_v4_supp_l14v3_batch4_r5_result.json",
+      "b4_r4_executor_sha12": "184186902a9f",
+      "b4_r4_executor_path": "results/_v4_supp_l14v3_batch4_r4_executor.py",
+      "b4_r4_result_sha12": "41e0ba55e205",
+      "b4_r4_result_path": "results/_v4_supp_l14v3_batch4_r4_result.json",
+      "b4_r3_executor_sha12": "b5e1c3637405",
+      "b4_r3_executor_path": "results/_v4_supp_l14v3_batch4_r3_executor.py",
+      "b4_r3_result_sha12": "ed5267df7d6f",
+      "b4_r3_result_path": "results/_v4_supp_l14v3_batch4_r3_result.json",
+      "b4_r2_executor_sha12": "7d8e12267790",
+      "b4_r2_executor_path": "results/_v4_supp_l14v3_batch4_r2_executor.py",
+      "b4_r2_result_sha12": "6a9a362d9869",
+      "b4_r2_result_path": "results/_v4_supp_l14v3_batch4_r2_result.json",
+      "b4_r1_executor_sha12": "e84bffd5dc7d",
+      "b4_r1_executor_path": "results/_v4_supp_l14v3_batch4_r1_executor.py",
+      "b4_r1_result_sha12": "7d9fe9d319a2",
+      "b4_r1_result_path": "results/_v4_supp_l14v3_batch4_r1_result.json",
+      "b2_r4_executor_sha12": "d9fe7aa2d292",
+      "b2_r4_executor_path": "results/_v4_supp_l14v3_batch2_r4_executor.py",
+      "b2_r4_result_sha12": "15b8ddc5ba9e",
+      "b2_r4_result_path": "results/_v4_supp_l14v3_batch2_r4_result.json",
+      "b2_r3_executor_sha12": "72fd2bb3838e",
+      "b2_r3_executor_path": "results/_v4_supp_l14v3_batch2_r3_executor.py",
+      "b2_r3_result_sha12": "25251aca6d79",
+      "b2_r3_result_path": "results/_v4_supp_l14v3_batch2_r3_result.json",
+      "b2_r2_executor_sha12": "e7418f47a130",
+      "b2_r2_executor_path": "results/_v4_supp_l14v3_batch2_r2_executor.py",
+      "b2_r2_result_sha12": "8c125e257af8",
+      "b2_r2_result_path": "results/_v4_supp_l14v3_batch2_r2_result.json",
+      "b2_r2_models_probe_sha12": "3c9dc60b5071",
+      "b2_r2_models_probe_path": "results/_v4_supp_l14v3_batch2_r2_models_probe.json",
+      "batch1_r6_executor_sha12": "5f02c7e0f094",
+      "batch1_r6_executor_path": "results/_v4_supp_l14v3_batch1_r6_executor.py",
+      "batch1_r6_result_sha12": "a4f851154551",
+      "batch1_r6_result_path": "results/_v4_supp_l14v3_batch1_r6_result.json"
+    },
+    "date": "2026-09-25",
+    "spec_conformance": "PI 2026-09-25 batch4 coze 教师侧 S6_n60 单 call 定向补 (reask=5); 沿 r5 deepseek-v4-flash smoke ok=200 + r5 22 caption 21 OK + S6_n60 空响应已知; 本棒同模型同 prompt 同 max_tokens=2000 同 temperature=0.7 同 tun; 1 caption (S6_n60) × 1 call = 1 call (按 dispatch 定向补); 硬停规则 (沿 dispatch §2): 若本 call 仍 empty → 立即停止不加试; 接受 partial 21/22; 夜间保守口径 (PI 2026-09-25 00:46): 启动前必检 tun 端口 (127.0.0.1:1018); 建议沿用 python -u > log 2>&1 防 300s 自动截杀",
+    "teacher": "coze",
+    "side": "teacher",
+    "round_index": 6,
+    "batch_index": 4,
+    "round6_target_caption": "S6_n60",
+    "round6_reask_idx": 5,
+    "target_successful_per_caption": 5,
+    "hard_stop_on_empty_response": true,
+    "n_captions_total": 22,
+    "planned_total": 1,
+    "actual_total": 1,
+    "endpoint_selected": "https://api.teamorouter.cn/v1",
+    "endpoint_selection_method": "沿 mapping 98a779d61c1e §1.1 第三栏 PI 拍板 (teamo 端点); /v1/models 探活清单沿 r2 models_probe.json (sha12=3c9dc60b5071); r6 沿 r5 smoke ok=200 + r5 22 caption 21 OK + S6_n60 空响应已知; r6 仅 1-call smoke 防端点飘移; 44 models 清单字面含 deepseek-v4-flash; r6 同模型同 prompt (沿 dispatch §1 「同 deepseek-v4-flash / 同 prompt」)",
+    "model_id_sent": "deepseek-v4-flash",
+    "model_id_inconsistency_honest_disclosure": "prereg §0 字面 model_id = coze (V3 公开产品名 / 端点名); 沿 mapping 留痕件 98a779d61c1e §1.1 第三栏 PI 拍板 = agent 平台封装; PI 拍板 Other 原文 (ask_748d9242c7a6be3d83de63a0 Q3 逐字引用): 「coze与trea都只是agent平台，我都是接的大模型API」; coze 底层 model 不可考 (V3 9-backbone 字段无 coze; V3 制品层 by_model/coze/ 同样无 model 字段; teamo /v1/models 探活清单 (44 models) 字面亦无 coze 字段); 本棒选定 = deepseek-v4-flash (deepseek-v4-flash / teamo 端点 / 1-call smoke ok=200, model_returned=deepseek-v4-flash-ga-260731); 代表采样选择 (deepseek-v4-flash) 理由 (沿 mapping §1.1 第二栏): 团队现行 6 模型补跑锚定 (Track 2 multimodel verdict 12,883 B 字面); deepseek-v4-flash 在 teamo /v1/models 探活清单 (44 models 中) 字面可考; 代表采样 ≠ coze 背后模型 (沿诚实 = 不误导 + 不可考即如实不可考); result 内 metadata 字段强制标注 representative_for_coze: true + substitute_origin: coze_agent_platform_underlying_model_not_documented; 本映射选择 = PI 拍板代表采样, 非 V3 字面继承, 非断层真实 mapping 断言; r1+r2+r3+r4+r5 五棒累计 110 calls 1 empty 109 ok (沿 r5 终态); model_returned 字面 = deepseek-v4-flash-ga-260731 (主) + deepseek-v4-flash-0731 (次), 均 family 下实例; r6 沿 r5 同模型同 max_tokens=2000 同 temperature=0.7 同 prompt 定向补 S6_n60 (reask=5); r6 单 call; 硬停规则 (沿 dispatch §2): empty 立即停不加试; 待 PI 复核项: 是否接受 deepseek-v4-flash 作为 coze = V3 公开产品名/端点名的代表采样",
+    "representative_for_coze": true,
+    "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+    "mapping_decision_basis": {
+      "mapping_document_sha12": "98a779d61c1e",
+      "mapping_document_path": "results/_v4_supp_l14v3_model_mapping_2026_09_24.md",
+      "ask_id": "ask_748d9242c7a6be3d83de63a0",
+      "ask_other_verbatim": "coze与trea都只是agent平台，我都是接的大模型API",
+      "ask_decision": "agent 平台封装 / 底层 model 不可考 / 代表采样 = teamo deepseek-v4-flash"
+    },
+    "v3_anchor_metadata": {
+      "v3_anchor_api_name": "coze",
+      "v3_anchor_9backbone_name": null,
+      "v3_anchor_9backbone_note": "coze 不在 V3 9-backbone (deposon_v3_physical_opt_60cells_2026_09_11.json L26 9_models 字段全部 9 项枚举无 coze); 沿 claude_code 回函 L168 字面「coze appears zero times in the 9-model file」",
+      "v3_by_model_dir": "corpus/v20/by_model/coze/ (路径标签, 制品层无 model 字段)",
+      "v4_current_model_id_sent": "deepseek-v4-flash",
+      "v4_current_endpoint": "teamo (https://api.teamorouter.cn/v1)",
+      "v4_representative_not_identity": true
+    },
+    "proxy_settings": {
+      "http": "http://127.0.0.1:1018",
+      "socks5": "socks5://127.0.0.1:1018",
+      "applied_to_teamo": true
+    },
+    "key_discipline": {
+      "source": "C:/Users/Administrator/Desktop/AI/LLM API.txt",
+      "key_index_1based": 15,
+      "method": "runtime memory read",
+      "redacted_in_products": true
+    },
+    "inter_call_sleep_s": 2.5,
+    "temperature": 0.7,
+    "max_tokens": 2000,
+    "tools_fault_param_correction": {
+      "read_timeout_initial_s": 60,
+      "read_timeout_retry_s": 90,
+      "network_error_categories_retry": [
+        "connection_error",
+        "proxy_error",
+        "ssl_error",
+        "timeout"
+      ],
+      "b4_r5_status": "r5 1-call smoke ok=200 + 22 caption × 1 call = 22 calls; 21 OK + 1 empty (S6_n60 reasoning-occupied 模式); model_returned 字面 deepseek-v4-flash-ga-260731 (主) + deepseek-v4-flash-0731 (次)",
+      "r6_b4_status": "r6 沿 r5 同模型同 prompt; 仅 1-call smoke (沿 r5 结论); 未做 3-candidate probe fallback",
+      "rationale": "沿 dispatch §1 「同 deepseek-v4-flash / 同 prompt / max_tokens=2000 / temperature=0.7 / tun」; r6 仅 S6_n60 1 call; 同模型 (deepseek-v4-flash); 同 prompt; 同 max_tokens=2000; 同 temperature=0.7; smoke 失败立即 abort 不重探; 硬停规则 (沿 dispatch §2): empty 立即停不加试; 启动前必检 tun 端口 (PI 2026-09-25 夜间保守口径; 防 net::ERR_HTTP2_PING_FAILED 重演); 建议沿用 python -u > log 2>&1 防 300s 自动截杀"
+    },
+    "inner_retry_max": 3,
+    "wall_time_budget_s": 120,
+    "wall_time_budget_remaining_after_smoke_s": 117.2,
+    "wall_time_actual_caption_s": 6.7,
+    "wall_time_actual_smoke_s": 2.8,
+    "wall_time_actual_total_s": 9.5,
+    "k_n26_n2_cumulative_threshold": 0.5,
+    "single_batch_empty_rate_threshold": 0.5,
+    "diff_vs_r5_executor": [
+      "1. ROUND=6 (升 r6 命名); BATCH=4 不变",
+      "2. **目标 caption 缩窄**: 仅 S6_n60 (沿 r5 终态 21/22 caption met target, S6_n60 仅 4/5); 取代 r5 的全 22 caption",
+      "3. **call 数**: 1 caption × 1 call = 1 call (取代 r5 的 22 caption × 1 call)",
+      "4. prompt_id 前缀 coze_t06_teacher_S6_n60 + 后缀 _b4_r6 (取代 r5 的 coze_t05_teacher_*_b4_r5); 单 caption 定向补",
+      "5. reask_idx=5 (本棒 S6_n60 第 6 call; 取代 r5 的 reask_idx=4)",
+      "6. phase_label: b4_r6_s6_n60_supplement (取代 r5 的 b4_r5_finish)",
+      "7. is_round_6=True (取代 r5 的 is_round_5; 语义升级)",
+      "8. **新增 hard_stop_on_empty_response = True** (沿 dispatch §2 硬停规则; r5 无此字段)",
+      "9. **新增 single_caption_target = S6_n60** (取代 r5 的全 22 caption)",
+      "10. smoke_call_only = True (沿 r5 同; 沿 r5 smoke ok=200 已知)",
+      "11. predecessor_sha12 链: b4_r5_executor 8a505613b476 + b4_r5_result bad01f2b89fd (新增; 取代 r5 链的 b4_r4/r3/r2/r1/r4/r3/probe/batch1_r6/prereg 仍保留作为历史累计 baseline)",
+      "12. baseline prior: r5 终态 110 calls / 1 empty / 109 ok / 0.0091 rate (取代 r5 链的 88/88/0/0.0)",
+      "13. 跨批累计 baseline: r5 终态 295 calls / 10 empty / 3.39% rate (取代 r5 链的 273/9/3.30%); 注: r5 cross_total=295 已含 b4r5 22 calls 增量",
+      "14. **新增 r6_disposition 块** (沿 dispatch §2): r6_call_target / r6_call_result / r6_call_structural_failure_confirmed / r6_hard_stop_engaged / r6_hard_stop_reason / r6_disposition (complete_22_of_22 / partial_21_of_22)",
+      "15. **新增 coze_teacher_side_round6_progress 块** (沿 r5 coze_teacher_side_round5_progress 惯例; 含 S6_n60 定向补结果)",
+      "16. **更新 coze_teacher_side_finish 收官判定块** (沿 r5 收官判定块惯例; 反映 r6 后状态; finish_status = complete/partial)",
+      "17. K-N26-N2 触发阈值 0.50 不变; 监控 baseline 更新为 295/10/3.39%",
+      "18. spec_conformance 重写: coze 教师侧 S6_n60 单 call 定向补 (reask=5); 同模型同 prompt; 硬停规则",
+      "19. model_id_inconsistency_honest_disclosure 字面继承 r5 (沿 mapping 拍板代表采样字面) + r6 累计补注",
+      "20. 派生 metadata 字段沿 r5 不动 (v3_anchor_api_name=coze / v3_anchor_9backbone_name=null / v4_current_model_id_sent=deepseek-v4-flash)",
+      "21. per_caption_successful_calls 字段: 复制 r5 终态 + 仅更新 S6_n60 行 (round6_updated=true)",
+      "22. baseline 路径: B4_R5_RESULT_PATH (沿 r5 result bad01f2b89fd) 取代 r5 链的 B4_R4_RESULT_PATH",
+      "23. 启动前必检 tun 端口 (PI 2026-09-25 夜间保守口径; 防 net::ERR_HTTP2_PING_FAILED 重演); r5 同",
+      "24. failure result 路径同步 r6: _v4_supp_l14v3_batch4_r6_result.json (取代 r5 链的 r5 result)",
+      "25. ROUNDS_USED = [r1, r2, r3, r4, r5, r6] (含 r6; r6 为定向补棒)"
+    ],
+    "iron_rules": {
+      "R1_no_llm": false,
+      "R2_no_proxy": false,
+      "R3_no_gateway": false,
+      "R4_key_never_in_plaintext": true,
+      "R5_v4_frozen_append_only": true,
+      "R6_pg_v0_v01_untouched": true,
+      "R7_plugin_spec_untouched": true,
+      "v1_v3_readonly": true,
+      "tun_compliance_teamo_endpoint": true,
+      "serial_interval_ge_2_5_s": true,
+      "empty_response_counted_not_dropped": true,
+      "kill_line_locked_K_N26_1_2_3_N1_N2": true,
+      "no_threshold_adjustment": true,
+      "no_existing_file_modified": true,
+      "no_merge_of_derived_json": true,
+      "no_overwrite_prior_results": true,
+      "retry_bug_fix_applied": true,
+      "smoke_only_no_full_probe": true,
+      "representative_substitute_disclosure_honest": true,
+      "preflight_tun_check_applied": true,
+      "hard_stop_on_empty_response": true,
+      "single_caption_target": "S6_n60",
+      "same_model_same_prompt_as_r5": true
+    },
+    "run_window_cst": "2026-09-25T01:44:37+08:00",
+    "stop_reason": null,
+    "hard_stop_engaged": false,
+    "hard_stop_reason": null,
+    "interruption_recovery_note": "r6 沿 r5 deepseek-v4-flash 代表采样结论 (sha12=bad01f2b89fd 实测 22 calls 21 OK + 1 empty); 不再做 3-candidate probe fallback; 1-call smoke 失败立即 abort; 启动前必检 tun 端口 (PI 2026-09-25 夜间保守口径; 防 net::ERR_HTTP2_PING_FAILED 重演); r6 与 r5/r4/r3/r2/r1/batch2_r*/batch1_r6 派生 JSON 独立 (不合并); coze 自身 baseline = 110/109/1/0.0091 (沿 r5 终态); cross batch baseline = 295/285/10/3.39% (沿 r5 终态); 本棒为 coze 教师侧 S6_n60 定向补棒 (reask=5); 硬停规则: empty 立即停不加试 (沿 dispatch §2); 收官判定见 coze_teacher_side_finish 块; r6 disposition 见 r6_disposition 块"
+  },
+  "models_listing_summary_ref": {
+    "endpoint": "https://api.teamorouter.cn/v1/models",
+    "model_count_total": 44,
+    "deepseek_like_ids": [
+      "deepseek-flash",
+      "deepseek-flash-free",
+      "deepseek-v4-flash",
+      "deepseek-v4-flash-free",
+      "deepseek-v4-flash-vision-exp",
+      "deepseek-v4-pro",
+      "deepseek-v4-pro-260425"
+    ],
+    "deepseek_v4_flash_in_listing": true,
+    "fetched_at_cst": "2026-09-24T22:40:12+08:00",
+    "note": "r6 不重探 /v1/models; 仅引用 r2 探活清单 (sha12=3c9dc60b5071) 确认 deepseek-v4-flash 在 teamo 44 models 清单; 代表采样 ≠ coze 背后模型 (沿诚实 = 不误导)"
+  },
+  "smoke_phase": {
+    "selected_model_id": "deepseek-v4-flash",
+    "representative_for_coze": true,
+    "substitute_origin": "coze_agent_platform_underlying_model_not_documented",
+    "smoke_record": {
+      "candidate_model_id": "deepseek-v4-flash",
+      "ok": true,
+      "status_code": 200,
+      "latency_ms": 2773.8,
+      "model_returned": "deepseek-v4-flash-ga-260731",
+      "error_category": null,
+      "error_snippet": "",
+      "content_preview": "ok",
+      "content_empty_reasoning_only": false,
+      "phase_label": "smoke_coze_representative_model_id_r6_supplement",
+      "wall_time_s": 2.8
+    },
+    "smoke_wall_time_s": 2.8
+  },
+  "quadruples": [
+    {
+      "prompt_id": "coze_t06_teacher_S6_n60_b4_r6",
+      "prompt_text": "Caption ID: S6_n60\nCaption (sequence of concept labels in the graph):\n猫; 薛定谔方程; 波函数; 动物界; 灵长目; 衍射; 光学; 哺乳纲; 植物界; 统计物理; 青蛙; 虎; 能量守恒; 狭义相对论; 动量守恒; 蝗虫; 原生生物界; 热容量; 偶蹄目; 电磁波; 软体动物门; 鹰; 脊索动物门; 犬科; 棘皮动物门; 蘑菇; 电场; 雀形目; 量子力学; 蔷薇科; 广义相对论; 单子叶植物纲; 狼; 经典力学; 量子纠缠; 温度; 硬骨鱼纲; 蛇; 麦克斯韦方程组; 时空弯曲; 猫科; 生物; 玻尔模型; 食肉目; 豆科; 电压; 麻雀; 热力学; 昆虫纲; 鲤鱼; 真菌界; 电流; 中子; 节肢动物门; 玫瑰; 普朗克常数; 原子核; 环节动物门; 电阻; 狗\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "光子, 熵, 进化, 生态学, 量子场论",
+      "per_call_metadata": {
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 6684.1,
+        "model_returned": "deepseek-v4-flash-0731",
+        "id": "chatcmpl-3e488310-e500-4350-8bc0-dafde30f3882",
+        "usage": {
+          "completion_tokens": 225,
+          "prompt_tokens": 447,
+          "total_tokens": 672,
+          "completion_tokens_details": {
+            "reasoning_tokens": 208
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "model_id_sent": "deepseek-v4-flash",
+        "side": "teacher",
+        "caption_id": "S6_n60",
+        "reask_idx": 5,
+        "round_index": 6,
+        "is_round_6": true,
+        "phase_label": "b4_r6_s6_n60_supplement",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "retry_count": 0,
+        "read_timeout_s": 60,
+        "retry_bug_fix_applied": true,
+        "empty_response": false,
+        "error_category": null,
+        "error_snippet": "",
+        "representative_for_coze": true,
+        "substitute_origin": "coze_agent_platform_underlying_model_not_documented"
+      }
+    }
+  ],
+  "retry_validation": {
+    "r6_retry_count_distribution": {
+      "0": 1
+    },
+    "r6_retry_triggered_count": 0,
+    "r6_retry_trigger_categories_tracker": [],
+    "r6_retry_trigger_categories_distribution": {},
+    "r6_retry_bug_fix_applied_in_all_calls": true,
+    "r6_empty_rate_with_fix": 0.0
+  },
+  "per_caption_successful_calls": {
+    "L_algorithm_process": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "L_biological_taxonomy": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "L_geography_world": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "L_historical_causality": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "L_physics_concepts": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "L_project_management": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S1": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S1_n35": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S1_n45": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S1_n60": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S2": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S2_n20": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S2_n35": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S2_n45": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S2_n60": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S3": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S4": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S5": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S6": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S6_n20": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S6_n35": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 5,
+      "empty_count_so_far": 0,
+      "round6_updated": false
+    },
+    "S6_n60": {
+      "succ_count": 5,
+      "target": 5,
+      "need_more_to_target": 0,
+      "met_target": true,
+      "total_calls_so_far": 6,
+      "empty_count_so_far": 1,
+      "round6_updated": true
+    }
+  },
+  "coze_teacher_side_round6_progress": {
+    "round6_target_caption": "S6_n60",
+    "round6_reask_idx": 5,
+    "round6_call_result": "ok",
+    "round6_met_target_post": true,
+    "round6_hard_stop_engaged": false,
+    "round6_hard_stop_reason": null,
+    "round6_total_calls": 1,
+    "round6_ok_count": 1,
+    "round6_empty_count": 0,
+    "round6_fail_count": 0,
+    "met_count_post_r6": 22,
+    "total_captions": 22,
+    "remaining_count_r6": 0,
+    "met_percentage_r6": 100.0,
+    "still_pending_captions_r6": []
+  },
+  "r6_disposition": {
+    "r6_call_target": "S6_n60",
+    "r6_call_result": "ok",
+    "r6_call_structural_failure_confirmed": false,
+    "r6_hard_stop_engaged": false,
+    "r6_hard_stop_reason": null,
+    "r6_disposition": "complete_22_of_22",
+    "r6_partial_path": null,
+    "r6_note": "S6_n60 第 6 call OK; coze 教师侧 22/22 收官"
+  },
+  "coze_teacher_side_finish": {
+    "all_22_captions_met_target": true,
+    "total_captions": 22,
+    "met_target_count": 22,
+    "met_target_percentage": 100.0,
+    "rounds_used": [
+      "r1",
+      "r2",
+      "r3",
+      "r4",
+      "r5",
+      "r6"
+    ],
+    "cumulative_calls_total": 111,
+    "cumulative_ok": 110,
+    "cumulative_empty": 1,
+    "cumulative_empty_rate": 0.009,
+    "finish_status": "complete",
+    "k_n26_n2_cumulative_threshold": 0.5,
+    "k_n26_n2_cumulative_triggered_this_batch": false,
+    "single_batch_triggered_this_batch": false,
+    "finish_verdict_trigger_for_verdict_keeper": true,
+    "note": "沿 r5 coze_teacher_side_finish 收官判定惯例; r6 定向补 S6_n60 (reask=5) 后 22/22 caption met target ≥5 successful/caption; finish_status=complete; verdict-keeper 可据 all_22_captions_met_target 触发判死线 (沿 '与死同行' 准则); 代表采样 = deepseek-v4-flash (沿 mapping 98a779d61c1e); coze 底层 model 不可考即如实不可考 (沿诚实 = 不误导)"
+  },
+  "dispatch_target_progress": {
+    "target_round6": "1 caption (S6_n60) × 1 call (round 6 reask=5 定向补)",
+    "target_cumulative": ">=5 successful calls/caption (跨轮累计)",
+    "met_count_post_r6_round6": 1,
+    "met_count_post_r6_cumulative_to_target": 22,
+    "total_captions": 22,
+    "remaining_count_round6": 0,
+    "remaining_count_cumulative_to_target": 0,
+    "met_percentage_round6": 100,
+    "met_percentage_cumulative_to_target": 100.0,
+    "still_pending_captions_round6": [],
+    "still_pending_captions_cumulative_to_target": []
+  },
+  "aggregate": {
+    "r6_total_calls": 1,
+    "r6_ok_count": 1,
+    "r6_empty_response_count": 0,
+    "r6_fail_count": 0,
+    "r6_empty_response_rate": 0.0,
+    "r6_total_prompt_tokens": 447,
+    "r6_total_completion_tokens": 225,
+    "r6_total_reasoning_tokens": 208,
+    "r6_total_tokens": 672,
+    "tun_compliance": true,
+    "tun_used_count": 1,
+    "tun_target_count": 1,
+    "smoke_total_calls": 1,
+    "smoke_attempted_model_id": "deepseek-v4-flash",
+    "coze_cumulative": {
+      "prior_total": 110,
+      "prior_empty": 1,
+      "prior_ok": 109,
+      "prior_rate": 0.0091,
+      "post_total": 111,
+      "post_empty": 1,
+      "post_ok": 110,
+      "post_rate": 0.009,
+      "delta_total": 1,
+      "delta_empty": 0,
+      "delta_ok": 1,
+      "k_n26_n2_threshold": 0.5,
+      "k_n26_n2_triggered_this_batch": false
+    },
+    "cross_batch_with_b4r5_baseline": {
+      "b4r5_baseline_total": 295,
+      "b4r5_baseline_empty": 10,
+      "b4r5_baseline_ok": 285,
+      "b4r5_baseline_rate": 0.0339,
+      "batch4_coze_post_total": 111,
+      "batch4_coze_post_empty": 1,
+      "batch4_coze_post_ok": 110,
+      "cross_total": 296,
+      "cross_empty": 10,
+      "cross_ok": 286,
+      "cross_rate": 0.0338,
+      "cross_k_n26_n2_threshold": 0.5,
+      "cross_k_n26_n2_triggered": false,
+      "note": "K-N26-N2 字面 per 教师; 本字段仅作 cross-batch sanity check; coze 教师侧 K-N26-N2 判定 = coze_cumulative.post_rate"
+    },
+    "r6_empty_response_rate_threshold_K_N26_N2_single_batch": 0.5,
+    "r6_empty_response_above_threshold_single_batch": false,
+    "single_batch_triggered_this_batch": false
+  },
+  "empty_rate_trend": {
+    "batch1_round6_cumulative": {
+      "calls": 119,
+      "empty": 9,
+      "ok": 110,
+      "rate": 0.0756,
+      "note": "batch1 r6 终态 (kimi 119 calls 字面源)"
+    },
+    "batch2_round2_round1_retry_glm1": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "r2 GLM_1 round 1 retry 22 caption × 1 call; all OK"
+    },
+    "batch2_round3_round2_reask1_glm1": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "r3 GLM_1 round 2 reask=1 22 caption × 1 call; all OK"
+    },
+    "batch2_round4_round3_reask2_glm1": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "r4 GLM_1 round 3 reask=2 22 caption × 1 call; all OK"
+    },
+    "batch4_round1_round1_reask0_coze": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "r1 coze round 1 reask=0 22 caption × 1 call; all OK"
+    },
+    "batch4_round2_round2_reask1_coze": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "r2 coze round 2 reask=1 22 caption × 1 call; all OK"
+    },
+    "batch4_round3_round3_reask2_coze": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "r3 coze round 3 reask=2 22 caption × 1 call; all OK"
+    },
+    "batch4_round4_round4_reask3_coze": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "r4 coze round 4 reask=3 22 caption × 1 call; all OK"
+    },
+    "batch2_round4_cumulative_glm1": {
+      "calls": 66,
+      "empty": 0,
+      "ok": 66,
+      "rate": 0.0,
+      "note": "r4 终态 GLM_1 自身累计"
+    },
+    "cross_batch_cumulative_post_r4_glm1_only": {
+      "calls": 185,
+      "empty": 9,
+      "ok": 176,
+      "rate": 0.0486,
+      "note": "r4 终态 cross batch baseline (kimi + GLM_1)"
+    },
+    "batch4_round5_round5_reask4_coze": {
+      "calls": 22,
+      "empty": 1,
+      "rate": 0.0455,
+      "note": "r5 coze round 5 reask=4 22 caption × 1 call; 21 OK + 1 empty (S6_n60 reasoning-occupied 模式)"
+    },
+    "batch4_round5_cumulative_coze": {
+      "calls": 110,
+      "empty": 1,
+      "ok": 109,
+      "rate": 0.0091,
+      "note": "r5 终态 coze 自身累计"
+    },
+    "cross_batch_cumulative_post_r5": {
+      "calls": 295,
+      "empty": 10,
+      "ok": 285,
+      "rate": 0.0339,
+      "note": "r5 终态 cross batch baseline (kimi + GLM_1 + coze r1+r2+r3+r4+r5)"
+    },
+    "batch4_round6_round6_reask5_coze_s6_n60": {
+      "calls": 1,
+      "empty": 0,
+      "rate": 0.0,
+      "note": "r6 coze round 6 reask=5 S6_n60 单 call 定向补 (沿 dispatch)"
+    },
+    "batch4_round6_cumulative_coze": {
+      "calls": 111,
+      "empty": 1,
+      "ok": 110,
+      "rate": 0.009,
+      "k_n26_n2_threshold": 0.5,
+      "k_n26_n2_triggered": false
+    },
+    "cross_batch_cumulative_post_r6": {
+      "calls": 296,
+      "empty": 10,
+      "ok": 286,
+      "rate": 0.0338,
+      "note": "b4r5 baseline 295/10/3.39% + r6 增量"
+    }
+  },
+  "K_N26_observability_only": {
+    "K_N26_1_computed": false,
+    "K_N26_2_computed": false,
+    "K_N26_3_computed": false,
+    "K_N26_N1_observation": {
+      "round6_reask5_n_distinct_sample_note": "round 6 reask=5 第 6 call 定向补 S6_n60 实测；本棒后 S6_n60 = 5/5 caption met target；r1+r2+r3+r4+r5+r6 六棒累计 111 calls"
+    },
+    "K_N26_N2_observation": {
+      "teamo_tun_used_for_all_calls": true,
+      "single_batch_empty_response_rate": 0.0,
+      "cumulative_empty_response_rate_coze_only": 0.009,
+      "cumulative_threshold": 0.5,
+      "single_batch_trigger_K_N26_N2_pass_False": false,
+      "cumulative_trigger_K_N26_N2_pass_False": false,
+      "monitor_disposition": "本棒 K-N26-N2 coze 自身累计 empty_rate 监控 = 已实施; coze 自身累计 = 111 calls / 1 empty / 0.0090; baseline coze = 110 calls / 1 empty / 0.0091; cross-batch rate = 0.0338; baseline cross batch = 295 calls / 10 empty / 0.0339",
+      "cross_batch_with_b4r5_baseline_rate": 0.0338
+    },
+    "verdict_pending": "verdict-keeper 统裁 (本棒 0 写 verdict; 收官判定见 coze_teacher_side_finish 块)"
+  },
+  "breakpoint_status": {
+    "actual_calls": 1,
+    "planned_calls": 1,
+    "actual_wall_time_s": 6.7,
+    "wall_time_budget_remaining_after_smoke_s": 117.2,
+    "actual_wall_time_total_s": 9.5,
+    "checkpoint_file": null,
+    "hit_wall_time_budget": false,
+    "k_n26_n2_cumulative_triggered": false,
+    "k_n26_n2_trigger_at_call_idx": null,
+    "k_n26_n2_trigger_cum_rate": null,
+    "single_batch_triggered": false,
+    "hard_stop_engaged": false,
+    "hard_stop_reason": null,
+    "next_resume_via": "本棒为单 call 定向补棒; 无需续跑; verdict-keeper 可据 coze_teacher_side_finish.all_22_captions_met_target 触发判死线 (沿 '与死同行' 准则)",
+    "note": "本棒 round 6 (reask=5) S6_n60 单 call 定向补: actual=1/1 calls; coze 教师侧完成度 = 22/22 caption met target ≥5 successful/caption; stop_reason=None; hard_stop_engaged=False; coze model_id 沿 mapping 拍板 = deepseek-v4-flash (代表采样; 1-call smoke 确认仍可用); representative_for_coze=true; substitute_origin=coze_agent_platform_underlying_model_not_documented; 收官判定 = complete; r6 disposition = complete_22_of_22",
+    "planned_total": 1,
+    "stop_reason": null
+  }
+}

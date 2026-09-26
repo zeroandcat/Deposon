@@ -1,0 +1,1407 @@
+{
+  "K_N26_observability_only": {
+    "K_N26_1_computed": false,
+    "K_N26_2_computed": false,
+    "K_N26_3_computed": false,
+    "K_N26_N1_observation": {
+      "round_5_n_distinct_sample_note": "round 5 收官棒第 5 call per caption 实测; GLM_1 distill side independent counting = 22 caption 各 5 successful (沿 r1+r2+r3+r4+本棒 quadruples, prompt_id prefix glm1_t01_distill_ filter domain, predecessor r1+r2+r3+r4 = 88 calls 4succ/caption);**GLM_1 蒸馏侧收官达成**: distill side 22/22 caption 5/5 successful 收官态 (4/5 -> 5/5);by verdict-keeper 统裁 (本棒 0 写 verdict)"
+    },
+    "K_N26_N2_observation": {
+      "cumulative_empty_response_rate": 0.0283,
+      "cumulative_threshold": 0.5,
+      "cumulative_trigger": {
+        "stop_reason": null,
+        "trigger_at_call_idx": null,
+        "trigger_cum_rate": null,
+        "triggered": false
+      },
+      "monitor_disposition": "本棒 K-N26-N2 累计 empty_rate 监控 = 已实施;本棒未触发 K-N26-N2 累计阈值; 跑至 1500s watchdog 提前停批 / 全 22 calls 完成 (收官态)",
+      "single_batch_empty_response_rate": 0.0,
+      "single_batch_trigger_K_N26_N2_pass_False": false,
+      "teamo_tun_used_for_all_calls": true
+    },
+    "verdict_pending": "5 教师批齐后由 verdict-keeper 统裁 (本棒 0 写 verdict); GLM_1 蒸馏侧 batch7 已收官态, 留待 verdict-keeper 终裁"
+  },
+  "aggregate": {
+    "cumulative": {
+      "delta_empty": 0,
+      "delta_ok": 22,
+      "delta_total": 22,
+      "k_n26_n2_threshold": 0.5,
+      "k_n26_n2_triggered_this_batch": false,
+      "post_empty": 9,
+      "post_ok": 309,
+      "post_rate": 0.0283,
+      "post_total": 318,
+      "prior_empty": 9,
+      "prior_ok": 287,
+      "prior_rate": 0.0304,
+      "prior_total": 296
+    },
+    "r5_empty_response_above_threshold_single_batch": false,
+    "r5_empty_response_count": 0,
+    "r5_empty_response_rate": 0.0,
+    "r5_empty_response_rate_threshold_K_N26_N2_single_batch": 0.5,
+    "r5_fail_count": 0,
+    "r5_ok_count": 22,
+    "r5_total_calls": 22,
+    "r5_total_completion_tokens": 14398,
+    "r5_total_prompt_tokens": 6792,
+    "r5_total_tokens": 21190,
+    "tun_compliance": true,
+    "tun_target_count": 22,
+    "tun_used_count": 22
+  },
+  "batch": 7,
+  "breakpoint_status": {
+    "actual_calls": 22,
+    "actual_wall_time_s": 328.6,
+    "checkpoint_file": null,
+    "hit_wall_time_budget": false,
+    "k_n26_n2_cumulative_triggered": false,
+    "next_resume_via": "本棒为 batch7 收官棒 — 无 next 棒 (GLM_1 蒸馏侧 22/22 caption 5/5 successful 收官达成)",
+    "note": "本棒 round 5 收官棒已完成（22/22 calls）; **GLM_1 蒸馏侧 22/22 caption 5/5 successful 收官** ✓ (4/5 -> 5/5)",
+    "planned_calls": 22,
+    "stop_reason": null
+  },
+  "counting_scope_correction": {
+    "finish_disposition": "r5 收官棒 distill side independent counting baseline = 88 calls 完成; 实测 r5 after = 110 calls; goal >=5 (收官阈值) 状态: 收官达成; by verdict-keeper 统裁 (本棒 0 写 verdict)",
+    "mixed_history_retention": "per_caption_mixed_history_successful_calls block = empty dict (GLM_1 distill 为新教师, 无混合域); block 保留作透明字段待后续 verdict-keeper 统裁",
+    "pending_pi_review": "PI 复核本计数口径切换是否合规 (保守口径自主决策, PI 2026-09-25 00:46 委托); PI 拍板沿用 ask_748d9242 GLM_1 模型映射 = teamo glm-5.3",
+    "r1_data_disposition": "r1+r2+r3+r4 quadruples 完整保留 (r1=3558a1d15867, r2=924f12c4e7ab, r3=b431a1ba54df, r4=0fe4c1339d88); 作为 distill 侧 predecessor 不视为废数据",
+    "r1_issue_description": "本棒为 GLM_1 蒸馏侧 round 5 收官棒; predecessor = r1+r2+r3+r4 quadruples (88 calls, 88 ok, 0 empty); GLM_1 distill side = brand new teacher side, 沿 r1+r2+r3+r4 计数干净",
+    "r1_issue_disclosed": false,
+    "r5_baseline_distill_only": "predecessor r1+r2+r3+r4 quadruples GLM_1 distill filter = 88 calls, 88 successful, 0 empty (each caption = 4/5 successful, 沿 r1+r2+r3+r4)",
+    "r5_counting_domain": "distill side independent counting; filter domain = prompt_id prefix 'glm1_t01_distill_' (along r1/r2/r3/r4 fix; new teacher GLM_1 distill side)",
+    "r5_post_distill_only": "r5 quadruples after = 110 calls, 110 successful, 0 empty (each caption = 5/5 successful 收官 expected)",
+    "r5_target": "distill side long-term goal >=5 successful calls/caption (收官阈值)"
+  },
+  "dispatch_target_progress_distill": {
+    "is_finish_round": true,
+    "met_count_post_r5": 22,
+    "met_percentage": 100.0,
+    "remaining_count": 0,
+    "still_pending_captions": [],
+    "target": ">=5 successful calls/caption (distill side only)",
+    "total_captions": 22
+  },
+  "empty_rate_trend": {
+    "batch1_round1": {
+      "calls": 21,
+      "empty": 1,
+      "rate": 0.0476
+    },
+    "batch1_round2": {
+      "calls": 19,
+      "empty": 4,
+      "rate": 0.2105
+    },
+    "batch1_round3": {
+      "calls": 17,
+      "empty": 4,
+      "rate": 0.2353
+    },
+    "batch1_round4": {
+      "calls": 17,
+      "empty": 0,
+      "rate": 0.0
+    },
+    "batch1_round5": {
+      "calls": 24,
+      "empty": 0,
+      "rate": 0.0
+    },
+    "batch6_round1": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0
+    },
+    "batch6_round2": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0
+    },
+    "batch6_round3": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0
+    },
+    "batch6_round4": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0
+    },
+    "batch6_round5": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0
+    },
+    "batch7_round1": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0
+    },
+    "batch7_round2": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0
+    },
+    "batch7_round3": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0
+    },
+    "batch7_round4": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0
+    },
+    "batch7_round5": {
+      "calls": 22,
+      "empty": 0,
+      "rate": 0.0
+    },
+    "cumulative_through_r5": {
+      "calls": 318,
+      "empty": 9,
+      "k_n26_n2_threshold": 0.5,
+      "k_n26_n2_triggered": false,
+      "ok": 309,
+      "rate": 0.0283
+    }
+  },
+  "glm1_distill_side_finish": {
+    "all_22_captions_met_target": true,
+    "distill_side_target_met_at_round": "r5",
+    "finish_disposition": "GLM_1 蒸馏侧全 22 caption 5/5 successful 达标 → batch7 蒸馏侧收官 ✓",
+    "is_finish_round": true,
+    "met_count_post_r5": 22,
+    "rounds_to_reach_target": 5,
+    "rounds_to_reach_target_actual": "5 棒 (r1+r2+r3+r4+r5) = 22 caption x 5 calls = 110 distill 侧 calls (收官态)",
+    "still_pending": [],
+    "total_captions": 22
+  },
+  "metadata": {
+    "activation_path": "results/_v4_supp_prereg_v02_add_L14V3_activation_2026_09_24.md",
+    "actual_total": 22,
+    "date": "2026-09-25",
+    "diff_vs_r4_executor": [
+      "1. ROUND=4 -> ROUND=5; REASK_R1=3 -> REASK_R1=4 (第 5 call/caption = reask_idx=4)",
+      "2. prompt_id 后缀 _r4 -> _r5",
+      "3. predecessor_sha12: r4_executor d789f9bd4fa1 + r4_result 0fe4c1339d88 (替代 r3 双件为直接 predecessor)",
+      "4. baseline 全载 [r1, r2, r3, r4] quadruples = 88 calls/88 ok/0 empty (沿 r4 fix 口径)",
+      "5. 增量: distill 各 caption 由 4/5 补至 5/5 (收官达成)",
+      "6. cumulative 起点: r4 post {296/9/0.0304} -> 本棒后 worst 31/318=9.75% / best 9/318=2.83%",
+      "7. **判定块重命名**: glm1_distill_side_round4_progress -> **glm1_distill_side_finish** (字面)",
+      "8. metadata.is_finish_round = True (替代 r4 is_progress_round = True)",
+      "9. metadata 新增 is_progress_round = False (明示非续跑态 = 收官态)",
+      "10. counting_scope_correction: r4_baseline=88 calls 4succ/0empty; r5 后预期 110 calls 5succ/0empty (收官)",
+      "11. headers 反映 batch7-r5 + finish"
+    ],
+    "endpoint_selected": "https://api.teamorouter.cn/v1",
+    "endpoint_selection_method": "along model mapping draft §1.1 GLM_1 拍板定案 (ask_748d9242 字面) + along r4 executor d789f9bd4fa1 端点实测 = teamo glm-5.3",
+    "freeze_day": "V4 L14+ N-26 truth-audit-only path batch 7 round 5 GLM_1 distill side reask=4 **收官棒**",
+    "inner_retry_max": 3,
+    "inter_call_sleep_s": 2.5,
+    "iron_rules": {
+      "R1_no_llm": false,
+      "R2_no_proxy": false,
+      "R3_no_gateway": false,
+      "R4_key_never_in_plaintext": true,
+      "R5_v4_frozen_append_only": true,
+      "R6_pg_v0_v01_untouched": true,
+      "R7_plugin_spec_untouched": true,
+      "empty_response_counted_not_dropped": true,
+      "kill_line_locked_K_N26_1_2_3_N1_N2": true,
+      "no_existing_file_modified": true,
+      "no_merge_of_derived_json": true,
+      "no_overwrite_prior_results": true,
+      "no_threshold_adjustment": true,
+      "retry_bug_fix_applied": true,
+      "serial_interval_ge_2_5_s": true,
+      "tun_compliance_teamo_endpoint": true,
+      "v1_v3_readonly": true
+    },
+    "is_finish_round": true,
+    "is_progress_round": false,
+    "is_start_round": false,
+    "k_n26_n2_cumulative_threshold": 0.5,
+    "key_discipline": {
+      "key_index_1based": 15,
+      "method": "runtime memory read",
+      "redacted_in_products": true,
+      "source": "C:/Users/Administrator/Desktop/AI/LLM API.txt"
+    },
+    "max_tokens": 2000,
+    "model_id_inconsistency_honest_disclosure": "prereg §1.2 字面 model_id = kimi (API 端点名 = kimi-for-coding); teamo 实测不接受 kimi-for-coding (400 model_not_available), 仅接受 kimi-k3; 沿 user memory 2026-09-08「代码里默认 kimi-for-coding (API 端点名), 公开产品名 KIMI-K3——两个不一致时直接问」+ 端点策略即用即探 = 用 teamo 实际可接受 model_id kimi-k3",
+    "model_id_sent": "glm-5.3",
+    "model_id_sent_basis": "model_mapping 98A779D61C1E §1.1 GLM_1 column 拍板定案 = teamo glm-5.3 (PI 2026-09-24 23:08 ask_748d9242)",
+    "n_captions_total": 22,
+    "night_authorization": "PI 2026-09-25 00:46「今晚保守口径下先斩后奏」",
+    "planned_total": 22,
+    "predecessor_sha12": {
+      "captions_path": "corpus/v20_caption_surface/strip_captions_22.json",
+      "captions_sha12": "6a2656878745",
+      "l13_verdict_on_disk": false,
+      "l13_verdict_path": "results/_v4_supp_l13_n26pair_verdict.md",
+      "l13_verdict_referenced_role": "V4 triplet basis (re-asked / distill / independent) distill style source anchor (round-trip reference only; no original-prompt doc reconstruction in this batch)",
+      "l13_verdict_sha12_referenced": "E105EC1362DB",
+      "model_mapping_path": "results/_v4_supp_l14v3_model_mapping_2026_09_24.md",
+      "model_mapping_sha12": "98A779D61C1E",
+      "r1_executor_path": "results/_v4_supp_l14v3_batch7_r1_executor.py",
+      "r1_executor_sha12": "c49fc9bca8c4",
+      "r1_result_path": "results/_v4_supp_l14v3_batch7_r1_result.json",
+      "r1_result_sha12": "3558a1d15867",
+      "r2_executor_path": "results/_v4_supp_l14v3_batch7_r2_executor.py",
+      "r2_executor_sha12": "35cda0c0f7da",
+      "r2_result_path": "results/_v4_supp_l14v3_batch7_r2_result.json",
+      "r2_result_sha12": "924f12c4e7ab",
+      "r3_executor_path": "results/_v4_supp_l14v3_batch7_r3_executor.py",
+      "r3_executor_sha12": "5c0b426e2ee0",
+      "r3_result_path": "results/_v4_supp_l14v3_batch7_r3_result.json",
+      "r3_result_sha12": "b431a1ba54df",
+      "r4_executor_path": "results/_v4_supp_l14v3_batch7_r4_executor.py",
+      "r4_executor_sha12": "d789f9bd4fa1",
+      "r4_result_path": "results/_v4_supp_l14v3_batch7_r4_result.json",
+      "r4_result_sha12": "0fe4c1339d88",
+      "r5_executor_path_legacy": "results/_v4_supp_l14v3_batch6_r5_executor.py",
+      "r5_executor_sha12_legacy": "8a8babb911b8",
+      "r5_result_path_legacy": "results/_v4_supp_l14v3_batch6_r5_result.json",
+      "r5_result_sha12_legacy": "e40424bf8abe"
+    },
+    "prereg_path": "results/_v4_supp_prereg_v02_add_L14V3_2026_09_24.md",
+    "prereg_sha12": "05B975A86989",
+    "prompt_construction_basis": {
+      "l13_triple_basis_naming_reference": {
+        "l13_verdict_sha12_referenced": "E105EC1362DB",
+        "l13_verdict_sha12_referenced_on_disk": false,
+        "note": "L13 verdict E105EC1362DB distill style text on disk = 0 read; this batch avoids round-trip reconstruct original prompt; per batch1 r6 prompt construction = known anchor; same prompt + different side label (teacher -> distill) per L13 triplet basis distill style",
+        "this_batch_axes": "distill",
+        "triple_axes": [
+          "re-asked",
+          "distill",
+          "independent"
+        ]
+      },
+      "l13_verdict_on_disk": false,
+      "l13_verdict_path": null,
+      "reproduction_caliber": true,
+      "reproduction_source_anchor_path": "results/_v4_supp_l14v3_batch1_r6_executor.py",
+      "reproduction_source_anchor_role": "teacher_side_prompt_construction_inherited",
+      "reproduction_source_anchor_sha12": "5f02c7e0f094",
+      "v3_distill_original_prompt_on_disk": false,
+      "v3_distill_original_prompt_path": null,
+      "v3_distill_pipeline_style_inherited": "V3-style concept-graph distillation continuation prompt (per batch1 r6 executor 5f02c7e0f094); prompt_text = Caption ID + Caption (sequence of concept labels) + Task (3-5 NEW related concept labels)"
+    },
+    "proxy_settings": {
+      "applied_to_teamo": true,
+      "http": "http://127.0.0.1:1018",
+      "socks5": "socks5://127.0.0.1:1018"
+    },
+    "reask_idx_r1": 4,
+    "round_index": 5,
+    "run_window_cst": "2026-09-25T03:29:41+08:00",
+    "side": "distill",
+    "spec_conformance": "PI 2026-09-24 同 agent 唤醒 (task_append) 接力棒 + 沿 r4 fix 口径续跑 (baseline [r1,r2,r3,r4] 全载) + retry 修复沿 r4 (含 r4 timeout recovery) + 每 caption successful 计数终盘点 + K-N26-N2 累计监控 + distill 侧独立计数 (沿 r1+r2+r3+r4) + **收官判定块 glm1_distill_side_finish** (沿 dispatch 字面)",
+    "stop_reason": null,
+    "target_successful_per_caption": 5,
+    "task": "L14V3_batch7_round5_GLM_1_distill_side_reask4_FINISH_round_independent_counting",
+    "teacher": "GLM_1",
+    "teacher_label": "GLM_1",
+    "temperature": 0.7,
+    "tools_fault_param_correction": {
+      "network_error_categories_retry": [
+        "connection_error",
+        "proxy_error",
+        "ssl_error",
+        "timeout"
+      ],
+      "r4_status": "retry 修复 + tracking 改进沿 r4 (沿 d789f9bd4fa1); r4 棒 timeout recovery proof 1 call (L_historical_causality retries=1)",
+      "r5_status": "retry 修复沿 r4; r5 收官棒本棒无新参数修正",
+      "rationale": "沿 r4 修复 + r4 tracking 改进 (含 r4 timeout recovery); r5 收官棒仅按 22 caption x 1 call 续采 (model 不变, 仅 reask_idx 3->4); hard fail 保持 fail path 立即返回",
+      "read_timeout_initial_s": 60,
+      "read_timeout_retry_s": 90
+    },
+    "wall_time_actual_s": 328.6,
+    "wall_time_budget_s": 1500
+  },
+  "per_caption_distill_only_successful_calls": {
+    "L_algorithm_process": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "L_biological_taxonomy": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "L_geography_world": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "L_historical_causality": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "L_physics_concepts": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "L_project_management": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S1": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S1_n35": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S1_n45": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S1_n60": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S2": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S2_n20": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S2_n35": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S2_n45": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S2_n60": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S3": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S4": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S5": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S6": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S6_n20": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S6_n35": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    },
+    "S6_n60": {
+      "empty_count_so_far": 0,
+      "met_target": true,
+      "need_more": 0,
+      "succ_count": 5,
+      "target": 5,
+      "total_calls_so_far": 5
+    }
+  },
+  "per_caption_mixed_history_successful_calls": {},
+  "quadruples": [
+    {
+      "per_call_metadata": {
+        "caption_id": "L_algorithm_process",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "e49df7ce-f79b-470f-9f8a-38f9a4018ee0",
+        "is_round_5": true,
+        "latency_ms": 11883.7,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_L_algorithm_process",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 981,
+          "completion_tokens_details": {
+            "reasoning_tokens": 945
+          },
+          "prompt_tokens": 299,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1280
+        }
+      },
+      "prompt_id": "glm1_t01_distill_L_algorithm_process_r5",
+      "prompt_text": "Caption ID: L_algorithm_process\nCaption (sequence of concept labels in the graph):\n问题输入; 数据预处理; 特征工程; 样本划分; 算法选择; 模型初始化; 参数配置; 损失函数; 优化器; 前向传播; 反向传播; 梯度计算; 参数更新; 收敛判断; 早停机制; 验证评估; 交叉验证; 超参调优; 特征重要性; 模型集成; 决策输出; 后处理规则; 置信度估计; 结果解释; 可视化展示; 部署上线; 在线推理; 日志监控; 反馈回流; 数据再采集; 模型重训练; 性能衰减检测; 版本回退; 终止状态; 流程审计; 异常处理; 资源释放; 输出报告\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "数据增强； 类别不平衡处理； 数据漂移检测； A/B测试； 灰度发布"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "L_biological_taxonomy",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "8867de87-12ca-49b0-bc06-85a71e9880c4",
+        "is_round_5": true,
+        "latency_ms": 10016.2,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_L_biological_taxonomy",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 584,
+          "completion_tokens_details": {
+            "reasoning_tokens": 522
+          },
+          "prompt_tokens": 342,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 926
+        }
+      },
+      "prompt_id": "glm1_t01_distill_L_biological_taxonomy_r5",
+      "prompt_text": "Caption ID: L_biological_taxonomy\nCaption (sequence of concept labels in the graph):\n生物; 真核生物; 原核生物; 动物界; 植物界; 真菌界; 细菌域; 古菌域; 脊索动物门; 节肢动物门; 软体动物门; 哺乳纲; 鸟纲; 鱼纲; 食肉目; 灵长目; 偶蹄目; 猫科; 犬科; 豹属; 猫属; 虎; 狮; 家猫; 人科; 猴科; 人属; 黑猩猩属; 智人; 被子植物门; 裸子植物门; 单子叶植物纲; 双子叶植物纲; 禾本目; 百合目; 禾本科; 竹亚科; 蔷薇目; 菊目; 蔷薇科; 苹果属; 苹果\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "豹; 犬属; 狼; 爬行纲; 水稻"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "L_geography_world",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "ababb46b-d0b7-4e06-ad04-97c2ddc03065",
+        "is_round_5": true,
+        "latency_ms": 8736.8,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_L_geography_world",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 487,
+          "completion_tokens_details": {
+            "reasoning_tokens": 433
+          },
+          "prompt_tokens": 299,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 786
+        }
+      },
+      "prompt_id": "glm1_t01_distill_L_geography_world_r5",
+      "prompt_text": "Caption ID: L_geography_world\nCaption (sequence of concept labels in the graph):\n世界; 亚洲; 欧洲; 非洲; 北美洲; 南美洲; 大洋洲; 南极洲; 中国; 日本; 印度; 法国; 德国; 英国; 埃及; 南非; 美国; 加拿大; 巴西; 阿根廷; 澳大利亚; 新西兰; 南极大陆; 长城站; 北京; 东京; 新德里; 巴黎; 柏林; 伦敦; 开罗; 约翰内斯堡; 纽约; 多伦多; 里约热内卢; 布宜诺斯艾利斯; 悉尼; 奥克兰; 故宫; 埃菲尔铁塔; 自由女神像; 大堡礁; 富士山; 泰姬陵; 金字塔\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "太平洋; 尼罗河; 撒哈拉沙漠; 喜马拉雅山脉; 悉尼歌剧院"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "L_historical_causality",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "91395f61-e485-4021-818c-d7ba1d7d3945",
+        "is_round_5": true,
+        "latency_ms": 7429.3,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_L_historical_causality",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 381,
+          "completion_tokens_details": {
+            "reasoning_tokens": 353
+          },
+          "prompt_tokens": 334,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 715
+        }
+      },
+      "prompt_id": "glm1_t01_distill_L_historical_causality_r5",
+      "prompt_text": "Caption ID: L_historical_causality\nCaption (sequence of concept labels in the graph):\n资本主义扩张; 帝国主义竞争; 工业革命深化; 民族主义高涨; 军事同盟形成; 殖民地争夺激化; 军备竞赛升级; 巴尔干危机; 萨拉热窝事件; 奥匈帝国最后通牒; 七月危机; 俄国总动员; 德国战争计划; 德国宣战; 英国参战; 一战全面爆发; 阵地战消耗; 凡尔登战役; 索姆河战役; 美国参战; 俄国退出一战; 德国失败; 凡尔赛条约; 国际联盟成立; 奥斯曼帝国瓦解; 奥匈帝国解体; 民族国家涌现; 经济危机隐患; 法西斯主义兴起; 二战根源; 女性地位提升; 工人运动发展; 社会主义革命; 十月革命; 殖民体系松动; 全球秩序重塑\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "大萧条； 德国赔款危机； 纳粹党上台； 绥靖政策； 慕尼黑协定"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "L_physics_concepts",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "95c82735-60cc-4fea-9a80-db71446abb65",
+        "is_round_5": true,
+        "latency_ms": 10022.3,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_L_physics_concepts",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 733,
+          "completion_tokens_details": {
+            "reasoning_tokens": 709
+          },
+          "prompt_tokens": 286,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1019
+        }
+      },
+      "prompt_id": "glm1_t01_distill_L_physics_concepts_r5",
+      "prompt_text": "Caption ID: L_physics_concepts\nCaption (sequence of concept labels in the graph):\n物理学; 经典力学; 电磁学; 热力学; 量子力学; 相对论; 粒子物理; 运动学; 动力学; 牛顿定律; 万有引力定律; 麦克斯韦方程组; 电场; 磁场; 电磁波; 温度; 熵; 热力学第二定律; 波函数; 薛定谔方程; 海森堡不确定性原理; 狭义相对论; 广义相对论; 质能方程; 时空弯曲; 标准模型; 基本粒子; 夸克; 轻子; 光子; 强相互作用; 弱相互作用; 电磁相互作用; 希格斯玻色子; 引力\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "统计力学； 量子场论； 量子纠缠； 黑洞； 引力波"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "L_project_management",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "c3b4e174-28a9-47cf-9889-456ad7790fc5",
+        "is_round_5": true,
+        "latency_ms": 8206.4,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_L_project_management",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 468,
+          "completion_tokens_details": {
+            "reasoning_tokens": 433
+          },
+          "prompt_tokens": 278,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 746
+        }
+      },
+      "prompt_id": "glm1_t01_distill_L_project_management_r5",
+      "prompt_text": "Caption ID: L_project_management\nCaption (sequence of concept labels in the graph):\n项目立项; 需求收集; 需求分析; 需求确认; 项目范围; WBS分解; 范围确认; 项目计划; 进度计划; 成本预算; 资源计划; 风险识别; 风险应对计划; 质量计划; 沟通计划; 采购计划; 干系人管理; 任务执行; 团队管理; 质量保证; 风险监控; 质量控制; 进度监控; 成本控制; 变更控制; 沟通汇报; 采购实施; 产品交付; 验收确认; 文档归档; 项目复盘; 经验总结; 项目关闭\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "项目章程， 关键路径法， 挣值管理， 范围蔓延， 合同管理"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S1",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "cd40b5c9-d222-4163-a584-c2721c308c3b",
+        "is_round_5": true,
+        "latency_ms": 17770.0,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S1",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 700,
+          "completion_tokens_details": {
+            "reasoning_tokens": 647
+          },
+          "prompt_tokens": 212,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 912
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S1_r5",
+      "prompt_text": "Caption ID: S1\nCaption (sequence of concept labels in the graph):\n玻尔模型; 波函数; 酵母菌; 蝗虫; 电磁波; 偏振; 蝙蝠; 青蛙; 偶蹄目; 豆科; 折射; 鹰; 电磁学; 声学; 熊科; 不确定性原理; 电场; 脊索动物门; 热容量; 光学\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子力学， 干涉， 磁场， 哺乳纲， 鸟纲"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S1_n35",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "810833e8-91ea-428d-8a0e-bb886ba0c34d",
+        "is_round_5": true,
+        "latency_ms": 13300.0,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S1_n35",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 841,
+          "completion_tokens_details": {
+            "reasoning_tokens": 766
+          },
+          "prompt_tokens": 292,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1133
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S1_n35_r5",
+      "prompt_text": "Caption ID: S1_n35\nCaption (sequence of concept labels in the graph):\n蜘蛛; 虎; 不确定性原理; 折射; 灵长目; 电磁学; 牛顿运动定律; 豆科; 狗; 角动量; 蛛形纲; 麦克斯韦方程组; 青蛙; 脊索动物门; 犬科; 鸟纲; 时空弯曲; 电磁波; 波函数; 熊科; 鲤鱼; 动量守恒; 偶蹄目; 电流; 麻雀; 动物界; 衍射; 量子力学; 生物; 硬骨鱼纲; 狭义相对论; 软体动物门; 两栖纲; 引力波; 真菌界\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "哺乳纲， 猫科， 食肉目， 广义相对论， 波粒二象性"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S1_n45",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "23bce505-f605-4f9c-8856-855ff8fbd5a0",
+        "is_round_5": true,
+        "latency_ms": 14889.7,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S1_n45",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 660,
+          "completion_tokens_details": {
+            "reasoning_tokens": 636
+          },
+          "prompt_tokens": 347,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1007
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S1_n45_r5",
+      "prompt_text": "Caption ID: S1_n45\nCaption (sequence of concept labels in the graph):\n节肢动物门; 偏振; 折射; 真菌界; 牛顿运动定律; 麦克斯韦方程组; 哺乳纲; 物理学; 酵母菌; 偶蹄目; 鲤鱼; 大豆; 声学; 单子叶植物纲; 能量守恒; 原生生物界; 衍射; 虎; 电压; 青蛙; 猫; 环节动物门; 雀形目; 蝗虫; 爬行纲; 脊索动物门; 禾本科; 熊科; 不确定性原理; 原子核; 两栖纲; 植物界; 量子力学; 水稻; 电磁波; 猫科; 电磁学; 热力学; 波函数; 质子; 熵; 蔷薇科; 普朗克常数; 干涉; 豆科\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "电子, 昆虫纲, 双子叶植物纲, 波粒二象性, 鸟纲"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S1_n60",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "e82f90ff-919c-4af9-bd6e-dd032d151544",
+        "is_round_5": true,
+        "latency_ms": 8491.6,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S1_n60",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 593,
+          "completion_tokens_details": {
+            "reasoning_tokens": 571
+          },
+          "prompt_tokens": 406,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 999
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S1_n60_r5",
+      "prompt_text": "Caption ID: S1_n60\nCaption (sequence of concept labels in the graph):\n青蛙; 物理学; 单子叶植物纲; 热容量; 电压; 雀形目; 玻尔模型; 熊科; 鲤鱼; 电磁学; 蔷薇科; 不确定性原理; 相对论; 熵; 蘑菇; 广义相对论; 能量守恒; 薛定谔方程; 温度; 动量守恒; 蝗虫; 酵母菌; 狼; 电磁波; 引力波; 声学; 统计物理; 犬科; 真菌界; 双子叶植物纲; 爬行纲; 禾本科; 经典力学; 脊索动物门; 折射; 黑洞; 生物; 偶蹄目; 中子; 两栖纲; 玫瑰; 鸟纲; 虎; 大豆; 哺乳纲; 波函数; 时空弯曲; 质子; 磁场; 水稻; 蛇; 麻雀; 量子力学; 衍射; 原生生物界; 量子纠缠; 食肉目; 动物界; 偏振; 硬骨鱼纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "电子; 光子; 热力学; 昆虫纲; 节肢动物门"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S2",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "c034014c-d3c5-47de-b580-decfdee015bf",
+        "is_round_5": true,
+        "latency_ms": 14645.4,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S2",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 937,
+          "completion_tokens_details": {
+            "reasoning_tokens": 916
+          },
+          "prompt_tokens": 269,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1206
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S2_r5",
+      "prompt_text": "Caption ID: S2\nCaption (sequence of concept labels in the graph):\n牛顿运动定律; 量子力学; 质子; 偶蹄目; 单子叶植物纲; 热容量; 环节动物门; 相对论; 水稻; 青蛙; 光子; 声学; 蛛形纲; 动量守恒; 麻雀; 电阻; 狼; 禾本科; 原生生物界; 鲸; 引力波; 鸟纲; 原子核; 时空弯曲; 鲤鱼; 衍射; 干涉; 万有引力; 统计物理; 两栖纲; 哺乳纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "电磁学; 热力学; 电子; 爬行纲; 双子叶植物纲"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S2_n20",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "c92a2575-e494-4e72-9b61-28ee0f56df19",
+        "is_round_5": true,
+        "latency_ms": 9470.4,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S2_n20",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 586,
+          "completion_tokens_details": {
+            "reasoning_tokens": 535
+          },
+          "prompt_tokens": 217,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 803
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S2_n20_r5",
+      "prompt_text": "Caption ID: S2_n20\nCaption (sequence of concept labels in the graph):\n蔷薇科; 物理学; 禾本科; 能量守恒; 动量守恒; 两栖纲; 虎; 真菌界; 量子力学; 原生生物界; 万有引力; 生物; 偏振; 蝙蝠; 节肢动物门; 经典力学; 电流; 热力学; 蜘蛛; 普朗克常数\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "哺乳纲, 动物界, 植物界, 电磁学, 相对论"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S2_n35",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "18f47fc8-f7ce-4efe-ac79-30d52967c94f",
+        "is_round_5": true,
+        "latency_ms": 10358.3,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S2_n35",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 278,
+          "completion_tokens_details": {
+            "reasoning_tokens": 251
+          },
+          "prompt_tokens": 288,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 566
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S2_n35_r5",
+      "prompt_text": "Caption ID: S2_n35\nCaption (sequence of concept labels in the graph):\n棘皮动物门; 量子纠缠; 青蛙; 环节动物门; 大豆; 万有引力; 角动量; 黑洞; 统计物理; 能量守恒; 动量守恒; 虎; 热容量; 真菌界; 猫科; 狗; 衍射; 蘑菇; 电压; 动物界; 经典力学; 温度; 麻雀; 电磁波; 薛定谔方程; 偏振; 鲤鱼; 声学; 蛛形纲; 不确定性原理; 鹰; 蝙蝠; 玫瑰; 质子; 昆虫纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子力学, 热力学, 电子, 哺乳纲, 脊索动物门"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S2_n45",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "e42ea0bd-37de-4f7e-8327-e33172449046",
+        "is_round_5": true,
+        "latency_ms": 21329.0,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S2_n45",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 872,
+          "completion_tokens_details": {
+            "reasoning_tokens": 849
+          },
+          "prompt_tokens": 338,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1210
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S2_n45_r5",
+      "prompt_text": "Caption ID: S2_n45\nCaption (sequence of concept labels in the graph):\n真菌界; 青蛙; 广义相对论; 动量守恒; 能量守恒; 哺乳纲; 统计物理; 光子; 原子核; 猫科; 熊科; 单子叶植物纲; 节肢动物门; 磁场; 蘑菇; 犬科; 昆虫纲; 麻雀; 蔷薇科; 食肉目; 衍射; 万有引力; 狭义相对论; 蝗虫; 热容量; 生物; 软体动物门; 原生生物界; 热力学; 电磁学; 电流; 温度; 大豆; 引力波; 量子力学; 角动量; 反射; 偏振; 折射; 双子叶植物纲; 薛定谔方程; 相对论; 不确定性原理; 电子; 量子纠缠\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "两栖纲, 鸟纲, 豆科, 熵, 波粒二象性"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S2_n60",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "ea1359bd-f9b8-458a-9578-55bb1cdd1765",
+        "is_round_5": true,
+        "latency_ms": 15544.8,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S2_n60",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 977,
+          "completion_tokens_details": {
+            "reasoning_tokens": 957
+          },
+          "prompt_tokens": 411,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1388
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S2_n60_r5",
+      "prompt_text": "Caption ID: S2_n60\nCaption (sequence of concept labels in the graph):\n光学; 玻尔模型; 热容量; 生物; 蛇; 折射; 大豆; 动物界; 电流; 量子力学; 电磁学; 时空弯曲; 引力波; 相对论; 电阻; 软体动物门; 食肉目; 爬行纲; 熊科; 薛定谔方程; 鲤鱼; 波函数; 衍射; 单子叶植物纲; 物理学; 真菌界; 节肢动物门; 猫; 广义相对论; 黑洞; 蔷薇科; 水稻; 蝗虫; 能量守恒; 雀形目; 蝙蝠; 双子叶植物纲; 青蛙; 统计物理; 猫科; 光子; 鸟纲; 电压; 牛顿运动定律; 禾本科; 鹰; 角动量; 质子; 热力学; 硬骨鱼纲; 犬科; 原子核; 蘑菇; 电场; 昆虫纲; 原生生物界; 万有引力; 狭义相对论; 植物界; 哺乳纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "电子, 中子, 磁场, 两栖纲, 灵长目"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S3",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "e6444ed9-881a-421b-a9f4-c5f0d7a18b23",
+        "is_round_5": true,
+        "latency_ms": 10292.1,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S3",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 666,
+          "completion_tokens_details": {
+            "reasoning_tokens": 644
+          },
+          "prompt_tokens": 261,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 927
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S3_r5",
+      "prompt_text": "Caption ID: S3\nCaption (sequence of concept labels in the graph):\n原生生物界; 蘑菇; 薛定谔方程; 熵; 物理学; 鸟纲; 猫科; 蛇; 玻尔模型; 熊科; 犬科; 棘皮动物门; 鹰; 爬行纲; 电磁波; 广义相对论; 电流; 偏振; 光子; 禾本科; 不确定性原理; 时空弯曲; 植物界; 雀形目; 波函数; 双子叶植物纲; 干涉; 青蛙; 万有引力; 磁场\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子力学, 电磁学, 热力学, 哺乳纲, 两栖纲"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S4",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "70369943-8fce-4961-a87d-50394342ae8a",
+        "is_round_5": true,
+        "latency_ms": 37565.8,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S4",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 999,
+          "completion_tokens_details": {
+            "reasoning_tokens": 946
+          },
+          "prompt_tokens": 310,
+          "prompt_tokens_details": {
+            "cached_tokens": 64
+          },
+          "total_tokens": 1309
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S4_r5",
+      "prompt_text": "Caption ID: S4\nCaption (sequence of concept labels in the graph):\n热力学; 狼; 青蛙; 酵母菌; 鸟纲; 量子纠缠; 相对论; 光学; 鹰; 磁场; 虎; 棘皮动物门; 水稻; 折射; 蝗虫; 薛定谔方程; 原生生物界; 熵; 麦克斯韦方程组; 电压; 蝙蝠; 统计物理; 黑洞; 蔷薇科; 双子叶植物纲; 蛇; 麻雀; 熊科; 中子; 电磁波; 经典力学; 偏振; 真菌界; 植物界; 能量守恒; 声学; 温度; 猫科; 反射; 蜘蛛\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "哺乳纲, 爬行纲, 昆虫纲, 单子叶植物纲, 量子力学"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S5",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "ba687e83-0cc8-43f1-9efc-f7ff3b48481a",
+        "is_round_5": true,
+        "latency_ms": 9325.8,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S5",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 562,
+          "completion_tokens_details": {
+            "reasoning_tokens": 491
+          },
+          "prompt_tokens": 328,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 890
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S5_r5",
+      "prompt_text": "Caption ID: S5\nCaption (sequence of concept labels in the graph):\n生物; 植物界; 棘皮动物门; 青蛙; 玻尔模型; 玫瑰; 光学; 爬行纲; 动物界; 真菌界; 水稻; 统计物理; 相对论; 光子; 蛛形纲; 角动量; 不确定性原理; 蔷薇科; 脊索动物门; 声学; 质子; 猫科; 蝙蝠; 引力波; 硬骨鱼纲; 鸟纲; 鹰; 电磁波; 经典力学; 熵; 虎; 电子; 黑洞; 电压; 电流; 狗; 热力学; 禾本科; 熊科; 原子核; 热容量; 鲤鱼; 电场; 偏振; 蛇\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "量子力学; 中子; 磁场; 哺乳纲; 两栖纲"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S6",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "0608006c-fc3a-489c-ad71-bffb018b82d8",
+        "is_round_5": true,
+        "latency_ms": 13491.2,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S6",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 899,
+          "completion_tokens_details": {
+            "reasoning_tokens": 826
+          },
+          "prompt_tokens": 343,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 1242
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S6_r5",
+      "prompt_text": "Caption ID: S6\nCaption (sequence of concept labels in the graph):\n磁场; 虎; 节肢动物门; 真菌界; 蛇; 禾本科; 衍射; 原子核; 原生生物界; 两栖纲; 电压; 蜘蛛; 统计物理; 硬骨鱼纲; 不确定性原理; 动物界; 鸟纲; 猫科; 生物; 蝗虫; 蛛形纲; 量子力学; 豆科; 犬科; 牛顿运动定律; 电场; 脊索动物门; 雀形目; 鲤鱼; 狗; 鹰; 玫瑰; 引力波; 动量守恒; 昆虫纲; 软体动物门; 广义相对论; 棘皮动物门; 普朗克常数; 蔷薇科; 热力学; 狼; 大豆; 中子; 环节动物门\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "哺乳纲, 爬行纲, 植物界, 质子, 能量守恒"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S6_n20",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "0d7a0f2a-cf20-46b8-8025-1d560578911e",
+        "is_round_5": true,
+        "latency_ms": 6440.3,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S6_n20",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 383,
+          "completion_tokens_details": {
+            "reasoning_tokens": 358
+          },
+          "prompt_tokens": 216,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 599
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S6_n20_r5",
+      "prompt_text": "Caption ID: S6_n20\nCaption (sequence of concept labels in the graph):\n硬骨鱼纲; 环节动物门; 生物; 植物界; 黑洞; 软体动物门; 真菌界; 干涉; 玫瑰; 偏振; 中子; 引力波; 折射; 反射; 电压; 偶蹄目; 猫; 动量守恒; 蔷薇科; 双子叶植物纲\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "哺乳纲, 节肢动物门, 衍射, 质子, 单子叶植物纲"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S6_n35",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "cca8898a-d15a-4800-a8f5-e0e813e2388f",
+        "is_round_5": true,
+        "latency_ms": 6396.9,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S6_n35",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 487,
+          "completion_tokens_details": {
+            "reasoning_tokens": 416
+          },
+          "prompt_tokens": 291,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 778
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S6_n35_r5",
+      "prompt_text": "Caption ID: S6_n35\nCaption (sequence of concept labels in the graph):\n猫; 禾本科; 昆虫纲; 爬行纲; 单子叶植物纲; 玻尔模型; 硬骨鱼纲; 酵母菌; 电压; 食肉目; 温度; 水稻; 麻雀; 动物界; 环节动物门; 热力学; 蝙蝠; 牛顿运动定律; 蜘蛛; 虎; 不确定性原理; 引力波; 经典力学; 电场; 鲤鱼; 鲸; 广义相对论; 哺乳纲; 熊科; 植物界; 电阻; 鹰; 软体动物门; 质子; 狗\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "鸟纲, 两栖纲, 猫科, 量子力学, 磁场"
+    },
+    {
+      "per_call_metadata": {
+        "caption_id": "S6_n60",
+        "empty_response": false,
+        "endpoint": "https://api.teamorouter.cn/v1/chat/completions",
+        "error_category": null,
+        "error_snippet": "",
+        "id": "4c5e3a1b-337e-4e33-bc3b-acf4c25c5b50",
+        "is_round_5": true,
+        "latency_ms": 10381.7,
+        "max_tokens": 2000,
+        "model_id_sent": "glm-5.3",
+        "model_returned": "glm-5.3",
+        "ok": true,
+        "phase_label": "r5_distill_S6_n60",
+        "read_timeout_s": 60,
+        "reask_idx": 4,
+        "retry_bug_fix_applied": true,
+        "retry_count": 0,
+        "round_index": 5,
+        "side": "distill",
+        "status_code": 200,
+        "teacher_label": "GLM_1",
+        "temperature": 0.7,
+        "usage": {
+          "completion_tokens": 324,
+          "completion_tokens_details": {
+            "reasoning_tokens": 305
+          },
+          "prompt_tokens": 425,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 749
+        }
+      },
+      "prompt_id": "glm1_t01_distill_S6_n60_r5",
+      "prompt_text": "Caption ID: S6_n60\nCaption (sequence of concept labels in the graph):\n猫; 薛定谔方程; 波函数; 动物界; 灵长目; 衍射; 光学; 哺乳纲; 植物界; 统计物理; 青蛙; 虎; 能量守恒; 狭义相对论; 动量守恒; 蝗虫; 原生生物界; 热容量; 偶蹄目; 电磁波; 软体动物门; 鹰; 脊索动物门; 犬科; 棘皮动物门; 蘑菇; 电场; 雀形目; 量子力学; 蔷薇科; 广义相对论; 单子叶植物纲; 狼; 经典力学; 量子纠缠; 温度; 硬骨鱼纲; 蛇; 麦克斯韦方程组; 时空弯曲; 猫科; 生物; 玻尔模型; 食肉目; 豆科; 电压; 麻雀; 热力学; 昆虫纲; 鲤鱼; 真菌界; 电流; 中子; 节肢动物门; 玫瑰; 普朗克常数; 原子核; 环节动物门; 电阻; 狗\n\nTask: Generate 3-5 NEW related concept labels that would naturally extend this graph. Output only a single line of comma-separated labels.",
+      "response_text": "电子, 光子, 磁场, 熵, 原子"
+    }
+  ],
+  "retry_validation": {
+    "delta_empty_rate_r5_vs_r4": 0.0,
+    "r4_empty_rate_with_fix_baseline": 0.0,
+    "r5_empty_rate_with_fix": 0.0,
+    "r5_retry_bug_fix_applied_in_all_calls": true,
+    "r5_retry_count_distribution": {
+      "0": 22
+    },
+    "r5_retry_trigger_categories_distribution": {},
+    "r5_retry_trigger_categories_tracker": [],
+    "r5_retry_triggered_count": 0
+  },
+  "round": 5,
+  "schema": "v4_l14v3_n26/1",
+  "self_scan": {
+    "key_pattern_hits_in_product": [],
+    "scanned_at": "2026-09-25T03:29:41+08:00"
+  }
+}

@@ -1,0 +1,1395 @@
+# -*- coding: utf-8 -*-
+"""
+_v4_supp_l14v3_batch3_r5_executor.py
+====================================
+
+V4 L14+ batch 3 · round 5 · GLM_2 教师侧 round 5（reask=4）—— 收官棒
+=====================================================================
+
+【派工依据】
+----------------
+- 沿 batch3 r4 executor `c79b5c274a10` + r4 result `0e47768640d3` 口径锚（GLM_2 教师侧 round 4 reask=3，22/22 全部 ≥4 successful）
+- 沿 batch3 r3 executor `1B3861943B7E` + r3 result `6E677FFCC880` 口径（GLM_2 教师侧 round 3 reask=2）
+- 沿 batch3 r2 executor `540C9369DD36` + r2 result `58E9C55A770D` 口径（GLM_2 教师侧 round 2 reask=1）
+- 沿 batch3 r1 executor `A4731B39343F` + r1 result `D24B84671C23` 口径（GLM_2 round 1 reask=0）
+- 沿 batch2 r3 executor `72FD2BB3838E` + r3 result `25251ACA6D79` 口径（基础口径锚 GLM_1 round 2 reask=1）
+- 沿 batch2 r2 executor `E7418F47A130` + r2 result `8C125E257AF8` 口径（基础口径锚）
+- 沿 batch1 r6 executor `5f02c7e0f094` + r6 result `A4F851154551` retry 修复口径 + finish 块惯例
+- 沿 /v1/models 探活 `_v4_supp_l14v3_batch2_r2_models_probe.json` (sha12=`3C9DC60B5071`)
+  选定 glm-5.3（44 个 model 中 GLM 系 4 个：glm-5.2/glm-5.3/glm-5.3-flash/glm-5.3-flash-free）
+- 派工单 ask_748d9242c7a6be3d83de63a0 (2026-09-24 23:08 显式) 映射拍板:
+  **GLM_2 = 复用 teamo `glm-5.3`**（与 GLM_1 同 model_id，不同语料；V3 字面 same lineage）
+  → teacher_label = GLM_2；model_id_shared_with = GLM_1；model_id = glm-5.3
+- **glm2_corpus 口径拍板** (2026-09-24 23:42 ask_259658a4ffadd6f8aeb12f34 显式):
+  **接受 system prompt 微调口径** = GLM_2 教师身份=语料标签+prompt 语境差异；近缘对分布差异有限
+  如实入 N-26 构造域限制（不软化）；round1+round2+round3+round4 88 calls 有效不作废；
+  字段命名维持现状（三处冗余标注保留）
+- 接力节奏派工 (2026-09-24 23:55 显式): 延续 22×1 call/棒模式（已拍工程口径，不再请示）
+- **收官棒** (PI 派工 2026-09-25 01:10): 本棒收 GLM_2 教师侧 round 5（reask=4）= 22 caption × 1 call
+  目标各 caption ≥5 successful；finish 块沿 batch1 r6 `kimi_distill_side_round1_finish` 惯例命名为
+  `glm2_teacher_side_finish.all_22_captions_met_target`
+- **夜间自主保守口径** (PI 2026-09-25 00:46 授权): 本棒先斩后奏，遇模糊取保守并如实标注待 PI 复核
+
+【本棒范围（沿 dispatch）—— GLM_2 教师侧 round 5（reask=4）收官】
+----------------------------------------------------------
+1. **沿用 glm-5.3**（r4 1-call smoke ok=200；本棒不再探活，仅 1-call smoke 防端点飘移）
+2. **22 caption × 1 call**（每位 caption 第 5 call；reask_idx=4；目标 5/5 successful/caption）
+3. **目标**：本棒后 22/22 caption 各 ≥5 successful call（GLM_2 教师侧 round 5 = 收官）
+4. 预算 ≤22 caption calls + ≤1 smoke calls / ≤600s watchdog
+5. 跑不完如实报断点
+
+【每 caption successful 计数（沿 dispatch §6）】
+---------------------------------------------------------
+- 本棒前基线（沿 r4 末态）：GLM_2 教师侧 = 88 calls / 0 empty / 88 ok / 0.0% rate
+- 跨批累计 baseline = r4 末态 **251 calls / 9 empty / 242 ok / 3.59%**（沿 r4 result cross_batch_with_r3_baseline）
+- 本棒 round 5（reask=4）后：22/22 caption 各 ≥5 successful call（收官理论值；如端点飘移可能回落）
+- 终盘结果：result.json 顶层 `per_caption_successful_calls` 块 + `glm2_teacher_side_finish` 收官块 + `dispatch_target_progress` 块
+
+【retry 修复逻辑沿 batch1 r6 + batch2 r2 + batch3 r1/r2/r3/r4（沿 dispatch §3）】
+--------------------------------------------
+- NETWORK_ERROR_CATEGORIES_RETRY = {timeout, proxy_error, ssl_error, connection_error}
+- read_timeout_initial_s=60 / read_timeout_retry_s=90
+- hard fail (auth/quota/model_not_available/http_xxx) 保持 fail path 立即返回
+- r6 retry 触发的源 error_category tracking 沿用
+
+【empty_rate 趋势监控 + K-N26-N2 累计阈值停采（沿 dispatch §4 + §5）】
+--------------------------------------------------------------------
+- 跨批累计 baseline = **251 calls / 9 empty / 3.59%**（沿 r4 末态，本棒前 GLM_2 r4 末态）
+- GLM_2 自身 = 88 calls / 0 empty / 0.0% rate（r4 末态）
+- 单棒 empty_rate >0.50 立即停采报告（dispatch §5 字面）
+- 触发 K-N26-N2 pass=False 条件：cumulative_empty_rate > 0.50 → 立即停采报告（不硬跑）
+- 并行下跨批实时合并由 verdict-keeper 统裁；本棒报自身数
+
+【端点取舍（沿 r4）】
+----------------------------
+- teamo + tun + glm-5.3（r4 已探活确认 ok=200；本棒不再做完整 3-candidate probe，仅 1-call smoke）
+- model_id 字面 = glm-5.3
+  - 与 GLM_1 同 model_id（model_id_shared_with = GLM_1）
+  - GLM_2 与 GLM_1 不同教师身份 = system prompt 微调标识 GLM_2 教师身份
+    (sibling lineage to GLM_1, same underlying model with distinct teacher corpus identity)
+    —— 沿 ask_259658a4ffadd6f8aeb12f34 口径拍板（2026-09-24 23:42）
+  - teacher_label = GLM_2 标识本棒是 GLM_2 教师（非 GLM_1）
+- teamo 必走 tun 防封号（PI 2026-09-23 硬纪律）
+
+【铁律严守（沿 r4）】
+------------------------
+- R4 key 永不明文（无例外）；仅 runtime memory 读
+- V1–V3 只读不动 / R5 V4 frozen append-only / R6 P-G 不动 / R7 plugin spec 不动
+- 派生 JSON 不合并（本棒 `_batch3_r5_*` 与 `_batch3_r4_*` / `_batch3_r3_*` / `_batch3_r2_*` / `_batch3_r1_*` / `_batch2_*` / `_batch1_*` 独立）
+- 0 擅调阈值；max_tokens=2000 沿 prereg §1.4 工具失灵修正条款
+- 串行 ≥2.5s 全程；teamo 必走 tun（PI 2026-09-23 硬纪律）
+- 空响应 = response_text 空/仅空白；如实计数
+- 只采不算 K-N26-1/2/3（verdict-keeper 统裁；本棒 0 写 verdict）
+- succeeded ≠ 跑完落盘核验
+- 老实交代 0 产物；探活计入 calls 账
+- 不覆盖既有件（r4 executor `c79b5c274a10` + r4 result `0e47768640d3` + r3 executor `1B3861943B7E` + r3 result `6E677FFCC880` + r2 executor `540C9369DD36` + r2 result `58E9C55A770D` + r1 executor `A4731B39343F` + r1 result `D24B84671C23` + r3 executor `72FD2BB3838E` + r3 result `25251ACA6D79` + r2 executor `E7418F47A130` + r2 result `8C125E257AF8` + batch1 r6 双件 + r1 探活件 + models_probe `3C9DC60B5071` 不动）
+
+【产物】
+----------
+- 写入：`results/_v4_supp_l14v3_batch3_r5_result.json`（schema = `v4_l14v3_n26/1` + batch=3 + round=5）
+- 不覆盖 r4 result `0e47768640d3` 或 r3 result `6E677FFCC880` 或 r2 result `58E9C55A770D` 或 r1 result `D24B84671C23` 或 r3 result `25251ACA6D79` 或 r2 result `8C125E257AF8` 或 r1 探活 result `D245AE4CE385` 或 batch1 r6 result `A4F851154551`
+- predecessor_sha12 链：r4_executor `c79b5c274a10` + r4_result `0e47768640d3` + r3_executor `1B3861943B7E` + r3_result `6E677FFCC880` + r2_executor `540C9369DD36` + r2_result `58E9C55A770D` + r1_executor `A4731B39343F` + r1_result `D24B84671C23` + r3_executor `72FD2BB3838E` + r3_result `25251ACA6D79` + r2_executor/r2_result + batch1_r6_executor/batch1_r6_result + r1_executor/r1_result + models_probe
+
+【与 r4 executor diff（沿 dispatch §4 「若需改参数则新件 + 注明 diff」）】
+-------------------------------------------------------------------------
+1. ROUND = 5（升 r5 命名避开 r4 重叠）；BATCH = 3 不变
+2. prompt_id 前缀 `glm2_t05_teacher_*`（取代 r4 的 `glm2_t04_teacher_*`）
+   - t05 = teacher side round 5（取代 r4 的 t04 round 4）
+   - 后缀 `_b3_r5`（取代 r4 的 `_b3_r4`）
+3. REASK_R1 = 4（本棒每位 caption 第 5 call；取代 r4 的 reask_idx=3）
+4. phase_label：`b3_r5_need1`（取代 r4 的 `b3_r4_need1`）
+5. is_round_2 = True（语义：本棒为 GLM_2 教师侧 data collection round 5；属 round ≥2 范畴）
+6. smoke_call_only = True（沿 r4）
+7. predecessor_sha12 链：r4_executor `c79b5c274a10` + r4_result `0e47768640d3` + r3_executor `1B3861943B7E` + r3_result `6E677FFCC880` + r2_executor `540C9369DD36` + r2_result `58E9C55A770D` + r1_executor `A4731B39343F` + r1_result `D24B84671C23` + r3_executor `72FD2BB3838E` + r3_result `25251ACA6D79` + r2_executor/r2_result + batch1_r6_executor/batch1_r6_result + r1_executor/r1_result + models_probe
+8. baseline prior：GLM_2 prior = 88 calls / 0 empty / 88 ok / 0.0% rate（取代 r4 链的 66/0/66/0%）
+9. 跨批累计 baseline：r4 末态 **251 calls / 9 empty / 3.59%**（取代 r4 链的 229/9/3.93%）
+10. 新增 `glm2_teacher_side_finish` 收官块（沿 batch1 r6 `kimi_distill_side_round1_finish` 惯例；含 all_22_captions_met_target / met_count_post_r5 / still_pending / finish_disposition / total_captions）
+11. K-N26-N2 触发阈值 = 0.50 不变；监控 baseline 更新为 251/9/3.59%
+12. spec_conformance 重写：GLM_2 教师侧 round 5（reask=4）收官，目标 ≥5 successful call
+13. per_caption_successful_calls 字段 `met_target` 反映 ≥5 successful/caption（取代 r4 的 round4_target=4 / round4_met → r5 met_target=True 即收官）
+14. 调度注释：GLM_2 教师侧 round 5（reask=4）22 caption × 1 call 收官
+15. glm2_corpus_calibration.rounds_covered 续展至「round1+round2+round3+round4 88 calls 有效不作废」
+16. 夜间授权标注：PI 2026-09-25 00:46 保守口径先斩后奏
+17. 接力源标注：本棒为同 agent 唤醒保上下文（r4 → r5 同一上下文接力；PI 2026-09-25 01:10）
+
+【边界】
+----------
+- 不动任何既有件（含 r4 executor `c79b5c274a10` + r4 result `0e47768640d3` + r3 executor `1B3861943B7E` + r3 result `6E677FFCC880` + r2 executor `540C9369DD36` + r2 result `58E9C55A770D` + r1 executor `A4731B39343F` + r1 result `D24B84671C23` + r3 executor `72FD2BB3838E` + r3 result `25251ACA6D79` + r2 executor `E7418F47A130` + r2 result `8C125E257AF8` + batch1 r6 executor `5f02c7e0f094` + batch1 r6 result `A4F851154551` + r1 executor `E52F930654D3` + r1 result `D245AE4CE385` + models_probe `3C9DC60B5071` + prereg `05B975A86989`）
+- 跑不完拆段报断点
+- 0 触动 V1–V3 资产 / R5 V4 frozen / R6 P-G / R7 plugin spec
+- 夜间自主保守口径：遇模糊取保守并如实标注待 PI 复核（PI 2026-09-25 00:46 授权）
+"""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+import re
+import sys
+import time
+from datetime import datetime, timezone, timedelta
+from typing import Any, Dict, List, Tuple
+
+import requests as _requests
+
+# ============================================================
+# 路径与常量
+# ============================================================
+ROOT = "D:/私人资料/deposon-repo"
+RESULTS_DIR = os.path.join(ROOT, "results")
+CAPTIONS_PATH = os.path.join(ROOT, "corpus", "v20_caption_surface", "strip_captions_22.json")
+KEY_SOURCE_PATH = "C:/Users/Administrator/Desktop/AI/LLM API.txt"
+BATCH1_R6_RESULT_PATH = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch1_r6_result.json")
+R1_RESULT_PATH_B2 = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch2_r1_result.json")
+R2_RESULT_PATH_B2 = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch2_r2_result.json")
+R3_RESULT_PATH_B2 = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch2_r3_result.json")
+R1_RESULT_PATH_B3 = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch3_r1_result.json")
+R2_RESULT_PATH_B3 = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch3_r2_result.json")
+R3_RESULT_PATH_B3 = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch3_r3_result.json")
+R4_RESULT_PATH_B3 = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch3_r4_result.json")
+MODELS_PROBE_PATH = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch2_r2_models_probe.json")
+
+# tun 代理（沿 r4）
+PROXY_HTTP = "http://127.0.0.1:1018"
+PROXY_SOCKS5 = "socks5://127.0.0.1:1018"
+
+# ============================================================
+# 端点配置（沿 r4）
+# ============================================================
+ENDPOINT_TEAMO = "https://api.teamorouter.cn/v1"
+KEY_INDEX_TEAMO_1BASED = 15  # 沿 r4 (line 15 = teamo key)
+USE_PROXY = True
+
+# 串行间隔
+INTER_CALL_SLEEP_S = 2.5
+
+# 超参（沿 r4）
+TEMPERATURE = 0.7
+MAX_TOKENS = 2000
+
+# 工具失灵族参数修正（沿 r4）
+READ_TIMEOUT_INITIAL_S = 60
+READ_TIMEOUT_RETRY_S = 90
+INNER_RETRY_MAX = 3
+
+# 网络异常 retry 类别（沿 r4 + dispatch §1 字面）
+NETWORK_ERROR_CATEGORIES_RETRY = {"timeout", "proxy_error", "ssl_error", "connection_error"}
+
+# K-N26-N2 累计 empty_rate 停采阈值（沿 dispatch §4）
+K_N26_N2_CUMULATIVE_EMPTY_RATE_THRESHOLD = 0.50
+
+# 预算
+WALL_TIME_BUDGET_S = 600
+
+# 本棒调度（沿 dispatch）
+BATCH = 3  # batch=3 不变
+ROUND = 5  # 升 r5 命名避开 r4 重叠；收官棒
+TEACHER = "GLM_2"  # 沿 r4
+TEACHER_LABEL = "GLM_2"  # 顶层字段沿 r4
+MODEL_ID_SHARED_WITH = "GLM_1"  # 顶层字段沿 r4
+SIDE = "teacher"
+REASK_R1 = 4  # 本棒 round 5 = 每 caption 第 5 call（reask_idx=4）
+TARGET_SUCCESSFUL_PER_CAPTION = 5  # 最终目标 ≥5 successful/caption（沿 prereg §1.6）—— 收官
+SMOKE_CALL_ONLY = True  # 沿 r4 smoke=glm-5.3 ok=200；本棒仅 1-call smoke 不再做 3-candidate probe
+
+# 选定的 model_id（沿 r4 探活结论，不重探）
+# 关键：GLM_2 与 GLM_1 复用同一 model_id（teamo glm-5.3）— 沿 ask_748d9242 映射拍板
+MODEL_GLM_2 = "glm-5.3"
+
+# smoke prompt（极小，节省 token）
+SMOKE_PROMPT = "Reply with the single word: ok"
+
+# glm2_corpus 口径拍板（沿 ask_259658a4ffadd6f8aeb12f34 2026-09-24 23:42 显式；本棒续展）
+GLM2_CORPUS_CALIBRATION = {
+    "decision": "accept system prompt 微调口径",
+    "ask_id": "ask_259658a4ffadd6f8aeb12f34",
+    "decided_at_cst": "2026-09-24T23:42:00+08:00",
+    "rounds_covered": "round1+round2+round3+round4 88 calls 有效不作废",
+    "field_naming_status": "维持现状（三处冗余标注保留）",
+    "near_lineage_pair_distribution_handling": (
+        "近缘对分布差异有限如实入 N-26 构造域限制（不软化）"
+    ),
+    "teacher_identity_definition": (
+        "GLM_2 教师身份 = 语料标签 + prompt 语境差异（system prompt 微调标识 GLM_2 教师身份）"
+    ),
+    "system_prompt_microcontent": (
+        "GLM_2 ... sibling lineage to GLM_1, same underlying model with distinct teacher corpus identity"
+    ),
+}
+
+
+# ============================================================
+# 敏感模式（沿 r4）
+# ============================================================
+SENSITIVE_PATTERNS = [
+    ("api_key_literal", re.compile(r"(?i)api[_-]?key\s*[:=]\s*[A-Za-z0-9_\-]{8,}")),
+    ("sk_literal", re.compile(r"(?i)sk-[A-Za-z0-9_\-]{8,}")),
+    ("Bearer_token", re.compile(r"(?i)Bearer\s+[A-Za-z0-9_\-\.]{20,}")),
+    ("tp_token", re.compile(r"(?i)tp-[A-Za-z0-9]{8,}")),
+    ("sp_key", re.compile(r"(?i)sk-sp-[A-Za-z0-9_\-\.]{8,}")),
+    ("sk_teamo", re.compile(r"(?i)sk-teamo-[A-Za-z0-9]{8,}")),
+    ("openai_endpoint", re.compile(r"(?i)openai-[A-Za-z0-9_\-]{4,}")),
+    ("claude_endpoint", re.compile(r"(?i)claude-[A-Za-z0-9_\-]{4,}")),
+    ("ark_endpoint", re.compile(r"(?i)ark-[A-Za-z0-9_\-]{4,}")),
+]
+
+
+# ============================================================
+# 工具（沿 r4 + 复用）
+# ============================================================
+def setup_proxy_teamo() -> None:
+    os.environ["https_proxy"] = PROXY_HTTP
+    os.environ["http_proxy"] = PROXY_HTTP
+    os.environ["all_proxy"] = PROXY_SOCKS5
+
+
+def fetch_api_key(key_index_1based: int) -> str:
+    raw = open(KEY_SOURCE_PATH, "rb").read()
+    for enc in ("utf-8", "gb18030", "gbk"):
+        try:
+            text = raw.decode(enc)
+            break
+        except UnicodeDecodeError:
+            continue
+    else:
+        raise RuntimeError("key source file: no decodable encoding found")
+    lines = text.splitlines()
+    key = lines[key_index_1based - 1].strip()
+    if not key or len(key) < 20:
+        raise RuntimeError(f"key line {key_index_1based} empty or too short; abort")
+    return key
+
+
+def is_empty_response(text: str) -> bool:
+    if text is None:
+        return True
+    return text.strip() == ""
+
+
+def classify_status(sc: int) -> str:
+    if sc == 401:
+        return "auth_failed"
+    if sc == 402:
+        return "quota_exhausted"
+    if sc == 404:
+        return "endpoint_not_found"
+    if sc == 429:
+        return "rate_limited"
+    if 400 <= sc < 500:
+        return "client_error_4xx"
+    if 500 <= sc < 600:
+        return "server_error_5xx"
+    return f"http_{sc}"
+
+
+def call_chat_teamo(
+    api_key: str,
+    model_id: str,
+    messages: List[Dict[str, str]],
+    temperature: float = TEMPERATURE,
+    max_tokens: int = MAX_TOKENS,
+    timeout: int = READ_TIMEOUT_INITIAL_S,
+) -> Dict[str, Any]:
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+        "HTTP-Referer": "https://deposon.local/l14v3-batch3-r5",
+        "X-Title": f"deposon-l14v3-batch3-r5-{TEACHER}-teacher",
+    }
+    body = {
+        "model": model_id,
+        "messages": messages,
+        "temperature": temperature,
+        "max_tokens": max_tokens,
+        "stream": False,
+    }
+    chat_url = ENDPOINT_TEAMO.rstrip("/") + "/chat/completions"
+    proxies = {"http": PROXY_HTTP, "https": PROXY_HTTP}
+
+    t0 = time.time()
+    try:
+        r = _requests.post(
+            chat_url, headers=headers, json=body, proxies=proxies, timeout=timeout,
+        )
+        latency_ms = round((time.time() - t0) * 1000, 1)
+        if r.status_code != 200:
+            return {
+                "ok": False,
+                "status_code": r.status_code,
+                "error_category": classify_status(r.status_code),
+                "latency_ms": latency_ms,
+                "error_body_snippet": r.text[:300],
+            }
+        data = r.json()
+        content = ""
+        try:
+            content = data["choices"][0]["message"]["content"] or ""
+        except (KeyError, IndexError, TypeError):
+            content = ""
+        return {
+            "ok": True,
+            "status_code": r.status_code,
+            "latency_ms": latency_ms,
+            "model_returned": data.get("model", ""),
+            "id": data.get("id", ""),
+            "content": content,
+            "usage": data.get("usage", {}),
+        }
+    except _requests.exceptions.ProxyError as e:
+        return {"ok": False, "error_category": "proxy_error",
+                "latency_ms": round((time.time() - t0) * 1000, 1),
+                "error_snippet": str(e)[:200]}
+    except _requests.exceptions.SSLError as e:
+        return {"ok": False, "error_category": "ssl_error",
+                "latency_ms": round((time.time() - t0) * 1000, 1),
+                "error_snippet": str(e)[:200]}
+    except _requests.exceptions.ConnectionError as e:
+        return {"ok": False, "error_category": "connection_error",
+                "latency_ms": round((time.time() - t0) * 1000, 1),
+                "error_snippet": str(e)[:200]}
+    except _requests.exceptions.Timeout as e:
+        return {"ok": False, "error_category": "timeout",
+                "latency_ms": round((time.time() - t0) * 1000, 1),
+                "error_snippet": str(e)[:200]}
+    except Exception as e:
+        return {"ok": False, "error_category": "other",
+                "latency_ms": round((time.time() - t0) * 1000, 1),
+                "error_snippet": str(e)[:200]}
+
+
+def self_scan_text(text: str) -> List[Tuple[str, int]]:
+    hits: List[Tuple[str, int]] = []
+    for name, pat in SENSITIVE_PATTERNS:
+        n = len(pat.findall(text))
+        if n > 0:
+            hits.append((name, n))
+    return hits
+
+
+def self_scan_obj(obj: Any) -> List[Tuple[str, int]]:
+    s = json.dumps(obj, ensure_ascii=False, sort_keys=True)
+    return self_scan_text(s)
+
+
+def sha12_file(path: str) -> Tuple[str, int, bool]:
+    with open(path, "rb") as f:
+        data = f.read()
+    return hashlib.sha256(data).hexdigest()[:12], len(data), b"\r" not in data
+
+
+# ============================================================
+# 提示构造（沿 r4 + GLM_2 教师身份微调；口径拍板已落定）
+# ============================================================
+# GLM_2 系统提示：与 GLM_1 同 model_id 不同教师身份
+# 不同语料 = GLM_2 教师身份的 system prompt 微调（沿 ask_259658a4ffadd6f8aeb12f34 口径拍板）
+PROMPT_SYSTEM = (
+    "You are GLM_2, a V3-style concept-graph distillation teacher (sibling lineage to GLM_1, "
+    "same underlying model with distinct teacher corpus identity). "
+    "Given a concept graph caption (a comma-separated sequence of concept "
+    "labels), generate 3-5 NEW related concept labels that would naturally "
+    "extend this graph. Output ONLY a single line of comma-separated labels "
+    "(no other text, no commentary, no markdown)."
+)
+
+
+def build_user_prompt(caption_text: str, caption_id: str) -> str:
+    return (
+        f"Caption ID: {caption_id}\n"
+        f"Caption (sequence of concept labels in the graph):\n{caption_text}\n\n"
+        f"Task: Generate 3-5 NEW related concept labels that would naturally "
+        f"extend this graph. Output only a single line of comma-separated labels."
+    )
+
+
+def load_captions() -> List[Dict[str, Any]]:
+    with open(CAPTIONS_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+# ============================================================
+# Smoke（沿 r4 probe 简化版；仅 1 call 确认端点 ok）
+# ============================================================
+def smoke_glm_model(api_key: str, model_id: str) -> Dict[str, Any]:
+    """1-call smoke（沿 r4 probe 结论 glm-5.3 ok=200 已知）；仅作端点可达性确认。"""
+    t0 = time.time()
+    messages = [{"role": "user", "content": SMOKE_PROMPT}]
+    r = call_chat_teamo(
+        api_key=api_key,
+        model_id=model_id,
+        messages=messages,
+        max_tokens=20,
+        timeout=READ_TIMEOUT_INITIAL_S,
+    )
+    rec = {
+        "candidate_model_id": model_id,
+        "ok": r.get("ok", False),
+        "status_code": r.get("status_code"),
+        "latency_ms": r.get("latency_ms", 0),
+        "model_returned": r.get("model_returned", ""),
+        "error_category": r.get("error_category"),
+        "error_snippet": (r.get("error_body_snippet") or r.get("error_snippet") or "")[:200],
+        "content_preview": (r.get("content", "") or "")[:50],
+        "content_empty_reasoning_only": r.get("ok", False) and is_empty_response(r.get("content", "")),
+        "phase_label": "smoke_glm_model_id",
+        "wall_time_s": round(time.time() - t0, 1),
+    }
+    return rec
+
+
+# ============================================================
+# 单 call + 内层重试（沿 r4）
+# ============================================================
+def run_one_quadruple(
+    api_key: str,
+    caption: Dict[str, Any],
+    reask_idx: int,
+    side: str,
+    round_index: int,
+    is_round_2: bool,
+    phase_label: str,
+    retry_trigger_categories_tracker: List[str],
+    model_id: str,
+) -> Dict[str, Any]:
+    caption_id = caption["id"]
+    prompt_text = build_user_prompt(caption["text"], caption_id)
+    messages = [
+        {"role": "system", "content": PROMPT_SYSTEM},
+        {"role": "user", "content": prompt_text},
+    ]
+    suffix = "_b3_r5"
+    prompt_id = f"glm2_t05_{side}_{caption_id}{suffix}"
+
+    retries = 0
+    last = None
+    while retries <= INNER_RETRY_MAX:
+        timeout_s = READ_TIMEOUT_INITIAL_S if retries == 0 else READ_TIMEOUT_RETRY_S
+        r = call_chat_teamo(api_key=api_key, model_id=model_id, messages=messages, timeout=timeout_s)
+        last = r
+        if r["ok"]:
+            content = r.get("content", "")
+            if not is_empty_response(content):
+                return {
+                    "prompt_id": prompt_id,
+                    "prompt_text": prompt_text,
+                    "response_text": content,
+                    "per_call_metadata": {
+                        "ok": True,
+                        "status_code": r["status_code"],
+                        "latency_ms": r["latency_ms"],
+                        "model_returned": r.get("model_returned", ""),
+                        "id": r.get("id", ""),
+                        "usage": r.get("usage", {}),
+                        "endpoint": ENDPOINT_TEAMO + "/chat/completions",
+                        "model_id_sent": model_id,
+                        "teacher_label": TEACHER_LABEL,
+                        "model_id_shared_with": MODEL_ID_SHARED_WITH,
+                        "side": side,
+                        "caption_id": caption_id,
+                        "reask_idx": reask_idx,
+                        "round_index": round_index,
+                        "is_round_2": is_round_2,
+                        "phase_label": phase_label,
+                        "temperature": TEMPERATURE,
+                        "max_tokens": MAX_TOKENS,
+                        "retry_count": retries,
+                        "read_timeout_s": timeout_s,
+                        "retry_bug_fix_applied": True,
+                        "empty_response": False,
+                        "error_category": None,
+                        "error_snippet": "",
+                    },
+                }
+            retries += 1
+            time.sleep(INTER_CALL_SLEEP_S)
+            continue
+
+        err_cat = r.get("error_category")
+        if err_cat in NETWORK_ERROR_CATEGORIES_RETRY:
+            retry_trigger_categories_tracker.append(err_cat)
+            retries += 1
+            time.sleep(INTER_CALL_SLEEP_S)
+            continue
+
+        return {
+            "prompt_id": prompt_id,
+            "prompt_text": prompt_text,
+            "response_text": "",
+            "per_call_metadata": {
+                "ok": False,
+                "status_code": r.get("status_code"),
+                "latency_ms": r.get("latency_ms", 0),
+                "model_returned": r.get("model_returned", ""),
+                "id": r.get("id", ""),
+                "usage": r.get("usage", {}),
+                "endpoint": ENDPOINT_TEAMO + "/chat/completions",
+                "model_id_sent": model_id,
+                "teacher_label": TEACHER_LABEL,
+                "model_id_shared_with": MODEL_ID_SHARED_WITH,
+                "side": side,
+                "caption_id": caption_id,
+                "reask_idx": reask_idx,
+                "round_index": round_index,
+                "is_round_2": is_round_2,
+                "phase_label": phase_label,
+                "temperature": TEMPERATURE,
+                "max_tokens": MAX_TOKENS,
+                "retry_count": retries,
+                "read_timeout_s": timeout_s,
+                "retry_bug_fix_applied": True,
+                "empty_response": is_empty_response(""),
+                "error_category": err_cat,
+                "error_snippet": (r.get("error_body_snippet") or r.get("error_snippet") or "")[:200],
+            },
+        }
+
+    if last and last.get("ok"):
+        content = last.get("content", "") or ""
+    else:
+        content = ""
+    err_cat_final = (last.get("error_category") if last and not last.get("ok") else None) or "empty_response_after_retries"
+    return {
+        "prompt_id": prompt_id,
+        "prompt_text": prompt_text,
+        "response_text": content,
+        "per_call_metadata": {
+            "ok": False,
+            "status_code": last.get("status_code") if last else None,
+            "latency_ms": last.get("latency_ms", 0) if last else 0,
+            "model_returned": last.get("model_returned", "") if last else "",
+            "id": last.get("id", "") if last else "",
+            "usage": last.get("usage", {}) if last else {},
+            "endpoint": ENDPOINT_TEAMO + "/chat/completions",
+            "model_id_sent": model_id,
+            "teacher_label": TEACHER_LABEL,
+            "model_id_shared_with": MODEL_ID_SHARED_WITH,
+            "side": side,
+            "caption_id": caption_id,
+            "reask_idx": reask_idx,
+            "round_index": round_index,
+            "is_round_2": is_round_2,
+            "phase_label": phase_label,
+            "temperature": TEMPERATURE,
+            "max_tokens": MAX_TOKENS,
+            "retry_count": INNER_RETRY_MAX,
+            "read_timeout_s": READ_TIMEOUT_RETRY_S,
+            "retry_bug_fix_applied": True,
+            "empty_response": is_empty_response(content),
+            "error_category": err_cat_final,
+            "error_snippet": (
+                last.get("error_body_snippet") or last.get("error_snippet") or ""
+                if last else f"empty response / network error after {INNER_RETRY_MAX} retries"
+            )[:200],
+        },
+    }
+
+
+# ============================================================
+# 主流程
+# ============================================================
+def main() -> int:
+    print("=" * 60)
+    print(f"V4 L14+ batch 3 round 5 · {TEACHER} 教师侧 round 5（reask=4）收官棒")
+    print("沿 r4 glm-5.3 探活结论 ok=200；本棒 smoke 1-call 后跑 22 caption × 1 call")
+    print("计划 calls = 22 caption × 1 call = 22 calls + 1 smoke call")
+    print("目标: round 5 后 22/22 caption 各 ≥5 successful call（收官）")
+    print("预算 ≤22 caption calls + 1 smoke call / ≤600s watchdog")
+    print("retry 修复沿 r4 (沿 batch1 r6 + batch2 r2 + batch3 r1/r2/r3/r4)")
+    print("夜间授权：PI 2026-09-25 00:46 保守口径先斩后奏")
+    print("接力源: PI 2026-09-25 01:10 同 agent 唤醒 r4 → r5 保上下文")
+    print("=" * 60)
+
+    setup_proxy_teamo()
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
+    # 1. 加载 caption
+    captions = load_captions()
+    cap_by_id = {c["id"]: c for c in captions}
+    print(f"[INIT] captions loaded: {len(captions)}")
+
+    # 2. 加载 key
+    try:
+        api_key = fetch_api_key(KEY_INDEX_TEAMO_1BASED)
+        print(f"[INIT] teamo key loaded (len={len(api_key)}, redacted in products)")
+    except Exception as e:
+        print(f"[FATAL] key read fail: {e}")
+        return 2
+
+    # 3. 加载前置累计基线（GLM_2 r4 末态）
+    with open(R4_RESULT_PATH_B3, "r", encoding="utf-8") as f:
+        r4_b3 = json.load(f)
+    glm2_prior_total = r4_b3["aggregate"]["glm2_cumulative"]["post_total"]
+    glm2_prior_empty = r4_b3["aggregate"]["glm2_cumulative"]["post_empty"]
+    glm2_prior_ok = r4_b3["aggregate"]["glm2_cumulative"]["post_ok"]
+    glm2_prior_rate = r4_b3["aggregate"]["glm2_cumulative"]["post_rate"]
+    print(f"[BASELINE GLM_2 r4] total={glm2_prior_total} ok={glm2_prior_ok} empty={glm2_prior_empty} rate={glm2_prior_rate:.4f}")
+
+    # 跨批累计基线 = r4 末态（251 calls / 9 empty / 3.59%）
+    cross_prior_total = r4_b3["aggregate"]["cross_batch_with_r3_baseline"]["cross_total"]
+    cross_prior_empty = r4_b3["aggregate"]["cross_batch_with_r3_baseline"]["cross_empty"]
+    cross_prior_ok = r4_b3["aggregate"]["cross_batch_with_r3_baseline"]["cross_ok"]
+    cross_prior_rate = r4_b3["aggregate"]["cross_batch_with_r3_baseline"]["cross_rate"]
+    print(f"[BASELINE cross batch (r4 末态)] total={cross_prior_total} ok={cross_prior_ok} empty={cross_prior_empty} rate={cross_prior_rate:.4f}")
+
+    # 4. 加载 /v1/models 探活清单（参考；不重探）
+    with open(MODELS_PROBE_PATH, "r", encoding="utf-8") as f:
+        models_probe = json.load(f)
+    glm_like_ids = models_probe.get("glm_like_ids", [])
+    print(f"[MODELS PROBE REF] 44 total models; GLM 系 {len(glm_like_ids)} 个: {glm_like_ids}")
+
+    # 5. Smoke 1-call（沿 r4 probe 结论 glm-5.3 ok=200）
+    print("=" * 60)
+    print(f"[SMOKE PHASE] {MODEL_GLM_2} 1-call smoke（沿 r4 probe 结论）")
+    print("=" * 60)
+    t_smoke_start = time.time()
+    smoke_rec = smoke_glm_model(api_key, MODEL_GLM_2)
+    t_smoke_end = time.time()
+    smoke_wall_s = round(t_smoke_end - t_smoke_start, 1)
+    print(
+        f"  [SMOKE] model_id={MODEL_GLM_2} sc={smoke_rec.get('status_code')} "
+        f"cat={smoke_rec.get('error_category')} lat={smoke_rec.get('latency_ms', 0):.1f}ms "
+        f"model_returned={smoke_rec.get('model_returned', '')[:30]} "
+        f"wall={smoke_wall_s}s"
+    )
+    if not (smoke_rec["ok"] and smoke_rec["status_code"] == 200 and smoke_rec["model_returned"].strip() != ""):
+        print(f"[FATAL] smoke fail; 退码 3")
+        cst = timezone(timedelta(hours=8))
+        now_iso = datetime.now(cst).strftime("%Y-%m-%dT%H:%M:%S+08:00")
+        fail_result = {
+            "schema": "v4_l14v3_n26/1",
+            "batch": 3,
+            "round": 5,
+            "metadata": {
+                "task": f"L14V3_batch3_round5_{TEACHER}_teacher_side_round5_reask4_finish",
+                "prereg_sha12": "05B975A86989",
+                "prereg_path": "results/_v4_supp_prereg_v02_add_L14V3_2026_09_24.md",
+                "predecessor_sha12": {
+                    "r4_executor_sha12": "c79b5c274a10",
+                    "r4_executor_path": "results/_v4_supp_l14v3_batch3_r4_executor.py",
+                    "r4_result_sha12": "0e47768640d3",
+                    "r4_result_path": "results/_v4_supp_l14v3_batch3_r4_result.json",
+                    "r3_executor_sha12": "1B3861943B7E",
+                    "r3_executor_path": "results/_v4_supp_l14v3_batch3_r3_executor.py",
+                    "r3_result_sha12": "6E677FFCC880",
+                    "r3_result_path": "results/_v4_supp_l14v3_batch3_r3_result.json",
+                    "r2_executor_sha12": "540C9369DD36",
+                    "r2_executor_path": "results/_v4_supp_l14v3_batch3_r2_executor.py",
+                    "r2_result_sha12": "58E9C55A770D",
+                    "r2_result_path": "results/_v4_supp_l14v3_batch3_r2_result.json",
+                    "r1_executor_sha12": "A4731B39343F",
+                    "r1_executor_path": "results/_v4_supp_l14v3_batch3_r1_executor.py",
+                    "r1_result_sha12": "D24B84671C23",
+                    "r1_result_path": "results/_v4_supp_l14v3_batch3_r1_result.json",
+                    "r3_executor_sha12_b2": "72FD2BB3838E",
+                    "r3_executor_path_b2": "results/_v4_supp_l14v3_batch2_r3_executor.py",
+                    "r3_result_sha12_b2": "25251ACA6D79",
+                    "r3_result_path_b2": "results/_v4_supp_l14v3_batch2_r3_result.json",
+                    "r2_executor_sha12_b2": "E7418F47A130",
+                    "r2_executor_path_b2": "results/_v4_supp_l14v3_batch2_r2_executor.py",
+                    "r2_result_sha12_b2": "8C125E257AF8",
+                    "r2_result_path_b2": "results/_v4_supp_l14v3_batch2_r2_result.json",
+                    "batch1_r6_executor_sha12": "5f02c7e0f094",
+                    "batch1_r6_executor_path": "results/_v4_supp_l14v3_batch1_r6_executor.py",
+                    "batch1_r6_result_sha12": "A4F851154551",
+                    "batch1_r6_result_path": "results/_v4_supp_l14v3_batch1_r6_result.json",
+                    "r1_executor_sha12_b2": "E52F930654D3",
+                    "r1_executor_path_b2": "results/_v4_supp_l14v3_batch2_r1_executor.py",
+                    "r1_result_sha12_b2": "D245AE4CE385",
+                    "r1_result_path_b2": "results/_v4_supp_l14v3_batch2_r1_result.json",
+                    "models_probe_sha12": "3C9DC60B5071",
+                    "models_probe_path": "results/_v4_supp_l14v3_batch2_r2_models_probe.json",
+                },
+                "date": "2026-09-25",
+                "teacher": TEACHER,
+                "teacher_label": TEACHER_LABEL,
+                "model_id_shared_with": MODEL_ID_SHARED_WITH,
+                "glm2_corpus_calibration": GLM2_CORPUS_CALIBRATION,
+                "side": SIDE,
+                "round_index": 5,
+                "stop_reason": "smoke_glm_model_failed",
+            },
+            "smoke_phase": smoke_rec,
+            "smoke_wall_time_s": smoke_wall_s,
+            "run_window_cst": now_iso,
+        }
+        out_path = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch3_r5_result.json")
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(fail_result, f, ensure_ascii=False, indent=2)
+        print(f"[WROTE] {out_path}")
+        return 3
+    print(f"[SMOKE-OK] model_id = {MODEL_GLM_2} (sc=200, model_returned={smoke_rec['model_returned']})")
+
+    model_id = MODEL_GLM_2
+
+    # 6. 调度：22 caption × 1 call (round 5 reask=4) 按 caption_id 字母序
+    captions_sorted = sorted(captions, key=lambda c: c["id"])
+    planned = [{"caption_id": c["id"], "phase": "b3_r5_need1"} for c in captions_sorted]
+    planned_total = len(planned)
+    print(f"[PLANNED] total: {planned_total} (22 caption × 1 call)")
+
+    # 7. 时间预算起点（含 smoke）
+    t_batch_start = time.time()
+    wall_budget_remaining_s = WALL_TIME_BUDGET_S - (t_batch_start - t_smoke_start)
+    if wall_budget_remaining_s <= 0:
+        print(f"[FATAL] smoke 已用尽 watchdog ({smoke_wall_s}s); 不再跑 caption")
+        return 4
+    print(f"[WALL BUDGET] remaining after smoke: {wall_budget_remaining_s:.1f}s")
+
+    # 8. 跑
+    quadruples: List[Dict[str, Any]] = []
+    cum_total = glm2_prior_total
+    cum_empty = glm2_prior_empty
+    cum_ok = glm2_prior_ok
+    r5_total = 0
+    r5_ok = 0
+    r5_empty = 0
+    r5_fail = 0
+    total_prompt_tokens = 0
+    total_completion_tokens = 0
+    k_n26_n2_triggered = False
+    k_n26_n2_trigger_at_call_idx = None
+    k_n26_n2_trigger_cum_rate = None
+    stop_reason = None
+
+    retry_trigger_categories_tracker: List[str] = []
+    retry_count_distribution: Dict[int, int] = {}
+    retry_triggered_count = 0
+
+    # 从 r4 累计 per_caption_successful_calls 起步
+    r4_per_cap = r4_b3.get("per_caption_successful_calls", {})
+    per_cap_succ = {cid: r4_per_cap.get(cid, {}).get("succ_count", 0) for cid in [c["id"] for c in captions]}
+    per_cap_total = {cid: r4_per_cap.get(cid, {}).get("total_calls_so_far", 0) for cid in [c["id"] for c in captions]}
+    per_cap_empty = {cid: r4_per_cap.get(cid, {}).get("empty_count_so_far", 0) for cid in [c["id"] for c in captions]}
+    print(f"[PRIOR per_caption_succ] {dict(sorted(per_cap_succ.items()))}")
+
+    for i, item in enumerate(planned):
+        elapsed = time.time() - t_batch_start
+        if elapsed > wall_budget_remaining_s:
+            stop_reason = f"wall_time_{wall_budget_remaining_s:.0f}s"
+            print(f"[BREAKPOINT] wall time {elapsed:.1f}s > {wall_budget_remaining_s:.1f}s remaining; stop at call {i}/{planned_total}")
+            break
+
+        cap_id = item["caption_id"]
+        caption = cap_by_id.get(cap_id)
+        if caption is None:
+            print(f"[WARN] caption_id={cap_id} not found; skip")
+            continue
+
+        # K-N26-N2 GLM_2 自身累计监控（call 前判）
+        if cum_total > 0:
+            current_cum_rate = cum_empty / cum_total
+            if current_cum_rate > K_N26_N2_CUMULATIVE_EMPTY_RATE_THRESHOLD:
+                k_n26_n2_triggered = True
+                k_n26_n2_trigger_at_call_idx = i
+                k_n26_n2_trigger_cum_rate = current_cum_rate
+                stop_reason = "K_N26_N2_cumulative_empty_rate_exceeded_0.50"
+                print(f"[STOP] K-N26-N2 GLM_2 cumulative empty_rate={current_cum_rate:.4f} > 0.50 at call {i}/{planned_total}; stop per dispatch §4")
+                break
+
+        # 单棒 empty_rate >50% 停采（dispatch §5）
+        if r5_total > 0:
+            current_batch_rate = r5_empty / r5_total
+            if current_batch_rate > K_N26_N2_CUMULATIVE_EMPTY_RATE_THRESHOLD:
+                k_n26_n2_triggered = True
+                k_n26_n2_trigger_at_call_idx = i
+                k_n26_n2_trigger_cum_rate = current_batch_rate
+                stop_reason = "single_batch_empty_rate_exceeded_0.50"
+                print(f"[STOP] single-batch empty_rate={current_batch_rate:.4f} > 0.50 at call {i}/{planned_total}; stop per dispatch §5")
+                break
+
+        rec = run_one_quadruple(
+            api_key=api_key,
+            caption=caption,
+            reask_idx=REASK_R1,
+            side="teacher",
+            round_index=ROUND,
+            is_round_2=True,  # 语义：本棒 = GLM_2 教师侧 data collection round 5；属 round ≥2 范畴
+            phase_label=item["phase"],
+            retry_trigger_categories_tracker=retry_trigger_categories_tracker,
+            model_id=model_id,
+        )
+        quadruples.append(rec)
+        m = rec["per_call_metadata"]
+        is_ok = m["ok"] and not m["empty_response"]
+        is_empty = m["empty_response"]
+        is_fail = not m["ok"]
+
+        rc = m.get("retry_count", 0)
+        retry_count_distribution[rc] = retry_count_distribution.get(rc, 0) + 1
+        if rc >= 1:
+            retry_triggered_count += 1
+
+        if is_ok:
+            r5_ok += 1
+            cum_ok += 1
+            per_cap_succ[cap_id] += 1
+        elif is_empty:
+            r5_empty += 1
+            cum_empty += 1
+            per_cap_empty[cap_id] += 1
+        else:
+            r5_fail += 1
+        r5_total += 1
+        cum_total += 1
+        per_cap_total[cap_id] += 1
+
+        usage = m.get("usage", {}) or {}
+        total_prompt_tokens += usage.get("prompt_tokens", 0) or 0
+        total_completion_tokens += usage.get("completion_tokens", 0) or 0
+
+        status = "OK" if is_ok else ("EMPTY" if is_empty else f"FAIL({m.get('error_category','')})")
+        marker = f"[b{BATCH}r{ROUND}]"
+        current_cum_rate_post = cum_empty / cum_total if cum_total > 0 else 0.0
+        cur_succ = per_cap_succ[cap_id]
+        target_met = "[FINISH]" if cur_succ >= 5 else "[..]"
+        print(
+            f"  [{i+1:2d}/{planned_total}] {marker} {item['phase']:<14} {cap_id:<28} "
+            f"lat={m.get('latency_ms',0):>7.1f}ms "
+            f"tokens(p/c)={(usage.get('prompt_tokens',0) or 0):>4}/{(usage.get('completion_tokens',0) or 0):>4} "
+            f"retries={rc} "
+            f"{status} "
+            f"[succ={cur_succ}/5 {target_met}] "
+            f"[glm2_cum_rate={current_cum_rate_post:.4f}]"
+        )
+
+        # K-N26-N2 停采监控（call 后立即判；GLM_2 自身累计）
+        if cum_total > 0:
+            post_rate = cum_empty / cum_total
+            if post_rate > K_N26_N2_CUMULATIVE_EMPTY_RATE_THRESHOLD:
+                k_n26_n2_triggered = True
+                k_n26_n2_trigger_at_call_idx = i + 1
+                k_n26_n2_trigger_cum_rate = post_rate
+                stop_reason = "K_N26_N2_cumulative_empty_rate_exceeded_0.50"
+                print(f"[STOP] K-N26-N2 GLM_2 post-call cumulative empty_rate={post_rate:.4f} > 0.50 at call {i+1}/{planned_total}; stop per dispatch §4")
+                break
+
+        # 单棒 empty_rate >50% 停采（dispatch §5；call 后立即判）
+        if r5_total > 0:
+            batch_rate_post = r5_empty / r5_total
+            if batch_rate_post > K_N26_N2_CUMULATIVE_EMPTY_RATE_THRESHOLD:
+                k_n26_n2_triggered = True
+                k_n26_n2_trigger_at_call_idx = i + 1
+                k_n26_n2_trigger_cum_rate = batch_rate_post
+                stop_reason = "single_batch_empty_rate_exceeded_0.50"
+                print(f"[STOP] single-batch post-call empty_rate={batch_rate_post:.4f} > 0.50 at call {i+1}/{planned_total}; stop per dispatch §5")
+                break
+
+        if i < planned_total - 1:
+            time.sleep(INTER_CALL_SLEEP_S)
+
+    t_batch_end = time.time()
+    wall_time_s = round(t_batch_end - t_batch_start, 1)
+    total_wall_s = round(t_batch_end - t_smoke_start, 1)
+
+    # 9. 统计
+    empty_rate_r5 = (r5_empty / r5_total) if r5_total > 0 else 0.0
+    cum_empty_rate_post = cum_empty / cum_total if cum_total > 0 else 0.0
+    tun_used_count = sum(
+        1 for r in quadruples
+        if r["per_call_metadata"].get("endpoint", "").endswith("/chat/completions")
+    )
+    tun_compliance = (tun_used_count == len(quadruples))
+
+    # 跨批累计 = r4 baseline + GLM_2 本棒
+    cross_batch_total = cross_prior_total + r5_total
+    cross_batch_empty = cross_prior_empty + cum_empty - glm2_prior_empty
+    cross_batch_ok = cross_prior_ok + cum_ok - glm2_prior_ok
+    cross_batch_rate = cross_batch_empty / cross_batch_total if cross_batch_total > 0 else 0.0
+
+    # 10. 每 caption successful 计数
+    per_caption_successful_calls = {}
+    met_target_count = 0
+    still_pending_captions = []
+    for cid in [c["id"] for c in captions]:
+        s = per_cap_succ[cid]
+        t = per_cap_total[cid]
+        e = per_cap_empty[cid]
+        met_target = s >= TARGET_SUCCESSFUL_PER_CAPTION
+        if met_target:
+            met_target_count += 1
+        else:
+            still_pending_captions.append(cid)
+        per_caption_successful_calls[cid] = {
+            "succ_count": s,
+            "round5_target": 5,  # 收官 = ≥5 successful/caption
+            "round5_met": met_target,  # 收官达成 = succ_count ≥ 5
+            "succ_count_cumulative_to_target": s,
+            "target": TARGET_SUCCESSFUL_PER_CAPTION,
+            "need_more_to_target": max(0, TARGET_SUCCESSFUL_PER_CAPTION - s),
+            "met_target": met_target,
+            "total_calls_so_far": t,
+            "empty_count_so_far": e,
+        }
+
+    # 11. 收官块（沿 batch1 r6 `kimi_distill_side_round1_finish` 惯例；本棒 GLM_2 教师侧命名）
+    glm2_teacher_side_finish = {
+        "all_22_captions_met_target": met_target_count == 22,
+        "finish_disposition": (
+            f"GLM_2 教师侧 round 5 (reask=4) 收官: "
+            f"{met_target_count}/22 caption met target (≥5 successful/caption); "
+            + ("GLM_2 教师侧 round 1+2+3+4+5 全部 caption 收官达标" if met_target_count == 22
+               else f"未达标 {22-met_target_count} caption: {still_pending_captions}; 留 worker 下一棒接力")
+        ),
+        "met_count_post_r5": met_target_count,
+        "still_pending": sorted(still_pending_captions),
+        "total_captions": 22,
+    }
+
+    # 12. retry validation 块
+    retry_trigger_categories_distribution: Dict[str, int] = {}
+    for cat in retry_trigger_categories_tracker:
+        retry_trigger_categories_distribution[cat] = retry_trigger_categories_distribution.get(cat, 0) + 1
+
+    retry_validation = {
+        "r5_retry_count_distribution": dict(retry_count_distribution),
+        "r5_retry_triggered_count": retry_triggered_count,
+        "r5_retry_trigger_categories_tracker": retry_trigger_categories_tracker,
+        "r5_retry_trigger_categories_distribution": retry_trigger_categories_distribution,
+        "r5_retry_bug_fix_applied_in_all_calls": all(
+            q["per_call_metadata"].get("retry_bug_fix_applied") is True
+            for q in quadruples
+        ),
+        "r5_empty_rate_with_fix": round(empty_rate_r5, 4),
+    }
+
+    # 13. 组装 result
+    cst = timezone(timedelta(hours=8))
+    now_iso = datetime.now(cst).strftime("%Y-%m-%dT%H:%M:%S+08:00")
+
+    # model_id_inconsistency_honest_disclosure（GLM_2 与 GLM_1 复用 glm-5.3；ask_748d9242 + ask_259658a4 双映射拍板）
+    selected_record = smoke_rec
+    model_id_disclosure = (
+        f"prereg §0 字面 model_id = GLM_2 (V3 公开产品名 / 端点名); "
+        f"teamo /v1/models 探活清单 (44 models 中 GLM 系 4 个: {glm_like_ids}); "
+        f"GLM_2 字面不在清单（V3 时期 GLM-2 命名已下线，teamo 当前 GLM 系已升 5.x）; "
+        f"本棒选定 = {model_id} (1-call smoke ok=200, model_returned={selected_record.get('model_returned', '')}); "
+        f"沿 user memory 2026-09-08「V3 端点名 vs 公开产品名不一致时直接问」+ 端点策略即用即探 (PI 2026-09-24 拍板) = "
+        f"用 teamo /v1/models 实际可用的 GLM 系主版本 glm-5.3 替代 GLM_2; "
+        f"本映射选择 (glm-5.3 主版本 / 非 flash / 非 free) 理由: 最贴近 GLM_2 = 主版本定位; 避开 flash/free 版的潜在 token/quota 限制; "
+        f"派工单 ask_748d9242c7a6be3d83de63a0 (2026-09-24 23:08) 映射拍板: GLM_2 = 复用 teamo glm-5.3 (与 GLM_1 同 model_id，不同语料；V3 字面 same lineage); "
+        f"派工单 ask_259658a4ffadd6f8aeb12f34 (2026-09-24 23:42) 口径拍板: glm2_corpus = 接受 system prompt 微调口径; "
+        f"GLM_2 教师身份 = 语料标签 + prompt 语境差异 (system prompt 微调标识 GLM_2 教师身份); "
+        f"近缘对分布差异如实入 N-26 构造域限制 (不软化); "
+        f"r1 1-call smoke ok=200 + 22 caption × 1 call 全成功 (0 empty / 0 fail); "
+        f"r2 1-call smoke ok=200 + 22 caption × 1 call 全成功 (0 empty / 0 fail); "
+        f"r3 1-call smoke ok=200 + 22 caption × 1 call 全成功 (0 empty / 0 fail); "
+        f"r4 1-call smoke ok=200 + 22 caption × 1 call 全成功 (0 empty / 0 fail); "
+        f"r5 沿 r4 结论仅做 1-call smoke 防端点飘移; "
+        f"teacher_label = GLM_2 (顶层字段明示本棒教师身份); "
+        f"model_id_shared_with = GLM_1 (顶层字段明示与 GLM_1 同 model_id 不同教师); "
+        f"待 PI 复核项: 是否接受 glm-5.3 作为 GLM_2 = V3 公开产品名的 teamo 端点映射"
+    )
+
+    result = {
+        "schema": "v4_l14v3_n26/1",
+        "batch": 3,
+        "round": 5,
+        "teacher_label": TEACHER_LABEL,
+        "model_id_shared_with": MODEL_ID_SHARED_WITH,
+        "metadata": {
+            "task": f"L14V3_batch3_round5_{TEACHER}_teacher_side_round5_reask4_finish",
+            "prereg_sha12": "05B975A86989",
+            "prereg_path": "results/_v4_supp_prereg_v02_add_L14V3_2026_09_24.md",
+            "predecessor_sha12": {
+                "r4_executor_sha12": "c79b5c274a10",
+                "r4_executor_path": "results/_v4_supp_l14v3_batch3_r4_executor.py",
+                "r4_result_sha12": "0e47768640d3",
+                "r4_result_path": "results/_v4_supp_l14v3_batch3_r4_result.json",
+                "r3_executor_sha12": "1B3861943B7E",
+                "r3_executor_path": "results/_v4_supp_l14v3_batch3_r3_executor.py",
+                "r3_result_sha12": "6E677FFCC880",
+                "r3_result_path": "results/_v4_supp_l14v3_batch3_r3_result.json",
+                "r2_executor_sha12": "540C9369DD36",
+                "r2_executor_path": "results/_v4_supp_l14v3_batch3_r2_executor.py",
+                "r2_result_sha12": "58E9C55A770D",
+                "r2_result_path": "results/_v4_supp_l14v3_batch3_r2_result.json",
+                "r1_executor_sha12": "A4731B39343F",
+                "r1_executor_path": "results/_v4_supp_l14v3_batch3_r1_executor.py",
+                "r1_result_sha12": "D24B84671C23",
+                "r1_result_path": "results/_v4_supp_l14v3_batch3_r1_result.json",
+                "r3_executor_sha12_b2": "72FD2BB3838E",
+                "r3_executor_path_b2": "results/_v4_supp_l14v3_batch2_r3_executor.py",
+                "r3_result_sha12_b2": "25251ACA6D79",
+                "r3_result_path_b2": "results/_v4_supp_l14v3_batch2_r3_result.json",
+                "r2_executor_sha12_b2": "E7418F47A130",
+                "r2_executor_path_b2": "results/_v4_supp_l14v3_batch2_r2_executor.py",
+                "r2_result_sha12_b2": "8C125E257AF8",
+                "r2_result_path_b2": "results/_v4_supp_l14v3_batch2_r2_result.json",
+                "batch1_r6_executor_sha12": "5f02c7e0f094",
+                "batch1_r6_executor_path": "results/_v4_supp_l14v3_batch1_r6_executor.py",
+                "batch1_r6_result_sha12": "A4F851154551",
+                "batch1_r6_result_path": "results/_v4_supp_l14v3_batch1_r6_result.json",
+                "r1_executor_sha12_b2": "E52F930654D3",
+                "r1_executor_path_b2": "results/_v4_supp_l14v3_batch2_r1_executor.py",
+                "r1_result_sha12_b2": "D245AE4CE385",
+                "r1_result_path_b2": "results/_v4_supp_l14v3_batch2_r1_result.json",
+                "models_probe_sha12": "3C9DC60B5071",
+                "models_probe_path": "results/_v4_supp_l14v3_batch2_r2_models_probe.json",
+            },
+            "date": "2026-09-25",
+            "spec_conformance": (
+                f"PI 2026-09-25 batch3 GLM_2 教师侧 round 5 续采 (reask=4) 收官; "
+                f"沿 r4 GLM_2 glm-5.3 同 model_id 复用结论 (1-call smoke ok=200); "
+                f"GLM_2 与 GLM_1 同 model_id 不同教师身份 (沿 ask_748d9242 映射拍板); "
+                f"glm2_corpus 接受 system prompt 微调口径 (沿 ask_259658a4 口径拍板); "
+                f"teacher_label = GLM_2; model_id_shared_with = GLM_1; "
+                f"22 caption × 1 call = 22 calls (按 caption_id 字母序); "
+                f"目标 ≥5 successful/caption (round 5 收官); "
+                f"接力节奏延续 22×1 call/棒模式 (2026-09-24 23:55 显式拍板); "
+                f"夜间自主保守口径 (PI 2026-09-25 00:46 授权先斩后奏); "
+                f"同 agent 唤醒保上下文 (PI 2026-09-25 01:10 r4 → r5 接力); "
+                f"finish 块沿 batch1 r6 `kimi_distill_side_round1_finish` 惯例命名为 "
+                f"`glm2_teacher_side_finish.all_22_captions_met_target`"
+            ),
+            "teacher": TEACHER,
+            "teacher_label": TEACHER_LABEL,
+            "model_id_shared_with": MODEL_ID_SHARED_WITH,
+            "glm2_corpus_calibration": GLM2_CORPUS_CALIBRATION,
+            "side": SIDE,
+            "round_index": 5,
+            "batch_index": BATCH,
+            "round5_target_per_caption": 5,
+            "round5_reask_idx": REASK_R1,
+            "target_successful_per_caption": TARGET_SUCCESSFUL_PER_CAPTION,
+            "n_captions_total": len(captions),
+            "planned_total": planned_total,
+            "actual_total": r5_total,
+            "endpoint_selected": ENDPOINT_TEAMO,
+            "endpoint_selection_method": (
+                "沿 r4 实测 (teamo 端点); r5 沿用 teamo 端点; "
+                "/v1/models 探活清单沿 r2 models_probe.json (sha12=3C9DC60B5071); "
+                "r5 仅 1-call smoke 防端点飘移"
+            ),
+            "model_id_sent": model_id,
+            "model_id_inconsistency_honest_disclosure": model_id_disclosure,
+            "proxy_settings": {
+                "http": PROXY_HTTP,
+                "socks5": PROXY_SOCKS5,
+                "applied_to_teamo": USE_PROXY,
+            },
+            "key_discipline": {
+                "source": KEY_SOURCE_PATH,
+                "key_index_1based": KEY_INDEX_TEAMO_1BASED,
+                "method": "runtime memory read",
+                "redacted_in_products": True,
+            },
+            "inter_call_sleep_s": INTER_CALL_SLEEP_S,
+            "temperature": TEMPERATURE,
+            "max_tokens": MAX_TOKENS,
+            "tools_fault_param_correction": {
+                "read_timeout_initial_s": READ_TIMEOUT_INITIAL_S,
+                "read_timeout_retry_s": READ_TIMEOUT_RETRY_S,
+                "network_error_categories_retry": sorted(list(NETWORK_ERROR_CATEGORIES_RETRY)),
+                "r6_status_沿": "retry 修复沿 batch1 r6 (沿 5f02c7e0f094)",
+                "r2_b2_status": "r2 1-call probe ok=200 选定 glm-5.3",
+                "r3_b2_status": "r3 GLM_1 同 model_id 复用 glm-5.3 成功",
+                "b3_r1_status": "b3_r1 GLM_2 沿 r3 GLM_1 结论 + 22 caption × 1 call 全成功 (0 empty / 0 fail)",
+                "b3_r2_status": "b3_r2 GLM_2 沿 r1 结论 + 22 caption × 1 call 全成功 (0 empty / 0 fail)",
+                "b3_r3_status": "b3_r3 GLM_2 沿 r2 结论仅做 1-call smoke；未做 3-candidate probe fallback",
+                "b3_r4_status": "b3_r4 GLM_2 沿 r3 结论仅做 1-call smoke；22 caption × 1 call 全成功 (0 empty / 0 fail)",
+                "b3_r5_status": "b3_r5 GLM_2 沿 r4 结论仅做 1-call smoke；收官棒",
+                "rationale": (
+                    "沿 r4 glm-5.3 探活结论；本棒节省预算避免重复 probe；"
+                    "smoke 失败立即 abort 不重探"
+                ),
+            },
+            "inner_retry_max": INNER_RETRY_MAX,
+            "wall_time_budget_s": WALL_TIME_BUDGET_S,
+            "wall_time_budget_remaining_after_smoke_s": round(wall_budget_remaining_s, 1),
+            "wall_time_actual_caption_s": wall_time_s,
+            "wall_time_actual_smoke_s": smoke_wall_s,
+            "wall_time_actual_total_s": total_wall_s,
+            "k_n26_n2_cumulative_threshold": K_N26_N2_CUMULATIVE_EMPTY_RATE_THRESHOLD,
+            "diff_vs_r4_executor": [
+                "1. ROUND=5 (升 r5 命名避开 r4 重叠)；BATCH=3 不变；本棒为收官棒",
+                "2. prompt_id 前缀 glm2_t05_teacher_* (取代 r4 的 glm2_t04_teacher_*)；后缀 _b3_r5 (取代 _b3_r4)",
+                "3. REASK_R1=4 (本棒每 caption 第 5 call；取代 r4 的 reask_idx=3)",
+                "4. phase_label: b3_r5_need1 (取代 r4 的 b3_r4_need1)",
+                "5. is_round_2=True (沿 r4；语义: GLM_2 教师侧 data collection round 5；属 round ≥2 范畴)",
+                "6. predecessor_sha12 链: r4_executor c79b5c274a10 + r4_result 0e47768640d3 + r3_executor 1B3861943B7E + r3_result 6E677FFCC880 + r2_executor 540C9369DD36 + r2_result 58E9C55A770D (取代 r4 链的 r3_executor/r3_result 仍保留)",
+                "7. baseline prior: GLM_2 prior = 88 calls / 0 empty / 88 ok / 0.0% rate (取代 r4 链的 66/0/66/0%)",
+                "8. 跨批累计 baseline: r4 末态 251 calls / 9 empty / 3.59% (取代 r4 链的 229/9/3.93%)",
+                "9. 新增 glm2_teacher_side_finish 收官块 (沿 batch1 r6 kimi_distill_side_round1_finish 惯例；含 all_22_captions_met_target / met_count_post_r5 / still_pending / finish_disposition / total_captions)",
+                "10. K-N26-N2 触发阈值 0.50 不变；监控 baseline 更新为 251/9/3.59%",
+                "11. spec_conformance 重写: GLM_2 教师侧 round 5 (reask=4) 收官",
+                "12. per_caption_successful_calls 字段新增 round5_target=5 / round5_met (取代 r4 的 round4_target=4 / round4_met)",
+                "13. 调度注释: GLM_2 教师侧 round 5 (reask=4) 22 caption × 1 call 收官",
+                "14. glm2_corpus_calibration.rounds_covered 续展至 round1+round2+round3+round4 88 calls 有效",
+                "15. 夜间授权标注: PI 2026-09-25 00:46 保守口径先斩后奏",
+                "16. 接力源标注: 同 agent 唤醒 r4 → r5 保上下文 (PI 2026-09-25 01:10)",
+            ],
+            "iron_rules": {
+                "R1_no_llm": False,
+                "R2_no_proxy": False,
+                "R3_no_gateway": False,
+                "R4_key_never_in_plaintext": True,
+                "R5_v4_frozen_append_only": True,
+                "R6_pg_v0_v01_untouched": True,
+                "R7_plugin_spec_untouched": True,
+                "v1_v3_readonly": True,
+                "tun_compliance_teamo_endpoint": tun_compliance,
+                "serial_interval_ge_2_5_s": True,
+                "empty_response_counted_not_dropped": True,
+                "kill_line_locked_K_N26_1_2_3_N1_N2": True,
+                "no_threshold_adjustment": True,
+                "no_existing_file_modified": True,
+                "no_merge_of_derived_json": True,
+                "no_overwrite_prior_results": True,
+                "retry_bug_fix_applied": True,
+                "smoke_only_no_full_probe": True,
+                "teacher_label_GL2_with_shared_model_id_GL1": True,
+            },
+            "run_window_cst": now_iso,
+            "stop_reason": stop_reason,
+            "interruption_recovery_note": (
+                "b3_r5 沿 r4 glm-5.3 探活结论；不再做 3-candidate probe fallback；"
+                "1-call smoke 失败立即 abort；b3_r5 与 r4/r3/r2/r1/r3/r2(b2)/r1(b2)/batch1_r6 派生 JSON 独立 (不合并); "
+                "夜间授权 (PI 2026-09-25 00:46) 保守口径先斩后奏，遇模糊如实标注待 PI 复核; "
+                "收官棒同 agent 唤醒 r4 → r5 (PI 2026-09-25 01:10) 保上下文"
+            ),
+        },
+        "models_listing_summary_ref": {
+            "endpoint": ENDPOINT_TEAMO + "/models",
+            "model_count_total": models_probe.get("model_count_total"),
+            "model_count_glm_like": len(glm_like_ids),
+            "glm_like_ids": glm_like_ids,
+            "fetched_at_cst": models_probe.get("fetched_at_cst"),
+            "note": (
+                "b3_r5 不重探 /v1/models；仅引用 r2 探活清单 (sha12=3C9DC60B5071) "
+                "确认 glm-5.3 主版本仍为 GLM 系首选"
+            ),
+        },
+        "smoke_phase": {
+            "selected_model_id": MODEL_GLM_2,
+            "smoke_record": smoke_rec,
+            "smoke_wall_time_s": smoke_wall_s,
+        },
+        "quadruples": quadruples,
+        "retry_validation": retry_validation,
+        "per_caption_successful_calls": per_caption_successful_calls,
+        "glm2_teacher_side_finish": glm2_teacher_side_finish,
+        "dispatch_target_progress": {
+            "target_round5": ">=5 successful calls/caption (round 5 reask=4 收官)",
+            "target_cumulative": f">={TARGET_SUCCESSFUL_PER_CAPTION} successful calls/caption (跨轮累计)",
+            "met_count_post_r5_round5": met_target_count,
+            "met_count_post_r5_cumulative_to_target": met_target_count,
+            "total_captions": len(captions),
+            "remaining_count_round5": len(captions) - met_target_count,
+            "remaining_count_cumulative_to_target": len(captions) - met_target_count,
+            "met_percentage_round5": round(met_target_count / len(captions) * 100, 2),
+            "met_percentage_cumulative_to_target": round(met_target_count / len(captions) * 100, 2),
+            "still_pending_captions_round5": sorted(still_pending_captions),
+            "still_pending_captions_cumulative_to_target": sorted(still_pending_captions),
+        },
+        "aggregate": {
+            "r5_total_calls": r5_total,
+            "r5_ok_count": r5_ok,
+            "r5_empty_response_count": r5_empty,
+            "r5_fail_count": r5_fail,
+            "r5_empty_response_rate": round(empty_rate_r5, 4),
+            "r5_total_prompt_tokens": total_prompt_tokens,
+            "r5_total_completion_tokens": total_completion_tokens,
+            "r5_total_tokens": total_prompt_tokens + total_completion_tokens,
+            "tun_compliance": tun_compliance,
+            "tun_used_count": tun_used_count,
+            "tun_target_count": len(quadruples),
+            "smoke_total_calls": 1,
+            "smoke_attempted_model_id": MODEL_GLM_2,
+            "glm2_cumulative": {
+                "prior_total": glm2_prior_total,
+                "prior_empty": glm2_prior_empty,
+                "prior_ok": glm2_prior_ok,
+                "prior_rate": glm2_prior_rate,
+                "post_total": cum_total,
+                "post_empty": cum_empty,
+                "post_ok": cum_ok,
+                "post_rate": round(cum_empty_rate_post, 4),
+                "delta_total": cum_total - glm2_prior_total,
+                "delta_empty": cum_empty - glm2_prior_empty,
+                "delta_ok": cum_ok - glm2_prior_ok,
+                "k_n26_n2_threshold": K_N26_N2_CUMULATIVE_EMPTY_RATE_THRESHOLD,
+                "k_n26_n2_triggered_this_batch": k_n26_n2_triggered,
+            },
+            "cross_batch_with_r4_baseline": {
+                "r4_baseline_total": cross_prior_total,
+                "r4_baseline_empty": cross_prior_empty,
+                "r4_baseline_ok": cross_prior_ok,
+                "r4_baseline_rate": cross_prior_rate,
+                "batch3_glm2_post_total": cum_total,
+                "batch3_glm2_post_empty": cum_empty,
+                "batch3_glm2_post_ok": cum_ok,
+                "cross_total": cross_batch_total,
+                "cross_empty": cross_batch_empty,
+                "cross_ok": cross_batch_ok,
+                "cross_rate": round(cross_batch_rate, 4),
+                "cross_k_n26_n2_threshold": K_N26_N2_CUMULATIVE_EMPTY_RATE_THRESHOLD,
+                "cross_k_n26_n2_triggered": cross_batch_rate > K_N26_N2_CUMULATIVE_EMPTY_RATE_THRESHOLD,
+                "note": (
+                    "K-N26-N2 字面 per 教师; 本字段仅作 cross-batch sanity check; "
+                    "GLM_2 教师侧 K-N26-N2 判定 = glm2_cumulative.post_rate"
+                ),
+            },
+            "r5_empty_response_rate_threshold_K_N26_N2_single_batch": 0.50,
+            "r5_empty_response_above_threshold_single_batch": empty_rate_r5 > 0.50,
+        },
+        "empty_rate_trend": {
+            "batch1_round6_cumulative": {
+                "calls": 119,
+                "empty": 9,
+                "rate": 0.0756,
+                "note": "kimi 教师侧 batch1 终态（沿 r3 result §empty_rate_trend）",
+            },
+            "batch2_round1_probe_fail": {
+                "calls": 0,
+                "empty": 0,
+                "rate": 0.0,
+                "note": "r1 探活 6 候选 400 全 fail; 0 caption call",
+            },
+            "batch2_round2_round1_retry": {
+                "calls": 22,
+                "empty": 0,
+                "rate": 0.0,
+                "note": "r2 round 1 retry 22 caption × 1 call; all OK",
+            },
+            "batch2_round3_round2_reask1": {
+                "calls": 22,
+                "empty": 0,
+                "rate": 0.0,
+                "note": "r3 GLM_1 教师侧 round 2 reask=1 22 caption × 1 call; all OK",
+            },
+            "batch3_round1_round1_reask0": {
+                "calls": 22,
+                "empty": 0,
+                "rate": 0.0,
+                "note": "b3_r1 GLM_2 教师侧 round 1 reask=0 22 caption × 1 call; all OK",
+            },
+            "batch3_round2_round2_reask1": {
+                "calls": 22,
+                "empty": 0,
+                "rate": 0.0,
+                "note": "b3_r2 GLM_2 教师侧 round 2 reask=1 22 caption × 1 call; all OK",
+            },
+            "batch3_round3_round3_reask2": {
+                "calls": 22,
+                "empty": 0,
+                "rate": 0.0,
+                "note": "b3_r3 GLM_2 教师侧 round 3 reask=2 22 caption × 1 call; all OK (沿 r3 result)",
+            },
+            "batch3_round4_round4_reask3": {
+                "calls": 22,
+                "empty": 0,
+                "rate": 0.0,
+                "note": "b3_r4 GLM_2 教师侧 round 4 reask=3 22 caption × 1 call; all OK (沿 r4 result)",
+            },
+            "batch3_round5_round5_reask4": {
+                "calls": r5_total,
+                "empty": r5_empty,
+                "rate": round(empty_rate_r5, 4),
+                "note": "b3_r5 GLM_2 教师侧 round 5 reask=4 22 caption × 1 call 收官",
+            },
+            "batch3_round5_cumulative_glm2": {
+                "calls": cum_total,
+                "empty": cum_empty,
+                "ok": cum_ok,
+                "rate": round(cum_empty_rate_post, 4),
+                "k_n26_n2_threshold": K_N26_N2_CUMULATIVE_EMPTY_RATE_THRESHOLD,
+                "k_n26_n2_triggered": k_n26_n2_triggered,
+            },
+            "cross_batch_cumulative_post_b3_r5": {
+                "calls": cross_batch_total,
+                "empty": cross_batch_empty,
+                "ok": cross_batch_ok,
+                "rate": round(cross_batch_rate, 4),
+                "note": "r4 baseline 251/9/3.59% + b3_r5 增量",
+            },
+        },
+        "K_N26_observability_only": {
+            "K_N26_1_computed": False,
+            "K_N26_2_computed": False,
+            "K_N26_3_computed": False,
+            "K_N26_N1_observation": {
+                "round5_reask4_n_distinct_sample_note": (
+                    f"round 5 reask=4 第 1 call 实测；本棒后 GLM_2 教师侧 round 5 = "
+                    f"{met_target_count}/{len(captions)} caption met round 5 收官目标 (≥5 successful/caption); "
+                    f"GLM_2 教师侧 round 1+2+3+4+5 累计 {cum_total} calls / {cum_ok} ok / {cum_empty} empty"
+                ),
+            },
+            "K_N26_N2_observation": {
+                "teamo_tun_used_for_all_calls": tun_compliance,
+                "single_batch_empty_response_rate": round(empty_rate_r5, 4),
+                "cumulative_empty_response_rate_glm2_only": round(cum_empty_rate_post, 4),
+                "cumulative_threshold": K_N26_N2_CUMULATIVE_EMPTY_RATE_THRESHOLD,
+                "single_batch_trigger_K_N26_N2_pass_False": empty_rate_r5 > 0.50,
+                "cumulative_trigger_K_N26_N2_pass_False": k_n26_n2_triggered,
+                "monitor_disposition": (
+                    f"本棒 K-N26-N2 GLM_2 自身累计 empty_rate 监控 = 已实施; "
+                    f"GLM_2 自身累计 = {cum_total} calls / {cum_empty} empty / {cum_empty_rate_post:.4f}; "
+                    f"GLM_2 prior = {glm2_prior_total} calls / {glm2_prior_empty} empty / {glm2_prior_rate:.4f} (r4 末态); "
+                    f"cross-batch rate = {cross_batch_rate:.4f}; "
+                    f"baseline cross batch = {cross_prior_total} calls / {cross_prior_empty} empty / {cross_prior_rate:.4f} (r4 末态)"
+                ),
+                "cross_batch_with_r4_baseline_rate": round(cross_batch_rate, 4),
+            },
+            "verdict_pending": "5 教师批齐后由 verdict-keeper 统裁 (本棒 0 写 verdict)",
+        },
+        "breakpoint_status": {
+            "actual_calls": r5_total,
+            "planned_calls": planned_total,
+            "actual_wall_time_s": wall_time_s,
+            "wall_time_budget_remaining_after_smoke_s": round(wall_budget_remaining_s, 1),
+            "actual_wall_time_total_s": total_wall_s,
+            "checkpoint_file": None,
+            "hit_wall_time_budget": wall_time_s > wall_budget_remaining_s,
+            "k_n26_n2_cumulative_triggered": k_n26_n2_triggered,
+            "k_n26_n2_trigger_at_call_idx": k_n26_n2_trigger_at_call_idx,
+            "k_n26_n2_trigger_cum_rate": k_n26_n2_trigger_cum_rate,
+            "next_resume_via": (
+                "GLM_2 教师侧 round 5 收官棒；本棒为 round 5 (reask=4)；如 met_target=22/22 → GLM_2 教师侧采完；"
+                "否则留 worker 下一棒接力（沿 prereg §1.6.4 同 agent 唤醒）"
+            ),
+            "note": (
+                f"本棒 round 5 (reask=4) 收官: actual={r5_total}/{planned_total} calls; "
+                f"GLM_2 教师侧 round 5 完成度 = {met_target_count}/{len(captions)} caption met 收官目标 (≥5 successful/caption); "
+                f"finish.all_22_captions_met_target = {glm2_teacher_side_finish['all_22_captions_met_target']}; "
+                f"stop_reason={stop_reason}; "
+                f"GLM_2 model_id 沿 r4 探活选定 = {model_id} (与 GLM_1 同 model_id 不同教师；1-call smoke 确认仍可用); "
+                f"夜间授权 (PI 2026-09-25 00:46) 保守口径先斩后奏; "
+                f"同 agent 唤醒 r4 → r5 保上下文 (PI 2026-09-25 01:10)"
+            ),
+            "planned_total": planned_total,
+            "stop_reason": stop_reason,
+        },
+    }
+
+    # 14. 自扫 key 泄露
+    scan_hits = self_scan_obj(result)
+    if scan_hits:
+        print(f"[FATAL] 自扫命中敏感模式: {scan_hits}; 拒绝落盘")
+        return 5
+
+    # 15. 落盘
+    out_path = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch3_r5_result.json")
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+    sha12, nbytes, lf_only = sha12_file(out_path)
+    print(f"[WROTE] {out_path}")
+    print(f"[SHA-12] {sha12}")
+    print(f"[BYTES] {nbytes}")
+    print(f"[LF-ONLY] {lf_only}")
+    print(f"[MODELS LISTING REF] total={models_probe.get('model_count_total')} GLM_like={len(glm_like_ids)}")
+    print(f"[SMOKE] selected={model_id} ok={smoke_rec['ok']} wall={smoke_wall_s}s")
+    print(f"[STATS] r5 ok={r5_ok} empty={r5_empty} fail={r5_fail} total={r5_total} rate={empty_rate_r5:.4f}")
+    print(f"[GLM2 CUM] total={cum_total} ok={cum_ok} empty={cum_empty} rate={cum_empty_rate_post:.4f}")
+    print(f"[CROSS BATCH] total={cross_batch_total} ok={cross_batch_ok} empty={cross_batch_empty} rate={cross_batch_rate:.4f}")
+    print(f"[FINISH] all_22_captions_met_target = {glm2_teacher_side_finish['all_22_captions_met_target']}")
+    print(f"[FINISH] met_count_post_r5 = {met_target_count}/{len(captions)}")
+    print(f"[STOP] {stop_reason}")
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
