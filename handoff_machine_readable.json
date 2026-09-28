@@ -1,0 +1,97 @@
+{
+  "schema": "deposon-handoff/v1",
+  "purpose": "机读交接文档：新会话加载本文件即可恢复全部上下文，无需读取长对话历史",
+  "generated": "2026-08-30",
+  "project": {
+    "name": "deposon",
+    "one_liner": "守恒账/博弈论化研究项目：V1.X 主线 + V2.X 博弈论形式化已共同收束；三层级『动力学≈最优响应』(P1a/P1b/T-P1c) 全部判死；终稿中英双版已交付并通过双审",
+    "status": "CLOSED (wrap-up complete)",
+    "repo": "deposon-repo/ inside deposon_core_bundle_final.zip",
+    "push_policy": "full papers NEVER to GitHub; only PAPER_BRIEF; PNG binary push user-side only"
+  },
+  "security": {
+    "key_rule": "两枚 API key（Kimi/Ark）永不落盘、永不进子代理提示词；仅主代理单命令内联环境变量使用；任务结束用户删除",
+    "known_incident": "verifier v37-v40 check.sh 曾把真实 Ark 密钥片段写进 grep 检测规则，已净化为泛化正则；扫描规则自身也须纳入扫描范围"
+  },
+  "governance": {
+    "paper_edits": "论文修改只由独立助手子代理执行，orchestrator 不直接改；成稿前独立双审全 PASS 才交付",
+    "verifier": "版本化 verifier/vN/ 不覆盖；README.md 追加索引；runs/ 追加时间戳运行记录（含失败）",
+    "preregistration": "判定纯函数先于运行冻结；SHA-256 前 12 位作时间锚；零结果必须如实披露"
+  },
+  "preregistration_anchors_sha256_12": {
+    "docs/GT_FORMALIZATION_v1.md": "aeefb8ef6972",
+    "run_v21_gtformal.py": "9bbe43f41fa8",
+    "run_v22_p1c.py": "6e9673205dc0",
+    "docs/SPEC_GT2B.md": "68a5b08ef007",
+    "docs/SPEC_GT8C.md": "6b09de9911c0"
+  },
+  "headline_results": {
+    "P1a_P1b_T_P1c": "三层级全灭。P1a max_dev_inf=0.8569（O(1) 偏差）；P1b min cos 过冲；T-P1c tau in [0,4] 81 档 min cos=-1.0，逐状态 tau* 中位数=0（双杀）。源: results/deposon_v22_p1c.json + deposon_v21_gtformal.json",
+    "P2": "降级：无环 5.9e-16 / 含环 0.669；frac_cyclic_high=0.9238≈0.924 过降级线",
+    "P3": "双向皆死：max_r_diff=0.1585 / max_fp_diff=0.8442；附 ρ(G)<1 耗散谱前提的机制性前提证据（g_a=0 且含环时 58/338 发散）",
+    "GT4_ECR": "ECR（原误名 PoA）median=4/3；覆盖 20/22 图（17 有限 + S1/S2/S5 Infinity；L_geography_world/L_project_management 无臂数据未评估）",
+    "GT6": "重定位为标量账近梯度性 r=||F-Bp||/||F||, p=pinv(B)F；博弈级势存在性声明为平凡（Φ=Σu_i）",
+    "E9_5_power_honest": "非配对 Newcombe 混合 CI：GSM8K -2pp [-11.8,+7.8]pp；StrategyQA 0pp [-8.8,+8.8]pp；unified vs CoT -12pp [-20.5,-4.1]pp；工件 results/deposon_v22_e95ci.json",
+    "enumeration_scope": "系统采样 61 图（5 族 n<=8）x 338 任务 x 20 步 = 6760 状态",
+    "pytest": 398,
+    "audit": "AUDIT-2026-08-30.json：首次真实重跑审计 PASS（重算逐位一致 + 5 锚点 + 9 项溯源抽查）"
+  },
+  "terminology_redlines": {
+    "forbidden_meta": [
+      "统一终稿",
+      "阶段稿",
+      "V1.X",
+      "V2.X",
+      "存在性实证",
+      "stage-draft"
+    ],
+    "renames": {
+      "PoA": "ECR (empirical coordination ratio / 分布级协调比)",
+      "已证/proven": "已闭合（预登记判定）/ closed (pre-registered)",
+      "穷举": "系统采样 61 图 × 状态全穷举 6760"
+    },
+    "figure_language_rule": "插图语言必须与论文语言一致（CN 版图用中文，EN 版图用英文）"
+  },
+  "deliverables": {
+    "papers": [
+      "deposon_paper_final_cn.pdf/.docx (17p)",
+      "deposon_paper_final_en.pdf/.docx (24p)"
+    ],
+    "sources": [
+      "deposon-repo/paper/deposon_paper_final_cn.md",
+      "deposon-repo/paper/deposon_paper_final_en.md"
+    ],
+    "report": "deposon_成果汇报_2026.md（已重写至终稿口径，1596 字 + 溯源表）",
+    "collab": "deposon-repo/docs/V3X_COLLAB_DIRECTIONS.md（P-A 均衡稳定化成本 > P-B 可验证宣言 > P-C 两相结构；已同步终稿口径）",
+    "thinking": "deposon_v3定义与博弈论贡献思考_2026.md",
+    "audit": "AUDIT-2026-08-30.json",
+    "bundle": "deposon_core_bundle_final.zip (635 files, 15.2MB)",
+    "verifier": "verifier/ v36-v41 + README + runs/"
+  },
+  "environment_recipes": {
+    "cjk_figures": "shell matplotlib 无 CJK 回退：须用包装器设 font.sans-serif=[WenQuanYi Zen Hei,Noto Sans CJK JP,DejaVu Sans], axes.unicode_minus=False, runpy 从仓库根执行；避免 U+2212",
+    "chromium_pdf": "--headless=new --no-sandbox --disable-dev-shm-usage --virtual-time-budget=30000 --no-pdf-header-footer；/dev/shm 仅 64MB",
+    "citation_regex": "[N] 锚点转换须跳过含 0 的编号组（tau in [0,4] 误报）",
+    "pytest": "pip install -q pytest 后 python3 -m pytest tests/ -q（约 40s，398 passed）",
+    "rerun_audit": "cp -r repo /tmp 后重跑，绝不在冻结工件原地执行"
+  },
+  "v3x_collab_directions": {
+    "mentor": "王子贺（RUC Gaoling；STOC'23 固定价格双边贸易机制 [0.71,0.7381]；AAAI 均衡迁移成本；机制设计×信息设计议程）",
+    "priority": "P-A 均衡稳定化成本 > P-B 可验证宣言 > P-D 可审计账指纹算法 > P-C 两相结构",
+    "mechanical_kill_lines": "每条方向附判死线（如 0.8 倍/p<0.05、R^2<0.3、成功率 50%/n>=200/1e-12）",
+    "P-D": "可审计账指纹算法（探索性）：内容寻址→清单哈希→根指纹(Merkle)→runs/ 追加哈希链；定位为 P-B 的完整性基础设施；判死线：12个月内第三方审计成本未降至人工 grep 的 1/10（n>=10 计时）则降级；根指纹相对 SHA 锚无表达力增量（删除/重排/回溯三类攻击检验）则判死"
+  },
+  "user_side_todos": [
+    "任务结束后删除两枚 API key",
+    "PNG 推送 GitHub（MCP 不支持二进制）",
+    "为预登记工件申请公开存档 DOI（审稿人 A 建议 N2）"
+  ],
+  "memory_instruction_ids": "ID 7-24 共 18 条经验教训已写入记忆空间",
+  "lessons_top5": [
+    "判死是资产不是失败：『与死同行』章节成为论文最硬的部分",
+    "密钥检测规则自身也可能泄漏——扫描必须覆盖检测脚本",
+    "字符串锚点审计不等于真审计；重跑对比才算（本文件 audit 字段即首次）",
+    "同文件并行编辑会静默丢失——串行 + grep 验证",
+    "术语挪用（PoA）是拒稿级风险——改名 ECR 并保留经典锚仅一句"
+  ]
+}
