@@ -15,7 +15,7 @@ import time
 import requests as _requests
 
 PROXY_HTTP = "http://127.0.0.1:1018"
-KEY_SOURCE = "C:/Users/Administrator/Desktop/AI/LLM API.txt"
+KEY_SOURCE = os.environ.get("DEPOSON_KEY_FILE", "C:/Users/Administrator/Desktop/AI/LLM API.txt")
 
 URLS = [
     ("qwen_plan", "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1", 23, False),
@@ -24,12 +24,23 @@ URLS = [
 ]
 
 def fetch_key(idx):
+    # [F3 修复 2026-09-27 · 受托方 Trae code] 原实现三处缺陷：
+    #   (1) 裸 `except:` 吞掉一切异常；(2) 三编码全失败时 `text` 未定义 ->
+    #   UnboundLocalError（误报为变量错误，而非「解码失败」）；(3) 行号越界无检查。
+    # 返回语义不变（仍返回第 idx 行 strip 结果）。
     raw = open(KEY_SOURCE, "rb").read()
+    text = None
     for enc in ("utf-8", "gb18030", "gbk"):
         try:
-            text = raw.decode(enc); break
-        except: continue
+            text = raw.decode(enc)
+            break
+        except UnicodeDecodeError:
+            continue
+    if text is None:
+        raise RuntimeError(f"KEY_SOURCE 无可用解码 (utf-8/gb18030/gbk): {KEY_SOURCE}")
     lines = text.splitlines()
+    if not (1 <= idx <= len(lines)):
+        raise IndexError(f"KEY_SOURCE 第 {idx} 行不存在 (共 {len(lines)} 行)")
     return lines[idx - 1].strip()
 
 def setup_proxy():
