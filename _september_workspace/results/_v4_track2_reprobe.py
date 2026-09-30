@@ -5,7 +5,7 @@ import os, sys, json, time
 import requests as _requests
 
 PROXY_HTTP = "http://127.0.0.1:1018"
-KEY_SOURCE = "C:/Users/Administrator/Desktop/AI/LLM API.txt"
+KEY_SOURCE = os.environ.get("DEPOSON_KEY_FILE", "C:/Users/Administrator/Desktop/AI/LLM API.txt")
 
 # 新选择: 每个端点用最相近的 deepseek / qwen / mimo 模型
 PROBES = [
@@ -15,11 +15,21 @@ PROBES = [
 ]
 
 def fetch_key(idx):
+    # [F3 修复 2026-09-27 · 受托方 Trae code] 同 models_probe：灭裸 except + 修 text 未定义 + 加行界检查。
     raw = open(KEY_SOURCE, "rb").read()
+    text = None
     for enc in ("utf-8", "gb18030", "gbk"):
-        try: text = raw.decode(enc); break
-        except: continue
-    return text.splitlines()[idx - 1].strip()
+        try:
+            text = raw.decode(enc)
+            break
+        except UnicodeDecodeError:
+            continue
+    if text is None:
+        raise RuntimeError(f"KEY_SOURCE 无可用解码 (utf-8/gb18030/gbk): {KEY_SOURCE}")
+    lines = text.splitlines()
+    if not (1 <= idx <= len(lines)):
+        raise IndexError(f"KEY_SOURCE 第 {idx} 行不存在 (共 {len(lines)} 行)")
+    return lines[idx - 1].strip()
 
 def main():
     try: sys.stdout.reconfigure(encoding="utf-8")
