@@ -434,7 +434,14 @@ def load_checkpoint() -> List[Dict[str, Any]]:
     if CHECKPOINT_PATH.exists():
         try:
             return json.loads(CHECKPOINT_PATH.read_text(encoding="utf-8"))
-        except Exception:
+        except Exception as _ckpt_err:
+            # [F1 修复 2026-09-27 · 受托方 Trae code]
+            # 原为静默 `return []`：checkpoint 半写/损坏时被静默重置为空，
+            # 续跑会为已记录 caption 重发 calls（配额/样本重复）且无任何日志。此处改为响亮告警；
+            # 返回语义保持不变（仍重置为空），故不影响任何历史读数。
+            import sys as _sys
+            print(f"[WARN] checkpoint unreadable at {CHECKPOINT_PATH}: {_ckpt_err!r} "
+                  f"-> reset to empty; re-run will re-issue calls", file=_sys.stderr)
             return []
     return []
 
