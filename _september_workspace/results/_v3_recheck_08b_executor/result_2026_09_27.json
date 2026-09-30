@@ -1,0 +1,2160 @@
+{
+  "schema": "v3_recheck_result/08b_boss_pc_3_a3_clipping_cell_tier_substitute/1",
+  "series": "08b（顶替重跑；**不覆盖** 08 系列三件套）",
+  "prereg": {
+    "path": "results/_v3_recheck_prereg_v1_2026_09_27.md",
+    "sha12_measured": "88052d7db895",
+    "kill_line": "K-V3R-8",
+    "threshold": "TH-V3R-8 clip_r2_min sweep 0.3/0.5/7（派工单冻结）+ spec §5 A3 语义；阶梯按 PI 授权顶替为 cell 计数档 {30,60,540}"
+  },
+  "executor": "results/_v3_recheck_08b_executor/executor_2026_09_27.py",
+  "date": "2026-09-27",
+  "seed": 20260927,
+  "runtime": "0 LLM; numpy + hashlib + json only; no network; read-only inputs; no temp files",
+  "skill": {
+    "name": "scientific-research-workflows:experimental-design",
+    "plugin": "@scientific-research-workflows",
+    "plugin_cache_sha256": "611965fcb6208a5dbeb28d594ad7ca0f8b1f8fd62fc33c189e56a50e49db19cb",
+    "loaded": true,
+    "loaded_path": "v2/plugin-cache/official/sha256-tree-v1-611965fc.../skills/experimental-design/SKILL.md",
+    "applied_points": [
+      "Mistakes #1 伪重复：独立重复单元 = model（n=9），0 按 cell 重抽（540 cells ≠ 540 单元）",
+      "Workflow 1「先定问题/单元/响应」：本件据此区分 tier 级聚合读法（无重抽单元）与 model 级重抽读法（唯一可 bootstrap 者）",
+      "Workflow 7「document the design, seed, and schedule」：seed / 重抽单元 / 档位来源逐项落盘"
+    ],
+    "scope_note": "该 skill 定位为**收集前**实验设计；本件为 post-hoc 重跑，仅取其结构审计透镜（单元/伪重复/预注册可审计），0 引入其收集前流程",
+    "fallback_used": false
+  },
+  "inputs": [
+    {
+      "path": "results/_v3_recheck_prereg_v1_2026_09_27.md",
+      "role": "预登记（判死线锚）",
+      "sha12_measured": "88052d7db895"
+    },
+    {
+      "path": "results/_v3_recheck_08_executor_2026_09_27.py",
+      "role": "第一梯队扫描+bootstrap 机制源",
+      "sha12_measured": "21c4ba4d479e"
+    },
+    {
+      "path": "results/deposon_v3_physical_opt_60cells_2026_09_11.json",
+      "role": "顶替档位数据源（原 JSON 自报 data_source）",
+      "sha12_measured": "c659695aa23c"
+    },
+    {
+      "path": "results/boss_pc_3_a3_clipping_2026_09_15.json",
+      "role": "原 BOSS-PC-3（legacy 口径）",
+      "sha12_measured": "d74d6b39d1b0"
+    },
+    {
+      "path": "docs/V3X/P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md",
+      "role": "A3 语义 + §3.3/§4.1 R² 公式锚",
+      "sha12_measured": "d427b2f57c33"
+    }
+  ],
+  "authorization": {
+    "authorization_id": "PI 2026-09-27 问卷 ask_167a54be6af9f2090ee5c900 Q1「授权顶替重跑」",
+    "authorization_literal": "N 阶梯 → cell 计数档 {30,60,540} 顶替 = PI 2026-09-27 显式授权新输入面（K-V3R-0-B 豁免）",
+    "authorized_by": "PI（派出方 Mavis root session 转达；授权字面 = 本派工单 + PI 问卷原件记录）",
+    "exempted_rule": "K-V3R-0-B 沿用阈值「0 新设」——本件顶替面为 PI 显式豁免的**新输入面**，非 worker 擅调阈值；豁免登记随 result / rescript 同步落盘",
+    "authorization_record_on_disk": false,
+    "authorization_record_note": "问卷 ask_167a54be6af9f2090ee5c900 原件 0 命中于盘上（0 网络 0 LLM，按铁律不自取）；本件以派工单字面为授权凭据，授权来源如实登记不代为补证",
+    "degen_exemption": {
+      "ladder_dimension": "N 阶梯维：授权 3 档（{30,60,540}）⇒ n_distinct = 3，**因 PI 授权豁免 n_distinct>3 门**（豁免与推演字面均注明 parent 推演、PI 授权延伸）",
+      "relocated_to_P_and_sample_dimension": "防退化自证改在 **P 维 / 样本维**做：每档内 n_distinct>3 + std>0（见 material_probe.per_tier_P_stats）",
+      "who": "parent 推演 / PI 授权延伸（worker 0 私设）"
+    }
+  },
+  "construct": {
+    "substitution": "N 阶梯 [10,20,50,100,200,500,1000] → cell 计数档 {30,60,540}（PI 授权顶替）",
+    "A3_semantics": "沿 spec §5：去掉阶梯两端，看幂律拟合 R² 是否仍 > clip_r2_min",
+    "clip_redefinition_on_3_tiers": {
+      "why": "3 档阶梯装不下 spec §5 的「去两端」（剩 1 点 ⇒ R² 无定义）",
+      "variants": {
+        "CLIP_STRICT_A3_drop_both_ends": [
+          60
+        ],
+        "CLIP_DROP_HIGHEST_tier_540": [
+          30,
+          60
+        ],
+        "CLIP_DROP_LOWEST_tier_30": [
+          60,
+          540
+        ]
+      },
+      "provenance": "parent 推演 / PI 授权延伸（worker 0 私设；0 新设阈值）"
+    },
+    "r2_formula": "沿 spec §3.3 + §4.1：log10(P) = beta*log10(C) + log10(A)，OLS R² = 1 - SS_res/SS_tot",
+    "clip_r2_min_grid": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "trials_seeds": [
+      42,
+      137,
+      256
+    ],
+    "trial_semantics": "trial = seeded **model 级重抽**（n=9, with replacement）",
+    "bootstrap": {
+      "n": 1000,
+      "seed": 42,
+      "unit": "model"
+    }
+  },
+  "material_probe": {
+    "authorized_cell_tiers": [
+      30,
+      60,
+      540
+    ],
+    "tier_provenance": {
+      "30": "每 model 30 cells（T30/R30/A30 计数，源件 P_C_distortion_bound_60cells.per_model）",
+      "60": "每 model 60 cells（T60/R60/A60 计数，同源件）",
+      "540": "9 model × 60 cells 汇总（T60_sum=384 / R60_sum=78 / A60_sum=78 = 540）"
+    },
+    "ladder_dimension": {
+      "n_distinct_tiers": 3,
+      "gate_n_distinct_gt_3": false,
+      "exempted_by": "PI 2026-09-27 显式授权（K-V3R-0-B 豁免），3 档固定",
+      "note": "3 档 < 4 ⇒ 原 n_distinct>3 门不达；按派工单字面豁免，自证改 P 维 / 样本维"
+    },
+    "P_and_sample_dimension": {
+      "gate": "每档内 n_distinct>3 + std>0（派工单字面豁免推演：parent 推演 / PI 授权延伸）",
+      "per_tier_stats_hit_rate": {
+        "30": {
+          "n": 9,
+          "n_distinct": 7,
+          "std": 0.10657403385139379,
+          "std_gt_0": true,
+          "min": 0.5333333333333333,
+          "max": 0.8666666666666667,
+          "mean": 0.7111111111111111
+        },
+        "60": {
+          "n": 9,
+          "n_distinct": 7,
+          "std": 0.10657403385139379,
+          "std_gt_0": true,
+          "min": 0.5333333333333333,
+          "max": 0.8666666666666667,
+          "mean": 0.7111111111111111
+        },
+        "540": {
+          "n": 9,
+          "n_distinct": 7,
+          "std": 0.10657403385139379,
+          "std_gt_0": true,
+          "min": 0.5333333333333333,
+          "max": 0.8666666666666667,
+          "mean": 0.7111111111111111
+        }
+      },
+      "gate_pass": true,
+      "unit_of_analysis": "model（n=9）—— skill experimental-design 落点：独立重复单元 = model，非 cell（540 cells ≠ 540 独立单元，cell 级 bootstrap = 伪重复）"
+    },
+    "tier_invariance_identity": {
+      "exact_count_doubling_30_to_60": {
+        "T60_eq_2xT30_all_models": true,
+        "R60_eq_2xR30_all_models": true,
+        "A60_eq_2xA30_all_models": true,
+        "sum_T30": 192,
+        "sum_T60": 384,
+        "sum_R30": 39,
+        "sum_R60": 78,
+        "sum_A30": 39,
+        "sum_A60": 78,
+        "per_model_exact_doubling": [
+          {
+            "model": "doubao-seed-2.0-lite",
+            "T30": 26,
+            "T60": 52,
+            "R30": 4,
+            "R60": 8,
+            "A30": 0,
+            "A60": 0,
+            "exact_doubling": true
+          },
+          {
+            "model": "glm-5.3",
+            "T30": 26,
+            "T60": 52,
+            "R30": 3,
+            "R60": 6,
+            "A30": 1,
+            "A60": 2,
+            "exact_doubling": true
+          },
+          {
+            "model": "deepseek-v4-flash",
+            "T30": 23,
+            "T60": 46,
+            "R30": 5,
+            "R60": 10,
+            "A30": 2,
+            "A60": 4,
+            "exact_doubling": true
+          },
+          {
+            "model": "doubao-seed-evolving",
+            "T30": 22,
+            "T60": 44,
+            "R30": 6,
+            "R60": 12,
+            "A30": 2,
+            "A60": 4,
+            "exact_doubling": true
+          },
+          {
+            "model": "minimax-m3",
+            "T30": 21,
+            "T60": 42,
+            "R30": 8,
+            "R60": 16,
+            "A30": 1,
+            "A60": 2,
+            "exact_doubling": true
+          },
+          {
+            "model": "glm-5.3-flash",
+            "T30": 21,
+            "T60": 42,
+            "R30": 1,
+            "R60": 2,
+            "A30": 8,
+            "A60": 16,
+            "exact_doubling": true
+          },
+          {
+            "model": "kimi-k2.7-code",
+            "T30": 19,
+            "T60": 38,
+            "R30": 8,
+            "R60": 16,
+            "A30": 3,
+            "A60": 6,
+            "exact_doubling": true
+          },
+          {
+            "model": "doubao-seed-2.1-turbo",
+            "T30": 18,
+            "T60": 36,
+            "R30": 2,
+            "R60": 4,
+            "A30": 10,
+            "A60": 20,
+            "exact_doubling": true
+          },
+          {
+            "model": "deepseek-v4-pro",
+            "T30": 16,
+            "T60": 32,
+            "R30": 2,
+            "R60": 4,
+            "A30": 12,
+            "A60": 24,
+            "exact_doubling": true
+          }
+        ]
+      },
+      "per_model_rate_tier_invariant": {
+        "hit_rate_T_frac": true,
+        "distortion_rate_A_frac": true
+      },
+      "tier_aggregate_scalar_tier_invariant": {
+        "hit_rate_30_eq_60": true,
+        "hit_rate_60_eq_540": true,
+        "distortion_rate_30_eq_60": true,
+        "distortion_rate_60_eq_540": true
+      },
+      "implication": "三档 cell 计数是**同一 cell 集的精确倍增/汇总**：任一 0 次齐次率型 P 定义（T_frac / A_frac / 任意计数比）在 30 / 60 / 540 三档上**逐 model 恒等** ⇒ log10(P) 档间全等 ⇒ SS_tot = 0 ⇒ 幂律 R² = 0/0 未定义（构造性，非计算失灵）",
+      "generality": "0 次齐次（计数比）之外的数据面字段均无档间变化：cos_sim / D_fix2_cosine / verdict / conservation_residual 仅在 60 档给出（无 30 档值）⇒ 无法构成 3 档阶梯"
+    }
+  },
+  "construct_degen_self_check": {
+    "gate": "K-V3R-0-A：阶梯维因 PI 授权 3 档豁免 n_distinct>3；自证改 P 维 / 样本维（每档内 n_distinct>3 + std>0）",
+    "ladder_dim_gate_pass": false,
+    "ladder_dim_exempted": true,
+    "P_dim_gate_pass": true,
+    "degenerate_alarm_hit": true,
+    "degen_alarm_cause": "顶替面的响应层档间恒等（SS_tot = 0）⇒ R² 未定义；**非** P 维退化（P 维 n_distinct=7>3 + std>0 已通过）",
+    "disposition": "§3.2「任意不达 = 退化警报，改构造或判『不明』，不许带病开跑」-> 已触发（未定义面）⇒ 判「不可判」；扫描 / bootstrap / 对照全部**跑完并落盘**"
+  },
+  "real_run_substitute_tier": {
+    "model_level_trials": [
+      {
+        "trial_seed": 42,
+        "resample_unit": "model (n=9, with replacement)",
+        "resampled_model_indices": [
+          0,
+          6,
+          5,
+          3,
+          3,
+          7,
+          0,
+          6,
+          1
+        ],
+        "hit_rate_T_frac": {
+          "tiers": [
+            30,
+            60,
+            540
+          ],
+          "P_tier_mean_over_resampled_models": [
+            0.7370370370370369,
+            0.7370370370370369,
+            0.7370370370370369
+          ],
+          "r2_full": {
+            "n_points": 3,
+            "beta": -3.0379788362215055e-17,
+            "log10_A": -0.13251068774928057,
+            "r2": null,
+            "ss_res": 1.6948183510607676e-32,
+            "ss_tot": 0.0,
+            "r2_status": "UNDEFINED_SS_TOT_ZERO",
+            "r2_if_unguarded": null,
+            "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+          },
+          "clip_r2_min_scan_full": {
+            "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+            "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+            "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+          },
+          "clips": {
+            "CLIP_STRICT_A3_drop_both_ends": {
+              "tiers": [
+                60
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.7370370370370369
+              ],
+              "r2_clipped": {
+                "n_points": 1,
+                "beta": null,
+                "log10_A": null,
+                "r2": null,
+                "ss_res": null,
+                "ss_tot": null,
+                "r2_status": "UNDEFINED_N_POINTS_LT_2",
+                "r2_if_unguarded": null,
+                "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_HIGHEST_tier_540": {
+              "tiers": [
+                30,
+                60
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.7370370370370369,
+                0.7370370370370369
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": -1.2289722663302416e-16,
+                "log10_A": -0.13251068774928043,
+                "r2": null,
+                "ss_res": 1.0014835710813626e-32,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_LOWEST_tier_30": {
+              "tiers": [
+                60,
+                540
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.7370370370370369,
+                0.7370370370370369
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": 2.9836122137047517e-17,
+                "log10_A": -0.13251068774928074,
+                "r2": null,
+                "ss_res": 3.851859888774472e-33,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            }
+          },
+          "per_model_ladder_reading": {
+            "n_ladders": 9,
+            "n_r2_defined": 0,
+            "n_r2_undefined": 9,
+            "r2_statuses": [
+              "UNDEFINED_SS_TOT_ZERO"
+            ],
+            "betas_defined": []
+          }
+        },
+        "distortion_rate_A_frac": {
+          "tiers": [
+            30,
+            60,
+            540
+          ],
+          "P_tier_mean_over_resampled_models": [
+            0.10740740740740741,
+            0.10740740740740741,
+            0.10740740740740741
+          ],
+          "r2_full": {
+            "n_points": 3,
+            "beta": -4.681367113276692e-17,
+            "log10_A": -0.9689657662600307,
+            "r2": null,
+            "ss_res": 3.3280069439011436e-31,
+            "ss_tot": 0.0,
+            "r2_status": "UNDEFINED_SS_TOT_ZERO",
+            "r2_if_unguarded": null,
+            "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+          },
+          "clip_r2_min_scan_full": {
+            "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+            "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+            "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+          },
+          "clips": {
+            "CLIP_STRICT_A3_drop_both_ends": {
+              "tiers": [
+                60
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.10740740740740741
+              ],
+              "r2_clipped": {
+                "n_points": 1,
+                "beta": null,
+                "log10_A": null,
+                "r2": null,
+                "ss_res": null,
+                "ss_tot": null,
+                "r2_status": "UNDEFINED_N_POINTS_LT_2",
+                "r2_if_unguarded": null,
+                "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_HIGHEST_tier_540": {
+              "tiers": [
+                30,
+                60
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.10740740740740741,
+                0.10740740740740741
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": -4.358913970767792e-16,
+                "log10_A": -0.9689657662600301,
+                "r2": null,
+                "ss_res": 3.0814879110195774e-31,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_LOWEST_tier_30": {
+              "tiers": [
+                60,
+                540
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.10740740740740741,
+                0.10740740740740741
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": 1.8946122706420617e-16,
+                "log10_A": -0.9689657662600316,
+                "r2": null,
+                "ss_res": 2.465190328815662e-32,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            }
+          },
+          "per_model_ladder_reading": {
+            "n_ladders": 9,
+            "n_r2_defined": 0,
+            "n_r2_undefined": 9,
+            "r2_statuses": [
+              "UNDEFINED_NONPOSITIVE_OR_NONFINITE_P",
+              "UNDEFINED_SS_TOT_ZERO"
+            ],
+            "betas_defined": []
+          }
+        }
+      },
+      {
+        "trial_seed": 137,
+        "resample_unit": "model (n=9, with replacement)",
+        "resampled_model_indices": [
+          4,
+          7,
+          2,
+          2,
+          7,
+          3,
+          1,
+          5,
+          5
+        ],
+        "hit_rate_T_frac": {
+          "tiers": [
+            30,
+            60,
+            540
+          ],
+          "P_tier_mean_over_resampled_models": [
+            0.7148148148148148,
+            0.7148148148148148,
+            0.7148148148148148
+          ],
+          "r2_full": {
+            "n_points": 3,
+            "beta": -2.2249571057100485e-17,
+            "log10_A": -0.14580645515121346,
+            "r2": null,
+            "ss_res": 1.6948183510607676e-32,
+            "ss_tot": 0.0,
+            "r2_status": "UNDEFINED_SS_TOT_ZERO",
+            "r2_if_unguarded": null,
+            "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+          },
+          "clip_r2_min_scan_full": {
+            "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+            "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+            "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+          },
+          "clips": {
+            "CLIP_STRICT_A3_drop_both_ends": {
+              "tiers": [
+                60
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.7148148148148148
+              ],
+              "r2_clipped": {
+                "n_points": 1,
+                "beta": null,
+                "log10_A": null,
+                "r2": null,
+                "ss_res": null,
+                "ss_tot": null,
+                "r2_status": "UNDEFINED_N_POINTS_LT_2",
+                "r2_if_unguarded": null,
+                "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_HIGHEST_tier_540": {
+              "tiers": [
+                30,
+                60
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.7148148148148148,
+                0.7148148148148148
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": 4.8822874225622104e-17,
+                "log10_A": -0.1458064551512136,
+                "r2": null,
+                "ss_res": 6.162975822039155e-33,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_LOWEST_tier_30": {
+              "tiers": [
+                60,
+                540
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.7148148148148148,
+                0.7148148148148148
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": -4.3320475139069056e-18,
+                "log10_A": -0.14580645515121357,
+                "r2": null,
+                "ss_res": 0.0,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            }
+          },
+          "per_model_ladder_reading": {
+            "n_ladders": 9,
+            "n_r2_defined": 0,
+            "n_r2_undefined": 9,
+            "r2_statuses": [
+              "UNDEFINED_SS_TOT_ZERO"
+            ],
+            "betas_defined": []
+          }
+        },
+        "distortion_rate_A_frac": {
+          "tiers": [
+            30,
+            60,
+            540
+          ],
+          "P_tier_mean_over_resampled_models": [
+            0.16296296296296295,
+            0.16296296296296295,
+            0.16296296296296295
+          ],
+          "r2_full": {
+            "n_points": 3,
+            "beta": -1.8289356667249068e-16,
+            "log10_A": -0.7879110876727995,
+            "r2": null,
+            "ss_res": 7.395570986446986e-32,
+            "ss_tot": 0.0,
+            "r2_status": "UNDEFINED_SS_TOT_ZERO",
+            "r2_if_unguarded": null,
+            "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+          },
+          "clip_r2_min_scan_full": {
+            "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+            "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+            "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+          },
+          "clips": {
+            "CLIP_STRICT_A3_drop_both_ends": {
+              "tiers": [
+                60
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.16296296296296295
+              ],
+              "r2_clipped": {
+                "n_points": 1,
+                "beta": null,
+                "log10_A": null,
+                "r2": null,
+                "ss_res": null,
+                "ss_tot": null,
+                "r2_status": "UNDEFINED_N_POINTS_LT_2",
+                "r2_if_unguarded": null,
+                "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_HIGHEST_tier_540": {
+              "tiers": [
+                30,
+                60
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.16296296296296295,
+                0.16296296296296295
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": 1.5164590063717293e-17,
+                "log10_A": -0.7879110876727997,
+                "r2": null,
+                "ss_res": 9.860761315262648e-32,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_LOWEST_tier_30": {
+              "tiers": [
+                60,
+                540
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.16296296296296295,
+                0.16296296296296295
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": -1.4468618171609594e-16,
+                "log10_A": -0.7879110876727993,
+                "r2": null,
+                "ss_res": 2.465190328815662e-31,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            }
+          },
+          "per_model_ladder_reading": {
+            "n_ladders": 9,
+            "n_r2_defined": 0,
+            "n_r2_undefined": 9,
+            "r2_statuses": [
+              "UNDEFINED_SS_TOT_ZERO"
+            ],
+            "betas_defined": []
+          }
+        }
+      },
+      {
+        "trial_seed": 256,
+        "resample_unit": "model (n=9, with replacement)",
+        "resampled_model_indices": [
+          3,
+          6,
+          6,
+          8,
+          1,
+          8,
+          0,
+          4,
+          0
+        ],
+        "hit_rate_T_frac": {
+          "tiers": [
+            30,
+            60,
+            540
+          ],
+          "P_tier_mean_over_resampled_models": [
+            0.7074074074074075,
+            0.7074074074074075,
+            0.7074074074074075
+          ],
+          "r2_full": {
+            "n_points": 3,
+            "beta": 1.8506085142073935e-17,
+            "log10_A": -0.1503303969112597,
+            "r2": null,
+            "ss_res": 1.3096323621833204e-32,
+            "ss_tot": 0.0,
+            "r2_status": "UNDEFINED_SS_TOT_ZERO",
+            "r2_if_unguarded": null,
+            "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+          },
+          "clip_r2_min_scan_full": {
+            "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+            "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+            "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+          },
+          "clips": {
+            "CLIP_STRICT_A3_drop_both_ends": {
+              "tiers": [
+                60
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.7074074074074075
+              ],
+              "r2_clipped": {
+                "n_points": 1,
+                "beta": null,
+                "log10_A": null,
+                "r2": null,
+                "ss_res": null,
+                "ss_tot": null,
+                "r2_status": "UNDEFINED_N_POINTS_LT_2",
+                "r2_if_unguarded": null,
+                "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_HIGHEST_tier_540": {
+              "tiers": [
+                30,
+                60
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.7074074074074075,
+                0.7074074074074075
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": -1.1040031518605516e-17,
+                "log10_A": -0.15033039691125966,
+                "r2": null,
+                "ss_res": 6.162975822039155e-33,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_LOWEST_tier_30": {
+              "tiers": [
+                60,
+                540
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.7074074074074075,
+                0.7074074074074075
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": 2.862736567567878e-18,
+                "log10_A": -0.15033039691125968,
+                "r2": null,
+                "ss_res": 6.162975822039155e-33,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            }
+          },
+          "per_model_ladder_reading": {
+            "n_ladders": 9,
+            "n_r2_defined": 0,
+            "n_r2_undefined": 9,
+            "r2_statuses": [
+              "UNDEFINED_SS_TOT_ZERO"
+            ],
+            "betas_defined": []
+          }
+        },
+        "distortion_rate_A_frac": {
+          "tiers": [
+            30,
+            60,
+            540
+          ],
+          "P_tier_mean_over_resampled_models": [
+            0.1259259259259259,
+            0.1259259259259259,
+            0.1259259259259259
+          ],
+          "r2_full": {
+            "n_points": 3,
+            "beta": -6.594978816521542e-17,
+            "log10_A": -0.899884847116732,
+            "r2": null,
+            "ss_res": 2.465190328815662e-32,
+            "ss_tot": 3.697785493223493e-32,
+            "r2_status": "UNDEFINED_FLOAT_NOISE",
+            "r2_if_unguarded": 0.33333333333333337,
+            "verdict_note": "0 < SS_tot < 1e-24 ⇒ 精确整数口径下档间响应恒等（SS_tot 必 = 0）⇒ 本 SS_tot 系 float64 舍入残差（噪声），0 计入判定"
+          },
+          "clip_r2_min_scan_full": {
+            "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+            "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+            "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+          },
+          "clips": {
+            "CLIP_STRICT_A3_drop_both_ends": {
+              "tiers": [
+                60
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.1259259259259259
+              ],
+              "r2_clipped": {
+                "n_points": 1,
+                "beta": null,
+                "log10_A": null,
+                "r2": null,
+                "ss_res": null,
+                "ss_tot": null,
+                "r2_status": "UNDEFINED_N_POINTS_LT_2",
+                "r2_if_unguarded": null,
+                "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_HIGHEST_tier_540": {
+              "tiers": [
+                30,
+                60
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.1259259259259259,
+                0.1259259259259259
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": -1.808468850412605e-16,
+                "log10_A": -0.8998848471167317,
+                "r2": null,
+                "ss_res": 1.6023737137301802e-31,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_LOWEST_tier_30": {
+              "tiers": [
+                60,
+                540
+              ],
+              "P_tier_mean_over_resampled_models": [
+                0.1259259259259259,
+                0.1259259259259259
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": 1.3597466211085952e-17,
+                "log10_A": -0.8998848471167321,
+                "r2": null,
+                "ss_res": 2.465190328815662e-32,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "clip_r2_min_scan_clipped": {
+                "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+                "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            }
+          },
+          "per_model_ladder_reading": {
+            "n_ladders": 9,
+            "n_r2_defined": 0,
+            "n_r2_undefined": 9,
+            "r2_statuses": [
+              "UNDEFINED_FLOAT_NOISE",
+              "UNDEFINED_NONPOSITIVE_OR_NONFINITE_P",
+              "UNDEFINED_SS_TOT_ZERO"
+            ],
+            "betas_defined": []
+          }
+        }
+      }
+    ],
+    "tier_aggregate_reading": [
+      {
+        "P_definition": "hit_rate_T_frac",
+        "tiers": [
+          30,
+          60,
+          540
+        ],
+        "P_scalar_per_tier": {
+          "30": 0.7111111111111111,
+          "60": 0.7111111111111111,
+          "540": 0.7111111111111111
+        },
+        "r2_full": {
+          "n_points": 3,
+          "beta": 1.6252953652878271e-18,
+          "log10_A": -0.14806253545543768,
+          "r2": null,
+          "ss_res": 0.0,
+          "ss_tot": 0.0,
+          "r2_status": "UNDEFINED_SS_TOT_ZERO",
+          "r2_if_unguarded": null,
+          "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+        },
+        "clip_r2_min_scan_full": {
+          "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+          "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+          "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+        },
+        "clips": {
+          "CLIP_STRICT_A3_drop_both_ends": {
+            "tiers": [
+              60
+            ],
+            "r2_clipped": {
+              "n_points": 1,
+              "beta": null,
+              "log10_A": null,
+              "r2": null,
+              "ss_res": null,
+              "ss_tot": null,
+              "r2_status": "UNDEFINED_N_POINTS_LT_2",
+              "r2_if_unguarded": null,
+              "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+            },
+            "clip_r2_min_scan_clipped": {
+              "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+              "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+              "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+            },
+            "delta": {
+              "r2_delta_full_minus_clipped": null,
+              "delta_is_zero": null,
+              "delta_is_nonzero": false,
+              "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+            }
+          },
+          "CLIP_DROP_HIGHEST_tier_540": {
+            "tiers": [
+              30,
+              60
+            ],
+            "r2_clipped": {
+              "n_points": 2,
+              "beta": -2.151260955367373e-17,
+              "log10_A": -0.1480625354554376,
+              "r2": null,
+              "ss_res": 6.162975822039155e-33,
+              "ss_tot": 0.0,
+              "r2_status": "UNDEFINED_SS_TOT_ZERO",
+              "r2_if_unguarded": null,
+              "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+            },
+            "clip_r2_min_scan_clipped": {
+              "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+              "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+              "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+            },
+            "delta": {
+              "r2_delta_full_minus_clipped": null,
+              "delta_is_zero": null,
+              "delta_is_nonzero": false,
+              "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+            }
+          },
+          "CLIP_DROP_LOWEST_tier_30": {
+            "tiers": [
+              60,
+              540
+            ],
+            "r2_clipped": {
+              "n_points": 2,
+              "beta": 1.2314739459597988e-17,
+              "log10_A": -0.1480625354554377,
+              "r2": null,
+              "ss_res": 0.0,
+              "ss_tot": 0.0,
+              "r2_status": "UNDEFINED_SS_TOT_ZERO",
+              "r2_if_unguarded": null,
+              "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+            },
+            "clip_r2_min_scan_clipped": {
+              "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+              "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+              "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+            },
+            "delta": {
+              "r2_delta_full_minus_clipped": null,
+              "delta_is_zero": null,
+              "delta_is_nonzero": false,
+              "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+            }
+          }
+        },
+        "trials_bit_identical_by_construction": true,
+        "trials_note": "tier 级标量无重抽单元（9 model 已被聚成 1 个数）⇒ 3 trial 逐字恒等；此处 0 bootstrap（cell 级重抽 = 伪重复，skill §Mistakes #1）"
+      },
+      {
+        "P_definition": "distortion_rate_A_frac",
+        "tiers": [
+          30,
+          60,
+          540
+        ],
+        "P_scalar_per_tier": {
+          "30": 0.14444444444444443,
+          "60": 0.14444444444444443,
+          "540": 0.14444444444444443
+        },
+        "r2_full": {
+          "n_points": 3,
+          "beta": 8.365470825431914e-17,
+          "log10_A": -0.8402991571324883,
+          "r2": null,
+          "ss_res": 1.232595164407831e-32,
+          "ss_tot": 0.0,
+          "r2_status": "UNDEFINED_SS_TOT_ZERO",
+          "r2_if_unguarded": null,
+          "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+        },
+        "clip_r2_min_scan_full": {
+          "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+          "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+          "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+        },
+        "clips": {
+          "CLIP_STRICT_A3_drop_both_ends": {
+            "tiers": [
+              60
+            ],
+            "r2_clipped": {
+              "n_points": 1,
+              "beta": null,
+              "log10_A": null,
+              "r2": null,
+              "ss_res": null,
+              "ss_tot": null,
+              "r2_status": "UNDEFINED_N_POINTS_LT_2",
+              "r2_if_unguarded": null,
+              "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+            },
+            "clip_r2_min_scan_clipped": {
+              "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+              "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+              "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+            },
+            "delta": {
+              "r2_delta_full_minus_clipped": null,
+              "delta_is_zero": null,
+              "delta_is_nonzero": false,
+              "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+            }
+          },
+          "CLIP_DROP_HIGHEST_tier_540": {
+            "tiers": [
+              30,
+              60
+            ],
+            "r2_clipped": {
+              "n_points": 2,
+              "beta": -6.202688545465762e-16,
+              "log10_A": -0.8402991571324865,
+              "r2": null,
+              "ss_res": 9.121204216617949e-31,
+              "ss_tot": 0.0,
+              "r2_status": "UNDEFINED_SS_TOT_ZERO",
+              "r2_if_unguarded": null,
+              "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+            },
+            "clip_r2_min_scan_clipped": {
+              "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+              "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+              "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+            },
+            "delta": {
+              "r2_delta_full_minus_clipped": null,
+              "delta_is_zero": null,
+              "delta_is_nonzero": false,
+              "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+            }
+          },
+          "CLIP_DROP_LOWEST_tier_30": {
+            "tiers": [
+              60,
+              540
+            ],
+            "r2_clipped": {
+              "n_points": 2,
+              "beta": 5.306766748548045e-17,
+              "log10_A": -0.8402991571324883,
+              "r2": null,
+              "ss_res": 0.0,
+              "ss_tot": 0.0,
+              "r2_status": "UNDEFINED_SS_TOT_ZERO",
+              "r2_if_unguarded": null,
+              "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+            },
+            "clip_r2_min_scan_clipped": {
+              "verdict_clip_r2_min_0.3": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+              "verdict_clip_r2_min_0.5": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）",
+              "verdict_clip_r2_min_0.7": "UNDEFINED（r2 无定义，不落 PASS/FAIL 分支）"
+            },
+            "delta": {
+              "r2_delta_full_minus_clipped": null,
+              "delta_is_zero": null,
+              "delta_is_nonzero": false,
+              "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+            }
+          }
+        },
+        "trials_bit_identical_by_construction": true,
+        "trials_note": "tier 级标量无重抽单元（9 model 已被聚成 1 个数）⇒ 3 trial 逐字恒等；此处 0 bootstrap（cell 级重抽 = 伪重复，skill §Mistakes #1）"
+      }
+    ]
+  },
+  "bootstrap": {
+    "n": 1000,
+    "seed": 42,
+    "resample_unit": "model (n=9, with replacement) — 独立重复单元（skill：防伪重复）",
+    "P_definition": "hit_rate_T_frac（命中率）",
+    "r2_full_defined_count": 0,
+    "r2_full_undefined_count": 1000,
+    "fraction_resamples_r2_undefined": 1.0,
+    "delta_nonzero_count": 0,
+    "delta_zero_count": 0,
+    "delta_undefined_count": 3000,
+    "delta_counts_are_over_all_3_clip_variants": true,
+    "r2_status_counter": {
+      "UNDEFINED_SS_TOT_ZERO": 918,
+      "UNDEFINED_FLOAT_NOISE": 82
+    },
+    "label": "REAL_DATA（顶替口径 · model 级重抽 · 非 synthetic）",
+    "note": "1000/1000 重抽 r2_full 皆未定义（SS_tot = 0 或 float64 舍入残差，档间响应恒等）⇒ 顶替面 0 重抽自由度；「delta ≡ 0 → FAIL」分支与「delta != 0 → PASS」分支**同时不可达**",
+    "float_noise_audit": {
+      "guard": "0 < SS_tot < 1e-24 ⇒ 判 UNDEFINED_FLOAT_NOISE（数值噪声守卫，非科学阈值）",
+      "n_resamples_flagged_float_noise": 82,
+      "max_ss_tot_among_flagged": 2.311115933264683e-33,
+      "exact_arithmetic_ground_truth": "material_probe.tier_invariance_identity：T60 == 2*T30 等逐 model **整数**相等 ⇒ 精确算术下 SS_tot ≡ 0",
+      "why_this_matters": "若 0 加守卫，浮点残差会让部分重抽产出**名义上**有定义的 R²（值由舍入误差决定，0 携带信息）⇒ 可能被误读为「裁剪有判据」信号"
+    }
+  },
+  "controls": {
+    "CTRL1_POSITIVE_tier_varying_synthetic": {
+      "rows": [
+        {
+          "label": "CTRL1_POSITIVE_tier_varying_synthetic",
+          "trial_seed": 42,
+          "P_tier_mean_over_resampled_models": [
+            0.4530590296562459,
+            0.33390485286702043,
+            0.13710347781592686
+          ],
+          "r2_full": {
+            "n_points": 3,
+            "beta": -0.41150171615761205,
+            "log10_A": 0.2602536455637067,
+            "r2": 0.9997280613394685,
+            "ss_res": 3.9564879248821783e-05,
+            "ss_tot": 0.14549192516974158,
+            "r2_status": "DEFINED",
+            "verdict_note": null
+          },
+          "clip_r2_min_scan_full": {
+            "verdict_clip_r2_min_0.3": "PASS",
+            "verdict_clip_r2_min_0.5": "PASS",
+            "verdict_clip_r2_min_0.7": "PASS"
+          },
+          "clips": {
+            "CLIP_STRICT_A3_drop_both_ends": {
+              "tiers": [
+                60
+              ],
+              "r2_clipped": {
+                "n_points": 1,
+                "beta": null,
+                "log10_A": null,
+                "r2": null,
+                "ss_res": null,
+                "ss_tot": null,
+                "r2_status": "UNDEFINED_N_POINTS_LT_2",
+                "r2_if_unguarded": null,
+                "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_HIGHEST_tier_540": {
+              "tiers": [
+                30,
+                60
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": -0.44026197192582067,
+                "log10_A": 0.30647510687449175,
+                "r2": 1.0,
+                "ss_res": 1.0477058897466563e-31,
+                "ss_tot": 0.008782373397635306,
+                "r2_status": "DEFINED",
+                "verdict_note": null
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": -0.0002719386605315455,
+                "delta_is_zero": false,
+                "delta_is_nonzero": true,
+                "delta_status": "DEFINED"
+              }
+            },
+            "CLIP_DROP_LOWEST_tier_30": {
+              "tiers": [
+                60,
+                540
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": -0.40511112822539747,
+                "log10_A": 0.2439715901965436,
+                "r2": 1.0,
+                "ss_res": 1.509929076399593e-31,
+                "ss_tot": 0.0747198290924894,
+                "r2_status": "DEFINED",
+                "verdict_note": null
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": -0.0002719386605315455,
+                "delta_is_zero": false,
+                "delta_is_nonzero": true,
+                "delta_status": "DEFINED"
+              }
+            }
+          }
+        },
+        {
+          "label": "CTRL1_POSITIVE_tier_varying_synthetic",
+          "trial_seed": 137,
+          "P_tier_mean_over_resampled_models": [
+            0.437927389945944,
+            0.33572324194509545,
+            0.13859236246442613
+          ],
+          "r2_full": {
+            "n_points": 3,
+            "beta": -0.3991677937938161,
+            "log10_A": 0.23306878261882027,
+            "r2": 0.9999133281468088,
+            "ss_res": 1.1863263702686555e-05,
+            "ss_tot": 0.13687562069913936,
+            "r2_status": "DEFINED",
+            "verdict_note": null
+          },
+          "clip_r2_min_scan_full": {
+            "verdict_clip_r2_min_0.3": "PASS",
+            "verdict_clip_r2_min_0.5": "PASS",
+            "verdict_clip_r2_min_0.7": "PASS"
+          },
+          "clips": {
+            "CLIP_STRICT_A3_drop_both_ends": {
+              "tiers": [
+                60
+              ],
+              "r2_clipped": {
+                "n_points": 1,
+                "beta": null,
+                "log10_A": null,
+                "r2": null,
+                "ss_res": null,
+                "ss_tot": null,
+                "r2_status": "UNDEFINED_N_POINTS_LT_2",
+                "r2_if_unguarded": null,
+                "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_HIGHEST_tier_540": {
+              "tiers": [
+                30,
+                60
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": -0.38341926772152973,
+                "log10_A": 0.20775885858967855,
+                "r2": 1.0,
+                "ss_res": 2.2186712959340957e-31,
+                "ss_tot": 0.006660969051920595,
+                "r2_status": "DEFINED",
+                "verdict_note": null
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": -8.66718531912225e-05,
+                "delta_is_zero": false,
+                "delta_is_nonzero": true,
+                "delta_status": "DEFINED"
+              }
+            },
+            "CLIP_DROP_LOWEST_tier_30": {
+              "tiers": [
+                60,
+                540
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": -0.40266714864930897,
+                "log10_A": 0.24198450212864395,
+                "r2": 1.0,
+                "ss_res": 2.465190328815662e-31,
+                "ss_tot": 0.07382099970074552,
+                "r2_status": "DEFINED",
+                "verdict_note": null
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": -8.66718531912225e-05,
+                "delta_is_zero": false,
+                "delta_is_nonzero": true,
+                "delta_status": "DEFINED"
+              }
+            }
+          }
+        },
+        {
+          "label": "CTRL1_POSITIVE_tier_varying_synthetic",
+          "trial_seed": 256,
+          "P_tier_mean_over_resampled_models": [
+            0.4641459277204229,
+            0.34181491469879877,
+            0.13757248078579443
+          ],
+          "r2_full": {
+            "n_points": 3,
+            "beta": -0.4191488351509973,
+            "log10_A": 0.28290015406124086,
+            "r2": 0.9998436107867961,
+            "ss_res": 2.360416911944327e-05,
+            "ss_tot": 0.15093220712521851,
+            "r2_status": "DEFINED",
+            "verdict_note": null
+          },
+          "clip_r2_min_scan_full": {
+            "verdict_clip_r2_min_0.3": "PASS",
+            "verdict_clip_r2_min_0.5": "PASS",
+            "verdict_clip_r2_min_0.7": "PASS"
+          },
+          "clips": {
+            "CLIP_STRICT_A3_drop_both_ends": {
+              "tiers": [
+                60
+              ],
+              "r2_clipped": {
+                "n_points": 1,
+                "beta": null,
+                "log10_A": null,
+                "r2": null,
+                "ss_res": null,
+                "ss_tot": null,
+                "r2_status": "UNDEFINED_N_POINTS_LT_2",
+                "r2_if_unguarded": null,
+                "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_HIGHEST_tier_540": {
+              "tiers": [
+                30,
+                60
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": -0.4413631120221024,
+                "log10_A": 0.3186013782513206,
+                "r2": 1.0,
+                "ss_res": 1.2634100435180267e-31,
+                "ss_tot": 0.008826359559120693,
+                "r2_status": "DEFINED",
+                "verdict_note": null
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": -0.0001563892132039335,
+                "delta_is_zero": false,
+                "delta_is_nonzero": true,
+                "delta_status": "DEFINED"
+              }
+            },
+            "CLIP_DROP_LOWEST_tier_30": {
+              "tiers": [
+                60,
+                540
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": -0.4142127771812943,
+                "log10_A": 0.27032397640580247,
+                "r2": 1.0,
+                "ss_res": 2.98904327368899e-31,
+                "ss_tot": 0.07811501243056881,
+                "r2_status": "DEFINED",
+                "verdict_note": null
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": -0.0001563892132039335,
+                "delta_is_zero": false,
+                "delta_is_nonzero": true,
+                "delta_status": "DEFINED"
+              }
+            }
+          }
+        }
+      ],
+      "all_r2_defined": true,
+      "all_delta_nonzero": true,
+      "purpose": "证执行器在档间有变化时能给出有定义 r2 与非零 delta（执行器非退化）"
+    },
+    "CTRL2_NOOP_emulation_of_v3_defect": {
+      "rows": [
+        {
+          "label": "CTRL2_NOOP_emulation_of_v3_defect",
+          "trial_seed": 42,
+          "r2_full": {
+            "n_points": 3,
+            "beta": -0.41150171615761205,
+            "log10_A": 0.2602536455637067,
+            "r2": 0.9997280613394685,
+            "ss_res": 3.9564879248821783e-05,
+            "ss_tot": 0.14549192516974158,
+            "r2_status": "DEFINED",
+            "verdict_note": null
+          },
+          "delta": {
+            "r2_delta_full_minus_clipped": 0.0,
+            "delta_is_zero": true,
+            "delta_is_nonzero": false,
+            "delta_status": "DEFINED"
+          }
+        },
+        {
+          "label": "CTRL2_NOOP_emulation_of_v3_defect",
+          "trial_seed": 137,
+          "r2_full": {
+            "n_points": 3,
+            "beta": -0.3991677937938161,
+            "log10_A": 0.23306878261882027,
+            "r2": 0.9999133281468088,
+            "ss_res": 1.1863263702686555e-05,
+            "ss_tot": 0.13687562069913936,
+            "r2_status": "DEFINED",
+            "verdict_note": null
+          },
+          "delta": {
+            "r2_delta_full_minus_clipped": 0.0,
+            "delta_is_zero": true,
+            "delta_is_nonzero": false,
+            "delta_status": "DEFINED"
+          }
+        },
+        {
+          "label": "CTRL2_NOOP_emulation_of_v3_defect",
+          "trial_seed": 256,
+          "r2_full": {
+            "n_points": 3,
+            "beta": -0.4191488351509973,
+            "log10_A": 0.28290015406124086,
+            "r2": 0.9998436107867961,
+            "ss_res": 2.360416911944327e-05,
+            "ss_tot": 0.15093220712521851,
+            "r2_status": "DEFINED",
+            "verdict_note": null
+          },
+          "delta": {
+            "r2_delta_full_minus_clipped": 0.0,
+            "delta_is_zero": true,
+            "delta_is_nonzero": false,
+            "delta_status": "DEFINED"
+          }
+        }
+      ],
+      "all_delta_zero": true,
+      "purpose": "证执行器能复现 V3 的 delta ≡ 0 形态（no-op）⇒ 0 恒返回非零"
+    },
+    "CTRL3_COUNTERFACTUAL_break_tier_invariance": {
+      "rows": [
+        {
+          "label": "CTRL3_COUNTERFACTUAL_break_tier_invariance（反事实 · 仅证机制，**不作判定证据**）",
+          "trial_seed": 42,
+          "P_tier_mean_over_resampled_models": [
+            0.7333333333333333,
+            0.7370370370370369,
+            0.7370370370370369
+          ],
+          "r2_full": {
+            "n_points": 3,
+            "beta": 0.0013213565071912296,
+            "log10_A": -0.13587726372602246,
+            "r2": 0.469958283309608,
+            "ss_res": 1.6914853093164047e-06,
+            "ss_tot": 3.1912305315855644e-06,
+            "r2_status": "DEFINED",
+            "verdict_note": null
+          },
+          "clip_r2_min_scan_full": {
+            "verdict_clip_r2_min_0.3": "PASS",
+            "verdict_clip_r2_min_0.5": "FAIL",
+            "verdict_clip_r2_min_0.7": "FAIL"
+          },
+          "clips": {
+            "CLIP_STRICT_A3_drop_both_ends": {
+              "tiers": [
+                60
+              ],
+              "r2_clipped": {
+                "n_points": 1,
+                "beta": null,
+                "log10_A": null,
+                "r2": null,
+                "ss_res": null,
+                "ss_tot": null,
+                "r2_status": "UNDEFINED_N_POINTS_LT_2",
+                "r2_if_unguarded": null,
+                "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_HIGHEST_tier_540": {
+              "tiers": [
+                30,
+                60
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": 0.007268000464039174,
+                "log10_A": -0.14543429186220083,
+                "r2": 1.0,
+                "ss_res": 1.5407439555097887e-33,
+                "ss_tot": 2.3934228986891728e-06,
+                "r2_status": "DEFINED",
+                "verdict_note": null
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": -0.530041716690392,
+                "delta_is_zero": false,
+                "delta_is_nonzero": true,
+                "delta_status": "DEFINED"
+              }
+            },
+            "CLIP_DROP_LOWEST_tier_30": {
+              "tiers": [
+                60,
+                540
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": 2.9836122137047517e-17,
+                "log10_A": -0.13251068774928074,
+                "r2": null,
+                "ss_res": 3.851859888774472e-33,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            }
+          },
+          "counterfactual_note": "仅对 30 档加 seeded ±1 cell 抖动以打破「T60 = 2×T30」恒等；该档数据 0 在盘，此反事实不主张任何真实数据结论"
+        },
+        {
+          "label": "CTRL3_COUNTERFACTUAL_break_tier_invariance（反事实 · 仅证机制，**不作判定证据**）",
+          "trial_seed": 137,
+          "P_tier_mean_over_resampled_models": [
+            0.711111111111111,
+            0.7148148148148148,
+            0.7148148148148148
+          ],
+          "r2_full": {
+            "n_points": 3,
+            "beta": 0.001362541827516234,
+            "log10_A": -0.14927796383101155,
+            "r2": 0.46995828330961276,
+            "ss_res": 1.798572302293689e-06,
+            "ss_tot": 3.3932655594055576e-06,
+            "r2_status": "DEFINED",
+            "verdict_note": null
+          },
+          "clip_r2_min_scan_full": {
+            "verdict_clip_r2_min_0.3": "PASS",
+            "verdict_clip_r2_min_0.5": "FAIL",
+            "verdict_clip_r2_min_0.7": "FAIL"
+          },
+          "clips": {
+            "CLIP_STRICT_A3_drop_both_ends": {
+              "tiers": [
+                60
+              ],
+              "r2_clipped": {
+                "n_points": 1,
+                "beta": null,
+                "log10_A": null,
+                "r2": null,
+                "ss_res": null,
+                "ss_tot": null,
+                "r2_status": "UNDEFINED_N_POINTS_LT_2",
+                "r2_if_unguarded": null,
+                "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_HIGHEST_tier_540": {
+              "tiers": [
+                30,
+                60
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": 0.007494536546924375,
+                "log10_A": -0.15913287468317305,
+                "r2": 1.0,
+                "ss_res": 0.0,
+                "ss_tot": 2.5449491695541683e-06,
+                "r2_status": "DEFINED",
+                "verdict_note": null
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": -0.5300417166903872,
+                "delta_is_zero": false,
+                "delta_is_nonzero": true,
+                "delta_status": "DEFINED"
+              }
+            },
+            "CLIP_DROP_LOWEST_tier_30": {
+              "tiers": [
+                60,
+                540
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": -4.3320475139069056e-18,
+                "log10_A": -0.14580645515121357,
+                "r2": null,
+                "ss_res": 0.0,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            }
+          },
+          "counterfactual_note": "仅对 30 档加 seeded ±1 cell 抖动以打破「T60 = 2×T30」恒等；该档数据 0 在盘，此反事实不主张任何真实数据结论"
+        },
+        {
+          "label": "CTRL3_COUNTERFACTUAL_break_tier_invariance（反事实 · 仅证机制，**不作判定证据**）",
+          "trial_seed": 256,
+          "P_tier_mean_over_resampled_models": [
+            0.6962962962962964,
+            0.7074074074074075,
+            0.7074074074074075
+          ],
+          "r2_full": {
+            "n_points": 3,
+            "beta": 0.0041524146199781245,
+            "log10_A": -0.16090999388528548,
+            "r2": 0.4699582833096023,
+            "ss_res": 1.6704352175682623e-05,
+            "ss_tot": 3.1515165032641746e-05,
+            "r2_status": "DEFINED",
+            "verdict_note": null
+          },
+          "clip_r2_min_scan_full": {
+            "verdict_clip_r2_min_0.3": "PASS",
+            "verdict_clip_r2_min_0.5": "FAIL",
+            "verdict_clip_r2_min_0.7": "FAIL"
+          },
+          "clips": {
+            "CLIP_STRICT_A3_drop_both_ends": {
+              "tiers": [
+                60
+              ],
+              "r2_clipped": {
+                "n_points": 1,
+                "beta": null,
+                "log10_A": null,
+                "r2": null,
+                "ss_res": null,
+                "ss_tot": null,
+                "r2_status": "UNDEFINED_N_POINTS_LT_2",
+                "r2_if_unguarded": null,
+                "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            },
+            "CLIP_DROP_HIGHEST_tier_540": {
+              "tiers": [
+                30,
+                60
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": 0.02283997635811114,
+                "log10_A": -0.1909433294311679,
+                "r2": 1.0,
+                "ss_res": 1.5407439555097887e-33,
+                "ss_tot": 2.3636373774481305e-05,
+                "r2_status": "DEFINED",
+                "verdict_note": null
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": -0.5300417166903977,
+                "delta_is_zero": false,
+                "delta_is_nonzero": true,
+                "delta_status": "DEFINED"
+              }
+            },
+            "CLIP_DROP_LOWEST_tier_30": {
+              "tiers": [
+                60,
+                540
+              ],
+              "r2_clipped": {
+                "n_points": 2,
+                "beta": 2.862736567567878e-18,
+                "log10_A": -0.15033039691125968,
+                "r2": null,
+                "ss_res": 6.162975822039155e-33,
+                "ss_tot": 0.0,
+                "r2_status": "UNDEFINED_SS_TOT_ZERO",
+                "r2_if_unguarded": null,
+                "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+              },
+              "delta": {
+                "r2_delta_full_minus_clipped": null,
+                "delta_is_zero": null,
+                "delta_is_nonzero": false,
+                "delta_status": "UNDEFINED（r2_full 或 r2_clip 无定义）"
+              }
+            }
+          },
+          "counterfactual_note": "仅对 30 档加 seeded ±1 cell 抖动以打破「T60 = 2×T30」恒等；该档数据 0 在盘，此反事实不主张任何真实数据结论"
+        }
+      ],
+      "all_r2_defined": true,
+      "all_delta_nonzero": true,
+      "purpose": "根因分离：仅打破档间恒等即让 r2 恢复有定义 ⇒ 顶替面的未定义源于**数据恒等**（构造不适用），0 源于执行器/工具失灵"
+    },
+    "CTRL4_DESIGN_ARITHMETIC_probe": {
+      "rows": [
+        {
+          "clip_variant": "CLIP_STRICT_A3_drop_both_ends",
+          "tiers": [
+            60
+          ],
+          "r2_clipped_real_P": {
+            "n_points": 1,
+            "beta": null,
+            "log10_A": null,
+            "r2": null,
+            "ss_res": null,
+            "ss_tot": null,
+            "r2_status": "UNDEFINED_N_POINTS_LT_2",
+            "r2_if_unguarded": null,
+            "verdict_note": "点数 < 2 ⇒ R² 无定义（幂律拟合至少需 2 点）"
+          },
+          "design_arithmetic_note": "点数 = 1：1 点 ⇒ R² 无定义；2 点 ⇒ **若两点 y 不等**则 OLS 必过两点 ⇒ R² ≡ 1（与数据幅度无关）；**若两点 y 相等**（本件实测即此，因响应档间恒等）⇒ SS_tot = 0 ⇒ R² 仍未定义"
+        },
+        {
+          "clip_variant": "CLIP_DROP_HIGHEST_tier_540",
+          "tiers": [
+            30,
+            60
+          ],
+          "r2_clipped_real_P": {
+            "n_points": 2,
+            "beta": -1.3274716685740104e-17,
+            "log10_A": -0.06214790674884443,
+            "r2": null,
+            "ss_res": 3.851859888774472e-34,
+            "ss_tot": 0.0,
+            "r2_status": "UNDEFINED_SS_TOT_ZERO",
+            "r2_if_unguarded": null,
+            "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+          },
+          "design_arithmetic_note": "点数 = 2：1 点 ⇒ R² 无定义；2 点 ⇒ **若两点 y 不等**则 OLS 必过两点 ⇒ R² ≡ 1（与数据幅度无关）；**若两点 y 相等**（本件实测即此，因响应档间恒等）⇒ SS_tot = 0 ⇒ R² 仍未定义"
+        },
+        {
+          "clip_variant": "CLIP_DROP_LOWEST_tier_30",
+          "tiers": [
+            60,
+            540
+          ],
+          "r2_clipped_real_P": {
+            "n_points": 2,
+            "beta": -1.0575294268754316e-17,
+            "log10_A": -0.062147906748844406,
+            "r2": null,
+            "ss_res": 1.9740781929969167e-33,
+            "ss_tot": 0.0,
+            "r2_status": "UNDEFINED_SS_TOT_ZERO",
+            "r2_if_unguarded": null,
+            "verdict_note": "SS_tot == 0 ⇒ log10(P) 在各档全等（响应层档间无变化）⇒ R² = 0/0 无定义；此为**未定义**，既非 0 亦非 1"
+          },
+          "design_arithmetic_note": "点数 = 2：1 点 ⇒ R² 无定义；2 点 ⇒ **若两点 y 不等**则 OLS 必过两点 ⇒ R² ≡ 1（与数据幅度无关）；**若两点 y 相等**（本件实测即此，因响应档间恒等）⇒ SS_tot = 0 ⇒ R² 仍未定义"
+        }
+      ],
+      "purpose": "登记裁剪重定义的设计算术后果（条件式构造面断言，非观测值）：**若**顶替面响应档间有变化，则任一 2 点 clipped 阶梯 R² ≡ 1（两点必过）⇒ delta ≡ r2_full − 1 ≠ 0 ⇒ 「delta != 0 → PASS」分支被**机械饱和**、「3 trial ≡ 0 → FAIL」分支**不可达**（即顶替面无法承载 FAIL 档）。本件实测更早一步：响应档间恒等 ⇒ 连 r2_full 都未定义 ⇒ 两分支同时不可达（见 CTRL1 正对照的实证饱和）"
+    },
+    "root_cause_separation": "顶替口径未定义 = **构造失灵（构造不适用）**，0 是「命题被证伪」：cell 计数档是同一 cell 集的精确倍增/汇总，对标度律问题（难度/规模轴）0 携带信息量"
+  },
+  "legacy_dual_track": {
+    "legacy_verdict": "FAIL（worst_clipped_r2 = 0.3362 < clip_r2_min = 0.7；3/3 trial 的 r2_delta_full_minus_clipped == 0.0）",
+    "legacy_verdict_field": "FAIL",
+    "legacy_worst_clipped_r2": 0.3362,
+    "legacy_clip_r2_min": 0.7,
+    "legacy_n_full": [
+      10,
+      20,
+      50,
+      100,
+      200,
+      500,
+      1000
+    ],
+    "legacy_n_clipped": [
+      20,
+      50,
+      100,
+      200,
+      500
+    ],
+    "legacy_r2_clipped_trials": [
+      0.6197,
+      0.3362,
+      0.5444
+    ],
+    "legacy_delta_trials": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "legacy_delta_all_zero": true,
+    "provenance_gap_carried_forward": "原 r2_full_N7 / r2_clipped_N5 = [0.6197, 0.3362, 0.5444] 仍**不可从其自报 data_source 复算**（顶替重跑 0 修复溯源链断裂；本件新数**不与原值混列**）"
+  },
+  "verdict": {
+    "new_verdict": "不可判 / UNDEFINED（顶替口径：R² = 0/0 未定义 ⇒ K-V3R-8 两分支[delta != 0 → PASS] 与 [3 trial ≡ 0 → FAIL] **同时不可达**）",
+    "kill_line": "K-V3R-8",
+    "kill_line_decidable": false,
+    "kill_line_pass": false,
+    "kill_line_hit": true,
+    "delta_slots_total": 18,
+    "delta_slots_undefined": 18,
+    "delta_slots_defined": 0,
+    "delta_any_nonzero": false,
+    "delta_all_zero": false,
+    "legacy_verdict": "FAIL（worst_clipped_r2 = 0.3362 < clip_r2_min = 0.7；3/3 trial 的 r2_delta_full_minus_clipped == 0.0）",
+    "一致性": "不一致（维持原标注 + 显式登记顶替口径 verdict）",
+    "gamma": "顶替面**构造不适用**：cell 计数档 {30,60,540} 系同一 cell 集的精确倍增/汇总（T60 = 2×T30 逐 model 精确成立；ΣT30=192 → ΣT60=384），任一率型 P 档间恒等 ⇒ SS_tot = 0 ⇒ 幂律 R² = 0/0 未定义 ⇒ K-V3R-8 两分支同时不可达。根因 = 构造失灵（0 是命题被证伪）；叠加设计算术：任一 2 点 clipped 阶梯 R² ≡ 1 ⇒ PASS 分支机械饱和、FAIL 分支不可达",
+    "改判档位": "v1 §2.3 第 4 行（不明）→ 维持原 V3 标注不动 + 显式登记 γ + 归「V4 收尾整理」待拍板桶（档位与 08 件同档，但**根因不同**：08 = 素材面缺件，08b = 授权面已跑但构造不适用）"
+  },
+  "iron_rules": {
+    "0_LLM": true,
+    "no_proxy": true,
+    "no_key_in_prompt_json_disk": true,
+    "read_only_inputs": true,
+    "derived_json_not_merged": true,
+    "series_08b_does_not_overwrite_series_08": true,
+    "no_new_threshold_except_pi_authorized_substitution": true,
+    "nan_trap_guards": [
+      "isfinite(delta) guard on the '!= 0' kill-line test",
+      "UNDEFINED sentinel instead of silent FAIL branch on r2 compare"
+    ],
+    "v3_original_files_bytes_untouched": true
+  }
+}
