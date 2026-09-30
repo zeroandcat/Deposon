@@ -1,0 +1,941 @@
+{
+ "schema": "v3_s1_executor_result_v1",
+ "series": "V3-S 补强系列 S1 段（度量再换代 + NW 邻近矩阵启用）",
+ "prereg": "results/_v3_s_prereg_v1_2026_09_27.md",
+ "executor": "results/_v3_s1_executor/executor_2026_09_27.py",
+ "date": "2026-09-27",
+ "generated_ts_frozen": "2026-09-27T15:34:00+08:00",
+ "seed": 42,
+ "runtime": "python3 + numpy；0 LLM / 0 proxy / 0 gateway",
+ "skill": {
+  "requested": "scientific-research-workflows:experimental-design (plugin @scientific-research-workflows)",
+  "status": "Local skill not found — C:/Users/Administrator/.minimax/plugins 实测 0 项（空目录）",
+  "fallback": "纪律锚 fallback = prereg §2.1 S1 六条字面 + v3 executor 度量实现段",
+  "disclosure": "未加载该 skill 的任何指令；0 引用、0 虚构其条文"
+ },
+ "inputs": {
+  "_v3_s_prereg_v1_2026_09_27.md": {
+   "idx": "0-1",
+   "file": "_v3_s_prereg_v1_2026_09_27.md",
+   "role": "S1 预登记（K-V3S-1-* 判死线锚）",
+   "sha12_expected": "ef5a40554960",
+   "sha12": "ef5a40554960",
+   "size_bytes": 46836,
+   "match": true
+  },
+  "_v4_pi_cot_v3_ruleset_v3_executor.py": {
+   "idx": "0-2",
+   "file": "_v4_pi_cot_v3_ruleset_v3_executor.py",
+   "role": "v3 度量实现面（只读，0 触动）",
+   "sha12_expected": "8a81d90c69ba",
+   "sha12": "8a81d90c69ba",
+   "size_bytes": 58794,
+   "match": true
+  },
+  "_v4_pi_cot_v3_dataset.json": {
+   "idx": "0-3",
+   "file": "_v4_pi_cot_v3_dataset.json",
+   "role": "v3 dataset 锚（metadata 件）",
+   "sha12_expected": "5118f5b44f17",
+   "sha12": "5118f5b44f17",
+   "size_bytes": 16025,
+   "match": true
+  },
+  "_v4_pi_cot_v3_result_v3.json": {
+   "idx": "0-4",
+   "file": "_v4_pi_cot_v3_result_v3.json",
+   "role": "同 substrate 对照读数源",
+   "sha12_expected": "585714f9660c",
+   "sha12": "585714f9660c",
+   "size_bytes": 27203,
+   "match": true
+  }
+ },
+ "input_chain_all_match": true,
+ "pi_rulings_2026_09_27": {
+  "ruling_1_embedding": "嵌入口径不落地 ⇒ K-V3S-1-M 记 null + reason（0 补 0、0 顶替）",
+  "ruling_2_thresholds": "LCS 达标线 = 0.65；F1 达标线 = 0.55（沿 K-V3-A/A' 同线）",
+  "ruling_3_degradation": "防退化门门不变 + 二值单列（TH-v3-19 门限 0 改动）",
+  "ruling_4_s4": "S4 下限 167（本段不涉）"
+ },
+ "construct": {
+  "proximity_matrix_enabled": true,
+  "proximity_pairs": [
+   [
+    "CRITERIA",
+    "KILL_LINE"
+   ],
+   [
+    "CRITERIA",
+    "RISK"
+   ],
+   [
+    "RISK",
+    "TIMING"
+   ]
+  ],
+  "score_matrix": {
+   "same_class": 2,
+   "proximity_pair": 1,
+   "other_mismatch": -1,
+   "gap": -2
+  },
+  "normalization": "沿 v3 字面 0 改动：min = gap*(m+n), max = match*max(m,n)",
+  "out_of_six_classes_policy": "非 6 类取值（如 UNKNOWN / META）与任何取值均非邻近对 ⇒ −1",
+  "metrics_run": [
+   "nw_sim_prox",
+   "nled_sim",
+   "lcs_sim",
+   "f1_sim"
+  ],
+  "metrics_absent": [
+   "embedding_based_reading"
+  ],
+  "n_metrics_judgeable": 4
+ },
+ "substrate": {
+  "n_substrate_run": 77,
+  "held_out_count": 23,
+  "held_out_idx": [
+   0,
+   2,
+   5,
+   6,
+   7,
+   12,
+   13,
+   16,
+   23,
+   27,
+   28,
+   36,
+   37,
+   39,
+   47,
+   50,
+   58,
+   59,
+   63,
+   66,
+   72,
+   74,
+   76
+  ],
+  "n_corr_in_held": 5,
+  "held_out_ratio": 0.3,
+  "held_out_seed": 42,
+  "n_distinct_days": 3,
+  "n_correction_total": 16,
+  "same_as_v3": true,
+  "extrapolation_boundary": "仅在 77 件 RUN substrate + 23 件 held-out + v3 规则集（≤6/12）构造域内有效；不可外推至 substrate 150+ / 树 8 层 / 15 特征"
+ },
+ "s1_metrics": {
+  "per_event": [
+   {
+    "held_idx": 0,
+    "pred": "RISK",
+    "actual": [
+     "RISK"
+    ],
+    "actual_len": 1,
+    "nw_sim_prox": 1.0,
+    "nw_sim_v3_original": 1.0,
+    "nled_sim": 1.0,
+    "lcs_sim": 1.0,
+    "f1_sim": 1.0,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 2,
+    "pred": "UNKNOWN",
+    "actual": [],
+    "actual_len": 0,
+    "nw_sim_prox": 0.0,
+    "nw_sim_v3_original": 0.0,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": null,
+    "f1_reason": "T-3: actual = [] => 口径不覆盖该件, 显式记不可判, 0 补 0"
+   },
+   {
+    "held_idx": 5,
+    "pred": "KILL_LINE",
+    "actual": [
+     "KILL_LINE"
+    ],
+    "actual_len": 1,
+    "nw_sim_prox": 1.0,
+    "nw_sim_v3_original": 1.0,
+    "nled_sim": 1.0,
+    "lcs_sim": 1.0,
+    "f1_sim": 1.0,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 6,
+    "pred": "RISK",
+    "actual": [
+     "CRITERIA",
+     "RISK"
+    ],
+    "actual_len": 2,
+    "nw_sim_prox": 0.6,
+    "nw_sim_v3_original": 0.6,
+    "nled_sim": 0.5,
+    "lcs_sim": 0.6666666666666666,
+    "f1_sim": 0.6666666666666666,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 7,
+    "pred": "CRITERIA",
+    "actual": [
+     "CRITERIA"
+    ],
+    "actual_len": 1,
+    "nw_sim_prox": 1.0,
+    "nw_sim_v3_original": 1.0,
+    "nled_sim": 1.0,
+    "lcs_sim": 1.0,
+    "f1_sim": 1.0,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 12,
+    "pred": "CRITERIA",
+    "actual": [
+     "TIMING"
+    ],
+    "actual_len": 1,
+    "nw_sim_prox": 0.5,
+    "nw_sim_v3_original": 0.5,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": 0.0,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 13,
+    "pred": "RISK",
+    "actual": [
+     "RISK",
+     "CRITERIA"
+    ],
+    "actual_len": 2,
+    "nw_sim_prox": 0.6,
+    "nw_sim_v3_original": 0.6,
+    "nled_sim": 0.5,
+    "lcs_sim": 0.6666666666666666,
+    "f1_sim": 0.6666666666666666,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 16,
+    "pred": "CRITERIA",
+    "actual": [
+     "CRITERIA"
+    ],
+    "actual_len": 1,
+    "nw_sim_prox": 1.0,
+    "nw_sim_v3_original": 1.0,
+    "nled_sim": 1.0,
+    "lcs_sim": 1.0,
+    "f1_sim": 1.0,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 23,
+    "pred": "CRITERIA",
+    "actual": [
+     "TIMING",
+     "CRITERIA"
+    ],
+    "actual_len": 2,
+    "nw_sim_prox": 0.6,
+    "nw_sim_v3_original": 0.6,
+    "nled_sim": 0.5,
+    "lcs_sim": 0.6666666666666666,
+    "f1_sim": 0.6666666666666666,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 27,
+    "pred": "DELEGATE",
+    "actual": [
+     "CRITERIA",
+     "RISK"
+    ],
+    "actual_len": 2,
+    "nw_sim_prox": 0.3,
+    "nw_sim_v3_original": 0.3,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": 0.0,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 28,
+    "pred": "CRITERIA",
+    "actual": [
+     "RISK"
+    ],
+    "actual_len": 1,
+    "nw_sim_prox": 0.8333333333333334,
+    "nw_sim_v3_original": 0.5,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": 0.0,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 36,
+    "pred": "CRITERIA",
+    "actual": [
+     "TIMING"
+    ],
+    "actual_len": 1,
+    "nw_sim_prox": 0.5,
+    "nw_sim_v3_original": 0.5,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": 0.0,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 37,
+    "pred": "UNKNOWN",
+    "actual": [],
+    "actual_len": 0,
+    "nw_sim_prox": 0.0,
+    "nw_sim_v3_original": 0.0,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": null,
+    "f1_reason": "T-3: actual = [] => 口径不覆盖该件, 显式记不可判, 0 补 0"
+   },
+   {
+    "held_idx": 39,
+    "pred": "UNKNOWN",
+    "actual": [],
+    "actual_len": 0,
+    "nw_sim_prox": 0.0,
+    "nw_sim_v3_original": 0.0,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": null,
+    "f1_reason": "T-3: actual = [] => 口径不覆盖该件, 显式记不可判, 0 补 0"
+   },
+   {
+    "held_idx": 47,
+    "pred": "UNKNOWN",
+    "actual": [],
+    "actual_len": 0,
+    "nw_sim_prox": 0.0,
+    "nw_sim_v3_original": 0.0,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": null,
+    "f1_reason": "T-3: actual = [] => 口径不覆盖该件, 显式记不可判, 0 补 0"
+   },
+   {
+    "held_idx": 50,
+    "pred": "UNKNOWN",
+    "actual": [],
+    "actual_len": 0,
+    "nw_sim_prox": 0.0,
+    "nw_sim_v3_original": 0.0,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": null,
+    "f1_reason": "T-3: actual = [] => 口径不覆盖该件, 显式记不可判, 0 补 0"
+   },
+   {
+    "held_idx": 58,
+    "pred": "CRITERIA",
+    "actual": [
+     "DELEGATE"
+    ],
+    "actual_len": 1,
+    "nw_sim_prox": 0.5,
+    "nw_sim_v3_original": 0.5,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": 0.0,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 59,
+    "pred": "UNKNOWN",
+    "actual": [],
+    "actual_len": 0,
+    "nw_sim_prox": 0.0,
+    "nw_sim_v3_original": 0.0,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": null,
+    "f1_reason": "T-3: actual = [] => 口径不覆盖该件, 显式记不可判, 0 补 0"
+   },
+   {
+    "held_idx": 63,
+    "pred": "RISK",
+    "actual": [
+     "RISK",
+     "KILL_LINE"
+    ],
+    "actual_len": 2,
+    "nw_sim_prox": 0.6,
+    "nw_sim_v3_original": 0.6,
+    "nled_sim": 0.5,
+    "lcs_sim": 0.6666666666666666,
+    "f1_sim": 0.6666666666666666,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 66,
+    "pred": "CRITERIA",
+    "actual": [
+     "TIMING"
+    ],
+    "actual_len": 1,
+    "nw_sim_prox": 0.5,
+    "nw_sim_v3_original": 0.5,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": 0.0,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 72,
+    "pred": "CRITERIA",
+    "actual": [
+     "TIMING",
+     "KILL_LINE"
+    ],
+    "actual_len": 2,
+    "nw_sim_prox": 0.5,
+    "nw_sim_v3_original": 0.3,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": 0.0,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 74,
+    "pred": "CRITERIA",
+    "actual": [
+     "TIMING"
+    ],
+    "actual_len": 1,
+    "nw_sim_prox": 0.5,
+    "nw_sim_v3_original": 0.5,
+    "nled_sim": 0.0,
+    "lcs_sim": 0.0,
+    "f1_sim": 0.0,
+    "f1_reason": null
+   },
+   {
+    "held_idx": 76,
+    "pred": "CRITERIA",
+    "actual": [
+     "CRITERIA",
+     "RISK",
+     "KILL_LINE"
+    ],
+    "actual_len": 3,
+    "nw_sim_prox": 0.42857142857142855,
+    "nw_sim_v3_original": 0.42857142857142855,
+    "nled_sim": 0.33333333333333337,
+    "lcs_sim": 0.5,
+    "f1_sim": 0.5,
+    "f1_reason": null
+   }
+  ],
+  "tree_depth_observed": 6,
+  "label_distribution": {
+   "COST": 3,
+   "CRITERIA": 21,
+   "DELEGATE": 7,
+   "KILL_LINE": 4,
+   "RISK": 12,
+   "TIMING": 13,
+   "UNKNOWN": 17
+  },
+  "n_held": 23,
+  "nw_sim_prox_mean": 0.4766045548654244,
+  "nw_sim_v3_original_mean": 0.453416149068323,
+  "nled_sim_mean": 0.2753623188405797,
+  "lcs_sim_mean": 0.3115942028985507,
+  "lcs_unjudgeable_count": 0,
+  "f1_sim_mean": 0.42156862745098034,
+  "f1_judgeable_count": 17,
+  "f1_unjudgeable_count": 6,
+  "f1_unjudgeable_idx": [
+   2,
+   37,
+   39,
+   47,
+   50,
+   59
+  ],
+  "f1_mean_zero_sensitivity": 0.3115942028985507,
+  "reading_table": [
+   {
+    "metric": "NW-sim（邻近矩阵版）",
+    "mean": "0.476605",
+    "threshold": 0.65,
+    "direction": "读数 < 阈值 即触发 (hit=True)",
+    "hit": "true",
+    "judgeable_n": 23,
+    "unjudgeable_n": 0
+   },
+   {
+    "metric": "NLED-sim",
+    "mean": "0.275362",
+    "threshold": 0.55,
+    "direction": "读数 < 阈值 即触发 (hit=True)",
+    "hit": "true",
+    "judgeable_n": 23,
+    "unjudgeable_n": 0
+   },
+   {
+    "metric": "LCS-sim",
+    "mean": "0.311594",
+    "threshold": 0.65,
+    "direction": "读数 < 阈值 即触发 (hit=True)",
+    "hit": "true",
+    "judgeable_n": 23,
+    "unjudgeable_n": 0
+   },
+   {
+    "metric": "F1（可判件）",
+    "mean": "0.421569",
+    "threshold": 0.55,
+    "direction": "读数 < 阈值 即触发 (hit=True)",
+    "hit": "true",
+    "judgeable_n": 17,
+    "unjudgeable_n": 6
+   },
+   {
+    "metric": "嵌入判读",
+    "mean": "**null**",
+    "threshold": "—",
+    "direction": "读数 < 阈值 即触发 (hit=True)",
+    "hit": "n/a（口径缺位，无方向）",
+    "judgeable_n": 0,
+    "unjudgeable_n": 23
+   }
+  ],
+  "f1_mean_zero_sensitivity_display": "0.311594"
+ },
+ "s1_judgment": {
+  "kill_lines_s1": [
+   {
+    "id": "K-V3S-1-A",
+    "name": "学习线 (NW 邻近矩阵版)",
+    "rule": "NW-sim(邻近矩阵版) mean < 0.65 → FAIL",
+    "observed": 0.4766,
+    "threshold": 0.65,
+    "k_v3s_1_a_hit": true,
+    "k_v3s_1_a_pass": false,
+    "hit_direction": "NW-sim(邻近矩阵版) mean < 0.65 即触发 (True)",
+    "threshold_source": "0.65 沿 K-V3-A / TH-v3-10 字面 (0 自创)"
+   },
+   {
+    "id": "K-V3S-1-A'",
+    "name": "学习线 (NLED 副口径)",
+    "rule": "NLED-sim mean < 0.55 → FAIL",
+    "observed": 0.2754,
+    "threshold": 0.55,
+    "k_v3s_1_a_prime_hit": true,
+    "k_v3s_1_a_prime_pass": false,
+    "hit_direction": "NLED-sim mean < 0.55 即触发 (True)",
+    "threshold_source": "0.55 沿 K-V3-A' / TH-v3-11 字面 (0 自创)"
+   },
+   {
+    "id": "K-V3S-1-L",
+    "name": "学习线 (LCS-sim)",
+    "rule": "LCS-sim mean < 0.65 → FAIL",
+    "observed": 0.3116,
+    "threshold": 0.65,
+    "k_v3s_1_l_hit": true,
+    "k_v3s_1_l_pass": false,
+    "hit_direction": "LCS-sim mean < 0.65 即触发 (True)",
+    "threshold_source": "PI 2026-09-27 拍板② (原 P-S1-2 unfrozen → 本日冻结)",
+    "status": "frozen_by_PI_2026_09_27_ruling_2"
+   },
+   {
+    "id": "K-V3S-1-F",
+    "name": "学习线 (F1)",
+    "rule": "F1 mean < 0.55 → FAIL",
+    "observed": 0.4216,
+    "threshold": 0.55,
+    "k_v3s_1_f_hit": true,
+    "k_v3s_1_f_pass": false,
+    "hit_direction": "F1 mean < 0.55 即触发 (True)",
+    "threshold_source": "PI 2026-09-27 拍板② (原 P-S1-3 unfrozen → 本日冻结)",
+    "status": "frozen_by_PI_2026_09_27_ruling_2",
+    "judgeable_n": 17,
+    "unjudgeable_n": 6,
+    "unjudgeable_idx": [
+     2,
+     37,
+     39,
+     47,
+     50,
+     59
+    ]
+   },
+   {
+    "id": "K-V3S-1-M",
+    "name": "嵌入判读口径",
+    "rule": "— (口径缺位, 0 补 0, 0 用其他口径顶替)",
+    "observed": null,
+    "threshold": null,
+    "k_v3s_1_m_hit": null,
+    "k_v3s_1_m_pass": null,
+    "hit_direction": "— (口径缺位, 无阈值)",
+    "status": "口径缺位（提案 P-S1-1 未拍板落地）",
+    "pi_ruling_literal": "PI 2026-09-27 拍板① 嵌入口径不落地",
+    "reason": "P-S1-1 提案 = 嵌入口径是否落地; PI 2026-09-27 拍板①「不落地」(盘上 0 证据表明本地 embedding 模型可用; v3 prereg §1.2.3(c) 曾明确排除)⇒ 嵌入腿记 null + reason, 0 补 0, 0 顶替。"
+   },
+   {
+    "id": "K-V3S-1-E",
+    "name": "多口径方向不一致 sentinel (构造面, 不进 any_hit)",
+    "rule": "可判口径任一对判定方向不一致 (一达线一不达线) ⇒ 消解 B 未真正消解警告",
+    "observed": null,
+    "threshold": null,
+    "k_v3s_1_e_warn": false,
+    "k_v3s_1_e_pass": true,
+    "n_direction_conflicts": 0,
+    "conflicts": [],
+    "n_metrics_judgeable": 4,
+    "n_metrics_functionally_independent": 3,
+    "identical_metric_pairs": [
+     {
+      "pair": [
+       "lcs_sim",
+       "f1_sim"
+      ],
+      "n_compared": 17,
+      "n_equal": 17,
+      "verdict": "恒等 (mathematically identical under this construction)"
+     }
+    ],
+    "hit_direction": "任一对方向不一致即警告 (True); 0 新数值 (存在性量词)",
+    "enters_any_hit": false,
+    "note": "预登记字面为 5 口径; PI 2026-09-27 拍板① 嵌入口径不落地 ⇒ 本段可判口径 4 (嵌入腿 null, 0 参与方向一致性判定)。口径数 5→4 系 P-S1-1 不落地的构造面后果, 0 私设。"
+   }
+  ],
+  "hit_bools_dict": {
+   "k_v3s_1_a_hit": true,
+   "k_v3s_1_a_prime_hit": true,
+   "k_v3s_1_l_hit": true,
+   "k_v3s_1_f_hit": true,
+   "k_v3s_1_m_hit": null,
+   "k_v3s_1_e_warn": false
+  },
+  "pass_bools_dict": {
+   "k_v3s_1_a_pass": false,
+   "k_v3s_1_a_prime_pass": false,
+   "k_v3s_1_l_pass": false,
+   "k_v3s_1_f_pass": false,
+   "k_v3s_1_m_pass": null
+  },
+  "n_judged_lines": 4,
+  "n_judged_hit": 4,
+  "any_hit": true,
+  "any_hit_scope": "4 可判学习线 (A/A'/L/F); -M 缺位不参与, -E sentinel 不进 any_hit"
+ },
+ "t4_same_substrate_comparison": {
+  "t4_literal": "必须并报 v3 原构造（纯同类/异类 -1）读数作为同 substrate 对照, 否则 K-V3S-1-A 触发的根因不可分辨（构造改善 vs 真学习线达成）。对照读数 0 省略",
+  "same_substrate": true,
+  "n_substrate_run": 77,
+  "n_held": 23,
+  "rows": [
+   {
+    "metric": "NW-sim mean",
+    "v3_original": "0.4534",
+    "s1_measured": "0.4766",
+    "delta": "+0.0232",
+    "note": "**同一 pred 序列**，仅对角线错配分由 −1 改为邻近对 +1；归一化锚点 0 改动"
+   },
+   {
+    "metric": "NLED-sim mean",
+    "v3_original": "0.2754",
+    "s1_measured": "0.2754",
+    "delta": "+0.0000",
+    "note": "构造 0 改动 ⇒ 差值应为 0（构造纯度自证）"
+   },
+   {
+    "metric": "批判覆盖 div_critical_coverage",
+    "v3_original": "0.4286",
+    "s1_measured": "0.4286",
+    "delta": "+0.0000",
+    "note": "沿 v3 字面 0 改动（派工单指定并报项）"
+   },
+   {
+    "metric": "盲从率 blind_obey_rate",
+    "v3_original": "0.2222",
+    "s1_measured": "0.2222",
+    "delta": "+0.0000",
+    "note": "沿 v3 字面 0 改动（派工单指定并报项）"
+   }
+  ],
+  "bit_exact_check": {
+   "nw_sim_mean": {
+    "repro": 0.453416149068323,
+    "ref": 0.453416149068323,
+    "bit_exact": true
+   },
+   "nled_sim_mean": {
+    "repro": 0.2753623188405797,
+    "ref": 0.2753623188405797,
+    "bit_exact": true
+   },
+   "div_critical_coverage": {
+    "repro": 0.42857142857142855,
+    "ref": 0.42857142857142855,
+    "bit_exact": true
+   },
+   "blind_obey_rate": {
+    "repro": 0.2222222222222222,
+    "ref": 0.2222222222222222,
+    "bit_exact": true
+   }
+  },
+  "nw_prox_mean_display": "0.476605",
+  "nw_v3_mean_display": "0.453416",
+  "delta_display": "+0.023188",
+  "nw_prox_meets_0_65": "否（不达线）",
+  "nw_v3_meets_0_65": "否（不达线）",
+  "root_cause_reading": "两版均不达线 ⇒ 构造改善幅度**不足以**跨过 0.65 达标线 ⇒ K-V3S-1-A 触发的根因**不是**构造自带改善，而是学习线本身未达。"
+ },
+ "degradation_self_check": {
+  "feature": {
+   "gate_literal": "TH-v3-19: 12 项特征 n_distinct 全 > 3",
+   "gate_min_n_distinct": 3,
+   "gate_changed": false,
+   "n_distinct_per_feature": {
+    "judge_type_J1": 2,
+    "judge_type_J2": 2,
+    "judge_type_J3": 2,
+    "judge_type_J4": 2,
+    "judge_type_J6": 2,
+    "scene_bucket_8": 8,
+    "opt_bucket_8": 8,
+    "is_corr_pair": 2,
+    "rf_len_bucket": 4,
+    "judge_type_J5": 1,
+    "rf_pos_density": 46,
+    "n_keywords_hit": 11
+   },
+   "binary_single_column": [
+    "judge_type_J1",
+    "judge_type_J2",
+    "judge_type_J3",
+    "judge_type_J4",
+    "judge_type_J6",
+    "is_corr_pair",
+    "judge_type_J5"
+   ],
+   "nonbinary_column": [
+    "scene_bucket_8",
+    "opt_bucket_8",
+    "rf_len_bucket",
+    "rf_pos_density",
+    "n_keywords_hit"
+   ],
+   "features_below_threshold": [
+    "judge_type_J1",
+    "judge_type_J2",
+    "judge_type_J3",
+    "judge_type_J4",
+    "judge_type_J6",
+    "is_corr_pair",
+    "judge_type_J5"
+   ],
+   "features_below_threshold_count": 7,
+   "features_below_threshold_binary": [
+    "judge_type_J1",
+    "judge_type_J2",
+    "judge_type_J3",
+    "judge_type_J4",
+    "judge_type_J6",
+    "is_corr_pair",
+    "judge_type_J5"
+   ],
+   "features_below_threshold_nonbinary": [],
+   "n_nonbinary_below_threshold": 0,
+   "th_v3_19_compliance": false,
+   "pi_ruling_literal": "门不变 + 二值单列 (PI 2026-09-27 拍板③)",
+   "note": "门沿 TH-v3-19 0 改动, th_v3_19_compliance 如实记 false; 二值/低基数设计常量单列登记 = 剔出验收面, 非门豁免。"
+  },
+  "metric_series": {
+   "NW-sim 邻近矩阵版": {
+    "n": 23,
+    "n_distinct": 7,
+    "min": 0.0,
+    "max": 1.0,
+    "std": 0.3415835357952852,
+    "constant_return": false,
+    "all_zero": false
+   },
+   "NW-sim v3 原构造": {
+    "n": 23,
+    "n_distinct": 6,
+    "min": 0.0,
+    "max": 1.0,
+    "std": 0.33461144058775927,
+    "constant_return": false,
+    "all_zero": false
+   },
+   "NLED-sim": {
+    "n": 23,
+    "n_distinct": 4,
+    "min": 0.0,
+    "max": 1.0,
+    "std": 0.3826196748534518,
+    "constant_return": false,
+    "all_zero": false
+   },
+   "LCS-sim": {
+    "n": 23,
+    "n_distinct": 4,
+    "min": 0.0,
+    "max": 1.0,
+    "std": 0.40618511470265267,
+    "constant_return": false,
+    "all_zero": false
+   },
+   "F1（可判件）": {
+    "n": 17,
+    "n_distinct": 4,
+    "min": 0.0,
+    "max": 1.0,
+    "std": 0.4205413841083768,
+    "constant_return": false,
+    "all_zero": false
+   }
+  },
+  "construction_tension_ids": [
+   "T-2（二值单列，已按 PI 拍板③ 处置）",
+   "T-3（F1 actual=[] → 不可判，已按字面处置）",
+   "T-4（邻近矩阵单调上移 → 并报 v3 原构造对照）"
+  ],
+  "metric_independence": {
+   "n_metrics_judgeable": 4,
+   "n_metrics_functionally_independent": 3,
+   "identical_pairs": [
+    {
+     "pair": [
+      "lcs_sim",
+      "f1_sim"
+     ],
+     "n_compared": 17,
+     "n_equal": 17,
+     "verdict": "恒等 (mathematically identical under this construction)"
+    }
+   ],
+   "note": "F1 ≡ LCS-sim: pred 为单叶标签 (|pred|=1) ⇒ LCS 长度 ∈ {0,1}; actual 已由 extract_judgment_sequence_v3 去重 ⇒ |set(actual)| = len(actual); 故两式同分母 2·[pred∈actual]/(1+n) 逐件恒等。⇒ 4 可判口径实为 3 个功能独立口径。E sentinel 方向一致性结论不变 (四腿同向), 但证据基数如实记 3。"
+  }
+ },
+ "rejudge_semantics": {
+  "s1_nature": "翻案路径实验（改的是度量面：NW 构造 + 口径数 2→4 判able）",
+  "cover_relation": "不覆盖 v3 结果；本件与 verdict_v3 / result_v3 并列登记",
+  "v3_frozen_conclusion": "result_v3 五线 any_hit=true 维持原状，0 触动",
+  "line_change_only_construction": "K-V3S-1-A/A' 只换构造面（邻近矩阵启用）不改阈值",
+  "e_line_nature": "K-V3S-1-E = K-V3-E 从 2 口径到多口径的存在性推广（0 新数值）"
+ },
+ "open_items": [
+  {
+   "id": "D-1",
+   "item": "F1 口径 T-3 字面「actual=[] ⇒ 0/0 定义域空」与本段数据（|pred|=1 恒成立 ⇒ 分母实为 1）的差异",
+   "status": "主读法按 T-3 记不可判（剔除非补 0）；另并报算式读数作敏感性面；字面是否改写待 PI 拍板"
+  },
+  {
+   "id": "D-2",
+   "item": "P-S1-1 嵌入口径不落地 ⇒ K-V3S-1-E sentinel 可判口径数 5→4",
+   "status": "已按 PI 拍板① 执行并登记；嵌入腿 null 不参与方向一致性判定"
+  },
+  {
+   "id": "D-3",
+   "item": "TH-v3-19 门在二值设计常量上构造不可达（n_distinct ≤2）",
+   "status": "PI 拍板③ 门不变 + 二值单列；th_v3_19_compliance 如实记 false，门 0 改动"
+  },
+  {
+   "id": "D-4",
+   "item": "F1 与 LCS-sim 在本段构造下逐件恒等（pred 单叶 + actual 已去重）⇒ 4 可判口径实为 3 个功能独立口径",
+   "status": "如实登记为派生退化/口径冗余；E sentinel 方向一致性结论不变（四腿同向），但证据基数记 3；口径是否需换构造使二者独立待 PI 拍板"
+  }
+ ],
+ "iron_rules": [
+  {
+   "idx": 1,
+   "rule": "判死线已锁，0 私设条款",
+   "evidence": "A/A' 沿 0.65/0.55；L/F 沿 PI 拍板② 0.65/0.55；M 记 null；E 0 新数值"
+  },
+  {
+   "idx": 2,
+   "rule": "T-4 纪律（硬）：并报 v3 原构造 NW 读数作同 substrate 对照",
+   "evidence": "§2 对照表 4 行齐 + bit-exact 复现自证 4/4 True"
+  },
+  {
+   "idx": 3,
+   "rule": "防退化门：门不变 + 二值单列",
+   "evidence": "th_v3_19_compliance=false；二值单列 7 项；门限 0 改动"
+  },
+  {
+   "idx": 4,
+   "rule": "派生 JSON 不合并",
+   "evidence": "S1 落独立新名 result_2026_09_27.json；0 合并入 result_v3"
+  },
+  {
+   "idx": 5,
+   "rule": "0 LLM",
+   "evidence": "纯 numpy/Python 本地机械；0 LLM / 0 proxy / 0 gateway"
+  },
+  {
+   "idx": 6,
+   "rule": "仅追加（v3 件 0 触动）",
+   "evidence": "4 输入件只读 import，SHA-12 前后一致；0 字节改动"
+  },
+  {
+   "idx": 7,
+   "rule": "S-40 布尔显式命名",
+   "evidence": "hit/pass 布尔逐条落盘；-M 记 null + status + reason（非补 0）"
+  },
+  {
+   "idx": 8,
+   "rule": "SHA-12 = hashlib.sha256 hexdigest()[:12] 小写",
+   "evidence": "sha12_file() 实现同 v3 executor；本件 3 件 SHA-12 见回报"
+  },
+  {
+   "idx": 9,
+   "rule": "key 永不明文",
+   "evidence": "0 key 读取 / 0 key 落盘 / 0 key 入 prompt"
+  },
+  {
+   "idx": 10,
+   "rule": "0 编造",
+   "evidence": "skill 缺位如实交代；D-1 字面/数据差异如实登记；0 虚构条文"
+  },
+  {
+   "idx": 11,
+   "rule": "改判语义：S1 判定件与 v3 并列不覆盖",
+   "evidence": "§6 改判语义表；v3 any_hit=true 原状维持"
+  },
+  {
+   "idx": 12,
+   "rule": "不外推",
+   "evidence": "结论仅在 77/23/v3 规则集构造域内；0 宣告命题层"
+  }
+ ],
+ "rerun_determinism": {
+  "ts_frozen": "2026-09-27T15:34:00+08:00",
+  "no_wallclock_dependency": true,
+  "new_rng_sources": 0,
+  "method": "连续两次独立执行本 executor, 落盘后各算 SHA-12 比对",
+  "result_byte_identical": "已实测两次一致（实测值见派工回报）",
+  "rescript_byte_identical": "已实测两次一致；rescript 由 result 程序化生成（0 手抄 ⇒ 0 漂移）"
+ }
+}
