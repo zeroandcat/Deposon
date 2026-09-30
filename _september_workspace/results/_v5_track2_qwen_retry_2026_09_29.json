@@ -1,0 +1,81 @@
+{
+  "task": "V4 Track 2 qwen_plan 401 retry",
+  "pi_authorization": "ask_0b4c1577f0d727e239e55095 q2 (2026-09-29) - 须用最新文件的 URL+key",
+  "generated_at_local": "2026-09-29T11:10:33",
+  "author": "worker (Mavis)",
+  "key_file": {
+    "path": "C:\\Users\\Administrator\\Desktop\\AI\\LLM API.txt",
+    "size_bytes": 947,
+    "mtime_local": "2026-09-23T15:00:05",
+    "mtime_utc": "2026-09-23T07:00:05+00:00",
+    "sha256_12": "D35EE9ECC881",
+    "lines_total": 30
+  },
+  "key_disclosure": "0 明文：key 仅 runtime 内存读；不入文件/JSON/prompt/log/stdout",
+  "endpoint": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+  "model_requested": "qwen3.7-max",
+  "key_line_1based": 23,
+  "proxy_policy": "直连（qwen_plan 非 teamo/openrouter 系；tun 纪律本棒未触发）",
+  "call_budget": {
+    "planned": 2,
+    "actual": 2,
+    "interval_s": 2.0,
+    "serial": true
+  },
+  "calls": [
+    {
+      "label": "GET /v1/models",
+      "url": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1/models",
+      "t_start": "2026-09-29T11:10:29",
+      "http_status": 405,
+      "latency_ms": 405.9,
+      "content_type": "application/json;charset=UTF-8",
+      "error_class": null,
+      "error_code": null,
+      "error_msg_scrubbed": null,
+      "response_model": null,
+      "object": null,
+      "transport": "RESPONSE_RECEIVED"
+    },
+    {
+      "label": "POST /chat/completions [qwen3.7-max]",
+      "url": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1/chat/completions",
+      "t_start": "2026-09-29T11:10:31",
+      "http_status": 200,
+      "latency_ms": 1866.7,
+      "content_type": "application/json; charset=utf-8",
+      "error_class": null,
+      "error_code": null,
+      "error_msg_scrubbed": null,
+      "response_model": "qwen3.7-max",
+      "object": "chat.completion",
+      "finish_reason": "stop",
+      "completion_chars": 2,
+      "completion_head_scrubbed": "OK",
+      "usage": {
+        "prompt_tokens": 17,
+        "total_tokens": 96,
+        "completion_tokens": 79,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 76
+        }
+      },
+      "transport": "RESPONSE_RECEIVED"
+    }
+  ],
+  "four_state_verdict": "① 成功（401 解除）",
+  "downgrade_check": {
+    "requested_model": "qwen3.7-max",
+    "response_model": "qwen3.7-max",
+    "downgraded": false,
+    "note": "response_model 与请求一致则无降级；为 null（未取到响应）则本面不可判"
+  },
+  "model_candidates_declared": [
+    "qwen3.7-max",
+    "qwen3.7-plus",
+    "qwen3.6-flash"
+  ]
+}
