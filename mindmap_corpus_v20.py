@@ -349,20 +349,55 @@ def build_corpus(corpus_dir: str = CORPUS_DIR) -> dict:
     return {"written": written, "n_graphs": idx["n_graphs"]}
 
 
+# ---------------------------------------------------------------- 孤儿哨兵 r1（P-6）
+# r1 修订（PI 2026-09-29 拍板「修加载器」，源 results/_v5_gt_exec_2026_09_29.md
+# P-6 / γ-V5R3-13）：原判据按**文件名后缀**（``fn.endswith(".json")``）把目录下
+# 所有 .json 一律当图记录，致 3 个**非图记录** .json（all.json /
+# index_v2_2026_09_16.json / strip_captions_22.json）被误判为孤儿图
+# ⇒ load_corpus 抛 RuntimeError。
+# r1 改按**记录形态**判定：图记录 = dict 且同时含 graph_id / family / N /
+# edges 四个核心键（族 S 与族 L 记录均满足；不要求 target——族 L 记录无该键）。
+# 核心键齐备但未入册 ⇒ 仍是真孤儿（哨兵不放宽）；不可解析的 .json 仍上抛
+# （不静默跳过）。
+# 0 改 build_index / 0 重建 index.json / 0 改 corpus 数据 / 0 新设阈值。
+_GRAPH_RECORD_CORE_KEYS = ("graph_id", "family", "N", "edges")
+
+
+def _graph_record_kind(path: str) -> str:
+    """"graph" | "non_graph"——按记录形态分类单个 .json（不依赖文件名）。"""
+    with open(path, encoding="utf-8") as f:
+        obj = json.load(f)
+    if isinstance(obj, dict) and all(k in obj for k in _GRAPH_RECORD_CORE_KEYS):
+        return "graph"
+    return "non_graph"
+
+
 def load_corpus(corpus_dir: str = CORPUS_DIR, families=("S",)) -> list:
     """按 index.json 顺序读入图记录（默认只读族 S）。
-    孤儿哨兵（R2/E3）：目录中存在未入册的图 JSON 时显式报错——
-    防「摄入未建索引导致静默漏图」复发。"""
+    孤儿哨兵（R2/E3，r1 修订 P-6）：目录中存在未入册的**图记录** JSON 时
+    显式报错——防「摄入未建索引导致静默漏图」复发。
+    r1：孤儿按**记录形态**判定（graph_id/family/N/edges 四核心键），
+    非图记录 .json 不再误判；真孤儿与不可解析 .json 仍上抛。"""
     with open(os.path.join(corpus_dir, "index.json"), encoding="utf-8") as f:
         idx = json.load(f)
     registered = {e["file"] for e in idx["graphs"]}
-    orphans = sorted(fn for fn in os.listdir(corpus_dir)
-                     if fn.endswith(".json") and fn != "index.json"
-                     and fn not in registered)
-    if orphans:
+    orphans, unparsable = [], []
+    for fn in sorted(os.listdir(corpus_dir)):
+        if not fn.endswith(".json") or fn == "index.json" or fn in registered:
+            continue
+        try:
+            kind = _graph_record_kind(os.path.join(corpus_dir, fn))
+        except (ValueError, UnicodeDecodeError):
+            unparsable.append(fn)
+            continue
+        if kind == "graph":
+            orphans.append(fn)
+    if orphans or unparsable:
         raise RuntimeError(
             f"corpus orphan graphs (not in index.json): {orphans} — "
-            "先运行 build_index()（R2/E3 哨兵）")
+            "先运行 build_index()（R2/E3 哨兵）"
+            + (f"；不可解析 .json（形态判据无法应用，报错不静默）：{unparsable}"
+               if unparsable else ""))
     out = []
     for e in idx["graphs"]:
         if families and e["family"] not in families:
