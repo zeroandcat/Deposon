@@ -1,0 +1,143 @@
+{
+  "schema": "v4_pi_cot_v2_dataset_addendum_d2e/1",
+  "created": "2026-09-26T17:35:00+08:00",
+  "created_by": "worker (执行类·数据修订)",
+  "addendum_for": {
+    "dataset_path": "results/_v4_pi_cot_v2_dataset.json",
+    "dataset_schema": "v4_pi_cot_v2_dataset/1.1",
+    "dataset_sha12_pre": "7B01CD835A41",
+    "dataset_sha12_post": "7B01CD835A41",
+    "d2_wave1_anchor_path": "results/_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json",
+    "d2_wave1_anchor_sha12_pre": "439721007AAF",
+    "d2_wave1_anchor_sha12_post": "439721007AAF",
+    "d2_wave2_anchor_path": "results/_v4_pi_cot_v2_dataset_addendum_d2b_2026_09_26.json",
+    "d2_wave2_anchor_sha12_pre": "41D6C28CA87C",
+    "d2_wave2_anchor_sha12_post": "41D6C28CA87C",
+    "d2_wave3_anchor_path": "results/_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json",
+    "d2_wave3_anchor_sha12_pre": "99C58906F792",
+    "d2_wave3_anchor_sha12_post": "99C58906F792",
+    "d2_wave4_anchor_path": "results/_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+    "d2_wave4_anchor_sha12_pre": "C6D092F77932",
+    "d2_wave4_anchor_sha12_post": "C6D092F77932",
+    "touch_policy": "0 触动(本件落盘前后 dataset v1.1 + D2 wave1/2/3/4 五锚 SHA-12 复验不变)"
+  },
+  "post_hoc_amendment": true,
+  "cross_day_collection": true,
+  "collection_round": "D2 第 5 波（终波）",
+  "collection_date": "2026-09-26",
+  "source_ask_id": "ask_c4c1b896880ba5e6292a6a5c",
+  "explicit_user_confirmation": true,
+  "honesty_note": "D2 第 5 波(终波)4 条入库——Q48/Q49/Q50 为非配对独立补充判定,Q48 为复合选项 Q49/Q50 为字面选项;case1 为 pi_disposition 处置事件(非问卷,不计入 TH-v2-1 N 计数),逐字录入不改写/润色/补全标点。Q48 option_chosen=Other(AC) 复合选项如实登记(composite_option=true, ambiguous_mapping=true, 不拆单选);反转轴判读留规则集学习阶段处理, 本棒不翻案。Q49 option=B(转派 worker) 与 Q50 option=C(全部重立) 字面选项逐字登记, 推理贴合 B/C 选项 label 逐字入库。case1 pi_disposition 处置=accept(selectedOptions 字面 accept), disposition_text 逐字录入; 新基准 6B92BBFF7180 是 case1 拍板后落定的基线 marker(替代既有错定), 待勘误链同步——见本件末尾 pending_actions 段。[50 题问卷全毕声明] Q1-Q50 全编号覆盖:D1(v1.1)=37 事件 + 11 推理全文补填 = 48 采集;D2 五波(R1b-R7b 七对反转配对 + Q38-Q50 十三补充判定)=20 采集事件;全采集合计 48+20=68 事件(扣除 pair 配对占位:R1a-R7a a-half 计 7 在 D1;R1b-R7b b-half 计 7 在 D2;Q1-Q37 全 Q 编号计 37;D2 独立补充判定 Q38-Q50 计 13;独立 R-pair 与独立 Q 之和=37+7+13=57 事件, +11 补推理填=68 采集件);TH-v2-1 N≥50 ✓(实证 68 ≥ 50);TH-v2-2 R 反转 7 对 ✓(实证 R1b/R2b/R3b/R4b[R2d2波 1]+R5b/R6b[d2波 2]+R7b[d2波 3] 共 7 对 b-half 全部跨日 ≥1 天闭合);[TH-v2-3 单日占比待 D3 稀释未达] 如实记录:D1 单日 2026-09-24 占比 48/68=70.6%(违反 ≤60% 阈值),D2 单日 2026-09-26 占比 20/68=29.4%,跨日仅 2 天(D1 + D2, prereg 字面要求 ≥3 天);单日占比阈值 + 跨日天数 双重不达标, 须 D3 续采稀释, 待 verdict.md 正式裁决触发条件复核签字后方可重判。本批不翻任何既有判定, 仅入正式判定前规则集重训语料(与 D1 附录/D2 wave1/2/3/4 合并评估), 正式判定须按 verdict.md §5.2 正式裁决触发条件(四要件缺一不可:跨天 D2/D3 数据到位 + TH-v2-2 R 后半配对闭合 + protocol-keeper 复核签字 + verifier 独立复核)重跑重裁。",
+  "paired_status_note": "Q48/Q49/Q50 为非配对独立补充判定, 无反转配对关系;case1 为 pi_disposition 处置事件非问卷, 不参与 TH-v2-2 配对闭合。本批不入 dataset 配对状态, 正式 dataset 字段如需对齐须由 PI 后续拍板。case1 处置拍板后的勘误链追加(E-34)由 doc-writer 下棒执行, 本棒 worker 仅登记不写——见 pending_actions。",
+  "supplements": [
+    {
+      "pair_id": "Q48",
+      "date": "2026-09-26",
+      "q_id": "Q48",
+      "scene_tag": "authority_boundary_powers_check",
+      "collected_via": "ask_user",
+      "collected_at": "2026-09-26T17:33:00+08:00",
+      "cross_day_collection": false,
+      "cross_day_collection_note": "Q48 为非配对独立补充判定, 与 Q49/Q50/case1 同日并行补采, 不计入 TH-v2-3 跨日递进",
+      "option_chosen": "Other(AC)",
+      "composite_option": true,
+      "composite_option_note": "复合选项如实登记(composite_option=true), 不拆单选",
+      "ambiguous_mapping": true,
+      "mapping_note": "user-confirmed 字面复合 AC; 反转轴判读留规则集学习阶段处理, 本棒不翻案",
+      "other_text": "AC",
+      "reasoning_full": "AC，这是放权，也是说明问法有问题使得上级觉得无法掌握索性让你担责，但不能因此失去边界"
+    },
+    {
+      "pair_id": "Q49",
+      "date": "2026-09-26",
+      "q_id": "Q49",
+      "scene_tag": "trust_direct_participant_motive",
+      "collected_via": "ask_user",
+      "collected_at": "2026-09-26T17:33:00+08:00",
+      "cross_day_collection": false,
+      "cross_day_collection_note": "Q49 为非配对独立补充判定, 与 Q48/Q50/case1 同日并行补采, 不计入 TH-v2-3 跨日递进",
+      "option_chosen": "B",
+      "option_meaning": "转派 worker",
+      "reasoning_full": "相信直接参与者，动机与建议同等重要，建议也许天真但动机总是真实"
+    },
+    {
+      "pair_id": "Q50",
+      "date": "2026-09-26",
+      "q_id": "Q50",
+      "scene_tag": "wholesale_reform_role_definition",
+      "collected_via": "ask_user",
+      "collected_at": "2026-09-26T17:33:00+08:00",
+      "cross_day_collection": false,
+      "cross_day_collection_note": "Q50 为非配对独立补充判定, 与 Q48/Q49/case1 同日并行补采, 不计入 TH-v2-3 跨日递进",
+      "option_chosen": "C",
+      "option_meaning": "全部重立",
+      "reasoning_full": "需要的旧职责一定包含于新的，不需要的也用不上，新出现的有兜底的worker"
+    },
+    {
+      "pair_id": "case1",
+      "event_type": "pi_disposition",
+      "date": "2026-09-26",
+      "collected_at": "2026-09-26T17:33:00+08:00",
+      "collected_via": "ask_user (disposition 步骤, 非问卷)",
+      "cross_day_collection": false,
+      "cross_day_collection_note": "case1 为 pi_disposition 处置事件, 非问卷事件, 不计入 TH-v2-3 跨日递进 亦不计入 TH-v2-1 N 计数",
+      "source_step": "ask_c4c1b896880ba5e6292a6a5c case1 步骤 selectedOptions=accept",
+      "selected_options": "accept",
+      "disposition": "accept",
+      "disposition_text": "接受 6B92BBFF7180 为新基准，勘误链记改写事实",
+      "new_baseline_marker": "6B92BBFF7180",
+      "errata_chain_trigger": {
+        "disposition_decision_recorded": "E-33.1",
+        "pending_errata_chain_link": "E-34",
+        "writer_agent": "doc-writer (本棒 worker 不写勘误链, 仅登记)",
+        "writer_status": "pending"
+      }
+    }
+  ],
+  "supplement_count": 4,
+  "verbatim_policy": "PI 原话逐字保留, 禁止改写/润色/扩写/补全标点; reasoning_full 字段值即 user-confirmed 原话; other_text 字段值即 selectedOther 文本原话; Q48 复合选项如实登记(composite_option=true, 不拆单选); Q48 reasoning_full 首段「AC,」作为复合选项前缀逐字录入, 不剥离; case1 disposition_text 字段值即 user-confirmed 字面处置文本",
+  "constraints_compliance": {
+    "key_never_in_prompt_or_json": true,
+    "key_never_on_disk": true,
+    "no_18_frozen_touch": true,
+    "no_9_grid_touch": true,
+    "no_pg_v0_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_builtin_script_touch": true,
+    "no_dataset_modification": true,
+    "no_merge_into_dataset": true,
+    "no_threshold_tampering": true,
+    "rationale": "V4 铁律沿用口径 (R4 key 永不明文沿用无例外; V1-V3 只读不动; 派生 JSON 不合并); 本附录为独立新件, 不触动 dataset / prereg / result / verdict 任何既有件; dataset v1.1 落盘前后 SHA-12 复验不变 (7B01CD835A41 -> 7B01CD835A41); D2 wave1 件落盘前后 SHA-12 复验不变 (439721007AAF -> 439721007AAF); D2 wave2 件落盘前后 SHA-12 复验不变 (41D6C28CA87C -> 41D6C28CA87C); D2 wave3 件落盘前后 SHA-12 复验不变 (99C58906F792 -> 99C58906F792); D2 wave4 件落盘前后 SHA-12 复验不变 (C6D092F77932 -> C6D092F77932)"
+  },
+  "fingerprint_self_hash_after_birth": "C9D38A166010",
+  "metadata": {
+    "algorithm": "SHA-256 前 12 位",
+    "author": "Mavis worker",
+    "date": "2026-09-26",
+    "encoding": "UTF-8 (no BOM)",
+    "line_ending": "LF",
+    "track": "Track 1 (0 LLM / 0 proxy / 0 gateway)",
+    "type": "cross_day_critical_reflection_addendum_d2e",
+    "version": "v1",
+    "pi_source": "PI 2026-09-26 17:33 ask_c4c1b896880ba5e6292a6a5c explicit_user_confirmation 字面补充 4 条 (Q48 复合 AC + Q49 [B 转派 worker] + Q50 [C 全部重立] + case1 pi_disposition=accept 接受 6B92BBFF7180 为新基准)"
+  },
+  "pending_actions": [
+    {
+      "id": "E-34",
+      "title": "case#1 落定待勘误链同步",
+      "summary": "E-33.1 处置=accept (新基准 6B92BBFF7180) 已由 PI 2026-09-26 17:33 ask_c4c1b896880ba5e6292a6a5c case1 步骤拍板, 勘误链 E-34 追加由 doc-writer 下棒执行",
+      "predecessor_link": "E-33.1",
+      "errata_chain_link": "E-34",
+      "executor_agent": "doc-writer",
+      "executor_status": "pending (本棒 worker 不写勘误链, 仅登记 + 移交)",
+      "basis_event": "ask_c4c1b896880ba5e6292a6a5c case1 步骤 selectedOptions=accept",
+      "disposition_text": "接受 6B92BBFF7180 为新基准，勘误链记改写事实",
+      "new_baseline_marker": "6B92BBFF7180",
+      "scope_note": "本棒仅登记 pending_actions, 不起草勘误件正文; 勘误件正文(含改写事实表述 + 新基准替换旧定)由 doc-writer 单独起草并入 E-34 链",
+      "handoff_artifacts": [
+        "本 addendum 件 (results/_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json) 作为 E-34 起草时的输入锚",
+        "case1 supplement payload (含 disposition_text / new_baseline_marker / errata_chain_trigger)"
+      ]
+    }
+  ]
+}

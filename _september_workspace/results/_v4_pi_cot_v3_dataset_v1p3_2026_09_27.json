@@ -1,0 +1,285 @@
+{
+ "schema": "v4_pi_cot_v3_dataset_v1p3/1",
+ "version": "v1.3",
+ "created": "2026-09-27T17:52:00+08:00",
+ "created_by": "Mavis 团队 worker 出件｜2026-09-27",
+ "task": "PI 思维链 v3 蒸馏 (棒 C) — dataset v1.3 修订件: D4 重标后 judge_type 落地",
+ "formal_judgment": true,
+ "exploratory": false,
+ "purpose": "D4 五件 judge_type 重标 (J6→J5 / J6→J1(J4 并记) / J6→J5 / J3→J4 / J3 维持) 落地为权威标注面; 账目 (85 events / substrate 77) 逐字不变 — 仅特征标注变",
+ "base_version": {
+  "file": "results/_v4_pi_cot_v3_dataset.json",
+  "version": "v1.2",
+  "sha12": "5118F5B44F17",
+  "bytes": 16025,
+  "relation": "v1.3 = v1.2 增量修订 (仅 judge_type 标注面); v1.2 引用不覆盖 / 0 字节改动 (实测复验见 anchor_sha_verification)"
+ },
+ "relabel_source": {
+  "file": "results/_v4_pi_cot_v3_dataset_addendum_d4_relabel_2026_09_27.json",
+  "sha12": "6EED9ACDB99A",
+  "bytes": 18714,
+  "decision_source": "PI 问卷 ask_ad37c9c9282a3edb0b881fe8 Q4「落 v1.3 重跑」",
+  "n_rows": 5,
+  "n_changed": 4
+ },
+ "anchor_sha_verification": {
+  "executor_r1": {
+   "path": "results/_v4_pi_cot_v3_ruleset_v3_executor_r1_2026_09_27.py",
+   "sha12_actual": "EE8671A28C2F",
+   "bytes": 62115
+  },
+  "d4_relabel": {
+   "path": "results/_v4_pi_cot_v3_dataset_addendum_d4_relabel_2026_09_27.json",
+   "sha12_actual": "6EED9ACDB99A",
+   "bytes": 18714
+  },
+  "dataset_v1_2": {
+   "path": "results/_v4_pi_cot_v3_dataset.json",
+   "sha12_actual": "5118F5B44F17",
+   "bytes": 16025
+  },
+  "result_v3": {
+   "path": "results/_v4_pi_cot_v3_result_v3.json",
+   "sha12_actual": "585714F9660C",
+   "bytes": 27203
+  },
+  "k3b_recheck_r1": {
+   "path": "results/_v4_pi_cot_v3_k3b_recheck_r1_2026_09_27.json",
+   "sha12_actual": "CBC14A76F038",
+   "bytes": 26891
+  },
+  "addendum_d4": {
+   "path": "results/_v4_pi_cot_v3_dataset_addendum_d4_2026_09_27.json",
+   "sha12_actual": "CBF60A630C9F",
+   "bytes": 20194
+  },
+  "verdict_v3": {
+   "path": "results/_v4_pi_cot_v3_verdict_v3.md",
+   "sha12_actual": "BB44FDC7AB0F",
+   "bytes": 53751
+  }
+ },
+ "relabeled_judge_type_landed": [
+  {
+   "q_id": "D4_Q1",
+   "event_idx_in_v3r1_run": 72,
+   "scene_tag": "G1_cross_day_collection_directive",
+   "judge_type_v1_2": "J6",
+   "judge_type_v1_3": "J5",
+   "changed": true,
+   "judge_type_relabeled_alternative": null,
+   "relabel_basis": "questionnaire_v1 §1 字面 J5 时机 = 先后·缓急·排期; 本件 option = 续采 D4/D5 至跨日 3 天 (采集轮次 / 先后)",
+   "ambiguity_note": null,
+   "applied_in": "in-memory (runner .tmp/_run_v3r1_relabel.py); 0 写回 D4 addendum 源件"
+  },
+  {
+   "q_id": "D4_Q2",
+   "event_idx_in_v3r1_run": 73,
+   "scene_tag": "G2_d1_missing_8_preservation_directive",
+   "judge_type_v1_2": "J6",
+   "judge_type_v1_3": "J1",
+   "changed": true,
+   "judge_type_relabeled_alternative": "J4",
+   "relabel_basis": "questionnaire_v1 §1 字面 J1 判死线 = 何时判死 / 放行 / 缓决 / 补构造再审; 本件 option = D1 缺位 8 件维持不补造 (72 件口径立案不变) = 对缺位件判死处置",
+   "ambiguity_note": "J4 风险亦可辩 (铁律·红线·安全边界: 维持不补造亦是边界处置); E-42.2 明示二者可辩, 以 J1 为主记、J4 并记, 本件两码如实并存",
+   "applied_in": "in-memory (runner .tmp/_run_v3r1_relabel.py); 0 写回 D4 addendum 源件"
+  },
+  {
+   "q_id": "D4_Q3",
+   "event_idx_in_v3r1_run": 74,
+   "scene_tag": "v3_chain_serial_execution_directive",
+   "judge_type_v1_2": "J6",
+   "judge_type_v1_3": "J5",
+   "changed": true,
+   "judge_type_relabeled_alternative": null,
+   "relabel_basis": "questionnaire_v1 §1 字面 J5 时机 = 先后·缓急·排期; 本件 option = v3 四件链立即串行跑 (立即 = 排期 / 缓急)",
+   "ambiguity_note": null,
+   "applied_in": "in-memory (runner .tmp/_run_v3r1_relabel.py); 0 写回 D4 addendum 源件"
+  },
+  {
+   "q_id": "D4_Q4",
+   "event_idx_in_v3r1_run": 75,
+   "scene_tag": "v3_sword_v4_official_separation_principle",
+   "judge_type_v1_2": "J3",
+   "judge_type_v1_3": "J4",
+   "changed": true,
+   "judge_type_relabeled_alternative": null,
+   "relabel_basis": "questionnaire_v1 §1 字面 J4 风险 = 铁律·红线·安全边界; 本件 option = 阶段间铁律不自动延续 (V3→V4 各阶段适用) = 铁律边界 / 红线",
+   "ambiguity_note": null,
+   "applied_in": "in-memory (runner .tmp/_run_v3r1_relabel.py); 0 写回 D4 addendum 源件"
+  },
+  {
+   "q_id": "D4_Q5",
+   "event_idx_in_v3r1_run": 76,
+   "scene_tag": "honesty_root_cause_non_misleading_principle",
+   "judge_type_v1_2": "J3",
+   "judge_type_v1_3": "J3",
+   "changed": false,
+   "judge_type_relabeled_alternative": null,
+   "relabel_basis": "questionnaire_v1 §1 字面 J3 准则 = 核心准则应用; 本件 option = 诚实 = 不误导 (核心准则应用)",
+   "ambiguity_note": null,
+   "applied_in": "in-memory (runner .tmp/_run_v3r1_relabel.py); 0 写回 D4 addendum 源件"
+  }
+ ],
+ "feature_impact": {
+  "affected_feature_keys": [
+   "judge_type_J1",
+   "judge_type_J3",
+   "judge_type_J4",
+   "judge_type_J5",
+   "judge_type_J6"
+  ],
+  "delta_detail": {
+   "judge_type_J1": {
+    "n_events_changed": 1,
+    "v3_sum": 9,
+    "v3r1_sum": 10,
+    "v3_mean": 0.116883,
+    "v3r1_mean": 0.12987
+   },
+   "judge_type_J3": {
+    "n_events_changed": 1,
+    "v3_sum": 14,
+    "v3r1_sum": 13,
+    "v3_mean": 0.181818,
+    "v3r1_mean": 0.168831
+   },
+   "judge_type_J4": {
+    "n_events_changed": 1,
+    "v3_sum": 7,
+    "v3r1_sum": 8,
+    "v3_mean": 0.090909,
+    "v3r1_mean": 0.103896
+   },
+   "judge_type_J6": {
+    "n_events_changed": 3,
+    "v3_sum": 7,
+    "v3r1_sum": 4,
+    "v3_mean": 0.090909,
+    "v3r1_mean": 0.051948
+   },
+   "judge_type_J5": {
+    "n_events_changed": 2,
+    "v3_sum": 0,
+    "v3r1_sum": 2,
+    "v3_mean": 0.0,
+    "v3r1_mean": 0.025974
+   }
+  },
+  "unaffected_feature_keys": [
+   "judge_type_J2",
+   "scene_bucket_8",
+   "opt_bucket_8",
+   "is_corr_pair",
+   "rf_len_bucket",
+   "rf_pos_density",
+   "n_keywords_hit"
+  ],
+  "note": "5 项 judge_type_* 二值特征面变化; 其余 7 项 (scene_bucket_8 / opt_bucket_8 / is_corr_pair / rf_len_bucket / rf_pos_density / n_keywords_hit + judge_type_J2) 逐字不变 — 标注面变更的构造证据"
+ },
+ "accounting_balance_conservation": {
+  "v2_baseline_N": 72,
+  "post_v2_added": 8,
+  "d4_added": 5,
+  "total_events": 85,
+  "v3_formal_experiment_substrate": 77,
+  "accounting_formula": "72 (v2 baseline) + 8 (D3 wave2/3 post-v2) + 5 (D4) = 85 events; substrate 77 = 64 v2 on-disk + 8 post-v2 in load + 5 D4",
+  "delta_vs_v1_2": "0 (逐字沿用 v1.2 §accounting_balance_conservation; 重标不增不减事件)",
+  "statement": "重标只改特征标注, 不改账目: 85 / 77 与 v1.2 完全一致"
+ },
+ "single_factor_change_disclosure": {
+  "varied": "D4 五件 judge_type 标注 (4 件 changed + 1 件维持)",
+  "held_constant": [
+   "SEED=42",
+   "HELD_OUT_RATIO=0.30",
+   "TREE_DEPTH_MAX=6",
+   "N_PERM=1000",
+   "N_BOOT=1000",
+   "12 特征集 FEAT_KEYS_V3",
+   "NW match/mismatch/gap = +2/-1/-2",
+   "6 类判据词表 + 36 批判反思标志词 + 5 短语模式",
+   "K-V3-* 阈值 0.65/0.55/1.00/0.10/0.40 + sentinel",
+   "全部 85 件 reasoning_full 推理全文",
+   "全部 85 件 option_chosen",
+   "全部 85 件 label (由 reasoning_full 派生, 实测逐字不变)"
+  ],
+  "measured_evidence": {
+   "held_out_idx_identical": true,
+   "non_d4_judge_type_identical": true,
+   "labels_identical": true,
+   "reasoning_full_identical": true,
+   "option_chosen_identical": true
+  },
+  "design_rationale": "沿 skill scientific-research-workflows:experimental-design 字面「一次只变一个因子, 其余 nuisance 钉死」— 否则树变与标注变的效应不可分离 (伪重复/混淆)"
+ },
+ "anti_regression_gate": {
+  "gate": "TH-v3-19 防退化门 (n_distinct ≤3 ⇒ 警报)",
+  "binary_single_column_per_pi_ruling_3": true,
+  "n_distinct_v1_3": {
+   "judge_type_J1": 2,
+   "judge_type_J2": 2,
+   "judge_type_J3": 2,
+   "judge_type_J4": 2,
+   "judge_type_J6": 2,
+   "scene_bucket_8": 8,
+   "opt_bucket_8": 8,
+   "is_corr_pair": 2,
+   "rf_len_bucket": 4,
+   "judge_type_J5": 2,
+   "rf_pos_density": 47,
+   "n_keywords_hit": 11
+  },
+  "features_below_threshold": [
+   "judge_type_J1",
+   "judge_type_J2",
+   "judge_type_J3",
+   "judge_type_J4",
+   "judge_type_J6",
+   "is_corr_pair",
+   "judge_type_J5"
+  ],
+  "delta_vs_v1_2": {
+   "judge_type_J5": "1 → 2 (D4 两件入 J5, 0 预测值 → 1 预测值 + 1 负样本)"
+  },
+  "verdict": "不触发处置 (沿 result_v3 §feature_degradation_check 字面: 二值/低基数特征 n_distinct ≤3 是设计预期, 非退化); 沿 PI 拍板③ 二值单列不展开"
+ },
+ "format_choice_disclosure": "形态选择: 修订件另起新名 _v4_pi_cot_v3_dataset_v1p3_2026_09_27.json (v1.2 原件 _v4_pi_cot_v3_dataset.json 0 字节改动, 并列不覆盖); 沿 v1.2 §format_choice_disclosure 字面, 本件仍为 metadata/anchor 件, 不内嵌 events 数组 (事件从源件重载 + 重标在内存落地, 派生 JSON 不合并)",
+ "non_portrait_declaration": "沿 v1.2 字面沿用: 数据用于提取可迁移判据结构规则集, 不做 PI 行为预测或个人模型; 重标只改判据类型归类, 不改 PI 推理原文",
+ "touch_policy_summary": {
+  "written_new_files_only": [
+   "_v4_pi_cot_v3_dataset_v1p3_2026_09_27.json",
+   "_v4_pi_cot_v3_result_v3r1_2026_09_27.json",
+   "_v4_pi_cot_v3_v3r1_rescript_2026_09_27.md"
+  ],
+  "zero_overwrite_existing": true,
+  "zero_byte_change_verified_on": [
+   "results/_v4_pi_cot_v3_dataset.json",
+   "results/_v4_pi_cot_v3_result_v3.json",
+   "results/_v4_pi_cot_v3_dataset_addendum_d4_2026_09_27.json",
+   "results/_v4_pi_cot_v3_dataset_addendum_d4_relabel_2026_09_27.json",
+   "results/_v4_pi_cot_v3_ruleset_v3_executor_r1_2026_09_27.py",
+   "results/_v4_pi_cot_v3_verdict_v3.md"
+  ],
+  "zero_derived_json_merge": true,
+  "zero_threshold_edit": true,
+  "zero_llm_call": true,
+  "zero_key_in_prompt_or_json_or_log": true,
+  "s_40_naming_followed": true
+ },
+ "next_link_in_chain": "_v4_pi_cot_v3_result_v3r1_2026_09_27.json",
+ "metadata": {
+  "execution_棒": "棒 C 重跑棒 (result_v3r1)",
+  "skill_anchor": "scientific-research-workflows:experimental-design (plugin @scientific-research-workflows, Local skill 已核存在)",
+  "params_frozen_at": {
+   "SEED": 42,
+   "HELD_OUT_RATIO": 0.3,
+   "TREE_DEPTH_MAX": 6,
+   "N_PERM": 1000,
+   "N_BOOT": 1000,
+   "n_features": 12
+  },
+  "signature": "Mavis 团队 worker 出件｜2026-09-27"
+ },
+ "fingerprint_self_hash_post_birth": "F3AD4D80CC45",
+ "honesty_note": "本棒 worker = D4 重标 v1.3 重跑执行棒. 已: (a) 输入链 7 件 SHA-12 hashlib 实测登记 (全部与派工单锚一致: d4_relabel 6EED9ACDB99A / r1 executor EE8671A28C2F / dataset v1.2 5118F5B44F17 / result_v3 585714F9660C / k3b_recheck CBC14A76F038 / addendum_d4 CBF60A630C9F / verdict_v3 BB44FDC7AB0F); (b) 母件口径复现自校验 11/11 项逐字等于盘上 k3b_recheck_r1 main_reading_after (证明本 runner 与前棒同口径); (c) 单因子变更实测: held_out_idx / 非 D4 judge_type / 全 85 件 reasoning_full / option_chosen / label 全部逐字不变, 仅 5 项 judge_type_* 特征面变 (J6 7→4, J5 0→2, J1 9→10, J3 14→13, J4 7→8); (d) 重标在内存落地, D4 源 addendum 与 relabel 源件 0 字节改动; (e) 阈值 0.65/0.55/1.00/0.10/0.40 + sentinel 一字未动. 未触: dataset v1.2 / result_v3 / verdict_v3 / D4 addendum / relabel addendum / r1 executor / v2 任何既有件 (SHA-12 实测复验全部不变). 0 LLM / 0 key 落盘 / 0 派生 JSON 合并 / 0 擅调阈值 / 0 覆盖既有件. succeeded ≠ 跑完 = 本件 SHA-12 核验实测后宣告. 老实交代: (i) D4_Q2 重标为 J1 而 J4 并记 (relabel addendum 字面 ambiguity_note), 本件按 J1 单值落地特征面, J4 并记只入本件 judge_type_relabeled_alternative 字段 — 未跑 J4 主记的平行重跑, 属未覆盖面如实登记; (ii) D4_Q1/Q3 为 J6→J5, 使 judge_type_J5 由 0 预测值变为 2 件 (1 预测 + 1 负), 该特征仍 n_distinct=2 属低基数, 沿 PI 拍板③ 二值单列不展开 (未做 5/6 混合编码的敏感性分析, 如实登记为未做); (iii) D4 五件中 3 件 (idx 72/74/76) 落在 held-out, 2 件 (idx 73/75) 落在训练集 — 树变由 2 件训练标注驱动, 读数变由 3 件 held-out 特征驱动, 二者不可混为一谈 (构造面如实登记); (iv) perm_p 0.1878 (r1) → 0.1279 (v3r1) 均 > alpha 0.05, 与 v3 母件 0.0160 方向相反 — 根因是 F1 修复改变了 D1_supp 三件 reasoning_full (标签面也变), 非本重标所致; 本棒只如实报读数, 不擅调 N_PERM/seed. 署名=Mavis 团队 worker 出件｜2026-09-27"
+}

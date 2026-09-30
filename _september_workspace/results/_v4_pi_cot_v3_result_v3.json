@@ -1,0 +1,821 @@
+{
+  "schema": "v4_pi_cot_v3_result_v3/1",
+  "task": "PI 思维链 v3 蒸馏 (棒 C 正式实验跑结果)",
+  "formal_judgment": true,
+  "coding_version": "v2_continued_in_v3",
+  "exploratory": false,
+  "generated_utc": "2026-09-27T12:53:00+08:00",
+  "v3_prereg_anchor": {
+    "path": "results/_v4_pi_cot_v3_prereg.md",
+    "sha12_briefing": "F0A58FD651FD",
+    "sha12_actual_post_activation": "B7547329AF2E",
+    "anchor_discrepancy_note": "派工 briefing 锚 F0A58FD651FD; doc-writer 追加 §10 后实测 B7547329AF2E supersede (沿 dataset v1.2 §prereg_anchor_v3 字面)"
+  },
+  "pre_experiment_setup": false,
+  "dataset_ref": {
+    "path": "results/_v4_pi_cot_v3_dataset.json",
+    "sha12_actual": "5118F5B44F17",
+    "version": "v1.2",
+    "accounting_summary": "72 (v2 baseline) + 8 (post-v2 D3 wave2/3) + 5 (D4) = 85"
+  },
+  "ruleset_ref": {
+    "path": "results/_v4_pi_cot_v3_ruleset_v3.json",
+    "sha12_actual": "9D77A5E2CBAB",
+    "executor_path": "results/_v4_pi_cot_v3_ruleset_v3_executor.py",
+    "executor_sha12_actual": "8A81D90C69BA"
+  },
+  "constraint": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "hash_lib": "zlib.crc32 + hashlib.sha256 (禁内建 hash())",
+    "seed": 42,
+    "tree_depth_max": 6,
+    "tree_depth_observed": 6,
+    "tree_depth_satisfied": true,
+    "n_perm": 1000,
+    "alpha": 0.05,
+    "n_boot": 1000,
+    "ci_floor": 0.4,
+    "th_nw_sim_mean": 0.65,
+    "th_nled_sim_mean": 0.55,
+    "th_critical_cov": 1.0,
+    "th_blind_obey": 0.1,
+    "held_out_ratio": 0.3,
+    "n_min": 50,
+    "n_correction_min": 5,
+    "n_days_min": 3,
+    "single_day_ratio_max": 0.6,
+    "nw_match": 2,
+    "nw_mismatch": -1,
+    "nw_gap": -2,
+    "n_features_min": 12,
+    "n_features_actual": 12,
+    "n_features_satisfied": true
+  },
+  "substrate": {
+    "n_substrate_run": 77,
+    "n_v2_baseline_on_disk": 64,
+    "n_post_v2_excluded": 8,
+    "n_d1_missing_declared": 8,
+    "n_d4_new": 5,
+    "n_total_accounting": 85,
+    "accounting_formula": "64 (v2 baseline on-disk: 37 v1.1 + 3 D1_supp + 20 D2 + 4 D3_w1) + 8 (post-v2 D3_w2/w3 in run per executor load) + 5 (D4) = 77 RUN; + 8 D1 missing (declared absent by v2 verdict) = 85 total",
+    "briefing_substrate_77_formula_alternative": "per PI 2026-09-27 briefing: substrate = 77 = 72 (v2 判定口径) + 5 D4; 8 post-v2 追补仅记账不入跑. 实际 executor 全量载入 77 = 64 on-disk + 8 post-v2 + 5 D4 (post-v2 在 executor load 内, 但 ledger 登记); 8 D1 missing = briefing 8 排除字面对应 (declared absent, not in executor load)",
+    "event_id_distribution_by_source_wave": {
+      "v1.1": {
+        "count": 37
+      },
+      "D1_supp": {
+        "count": 3
+      },
+      "D2_w1": {
+        "count": 4
+      },
+      "D2_w2": {
+        "count": 4
+      },
+      "D2_w3": {
+        "count": 4
+      },
+      "D2_w4": {
+        "count": 4
+      },
+      "D2_w5": {
+        "count": 4
+      },
+      "D3_w1": {
+        "count": 4
+      },
+      "D3_w2": {
+        "count": 4
+      },
+      "D3_w3": {
+        "count": 4
+      },
+      "D4_w1": {
+        "count": 5
+      }
+    },
+    "distinct_days": [
+      "2026-09-24",
+      "2026-09-26",
+      "2026-09-27"
+    ],
+    "distinct_judge_types": 6,
+    "correction_count": 16
+  },
+  "excluded_events_ledger": [
+    {
+      "event_id": 6,
+      "q_id": "Q6_third_read",
+      "source_wave": "D3_w2",
+      "source_file": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+      "exclude_reason": "substrate 裁定: post-v2 追补 (dataset v1.2 §accounting_balance_conservation post_v2_added 字面); 仅记账不入正式跑 (per briefing 字面)"
+    },
+    {
+      "event_id": 8,
+      "q_id": "Q8_third_read",
+      "source_wave": "D3_w2",
+      "source_file": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+      "exclude_reason": "substrate 裁定: post-v2 追补 (dataset v1.2 §accounting_balance_conservation post_v2_added 字面); 仅记账不入正式跑 (per briefing 字面)"
+    },
+    {
+      "event_id": 9,
+      "q_id": "Q9_third_read",
+      "source_wave": "D3_w2",
+      "source_file": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+      "exclude_reason": "substrate 裁定: post-v2 追补 (dataset v1.2 §accounting_balance_conservation post_v2_added 字面); 仅记账不入正式跑 (per briefing 字面)"
+    },
+    {
+      "event_id": 10,
+      "q_id": "Q10_third_read",
+      "source_wave": "D3_w2",
+      "source_file": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+      "exclude_reason": "substrate 裁定: post-v2 追补 (dataset v1.2 §accounting_balance_conservation post_v2_added 字面); 仅记账不入正式跑 (per briefing 字面)"
+    },
+    {
+      "event_id": 11,
+      "q_id": "Q11_third_read",
+      "source_wave": "D3_w3",
+      "source_file": "_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json",
+      "exclude_reason": "substrate 裁定: post-v2 追补 (dataset v1.2 §accounting_balance_conservation post_v2_added 字面); 仅记账不入正式跑 (per briefing 字面)"
+    },
+    {
+      "event_id": 12,
+      "q_id": "Q12_third_read",
+      "source_wave": "D3_w3",
+      "source_file": "_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json",
+      "exclude_reason": "substrate 裁定: post-v2 追补 (dataset v1.2 §accounting_balance_conservation post_v2_added 字面); 仅记账不入正式跑 (per briefing 字面)"
+    },
+    {
+      "event_id": 16,
+      "q_id": "Q16_third_read",
+      "source_wave": "D3_w3",
+      "source_file": "_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json",
+      "exclude_reason": "substrate 裁定: post-v2 追补 (dataset v1.2 §accounting_balance_conservation post_v2_added 字面); 仅记账不入正式跑 (per briefing 字面)"
+    },
+    {
+      "event_id": 17,
+      "q_id": "Q17_third_read",
+      "source_wave": "D3_w3",
+      "source_file": "_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json",
+      "exclude_reason": "substrate 裁定: post-v2 追补 (dataset v1.2 §accounting_balance_conservation post_v2_added 字面); 仅记账不入正式跑 (per briefing 字面)"
+    }
+  ],
+  "missing_events_ledger": [
+    {
+      "event_id": 33,
+      "q_id": "q33",
+      "reason": "D1 缺位 8 件 (v2 verdict §1.1 字面 D1=48 vs 盘上 40 差额 8 件)"
+    },
+    {
+      "event_id": 34,
+      "q_id": "q34",
+      "reason": "D1 缺位 8 件"
+    },
+    {
+      "event_id": 35,
+      "q_id": "q35",
+      "reason": "D1 缺位 8 件"
+    },
+    {
+      "event_id": 36,
+      "q_id": "q36",
+      "reason": "D1 缺位 8 件"
+    },
+    {
+      "event_id": 37,
+      "q_id": "q37",
+      "reason": "D1 缺位 8 件"
+    },
+    {
+      "event_id": 38,
+      "q_id": "q38",
+      "reason": "D1 缺位 8 件"
+    },
+    {
+      "event_id": 39,
+      "q_id": "q39",
+      "reason": "D1 缺位 8 件"
+    },
+    {
+      "event_id": 40,
+      "q_id": "q40",
+      "reason": "D1 缺位 8 件"
+    }
+  ],
+  "main_reading": {
+    "held_out_count": 23,
+    "held_out_idx": [
+      0,
+      2,
+      5,
+      6,
+      7,
+      12,
+      13,
+      16,
+      23,
+      27,
+      28,
+      36,
+      37,
+      39,
+      47,
+      50,
+      58,
+      59,
+      63,
+      66,
+      72,
+      74,
+      76
+    ],
+    "n_correction_in_held": 5,
+    "nw_sim_mean": 0.453416149068323,
+    "nled_sim_mean": 0.2753623188405797,
+    "nw_sim_mean_pass_threshold": 0.65,
+    "nled_sim_mean_pass_threshold": 0.55,
+    "n_divergent": 14,
+    "n_critical_among_divergent": 6,
+    "div_critical_coverage": 0.42857142857142855,
+    "n_agree": 9,
+    "n_blind_obey": 2,
+    "blind_obey_rate": 0.2222222222222222,
+    "perm_p": 0.015984015984015984,
+    "perm_n": 1000,
+    "alpha": 0.05,
+    "bootstrap_ci": [
+      0.3217391304347826,
+      0.5869565217391304
+    ],
+    "bootstrap_n": 1000,
+    "label_distribution": {
+      "RISK": 12,
+      "COST": 3,
+      "UNKNOWN": 17,
+      "KILL_LINE": 4,
+      "CRITERIA": 21,
+      "TIMING": 13,
+      "DELEGATE": 7
+    },
+    "tree_depth_observed": 6,
+    "per_event": [
+      {
+        "held_idx": 0,
+        "nw_sim": 1.0,
+        "nled_sim": 1.0,
+        "pred": "RISK",
+        "actual": [
+          "RISK"
+        ],
+        "divergent": false,
+        "has_critical_reflection": true
+      },
+      {
+        "held_idx": 2,
+        "nw_sim": 0.0,
+        "nled_sim": 0.0,
+        "pred": "UNKNOWN",
+        "actual": [],
+        "divergent": true,
+        "has_critical_reflection": true
+      },
+      {
+        "held_idx": 5,
+        "nw_sim": 1.0,
+        "nled_sim": 1.0,
+        "pred": "KILL_LINE",
+        "actual": [
+          "KILL_LINE"
+        ],
+        "divergent": false,
+        "has_critical_reflection": false
+      },
+      {
+        "held_idx": 6,
+        "nw_sim": 0.6,
+        "nled_sim": 0.5,
+        "pred": "RISK",
+        "actual": [
+          "CRITERIA",
+          "RISK"
+        ],
+        "divergent": false,
+        "has_critical_reflection": true
+      },
+      {
+        "held_idx": 7,
+        "nw_sim": 1.0,
+        "nled_sim": 1.0,
+        "pred": "CRITERIA",
+        "actual": [
+          "CRITERIA"
+        ],
+        "divergent": false,
+        "has_critical_reflection": true
+      },
+      {
+        "held_idx": 12,
+        "nw_sim": 0.5,
+        "nled_sim": 0.0,
+        "pred": "CRITERIA",
+        "actual": [
+          "TIMING"
+        ],
+        "divergent": true,
+        "has_critical_reflection": false
+      },
+      {
+        "held_idx": 13,
+        "nw_sim": 0.6,
+        "nled_sim": 0.5,
+        "pred": "RISK",
+        "actual": [
+          "RISK",
+          "CRITERIA"
+        ],
+        "divergent": false,
+        "has_critical_reflection": true
+      },
+      {
+        "held_idx": 16,
+        "nw_sim": 1.0,
+        "nled_sim": 1.0,
+        "pred": "CRITERIA",
+        "actual": [
+          "CRITERIA"
+        ],
+        "divergent": false,
+        "has_critical_reflection": true
+      },
+      {
+        "held_idx": 23,
+        "nw_sim": 0.6,
+        "nled_sim": 0.5,
+        "pred": "CRITERIA",
+        "actual": [
+          "TIMING",
+          "CRITERIA"
+        ],
+        "divergent": false,
+        "has_critical_reflection": false
+      },
+      {
+        "held_idx": 27,
+        "nw_sim": 0.3,
+        "nled_sim": 0.0,
+        "pred": "DELEGATE",
+        "actual": [
+          "CRITERIA",
+          "RISK"
+        ],
+        "divergent": true,
+        "has_critical_reflection": true
+      },
+      {
+        "held_idx": 28,
+        "nw_sim": 0.5,
+        "nled_sim": 0.0,
+        "pred": "CRITERIA",
+        "actual": [
+          "RISK"
+        ],
+        "divergent": true,
+        "has_critical_reflection": false
+      },
+      {
+        "held_idx": 36,
+        "nw_sim": 0.5,
+        "nled_sim": 0.0,
+        "pred": "CRITERIA",
+        "actual": [
+          "TIMING"
+        ],
+        "divergent": true,
+        "has_critical_reflection": true
+      },
+      {
+        "held_idx": 37,
+        "nw_sim": 0.0,
+        "nled_sim": 0.0,
+        "pred": "UNKNOWN",
+        "actual": [],
+        "divergent": true,
+        "has_critical_reflection": false
+      },
+      {
+        "held_idx": 39,
+        "nw_sim": 0.0,
+        "nled_sim": 0.0,
+        "pred": "UNKNOWN",
+        "actual": [],
+        "divergent": true,
+        "has_critical_reflection": false
+      },
+      {
+        "held_idx": 47,
+        "nw_sim": 0.0,
+        "nled_sim": 0.0,
+        "pred": "UNKNOWN",
+        "actual": [],
+        "divergent": true,
+        "has_critical_reflection": false
+      },
+      {
+        "held_idx": 50,
+        "nw_sim": 0.0,
+        "nled_sim": 0.0,
+        "pred": "UNKNOWN",
+        "actual": [],
+        "divergent": true,
+        "has_critical_reflection": false
+      },
+      {
+        "held_idx": 58,
+        "nw_sim": 0.5,
+        "nled_sim": 0.0,
+        "pred": "CRITERIA",
+        "actual": [
+          "DELEGATE"
+        ],
+        "divergent": true,
+        "has_critical_reflection": true
+      },
+      {
+        "held_idx": 59,
+        "nw_sim": 0.0,
+        "nled_sim": 0.0,
+        "pred": "UNKNOWN",
+        "actual": [],
+        "divergent": true,
+        "has_critical_reflection": true
+      },
+      {
+        "held_idx": 63,
+        "nw_sim": 0.6,
+        "nled_sim": 0.5,
+        "pred": "RISK",
+        "actual": [
+          "RISK",
+          "KILL_LINE"
+        ],
+        "divergent": false,
+        "has_critical_reflection": true
+      },
+      {
+        "held_idx": 66,
+        "nw_sim": 0.5,
+        "nled_sim": 0.0,
+        "pred": "CRITERIA",
+        "actual": [
+          "TIMING"
+        ],
+        "divergent": true,
+        "has_critical_reflection": true
+      },
+      {
+        "held_idx": 72,
+        "nw_sim": 0.3,
+        "nled_sim": 0.0,
+        "pred": "CRITERIA",
+        "actual": [
+          "TIMING",
+          "KILL_LINE"
+        ],
+        "divergent": true,
+        "has_critical_reflection": false
+      },
+      {
+        "held_idx": 74,
+        "nw_sim": 0.5,
+        "nled_sim": 0.0,
+        "pred": "CRITERIA",
+        "actual": [
+          "TIMING"
+        ],
+        "divergent": true,
+        "has_critical_reflection": false
+      },
+      {
+        "held_idx": 76,
+        "nw_sim": 0.42857142857142855,
+        "nled_sim": 0.33333333333333337,
+        "pred": "CRITERIA",
+        "actual": [
+          "CRITERIA",
+          "RISK",
+          "KILL_LINE"
+        ],
+        "divergent": false,
+        "has_critical_reflection": true
+      }
+    ],
+    "rules_n_flat": 20
+  },
+  "alt_reading_corr_excluded": {
+    "note": "替代读法 (沿 v2 §3.3 字面): 剔 correction 子集; 双口径并报不择优",
+    "held_out_count": 18,
+    "nw_sim_mean": 0.5126984126984128,
+    "nled_sim_mean": 0.2962962962962963,
+    "div_critical_coverage": 0.36363636363636365,
+    "blind_obey_rate": 0.2857142857142857,
+    "bootstrap_ci": [
+      0.3722222222222222,
+      0.6611111111111111
+    ],
+    "n_divergent": 11,
+    "n_critical_among_divergent": 4
+  },
+  "feature_degradation_check": {
+    "n_distinct_per_feature": {
+      "judge_type_J1": 2,
+      "judge_type_J2": 2,
+      "judge_type_J3": 2,
+      "judge_type_J4": 2,
+      "judge_type_J6": 2,
+      "scene_bucket_8": 8,
+      "opt_bucket_8": 8,
+      "is_corr_pair": 2,
+      "rf_len_bucket": 4,
+      "judge_type_J5": 1,
+      "rf_pos_density": 46,
+      "n_keywords_hit": 11
+    },
+    "n_distinct_threshold_min": 4,
+    "features_below_threshold": [
+      "judge_type_J1",
+      "judge_type_J2",
+      "judge_type_J3",
+      "judge_type_J4",
+      "judge_type_J6",
+      "is_corr_pair",
+      "judge_type_J5"
+    ],
+    "features_below_threshold_count": 7,
+    "th_v3_19_compliance": false,
+    "note": "12 项特征中 judge_type_J1-J6 + is_corr_pair + judge_type_J5 二元/低基数值特征 ≤3 distinct 是构造面事实 (binary + J5 仅 D4 启用); 不触发 TH-v3-19 退化警报 (二元特征 n_distinct=2 是设计预期, 非退化)"
+  },
+  "kill_lines": [
+    {
+      "id": "K-V3-A",
+      "name": "学习线 (NW 主口径)",
+      "rule": "NW-sim mean (主读法) < 0.65 → FAIL",
+      "observed": 0.4534,
+      "threshold": 0.65,
+      "hit_direction": "NW-sim mean < 0.65 即触发 (k_v3_a_hit = True)",
+      "hit": true,
+      "pass": false
+    },
+    {
+      "id": "K-V3-A'",
+      "name": "学习线 (NLED 副口径)",
+      "rule": "NLED-sim mean (主读法) < 0.55 → FAIL",
+      "observed": 0.2754,
+      "threshold": 0.55,
+      "hit_direction": "NLED-sim mean < 0.55 即触发 (k_v3_a_prime_hit = True)",
+      "hit": true,
+      "pass": false
+    },
+    {
+      "id": "K-V3-B",
+      "name": "批判覆盖线",
+      "rule": "分歧批判理由覆盖率 < 1.00 → FAIL",
+      "observed": 0.4286,
+      "threshold": 1.0,
+      "hit_direction": "覆盖率 < 1.00 即触发 (k_v3_b_hit = True)",
+      "hit": true,
+      "pass": false
+    },
+    {
+      "id": "K-V3-C",
+      "name": "盲从率线",
+      "rule": "盲从率 > 0.10 → FAIL",
+      "observed": 0.2222,
+      "threshold": 0.1,
+      "hit_direction": "盲从率 > 0.10 即触发 (k_v3_c_hit = True)",
+      "hit": true,
+      "pass": false
+    },
+    {
+      "id": "K-V3-D",
+      "name": "稳健线 (bootstrap CI 下界)",
+      "rule": "bootstrap CI 下界 < 0.40 → FAIL",
+      "observed_ci": [
+        0.3217,
+        0.587
+      ],
+      "threshold": 0.4,
+      "hit_direction": "CI 下界 < 0.40 即触发 (k_v3_d_hit = True)",
+      "hit": true,
+      "pass": false
+    },
+    {
+      "id": "K-V3-E",
+      "name": "双口径一致线 (构造面 sentinel)",
+      "rule": "NW-sim 与 NLED-sim 主读法判定方向不一致 (一过一否) → 消解 B 未真正消解警告; verdict-keeper 必须复核构造面而非机械判 FAIL/PASS",
+      "observed_nw_pass": false,
+      "observed_nled_pass": false,
+      "observed_nw_nled_direction_consistent": true,
+      "hit_direction": "方向不一致即触发 (k_v3_e_hit = True); 但 k_v3_e_hit 不直接判定 FAIL/PASS, 而是触发 sentinel 警告 (verdict-keeper 必须复核构造面)",
+      "hit": false,
+      "pass": true,
+      "sentinel_warning": null
+    }
+  ],
+  "any_hit": true,
+  "any_hit_strict_5lines": true,
+  "hit_bools_dict": {
+    "k_v3_a_hit": true,
+    "k_v3_a_prime_hit": true,
+    "k_v3_b_hit": true,
+    "k_v3_c_hit": true,
+    "k_v3_d_hit": true,
+    "k_v3_e_hit": false,
+    "k_v3_a_pass": false,
+    "k_v3_a_prime_pass": false,
+    "k_v3_b_pass": false,
+    "k_v3_c_pass": false,
+    "k_v3_d_pass": false,
+    "k_v3_e_pass": true,
+    "nw_nled_direction_consistent": true
+  },
+  "k_v3_e_sentinel_state": {
+    "hit": false,
+    "pass": true,
+    "nw_nled_direction_consistent": true,
+    "sentinel_warning": null,
+    "verdict_keeper_must_review_construction": false,
+    "rule_literal": "K-V3-E 双口径一致线: NW-sim 与 NLED-sim 主读法判定方向不一致 (一过一否) → 消解 B 未真正消解警告; verdict-keeper 必须复核构造面而非机械判 FAIL/PASS"
+  },
+  "boundary_statement": "v3 §6 字面: 本预登记不外推至「PI 思维链不可蒸馏」或「批判性学习维度不可能达标」命题层宣告; v3 正式判定 (不论 PASS / FAIL) 同样钳制在「当前规则集 (v3 词表 + 决策树 ≤6 + 12 特征 + 全序列+短语模式) + 当前度量 (NW-sim + NLED-sim 双口径) + 当前素材 (substrate=77 = 64 v2 on-disk + 8 post-v2 in load + 5 D4)」边界内",
+  "v1_v2_anchors_preserved": {
+    "v1_verdict_sha12": "EB9AD4193CF2",
+    "v2_verdict_sha12": "5D79E67A4E9D",
+    "v2_signoff_sha12": "BA4D07BD7000",
+    "v1_v2_not_retrial": true
+  },
+  "non_portrait_declaration": "v3 dataset 沿用 v2 dataset 非画像声明: 数据用于提取可迁移判据结构规则集 (判据优先序/权衡模式/分界标准/准则应用法/反例检验法/委托裁决法), 不做 PI 行为预测或个人模型; 推理全文隐私面仅入本地件 (v2 prereg §7 字面); v3 prereg §6 沿用此声明",
+  "anchor_sha_verification": {
+    "prereg_v3": {
+      "path": "results/_v4_pi_cot_v3_prereg.md",
+      "expected_sha12": "B7547329AF2E",
+      "actual_sha12": "B7547329AF2E",
+      "drift": false
+    },
+    "ruleset_v3": {
+      "path": "results/_v4_pi_cot_v3_ruleset_v3.json",
+      "expected_sha12": "9D77A5E2CBAB",
+      "actual_sha12": "9D77A5E2CBAB",
+      "drift": false
+    },
+    "ruleset_v3_executor": {
+      "path": "results/_v4_pi_cot_v3_ruleset_v3_executor.py",
+      "expected_sha12": "8A81D90C69BA",
+      "actual_sha12": "8A81D90C69BA",
+      "drift": false
+    },
+    "dataset_v3": {
+      "path": "results/_v4_pi_cot_v3_dataset.json",
+      "expected_sha12": "5118F5B44F17",
+      "actual_sha12": "5118F5B44F17",
+      "drift": false
+    },
+    "dataset_v2_v11": {
+      "path": "results/_v4_pi_cot_v2_dataset.json",
+      "expected_sha12": "7B01CD835A41",
+      "actual_sha12": "7B01CD835A41",
+      "drift": false
+    },
+    "coding_review_v2": {
+      "path": "results/_v4_pi_cot_v2_coding_review_2026_09_26.md",
+      "expected_sha12": "5FBEC21E0AD2",
+      "actual_sha12": "5FBEC21E0AD2",
+      "drift": false
+    },
+    "ruleset_v2_ref": {
+      "path": "results/_v4_pi_cot_v2_ruleset_v2.json",
+      "expected_sha12": "C5B3DD141655",
+      "actual_sha12": "C5B3DD141655",
+      "drift": false
+    },
+    "executor_v2_ref": {
+      "path": "results/_v4_pi_cot_v2_ruleset_v2_executor.py",
+      "expected_sha12": "EB22F13D571C",
+      "actual_sha12": "EB22F13D571C",
+      "drift": false
+    },
+    "addendum_d1": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+      "expected_sha12": "172093A23E4B",
+      "actual_sha12": "172093A23E4B",
+      "drift": false
+    },
+    "addendum_d2": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json",
+      "expected_sha12": "439721007AAF",
+      "actual_sha12": "439721007AAF",
+      "drift": false
+    },
+    "addendum_d2b": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d2b_2026_09_26.json",
+      "expected_sha12": "41D6C28CA87C",
+      "actual_sha12": "41D6C28CA87C",
+      "drift": false
+    },
+    "addendum_d2c": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json",
+      "expected_sha12": "99C58906F792",
+      "actual_sha12": "99C58906F792",
+      "drift": false
+    },
+    "addendum_d2d": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+      "expected_sha12": "C6D092F77932",
+      "actual_sha12": "C6D092F77932",
+      "drift": false
+    },
+    "addendum_d2e": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json",
+      "expected_sha12": "26F110A6E571",
+      "actual_sha12": "26F110A6E571",
+      "drift": false
+    },
+    "addendum_d3a": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json",
+      "expected_sha12": "6E104E2DB038",
+      "actual_sha12": "6E104E2DB038",
+      "drift": false
+    },
+    "addendum_d3b": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+      "expected_sha12": "D96B747BFC6C",
+      "actual_sha12": "D96B747BFC6C",
+      "drift": false
+    },
+    "addendum_d3c": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json",
+      "expected_sha12": "401BD614CDF7",
+      "actual_sha12": "401BD614CDF7",
+      "drift": false
+    },
+    "addendum_d4": {
+      "path": "results/_v4_pi_cot_v3_dataset_addendum_d4_2026_09_27.json",
+      "expected_sha12": "B18FF4177289",
+      "actual_sha12": "CBF60A630C9F",
+      "drift": true
+    }
+  },
+  "anchor_drift_summary": {
+    "addendum_d4": {
+      "expected": "B18FF4177289",
+      "actual": "CBF60A630C9F"
+    }
+  },
+  "touch_policy_summary": {
+    "no_v1_v2_v3_frozen_touch": true,
+    "no_derived_json_merge": true,
+    "no_threshold_tampering": true,
+    "no_llm_judgment_layer": true,
+    "explicit_boolean_naming": true,
+    "s_40_discipline_followed": true,
+    "kill_line_check_v3_used_directly": true,
+    "kill_line_values_not_modified": true
+  },
+  "honesty_note": "本棒 worker = 棒 C (result_v3 执行跑), 任务 B v3 正式实验跑 (formal_judgment=true), 非探索性. 已: (a) 输入链 18 件锚 SHA-12 实测核验 (1 件 D4 addendum 漂移 CBF60A630C9F vs anchor B18FF4177289, 沿 dataset v1.2 §prereg_anchor_v3 字面 disclosure); (b) substrate 记账式 (77 RUN = 64 v2 on-disk + 8 post-v2 in load + 5 D4); 8 post-v2 (D3_w2/w3) 登记 excluded_events_ledger 字段 (per briefing 字面); 8 D1 missing 登记 missing_events_ledger 字段 (per v2 verdict §1.1 字面 D1=48 vs 盘上 40 差额); (c) 跑 executor 全链: stratified holdout 0.30 (23 held-out, 5 correction in held); NW-sim mean=0.4534 / NLED-sim mean=0.2754; div_critical_coverage=0.4286; blind_obey_rate=0.2222; bootstrap CI=[0.3217, 0.5870]; perm_p=0.0160; (d) K-V3-A/A'/B/C/D/E 判定段: 5/6 hit (K-V3-E 不触发因 NW 与 NLED 同向 FAIL); kill-line 字段直接来自 executor kill_line_check_v3 输出, 0 二次手改; (e) result_v3.json 落盘 + SHA-12 实测核验. 未触: ruleset_v3 / ruleset_v3_executor / dataset_v3 / v2 dataset v1.1 / v2 verdict / v2 ruleset_v2 / 9 v2 addenda / collection_log 任何既有件 (SHA-12 复验全部不变); 0 LLM / 0 key 落盘 / 0 派生 JSON 合并 / 0 擅调阈值. succeeded ≠ 跑完 = 本件 SHA-12 核验实测后宣告. 老实交代: (i) briefing 锚 v3 prereg SHA F0A58FD651FD vs 实测 B7547329AF2E supersede (沿 dataset v1.2 §prereg_anchor_v3 字面 disclosure, 本棒不擅自重派此问题); (ii) D4 addendum SHA-12 漂移 CBF60A630C9F vs anchor B18FF4177289 (briefing 字面锚), executor 仍按实测 SHA 锚入 (0 触动既有件); (iii) substrate 77 = 64 v2 baseline on-disk + 8 post-v2 (D3_w2/w3, per dataset v1.2 §accounting_balance_conservation post_v2_added 字面) + 5 D4; briefing 字面 '77 = 72 + 5' 隐含 post-v2 8 件纳入 v2 baseline 72 口径 (本棒按 dataset v1.2 字面披露, 0 重排); (iv) feature_degradation_check: judge_type_J1-J6 + is_corr_pair + judge_type_J5 = 二元/低基数特征 n_distinct ≤3 是设计预期 (非退化), 不触发 TH-v3-19 警报; (v) K-V3-E 不触发 (NW 与 NLED 同向 FAIL 一致); verdict-keeper 复核构造面而非机械判 FAIL/PASS 字面交付 689ed70832d3b9cf; (vii) 署名=Mavis 团队 worker 出件｜2026-09-27 (沿棒 A dataset v1.2 署名惯例 + S-40 教训产物署名如实).",
+  "fingerprint_self_hash_post_birth": "2CD0D493A0D1",
+  "metadata": {
+    "author": "Mavis 团队 worker",
+    "date": "2026-09-27",
+    "encoding": "UTF-8 (no BOM)",
+    "line_ending": "LF",
+    "track": "Track 1 (0 LLM / 0 proxy / 0 gateway)",
+    "type": "v3_result_v3_formal_run",
+    "棒": "棒 C (result_v3 正式跑)",
+    "execution_棒_sequence_position": "v3 四件链棒③ / 4",
+    "棒_id": "棒 C",
+    "棒_predecessor_files_count": 17,
+    "棒_predecessor_files_listed": [
+      "results/_v4_pi_cot_v3_prereg.md (B7547329AF2E)",
+      "results/_v4_pi_cot_v3_ruleset_v3.json (9D77A5E2CBAB)",
+      "results/_v4_pi_cot_v3_ruleset_v3_executor.py (8A81D90C69BA)",
+      "results/_v4_pi_cot_v3_dataset.json (5118F5B44F17)",
+      "results/_v4_pi_cot_v2_dataset.json (7B01CD835A41)",
+      "results/_v4_pi_cot_v2_coding_review_2026_09_26.md (5FBEC21E0AD2)",
+      "results/_v4_pi_cot_v2_ruleset_v2.json (C5B3DD141655)",
+      "results/_v4_pi_cot_v2_ruleset_v2_executor.py (EB22F13D571C)",
+      "results/_v4_pi_cot_v2_dataset_addendum_2026_09_24.json (172093A23E4B)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json (439721007AAF)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d2b_2026_09_26.json (41D6C28CA87C)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json (99C58906F792)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json (C6D092F77932)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json (26F110A6E571)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json (6E104E2DB038)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json (D96B747BFC6C)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json (401BD614CDF7)",
+      "results/_v4_pi_cot_v3_dataset_addendum_d4_2026_09_27.json (实测 CBF60A630C9F vs anchor B18FF4177289)"
+    ],
+    "pi_source": "PI 2026-09-27 派工单 briefing 字面 (substrate=77, K-V3-A/A'/B/C/D/E 阈值锁定, S-40 教训产物署名如实)"
+  }
+}

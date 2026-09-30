@@ -1,0 +1,83 @@
+{
+  "schema": "v4_pi_cot_v2_dataset_addendum/1",
+  "created": "2026-09-24T18:43:00+08:00",
+  "created_by": "worker (执行类·数据修订)",
+  "addendum_for": {
+    "dataset_path": "results/_v4_pi_cot_v2_dataset.json",
+    "dataset_schema": "v4_pi_cot_v2_dataset/1.1",
+    "dataset_sha12_pre": "7B01CD835A41",
+    "dataset_sha12_post": "7B01CD835A41",
+    "touch_policy": "0 触动（落盘后复验 SHA-12 不变）"
+  },
+  "post_hoc_amendment": true,
+  "honesty_note": "本件为事后修订补充（探索性预跑后采集）。K-V2-b1 探索性观测值 div_critical_coverage=0.6667 维持原值不变，不得以本补充翻案为 PASS；本补充仅入正式判定前规则集重训语料（与 D2/D3 跨天数据合并评估），正式判定须按 verdict.md 正式裁决触发条件重跑重裁。",
+  "paired_status_note": "据 parent 派工单 briefing，本批 3 条补充均属 R*a_pair_pending 前半事件（后半配对仍未闭合）。注：dataset 现状（is_correction 字段）下，event_id 17 / 21 / 27 三件均标 is_correction=false，并非既有的 R1a–R6a 反转配对；本 addendum 不触动 dataset，因此新配对状态以本件 paired_status_note 为准，正式 dataset 字段如需对齐须由 PI 后续拍板（不在本棒 scope）。TH-v2-2 partial 状态不变：6 对 R1a–R6a 既有配对维持；本批 3 条按 parent briefing 记为 a-half 待 b-half 跨日续采。",
+  "supplements": [
+    {
+      "event_id": 17,
+      "q_id": "q17",
+      "scene_tag": "fiction_admission_line",
+      "critical_reflection_supplement": "硬核",
+      "source": {
+        "ask_id": "ask_78da95120311ddbe4a811c45",
+        "explicit_user_confirmation": true,
+        "selected_other": true,
+        "collected_at": "2026-09-24T18:43:00+08:00"
+      },
+      "collected_date": "2026-09-24"
+    },
+    {
+      "event_id": 21,
+      "q_id": "q21",
+      "scene_tag": "iron_rule_inheritance",
+      "critical_reflection_supplement": "区分PI铁律与时代铁律，前者跟随我对项目需要的判断，即唯物主义，后者则是唯物史观",
+      "source": {
+        "ask_id": "ask_78da95120311ddbe4a811c45",
+        "explicit_user_confirmation": true,
+        "selected_other": true,
+        "collected_at": "2026-09-24T18:43:00+08:00"
+      },
+      "collected_date": "2026-09-24"
+    },
+    {
+      "event_id": 27,
+      "q_id": "q27",
+      "scene_tag": "agent_report_trust",
+      "critical_reflection_supplement": "agent集群相对于单agent的优势，组织行为学指出了组织可能失去客观判断，但agent集群不同于常规组织，可以达成共同体",
+      "source": {
+        "ask_id": "ask_78da95120311ddbe4a811c45",
+        "explicit_user_confirmation": true,
+        "selected_other": true,
+        "collected_at": "2026-09-24T18:43:00+08:00"
+      },
+      "collected_date": "2026-09-24"
+    }
+  ],
+  "supplement_count": 3,
+  "verbatim_policy": "PI 原话逐字保留，禁止改写/润色/扩写/补全标点；supplement 字段值即 user-confirmed 原话",
+  "constraints_compliance": {
+    "key_never_in_prompt_or_json": true,
+    "key_never_on_disk": true,
+    "no_18_frozen_touch": true,
+    "no_9_grid_touch": true,
+    "no_pg_v0_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_builtin_script_touch": true,
+    "no_dataset_modification": true,
+    "no_merge_into_dataset": true,
+    "no_threshold_tampering": true,
+    "rationale": "V4 铁律沿用口径 (R4 key 永不明文沿用无例外; V1-V3 只读不动; 派生 JSON 不合并); 本附录为独立新件, 不触动 dataset / prereg / result / verdict 任何既有件"
+  },
+  "fingerprint_self_hash_after_birth": "6F76EAE13FA0",
+  "metadata": {
+    "algorithm": "SHA-256 前 12 位",
+    "author": "Mavis worker",
+    "date": "2026-09-24",
+    "encoding": "UTF-8 (no BOM)",
+    "line_ending": "LF",
+    "track": "Track 1 (0 LLM / 0 proxy / 0 gateway)",
+    "type": "post_hoc_critical_reflection_addendum",
+    "version": "v1",
+    "pi_source": "PI 2026-09-24 18:43 ask_78da95120311ddbe4a811c45 selectedOther=true 字面补充 3 条"
+  }
+}

@@ -1,0 +1,992 @@
+{
+  "schema": "v3_s3_wordexpand_recheck_r1_v1",
+  "series": "V3-S 补强系列 S3 段 · loader_r1 修复后覆盖率重算（r1 修正版）",
+  "executor": "results/_v3_s3_wordexpand_data/executor_r1_2026_09_28.py",
+  "mother_executor": "results/_v3_s3_wordexpand_data/executor_2026_09_28.py",
+  "prereg": "results/_v3_s_prereg_v1_2026_09_27.md",
+  "date": "2026-09-28",
+  "generated_ts_frozen": "2026-09-28T14:40:00+08:00",
+  "seed": 42,
+  "runtime": "python3 + numpy；0 LLM / 0 proxy / 0 gateway；全部为本地机械读数",
+  "skill": {
+    "requested": "scientific-research-workflows:experimental-design (plugin @scientific-research-workflows)",
+    "status": "Local skill not found — C:/Users/Administrator/.minimax/plugins 实测 0 项（空目录）",
+    "fallback": "纪律锚 = prereg §2.3 K-V3S-3-1..3-4 字面 + E-42.1 死因改判 + 母件 result §loader_drop_finding 字面",
+    "disclosure": "未加载该 skill 的任何指令；0 引用、0 虚构其条文"
+  },
+  "r1_fix_registration": {
+    "pi_decision": "T-S3-2 loader 丢弃面 = 按 F1 先例直修（PI 2026-09-28 拍板）",
+    "prescription": "拼接入口由「嵌套于排他 if 链首项」提为「base 已定后全分支统一后置追加」",
+    "prescription_source": "results/_v4_pi_cot_v3_ruleset_v3_executor_r1_2026_09_27.py（ee8671a28c2f）文件头 r1 登记块",
+    "how_applied_in_this_file": "本件**只切换装载面引用**（事件构造面 = 先例 r1 executor）；母件 v3 executor 仅作修复前对照臂读数；**0 复制修法代码**（避免同一修法两份实现漂移）",
+    "unchanged_discipline": "0 改词表 / 0 改阈值 / 0 改特征 / 0 改判定公式 / 0 改 seed / 0 改 held-out 划分 / 0 改 ALT 口径定义 / 0 改 per_event 标签来源 / 0 重训决策树",
+    "defect_host_file": "results/_v4_pi_cot_v3_ruleset_v3_executor.py (8a81d90c69ba)",
+    "defect_lines": "775-788（if/elif 排他链; supplement 拼接嵌在首项内）",
+    "semantic_equivalence": "先例修法在 base 非空时输出逐字不变 = base + ' ' + supplement"
+  },
+  "inputs": [
+    {
+      "path": "results/_v3_s_prereg_v1_2026_09_27.md",
+      "sha12_expected": "ef5a40554960",
+      "sha12": "ef5a40554960",
+      "size_bytes": 46836,
+      "match": true,
+      "role": "S 预登记（K-V3S-3-* 四条判死线 + P-S3-1 入锁规则）"
+    },
+    {
+      "path": "results/_v4_pi_cot_v3_ruleset_v3_executor.py",
+      "sha12_expected": "8a81d90c69ba",
+      "sha12": "8a81d90c69ba",
+      "size_bytes": 58794,
+      "match": true,
+      "role": "修复前对照臂 loader（缺陷宿主件, 只读）"
+    },
+    {
+      "path": "results/_v4_pi_cot_v3_ruleset_v3_executor_r1_2026_09_27.py",
+      "sha12_expected": "ee8671a28c2f",
+      "sha12": "ee8671a28c2f",
+      "size_bytes": 62115,
+      "match": true,
+      "role": "修复臂 loader（F1 先例直修件, 只读）"
+    },
+    {
+      "path": "results/_v3_s3_wordexpand_data/executor_2026_09_28.py",
+      "sha12_expected": "80f1445ce45d",
+      "sha12": "80f1445ce45d",
+      "size_bytes": 46005,
+      "match": true,
+      "role": "母件计算面（原语复用, 只读）"
+    },
+    {
+      "path": "results/_v3_s3_wordexpand_data/result_2026_09_28.json",
+      "sha12_expected": "f7f6d875d73a",
+      "sha12": "f7f6d875d73a",
+      "size_bytes": 34953,
+      "match": true,
+      "role": "上游扩词段读数 + loader_drop_finding（只读）"
+    },
+    {
+      "path": "results/_v4_pi_cot_v3_result_v3.json",
+      "sha12_expected": "585714f9660c",
+      "sha12": "585714f9660c",
+      "size_bytes": 27203,
+      "match": true,
+      "role": "per_event 标签 + held_out_idx + missing_events_ledger（只读）"
+    },
+    {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+      "sha12_expected": "172093a23e4b",
+      "sha12": "172093a23e4b",
+      "size_bytes": 4103,
+      "match": true,
+      "role": "D1 addendum（critical_reflection_supplement 字面）"
+    }
+  ],
+  "input_chain_all_match": true,
+  "loader_fix_verification": {
+    "substrate_n_before": 77,
+    "substrate_n_after": 77,
+    "substrate_n_identical": true,
+    "load_meta_identical": true,
+    "changed_event_idx": [
+      37,
+      38,
+      39
+    ],
+    "n_changed": 3,
+    "changed_detail": [
+      {
+        "held_idx": 37,
+        "event_id": 17,
+        "q_id": "q17",
+        "source_wave": "D1_supp",
+        "source_file": "_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+        "reasoning_full_len_before": 0,
+        "reasoning_full_len_after": 2,
+        "was_empty_before": true,
+        "now_nonempty_after": true,
+        "text_after_head": "硬核",
+        "other_fields_identical": {
+          "_provenance": true,
+          "date": true,
+          "event_id": true,
+          "is_correction": true,
+          "judge_type": true,
+          "option_chosen": true,
+          "q_id": true,
+          "scene_tag": true,
+          "weight": true
+        }
+      },
+      {
+        "held_idx": 38,
+        "event_id": 21,
+        "q_id": "q21",
+        "source_wave": "D1_supp",
+        "source_file": "_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+        "reasoning_full_len_before": 0,
+        "reasoning_full_len_after": 40,
+        "was_empty_before": true,
+        "now_nonempty_after": true,
+        "text_after_head": "区分PI铁律与时代铁律，前者跟随我对项目需要的判断，即唯物主义，后者则是唯物史观",
+        "other_fields_identical": {
+          "_provenance": true,
+          "date": true,
+          "event_id": true,
+          "is_correction": true,
+          "judge_type": true,
+          "option_chosen": true,
+          "q_id": true,
+          "scene_tag": true,
+          "weight": true
+        }
+      },
+      {
+        "held_idx": 39,
+        "event_id": 27,
+        "q_id": "q27",
+        "source_wave": "D1_supp",
+        "source_file": "_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+        "reasoning_full_len_before": 0,
+        "reasoning_full_len_after": 62,
+        "was_empty_before": true,
+        "now_nonempty_after": true,
+        "text_after_head": "agent集群相对于单agent的优势，组织行为学指出了组织可能失去客观判断，但agent集群不同于常规组织，可以达成共",
+        "other_fields_identical": {
+          "_provenance": true,
+          "date": true,
+          "event_id": true,
+          "is_correction": true,
+          "judge_type": true,
+          "option_chosen": true,
+          "q_id": true,
+          "scene_tag": true,
+          "weight": true
+        }
+      }
+    ],
+    "all_changed_are_d1_supp": true,
+    "all_changed_were_empty_before": true,
+    "all_changed_nonempty_after": true,
+    "only_reasoning_full_field_changed": true,
+    "held_out_split_identical_across_arms": true,
+    "held_out_repro_after_bit_exact_vs_result_v3": true,
+    "n_events_with_reasoning_before": 72,
+    "n_events_with_reasoning_after": 75,
+    "verdict_0_4286_to_0_5714": {
+      "target_source": "母件 result_2026_09_28.json §loaderfix_diagnostic_leg.after_fix 字面（BASE_36 MAIN 0.4286→0.5714 / ALT 0.3000→0.5000）",
+      "base36_main_before": 0.42857142857142855,
+      "base36_main_after": 0.5714285714285714,
+      "base36_alt_before": 0.3,
+      "base36_alt_after": 0.5,
+      "compare_tolerance": 5e-05,
+      "match_before_main": true,
+      "match_after_main": true,
+      "match_before_alt": true,
+      "match_after_alt": true,
+      "exact_fraction_before_main": "6/14",
+      "exact_fraction_after_main": "8/14",
+      "exact_fraction_before_alt": "3/10",
+      "exact_fraction_after_alt": "5/10",
+      "newly_critical_divergent_idx_main": [
+        37,
+        39
+      ],
+      "newly_critical_divergent_idx_alt": [
+        37,
+        39
+      ],
+      "verdict": true
+    }
+  },
+  "substrate": {
+    "n_substrate_run": 77,
+    "held_out_count": 23,
+    "held_out_ratio": 0.3,
+    "held_out_seed": 42,
+    "held_out_idx": [
+      0,
+      2,
+      5,
+      6,
+      7,
+      12,
+      13,
+      16,
+      23,
+      27,
+      28,
+      36,
+      37,
+      39,
+      47,
+      50,
+      58,
+      59,
+      63,
+      66,
+      72,
+      74,
+      76
+    ],
+    "alt_reading_n": 18,
+    "alt_reading_idx": [
+      0,
+      5,
+      7,
+      12,
+      13,
+      16,
+      23,
+      28,
+      36,
+      37,
+      39,
+      47,
+      58,
+      63,
+      66,
+      72,
+      74,
+      76
+    ],
+    "alt_reading_correction_excluded_idx": [
+      2,
+      6,
+      27,
+      50,
+      59
+    ],
+    "n_correction_total": 16,
+    "alt_caliber_definition": "ALT = 主 held-out 23 件剔 correction 子集（is_correction_event_v3）= 18 件（沿母件显式定义；**0 静默沿用** v3 result 登记的不可复现 ALT 值）",
+    "extrapolation_boundary": "仅在 77 件 RUN substrate + 23 件 held-out + v3 词表构造域内有效；不可外推至 S3 补采后 substrate（≥85）或 S4 扩样（≥167），更不可外推至命题层"
+  },
+  "word_table": {
+    "base36_tuple": 36,
+    "base36_distinct": 35,
+    "tuple_duplicate_words": [
+      "未必"
+    ],
+    "locked39_tuple": 39,
+    "locked39_distinct": 38,
+    "proposal_full_41_tuple": 41
+  },
+  "coverage_matrix": {
+    "caliber_note": "同一 77 件 substrate / 同一 held-out 23 / 同一 ALT 18 件 / 同一 per_event 标签源（result_v3 登记值）；**仅 loader 臂与词表臂变** ⇒ Δ 可归因",
+    "matrix": [
+      {
+        "arm": "BASE_36 (原口径, 判定面)",
+        "n_markers_tuple": 36,
+        "n_markers_distinct": 35,
+        "loader_state": "BEFORE_FIX (母件 loader)",
+        "main_reading": {
+          "n_divergent": 14,
+          "n_critical_among_divergent": 6,
+          "div_critical_coverage": 0.42857142857142855,
+          "critical_idx": [
+            2,
+            27,
+            36,
+            58,
+            59,
+            66
+          ],
+          "divergent_no_critical_idx": [
+            12,
+            28,
+            37,
+            39,
+            47,
+            50,
+            72,
+            74
+          ]
+        },
+        "alt_reading": {
+          "n_divergent": 10,
+          "n_critical_among_divergent": 3,
+          "div_critical_coverage": 0.3,
+          "critical_idx": [
+            36,
+            58,
+            66
+          ],
+          "divergent_no_critical_idx": [
+            12,
+            28,
+            37,
+            39,
+            47,
+            72,
+            74
+          ]
+        },
+        "blind_obey_main": {
+          "n_agree": 9,
+          "n_blind_obey": 2,
+          "blind_obey_rate": 0.2222222222222222,
+          "blind_obey_idx": [
+            5,
+            23
+          ]
+        }
+      },
+      {
+        "arm": "BASE_36 (原口径, 判定面)",
+        "n_markers_tuple": 36,
+        "n_markers_distinct": 35,
+        "loader_state": "AFTER_FIX (F1 先例 loader)",
+        "main_reading": {
+          "n_divergent": 14,
+          "n_critical_among_divergent": 8,
+          "div_critical_coverage": 0.5714285714285714,
+          "critical_idx": [
+            2,
+            27,
+            36,
+            37,
+            39,
+            58,
+            59,
+            66
+          ],
+          "divergent_no_critical_idx": [
+            12,
+            28,
+            47,
+            50,
+            72,
+            74
+          ]
+        },
+        "alt_reading": {
+          "n_divergent": 10,
+          "n_critical_among_divergent": 5,
+          "div_critical_coverage": 0.5,
+          "critical_idx": [
+            36,
+            37,
+            39,
+            58,
+            66
+          ],
+          "divergent_no_critical_idx": [
+            12,
+            28,
+            47,
+            72,
+            74
+          ]
+        },
+        "blind_obey_main": {
+          "n_agree": 9,
+          "n_blind_obey": 2,
+          "blind_obey_rate": 0.2222222222222222,
+          "blind_obey_idx": [
+            5,
+            23
+          ]
+        }
+      },
+      {
+        "arm": "LOCKED_39 (PI 2026-09-28 部分入锁, 待生效)",
+        "n_markers_tuple": 39,
+        "n_markers_distinct": 38,
+        "loader_state": "BEFORE_FIX (母件 loader)",
+        "main_reading": {
+          "n_divergent": 14,
+          "n_critical_among_divergent": 8,
+          "div_critical_coverage": 0.5714285714285714,
+          "critical_idx": [
+            2,
+            12,
+            27,
+            28,
+            36,
+            58,
+            59,
+            66
+          ],
+          "divergent_no_critical_idx": [
+            37,
+            39,
+            47,
+            50,
+            72,
+            74
+          ]
+        },
+        "alt_reading": {
+          "n_divergent": 10,
+          "n_critical_among_divergent": 5,
+          "div_critical_coverage": 0.5,
+          "critical_idx": [
+            12,
+            28,
+            36,
+            58,
+            66
+          ],
+          "divergent_no_critical_idx": [
+            37,
+            39,
+            47,
+            72,
+            74
+          ]
+        },
+        "blind_obey_main": {
+          "n_agree": 9,
+          "n_blind_obey": 1,
+          "blind_obey_rate": 0.1111111111111111,
+          "blind_obey_idx": [
+            5
+          ]
+        }
+      },
+      {
+        "arm": "LOCKED_39 (PI 2026-09-28 部分入锁, 待生效)",
+        "n_markers_tuple": 39,
+        "n_markers_distinct": 38,
+        "loader_state": "AFTER_FIX (F1 先例 loader)",
+        "main_reading": {
+          "n_divergent": 14,
+          "n_critical_among_divergent": 10,
+          "div_critical_coverage": 0.7142857142857143,
+          "critical_idx": [
+            2,
+            12,
+            27,
+            28,
+            36,
+            37,
+            39,
+            58,
+            59,
+            66
+          ],
+          "divergent_no_critical_idx": [
+            47,
+            50,
+            72,
+            74
+          ]
+        },
+        "alt_reading": {
+          "n_divergent": 10,
+          "n_critical_among_divergent": 7,
+          "div_critical_coverage": 0.7,
+          "critical_idx": [
+            12,
+            28,
+            36,
+            37,
+            39,
+            58,
+            66
+          ],
+          "divergent_no_critical_idx": [
+            47,
+            72,
+            74
+          ]
+        },
+        "blind_obey_main": {
+          "n_agree": 9,
+          "n_blind_obey": 1,
+          "blind_obey_rate": 0.1111111111111111,
+          "blind_obey_idx": [
+            5
+          ]
+        }
+      },
+      {
+        "arm": "PROPOSAL_FULL_41 (母件提案全量, 仅对照)",
+        "n_markers_tuple": 41,
+        "n_markers_distinct": 40,
+        "loader_state": "BEFORE_FIX (母件 loader)",
+        "main_reading": {
+          "n_divergent": 14,
+          "n_critical_among_divergent": 9,
+          "div_critical_coverage": 0.6428571428571429,
+          "critical_idx": [
+            2,
+            12,
+            27,
+            28,
+            36,
+            58,
+            59,
+            66,
+            72
+          ],
+          "divergent_no_critical_idx": [
+            37,
+            39,
+            47,
+            50,
+            74
+          ]
+        },
+        "alt_reading": {
+          "n_divergent": 10,
+          "n_critical_among_divergent": 6,
+          "div_critical_coverage": 0.6,
+          "critical_idx": [
+            12,
+            28,
+            36,
+            58,
+            66,
+            72
+          ],
+          "divergent_no_critical_idx": [
+            37,
+            39,
+            47,
+            74
+          ]
+        },
+        "blind_obey_main": {
+          "n_agree": 9,
+          "n_blind_obey": 1,
+          "blind_obey_rate": 0.1111111111111111,
+          "blind_obey_idx": [
+            5
+          ]
+        }
+      },
+      {
+        "arm": "PROPOSAL_FULL_41 (母件提案全量, 仅对照)",
+        "n_markers_tuple": 41,
+        "n_markers_distinct": 40,
+        "loader_state": "AFTER_FIX (F1 先例 loader)",
+        "main_reading": {
+          "n_divergent": 14,
+          "n_critical_among_divergent": 11,
+          "div_critical_coverage": 0.7857142857142857,
+          "critical_idx": [
+            2,
+            12,
+            27,
+            28,
+            36,
+            37,
+            39,
+            58,
+            59,
+            66,
+            72
+          ],
+          "divergent_no_critical_idx": [
+            47,
+            50,
+            74
+          ]
+        },
+        "alt_reading": {
+          "n_divergent": 10,
+          "n_critical_among_divergent": 8,
+          "div_critical_coverage": 0.8,
+          "critical_idx": [
+            12,
+            28,
+            36,
+            37,
+            39,
+            58,
+            66,
+            72
+          ],
+          "divergent_no_critical_idx": [
+            47,
+            74
+          ]
+        },
+        "blind_obey_main": {
+          "n_agree": 9,
+          "n_blind_obey": 1,
+          "blind_obey_rate": 0.1111111111111111,
+          "blind_obey_idx": [
+            5
+          ]
+        }
+      }
+    ],
+    "deltas_after_minus_before": {
+      "base36_main": 0.14285714285714285,
+      "base36_alt": 0.2,
+      "locked39_main": 0.1428571428571429,
+      "locked39_alt": 0.19999999999999996,
+      "proposal_full41_main": 0.1428571428571428,
+      "proposal_full41_alt": 0.20000000000000007
+    }
+  },
+  "eight_miss_root_cause_after_fix": {
+    "target_idx": [
+      12,
+      28,
+      37,
+      39,
+      47,
+      50,
+      72,
+      74
+    ],
+    "source_literal": "verdict_v3 §2.3 K-V3-B 字面 8 件无批判词分歧事件",
+    "per_event": [
+      {
+        "held_idx": 12,
+        "event_id": 13,
+        "q_id": "q13",
+        "pred": "CRITERIA",
+        "actual": [
+          "TIMING"
+        ],
+        "reasoning_full_len_before": 36,
+        "reasoning_full_len_after": 36,
+        "class_before": "NOT_COVERED_BY_BASE36",
+        "class_after": "NOT_COVERED_BY_BASE36_AFTER_FIX",
+        "covering_base36_words_after": [],
+        "covered_by_locked39_after": true
+      },
+      {
+        "held_idx": 28,
+        "event_id": 29,
+        "q_id": "q29",
+        "pred": "CRITERIA",
+        "actual": [
+          "RISK"
+        ],
+        "reasoning_full_len_before": 12,
+        "reasoning_full_len_after": 12,
+        "class_before": "NOT_COVERED_BY_BASE36",
+        "class_after": "NOT_COVERED_BY_BASE36_AFTER_FIX",
+        "covering_base36_words_after": [],
+        "covered_by_locked39_after": true
+      },
+      {
+        "held_idx": 37,
+        "event_id": 17,
+        "q_id": "q17",
+        "pred": "UNKNOWN",
+        "actual": [],
+        "reasoning_full_len_before": 0,
+        "reasoning_full_len_after": 2,
+        "class_before": "EMPTY_TEXT",
+        "class_after": "COVERED_BY_BASE36_AFTER_FIX",
+        "covering_base36_words_after": [
+          "硬核"
+        ],
+        "covered_by_locked39_after": true
+      },
+      {
+        "held_idx": 39,
+        "event_id": 27,
+        "q_id": "q27",
+        "pred": "UNKNOWN",
+        "actual": [],
+        "reasoning_full_len_before": 0,
+        "reasoning_full_len_after": 62,
+        "class_before": "EMPTY_TEXT",
+        "class_after": "COVERED_BY_BASE36_AFTER_FIX",
+        "covering_base36_words_after": [
+          "不",
+          "但"
+        ],
+        "covered_by_locked39_after": true
+      },
+      {
+        "held_idx": 47,
+        "event_id": 1738573,
+        "q_id": "Q39",
+        "pred": "UNKNOWN",
+        "actual": [],
+        "reasoning_full_len_before": 0,
+        "reasoning_full_len_after": 0,
+        "class_before": "EMPTY_TEXT",
+        "class_after": "STILL_EMPTY_TRUE_MISSING",
+        "covering_base36_words_after": [],
+        "covered_by_locked39_after": false
+      },
+      {
+        "held_idx": 50,
+        "event_id": 7703938,
+        "q_id": "Q42",
+        "pred": "UNKNOWN",
+        "actual": [],
+        "reasoning_full_len_before": 0,
+        "reasoning_full_len_after": 0,
+        "class_before": "EMPTY_TEXT",
+        "class_after": "STILL_EMPTY_TRUE_MISSING",
+        "covering_base36_words_after": [],
+        "covered_by_locked39_after": false
+      },
+      {
+        "held_idx": 72,
+        "event_id": 3168224,
+        "q_id": "D4_Q1",
+        "pred": "CRITERIA",
+        "actual": [
+          "TIMING",
+          "KILL_LINE"
+        ],
+        "reasoning_full_len_before": 56,
+        "reasoning_full_len_after": 56,
+        "class_before": "NOT_COVERED_BY_BASE36",
+        "class_after": "NOT_COVERED_BY_BASE36_AFTER_FIX",
+        "covering_base36_words_after": [],
+        "covered_by_locked39_after": false
+      },
+      {
+        "held_idx": 74,
+        "event_id": 1284620,
+        "q_id": "D4_Q3",
+        "pred": "CRITERIA",
+        "actual": [
+          "TIMING"
+        ],
+        "reasoning_full_len_before": 80,
+        "reasoning_full_len_after": 80,
+        "class_before": "NOT_COVERED_BY_BASE36",
+        "class_after": "NOT_COVERED_BY_BASE36_AFTER_FIX",
+        "covering_base36_words_after": [],
+        "covered_by_locked39_after": false
+      }
+    ],
+    "tally": {
+      "n_still_empty_true_missing": 2,
+      "n_covered_by_base36_after_fix": 2,
+      "n_not_covered_by_base36_after_fix": 4
+    },
+    "finding": "修复后：2 件（idx 37 / 39）由空文本转为 36 词命中（**构造面缺陷已消**）；2 件（idx 47 / 50）**仍为空文本**（reasoning_missing = true 的真缺料件，词表与 loader 均无法补）；4 件（idx 74 等）非空但 36 词未覆盖",
+    "coverage_ceiling_after_fix": {
+      "main_n_divergent": 14,
+      "main_ceiling": 0.8571428571428571,
+      "alt_n_divergent": 10,
+      "alt_ceiling": 0.8,
+      "ceiling_formula": "(n_divergent - 真缺料空文本件数) / n_divergent",
+      "still_empty_divergent_detail": [
+        {
+          "held_idx": 47,
+          "event_id": 1738573,
+          "q_id": "Q39",
+          "pred": "UNKNOWN",
+          "actual": [],
+          "reasoning_missing_flag": true,
+          "reasoning_full_len": 0
+        },
+        {
+          "held_idx": 50,
+          "event_id": 7703938,
+          "q_id": "Q42",
+          "pred": "UNKNOWN",
+          "actual": [],
+          "reasoning_missing_flag": true,
+          "reasoning_full_len": 0
+        }
+      ],
+      "implication": "⇒ 修复后天花板 MAIN 0.8571 / ALT 0.8000；**K-V3S-3-4 的 1.00 在本盘素材面仍结构性不可达**（idx 47 / 50 为 PI 当初跳过推理、采集协议允许记 null 的真缺料件）"
+    }
+  },
+  "word_lock_39_face": {
+    "status": "locked_pending_effective",
+    "status_reason": "PI 2026-09-28 拍板 T-S3-1「39 词部分入锁」；本件落盘为**待生效锁**（locked_pending_effective）⇒ 读数可报、**判定 0 做**（沿 prereg §2.3 P-S3-1 字面：入锁才允许重算并判定；生效时点由 PI 另定）",
+    "pi_decision_literal": "词表 39 词部分入锁：推翻 / 冲突 / 庖丁解牛 入锁；非 / 小是具体 出锁（源 = S3 扩词段实测面；`unfrozen_pending_PI` → 待生效锁）",
+    "words_in": [
+      "推翻",
+      "冲突",
+      "庖丁解牛"
+    ],
+    "words_out": [
+      "非",
+      "小是具体"
+    ],
+    "n_markers_tuple": 39,
+    "n_markers_distinct": 38,
+    "tuple_duplicate_words": [
+      "未必"
+    ],
+    "n_base_markers_tuple": 36,
+    "n_base_markers_distinct": 35,
+    "caliber_note": "「39 词」= tuple 长度口径（36 + 3）；去重 distinct = 38（母件 tuple 内「未必」重复 1 次 ⇒ ['未必']）——沿母件 §1 字面口径，0 擅改",
+    "readings_before_fix": {
+      "main": 0.5714285714285714,
+      "alt": 0.5
+    },
+    "readings_after_fix": {
+      "main": 0.7142857142857143,
+      "alt": 0.7,
+      "main_critical_idx": [
+        2,
+        12,
+        27,
+        28,
+        36,
+        37,
+        39,
+        58,
+        59,
+        66
+      ],
+      "alt_divergent_no_critical_idx": [
+        47,
+        72,
+        74
+      ]
+    },
+    "judged": false,
+    "judge_reason": "待生效锁 ⇒ 0 判（沿 P-S3-1 字面）",
+    "direction_invariance_note": "入锁口径 MAIN/ALT 两读数均 < 1.00 ⇒ 若生效, K-V3S-3-4 的 hit 方向与 36 词口径**同向（仍 hit=True）**；本件**不宣告**该口径已生效判定",
+    "side_effect_blind_obey": {
+      "note": "入锁必并报盲从率（诚实纪律：0 只报 coverage 改善）",
+      "before_fix": {
+        "n_agree": 9,
+        "n_blind_obey": 1,
+        "blind_obey_rate": 0.1111111111111111,
+        "blind_obey_idx": [
+          5
+        ]
+      },
+      "after_fix": {
+        "n_agree": 9,
+        "n_blind_obey": 1,
+        "blind_obey_rate": 0.1111111111111111,
+        "blind_obey_idx": [
+          5
+        ]
+      },
+      "delta_from_loader_fix": 0.0,
+      "delta_from_base36_same_loader_arm": -0.1111111111111111,
+      "base36_reference_after_fix": {
+        "n_agree": 9,
+        "n_blind_obey": 2,
+        "blind_obey_rate": 0.2222222222222222,
+        "blind_obey_idx": [
+          5,
+          23
+        ]
+      },
+      "note_detail": "**两个 Δ 方向不同，必须分别读**：① loader 修复本身对盲从率 **0 影响**（before/after 均为 idx 5 单件，delta = 0）；② 「庖丁解牛」入锁使 idx 23 由盲从件转非盲从件（36 词臂 idx 5 + 23 → 39 词臂 idx 5），盲从率 0.2222 → 0.1111。**若只报 coverage 改善而不报此项即为误导**"
+    }
+  },
+  "proposal_full_41_face": {
+    "status": "not_locked_reference_only",
+    "note": "母件提案全量 41 词臂**仅作对照读数**；PI 2026-09-28 拍板入锁的是 39 词臂（「非」/「小是具体」出锁）⇒ 本臂 0 判",
+    "before_fix": {
+      "main": 0.6428571428571429,
+      "alt": 0.6
+    },
+    "after_fix": {
+      "main": 0.7857142857142857,
+      "alt": 0.8
+    }
+  },
+  "kill_lines": [
+    {
+      "id": "K-V3S-3-1",
+      "name": "跨日天数达标线",
+      "rule": "distinct calendar days >= 5",
+      "threshold": 5,
+      "threshold_source": "verdict_v3 §3.3 字面 (PI 2026-09-27 拍板值)",
+      "hit_direction": "跨日 < 5 天即不达标 (ok=False)",
+      "boolean_field": "k_v3s_3_1_ok"
+    },
+    {
+      "id": "K-V3S-3-2",
+      "name": "单日占比达标线",
+      "rule": "单日最大占比 <= 0.60",
+      "threshold": 0.6,
+      "threshold_source": "TH-v2-3 / TH-v3-3 字面 0.60",
+      "hit_direction": "单日占比 > 0.60 即不达标 (ok=False)",
+      "boolean_field": "k_v3s_3_2_ok"
+    },
+    {
+      "id": "K-V3S-3-3",
+      "name": "样本量 + 纠正事件达标线",
+      "rule": "N >= 50 且 纠正/反转事件 >= 5",
+      "threshold": [
+        50,
+        5
+      ],
+      "threshold_source": "TH-v2-1/2 = TH-v3-1/2 字面",
+      "hit_direction": "任一不达即不达标 (ok=False)",
+      "boolean_field": "k_v3s_3_3_ok"
+    },
+    {
+      "id": "K-V3S-3-4",
+      "name": "批判覆盖双口径线（判定面命中线）",
+      "rule": "原 36 词 coverage 与入锁后 N 词 coverage 两者并报, 判定沿 1.00",
+      "threshold": 1.0,
+      "threshold_source": "1.00 沿 K-V3-B / TH-v2-5b 字面",
+      "hit_direction": "任一口径 coverage < 1.00 即触发 (hit=True)",
+      "boolean_field": "k_v3s_3_4_hit"
+    }
+  ],
+  "judgment": {
+    "k_v3s_3_1_ok": false,
+    "k_v3s_3_1_note": "distinct days = 3 ['2026-09-24', '2026-09-26', '2026-09-27'] vs 阈值 5 ⇒ 不达标（loader 修复 0 影响跨日；D6/D1 补采入库后须重算）",
+    "k_v3s_3_2_ok": true,
+    "k_v3s_3_2_note": "最大单日 = 2026-09-24 40/77 = 0.5195 vs 阈值 0.6 ⇒ 达标",
+    "k_v3s_3_3_ok": true,
+    "k_v3s_3_3_note": "N = 77 vs 50；纠正/反转 = 16 vs 5 ⇒ 达标",
+    "k_v3s_3_4_hit": true,
+    "k_v3s_3_4_note": "修复后原 36 词口径：MAIN 0.5714 / ALT 0.5000，均 < 1.0 ⇒ hit=True（修复前 MAIN 0.4286 / ALT 0.3000）",
+    "k_v3s_3_4_locked39_face": {
+      "status": "locked_pending_effective",
+      "judged": false,
+      "reported_value_only": {
+        "main_reading": 0.7142857142857143,
+        "alt_reading": 0.7
+      }
+    },
+    "any_hit_scope": "K-V3S-3-4 = 判定面命中线（进判定汇总）；K-V3S-3-1/2/3 = 采集面达标线（不进 FAIL 汇总）；两者不混算",
+    "any_hit": true,
+    "root_cause": "**β 构造面主导但已局部修复**：修复后 idx 37 / 39 的装载缺陷面消解（覆盖率 0.4286 → 0.5714 MAIN）；剩余主因 = **素材面真缺料**（idx 47 / 50 reasoning_missing = true）+ **词表边界**（idx 74 等）；**词表覆盖不足不再是主因**，且 1.00 阈值在本盘素材面**结构性不可达**（天花板 MAIN 0.8571）—— 本棒**0 擅调阈值**",
+    "root_cause_three_way": {
+      "alpha_true_falsification": "弱（修复后仍无非空文本件因词表边界大规模漏检）",
+      "beta_construct_or_boundary": "仍主导，但构成已变：装载缺陷面**已修**（37/39）；剩素材缺料 + 词表边界",
+      "sentinel_warning": "即便 loader 修复，K-V3S-3-4 仍 hit=True（覆盖率 < 1.00）—— sentinel 未解除，**不可宣告「修 loader 即达标」**"
+    }
+  },
+  "boundary_statement": {
+    "no_extrapolation": "本件读数仅在 77 件 RUN substrate + 23 件 held-out + 23→18 ALT + v3 词表构造域内有效；不可外推至补采后 substrate / S4 扩样 / 命题层",
+    "no_killline_invention": "K-V3S-3-1..4 四条阈值全部沿既有件字面，本棒 0 自设",
+    "no_threshold_adjustment": "0 擅调；1.00 未动（天花板不可达 ≠ 阈值可改）",
+    "no_derived_json_merge": "本件独立落盘（_v3_s3_wordexpand_recheck_r1_2026_09_28.json），0 合并任何既有 result JSON",
+    "no_existing_file_touched": "母件 / 宿主件 / 先例件 / dataset / result / verdict / 勘误链全部只读；本件与 r1 result 均为**新名新建**（开跑前实测不在盘）",
+    "no_retrain": "**0 重训决策树**：per_event 的 pred / actual / divergent 沿 result_v3 登记值；本件只重算 coverage 分子/分母 ⇒ 修复对 pred 的影响面**未评估**（见 open_items）",
+    "no_llm": "0 LLM / 0 proxy / 0 gateway；全部读数为本地机械 substring 命中",
+    "key_never_plaintext": "0 key 读取 / 0 落盘 / 0 入 prompt / 0 入 JSON / 0 入 log",
+    "succeeded_not_done": "本件 = **覆盖率重算 + 修复验证**，不是「loader 修复即达标」的宣告；亦非 substrate 重跑（0 重训、0 重划 held-out）"
+  },
+  "open_items": [
+    {
+      "id": "T-S3-3",
+      "item": "K-V3S-3-4 的 1.00 在本盘素材面结构性不可达（修复后天花板 MAIN 0.8571 / ALT 0.8000）",
+      "status": "仍挂 PI；本棒 0 擅调",
+      "honest_note": "唯一可达路径 = 补 idx 47 / 50 的 reasoning_missing 缺料件（D1 补采 8 件题面见 results/_v3_s3_collection_brief_2026_09_28.md）；词表扩词**不是**可达路径"
+    },
+    {
+      "id": "T-S3-4",
+      "item": "v3 登记 ALT 口径（n_div=11 / n_crit=4）不可复现；本件沿母件显式定义（n_div=10）",
+      "status": "仍挂 PI；本件 0 静默沿用 v3 值"
+    },
+    {
+      "id": "T-S3-5",
+      "item": "D1 缺位 8 件的 event_id 归属（ledger 记 33–40 占位；实测 33–37 在盘）",
+      "status": "已按 PI 2026-09-28 拍板落**订正新名件** results/_v4_pi_cot_v3_missing_ledger_correction_2026_09_28.md；原 result_v3 ledger 0 改"
+    },
+    {
+      "id": "T-S3-1R",
+      "item": "39 词入锁面的**生效时点**（现 = 待生效锁 locked_pending_effective）",
+      "status": "待 PI；本件只报读数 0 判"
+    },
+    {
+      "id": "NEW-1",
+      "item": "loader 修复对**决策树 pred** 的影响面（本件 0 重训 ⇒ 未评估）",
+      "status": "如实登记为未评估项：idx 37 / 38 / 39 的 rf_len_bucket / rf_pos_density / n_keywords_hit 三项特征随文本变化 ⇒ 若重训，全部 pred 可能变动；**本棒 0 擅开重训**（会改 result_v3 判定本体，超出本派工范围）"
+    }
+  ],
+  "honesty_note": "本件全部读数为盘上实测：substrate 由 v3 executor loader 只读载入（双臂各 77 件，meta 全等）；held-out 23 沿 result_v3 登记值且修复臂复现 **bit-exact**；两臂划分**完全相同**；loader 差异**逐件仅落在 idx 37/38/39 且仅 reasoning_full 一个字段变动**（其余字段逐件全等）；覆盖率分子/分母沿母件原语（只读复用，0 复制实现）。如实登记三处不利读数：(i) 修复后 K-V3S-3-4 **仍 hit=True**（0.5714 / 0.5000 << 1.00），sentinel 未解除；(ii) idx 47 / 50 为真缺料（reasoning_missing=true），词表与 loader 均无法补 ⇒ 天花板 0.8571；(iii) 本件 **0 重训**，pred 影响面未评估。39 词入锁面（待生效锁）只报读数不判；「庖丁解牛」入锁对盲从率的副作用**并报**。"
+}
