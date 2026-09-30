@@ -139,7 +139,7 @@ import requests as _requests
 ROOT = "D:/私人资料/deposon-repo"
 RESULTS_DIR = os.path.join(ROOT, "results")
 CAPTIONS_PATH = os.path.join(ROOT, "corpus", "v20_caption_surface", "strip_captions_22.json")
-KEY_SOURCE_PATH = "C:/Users/Administrator/Desktop/AI/LLM API.txt"
+KEY_SOURCE_PATH = os.environ.get("DEPOSON_KEY_FILE", "C:/Users/Administrator/Desktop/AI/LLM API.txt")
 BATCH1_R6_RESULT_PATH = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch1_r6_result.json")
 R1_RESULT_PATH_B2 = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch2_r1_result.json")
 R2_RESULT_PATH_B2 = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch2_r2_result.json")
