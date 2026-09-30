@@ -673,7 +673,7 @@ Substantive items: 1283 (transient .pyc/.log: 41)
 
 | Path (Rel) | SHA-12 | Size | Status | View | Modified |
 |---|---|---|---|---|---|
-| `mindmap_corpus_v20.py` | `7D8D6A30DD8C` | 23893 | IN-EFFECT | C | 2026/08/29 01:14:15 |
+| `mindmap_corpus_v20.py` | `E77E7F3455E0` | 25791 | IN-EFFECT | C | 2026/09/29 12:06:04 | 修订后（2026-08-29 原值 `7D8D6A30DD8C` / 23893 / 2026-08-29 01:14:15，见 `results/_v5_loadcorpus_switch_2026_09_29.md`） |
 
 #### 4.1.28 paper/  (5 items)
 
