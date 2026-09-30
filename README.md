@@ -1,75 +1,86 @@
-# Deposon (凝子) — Physics-Inspired Reasoning Layer for LLMs
+# Deposon (凝子)
 
-> **将 LLM 作为认知振幅场的生成器，将 Deposon 统一场作为 LLM 推理的物理约束层。**
+**An auditable, conservation-guaranteed, game-theoretically tested scattering layer over LLM reasoning paths.** · Paper: [arXiv:2609.09001](https://arxiv.org/abs/2609.09001) · License: [MIT](LICENSE)
 
-Deposon（凝子，Deposition + -on）是一个仿物理 AGI 推理框架：把 LLM 分解出的概念图节点绑定为"凝子态"（DeposonState），通过三通道散射（透射/反射/耗散）与无限维正交以太（EtherChannel，能量不可逆沉积）对推理路径进行物理约束筛选，从而阻断陷阱路径、保留正确推理链。
+Deposon is an ongoing research program on making multi-step LLM reasoning **machine-recheckable**. Its first two lines — **V1 (mind-map)** and **V2 (game-theory explanation)** — are **published** in the paper above; two further lines — **V3 (game-theory)** and **V4 (distillation)** — are active in this repository.
 
-## 核心结果（v1.3.1，合成百题基准，seed=42）
+## Project lines
 
-| 数据集 | no_deposon | unified | effect size |
-|---|---|---|---|
-| 简单 100 题 | 7% | **100%** | **+0.93** |
-| 陷阱 100 题（表面关联误导） | 10% | **100%** | **+0.90** |
+| Line | Theme | Status |
+|---|---|---|
+| **V1** | **脑图主线 / Mind-map** — an LLM-generated concept-decomposition graph as the substrate for reasoning | ✅ published |
+| **V2** | **博弈论解释 / Game-theory explanation** — the scattering mechanism explained and tested game-theoretically (potential game, coordination ratio, falsified dynamical-equivalence propositions) | ✅ published |
+| **V3** | **博弈论主线 / Game-theory line** — the mechanism program continues: pre-registered kill protocols, adversarial & equilibrium analyses, independent verifier suites | 🔬 active |
+| **V4** | **蒸馏主线 / Distillation line** — distilling human judgment *methods* into datasets for **AI critical learning** (method transfer — explicitly **not** behavioral profiling) | 🔬 active |
 
-- 物理审计：幺正性 t+r+a 与 1 的偏差 < 2.3e-16；v1 极限零耗散、v2 极限强耗散、unified 适度耗散，三极限态与理论预测一致。
-- LLM 后端：真实 Kimi API（kimi-for-coding），规则引擎自动降级，持久化缓存（百题评测缓存命中率 100%）。
-- v1.2 → v1.3 关键修复：效应量恒 0 的两个根因（答案与散射筛选脱钩；陷阱节点为 BFS 不可达死胡同）——详见 `docs/Deposon_v1_3_验证报告.md`。
+**V1 + V2 are published as**: *Deposon: An Auditable, Conservation-Guaranteed, Game-Theoretically Tested Scattering Layer over LLM Reasoning Paths* — Qihao Yuan, [arXiv:2609.09001](https://arxiv.org/abs/2609.09001) (cs.AI, 2026-09; 23 pages, 5 figures). This repository is the program's code, verifier and record set.
 
-> **诚实声明**：合成基准的效应量度量的是"同一张 LLM 分解图上，物理层筛选 vs 贪心选路"的增量价值。与 LLM 本体（CoT 基线）的对比实验在真实 GSM8K 子集上进行，结果见 `results/`（持续更新中）。
+## The mechanism (V1 + V2 core)
 
-## 快速开始
+- Each node of an LLM-generated concept-decomposition graph is bound to a two-parameter **Deposon state**; reasoning paths undergo **three-channel scattering** — transmission, reflection, irreversible dissipation — obeying `T + R + A = 1` for arbitrary parameters.
+- The maximum per-path energy-audit deviation is **2.2e-16** (machine epsilon): discarded paths leave a **machine-recheckable record** instead of vanishing.
+
+## Published findings (as reported in the paper)
+
+- **Synthetic trap benchmarks** (pre-registered): the path-filtering gain **is closed** — unified reaches **100%** versus a decoy-capture baseline at **7% / 10%**.
+- **Real benchmarks**: the layer is **indistinguishable from a trivial six-keyword rule filter** (GSM8K 0.87 vs 0.85, McNemar p = 0.5; StrategyQA 0.899 vs 0.899) — the claim is sharpened to: **the differential value lies solely in machine verifiability.**
+- **Fusion yields a second negative result**: convex combinations with a semantic prior never improve; the apparent gain at λ = 2 is an anti-field artifact — any fusion gain must be **nonlinear**.
+- **Game-theoretic analysis**: an auditable scalar's monotonicity and near-gradientness are evidenced and the empirical coordination ratio (ECR) quantified; the three dynamical-equivalence propositions (P1a / P1b / T-P1c) are **falsified under the pre-registered kill protocol**, and the potential-game claim is downgraded to *approximate* (cyclic-graph median residual 0.669).
+
+> Negative results are reported as part of the evidence. The repository keeps the same posture: readings, preregistrations and audit records stay on disk, and nothing here is a claim stronger than the literal wording of the data.
+
+## Ongoing lines (V3 / V4)
+
+- **V3 · game-theory line** — the mechanism program continues under the same preregistration discipline: kill-line protocols, adversarial checks, equilibrium / coordination analyses and independent verification. Current specs live under [`docs/V3X/`](docs/V3X/); audit suites under [`verifier/`](verifier/); run records under [`results/`](results/).
+- **V4 · distillation line** — collecting and distilling human judgment *methods* (criteria, trade-offs, stopping rules) into structured datasets for **AI critical learning**: the objective is *method transfer to AI*, explicitly **not** building a behavioral profile. Collection datasets and ledgers live under [`results/`](results/) (`pi_cot` series).
+
+## Repository layout
+
+| Path | Contents |
+|---|---|
+| `tools/` | Experiment harness (`exp_harness.py`), LLM client (`llm_client.py`), figure generation |
+| `verifier/` | Audit suites and independent verification runs (`audit/`, `kill_lines/`, `runs/`, versioned checkers) |
+| `docs/` | Specifications, requirements, verification reports, findings & lessons (`V3X/`, `reviews/`) |
+| `results/` | Experimental records, audit registries and collection datasets (JSON) |
+| `paper/` | Manuscript sources (CN / EN) and figures |
+| `mindmap_corpus_v20.py`, `scripts/`, `run_*.py` | Mind-map corpus tooling and experiment runners |
+
+## Getting started
 
 ```bash
-pip install numpy requests
-export KIMI_API_KEY="your-key"   # 可选；不设置则自动使用规则引擎降级模式
-python3
+git clone https://github.com/zeroandcat/Deposon.git
+cd Deposon
+pip install -r requirements.txt          # numpy, requests
 ```
 
-```python
-from deposon_agents_v1_3 import DeposonAgentSystem, BenchmarkEvaluator
+- **API keys** (if you run LLM-backed experiments): provide them via **environment variables only** — never hard-code or commit keys. Several recorded experiments can be re-verified from cached data without any key.
+- Each experiment script is self-describing (see its header); outputs are written to `results/`.
 
-system = DeposonAgentSystem(llm_backend=None, mode='unified')   # 无key时规则引擎
-result = system.reason("小明有5个苹果，给了小红2个，又买了10个，一共几个？", domain_hint='math')
-print(result['best_path'], result['best_score'])
-print(result['deposon_stats']['ether_dissipated'])   # 以太耗散能量
+## Citation
 
-# 五变体消融
-ablation = system.ablation_study("...", domain_hint='math')
-print(system.report_ablation(ablation))
+```bibtex
+@misc{yuan2026deposon,
+  title         = {Deposon: An Auditable, Conservation-Guaranteed, Game-Theoretically Tested Scattering Layer over LLM Reasoning Paths},
+  author        = {Yuan, Qihao},
+  year          = {2026},
+  eprint        = {2609.09001},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  doi           = {10.48550/arXiv.2609.09001}
+}
 ```
-
-## 仓库结构
-
-```
-deposon_agents_v1_3.py     # 核心系统（DeposonState / EtherChannel / DeposonField /
-                           #   DeposonAgentSystem / LLMBackend / BenchmarkEvaluator）
-run_benchmark_v1_3.py      # 百题五变体消融 runner
-results/                   # 评测结果 JSON（含逐题明细引用）
-                           #   注: *details.json 大文件因托管载荷限制未入库,
-                           #   可由 run_benchmark 脚本 + deposon_cache 复现
-docs/                      # 需求文档、验证报告
-paper/                     # 论文（撰写中）
-```
-
-## 物理模型速查
-
-```
-t = 1/(1+g_eff+g_aether)   透射    r = g_eff/(1+g_eff+g_aether)   反射
-a = g_aether/(1+g_eff+g_aether) 耗散（不可逆沉积到以太）
-g_eff = g_couple/(1+detuning²)     共振增强
-守恒: E_final + E_reflected + E_dissipated = E_0
-```
-
-## 路线图
-
-- [x] v1.2 统一场框架 + 向量化散射 + 持久缓存
-- [x] v1.3 真实 LLM 后端 + 效应量根因修复 + validate 主环路
-- [ ] v1.4 真实 GSM8K 基准 + CoT 基线对照（进行中）
-- [ ] v1.5 节点共轭映射激活（v2 隧穿价值验证）
-- [ ] v2.0 硬件映射验证（PCM/MZI/ECM → 光子芯片）
 
 ## License
 
-MIT — 见 [LICENSE](LICENSE)
+MIT — see [LICENSE](LICENSE).
 
-> 注：`results/` 中的 details 大文件（如 `deposon_benchmark_v1_3_details.json`）因托管载荷限制未入库，可由 `run_benchmark_v1_3.py` / `run_benchmark_v1_4_gsm8k.py` 脚本结合本地缓存（`deposon_cache/`）完整复现。
+---
+
+## 中文简介（简版）
+
+**Deposon（凝子）**：让多步 LLM 推理**可机器复核**的散射层研究计划。**第一、二条线——V1 脑图主线 与 V2 博弈论解释——已成文发表**（[arXiv:2609.09001](https://arxiv.org/abs/2609.09001)，2026-09，cs.AI；作者：Qihao Yuan），本仓库即该计划的代码、验证与记录集；**V3 博弈论主线 与 V4 蒸馏主线 为进行中**。
+
+- **机制（V1＋V2 核心）**：概念分解图节点绑定「凝子态」，路径经三通道散射（透射／反射／不可逆耗散），对任意参数满足 `T+R+A=1`（逐路径审计偏差 ≤ 2.2e-16，机器精度）。
+- **已发表要点（如实）**：合成陷阱基准上路径筛选增益（预登记）**闭合**（unified 100% vs 抽取基线 7%／10%）；真实基准上与「6 关键词规则过滤」**无法区分**（GSM8K 0.87 vs 0.85；StrategyQA 0.899 vs 0.899）⇒ 主张收窄为「**差异化价值在于可机器验证性**」；融合为负结果；博弈论分析中三条动力学等价命题在预登记协议下**被证伪**、势博弈主张降级为**近似**。
+- **进行面**：**V3**＝机制程序延续（预登记判死协议、对抗与均衡分析、独立验证套件；`docs/V3X/`、`verifier/`、`results/`）；**V4**＝人类判断**方法**的蒸馏（服务于 AI 批判性学习，**方法迁移而非画像**；`results/` 之 `pi_cot` 系列）。
+- **密钥纪律**：一切 API key **只经环境变量**、0 硬编码、0 入库。｜**许可**：MIT（见 [LICENSE](LICENSE)）。
