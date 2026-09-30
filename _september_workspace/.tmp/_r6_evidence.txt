@@ -1,0 +1,218 @@
+
+===== paper =====
+  actual _v4_commission_paper_final_glm_2026_09_24.md                 10515 B  53A425FE1BD2
+  actual _v4_commission_paper_final_glm_2026_09_24_v2.md              13749 B  F3B3E13A0F1B
+  actual _v4_commission_paper_final_glm_2026_09_24_v3.md              20989 B  614DF9879696
+  actual _v4_commission_paper_final_glm_2026_09_24_v4.md              31531 B  D5337702CEC9
+
+  --- _v4_commission_paper_final_glm_2026_09_24_v3.md 沿革/版本槽位行 ---
+   L6: > **版本**：v3（沿 v2 `53A425FE1BD2` 的路径/计数/底账更新面 + 正式判定落定素材；**不含大纲 / 不附结构约束**——行文结构由 GLM 自由发挥）
+   L11: > - PI 2026-09-26 18:42 拍板 `ask_822b1e27` TH-v2-3 跨日 2 天达标 supersede
+   L13: > **v2 件状态**：v2 `letters/_v4_commission_paper_final_glm_2026_09_24_v2.md` 0 触动（沿 PI 2026-09-23「v1/v2 件一律不覆盖」纪律）
+   L23: ### 2.1 V3-V4 成就三目录盘点 + 勘误 + 补账 v1 + 补账件 v2 四件套
+   L28: | 勘误件 | `results/_v3_v4_achievements_inventory_3dir_erratum_2026_09_24.md` | 10,288 | `55CD332F66F2` | doc-writer（任务 B v2.2 三件在盘勘误） |
+   L29: | 补账件 v1（清理六棒） | `results/_v3_v4_achievements_inventory_3dir_addendum_2026_09_24.md` | 23,152 | `C64146C4CCAC` | doc-writer（清理六棒后最终布局登记面，2026-09-24 19:50） |
+   L30: | **补账件 v2（本轮新出）** | `results/_v3_v4_achievements_inventory_3dir_addendum_v2_2026_09_26.md` | （落盘后实测） | （落盘后实测） | doc-writer（**归档二棒后 + 全链补账**，2026-09-26 19:50） |
+   L32: **重点引用条款**：终稿引用任务 B v2.2 三件时请按 **勘误件 `55CD332F66F2` E1 字面**（实测在盘 + SHA-12 逐一 MATCH，本勘误件推翻原盘点件登记的「NOT-ON-DISK」误报）；终稿引用归档二棒布局时请按 **补账件 v2 §1 + §3 + §4 + §5 字面**（MAIN **986** / ARCHIVE 1,669 / SUB 467 三目录终态 + 51 件 B 类候选处置对账）；终稿引用清理六棒布局时请按 **补账件 v1 `C64146C4CCAC` §1 + §3 字面**（MAIN 799 / ARCHIVE 1,669 / SUB 441）。
+   L38: ### 2.3 V3 资产勘误链 v17（Trae code 走读出证，E-1…E-34）
+   L40: - `docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md`（198,204 B · SHA-12 `2DD8039D47E4`，含 E-1…E-34 完整登记 + v17 §22.7 E-34 5 子条 + §22.8 v17 SHA 自核 + §22.9 E-34 边界声明）
+   L47: - §5 E-22 / E-23 / E-24 / E-25 / E-26——任务 A1「145.82x」在非退化构造下崩塌至 1.0174x（**假证伪线索**）；N-29 真证伪（JS>0.50 13/22 graphs，p=0.001）；S-40 FAIL→PASS 重判；任务 B v1 假证伪改判（**禁止外推为「思维链不可蒸馏」**）；任务 B claim 由画像式改批判性学习式
+   L48: - **§20 E-31**（v14 新增）——R4 处置收口（3 件 redact pre/post + 5 指纹 CLOSED）；stale 事实注记（4 件 v4_supp hash manifest 不动 + MD §5.7/§5.8 + JSON sanity 链 manifest 引用 stale）；盘点误报根因（naming drift CONFIRMED，闭环勘误件 E1）；truncated `rk-…` 指纹 unrecorded CLOSED；清理一至六棒布局变更（578 件移动 + 87 件回收站删除，主目录 1,486 → 799；ledger v1–v5 全链 `4025E871726B` / `64C4EF850025` / `8F5136E176B8` / `9BD8932FA214` / `272E8C752406`）
+   L51: ### 2.4 任务 B 链（v2.2 正式判定落定）
+   L53: - 预登记：`results/_v4_pi_cot_v2_prereg.md`（4,247 B · SHA-12 `CC25C5149CE1`，v2.2 claim 重定三指标：结构相似 ≥0.8 + 分歧批判理由 100% + 盲从率 ≤0.1）
+   L54: - 数据集：`results/_v4_pi_cot_v2_dataset.json`（12,672 B · SHA-12 `7B01CD835A41`，v1.1 dataset，**推理全文隐私面严禁上传 / 严禁外发**）+ 9 件 addendum：
+   L55: - `results/_v4_pi_cot_v2_dataset_addendum_2026_09_24.json`（4,103 B · `172093A23E4B`，D1 supp）
+   L56: - `results/_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json`（6,132 B · `439721007AAF`，D2 wave1）
+   L57: - `results/_v4_pi_cot_v2_dataset_addendum_d2b_2026_09_26.json`（7,566 B · `41D6C28CA87C`，D2 wave2）
+   L58: - `results/_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json`（6,666 B · `99C58906F792`，D2 wave3）
+   L59: - `results/_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json`（7,668 B · `C6D092F77932`，D2 wave4）
+   L60: - `results/_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json`（10,257 B · `26F110A6E571`，D2 wave5，含 case#1 disposition_text 字面源）
+   L61: - `results/_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json`（11,589 B · `6E104E2DB038`，D3 wave1）
+   L62: - `results/_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json`（14,722 B · `D96B747BFC6C`，D3 wave2）
+   L63: - `results/_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json`（19,615 B · `401BD614CDF7`，D3 wave3）
+   L64: - 结果：`results/_v4_pi_cot_v2_result_v2.json`（18,089 B · SHA-12 `F86727C857A8`，含 main_reading 22 条 + alt_reading 17 条 + bootstrap CI `[0.0, 0.2045]` + `[0.0294, 0.3382]`）
+   L65: - 规则集：`results/_v4_pi_cot_v2_ruleset_v2.json`（6,179 B · SHA-12 `C5B3DD141655`，v2 词表扩 201 词 + 批判反思 35 词）+ executor `results/_v4_pi_cot_v2_ruleset_v2_executor.py`（52,465 B · SHA-12 `EB22F13D571C`）
+   L66: - **判定（论文 §4 负面结果章素材）**：`results/_v4_pi_cot_v2_verdict_v2.md`（33,723 B · SHA-12 `5D79E67A4E9D`，**正式判定 FAIL · 复合定性 2 复合 + 2 β**；K-V2-a 复合 / K-V2-b1 β / K-V2-b2 复合 / K-V2-c β；any_hit=True 字面成立）
+   L67: - coding review：`results/_v4_pi_cot_v2_coding_review_2026_09_26.md`（42,914 B · SHA-12 `5FBEC21E0AD2`，v2 词表扩 201 + 35 词字面引用 + 防退化审查 PASS）
+   L68: - verifier 独立复核签字：`results/_v4_pi_cot_v2_verdict_v2_signoff_2026_09_26.md`（26,637 B · SHA-12 `BA4D07BD7000`，VERDICT: PASS + 注记 1 项 K-N26-N1 out-of-scope 备案）
+   L72: PI 2026-09-23 明示：蒸馏 = **AI 批判性学习 PI 思维方式**，非画像；呼应 V1 脑图主题 G1「AI 应当如何思考」（`55428F6BD848`，GOAL_拓扑智能）。度量 = 结构相似 + 分歧批判理由 + 盲从率（**v1「复现一致率」画像式口径已废**）。
+   L86: - **虚实回路（FTFB）**——Fiction That Feeds Back: From Non-Euclidean Geometry to Machine Worldviews；盘上件 `results/_archive_2026_09_20/fiction_that_feeds_back.pdf`（23 页；trae_code 回函曾报 12-page 系版本误记）
+   L104: - **0 编造**——不知道的（模型名 / 论文号 / 会议缩写 / 工具版本 / 厂商代号）一律先搜或问
+   L105: - **GLM 模型名 / API 端点名 / 产品名三者的实际关系**——**涉 GLM 表述一律「以 PI 的 github 为唯一权威源（受托方已知）」**（沿 PI 2026-09-26 `ask_9c8751ec` 原文「KIMI与GLM知道即可」「你侧无额外补充」字面；本委托信不写具体 github URL，不写具体模型版本号，不擅自代填）
+   L111: - 通报截止时点：**2026-09-26 19:50 GMT+8**（本件出件时点 = 补账件 v2 出件时点）
+   L119: - 归档二棒后的 manifest v2 `F586A5A21584` / ledger v6 `CC498BC28525` / noise v3 `6F3F6FA3AB1D` 新件——**整段不动**
+   L130: - **是否纳入 V3-V4 勘误件 / 盘点件 / 补账件 v1 / 补账件 v2**：GLM 自定（按需在「方法 / 数据可用性 / 限制」节择用；不纳入同样不构成对盘点件 + 勘误件 + 补账件的否定）
+   L131: - **是否纳入 E-31 R4 处置收口 / E-34 5 子条**：GLM 自定（按需在「数据可用性 / 限制 / 复现性」节择用；不纳入同样不构成对 v14 E-31 + v17 E-34 的否定）
+   L139: - V3 报告层引用须**并列**给出勘误件 v17 的引用（避免单一来源风险）
+   L140: - **三目录盘点 / 勘误 / 补账 v1 / 补账件 v2 引用须四件套并列**（盘点件 `3E4E90FB48E1` + 勘误件 `55CD332F66F2` + 补账件 v1 `C64146C4CCAC` + 补账件 v2 [本轮新出]）
+   L145: - **交付路径**：本目录下追加回函件（命名建议 `letters/_v4_commission_paper_final_glm_reply_v3_2026_09_24.md`，与 v1/v2 回函件命名区分）+ 论文终稿本体放 `results/_v4_paper_final_<日期>_v1.0.md` 或 `.tex`
+   L152: - 任务 B v2.2 verdict 结论维持原判字面（正式判定 FAIL · 复合定性 2 复合 + 2 β / 假证伪疑点未排除 / 禁止外推）。
+   L155: - v2 件 `53A425FE1BD2` 0 触动；本件为 v3 新件新名。
+   L158: - **涉 GLM 表述一律以 PI 的 github 为唯一权威源（受托方已知）**——本委托信不写具体 github URL，不写具体模型版本号，不擅自代填（沿 `ask_9c8751ec`「你侧无额外补充」字面）。
+   L167: | 委托信 v2（0 触动） | `letters/_v4_commission_paper_final_glm_2026_09_24_v2.md` | 10,515 | `53A425FE1BD2` |
+   L170: | 三目录盘点补账件 v1 | `results/_v3_v4_achievements_inventory_3dir_addendum_2026_09_24.md` | 23,152 | `C64146C4CCAC` |
+   L171: | 三目录盘点补账件 v2（本轮新出） | `results/_v3_v4_achievements_inventory_3dir_addendum_v2_2026_09_26.md` | （落盘后实测） | （落盘后实测） |
+   L173: | V3 资产勘误链 v17 | `docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md` | 198,204 | `2DD8039D47E4` |
+   L174: | cleanup ledger v1（棒 2） | `results/_v4_maindir_cleanup_moves_ledger_2026_09_24.md` | 18,829 | `4025E871726B` |
+   L175: | cleanup ledger v2（棒 3） | `results/_v4_maindir_cleanup_moves_ledger_v2_2026_09_24.md` | 47,909 | `64C4EF850025` |
+   L180: | cleanup manifest v2（棒 7） | `results/_v4_maindir_cleanup_manifest_v2_2026_09_26.md` | 27,909 | `F586A5A21584` |
+   L185: | 任务 B v2.2 verdict 锚（§4 负面章核心） | `results/_v4_pi_cot_v2_verdict_v2.md` | 33,723 | `5D79E67A4E9D` |
+   L186: | 任务 B v2.2 verdict signoff | `results/_v4_pi_cot_v2_verdict_v2_signoff_2026_09_26.md` | 26,637 | `BA4D07BD7000` |
+   L187: | 任务 B v2.2 coding review | `results/_v4_pi_cot_v2_coding_review_2026_09_26.md` | 42,914 | `5FBEC21E0AD2` |
+   L188: | 任务 B v2.2 prereg | `results/_v4_pi_cot_v2_prereg.md` | 4,247 | `CC25C5149CE1` |
+   L189: | 任务 B v2.2 dataset | `results/_v4_pi_cot_v2_dataset.json` | 12,672 | `7B01CD835A41` |
+   L190: | 任务 B v2.2 ruleset_v2 | `results/_v4_pi_cot_v2_ruleset_v2.json` | 6,179 | `C5B3DD141655` |
+   L191: | 任务 B v2.2 ruleset_v2 executor | `results/_v4_pi_cot_v2_ruleset_v2_executor.py` | 52,465 | `EB22F13D571C` |
+   L192: | 任务 B v2.2 result_v2 | `results/_v4_pi_cot_v2_result_v2.json` | 18,089 | `F86727C857A8` |
+   L199: | V1 脑图 G1 主锚 | `corpus/v20/by_model/...`（详 `docs/V3X/` 报告层；G1 锚 `55428F6BD848`） | — | — |
+
+  VERDICT _v4_commission_paper_final_glm_2026_09_24_v3.md: 沿革行称 'v2 = 53A425FE1BD2'
+     实际 v1 _v4_commission_paper_final_glm_2026_09_24.md = 53A425FE1BD2
+     实际 v2 _v4_commission_paper_final_glm_2026_09_24_v2.md = F3B3E13A0F1B
+     → claimed == v1 值? True
+     → claimed == v2 值? False
+
+===== wechat =====
+  actual _v4_commission_wechat_report_coze_2026_09_24.md               7197 B  15F8227308BC
+  actual _v4_commission_wechat_report_coze_2026_09_24_v2.md           10599 B  389C51E70D19
+  actual _v4_commission_wechat_report_coze_2026_09_24_v3.md           13898 B  E5B63D181B15
+  actual _v4_commission_wechat_report_coze_2026_09_24_v4.md           21433 B  802C705E1469
+
+  --- _v4_commission_wechat_report_coze_2026_09_24_v3.md 沿革/版本槽位行 ---
+   L6: > **版本**：v3（沿 v2 `15F8227308BC` 的路径/计数/底账更新面 + 正式判定落定素材；**不含大纲 / 不附结构约束**——行文结构由 coze 自由发挥）
+   L10: > - PI 2026-09-26 18:42 拍板 `ask_822b1e27` TH-v2-3 跨日 2 天达标 supersede
+   L12: > **v2 件状态**：v2 `letters/_v4_commission_wechat_report_coze_2026_09_24_v2.md` 0 触动（沿 PI 2026-09-23「v1/v2 件一律不覆盖」纪律）
+   L22: ### 2.1 三目录盘点 + 勘误 + 补账 v1 + 补账件 v2 四件套（最新底账）
+   L27: | 勘误件 | `results/_v3_v4_achievements_inventory_3dir_erratum_2026_09_24.md` | 10,288 | `55CD332F66F2` | doc-writer（任务 B v2.2 三件在盘勘误） |
+   L28: | 补账件 v1（清理六棒） | `results/_v3_v4_achievements_inventory_3dir_addendum_2026_09_24.md` | 23,152 | `C64146C4CCAC` | doc-writer（清理六棒后最终布局登记面，2026-09-24 19:50） |
+   L29: | **补账件 v2（本轮新出）** | `results/_v3_v4_achievements_inventory_3dir_addendum_v2_2026_09_26.md` | （落盘后实测） | （落盘后实测） | doc-writer（**归档二棒后 + 全链补账**，2026-09-26 19:50） |
+   L31: ### 2.2 三目录终态实测口径（沿补账件 v2 §1 字面）
+   L35: | **MAIN** | **986** | 799（补账件 v1 §1 字面） | +187 |
+   L44: | **棒 7**（manifest v2 `F586A5A21584`） | 0 件移动（保守） | **28 件** mavis-trash（0 永久） | `F586A5A21584`（27,909 B） |
+   L52: ### 2.5 V3 资产勘误链 v17（含 E-34 5 子条 + E-31 R4 处置收口 + 清理六棒布局变更）
+   L54: - `docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md`（198,204 B · SHA-12 `2DD8039D47E4`，含 E-1…E-34 完整登记 + v17 §22.7 E-34 5 子条 + v14 §20 E-31 R4 处置收口 + 清理六棒布局变更）
+   L64: ### 2.7 任务 B 链（v2.2 正式判定落定 · 沿 ratify_formal=all 字面）
+   L66: - 预登记：`results/_v4_pi_cot_v2_prereg.md`（4,247 B · SHA-12 `CC25C5149CE1`，v2.2 claim 重定三指标：结构相似 ≥0.8 + 分歧批判理由 100% + 盲从率 ≤0.1）
+   L67: - 数据集：`results/_v4_pi_cot_v2_dataset.json`（12,672 B · SHA-12 `7B01CD835A41`，v1.1 dataset）+ 9 件 addendum
+   L68: - 规则集：`results/_v4_pi_cot_v2_ruleset_v2.json`（6,179 B · SHA-12 `C5B3DD141655`，v2 词表扩 201 词 + 批判反思 35 词）+ executor `results/_v4_pi_cot_v2_ruleset_v2_executor.py`（52,465 B · SHA-12 `EB22F13D571C`）
+   L69: - 结果：`results/_v4_pi_cot_v2_result_v2.json`（18,089 B · SHA-12 `F86727C857A8`）
+   L70: - **判定（论文 §4 负面结果章素材）**：`results/_v4_pi_cot_v2_verdict_v2.md`（33,723 B · SHA-12 `5D79E67A4E9D`，**正式判定 FAIL · 复合定性 2 复合 + 2 β**；any_hit=True 字面成立）
+   L71: - coding review：`results/_v4_pi_cot_v2_coding_review_2026_09_26.md`（42,914 B · SHA-12 `5FBEC21E0AD2`）
+   L72: - verifier 独立复核签字：`results/_v4_pi_cot_v2_verdict_v2_signoff_2026_09_26.md`（26,637 B · SHA-12 `BA4D07BD7000`，VERDICT: PASS + 注记 1 项）
+   L83: - 虚实回路（FTFB = Fiction That Feeds Back: From Non-Euclidean Geometry to Machine Worldviews；本项目盘上件 `results/_archive_2026_09_20/fiction_that_feeds_back.pdf`，23 页；trae_code 回函曾报 12-page 系版本误记）
+   L85: ### 2.10 R4 处置收口事实（沿 v14 §20 E-31 + 补账件 v2 §0 字面）
+   L103: - **0 编造**——不知道的（模型名 / 论文号 / 会议缩写 / 工具版本 / 厂商代号）一律先搜或问，不得「看着合理就写」
+   L108: - 通报截止时点：**2026-09-26 19:50 GMT+8**（本件出件时点 = 补账件 v2 出件时点）
+   L128: - **交付路径**：本目录下追加回函件（命名建议 `letters/_v4_commission_wechat_report_coze_reply_v3_2026_09_24.md`，与 v1/v2 回函件命名区分）
+   L135: - 任务 B v2.2 verdict 结论维持原判字面（正式判定 FAIL · 复合定性 2 复合 + 2 β / 假证伪疑点未排除 / 禁止外推）。
+   L137: - v2 件 `15F8227308BC` 0 触动；本件为 v3 新件新名。
+   L148: | 委托信 v2（0 触动） | `letters/_v4_commission_wechat_report_coze_2026_09_24_v2.md` | 7,197 | `15F8227308BC` |
+   L151: | 三目录盘点补账件 v1 | `results/_v3_v4_achievements_inventory_3dir_addendum_2026_09_24.md` | 23,152 | `C64146C4CCAC` |
+   L152: | 三目录盘点补账件 v2（本轮新出） | `results/_v3_v4_achievements_inventory_3dir_addendum_v2_2026_09_26.md` | （落盘后实测） | （落盘后实测） |
+   L153: | V3 资产勘误链 v17 | `docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md` | 198,204 | `2DD8039D47E4` |
+   L155: | cleanup manifest v2（棒 7） | `results/_v4_maindir_cleanup_manifest_v2_2026_09_26.md` | 27,909 | `F586A5A21584` |
+   L156: | cleanup ledger v1（棒 2） | `results/_v4_maindir_cleanup_moves_ledger_2026_09_24.md` | 18,829 | `4025E871726B` |
+   L157: | cleanup ledger v2（棒 3） | `results/_v4_maindir_cleanup_moves_ledger_v2_2026_09_24.md` | 47,909 | `64C4EF850025` |
+   L167: | 任务 B v2.2 verdict（论文 §4 素材） | `results/_v4_pi_cot_v2_verdict_v2.md` | 33,723 | `5D79E67A4E9D` |
+   L168: | 任务 B v2.2 verdict signoff | `results/_v4_pi_cot_v2_verdict_v2_signoff_2026_09_26.md` | 26,637 | `BA4D07BD7000` |
+   L169: | 任务 B v2.2 coding review | `results/_v4_pi_cot_v2_coding_review_2026_09_26.md` | 42,914 | `5FBEC21E0AD2` |
+   L170: | 任务 B v2.2 prereg | `results/_v4_pi_cot_v2_prereg.md` | 4,247 | `CC25C5149CE1` |
+   L171: | 任务 B v2.2 dataset | `results/_v4_pi_cot_v2_dataset.json` | 12,672 | `7B01CD835A41` |
+   L172: | 任务 B v2.2 ruleset_v2 | `results/_v4_pi_cot_v2_ruleset_v2.json` | 6,179 | `C5B3DD141655` |
+   L173: | 任务 B v2.2 ruleset_v2 executor | `results/_v4_pi_cot_v2_ruleset_v2_executor.py` | 52,465 | `EB22F13D571C` |
+   L174: | 任务 B v2.2 result_v2 | `results/_v4_pi_cot_v2_result_v2.json` | 18,089 | `F86727C857A8` |
+
+  VERDICT _v4_commission_wechat_report_coze_2026_09_24_v3.md: 沿革行称 'v2 = 15F8227308BC'
+     实际 v1 _v4_commission_wechat_report_coze_2026_09_24.md = 15F8227308BC
+     实际 v2 _v4_commission_wechat_report_coze_2026_09_24_v2.md = 389C51E70D19
+     → claimed == v1 值? True
+     → claimed == v2 值? False
+
+===== upload_executor =====
+  actual _v4_commission_upload_executor_2026_09_24.md                 13012 B  ADFA7DD03F76
+  actual _v4_commission_upload_executor_2026_09_24_v2.md              16894 B  FF2154CE182D
+  actual _v4_commission_upload_executor_2026_09_24_v3.md              25091 B  C20D4F58F5C8
+
+  --- _v4_commission_upload_executor_2026_09_24_v3.md 沿革/版本槽位行 ---
+   L6: > **版本**：v3（沿 v2 `ADFA7DD03F76` 13,012 B 的路径/计数/上传清单更新面 + on-disk SHA-12 锚口径 + 归档二棒后终态）
+   L10: > - PI 2026-09-26 18:42 拍板 `ask_822b1e27` TH-v2-3 跨日 2 天达标 supersede
+   L13: > **v2 件状态**：v2 `letters/_v4_commission_upload_executor_2026_09_24_v2.md` 0 触动（沿 PI 2026-09-23「v1/v2 件一律不覆盖」纪律）
+   L22: > **v3 与 v2 关键差异**：
+   L23: > - v2 字面以补账件 v1 19:50 快照（MAIN 799）为底账；**v3 以补账件 v2 19:50 快照（MAIN 986）为底账**——上传清单与 no-upload 清单均按最终布局重排
+   L25: > - 任务 B v2.2 正式判定 `5D79E67A4E9D` 复合定性落定素材（FAIL · 2 复合 + 2 β）+ N-26 真审终裁 `F4435801D09F` 字面加入负面结果章素材清单
+   L34: - 补账件 v1：`results/_v3_v4_achievements_inventory_3dir_addendum_2026_09_24.md`（23,152 B · SHA-12 `C64146C4CCAC`，doc-writer 出具，清理六棒后最终布局登记面）
+   L35: - **补账件 v2（本轮新出）**：`results/_v3_v4_achievements_inventory_3dir_addendum_v2_2026_09_26.md`（SHA-12 实测）· **归档二棒后 + 全链补账，2026-09-26 19:50**
+   L36: - **路径取数**：以本轮归档二棒后**新路径**为准——v6 ledger `CC498BC28525` §3 旧→新路径对账表（v1 ledger `4025E871726B` 不动 + v2-v5 ledger 各自 §A/§B `64C4EF850025` / `8F5136E176B8` / `9BD8932FA214` / `272E8C752406`）作为补充核对源
+   L38: - **通报截止时点**：**2026-09-26 19:50 GMT+8**（本件出件时点 = 补账件 v2 出件时点）；凡此之后 PI 拍板之新口径以 PI 当日拍板为准
+   L40: ### 2.2 Tag-A 上传清单（MAIN 内正式成果候选 · 沿补账件 v2 §8.1 字面）
+   L71: | 26 | `results/_v4_pi_cot_v2_ruleset_v2.json` | `C5B3DD141655` | 6,179 | 协作圈知识库（v2 词表扩 201 词 + 35 批判反思词） |
+   L72: | 27 | `results/_v4_pi_cot_v2_ruleset_v2_executor.py` | `EB22F13D571C` | 52,465 | 协作圈知识库 |
+   L73: | 28 | `results/_v4_pi_cot_v2_verdict_v2.md` | `5D79E67A4E9D` | 33,723 | 协作圈知识库（**论文 §4 负面结果章素材**） |
+   L74: | 29 | `results/_v4_pi_cot_v2_coding_review_2026_09_26.md` | `5FBEC21E0AD2` | 42,914 | 协作圈知识库 |
+   L75: | 30 | `results/_v4_supp_l6_s38v2_rootcause_verdict.md` | `973103878D6F` | 24,847 | 协作圈知识库 |
+   L77: > v3 与 v2 字面差异：Tag-A 由 v2 之 28 件扩展为 **30 件**（v2.2 ruleset_v2 executor + v2.2 verdict + coding review 为本轮新增正式成果件；沿补账件 v2 §8.1 字面 30 件）
+   L79: ### 2.3 Tag-B 上传清单（MAIN 内 cleanup 链 10 件 · v3 较 v2 增 4 件）
+   L84: | B-2 | `results/_v4_maindir_cleanup_moves_ledger_2026_09_24.md` | `4025E871726B` | 18,829 | 协作圈知识库（v1 ledger） |
+   L85: | B-3 | `results/_v4_maindir_cleanup_moves_ledger_v2_2026_09_24.md` | `64C4EF850025` | 47,909 | 协作圈知识库（v2 ledger · 棒 3） |
+   L90: | B-8（v3 新增） | `results/_v4_maindir_cleanup_manifest_v2_2026_09_26.md` | `F586A5A21584` | 27,909 | 协作圈知识库（棒 7 manifest v2） |
+   L94: > v3 与 v2 字面差异：Tag-B 由 v2 之 6 件扩展为 **10 件**（noise v3 + manifest v2 + ledger v6 + 审链件 4 件为归档二棒 / 证据链期间新增）
+   L96: ### 2.4 本轮出具之勘误件 + 补账件 + 补账件 v2 + 勘误链 v17（v3 较 v2 增补账件 v2 + 勘误链 v17）
+   L102: | E-3（v3 新增） | `results/_v3_v4_achievements_inventory_3dir_addendum_v2_2026_09_26.md` | （落盘后实测） | （落盘后实测） | 协作圈知识库（**归档二棒后 + 全链补账**，与 E-1 + E-2 + 盘点件同步发布） |
+   L103: | E-4 | `docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md`（v17） | `2DD8039D47E4` | 198,204 | 协作圈知识库（含 E-1…E-34 完整登记 + v17 §22.7 E-34 5 子条 + v14 §20 E-31 R4 处置收口） |
+   L105: > v3 与 v2 字面差异：E 由 v2 之 3 件扩展为 **4 件**（E-3 补账件 v2 + E-4 勘误链 v17 为归档二棒 / 拍板留痕后新增；E-4 字节由 v14 141,013 增至 v17 198,204，差异源于 §21 E-32 + §22 E-33 + §22.7 E-34 三段追加）
+   L113: ### 3.1 dataset 推理全文隐私面（v3 沿 v2 字面 · 沿 ledger v6 §4.2 字面 10 件留原地）
+   L119: | `results/_v4_pi_cot_v2_dataset.json`（12,672 B · SHA-12 `7B01CD835A41`） | 任务 B v2.2 dataset，**含推理全文 / 拍板痕迹 / 原始 prompt / 原始输出** | **仅入本地件；禁止公网化** |
+   L120: | `results/_v4_pi_cot_v2_dataset_addendum_2026_09_24.json`（4,103 B · `172093A23E4B`） | dataset addendum | **仅入本地件** |
+   L121: | `results/_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json`（6,132 B · `439721007AAF`） | D2 wave1 | **仅入本地件** |
+   L122: | `results/_v4_pi_cot_v2_dataset_addendum_d2b_2026_09_26.json`（7,566 B · `41D6C28CA87C`） | D2 wave2 | **仅入本地件** |
+   L123: | `results/_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json`（6,666 B · `99C58906F792`） | D2 wave3 | **仅入本地件** |
+   L124: | `results/_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json`（7,668 B · `C6D092F77932`） | D2 wave4 | **仅入本地件** |
+   L125: | `results/_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json`（10,257 B · `26F110A6E571`） | D2 wave5 | **仅入本地件** |
+   L126: | `results/_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json`（11,589 B · `6E104E2DB038`） | D3 wave1 | **仅入本地件** |
+   L127: | `results/_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json`（14,722 B · `D96B747BFC6C`） | D3 wave2 | **仅入本地件** |
+   L128: | `results/_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json`（19,615 B · `401BD614CDF7`） | D3 wave3 | **仅入本地件** |
+   L130: > v3 字面较 v2 字面差异：v2 字面以 5 件 dataset + verdict/result 列严禁；**v3 字面明示 10 件 dataset（v1.1 + 9 件 addendum）全部严禁**（沿 ledger v6 §4.2 字面「dataset 七件 / 实测 10 件」口径 + signoff `BA4D07BD7000` §0.4 字面 9 件 addendum 实测）
+   L135: > - `results/_v4_pi_cot_v2_prereg.md`（4,247 B · SHA-12 `CC25C5149CE1`）= 任务 B v2.2 prereg（claim 重定三指标）= **可入协作圈知识库**（无隐私面）；dataset / verdict / result 严禁跟随
+   L136: > - `results/_v4_pi_cot_v2_verdict_v2.md`（33,723 B · SHA-12 `5D79E67A4E9D`）= 任务 B v2.2 verdict **可入协作圈知识库**（沿 §2.2 #28 列入 Tag-A）；verdict 全文含 kill-line 字面 + 复合定性字面 + 诚实纪律复核字面（非推理全文隐私面）；但 verdict 字面外**严禁跟随 dataset / result / addendum**
+   L138: ### 3.2 `_non_upload_local_archive` 内件（v3 较 v2 更新件数：全 1,669 件严禁上传）
+   L142: > v3 与 v2 字面差异：v2 字面以「V1-V2 时代冻结快照 + 私有归档面」描述；**v3 字面维持 1,669 件实测数 + 归档二棒 0 件移入（沿 ledger v6 §0 字面「arch 实际 = 1,669（本棒未触 A 路径，0 变化）」）**
+   L146: ### 3.3 SUB / 其他仓外目录内件（v3 沿 v2 字面 · 沿 ledger v6 §E.2 字面 6 项路径差异注记）
+   L148: - **SUB**（`D:\私人资料\deposon-sub\`）——除 §2 已列入外，**Tag-C / B-path 移出件 / 灰区件 / `_archive_2026_09_20/` 旧归档件严禁上传**（详 v2 ledger `64C4EF850025` §C/§G 对账表 + v3/v4/v6 ledger §A/§B）；本目录终态 467 件中 0 件在 §2 上传清单内
+   L151: 1. `_v4_pi_cot_v2_coding_review_2026_09_26.md` 字面引用 `_tmp_*.py`（4 件：`_tmp_degen.py` / `_tmp_v1_recompute.py` / `_tmp_v2_redesign.py` / `_tmp_verify.py`）——已 Move-Item 至 `deposon-sub/_tmp_*.py`（sub root），引用方文本不动
+   L183: - 回函路径：`letters/_v4_commission_upload_executor_reply_v3_2026_09_24.md`（命名建议，与 v1/v2 回函件命名区分）
+   L188: - 所有路径引用**仅路径 + SHA-12 + 字节数**（如 `results/_v3_v4_achievements_inventory_3dir_addendum_v2_2026_09_26.md` · 落盘后实测字节 · SHA-12 落盘后实测）
+   L189: - v6 ledger 路径对账：详 `results/_v4_maindir_cleanup_moves_ledger_v6_2026_09_26.md` §3（旧→新路径对账表）+ v1-v5 ledger 各自 §A/§B/§C/§G 作为补充核对源
+   L192: - **三目录盘点 / 勘误 / 补账 v1 / 补账件 v2 引用须四件套并列**（盘点件 `3E4E90FB48E1` + 勘误件 `55CD332F66F2` + 补账件 v1 `C64146C4CCAC` + 补账件 v2 [本轮新出]）
+   L197: - **交付路径**：`letters/_v4_commission_upload_executor_reply_v3_2026_09_24.md`（命名建议，与 v1/v2 回函件命名区分）
+   L211: - §3.1 dataset 10 件（v1.1 + 9 件 addendum）严禁公网化——任何「为方便起见贴 chat 工具核验」均违规
+   L214: - v2 件 `ADFA7DD03F76` 0 触动；本件为 v3 新件新名
+   L217: - **涉 KIMI / GLM 表述一律以 PI 的 github 为唯一权威源（受托方已知）**——本委托信不写具体 github URL，不写具体模型版本号，不擅自代填（沿 `ask_9c8751ec`「你侧无额外补充」字面）
+   L226: | 委托信 v2（0 触动） | `letters/_v4_commission_upload_executor_2026_09_24_v2.md` | 13,012 | `ADFA7DD03F76` |
+   L229: | 三目录盘点补账件 v1 | `results/_v3_v4_achievements_inventory_3dir_addendum_2026_09_24.md` | 23,152 | `C64146C4CCAC` |
+   L230: | 三目录盘点补账件 v2（本轮新出） | `results/_v3_v4_achievements_inventory_3dir_addendum_v2_2026_09_26.md` | （落盘后实测） | （落盘后实测） |
+   L232: | cleanup ledger v1（棒 2） | `results/_v4_maindir_cleanup_moves_ledger_2026_09_24.md` | 18,829 | `4025E871726B` |
+   L233: | cleanup ledger v2（棒 3，路径对账表） | `results/_v4_maindir_cleanup_moves_ledger_v2_2026_09_24.md` | 47,909 | `64C4EF850025` |
+   L238: | cleanup manifest v2（棒 7） | `results/_v4_maindir_cleanup_manifest_v2_2026_09_26.md` | 27,909 | `F586A5A21584` |
+   L241: | V3 资产勘误链 v17 | `docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md` | 198,204 | `2DD8039D47E4` |
+   L242: | 任务 B v2.2 verdict（§2.2 #28，§3.1 严禁全文） | `results/_v4_pi_cot_v2_verdict_v2.md` | 33,723 | `5D79E67A4E9D` |
+   L243: | 任务 B v2.2 verdict signoff | `results/_v4_pi_cot_v2_verdict_v2_signoff_2026_09_26.md` | 26,637 | `BA4D07BD7000` |
+   L244: | 任务 B v2.2 coding review | `results/_v4_pi_cot_v2_coding_review_2026_09_26.md` | 42,914 | `5FBEC21E0AD2` |
+   L245: | 任务 B v2.2 ruleset_v2 | `results/_v4_pi_cot_v2_ruleset_v2.json` | 6,179 | `C5B3DD141655` |
+   L246: | 任务 B v2.2 ruleset_v2 executor | `results/_v4_pi_cot_v2_ruleset_v2_executor.py` | 52,465 | `EB22F13D571C` |
+   L247: | 任务 B v2.2 prereg（§3.1 可入协作圈） | `results/_v4_pi_cot_v2_prereg.md` | 4,247 | `CC25C5149CE1` |
+   L248: | 任务 B v2.2 dataset（§3.1 严禁） | `results/_v4_pi_cot_v2_dataset.json` | 12,672 | `7B01CD835A41` |
+   L249: | 任务 B v2.2 dataset addendum（§3.1 严禁） | `results/_v4_pi_cot_v2_dataset_addendum_2026_09_24.json` | 4,103 | `172093A23E4B` |
+   L250: | 任务 B v2.2 dataset addendum d2（§3.1 严禁） | `results/_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json` | 6,132 | `439721007AAF` |
+   L251: | 任务 B v2.2 dataset addendum d2b（§3.1 严禁） | `results/_v4_pi_cot_v2_dataset_addendum_d2b_2026_09_26.json` | 7,566 | `41D6C28CA87C` |
+   L252: | 任务 B v2.2 dataset addendum d2c（§3.1 严禁） | `results/_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json` | 6,666 | `99C58906F792` |
+   L253: | 任务 B v2.2 dataset addendum d2d（§3.1 严禁） | `results/_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json` | 7,668 | `C6D092F77932` |
+   L254: | 任务 B v2.2 dataset addendum d2e（§3.1 严禁） | `results/_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json` | 10,257 | `26F110A6E571` |
+   L255: | 任务 B v2.2 dataset addendum d3a（§3.1 严禁） | `results/_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json` | 11,589 | `6E104E2DB038` |
+   L256: | 任务 B v2.2 dataset addendum d3b（§3.1 严禁） | `results/_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json` | 14,722 | `D96B747BFC6C` |
+   L257: | 任务 B v2.2 dataset addendum d3c（§3.1 严禁） | `results/_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json` | 19,615 | `401BD614CDF7` |
+
+  VERDICT _v4_commission_upload_executor_2026_09_24_v3.md: 沿革行称 'v2 = ADFA7DD03F76'
+     实际 v1 _v4_commission_upload_executor_2026_09_24.md = ADFA7DD03F76
+     实际 v2 _v4_commission_upload_executor_2026_09_24_v2.md = FF2154CE182D
+     → claimed == v1 值? True
+     → claimed == v2 值? False

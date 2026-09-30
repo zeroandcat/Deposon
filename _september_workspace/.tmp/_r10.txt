@@ -1,0 +1,24 @@
+_v4_pi_cot_v2_dataset_addendum_2026_09_24.json             4103 B actual=172093A23E4B self=6F76EAE13FA0 drift=True  bom=False schema=v4_pi_cot_v2_dataset_addendum/1
+_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json          6132 B actual=439721007AAF self=9445AF20688B drift=True  bom=False schema=v4_pi_cot_v2_dataset_addendum_d2/1
+_v4_pi_cot_v2_dataset_addendum_d2b_2026_09_26.json         7566 B actual=41D6C28CA87C self=31EFC6DEA05B drift=True  bom=False schema=v4_pi_cot_v2_dataset_addendum_d2b/1
+_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json         6666 B actual=99C58906F792 self=F5B19F4635D0 drift=True  bom=False schema=v4_pi_cot_v2_dataset_addendum_d2c/1
+_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json         7668 B actual=C6D092F77932 self=6C486E1E6716 drift=True  bom=False schema=v4_pi_cot_v2_dataset_addendum_d2d/1
+_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json        10257 B actual=26F110A6E571 self=C9D38A166010 drift=True  bom=False schema=v4_pi_cot_v2_dataset_addendum_d2e/1
+_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json        11589 B actual=6E104E2DB038 self=924189172216 drift=True  bom=False schema=v4_pi_cot_v2_dataset_addendum_d3a/1
+_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json        14722 B actual=D96B747BFC6C self=539C197E51D8 drift=True  bom=False schema=v4_pi_cot_v2_dataset_addendum_d3b/1
+_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json        19615 B actual=401BD614CDF7 self=367723816B89 drift=True  bom=False schema=v4_pi_cot_v2_dataset_addendum_d3c/1
+
+coding review fingerprint/drift lines:
+  L22: | `_v4_pi_cot_v2_dataset_addendum_2026_09_24.json` | 6F76EAE13FA0（自报 fingerprint_self_hash_after_birth） | 172093A23E4B（**实测，与自报值不一致**——见 §5.7 已知哈希漂移） | ⚠ 漂移 |
+  L30: | `_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json` | 367723816B89（自报 fingerprint_self_hash_after_birth） | 401BD614CDF7（**实测，与自报值不一致**——见 §5.7 已知哈希漂移） | ⚠ 漂移 |
+  L431: 本复核件 §0 SHA-12 表实测发现 2 件 addendum 文件存在**自报 fingerprint_self_hash_after_birth 与文件实测 SHA-12 不一致**的已知漂移：
+  L433: | 件 | 自报 fingerprint_self_hash_after_birth | 实测 SHA-12 |
+  L439: - `_v4_pi_cot_v2_dataset_addendum_2026_09_24.json`：可能因落盘后追加字段（如 `metadata.author / metadata.encoding / metadata.line_ending / metadata.track` 等后续 worker 修订）导致 fingerprint 漂移
+  L440: - `_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json`：d3c honesty_note 字面已自报「与 d3b 自报 fingerprint_self_hash_after_birth=539C197E51D8 不一致，沿用实际值」（d3c 沿 d3b 先例如实处理自报 vs 实测漂移）
+  L444: - 不擅自修改任何 addendum 文件的 `fingerprint_self_hash_after_birth` 字段（避免触动既有件）
+  L446: - **实测 SHA-12 为权威值**，自报 fingerprint_self_hash_after_birth 仅作历史参考
+
+d3c self-description lines:
+  L42: "honesty_note": "D3 第 3 波(三读稳定性探针·终波)4 条入库(Q11/Q12/Q16/Q17 均为对 dataset v1.1 早期事件的三读重判,read_index=3,稳定性探针),逐字录入不改写/润色/补全标点。D1 原读日期 2026-09-24 → D3 三读日期 2026-09-26 间隔 2 天,跨日满足稳定性探针设计预期(非配对反转件,仅作判定漂移事实采集)。Q11/Q17 三读为复合回答 option_chosen=Other(AB
+  L171: "rationale": "V4 铁律沿用口径 (R4 key 永不明文沿用无例外; V1-V3 只读不动; 派生 JSON 不合并); 本附录为独立新件, 不触动 dataset / prereg / result / verdict 任何既有件; dataset v1.1 落盘前后 SHA-12 复验不变 (7B01CD835A41 -> 7B01CD835A41); D2 wave1 件落盘前后 SHA-12 复验不变 (439721007AAF -> 43972100
+  L173: "fingerprint_self_hash_after_birth": "367723816B89",

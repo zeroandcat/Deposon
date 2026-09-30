@@ -1,0 +1,358 @@
+{
+  "V1_ast_parse": true,
+  "V2_three_stage": true,
+  "V2_old_writeface_zero": true,
+  "V2_src_still_nonatomic": true,
+  "V2_rows": [
+    {
+      "dst": "results/_v4_supp_t15_executor_r0_atomic_2026_09_29.py",
+      "bytes": 66317,
+      "sha12": "7da23c0e94cf",
+      "ast_parse": "PASS",
+      "src_still_nonatomic": true,
+      "dst_old_writeface_hits": [],
+      "dst_calls_helper": 1,
+      "has_tmp_pid": true,
+      "has_flush": true,
+      "has_fsync": true,
+      "has_os_replace": true,
+      "has_mkdir": true,
+      "three_stage_all_true": true,
+      "atomic_line_hits": [
+        "L487",
+        "L488"
+      ]
+    },
+    {
+      "dst": "results/_v4_supp_t15r2_executor_r0_atomic_2026_09_29.py",
+      "bytes": 89083,
+      "sha12": "678032f726a8",
+      "ast_parse": "PASS",
+      "src_still_nonatomic": true,
+      "dst_old_writeface_hits": [],
+      "dst_calls_helper": 1,
+      "has_tmp_pid": true,
+      "has_flush": true,
+      "has_fsync": true,
+      "has_os_replace": true,
+      "has_mkdir": true,
+      "three_stage_all_true": true,
+      "atomic_line_hits": [
+        "L516",
+        "L517"
+      ]
+    },
+    {
+      "dst": "results/_archive_2026_09_24/l14_runner_v2_r1_atomic_2026_09_29.py",
+      "bytes": 25892,
+      "sha12": "b1923528ab84",
+      "ast_parse": "PASS",
+      "src_still_nonatomic": true,
+      "dst_old_writeface_hits": [],
+      "dst_calls_helper": 2,
+      "has_tmp_pid": true,
+      "has_flush": true,
+      "has_fsync": true,
+      "has_os_replace": true,
+      "has_mkdir": true,
+      "three_stage_all_true": true,
+      "atomic_line_hits": [
+        "L86",
+        "L87"
+      ]
+    }
+  ],
+  "V3_untouched_files": [
+    {
+      "path": "results/_v4_supp_t15_executor.py",
+      "expect": "558e635f9ba6",
+      "got": "558e635f9ba6",
+      "match": true
+    },
+    {
+      "path": "results/_v4_supp_t15r2_executor.py",
+      "expect": "4b5b720d5cda",
+      "got": "4b5b720d5cda",
+      "match": true
+    },
+    {
+      "path": "results/_archive_2026_09_24/l14_runner_v2.py",
+      "expect": "acf1cd6ccbd4",
+      "got": "acf1cd6ccbd4",
+      "match": true
+    },
+    {
+      "path": "results/_v4_supp_t15_executor_r1_2026_09_27.py",
+      "expect": "6d22444c65af",
+      "got": "6d22444c65af",
+      "match": true
+    },
+    {
+      "path": "results/_v4_supp_t15_executor_r2_atomic_2026_09_28.py",
+      "expect": "9e89e021ea03",
+      "got": "9e89e021ea03",
+      "match": true
+    },
+    {
+      "path": "results/_v4_supp_t15_executor_r3_2026_09_28.py",
+      "expect": "b86cce242abe",
+      "got": "b86cce242abe",
+      "match": true
+    },
+    {
+      "path": "results/_v4_supp_t15r2_executor_r1_2026_09_28.py",
+      "expect": "e0936a68fa82",
+      "got": "e0936a68fa82",
+      "match": true
+    },
+    {
+      "path": "results/_v4_supp_t15r2_executor_r2_atomic_2026_09_28.py",
+      "expect": "215db16a0556",
+      "got": "215db16a0556",
+      "match": true
+    },
+    {
+      "path": "results/_v4_supp_t15r2_executor_r3_2026_09_28.py",
+      "expect": "4f514b3fb4b8",
+      "got": "4f514b3fb4b8",
+      "match": true
+    }
+  ],
+  "V3_untouched_all_match": true,
+  "V3_frozen": {
+    "n": 18,
+    "pass": 18,
+    "mismatch": []
+  },
+  "V_scratch_preclean": {
+    "rc": 0,
+    "out": "mavis-trash: moved to trash: 'D:\\绉佷汉璧勬枡\\deposon-repo\\.tmp\\_tail3_scratch'"
+  },
+  "V4_byte_identity": [
+    {
+      "dst": "results/_v4_supp_t15_executor_r0_atomic_2026_09_29.py",
+      "atomic_rc": 0,
+      "old_rc": 0,
+      "atomic_bytes": 5508890,
+      "old_bytes": 5508890,
+      "atomic_sha12": "13425104558a",
+      "old_sha12": "13425104558a",
+      "byte_identical": true,
+      "matches_payload_bytes": true,
+      "tmp_leftovers": []
+    },
+    {
+      "dst": "results/_v4_supp_t15r2_executor_r0_atomic_2026_09_29.py",
+      "atomic_rc": 0,
+      "old_rc": 0,
+      "atomic_bytes": 5508890,
+      "old_bytes": 5508890,
+      "atomic_sha12": "13425104558a",
+      "old_sha12": "13425104558a",
+      "byte_identical": true,
+      "matches_payload_bytes": true,
+      "tmp_leftovers": []
+    },
+    {
+      "dst": "results/_archive_2026_09_24/l14_runner_v2_r1_atomic_2026_09_29.py",
+      "atomic_rc": 0,
+      "old_rc": 0,
+      "atomic_bytes": 5508890,
+      "old_bytes": 5508890,
+      "atomic_sha12": "13425104558a",
+      "old_sha12": "13425104558a",
+      "byte_identical": true,
+      "matches_payload_bytes": true,
+      "tmp_leftovers": []
+    }
+  ],
+  "V5_crash_semantics": [
+    {
+      "dst": "results/_v4_supp_t15_executor_r0_atomic_2026_09_29.py",
+      "atomic_seed_sha12": "6d61e84adfbc",
+      "atomic_after_sha12": "6d61e84adfbc",
+      "atomic_state": "ORIGINAL_UNTOUCHED",
+      "atomic_state_ok": true,
+      "atomic_json_loads_ok": true,
+      "atomic_kill_happened": true,
+      "atomic_tmp_leftover": [
+        "v50.json.tmp_4676"
+      ],
+      "control_kill_happened": true,
+      "control_after_sha12": "13425104558a",
+      "control_bytes": 5508890,
+      "control_seed_bytes": 412090,
+      "control_destroyed": true,
+      "control_json_loads_ok": true
+    },
+    {
+      "dst": "results/_v4_supp_t15r2_executor_r0_atomic_2026_09_29.py",
+      "atomic_seed_sha12": "6d61e84adfbc",
+      "atomic_after_sha12": "13425104558a",
+      "atomic_state": "NEW_COMPLETE",
+      "atomic_state_ok": true,
+      "atomic_json_loads_ok": true,
+      "atomic_kill_happened": true,
+      "atomic_tmp_leftover": [
+        "v51.json.tmp_3940"
+      ],
+      "control_kill_happened": true,
+      "control_after_sha12": "13425104558a",
+      "control_bytes": 5508890,
+      "control_seed_bytes": 412090,
+      "control_destroyed": true,
+      "control_json_loads_ok": true
+    },
+    {
+      "dst": "results/_archive_2026_09_24/l14_runner_v2_r1_atomic_2026_09_29.py",
+      "atomic_seed_sha12": "6d61e84adfbc",
+      "atomic_after_sha12": "6d61e84adfbc",
+      "atomic_state": "ORIGINAL_UNTOUCHED",
+      "atomic_state_ok": true,
+      "atomic_json_loads_ok": true,
+      "atomic_kill_happened": true,
+      "atomic_tmp_leftover": [
+        "v52.json.tmp_876"
+      ],
+      "control_kill_happened": true,
+      "control_after_sha12": "13425104558a",
+      "control_bytes": 5508890,
+      "control_seed_bytes": 412090,
+      "control_destroyed": true,
+      "control_json_loads_ok": true
+    }
+  ],
+  "V4_all_identical": true,
+  "V5_atomic_state_all_ok": true,
+  "V5_control_all_destroyed": true,
+  "V6_diff_scope": [
+    {
+      "src": "results/_v4_supp_t15_executor.py",
+      "dst": "results/_v4_supp_t15_executor_r0_atomic_2026_09_29.py",
+      "hunks": 4,
+      "removed_lines": [
+        "_v4_supp_t15_executor.py",
+        "    CHECKPOINT_PATH.parent.mkdir(parents=True, exist_ok=True)",
+        "    CHECKPOINT_PATH.write_text(json.dumps(records, ensure_ascii=False),",
+        "                               encoding=\"utf-8\")"
+      ],
+      "added_code_lines": [
+        "L474 def _atomic_write_json(obj, path, indent=None):",
+        "L481 path.parent.mkdir(parents=True, exist_ok=True)",
+        "L482 tmp = path.with_name(f\"{path.name}.tmp_{os.getpid()}\")",
+        "L483 try:",
+        "L484 with open(tmp, \"w\", encoding=\"utf-8\") as f:",
+        "L485 json.dump(obj, f, ensure_ascii=False, indent=indent)",
+        "L486 f.flush()",
+        "L487 os.fsync(f.fileno())",
+        "L488 os.replace(tmp, path)   # 同卷原子替换: 要么全量新内容, 要么原内容",
+        "L489 except BaseException:",
+        "L491 raise",
+        "L496 _atomic_write_json(records, CHECKPOINT_PATH)"
+      ],
+      "unauthorized_removed": [],
+      "unauthorized_added": []
+    },
+    {
+      "src": "results/_v4_supp_t15r2_executor.py",
+      "dst": "results/_v4_supp_t15r2_executor_r0_atomic_2026_09_29.py",
+      "hunks": 4,
+      "removed_lines": [
+        "_v4_supp_t15r2_executor.py",
+        "    T15R2_CHECKPOINT_PATH.parent.mkdir(parents=True, exist_ok=True)",
+        "    T15R2_CHECKPOINT_PATH.write_text(json.dumps(r2_records, ensure_ascii=False),",
+        "                                     encoding=\"utf-8\")"
+      ],
+      "added_code_lines": [
+        "L503 def _atomic_write_json(obj, path, indent=None):",
+        "L510 path.parent.mkdir(parents=True, exist_ok=True)",
+        "L511 tmp = path.with_name(f\"{path.name}.tmp_{os.getpid()}\")",
+        "L512 try:",
+        "L513 with open(tmp, \"w\", encoding=\"utf-8\") as f:",
+        "L514 json.dump(obj, f, ensure_ascii=False, indent=indent)",
+        "L515 f.flush()",
+        "L516 os.fsync(f.fileno())",
+        "L517 os.replace(tmp, path)   # 同卷原子替换: 要么全量新内容, 要么原内容",
+        "L518 except BaseException:",
+        "L520 raise",
+        "L525 _atomic_write_json(r2_records, T15R2_CHECKPOINT_PATH)"
+      ],
+      "unauthorized_removed": [],
+      "unauthorized_added": []
+    },
+    {
+      "src": "results/_archive_2026_09_24/l14_runner_v2.py",
+      "dst": "results/_archive_2026_09_24/l14_runner_v2_r1_atomic_2026_09_29.py",
+      "hunks": 3,
+      "removed_lines": [
+        "            CHECKPOINT.write_text(json.dumps(records, ensure_ascii=False), encoding=\"utf-8\")",
+        "CHECKPOINT.write_text(json.dumps(records, ensure_ascii=False), encoding=\"utf-8\")"
+      ],
+      "added_code_lines": [
+        "L73 def _atomic_write_json(obj, path, indent=None):",
+        "L80 path.parent.mkdir(parents=True, exist_ok=True)",
+        "L81 tmp = path.with_name(f\"{path.name}.tmp_{os.getpid()}\")",
+        "L82 try:",
+        "L83 with open(tmp, \"w\", encoding=\"utf-8\") as f:",
+        "L84 json.dump(obj, f, ensure_ascii=False, indent=indent)",
+        "L85 f.flush()",
+        "L86 os.fsync(f.fileno())",
+        "L87 os.replace(tmp, path)   # 同卷原子替换: 要么全量新内容, 要么原内容",
+        "L88 except BaseException:",
+        "L90 raise",
+        "L193 _atomic_write_json(records, CHECKPOINT)",
+        "L208 _atomic_write_json(records, CHECKPOINT)"
+      ],
+      "unauthorized_removed": [],
+      "unauthorized_added": []
+    }
+  ],
+  "V6_only_writeface": true,
+  "V7_keyscan": [
+    {
+      "path": "results/_v4_supp_t15_executor_r0_atomic_2026_09_29.py",
+      "hits": 0
+    },
+    {
+      "path": "results/_v4_supp_t15r2_executor_r0_atomic_2026_09_29.py",
+      "hits": 0
+    },
+    {
+      "path": "results/_archive_2026_09_24/l14_runner_v2_r1_atomic_2026_09_29.py",
+      "hits": 0
+    }
+  ],
+  "V7_key_hits_total": 0,
+  "V8_pycache_dirs": [
+    {
+      "path": "__pycache__",
+      "mtime": "2026-09-29 11:15:09"
+    },
+    {
+      "path": ".scratch_gamma_r1/__pycache__",
+      "mtime": "2026-09-28 17:30:35"
+    },
+    {
+      "path": ".scratch_rj5/__pycache__",
+      "mtime": "2026-09-28 18:07:35"
+    },
+    {
+      "path": ".tmp/__pycache__",
+      "mtime": "2026-09-28 20:23:03"
+    },
+    {
+      "path": "results/__pycache__",
+      "mtime": "2026-09-29 10:51:42"
+    },
+    {
+      "path": "results/_v3_recheck_08b_executor/__pycache__",
+      "mtime": "2026-09-28 22:31:05"
+    },
+    {
+      "path": "results/_v3_recheck_08c_preexp_data/__pycache__",
+      "mtime": "2026-09-28 22:41:13"
+    }
+  ],
+  "V8_pyc_for_new_files": [],
+  "V8_no_new_pyc": true
+}

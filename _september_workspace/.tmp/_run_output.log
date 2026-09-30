@@ -1,0 +1,23 @@
+﻿=== result_v3.json 落盘核验 ===
+path:    D:\私人资料\deposon-repo\results\_v4_pi_cot_v3_result_v3.json
+size:    27203 bytes
+sha-12 (fingerprint_self_hash_post_birth, post-embedding 自指): 2CD0D493A0D1
+sha-12 (实测当前):                                              585714F9660C
+
+=== K-V3-* 判定表 (直接来自 kill_line_check_v3, 0 二次手改) ===
+  K-V3-A: hit=True, pass=False, observed=0.4534, threshold=0.65
+  K-V3-A': hit=True, pass=False, observed=0.2754, threshold=0.55
+  K-V3-B: hit=True, pass=False, observed=0.4286, threshold=1.0
+  K-V3-C: hit=True, pass=False, observed=0.2222, threshold=0.1
+  K-V3-D: hit=True, pass=False, observed=[0.3217, 0.587], threshold=0.4
+python : Traceback (most recent call last):
+所在位置 行:1 字符: 179
++ ... $env:PYTHONIOENCODING="utf-8"; python .tmp/_run_final.py 2>&1 | Out-F ...
++                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\私人资料\deposon-repo\.tmp\_run_final.py", line 405, in <module>
+    print(f"  {k['id']}: hit={k['hit']}, pass={k['pass']}, observed={observed}, threshold={k['threshold']}")
+                                                                                           ~^^^^^^^^^^^^^
+KeyError: 'threshold'

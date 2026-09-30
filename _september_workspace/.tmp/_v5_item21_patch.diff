@@ -1,0 +1,486 @@
+--- ANCHOR/boss_b1_sinkhorn_ot.py.bak
++++ PATCHED/.tmp/_v5_item21_patched_b1_semA_none_default.py
+@@ -86,6 +86,52 @@
+         return json.load(f)
+ 
+ 
++# =============================================================================
++# [V4#21 副本补丁 · PATCH-START] 锚版本体 0 触动；仅 .tmp 副本打补丁
++# 补丁三要素：① None 容错 ② v19 双形态回退 ③ 由驱动侧 SourceFileLoader 承接
++# =============================================================================
++
++
++def _patch_to_float(v) -> float:
++    """补丁①a: 数值字段 None/非法容错 -> 0.0 (策略qa 实测无 answer 键)。"""
++    if v is None:
++        return 0.0
++    if isinstance(v, bool):
++        return 1.0 if v else 0.0
++    if isinstance(v, (int, float)):
++        return float(v)
++    if isinstance(v, str):
++        try:
++            return float(v)
++        except ValueError:
++            return 0.0
++    return 0.0
++
++
++def _patch_norm_pred(v) -> float:
++    """补丁①②: v19 双形态预测值归一（不做 [0,1] clamp，保留原始量级/负值）。
++    gsm8k = 数值(predicted 键) / strategyqa = 'Yes'/'No' 串(pred 键)。"""
++    if v is None:
++        return 0.0
++    if isinstance(v, bool):
++        return 1.0 if v else 0.0
++    if isinstance(v, (int, float)):
++        return float(v)
++    if isinstance(v, str):
++        s = v.strip().lower()
++        if s in ("yes", "y", "true", "1"):
++            return 1.0
++        if s in ("no", "n", "false", "0"):
++            return 0.0
++        try:
++            return float(v)
++        except ValueError:
++            return 0.0
++    return 0.0
++
++# [PATCH-END]
++
++
+ def _extract_200_questions(v19_data: dict) -> list[dict]:
+     """
+     提取 200 道题 (E9.3 gsm8k + E9.3 strategyqa) 每题关键字段。
+@@ -105,16 +151,20 @@
+         per_problem = bm.get("per_problem", {})
+         for cond, problems in per_problem.items():
+             for p in problems:
++                # [PATCH ①②] v19 双形态: pred 键(strategyqa) / predicted 键(gsm8k)
++                _raw_pred = p.get("pred", p.get("predicted", 0.0))
++                # [PATCH ① 语义A] None 视同缺失, 走默认 0.0（保留该条）
+                 out.append(
+                     {
+                         "id": int(p.get("id", 0)),
+                         "experiment": "E9.3_high_couple_fix",
+                         "benchmark": bm_name,
+                         "condition": cond,
+-                        "predicted": float(p.get("predicted", 0.0)),
+-                        "answer": float(p.get("answer", 0.0)),
++                        "predicted": _patch_norm_pred(_raw_pred),
++                        "answer": _patch_to_float(p.get("answer", 0.0)),
+                         "is_correct": bool(p.get("is_correct", False)),
+-                        "best_path": list(p.get("best_path", [])),
++                        # [PATCH ②] best_path 键(gsm8k) / path 键(strategyqa)
++                        "best_path": list(p.get("best_path", p.get("path", []))),
+                         "trap_hit": p.get("trap_hit", ""),
+                     }
+                 )
+###PATCH-END### b1/semA_none_default orig_bytes=14956 patched_bytes=16768
+--- ANCHOR/boss_b1_sinkhorn_ot.py.bak
++++ PATCHED/.tmp/_v5_item21_patched_b1_semB_none_skip.py
+@@ -86,6 +86,52 @@
+         return json.load(f)
+ 
+ 
++# =============================================================================
++# [V4#21 副本补丁 · PATCH-START] 锚版本体 0 触动；仅 .tmp 副本打补丁
++# 补丁三要素：① None 容错 ② v19 双形态回退 ③ 由驱动侧 SourceFileLoader 承接
++# =============================================================================
++
++
++def _patch_to_float(v) -> float:
++    """补丁①a: 数值字段 None/非法容错 -> 0.0 (策略qa 实测无 answer 键)。"""
++    if v is None:
++        return 0.0
++    if isinstance(v, bool):
++        return 1.0 if v else 0.0
++    if isinstance(v, (int, float)):
++        return float(v)
++    if isinstance(v, str):
++        try:
++            return float(v)
++        except ValueError:
++            return 0.0
++    return 0.0
++
++
++def _patch_norm_pred(v) -> float:
++    """补丁①②: v19 双形态预测值归一（不做 [0,1] clamp，保留原始量级/负值）。
++    gsm8k = 数值(predicted 键) / strategyqa = 'Yes'/'No' 串(pred 键)。"""
++    if v is None:
++        return 0.0
++    if isinstance(v, bool):
++        return 1.0 if v else 0.0
++    if isinstance(v, (int, float)):
++        return float(v)
++    if isinstance(v, str):
++        s = v.strip().lower()
++        if s in ("yes", "y", "true", "1"):
++            return 1.0
++        if s in ("no", "n", "false", "0"):
++            return 0.0
++        try:
++            return float(v)
++        except ValueError:
++            return 0.0
++    return 0.0
++
++# [PATCH-END]
++
++
+ def _extract_200_questions(v19_data: dict) -> list[dict]:
+     """
+     提取 200 道题 (E9.3 gsm8k + E9.3 strategyqa) 每题关键字段。
+@@ -105,16 +151,22 @@
+         per_problem = bm.get("per_problem", {})
+         for cond, problems in per_problem.items():
+             for p in problems:
++                # [PATCH ①②] v19 双形态: pred 键(strategyqa) / predicted 键(gsm8k)
++                _raw_pred = p.get("pred", p.get("predicted", 0.0))
++                # [PATCH ① 语义B] None 显式跳过该条（不计入题集）
++                if _raw_pred is None:
++                    continue
+                 out.append(
+                     {
+                         "id": int(p.get("id", 0)),
+                         "experiment": "E9.3_high_couple_fix",
+                         "benchmark": bm_name,
+                         "condition": cond,
+-                        "predicted": float(p.get("predicted", 0.0)),
+-                        "answer": float(p.get("answer", 0.0)),
++                        "predicted": _patch_norm_pred(_raw_pred),
++                        "answer": _patch_to_float(p.get("answer", 0.0)),
+                         "is_correct": bool(p.get("is_correct", False)),
+-                        "best_path": list(p.get("best_path", [])),
++                        # [PATCH ②] best_path 键(gsm8k) / path 键(strategyqa)
++                        "best_path": list(p.get("best_path", p.get("path", []))),
+                         "trap_hit": p.get("trap_hit", ""),
+                     }
+                 )
+###PATCH-END### b1/semB_none_skip orig_bytes=14956 patched_bytes=16829
+--- ANCHOR/boss_b2_kd.py.bak
++++ PATCHED/.tmp/_v5_item21_patched_b2_semA_none_default.py
+@@ -74,6 +74,52 @@
+         raise FileNotFoundError(f"v19 frozen JSON {path} 不存在 (冻结资产只读)")
+     with p.open("r", encoding="utf-8") as f:
+         return json.load(f)
++
++
++# =============================================================================
++# [V4#21 副本补丁 · PATCH-START] 锚版本体 0 触动；仅 .tmp 副本打补丁
++# 补丁三要素：① None 容错 ② v19 双形态回退 ③ 由驱动侧 SourceFileLoader 承接
++# =============================================================================
++
++
++def _patch_to_float(v) -> float:
++    """补丁①a: 数值字段 None/非法容错 -> 0.0 (策略qa 实测无 answer 键)。"""
++    if v is None:
++        return 0.0
++    if isinstance(v, bool):
++        return 1.0 if v else 0.0
++    if isinstance(v, (int, float)):
++        return float(v)
++    if isinstance(v, str):
++        try:
++            return float(v)
++        except ValueError:
++            return 0.0
++    return 0.0
++
++
++def _patch_norm_pred(v) -> float:
++    """补丁①②: v19 双形态预测值归一（不做 [0,1] clamp，保留原始量级/负值）。
++    gsm8k = 数值(predicted 键) / strategyqa = 'Yes'/'No' 串(pred 键)。"""
++    if v is None:
++        return 0.0
++    if isinstance(v, bool):
++        return 1.0 if v else 0.0
++    if isinstance(v, (int, float)):
++        return float(v)
++    if isinstance(v, str):
++        s = v.strip().lower()
++        if s in ("yes", "y", "true", "1"):
++            return 1.0
++        if s in ("no", "n", "false", "0"):
++            return 0.0
++        try:
++            return float(v)
++        except ValueError:
++            return 0.0
++    return 0.0
++
++# [PATCH-END]
+ 
+ 
+ def _extract_200_questions(v19_data: dict) -> list[dict]:
+@@ -86,16 +132,20 @@
+         per_problem = bm.get("per_problem", {})
+         for cond, problems in per_problem.items():
+             for p in problems:
++                # [PATCH ①②] v19 双形态: pred 键(strategyqa) / predicted 键(gsm8k)
++                _raw_pred = p.get("pred", p.get("predicted", 0.0))
++                # [PATCH ① 语义A] None 视同缺失, 走默认 0.0（保留该条）
+                 out.append(
+                     {
+                         "id": int(p.get("id", 0)),
+                         "experiment": "E9.3_high_couple_fix",
+                         "benchmark": bm_name,
+                         "condition": cond,
+-                        "predicted": float(p.get("predicted", 0.0)),
+-                        "answer": float(p.get("answer", 0.0)),
++                        "predicted": _patch_norm_pred(_raw_pred),
++                        "answer": _patch_to_float(p.get("answer", 0.0)),
+                         "is_correct": bool(p.get("is_correct", False)),
+-                        "best_path": list(p.get("best_path", [])),
++                        # [PATCH ②] best_path 键(gsm8k) / path 键(strategyqa)
++                        "best_path": list(p.get("best_path", p.get("path", []))),
+                         "trap_hit": p.get("trap_hit", ""),
+                     }
+                 )
+###PATCH-END### b2/semA_none_default orig_bytes=14224 patched_bytes=16036
+--- ANCHOR/boss_b2_kd.py.bak
++++ PATCHED/.tmp/_v5_item21_patched_b2_semB_none_skip.py
+@@ -74,6 +74,52 @@
+         raise FileNotFoundError(f"v19 frozen JSON {path} 不存在 (冻结资产只读)")
+     with p.open("r", encoding="utf-8") as f:
+         return json.load(f)
++
++
++# =============================================================================
++# [V4#21 副本补丁 · PATCH-START] 锚版本体 0 触动；仅 .tmp 副本打补丁
++# 补丁三要素：① None 容错 ② v19 双形态回退 ③ 由驱动侧 SourceFileLoader 承接
++# =============================================================================
++
++
++def _patch_to_float(v) -> float:
++    """补丁①a: 数值字段 None/非法容错 -> 0.0 (策略qa 实测无 answer 键)。"""
++    if v is None:
++        return 0.0
++    if isinstance(v, bool):
++        return 1.0 if v else 0.0
++    if isinstance(v, (int, float)):
++        return float(v)
++    if isinstance(v, str):
++        try:
++            return float(v)
++        except ValueError:
++            return 0.0
++    return 0.0
++
++
++def _patch_norm_pred(v) -> float:
++    """补丁①②: v19 双形态预测值归一（不做 [0,1] clamp，保留原始量级/负值）。
++    gsm8k = 数值(predicted 键) / strategyqa = 'Yes'/'No' 串(pred 键)。"""
++    if v is None:
++        return 0.0
++    if isinstance(v, bool):
++        return 1.0 if v else 0.0
++    if isinstance(v, (int, float)):
++        return float(v)
++    if isinstance(v, str):
++        s = v.strip().lower()
++        if s in ("yes", "y", "true", "1"):
++            return 1.0
++        if s in ("no", "n", "false", "0"):
++            return 0.0
++        try:
++            return float(v)
++        except ValueError:
++            return 0.0
++    return 0.0
++
++# [PATCH-END]
+ 
+ 
+ def _extract_200_questions(v19_data: dict) -> list[dict]:
+@@ -86,16 +132,22 @@
+         per_problem = bm.get("per_problem", {})
+         for cond, problems in per_problem.items():
+             for p in problems:
++                # [PATCH ①②] v19 双形态: pred 键(strategyqa) / predicted 键(gsm8k)
++                _raw_pred = p.get("pred", p.get("predicted", 0.0))
++                # [PATCH ① 语义B] None 显式跳过该条（不计入题集）
++                if _raw_pred is None:
++                    continue
+                 out.append(
+                     {
+                         "id": int(p.get("id", 0)),
+                         "experiment": "E9.3_high_couple_fix",
+                         "benchmark": bm_name,
+                         "condition": cond,
+-                        "predicted": float(p.get("predicted", 0.0)),
+-                        "answer": float(p.get("answer", 0.0)),
++                        "predicted": _patch_norm_pred(_raw_pred),
++                        "answer": _patch_to_float(p.get("answer", 0.0)),
+                         "is_correct": bool(p.get("is_correct", False)),
+-                        "best_path": list(p.get("best_path", [])),
++                        # [PATCH ②] best_path 键(gsm8k) / path 键(strategyqa)
++                        "best_path": list(p.get("best_path", p.get("path", []))),
+                         "trap_hit": p.get("trap_hit", ""),
+                     }
+                 )
+###PATCH-END### b2/semB_none_skip orig_bytes=14224 patched_bytes=16097
+--- ANCHOR/boss_b3_llmlingua.py.bak
++++ PATCHED/.tmp/_v5_item21_patched_b3_semA_none_default.py
+@@ -67,6 +67,52 @@
+         raise FileNotFoundError(f"v19 frozen JSON {path} 不存在 (冻结资产只读)")
+     with p.open("r", encoding="utf-8") as f:
+         return json.load(f)
++
++
++# =============================================================================
++# [V4#21 副本补丁 · PATCH-START] 锚版本体 0 触动；仅 .tmp 副本打补丁
++# 补丁三要素：① None 容错 ② v19 双形态回退 ③ 由驱动侧 SourceFileLoader 承接
++# =============================================================================
++
++
++def _patch_to_float(v) -> float:
++    """补丁①a: 数值字段 None/非法容错 -> 0.0 (策略qa 实测无 answer 键)。"""
++    if v is None:
++        return 0.0
++    if isinstance(v, bool):
++        return 1.0 if v else 0.0
++    if isinstance(v, (int, float)):
++        return float(v)
++    if isinstance(v, str):
++        try:
++            return float(v)
++        except ValueError:
++            return 0.0
++    return 0.0
++
++
++def _patch_norm_pred(v) -> float:
++    """补丁①②: v19 双形态预测值归一（不做 [0,1] clamp，保留原始量级/负值）。
++    gsm8k = 数值(predicted 键) / strategyqa = 'Yes'/'No' 串(pred 键)。"""
++    if v is None:
++        return 0.0
++    if isinstance(v, bool):
++        return 1.0 if v else 0.0
++    if isinstance(v, (int, float)):
++        return float(v)
++    if isinstance(v, str):
++        s = v.strip().lower()
++        if s in ("yes", "y", "true", "1"):
++            return 1.0
++        if s in ("no", "n", "false", "0"):
++            return 0.0
++        try:
++            return float(v)
++        except ValueError:
++            return 0.0
++    return 0.0
++
++# [PATCH-END]
+ 
+ 
+ def _extract_200_questions(v19_data: dict) -> list[dict]:
+@@ -79,16 +125,20 @@
+         per_problem = bm.get("per_problem", {})
+         for cond, problems in per_problem.items():
+             for p in problems:
++                # [PATCH ①②] v19 双形态: pred 键(strategyqa) / predicted 键(gsm8k)
++                _raw_pred = p.get("pred", p.get("predicted", 0.0))
++                # [PATCH ① 语义A] None 视同缺失, 走默认 0.0（保留该条）
+                 out.append(
+                     {
+                         "id": int(p.get("id", 0)),
+                         "experiment": "E9.3_high_couple_fix",
+                         "benchmark": bm_name,
+                         "condition": cond,
+-                        "predicted": float(p.get("predicted", 0.0)),
+-                        "answer": float(p.get("answer", 0.0)),
++                        "predicted": _patch_norm_pred(_raw_pred),
++                        "answer": _patch_to_float(p.get("answer", 0.0)),
+                         "is_correct": bool(p.get("is_correct", False)),
+-                        "best_path": list(p.get("best_path", [])),
++                        # [PATCH ②] best_path 键(gsm8k) / path 键(strategyqa)
++                        "best_path": list(p.get("best_path", p.get("path", []))),
+                         "trap_hit": p.get("trap_hit", ""),
+                     }
+                 )
+###PATCH-END### b3/semA_none_default orig_bytes=13966 patched_bytes=15778
+--- ANCHOR/boss_b3_llmlingua.py.bak
++++ PATCHED/.tmp/_v5_item21_patched_b3_semB_none_skip.py
+@@ -67,6 +67,52 @@
+         raise FileNotFoundError(f"v19 frozen JSON {path} 不存在 (冻结资产只读)")
+     with p.open("r", encoding="utf-8") as f:
+         return json.load(f)
++
++
++# =============================================================================
++# [V4#21 副本补丁 · PATCH-START] 锚版本体 0 触动；仅 .tmp 副本打补丁
++# 补丁三要素：① None 容错 ② v19 双形态回退 ③ 由驱动侧 SourceFileLoader 承接
++# =============================================================================
++
++
++def _patch_to_float(v) -> float:
++    """补丁①a: 数值字段 None/非法容错 -> 0.0 (策略qa 实测无 answer 键)。"""
++    if v is None:
++        return 0.0
++    if isinstance(v, bool):
++        return 1.0 if v else 0.0
++    if isinstance(v, (int, float)):
++        return float(v)
++    if isinstance(v, str):
++        try:
++            return float(v)
++        except ValueError:
++            return 0.0
++    return 0.0
++
++
++def _patch_norm_pred(v) -> float:
++    """补丁①②: v19 双形态预测值归一（不做 [0,1] clamp，保留原始量级/负值）。
++    gsm8k = 数值(predicted 键) / strategyqa = 'Yes'/'No' 串(pred 键)。"""
++    if v is None:
++        return 0.0
++    if isinstance(v, bool):
++        return 1.0 if v else 0.0
++    if isinstance(v, (int, float)):
++        return float(v)
++    if isinstance(v, str):
++        s = v.strip().lower()
++        if s in ("yes", "y", "true", "1"):
++            return 1.0
++        if s in ("no", "n", "false", "0"):
++            return 0.0
++        try:
++            return float(v)
++        except ValueError:
++            return 0.0
++    return 0.0
++
++# [PATCH-END]
+ 
+ 
+ def _extract_200_questions(v19_data: dict) -> list[dict]:
+@@ -79,16 +125,22 @@
+         per_problem = bm.get("per_problem", {})
+         for cond, problems in per_problem.items():
+             for p in problems:
++                # [PATCH ①②] v19 双形态: pred 键(strategyqa) / predicted 键(gsm8k)
++                _raw_pred = p.get("pred", p.get("predicted", 0.0))
++                # [PATCH ① 语义B] None 显式跳过该条（不计入题集）
++                if _raw_pred is None:
++                    continue
+                 out.append(
+                     {
+                         "id": int(p.get("id", 0)),
+                         "experiment": "E9.3_high_couple_fix",
+                         "benchmark": bm_name,
+                         "condition": cond,
+-                        "predicted": float(p.get("predicted", 0.0)),
+-                        "answer": float(p.get("answer", 0.0)),
++                        "predicted": _patch_norm_pred(_raw_pred),
++                        "answer": _patch_to_float(p.get("answer", 0.0)),
+                         "is_correct": bool(p.get("is_correct", False)),
+-                        "best_path": list(p.get("best_path", [])),
++                        # [PATCH ②] best_path 键(gsm8k) / path 键(strategyqa)
++                        "best_path": list(p.get("best_path", p.get("path", []))),
+                         "trap_hit": p.get("trap_hit", ""),
+                     }
+                 )
+###PATCH-END### b3/semB_none_skip orig_bytes=13966 patched_bytes=15839
