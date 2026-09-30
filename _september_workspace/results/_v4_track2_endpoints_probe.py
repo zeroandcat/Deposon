@@ -58,7 +58,7 @@ import requests as _requests
 # ============================================================
 ROOT = "D:/私人资料/deposon-repo"
 RESULTS_DIR = os.path.join(ROOT, "results")
-KEY_SOURCE_PATH = "C:/Users/Administrator/Desktop/AI/LLM API.txt"
+KEY_SOURCE_PATH = os.environ.get("DEPOSON_KEY_FILE", "C:/Users/Administrator/Desktop/AI/LLM API.txt")
 
 # PI 拍板代理 (tun/127.0.0.1:1018; PI 2026-09-23 补充 2)
 PROXY_HTTP = "http://127.0.0.1:1018"
