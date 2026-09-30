@@ -548,3 +548,15 @@ L14+ V3 distill 整链重跑复现在 5 教师 × 22 caption × ≥5 calls × �
 
 - **L14+ 立线件 SHA 漂移自检**：L14+ 立线件本身不存在自报 SHA（沿既有惯例不自指 hash；§7 报告段「见 RESULT 报告」引用 harness 外部汇报段）
 - **L14+ 立线件 0 触 22 件既有件**：N-26 主预登记 + L4 verdict + L4 result + L13 verdict + L13 executor + L7 verdict + L7 runner + v0.2 本体 + activation + add_T1 件 + activation + L9 / L10 追加件 + activations + Track 2 件 + 度量函数 + 22 caption + V3 distill 流水线参照系 —— 0 触动（四件盘 SHA 漂移非 L14+ 引入）
+
+
+<!-- appended-note:2026-09-30 skill 引用面复核（PI 派工第④项 · 0 删改历史字面） -->
+
+> **附注（2026-09-30 追加 · 非原件内容）**
+> 本件原引用字面**逐字保留、0 删改**；本附注**只增不改**。
+>
+> - **原引用面**：L50,487（出现 2 处）· `experimental-design` 加载老实交代（实录失败）
+> - **2026-09-30 只读复核**：原记录为**实测失败实录**。2026-09-30 只读复核：所引树/实体**在位、哈希对得上** ⇒ **失败 ≠ 盘上缺失**；**失败成因本棒未定位、0 断言**，原实录字面**保留不改**
+> - **当前三段式锚**（plugin:skill + 树哈希前 12 + SKILL.md SHA-12 + 定位方式）：scientific-research-workflows:experimental-design` · 树 ``611965fcb620`` · ``SKILL.md`` SHA-12 ``0a314eed103a`` / 13,044 B（实体直读；运行时加载行为见执行件 §6，**本棒 0 复现**）
+> - **「历史实测 vs 今日实测」口径**：本件所记为**当时实测证据**，**保留有效、0 回改**；今日复核值以本附注与执行件为准，读者可据此区分二者（起因件建议 A2）。
+> - **执行件**：`results/_skill_reference_update_and_user_surface_survey_2026_09_30.md` · 出件 **worker**（本棒）· **0 删改本件任何既有字节**
