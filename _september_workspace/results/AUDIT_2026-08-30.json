@@ -1,0 +1,39 @@
+{
+  "audit_id": "AUDIT-2026-08-30",
+  "auditor": "orchestrator (main agent), first true re-execution audit",
+  "method": "repo copied to /tmp/audit/repo; frozen artifacts untouched; scripts re-executed and diffed numerically; SHA-256 anchors recomputed; key paper numbers traced to frozen JSON paths",
+  "prior_state": "verifier v36-v41 were string-anchor audits only (grep checks); NO re-execution had ever been performed before this audit",
+  "results": {
+    "sha256_preregistration_anchors": {
+      "status": "PASS 5/5",
+      "items": {
+        "docs/GT_FORMALIZATION_v1.md": "aeefb8ef6972",
+        "run_v21_gtformal.py": "9bbe43f41fa8",
+        "run_v22_p1c.py": "6e9673205dc0",
+        "docs/SPEC_GT2B.md": "68a5b08ef007",
+        "docs/SPEC_GT8C.md": "6b09de9911c0"
+      }
+    },
+    "reexecution": {
+      "run_v22_p1c.py": {"status": "PASS", "numeric_diffs_vs_frozen": 0, "only_diff": "runtime_sec (wall clock, expected)", "verdict": "killed/killed/killed, min_cos=-1.0, tau_median=0.0"},
+      "run_v22_e95ci.py": {"status": "PASS", "numeric_diffs_vs_frozen": 0}
+    },
+    "pytest": {"status": "PASS", "count": 398, "note": "reproduces the 398 figure cited in report"},
+    "traceability_spot_checks": [
+      {"claim": "P1a O(1) deviation 0.8569", "source": "deposon_v21_gtformal.json:.verdict.P1a_deviation.max_dev_inf", "status": "PASS"},
+      {"claim": "P2 cyclic 0.669", "source": "deposon_v21_gtformal.json:.residuals.cyclic / per_graph r values", "status": "PASS"},
+      {"claim": "P2 downgrade fraction 0.924", "source": "deposon_v21_gtformal.json:.verdict.T_P2.frac_cyclic_high = 0.9237804878048781 (rounds to 0.924)", "status": "PASS"},
+      {"claim": "P3 0.1585 / 0.8442", "source": "deposon_v21_gtformal.json:.verdict.T_P3.max_r_diff / max_fp_diff", "status": "PASS"},
+      {"claim": "T-P1c min cos = -1.0", "source": "deposon_v22_p1c.json:.verdict.min_cos_at_best_global_tau / min_cos_per_state_best_tau", "status": "PASS"},
+      {"claim": "E9.5 CI [-11.8,+7.8] / [-8.8,+8.8] pp", "source": "deposon_v22_e95ci.json:.gsm8k.ci_pp / .strategyqa.ci_pp", "status": "PASS"},
+      {"claim": "61 graphs x 338 tasks x 20 steps = 6760 states", "source": "deposon_v21_gtformal.json: per_graph n=61, tasks total 338, n_states=6760", "status": "PASS"},
+      {"claim": "GT-4 coverage 20/22 (17 finite + 3 Infinity)", "source": "deposon_v20_gt.json:GT4_price_of_anarchy.poa_per_graph n=20, Infinity on S1/S2/S5, L_geography_world & L_project_management absent", "status": "PASS"},
+      {"claim": "GT-4 median 4/3", "source": "deposon_v20_gt.json:...verdict.median_poa = 1.3333333333333333", "status": "PASS"}
+    ]
+  },
+  "overall": "PASS — the auditable ledger is now actually audited: claims reproduce bit-for-bit from frozen artifacts",
+  "caveats": [
+    "v21 formal suite itself was NOT re-run (runtime/env cost); its JSON was used as the frozen reference for number tracing, and its two downstream consumers (p1c re-execution, tests) reproduce",
+    "LLM-paper-based numbers (E9.5 raw counts) trace to benchmark JSONs frozen from earlier API runs; the API runs themselves are not re-executable without keys"
+  ]
+}
