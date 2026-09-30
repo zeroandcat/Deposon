@@ -96,7 +96,7 @@ Total disk-tested files (excluding transient): **1383**
 | gt_common.py | 425B4B2F1C01 | 3601 | C | IN-EFFECT | 2026/08/30 10:17:31 | top-level scripts |
 | llm_fetch.py | FDA22714DE2D | 8433 | C | IN-EFFECT | 2026/08/30 10:09:18 | top-level executors |
 | llm_prior.py | 7FBA7D72A679 | 7466 | C | IN-EFFECT | 2026/08/30 10:10:54 | top-level executors |
-| mindmap_corpus_v20.py | 7D8D6A30DD8C | 23893 | C | IN-EFFECT | 2026/08/29 01:14:15 | top-level executors |
+| mindmap_corpus_v20.py | E77E7F3455E0 | 25791 | C | IN-EFFECT | 2026/09/29 12:06:04 | top-level executors | 修订后（原值 7D8D6A30DD8C / 23893 / 2026-08-29 01:14:15，见 results/_v5_loadcorpus_switch_2026_09_29.md） |
 | run_v15_experiment.py | 58A5623F3AA1 | 22761 | C | IN-EFFECT | 2026/08/30 04:56:14 | top-level scripts |
 | run_v16_llm_prior.py | 6350BBAECB81 | 13423 | C | IN-EFFECT | 2026/08/30 04:56:13 | top-level scripts |
 | run_v17_fixed_sampler.py | 3E54797EEDEB | 10435 | C | IN-EFFECT | 2026/08/23 21:38:54 | top-level scripts |
@@ -1901,10 +1901,27 @@ On successful write the SHA-12 of THIS file is computed and appended in the post
 
 | field | value |
 |---|---|
-| path | esults/_v3_v4_achievements_inventory_2026_09_24.md |
+| path | 
+esults/_v3_v4_achievements_inventory_2026_09_24.md |
 | size | 191194 bytes |
 | last-modified | 2026-09-24 17:22:25 |
 | SHA-256 | FDF12FA1A6B70A2D424D4EEEE46B1EAEF325801ED7601C6B990B51819EBFEBB3 |
 | SHA-12 | FDF12FA1A6B7 |
 
-10 random representative items cross-checked between inventory entries and Get-FileHash -Algorithm SHA256 recomputation -- 10/10 MATCH. (Sample paths checked: erifier/v17/erratum.md 50F15F7EA3DC, erifier/v20/erratum.md 35081D39F35B, ttacks/__init__.py D11E085D9ECC, docs/V3X/P_D_FINGERPRINT_V0_3_SPEC.md F119F2F30287, esults/_v4_iron_rules_review_2026_09_22.md 40A51EF13882, corpus/v20/all.json 8DF31C95B1FC, corpus/v20_caption_surface/manifest.json 4FDDA6480BB5, erifier/handoff/KT_ABC1_anchors_sha256_12.json  3C6C01F3697, esults/_v4_supp_l6_s38v2_rootcause_verdict.md 973103878D6F, esults/_v4_pi_cot_v2_dataset.json 7B01CD835A41.)
+10 random representative items cross-checked between inventory entries and Get-FileHash -Algorithm SHA256 recomputation -- 10/10 MATCH. (Sample paths checked: erifier/v17/erratum.md 50F15F7EA3DC, erifier/v20/erratum.md 35081D39F35B, ttacks/__init__.py D11E085D9ECC, docs/V3X/P_D_FINGERPRINT_V0_3_SPEC.md F119F2F30287, 
+esults/_v4_iron_rules_review_2026_09_22.md 40A51EF13882, corpus/v20/all.json 8DF31C95B1FC, corpus/v20_caption_surface/manifest.json 4FDDA6480BB5, erifier/handoff/KT_ABC1_anchors_sha256_12.json  3C6C01F3697, 
+esults/_v4_supp_l6_s38v2_rootcause_verdict.md 973103878D6F, 
+esults/_v4_pi_cot_v2_dataset.json 7B01CD835A41.)
+
+
+<!-- appended-note:2026-09-30 skill 引用面复核（PI 派工第④项 · 0 删改历史字面） -->
+
+> **附注（2026-09-30 追加 · 非原件内容）**
+> 本件原引用字面**逐字保留、0 删改**；本附注**只增不改**。
+>
+> - **原引用面**：L14（出现 1 处）· `superpowers:verification-before-completion`（树 `ade95665080e...`）-- known possibly-missing
+> - **2026-09-30 只读复核**：原注记「known possibly-missing」于 2026-09-30 实测**已不成立**（树 `ade95665080e…` 在位、`SKILL.md` SHA-12 `2befe7fc55bc` / 3,646 B）⇒ **本件属实录/清册类、0 回改**；过期事实以**追加勘误**为准，正式勘误见 `results/_skill_reference_erratum_and_runtime_anchor_experiment_2026_09_30.md` §1 E-01
+> - **当前三段式锚**（plugin:skill + 树哈希前 12 + SKILL.md SHA-12 + 定位方式）：`superpowers:verification-before-completion` · 树 `ade95665080e` · `SKILL.md` SHA-12 `2befe7fc55bc` / 3,646 B（**在位**）
+> - **本件哈希变更提示**：本附注使本件 SHA-12 改变（原 `2fb5987f544d`）；引用本件旧哈希之处**须知悉**，原始值已登记于执行件。
+> - **执行件**：`results/_skill_reference_update_and_user_surface_survey_2026_09_30.md` · 出件 **worker**（本棒）· **0 删改本件任何既有字节**
+> **交叉引用校正（2026-09-30 追加 · parent 协调令 · 仅追加不删改）**：上条附注中「正式勘误见 `results/_skill_reference_erratum_and_runtime_anchor_experiment_2026_09_30.md` §1 E-01」为**草案位指代**；**正式勘误以拆件** `results/_skill_erratum_and_parent_success_note_2026_09_30.md`（`7a64949402d9`）**§1 E-01 为准**，`644e0666fbc4` §1 为**草案位（历史）**。上句**保留不删改**。
