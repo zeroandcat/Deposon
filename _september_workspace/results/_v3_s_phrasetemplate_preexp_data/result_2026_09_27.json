@@ -1,0 +1,1309 @@
+{
+  "schema": "v3_s_phrasetemplate_preexp_result_v1",
+  "series": "V3-S 短语达标线三路线预实验（探索性档）",
+  "nature": "本件为**预实验（探索性档，三档最低）**：verdict 恒 null，0 判定动作、0 改判、0 改任何既有档位。本件只比较三条达标线的**构造行为**（判别力/可达性/非退化/可复现），不构成对 S 系列任何档位的改判，也不构成 PI 拍板。",
+  "prereg": "results/_v3_s_phrasetemplate_prereg_v1_2026_09_27.md",
+  "executor": "results/_v3_s_phrasetemplate_preexp_data/executor_2026_09_27.py",
+  "date": "2026-09-27",
+  "generated_ts_frozen": "2026-09-27T00:00:00+08:00",
+  "seed": 42,
+  "runtime": "python3 + numpy（0 LLM / 0 proxy / 0 gateway）",
+  "skill": {
+    "requested": "scientific-research-workflows:experimental-design (plugin @scientific-research-workflows)",
+    "status": "Local skill not found —— C:/Users/Administrator/.minimax/plugins 实测 0 项（空目录）；本 turn 0 挂载任何 skill 加载工具；skills/ 下 0 命中 experimental-design",
+    "fallback": "纪律锚 fallback = prereg §3.2 三提案字面 + §1.4 口径固化 + §2.2 P-P-1 词表字面 + §3.3 T-4 口径字面（0 自创条文）",
+    "disclosure": "未加载该 skill 的任何指令；0 引用、0 虚构其条文"
+  },
+  "inputs": [
+    {
+      "idx": "1-1",
+      "path": "results/_v3_s_phrasetemplate_prereg_v1_2026_09_27.md",
+      "file": "_v3_s_phrasetemplate_prereg_v1_2026_09_27.md",
+      "role": "预登记（纪律锚 · 三提案字面来源）",
+      "sha12_expected": "7e1323b09030",
+      "sha12": "7e1323b09030",
+      "size_bytes": 33932,
+      "match": true
+    },
+    {
+      "idx": "1-2",
+      "path": "results/_v4_pi_cot_v3_ruleset_v3_executor.py",
+      "file": "_v4_pi_cot_v3_ruleset_v3_executor.py",
+      "role": "v3 substrate 装载器 + 短语模式 5 类字面（0 改动，只读 import）",
+      "sha12_expected": "8a81d90c69ba",
+      "sha12": "8a81d90c69ba",
+      "size_bytes": 58794,
+      "match": true
+    },
+    {
+      "idx": "1-3",
+      "path": "results/_v3_s2_executor/result_2026_09_27.json",
+      "file": "result_2026_09_27.json",
+      "role": "S2 冻结读数（T-4 对照 + held-out 23 idx 来源）",
+      "sha12_expected": "d73d51e670de",
+      "sha12": "d73d51e670de",
+      "size_bytes": 51039,
+      "match": true
+    }
+  ],
+  "input_chain_all_match": true,
+  "frozen_eval_criteria": {
+    "freeze_discipline": "判据在测量前冻结（模块常量）；预实验 = 探索性档，0 事后调、0 自创阈值",
+    "C1_discrimination": {
+      "id": "C1",
+      "name": "判别力（读数分布）",
+      "operationalization": "逐件读数非二值的面：n_distinct(word-form 命中数/事件)、n_distinct(序列长度)；判据层另测 verdict n_distinct 与 verdict 塌缩（同判率）",
+      "pass_note": "本项为择优描述量，0 设数值门槛（PI 未拍板 0 自创）"
+    },
+    "C2_attainability": {
+      "id": "C2",
+      "name": "可达性",
+      "operationalization": "目标线在本盘 77 件数据上是否可超；不可超 ⇒ 该线在本盘必然落「不明」",
+      "pass_note": "定性；判据由 prereg §3.4 字面（<达标线 ⇒ 未达标 / 退化 ⇒ 不明）承担"
+    },
+    "C3_non_degenerate": {
+      "id": "C3",
+      "name": "非退化",
+      "operationalization": "0 二值/常量返回；读数层 n_distinct > 1 且 std > 0；判据层 verdict 不得对全部候选构造成单一常量",
+      "threshold_source": "形态沿 K-V3SP-0-A / TH-V3R-0-common-a 字面（n_distinct > 3 + std > 0）；本预实验读数层用 n_distinct > 1 的弱化探针并在结果中如实标注强弱"
+    },
+    "C4_reproducible": {
+      "id": "C4",
+      "name": "可复现（重跑逐字不变）",
+      "operationalization": "连续两次独立执行本 executor，落盘后各算 SHA-12 比对",
+      "threshold_source": "沿 S2 result rerun_determinism 字面"
+    }
+  },
+  "corpus_profile": {
+    "n_substrate": 77,
+    "n_substrate_expected": 77,
+    "n_substrate_match": true,
+    "reasoning_len_min": 0,
+    "reasoning_len_max": 157,
+    "reasoning_len_mean": 35.87012987012987,
+    "n_empty_reasoning": 5,
+    "n_empty_reasoning_share": 0.06493506493506493,
+    "n_len_le_20": 25,
+    "meta_n_total": 77,
+    "meta_n_v11": 37,
+    "meta_n_addendum_loaded": 40,
+    "meta_n_correction": 16,
+    "source": "prereg §1.2 字面复算（0 采信记忆，0 采信他件转述）"
+  },
+  "held_out": {
+    "n": 23,
+    "idx": [
+      0,
+      2,
+      5,
+      6,
+      7,
+      12,
+      13,
+      16,
+      23,
+      27,
+      28,
+      36,
+      37,
+      39,
+      47,
+      50,
+      58,
+      59,
+      63,
+      66,
+      72,
+      74,
+      76
+    ],
+    "seed": 42,
+    "source": "S2 result 字面 held_out_idx（0 重抽、0 换 seed）",
+    "match_expected": true
+  },
+  "constructions": {
+    "C0": {
+      "construct_id": "C0",
+      "name": "现状 5 类固定串（实现截断形态）",
+      "face": "phrase",
+      "kind": "phrase",
+      "n_hits": 1,
+      "n_substrate": 77,
+      "coverage": 0.012987012987012988,
+      "held_out_n_hits": 0,
+      "held_out_coverage": 0.0,
+      "graded_readings": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "graded_spread": {
+        "n": 77,
+        "n_distinct": 2,
+        "std": 0.11321815437767985,
+        "std_gt_0": true,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "note": "S2 冻结读数源；prereg §1.4.1 记实现把第 4/5 类 / 二选一截成首项"
+    },
+    "C0b": {
+      "construct_id": "C0b",
+      "name": "5 类 7 候选式（/ 补全）",
+      "face": "phrase",
+      "kind": "phrase",
+      "n_hits": 1,
+      "n_substrate": 77,
+      "coverage": 0.012987012987012988,
+      "held_out_n_hits": 0,
+      "held_out_coverage": 0.0,
+      "graded_readings": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "graded_spread": {
+        "n": 77,
+        "n_distinct": 2,
+        "std": 0.11321815437767985,
+        "std_gt_0": true,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "note": "prereg §1.4.1 口径差 A 复算：补全 / 候选式是否改变命中"
+    },
+    "C1": {
+      "construct_id": "C1",
+      "name": "P-P-1 词形泛化并集（26 词形）",
+      "face": "phrase",
+      "kind": "phrase",
+      "n_hits": 19,
+      "n_substrate": 77,
+      "coverage": 0.24675324675324675,
+      "held_out_n_hits": 6,
+      "held_out_coverage": 0.2608695652173913,
+      "graded_readings": [
+        1,
+        0,
+        0,
+        0,
+        4,
+        0,
+        2,
+        1,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        2,
+        2,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        4,
+        1,
+        1,
+        0,
+        3,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      "graded_spread": {
+        "n": 77,
+        "n_distinct": 5,
+        "std": 1.133819043413878,
+        "std_gt_0": true,
+        "min": 0.0,
+        "max": 4.0
+      },
+      "note": "prereg §2.2 字面上限探针；target_seq 一字不动，0 改语义"
+    },
+    "C2": {
+      "construct_id": "C2",
+      "name": "全序列面（≥1 判据类型）",
+      "face": "full_sequence",
+      "kind": "sequence",
+      "n_hits": 60,
+      "n_substrate": 77,
+      "coverage": 0.7792207792207793,
+      "held_out_n_hits": 17,
+      "held_out_coverage": 0.7391304347826086,
+      "graded_readings": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        0,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        2,
+        3,
+        0,
+        1,
+        2,
+        1,
+        2,
+        0,
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        4,
+        2,
+        2,
+        3,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        3
+      ],
+      "graded_spread": {
+        "n": 77,
+        "n_distinct": 5,
+        "std": 0.9022002302835536,
+        "std_gt_0": true,
+        "min": 0.0,
+        "max": 4.0
+      },
+      "note": "prereg §1.5 字面：模板面实质由全序列面承担"
+    },
+    "C3": {
+      "construct_id": "C3",
+      "name": "KEYWORDS_V3 263 词面",
+      "face": "keyword",
+      "kind": "keyword",
+      "n_hits": 60,
+      "n_substrate": 77,
+      "coverage": 0.7792207792207793,
+      "held_out_n_hits": 17,
+      "held_out_coverage": 0.7391304347826086,
+      "graded_readings": [
+        1,
+        4,
+        0,
+        1,
+        3,
+        1,
+        2,
+        2,
+        2,
+        8,
+        2,
+        0,
+        1,
+        3,
+        2,
+        2,
+        4,
+        7,
+        5,
+        11,
+        2,
+        1,
+        3,
+        3,
+        9,
+        0,
+        1,
+        3,
+        1,
+        4,
+        0,
+        2,
+        5,
+        0,
+        1,
+        1,
+        3,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        1,
+        1,
+        0,
+        3,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        6,
+        3,
+        4,
+        3,
+        2,
+        3,
+        9,
+        3,
+        1,
+        3,
+        7,
+        4,
+        2,
+        1,
+        1,
+        7
+      ],
+      "graded_spread": {
+        "n": 77,
+        "n_distinct": 11,
+        "std": 2.3853717348402816,
+        "std_gt_0": true,
+        "min": 0.0,
+        "max": 11.0
+      },
+      "note": "v3 executor 字面 KEYWORDS_V3 词表"
+    }
+  },
+  "per_class_breakdown": [
+    {
+      "face": "A_responsibility",
+      "n_candidate_forms": 6,
+      "n_hits": 7,
+      "coverage": 0.09090909090909091,
+      "graded_spread": {
+        "n": 77,
+        "n_distinct": 4,
+        "std": 0.6454427864825547,
+        "std_gt_0": true,
+        "min": 0.0,
+        "max": 3.0
+      }
+    },
+    {
+      "face": "B_killline",
+      "n_candidate_forms": 6,
+      "n_hits": 6,
+      "coverage": 0.07792207792207792,
+      "graded_spread": {
+        "n": 77,
+        "n_distinct": 4,
+        "std": 0.6913678781405801,
+        "std_gt_0": true,
+        "min": 0.0,
+        "max": 4.0
+      }
+    },
+    {
+      "face": "C_criteria_root",
+      "n_candidate_forms": 5,
+      "n_hits": 9,
+      "coverage": 0.11688311688311688,
+      "graded_spread": {
+        "n": 77,
+        "n_distinct": 3,
+        "std": 0.3727974050495409,
+        "std_gt_0": true,
+        "min": 0.0,
+        "max": 2.0
+      }
+    },
+    {
+      "face": "D_unified_def",
+      "n_candidate_forms": 4,
+      "n_hits": 1,
+      "coverage": 0.012987012987012988,
+      "graded_spread": {
+        "n": 77,
+        "n_distinct": 2,
+        "std": 0.2264363087553597,
+        "std_gt_0": true,
+        "min": 0.0,
+        "max": 2.0
+      }
+    },
+    {
+      "face": "E_criteria_order",
+      "n_candidate_forms": 6,
+      "n_hits": 3,
+      "coverage": 0.03896103896103896,
+      "graded_spread": {
+        "n": 77,
+        "n_distinct": 2,
+        "std": 0.19350213539936806,
+        "std_gt_0": true,
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    {
+      "face": "C0_class_1",
+      "pattern": "不误导，且避免打回",
+      "target_seq": [
+        "CRITERIA",
+        "RISK",
+        "CRITERIA"
+      ],
+      "n_hits": 0,
+      "coverage": 0.0
+    },
+    {
+      "face": "C0_class_2",
+      "pattern": "判死线先于实验",
+      "target_seq": [
+        "KILL_LINE",
+        "TIMING"
+      ],
+      "n_hits": 0,
+      "coverage": 0.0
+    },
+    {
+      "face": "C0_class_3",
+      "pattern": "准则为根，论文章节只是一处外显",
+      "target_seq": [
+        "CRITERIA",
+        "CRITERIA",
+        "META"
+      ],
+      "n_hits": 0,
+      "coverage": 0.0
+    },
+    {
+      "face": "C0_class_4",
+      "pattern": "大一统定义",
+      "target_seq": [
+        "CRITERIA",
+        "CRITERIA"
+      ],
+      "n_hits": 1,
+      "coverage": 0.012987012987012988
+    },
+    {
+      "face": "C0_class_5",
+      "pattern": "判据序列",
+      "target_seq": [
+        "CRITERIA",
+        "CRITERIA"
+      ],
+      "n_hits": 0,
+      "coverage": 0.0
+    }
+  ],
+  "structural_ceiling": {
+    "n_empty_reasoning": 5,
+    "n_empty_seq": 17,
+    "phrase_face_ceiling_n": 72,
+    "phrase_face_ceiling_cov": 0.935064935064935,
+    "literal": "空 reasoning 件对文本面模板结构上不可达 ⇒ 绝对上限；沿 prereg §2.3 字面（0 自创）"
+  },
+  "routes": {
+    "P-PT-1": {
+      "proposal_id": "P-PT-1",
+      "criterion_literal": "沿用 0.80 比率门槛（≥ ceil(0.80 × N_actual) = ≥ 62 件）",
+      "criterion_object": "短语面覆盖率",
+      "threshold_source": "ruleset_v3 §phrase_patterns_validation_requirement 字面（0 改数）",
+      "target_n": 62,
+      "target_ratio": 0.8,
+      "applicable_constructs": [
+        "C0",
+        "C0b",
+        "C1"
+      ],
+      "not_applicable_constructs": [
+        "C2",
+        "C3"
+      ],
+      "not_applicable_reason": "P-PT-1 判据对象字面为「短语面覆盖率」；C2（全序列面）/ C3（关键词面）非短语面 ⇒ 该线对其不适用（0 偷换判据对象）",
+      "rows": [
+        {
+          "construct_id": "C0",
+          "n_hits": 1,
+          "coverage": 0.012987012987012988,
+          "target_n": 62,
+          "target_ratio": 0.8,
+          "verdict": "NOT_MET",
+          "gap_n": -61
+        },
+        {
+          "construct_id": "C0b",
+          "n_hits": 1,
+          "coverage": 0.012987012987012988,
+          "target_n": 62,
+          "target_ratio": 0.8,
+          "verdict": "NOT_MET",
+          "gap_n": -61
+        },
+        {
+          "construct_id": "C1",
+          "n_hits": 19,
+          "coverage": 0.24675324675324675,
+          "target_n": 62,
+          "target_ratio": 0.8,
+          "verdict": "NOT_MET",
+          "gap_n": -43
+        }
+      ],
+      "n_pass": 0,
+      "n_not_met": 3,
+      "verdict_n_distinct": 1,
+      "all_same_verdict": true
+    },
+    "P-PT-2": {
+      "proposal_id": "P-PT-2",
+      "criterion_literal": "改判据形态：比率不变、达标对象变 —— 「覆盖率 ≥ 现状基线 × 提升倍数」或「覆盖率 ≥ 某绝对件数下限」",
+      "criterion_object": "可换（短语面 / 全序列面 / 关键词面）",
+      "threshold_source": "倍率与下限须 PI 给；本件 0 自创数值 ⇒ 只报**可达域**（各构造实测值 + 达标所需倍率/下限），不代 PI 选定",
+      "baseline_coverage": 0.012987012987012988,
+      "best_phrase_face_coverage": 0.24675324675324675,
+      "best_any_face_coverage": 0.7792207792207793,
+      "best_any_face_construct": "C2",
+      "attainable_indicator_note": "派工字面举例「全序列面 77.92% 等可达指标」：实测全序列面 = 0.7792（60/77）",
+      "rows": [
+        {
+          "construct_id": "C0",
+          "n_hits": 1,
+          "coverage": 0.012987012987012988,
+          "required_multiple_over_baseline": 1.0,
+          "attainable_as_absolute_floor_n": 1,
+          "attainable_as_ratio_floor_cov": 0.012987012987012988
+        },
+        {
+          "construct_id": "C0b",
+          "n_hits": 1,
+          "coverage": 0.012987012987012988,
+          "required_multiple_over_baseline": 1.0,
+          "attainable_as_absolute_floor_n": 1,
+          "attainable_as_ratio_floor_cov": 0.012987012987012988
+        },
+        {
+          "construct_id": "C1",
+          "n_hits": 19,
+          "coverage": 0.24675324675324675,
+          "required_multiple_over_baseline": 19.0,
+          "attainable_as_absolute_floor_n": 19,
+          "attainable_as_ratio_floor_cov": 0.24675324675324675
+        },
+        {
+          "construct_id": "C2",
+          "n_hits": 60,
+          "coverage": 0.7792207792207793,
+          "required_multiple_over_baseline": 60.0,
+          "attainable_as_absolute_floor_n": 60,
+          "attainable_as_ratio_floor_cov": 0.7792207792207793
+        },
+        {
+          "construct_id": "C3",
+          "n_hits": 60,
+          "coverage": 0.7792207792207793,
+          "required_multiple_over_baseline": 60.0,
+          "attainable_as_absolute_floor_n": 60,
+          "attainable_as_ratio_floor_cov": 0.7792207792207793
+        }
+      ],
+      "attainability_verdict": "在 0.80 口径下不可达",
+      "injection_caveat": "⚠ 关键边界：0.80 是冻结字面，本线**不改 0.80**；本线把达标对象换到可达面 ⇒ 达标与否取决于**哪个面被指定为验收对象**⇒ 该选择本身即 PI 拍板项（0 自决）"
+    },
+    "P-PT-3a": {
+      "proposal_id": "P-PT-3a",
+      "criterion_literal": "显式重设门槛（PI 直接给新比率）",
+      "criterion_object": "短语面覆盖率（比率值可换）",
+      "threshold_source": "0.80 是冻结字面，重设 = 改阈值 ⇒ 须 PI 显式给；本件 0 自创 ⇒ 只报**各构造达标所需阈值**（可达域），不代 PI 选定",
+      "rows": [
+        {
+          "construct_id": "C0",
+          "observed_coverage": 0.012987012987012988,
+          "required_threshold_to_pass": 0.012987012987012988,
+          "verdict_at_0p80": "NOT_MET"
+        },
+        {
+          "construct_id": "C0b",
+          "observed_coverage": 0.012987012987012988,
+          "required_threshold_to_pass": 0.012987012987012988,
+          "verdict_at_0p80": "NOT_MET"
+        },
+        {
+          "construct_id": "C1",
+          "observed_coverage": 0.24675324675324675,
+          "required_threshold_to_pass": 0.24675324675324675,
+          "verdict_at_0p80": "NOT_MET"
+        },
+        {
+          "construct_id": "C2",
+          "observed_coverage": 0.7792207792207793,
+          "required_threshold_to_pass": 0.7792207792207793,
+          "verdict_at_0p80": "NOT_MET"
+        },
+        {
+          "construct_id": "C3",
+          "observed_coverage": 0.7792207792207793,
+          "required_threshold_to_pass": 0.7792207792207793,
+          "verdict_at_0p80": "NOT_MET"
+        }
+      ],
+      "any_face_reaches_0p80": false,
+      "required_threshold_range": {
+        "min": 0.012987012987012988,
+        "max": 0.7792207792207793
+      },
+      "non_degenerate_threshold_window": {
+        "derivation": "本窗口由**数据反算**（0 自创数值）：令阈值 t，构造 c 通过 ⇔ coverage_c ≥ t。全部构造一律不达 ⇔ t > max(cov)；无任何构造达 ⇔ t < min(cov)；⇒ 判别力非退化的 t 区间 = [min(cov), max(cov)]（端点闭区间）",
+        "phrase_face_window": [
+          0.012987012987012988,
+          0.24675324675324675
+        ],
+        "phrase_face_window_display": "[0.012987, 0.246753]",
+        "all_face_window": [
+          0.012987012987012988,
+          0.7792207792207793
+        ],
+        "all_face_window_display": "[0.012987, 0.779221]",
+        "below_window_behavior": "t < 下界 ⇒ 0 个构造达标（判据空转，n_pass = 0）",
+        "above_window_behavior": "t > 上界 ⇒ 全部构造不达（判据塌缩，退化为 P-PT-1 同款塌缩）",
+        "caveat": "本窗口是**判别力**窗口，0 是「科学上正确」的门槛；窗口内取值仍属 PI 拍板"
+      },
+      "note": "若 PI 欲「有面达标」⇒ 所需阈值 ≤ 0.7792（= 本盘最佳面读数）"
+    },
+    "P-PT-3b": {
+      "proposal_id": "P-PT-3b",
+      "criterion_literal": "宣布短语面在本盘 substrate 上改为**非验收面**、仅作诊断项",
+      "criterion_object": "无验收对象（诊断项）",
+      "threshold_source": "沿 prereg §3.2 P-PT-3 字面「非验收面」分支",
+      "verdict_emitted": null,
+      "verdict_is_null": true,
+      "n_diagnostic_readings_retained": 5,
+      "diagnostic_readings": {
+        "C0": {
+          "coverage": 0.012987012987012988,
+          "graded_spread": {
+            "n": 77,
+            "n_distinct": 2,
+            "std": 0.11321815437767985,
+            "std_gt_0": true,
+            "min": 0.0,
+            "max": 1.0
+          }
+        },
+        "C0b": {
+          "coverage": 0.012987012987012988,
+          "graded_spread": {
+            "n": 77,
+            "n_distinct": 2,
+            "std": 0.11321815437767985,
+            "std_gt_0": true,
+            "min": 0.0,
+            "max": 1.0
+          }
+        },
+        "C1": {
+          "coverage": 0.24675324675324675,
+          "graded_spread": {
+            "n": 77,
+            "n_distinct": 5,
+            "std": 1.133819043413878,
+            "std_gt_0": true,
+            "min": 0.0,
+            "max": 4.0
+          }
+        },
+        "C2": {
+          "coverage": 0.7792207792207793,
+          "graded_spread": {
+            "n": 77,
+            "n_distinct": 5,
+            "std": 0.9022002302835536,
+            "std_gt_0": true,
+            "min": 0.0,
+            "max": 4.0
+          }
+        },
+        "C3": {
+          "coverage": 0.7792207792207793,
+          "graded_spread": {
+            "n": 77,
+            "n_distinct": 11,
+            "std": 2.3853717348402816,
+            "std_gt_0": true,
+            "min": 0.0,
+            "max": 11.0
+          }
+        }
+      },
+      "downstream_consequence_literal": "prereg §3.2 字面：若宣布「非验收面」⇒ 消解 A 的该项读数须另寻消解路径（否则消解 A 永远「未完全消解」）",
+      "secondary_cost": "⚠ 沿 prereg §3.4 落档表：覆盖率 < 达标线 ⇒ 落「未达标」、维持「已知构造面缺陷」登记；改判须**另出改判件**，0 在本件内改档"
+    }
+  },
+  "eval_criteria_results": {
+    "C1_discrimination": {
+      "per_construct_graded_spread": {
+        "C0": {
+          "n": 77,
+          "n_distinct": 2,
+          "std": 0.11321815437767985,
+          "std_gt_0": true,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "C0b": {
+          "n": 77,
+          "n_distinct": 2,
+          "std": 0.11321815437767985,
+          "std_gt_0": true,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "C1": {
+          "n": 77,
+          "n_distinct": 5,
+          "std": 1.133819043413878,
+          "std_gt_0": true,
+          "min": 0.0,
+          "max": 4.0
+        },
+        "C2": {
+          "n": 77,
+          "n_distinct": 5,
+          "std": 0.9022002302835536,
+          "std_gt_0": true,
+          "min": 0.0,
+          "max": 4.0
+        },
+        "C3": {
+          "n": 77,
+          "n_distinct": 11,
+          "std": 2.3853717348402816,
+          "std_gt_0": true,
+          "min": 0.0,
+          "max": 11.0
+        }
+      },
+      "graded_nondegenerate_ok": {
+        "C0": true,
+        "C0b": true,
+        "C1": true,
+        "C2": true,
+        "C3": true
+      },
+      "readings_coverage_spread": {
+        "n": 5,
+        "n_distinct": 3,
+        "std": 0.347838663085618,
+        "std_gt_0": true,
+        "min": 0.012987012987012988,
+        "max": 0.7792207792207793
+      },
+      "readings_n_distinct": 3
+    },
+    "C2_attainability": {
+      "best_any_face_coverage": 0.7792207792207793,
+      "best_any_face_construct": "C2",
+      "target_0p80": 0.8,
+      "ratio_0p80_reachable_by_any_face": false,
+      "ratio_0p80_reachable_by_phrase_face": false,
+      "structural_ceiling_cov": 0.935064935064935,
+      "structural_ceiling_note": "结构天花板 0.9351 > 0.80 ⇒ 0.80 在**结构上**可达；但本盘实测最佳短语面仅 0.2468 ⇒ **实测上**不可达"
+    },
+    "C3_non_degenerate": {
+      "verdict_n_distinct_pt1": 1,
+      "verdict_all_same_pt1": true,
+      "verdict_collapse_note": "P-PT-1 判据层 verdict 二值化 ⇒ 判别力**结构上封顶 n_distinct ≤ 2**（判据形态使然，0 数据所致）",
+      "pt3b_verdict_is_null": true,
+      "non_degenerate_ok": {
+        "readings_layer": true,
+        "criterion_layer_pt1": false,
+        "criterion_layer_pt2_continuous": true,
+        "criterion_layer_pt3b_null": true
+      }
+    },
+    "C4_reproducible": {
+      "method": "连续两次独立执行本 executor，落盘后各算 SHA-12 比对",
+      "no_wallclock_dependency": true,
+      "ts_frozen": "2026-09-27T00:00:00+08:00",
+      "new_rng_sources": 0,
+      "rng_declarations": [
+        "seed = 42 (0 消耗：测量面全确定性)"
+      ],
+      "self_check_ok": true
+    }
+  },
+  "comparison_table": [
+    {
+      "route_id": "P-PT-1",
+      "criterion_object": "短语面覆盖率",
+      "n_c1_graded_readings": 5,
+      "c1_graded_n_distinct": 3,
+      "c1_verdict_n_distinct": 1,
+      "c1_verdict_collapse": true,
+      "c2_attainable": "不可达（0.80 口径）",
+      "c2_attainable_invariant_of_object": false,
+      "c3_non_degenerate": false,
+      "c3_note": "判据层 verdict 塌缩（判别力封顶）",
+      "c4_reproducible_ok": true,
+      "verdict_emitted": "EXPLORATORY_ONLY"
+    },
+    {
+      "route_id": "P-PT-2",
+      "criterion_object": "可换（短语面 / 全序列面 / 关键词面）",
+      "n_c1_graded_readings": 5,
+      "c1_graded_n_distinct": 3,
+      "c1_verdict_n_distinct": null,
+      "c1_verdict_collapse": null,
+      "c2_attainable": "在 0.80 口径下不可达",
+      "c2_attainable_invariant_of_object": true,
+      "c3_non_degenerate": true,
+      "c3_note": "判据层 0 塌缩",
+      "c4_reproducible_ok": true,
+      "verdict_emitted": "EXPLORATORY_ONLY"
+    },
+    {
+      "route_id": "P-PT-3a",
+      "criterion_object": "短语面覆盖率（比率值可换）",
+      "n_c1_graded_readings": 5,
+      "c1_graded_n_distinct": 3,
+      "c1_verdict_n_distinct": null,
+      "c1_verdict_collapse": null,
+      "c2_attainable": "不可达（0.80 口径）",
+      "c2_attainable_invariant_of_object": true,
+      "c3_non_degenerate": true,
+      "c3_note": "判据层 0 塌缩",
+      "c4_reproducible_ok": true,
+      "verdict_emitted": "EXPLORATORY_ONLY"
+    },
+    {
+      "route_id": "P-PT-3b",
+      "criterion_object": "无验收对象（诊断项）",
+      "n_c1_graded_readings": 5,
+      "c1_graded_n_distinct": 3,
+      "c1_verdict_n_distinct": null,
+      "c1_verdict_collapse": null,
+      "c2_attainable": "不可达（0.80 口径）",
+      "c2_attainable_invariant_of_object": true,
+      "c3_non_degenerate": true,
+      "c3_note": "判据层 0 塌缩",
+      "c4_reproducible_ok": true,
+      "verdict_emitted": null
+    }
+  ],
+  "t4_same_substrate_comparison": {
+    "t4_literal": "必须并报 v3 原构造读数作为同 substrate 对照，否则触发的根因不可分辨；对照读数 0 省略（沿 prereg §3.3 字面）",
+    "same_substrate": true,
+    "same_held_out": true,
+    "same_seed": true,
+    "frozen_readings": {
+      "source": "results/_v3_s2_executor/result_2026_09_27.json · t4_same_substrate_comparison 字面",
+      "n_substrate_run": 77,
+      "n_held": 23,
+      "rows": {
+        "nw_sim_mean_v3_rule": 0.4766,
+        "nw_sim_mean_s2": 0.481,
+        "nw_sim_mean_v3_construct": 0.4534,
+        "nled_sim_mean_v3": 0.2754,
+        "div_critical_coverage_v3": 0.4286,
+        "blind_obey_rate_v3": 0.2222,
+        "full_sequence_coverage": 0.7792,
+        "phrase_coverage_s2": 0.012987012987012988,
+        "n_events_with_multi_step_seq": 26
+      }
+    },
+    "phrase_face_rows": [
+      {
+        "metric": "短语面覆盖率（现状 5 类 C0）",
+        "v3_s2_frozen": 0.012987012987012988,
+        "preexp_measured": 0.012987012987012988,
+        "bit_exact": true
+      },
+      {
+        "metric": "全序列面覆盖率 C2",
+        "v3_s2_frozen": 0.7792,
+        "preexp_measured": 0.7792207792207793,
+        "bit_exact": true
+      },
+      {
+        "metric": "多步序列件数",
+        "v3_s2_frozen": 26,
+        "preexp_measured": 26,
+        "bit_exact": true
+      }
+    ],
+    "parallel_v3_s1_s2_context": {
+      "note": "v3 / S1 / S2 完整 T-4 表（8 行 + bit-exact 4/4）沿 S2 result 字面并报，0 省略；本件只读引用，0 重算、0 改写",
+      "rows": {
+        "nw_sim_mean_v3_rule": 0.4766,
+        "nw_sim_mean_s2": 0.481,
+        "nw_sim_mean_v3_construct": 0.4534,
+        "nled_sim_mean_v3": 0.2754,
+        "div_critical_coverage_v3": 0.4286,
+        "blind_obey_rate_v3": 0.2222,
+        "full_sequence_coverage": 0.7792,
+        "phrase_coverage_s2": 0.012987012987012988,
+        "n_events_with_multi_step_seq": 26
+      }
+    }
+  },
+  "preferred_route": {
+    "route_id": "P-PT-3a",
+    "verdict_is_recommendation_only": true,
+    "reason_codes": [
+      "C1_discrimination_preserved",
+      "C2_attainable",
+      "C3_non_degenerate",
+      "T4_comparability_preserved",
+      "minimal_semantic_damage"
+    ],
+    "primary_reason": "P-PT-3a 只换**数值**、判据对象（短语面）与其语义契约不动 ⇒ 对 prereg §3.3 T-4 同构对照的可比性伤害最小；P-PT-2 虽可达，但**换验收对象**＝换被验证命题（v3/S1/S2 验的都是短语面）⇒ 静默改写消解 A 原始声明",
+    "supporting_readings": {
+      "non_degenerate_window_phrase": "[0.012987, 0.246753]",
+      "why_not_pt1": "P-PT-1 实测 0/3 通过且 verdict 塌缩为单一值（n_distinct = 1）⇒ C1/C2/C3 三项皆不过"
+    },
+    "runner_up": "P-PT-2（条件可达，须 PI 指定验收对象 + 给倍率/下限）",
+    "fallback": "P-PT-3b（PI 不愿给新数值时的退路；须同时承担消解 A 另寻消解路径）",
+    "caveat": "推荐**带条件**：具体阈值落在 [0.012987, 0.246753] 区间内由 PI 拍板；本件 0 自决、0 自创阈值"
+  },
+  "honest_corrections_to_dispatch_premise": [
+    {
+      "id": "HC-1",
+      "dispatch_literal": "P-PT-2（换判据：全序列面 77.92% 等可达指标）",
+      "measured": "全序列面实测覆盖率 = 0.779221（60/77）",
+      "correction": "⛔ 全序列面 0.7792 **仍 < 0.80** ⇒ P-PT-2 若沿用 0.80 比率，**同样不达**。「可达指标」只在 P-PT-2 的「绝对件数下限」或「基线 × 倍率」子形态下成立（且须 PI 给数值）",
+      "root_cause": "**构造失灵（判据-数据错配），0 是命题被证伪**：0.80 是针对 85 件语料写的门槛字面，实测 77 件上全部面均 < 0.80"
+    },
+    {
+      "id": "HC-2",
+      "dispatch_literal": "0.80 线可达性",
+      "measured": "结构天花板 0.9351（72/77）> 0.80，但实测最佳面仅 0.7792",
+      "correction": "0.80 在**结构上**可达（天花板 0.9351），在**实测上**不可达（最佳面 0.7792）⇒ 二者须分开陈述，合起来说即误导",
+      "root_cause": "构造失灵（语料粒度 vs 5 类准则级长连缀固定串），沿 prereg §1.3 L-2 字面"
+    }
+  ],
+  "open_items_for_pi": [
+    "P-PT-1/2/3 择一（本件 0 择一；三线互斥字面沿 prereg §3.2）",
+    "若选 P-PT-2：须 PI 指定验收对象（短语面 vs 全序列面）并给倍率/下限",
+    "若选 P-PT-3a：须 PI 显式给新比率阈值",
+    "若选 P-PT-3b：须 PI 显式承担「消解 A 该项读数另寻消解路径」的后果"
+  ],
+  "verdict": null,
+  "verdict_is_null": true,
+  "actions_taken": 0,
+  "rejudge_actions": 0,
+  "files_touched_existing": 0,
+  "iron_rules": [
+    {
+      "idx": 1,
+      "rule": "预实验 = 探索性档",
+      "evidence": "verdict=null；0 判定动作、0 改判、0 改档"
+    },
+    {
+      "idx": 2,
+      "rule": "效果判据先冻结后跑",
+      "evidence": "FROZEN_EVAL_CRITERIA 为模块常量，先于任何测量"
+    },
+    {
+      "idx": 3,
+      "rule": "0 择一",
+      "evidence": "三线全跑，0 代 PI 拍板"
+    },
+    {
+      "idx": 4,
+      "rule": "0 自创阈值",
+      "evidence": "P-PT-2 / P-PT-3a 只报可达域，0 代 PI 给倍率/下限/新比率"
+    },
+    {
+      "idx": 5,
+      "rule": "T-4 同构对照",
+      "evidence": "同 77 substrate + 同 23 held-out + 同 seed 42；v3/S1/S2 读数并报"
+    },
+    {
+      "idx": 6,
+      "rule": "S-40 布尔显式命名",
+      "evidence": "全部布尔带 _ok/_match/_reachable/_emitted 后缀"
+    },
+    {
+      "idx": 7,
+      "rule": "SHA-12 口径",
+      "evidence": "hashlib.sha256(bytes).hexdigest()[:12] 小写；3 输入件全 MATCH"
+    },
+    {
+      "idx": 8,
+      "rule": "派生 JSON 不合并",
+      "evidence": "独立落盘 _preexp_data/result_2026_09_27.json；0 合并 S2/v3/S1"
+    },
+    {
+      "idx": 9,
+      "rule": "0 LLM",
+      "evidence": "纯 numpy/Python 本地机械；0 网络 0 模型调用"
+    },
+    {
+      "idx": 10,
+      "rule": "既有件 0 触动",
+      "evidence": "3 输入件只读（SHA-12 前后一致）；0 字节改动"
+    },
+    {
+      "idx": 11,
+      "rule": "key 永不明文",
+      "evidence": "0 key 读取 / 0 落盘 / 0 入 log"
+    },
+    {
+      "idx": 12,
+      "rule": "0 编造",
+      "evidence": "skill 缺位如实交代；0 虚构条文；0 虚构读数"
+    }
+  ],
+  "rerun_determinism": {
+    "ts_frozen": "2026-09-27T00:00:00+08:00",
+    "no_wallclock_dependency": true,
+    "new_rng_sources": 0,
+    "method": "连续两次独立执行本 executor，落盘后各算 SHA-12 比对"
+  }
+}
