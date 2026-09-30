@@ -1,0 +1,132 @@
+{
+  "schema": "v5r_s40_recompute/1.0",
+  "id": "S-40",
+  "label": "长期漂移",
+  "recompute_at": "2026-09-29",
+  "recompute_by": "Mavis worker（delegated sub-task 2026-09-29, M-R3 裁 A）",
+  "verdict_basis": "按预登记字面 K-S40-1/2/3 三项复算（0 触预登记字面）",
+  "prereg": {
+    "file": "_v4_seeds_prereg_supplement_2026_09_23.md",
+    "sha12": "113cbe555643",
+    "lines": "L367 (K-S40-1) / L368 (K-S40-2) / L369 (K-S40-3) / L510 (S-40 汇总行)",
+    "threshold_used": 0.5,
+    "threshold_touched": false
+  },
+  "fix_inputs": {
+    "verifier_verdict_file": "_v4_s40_semantics_verdict_2026_09_23.md",
+    "verifier_verdict_sha12": "0d6b3c74dc98",
+    "correction_note_file": "_v4_s40_correction_note_2026_09_23.md",
+    "correction_note_sha12": "065e57820c36",
+    "upgrade_review_sha12_untouched": "c398cf82b3ea"
+  },
+  "source_executor_readonly": {
+    "path": "D:\\私人资料\\_non_upload_local_archive\\results\\_v4_rerun_executor_2026_09_23.py",
+    "sha12": "cb47672e3062",
+    "bytes": 67571,
+    "modified_by_this_task": false
+  },
+  "inputs": {
+    "captions_file": "D:\\私人资料\\deposon-repo\\corpus\\v20_caption_surface\\strip_captions_22.json",
+    "n_captions": 22,
+    "n_cells_subsample_cap": 100,
+    "seed": 42
+  },
+  "metrics_full_precision": {
+    "cv_val": 0.100852,
+    "ci_lo": 0.092012,
+    "ci_hi": 0.110904,
+    "range_val": 2.119411,
+    "cv_shuf": 0.100852,
+    "min_cvs": 0.013747,
+    "max_cvs": 0.227494,
+    "n_cells": 100
+  },
+  "metrics_rounded_4": {
+    "cv_val": 0.1009,
+    "ci_95": [
+      0.092,
+      0.1109
+    ],
+    "max_min_range": 2.1194,
+    "negctrl_cv": 0.1009
+  },
+  "kill_lines_postfix": {
+    "K-S40-1": {
+      "threshold_desc": "CV>=0.50即FAIL",
+      "prereg_src": "_v4_seeds_prereg_supplement_2026_09_23.md L367 (K-S40-1) / L368 (K-S40-2) / L369 (K-S40-3) / L510 (S-40 汇总行)",
+      "observed": 0.1009,
+      "pass": true
+    },
+    "K-S40-2": {
+      "threshold_desc": "CI95%上界>=0.50即FAIL",
+      "prereg_src": "_v4_seeds_prereg_supplement_2026_09_23.md L367 (K-S40-1) / L368 (K-S40-2) / L369 (K-S40-3) / L510 (S-40 汇总行)",
+      "observed_ci_hi": 0.1109,
+      "pass": true
+    },
+    "K-S40-3": {
+      "threshold_desc": "CV_shuffle>=0.50且CV_proxy<=CV_shuffle即FAIL",
+      "prereg_src": "_v4_seeds_prereg_supplement_2026_09_23.md L367 (K-S40-1) / L368 (K-S40-2) / L369 (K-S40-3) / L510 (S-40 汇总行)",
+      "observed": [
+        0.1009,
+        0.1009
+      ],
+      "pass": true
+    }
+  },
+  "kill_line_hits": {
+    "K-S40-1": false,
+    "K-S40-2": false,
+    "K-S40-3": false
+  },
+  "all_three_false": true,
+  "verdict": "PASS",
+  "root_cause": "命题层面成立",
+  "failed_formula_postfix": "failed = cv_val >= TH_TAU_CV or ci[1] >= TH_TAU_CV or (cv_shuf >= TH_TAU_CV and cv_val <= cv_shuf)",
+  "construction_warning_not_a_killline": {
+    "expr": "range_val > 1.0",
+    "value": 2.119411,
+    "triggered": true,
+    "note": "非预登记条款，已按 0d6b3c74dc98 L153 从判死面迁出为独立构造警告；**不参与 verdict**"
+  },
+  "counterfactual_prefix_documented_only": {
+    "failed_formula_prefix": "failed = cv_val >= TH_TAU_CV or ci[1] >= TH_TAU_CV or range_val > 1.0 or (cv_shuf >= TH_TAU_CV and cv_val <= cv_shuf)",
+    "failed_prefix": true,
+    "verdict_prefix": "FAIL",
+    "kill_lines_prefix_raw_bool": {
+      "K-S40-1": true,
+      "K-S40-2": true,
+      "K-S40-3": true
+    },
+    "note": "改前形态仅作双因对照留痕，**不驱动本件 verdict**；0 预判"
+  },
+  "dual_factor_rootcause": {
+    "fatal_1_l833": "源执行棒 L833 failed 公式新增非预登记条款 `range_val > 1.0`；本次实测 range_val=2.119411 > 1.0 ⇒ 该子句单独把 PASS 翻成 FAIL",
+    "fatal_2_l837": "源执行棒 L837 kill_lines 字典丢弃 pass 命名 wrapper，存 raw bool；若按「True = hit」消费则与预登记字面「CV >= 0.50 即 FAIL」方向相反",
+    "post_fix": "两项均已在新名件修复；升格件归因「threshold-evaluation-path artifact」漏致命 1"
+  },
+  "iron_rules": {
+    "no_llm_no_api": "0 LLM / 0 API / 0 proxy / 0 gateway（纯本地 random.Random(42)）",
+    "no_prereg_touch": "TH_TAU_CV=0.50 与 K-S40-1/2/3 字面一字未动",
+    "no_source_modify": "源执行棒 / 升格件 / 预登记 / 语义复核件 全只读",
+    "no_baked_verdict": "verdict 由公式算出，未写死"
+  },
+  "cross_check": {
+    "ran": true,
+    "mode": "read-only import of source executor + run_S40()",
+    "source_verdict": "PASS",
+    "replica_verdict": "PASS",
+    "source_main_metric": 0.1009,
+    "replica_main_metric": 0.1009,
+    "source_kill_lines_pass": {
+      "K-S40-1": true,
+      "K-S40-2": true,
+      "K-S40-3": true
+    },
+    "replica_kill_lines_pass": {
+      "K-S40-1": true,
+      "K-S40-2": true,
+      "K-S40-3": true
+    },
+    "equivalent": true
+  }
+}
