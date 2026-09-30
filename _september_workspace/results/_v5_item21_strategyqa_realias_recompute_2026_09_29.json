@@ -1,0 +1,1219 @@
+{
+ "task": "V5 · H2-30 strategyqa 补字段别名（pred → predicted）后面 3 重算",
+ "date": "2026-09-29",
+ "author": "Mavis 团队 worker（纯执行棒）",
+ "authorization": "PI 确认批 11 §2 ㊱（落册册 _v5_confirm_b11_decisions_register_2026_09_29.md）",
+ "scope_lock": {
+  "authorized_surface": "仅补字段别名 pred → predicted（读取面兼容）",
+  "algorithm_changed": false,
+  "criterion_changed": false,
+  "reading_definition_changed": false,
+  "face": "面 3（按 benchmark 粒度）",
+  "faces_1_2_recomputed": false,
+  "face_2_boss_rerun": false,
+  "cross_benchmark_merged": false,
+  "benchmark_ordering_comparison_claimed": false,
+  "existing_files_modified": 0,
+  "derived_json_merged_into_existing": false,
+  "prior_result_json_overwritten": false
+ },
+ "frozen_params_inherited_from_orig_executor": {
+  "n_resamples": 10000,
+  "seeds": [
+   42,
+   123,
+   456
+  ],
+  "repro_tolerance_面2_unused": 0.05,
+  "conservation_tolerance_面1_unused": 1e-06,
+  "required_fields_canonical": [
+   "predicted",
+   "trap_hit",
+   "n_paths",
+   "n_filtered"
+  ],
+  "new_thresholds_introduced": 0
+ },
+ "definitions_inherited_verbatim": {
+  "D_dec": "D_dec(a,b) = (1/N) · Σ_i 1[pred_a(i) ≠ pred_b(i)]",
+  "D_trap": "D_trap(a) = (1/N) · Σ_i 1[trap_hit(i) = True]",
+  "D_flux": "D_flux(a) = (1/N) · Σ_i |n_filtered(i) − n_paths(i)| / n_paths(i)",
+  "bootstrap": "95% percentile，10k resamples，每 seed 共享一份索引矩阵（沿原件）"
+ },
+ "input_chain": {
+  "src_report_04f6ecd482b9": {
+   "path": "results/_v3_recheck_21_rescript_2026_09_27.md",
+   "sha12": "04f6ecd482b9",
+   "bytes": 14618,
+   "access": "read_only"
+  },
+  "b11_register": {
+   "path": "results/_v5_confirm_b11_decisions_register_2026_09_29.md",
+   "sha12": "07e9fe512da5",
+   "bytes": 12276,
+   "access": "read_only"
+  },
+  "prereg_v1p1": {
+   "path": "results/_v3_recheck_prereg_v1p1_2026_09_27.md",
+   "sha12": "bcc3cee23e82",
+   "bytes": 42970,
+   "access": "read_only"
+  },
+  "prior_result_354ae9c14fe2": {
+   "path": "results/_v3_recheck_21_result_2026_09_27.json",
+   "sha12": "354ae9c14fe2",
+   "bytes": 44928,
+   "access": "read_only"
+  },
+  "v19_frozen": {
+   "path": "results/deposon_v19_benchmark_fixes.json",
+   "sha12": "910c4333eead",
+   "bytes": 409104,
+   "access": "read_only"
+  },
+  "orig_executor": {
+   "path": "deposon_team/plugins/_v3r1p1_21_ktb1_distortion_2026_09_27.py",
+   "sha12": "f7b61f041c0b",
+   "bytes": 30672,
+   "access": "read_only_importlib_reuse_stats_boot_ci"
+  }
+ },
+ "alias_evidence": {
+  "gsm8k_observed_field": "predicted",
+  "strategyqa_observed_field": "pred",
+  "uniform_within_strategyqa": true,
+  "cross_arm_consistency": "strategyqa 6/6 臂均用 `pred`；gsm8k 6/6 臂均用 `predicted`⇒ 别名无跨臂冲突、无混合命名（0 归因，仅事实登记）"
+ },
+ "face_3_per_benchmark": {
+  "strategyqa": {
+   "benchmark": "strategyqa",
+   "n_ids": 99,
+   "arms": [
+    "high_couple",
+    "no_deposon",
+    "rule_baseline",
+    "unified",
+    "v1_blocking",
+    "v2_tunneling"
+   ],
+   "arm_insertion_order": [
+    "no_deposon",
+    "v1_blocking",
+    "v2_tunneling",
+    "unified",
+    "high_couple",
+    "rule_baseline"
+   ],
+   "flat_arm_identification": {
+    "arm": "rule_baseline",
+    "evidence_implied_accuracy": 0.898989898989899,
+    "e95_rule_baseline_accuracy": 0.898989898989899,
+    "e95_unified_accuracy": 0.898989898989899,
+    "identified": true,
+    "unified_also_matches": true,
+    "identification_unique": false,
+    "identification_caveat": "strategyqa 实测 rule_baseline 与 unified 精度完全相同 ⇒ 臂归属证据不唯一；该 benchmark 已按 `predicted` 0 命中判不可算 ⇒ 归属不参与任何读数"
+   },
+   "prediction_field_name_observed": "pred",
+   "alias_applied": true,
+   "alias_table_canonical_to_observed": {
+    "predicted": "pred"
+   },
+   "four_field_hits": {
+    "predicted": 594,
+    "trap_hit": 594,
+    "n_paths": 99,
+    "n_filtered": 99
+   },
+   "four_field_hits_without_alias": {
+    "predicted": 0,
+    "trap_hit": 594,
+    "n_paths": 99,
+    "n_filtered": 99
+   },
+   "computable": true,
+   "verdict": "COMPUTED",
+   "D_dec": {
+    "no_deposon|v1_blocking": {
+     "point": 0.9797979797979798,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.9798454545454546,
+      "ci95_lo": 0.9494949494949495,
+      "ci95_hi": 1.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.9798565656565658,
+      "ci95_lo": 0.9494949494949495,
+      "ci95_hi": 1.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.9798666666666668,
+      "ci95_lo": 0.9494949494949495,
+      "ci95_hi": 1.0
+     }
+    },
+    "no_deposon|v2_tunneling": {
+     "point": 0.10101010101010101,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.10068585858585859,
+      "ci95_lo": 0.050505050505050504,
+      "ci95_hi": 0.16161616161616163
+     },
+     "seed123": {
+      "mean_bootstrap": 0.10102525252525253,
+      "ci95_lo": 0.04040404040404041,
+      "ci95_hi": 0.16161616161616163
+     },
+     "seed456": {
+      "mean_bootstrap": 0.10093535353535353,
+      "ci95_lo": 0.050505050505050504,
+      "ci95_hi": 0.16161616161616163
+     }
+    },
+    "no_deposon|unified": {
+     "point": 0.9797979797979798,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.9798454545454546,
+      "ci95_lo": 0.9494949494949495,
+      "ci95_hi": 1.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.9798565656565658,
+      "ci95_lo": 0.9494949494949495,
+      "ci95_hi": 1.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.9798666666666668,
+      "ci95_lo": 0.9494949494949495,
+      "ci95_hi": 1.0
+     }
+    },
+    "no_deposon|rule_baseline": {
+     "point": 0.9797979797979798,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.9798454545454546,
+      "ci95_lo": 0.9494949494949495,
+      "ci95_hi": 1.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.9798565656565658,
+      "ci95_lo": 0.9494949494949495,
+      "ci95_hi": 1.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.9798666666666668,
+      "ci95_lo": 0.9494949494949495,
+      "ci95_hi": 1.0
+     }
+    },
+    "v1_blocking|v2_tunneling": {
+     "point": 0.8787878787878788,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.8791595959595959,
+      "ci95_lo": 0.8080808080808081,
+      "ci95_hi": 0.9393939393939394
+     },
+     "seed123": {
+      "mean_bootstrap": 0.878831313131313,
+      "ci95_lo": 0.8080808080808081,
+      "ci95_hi": 0.9393939393939394
+     },
+     "seed456": {
+      "mean_bootstrap": 0.8789313131313131,
+      "ci95_lo": 0.8080808080808081,
+      "ci95_hi": 0.9393939393939394
+     }
+    },
+    "unified|v1_blocking": {
+     "point": 0.0,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     }
+    },
+    "unified|v2_tunneling": {
+     "point": 0.8787878787878788,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.8791595959595959,
+      "ci95_lo": 0.8080808080808081,
+      "ci95_hi": 0.9393939393939394
+     },
+     "seed123": {
+      "mean_bootstrap": 0.878831313131313,
+      "ci95_lo": 0.8080808080808081,
+      "ci95_hi": 0.9393939393939394
+     },
+     "seed456": {
+      "mean_bootstrap": 0.8789313131313131,
+      "ci95_lo": 0.8080808080808081,
+      "ci95_hi": 0.9393939393939394
+     }
+    },
+    "high_couple|no_deposon": {
+     "point": 0.9797979797979798,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.9798454545454546,
+      "ci95_lo": 0.9494949494949495,
+      "ci95_hi": 1.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.9798565656565658,
+      "ci95_lo": 0.9494949494949495,
+      "ci95_hi": 1.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.9798666666666668,
+      "ci95_lo": 0.9494949494949495,
+      "ci95_hi": 1.0
+     }
+    },
+    "high_couple|v1_blocking": {
+     "point": 0.0,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     }
+    },
+    "high_couple|v2_tunneling": {
+     "point": 0.8787878787878788,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.8791595959595959,
+      "ci95_lo": 0.8080808080808081,
+      "ci95_hi": 0.9393939393939394
+     },
+     "seed123": {
+      "mean_bootstrap": 0.878831313131313,
+      "ci95_lo": 0.8080808080808081,
+      "ci95_hi": 0.9393939393939394
+     },
+     "seed456": {
+      "mean_bootstrap": 0.8789313131313131,
+      "ci95_lo": 0.8080808080808081,
+      "ci95_hi": 0.9393939393939394
+     }
+    },
+    "high_couple|unified": {
+     "point": 0.0,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     }
+    },
+    "high_couple|rule_baseline": {
+     "point": 0.0,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     }
+    },
+    "rule_baseline|v1_blocking": {
+     "point": 0.0,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     }
+    },
+    "rule_baseline|v2_tunneling": {
+     "point": 0.8787878787878788,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.8791595959595959,
+      "ci95_lo": 0.8080808080808081,
+      "ci95_hi": 0.9393939393939394
+     },
+     "seed123": {
+      "mean_bootstrap": 0.878831313131313,
+      "ci95_lo": 0.8080808080808081,
+      "ci95_hi": 0.9393939393939394
+     },
+     "seed456": {
+      "mean_bootstrap": 0.8789313131313131,
+      "ci95_lo": 0.8080808080808081,
+      "ci95_hi": 0.9393939393939394
+     }
+    },
+    "rule_baseline|unified": {
+     "point": 0.0,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     }
+    }
+   },
+   "D_dec_diag": {
+    "no_deposon|v1_blocking": {
+     "n": 99,
+     "n_distinct": 2,
+     "std": 0.14069079067862747,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.9797979797979798
+    },
+    "no_deposon|v2_tunneling": {
+     "n": 99,
+     "n_distinct": 2,
+     "std": 0.3013420987914403,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.10101010101010101
+    },
+    "no_deposon|unified": {
+     "n": 99,
+     "n_distinct": 2,
+     "std": 0.14069079067862747,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.9797979797979798
+    },
+    "no_deposon|rule_baseline": {
+     "n": 99,
+     "n_distinct": 2,
+     "std": 0.14069079067862747,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.9797979797979798
+    },
+    "v1_blocking|v2_tunneling": {
+     "n": 99,
+     "n_distinct": 2,
+     "std": 0.32637362467481845,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.8787878787878788
+    },
+    "unified|v1_blocking": {
+     "n": 99,
+     "n_distinct": 1,
+     "std": 0.0,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.0
+    },
+    "unified|v2_tunneling": {
+     "n": 99,
+     "n_distinct": 2,
+     "std": 0.32637362467481845,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.8787878787878788
+    },
+    "high_couple|no_deposon": {
+     "n": 99,
+     "n_distinct": 2,
+     "std": 0.14069079067862747,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.9797979797979798
+    },
+    "high_couple|v1_blocking": {
+     "n": 99,
+     "n_distinct": 1,
+     "std": 0.0,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.0
+    },
+    "high_couple|v2_tunneling": {
+     "n": 99,
+     "n_distinct": 2,
+     "std": 0.32637362467481845,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.8787878787878788
+    },
+    "high_couple|unified": {
+     "n": 99,
+     "n_distinct": 1,
+     "std": 0.0,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.0
+    },
+    "high_couple|rule_baseline": {
+     "n": 99,
+     "n_distinct": 1,
+     "std": 0.0,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.0
+    },
+    "rule_baseline|v1_blocking": {
+     "n": 99,
+     "n_distinct": 1,
+     "std": 0.0,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.0
+    },
+    "rule_baseline|v2_tunneling": {
+     "n": 99,
+     "n_distinct": 2,
+     "std": 0.32637362467481845,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.8787878787878788
+    },
+    "rule_baseline|unified": {
+     "n": 99,
+     "n_distinct": 1,
+     "std": 0.0,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.0
+    }
+   },
+   "D_trap": {
+    "no_deposon": {
+     "point": 1.0,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 1.0,
+      "ci95_lo": 1.0,
+      "ci95_hi": 1.0
+     },
+     "seed123": {
+      "mean_bootstrap": 1.0,
+      "ci95_lo": 1.0,
+      "ci95_hi": 1.0
+     },
+     "seed456": {
+      "mean_bootstrap": 1.0,
+      "ci95_lo": 1.0,
+      "ci95_hi": 1.0
+     }
+    },
+    "v1_blocking": {
+     "point": 0.0,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     }
+    },
+    "v2_tunneling": {
+     "point": 0.898989898989899,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.8993141414141413,
+      "ci95_lo": 0.8383838383838383,
+      "ci95_hi": 0.9494949494949495
+     },
+     "seed123": {
+      "mean_bootstrap": 0.8989747474747475,
+      "ci95_lo": 0.8383838383838383,
+      "ci95_hi": 0.9595959595959596
+     },
+     "seed456": {
+      "mean_bootstrap": 0.8990646464646465,
+      "ci95_lo": 0.8383838383838383,
+      "ci95_hi": 0.9494949494949495
+     }
+    },
+    "unified": {
+     "point": 0.0,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     }
+    },
+    "high_couple": {
+     "point": 0.0,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     }
+    },
+    "rule_baseline": {
+     "point": 0.0,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed123": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     },
+     "seed456": {
+      "mean_bootstrap": 0.0,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0
+     }
+    }
+   },
+   "D_trap_diag": {
+    "no_deposon": {
+     "n": 99,
+     "n_distinct": 1,
+     "std": 0.0,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 1.0
+    },
+    "v1_blocking": {
+     "n": 99,
+     "n_distinct": 1,
+     "std": 0.0,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.0
+    },
+    "v2_tunneling": {
+     "n": 99,
+     "n_distinct": 2,
+     "std": 0.3013420987914403,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.898989898989899
+    },
+    "unified": {
+     "n": 99,
+     "n_distinct": 1,
+     "std": 0.0,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.0
+    },
+    "high_couple": {
+     "n": 99,
+     "n_distinct": 1,
+     "std": 0.0,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.0
+    },
+    "rule_baseline": {
+     "n": 99,
+     "n_distinct": 1,
+     "std": 0.0,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.0
+    }
+   },
+   "D_flux": {
+    "no_deposon": {
+     "point": null,
+     "N": 99,
+     "computable": false,
+     "reason": "n_paths/n_filtered 在该臂 0 命中"
+    },
+    "v1_blocking": {
+     "point": null,
+     "N": 99,
+     "computable": false,
+     "reason": "n_paths/n_filtered 在该臂 0 命中"
+    },
+    "v2_tunneling": {
+     "point": null,
+     "N": 99,
+     "computable": false,
+     "reason": "n_paths/n_filtered 在该臂 0 命中"
+    },
+    "unified": {
+     "point": null,
+     "N": 99,
+     "computable": false,
+     "reason": "n_paths/n_filtered 在该臂 0 命中"
+    },
+    "high_couple": {
+     "point": null,
+     "N": 99,
+     "computable": false,
+     "reason": "n_paths/n_filtered 在该臂 0 命中"
+    },
+    "rule_baseline": {
+     "point": 0.5,
+     "N": 99,
+     "seed42": {
+      "mean_bootstrap": 0.5,
+      "ci95_lo": 0.5,
+      "ci95_hi": 0.5
+     },
+     "seed123": {
+      "mean_bootstrap": 0.5,
+      "ci95_lo": 0.5,
+      "ci95_hi": 0.5
+     },
+     "seed456": {
+      "mean_bootstrap": 0.5,
+      "ci95_lo": 0.5,
+      "ci95_hi": 0.5
+     }
+    }
+   },
+   "D_flux_diag": {
+    "rule_baseline": {
+     "n": 99,
+     "n_distinct": 1,
+     "std": 0.0,
+     "is_binary": true,
+     "gate_non_degenerate": false,
+     "mean": 0.5
+    }
+   },
+   "D_flux_arm_level_gap": [
+    "high_couple",
+    "no_deposon",
+    "unified",
+    "v1_blocking",
+    "v2_tunneling"
+   ],
+   "construct_degen_self_check": {
+    "rule": "n_distinct > 3 + std > 0（K-V3R1P1-0-A）",
+    "binary_single_column": {
+     "D_dec_per_pair_indicator": {
+      "no_deposon|v1_blocking": {
+       "n_distinct": 2,
+       "std": 0.14069079067862747,
+       "is_binary": true
+      },
+      "no_deposon|v2_tunneling": {
+       "n_distinct": 2,
+       "std": 0.3013420987914403,
+       "is_binary": true
+      },
+      "no_deposon|unified": {
+       "n_distinct": 2,
+       "std": 0.14069079067862747,
+       "is_binary": true
+      },
+      "no_deposon|rule_baseline": {
+       "n_distinct": 2,
+       "std": 0.14069079067862747,
+       "is_binary": true
+      },
+      "v1_blocking|v2_tunneling": {
+       "n_distinct": 2,
+       "std": 0.32637362467481845,
+       "is_binary": true
+      },
+      "unified|v1_blocking": {
+       "n_distinct": 1,
+       "std": 0.0,
+       "is_binary": true
+      },
+      "unified|v2_tunneling": {
+       "n_distinct": 2,
+       "std": 0.32637362467481845,
+       "is_binary": true
+      },
+      "high_couple|no_deposon": {
+       "n_distinct": 2,
+       "std": 0.14069079067862747,
+       "is_binary": true
+      },
+      "high_couple|v1_blocking": {
+       "n_distinct": 1,
+       "std": 0.0,
+       "is_binary": true
+      },
+      "high_couple|v2_tunneling": {
+       "n_distinct": 2,
+       "std": 0.32637362467481845,
+       "is_binary": true
+      },
+      "high_couple|unified": {
+       "n_distinct": 1,
+       "std": 0.0,
+       "is_binary": true
+      },
+      "high_couple|rule_baseline": {
+       "n_distinct": 1,
+       "std": 0.0,
+       "is_binary": true
+      },
+      "rule_baseline|v1_blocking": {
+       "n_distinct": 1,
+       "std": 0.0,
+       "is_binary": true
+      },
+      "rule_baseline|v2_tunneling": {
+       "n_distinct": 2,
+       "std": 0.32637362467481845,
+       "is_binary": true
+      },
+      "rule_baseline|unified": {
+       "n_distinct": 1,
+       "std": 0.0,
+       "is_binary": true
+      }
+     },
+     "D_trap_indicator": {
+      "no_deposon": {
+       "n_distinct": 1,
+       "std": 0.0,
+       "is_binary": true
+      },
+      "v1_blocking": {
+       "n_distinct": 1,
+       "std": 0.0,
+       "is_binary": true
+      },
+      "v2_tunneling": {
+       "n_distinct": 2,
+       "std": 0.3013420987914403,
+       "is_binary": true
+      },
+      "unified": {
+       "n_distinct": 1,
+       "std": 0.0,
+       "is_binary": true
+      },
+      "high_couple": {
+       "n_distinct": 1,
+       "std": 0.0,
+       "is_binary": true
+      },
+      "rule_baseline": {
+       "n_distinct": 1,
+       "std": 0.0,
+       "is_binary": true
+      }
+     },
+     "note": "D_dec / D_trap 的 per-item 序列为 0/1 指示量 ⇒ 结构性二值，n_distinct ≤ 2 恒成立；沿 PI 拍板③ 二值单列"
+    },
+    "non_binary_series_gate": {
+     "D_flux_per_arm": {
+      "rule_baseline": {
+       "n_distinct": 1,
+       "std": 0.0,
+       "gate_non_degenerate": false
+      }
+     },
+     "D_dec_pairs_passing": [],
+     "D_flux_arms_passing": []
+    }
+   },
+   "judgment_b": {
+    "criterion": "≥3 个臂对上 n_distinct > 3 且 std > 0",
+    "arm_pairs_total_D_dec": 15,
+    "arm_pairs_passing_non_binary_gate": 0,
+    "arm_level_passing_D_flux": 0,
+    "qualifying_count": 0,
+    "pass": false,
+    "alert_hit": true,
+    "reading_used": "B-1（本件机械判定沿用读法；门施于指标自身 per-item 序列）",
+    "reading_attribution": "(b) 判据读法归属属 PI 拍板项（批 11 §3 ㊲ H2-31）⇒ 本件 0 代裁、0 择一；B-2 读法读数见 reading_B2_arm_level"
+   },
+   "reading_B2_arm_level": {
+    "reading": "B-2（源件 §3 读法 B-2：门施于源值序列）",
+    "status": "supplementary_measured_not_counted_in_judgment_b",
+    "per_arm": {
+     "no_deposon": {
+      "n": 99,
+      "n_distinct": 2,
+      "std": null,
+      "gate_non_degenerate": false,
+      "computable": false,
+      "distinct_count_method": "repr 级去重计数（0 编码、0 转换）",
+      "std_not_computable_reason": "源值序列取值域 = [\"'No'\", \"'Yes'\"] 为字符串布尔域；原件 stats() 的 std 定义需 float 域 ⇒ std 不可算（ValueError）",
+      "n_distinct_gt_3": false,
+      "first_conjunct_fails": true,
+      "encoding_invented": false,
+      "note": "门规则首个合取项 n_distinct > 3 已不满足 ⇒ 无需 std 即可机械落读；0 自创 Yes/No→数值编码（编码即私设读数定义）"
+     },
+     "v1_blocking": {
+      "n": 99,
+      "n_distinct": 2,
+      "std": null,
+      "gate_non_degenerate": false,
+      "computable": false,
+      "distinct_count_method": "repr 级去重计数（0 编码、0 转换）",
+      "std_not_computable_reason": "源值序列取值域 = [\"'No'\", \"'Yes'\"] 为字符串布尔域；原件 stats() 的 std 定义需 float 域 ⇒ std 不可算（ValueError）",
+      "n_distinct_gt_3": false,
+      "first_conjunct_fails": true,
+      "encoding_invented": false,
+      "note": "门规则首个合取项 n_distinct > 3 已不满足 ⇒ 无需 std 即可机械落读；0 自创 Yes/No→数值编码（编码即私设读数定义）"
+     },
+     "v2_tunneling": {
+      "n": 99,
+      "n_distinct": 2,
+      "std": null,
+      "gate_non_degenerate": false,
+      "computable": false,
+      "distinct_count_method": "repr 级去重计数（0 编码、0 转换）",
+      "std_not_computable_reason": "源值序列取值域 = [\"'No'\", \"'Yes'\"] 为字符串布尔域；原件 stats() 的 std 定义需 float 域 ⇒ std 不可算（ValueError）",
+      "n_distinct_gt_3": false,
+      "first_conjunct_fails": true,
+      "encoding_invented": false,
+      "note": "门规则首个合取项 n_distinct > 3 已不满足 ⇒ 无需 std 即可机械落读；0 自创 Yes/No→数值编码（编码即私设读数定义）"
+     },
+     "unified": {
+      "n": 99,
+      "n_distinct": 2,
+      "std": null,
+      "gate_non_degenerate": false,
+      "computable": false,
+      "distinct_count_method": "repr 级去重计数（0 编码、0 转换）",
+      "std_not_computable_reason": "源值序列取值域 = [\"'No'\", \"'Yes'\"] 为字符串布尔域；原件 stats() 的 std 定义需 float 域 ⇒ std 不可算（ValueError）",
+      "n_distinct_gt_3": false,
+      "first_conjunct_fails": true,
+      "encoding_invented": false,
+      "note": "门规则首个合取项 n_distinct > 3 已不满足 ⇒ 无需 std 即可机械落读；0 自创 Yes/No→数值编码（编码即私设读数定义）"
+     },
+     "high_couple": {
+      "n": 99,
+      "n_distinct": 2,
+      "std": null,
+      "gate_non_degenerate": false,
+      "computable": false,
+      "distinct_count_method": "repr 级去重计数（0 编码、0 转换）",
+      "std_not_computable_reason": "源值序列取值域 = [\"'No'\", \"'Yes'\"] 为字符串布尔域；原件 stats() 的 std 定义需 float 域 ⇒ std 不可算（ValueError）",
+      "n_distinct_gt_3": false,
+      "first_conjunct_fails": true,
+      "encoding_invented": false,
+      "note": "门规则首个合取项 n_distinct > 3 已不满足 ⇒ 无需 std 即可机械落读；0 自创 Yes/No→数值编码（编码即私设读数定义）"
+     },
+     "rule_baseline": {
+      "n": 99,
+      "n_distinct": 2,
+      "std": null,
+      "gate_non_degenerate": false,
+      "computable": false,
+      "distinct_count_method": "repr 级去重计数（0 编码、0 转换）",
+      "std_not_computable_reason": "源值序列取值域 = [\"'No'\", \"'Yes'\"] 为字符串布尔域；原件 stats() 的 std 定义需 float 域 ⇒ std 不可算（ValueError）",
+      "n_distinct_gt_3": false,
+      "first_conjunct_fails": true,
+      "encoding_invented": false,
+      "note": "门规则首个合取项 n_distinct > 3 已不满足 ⇒ 无需 std 即可机械落读；0 自创 Yes/No→数值编码（编码即私设读数定义）"
+     }
+    },
+    "n_arms_total": 6,
+    "n_arms_measurable": 0,
+    "n_arms_passing_gate": 0
+   },
+   "judgment_c": {
+    "criterion": "3 seed（42/123/456）× 10k resamples 下臂间大小序 3/3 不变",
+    "n_resamples": 10000,
+    "seeds": [
+     42,
+     123,
+     456
+    ],
+    "orders_by_seed": {
+     "seed42": [
+      "high_couple|rule_baseline",
+      "high_couple|unified",
+      "high_couple|v1_blocking",
+      "rule_baseline|unified",
+      "rule_baseline|v1_blocking",
+      "unified|v1_blocking",
+      "no_deposon|v2_tunneling",
+      "high_couple|v2_tunneling",
+      "rule_baseline|v2_tunneling",
+      "unified|v2_tunneling",
+      "v1_blocking|v2_tunneling",
+      "high_couple|no_deposon",
+      "no_deposon|rule_baseline",
+      "no_deposon|unified",
+      "no_deposon|v1_blocking"
+     ],
+     "seed123": [
+      "high_couple|rule_baseline",
+      "high_couple|unified",
+      "high_couple|v1_blocking",
+      "rule_baseline|unified",
+      "rule_baseline|v1_blocking",
+      "unified|v1_blocking",
+      "no_deposon|v2_tunneling",
+      "high_couple|v2_tunneling",
+      "rule_baseline|v2_tunneling",
+      "unified|v2_tunneling",
+      "v1_blocking|v2_tunneling",
+      "high_couple|no_deposon",
+      "no_deposon|rule_baseline",
+      "no_deposon|unified",
+      "no_deposon|v1_blocking"
+     ],
+     "seed456": [
+      "high_couple|rule_baseline",
+      "high_couple|unified",
+      "high_couple|v1_blocking",
+      "rule_baseline|unified",
+      "rule_baseline|v1_blocking",
+      "unified|v1_blocking",
+      "no_deposon|v2_tunneling",
+      "high_couple|v2_tunneling",
+      "rule_baseline|v2_tunneling",
+      "unified|v2_tunneling",
+      "v1_blocking|v2_tunneling",
+      "high_couple|no_deposon",
+      "no_deposon|rule_baseline",
+      "no_deposon|unified",
+      "no_deposon|v1_blocking"
+     ]
+    },
+    "point_estimate_order": [
+     "high_couple|rule_baseline",
+     "high_couple|unified",
+     "high_couple|v1_blocking",
+     "rule_baseline|unified",
+     "rule_baseline|v1_blocking",
+     "unified|v1_blocking",
+     "no_deposon|v2_tunneling",
+     "high_couple|v2_tunneling",
+     "rule_baseline|v2_tunneling",
+     "unified|v2_tunneling",
+     "v1_blocking|v2_tunneling",
+     "high_couple|no_deposon",
+     "no_deposon|rule_baseline",
+     "no_deposon|unified",
+     "no_deposon|v1_blocking"
+    ],
+    "orders_identical_3of3": true,
+    "discordant_pairs": {
+     "seed42_vs_seed123": [],
+     "seed123_vs_seed456": [],
+     "seed42_vs_seed456": []
+    },
+    "n_pairwise_comparisons": 105,
+    "n_agreements_all3seeds": 105,
+    "pass": true,
+    "alert_hit": false,
+    "ci_overlap_note": "面 3 各臂对 95% CI 宽度见 D_dec 条目；序稳定 ≠ CI 互不重叠（0 跨面主张）"
+   },
+   "n_common_ids": 99,
+   "id_sets_identical_across_arms": true,
+   "predicted_none_records": {
+    "high_couple": 0,
+    "no_deposon": 0,
+    "rule_baseline": 0,
+    "unified": 0,
+    "v1_blocking": 0,
+    "v2_tunneling": 0
+   },
+   "none_treatment": "predicted 为 null 的 item 按字面参与 1[pred_a≠pred_b] 比较（null 与数值互异）；0 归一化、0 剔除（剔除即私设）",
+   "missing_key_records": {
+    "high_couple": 0,
+    "no_deposon": 0,
+    "rule_baseline": 0,
+    "unified": 0,
+    "v1_blocking": 0,
+    "v2_tunneling": 0
+   },
+   "prediction_value_domain": {
+    "high_couple": [
+     "'No'",
+     "'Yes'"
+    ],
+    "no_deposon": [
+     "'No'",
+     "'Yes'"
+    ],
+    "rule_baseline": [
+     "'No'",
+     "'Yes'"
+    ],
+    "unified": [
+     "'No'",
+     "'Yes'"
+    ],
+    "v1_blocking": [
+     "'No'",
+     "'Yes'"
+    ],
+    "v2_tunneling": [
+     "'No'",
+     "'Yes'"
+    ]
+   },
+   "tie_structure_disclosure": {
+    "n_pairs_total": 15,
+    "n_pairs_in_tied_groups": 14,
+    "n_pairs_with_unique_point": 1,
+    "tied_groups": {
+     "0.979797979798": [
+      "high_couple|no_deposon",
+      "no_deposon|rule_baseline",
+      "no_deposon|unified",
+      "no_deposon|v1_blocking"
+     ],
+     "0.878787878788": [
+      "high_couple|v2_tunneling",
+      "rule_baseline|v2_tunneling",
+      "unified|v2_tunneling",
+      "v1_blocking|v2_tunneling"
+     ],
+     "0.0": [
+      "high_couple|rule_baseline",
+      "high_couple|unified",
+      "high_couple|v1_blocking",
+      "rule_baseline|unified",
+      "rule_baseline|v1_blocking",
+      "unified|v1_blocking"
+     ]
+    },
+    "order_tiebreak_source": "源件 order_by 排序键 = (bootstrap 均值, 臂对名字符串) ⇒ 点估计完全并列处由**臂对名 tiebreak** 决定次序",
+    "implication_for_criterion_c": "判据 (c) 字面为「全序 3/3 不变」⇒ 机械判定按字面落读；但绝大多数臂对点估计完全相同 ⇒ 该「稳定」含名 tiebreak 成分，**不可**据此宣称读数具备鉴别力（0 放宽、0 改判、仅披露）"
+   },
+   "arm_attribution_disclosure_post_alias": {
+    "issue": "strategyqa 平铺 E9.5 臂的 `rule_baseline` 标签证据**不唯一**（rule_baseline 与 unified 精度同为 0.898989898989899）",
+    "premise_now_void": "源件/原 executor 的 caveat「该 benchmark 已判不可算 ⇒ 归属不参与任何读数」**在别名重算后不再成立**（benchmark 现已 computable）⇒ 如实披露",
+    "arm_label_source": "沿原 executor L272 硬编码 flat_arm='rule_baseline'；本件 0 改臂名、0 重命名、0 替 PI 裁定归属",
+    "readings_involving_this_arm": {
+     "D_dec_pairs": [
+      "high_couple|rule_baseline",
+      "no_deposon|rule_baseline",
+      "rule_baseline|unified",
+      "rule_baseline|v1_blocking",
+      "rule_baseline|v2_tunneling"
+     ],
+     "D_trap_arm": true,
+     "D_flux_computable_arms": [
+      "rule_baseline"
+     ],
+     "note": "D_flux 唯一可算臂即该归属不唯一的平铺臂 ⇒ D_flux 读数完全依赖此归属；0 归因、0 编造归属说明"
+    }
+   }
+  }
+ },
+ "algorithm_fidelity_selfcheck_gsm8k": {
+  "compared_keys": {
+   "D_dec": true,
+   "D_trap": true,
+   "D_flux": true,
+   "D_dec_diag": true,
+   "D_trap_diag": true,
+   "D_flux_diag": true,
+   "D_flux_arm_level_gap": true,
+   "four_field_hits": true,
+   "computable": true,
+   "n_ids": true,
+   "arms": true
+  },
+  "judgment_c_orders_equal": true,
+  "judgment_b_qualifying_equal": true,
+  "all_equal": true,
+  "prior_gsm8k_n_ids": 100,
+  "meaning": "同一代码路径在 gsm8k（无别名命中）上与既有结果 JSON 逐键相等 ⇒ 别名之外 0 算法/0 判据/0 读数定义差异（可核自证）"
+ },
+ "zero_touch_declaration": {
+  "existing_files_modified": 0,
+  "derived_json_merged_into_existing": false,
+  "llm_calls": 0,
+  "proxy": false,
+  "network_calls": 0,
+  "key_reads": 0,
+  "external_archive_touched": false
+ },
+ "verdict_boundary": "本件 0 判档位、0 代裁 (b) 读法归属（属 verdict-keeper / PI）；0 跨 benchmark 合并、0 跨 benchmark 比大小",
+ "determinism": "无墙钟时间戳；同输入重跑本 JSON 逐字节一致"
+}

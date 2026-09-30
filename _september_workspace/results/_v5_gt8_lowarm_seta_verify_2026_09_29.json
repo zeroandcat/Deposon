@@ -1,0 +1,315 @@
+{
+ "case": "gt8_p10_lowarm_seta_readonly_verification",
+ "purpose": "派工单「上一棒已落产物 ⇒ 先盘上核验、无则重产、有则核后接续」之**核**环节；对 set A 只读核验，0 覆写、0 合并、0 改任何既有件",
+ "verify_of": {
+  "path": "results/_v5_gt8_lowarm_result_2026_09_29.json",
+  "sha12": "c68076c88140",
+  "produced_by": "worker 棒 1b（executor）· mvs_cb132cd536f648299c713abf2071d026"
+ },
+ "source_status": "**set A 源码已丢失**（并发写者碰撞时被本棒写入覆盖）",
+ "verifiable_low_arms": {
+  "GT8_E_low": {
+   "reconstructed_from": "N=33, k=3（平衡 k 叉树 · S2 口径）",
+   "seed": 208810,
+   "n_named_rebuilt": 10,
+   "n_named_recorded": 10,
+   "n_named_match": true,
+   "n_filler_rebuilt": 22,
+   "n_filler_recorded": 22,
+   "source_target_match": true,
+   "hub_concentration_recomputed": 0.03125,
+   "hub_concentration_recorded": 0.03125,
+   "hub_concentration_bit_identical": true,
+   "field_named_recomputed": 0.2,
+   "field_named_recorded": 0.2,
+   "field_named_bit_identical": true,
+   "random_named_bit_identical": true,
+   "degree_named_bit_identical": true,
+   "diff_fm_rand_recomputed": 0.2,
+   "diff_fm_rand_recorded": 0.2,
+   "diff_fm_rand_bit_identical": true,
+   "all_readings_bit_identical": true
+  },
+  "GT8_F_low": {
+   "reconstructed_from": "N=59, k=4（平衡 k 叉树 · S2 口径）",
+   "seed": 208812,
+   "n_named_rebuilt": 14,
+   "n_named_recorded": 14,
+   "n_named_match": true,
+   "n_filler_rebuilt": 44,
+   "n_filler_recorded": 44,
+   "source_target_match": true,
+   "hub_concentration_recomputed": 0.017241379310344827,
+   "hub_concentration_recorded": 0.017241379310344827,
+   "hub_concentration_bit_identical": true,
+   "field_named_recomputed": 0.14285714285714285,
+   "field_named_recorded": 0.14285714285714285,
+   "field_named_bit_identical": true,
+   "random_named_bit_identical": true,
+   "degree_named_bit_identical": true,
+   "diff_fm_rand_recomputed": 0.07142857142857142,
+   "diff_fm_rand_recorded": 0.07142857142857142,
+   "diff_fm_rand_bit_identical": true,
+   "all_readings_bit_identical": true
+  }
+ },
+ "all_low_arm_readings_bit_identical": true,
+ "unverifiable_high_arms": {
+  "GT8_E_high": {
+   "recorded_sha256": "2e265a7a05cb9108f4f3eaade145c217ea326a2f7e2874c761b65acdd4502ee8",
+   "recorded_diff_fm_rand": 0.8709677419354839,
+   "recorded_hub_concentration": 0.5,
+   "reason_unverifiable": "set A 源码已丢失 ⇒ 边集未落盘 ⇒ 0 独立重建、0 复算 sha256/读数；本件 0 猜测构造、0 编造校验",
+   "internal_consistency_only": {
+    "diff_equals_field_minus_random": true,
+    "n_named_plus_filler_equals_n_edges": true,
+    "hub_equals_max_indeg_over_n_edges_recorded": 0.5
+   }
+  },
+  "GT8_F_high": {
+   "recorded_sha256": "593253d85ee232b213a80f31e9687be383fe9575b12e6b96f63875e46017c163",
+   "recorded_diff_fm_rand": 0.8727272727272728,
+   "recorded_hub_concentration": 0.5,
+   "reason_unverifiable": "set A 源码已丢失 ⇒ 边集未落盘 ⇒ 0 独立重建、0 复算 sha256/读数；本件 0 猜测构造、0 编造校验",
+   "internal_consistency_only": {
+    "diff_equals_field_minus_random": true,
+    "n_named_plus_filler_equals_n_edges": true,
+    "hub_equals_max_indeg_over_n_edges_recorded": 0.5
+   }
+  }
+ },
+ "recomputed_mechanical": {
+  "attribution": {
+   "all": {
+    "n_pairs": 6,
+    "n_concordant": 6,
+    "n_reversed": 0,
+    "n_tied": 0
+   },
+   "new_2": {
+    "n_pairs": 2,
+    "n_concordant": 2,
+    "n_reversed": 0,
+    "n_tied": 0
+   },
+   "as_run_2": {
+    "n_pairs": 2,
+    "n_concordant": 2,
+    "n_reversed": 0,
+    "n_tied": 0
+   },
+   "expansion_2": {
+    "n_pairs": 2,
+    "n_concordant": 2,
+    "n_reversed": 0,
+    "n_tied": 0
+   }
+  },
+  "attribution_disk": {
+   "as_run_2_pairs": {
+    "n_pairs": 2,
+    "n_concordant": 2,
+    "n_reversed": 0,
+    "n_tied": 0
+   },
+   "v5_expansion_2_pairs": {
+    "n_pairs": 2,
+    "n_concordant": 2,
+    "n_reversed": 0,
+    "n_tied": 0
+   },
+   "p10_new_2_pairs": {
+    "n_pairs": 2,
+    "n_concordant": 2,
+    "n_reversed": 0,
+    "n_tied": 0
+   },
+   "all_6_pairs": {
+    "n_pairs": 6,
+    "n_concordant": 6,
+    "n_reversed": 0,
+    "n_tied": 0
+   },
+   "required_two_framings_per_prereg": {
+    "新增对子集": {
+     "n_pairs": 2,
+     "n_concordant": 2,
+     "n_reversed": 0,
+     "n_tied": 0
+    },
+    "全部对池": {
+     "n_pairs": 6,
+     "n_concordant": 6,
+     "n_reversed": 0,
+     "n_tied": 0
+    }
+   }
+  },
+  "diff_low_values": {
+   "GT8_A_low": 0.13333333333333333,
+   "GT8_B_low": -0.08333333333333334,
+   "GT8_C_low": 0.25,
+   "GT8_D_low": 0.25,
+   "GT8_E_low": 0.2,
+   "GT8_F_low": 0.07142857142857142
+  },
+  "n_distinct_diff_low_all": 5,
+  "n_distinct_diff_low_existing_4": 3,
+  "collision_groups": {
+   "0.25": [
+    "GT8_C_low",
+    "GT8_D_low"
+   ]
+  },
+  "gates_recomputed_vs_disk": {
+   "new_2_pairs_diff_fm_rand": {
+    "recomputed": {
+     "n_values": 4,
+     "n_distinct": 4,
+     "std": 0.37086351062928535,
+     "gate_n_distinct_gt_3": true,
+     "gate_std_gt_0": true,
+     "gate_pass": true,
+     "state_candidate": "PASS",
+     "kd_reason": null
+    },
+    "disk": {
+     "n_values": 4,
+     "n_distinct": 4,
+     "std": 0.37086351062928535,
+     "gate_pass": true
+    },
+    "matches_disk": true
+   },
+   "new_2_pairs_hub_concentration": {
+    "recomputed": {
+     "n_values": 4,
+     "n_distinct": 3,
+     "std": 0.23792871019409145,
+     "gate_n_distinct_gt_3": false,
+     "gate_std_gt_0": true,
+     "gate_pass": false,
+     "state_candidate": "KD",
+     "kd_reason": "K-V5R3-0-B ③ 防退化门不达（n_distinct≤3 或 std=0）"
+    },
+    "disk": {
+     "n_values": 4,
+     "n_distinct": 3,
+     "std": 0.23792871019409145,
+     "gate_pass": false
+    },
+    "matches_disk": true
+   },
+   "all_6_pairs_diff_fm_rand": {
+    "recomputed": {
+     "n_values": 12,
+     "n_distinct": 11,
+     "std": 0.3631803498656735,
+     "gate_n_distinct_gt_3": true,
+     "gate_std_gt_0": true,
+     "gate_pass": true,
+     "state_candidate": "PASS",
+     "kd_reason": null
+    },
+    "disk": {
+     "n_values": 12,
+     "n_distinct": 11,
+     "std": 0.3631803498656735,
+     "gate_pass": true
+    },
+    "matches_disk": true
+   },
+   "all_6_pairs_hub_concentration": {
+    "recomputed": {
+     "n_values": 12,
+     "n_distinct": 9,
+     "std": 0.22498971339771734,
+     "gate_n_distinct_gt_3": true,
+     "gate_std_gt_0": true,
+     "gate_pass": true,
+     "state_candidate": "PASS",
+     "kd_reason": null
+    },
+    "disk": {
+     "n_values": 12,
+     "n_distinct": 9,
+     "std": 0.22498971339771734,
+     "gate_pass": true
+    },
+    "matches_disk": true
+   },
+   "all_6_pairs_diff_low_only": {
+    "recomputed": {
+     "n_values": 6,
+     "n_distinct": 5,
+     "std": 0.1171656804453644,
+     "gate_n_distinct_gt_3": true,
+     "gate_std_gt_0": true,
+     "gate_pass": true,
+     "state_candidate": "PASS",
+     "kd_reason": null
+    },
+    "disk": {
+     "n_values": 6,
+     "n_distinct": 5,
+     "std": 0.1171656804453644,
+     "gate_pass": true
+    },
+    "matches_disk": true
+   }
+  },
+  "all_gates_match_disk": true,
+  "all_attribution_match_disk": true
+ },
+ "material_finding_for_verdict_keeper": "⚠️ set A 新面 hub_concentration 门：n_distinct = 3 ≤ 3 ⇒ **门不达** ⇒ 按 K-V5R3-0-B ③ 该面落 **KD** 面（根因：set A 两条高臂的 hub_concentration 同为 0.5 ⇒ 4 值序列只有 3 个互异值）。**该 KD 候选的裁定归 verdict-keeper，本棒 0 代裁。**",
+ "set_b_parallel": {
+  "sha12": "8aa69a5e922d",
+  "case": "gt8_p10_lowarm_v3_setB",
+  "n_pairs": 6,
+  "low_arm_diff_fm_rand": {
+   "GT8_A_low": 0.13333333333333333,
+   "GT8_B_low": -0.08333333333333334,
+   "GT8_C_low": 0.25,
+   "GT8_D_low": 0.25,
+   "GT8_E_low": 0.2222222222222222,
+   "GT8_F_low": 0.15384615384615385
+  },
+  "n_distinct_diff_low_all": 5,
+  "new_low_arm_n_named": {
+   "GT8_E_low": 9,
+   "GT8_F_low": 13
+  },
+  "attribution_counts": {
+   "new_pairs_2": {
+    "n_pairs": 2,
+    "n_concordant": 2,
+    "n_reversed": 0,
+    "n_tied": 0
+   },
+   "all_pairs_6": {
+    "n_pairs": 6,
+    "n_concordant": 6,
+    "n_reversed": 0,
+    "n_tied": 0
+   }
+  },
+  "agreement_on_concordance": true,
+  "note": "两套为同面两次**独立写死**的构造（低臂 k 与高臂构型不同）；**0 由执行面择一为准**（裁定归 verdict-keeper / PI）"
+ },
+ "discipline": {
+  "read_only_on_existing": true,
+  "no_overwrite_of_set_a": true,
+  "no_new_measurement_surface": "重算沿既有协议、0 新增对数、0 改判据；0 猜测 set A 高臂构造",
+  "no_new_thresholds": 0,
+  "adjudication_owner": "verdict-keeper",
+  "worker_predetermined_state": false,
+  "key_read": 0,
+  "llm_api": 0
+ },
+ "author": {
+  "role": "worker",
+  "session": "mvs_02eb4a5ab8024f439c31147529aaf7d4",
+  "note": "0 冒充 verdict-keeper / protocol-keeper / evidence-auditor / doc-writer / PI / 并发棒会话"
+ },
+ "self_sha_note": "本件 SHA-12 0 自写入（避免自指悖论）⇒ 由交付回执自报盘上实测值"
+}

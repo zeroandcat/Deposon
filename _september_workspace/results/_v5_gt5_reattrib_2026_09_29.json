@@ -1,0 +1,162 @@
+{
+ "case": "gt5",
+ "class": "类 I · 已落地「不明」",
+ "prereg_rule_ids": [
+  "K-V5R3-GT5-1",
+  "K-V5R3-GT5-2",
+  "K-V5R3-GT5-3",
+  "K-V5R3-GT5-4",
+  "K-V5R3-GT5-5",
+  "K-V5R3-GT5-6",
+  "K-V5R3-0-D",
+  "K-V5R3-0-E",
+  "K-V5R3-0-F"
+ ],
+ "surface": "只读复算（立线件 §6.2）· 0 补跑 · 0 新测量",
+ "anchor": {
+  "path": "results/deposon_v20_gt5.json",
+  "sha12": "fca14c5735dd"
+ },
+ "original_verdict_literal": "inconclusive_preregistered_undefined_band",
+ "v2_parallel_verdict": "FAIL",
+ "parallel_report": {
+  "原判": "inconclusive_preregistered_undefined_band",
+  "v2 并列判": "FAIL"
+ },
+ "legs": {
+  "A_leg_monotonicity": {
+   "literal": "frac_full_mono ≥ 0.8",
+   "frac_graphs_full_monotonicity": 1.0,
+   "graphs_with_full_monotonicity": [
+    "S6",
+    "L_physics_concepts",
+    "L_biological_taxonomy",
+    "L_algorithm_process"
+   ],
+   "verdict": "PASS"
+  },
+  "B_leg_noise_arm_global_potential_advantage": {
+   "literal": "全部图 dirichlet终点 Φ < meanfield终点 Φ（全称条件）",
+   "universal_condition": false,
+   "graphs_holding": [
+    "L_biological_taxonomy"
+   ],
+   "graphs_violating": [
+    "S6",
+    "L_physics_concepts",
+    "L_algorithm_process"
+   ],
+   "n_violating": 3,
+   "n_graphs": 4,
+   "verdict": "FAIL",
+   "attribution": "②最不利方向（K-V5R3-GT5-2）· 全称命题按字面被证伪，0 软化为「未观察到」"
+  }
+ },
+ "kill_rule_probe": {
+  "literal": "meanfield_monotone_rate < 0.5 的图 ≥ 2",
+  "graphs_below_dead": [],
+  "n_graphs_below_dead": 0,
+  "triggered": false
+ },
+ "claim_level": {
+  "verdict": "FAIL",
+  "permitted_statement": "「噪声臂全局势优势腿被证伪；单调性腿单独成立（4/4）；两者不可互替」",
+  "disclosure_item": "3/4 反转披露强制项：S6 gap=−0.30658882271105603、L_physics_concepts gap=−0.008594356229952638、L_algorithm_process gap=−0.0007708929775289697；仅 L_biological_taxonomy gap=+0.43777787179854766 满足（docs/GT_RECONSTRUCTION.md §2 披露面 0 删改）"
+ },
+ "root_cause": {
+  "class": "③ 混合",
+  "mandated_literal": "③ 混合 —— 该全称命题按字面被证伪（3/4 图违反），但反转具系统性而非工具失灵：同 3/4 图在 GT-7 温度前沿扫描中复现，Φ 增益集中于高温端（docs/GT_RECONSTRUCTION.md §7 载 corr −0.87）；即噪声在命中率上有害、在全局势上可有益（探索-利用权衡），非读数错误。",
+  "not_classified_as": [
+   "① 真证伪",
+   "② 假证伪"
+  ],
+  "evidence": [
+   "docs/GT_RECONSTRUCTION.md §2 纪律声明",
+   "docs/GT_RECONSTRUCTION.md §7 GT-7 温度前沿扫描"
+  ]
+ },
+ "no_backtrack_guards": {
+  "GT-5 终点条件 0 回写": true,
+  "GT_RECONSTRUCTION.md §2 3/4 披露 0 删改": true,
+  "gt5b 收窄主张 0 使失效": true,
+  "原判字面保留、v2 并列": true,
+  "并报强制（K-V5R3-0-E）": true
+ },
+ "anti_degeneration_gates": {
+  "endpoint_gap": {
+   "construct": "gt5 · endpoint_gap 逐图（4 值）",
+   "n_values": 4,
+   "n_distinct": 4,
+   "std": 0.26552324235766345,
+   "gate_n_distinct_gt_3": true,
+   "gate_std_gt_0": true,
+   "gate_pass": true,
+   "verdict": "PASS",
+   "kd_reason": null
+  },
+  "meanfield_monotone_rate": {
+   "construct": "gt5 · meanfield_monotone_rate 逐图",
+   "n_values": 4,
+   "n_distinct": 1,
+   "std": 0.0,
+   "gate_n_distinct_gt_3": false,
+   "gate_std_gt_0": false,
+   "gate_pass": false,
+   "verdict": "KD",
+   "kd_reason": "K-V5R3-0-B ③ 防退化门不达（n_distinct≤3 或 std=0）"
+  },
+  "gamma_V5R3_3": "meanfield_monotone_rate 二值退化（n_distinct=1）⇒ 判别力由 endpoint_gap（n_distinct=4）承担，0 以单调率字段单独判档"
+ },
+ "conclusion_ceiling": "仅覆盖本构造面（4 图 × 5 tasks × 10 dirichlet seeds · sample_seed=505000）；0 外推（立线件 §9）",
+ "per_graph_readout": {
+  "S6": {
+   "meanfield_mean_endpoint": -1.7879595323591382,
+   "dirichlet_mean_endpoint": -1.4813707096480822,
+   "endpoint_gap_meanfield_minus_dirichlet": -0.30658882271105603,
+   "gap_sign": "negative",
+   "b_leg_this_graph_holds": false,
+   "meanfield_monotone_rate": 1.0,
+   "a_leg_this_graph_holds": true,
+   "gap_vs_direct_compare_consistent": true
+  },
+  "L_physics_concepts": {
+   "meanfield_mean_endpoint": -2.969335066356968,
+   "dirichlet_mean_endpoint": -2.9607407101270153,
+   "endpoint_gap_meanfield_minus_dirichlet": -0.008594356229952638,
+   "gap_sign": "negative",
+   "b_leg_this_graph_holds": false,
+   "meanfield_monotone_rate": 1.0,
+   "a_leg_this_graph_holds": true,
+   "gap_vs_direct_compare_consistent": true
+  },
+  "L_biological_taxonomy": {
+   "meanfield_mean_endpoint": -6.066723525698466,
+   "dirichlet_mean_endpoint": -6.504501397497013,
+   "endpoint_gap_meanfield_minus_dirichlet": 0.43777787179854766,
+   "gap_sign": "positive",
+   "b_leg_this_graph_holds": true,
+   "meanfield_monotone_rate": 1.0,
+   "a_leg_this_graph_holds": true,
+   "gap_vs_direct_compare_consistent": true
+  },
+  "L_algorithm_process": {
+   "meanfield_mean_endpoint": -1.7384624169383804,
+   "dirichlet_mean_endpoint": -1.7376915239608515,
+   "endpoint_gap_meanfield_minus_dirichlet": -0.0007708929775289697,
+   "gap_sign": "negative",
+   "b_leg_this_graph_holds": false,
+   "meanfield_monotone_rate": 1.0,
+   "a_leg_this_graph_holds": true,
+   "gap_vs_direct_compare_consistent": true
+  }
+ },
+ "thresholds_used": {
+  "pass_graph_frac": 0.8,
+  "mono_full": 1.0,
+  "mono_dead": 0.5,
+  "dead_min_graphs": 2,
+  "tol": 1e-09
+ },
+ "new_thresholds_added": 0,
+ "tol_note": "tol=1e-09 沿既有字面，本案判定未使用（B 腿为严格 < 精确比较）"
+}

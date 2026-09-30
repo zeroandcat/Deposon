@@ -1,0 +1,969 @@
+{
+ "case": "gt8_p10_lowarm_independent_measurement_surface_set_A",
+ "class": "新增测量面 · low 臂独立读数面（件 B P-1① B-案 2 ＋ 案 1 约束）",
+ "produced_by": "worker 棒 1b（executor）· set A · mvs_cb132cd536f648299c713abf2071d026",
+ "concurrent_writer_collision": {
+  "collision_detected": true,
+  "path_contested": "deposon_team/plugins/_v5_gt8_lowarm_2026_09_29.py",
+  "this_stick": {
+   "session": "mvs_cb132cd536f648299c713abf2071d026",
+   "role": "worker 棒 1b executor",
+   "set": "A"
+  },
+  "other_stick": {
+   "session": "mvs_02eb4a5ab8024f439c31147529aaf7d4",
+   "role": "worker 棒 1b executor",
+   "set": "B",
+   "source_overwrote_this_stick_at": "2026-09-29 15:21:01",
+   "declared_output": "results/_v5_gt8_lowarm_resultb_2026_09_29.json"
+  },
+  "timeline": [
+   "15:20:5x 本棒首次写入 canonical .py 路径",
+   "15:20:58 本棒以该路径启动 python",
+   "15:21:01 对方棒写入同一路径 ⇒ 覆盖本棒源码（对方造成，如实登记）",
+   "15:21:52 本棒进程完成 ⇒ 落 set A（c68076c88140）"
+  ],
+  "resolution_this_stick": "本棒 0 覆写对方任何产物；set A 另存为 0 碰撞新名；本源码重写于新名并重跑逐字节复现 set A；set A / set B 并排如实登记，0 代 PI/verdict-keeper 择一",
+  "set_a_preserved_copy": "results/_v5_gt8_lowarm_resultA_cb132cd5_2026_09_29.json",
+  "set_a_canonical_path": "results/_v5_gt8_lowarm_result_2026_09_29.json",
+  "adjudication_owner": "PI / verdict-keeper（0 由本棒择一）"
+ },
+ "prereg_control_doc": {
+  "path": "results/_v5_gt_p10_lowarm_prereg_2026_09_29.md",
+  "sha12": "07e28e2fe374"
+ },
+ "pi_decision_batch": {
+  "path": "results/_v5_confirm_b9_decisions_register_2026_09_29.md",
+  "sha12": "8c510cda6014",
+  "P-1": "① B-案 2（含案 1 约束）",
+  "P-2": "① 只增不减（4 对为下限）＋ 本棒测量前写死 ＋2 对",
+  "P-3": "③ 读数级 ＋ 构造级 两者并报",
+  "P-4": "② 撞值并报披露（0 归并）",
+  "P-5": "① 0 设独立证据数下限数值门",
+  "P-6": "① real_semantics 仍 deferred"
+ },
+ "anchors_measured": {
+  "prereg_p10": {
+   "path": "results/_v5_gt_p10_lowarm_prereg_2026_09_29.md",
+   "sha12_measured": "07e28e2fe374",
+   "bytes": 38464,
+   "sha12_expected": "07e28e2fe374",
+   "matches_expected": true
+  },
+  "verdict_gt": {
+   "path": "results/_v5_gt_verdict_2026_09_29.md",
+   "sha12_measured": "45648b0ec940",
+   "bytes": 57227,
+   "sha12_expected": "45648b0ec940",
+   "matches_expected": true
+  },
+  "expand_gt8": {
+   "path": "results/_v5_gt8_expand_2026_09_29.json",
+   "sha12_measured": "34ff826f97c2",
+   "bytes": 20090,
+   "sha12_expected": "34ff826f97c2",
+   "matches_expected": true
+  },
+  "asrun_gt8": {
+   "path": "results/deposon_v20_gt8.json",
+   "sha12_measured": "2b88948dca19",
+   "bytes": 5396,
+   "sha12_expected": "2b88948dca19",
+   "matches_expected": true
+  },
+  "prereg_v2": {
+   "path": "results/_v5_gt5_gt6_gt8_gt5b_gt_prereg_2026_09_28.md",
+   "sha12_measured": "2505ff5d203f",
+   "bytes": 63447,
+   "sha12_expected": "2505ff5d203f",
+   "matches_expected": true
+  },
+  "confirm_b9": {
+   "path": "results/_v5_confirm_b9_decisions_register_2026_09_29.md",
+   "sha12_measured": "8c510cda6014",
+   "bytes": 17008
+  },
+  "spec_gt8": {
+   "path": "docs/SPEC_GT8.md",
+   "sha12_measured": "edf6f4465ead",
+   "bytes": 4181
+  }
+ },
+ "scale_freeze_written_before_measurement": {
+  "rule": "件 B §9 P-2 ＋ 2505ff5d203f §6.3「对数与种子数测量前写死，0 依既有读数反选」；写死时点 = 本脚本首次 eval_graph 调用之前，0 任何新读数存在",
+  "pairs_existing": 4,
+  "pairs_new": 2,
+  "pairs_total": 6,
+  "increment_rationale": "＋2 对与上一棒扩面步（2→4）同为 ＋2；未按任何读数调档",
+  "new_seeds": {
+   "GT8_E_high": 208809,
+   "GT8_E_low": 208810,
+   "GT8_F_high": 208811,
+   "GT8_F_low": 208812
+  },
+  "seed_numbering": "沿 208801–208804（as-run）／208805–208808（扩面）续号；与语料族 200101–200106 0 重叠",
+  "pair_matching_written_dead": [
+   {
+    "pair": "GT8_E_high__vs__GT8_E_low",
+    "N": 33,
+    "n_edges": 32,
+    "high_and_low_matched": true
+   },
+   {
+    "pair": "GT8_F_high__vs__GT8_F_low",
+    "N": 59,
+    "n_edges": 58,
+    "high_and_low_matched": true
+   }
+  ],
+  "lowarm_n_named_written_dead": {
+   "GT8_E_low": 10,
+   "GT8_F_low": 14
+  },
+  "existing_low_named": {
+   "GT8_A_low": 15,
+   "GT8_B_low": 12,
+   "GT8_C_low": 8,
+   "GT8_D_low": 8
+  },
+  "distinctness_basis": "n_named = #{i ∈ 1..N-1 : k·i+1 < N} 的结构算术 ＋ 种子续号推出；0 参考任何 diff 读数",
+  "case1_caveat": "件 B §4.2 案 1 ②：n_named 互异只**降低**撞值概率，0 构造性排除再次相等（1/10 与 1/14 仍可相等）⇒ 本面 0 承诺「补测后必定互异」"
+ },
+ "structure_preflight_no_readings": {
+  "all_pass": true,
+  "checks": {
+   "pairing_GT8_E_low": true,
+   "pairing_GT8_F_low": true,
+   "lowarm_n_named_mutually_distinct": true,
+   "lowarm_n_named_differs_from_existing": true,
+   "nonisomorphic_to_existing_30_GT8_E_high": true,
+   "sha256_fresh_GT8_E_high": true,
+   "nonisomorphic_to_existing_30_GT8_E_low": true,
+   "sha256_fresh_GT8_E_low": true,
+   "nonisomorphic_to_existing_30_GT8_F_high": true,
+   "sha256_fresh_GT8_F_high": true,
+   "nonisomorphic_to_existing_30_GT8_F_low": true,
+   "sha256_fresh_GT8_F_low": true,
+   "nonisomorphic_pairwise_GT8_E_high_GT8_E_low": true,
+   "nonisomorphic_pairwise_GT8_E_high_GT8_F_high": true,
+   "nonisomorphic_pairwise_GT8_E_high_GT8_F_low": true,
+   "nonisomorphic_pairwise_GT8_E_low_GT8_F_high": true,
+   "nonisomorphic_pairwise_GT8_E_low_GT8_F_low": true,
+   "nonisomorphic_pairwise_GT8_F_high_GT8_F_low": true,
+   "high_hub_gt_low_hub_GT8_E_low": true,
+   "high_hub_gt_low_hub_GT8_F_low": true
+  },
+  "per_graph": {
+   "GT8_E_high": {
+    "N": 33,
+    "n_edges": 32,
+    "n_named": 31,
+    "n_filler": 1,
+    "sha256": "2e265a7a05cb9108f4f3eaade145c217ea326a2f7e2874c761b65acdd4502ee8",
+    "hub_concentration": 0.5,
+    "invariant_collides_with_existing_set": [],
+    "sha256_collides_with_existing_set": false,
+    "NE_collides_with_existing_set": false
+   },
+   "GT8_E_low": {
+    "N": 33,
+    "n_edges": 32,
+    "n_named": 10,
+    "n_filler": 22,
+    "sha256": "88358ccc32da1d41eae2e2783b67e8b8ddf66750d2db12e0713925fbf0b0d334",
+    "hub_concentration": 0.03125,
+    "invariant_collides_with_existing_set": [],
+    "sha256_collides_with_existing_set": false,
+    "NE_collides_with_existing_set": false
+   },
+   "GT8_F_high": {
+    "N": 59,
+    "n_edges": 58,
+    "n_named": 55,
+    "n_filler": 3,
+    "sha256": "593253d85ee232b213a80f31e9687be383fe9575b12e6b96f63875e46017c163",
+    "hub_concentration": 0.5,
+    "invariant_collides_with_existing_set": [],
+    "sha256_collides_with_existing_set": false,
+    "NE_collides_with_existing_set": false
+   },
+   "GT8_F_low": {
+    "N": 59,
+    "n_edges": 58,
+    "n_named": 14,
+    "n_filler": 44,
+    "sha256": "3882305a9bdd11ff4f5c827b9287e1f7cece25591d056e1c2e90555089993d99",
+    "hub_concentration": 0.017241379310344827,
+    "invariant_collides_with_existing_set": [],
+    "sha256_collides_with_existing_set": false,
+    "NE_collides_with_existing_set": false
+   }
+  }
+ },
+ "executor_protocol": {
+  "arms": [
+   "field_mean",
+   "random",
+   "degree"
+  ],
+  "rng": "default_rng(g_seed*100003+ei)",
+  "field_instance_seed": "g_seed+ei",
+  "leave_one_out": "全边留一",
+  "candidate": "全候选 raw 口径",
+  "metric": "named Hits@3（gold_rank < 3）",
+  "hub_concentration": "max_in_degree / n_edges",
+  "real_semantics": 0,
+  "new_protocol_added": 0,
+  "note": "协议函数经只读 import 复用（run_v20_gt8 / mindmap_corpus_v20 / deposon_diffusion），既有件 byte 0 改动"
+ },
+ "reproduction_check_existing_4_pairs": {
+  "purpose": "环境可比性前提（0 新测量：既有 4 对在本环境复算 vs 盘上字面）",
+  "n_pairs": 4,
+  "n_pairs_bit_identical": 4,
+  "all_bit_identical": true,
+  "per_pair": {
+   "GT8_A_high__vs__GT8_A_low": {
+    "landed_diff_high": 0.7916666666666666,
+    "recomputed_diff_high": 0.7916666666666666,
+    "landed_diff_low": 0.13333333333333333,
+    "recomputed_diff_low": 0.13333333333333333,
+    "bit_identical": true
+   },
+   "GT8_B_high__vs__GT8_B_low": {
+    "landed_diff_high": 0.05263157894736842,
+    "recomputed_diff_high": 0.05263157894736842,
+    "landed_diff_low": -0.08333333333333334,
+    "recomputed_diff_low": -0.08333333333333334,
+    "bit_identical": true
+   },
+   "GT8_C_high__vs__GT8_C_low": {
+    "landed_diff_high": 0.8518518518518519,
+    "recomputed_diff_high": 0.8518518518518519,
+    "landed_diff_low": 0.25,
+    "recomputed_diff_low": 0.25,
+    "bit_identical": true
+   },
+   "GT8_D_high__vs__GT8_D_low": {
+    "landed_diff_high": 0.8095238095238095,
+    "recomputed_diff_high": 0.8095238095238095,
+    "landed_diff_low": 0.25,
+    "recomputed_diff_low": 0.25,
+    "bit_identical": true
+   }
+  }
+ },
+ "per_graph": {
+  "GT8_A_high": {
+   "structure": "star_chain_double_convergence",
+   "N": 31,
+   "n_edges": 30,
+   "n_named": 24,
+   "n_filler": 6,
+   "source": 25,
+   "target": 30,
+   "seed": 208801,
+   "sha256": "28fb1c2f57a93f6f8eec0601749b6f752033ae75f4d4078b25ee312699bd1836",
+   "features": {
+    "hub_concentration": 0.5,
+    "real_semantics": 0
+   },
+   "field_named": 1.0,
+   "random_named": 0.20833333333333334,
+   "degree_named": 1.0,
+   "diff_fm_rand": 0.7916666666666666,
+   "diff_fm_deg": 0.0,
+   "invariant": [
+    31,
+    30
+   ]
+  },
+  "GT8_A_low": {
+   "structure": "caterpillar_chain",
+   "N": 31,
+   "n_edges": 30,
+   "n_named": 15,
+   "n_filler": 15,
+   "source": 0,
+   "target": 15,
+   "seed": 208802,
+   "sha256": "2ce949fbc01a65113742895a1cad36b8326c5c01a8d38a803a80ccbdccfbe312",
+   "features": {
+    "hub_concentration": 0.06666666666666667,
+    "real_semantics": 0
+   },
+   "field_named": 0.13333333333333333,
+   "random_named": 0.0,
+   "degree_named": 0.0,
+   "diff_fm_rand": 0.13333333333333333,
+   "diff_fm_deg": 0.13333333333333333,
+   "invariant": [
+    31,
+    30
+   ]
+  },
+  "GT8_B_high": {
+   "structure": "balanced_tree_superhub",
+   "N": 40,
+   "n_edges": 39,
+   "n_named": 19,
+   "n_filler": 20,
+   "source": 0,
+   "target": 21,
+   "seed": 208803,
+   "sha256": "be3dcb084cbf82b49bcd7892c66c86e369e80521571a79987a85cde28e76bbaa",
+   "features": {
+    "hub_concentration": 0.48717948717948717,
+    "real_semantics": 0
+   },
+   "field_named": 0.05263157894736842,
+   "random_named": 0.0,
+   "degree_named": 1.0,
+   "diff_fm_rand": 0.05263157894736842,
+   "diff_fm_deg": -0.9473684210526316,
+   "invariant": [
+    40,
+    39
+   ]
+  },
+  "GT8_B_low": {
+   "structure": "balanced_ternary_tree",
+   "N": 40,
+   "n_edges": 39,
+   "n_named": 12,
+   "n_filler": 27,
+   "source": 0,
+   "target": 13,
+   "seed": 208804,
+   "sha256": "5c90ebc428db0f6b795ecd1a9a7ff78bf7f7c0c22cd247e155568aff35465b26",
+   "features": {
+    "hub_concentration": 0.02564102564102564,
+    "real_semantics": 0
+   },
+   "field_named": 0.16666666666666666,
+   "random_named": 0.25,
+   "degree_named": 0.0,
+   "diff_fm_rand": -0.08333333333333334,
+   "diff_fm_deg": 0.16666666666666666,
+   "invariant": [
+    40,
+    39
+   ]
+  },
+  "GT8_C_high": {
+   "structure": "triple_hub_cone",
+   "N": 36,
+   "n_edges": 35,
+   "n_named": 27,
+   "n_filler": 8,
+   "source": 24,
+   "target": 32,
+   "seed": 208805,
+   "sha256": "022abfeeee973cd65081dfcb3ba662885abd26b5bfa195afbc9346de16b61704",
+   "features": {
+    "hub_concentration": 0.37142857142857144,
+    "real_semantics": 0
+   },
+   "field_named": 0.9629629629629629,
+   "random_named": 0.1111111111111111,
+   "degree_named": 1.0,
+   "diff_fm_rand": 0.8518518518518519,
+   "diff_fm_deg": -0.03703703703703709,
+   "invariant": [
+    36,
+    35
+   ]
+  },
+  "GT8_C_low": {
+   "structure": "balanced_4ary_tree",
+   "N": 36,
+   "n_edges": 35,
+   "n_named": 8,
+   "n_filler": 27,
+   "source": 0,
+   "target": 21,
+   "seed": 208806,
+   "sha256": "6aaec501207d20978397604e82fadbb5e73dcb83f3a87a1b4b38eda94fbb9fc2",
+   "features": {
+    "hub_concentration": 0.02857142857142857,
+    "real_semantics": 0
+   },
+   "field_named": 0.25,
+   "random_named": 0.0,
+   "degree_named": 0.0,
+   "diff_fm_rand": 0.25,
+   "diff_fm_deg": 0.25,
+   "invariant": [
+    36,
+    35
+   ]
+  },
+  "GT8_D_high": {
+   "structure": "twin_superhub_star",
+   "N": 45,
+   "n_edges": 44,
+   "n_named": 42,
+   "n_filler": 2,
+   "source": 41,
+   "target": 1,
+   "seed": 208807,
+   "sha256": "d4203aa9feb5ffc1b31057115269752477fe7db6c3c3bce6604d7a149d3e41c2",
+   "features": {
+    "hub_concentration": 0.5,
+    "real_semantics": 0
+   },
+   "field_named": 1.0,
+   "random_named": 0.19047619047619047,
+   "degree_named": 1.0,
+   "diff_fm_rand": 0.8095238095238095,
+   "diff_fm_deg": 0.0,
+   "invariant": [
+    45,
+    44
+   ]
+  },
+  "GT8_D_low": {
+   "structure": "balanced_5ary_tree",
+   "N": 45,
+   "n_edges": 44,
+   "n_named": 8,
+   "n_filler": 36,
+   "source": 0,
+   "target": 31,
+   "seed": 208808,
+   "sha256": "81db5581beb27bc05267db84ecd52005d5e4a86c3aaaad354239ea0df13b1e1e",
+   "features": {
+    "hub_concentration": 0.022727272727272728,
+    "real_semantics": 0
+   },
+   "field_named": 0.25,
+   "random_named": 0.0,
+   "degree_named": 0.0,
+   "diff_fm_rand": 0.25,
+   "diff_fm_deg": 0.25,
+   "invariant": [
+    45,
+    44
+   ]
+  },
+  "GT8_E_high": {
+   "structure": "twin_hub_star_33",
+   "N": 33,
+   "n_edges": 32,
+   "n_named": 31,
+   "n_filler": 1,
+   "source": 0,
+   "target": 32,
+   "seed": 208809,
+   "sha256": "2e265a7a05cb9108f4f3eaade145c217ea326a2f7e2874c761b65acdd4502ee8",
+   "features": {
+    "hub_concentration": 0.5,
+    "real_semantics": 0
+   },
+   "field_named": 0.967741935483871,
+   "random_named": 0.0967741935483871,
+   "degree_named": 1.0,
+   "diff_fm_rand": 0.8709677419354839,
+   "diff_fm_deg": -0.032258064516129004,
+   "invariant": [
+    33,
+    32
+   ]
+  },
+  "GT8_E_low": {
+   "structure": "balanced_3ary_tree_33",
+   "N": 33,
+   "n_edges": 32,
+   "n_named": 10,
+   "n_filler": 22,
+   "source": 0,
+   "target": 13,
+   "seed": 208810,
+   "sha256": "88358ccc32da1d41eae2e2783b67e8b8ddf66750d2db12e0713925fbf0b0d334",
+   "features": {
+    "hub_concentration": 0.03125,
+    "real_semantics": 0
+   },
+   "field_named": 0.2,
+   "random_named": 0.0,
+   "degree_named": 0.0,
+   "diff_fm_rand": 0.2,
+   "diff_fm_deg": 0.2,
+   "invariant": [
+    33,
+    32
+   ]
+  },
+  "GT8_F_high": {
+   "structure": "twin_hub_spine_star_59",
+   "N": 59,
+   "n_edges": 58,
+   "n_named": 55,
+   "n_filler": 3,
+   "source": 3,
+   "target": 1,
+   "seed": 208811,
+   "sha256": "593253d85ee232b213a80f31e9687be383fe9575b12e6b96f63875e46017c163",
+   "features": {
+    "hub_concentration": 0.5,
+    "real_semantics": 0
+   },
+   "field_named": 1.0,
+   "random_named": 0.12727272727272726,
+   "degree_named": 1.0,
+   "diff_fm_rand": 0.8727272727272728,
+   "diff_fm_deg": 0.0,
+   "invariant": [
+    59,
+    58
+   ]
+  },
+  "GT8_F_low": {
+   "structure": "balanced_4ary_tree_59",
+   "N": 59,
+   "n_edges": 58,
+   "n_named": 14,
+   "n_filler": 44,
+   "source": 0,
+   "target": 21,
+   "seed": 208812,
+   "sha256": "3882305a9bdd11ff4f5c827b9287e1f7cece25591d056e1c2e90555089993d99",
+   "features": {
+    "hub_concentration": 0.017241379310344827,
+    "real_semantics": 0
+   },
+   "field_named": 0.14285714285714285,
+   "random_named": 0.07142857142857142,
+   "degree_named": 0.0,
+   "diff_fm_rand": 0.07142857142857142,
+   "diff_fm_deg": 0.14285714285714285,
+   "invariant": [
+    59,
+    58
+   ]
+  }
+ },
+ "per_pair": [
+  {
+   "pair": "GT8_A_high__vs__GT8_A_low",
+   "high": "GT8_A_high",
+   "low": "GT8_A_low",
+   "origin": "as_run",
+   "diff_high": 0.7916666666666666,
+   "hub_high": 0.5,
+   "diff_low": 0.13333333333333333,
+   "hub_low": 0.06666666666666667,
+   "concordant": true,
+   "tied": false
+  },
+  {
+   "pair": "GT8_B_high__vs__GT8_B_low",
+   "high": "GT8_B_high",
+   "low": "GT8_B_low",
+   "origin": "as_run",
+   "diff_high": 0.05263157894736842,
+   "hub_high": 0.48717948717948717,
+   "diff_low": -0.08333333333333334,
+   "hub_low": 0.02564102564102564,
+   "concordant": true,
+   "tied": false
+  },
+  {
+   "pair": "GT8_C_high__vs__GT8_C_low",
+   "high": "GT8_C_high",
+   "low": "GT8_C_low",
+   "origin": "v5_expansion",
+   "diff_high": 0.8518518518518519,
+   "hub_high": 0.37142857142857144,
+   "diff_low": 0.25,
+   "hub_low": 0.02857142857142857,
+   "concordant": true,
+   "tied": false
+  },
+  {
+   "pair": "GT8_D_high__vs__GT8_D_low",
+   "high": "GT8_D_high",
+   "low": "GT8_D_low",
+   "origin": "v5_expansion",
+   "diff_high": 0.8095238095238095,
+   "hub_high": 0.5,
+   "diff_low": 0.25,
+   "hub_low": 0.022727272727272728,
+   "concordant": true,
+   "tied": false
+  },
+  {
+   "pair": "GT8_E_high__vs__GT8_E_low",
+   "high": "GT8_E_high",
+   "low": "GT8_E_low",
+   "origin": "p10_lowarm_new",
+   "diff_high": 0.8709677419354839,
+   "hub_high": 0.5,
+   "diff_low": 0.2,
+   "hub_low": 0.03125,
+   "concordant": true,
+   "tied": false
+  },
+  {
+   "pair": "GT8_F_high__vs__GT8_F_low",
+   "high": "GT8_F_high",
+   "low": "GT8_F_low",
+   "origin": "p10_lowarm_new",
+   "diff_high": 0.8727272727272728,
+   "hub_high": 0.5,
+   "diff_low": 0.07142857142857142,
+   "hub_low": 0.017241379310344827,
+   "concordant": true,
+   "tied": false
+  }
+ ],
+ "subset_attribution_mechanical": {
+  "as_run_2_pairs": {
+   "n_pairs": 2,
+   "n_concordant": 2,
+   "n_reversed": 0,
+   "n_tied": 0
+  },
+  "v5_expansion_2_pairs": {
+   "n_pairs": 2,
+   "n_concordant": 2,
+   "n_reversed": 0,
+   "n_tied": 0
+  },
+  "p10_new_2_pairs": {
+   "n_pairs": 2,
+   "n_concordant": 2,
+   "n_reversed": 0,
+   "n_tied": 0
+  },
+  "all_6_pairs": {
+   "n_pairs": 6,
+   "n_concordant": 6,
+   "n_reversed": 0,
+   "n_tied": 0
+  },
+  "required_two_framings_per_prereg": {
+   "新增对子集": {
+    "n_pairs": 2,
+    "n_concordant": 2,
+    "n_reversed": 0,
+    "n_tied": 0
+   },
+   "全部对池": {
+    "n_pairs": 6,
+    "n_concordant": 6,
+    "n_reversed": 0,
+    "n_tied": 0
+   }
+  }
+ },
+ "mechanical_gt8_verdict_function_output_NOT_A_VERDICT": {
+  "note": "本块是既有纯函数 gt8_verdict 的机械输出，**0 是本棒判定**；本棒 0 代裁、0 预判档位（件 B §7.2 棒 2 = verdict-keeper）",
+  "function": "run_v20_gt8.gt8_verdict（min_pairs 既有默认 2，0 改）",
+  "by_subset": {
+   "as_run_2_pairs": {
+    "verdict": "supports_H_GT8",
+    "supported_H_GT8": true,
+    "n_pairs": 2,
+    "pairs_concordant": [
+     "GT8_A_high__vs__GT8_A_low",
+     "GT8_B_high__vs__GT8_B_low"
+    ],
+    "pairs_reversed": [],
+    "pairs_tied": [],
+    "thresholds": {
+     "min_pairs": 2
+    }
+   },
+   "v5_expansion_2_pairs": {
+    "verdict": "supports_H_GT8",
+    "supported_H_GT8": true,
+    "n_pairs": 2,
+    "pairs_concordant": [
+     "GT8_C_high__vs__GT8_C_low",
+     "GT8_D_high__vs__GT8_D_low"
+    ],
+    "pairs_reversed": [],
+    "pairs_tied": [],
+    "thresholds": {
+     "min_pairs": 2
+    }
+   },
+   "p10_new_2_pairs": {
+    "verdict": "supports_H_GT8",
+    "supported_H_GT8": true,
+    "n_pairs": 2,
+    "pairs_concordant": [
+     "GT8_E_high__vs__GT8_E_low",
+     "GT8_F_high__vs__GT8_F_low"
+    ],
+    "pairs_reversed": [],
+    "pairs_tied": [],
+    "thresholds": {
+     "min_pairs": 2
+    }
+   },
+   "all_6_pairs": {
+    "verdict": "supports_H_GT8",
+    "supported_H_GT8": true,
+    "n_pairs": 6,
+    "pairs_concordant": [
+     "GT8_A_high__vs__GT8_A_low",
+     "GT8_B_high__vs__GT8_B_low",
+     "GT8_C_high__vs__GT8_C_low",
+     "GT8_D_high__vs__GT8_D_low",
+     "GT8_E_high__vs__GT8_E_low",
+     "GT8_F_high__vs__GT8_F_low"
+    ],
+    "pairs_reversed": [],
+    "pairs_tied": [],
+    "thresholds": {
+     "min_pairs": 2
+    }
+   }
+  }
+ },
+ "gamma14_coverage_gap_mechanical_flag": {
+  "note": "#conc ∈ [2, n−1] 且 0 平局的形态在 v2 else 归属中无明文（γ-V5R3-14）；本棒只机械标记**是否出现**，0 自创归属、0 裁 KD（K-V5R3-0-A）",
+  "flags": {
+   "as_run_2_pairs": false,
+   "v5_expansion_2_pairs": false,
+   "p10_new_2_pairs": false,
+   "all_6_pairs": false
+  }
+ },
+ "P3_both_framings_reported": {
+  "reading_level": {
+   "definition": "去重后不同 diff_low 值的个数（γ-V5R3-21 读数级口径）",
+   "low_arm_diffs": {
+    "GT8_A_low": 0.13333333333333333,
+    "GT8_B_low": -0.08333333333333334,
+    "GT8_C_low": 0.25,
+    "GT8_D_low": 0.25,
+    "GT8_E_low": 0.2,
+    "GT8_F_low": 0.07142857142857142
+   },
+   "n_low_arms": 6,
+   "n_distinct_all_pool": 5,
+   "n_distinct_existing_4": 3,
+   "n_distinct_new_2": 2,
+   "collision_groups_existing": {
+    "0.25": [
+     "GT8_C_low",
+     "GT8_D_low"
+    ]
+   },
+   "collision_groups_new": {},
+   "collision_groups_all_pool": {
+    "0.25": [
+     "GT8_C_low",
+     "GT8_D_low"
+    ]
+   }
+  },
+  "construction_level": {
+   "definition": "构造不变量：sha256 两两不同 ＋ 不同构哨兵通过 ＋ 低臂 n_named 互异",
+   "sha256_all_distinct_across_12_graphs": true,
+   "nonisomorphism_sentinel_self_collision_fixed": true,
+   "comparison_set_graphs": 30,
+   "comparison_set_breakdown": {
+    "n_corpus_graphs": 22,
+    "n_existing_gt8_graphs": 8
+   },
+   "new_graphs_nonisomorphic_to_existing_30": true,
+   "new_graphs_sha256_fresh": true,
+   "new_low_named_written_dead_mutually_distinct": true,
+   "new_low_named_differs_from_existing_lows": true,
+   "n_paired_NE_matched_all": true
+  }
+ },
+ "P4_collision_disclosure_not_merged": {
+  "rule": "P-4 ② 并报披露（0 归并、0 沿 GT8-1 ③ 精神类推跨对撞值）",
+  "gamma_21_existing": {
+   "literal": "C_low 与 D_low 的 diff_fm_rand 双双 = 0.25（γ-V5R3-21）",
+   "n_named_both": 8,
+   "granularity": "1/8",
+   "disclosure": "本面 0 改动、0 归并、0 抹除该撞值（K-V5R3-0-D 历史 0 回改）"
+  },
+  "new_face_collisions": {
+   "within_new_2_pairs": {},
+   "within_all_6_pairs": {
+    "0.25": [
+     "GT8_C_low",
+     "GT8_D_low"
+    ]
+   }
+  },
+  "no_merge_statement": "本面只登记撞值事实，0 把撞值对并为 1 个证据；「独立 low 臂基线」的任何**归并计数**由棒 2 按 P-4 口径裁定，本棒 0 预裁"
+ },
+ "anti_degeneration_gates_new_surface": {
+  "new_2_pairs_diff_fm_rand": {
+   "construct": "p10-new · diff_fm_rand 逐图（4 值）",
+   "n_values": 4,
+   "n_distinct": 4,
+   "std": 0.37086351062928535,
+   "gate_n_distinct_gt_3": true,
+   "gate_std_gt_0": true,
+   "gate_pass": true,
+   "kd_reason": null
+  },
+  "new_2_pairs_hub_concentration": {
+   "construct": "p10-new · hub_concentration 逐图（4 值）",
+   "n_values": 4,
+   "n_distinct": 3,
+   "std": 0.23792871019409145,
+   "gate_n_distinct_gt_3": false,
+   "gate_std_gt_0": true,
+   "gate_pass": false,
+   "kd_reason": "K-V5R3-0-B ③ 防退化门不达（n_distinct ≤ 3 或 std = 0）"
+  },
+  "all_6_pairs_diff_fm_rand": {
+   "construct": "p10-all-6 · diff_fm_rand 逐图（12 值）",
+   "n_values": 12,
+   "n_distinct": 11,
+   "std": 0.3631803498656735,
+   "gate_n_distinct_gt_3": true,
+   "gate_std_gt_0": true,
+   "gate_pass": true,
+   "kd_reason": null
+  },
+  "all_6_pairs_hub_concentration": {
+   "construct": "p10-all-6 · hub_concentration 逐图（12 值）",
+   "n_values": 12,
+   "n_distinct": 9,
+   "std": 0.22498971339771734,
+   "gate_n_distinct_gt_3": true,
+   "gate_std_gt_0": true,
+   "gate_pass": true,
+   "kd_reason": null
+  },
+  "all_6_pairs_diff_low_only": {
+   "construct": "p10-all-6 · diff_low 逐对（6 值）",
+   "n_values": 6,
+   "n_distinct": 5,
+   "std": 0.1171656804453644,
+   "gate_n_distinct_gt_3": true,
+   "gate_std_gt_0": true,
+   "gate_pass": true,
+   "kd_reason": null
+  }
+ },
+ "gate_all_pass": false,
+ "gate_failure_registration": {
+  "any_gate_failed": true,
+  "failed_gates": [
+   "new_2_pairs_hub_concentration"
+  ],
+  "cause": "新增 2 对的两个高臂 hub_concentration 恰同落 0.5 ⇒ 该 4 值序列 n_distinct = 3 ⇒ 门「n_distinct > 3」不达",
+  "this_rod_action": "如实登记，**0 重掷结构、0 事后调构、0 改门值**；本面 0 自行放宽或提高该门",
+  "note": "本面 0 预判该门的归属（PASS/FAIL/KD）—— 归棒 2 verdict-keeper 按既有字面裁定"
+ },
+ "thresholds_used": {
+  "min_pairs": 2,
+  "pass_rule": "全部对同向（#conc = n 且 n ≥ 2）",
+  "kill_rule": "全部对全反",
+  "anti_degeneration_gate": "n_distinct > 3 且 std > 0",
+  "hub_concentration": "max_in_degree / n_edges",
+  "pair_requirement": "N 与 n_edges 尽量对配（SPEC_GT8 L30）",
+  "granularity_rule": "named Hits@3，named 边数 = n_named（0 取整/0 ±ε）",
+  "independent_evidence_floor": "不存在（P-5 ①：0 设数值门）",
+  "source": "34ff826f97c2 thresholds_used ＋ K-V5R3-0-B ③ ＋ SPEC_GT8 L21/L30",
+  "every_value_unchanged": true
+ },
+ "new_thresholds_added": 0,
+ "no_backtrack_guards": {
+  "as_run_verdict_2b88948dca19_supports_H_GT8": "0 触动（byte 0 改）",
+  "v5_expansion_terminal_PASS_34ff826f97c2": "0 触动（byte 0 改）",
+  "pass_rule_min_pairs_kill_rule": "一字不动",
+  "existing_4_pairs_graphs_and_readings": "0 重配（K-V5R3-0-D）",
+  "derived_json_merge": 0,
+  "eighteen_frozen_and_nine_grid": "0 触动（本棒只新建件）",
+  "key_read": 0,
+  "llm_api_calls": 0,
+  "other_stick_outputs_overwritten_by_this_stick": 0,
+  "four_independent_concordant_evidence_statement": "仍禁述（γ-V5R3-21 结论上限下调 0 因补测自动撤销）",
+  "effect_size_or_significance_statement": "永久禁述（K-V5R3-GT8-4）",
+  "family_L_extrapolation": 0,
+  "grid_count_equals_independent_evidence": "禁述（件 B §4.2 案 2 ③）"
+ },
+ "parallel_reporting_K_V5R3_0_E": {
+  "原判（as-run 2 对）": "supports_H_GT8",
+  "并列判（v5 扩面 4 对 · 既有）": "supports_H_GT8",
+  "本面新增对子集机械计数": {
+   "n_pairs": 2,
+   "n_concordant": 2,
+   "n_reversed": 0,
+   "n_tied": 0
+  },
+  "本面全部对池机械计数": {
+   "n_pairs": 6,
+   "n_concordant": 6,
+   "n_reversed": 0,
+   "n_tied": 0
+  },
+  "note": "原判与既有并列判 byte 0 改动；本面读数为**并列新判的输入**"
+ },
+ "P1_disclosure_registered": {
+  "prereg_literal": "件 B §4.2 案 2 ①：本面有可能把 gt8 的 PASS 面推向 FAIL 面（K-V5R3-GT8-2 第二步）",
+  "acknowledged_before_run": true,
+  "mechanical_outcome_readout": {
+   "new_2_pairs": {
+    "n_pairs": 2,
+    "n_concordant": 2,
+    "n_reversed": 0,
+    "n_tied": 0
+   },
+   "all_6_pairs": {
+    "n_pairs": 6,
+    "n_concordant": 6,
+    "n_reversed": 0,
+    "n_tied": 0
+   },
+   "plain_reading": "本面新增 2 对 2/2 同向、0 反向、0 平局；全部对池 6/6 同向、0 反向、0 平局 ⇒ **本面未把 PASS 面推向 FAIL 面**",
+   "still_forbidden": "此为机械计数，0 表述为效应量/显著性，0 表述为「6 个独立同向证据」"
+  },
+  "worker_prejudgment": null
+ },
+ "terminal_state": null,
+ "adjudication": {
+  "owner": "verdict-keeper（棒 2）",
+  "state": "PENDING",
+  "this_rod_declared": null,
+  "note": "本棒 0 代裁、0 预判档位、0 落档"
+ },
+ "honesty": {
+  "what_this_rod_ran": "构造面 pre-flight（0 读数）＋ 既有 4 对复现复算（0 新测量：与盘上字面比对）＋ 本面新增 4 图读数",
+  "skills_loaded": "0（派工单未指定 skill）",
+  "not_done": [
+   "0 独立复核 18 frozen 的具体条目清单",
+   "0 独立复核 9 网格的具体条目清单",
+   "0 触及 real_semantics 轴（deferred）",
+   "0 LLM API / 0 proxy / 0 key",
+   "0 预填独立证据数下限（属 PI 拍板项 P-5）",
+   "0 对 hub_concentration 门不达作任何归属或重掷结构"
+  ],
+  "json_determinism": "本 JSON 不含时间戳/运行秒 ⇒ 重跑逐字节不变可自证",
+  "self_sha_not_written": "本件 SHA-12 0 自写入（避免自指悖论），由交付回执自报盘上实测值",
+  "judgment_components_worker": [
+   "规模增量取 ＋2 对（PI 只给「只增不减」方向，具体档位属执行面）—— 属本棒判断，PI/verdict-keeper 可推翻",
+   "E/F 低臂取平衡 k 叉树（S2 口径）以实现 n_named 写死互异 —— 沿既有 C/D 低臂构型族，0 新协议",
+   "高臂取「双枢纽星 / 枢纽脊星」两种新构型以避开既有图不变量的（N, n_edges, 入度多重集, 出度多重集）碰撞 —— 属本棒构造选择；⚠ 副作用：两高臂 hub_concentration 恰同为 0.5，致新面 hub 门n_distinct = 3（见 gate_failure_registration）"
+  ]
+ },
+ "runtime_env": {
+  "python": "3.14.7",
+  "numpy": "2.5.3"
+ },
+ "untouched_anchor_bytes_unchanged": {
+  "prereg_p10": true,
+  "verdict_gt": true,
+  "expand_gt8": true,
+  "asrun_gt8": true,
+  "prereg_v2": true,
+  "confirm_b9": true,
+  "spec_gt8": true
+ },
+ "all_anchors_untouched": true,
+ "output_paths_written": [
+  "results/_v5_gt8_lowarm_resultA_cb132cd5_2026_09_29.json"
+ ]
+}

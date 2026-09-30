@@ -1,0 +1,185 @@
+{
+  "task": "V5 #21 锚版复算棒 · KT-B1 BOSS-B1/B2/B3 锚版原脚本复算读数",
+  "date": "2026-09-28",
+  "author": "Mavis 团队 worker",
+  "prereg_upstream": "results/_v5_item21_asset_recovery_2026_09_28.md (6c80ff43bdd7)",
+  "verdict_role": "0 判定 0 代判；判定归 verdict-keeper",
+  "environment": {
+    "python": "3.14.7 (tags/v3.14.7:823f032e, Aug  5 2026) [MSC v.1944 64 bit (AMD64)]",
+    "cwd": "D:/私人资料/deposon-repo",
+    "cwd_reason": "锚版 3 件以相对路径 results/deposon_v19_benchmark_fixes.json 载入",
+    "anchor_loader": "importlib.machinery.SourceFileLoader 显式指定 loader（Python 3.14 已移除 load_module）；0 字节改动"
+  },
+  "inputs": {
+    "v19_frozen": {
+      "path": "results/deposon_v19_benchmark_fixes.json",
+      "sha12": "910c4333eead",
+      "bytes": 409104,
+      "pre_run_sha12": "910c4333eead",
+      "post_run_sha12": "910c4333eead",
+      "touched": false
+    },
+    "v3_recheck_21_result": {
+      "path": "results/_v3_recheck_21_result_2026_09_27.json",
+      "sha12": "354ae9c14fe2",
+      "bytes": 44928,
+      "access": "read_only"
+    },
+    "v3_recheck_21_rescript": {
+      "path": "results/_v3_recheck_21_rescript_2026_09_27.md",
+      "sha12": "04f6ecd482b9",
+      "bytes": 14618,
+      "access": "read_only"
+    }
+  },
+  "anchor_readings": {
+    "common_outcome": "0/3 EXECUTABLE",
+    "common_failure": "TypeError: float() argument must be a string or a real number, not 'NoneType'",
+    "common_failure_site": "_extract_200_questions -> float(p.get('predicted', 0.0))",
+    "B1_Sinkhorn_OT": {
+      "anchor_path": "D:/私人资料/_non_upload_local_archive/scripts/scripts/kt_b1/boss_b1_sinkhorn_ot.py.bak",
+      "anchor_sha12_pre": "19325960b8be",
+      "anchor_sha12_post": "19325960b8be",
+      "bytes": 14956,
+      "mtime": "2026-09-09 11:55:40",
+      "touched": false,
+      "executable": false,
+      "error_line": 114,
+      "reading": null,
+      "reading_note": "0 读数产出（非数值差异，是硬崩溃）"
+    },
+    "B2_KD": {
+      "anchor_path": "D:/私人资料/_non_upload_local_archive/scripts/scripts/kt_b1/boss_b2_kd.py.bak",
+      "anchor_sha12_pre": "1781ea2f742d",
+      "anchor_sha12_post": "1781ea2f742d",
+      "bytes": 14224,
+      "mtime": "2026-09-09 11:55:40",
+      "touched": false,
+      "executable": false,
+      "error_line": 95,
+      "reading": null,
+      "reading_note": "0 读数产出（非数值差异，是硬崩溃）"
+    },
+    "B3_LLMLingua": {
+      "anchor_path": "D:/私人资料/_non_upload_local_archive/scripts/scripts/kt_b1/boss_b3_llmlingua.py.bak",
+      "anchor_sha12_pre": "c0b55e0385a4",
+      "anchor_sha12_post": "c0b55e0385a4",
+      "bytes": 13966,
+      "mtime": "2026-09-09 11:55:41",
+      "touched": false,
+      "executable": false,
+      "error_line": 88,
+      "reading": null,
+      "reading_note": "0 读数产出（非数值差异，是硬崩溃）"
+    }
+  },
+  "anchor_blocker_root_cause": {
+    "primary": "v19 frozen 中 gsm8k 有 12 条记录 predicted 键存在但值为 null（no_deposon 6 条 + v2_tunneling 6 条）；dict.get('predicted', 0.0) 对『键存在值为 None』返回 None 而非默认值 0.0，随后的 float(None) 抛 TypeError",
+    "null_distribution": {
+      "gsm8k/no_deposon": {"n": 100, "predicted_is_null": 6, "predicted_key_absent": 0},
+      "gsm8k/v1_blocking": {"n": 100, "predicted_is_null": 0, "predicted_key_absent": 0},
+      "gsm8k/v2_tunneling": {"n": 100, "predicted_is_null": 6, "predicted_key_absent": 0},
+      "gsm8k/unified": {"n": 100, "predicted_is_null": 0, "predicted_key_absent": 0},
+      "gsm8k/high_couple": {"n": 100, "predicted_is_null": 0, "predicted_key_absent": 0},
+      "strategyqa/all_5_arms": {"n": 495, "predicted_is_null": 0, "predicted_key_absent": 495}
+    },
+    "total_predicted_is_null": 12,
+    "independent_corroboration": "09-27 _v3_recheck_21_result face_3_d_dec.field_availability_audit 已登记 gsm8k/no_deposon 与 gsm8k/v2_tunneling 的 predicted value_nonnull=94（=100-6），与本棒实测 6 条 null 逐位吻合；同一批 null 在漂移版由 _norm_pred 容错、在锚版无容错 ⇒ 崩溃",
+    "secondary_divergence_even_if_nulls_patched": {
+      "statement": "仅给锚版打 null 容错补丁仍不足以复现漂移版读数（机械事实登记，0 主张）",
+      "mechanism": "strategyqa 495 条不使用 predicted/answer/best_path 三键（实测 keys = id/is_correct/path/pred/trap_hit）；锚版无回退 ⇒ 495 条将静默取 predicted=0.0、answer=0.0、best_path=[]；漂移版有 p.get('pred', p.get('predicted',0.0))、p.get('best_path', p.get('path',[]))、_to_float 三重回退",
+      "consequence": "锚版与漂移版不是可互推的两代；漂移版读数不可由锚版推出"
+    }
+  },
+  "drift_recompute_for_comparison": {
+    "purpose": "派工单要求锚版读数与 09-27 漂移版值逐位比对；锚版 0 读数 ⇒ 另跑漂移版以确认 09-27 漂移值本身是否可复现，并量化漂移版与锚版之间的输入面落差",
+    "access": "read_only_external_archive，0 复制入仓，0 字节改动",
+    "B1_Sinkhorn_OT": {
+      "drift_sha12": "7c2b41c008a5",
+      "records_actually_extracted": 995,
+      "script_declared_n_questions": 200,
+      "vocab_size": 30,
+      "selected_reg": 0.1,
+      "recomputed_value": 0.00044522183946429185,
+      "v3_0927_value": 0.00044522183946429185,
+      "bitwise_identical": true,
+      "elapsed_s": 111.28
+    },
+    "B2_KD": {
+      "drift_sha12": "8c6e98034005",
+      "recomputed_value": 0.002813601952161043,
+      "v3_0927_value": 0.002813601952161043,
+      "bitwise_identical": true,
+      "elapsed_s": 0.39
+    },
+    "B3_LLMLingua": {
+      "drift_sha12": "2ded5cf0e863",
+      "recomputed_value": 0.46342184490589095,
+      "v3_0927_value": 0.46342184490589095,
+      "bitwise_identical": true,
+      "elapsed_s": 0.44
+    }
+  },
+  "anchor_vs_drift_comparison": {
+    "verdict_of_comparison": "NOT_COMPARABLE",
+    "reason": "锚版 0 读数产出 ⇒ 逐位比对不成立；不是『读数有差』，而是『锚版跑不出读数』",
+    "per_boss": [
+      {"boss": "B1_Sinkhorn_OT", "anchor_reading": null, "drift_reading": 0.00044522183946429185, "digitwise_delta": "不可计算（锚版无值）"},
+      {"boss": "B2_KD", "anchor_reading": null, "drift_reading": 0.002813601952161043, "digitwise_delta": "不可计算（锚版无值）"},
+      {"boss": "B3_LLMLingua", "anchor_reading": null, "drift_reading": 0.46342184490589095, "digitwise_delta": "不可计算（锚版无值）"}
+    ],
+    "attribution_layer": "字段抽取层（已落实为崩溃 + 形态回退缺失两层，非超参层；超参层回填件已证零差异）",
+    "hyperparam_layer": "0 差异（沿用 6c80ff43bdd7 §3 实测，本棒未重测）"
+  },
+  "three_leg_input_face": {
+    "leg_a_face2_generic_baseline_repro_3of3_within_5pct": {
+      "status": "INCOMPLETE_BLOCKED",
+      "anchor_assets": "✅ 已就位（3/3 路径 + SHA-12 本棒实测复核通过）",
+      "anchor_executability": "❌ 0/3 可执行（3/3 同一 TypeError）",
+      "v19_frozen_input": "✅ 已就位 910c4333eead",
+      "drift_side_values": "✅ 3/3 精确复现（但 implementation 为漂移版 ≠ 锚版，不满足腿 (a) 的锚版要求）",
+      "blocking_reason": "腿 (a) 要求锚版读数；锚版读数在本棒为 0 件产出 ⇒ 3/3 复现性无从比较",
+      "note": "本棒不提出修复方案（改锚版/换输入面均属改动受保护资产，需 PI/verdict-keeper 拍板）"
+    },
+    "leg_b_face3_d_dec_discriminating": {
+      "status": "READY_PRIOR",
+      "input_face": "v19 frozen 四字段抽取已落盘 09-27（354ae9c14fe2）",
+      "field_availability_caveat": "n_paths / n_filtered 两字段全 10 个 condition key_hits 均为 0；strategyqa 的 predicted key_hits 全为 0（改用 pred）——该缺口属 09-27 已登记事实，本棒只读未重算、未改判",
+      "depends_on_this_stick": false
+    },
+    "leg_c_face3_order_stability": {
+      "status": "READY_PRIOR",
+      "input_face": "同腿 (b)，09-27 已落盘",
+      "depends_on_this_stick": false
+    },
+    "deposon_side_D_M_T": {
+      "status": "STRUCTURALLY_INCOMPUTABLE",
+      "carried_forward_from": "6c80ff43bdd7 §4",
+      "independent_recheck_this_stick": "glob **/distortion_calculator.py over D:/私人资料 = 0 命中（本棒实测复核，缺口未解除）",
+      "changed_by_anchor_refill": false
+    }
+  },
+  "zero_touch_declaration": {
+    "anchor_files_modified": 0,
+    "anchor_files_copied_into_repo": 0,
+    "anchor_sha12_pre_equals_post": true,
+    "existing_result_files_modified": 0,
+    "derived_json_merged_into_existing": 0,
+    "llm_calls": 0,
+    "proxy": 0,
+    "gateway": 0,
+    "key_reads": 0,
+    "scratch_used": ".tmp/_v5_item21_anchor_driver.py 与 .tmp/_probe21.py（驱动脚本，非读数；读数件在 results/）"
+  },
+  "honest_disclosure": {
+    "anchor_readings_produced": 0,
+    "succeeded_equals_done": false,
+    "completion_basis": "本 JSON 与同名 .md 落盘核验（字节 + SHA-12）后方宣告",
+    "estimate_correction": "派工单『B1 约十余分钟量级』未成立：锚版 B1 在 <1 s 内崩溃，无运行时长；漂移版 B1 单 reg=0.1 实测 111.28 s",
+    "not_done": [
+      "未修改锚版任何字节以绕过崩溃（受 0 修改铁律约束）",
+      "未以漂移版读数冒充锚版读数",
+      "未对腿 (a)(b)(c) 给任何 PASS/FAIL/不明结论"
+    ]
+  }
+}

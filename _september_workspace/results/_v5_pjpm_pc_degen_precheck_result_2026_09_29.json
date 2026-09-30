@@ -1,0 +1,2246 @@
+{
+  "0越权_老实交代": {
+    "0代拟E条目报告措辞": "②档技术面材料 / 对账面材料只出可机械复算的证据面数字与约束；正式措辞 0 代拟（归 doc-writer）",
+    "0出判定裁决": "K-PJPC-1-1/1-2/1-3/2-1/2-2/2-3/3-1…3-5 全部落【可裁形式】三态；终态判定归 verdict-keeper（棒 3）",
+    "0合并派生JSON": "本棒唯一新建 JSON 为横切预检件新名件（K-PJPC-0-3）",
+    "0改阈值": "新设数值判定阈值 = 0（见 threshold_watch）",
+    "0触原件frozen": "全部既有件只读加载；K-PJPC-0-2 锚表 17 件 + 读数链 4 件写盘前后逐件复算（见收口读数件 §7）",
+    "0读key": "R4 无例外沿用；本棒 0 读、0 引用任何 key 值",
+    "skill": "派工单未指定 skill 名 ⇒ 本棒 0 加载、0 引用、0 虚构任何 skill 条文；纪律锚 = 派工单字面 + 盘上既有件字面",
+    "署名如实": "本件署 worker；不冒充 PI / protocol-keeper / verdict-keeper / evidence-auditor / doc-writer / Trae code",
+    "自指指纹": "本件 SHA-12 0 自写入（自指不可解）⇒ 落盘后由收口回执以实测值回报"
+  },
+  "K_PJPC_逐条落态": {
+    "K-PJPC-0-1_防退化门跑前自证": {
+      "三态_可裁形式": "PASS（自证齐备；退化警报命中面已逐条登记）",
+      "判据": "横切预检件对每个输入字段与每个输出读数列报 n_distinct/min/max/std；任一 n_distinct ≤ 3 ⇒ 退化警报 ⇒ 不得开跑",
+      "命中处置": "命中面按甲案落 KD + γ（K-PJPC-0-1 落法 ＋ 棒 1 派工字面）",
+      "备注短句": "自证齐备：3 族 × 6 面逐条报齐 n_distinct/min/max/std，无缺项；退化警报命中面见 §2 处置汇总",
+      "达标": true,
+      "达标面": "本件对三族 × 全部面（as-run + 新构造）逐条报出 n_distinct/min/max/std，无缺项",
+      "退化警报命中面": [
+        "P-J / asrun_退化面 / K-PJPC-3-1",
+        "P-J / asrun_退化面 / K-PJPC-3-2",
+        "P-J / asrun_退化面 / K-PJPC-3-1",
+        "P-J / asrun_退化面 / K-PJPC-3-2",
+        "P-M / asrun_退化面 / K-PJPC-3-1",
+        "P-M / asrun_退化面 / K-PJPC-3-2",
+        "P-M / asrun_退化面 / K-PJPC-3-1",
+        "P-M / asrun_退化面 / K-PJPC-3-2",
+        "P-M / asrun_退化面 / K-PJPC-3-4",
+        "P-M / 新构造面_3算子×9budget / K-PJPC-3-1",
+        "P-M / 新构造面_3算子×9budget / K-PJPC-3-2",
+        "P-C / asrun_退化面 / K-PJPC-3-1",
+        "P-C / asrun_退化面 / K-PJPC-3-2"
+      ]
+    },
+    "K-PJPC-0-2_原件0触动门": {
+      "三态_可裁形式": "PASS（17/17 件写盘后复算相符，漂移 0）",
+      "写盘前复算漂移件数": 0,
+      "写盘后复算": "见收口读数件 §7（写盘后再复算 17 件）",
+      "判据": "17 件 SHA-12 逐件复算 = 修复前值",
+      "备注短句": "17 件锚表逐件复算相符、漂移 0（写盘后复算见本件 §7）；读数链 4 件亦相符",
+      "复算件数": 17,
+      "漂移件数": 0,
+      "达标": true
+    },
+    "K-PJPC-0-3_派生JSON不合并门": {
+      "0 合并声明": "本棒 0 打开任何既有 JSON 写入模式；全部既有 JSON 只读加载",
+      "三态_可裁形式": "PASS（本棒唯一新建 JSON 为新名独立件）",
+      "判据": "本件必须落新名独立件，0 合并进 _p_j_* / _p_m_* / _v3x_experiments_* / _v3_recheck_* 任一既有 JSON",
+      "备注短句": "本棒唯一新建 JSON 落新名独立件；0 打开任何既有 JSON 写入模式",
+      "本棒新建JSON": [
+        "results/_v5_pjpm_pc_degen_precheck_result_2026_09_29.json"
+      ],
+      "达标": true
+    },
+    "K-PJPC-0-4_0回改既有改判门": {
+      "三态_可裁形式": "PASS（0 覆盖 / 0 撤销 / 0 追认式翻案）",
+      "判据": "0 修改 _v3_recheck_26/26b/28/10_* 任一文件的任一字；0 覆盖其档 2 判定与 γ；0 改 V3 期原标注 UNVERIFIED",
+      "备注短句": "既有档 2 判定原样并报、0 覆盖 0 撤销；自证面 = 0-2 锚表 17 件写盘后复算",
+      "自证面": "K-PJPC-0-2 17 件写盘后逐件 SHA-12 复算（含 4 件 rescript ＋ 登记件 17262abfd1d5 ＋ 预登记 88052d7db895）",
+      "达标": true
+    },
+    "K-PJPC-1-1_P-J三本体逐本体": {
+      "三态_可裁形式": {
+        "O1_discrete_cell_redistribution": "PASS",
+        "O3_logit_normal_form": "PASS",
+        "O5_replicator_ode_softlimit": "PASS"
+      },
+      "判据": "逐本体报 n_distinct/std；沿 K-V3R-26（n_distinct > 3 且 std > 0 ⇒ PASS）；逐本体独立判定，0 合并、0 择优、0 聚合掩盖",
+      "逐本体读数": {
+        "O1_discrete_cell_redistribution": {
+          "max": 0.0173,
+          "min": 0.0132,
+          "n": 9,
+          "n_distinct": 9,
+          "std": 0.0012788884062167251
+        },
+        "O3_logit_normal_form": {
+          "max": 0.3557,
+          "min": 0.33899999999999997,
+          "n": 9,
+          "n_distinct": 8,
+          "std": 0.004466169126518474
+        },
+        "O5_replicator_ode_softlimit": {
+          "max": 72.0337,
+          "min": 17.9501,
+          "n": 9,
+          "n_distinct": 9,
+          "std": 16.980008842717528
+        }
+      }
+    },
+    "K-PJPC-1-2_P-J字面空档": {
+      "三态_可裁形式": "0 触发（实测 9 / 8 / 9，均在空档外）",
+      "判据": "2 ≤ n_distinct ≤ 3 落 K-V3R-26 字面空档；0 新设阈值、0 向任一侧归拢",
+      "登记": "字面空档分支本轮未被触发（沿 26b §3 + γ₂₆₄）"
+    },
+    "K-PJPC-1-3_P-M逐档矩阵与安全预算重测": {
+      "三态_可裁形式": "PASS（≥1 档 detection_rate > 0 且 safety_budget_lower_bound 重测 80 ≥ 80）",
+      "判据": "新构造 detection_rate 须报逐档矩阵 + safety_budget_lower_bound 重测；沿 K-V3R-28；天花板序列披露强制",
+      "天花板披露": "n_distinct = 1、std = 0 ⇒ 属检测器饱和、非判据退化；⚠️ 不得单独充当「非退化」证据；判据非退化性由 input_fields 承担（沿 a0734e0a6860 §3.1）",
+      "逐档矩阵": {
+        "budgets": 9,
+        "detection_rate_stat": {
+          "max": 1.0,
+          "min": 1.0,
+          "n": 27,
+          "n_distinct": 1,
+          "std": 0.0
+        },
+        "n_cells": 27,
+        "operators": 3,
+        "safety_budget_lower_bound_remeasured": 80
+      }
+    },
+    "K-PJPC-2-1_P-C逐η档跨model": {
+      "asrun对照": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "三态_可裁形式": "PASS（9/9 个 η 档 n_distinct = 9）",
+      "判据": "沿 K-V3R-10（≥1 个 η 档下 n_distinct > 3 ⇒ PASS）",
+      "逐η档读数": {
+        "eta=0.01": {
+          "max": 0.6598733691018495,
+          "min": 0.00614225523225409,
+          "n": 9,
+          "n_distinct": 9,
+          "std": 0.20310644472745254
+        },
+        "eta=0.1": {
+          "max": 0.5101408443095636,
+          "min": 0.0011579268668835407,
+          "n": 9,
+          "n_distinct": 9,
+          "std": 0.14840904579833686
+        },
+        "eta=0.5": {
+          "max": 0.6641964976981287,
+          "min": 0.01873555167265839,
+          "n": 9,
+          "n_distinct": 9,
+          "std": 0.22598068878991132
+        },
+        "eta=1": {
+          "max": 0.6815646123791426,
+          "min": 0.041186011693437385,
+          "n": 9,
+          "n_distinct": 9,
+          "std": 0.1972572705086307
+        },
+        "eta=10": {
+          "max": 0.9286188996387963,
+          "min": 0.004072367489818984,
+          "n": 9,
+          "n_distinct": 9,
+          "std": 0.30123405181870583
+        },
+        "eta=100": {
+          "max": 0.7136848940020104,
+          "min": 0.061499434105409256,
+          "n": 9,
+          "n_distinct": 9,
+          "std": 0.21677746698804673
+        },
+        "eta=2": {
+          "max": 0.8510642444031592,
+          "min": 0.023811719048000946,
+          "n": 9,
+          "n_distinct": 9,
+          "std": 0.28065746422527393
+        },
+        "eta=5": {
+          "max": 0.8185764478224623,
+          "min": 0.04036079489125055,
+          "n": 9,
+          "n_distinct": 9,
+          "std": 0.25748303899194996
+        },
+        "eta=50": {
+          "max": 0.8155037437669215,
+          "min": 0.08696415507405564,
+          "n": 9,
+          "n_distinct": 9,
+          "std": 0.20558306695438816
+        }
+      }
+    },
+    "K-PJPC-2-2_PASS不等于命题成立": {
+      "三态_可裁形式": "PASS（本棒读数件两腿分读，0 合并）",
+      "两腿": {
+        "命题面": "FAIL_H0 仍全档成立、β̂ ≈ 0 ⇒ 幂律命题面 0 翻案",
+        "禁止": "PASS 0 构成『幂律成立』证据（沿 fc0ffd27adca γ₃：零噪声对照腿 ss_tot ~ 1e-31、R² 退化为 ULP 伪值）",
+        "证据面": "新构造 PASS ⇒ model 维判据从未受审这一缺陷成立"
+      },
+      "判据": "证据面与命题面必须分两条腿并报；违反 ⇒ 判 FAIL（措辞违规）"
+    },
+    "K-PJPC-2-3_三参数形式拒收记录继承": {
+      "三态_可裁形式": "PASS（拒收记录沿用既有件字面，原样并报）",
+      "判据": "#10 第一次参数化（spec §4.1 三参数 +C）在盘上数据面 81/81 无定义 ⇒ 按 K-V3R-0-A 拒收；本件 0 重跑、0 重议",
+      "拒收实测": {
+        "construct": "P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md §4.1 字面三参数 P(N) = A·N^(-β) + C，C_hat 取最大 2 个 N 档 P 的均值",
+        "degenerate_alarm_hit": true,
+        "disposition": "按 K-V3R-0-A「不许带病开跑」拒收；主口径改用纯 log-log 两参数 P(N) = A·N^(-β)（沿盘上姊妹实现 deposon_pc_d1_d3 §R2_b_CI_log_log_fit 的 OLS-on-log-log 字面，0 擅调阈值，判定量 n_distinct 与函数形式无关）。三参数形式留 PI 复核提案，本件不私设。",
+        "measured": "9 model × 9 η = 81 个 (model, η) 组合中 81 个 R² 无定义（P(N) - C_hat <= 0）；逐 η 档跨 model n_distinct 全为 0"
+      }
+    },
+    "K-PJPC-3-1_断言①方差>0": {
+      "三态_可裁形式": "登记（逐面读数见 families[*].faces[*].assertions[gate_id=K-PJPC-3-1]）",
+      "命中面": [
+        "P-J / asrun_退化面",
+        "P-J / asrun_退化面",
+        "P-M / asrun_退化面",
+        "P-M / asrun_退化面",
+        "P-M / 新构造面_3算子×9budget",
+        "P-C / asrun_退化面"
+      ],
+      "备注短句": "复用 K-V3R-0-A，0 新增门槛；命中面逐条见 §2",
+      "门形态": "批 5 ①档：复用 K-V3R-0-A，0 新增门槛"
+    },
+    "K-PJPC-3-2_断言②秩不恒同": {
+      "三态_可裁形式": "登记",
+      "命中面": [
+        "P-J / asrun_退化面",
+        "P-J / asrun_退化面",
+        "P-M / asrun_退化面",
+        "P-M / asrun_退化面",
+        "P-M / 新构造面_3算子×9budget",
+        "P-C / asrun_退化面"
+      ],
+      "备注短句": "近似代理门：分布非退化 ≠ 排序非恒同；命中面逐条见 §2",
+      "等义性限定": "本门为近似代理：分布非退化 ≠ 排序非恒同；PI 批 5 采此档 ⇒ 本棒沿用并显式标注其近似性质，0 声称等义",
+      "门形态": "批 5 ②档：复用 n_distinct > 3 作近似代理（⚠️ 分布层近似，非排序层等义 —— 沿 prereg §1.4/§4.2 限定如实标注）"
+    },
+    "K-PJPC-3-3_断言③标签非硬编码": {
+      "三态_可裁形式": "登记（定性范式非门 ⇒ 0 触发落态处置、0 编造机械判定式）",
+      "备注短句": "明确非门：3 族 × 6 面逐条定性登记，0 触发任何落态处置",
+      "定性登记面": [
+        "P-J / asrun_退化面",
+        "P-J / 新构造面_O1_discrete_cell_redistribution",
+        "P-J / 新构造面_O3_logit_normal_form",
+        "P-J / 新构造面_O5_replicator_ode_softlimit",
+        "P-M / asrun_退化面",
+        "P-M / 新构造面_3算子×9budget",
+        "P-C / asrun_退化面",
+        "P-C / 新构造面_纯log-log两参数"
+      ],
+      "门形态": "批 5 ③档：沿 P-I 诚实降级范式作【定性范式，明确非门】"
+    },
+    "K-PJPC-3-4_断言④检测率不低于随机基线": {
+      "三态_可裁形式": "登记",
+      "不适用面": [
+        "P-J / asrun_退化面（该族无 detection_rate 字段）",
+        "P-J / 新构造面_O1_discrete_cell_redistribution（该族无 detection_rate 字段）",
+        "P-J / 新构造面_O3_logit_normal_form（该族无 detection_rate 字段）",
+        "P-J / 新构造面_O5_replicator_ode_softlimit（该族无 detection_rate 字段）",
+        "P-C / asrun_退化面（该族无 detection_rate 字段）",
+        "P-C / 新构造面_纯log-log两参数（该族无 detection_rate 字段）"
+      ],
+      "命中面": [
+        "P-M / asrun_退化面"
+      ],
+      "备注短句": "升独立门、切点 0.5（盘上既有字段）；P-J / P-C 无该字段 ⇒ 如实登记 N/A",
+      "门形态": "批 5 ④档：升独立门；切点 random_guess_rate = 0.5（盘上既有字段，0 新设）"
+    },
+    "K-PJPC-3-5_失败处置词面": {
+      "⚠️ 未裁面": "三族终态判定的词面裁定（prereg §2.2-3 甲/乙/丙）仍【待 PI / verdict-keeper 裁】⇒ 本棒 0 代裁、0 自创第四态",
+      "三态_可裁形式": "KD（横切预检件层）",
+      "判据": "UNVERIFIED vs 项目级三态的词面裁定（甲/乙/丙）",
+      "本棒处置": "横切预检件按【甲案】落 KD + γ（棒 1 派工字面）"
+    },
+    "K-PJPC-4-1_全链重验": {
+      "三态_可裁形式": "PASS（本棒三项交付齐备；判定面变化须由 verdict-keeper 裁因）",
+      "判据": "K-V3R-0-C 双口径并报 + 既有档 2 判定原样并报 + §1.4 四项断言命中面逐条登记"
+    },
+    "K-PJPC-4-2_三态收口纪律": {
+      "⚠️ 冲突登记": "既有档 2 的『归「不明」分支』与三态纪律的冲突仍未裁（prereg §2.2）⇒ 本棒如实并报 0 消解",
+      "三态_可裁形式": "PASS（本棒 0 自创第四态、0 用模糊态充当结论）",
+      "判据": "凡判定必落 PASS/FAIL/KD；禁 PARTIAL/GRAY/UNVERIFIED 充当结论"
+    },
+    "K-PJPC-4-3_0不明收口": {
+      "三态_可裁形式": "PASS（本棒全部甲案落点均附 γ 根因列）",
+      "判据": "任一条落「不明」须挂 γ 根因列（真证伪/假证伪/混合 + 构造层根因）"
+    },
+    "K-PJPC-4-4_根因强制": {
+      "三态_可裁形式": "PASS（根因沿既有件逐字并报，0 改写为工具失灵/命题被证伪）",
+      "判据": "凡 FAIL 须附根因三分类之一；三族既有根因已定位，0 改写",
+      "既有根因": {
+        "P-C": "pooled 读数被复制到 9 行（fc0ffd27adca §1 根因）",
+        "P-J": "构造常量 + 判据从未受审（6b86576146a3 §1 根因）",
+        "P-M": "计数语义反转（非检测能力缺失；a0734e0a6860 §3.4 独立复现）"
+      }
+    },
+    "口径声明": "本表为【可裁形式】落态登记：读数面由本棒机械复算并落三态字面；终态判定归 verdict-keeper（棒 3，沿 K-PJPC-4-1），本棒 0 代裁、0 出判定裁决。"
+  },
+  "K_V3R_0_C_双口径并报": {
+    "P-C": {
+      "K_PJPC_2_2_两腿分读": {
+        "命题面": "FAIL_H0 仍全档成立、β̂ ≈ 0 ⇒ 幂律命题面 0 翻案",
+        "禁止": "PASS 0 构成『幂律成立』证据（沿 fc0ffd27adca γ₃：零噪声对照腿 ss_tot ~ 1e-31、R² 退化为 ULP 伪值）",
+        "证据面": "新构造 PASS ⇒ model 维判据从未受审这一缺陷成立"
+      },
+      "legacy_verdict_沿原V3阈值字面": "FAIL（维持假证伪）：as-run max r2_per_eta = 0.19840149926690828 < 0.3 ⇒ FAIL_H0，与同件 exp_d7_5anchor_60cells.P-C_two_phase 字面同向",
+      "new_verdict_重构造": "PASS（9/9 个 η 档跨 model n_distinct = 9 > 3）",
+      "一致性": "不一致（维持原标注 + γ 升级）"
+    },
+    "P-J": {
+      "K_PJPC_1_1_逐本体不聚合": {
+        "O1_discrete_cell_redistribution": {
+          "consistency": "不一致（new PASS vs legacy UNVERIFIED/判据退化）",
+          "legacy": "UNVERIFIED（判据退化）",
+          "new": "PASS"
+        },
+        "O3_logit_normal_form": {
+          "consistency": "不一致（new PASS vs legacy UNVERIFIED/判据退化）",
+          "legacy": "UNVERIFIED（判据退化）",
+          "new": "PASS"
+        },
+        "O5_replicator_ode_softlimit": {
+          "consistency": "不一致（new PASS vs legacy UNVERIFIED/判据退化）",
+          "legacy": "UNVERIFIED（判据退化）",
+          "new": "PASS"
+        }
+      },
+      "K_PJPC_1_2_字面空档": "2 ≤ n_distinct ≤ 3 为 K-V3R-26 字面空档；本轮 9/8/9 均在空档外 ⇒ 空档分支 0 触发（沿 26b §3 + γ₂₆₄）",
+      "legacy_verdict_沿原V3阈值字面": "UNVERIFIED（判据退化：convergence_rate ≡ 0.1，n_distinct = 1、std = 0）",
+      "new_verdict_重构造": "PASS（逐本体 O1/O3/O5 3/3，n_distinct = 9/8/9、std > 0）",
+      "一致性": "不一致（维持原标注 + 显式登记 + 归「不明」分支）"
+    },
+    "P-M": {
+      "K_PJPC_1_3_天花板披露": "新构造输出为天花板序列（n_distinct = 1、std = 0）⇒ 属检测器饱和、非判据退化；判据非退化性由 input_fields 承担（沿 a0734e0a6860 §3.1）；⚠️ 不得单独充当「非退化」证据",
+      "legacy_verdict_沿原V3阈值字面": "UNVERIFIED（判据退化：10 档 detection_rate ≡ 0.0，n_distinct = 1、std = 0，低于随机猜测 0.5）",
+      "new_verdict_重构造": "PASS（27 格 detection_rate 全 1.0；safety_budget_lower_bound 重测 = 80 ≥ 80）",
+      "一致性": "不一致（维持原标注 + 显式登记 + 归「不明」分支）"
+    },
+    "literal_source": "88052d7db895 §2.1 K-V3R-0-C：verdict 须附 1) 重构造 verdict（沿新构造算）+ 2) 沿原 V3 阈值字面算 verdict；两口径一致 ⇒ 改判成立；不一致 ⇒ 维持原标注 + γ 升级"
+  },
+  "date": "2026-09-29",
+  "families": {
+    "P-C": {
+      "PI_裁项档位_确认批5": "②档（对账面材料：P-C PASS vs P-C_two_phase FAIL_H0 口径对账）",
+      "faces": {
+        "asrun_退化面": {
+          "assertions": [
+            {
+              "applicable": true,
+              "assertion": "① 输入向量方差 > 0",
+              "evidence": {
+                "max": 0.19840149926690828,
+                "min": 0.19840149926690828,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "复用 K-V3R-0-A 字面（std > 0），0 新增门槛",
+              "gate_id": "K-PJPC-3-1",
+              "hit": true,
+              "三态_可裁形式": "FAIL（退化警报命中）"
+            },
+            {
+              "applicable": true,
+              "assertion": "② 秩不恒同（排序层）",
+              "evidence": {
+                "max": 0.19840149926690828,
+                "min": 0.19840149926690828,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "批 5 ②档：复用 n_distinct > 3 作近似代理（非排序层等义，沿 prereg §1.4/§4.2 限定）",
+              "gate_id": "K-PJPC-3-2",
+              "hit": true,
+              "三态_可裁形式": "FAIL（退化警报命中）"
+            },
+            {
+              "applicable": true,
+              "assertion": "① 输入向量方差 > 0",
+              "evidence": {
+                "max": 0.8667,
+                "min": 0.5333,
+                "n": 9,
+                "n_distinct": 7,
+                "std": 0.10659488672794401
+              },
+              "form": "复用 K-V3R-0-A 字面（std > 0），0 新增门槛",
+              "gate_id": "K-PJPC-3-1",
+              "hit": false,
+              "三态_可裁形式": "PASS（std > 0）"
+            },
+            {
+              "applicable": true,
+              "assertion": "② 秩不恒同（排序层）",
+              "evidence": {
+                "max": 0.8667,
+                "min": 0.5333,
+                "n": 9,
+                "n_distinct": 7,
+                "std": 0.10659488672794401
+              },
+              "form": "批 5 ②档：复用 n_distinct > 3 作近似代理（非排序层等义，沿 prereg §1.4/§4.2 限定）",
+              "gate_id": "K-PJPC-3-2",
+              "hit": false,
+              "三态_可裁形式": "PASS（n_distinct > 3）"
+            },
+            {
+              "assertion": "③ 标签非硬编码",
+              "form": "批 5 ③档：沿 P-I 诚实降级范式（e934819ee9ed『移除 true_labels 硬编码占位后该维度判 UNVERIFIED — 沿 V3 §6.7 诚实降级』）作【定性范式】，明确【非门】",
+              "gate_id": "K-PJPC-3-3",
+              "is_gate": false,
+              "note": "批 5 ③档【非门】，仅定性登记",
+              "qualitative_reading": "命中（定性）：9 条 9 元素数组逐字全等 ⇒ pooled 读数被复制到 9 行，model 维标签为构造性常量（根因沿 fc0ffd27adca §1）",
+              "triggers_disposition": false,
+              "面": "per_model_per_eta.r2_per_eta（9 model × 9 η 档）"
+            },
+            {
+              "applicable": false,
+              "assertion": "④ 检测率不低于随机基线",
+              "evidence": null,
+              "form": "批 5 ④档：升独立门；切点 = random_guess_rate = 0.5（盘上 fbcb60cf5102 §safety_bound 既有字段，0 新设）",
+              "gate_id": "K-PJPC-3-4",
+              "hit": null,
+              "threshold": 0.5,
+              "threshold_source": "n/a",
+              "三态_可裁形式": "N/A（该族无 detection_rate 字段 ⇒ 门不适用；如实登记，0 当作通过、0 当作失败）"
+            }
+          ],
+          "disposition_甲案": {
+            "basis": "棒 1 派工字面：任一失败 ⇒ 按甲案落 KD + γ（prereg §2.2-3 甲案 = 归 KD，扩写 KD 定义）",
+            "disposition": "甲案（退化预检命中 ⇒ 落 KD + γ）",
+            "hit_gate_ids": [
+              "K-PJPC-3-1",
+              "K-PJPC-3-2"
+            ],
+            "hit_qualitative_assertion_3": true,
+            "kd_scope_limit": "KD 仅『构造/素材不可算』，门不达本身不触发 KD（沿 7dd7dd3fb721 落册语义 2）；本棒按甲案扩写口径落 KD，扩写合法性仍归 PI/verdict-keeper 裁定（prereg §2.2-4 / §8.2-③ 未裁）",
+            "三态_可裁形式": "KD"
+          },
+          "readings": {
+            "anchor_rescript_sha12": "fc0ffd27adca",
+            "eta_scan_count_note": "盘上 9 档 vs TH-V3R-10 预登记 7 档：沿 fc0ffd27adca §5.2 既有登记 legacy_eta_scan_count_mismatch_hit，本棒 0 统一、0 改既有预登记",
+            "face_id": "P-C_asrun_退化面",
+            "input_fields": {
+              "eta_scan（η 轴）": {
+                "max": 100.0,
+                "min": 0.01,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 32.440450439094676
+              },
+              "per_model_per_eta.t_frac（9 model 对照）": {
+                "max": 0.8667,
+                "min": 0.5333,
+                "n": 9,
+                "n_distinct": 7,
+                "std": 0.10659488672794401
+              }
+            },
+            "output_reading_series": {
+              "r2_per_eta 逐 η 档跨 model（η 档 0）": {
+                "max": 0.19840149926690828,
+                "min": 0.19840149926690828,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "r2_per_eta 逐 η 档跨 model（η 档 1）": {
+                "max": 0.19662389698258478,
+                "min": 0.19662389698258478,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "r2_per_eta 逐 η 档跨 model（η 档 2）": {
+                "max": 0.1889141637058418,
+                "min": 0.1889141637058418,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "r2_per_eta 逐 η 档跨 model（η 档 3）": {
+                "max": 0.17970071122194156,
+                "min": 0.17970071122194156,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "r2_per_eta 逐 η 档跨 model（η 档 4）": {
+                "max": 0.1625999275612872,
+                "min": 0.1625999275612872,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "r2_per_eta 逐 η 档跨 model（η 档 5）": {
+                "max": 0.120456989018929,
+                "min": 0.120456989018929,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "r2_per_eta 逐 η 档跨 model（η 档 6）": {
+                "max": 0.07306085701664845,
+                "min": 0.07306085701664845,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "r2_per_eta 逐 η 档跨 model（η 档 7）": {
+                "max": 0.0013381562740183738,
+                "min": 0.0013381562740183738,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "r2_per_eta 逐 η 档跨 model（η 档 8）": {
+                "max": 9.016426050829492e-06,
+                "min": 9.016426050829492e-06,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              }
+            },
+            "source": "results/_v3x_experiments_2026_09_16/v3x_experiments_results_2026_09_16.json §all_results.exp_3_3_p_c_supplement",
+            "source_sha12": "f39412103366",
+            "structural_findings": {
+              "n_eta_slots": 9,
+              "n_models": 9,
+              "per_eta_slot_cross_model_n_distinct": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "r2_per_eta_all_models_identical": true,
+              "r2_per_eta_slot0_values": [
+                0.19840149926690828,
+                0.19662389698258478,
+                0.1889141637058418,
+                0.17970071122194156,
+                0.1625999275612872,
+                0.120456989018929,
+                0.07306085701664845,
+                0.0013381562740183738,
+                9.016426050829492e-06
+              ]
+            }
+          }
+        },
+        "新构造面_纯log-log两参数": {
+          "assertions": [
+            {
+              "applicable": true,
+              "assertion": "① 输入向量方差 > 0",
+              "evidence": {
+                "max": 0.6598733691018495,
+                "min": 0.00614225523225409,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 0.20310644472745254
+              },
+              "form": "复用 K-V3R-0-A 字面（std > 0），0 新增门槛",
+              "gate_id": "K-PJPC-3-1",
+              "hit": false,
+              "三态_可裁形式": "PASS（std > 0）"
+            },
+            {
+              "applicable": true,
+              "assertion": "② 秩不恒同（排序层）",
+              "evidence": {
+                "max": 0.6598733691018495,
+                "min": 0.00614225523225409,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 0.20310644472745254
+              },
+              "form": "批 5 ②档：复用 n_distinct > 3 作近似代理（非排序层等义，沿 prereg §1.4/§4.2 限定）",
+              "gate_id": "K-PJPC-3-2",
+              "hit": false,
+              "三态_可裁形式": "PASS（n_distinct > 3）"
+            },
+            {
+              "assertion": "③ 标签非硬编码",
+              "form": "批 5 ③档：沿 P-I 诚实降级范式（e934819ee9ed『移除 true_labels 硬编码占位后该维度判 UNVERIFIED — 沿 V3 §6.7 诚实降级』）作【定性范式】，明确【非门】",
+              "gate_id": "K-PJPC-3-3",
+              "is_gate": false,
+              "note": "批 5 ③档【非门】，仅定性登记",
+              "qualitative_reading": "未命中（定性）：9/9 个 η 档跨 model n_distinct = 9 ⇒ 逐 model 读数真分布，非硬编码标签",
+              "triggers_disposition": false,
+              "面": "per_eta_table.per_model_r2（9 model × 9 η 档）"
+            },
+            {
+              "applicable": false,
+              "assertion": "④ 检测率不低于随机基线",
+              "evidence": null,
+              "form": "批 5 ④档：升独立门；切点 = random_guess_rate = 0.5（盘上 fbcb60cf5102 §safety_bound 既有字段，0 新设）",
+              "gate_id": "K-PJPC-3-4",
+              "hit": null,
+              "threshold": 0.5,
+              "threshold_source": "n/a",
+              "三态_可裁形式": "N/A（该族无 detection_rate 字段 ⇒ 门不适用；如实登记，0 当作通过、0 当作失败）"
+            }
+          ],
+          "disposition_甲案": {
+            "basis": "0 门失败 ⇒ 甲案未触发",
+            "disposition": "无门命中",
+            "三态_可裁形式": "PASS"
+          },
+          "readings": {
+            "anchor_rescript_sha12": "fc0ffd27adca",
+            "contrast_asrun_10": {
+              "asrun_per_eta_slot_n_distinct": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            },
+            "face_id": "P-C_新构造面_纯log-log两参数",
+            "output_field_slotwise_10": {
+              "per_eta_slot_n_distinct_across_model": [
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9,
+                9
+              ],
+              "stat": {
+                "max": 9.0,
+                "mean": 9.0,
+                "min": 9.0,
+                "n": 9,
+                "n_distinct": 1,
+                "n_finite": 9,
+                "std": 0.0
+              }
+            },
+            "output_reading_series": {
+              "r2_per_eta 逐 η 档跨 model（eta=0.01）": {
+                "max": 0.6598733691018495,
+                "min": 0.00614225523225409,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 0.20310644472745254
+              },
+              "r2_per_eta 逐 η 档跨 model（eta=0.1）": {
+                "max": 0.5101408443095636,
+                "min": 0.0011579268668835407,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 0.14840904579833686
+              },
+              "r2_per_eta 逐 η 档跨 model（eta=0.5）": {
+                "max": 0.6641964976981287,
+                "min": 0.01873555167265839,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 0.22598068878991132
+              },
+              "r2_per_eta 逐 η 档跨 model（eta=100）": {
+                "max": 0.7136848940020104,
+                "min": 0.061499434105409256,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 0.21677746698804673
+              },
+              "r2_per_eta 逐 η 档跨 model（eta=10）": {
+                "max": 0.9286188996387963,
+                "min": 0.004072367489818984,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 0.30123405181870583
+              },
+              "r2_per_eta 逐 η 档跨 model（eta=1）": {
+                "max": 0.6815646123791426,
+                "min": 0.041186011693437385,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 0.1972572705086307
+              },
+              "r2_per_eta 逐 η 档跨 model（eta=2）": {
+                "max": 0.8510642444031592,
+                "min": 0.023811719048000946,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 0.28065746422527393
+              },
+              "r2_per_eta 逐 η 档跨 model（eta=50）": {
+                "max": 0.8155037437669215,
+                "min": 0.08696415507405564,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 0.20558306695438816
+              },
+              "r2_per_eta 逐 η 档跨 model（eta=5）": {
+                "max": 0.8185764478224623,
+                "min": 0.04036079489125055,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 0.25748303899194996
+              }
+            },
+            "per_eta_slot_detail": {
+              "eta=0.01": {
+                "kill_line_slot_pass_10": true,
+                "n_distinct_across_model_measured": 9,
+                "n_distinct_across_model_recorded": 9,
+                "n_undefined_models": 0,
+                "per_model_beta": [
+                  -0.0034913328550912792,
+                  -0.008801274500204148,
+                  -0.001850692447114277,
+                  0.009053390038213427,
+                  0.0011901648852599542,
+                  0.0019536013414689045,
+                  -0.00395261816789059,
+                  -0.006350460171093169,
+                  0.006225889648830943
+                ],
+                "stat_measured": {
+                  "max": 0.6598733691018495,
+                  "min": 0.00614225523225409,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "std": 0.20310644472745254
+                },
+                "stat_recorded": {
+                  "max": 0.6598733691018495,
+                  "mean": 0.2508587641886082,
+                  "min": 0.00614225523225409,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "n_finite": 9,
+                  "std": 0.20310644472745254
+                }
+              },
+              "eta=0.1": {
+                "kill_line_slot_pass_10": true,
+                "n_distinct_across_model_measured": 9,
+                "n_distinct_across_model_recorded": 9,
+                "n_undefined_models": 0,
+                "per_model_beta": [
+                  0.00025080831358575604,
+                  -0.0015338364888013221,
+                  0.001782305223046425,
+                  0.0014869896883222312,
+                  0.0013103773798725064,
+                  -0.003589368360736772,
+                  -0.0026024435035746476,
+                  -0.0015424355643828774,
+                  -0.005448026560269138
+                ],
+                "stat_measured": {
+                  "max": 0.5101408443095636,
+                  "min": 0.0011579268668835407,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "std": 0.14840904579833686
+                },
+                "stat_recorded": {
+                  "max": 0.5101408443095636,
+                  "mean": 0.12778917390110234,
+                  "min": 0.0011579268668835407,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "n_finite": 9,
+                  "std": 0.14840904579833686
+                }
+              },
+              "eta=0.5": {
+                "kill_line_slot_pass_10": true,
+                "n_distinct_across_model_measured": 9,
+                "n_distinct_across_model_recorded": 9,
+                "n_undefined_models": 0,
+                "per_model_beta": [
+                  -0.00355059774864105,
+                  0.002042697046706447,
+                  0.0018849371569956402,
+                  0.009993103203716797,
+                  0.011937455609058583,
+                  0.007532275444526216,
+                  0.007618926384213459,
+                  0.002042266429134285,
+                  0.012588353480318431
+                ],
+                "stat_measured": {
+                  "max": 0.6641964976981287,
+                  "min": 0.01873555167265839,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "std": 0.22598068878991132
+                },
+                "stat_recorded": {
+                  "max": 0.6641964976981287,
+                  "mean": 0.29953820507336243,
+                  "min": 0.01873555167265839,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "n_finite": 9,
+                  "std": 0.22598068878991132
+                }
+              },
+              "eta=1": {
+                "kill_line_slot_pass_10": true,
+                "n_distinct_across_model_measured": 9,
+                "n_distinct_across_model_recorded": 9,
+                "n_undefined_models": 0,
+                "per_model_beta": [
+                  0.006651150575574014,
+                  0.008649933506260596,
+                  0.011851878766836431,
+                  0.0035994660838822444,
+                  0.008510772886162327,
+                  0.012535453322757548,
+                  0.03538825864257258,
+                  -0.010760250257718498,
+                  -0.007541725549121166
+                ],
+                "stat_measured": {
+                  "max": 0.6815646123791426,
+                  "min": 0.041186011693437385,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "std": 0.1972572705086307
+                },
+                "stat_recorded": {
+                  "max": 0.6815646123791426,
+                  "mean": 0.37806552624624234,
+                  "min": 0.041186011693437385,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "n_finite": 9,
+                  "std": 0.19725727050863068
+                }
+              },
+              "eta=10": {
+                "kill_line_slot_pass_10": true,
+                "n_distinct_across_model_measured": 9,
+                "n_distinct_across_model_recorded": 9,
+                "n_undefined_models": 0,
+                "per_model_beta": [
+                  0.09810365998620191,
+                  0.12104690200558277,
+                  0.060143303285358614,
+                  0.050700361099831746,
+                  0.05016400170011977,
+                  0.05582531440124093,
+                  0.04957463592648685,
+                  0.006489832693553539,
+                  0.0042616207449592495
+                ],
+                "stat_measured": {
+                  "max": 0.9286188996387963,
+                  "min": 0.004072367489818984,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "std": 0.30123405181870583
+                },
+                "stat_recorded": {
+                  "max": 0.9286188996387963,
+                  "mean": 0.4806543891979104,
+                  "min": 0.004072367489818984,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "n_finite": 9,
+                  "std": 0.3012340518187059
+                }
+              },
+              "eta=100": {
+                "kill_line_slot_pass_10": true,
+                "n_distinct_across_model_measured": 9,
+                "n_distinct_across_model_recorded": 9,
+                "n_undefined_models": 0,
+                "per_model_beta": [
+                  0.05494975388118471,
+                  0.034979597443801407,
+                  0.03868535210283508,
+                  0.03520274817975998,
+                  0.05130764210780862,
+                  -0.010181968458500511,
+                  0.02370455377490316,
+                  -0.012540357067032734,
+                  -0.026695368816122975
+                ],
+                "stat_measured": {
+                  "max": 0.7136848940020104,
+                  "min": 0.061499434105409256,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "std": 0.21677746698804673
+                },
+                "stat_recorded": {
+                  "max": 0.7136848940020104,
+                  "mean": 0.3226111668366864,
+                  "min": 0.061499434105409256,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "n_finite": 9,
+                  "std": 0.2167774669880467
+                }
+              },
+              "eta=2": {
+                "kill_line_slot_pass_10": true,
+                "n_distinct_across_model_measured": 9,
+                "n_distinct_across_model_recorded": 9,
+                "n_undefined_models": 0,
+                "per_model_beta": [
+                  0.039643277214370005,
+                  0.03548324039487883,
+                  0.03348091967635455,
+                  0.022379517509024918,
+                  0.013531944791684208,
+                  0.02686419356094028,
+                  0.014712644062756988,
+                  -0.004016861068843679,
+                  0.029365017254906794
+                ],
+                "stat_measured": {
+                  "max": 0.8510642444031592,
+                  "min": 0.023811719048000946,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "std": 0.28065746422527393
+                },
+                "stat_recorded": {
+                  "max": 0.8510642444031592,
+                  "mean": 0.47066867895980596,
+                  "min": 0.023811719048000946,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "n_finite": 9,
+                  "std": 0.2806574642252739
+                }
+              },
+              "eta=5": {
+                "kill_line_slot_pass_10": true,
+                "n_distinct_across_model_measured": 9,
+                "n_distinct_across_model_recorded": 9,
+                "n_undefined_models": 0,
+                "per_model_beta": [
+                  0.06474643995139784,
+                  0.06815668202039687,
+                  0.05565757638738992,
+                  0.042426074911784635,
+                  0.05006153879764686,
+                  0.03516230638595981,
+                  0.02454898692680711,
+                  0.02195788935447392,
+                  -0.010180659056422715
+                ],
+                "stat_measured": {
+                  "max": 0.8185764478224623,
+                  "min": 0.04036079489125055,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "std": 0.25748303899194996
+                },
+                "stat_recorded": {
+                  "max": 0.8185764478224623,
+                  "mean": 0.44430679759594255,
+                  "min": 0.04036079489125055,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "n_finite": 9,
+                  "std": 0.25748303899194996
+                }
+              },
+              "eta=50": {
+                "kill_line_slot_pass_10": true,
+                "n_distinct_across_model_measured": 9,
+                "n_distinct_across_model_recorded": 9,
+                "n_undefined_models": 0,
+                "per_model_beta": [
+                  0.10140413171087252,
+                  0.04775807036759892,
+                  0.05251102414339573,
+                  -0.0190872256655629,
+                  0.061743640936802714,
+                  0.06111738060068131,
+                  0.033763353187855095,
+                  0.021521935839720698,
+                  -0.03494010287335212
+                ],
+                "stat_measured": {
+                  "max": 0.8155037437669215,
+                  "min": 0.08696415507405564,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "std": 0.20558306695438816
+                },
+                "stat_recorded": {
+                  "max": 0.8155037437669215,
+                  "mean": 0.3969243235013525,
+                  "min": 0.08696415507405564,
+                  "n": 9,
+                  "n_distinct": 9,
+                  "n_finite": 9,
+                  "std": 0.20558306695438816
+                }
+              }
+            },
+            "power_law_form": "主口径 = 纯 log-log 两参数 P(N) = A·N^(-β)：对 log P ~ log N 做 OLS，R² 在 7 档原始 (N, P) 上算；沿盘上姊妹实现 deposon_pc_d1_d3 §R2_b_CI_log_log_fit 的 OLS-on-log-log 字面（0 擅调；判定量 n_distinct 与函数形式无关）。spec §4.1 的三参数 +C 形式已按 K-V3R-0-A 拒收，见 rejected_first_attempt",
+            "rejected_first_attempt_10": {
+              "construct": "P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md §4.1 字面三参数 P(N) = A·N^(-β) + C，C_hat 取最大 2 个 N 档 P 的均值",
+              "degenerate_alarm_hit": true,
+              "disposition": "按 K-V3R-0-A「不许带病开跑」拒收；主口径改用纯 log-log 两参数 P(N) = A·N^(-β)（沿盘上姊妹实现 deposon_pc_d1_d3 §R2_b_CI_log_log_fit 的 OLS-on-log-log 字面，0 擅调阈值，判定量 n_distinct 与函数形式无关）。三参数形式留 PI 复核提案，本件不私设。",
+              "measured": "9 model × 9 η = 81 个 (model, η) 组合中 81 个 R² 无定义（P(N) - C_hat <= 0）；逐 η 档跨 model n_distinct 全为 0"
+            },
+            "source": "results/_v3_recheck_10_result_2026_09_27.json（#10）",
+            "source_sha12": "5d4b6baf1b18",
+            "zero_noise_control_10": {
+              "P_N_independent_to_machine_precision_hit": true,
+              "reading": "对照腿证实：新构造的逐 model 幂律 R² 完全由重采样涨落产生，**不是** 60-cell 总体的真实尺寸标度（K-V3R-10 PASS 只推翻「model 维退化」，不构成「幂律成立」的证据）；配套证据 = β̂ 全部 |β| < 0.06（≈0，无标度）+ spec §4.3 字面在新构造上仍判 FAIL_H0"
+            },
+            "两腿分读_命题面": {
+              "same_json_P_C_two_phase_field": "FAIL_H0 (幂律死)",
+              "spec_kill_decision_on_asrun_max_r2": "FAIL_H0",
+              "spec_literal_source": "P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md §1 判死线（spec 全文命中 R^2 < 0.3 -> FAIL_H0；命中 2 次）"
+            }
+          },
+          "三参数_拒收记录继承_K_PJPC_2_3": {
+            "construct": "P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md §4.1 字面三参数 P(N) = A·N^(-β) + C，C_hat 取最大 2 个 N 档 P 的均值",
+            "degenerate_alarm_hit": true,
+            "disposition": "按 K-V3R-0-A「不许带病开跑」拒收；主口径改用纯 log-log 两参数 P(N) = A·N^(-β)（沿盘上姊妹实现 deposon_pc_d1_d3 §R2_b_CI_log_log_fit 的 OLS-on-log-log 字面，0 擅调阈值，判定量 n_distinct 与函数形式无关）。三参数形式留 PI 复核提案，本件不私设。",
+            "measured": "9 model × 9 η = 81 个 (model, η) 组合中 81 个 R² 无定义（P(N) - C_hat <= 0）；逐 η 档跨 model n_distinct 全为 0"
+          }
+        }
+      },
+      "family": "P-C",
+      "本棒_②档对账面材料": {
+        "0 重复_0 混件": "K-V3R-27 已在 P-L/P-C FSS 线上处理同族对账 ⇒ 本棒 0 重复、0 混件（沿 prereg §3.2 P-C 可选面②）",
+        "material_id": "P-C-ACCT-①",
+        "对账面": {
+          "命题面": {
+            "same_json_P_C_two_phase_field": "FAIL_H0 (幂律死)",
+            "spec_kill_decision_on_asrun_max_r2": "FAIL_H0",
+            "spec_literal_source": "P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md §1 判死线（spec 全文命中 R^2 < 0.3 -> FAIL_H0；命中 2 次）"
+          },
+          "硬约束_K_PJPC_2_2": "证据面与命题面必须分两条腿并报；PASS 只说明『model 维判据从未受审』这一缺陷成立，0 构成『幂律成立』或『P-C 方向翻案』的证据（沿 fc0ffd27adca γ₃ + K-PJPC-2-2）",
+          "证据面": "K-PJPC-2-1 沿 K-V3R-10：9/9 个 η 档跨 model n_distinct = 9 > 3 ⇒ 新构造 PASS（#10）"
+        },
+        "正式措辞": "0 代拟（归 doc-writer）"
+      },
+      "线索": "exp_3_3 per_model_per_eta.r2_per_eta 对 9 model 逐字全等（pooled 读数被复制到 9 行）"
+    },
+    "P-J": {
+      "PI_裁项档位_确认批5": "②档（rho = −0.9667 显式标为伪秩相关的技术面材料；禁引纪律的正式措辞归 doc-writer，本棒 0 代拟）",
+      "faces": {
+        "asrun_退化面": {
+          "assertions": [
+            {
+              "applicable": true,
+              "assertion": "① 输入向量方差 > 0",
+              "evidence": {
+                "max": 0.1,
+                "min": 0.1,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "复用 K-V3R-0-A 字面（std > 0），0 新增门槛",
+              "gate_id": "K-PJPC-3-1",
+              "hit": true,
+              "三态_可裁形式": "FAIL（退化警报命中）"
+            },
+            {
+              "applicable": true,
+              "assertion": "② 秩不恒同（排序层）",
+              "evidence": {
+                "max": 0.1,
+                "min": 0.1,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "批 5 ②档：复用 n_distinct > 3 作近似代理（非排序层等义，沿 prereg §1.4/§4.2 限定）",
+              "gate_id": "K-PJPC-3-2",
+              "hit": true,
+              "三态_可裁形式": "FAIL（退化警报命中）"
+            },
+            {
+              "applicable": true,
+              "assertion": "① 输入向量方差 > 0",
+              "evidence": {
+                "max": 0.711111111111111,
+                "min": 0.711111111111111,
+                "n": 2,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "复用 K-V3R-0-A 字面（std > 0），0 新增门槛",
+              "gate_id": "K-PJPC-3-1",
+              "hit": true,
+              "三态_可裁形式": "FAIL（退化警报命中）"
+            },
+            {
+              "applicable": true,
+              "assertion": "② 秩不恒同（排序层）",
+              "evidence": {
+                "max": 0.711111111111111,
+                "min": 0.711111111111111,
+                "n": 2,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "批 5 ②档：复用 n_distinct > 3 作近似代理（非排序层等义，沿 prereg §1.4/§4.2 限定）",
+              "gate_id": "K-PJPC-3-2",
+              "hit": true,
+              "三态_可裁形式": "FAIL（退化警报命中）"
+            },
+            {
+              "assertion": "③ 标签非硬编码",
+              "form": "批 5 ③档：沿 P-I 诚实降级范式（e934819ee9ed『移除 true_labels 硬编码占位后该维度判 UNVERIFIED — 沿 V3 §6.7 诚实降级』）作【定性范式】，明确【非门】",
+              "gate_id": "K-PJPC-3-3",
+              "is_gate": false,
+              "note": "批 5 ③档明确【非门】⇒ 本条 0 触发任何落态处置，仅作定性登记；不编造机械判定式",
+              "qualitative_reading": "命中（定性）：该维度的读数由构造性常量产生，移除硬编码占位后该维度无可读分布 —— 与 P-I e934819ee9ed 自陈『UNVERIFIED(true_labels 占位, AUC 不可信) — 沿 V3 §6.7 诚实降级』同款形态",
+              "triggers_disposition": false,
+              "面": "convergence_rates ≡ 0.1（9/9 逐字相同）＋ basin_map_sample.potentialness ≡ 0.7111（2/2 相同，2 点样本）"
+            },
+            {
+              "applicable": false,
+              "assertion": "④ 检测率不低于随机基线",
+              "evidence": null,
+              "form": "批 5 ④档：升独立门；切点 = random_guess_rate = 0.5（盘上 fbcb60cf5102 §safety_bound 既有字段，0 新设）",
+              "gate_id": "K-PJPC-3-4",
+              "hit": null,
+              "threshold": 0.5,
+              "threshold_source": "n/a",
+              "三态_可裁形式": "N/A（该族无 detection_rate 字段 ⇒ 门不适用；如实登记，0 当作通过、0 当作失败）"
+            }
+          ],
+          "disposition_甲案": {
+            "basis": "棒 1 派工字面：任一失败 ⇒ 按甲案落 KD + γ（prereg §2.2-3 甲案 = 归 KD，扩写 KD 定义）",
+            "disposition": "甲案（退化预检命中 ⇒ 落 KD + γ）",
+            "hit_gate_ids": [
+              "K-PJPC-3-1",
+              "K-PJPC-3-1",
+              "K-PJPC-3-2",
+              "K-PJPC-3-2"
+            ],
+            "hit_qualitative_assertion_3": true,
+            "kd_scope_limit": "KD 仅『构造/素材不可算』，门不达本身不触发 KD（沿 7dd7dd3fb721 落册语义 2）；本棒按甲案扩写口径落 KD，扩写合法性仍归 PI/verdict-keeper 裁定（prereg §2.2-4 / §8.2-③ 未裁）",
+            "三态_可裁形式": "KD"
+          },
+          "readings": {
+            "anchor_rescript_sha12": "6b86576146a3",
+            "face_id": "P-J_asrun_退化面",
+            "input_fields": {
+              "T_frac60（对照，9 model）": {
+                "max": 0.8667,
+                "min": 0.5333,
+                "n": 9,
+                "n_distinct": 7,
+                "std": 0.10659488672794401
+              }
+            },
+            "output_reading_series": {
+              "basin_map_sample.potentialness（2 点样本）": {
+                "max": 0.711111111111111,
+                "min": 0.711111111111111,
+                "n": 2,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "convergence_rates（9 model 主读数列）": {
+                "max": 0.1,
+                "min": 0.1,
+                "n": 9,
+                "n_distinct": 1,
+                "std": 0.0
+              }
+            },
+            "scalar_readings": {
+              "convergence_rate_mean": 0.1,
+              "final_dang_verdict_V3期字面": "P-J 通过(收敛比例与势博弈度量有单调关系, 定量遗产路线可继续)",
+              "potentialness": 0.7111,
+              "spearman_rho_T_frac60_vs_convergence_rate": -0.9667
+            },
+            "source": "results/_p_j_convergence_basin_2026_09_16/p_j_convergence_basin_results_2026_09_16.json",
+            "source_sha12": "a9ad1de618f5"
+          }
+        },
+        "新构造面_O1_discrete_cell_redistribution": {
+          "assertions": [
+            {
+              "applicable": true,
+              "assertion": "① 输入向量方差 > 0",
+              "evidence": {
+                "max": 0.0173,
+                "min": 0.0132,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 0.0012788884062167251
+              },
+              "form": "复用 K-V3R-0-A 字面（std > 0），0 新增门槛",
+              "gate_id": "K-PJPC-3-1",
+              "hit": false,
+              "三态_可裁形式": "PASS（std > 0）"
+            },
+            {
+              "applicable": true,
+              "assertion": "② 秩不恒同（排序层）",
+              "evidence": {
+                "max": 0.0173,
+                "min": 0.0132,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 0.0012788884062167251
+              },
+              "form": "批 5 ②档：复用 n_distinct > 3 作近似代理（非排序层等义，沿 prereg §1.4/§4.2 限定）",
+              "gate_id": "K-PJPC-3-2",
+              "hit": false,
+              "三态_可裁形式": "PASS（n_distinct > 3）"
+            },
+            {
+              "assertion": "③ 标签非硬编码",
+              "form": "批 5 ③档：沿 P-I 诚实降级范式（e934819ee9ed『移除 true_labels 硬编码占位后该维度判 UNVERIFIED — 沿 V3 §6.7 诚实降级』）作【定性范式】，明确【非门】",
+              "gate_id": "K-PJPC-3-3",
+              "is_gate": false,
+              "note": "批 5 ③档【非门】，仅定性登记",
+              "qualitative_reading": "未命中（定性）：9 值互异 ⇒ 非硬编码标签（O3 为 8 档互异 + 1 重复，仍非全同）",
+              "triggers_disposition": false,
+              "面": "逐 model convergence_rate 9 值（O1_discrete_cell_redistribution）"
+            },
+            {
+              "applicable": false,
+              "assertion": "④ 检测率不低于随机基线",
+              "evidence": null,
+              "form": "批 5 ④档：升独立门；切点 = random_guess_rate = 0.5（盘上 fbcb60cf5102 §safety_bound 既有字段，0 新设）",
+              "gate_id": "K-PJPC-3-4",
+              "hit": null,
+              "threshold": 0.5,
+              "threshold_source": "n/a",
+              "三态_可裁形式": "N/A（该族无 detection_rate 字段 ⇒ 门不适用；如实登记，0 当作通过、0 当作失败）"
+            }
+          ],
+          "disposition_甲案": {
+            "basis": "0 门失败 ⇒ 甲案未触发",
+            "disposition": "无门命中",
+            "三态_可裁形式": "PASS"
+          },
+          "readings": {
+            "per_model_convergence_rate": {
+              "deepseek-v4-flash": 0.0149,
+              "deepseek-v4-pro": 0.0155,
+              "doubao-seed-2.0-lite": 0.0158,
+              "doubao-seed-2.1-turbo": 0.0152,
+              "doubao-seed-evolving": 0.0173,
+              "glm-5.3": 0.0146,
+              "glm-5.3-flash": 0.013300000000000001,
+              "kimi-k2.7-code": 0.0132,
+              "minimax-m3": 0.0134
+            },
+            "rates_measured": {
+              "max": 0.0173,
+              "min": 0.0132,
+              "n": 9,
+              "n_distinct": 9,
+              "std": 0.0012788884062167251
+            },
+            "rates_measured_equals_recorded": true,
+            "rates_recorded_in_26b": {
+              "iqr": 0.0020999999999999994,
+              "max": 0.0173,
+              "mean": 0.014799999999999999,
+              "median": 0.0149,
+              "min": 0.0132,
+              "n": 9,
+              "n_distinct": 9,
+              "rel_std": 0.08641137879842738,
+              "std": 0.0012788884062167251
+            }
+          }
+        },
+        "新构造面_O3_logit_normal_form": {
+          "assertions": [
+            {
+              "applicable": true,
+              "assertion": "① 输入向量方差 > 0",
+              "evidence": {
+                "max": 0.3557,
+                "min": 0.33899999999999997,
+                "n": 9,
+                "n_distinct": 8,
+                "std": 0.004466169126518474
+              },
+              "form": "复用 K-V3R-0-A 字面（std > 0），0 新增门槛",
+              "gate_id": "K-PJPC-3-1",
+              "hit": false,
+              "三态_可裁形式": "PASS（std > 0）"
+            },
+            {
+              "applicable": true,
+              "assertion": "② 秩不恒同（排序层）",
+              "evidence": {
+                "max": 0.3557,
+                "min": 0.33899999999999997,
+                "n": 9,
+                "n_distinct": 8,
+                "std": 0.004466169126518474
+              },
+              "form": "批 5 ②档：复用 n_distinct > 3 作近似代理（非排序层等义，沿 prereg §1.4/§4.2 限定）",
+              "gate_id": "K-PJPC-3-2",
+              "hit": false,
+              "三态_可裁形式": "PASS（n_distinct > 3）"
+            },
+            {
+              "assertion": "③ 标签非硬编码",
+              "form": "批 5 ③档：沿 P-I 诚实降级范式（e934819ee9ed『移除 true_labels 硬编码占位后该维度判 UNVERIFIED — 沿 V3 §6.7 诚实降级』）作【定性范式】，明确【非门】",
+              "gate_id": "K-PJPC-3-3",
+              "is_gate": false,
+              "note": "批 5 ③档【非门】，仅定性登记",
+              "qualitative_reading": "未命中（定性）：9 值互异 ⇒ 非硬编码标签（O3 为 8 档互异 + 1 重复，仍非全同）",
+              "triggers_disposition": false,
+              "面": "逐 model convergence_rate 9 值（O3_logit_normal_form）"
+            },
+            {
+              "applicable": false,
+              "assertion": "④ 检测率不低于随机基线",
+              "evidence": null,
+              "form": "批 5 ④档：升独立门；切点 = random_guess_rate = 0.5（盘上 fbcb60cf5102 §safety_bound 既有字段，0 新设）",
+              "gate_id": "K-PJPC-3-4",
+              "hit": null,
+              "threshold": 0.5,
+              "threshold_source": "n/a",
+              "三态_可裁形式": "N/A（该族无 detection_rate 字段 ⇒ 门不适用；如实登记，0 当作通过、0 当作失败）"
+            }
+          ],
+          "disposition_甲案": {
+            "basis": "0 门失败 ⇒ 甲案未触发",
+            "disposition": "无门命中",
+            "三态_可裁形式": "PASS"
+          },
+          "readings": {
+            "per_model_convergence_rate": {
+              "deepseek-v4-flash": 0.3478,
+              "deepseek-v4-pro": 0.3454,
+              "doubao-seed-2.0-lite": 0.34990000000000004,
+              "doubao-seed-2.1-turbo": 0.3454,
+              "doubao-seed-evolving": 0.3557,
+              "glm-5.3": 0.34409999999999996,
+              "glm-5.3-flash": 0.3425,
+              "kimi-k2.7-code": 0.33899999999999997,
+              "minimax-m3": 0.3448
+            },
+            "rates_measured": {
+              "max": 0.3557,
+              "min": 0.33899999999999997,
+              "n": 9,
+              "n_distinct": 8,
+              "std": 0.004466169126518474
+            },
+            "rates_measured_equals_recorded": false,
+            "rates_recorded_in_26b": {
+              "iqr": 0.0037000000000000366,
+              "max": 0.3557,
+              "mean": 0.34606666666666663,
+              "median": 0.3454,
+              "min": 0.33899999999999997,
+              "n": 9,
+              "n_distinct": 8,
+              "rel_std": 0.01290551664376365,
+              "std": 0.0044661691265184735
+            }
+          }
+        },
+        "新构造面_O5_replicator_ode_softlimit": {
+          "assertions": [
+            {
+              "applicable": true,
+              "assertion": "① 输入向量方差 > 0",
+              "evidence": {
+                "max": 72.0337,
+                "min": 17.9501,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 16.980008842717528
+              },
+              "form": "复用 K-V3R-0-A 字面（std > 0），0 新增门槛",
+              "gate_id": "K-PJPC-3-1",
+              "hit": false,
+              "三态_可裁形式": "PASS（std > 0）"
+            },
+            {
+              "applicable": true,
+              "assertion": "② 秩不恒同（排序层）",
+              "evidence": {
+                "max": 72.0337,
+                "min": 17.9501,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 16.980008842717528
+              },
+              "form": "批 5 ②档：复用 n_distinct > 3 作近似代理（非排序层等义，沿 prereg §1.4/§4.2 限定）",
+              "gate_id": "K-PJPC-3-2",
+              "hit": false,
+              "三态_可裁形式": "PASS（n_distinct > 3）"
+            },
+            {
+              "assertion": "③ 标签非硬编码",
+              "form": "批 5 ③档：沿 P-I 诚实降级范式（e934819ee9ed『移除 true_labels 硬编码占位后该维度判 UNVERIFIED — 沿 V3 §6.7 诚实降级』）作【定性范式】，明确【非门】",
+              "gate_id": "K-PJPC-3-3",
+              "is_gate": false,
+              "note": "批 5 ③档【非门】，仅定性登记",
+              "qualitative_reading": "未命中（定性）：9 值互异 ⇒ 非硬编码标签（O3 为 8 档互异 + 1 重复，仍非全同）",
+              "triggers_disposition": false,
+              "面": "逐 model convergence_rate 9 值（O5_replicator_ode_softlimit）"
+            },
+            {
+              "applicable": false,
+              "assertion": "④ 检测率不低于随机基线",
+              "evidence": null,
+              "form": "批 5 ④档：升独立门；切点 = random_guess_rate = 0.5（盘上 fbcb60cf5102 §safety_bound 既有字段，0 新设）",
+              "gate_id": "K-PJPC-3-4",
+              "hit": null,
+              "threshold": 0.5,
+              "threshold_source": "n/a",
+              "三态_可裁形式": "N/A（该族无 detection_rate 字段 ⇒ 门不适用；如实登记，0 当作通过、0 当作失败）"
+            }
+          ],
+          "disposition_甲案": {
+            "basis": "0 门失败 ⇒ 甲案未触发",
+            "disposition": "无门命中",
+            "三态_可裁形式": "PASS"
+          },
+          "readings": {
+            "per_model_convergence_rate": {
+              "deepseek-v4-flash": 35.767399999999995,
+              "deepseek-v4-pro": 33.1413,
+              "doubao-seed-2.0-lite": 17.9501,
+              "doubao-seed-2.1-turbo": 33.376999999999995,
+              "doubao-seed-evolving": 37.0278,
+              "glm-5.3": 72.0337,
+              "glm-5.3-flash": 58.294200000000004,
+              "kimi-k2.7-code": 23.438499999999998,
+              "minimax-m3": 59.1696
+            },
+            "rates_measured": {
+              "max": 72.0337,
+              "min": 17.9501,
+              "n": 9,
+              "n_distinct": 9,
+              "std": 16.980008842717528
+            },
+            "rates_measured_equals_recorded": true,
+            "rates_recorded_in_26b": {
+              "iqr": 25.152900000000002,
+              "max": 72.0337,
+              "mean": 41.13328888888889,
+              "median": 35.767399999999995,
+              "min": 17.9501,
+              "n": 9,
+              "n_distinct": 9,
+              "rel_std": 0.4128045508003189,
+              "std": 16.980008842717528
+            }
+          }
+        }
+      },
+      "family": "P-J",
+      "本棒_②档技术面材料": {
+        "material_id": "P-J-TECH-①",
+        "内容": "rho = −0.9667 系对 9 元素常量 vector（convergence_rates ≡ 0.1）计算的 Spearman，判据从未受审",
+        "本棒可机械复算的证据面": {
+          "T_frac60_对照_n_distinct": 7,
+          "convergence_rates_n_distinct": 1,
+          "convergence_rates_std": 0.0
+        },
+        "正式措辞": "0 代拟（归 doc-writer）"
+      },
+      "线索": "收敛盆地 convergence_rates 恒 0.1（9 model）；JSON 记 spearman_rho_T_frac60_vs_convergence_rate = −0.9667"
+    },
+    "P-M": {
+      "PI_裁项档位_确认批5": "②档（v42_safety_index = 'SECURE' 显式标无效的技术面材料）",
+      "faces": {
+        "asrun_退化面": {
+          "assertions": [
+            {
+              "applicable": true,
+              "assertion": "① 输入向量方差 > 0",
+              "evidence": {
+                "max": 0.0,
+                "min": 0.0,
+                "n": 10,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "复用 K-V3R-0-A 字面（std > 0），0 新增门槛",
+              "gate_id": "K-PJPC-3-1",
+              "hit": true,
+              "三态_可裁形式": "FAIL（退化警报命中）"
+            },
+            {
+              "applicable": true,
+              "assertion": "② 秩不恒同（排序层）",
+              "evidence": {
+                "max": 0.0,
+                "min": 0.0,
+                "n": 10,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "批 5 ②档：复用 n_distinct > 3 作近似代理（非排序层等义，沿 prereg §1.4/§4.2 限定）",
+              "gate_id": "K-PJPC-3-2",
+              "hit": true,
+              "三态_可裁形式": "FAIL（退化警报命中）"
+            },
+            {
+              "applicable": true,
+              "assertion": "① 输入向量方差 > 0",
+              "evidence": {
+                "max": 1.0,
+                "min": 1.0,
+                "n": 10,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "复用 K-V3R-0-A 字面（std > 0），0 新增门槛",
+              "gate_id": "K-PJPC-3-1",
+              "hit": true,
+              "三态_可裁形式": "FAIL（退化警报命中）"
+            },
+            {
+              "applicable": true,
+              "assertion": "② 秩不恒同（排序层）",
+              "evidence": {
+                "max": 1.0,
+                "min": 1.0,
+                "n": 10,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "批 5 ②档：复用 n_distinct > 3 作近似代理（非排序层等义，沿 prereg §1.4/§4.2 限定）",
+              "gate_id": "K-PJPC-3-2",
+              "hit": true,
+              "三态_可裁形式": "FAIL（退化警报命中）"
+            },
+            {
+              "assertion": "③ 标签非硬编码",
+              "form": "批 5 ③档：沿 P-I 诚实降级范式（e934819ee9ed『移除 true_labels 硬编码占位后该维度判 UNVERIFIED — 沿 V3 §6.7 诚实降级』）作【定性范式】，明确【非门】",
+              "gate_id": "K-PJPC-3-3",
+              "is_gate": false,
+              "note": "批 5 ③档【非门】，仅定性登记；根因沿既有件，0 重定位",
+              "qualitative_reading": "命中（定性）：missed_indices_first_5 10/10 逐字相同 [0,1,2,3,4] ⇒ 漏检位置标签为构造性常量；detected_count ≡ 0 / missed_count ≡ 8 沿 a0734e0a6860 §3.4 独立复现为【计数语义反转】，非检测能力缺失",
+              "triggers_disposition": false,
+              "面": "attack_results.missed_indices_first_5（10 档）＋ detected_count / missed_count（10 档）"
+            },
+            {
+              "applicable": true,
+              "assertion": "④ 检测率不低于随机基线",
+              "evidence": {
+                "max": 0.0,
+                "min": 0.0,
+                "n": 10,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "批 5 ④档：升独立门；切点 = random_guess_rate = 0.5（盘上 fbcb60cf5102 §safety_bound 既有字段，0 新设）",
+              "gate_id": "K-PJPC-3-4",
+              "hit": true,
+              "threshold": 0.5,
+              "threshold_source": "盘上 fbcb60cf5102 §all_results.safety_bound.random_guess_rate（既有字段）",
+              "三态_可裁形式": "FAIL（存在 detection_rate < 0.5 的档）"
+            }
+          ],
+          "disposition_甲案": {
+            "basis": "棒 1 派工字面：任一失败 ⇒ 按甲案落 KD + γ（prereg §2.2-3 甲案 = 归 KD，扩写 KD 定义）",
+            "disposition": "甲案（退化预检命中 ⇒ 落 KD + γ）",
+            "hit_gate_ids": [
+              "K-PJPC-3-1",
+              "K-PJPC-3-1",
+              "K-PJPC-3-2",
+              "K-PJPC-3-2",
+              "K-PJPC-3-4"
+            ],
+            "hit_qualitative_assertion_3": true,
+            "kd_scope_limit": "KD 仅『构造/素材不可算』，门不达本身不触发 KD（沿 7dd7dd3fb721 落册语义 2）；本棒按甲案扩写口径落 KD，扩写合法性仍归 PI/verdict-keeper 裁定（prereg §2.2-4 / §8.2-③ 未裁）",
+            "三态_可裁形式": "KD"
+          },
+          "readings": {
+            "anchor_rescript_sha12": "a0734e0a6860",
+            "face_id": "P-M_asrun_退化面",
+            "input_fields": {
+              "attack_results.attack_budget（10 档轴）": {
+                "max": 80,
+                "min": 8,
+                "n": 10,
+                "n_distinct": 10,
+                "std": 22.978250586152114
+              },
+              "attack_results.unit_perturbation_count（逐档）": {
+                "max": 640,
+                "min": 64,
+                "n": 10,
+                "n_distinct": 10,
+                "std": 183.82600468921692
+              }
+            },
+            "output_reading_series": {
+              "attack_results.detected_count（10 档）": {
+                "max": 0,
+                "min": 0,
+                "n": 10,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "attack_results.detection_rate（10 档）": {
+                "max": 0.0,
+                "min": 0.0,
+                "n": 10,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "attack_results.missed_count（10 档）": {
+                "max": 8,
+                "min": 8,
+                "n": 10,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "attack_results.missed_indices_first_5（10 档，序列型）": {
+                "max": "[0, 1, 2, 3, 4]",
+                "min": "[0, 1, 2, 3, 4]",
+                "n": 1,
+                "n_distinct": 1,
+                "std": null,
+                "std_note": "标识符型字段，std 无意义，沿既有件同款只报 n_distinct（K-V3R-0-A §1.2 辅助说明：门槛只对真分布字段生效）"
+              },
+              "cost_miss_rate_curve.detection_rate（10 档）": {
+                "max": 0.0,
+                "min": 0.0,
+                "n": 10,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "cost_miss_rate_curve.miss_rate（10 档）": {
+                "max": 1.0,
+                "min": 1.0,
+                "n": 10,
+                "n_distinct": 1,
+                "std": 0.0
+              }
+            },
+            "paper_amendment_literal": {
+              "auditability_inequality": "可审计性 = f(篡改成本下界, 复算成本)",
+              "conclusion": "v42 verifier 安全预算下界 = 80 (随机猜测成本 = 50%); 如果 v42 安全预算 < 论文修正条款下界, 须重设计 v42 (非项目判死, 是强制修正案)",
+              "random_guess_cost": "50% (基线)",
+              "v42_safety_budget_lower_bound": 80
+            },
+            "scalar_readings": {
+              "random_guess_rate": 0.5,
+              "safety_budget_lower_bound": 80,
+              "v42_safety_index": "SECURE"
+            },
+            "source": "results/_p_m_attack_surface_cost_2026_09_16/p_m_attack_surface_cost_results_2026_09_16.json",
+            "source_sha12": "fbcb60cf5102",
+            "诚实降级面_readings": {
+              "cost_curve.detection_rate（10 档）": {
+                "max": 0.0,
+                "min": 0.0,
+                "n": 10,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "cost_curve.miss_rate（10 档）": {
+                "max": 1.0,
+                "min": 1.0,
+                "n": 10,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "final_dang_verdict_诚实降级版": "v42 须重设计(沿 KIMI P-M 强判死, 强制修正案, 如实披露)",
+              "v42_redesign_reason": "miss_rate = 1.0 沿 10/10 budget 档 + budget 维度无下限 + miss_rate 维度 > random_guess_rate(0.5) → v42 须重设计(强制修正案)",
+              "v42_redesign_required": true
+            },
+            "诚实降级面_source": "results/_p_m_real_separation_2026_09_16/p_m_real_separation_results_2026_09_16.json",
+            "诚实降级面_source_sha12": "a4b12d1cfedc"
+          }
+        },
+        "新构造面_3算子×9budget": {
+          "assertions": [
+            {
+              "applicable": true,
+              "assertion": "① 输入向量方差 > 0",
+              "evidence": {
+                "max": 1.0,
+                "min": 1.0,
+                "n": 27,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "复用 K-V3R-0-A 字面（std > 0），0 新增门槛",
+              "gate_id": "K-PJPC-3-1",
+              "hit": true,
+              "三态_可裁形式": "FAIL（退化警报命中）"
+            },
+            {
+              "applicable": true,
+              "assertion": "② 秩不恒同（排序层）",
+              "evidence": {
+                "max": 1.0,
+                "min": 1.0,
+                "n": 27,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "批 5 ②档：复用 n_distinct > 3 作近似代理（非排序层等义，沿 prereg §1.4/§4.2 限定）",
+              "gate_id": "K-PJPC-3-2",
+              "hit": true,
+              "三态_可裁形式": "FAIL（退化警报命中）"
+            },
+            {
+              "assertion": "③ 标签非硬编码",
+              "form": "批 5 ③档：沿 P-I 诚实降级范式（e934819ee9ed『移除 true_labels 硬编码占位后该维度判 UNVERIFIED — 沿 V3 §6.7 诚实降级』）作【定性范式】，明确【非门】",
+              "gate_id": "K-PJPC-3-3",
+              "is_gate": false,
+              "note": "批 5 ③档【非门】，仅定性登记",
+              "qualitative_reading": "未命中（定性）：逐格 detected_count / trials 真分布（n=27 真计数）⇒ 标签非硬编码",
+              "triggers_disposition": false,
+              "面": "matrix 27 格（3 算子 × 9 budget × 400 次篡改）"
+            },
+            {
+              "applicable": true,
+              "assertion": "④ 检测率不低于随机基线",
+              "evidence": {
+                "max": 1.0,
+                "min": 1.0,
+                "n": 27,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "form": "批 5 ④档：升独立门；切点 = random_guess_rate = 0.5（盘上 fbcb60cf5102 §safety_bound 既有字段，0 新设）",
+              "gate_id": "K-PJPC-3-4",
+              "hit": false,
+              "threshold": 0.5,
+              "threshold_source": "盘上 fbcb60cf5102 §all_results.safety_bound.random_guess_rate（既有字段）",
+              "三态_可裁形式": "PASS（全部档 ≥ 0.5）"
+            }
+          ],
+          "ceiling_disclosure_强制": {
+            "K_PJPC_1_3_约束": "⚠️ 天花板序列不得单独充当『非退化』证据（沿 #28 自陈）",
+            "applies": true,
+            "input_fields_gate_per_field_28": {
+              "budget_ladder (TH-V3R-28 冻结)": true,
+              "protected_file_sizes_bytes (逐文件)": true,
+              "v42v2_manifest_sha12 (8 件真值, 逐文件)": true
+            },
+            "实测": {
+              "max": 1.0,
+              "min": 1.0,
+              "n": 27,
+              "n_distinct": 1,
+              "std": 0.0
+            },
+            "沿用字面": "a0734e0a6860 §3.1：「这是检测器饱和，不是判据退化；判据非退化性由上方 input_fields 承担」"
+          },
+          "disposition_甲案": {
+            "basis": "棒 1 派工字面：任一失败 ⇒ 按甲案落 KD + γ（prereg §2.2-3 甲案 = 归 KD，扩写 KD 定义）",
+            "disposition": "甲案（退化预检命中 ⇒ 落 KD + γ）",
+            "hit_gate_ids": [
+              "K-PJPC-3-1",
+              "K-PJPC-3-2"
+            ],
+            "hit_qualitative_assertion_3": false,
+            "kd_scope_limit": "KD 仅『构造/素材不可算』，门不达本身不触发 KD（沿 7dd7dd3fb721 落册语义 2）；本棒按甲案扩写口径落 KD，扩写合法性仍归 PI/verdict-keeper 裁定（prereg §2.2-4 / §8.2-③ 未裁）",
+            "三态_可裁形式": "KD"
+          },
+          "readings": {
+            "anchor_rescript_sha12": "a0734e0a6860",
+            "degen_self_check_gate_per_field_28": {
+              "budget_ladder (TH-V3R-28 冻结)": true,
+              "protected_file_sizes_bytes (逐文件)": true,
+              "v42v2_manifest_sha12 (8 件真值, 逐文件)": true
+            },
+            "degen_self_check_input_fields_28": {
+              "P-M_原 detection_rate (10 档, 对照, 应退化)": {
+                "distinct_values": [
+                  0.0
+                ],
+                "max": 0.0,
+                "mean": 0.0,
+                "min": 0.0,
+                "n": 10,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "budget_ladder (TH-V3R-28 冻结)": {
+                "distinct_values": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  8,
+                  16,
+                  32,
+                  64,
+                  80
+                ],
+                "max": 80,
+                "mean": 23.333333333333332,
+                "min": 1,
+                "n": 9,
+                "n_distinct": 9,
+                "std": 27.82884195298907
+              },
+              "protected_file_sizes_bytes (逐文件)": {
+                "distinct_values": [
+                  6680,
+                  7335,
+                  8699,
+                  8915,
+                  9078,
+                  15927,
+                  69204,
+                  409104
+                ],
+                "max": 409104,
+                "mean": 66867.75,
+                "min": 6680,
+                "n": 8,
+                "n_distinct": 8,
+                "std": 130850.37369811941
+              },
+              "v42v2_manifest_sha12 (8 件真值, 逐文件)": {
+                "distinct_values": [
+                  "03c6c01f3697",
+                  "3e369a1f6171",
+                  "8423ffe266af",
+                  "910c4333eead",
+                  "9d9ae5001c57",
+                  "b1463bb24403",
+                  "e19e76c5da7e",
+                  "e5a299f69a22"
+                ],
+                "max": "e5a299f69a22",
+                "min": "03c6c01f3697",
+                "n": 8,
+                "n_distinct": 8,
+                "std_of_lead2hex": 72.2266398221598
+              }
+            },
+            "face_id": "P-M_新构造面_3算子×9budget",
+            "input_fields": {
+              "matrix.attack_budget（27 格）": {
+                "max": 80,
+                "min": 1,
+                "n": 27,
+                "n_distinct": 9,
+                "std": 27.82884195298907
+              },
+              "matrix.detected_count（27 格）": {
+                "max": 400,
+                "min": 400,
+                "n": 27,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "matrix.trials（27 格）": {
+                "max": 400,
+                "min": 400,
+                "n": 27,
+                "n_distinct": 1,
+                "std": 0.0
+              }
+            },
+            "output_ceiling_note_28": "新构造 detection_rate 呈天花板序列（全部 1.0）时 n_distinct=1/std=0，这是检测器饱和而非判据退化；判据非退化性由上方 input_fields 承担。与原 10 档 == 0.0 的对照见 legacy_dual_track。",
+            "output_ceiling_series_28": true,
+            "output_reading_series": {
+              "matrix.detection_rate（27 格 = 3 算子 × 9 budget）": {
+                "max": 1.0,
+                "min": 1.0,
+                "n": 27,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "matrix.hamming_detector_rate（27 格）": {
+                "max": 1.0,
+                "min": 1.0,
+                "n": 27,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "matrix.miss_rate（27 格）": {
+                "max": 0.0,
+                "min": 0.0,
+                "n": 27,
+                "n_distinct": 1,
+                "std": 0.0
+              }
+            },
+            "root_cause_test_28": {
+              "hypothesis": "原 P-M detection_rate == 0.0 的根因是计数语义反转（is_valid=True -> detected），而非检测能力缺失",
+              "legacy_inverted_detection_rate_stat": {
+                "distinct_values": [
+                  0.0
+                ],
+                "max": 0.0,
+                "mean": 0.0,
+                "min": 0.0,
+                "n": 27,
+                "n_distinct": 1,
+                "std": 0.0
+              },
+              "missing_artifact": "原 P-M 执行器 deposon_team/plugins/_p_m_attack_surface_cost_runner_2026_09_16.py（v42_v2 报告引用）在盘上不存在，无法逐行复核其 L30-45 / L82-87；如实登记。",
+              "reproduces_original_zero_pattern": true
+            },
+            "scalar_readings": {
+              "random_guess_rate_盘上既有": 0.5,
+              "safety_budget_lower_bound_legacy": 80,
+              "safety_budget_lower_bound_remeasured": 80
+            },
+            "source": "results/_v3_recheck_28_result_2026_09_27.json（#28）",
+            "source_sha12": "c0a8cb9029a7"
+          }
+        }
+      },
+      "family": "P-M",
+      "本棒_②档技术面材料": {
+        "material_id": "P-M-TECH-①",
+        "内容": "同件 detection_rate ≡ 0.0（n_distinct = 1、std = 0）却记 v42_safety_index = 'SECURE' ⇒ 该 SECURE 字面与其自身数据面矛盾",
+        "本棒可机械复算的证据面": {
+          "detection_rate_min": 0.0,
+          "detection_rate_n_distinct": 1,
+          "detection_rate_std": 0.0,
+          "random_guess_rate_盘上既有": 0.5,
+          "低于随机基线": true,
+          "同件SECURE字面": "SECURE"
+        },
+        "正式措辞": "0 代拟（归 doc-writer）"
+      },
+      "线索": "攻击面 detection_rate 恒 0.0（10 档 budget 8…80）vs 同件 safety_bound.v42_safety_index = 'SECURE'"
+    }
+  },
+  "gamma_根因登记": [
+    "γ_A｜登记 vs 盘上：17262abfd1d5 §1.1 档 2 行『#26 P-J · 证据锚』记 rescript `3d9ad5f1540d`，而盘上 `results/_v3_recheck_26_rescript_2026_09_27.md` 实测 = `6b86576146a3`；同表其余 4 个 result 锚（eb6a99dd46dd / 49c6e5a07732 / c0a8cb9029a7 / 5d4b6baf1b18）逐字与盘上相符。⇒ 只报事实（1 件不符），0 归因、0 回改登记件、0 回改 rescript（K-PJPC-0-4）。",
+    "γ_B｜26b r2/r3 executor 源件在盘、其新名派生 result 盘上 0 命中：`results/_v3_recheck_26b_executor_r2_2026_09_28.py`（0808af6212c5）与 `_v3_recheck_26b_executor_r3_2026_09_29.py`（6c83e7a7ca2e，mtime 2026-09-29 10:50）存在，但其 OUT 名 `_v3_recheck_26b_r2_result_*.json` / `_r3_result_*.json` 盘上 0 命中 ⇒ 该两轮跑批的派生读数【不在盘】。⇒ 本棒 P-J 新构造读数一律沿 prereg §2.1 锚定的 26b 正式档（rescript c300e74a082c / result 49c6e5a07732，mtime 2026-09-27 15:52），0 据 r2/r3 断言任何读数。",
+    "γ_C｜P-M 新构造面（#28）断言 ① / ② 双命中：detection_rate 27 格全 1.0 ⇒ n_distinct = 1、std = 0。根因沿 a0734e0a6860 §3.1 自陈 = 【检测器饱和】而非判据退化；判据非退化性由 input_fields 承担（#28 `gate_per_field` 三项全 True）。⇒ 本棒按甲案落 KD + γ 并【显式保留该限定】，0 以天花板序列充当「非退化」证据（K-PJPC-1-3 硬约束）。",
+    "γ_D｜断言 ② 的等义性限定：PI 确认批 5 采「复用 n_distinct > 3 作近似代理」档。该代理只在【分布层】成立，与断言 ② 字面（【排序层】两两序关系是否全同）非等义（沿 prereg §1.4/§4.2）。⇒ 本棒沿用该近似并逐处显式标注，0 声称等义；排序层等义门 0 自创。",
+    "γ_E｜P-J / P-C 族无 `detection_rate` 字段 ⇒ 断言 ④ 独立门对该两族【不适用】。⇒ 本棒如实登记 N/A，0 当作通过、0 当作失败（0 以缺件充当门通过）。",
+    "γ_F｜三族终态判定的词面裁定（prereg §2.2-3 甲/乙/丙）在本棒范围内【未裁】：PI 确认批 5 裁了三族修复档位（均 ②档）与 4 项断言门形态，0 触及 §2.2 词面裁定。⇒ 本棒横切预检件层按【甲案】落 KD + γ（棒 1 派工字面）；三族终态 0 代裁，归 verdict-keeper。",
+    "γ_G｜P-C 证据面 / 命题面分读（K-PJPC-2-2）：新构造 9/9 η 档 n_distinct = 9 ⇒ 证据面 PASS；同件 `exp_d7_5anchor_60cells.P-C_two_phase` 字面仍 = `FAIL_H0 (幂律死)`、as-run max r2_per_eta = 0.19840149926690828 < 0.3。⇒ 本棒两腿分读并报，PASS 0 构成「幂律成立」证据（沿 fc0ffd27adca γ₃ 零噪声对照腿）。",
+    "γ_H｜PI 确认批 5 问卷原件 0 命中于盘上 ⇒ 本棒裁项档位系【引用派工单字面】，0 独立复算问卷原件。"
+  ],
+  "hash_convention": "hashlib.sha256(全文字节).hexdigest()[:12]，小写（禁内建 hash()）",
+  "input_manifest": {
+    "K_PJPC_0_2_锚表_17件": {
+      "docs/V3X/P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md": {
+        "baseline": "d427b2f57c33",
+        "match": true,
+        "measured_before_write": "d427b2f57c33"
+      },
+      "results/_p_i_real_labels_2026_09_16/p_i_real_labels_results_2026_09_16.json": {
+        "baseline": "e934819ee9ed",
+        "match": true,
+        "measured_before_write": "e934819ee9ed"
+      },
+      "results/_p_j_convergence_basin_2026_09_16/p_j_convergence_basin_results_2026_09_16.json": {
+        "baseline": "a9ad1de618f5",
+        "match": true,
+        "measured_before_write": "a9ad1de618f5"
+      },
+      "results/_p_l_p_c_finite_size_scaling_2026_09_16/p_l_p_c_finite_size_scaling_results_2026_09_16.json": {
+        "baseline": "664e7cc05aec",
+        "match": true,
+        "measured_before_write": "664e7cc05aec"
+      },
+      "results/_p_l_real_data_collapse_2026_09_16/p_l_real_data_collapse_results_v2_2026_09_16.json": {
+        "baseline": "afe975606d40",
+        "match": true,
+        "measured_before_write": "afe975606d40"
+      },
+      "results/_p_m_attack_surface_cost_2026_09_16/p_m_attack_surface_cost_results_2026_09_16.json": {
+        "baseline": "fbcb60cf5102",
+        "match": true,
+        "measured_before_write": "fbcb60cf5102"
+      },
+      "results/_p_m_real_separation_2026_09_16/p_m_real_separation_results_2026_09_16.json": {
+        "baseline": "a4b12d1cfedc",
+        "match": true,
+        "measured_before_write": "a4b12d1cfedc"
+      },
+      "results/_v3_recheck_10_rescript_2026_09_27.md": {
+        "baseline": "fc0ffd27adca",
+        "match": true,
+        "measured_before_write": "fc0ffd27adca"
+      },
+      "results/_v3_recheck_26_rescript_2026_09_27.md": {
+        "baseline": "6b86576146a3",
+        "match": true,
+        "measured_before_write": "6b86576146a3"
+      },
+      "results/_v3_recheck_26b_rescript_2026_09_27.md": {
+        "baseline": "c300e74a082c",
+        "match": true,
+        "measured_before_write": "c300e74a082c"
+      },
+      "results/_v3_recheck_28_rescript_2026_09_27.md": {
+        "baseline": "a0734e0a6860",
+        "match": true,
+        "measured_before_write": "a0734e0a6860"
+      },
+      "results/_v3_recheck_prereg_v1_2026_09_27.md": {
+        "baseline": "88052d7db895",
+        "match": true,
+        "measured_before_write": "88052d7db895"
+      },
+      "results/_v3_recheck_verdict_register_2026_09_27.md": {
+        "baseline": "17262abfd1d5",
+        "match": true,
+        "measured_before_write": "17262abfd1d5"
+      },
+      "results/_v3x_experiments_2026_09_16/v3x_experiments_results_2026_09_16.json": {
+        "baseline": "f39412103366",
+        "match": true,
+        "measured_before_write": "f39412103366"
+      },
+      "results/deposon_v3_physical_opt_60cells_2026_09_11.json": {
+        "baseline": "c659695aa23c",
+        "match": true,
+        "measured_before_write": "c659695aa23c"
+      },
+      "results/deposon_v42_v2_miss_rate_curve_2026_09_16.json": {
+        "baseline": "0a8ed127d6de",
+        "match": true,
+        "measured_before_write": "0a8ed127d6de"
+      },
+      "verifier/handoff/KT_ABC1_anchors_sha256_12.json": {
+        "baseline": "03c6c01f3697",
+        "match": true,
+        "measured_before_write": "03c6c01f3697"
+      }
+    },
+    "chain_drift": {},
+    "drift_count_before_write": 0,
+    "读数链_派生result_JSON": {
+      "results/_v3_recheck_10_result_2026_09_27.json": {
+        "match": true,
+        "measured": "5d4b6baf1b18",
+        "registered": "5d4b6baf1b18"
+      },
+      "results/_v3_recheck_26_result_2026_09_27.json": {
+        "match": true,
+        "measured": "eb6a99dd46dd",
+        "registered": "eb6a99dd46dd"
+      },
+      "results/_v3_recheck_26b_result_2026_09_27.json": {
+        "match": true,
+        "measured": "49c6e5a07732",
+        "registered": "49c6e5a07732"
+      },
+      "results/_v3_recheck_28_result_2026_09_27.json": {
+        "match": true,
+        "measured": "c0a8cb9029a7",
+        "registered": "c0a8cb9029a7"
+      }
+    }
+  },
+  "nature": "横切退化预检件（4 项断言实现）＋ 收口读数；只读复算 stored 读数，0 跑任何修复构造",
+  "produced_by": "Mavis 团队 worker（棒 1 · 收口棒；agent 署名如实，不冒充 protocol-keeper / verdict-keeper / evidence-auditor / doc-writer / PI / Trae code）",
+  "runtime": "0 LLM；0 网络；纯 stdlib hashlib/json/statistics；只读加载既有件；0 写既有件",
+  "schema": "v5_pjpm_pc_degen_precheck/1",
+  "std_convention_selfcheck": {
+    "P-J_逐本体复算相符": {
+      "O1_discrete_cell_redistribution": true,
+      "O3_logit_normal_form": false,
+      "O5_replicator_ode_softlimit": true
+    },
+    "口径": "population std（statistics.pstdev）",
+    "对齐证据": "P-J 三本体 rates 复算值与 26b 件内 criteria_evidence.rates 逐字相符（rates_measured_equals_recorded）"
+  },
+  "上游锚件": {
+    "match": true,
+    "path": "results/_v5_pjpm_pc_deg_prereg_2026_09_29.md",
+    "sha12_expected": "989ee2bce660",
+    "sha12_measured": "989ee2bce660",
+    "status": "PI 复核生效（确认批 3）"
+  },
+  "四断言_门形态与命中": {
+    "① 方差 > 0": "复用 K-V3R-0-A（批 5 ①档）",
+    "② 秩不恒同": "复用 n_distinct > 3 作近似代理（批 5 ②档；⚠️ 近似非等义）",
+    "③ 标签非硬编码": "沿 P-I 诚实降级范式，定性范式、明确非门（批 5 ③档）",
+    "④ 检测率不低于随机基线": "升独立门，切点 0.5（批 5 ④档）",
+    "失败处置": "任一门失败 ⇒ 甲案落 KD + γ（棒 1 派工字面）；断言③ 非门不触发处置"
+  },
+  "族边界_批5⑤": {
+    "P-I": {
+      "sha12": "e934819ee9ed",
+      "本棒处置": "0 并入本件（维持现状）；其诚实降级范式仅作断言③ 的范式来源引用",
+      "盘上自陈": "UNVERIFIED(true_labels 占位, AUC 不可信) — 沿 V3 §6.7 诚实降级"
+    },
+    "P-L": {
+      "sha12": "afe975606d40",
+      "本棒处置": "0 并入本件（维持现状；已由 K-V3R-27 处理）",
+      "盘上自陈": "P-L 通过 (R2 = 1.0 > 0.9)"
+    }
+  },
+  "既有档2判定_并报": {
+    "P-C": {
+      "原标注_V3期字面": "该维度 UNVERIFIED（9 model r2_per_eta 逐字相同，逐 η 档 n_distinct ≡ 1）",
+      "双口径一致性": "新构造 PASS vs 沿原 V3 阈值字面 FAIL（维持假证伪）⇒ 不一致",
+      "处置": "维持原 V3 标注（UNVERIFIED / 假证伪，不动）+ 显式登记新构造 verdict；归「不明」分支；γ₁ model 维判据从未受审 / γ₂ η 原为 scaling 旋钮非物理温度 / γ₃ 新构造逐 model R² 完全由重采样涨落产生 ⇒ K-V3R-10 PASS 不构成「幂律成立」证据；桶位 = 「V4 收尾整理」待拍板桶",
+      "改判档位": "第 2 行：PASS + 不一致",
+      "新构造读数": "model 维真重采样（k ~ Binomial(N, T60/60)）+ η = logit 温度抖动：9/9 个 η 档跨 model n_distinct = 9 > 3 ⇒ 新构造 PASS",
+      "证据锚": "rescript fc0ffd27adca / result 5d4b6baf1b18；v1 §2.2 K-V3R-10 / TH-V3R-10"
+    },
+    "P-J": {
+      "原标注_V3期字面": "UNVERIFIED（9 model convergence_rate ≡ 0.1，var = 0.0 / n_distinct = 1；JSON 记 rho = -0.9667 系对常量 vector 的伪秩相关）",
+      "双口径一致性": "新构造 PASS vs 沿原 V3 阈值字面 UNVERIFIED（判据退化）⇒ 不一致",
+      "处置": "维持原 V3 标注（UNVERIFIED / 假证伪，不动）+ 显式登记新构造 verdict；归「不明」分支；γ₁ 构造常量 / γ₂ 伪秩相关 / γ₃ 双口径不一致 ⇒ 0 构成翻案；桶位 = 「V4 收尾整理」待拍板桶",
+      "改判档位": "第 2 行：PASS + 不一致（26b 三本体 O1/O3/O5 3/3 同向 PASS，hit_tier_all_same = true，同落此档）",
+      "新构造读数": "重定义 convergence_rate = n_iter/n_budget（n_budget = 100，±0.05 抖动）：n_distinct = 9、std = 0.001279、min 0.01320 / max 0.01730 ⇒ 新构造 PASS（优先级规则 3 档敏感性均同）",
+      "证据锚": "rescript 3d9ad5f1540d / result eb6a99dd46dd；26b rescript c300e74a082c / result 49c6e5a07732；v1 §2.2 K-V3R-26 / v1.2 §2.2"
+    },
+    "P-M": {
+      "原标注_V3期字面": "UNVERIFIED（10 档 budget 8–80 detection_rate ≡ 0.0，全低于随机猜测 0.5）",
+      "双口径一致性": "新构造 PASS vs 沿原 V3 阈值字面 UNVERIFIED（判据退化）⇒ 不一致",
+      "处置": "维持原 V3 标注（UNVERIFIED / 假证伪，不动）+ 显式登记新构造 verdict；归「不明」分支；γ₁ = 原 ≡ 0.0 根因为计数语义反转（盘上 v42_v2 复算记录 + 本行独立复现双证据），非检测能力缺失；γ₂ = 原判据覆盖面仅 5 文件、原 UNVERIFIED 在其自身口径下不可直接引用为安全结论；桶位 = 「V4 收尾整理」待拍板桶",
+      "改判档位": "第 2 行：PASS + 不一致",
+      "新构造读数": "真算子 3 类 × 9 档 budget × 400 次篡改 = 27 格 detection_rate 全 = 1.0000；safety_budget_lower_bound 重测 = 80 ≥ 80 ⇒ 新构造 PASS",
+      "证据锚": "rescript a0734e0a6860 / result c0a8cb9029a7；v1 §2.2 K-V3R-28 / TH-V3R-28"
+    },
+    "register_source": "results/_v3_recheck_verdict_register_2026_09_27.md（17262abfd1d5）§1.1 档 2 行（PASS + 不一致）逐字并报",
+    "本棒处置": "既有档 2 判定原样并报，0 覆盖、0 撤销、0 追认式翻案（K-PJPC-0-4）",
+    "档位分布_并报": "17262abfd1d5 §2.1：档 1 = 0 条；档 2 = 4 条（#10 / #26 / #28 + #4 修订 R1）；档 3 = 3 条；档 4 = 2 条"
+  },
+  "棒序": "棒 1 · 收口棒（worker）→ 棒 2 · 重验棒（verifier）→ 棒 3 · 判定面（verdict-keeper）",
+  "横切门_批5裁项承接": {
+    "PI_确认批5_横切门_逐条承接": [
+      {
+        "内容": "复用 K-V3R-0-A",
+        "本棒落法": "K-PJPC-3-1 复用其 std > 0 字面，0 新增门槛",
+        "状态": "已承接",
+        "裁项": "①"
+      },
+      {
+        "内容": "门 = 复用 n_distinct > 3 近似代理",
+        "本棒落法": "K-PJPC-3-2 以 n_distinct > 3 为近似门；逐处标注近似非等义（γ_D）",
+        "状态": "已承接",
+        "裁项": "②"
+      },
+      {
+        "内容": "门 = 沿 P-I 诚实降级范式（定性范式，非门）",
+        "本棒落法": "K-PJPC-3-3 标 is_gate=false / triggers_disposition=false，仅定性登记",
+        "状态": "已承接",
+        "裁项": "③"
+      },
+      {
+        "内容": "门 = 升独立门（切点 random_guess_rate = 0.5，盘上既有字段，0 新设）",
+        "本棒落法": "K-PJPC-3-4 升独立门，切点 0.5 引自 fbcb60cf5102 §safety_bound.random_guess_rate",
+        "状态": "已承接",
+        "裁项": "④"
+      },
+      {
+        "内容": "族边界 P-I · P-L 维持现状",
+        "本棒落法": "P-I（e934819ee9ed，AUC 全 0，已自陈 UNVERIFIED）与 P-L（afe975606d40，R² 全 1.0 仍产 PASS，已由 K-V3R-27 处理）0 并入本件；P-I 诚实降级范式仅作断言③ 的【范式来源】引用",
+        "状态": "已承接",
+        "裁项": "⑤"
+      },
+      {
+        "内容": "横切件名 / 别名表交 protocol-keeper 出候选",
+        "本棒落法": "本棒以【工作名】落盘（D-01 待回填），0 拍板件名、0 回填 D-01…D-04",
+        "状态": "已承接（待 protocol-keeper 定名回填）",
+        "裁项": "⑥"
+      },
+      {
+        "内容": "程序登记（若门含比例切点 ⇒ 触发二次确认）",
+        "本棒落法": "门②切点 n_distinct > 3 = 既有 K-V3R-0-A 字面（计数切点）；门④切点 0.5 = 盘上既有字段（比率切点但字面既有）⇒ 本棒【0 新设比例切点】⇒ 二次确认门 0 触发",
+        "状态": "已登记",
+        "裁项": "⑦"
+      }
+    ],
+    "三族_②档_技术面对账面材料": {
+      "P-C": {
+        "0 重复_0 混件": "K-V3R-27 已在 P-L/P-C FSS 线上处理同族对账 ⇒ 本棒 0 重复、0 混件（沿 prereg §3.2 P-C 可选面②）",
+        "material_id": "P-C-ACCT-①",
+        "对账面": {
+          "命题面": {
+            "same_json_P_C_two_phase_field": "FAIL_H0 (幂律死)",
+            "spec_kill_decision_on_asrun_max_r2": "FAIL_H0",
+            "spec_literal_source": "P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md §1 判死线（spec 全文命中 R^2 < 0.3 -> FAIL_H0；命中 2 次）"
+          },
+          "硬约束_K_PJPC_2_2": "证据面与命题面必须分两条腿并报；PASS 只说明『model 维判据从未受审』这一缺陷成立，0 构成『幂律成立』或『P-C 方向翻案』的证据（沿 fc0ffd27adca γ₃ + K-PJPC-2-2）",
+          "证据面": "K-PJPC-2-1 沿 K-V3R-10：9/9 个 η 档跨 model n_distinct = 9 > 3 ⇒ 新构造 PASS（#10）"
+        },
+        "正式措辞": "0 代拟（归 doc-writer）"
+      },
+      "P-J": {
+        "material_id": "P-J-TECH-①",
+        "内容": "rho = −0.9667 系对 9 元素常量 vector（convergence_rates ≡ 0.1）计算的 Spearman，判据从未受审",
+        "本棒可机械复算的证据面": {
+          "T_frac60_对照_n_distinct": 7,
+          "convergence_rates_n_distinct": 1,
+          "convergence_rates_std": 0.0
+        },
+        "正式措辞": "0 代拟（归 doc-writer）"
+      },
+      "P-M": {
+        "material_id": "P-M-TECH-①",
+        "内容": "同件 detection_rate ≡ 0.0（n_distinct = 1、std = 0）却记 v42_safety_index = 'SECURE' ⇒ 该 SECURE 字面与其自身数据面矛盾",
+        "本棒可机械复算的证据面": {
+          "detection_rate_min": 0.0,
+          "detection_rate_n_distinct": 1,
+          "detection_rate_std": 0.0,
+          "random_guess_rate_盘上既有": 0.5,
+          "低于随机基线": true,
+          "同件SECURE字面": "SECURE"
+        },
+        "正式措辞": "0 代拟（归 doc-writer）"
+      }
+    }
+  },
+  "裁项包": "PI 确认批 5（派工单字面；问卷原件 0 命中于盘上 ⇒ 见 γ_H）",
+  "阈值看护": {
+    "引用切点": {
+      "n_distinct > 3": "K-V3R-0-A / K-V3R-10 / K-V3R-26 既有字面（0 新设）",
+      "random_guess_rate = 0.5": "盘上 fbcb60cf5102 §safety_bound 既有字段（0 新设）",
+      "safety_budget_lower_bound = 80": "盘上既有字面 / TH-V3R-28（0 新设）",
+      "std > 0": "K-V3R-0-A 既有字面（0 新设）"
+    },
+    "本棒新设数值判定阈值": 0,
+    "比例切点检查": "门② = 计数切点；门④ = 既有字段比率值 0.5（引自盘上，0 新设）⇒ 0 新设比例切点 ⇒ 二次确认门 0 触发（批 5 ⑦）"
+  }
+}

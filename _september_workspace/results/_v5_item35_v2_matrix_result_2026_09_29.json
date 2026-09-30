@@ -1,0 +1,3117 @@
+{
+ "task": "V5 #35 v2 · GT2b 场免疫性 · 扩矩阵执行面（6 seed × 3 T = 18 格 × α/β 双口径）",
+ "date": "2026-09-29",
+ "author": "Mavis 团队 worker（agent worker）",
+ "prereg_v2": "results/_v5_item35_prereg_v2_2026_09_28.md",
+ "prereg_v2_sha12": "1fb2419c6e96",
+ "kill_line": "K-V5R2-35-AR1…AR6 + §3.2.1 刀锋格 + §3.3 三态终态表（生效即锁）；field_tol = 0.05 一字不动",
+ "adjudication_ownership": {
+  "this_baton": "worker",
+  "this_baton_did_not_adjudicate": true,
+  "verdict_owner": "verdict-keeper",
+  "note": "本件提供逐格读数 + 逐腿**机械落档**（按 §3.3 表机械求值）；claim 级裁定、根因分类、对外表述属 verdict-keeper，本棒 0 代判",
+  "mechanical_state_is_not_verdict": true
+ },
+ "frozen_params": {
+  "field_tol": 0.05,
+  "field_tol_unchanged": true,
+  "bank_seed_set_v2": [
+   20260828,
+   20260829,
+   20260830,
+   20260831,
+   20260832,
+   20260833
+  ],
+  "seeds_existing": [
+   20260828,
+   20260829,
+   20260830
+  ],
+  "seeds_v2_new": [
+   20260831,
+   20260832,
+   20260833
+  ],
+  "seed_selection_basis": "连续整数、读数未知前固定（v2 §4.1），0 依既有读数反选",
+  "T_levels": [
+   1,
+   2,
+   3
+  ],
+  "ARMS": [
+   "rule_filter",
+   "field_mean",
+   "random"
+  ],
+  "n_options_fixed": 4,
+  "chance_level": 0.25,
+  "n_items_per_map": 10,
+  "matrix_size": {
+   "seeds": 6,
+   "T": 3,
+   "cells": 18,
+   "alpha_denominator_cells": 12,
+   "beta_cells": 18
+  },
+  "config": {
+   "n_steps": 50,
+   "beta_schedule": "linear",
+   "prior": "uniform_out",
+   "lr": 0.1,
+   "lam_smooth": 0.01,
+   "field_guidance": true,
+   "energy_mode": "aggregate",
+   "seed": 0
+  },
+  "new_numeric_thresholds_introduced": 0
+ },
+ "zero_touch_anchors": {
+  "anchors_pre": {
+   "prereg_v2": {
+    "path": "results/_v5_item35_prereg_v2_2026_09_28.md",
+    "sha12": "1fb2419c6e96",
+    "bytes": 35633,
+    "access": "read_only"
+   },
+   "prereg_v1p1": {
+    "path": "results/_v3_recheck_prereg_v1p1_2026_09_27.md",
+    "sha12": "bcc3cee23e82",
+    "bytes": 42970,
+    "access": "read_only"
+   },
+   "prereg_v1": {
+    "path": "results/_v3_recheck_prereg_v1_2026_09_27.md",
+    "sha12": "88052d7db895",
+    "bytes": 37346,
+    "access": "read_only"
+   },
+   "v1_rescript_35": {
+    "path": "results/_v3_recheck_35_rescript_2026_09_27.md",
+    "sha12": "138faf395f40",
+    "bytes": 13211,
+    "access": "read_only"
+   },
+   "v1_result_35": {
+    "path": "results/_v3_recheck_35_result_2026_09_27.json",
+    "sha12": "a8a4befb21f5",
+    "bytes": 35091,
+    "access": "read_only"
+   },
+   "v1_executor_35": {
+    "path": "deposon_team/plugins/_v3r1p1_35_gt2b_bankseed_2026_09_27.py",
+    "sha12": "62353279cd0c",
+    "bytes": 26734,
+    "access": "read_only"
+   },
+   "verdict_register": {
+    "path": "results/_v3_recheck_verdict_register_2026_09_27.md",
+    "sha12": "17262abfd1d5",
+    "bytes": 110787,
+    "access": "read_only"
+   },
+   "verdict_3item": {
+    "path": "results/_v3_n_recheck_llm_verdict_2026_09_27.md",
+    "sha12": "426cfe18cf65",
+    "bytes": 21332,
+    "access": "read_only"
+   },
+   "runner_gt2b": {
+    "path": "run_v20_gt2b.py",
+    "sha12": "361aff516219",
+    "bytes": 9076,
+    "access": "read_only"
+   },
+   "runner_meanfield": {
+    "path": "run_v19_meanfield.py",
+    "sha12": "67ef3779478a",
+    "bytes": 11690,
+    "access": "read_only"
+   },
+   "protocol": {
+    "path": "deposon_protocol.py",
+    "sha12": "ca756668ce2e",
+    "bytes": 2845,
+    "access": "read_only"
+   },
+   "corpus_loader": {
+    "path": "mindmap_corpus_v20.py",
+    "sha12": "e77e7f3455e0",
+    "bytes": 25791,
+    "access": "read_only"
+   },
+   "as_run_result": {
+    "path": "results/deposon_v20_gt2b.json",
+    "sha12": "a2ae7997ee67",
+    "bytes": 123331,
+    "access": "read_only"
+   },
+   "spec_gt2b": {
+    "path": "docs/SPEC_GT2B.md",
+    "sha12": "68a5b08ef007",
+    "bytes": 3318,
+    "access": "read_only"
+   },
+   "corpus_index": {
+    "path": "corpus/v20/index.json",
+    "sha12": "8423ffe266af",
+    "bytes": 7335,
+    "access": "read_only"
+   }
+  },
+  "anchors_post": {
+   "prereg_v2": {
+    "path": "results/_v5_item35_prereg_v2_2026_09_28.md",
+    "sha12": "1fb2419c6e96",
+    "bytes": 35633,
+    "access": "read_only"
+   },
+   "prereg_v1p1": {
+    "path": "results/_v3_recheck_prereg_v1p1_2026_09_27.md",
+    "sha12": "bcc3cee23e82",
+    "bytes": 42970,
+    "access": "read_only"
+   },
+   "prereg_v1": {
+    "path": "results/_v3_recheck_prereg_v1_2026_09_27.md",
+    "sha12": "88052d7db895",
+    "bytes": 37346,
+    "access": "read_only"
+   },
+   "v1_rescript_35": {
+    "path": "results/_v3_recheck_35_rescript_2026_09_27.md",
+    "sha12": "138faf395f40",
+    "bytes": 13211,
+    "access": "read_only"
+   },
+   "v1_result_35": {
+    "path": "results/_v3_recheck_35_result_2026_09_27.json",
+    "sha12": "a8a4befb21f5",
+    "bytes": 35091,
+    "access": "read_only"
+   },
+   "v1_executor_35": {
+    "path": "deposon_team/plugins/_v3r1p1_35_gt2b_bankseed_2026_09_27.py",
+    "sha12": "62353279cd0c",
+    "bytes": 26734,
+    "access": "read_only"
+   },
+   "verdict_register": {
+    "path": "results/_v3_recheck_verdict_register_2026_09_27.md",
+    "sha12": "17262abfd1d5",
+    "bytes": 110787,
+    "access": "read_only"
+   },
+   "verdict_3item": {
+    "path": "results/_v3_n_recheck_llm_verdict_2026_09_27.md",
+    "sha12": "426cfe18cf65",
+    "bytes": 21332,
+    "access": "read_only"
+   },
+   "runner_gt2b": {
+    "path": "run_v20_gt2b.py",
+    "sha12": "361aff516219",
+    "bytes": 9076,
+    "access": "read_only"
+   },
+   "runner_meanfield": {
+    "path": "run_v19_meanfield.py",
+    "sha12": "67ef3779478a",
+    "bytes": 11690,
+    "access": "read_only"
+   },
+   "protocol": {
+    "path": "deposon_protocol.py",
+    "sha12": "ca756668ce2e",
+    "bytes": 2845,
+    "access": "read_only"
+   },
+   "corpus_loader": {
+    "path": "mindmap_corpus_v20.py",
+    "sha12": "e77e7f3455e0",
+    "bytes": 25791,
+    "access": "read_only"
+   },
+   "as_run_result": {
+    "path": "results/deposon_v20_gt2b.json",
+    "sha12": "a2ae7997ee67",
+    "bytes": 123331,
+    "access": "read_only"
+   },
+   "spec_gt2b": {
+    "path": "docs/SPEC_GT2B.md",
+    "sha12": "68a5b08ef007",
+    "bytes": 3318,
+    "access": "read_only"
+   },
+   "corpus_index": {
+    "path": "corpus/v20/index.json",
+    "sha12": "8423ffe266af",
+    "bytes": 7335,
+    "access": "read_only"
+   }
+  },
+  "all_identical": true,
+  "existing_files_modified": 0
+ },
+ "pre_run_selfcheck": {
+  "field_tol_literal": 0.05,
+  "field_tol_unchanged": true,
+  "new_numeric_thresholds_introduced": 0,
+  "knife_edge_label_eps_source": "v1 executor 62353279cd0c 既有实现字面（只打标签）",
+  "domains_available": [
+   "algorithm_process",
+   "biological_taxonomy",
+   "historical_causality",
+   "physics_concepts"
+  ],
+  "domains_excluded_no_cache": [
+   "geography_world",
+   "project_management"
+  ],
+  "traps_available_per_domain": {
+   "algorithm_process": 12,
+   "biological_taxonomy": 12,
+   "historical_causality": 12,
+   "physics_concepts": 12
+  },
+  "external_read_only_reachable": true,
+  "external_read_only_error": null,
+  "n_domains_in_matrix": 4,
+  "n_items_per_cell_expected": 40,
+  "cfg_seed_lever_double_selfproof": {
+   "lever": "cfg[\"seed\"]",
+   "runner_cfg_subscript_seed_hits": 0,
+   "runner_passed_seed_arg_literal": true,
+   "protocol_field_scores_init_overwrites_seed": true,
+   "static_reading": "run_v20_gt2b.py 内 cfg[\"seed\"] 0 消费点；field_scores_init 在 deposon_protocol.py 内以 {\"seed\": inst_seed} 覆盖传入 cfg 的 seed 字段，inst_seed 源 = graph[\"seed\"] + 边序，与 cfg.seed 无关",
+   "empirical_bit_identical_when_cfg_seed_changed": true,
+   "probe_result": {
+    "rule_filter": 0.3,
+    "field_mean": 0.5,
+    "random": 0.3
+   },
+   "lever_status": "0 消费点已双重自证（静态 + 实测 bit-identical）⇒ 禁作杠杆登记成立，本件 0 以 cfg.seed 为扫描变量（v2 §4.4 / §5.1）",
+   "other_known_levers": {
+    "BANK_SEED": "唯一扫描变量；有真实消费点（stable_seed → graph[\"seed\"] → field_scores_init），故 v2 扩档只改此一项",
+    "T_levels": "一字不动（1,2,3）"
+   }
+  },
+  "gate_sequence_frozen_before_measurement": "读法 D（逐臂 × 全矩阵域级正确率池化）—— v2 §5.2 AR4 测量前唯一冻结；读法 A / C 继续双记并报、仅作对照登记，0 再作为判死线分支"
+ },
+ "external_readonly": {
+  "external_archive": "D:/私人资料/_non_upload_local_archive/",
+  "items_pre": {
+   "algorithm_process.json": {
+    "path": "D:/私人资料/_non_upload_local_archive/results/gt2_attacker_cache\\algorithm_process.json",
+    "sha12": "ddda494f014a",
+    "bytes": 2782,
+    "access": "read_only_external_archive"
+   },
+   "biological_taxonomy.json": {
+    "path": "D:/私人资料/_non_upload_local_archive/results/gt2_attacker_cache\\biological_taxonomy.json",
+    "sha12": "0f0a4329c34f",
+    "bytes": 2385,
+    "access": "read_only_external_archive"
+   },
+   "historical_causality.json": {
+    "path": "D:/私人资料/_non_upload_local_archive/results/gt2_attacker_cache\\historical_causality.json",
+    "sha12": "86af2ef6b66c",
+    "bytes": 2341,
+    "access": "read_only_external_archive"
+   },
+   "physics_concepts.json": {
+    "path": "D:/私人资料/_non_upload_local_archive/results/gt2_attacker_cache\\physics_concepts.json",
+    "sha12": "9c74bb8206c0",
+    "bytes": 2386,
+    "access": "read_only_external_archive"
+   }
+  },
+  "items_post": {
+   "algorithm_process.json": {
+    "path": "D:/私人资料/_non_upload_local_archive/results/gt2_attacker_cache\\algorithm_process.json",
+    "sha12": "ddda494f014a",
+    "bytes": 2782
+   },
+   "biological_taxonomy.json": {
+    "path": "D:/私人资料/_non_upload_local_archive/results/gt2_attacker_cache\\biological_taxonomy.json",
+    "sha12": "0f0a4329c34f",
+    "bytes": 2385
+   },
+   "historical_causality.json": {
+    "path": "D:/私人资料/_non_upload_local_archive/results/gt2_attacker_cache\\historical_causality.json",
+    "sha12": "86af2ef6b66c",
+    "bytes": 2341
+   },
+   "physics_concepts.json": {
+    "path": "D:/私人资料/_non_upload_local_archive/results/gt2_attacker_cache\\physics_concepts.json",
+    "sha12": "9c74bb8206c0",
+    "bytes": 2386
+   }
+  },
+  "pre_post_identical": true,
+  "copied_into_repo": 0,
+  "wrote_external": false,
+  "repo_cache_dir_exists": false,
+  "declaration": "只读取用授权：0 复制入仓 / 0 写入 / 0 移出 / 0 删除 / 0 改 ACL"
+ },
+ "assets": {
+  "domains_included": [
+   "algorithm_process",
+   "biological_taxonomy",
+   "historical_causality",
+   "physics_concepts"
+  ],
+  "domains_excluded_no_cache": [
+   "geography_world",
+   "project_management"
+  ],
+  "traps_available_per_domain": {
+   "algorithm_process": 12,
+   "biological_taxonomy": 12,
+   "historical_causality": 12,
+   "physics_concepts": 12
+  },
+  "scope_limit": "仅 4 缓存域；不得外推至全 6 域（v2 §4.3 / §8）"
+ },
+ "kou_jing_fields": {
+  "alpha": "|field_mean(T) - field_mean(T=1)| <= 0.05 ⇒ immune（沿既有字面）",
+  "beta": "delta = field_mean(T) - max(rule_filter(T), random(T)); >= 0.05 ⇒ PASS",
+  "strongest_opponent_definition": "max(rule_filter(T), random(T))（两对照臂取大）",
+  "alpha_beta_not_interchangeable": true,
+  "aggregation": "逐腿机械落档 + 计数；0 合取掩盖任一腿（AR3）"
+ },
+ "matrix_18cells": [
+  {
+   "cell": "seed20260828_T1",
+   "bank_seed": 20260828,
+   "T": 1,
+   "seed_origin": "existing_v1p1",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.15000000000000002,
+    "field_mean": 0.375,
+    "random": 0.35000000000000003
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.2,
+     "field_mean": 0.3,
+     "random": 0.4
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.0,
+     "field_mean": 0.4,
+     "random": 0.5
+    },
+    "historical_causality": {
+     "rule_filter": 0.1,
+     "field_mean": 0.3,
+     "random": 0.4
+    },
+    "physics_concepts": {
+     "rule_filter": 0.3,
+     "field_mean": 0.5,
+     "random": 0.1
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.35000000000000003,
+   "strongest_opponent_arm": "random",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.0,
+    "value_float_literal": "0.0",
+    "field_tol": 0.05,
+    "band": "IMMUNE",
+    "field_immune": true,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": false,
+    "denominator_exclusion_reason": "T=1 结构性恒等格（|field_mean(1) − field_mean(1)| ≡ 0 ⇒ 恒判 immune，无鉴别力）⇒ 沿 v2 §5.4 单列登记、0 计入 α 腿判定分母；β 腿 T=1 仍为合法格",
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.024999999999999967,
+    "value_float_literal": "0.024999999999999967",
+    "field_tol": 0.05,
+    "band": "BELOW_TOL",
+    "band_float_literal": "BELOW_TOL",
+    "beta_pass": false,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260828_T2",
+   "bank_seed": 20260828,
+   "T": 2,
+   "seed_origin": "existing_v1p1",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.275,
+    "field_mean": 0.525,
+    "random": 0.325
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.4,
+     "field_mean": 0.4,
+     "random": 0.3
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.1,
+     "field_mean": 0.7,
+     "random": 0.5
+    },
+    "historical_causality": {
+     "rule_filter": 0.3,
+     "field_mean": 0.5,
+     "random": 0.2
+    },
+    "physics_concepts": {
+     "rule_filter": 0.3,
+     "field_mean": 0.5,
+     "random": 0.3
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.325,
+   "strongest_opponent_arm": "random",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.15000000000000002,
+    "value_float_literal": "0.15000000000000002",
+    "field_tol": 0.05,
+    "band": "NOT_IMMUNE",
+    "field_immune": false,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": true,
+    "denominator_exclusion_reason": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.2,
+    "value_float_literal": "0.2",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260828_T3",
+   "bank_seed": 20260828,
+   "T": 3,
+   "seed_origin": "existing_v1p1",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.19999999999999998,
+    "field_mean": 1.0,
+    "random": 0.2
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.3,
+     "field_mean": 1.0,
+     "random": 0.3
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.0,
+     "field_mean": 1.0,
+     "random": 0.1
+    },
+    "historical_causality": {
+     "rule_filter": 0.4,
+     "field_mean": 1.0,
+     "random": 0.2
+    },
+    "physics_concepts": {
+     "rule_filter": 0.1,
+     "field_mean": 1.0,
+     "random": 0.2
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.2,
+   "strongest_opponent_arm": "random",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.625,
+    "value_float_literal": "0.625",
+    "field_tol": 0.05,
+    "band": "NOT_IMMUNE",
+    "field_immune": false,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": true,
+    "denominator_exclusion_reason": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.8,
+    "value_float_literal": "0.8",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260829_T1",
+   "bank_seed": 20260829,
+   "T": 1,
+   "seed_origin": "existing_v1p1",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.325,
+    "field_mean": 0.375,
+    "random": 0.225
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.3,
+     "field_mean": 0.5,
+     "random": 0.1
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.5,
+     "field_mean": 0.4,
+     "random": 0.2
+    },
+    "historical_causality": {
+     "rule_filter": 0.3,
+     "field_mean": 0.2,
+     "random": 0.1
+    },
+    "physics_concepts": {
+     "rule_filter": 0.2,
+     "field_mean": 0.4,
+     "random": 0.5
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.325,
+   "strongest_opponent_arm": "rule_filter",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.0,
+    "value_float_literal": "0.0",
+    "field_tol": 0.05,
+    "band": "IMMUNE",
+    "field_immune": true,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": false,
+    "denominator_exclusion_reason": "T=1 结构性恒等格（|field_mean(1) − field_mean(1)| ≡ 0 ⇒ 恒判 immune，无鉴别力）⇒ 沿 v2 §5.4 单列登记、0 计入 α 腿判定分母；β 腿 T=1 仍为合法格",
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.04999999999999999,
+    "value_float_literal": "0.04999999999999999",
+    "field_tol": 0.05,
+    "band": "BELOW_TOL",
+    "band_float_literal": "BELOW_TOL",
+    "beta_pass": false,
+    "is_knife_edge": true,
+    "knife_edge_disclosure": {
+     "value_float_literal": "0.04999999999999999",
+     "value_math_note": "两侧读数落在 0.025 粒度网格上 ⇒ 数学值恰 = 0.05",
+     "band_float_literal": "BELOW_TOL",
+     "band_math_rounded_control_only": "PASS",
+     "counted_as": "按 float64 字面档计入档位计数（使计数唯一可复算）",
+     "double_counted": false,
+     "rounded": false,
+     "tolerance_band_used": false
+    },
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260829_T2",
+   "bank_seed": 20260829,
+   "T": 2,
+   "seed_origin": "existing_v1p1",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.325,
+    "field_mean": 0.55,
+    "random": 0.2
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.3,
+     "field_mean": 0.5,
+     "random": 0.2
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.5,
+     "field_mean": 0.5,
+     "random": 0.1
+    },
+    "historical_causality": {
+     "rule_filter": 0.2,
+     "field_mean": 0.4,
+     "random": 0.2
+    },
+    "physics_concepts": {
+     "rule_filter": 0.3,
+     "field_mean": 0.8,
+     "random": 0.3
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.325,
+   "strongest_opponent_arm": "rule_filter",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.17500000000000004,
+    "value_float_literal": "0.17500000000000004",
+    "field_tol": 0.05,
+    "band": "NOT_IMMUNE",
+    "field_immune": false,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": true,
+    "denominator_exclusion_reason": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.22500000000000003,
+    "value_float_literal": "0.22500000000000003",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260829_T3",
+   "bank_seed": 20260829,
+   "T": 3,
+   "seed_origin": "existing_v1p1",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.25,
+    "field_mean": 1.0,
+    "random": 0.275
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.2,
+     "field_mean": 1.0,
+     "random": 0.3
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.3,
+     "field_mean": 1.0,
+     "random": 0.2
+    },
+    "historical_causality": {
+     "rule_filter": 0.1,
+     "field_mean": 1.0,
+     "random": 0.3
+    },
+    "physics_concepts": {
+     "rule_filter": 0.4,
+     "field_mean": 1.0,
+     "random": 0.3
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.275,
+   "strongest_opponent_arm": "random",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.625,
+    "value_float_literal": "0.625",
+    "field_tol": 0.05,
+    "band": "NOT_IMMUNE",
+    "field_immune": false,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": true,
+    "denominator_exclusion_reason": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.725,
+    "value_float_literal": "0.725",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260830_T1",
+   "bank_seed": 20260830,
+   "T": 1,
+   "seed_origin": "existing_v1p1",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.25,
+    "field_mean": 0.35,
+    "random": 0.25
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.3,
+     "field_mean": 0.3,
+     "random": 0.5
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.1,
+     "field_mean": 0.4,
+     "random": 0.0
+    },
+    "historical_causality": {
+     "rule_filter": 0.3,
+     "field_mean": 0.3,
+     "random": 0.2
+    },
+    "physics_concepts": {
+     "rule_filter": 0.3,
+     "field_mean": 0.4,
+     "random": 0.3
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.25,
+   "strongest_opponent_arm": "rule_filter",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.0,
+    "value_float_literal": "0.0",
+    "field_tol": 0.05,
+    "band": "IMMUNE",
+    "field_immune": true,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": false,
+    "denominator_exclusion_reason": "T=1 结构性恒等格（|field_mean(1) − field_mean(1)| ≡ 0 ⇒ 恒判 immune，无鉴别力）⇒ 沿 v2 §5.4 单列登记、0 计入 α 腿判定分母；β 腿 T=1 仍为合法格",
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.09999999999999998,
+    "value_float_literal": "0.09999999999999998",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260830_T2",
+   "bank_seed": 20260830,
+   "T": 2,
+   "seed_origin": "existing_v1p1",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.275,
+    "field_mean": 0.425,
+    "random": 0.30000000000000004
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.3,
+     "field_mean": 0.3,
+     "random": 0.2
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.1,
+     "field_mean": 0.4,
+     "random": 0.2
+    },
+    "historical_causality": {
+     "rule_filter": 0.2,
+     "field_mean": 0.5,
+     "random": 0.4
+    },
+    "physics_concepts": {
+     "rule_filter": 0.5,
+     "field_mean": 0.5,
+     "random": 0.4
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.30000000000000004,
+   "strongest_opponent_arm": "random",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.07500000000000001,
+    "value_float_literal": "0.07500000000000001",
+    "field_tol": 0.05,
+    "band": "NOT_IMMUNE",
+    "field_immune": false,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": true,
+    "denominator_exclusion_reason": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.12499999999999994,
+    "value_float_literal": "0.12499999999999994",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260830_T3",
+   "bank_seed": 20260830,
+   "T": 3,
+   "seed_origin": "existing_v1p1",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.15000000000000002,
+    "field_mean": 1.0,
+    "random": 0.35
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.1,
+     "field_mean": 1.0,
+     "random": 0.4
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.0,
+     "field_mean": 1.0,
+     "random": 0.3
+    },
+    "historical_causality": {
+     "rule_filter": 0.2,
+     "field_mean": 1.0,
+     "random": 0.3
+    },
+    "physics_concepts": {
+     "rule_filter": 0.3,
+     "field_mean": 1.0,
+     "random": 0.4
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.35,
+   "strongest_opponent_arm": "random",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.65,
+    "value_float_literal": "0.65",
+    "field_tol": 0.05,
+    "band": "NOT_IMMUNE",
+    "field_immune": false,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": true,
+    "denominator_exclusion_reason": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.65,
+    "value_float_literal": "0.65",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260831_T1",
+   "bank_seed": 20260831,
+   "T": 1,
+   "seed_origin": "new_v2_consecutive",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.2,
+    "field_mean": 0.4,
+    "random": 0.25
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.0,
+     "field_mean": 0.4,
+     "random": 0.2
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.2,
+     "field_mean": 0.6,
+     "random": 0.3
+    },
+    "historical_causality": {
+     "rule_filter": 0.4,
+     "field_mean": 0.3,
+     "random": 0.3
+    },
+    "physics_concepts": {
+     "rule_filter": 0.2,
+     "field_mean": 0.3,
+     "random": 0.2
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.25,
+   "strongest_opponent_arm": "random",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.0,
+    "value_float_literal": "0.0",
+    "field_tol": 0.05,
+    "band": "IMMUNE",
+    "field_immune": true,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": false,
+    "denominator_exclusion_reason": "T=1 结构性恒等格（|field_mean(1) − field_mean(1)| ≡ 0 ⇒ 恒判 immune，无鉴别力）⇒ 沿 v2 §5.4 单列登记、0 计入 α 腿判定分母；β 腿 T=1 仍为合法格",
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.15000000000000002,
+    "value_float_literal": "0.15000000000000002",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260831_T2",
+   "bank_seed": 20260831,
+   "T": 2,
+   "seed_origin": "new_v2_consecutive",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.2,
+    "field_mean": 0.425,
+    "random": 0.3
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.1,
+     "field_mean": 0.7,
+     "random": 0.3
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.1,
+     "field_mean": 0.5,
+     "random": 0.3
+    },
+    "historical_causality": {
+     "rule_filter": 0.4,
+     "field_mean": 0.3,
+     "random": 0.4
+    },
+    "physics_concepts": {
+     "rule_filter": 0.2,
+     "field_mean": 0.2,
+     "random": 0.2
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.3,
+   "strongest_opponent_arm": "random",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.024999999999999967,
+    "value_float_literal": "0.024999999999999967",
+    "field_tol": 0.05,
+    "band": "IMMUNE",
+    "field_immune": true,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": true,
+    "denominator_exclusion_reason": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.125,
+    "value_float_literal": "0.125",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260831_T3",
+   "bank_seed": 20260831,
+   "T": 3,
+   "seed_origin": "new_v2_consecutive",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.175,
+    "field_mean": 1.0,
+    "random": 0.25
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.0,
+     "field_mean": 1.0,
+     "random": 0.4
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.2,
+     "field_mean": 1.0,
+     "random": 0.2
+    },
+    "historical_causality": {
+     "rule_filter": 0.2,
+     "field_mean": 1.0,
+     "random": 0.2
+    },
+    "physics_concepts": {
+     "rule_filter": 0.3,
+     "field_mean": 1.0,
+     "random": 0.2
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.25,
+   "strongest_opponent_arm": "random",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.6,
+    "value_float_literal": "0.6",
+    "field_tol": 0.05,
+    "band": "NOT_IMMUNE",
+    "field_immune": false,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": true,
+    "denominator_exclusion_reason": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.75,
+    "value_float_literal": "0.75",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260832_T1",
+   "bank_seed": 20260832,
+   "T": 1,
+   "seed_origin": "new_v2_consecutive",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.35,
+    "field_mean": 0.42500000000000004,
+    "random": 0.325
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.6,
+     "field_mean": 0.6,
+     "random": 0.3
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.1,
+     "field_mean": 0.4,
+     "random": 0.3
+    },
+    "historical_causality": {
+     "rule_filter": 0.2,
+     "field_mean": 0.1,
+     "random": 0.4
+    },
+    "physics_concepts": {
+     "rule_filter": 0.5,
+     "field_mean": 0.6,
+     "random": 0.3
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.35,
+   "strongest_opponent_arm": "rule_filter",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.0,
+    "value_float_literal": "0.0",
+    "field_tol": 0.05,
+    "band": "IMMUNE",
+    "field_immune": true,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": false,
+    "denominator_exclusion_reason": "T=1 结构性恒等格（|field_mean(1) − field_mean(1)| ≡ 0 ⇒ 恒判 immune，无鉴别力）⇒ 沿 v2 §5.4 单列登记、0 计入 α 腿判定分母；β 腿 T=1 仍为合法格",
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.07500000000000007,
+    "value_float_literal": "0.07500000000000007",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260832_T2",
+   "bank_seed": 20260832,
+   "T": 2,
+   "seed_origin": "new_v2_consecutive",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.3,
+    "field_mean": 0.475,
+    "random": 0.275
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.3,
+     "field_mean": 0.6,
+     "random": 0.3
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.2,
+     "field_mean": 0.5,
+     "random": 0.3
+    },
+    "historical_causality": {
+     "rule_filter": 0.4,
+     "field_mean": 0.4,
+     "random": 0.2
+    },
+    "physics_concepts": {
+     "rule_filter": 0.3,
+     "field_mean": 0.4,
+     "random": 0.3
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.3,
+   "strongest_opponent_arm": "rule_filter",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.04999999999999993,
+    "value_float_literal": "0.04999999999999993",
+    "field_tol": 0.05,
+    "band": "IMMUNE",
+    "field_immune": true,
+    "knife_edge_like_label_CONTROL_ONLY": {
+     "value_float_literal": "0.04999999999999993",
+     "label_eps": 1e-06,
+     "mathematical_value_note": "两侧读数落在 0.025 粒度网格上 ⇒ 数学值恰 = 0.05",
+     "band_float_literal": "IMMUNE",
+     "band_if_math_value_used": "IMMUNE",
+     "band_changes_under_either_reading": false,
+     "why": "AR6 / §3.2.1 刀锋格字面施于 β 的 Δ；α 用「≤ field_tol」判带，0.05 恰在带内 ⇒ 取整档与字面档同档，**对 α 腿结论 0 影响**。此处仅披露事实，0 引入新判据、0 新增阈值"
+    },
+    "in_alpha_denominator": true,
+    "denominator_exclusion_reason": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.175,
+    "value_float_literal": "0.175",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260832_T3",
+   "bank_seed": 20260832,
+   "T": 3,
+   "seed_origin": "new_v2_consecutive",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.25,
+    "field_mean": 1.0,
+    "random": 0.25
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.3,
+     "field_mean": 1.0,
+     "random": 0.3
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.1,
+     "field_mean": 1.0,
+     "random": 0.3
+    },
+    "historical_causality": {
+     "rule_filter": 0.2,
+     "field_mean": 1.0,
+     "random": 0.4
+    },
+    "physics_concepts": {
+     "rule_filter": 0.4,
+     "field_mean": 1.0,
+     "random": 0.0
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.25,
+   "strongest_opponent_arm": "rule_filter",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.575,
+    "value_float_literal": "0.575",
+    "field_tol": 0.05,
+    "band": "NOT_IMMUNE",
+    "field_immune": false,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": true,
+    "denominator_exclusion_reason": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.75,
+    "value_float_literal": "0.75",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260833_T1",
+   "bank_seed": 20260833,
+   "T": 1,
+   "seed_origin": "new_v2_consecutive",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.325,
+    "field_mean": 0.35000000000000003,
+    "random": 0.275
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.3,
+     "field_mean": 0.4,
+     "random": 0.3
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.3,
+     "field_mean": 0.4,
+     "random": 0.2
+    },
+    "historical_causality": {
+     "rule_filter": 0.4,
+     "field_mean": 0.3,
+     "random": 0.3
+    },
+    "physics_concepts": {
+     "rule_filter": 0.3,
+     "field_mean": 0.3,
+     "random": 0.3
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.325,
+   "strongest_opponent_arm": "rule_filter",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.0,
+    "value_float_literal": "0.0",
+    "field_tol": 0.05,
+    "band": "IMMUNE",
+    "field_immune": true,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": false,
+    "denominator_exclusion_reason": "T=1 结构性恒等格（|field_mean(1) − field_mean(1)| ≡ 0 ⇒ 恒判 immune，无鉴别力）⇒ 沿 v2 §5.4 单列登记、0 计入 α 腿判定分母；β 腿 T=1 仍为合法格",
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.025000000000000022,
+    "value_float_literal": "0.025000000000000022",
+    "field_tol": 0.05,
+    "band": "BELOW_TOL",
+    "band_float_literal": "BELOW_TOL",
+    "beta_pass": false,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260833_T2",
+   "bank_seed": 20260833,
+   "T": 2,
+   "seed_origin": "new_v2_consecutive",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.25,
+    "field_mean": 0.55,
+    "random": 0.25
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.2,
+     "field_mean": 0.3,
+     "random": 0.3
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.3,
+     "field_mean": 0.8,
+     "random": 0.2
+    },
+    "historical_causality": {
+     "rule_filter": 0.4,
+     "field_mean": 0.4,
+     "random": 0.2
+    },
+    "physics_concepts": {
+     "rule_filter": 0.1,
+     "field_mean": 0.7,
+     "random": 0.3
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.25,
+   "strongest_opponent_arm": "rule_filter",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.2,
+    "value_float_literal": "0.2",
+    "field_tol": 0.05,
+    "band": "NOT_IMMUNE",
+    "field_immune": false,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": true,
+    "denominator_exclusion_reason": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.30000000000000004,
+    "value_float_literal": "0.30000000000000004",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  },
+  {
+   "cell": "seed20260833_T3",
+   "bank_seed": 20260833,
+   "T": 3,
+   "seed_origin": "new_v2_consecutive",
+   "n_items": 40,
+   "n_items_expected": 40,
+   "n_items_as_expected": true,
+   "accuracy": {
+    "rule_filter": 0.3,
+    "field_mean": 1.0,
+    "random": 0.2
+   },
+   "per_domain_accuracy": {
+    "algorithm_process": {
+     "rule_filter": 0.3,
+     "field_mean": 1.0,
+     "random": 0.0
+    },
+    "biological_taxonomy": {
+     "rule_filter": 0.2,
+     "field_mean": 1.0,
+     "random": 0.3
+    },
+    "historical_causality": {
+     "rule_filter": 0.4,
+     "field_mean": 1.0,
+     "random": 0.3
+    },
+    "physics_concepts": {
+     "rule_filter": 0.3,
+     "field_mean": 1.0,
+     "random": 0.2
+    }
+   },
+   "per_domain_n_items": {
+    "algorithm_process": 10,
+    "biological_taxonomy": 10,
+    "historical_causality": 10,
+    "physics_concepts": 10
+   },
+   "strongest_opponent_value": 0.3,
+   "strongest_opponent_arm": "rule_filter",
+   "kou_jing_alpha": {
+    "definition": "|field_mean(T) - field_mean(T=1)| (run_v20_gt2b.py L129 字面)",
+    "value": 0.6499999999999999,
+    "value_float_literal": "0.6499999999999999",
+    "field_tol": 0.05,
+    "band": "NOT_IMMUNE",
+    "field_immune": false,
+    "knife_edge_like_label_CONTROL_ONLY": null,
+    "in_alpha_denominator": true,
+    "denominator_exclusion_reason": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "kou_jing_beta": {
+    "definition": "delta = field_mean(T) - max(rule_filter(T), random(T))",
+    "value": 0.7,
+    "value_float_literal": "0.7",
+    "field_tol": 0.05,
+    "band": "PASS",
+    "band_float_literal": "PASS",
+    "beta_pass": true,
+    "is_knife_edge": false,
+    "knife_edge_disclosure": null,
+    "values_finite": true,
+    "computable": true
+   },
+   "chance_level": 0.25,
+   "n_options_fixed": 4
+  }
+ ],
+ "consistency": {
+  "n_cells": 18,
+  "alpha_denominator_cells": 12,
+  "alpha_denominator_note": "6 seed × T∈{2,3} = 12 格；T=1 结构性恒等格排除（§5.4）",
+  "beta_cells": 18,
+  "alpha_band_counts": {
+   "IMMUNE": 2,
+   "NOT_IMMUNE": 10
+  },
+  "alpha_all_same_band_in_denominator": false,
+  "alpha_not_immune_cells": [
+   "seed20260828_T2",
+   "seed20260828_T3",
+   "seed20260829_T2",
+   "seed20260829_T3",
+   "seed20260830_T2",
+   "seed20260830_T3",
+   "seed20260831_T3",
+   "seed20260832_T3",
+   "seed20260833_T2",
+   "seed20260833_T3"
+  ],
+  "alpha_all_T2T3_immune": false,
+  "beta_band_counts": {
+   "BELOW_TOL": 3,
+   "PASS": 15
+  },
+  "beta_all_same_band": false,
+  "beta_below_tol_cells": [
+   "seed20260828_T1",
+   "seed20260829_T1",
+   "seed20260833_T1"
+  ],
+  "beta_all_PASS": false,
+  "alpha_flags_incl_T1_control_only": {
+   "counts": {
+    "True": 8,
+    "False": 10
+   },
+   "all_same_flag_incl_T1": false,
+   "note": "含 T=1 的 α 一致性仅作对照登记，0 参与判定（§5.4）"
+  },
+  "beta_knife_edge_cells": [
+   {
+    "cell": "seed20260829_T1",
+    "value_float_literal": "0.04999999999999999",
+    "value_math_note": "两侧读数落在 0.025 粒度网格上 ⇒ 数学值恰 = 0.05",
+    "band_float_literal": "BELOW_TOL",
+    "is_knife_edge": true
+   }
+  ],
+  "beta_band_counts_if_knife_edge_rounded_CONTROL_ONLY": {
+   "PASS": 16,
+   "BELOW_TOL": 2,
+   "participates_in_judgement": false,
+   "note": "沿 v1 既有字段 beta_band_counts_if_knife_edge_rounded 口径；AR6 0 参与判定，仅作对照登记"
+  },
+  "leg_states_mechanical": {
+   "alpha_leg": "FAIL",
+   "beta_leg": "FAIL",
+   "alpha_uncomputable_cells": [],
+   "beta_uncomputable_cells": [],
+   "precedence_rule_disclosed": "分母格不可算 ⇒ KD 优先（构造/素材不可算属硬阻断，机械优先于档位异同）；否则异档 ⇒ FAIL；全档一致 ⇒ PASS。§3.3 三态表未明写优先级，本处为机械优先级的显式披露，0 新增阈值、0 新增数值切点"
+  },
+  "compound_claim_state_mechanical": "FAIL",
+  "compound_table_covered_both_legs": true,
+  "aggregation_note": "α/β 双口径强制并报、0 互替（K-V3R1P1-0-C）；0 合取掩盖任一腿"
+ },
+ "legacy_verdict_separate": [
+  {
+   "bank_seed": 20260828,
+   "legacy_verdict": "inconclusive",
+   "legacy_detail": {
+    "rule_filter_acc_by_T": [
+     0.15000000000000002,
+     0.275,
+     0.19999999999999998
+    ],
+    "field_mean_acc_by_T": [
+     0.375,
+     0.525,
+     1.0
+    ],
+    "field_immunity_ok": false,
+    "field_tol": 0.05
+   },
+   "legacy_beta_margin_T1": 0.024999999999999967
+  },
+  {
+   "bank_seed": 20260829,
+   "legacy_verdict": "inconclusive",
+   "legacy_detail": {
+    "rule_filter_acc_by_T": [
+     0.325,
+     0.325,
+     0.25
+    ],
+    "field_mean_acc_by_T": [
+     0.375,
+     0.55,
+     1.0
+    ],
+    "field_immunity_ok": false,
+    "field_tol": 0.05
+   },
+   "legacy_beta_margin_T1": 0.04999999999999999
+  },
+  {
+   "bank_seed": 20260830,
+   "legacy_verdict": "inconclusive",
+   "legacy_detail": {
+    "rule_filter_acc_by_T": [
+     0.25,
+     0.275,
+     0.15000000000000002
+    ],
+    "field_mean_acc_by_T": [
+     0.35,
+     0.425,
+     1.0
+    ],
+    "field_immunity_ok": false,
+    "field_tol": 0.05
+   },
+   "legacy_beta_margin_T1": 0.09999999999999998
+  },
+  {
+   "bank_seed": 20260831,
+   "legacy_verdict": "inconclusive",
+   "legacy_detail": {
+    "rule_filter_acc_by_T": [
+     0.2,
+     0.2,
+     0.175
+    ],
+    "field_mean_acc_by_T": [
+     0.4,
+     0.425,
+     1.0
+    ],
+    "field_immunity_ok": false,
+    "field_tol": 0.05
+   },
+   "legacy_beta_margin_T1": 0.15000000000000002
+  },
+  {
+   "bank_seed": 20260832,
+   "legacy_verdict": "supports_H_GT2B",
+   "legacy_detail": {
+    "rule_filter_acc_by_T": [
+     0.35,
+     0.3,
+     0.25
+    ],
+    "field_mean_acc_by_T": [
+     0.42500000000000004,
+     0.475,
+     1.0
+    ],
+    "field_immunity_ok": false,
+    "field_tol": 0.05
+   },
+   "legacy_beta_margin_T1": 0.07500000000000007
+  },
+  {
+   "bank_seed": 20260833,
+   "legacy_verdict": "inconclusive",
+   "legacy_detail": {
+    "rule_filter_acc_by_T": [
+     0.325,
+     0.25,
+     0.3
+    ],
+    "field_mean_acc_by_T": [
+     0.35000000000000003,
+     0.55,
+     1.0
+    ],
+    "field_immunity_ok": false,
+    "field_tol": 0.05
+   },
+   "legacy_beta_margin_T1": 0.025000000000000022
+  }
+ ],
+ "construct_degen_self_check": {
+  "rule": "n_distinct > 3 + std > 0（K-V3R1P1-0-A，字面不变）",
+  "gate_sequence_frozen": "D",
+  "gate_sequence_frozen_basis": "v2 §5.2 / AR4 测量前唯一冻结；D 为 A 的严格超集池化",
+  "reading_A_per_domain_item_accuracy": {
+   "definition": "每格每臂的 4 个域 item 级正确率序列（n=4/格）",
+   "role": "CONTROL_ONLY（AR4：0 再作为判死线分支）",
+   "per_cell": {
+    "seed20260828_T1": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 4,
+      "std": 0.11180339887498948,
+      "min": 0.0,
+      "max": 0.3,
+      "is_binary": false,
+      "gate_non_degenerate": true
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.082915619758885,
+      "min": 0.3,
+      "max": 0.5,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.15,
+      "min": 0.1,
+      "max": 0.5,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260828_T2": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.10897247358851685,
+      "min": 0.1,
+      "max": 0.4,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.1089724735885168,
+      "min": 0.4,
+      "max": 0.7,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.10897247358851683,
+      "min": 0.2,
+      "max": 0.5,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260828_T3": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 4,
+      "std": 0.15811388300841897,
+      "min": 0.0,
+      "max": 0.4,
+      "is_binary": false,
+      "gate_non_degenerate": true
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 1,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.07071067811865475,
+      "min": 0.1,
+      "max": 0.3,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260829_T1": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.10897247358851683,
+      "min": 0.2,
+      "max": 0.5,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.10897247358851683,
+      "min": 0.2,
+      "max": 0.5,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.16393596310755001,
+      "min": 0.1,
+      "max": 0.5,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260829_T2": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.10897247358851683,
+      "min": 0.2,
+      "max": 0.5,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.15000000000000002,
+      "min": 0.4,
+      "max": 0.8,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.07071067811865475,
+      "min": 0.1,
+      "max": 0.3,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260829_T3": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 4,
+      "std": 0.11180339887498948,
+      "min": 0.1,
+      "max": 0.4,
+      "is_binary": false,
+      "gate_non_degenerate": true
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 1,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 2,
+      "std": 0.043301270189221926,
+      "min": 0.2,
+      "max": 0.3,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260830_T1": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 2,
+      "std": 0.08660254037844385,
+      "min": 0.1,
+      "max": 0.3,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 2,
+      "std": 0.05000000000000002,
+      "min": 0.3,
+      "max": 0.4,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 4,
+      "std": 0.18027756377319948,
+      "min": 0.0,
+      "max": 0.5,
+      "is_binary": false,
+      "gate_non_degenerate": true
+     }
+    },
+    "seed20260830_T2": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 4,
+      "std": 0.1479019945774904,
+      "min": 0.1,
+      "max": 0.5,
+      "is_binary": false,
+      "gate_non_degenerate": true
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.08291561975888499,
+      "min": 0.3,
+      "max": 0.5,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 2,
+      "std": 0.1,
+      "min": 0.2,
+      "max": 0.4,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260830_T3": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 4,
+      "std": 0.11180339887498948,
+      "min": 0.0,
+      "max": 0.3,
+      "is_binary": false,
+      "gate_non_degenerate": true
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 1,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 2,
+      "std": 0.05000000000000002,
+      "min": 0.3,
+      "max": 0.4,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260831_T1": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.14142135623730953,
+      "min": 0.0,
+      "max": 0.4,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.1224744871391589,
+      "min": 0.3,
+      "max": 0.6,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 2,
+      "std": 0.04999999999999999,
+      "min": 0.2,
+      "max": 0.3,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260831_T2": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.12247448713915891,
+      "min": 0.1,
+      "max": 0.4,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 4,
+      "std": 0.19202864369671518,
+      "min": 0.2,
+      "max": 0.7,
+      "is_binary": false,
+      "gate_non_degenerate": true
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.07071067811865477,
+      "min": 0.2,
+      "max": 0.4,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260831_T3": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.10897247358851683,
+      "min": 0.0,
+      "max": 0.3,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 1,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 2,
+      "std": 0.08660254037844387,
+      "min": 0.2,
+      "max": 0.4,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260832_T1": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 4,
+      "std": 0.206155281280883,
+      "min": 0.1,
+      "max": 0.6,
+      "is_binary": false,
+      "gate_non_degenerate": true
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.20463381929681126,
+      "min": 0.1,
+      "max": 0.6,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 2,
+      "std": 0.043301270189221946,
+      "min": 0.3,
+      "max": 0.4,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260832_T2": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.07071067811865477,
+      "min": 0.2,
+      "max": 0.4,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.08291561975888498,
+      "min": 0.4,
+      "max": 0.6,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 2,
+      "std": 0.04330127018922192,
+      "min": 0.2,
+      "max": 0.3,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260832_T3": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 4,
+      "std": 0.11180339887498948,
+      "min": 0.1,
+      "max": 0.4,
+      "is_binary": false,
+      "gate_non_degenerate": true
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 1,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.15,
+      "min": 0.0,
+      "max": 0.4,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260833_T1": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 2,
+      "std": 0.043301270189221946,
+      "min": 0.3,
+      "max": 0.4,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 2,
+      "std": 0.05000000000000002,
+      "min": 0.3,
+      "max": 0.4,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 2,
+      "std": 0.043301270189221926,
+      "min": 0.2,
+      "max": 0.3,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260833_T2": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 4,
+      "std": 0.11180339887498948,
+      "min": 0.1,
+      "max": 0.4,
+      "is_binary": false,
+      "gate_non_degenerate": true
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 4,
+      "std": 0.206155281280883,
+      "min": 0.3,
+      "max": 0.8,
+      "is_binary": false,
+      "gate_non_degenerate": true
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 2,
+      "std": 0.04999999999999999,
+      "min": 0.2,
+      "max": 0.3,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     }
+    },
+    "seed20260833_T3": {
+     "rule_filter": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.07071067811865477,
+      "min": 0.2,
+      "max": 0.4,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     },
+     "field_mean": {
+      "n": 4,
+      "n_distinct": 1,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "is_binary": true,
+      "gate_non_degenerate": false
+     },
+     "random": {
+      "n": 4,
+      "n_distinct": 3,
+      "std": 0.1224744871391589,
+      "min": 0.0,
+      "max": 0.3,
+      "is_binary": false,
+      "gate_non_degenerate": false
+     }
+    }
+   }
+  },
+  "reading_B_per_item_correctness": {
+   "definition": "每格每臂 40 条 item 级 0/1 正确性序列（n=40/格）",
+   "role": "永禁作门序列（结构性二值 ⇒ n_distinct ≤ 2 恒成立，§5.2）",
+   "is_binary_by_construction": true
+  },
+  "reading_C_cell_level_readout": {
+   "definition": "18 格格级读数序列（每臂 n=18）",
+   "role": "CONTROL_ONLY（AR4）",
+   "per_arm": {
+    "rule_filter": {
+     "n": 18,
+     "n_distinct": 9,
+     "std": 0.06060395619242063,
+     "min": 0.15000000000000002,
+     "max": 0.35,
+     "is_binary": false,
+     "gate_non_degenerate": true
+    },
+    "field_mean": {
+     "n": 18,
+     "n_distinct": 10,
+     "std": 0.272268278416893,
+     "min": 0.35,
+     "max": 1.0,
+     "is_binary": false,
+     "gate_non_degenerate": true
+    },
+    "random": {
+     "n": 18,
+     "n_distinct": 9,
+     "std": 0.04681194318431311,
+     "min": 0.2,
+     "max": 0.35000000000000003,
+     "is_binary": false,
+     "gate_non_degenerate": true
+    }
+   }
+  },
+  "reading_D_matrix_pooled": {
+   "definition": "逐臂 × 全矩阵的域级正确率池化序列（4 域 × 18 格 = 72 值/臂）",
+   "role": "GATE_SEQUENCE（v2 §5.2 冻结）",
+   "per_arm": {
+    "rule_filter": {
+     "n": 72,
+     "n_distinct": 7,
+     "std": 0.13330439500779806,
+     "min": 0.0,
+     "max": 0.6,
+     "is_binary": false,
+     "gate_non_degenerate": true
+    },
+    "field_mean": {
+     "n": 72,
+     "n_distinct": 9,
+     "std": 0.2927328396885098,
+     "min": 0.1,
+     "max": 1.0,
+     "is_binary": false,
+     "gate_non_degenerate": true
+    },
+    "random": {
+     "n": 72,
+     "n_distinct": 6,
+     "std": 0.11009956212559119,
+     "min": 0.0,
+     "max": 0.5,
+     "is_binary": false,
+     "gate_non_degenerate": true
+    }
+   }
+  },
+  "reading_A_summary": {
+   "n_cell_arm_series": 54,
+   "n_pass": 11,
+   "n_fail": 43,
+   "fail_series": [
+    "seed20260828_T1|field_mean",
+    "seed20260828_T1|random",
+    "seed20260828_T2|rule_filter",
+    "seed20260828_T2|field_mean",
+    "seed20260828_T2|random",
+    "seed20260828_T3|field_mean",
+    "seed20260828_T3|random",
+    "seed20260829_T1|rule_filter",
+    "seed20260829_T1|field_mean",
+    "seed20260829_T1|random",
+    "seed20260829_T2|rule_filter",
+    "seed20260829_T2|field_mean",
+    "seed20260829_T2|random",
+    "seed20260829_T3|field_mean",
+    "seed20260829_T3|random",
+    "seed20260830_T1|rule_filter",
+    "seed20260830_T1|field_mean",
+    "seed20260830_T2|field_mean",
+    "seed20260830_T2|random",
+    "seed20260830_T3|field_mean",
+    "seed20260830_T3|random",
+    "seed20260831_T1|rule_filter",
+    "seed20260831_T1|field_mean",
+    "seed20260831_T1|random",
+    "seed20260831_T2|rule_filter",
+    "seed20260831_T2|random",
+    "seed20260831_T3|rule_filter",
+    "seed20260831_T3|field_mean",
+    "seed20260831_T3|random",
+    "seed20260832_T1|field_mean",
+    "seed20260832_T1|random",
+    "seed20260832_T2|rule_filter",
+    "seed20260832_T2|field_mean",
+    "seed20260832_T2|random",
+    "seed20260832_T3|field_mean",
+    "seed20260832_T3|random",
+    "seed20260833_T1|rule_filter",
+    "seed20260833_T1|field_mean",
+    "seed20260833_T1|random",
+    "seed20260833_T2|random",
+    "seed20260833_T3|rule_filter",
+    "seed20260833_T3|field_mean",
+    "seed20260833_T3|random"
+   ]
+  },
+  "reading_A_all_cells_pass": false,
+  "reading_C_all_arms_pass": true,
+  "reading_D_all_arms_pass": true,
+  "cfg_seed_lever": {
+   "lever": "cfg[\"seed\"]",
+   "runner_cfg_subscript_seed_hits": 0,
+   "runner_passed_seed_arg_literal": true,
+   "protocol_field_scores_init_overwrites_seed": true,
+   "static_reading": "run_v20_gt2b.py 内 cfg[\"seed\"] 0 消费点；field_scores_init 在 deposon_protocol.py 内以 {\"seed\": inst_seed} 覆盖传入 cfg 的 seed 字段，inst_seed 源 = graph[\"seed\"] + 边序，与 cfg.seed 无关",
+   "empirical_bit_identical_when_cfg_seed_changed": true,
+   "probe_result": {
+    "rule_filter": 0.3,
+    "field_mean": 0.5,
+    "random": 0.3
+   },
+   "lever_status": "0 消费点已双重自证（静态 + 实测 bit-identical）⇒ 禁作杠杆登记成立，本件 0 以 cfg.seed 为扫描变量（v2 §4.4 / §5.1）",
+   "other_known_levers": {
+    "BANK_SEED": "唯一扫描变量；有真实消费点（stable_seed → graph[\"seed\"] → field_scores_init），故 v2 扩档只改此一项",
+    "T_levels": "一字不动（1,2,3）"
+   }
+  },
+  "reading_dependence_disclosure": "AR4 冻结：门施于读法 D（全矩阵池化，72 值/臂）。读法 A（per-cell 4 域序列）43/54 条不过门（粒度不匹配：n=4 要 4 值全互异）、读法 C 过门与否见上表 —— **A / C 事实照旧逐条落盘并随判定披露，0 隐瞒**；但 0 再作为判死线分支，故「双读并列 ⇒ 不明」路径在本件生效范围内结构性不可达（AR4 + AR5）",
+  "leg_readout_series_self_check": {
+   "definition": "α/β 两腿读数序列自身的非退化自证（§5.5）",
+   "beta_delta_all_18": {
+    "n": 18,
+    "n_distinct": 17,
+    "std": 0.2906596371898892,
+    "min": 0.024999999999999967,
+    "max": 0.8,
+    "is_binary": false,
+    "gate_non_degenerate": true
+   },
+   "alpha_T2T3_12": {
+    "n": 12,
+    "n_distinct": 11,
+    "std": 0.2590715259451635,
+    "min": 0.024999999999999967,
+    "max": 0.65,
+    "is_binary": false,
+    "gate_non_degenerate": true
+   },
+   "note": "n_distinct > 3 + std > 0 ⇒ 逐格判档具备鉴别力（非在常量面上判档）"
+  }
+ },
+ "as_run_environment_self_check": {
+  "as_run_bank_seed": 20260828,
+  "as_run_accuracy_by_T": {
+   "rule_filter": {
+    "1": 0.15000000000000002,
+    "2": 0.275,
+    "3": 0.19999999999999998
+   },
+   "field_mean": {
+    "1": 0.375,
+    "2": 0.525,
+    "3": 1.0
+   },
+   "random": {
+    "1": 0.35000000000000003,
+    "2": 0.325,
+    "3": 0.2
+   }
+  },
+  "recomputed_accuracy_by_T_seed20260828": {
+   "rule_filter": {
+    "1": 0.15000000000000002,
+    "2": 0.275,
+    "3": 0.19999999999999998
+   },
+   "field_mean": {
+    "1": 0.375,
+    "2": 0.525,
+    "3": 1.0
+   },
+   "random": {
+    "1": 0.35000000000000003,
+    "2": 0.325,
+    "3": 0.2
+   }
+  },
+  "bit_identical": true,
+  "as_run_legacy_verdict": "inconclusive",
+  "recomputed_legacy_verdict_seed20260828": "inconclusive",
+  "T1_beta_margin_as_run_control": 0.025,
+  "T1_beta_margin_recomputed": 0.024999999999999967,
+  "control_used_as_threshold": false
+ },
+ "v1_1_parallel_double_record": {
+  "rule": "AR2：v1.1 的 9 格读数原样保留、0 回头改写，与 v2 的 18 格并列双记",
+  "v1_1_9cells_readonly_mirror": [
+   {
+    "cell": "seed20260828_T1",
+    "alpha_value": 0.0,
+    "alpha_field_immune": true,
+    "beta_value": 0.024999999999999967,
+    "beta_band": "BELOW_TOL"
+   },
+   {
+    "cell": "seed20260828_T2",
+    "alpha_value": 0.15000000000000002,
+    "alpha_field_immune": false,
+    "beta_value": 0.2,
+    "beta_band": "PASS"
+   },
+   {
+    "cell": "seed20260828_T3",
+    "alpha_value": 0.625,
+    "alpha_field_immune": false,
+    "beta_value": 0.8,
+    "beta_band": "PASS"
+   },
+   {
+    "cell": "seed20260829_T1",
+    "alpha_value": 0.0,
+    "alpha_field_immune": true,
+    "beta_value": 0.04999999999999999,
+    "beta_band": "BELOW_TOL"
+   },
+   {
+    "cell": "seed20260829_T2",
+    "alpha_value": 0.17500000000000004,
+    "alpha_field_immune": false,
+    "beta_value": 0.22500000000000003,
+    "beta_band": "PASS"
+   },
+   {
+    "cell": "seed20260829_T3",
+    "alpha_value": 0.625,
+    "alpha_field_immune": false,
+    "beta_value": 0.725,
+    "beta_band": "PASS"
+   },
+   {
+    "cell": "seed20260830_T1",
+    "alpha_value": 0.0,
+    "alpha_field_immune": true,
+    "beta_value": 0.09999999999999998,
+    "beta_band": "PASS"
+   },
+   {
+    "cell": "seed20260830_T2",
+    "alpha_value": 0.07500000000000001,
+    "alpha_field_immune": false,
+    "beta_value": 0.12499999999999994,
+    "beta_band": "PASS"
+   },
+   {
+    "cell": "seed20260830_T3",
+    "alpha_value": 0.65,
+    "alpha_field_immune": false,
+    "beta_value": 0.65,
+    "beta_band": "PASS"
+   }
+  ],
+  "v1_1_9cells_sha12": "a8a4befb21f5",
+  "v2_vs_v1_1_overlap_crosscheck": [
+   {
+    "cell": "seed20260828_T1",
+    "v1_1_beta_value": 0.024999999999999967,
+    "v2_beta_value": 0.024999999999999967,
+    "beta_value_identical": true,
+    "beta_band_identical": true
+   },
+   {
+    "cell": "seed20260828_T2",
+    "v1_1_beta_value": 0.2,
+    "v2_beta_value": 0.2,
+    "beta_value_identical": true,
+    "beta_band_identical": true
+   },
+   {
+    "cell": "seed20260828_T3",
+    "v1_1_beta_value": 0.8,
+    "v2_beta_value": 0.8,
+    "beta_value_identical": true,
+    "beta_band_identical": true
+   },
+   {
+    "cell": "seed20260829_T1",
+    "v1_1_beta_value": 0.04999999999999999,
+    "v2_beta_value": 0.04999999999999999,
+    "beta_value_identical": true,
+    "beta_band_identical": true
+   },
+   {
+    "cell": "seed20260829_T2",
+    "v1_1_beta_value": 0.22500000000000003,
+    "v2_beta_value": 0.22500000000000003,
+    "beta_value_identical": true,
+    "beta_band_identical": true
+   },
+   {
+    "cell": "seed20260829_T3",
+    "v1_1_beta_value": 0.725,
+    "v2_beta_value": 0.725,
+    "beta_value_identical": true,
+    "beta_band_identical": true
+   },
+   {
+    "cell": "seed20260830_T1",
+    "v1_1_beta_value": 0.09999999999999998,
+    "v2_beta_value": 0.09999999999999998,
+    "beta_value_identical": true,
+    "beta_band_identical": true
+   },
+   {
+    "cell": "seed20260830_T2",
+    "v1_1_beta_value": 0.12499999999999994,
+    "v2_beta_value": 0.12499999999999994,
+    "beta_value_identical": true,
+    "beta_band_identical": true
+   },
+   {
+    "cell": "seed20260830_T3",
+    "v1_1_beta_value": 0.65,
+    "v2_beta_value": 0.65,
+    "beta_value_identical": true,
+    "beta_band_identical": true
+   }
+  ],
+  "overlap_all_identical": true,
+  "not_used_for_adjudication": true,
+  "note": "本字段只作复现性交叉核验（3 既有 seed × 3 T = 9 格），0 用于任何档位裁决"
+ },
+ "kill_line_b_four_triggers": {
+  "rule": "K-V3R-35 (b) 四类触发照旧逐条检测、照旧逐条登记 γ（v2 §3.1 叠加只改终点归属）",
+  "per_trigger": {
+   "1_仓外只读被拒": {
+    "triggered": false,
+    "evidence": "4 件全部可读（只读）"
+   },
+   "2_缓存域缺": {
+    "triggered": true,
+    "evidence": {
+     "excluded_domains": [
+      "geography_world",
+      "project_management"
+     ],
+     "included_domains": [
+      "algorithm_process",
+      "biological_taxonomy",
+      "historical_causality",
+      "physics_concepts"
+     ]
+    }
+   },
+   "3_跑不完": {
+    "triggered": false,
+    "evidence": {
+     "n_cells_produced": 18,
+     "n_cells_expected": 18,
+     "n_items_mismatched_cells": [],
+     "uncomputable_cells": []
+    }
+   },
+   "4_item级正确率_n_distinct<=3退化": {
+    "triggered": true,
+    "evidence": {
+     "reading_A_n_fail": 43,
+     "reading_A_n_total": 54
+    }
+   }
+  },
+  "n_triggered": 2,
+  "triggered_ids": [
+   "2_缓存域缺",
+   "4_item级正确率_n_distinct<=3退化"
+  ],
+  "degeneracy_gate_D_hit": false,
+  "terminal_membership": "KD（判死构造）",
+  "note": "「不明」在本件生效范围内结构性不可达（AR4 + AR5）；触发信息一字不删，终点不再悬置"
+ },
+ "root_cause_evidence_for_adjudicator": {
+  "note": "§3.3 要求每条 FAIL 附根因三分类（真证伪/假证伪/混合）。根因**分类权属 verdict-keeper**；本棒 0 代判 ⇒ root_cause_class 留空，仅提供机械可核证据供其取证",
+  "alpha_fail_cells_mechanical_evidence": {
+   "cells": [
+    "seed20260828_T2",
+    "seed20260828_T3",
+    "seed20260829_T2",
+    "seed20260829_T3",
+    "seed20260830_T2",
+    "seed20260830_T3",
+    "seed20260831_T3",
+    "seed20260832_T3",
+    "seed20260833_T2",
+    "seed20260833_T3"
+   ],
+   "field_mean_by_T_per_seed": {
+    "20260828": {
+     "1": 0.375,
+     "2": 0.525,
+     "3": 1.0
+    },
+    "20260829": {
+     "1": 0.375,
+     "2": 0.55,
+     "3": 1.0
+    },
+    "20260830": {
+     "1": 0.35,
+     "2": 0.425,
+     "3": 1.0
+    },
+    "20260831": {
+     "1": 0.4,
+     "2": 0.425,
+     "3": 1.0
+    },
+    "20260832": {
+     "1": 0.42500000000000004,
+     "2": 0.475,
+     "3": 1.0
+    },
+    "20260833": {
+     "1": 0.35000000000000003,
+     "2": 0.55,
+     "3": 1.0
+    }
+   },
+   "note": "T=3 格 field_mean 抬升是 α 腿全部 FAIL 的来源"
+  },
+  "beta_fail_cells_mechanical_evidence": {
+   "cells": [
+    "seed20260828_T1",
+    "seed20260829_T1",
+    "seed20260833_T1"
+   ],
+   "dominant_source_T": [
+    "1"
+   ],
+   "mechanism_note": "T=1 档 option 数被 T 个陷阱占位 ⇒ field_mean 相对两对照臂的边际最小；trap 标签不在图节点集内 ⇒ field_mean 对其打 -inf（机制性免疫，run_v20_gt2b.py honesty 字面），故 T=1 的小边际不等价于语义识别能力不足"
+  }
+ },
+ "gamma_registry": [
+  {
+   "id": "γ-V2-1",
+   "item": "v1.1 K-V3R-35 (b) 已触发（读法 A 21/27 不过门）⇒ 旧终态「不明」",
+   "v2_status": "历史事实保留、0 删除；终态改由 §3.3 三态表落定",
+   "triggered_now": true,
+   "detail": {
+    "reading_A_n_fail": 43,
+    "reading_A_n_total": 54
+   }
+  },
+  {
+   "id": "γ-V2-2",
+   "item": "另 2 域无 gt2_attacker_cache",
+   "v2_status": "待采集（沿 v1.1 事实，0 虚构缓存、0 外推全 6 域）",
+   "triggered_now": true,
+   "detail": {
+    "excluded_domains": [
+     "geography_world",
+     "project_management"
+    ],
+    "included_domains": [
+     "algorithm_process",
+     "biological_taxonomy",
+     "historical_causality",
+     "physics_concepts"
+    ]
+   }
+  },
+  {
+   "id": "γ-V2-3",
+   "item": "β 刀锋格",
+   "v2_status": "按 AR6 float64 字面档计数；0 round / 0 容差 / 0 双计",
+   "triggered_now": true,
+   "detail": {
+    "cells": [
+     "seed20260829_T1"
+    ],
+    "band_counts_literal": {
+     "BELOW_TOL": 3,
+     "PASS": 15
+    },
+    "band_counts_if_rounded_CONTROL_ONLY": {
+     "PASS": 16,
+     "BELOW_TOL": 2,
+     "participates_in_judgement": false,
+     "note": "沿 v1 既有字段 beta_band_counts_if_knife_edge_rounded 口径；AR6 0 参与判定，仅作对照登记"
+    }
+   }
+  },
+  {
+   "id": "γ-V2-4",
+   "item": "T=1 档 as-run 对照边际 +0.025",
+   "v2_status": "对照留档，0 作阈值、0 参与判定",
+   "triggered_now": true,
+   "detail": {
+    "value": 0.025,
+    "used_as_threshold": false,
+    "used_in_judgement": false
+   }
+  },
+  {
+   "id": "γ-V2-5",
+   "item": "corpus 孤儿哨兵在本仓现状抛错",
+   "v2_status": "沿 v1 同一等价只读路径；0 改既有模块 / 0 改 index.json / 0 改语料",
+   "triggered_now": true,
+   "detail": {
+    "orphan_non_graph_json": [
+     "all.json",
+     "index_v2_2026_09_16.json",
+     "strip_captions_22.json"
+    ],
+    "existing_modules_modified": 0,
+    "corpus_files_modified": 0
+   }
+  },
+  {
+   "id": "γ-V2-6",
+   "item": "读法 A 不过门（若 PI 坚持 per-cell 门粒度）",
+   "v2_status": "默认档 = 读法 D（AR4 / §10 P-2）；PI 改判 ⇒ KD 并 γ",
+   "triggered_now": true,
+   "detail": {
+    "default": "D",
+    "reading_A_n_fail": 43
+   }
+  },
+  {
+   "id": "γ-V2-7",
+   "item": "v2 新增 3 个 seed 的读数本件 0 预测、0 填值",
+   "v2_status": "本棒逐格实测落盘；0 以 v1 的 9 格外推新 seed",
+   "triggered_now": true,
+   "detail": {
+    "new_seeds": [
+     20260831,
+     20260832,
+     20260833
+    ],
+    "per_cell_readings": {
+     "seed20260831_T1": {
+      "accuracy": {
+       "rule_filter": 0.2,
+       "field_mean": 0.4,
+       "random": 0.25
+      },
+      "alpha": 0.0,
+      "beta": 0.15000000000000002,
+      "beta_band": "PASS"
+     },
+     "seed20260831_T2": {
+      "accuracy": {
+       "rule_filter": 0.2,
+       "field_mean": 0.425,
+       "random": 0.3
+      },
+      "alpha": 0.024999999999999967,
+      "beta": 0.125,
+      "beta_band": "PASS"
+     },
+     "seed20260831_T3": {
+      "accuracy": {
+       "rule_filter": 0.175,
+       "field_mean": 1.0,
+       "random": 0.25
+      },
+      "alpha": 0.6,
+      "beta": 0.75,
+      "beta_band": "PASS"
+     },
+     "seed20260832_T1": {
+      "accuracy": {
+       "rule_filter": 0.35,
+       "field_mean": 0.42500000000000004,
+       "random": 0.325
+      },
+      "alpha": 0.0,
+      "beta": 0.07500000000000007,
+      "beta_band": "PASS"
+     },
+     "seed20260832_T2": {
+      "accuracy": {
+       "rule_filter": 0.3,
+       "field_mean": 0.475,
+       "random": 0.275
+      },
+      "alpha": 0.04999999999999993,
+      "beta": 0.175,
+      "beta_band": "PASS"
+     },
+     "seed20260832_T3": {
+      "accuracy": {
+       "rule_filter": 0.25,
+       "field_mean": 1.0,
+       "random": 0.25
+      },
+      "alpha": 0.575,
+      "beta": 0.75,
+      "beta_band": "PASS"
+     },
+     "seed20260833_T1": {
+      "accuracy": {
+       "rule_filter": 0.325,
+       "field_mean": 0.35000000000000003,
+       "random": 0.275
+      },
+      "alpha": 0.0,
+      "beta": 0.025000000000000022,
+      "beta_band": "BELOW_TOL"
+     },
+     "seed20260833_T2": {
+      "accuracy": {
+       "rule_filter": 0.25,
+       "field_mean": 0.55,
+       "random": 0.25
+      },
+      "alpha": 0.2,
+      "beta": 0.30000000000000004,
+      "beta_band": "PASS"
+     },
+     "seed20260833_T3": {
+      "accuracy": {
+       "rule_filter": 0.3,
+       "field_mean": 1.0,
+       "random": 0.2
+      },
+      "alpha": 0.6499999999999999,
+      "beta": 0.7,
+      "beta_band": "PASS"
+     }
+    }
+   }
+  },
+  {
+   "id": "γ-V2-8",
+   "item": "锚件 sha12 漂移（v2 预登记件所记 vs 盘上实测）",
+   "v2_status": "如实登记；0 回改既有件、0 以锚值覆盖实测值",
+   "triggered_now": true,
+   "detail": {
+    "prereg_v2_claimed_v1_result_sha12": "e9aa6e5180ca",
+    "on_disk_actual_sha12": "a8a4befb21f5",
+    "on_disk_actual_bytes": 35091,
+    "prereg_v2_claimed_bytes": 34547,
+    "read_policy": "以盘上实测件为只读源；0 修改任何既有件"
+   }
+  },
+  {
+   "id": "γ-V2-9",
+   "item": "产物命名与 v2 §4.6 字面的偏离（PI 派工单指定新名）",
+   "v2_status": "以 PI 2026-09-29 派工单字面为准（后于 §4.6）；如实登记",
+   "triggered_now": true,
+   "detail": {
+    "prereg_v2_clause": {
+     "executor": "deposon_team/plugins/_v5_item35_v2_matrix_{执行日期}.py",
+     "readout": "results/_v5_item35_v2_matrix_{执行日期}.json",
+     "report": "results/_v5_item35_v2_rescript_{执行日期}.md"
+    },
+    "actually_written": {
+     "executor": "deposon_team/plugins/_v5_item35_v2_matrix_2026_09_29.py",
+     "readout": "results/_v5_item35_v2_matrix_result_2026_09_29.json",
+     "report": "results/_v5_item35_v2_matrix_exec_2026_09_29.md"
+    },
+    "nature": "仅命名偏离，0 改任何阈值/判据/口径"
+   }
+  },
+  {
+   "id": "γ-V2-10",
+   "item": "α 腿读数中出现「数学值恰 = 0.05」型近刀锋值（AR6 刀锋格字面只施于 β）",
+   "v2_status": "如实披露；α 判带用「≤ field_tol」⇒ 两种读法同档，0 影响 α 腿结论",
+   "triggered_now": true,
+   "detail": {
+    "cells": [
+     "seed20260832_T2"
+    ],
+    "rule": "AR6 / §3.2.1 刀锋格字面施于 β 的 Δ；本项 0 扩展该规则的适用范围"
+   }
+  }
+ ],
+ "zero_touch_declaration": {
+  "existing_files_modified": 0,
+  "runner_modified": false,
+  "corpus_or_index_modified": false,
+  "derived_json_merged_into_existing": false,
+  "llm_calls": 0,
+  "proxy": false,
+  "key_reads": 0,
+  "new_thresholds": 0
+ },
+ "determinism": "无墙钟时间戳；同输入重跑本 JSON 逐字节一致"
+}
