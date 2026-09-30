@@ -1,0 +1,192 @@
+===== R-13 =====
+  reply file: 9848 B / 50592E36ECAD
+  numeric rows (Tag-A style) = 0
+  B- rows                     = 10
+  E- rows                     = 4
+  TOTAL listed rows           = 14
+  header claim L14            = - 表载 43 项（Tag-A 30 + Tag-B 10 + E 表内 3）：**41 项实测一致 / 1 项 MAIN 内缺失（§3.2 停手项）/ 1 项失配（§2.5 停手项）**
+  Tag-A numbering range       = -..- (n=0, dup=False)
+  --- raw table-ish lines sample (first 6 / last 6 of any | at line start) ---
+    | # | 路径 | 表载 SHA-12 · 字节 | 实测 SHA-12 · 字节 | 结论 |
+    |---|---|---|---|---|
+    | A-1 | `docs/V3X/BOSS_PE_3_RESERVOIR_VERIFY_REPORT_2026_09_15.md` | C28F7F0B530F · 11,079 | C28F7F0B530F · 11,079 | ✅ 一致 |
+    | A-2 | `docs/V3X/CPATH_SIMULATION_REPORT_2026_09_10.md` | DE772CD9E7BA · 6,825 | DE772CD9E7BA · 6,825 | ✅ 一致 |
+    | A-3 | `docs/V3X/D5_DECISIONS_LAND_REPORT_2026_09_15.md` | 8FF1A7C5413F · 21,756 | 8FF1A7C5413F · 21,756 | ✅ 一致 |
+    | A-4 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | 240A7AE4BDFB · 17,803 | 240A7AE4BDFB · 17,803 | ✅ 一致 |
+    | B-9 | `results/_v4_maindir_cleanup_moves_ledger_v6_2026_09_26.md` | CC498BC28525 · 37,629 | CC498BC28525 · 37,629 | ✅ 一致 |
+    | B-10 | `results/_v4_evidence_audit_reconcile_2026_09_26.md` | 68F66904C0C8 · 22,863 | 68F66904C0C8 · 22,863 | ✅ 一致 |
+    | E-1 | `results/_v3_v4_achievements_inventory_3dir_erratum_2026_09_24.md` | 55CD332F66F2 · 10,288 | 55CD332F66F2 · 10,288 | ✅ 一致 |
+    | E-2 | `results/_v3_v4_achievements_inventory_3dir_addendum_2026_09_24.md` | C64146C4CCAC · 23,152 | C64146C4CCAC · 23,152 | ✅ 一致 |
+    | E-3 | `results/_v3_v4_achievements_inventory_3dir_addendum_v2_2026_09_26.md` | （表载留白） | 24C64CC23907 · 37,212 | ✅ 补测登记 |
+    | E-4 | `docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md` | 2DD8039D47E4 · 198,204 | CA8B95DDAA70 · 225,731 | ⛔ 失配（§2.5） |
+  Tag-B ids                   = ['B-1', 'B-10', 'B-2', 'B-3', 'B-4', 'B-5', 'B-6', 'B-7', 'B-8', 'B-9']
+  E ids                       = ['E-1', 'E-2', 'E-3', 'E-4']
+  SOURCE v3: 25091 B / C20D4F58F5C8
+  SOURCE v3 Tag-A rows=30  Tag-B rows=10  E rows=4 => total 44
+  SOURCE v3 E ids = ['E-1', 'E-2', 'E-3', 'E-31', 'E-34', 'E-4']
+
+===== R-14 =====
+  _v4_supp_prereg_v02_add_T1_2026_09_24.md                 52942 B / 802DECE2286A
+  _v4_supp_prereg_v02_add_T15_2026_09_24.md                76991 B / 8898B964A9D9
+  _v4_supp_prereg_v02_add_T15r2_2026_09_26.md              97059 B / 883DCED872B4
+  _v4_supp_prereg_v02_add_L14V3_2026_09_24.md              61547 B / 05B975A86989
+  --- 各件自记 add_T1 值 ---
+  _v4_supp_prereg_v02_add_L14V3_2026_09_24.md: {'L3': '- **性质**：protocol-keeper 追加立线（派工单 2026-09-24 L14+ follow-up，protocol-keeper 起草；本棒从 PI 2026-09-24 派工「L14+ V3 整链重跑预登记——N-26 真审唯一路径（即锁）」—— V3 distill 流水线整链重跑复现 + 采集阶段同步保四元组（prompt_id / prompt_text / resp', 'L5': '- **预登记件本体不动**：`results/_v4_N09_N39_prereg_2026_09_23.md` SHA-12 `0A9EE16267B5`（**盘上已清出**，inventory L800 锁定 SHA-12 + 60,530 B 字面源）锁后**一字不改**；L4 verdict `results/_v4_supp_l4_n26re_verdict.md` SHA-12 `7', 'L22': '| add_T1 追加件（锚定不动） | `results/_v4_supp_prereg_v02_add_T1_2026_09_24.md` | （落盘报值 `48,738 B`） | 48,738 | 盘上在 | L14+ 立线锚定 + LLM 调用纪律沿用 |', 'L526': '- **add_T1 件**：本棒未实测（仅引用 §0 输入件 SHA-12 链字面）；add_T1 件落盘报值 48,738 B'}
+  _v4_supp_prereg_v02_add_L14V3_activation_2026_09_24.md: (无 48,738/52,942 字面)
+  _v4_supp_prereg_v02_add_T15_2026_09_24.md: {'L22': '| **T1 追加件（锚定不动，T1.5 字面源 1）** | `results/_v4_supp_prereg_v02_add_T1_2026_09_24.md` | `802DECE2286A` | 52,942 | T1.5 立线锚定 + K-T1-S1/S3 字面源 + T1 verdict §1-§5 字面 |', 'L525': '- **T1 追加件 `802DECE2286A`**：自报 = `802DECE2286A`（52,942 B）；T1.5 立线件字面引用 `802DECE2286A` 一字不动'}
+  _v4_supp_prereg_v02_add_T15_activation_2026_09_24.md: (无 48,738/52,942 字面)
+  _v4_supp_prereg_v02_add_T15r2_2026_09_26.md: {'L23': '| T1 追加件（锚定不动，T1.5r2 字面源 1） | `results/_v4_supp_prereg_v02_add_T1_2026_09_24.md` | `802DECE2286A` | 52,942 | T1.5r2 立线锚定 + K-T1-S1/S3 字面源 + T1 verdict §1-§5 字面 |'}
+  _v4_supp_prereg_v02_add_T15r2_activation_2026_09_26.md: (无 48,738/52,942 字面)
+  _v4_supp_prereg_v02_add_T1_2026_09_24.md: (无 48,738/52,942 字面)
+  _v4_supp_prereg_v02_add_T1_activation_2026_09_24.md: {'L3': '- **追加件**：`results/_v4_supp_prereg_v02_add_T1_2026_09_24.md`（T1 · L2/L14 温度敏感性 + mimo/teamo 端点补测 稳健性探针），SHA-12 见落盘报值（**48,738 B / 末态文件 hash**）——**待 PI 复核生效，生效即锁，一字不改**'}
+
+===== R-16 =====
+  inventory: 192160 B / 29A853444D42
+  --- NOT-ON-DISK lines ---
+  --- on-disk existence ---
+   ABSENT  _v4_pi_cot_v2_ruleset_result.json
+   ABSENT  _v4_pi_cot_v2_ruleset_verdict.md
+   ABSENT  _v4_pi_cot_v2_ruleset_prereg.md
+   EXISTS  _v4_pi_cot_v2_result.json
+   EXISTS  _v4_pi_cot_v2_verdict.md
+   EXISTS  _v4_pi_cot_v2_prereg.md
+  erratum(3dir): 10288 B / 55CD332F66F2
+
+===== R-17 =====
+  sub  13762 B / 4CD07B3A7DEA
+  main 52465 B / EB22F13D571C
+  --- sub KW_V2 @char 1819 ---
+   KW_V2 = {
+       "KILL_LINE": KW_V1["KILL_LINE"] + (
+           # v2 扩: PI 风格"完成性"/"证伪性"判据词
+           "立案", "完工", "跑完", "跑通", "判据", "判据序列",
+           "真证伪", "假证伪", "实证", "证伪", "死兆", "否决",
+           "PASS判定", "FAIL判定", "FALSIFY", "PASS 立案",
+           "立案", "完工标准", "通过门槛",
+       ),
+       "COST": KW_V1["COST"] + (
+           # v2 扩: PI 风格"资源"/"资金"语境
+           "资源", "资金", "经费", "算账", "无尽资源", "资金有限",
+           "财力", "花钱", "收费", "资源留给", "没资源", "资源不够",
+           "价格", "贵", "便宜", "省钱",
+       ),
+       "CRITERIA": KW_V1["CRITERIA"] + (
+           # v2 扩: deposon 凝子/大一统/硬核/庖丁解牛/虚实闭合/伦理 等 PI 哲学口径
+           "deposon", "凝子", "大一统", "大一统定义", "硬核",
+           "客观", "区别于", "区别", "区分",
+           "庖丁解牛", "数学等价", "物理唯一", "哲学命题", "虚实闭合",
+           "时代铁律", "PI铁律", "PI 铁律",
+           "唯物主义", "唯物史观", "朴素哲学", "马哲",
+           "一视同仁", "一杆进洞", "落地", "实操",
+           "优雅", "优雅回归", "外审",
+           "反哺", "判据结构", "判据优先序",
+           "顶层设计", "准则应用", "诚实边界",
+           "判死先于", "可判", "可证伪", "判死线先于",
+           "判对死因", "F-C3", "T/D/R", "接口协议",
+           "万物理论", "大一统理论", "大一统命题",
+           "伦理", "道德", "严谨", "求是",
+           "数学恒等", "软化", "不软化",
+           "派工单", "规则集", "判据类型", "结构相似度",
+       ),
+       "RISK": KW_V1["RISK"] + (
+           # v2 扩: PI 风格"过敏"/"误导"/"不一致"语境
+           "过敏反应", "过敏", "误导", "误导性",
+           "不一致", "冲突", "不一", "错定", "错位",
+           "假fail", "假pass", "假fail", "假pass", "假证",
+           "过敏感", "BUG", "bug", "假证伪",
+           "不可靠", "不可信", "不安全", "不稳",
+           "不可", "误报", "假",
+       ),
+   
+   n_literals=2 first5=['KILL_LINE', 'KILL_LINE'] last5=['KILL_LINE', 'KILL_LINE']
+   dups=['KILL_LINE']
+  --- main KEYWORDS_V2 @char 6915 ---
+   KEYWORDS_V2: Dict[str, Tuple[str, ...]] = {
+       # KILL_LINE 判死线
+       "KILL_LINE": (
+           "判死线", "判死", "判对死因", "通过", "不通过", "PASS", "FAIL",
+           "阈值", "边界", "达标", "不达标", "kill", "Kill", "KILL",
+           # v2 扩 (基于 72 件 reasoning_full 已现)
+           "立案", "完工", "跑完", "跑通", "判据", "判据序列",
+           "真证伪", "假证伪", "实证", "证伪", "死兆", "否决",
+           "PASS判定", "FAIL判定", "FALSIFY", "PASS 立案",
+           "完工标准", "通过门槛",
+       ),
+       # COST 成本
+       "COST": (
+           "成本", "贵", "便宜", "廉价", "量化", "投入", "开销",
+           "费用", "价格", "付费", "花费", "算力", "消耗",
+           # v2 扩
+           "资源", "资金", "经费", "算账", "无尽资源", "资金有限",
+           "财力", "花钱", "收费", "资源留给", "资源不够",
+           "没钱", "省钱",
+       ),
+       # CRITERIA 准则
+       "CRITERIA": (
+           "准则", "原则", "口径", "规范", "约束", "标准",
+           "大材小用", "落到实处", "与死同行", "虚实回路", "FTFB",
+           "诚实", "不误导", "价值观", "世界观", "道德", "伦理",
+           "顶层", "根", "接口", "协议",
+           # v2 扩
+           "deposon", "凝子", "大一统", "大一统定义", "硬核",
+           "客观", "区别于", "区别", "区分",
+           "庖丁解牛", "数学等价", "物理唯一", "哲学命题", "虚实闭合",
+           "时代铁律", "PI铁律", "PI 铁律",
+           "唯物主义", "唯物史观", "朴素哲学", "马哲",
+           "一视同仁", "一杆进洞", "落地", "实操",
+           "优雅", "优雅回归", "外审",
+           "反哺", "判据结构", "判据优先序",
+           "顶层设计", "准则应用", "诚实边界",
+           "判死先于", "可判", "可证伪", "判死线先于",
+           "F-C3", "T/D/R", "接口协议",
+           "万物理论", "大一统理论", "大一统命题",
+           "严谨", "求是",
+           "数学恒等", "软化", "不软化",
+           "派工单", "规则集", "判据类型", "结
+   n_literals=0 first5=[] last5=[]
+   dups=[]
+
+===== R-18 =====
+  _v4_commission_paper_final_glm_2026_09_24_v4.md: 31531 B / D5337702CEC9
+    L233: 4. T1.5r2 verdict 字节从 v3 §Z 字面 41,246 → 实测 64,145（v3 出件时未及实测，v4 件按 2026-09-26 21:1x 实测落账）
+    L234: 5. v3 件 §Z 「委托信 v2 glm」槽位误把 v1 字面（10,515 B / `53A425FE1BD2`）写入了 v2 槽位（实际 v2 glm 为 13,749 B / `F3B3E13A0F1B`）；本 v4 件已按实测写正确值（v3 件 0 触动，未回头改）
+    L244: - **本件 SHA-12 自核**：沿 v3 件既有风格，§Z 表「本委托信 v4」行未回填本件 SHA（避免自指 SHA 循环——任何回填都会改变文件字节，进而改变本件 SHA）。**本件最终实测值由 parent 回报段引用**，不在件内回填。
+    L248: ## §Z SHA-12 自核尾注
+    L252: | **本委托信 v4**（SHA 自核节一律避免自指 SHA 循环；最终实测 SHA 见 §7 老实交代段） | `letters/_v4_commission_paper_final_glm_2026_09_24_v4.md` | 31,167 | （见 §7 老实交代段） |
+  _v4_commission_wechat_report_coze_2026_09_24_v4.md: 21433 B / 802C705E1469
+    L62: - T1.5r2 verdict：**`results/_v4_supp_t15r2_verdict.md`（64,145 B · SHA-12 `8355724A26E3`，扩样 N_min 根因消除；v3 件 §Z 表曾列 41,246 B 系出件时未及实测，v4 件按 2026-09-26 21:1x 实测 64,145 B 落账）**
+    L64: - T1.5 verdict：`results/_v4_supp_t15_verdict.md`（52,884 B · SHA-12 `52C985429C91`；v3 件 §Z 表字节栏空，v4 件按实测落账）
+    L178: 4. T1.5r2 verdict 字节从 v3 §Z 字面 41,246 → 实测 64,145（v3 出件时未及实测，v4 件按 2026-09-26 21:1x 实测落账）
+    L179: 5. v3 件 §Z 「委托信 v2 wechat」槽位误把 v1 字面（7,197 B / `15F8227308BC`）写入了 v2 槽位（实际 v2 wechat 为 10,599 B / `389C51E70D19`）；本 v4 件已按实测写正确值（v3 件 0 触动，未回头改）
+    L180: 6. v3 件 §Z 「委托信 v2 glm」槽位误把 v1 字面（10,515 B / `53A425FE1BD2`）写入了 v2 槽位（实际 v2 glm 为 13,749 B / `F3B3E13A0F1B`）；本 v4 件已按实测写正确值（v3 件 0 触动，未回头改）
+    L186: - **本件 SHA-12 自核**：沿 v3 件既有风格，§Z 表「本委托信 v4」行未回填本件 SHA（避免自指 SHA 循环——任何回填都会改变文件字节，进而改变本件 SHA）。**本件最终实测值由 parent 回报段引用**，不在件内回填。
+    L190: ## §Z SHA-12 自核尾注
+    L194: | **本委托信 v4**（SHA 自核节一律避免自指 SHA 循环；最终实测 SHA 见 §7 老实交代段） | `letters/_v4_commission_wechat_report_coze_2026_09_24_v4.md` | 21,069 | （见 §7 老实交代段） |
+
+===== R-19 =====
+  _v4_maindir_cleanup_manifest_2026_09_24.md: 19104 B / 32CC61D394F2
+  _v4_maindir_cleanup_manifest_v2_2026_09_26.md: 27909 B / F586A5A21584
+  _v4_noise_cleanup_manifest_v2_2026_09_24.md: 9683 B / 90253E8342DA
+    L147: 4. **主目录计数 1437 → 833**:差额 -604 大于 -6(本棒实际删除件),系派单时刻 vs 落地时刻 T1 在跑新增文件 + 路径动态变化所致(主目录递归文件计数为活态指标,非冻结指标)。本棒实际仅删 6 件,差额归因诚实标注。
+  _v4_noise_cleanup_manifest_v3_2026_09_25.md: 24491 B / 6F3F6FA3AB1D
+    L236: 9. **主目录计数 945 → 908**：差额 -37 件小于 -47 件（本棒实际删除件），系清理期间 (00:51-01:02 间) T1.5 棒在跑 + 4 路实验在跑 + 当前 worker 自身工具调用新增若干件（manifest 自身落盘 + grep/read 临时件等）所致。**最终实测 after=908**（详见 §F），主目录递归计数为活态指标而非冻结指标。
+  _v4_noise_cleanup_manifest_v4_2026_09_27.md: 38001 B / 82E90FF496AE
+
+===== R-20 =====
+  D:\私人资料\deposon-sub\_check_conv_archive.ps1: 2326 B / C89D46C47026
+  BOM=False  CRLF=0
+  total lines = 50; last 10 lines verbatim:
+    L41: "Write-Output ('dataset_v11_SHA12: ' + $dsInfo.sha12 + ' (expect 7B01CD835A41)')"
+    L42: "Write-Output ('d2_wave1_SHA12:    ' + $w1Info.sha12 + ' (expect 439721007AAF)')"
+    L43: "Write-Output ('d2_wave2_SHA12:    ' + $w2Info.sha12 + ' (expect 41D6C28CA87C)')"
+    L44: "Write-Output ('---DONE---')"
+    L45: ''
+    L46: ''
+    L47: ''
+    L48: ''
+    L49: ''
+    L50: "Write-Output 'DONE'"
+
+===== R-21 =====
+  verdict: 12883 B / 44D9BAD9039B
+    L127: - 本棒自扫（11 模式含 tp- / sp- / sk-teamo-）：落盘前 0 命中；落盘后 0 命中

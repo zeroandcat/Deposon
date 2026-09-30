@@ -1,0 +1,9 @@
+--- version markers ---
+L1217: - **不覆盖既有件**：仅 redact 3 件（line-level 行级替换，非整件覆盖）+ 新建 2 件 R4 处置清单 + 追加本节至勘误链 v13 末行；既有件 0 覆盖
+L1815: - **本勘误链 v18 + 本轮所有下游引用** 锚链口径统一为 **on-disk SHA-12**（盘实测 `Get-FileHash -Algorithm SHA256` 前 12 字符 + uppercase）
+L1821: - **本勘误链 v18 全引用 on-disk SHA 单一口径**（v17 `2DD8039D47E4` 等）
+L1833: **(i) 清单补账件 v2 出件**：本轮派工 `results/_v3_v4_achievements_inventory_3dir_addendum_v2_2026_09_26.md` 已出（沿派工单 A 字面），落盘字节 + SHA-12 由 doc-writer handoff 报值；与盘点件 + 勘误件 + 补账件 v1 + 勘误链 v17 五件并列存在；下游引用一律五件套并列引用。
+L2003: > **补账件 v2.1 出件**（沿 `results/_v3_v4_achievements_inventory_3dir_addendum_v2p1_2026_09_26.md` 17,130 B · SHA-12 `4C731A625868`）：本棒由 doc-writer 同步出件，将三拍板（taga30=delist / e4ver=v18 / v2drift=errata_v2）字面录入补账件 v2.1，本件 v19 E-36 同步追加 → 七件套并列（盘点件 + 勘误件 + 补账件 v1 + 补账件
+L2262: 1. **本勘误链 v21+ 末行出证署名** = **Mavis 团队**（doc-writer 起草 / verdict-keeper 裁决 / verifier 签字 / evidence-auditor 审链，按实际出件 agent 署名）—— **Trae code 名头不再沿用**（Trae code 名头仅指 v3 期原始出证方历史快照，不挪用至 v21+ 续写节）。
+L2290: > **锚定证据**：派工单字面声明「勘误链 v20（FCCFCC869E7A，E-37 格式）」—— 实测核验 ✓（v19 `849D76BE3A06` 239,387 B → v20 `FCCFCC869E7A` 257,362 B，差异源于 v20 追加 §22.16 E-37（4 子条）+ §22.17（v20 SHA 自核 4 小节）+ §22.18（E-37 边界声明）共三节，字节 239,387 → 257,362）
+L2399:   - **对外引用一律以盘上实测为准**（沿周报自身先例「**本件数字一律以盘上实测为准**」字面 —— 本勘误链 v22+ 任何对外引用本勘误链字节 / SHA 时 = 以 §22.22.3 字面登记的「盘上实测值」为准；周报 §八 字面登记值仅作「上游 PI 表述」字面登记，不挪用为对外引用值）

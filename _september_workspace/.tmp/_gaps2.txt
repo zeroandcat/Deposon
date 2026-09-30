@@ -1,0 +1,22 @@
+--- inventory: any NOT/ON-DISK variant (case-insens) ---
+  L21: PI decision recorded in the parent session: the **paper final draft + project-report WeChat commission letter will not contain an outline**; GLM / coze are free to structure as they wish. This inventory therefore acts as
+  L1800: All SHA-12 values in this inventory are disk-tested via `Get-FileHash -Algorithm SHA256`, first 12 hex chars. No fabricated hashes; every value here traces to a real byte-for-byte file on disk at workspace `D:/private-da
+  L1867: - **Trailing slash handling**: paths like `corpus/v20/by_model/coze/coze_artifact_v_2026_09_16.json` are recorded by relative path; in some asset-scanner outputs the by_model sub-tree inherits a corrupted LastWriteTime (
+  total on-disk mentions = 3
+
+--- inventory: pi_cot_v2 registered filenames ---
+  L1385: | results/_v4_pi_cot_v2_prereg.md | CC25C5149CE1 | 4247 | A | IN-EFFECT | 2026/09/23 17:56:05 | Task-B v2 prereg |
+  L1386: | results/_v4_pi_cot_v2_prereg_activation_2026_09_23.md | 00584E5A5C78 | 1016 | A | IN-EFFECT | 2026/09/23 18:03:11 | Task-B v2 activation |
+  L1435: | results/_v4_pi_cot_v2_dataset.json | 7B01CD835A41 | 12672 | B | IN-EFFECT | 2026/09/24 15:55:01 | Task-B v2 dataset |
+  L1482: | results/_v4_pi_cot_v2_questionnaire_v1.md | 7B14CDB31D21 | 12402 | B | IN-EFFECT | 2026/09/24 10:51:01 | Task-B questionnaire v1 |
+  L1497: | results/_v4_pi_cot_v2_collection_log.md | 167AD91F198E | 1181 | C | IN-EFFECT | 2026/09/23 17:49:35 | Task-B v2 collection log |
+  L1688: | results/_v4_pi_cot_v2_prereg.md | V4 | PREREG | CC25C5149CE1 | 2026/09/23 17:56:05 | Task-B v2 prereg |
+  L1689: | results/_v4_pi_cot_v2_prereg_activation_2026_09_23.md | V4 | PREREG | 00584E5A5C78 | 2026/09/23 18:03:11 | Task-B v2 activation |
+  L1784: | results/_v4_pi_cot_v2_dataset.json | V4 | ARTIFACT | 7B01CD835A41 | 2026/09/24 15:55:01 | Task-B v2 dataset |
+  L1785: | results/_v4_pi_cot_v2_questionnaire_v1.md | V4 | DECISION | 7B14CDB31D21 | 2026/09/24 10:51:01 | Task-B questionnaire v1 |
+  L1917: esults/_v4_pi_cot_v2_dataset.json 7B01CD835A41.)
+
+--- R-21 rerun file ---
+  results\_v4_track2_multimodel_rerun.py: 38719 B / 5C0983EAAF11
+  SENSITIVE_PATTERNS n=10
+  names=['api_key_literal', 'sk_literal', 'gpt_endpoint', 'claude_endpoint', 'ark_endpoint', 'Bearer_token', 'url_token_param', 'tp_token', 'sp_key', 'sk_teamo']
