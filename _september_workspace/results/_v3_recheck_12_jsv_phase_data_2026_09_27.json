@@ -1,0 +1,177 @@
+{
+  "schema": "v3_recheck_12_jsv_phase_data/2026_09_27/1",
+  "title": "V3-R #12 BOSS-PE-2 补审 (b) 专项 · Jordan-Sucher-Votek 1999 相图联网检索调取件",
+  "date": "2026-09-27",
+  "parent_case": {
+    "prereg": "results/_v3_recheck_prereg_v1_2026_09_27.md",
+    "kill_line": "K-V3R-12",
+    "rescript": "results/_v3_recheck_12_rescript_2026_09_27.md",
+    "result": "results/_v3_recheck_12_result_2026_09_27.json",
+    "prereg_clause": "§1.2 #12 (b): transverse_ising_region 用真 phase boundary 测试（沿 Jordan-Sucher-Votek 1999 数值解 + per-model empirical 散点）"
+  },
+  "runtime": "0 LLM; stdlib only (json/hashlib); 联网仅 GET 公开文献元数据检索（PI 2026-09-27 授权，ask_421d7df4aa0929633c265c47 Q3）; 0 注册 / 0 登录 / 0 提交表单; 0 teamorouter/openrouter 调用（故 0 代理需求）; 只读输入，既有件 0 触动",
+  "skill": {
+    "plugin": "@scientific-research-workflows",
+    "skill": "experimental-design",
+    "resolved_path": "C:\\Users\\Administrator\\.minimax\\v2\\plugin-cache\\official\\sha256-tree-v1-611965fcb6208a5dbeb28d594ad7ca0f8b1f8fd62fc33c189e56a50e49db19cb\\skills\\experimental-design\\SKILL.md",
+    "sha12_of_SKILL_md": "0a314eed103a",
+    "bytes": 13044,
+    "fallback_used": false,
+    "note": "首查 .minimax\\plugins 与 .minimax\\skills 均 0 命中（plugins 目录为空；skills 223 项中无 scientific-research-workflows）；经 plugin-cache 全盘定位成功，SHA-12 与 #12 rescript 老实交代段第 7 条所记 0a314eed103a 逐字一致 => 未 fallback，0 编造 skill 指令",
+    "applied": [
+      "区组 = 9 model（block，block = model）",
+      "伪重复声明：per-model 样本嵌套于 model，独立重复真实层级 = 9 model（非 900）——沿 #12 既有字面",
+      "本件 0 新增处理格 / 0 新阈值 / 0 新 seed（0 重跑，0 重算）"
+    ]
+  },
+
+  "verdict": {
+    "citation": "Jordan-Sucher-Votek 1999",
+    "verdict_code": "NOT_FOUND / 疑似误记或虚构",
+    "jsv_1999_exists": false,
+    "phase_diagram_numbers_retrieved_from_jsv": null,
+    "fabricated_numbers": 0,
+    "statement_cn": "经 3 个独立权威文献索引（Crossref / arXiv / OpenAlex）共 21 次 GET 检索，**「Jordan-Sucher-Votek 1999」查无**。核心证据：姓氏 **Votek** 在 Crossref 作者索引（query.author=Votek → total-results 0）与 OpenAlex 作者索引（authors?search=Votek → count 0）中**完全不存在**；Sucher 确为真实姓氏（OpenAlex 130 位作者），但无一为凝聚态/横场 Ising 领域，且 arXiv 中 au:\"Sucher\" AND abs:\"Ising\" → 0。**0 编造任何 JSV 相图数值**；本件不将任何相似文献冒充为 JSV 1999。"
+  },
+
+  "search_log": {
+    "note": "全部为 GET 公开检索/元数据端点；0 注册 0 登录 0 提交表单。时间为本地时钟（CST, UTC+8）。失败项如实登记。",
+    "online": [
+      {"n": 1, "ts_cst": "2026-09-27 16:14", "endpoint": "api.crossref.org", "query": "works?query.bibliographic=Jordan+Sucher+Votek+transverse+Ising+1999&rows=8", "result": "8 条返回，无任何一条含 Jordan/Schuch/Votek 姓名或该三人组合", "outcome": "NO_MATCH"},
+      {"n": 2, "ts_cst": "2026-09-27 16:14", "endpoint": "export.arxiv.org", "query": "all:\"transverse field Ising\" AND au:Votek", "result": "opensearch:totalResults = 0", "outcome": "NO_MATCH"},
+      {"n": 3, "ts_cst": "2026-09-27 16:15", "endpoint": "export.arxiv.org", "query": "au:\"Sucher\" AND abs:\"Ising\"", "result": "opensearch:totalResults = 0", "outcome": "NO_MATCH"},
+      {"n": 4, "ts_cst": "2026-09-27 16:15", "endpoint": "export.arxiv.org", "query": "au:\"Schuch\" AND au:\"Vojta\"（拼写变体假设：Sucher→Schuch、Votek→Vojta）", "result": "opensearch:totalResults = 0", "outcome": "NO_MATCH"},
+      {"n": 5, "ts_cst": "2026-09-27 16:15", "endpoint": "html.duckduckgo.com", "query": "\"Jordan-Sucher-Votek\"", "result": "web_fetch network request failed", "outcome": "FAILED"},
+      {"n": 6, "ts_cst": "2026-09-27 16:15", "endpoint": "api.crossref.org", "query": "works?query.author=Jordan+Sucher+Votek&filter=from-pub-date:1998-01-01,until-pub-date:2000-12-31", "result": "1998-2000 窗口内 0 条与该三人组合相关（J. Sucher 的 1998-2000 命中为 QED 二体问题 / 医学 / 会计学等无关领域）", "outcome": "NO_MATCH"},
+      {"n": 7, "ts_cst": "2026-09-27 16:15", "endpoint": "api.crossref.org", "query": "works/10.1103/PhysRevB.60.730", "result": "Resource not found", "outcome": "INCONCLUSIVE_EXCLUDED", "exclusion_reason": "Crossref/APS DOI 大小写敏感性未排除（后测 n=9 证实端点本身有效）=> 本条**不计入证据**"},
+      {"n": 8, "ts_cst": "2026-09-27 16:15", "endpoint": "api.crossref.org", "query": "works/10.1007%2F978-3-540-49865-0_2（方法对照探针）", "result": "OK / 返回完整记录", "outcome": "METHOD_VALIDATED"},
+      {"n": 9, "ts_cst": "2026-09-27 16:16", "endpoint": "api.crossref.org", "query": "works?filter=doi:10.1103/physrevb.60.730", "result": "total-results 0", "outcome": "INCONCLUSIVE_EXCLUDED", "exclusion_reason": "同 n=7，大小写敏感性未排除，不计入证据"},
+      {"n": 10, "ts_cst": "2026-09-27 16:16", "endpoint": "api.crossref.org", "query": "works?query.author=Votek", "result": "total-results = 0", "outcome": "DECISIVE_NEGATIVE", "weight": "核心证据"},
+      {"n": 11, "ts_cst": "2026-09-27 16:16", "endpoint": "api.crossref.org", "query": "works?query.bibliographic=Votek", "result": "total-results = 0", "outcome": "DECISIVE_NEGATIVE", "weight": "核心证据"},
+      {"n": 12, "ts_cst": "2026-09-27 16:16", "endpoint": "export.arxiv.org", "query": "all:Votek", "result": "opensearch:totalResults = 0", "outcome": "DECISIVE_NEGATIVE", "weight": "核心证据"},
+      {"n": 13, "ts_cst": "2026-09-27 16:16", "endpoint": "www.mojeek.com", "query": "\"Jordan-Sucher-Votek\"", "result": "HTTP 403（反自动化拦截）", "outcome": "FAILED"},
+      {"n": 14, "ts_cst": "2026-09-27 16:17", "endpoint": "search.marcia.cc（searx 公共实例）", "query": "\"Jordan-Sucher-Votek\"", "result": "域已停放售卖，非可用 searx 实例", "outcome": "FAILED"},
+      {"n": 15, "ts_cst": "2026-09-27 16:17 (x2)", "endpoint": "api.semanticscholar.org", "query": "graph/v1/paper/search?query=Jordan-Sucher-Votek…", "result": "HTTP 429 Too Many Requests（无 key 限流）", "outcome": "FAILED"},
+      {"n": 16, "ts_cst": "2026-09-27 16:17", "endpoint": "api.openalex.org", "query": "works?search=Jordan Sucher Votek", "result": "count = 13，top-5 全为无关的 in-context learning / 公司治理 / LLM 综述文献，无一为 Ising 相图文献", "outcome": "NO_MATCH"},
+      {"n": 17, "ts_cst": "2026-09-27 16:18", "endpoint": "api.openalex.org", "query": "authors?search=Votek", "result": "meta.count = 0（results 为空数组）", "outcome": "DECISIVE_NEGATIVE", "weight": "核心证据"},
+      {"n": 18, "ts_cst": "2026-09-27 16:18", "endpoint": "api.openalex.org", "query": "authors?search=Sucher", "result": "meta.count = 130；top-5 = Nikolaus J. Sucher（社区学院数学教育）/ Joseph Sucher（UMD，QED 多体理论）/ Robert Sucher（Medical University of Graz，医学）/ Kathryn P. Sucher（医学）/ Joseph F. Sucher（医学）——**无一为横场 Ising / 凝聚态相图**", "outcome": "NO_MATCH"},
+      {"n": 19, "ts_cst": "2026-09-27 16:19", "endpoint": "api.openalex.org", "query": "works?filter=publication_year:1999&search=transverse Ising chain critical line phase diagram", "result": "count = 21，top-8 全为 XY 链随机场 / Haldene-gap 反铁磁体 / 价键固体 / 格气等其他 1999 文献，无 Jordan/Schuch/Vojta 署名者", "outcome": "NO_MATCH"},
+      {"n": 20, "ts_cst": "2026-09-27 16:20", "endpoint": "api.crossref.org", "query": "works/10.1016%2F0003-4916%2870%2990270-8（对照候选存在性核验）", "result": "OK / 返回完整记录", "outcome": "CANDIDATE_VERIFIED"},
+      {"n": 21, "ts_cst": "2026-09-27 16:20", "endpoint": "api.crossref.org", "query": "works/10.1007%2F978-3-540-49865-0（对照候选存在性核验）", "result": "OK / 返回完整记录", "outcome": "CANDIDATE_VERIFIED"}
+    ],
+    "online_totals": {"requests_attempted": 21, "succeeded": 15, "failed": 6, "inconclusive_excluded": 2},
+    "local": [
+      {
+        "n": "L1",
+        "tool": "grep (repo-wide, pattern: Jordan-Sucher|Jordan et al|Sucher|Votek|Schurer)",
+        "result": "9 命中，**全部**落在 V3-R 派生物内：results/_v3_recheck_prereg_v1_2026_09_27.md (2)、_v3_recheck_12_rescript (2)、_v3_recheck_12_result (1)、_v3_recheck_12_executor (3)；V3 源件 0 命中",
+        "outcome": "PROVENANCE_FINDING"
+      },
+      {
+        "n": "L2",
+        "tool": "grep (results/boss_pe_2_real_transverse_ising_2026_09_15.json: reference|spec_source|Pfeuty)",
+        "result": "该 JSON **无 `reference` 字段**；spec_source = \"P_E_DOUBAN_EMBEDDING_V0_SPEC.md §3 + D5 1A strict threshold\"；note 仅称 \"h_c(T) 为 Pfeuty 1D chain 简化\"。**JSV 1999 在此 0 命中**",
+        "outcome": "PROVENANCE_FINDING"
+      },
+      {
+        "n": "L3",
+        "tool": "grep (deposon_team/plugins/boss_pc_2_transverse_field_ising.py: Ising|reference|Pfeuty|critical_line)",
+        "result": "实现文件仅引 Pfeuty（`PFEUTY_H_C_OVER_J = 1.0  # 1D chain Pfeuty 严格解 h_c/J = 1`），docstring 自承 \"简化: 沿 T_frac 作 h_c(T) 平均值\" 而函数体 `return 0.5`。**JSV 1999 在此 0 命中**",
+        "outcome": "PROVENANCE_FINDING"
+      }
+    ]
+  },
+
+  "spelling_variant_hypotheses_tested": [
+    {"hypothesis": "Sucher -> Schuch 且 Votek -> Vojta", "probe": "arXiv au:\"Schuch\" AND au:\"Vojta\"", "result": "0 结果，该变体组合亦无产出"},
+    {"hypothesis": "Schurer / Sucher 为 Jordan 的转写误差", "probe": "arXiv au:\"Sucher\" AND abs:\"Ising\"", "result": "0 结果"},
+    {"hypothesis": "Votek 为 Votrubá / Votruba / 斯洛伐克语拼写变体", "probe": "Crossref query.author=Votek；Crossref query.bibliographic=Votek；OpenAlex authors?search=Votek", "result": "三者均 0；**无任何形近真实作者可对应**"},
+    {"hypothesis": "1999 年横场 Ising 链临界线论文存在但作者名误记", "probe": "OpenAlex works filter publication_year:1999 + fulltext 'transverse Ising chain critical line phase diagram'", "result": "count 21，无 Jordan/Schuch/Vojta 署名者"}
+  ],
+  "variant_hypothesis_conclusion": "0 条变体假设产出可定位文献。**不能判定为某一真实文献的拼写变体；判定为查无（误记或虚构）。**",
+
+  "closest_real_candidates": {
+    "IMPORTANT": "以下条目**均非 JSV 1999**，仅为 PI 拍板时可选的**真实**横场 Ising 相界文献。本件**不**以其替代 JSV、**不**以其数值参与任何判定（#12 主判定不依赖 JSV 数值，见 check 件 §4）。核验状态分列。",
+    "items": [
+      {
+        "rank": 1,
+        "citation": "Pfeuty, P. (1970). The one-dimensional Ising model with a transverse field. Annals of Physics 57(1), 79-90.",
+        "doi": "10.1016/0003-4916(70)90270-8",
+        "url": "https://doi.org/10.1016/0003-4916(70)90270-8",
+        "crossref_verified": true,
+        "verification_method": "Crossref works/<DOI> 直查（n=20）",
+        "crossref_facts": {"type": "journal-article", "publisher": "Elsevier BV", "volume": "57", "issue": "1", "page": "79-90", "issued": "1970-03", "is-referenced-by-count": 1542},
+        "relation_to_repo": "**本仓 V3 已冻结引用的就是这篇**（boss_pc_2 `PFEUTY_H_C_OVER_J = 1.0  # 1D chain Pfeuty 严格解 h_c/J = 1`；PE-2 JSON note \"h_c(T) 为 Pfeuty 1D chain 简化\"）",
+        "numeric_values_retrieved": false,
+        "numeric_retrieval_note": "本次仅取得 Crossref **书目元数据**，**未**取得该文正文/数值表（Elsevier TDM 全文需另行授权）。本件 0 声称已调取其相图数值"
+      },
+      {
+        "rank": 2,
+        "citation": "Chakrabarti, B. K.; Dutta, A.; Sen, P. (1996). Quantum Ising Phases and Transitions in Transverse Ising Models. Lecture Notes in Physics Monographs. Springer, Berlin/Heidelberg.",
+        "doi": "10.1007/978-3-540-49865-0",
+        "isbn": {"print": "9783540610335", "electronic": "9783540498650"},
+        "url": "https://doi.org/10.1007/978-3-540-49865-0",
+        "crossref_verified": true,
+        "verification_method": "Crossref works/<DOI> 直查（n=21）+ 章节 DOI 直查（n=8）",
+        "crossref_facts": {"type": "book", "publisher": "Springer Berlin Heidelberg", "issued": "1996", "is-referenced-by-count": 220},
+        "relevant_chapters": [
+          {"doi": "10.1007/978-3-540-49865-0_2", "title": "Transverse Ising Chain (Pure System)", "page": "17-49"},
+          {"doi": "10.1007/978-3-540-49865-0_3", "title": "Transverse Ising System in Higher Dimensions (Pure Systems)", "page": "50-67"},
+          {"doi": "10.1007/978-3-540-49865-0_5", "title": "Dilute and Random Transverse Ising Systems", "page": "99-117"}
+        ],
+        "why_candidate": "唯一在本次检索中**实测存在**且**专章覆盖横场 Ising 链/高维纯系统相图**的专著；若 PI 要一条可调取数值的真实相界来源，这是最对口者",
+        "numeric_values_retrieved": false,
+        "numeric_retrieval_note": "同上，仅元数据；章节 PDF 未取"
+      },
+      {
+        "rank": 3,
+        "citation": "Lieb, E.; Schultz, T.; Mattis, D. (1961). Two soluble models of a four-dimensional Ising-like problem. Annals of Physics 16, 407-436.",
+        "doi": "10.1016/0003-4916(61)90115-4",
+        "crossref_verified": "indirect",
+        "verification_method": "DOI 于 Pfeuty 1970 记录的参考文献列表中实测出现（n=20 响应内）；本件**未**单独直查该 DOI",
+        "numeric_values_retrieved": false
+      }
+    ],
+    "explicitly_not_offered_as_jsv": true
+  },
+
+  "root_cause_finding": {
+    "id": "J-1（文献溯源，PREREG-PROVENANCE 失效）",
+    "finding": "**「Jordan-Sucher-Votek 1999」在 V3 源件中根本不存在，其在盘上的首次出现就是预登记件本身。**",
+    "evidence": [
+      "L2：boss_pe_2_real_transverse_ising_2026_09_15.json **无 `reference` 字段**，spec_source 指向内部 spec 文件，全文 0 处 JSV",
+      "L3：deposon_team/plugins/boss_pc_2_transverse_field_ising.py 只引 Pfeuty，全文 0 处 JSV",
+      "L1：全仓 9 处 JSV 全部位于 V3-R 派生物（prereg v1 与 #12 三件套）"
+    ],
+    "collateral_finding": "预登记 `results/_v3_recheck_prereg_v1_2026_09_27.md` 自称两处（§0 不引段「…Pfeuty 1D Ising / **Jordan-Sucher-Votek 1999** / Needleman & Wunsch 1970 沿 V3 既引」；§对应段「…沿 V3 JSON `reference` / `spec_source` 字面，不另引」）**溯源声明与盘上事实不符**：V3 JSON 既无 `reference` 字段亦无 JSV 字面。",
+    "consequence": "预登记 §1.2 #12(b) 的构造要求「沿 JSV 1999 数值解」**自始不可满足**（引用不存在），这是 **K-V3R-12 补审构造层面的一处独立缺陷**，此前 12 号 rescript 仅登记为「缺件」（γ₂：0 命中/0 联网），**未识别其溯源本身即失效**。本件据实升级登记。",
+    "no_touch_statement": "预登记件与 #12 三件套均 byte 0 触动；本件 0 代为修订，0 合并派生 JSON"
+  },
+
+  "impact_on_12_main_verdict": {
+    "verdict_unchanged": true,
+    "reason": "#12 主判定（真相界 FAIL / 维持「假成立」，outside(>0.15) = 0/9）**完全不依赖 JSV 数值**：其真相界来自 #12 自实现的 1D 精确临界线 sinh(2K)sinh(2Γ)=1（闭式 vs 二分最大偏差 4.441e-16，残差 ≤ 2.220e-16，7/7 自校验通过）。JSV 查无**不改变**该判定的任何输入或结论",
+    "strengthening": "查无结论**加强**而非削弱 #12 判定：原 PASS 的死因（硬编码 0.5 × 量纲错配）本已独立成立，JSV 缺件现进一步证明**原标注所依据的相界对照链在文献层面亦为悬空**",
+    "carve_out": "但须诚实标出：#12 rescript §3.1 所引 1D 精确临界**方程本身**本次**未**取得逐字文献出处（已实测存在的 Pfeuty 1970 / Chakrabarti-Dutta-Sen 1996 均未取正文），其依据仍是 #12 自身的数值自校验 + 常规教科书结论。**该方程的文献级引用仍为待补项**"
+  },
+
+  "fabrication_guard": {
+    "jsv_numbers_fabricated": 0,
+    "similar_paper_impersonated_as_jsv": false,
+    "external_citations_added_beyond_repo_existing": 0,
+    "note": "本件所列 closest_real_candidates 全部经 Crossref 实测存在并逐字给出 DOI/卷期页码，**0 冒充为 JSV 1999**，0 用于任何判定"
+  },
+
+  "hashes": {
+    "convention": "SHA-12 = hashlib.sha256(file_bytes).hexdigest()[:12]，小写",
+    "note": "自哈希不可内含，故本件不内嵌自身 SHA-12；两件实测值见 check 件署名段上方（由 Mavis 团队 worker 落盘后以 PowerShell [System.Security.Cryptography.SHA256] 对全文字节实测，与 hashlib.sha256 等价）",
+    "read_only_unchanged_verified": {
+      "results/_v3_recheck_prereg_v1_2026_09_27.md": {"bytes": 37346, "sha12": "88052d7db895", "matches_value_recorded_in_12_rescript": true},
+      "results/boss_pe_2_real_transverse_ising_2026_09_15.json": {"bytes": 3553, "sha12": "8933d61b180a", "matches_value_recorded_in_12_rescript": true},
+      "note": "两件实测值与 #12 rescript 所记逐字一致 => 既有件 byte 0 触动（prereg 与 boss_pe_2 均本件只读）"
+    },
+    "no_key_self_scan": "两件 key 形态（sk-* / api_key= / Bearer / token=）正则自扫 0 命中"
+  },
+
+  "signature": "Mavis 团队 worker 出件｜2026-09-27"
+}

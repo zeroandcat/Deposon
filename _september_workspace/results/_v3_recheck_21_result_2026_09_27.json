@@ -1,0 +1,1661 @@
+{
+ "task": "V3-R #21 KT-B1 失真上界重评（K-V3R-21，三面并报）",
+ "date": "2026-09-27",
+ "author": "Mavis 团队 worker",
+ "prereg": "results/_v3_recheck_prereg_v1p1_2026_09_27.md",
+ "kill_line": "K-V3R-21：(a) 面 2 3/3 ±5% 一致 (b) 面 3 ≥3 臂对 n_distinct>3 且 std>0 (c) 3 seed × 10k resamples 臂间大小序 3/3 不变；全满足 ⇒ 可判，任一不满足 ⇒ 维持不明 + γ",
+ "conclusion_ceiling_frozen": "分面结论；deposon 侧 D(M,T) 真值不可算 ⇒ 不得升级为「deposon 优于/不优于 OT·KD·LLMLingua」的跨面结论",
+ "dimension_exclusivity_declaration": "D_dec = 决策不一致率量纲；0.0004/0.0028/0.4634 = D(M,T) 失真上界量纲；二者不可并排比大小（0 混算、0 跨面主张）",
+ "frozen_params": {
+  "kt_b1_kill_line_0.95": 0.95,
+  "repro_tolerance": 0.05,
+  "conservation_tolerance": 1e-06,
+  "n_resamples": 10000,
+  "seeds": [
+   42,
+   123,
+   456
+  ],
+  "new_thresholds_introduced": 0
+ },
+ "input_chain": {
+  "prereg_v1p1": {
+   "path": "results/_v3_recheck_prereg_v1p1_2026_09_27.md",
+   "sha12": "bcc3cee23e82",
+   "bytes": 42970,
+   "access": "read_only"
+  },
+  "prereg_v1": {
+   "path": "results/_v3_recheck_prereg_v1_2026_09_27.md",
+   "sha12": "88052d7db895",
+   "bytes": 37346,
+   "access": "read_only"
+  },
+  "verdict_3item": {
+   "path": "results/_v3_n_recheck_llm_verdict_2026_09_27.md",
+   "sha12": "426cfe18cf65",
+   "bytes": 21332,
+   "access": "read_only"
+  },
+  "ktb1_data_prev": {
+   "path": "results/_v3_n_ktb1_distortion_bound_data_2026_09_27.json",
+   "sha12": "26c0d0b0ffb6",
+   "bytes": 6411,
+   "access": "read_only"
+  },
+  "v19_frozen": {
+   "path": "results/deposon_v19_benchmark_fixes.json",
+   "sha12": "910c4333eead",
+   "bytes": 409104,
+   "access": "read_only"
+  },
+  "conservation_py": {
+   "path": "verifier/audit/conservation.py",
+   "sha12": "4bdec2683f06",
+   "bytes": 22105,
+   "access": "read_only"
+  },
+  "kt_b1_spec": {
+   "path": "docs/V3X/KT_B1_SPEC_V0.1.md",
+   "sha12": "0410ca0fbdae",
+   "bytes": 35688,
+   "access": "read_only"
+  },
+  "kt_b1_rework": {
+   "path": "docs/V3X/KT_B1_REWORK_REPORT_2026_09_10.md",
+   "sha12": "baef94e393de",
+   "bytes": 11478,
+   "access": "read_only"
+  },
+  "p_b_spec": {
+   "path": "docs/V3X/P_B_DISTORTION_BOUND_V0_SPEC.md",
+   "sha12": "bb7ca9838150",
+   "bytes": 7126,
+   "access": "read_only"
+  },
+  "kt_anchor_bak": {
+   "path": "verifier/handoff/KT_ABC1_anchors_sha256_12.root_session_11318B.bak_2026_09_23.json",
+   "sha12": "6e9cd8cd8e07",
+   "bytes": 11318,
+   "access": "read_only"
+  }
+ },
+ "external_readonly": {
+  "external_archive": "D:/私人资料/_non_upload_local_archive/",
+  "items": {
+   "B1_Sinkhorn_OT": {
+    "path": "D:/私人资料/_non_upload_local_archive\\scripts\\scripts\\kt_b1\\boss_b1_sinkhorn_ot.py",
+    "sha12": "7c2b41c008a5",
+    "bytes": 16404,
+    "anchor_sha12": "19325960b8be",
+    "drift": true,
+    "access": "read_only_external_archive"
+   },
+   "B2_KD": {
+    "path": "D:/私人资料/_non_upload_local_archive\\scripts\\scripts\\kt_b1\\boss_b2_kd.py",
+    "sha12": "8c6e98034005",
+    "bytes": 15677,
+    "anchor_sha12": "1781ea2f742d",
+    "drift": true,
+    "access": "read_only_external_archive"
+   },
+   "B3_LLMLingua": {
+    "path": "D:/私人资料/_non_upload_local_archive\\scripts\\scripts\\kt_b1\\boss_b3_llmlingua.py",
+    "sha12": "2ded5cf0e863",
+    "bytes": 15389,
+    "anchor_sha12": "c0b55e0385a4",
+    "drift": true,
+    "access": "read_only_external_archive"
+   }
+  },
+  "copied_into_repo": 0,
+  "wrote_external": false,
+  "declaration": "只读取用授权：0 复制入仓 / 0 写入 / 0 移出 / 0 删除 / 0 改 ACL"
+ },
+ "face_1_identity_control": {
+  "kou_jing": "恒等口径：T+R+A ≡ 1 守恒残差（对照留档）",
+  "recomputed_max_deviation": 2.220446049250313e-16,
+  "stored_t_plus_r_plus_a_max_deviation": 2.220446049250313e-16,
+  "tolerance": 1e-06,
+  "tolerance_source": "conservation.py physics_audit.tolerance (TH-V3R1P1-21-c)",
+  "stored_vs_recomputed_match": true,
+  "equals_ieee754_eps_2^-52": true,
+  "graded_verdict": "PASS",
+  "discriminating_power": "构造恒等 ⇒ 该测法轴无鉴别力（承 #21 原结论，0 改判）",
+  "n_records_checked": 1592
+ },
+ "face_2_generic_baseline": {
+  "kou_jing": "原 D(M,T) 口径 · 通用基线侧（通用基线值 vs 报告值复现性检查）",
+  "source": "仓外漂移版 3 BOSS 脚本（只读取用，0 复制入仓）+ v19 frozen 只读",
+  "recompute_label": "以漂移版实现复算（K-V3R1P1-0-G）",
+  "anchor_version_available": false,
+  "anchor_version_note": "锚版 SHA-12 全仓 0 命中 ⇒ 漂移差异内容不可核 ⇒ 0 归因、0 编造差异说明",
+  "boss_files": {
+   "B1_Sinkhorn_OT": {
+    "path": "D:/私人资料/_non_upload_local_archive\\scripts\\scripts\\kt_b1\\boss_b1_sinkhorn_ot.py",
+    "sha12": "7c2b41c008a5",
+    "bytes": 16404,
+    "anchor_sha12": "19325960b8be",
+    "drift": true,
+    "access": "read_only_external_archive"
+   },
+   "B2_KD": {
+    "path": "D:/私人资料/_non_upload_local_archive\\scripts\\scripts\\kt_b1\\boss_b2_kd.py",
+    "sha12": "8c6e98034005",
+    "bytes": 15677,
+    "anchor_sha12": "1781ea2f742d",
+    "drift": true,
+    "access": "read_only_external_archive"
+   },
+   "B3_LLMLingua": {
+    "path": "D:/私人资料/_non_upload_local_archive\\scripts\\scripts\\kt_b1\\boss_b3_llmlingua.py",
+    "sha12": "2ded5cf0e863",
+    "bytes": 15389,
+    "anchor_sha12": "c0b55e0385a4",
+    "drift": true,
+    "access": "read_only_external_archive"
+   }
+  },
+  "b1_reg_scan": {
+   "0.001": 1.7468881477325492e-07,
+   "0.005": 2.166636122670533e-06,
+   "0.01": 1.472291435366956e-05,
+   "0.05": 0.0001236071779561935,
+   "0.1": 0.00044522183946429185,
+   "0.5": 0.0023781212841854937
+  },
+  "b1_records_actually_extracted": 995,
+  "b1_script_declared_n_questions": 200,
+  "b1_record_count_note": "漂移版 B1 实抽记录数 = 995（E9.3 两基准 × 5 臂 × 99~100），与脚本 docstring/常量 N_QUESTIONS=200 不一致；**0 归因、0 编造差异说明**，仅事实登记",
+  "b1_selected_reg": 0.1,
+  "b2_kd_hyperparams": {
+   "T": 2.0,
+   "alpha": 0.5,
+   "lr": 0.001,
+   "epochs": 50,
+   "batch": 32
+  },
+  "b3_target_compression_ratio": 0.5,
+  "items": [
+   {
+    "boss": "B1_Sinkhorn_OT",
+    "implementation": "漂移版（回填件 ≠ 原件）",
+    "recomputed_value": 0.00044522183946429185,
+    "reported_value": 0.0004,
+    "repro_tolerance": 0.05,
+    "repro_window": [
+     0.00038,
+     0.00042
+    ],
+    "repro_pass": false,
+    "repro_alert_hit": true,
+    "rel_deviation": 0.11305459866072956,
+    "script_internal_threshold": 0.95,
+    "script_internal_deposon_reference_placeholder": 0.5,
+    "script_verdict_with_own_placeholder": "GRAY_BOTH_BELOW",
+    "verdict_caveat": "脚本内部裁定用占位 deposon 值比较，仅登记 0 主张（占位 0.5/0.05）",
+    "absolute_difference": 4.522183946429183e-05,
+    "reported_value_display_decimals": 4,
+    "display_halfstep": 5e-05,
+    "abs_diff_within_display_halfstep": true,
+    "tolerance_window_halfwidth": 2e-05,
+    "precision_note": "报告值仅 4 位小数显示 ⇒ ±5% 相对窗半宽 2.00e-05 窄于显示粒度半步 5.00e-05；机械判超差如实登记，**0 擅改容差、0 改判**"
+   },
+   {
+    "boss": "B2_KD",
+    "implementation": "漂移版（回填件 ≠ 原件）",
+    "recomputed_value": 0.002813601952161043,
+    "reported_value": 0.0028,
+    "repro_tolerance": 0.05,
+    "repro_window": [
+     0.00266,
+     0.00294
+    ],
+    "repro_pass": true,
+    "repro_alert_hit": false,
+    "rel_deviation": 0.004857840057515342,
+    "script_internal_threshold": 0.95,
+    "script_internal_deposon_reference_placeholder": 0.5,
+    "script_verdict_with_own_placeholder": "GRAY_BOTH_BELOW",
+    "verdict_caveat": "脚本内部裁定用占位 deposon 值比较，仅登记 0 主张（占位 0.5/0.05）",
+    "absolute_difference": 1.3601952161042957e-05,
+    "reported_value_display_decimals": 4,
+    "display_halfstep": 5e-05,
+    "abs_diff_within_display_halfstep": true,
+    "tolerance_window_halfwidth": 0.00014000000000000001,
+    "precision_note": "报告值仅 4 位小数显示 ⇒ ±5% 相对窗半宽 1.40e-04 窄于显示粒度半步 5.00e-05；机械判超差如实登记，**0 擅改容差、0 改判**"
+   },
+   {
+    "boss": "B3_LLMLingua",
+    "implementation": "漂移版（回填件 ≠ 原件）",
+    "recomputed_value": 0.46342184490589095,
+    "reported_value": 0.4634,
+    "repro_tolerance": 0.05,
+    "repro_window": [
+     0.44022999999999995,
+     0.48657
+    ],
+    "repro_pass": true,
+    "repro_alert_hit": false,
+    "rel_deviation": 4.714049609617272e-05,
+    "script_internal_threshold": 0.05,
+    "script_internal_deposon_reference_placeholder": 0.05,
+    "script_verdict_with_own_placeholder": "GRAY_BOTH_ABOVE",
+    "verdict_caveat": "脚本内部裁定用占位 deposon 值比较，仅登记 0 主张（占位 0.5/0.05）",
+    "absolute_difference": 2.1844905890966437e-05,
+    "reported_value_display_decimals": 4,
+    "display_halfstep": 5e-05,
+    "abs_diff_within_display_halfstep": true,
+    "tolerance_window_halfwidth": 0.02317,
+    "precision_note": "报告值仅 4 位小数显示 ⇒ ±5% 相对窗半宽 2.32e-02 窄于显示粒度半步 5.00e-05；机械判超差如实登记，**0 擅改容差、0 改判**"
+   }
+  ],
+  "n_within_tolerance": 2,
+  "n_items": 3,
+  "deposon_side": {
+   "computable": false,
+   "reason": "tools/distortion_calculator.py 本仓 + 仓外按名全扫 0 命中；核心理论输入 u*(a_t) 与理论界 L/U 未交付（bb7ca9838150 §3.5/§8/§9：理论界由王老师给定、不在 P-B 内自创）⇒ 逆向重建须自创理论 = 违 §9",
+   "proposal_A3_ruling": "不可行 + γ（提案 A-3，PI 已照案采纳）",
+   "fallback_condition_A4": "PI 不允仓外只读或回填件跑不动 ⇒ 面 2 判不可算 + γ",
+   "reverse_rebuild_attempted": false
+  }
+ },
+ "face_3_d_dec": {
+  "kou_jing": "非恒等 D_dec 决策轴（提案 B 冻结算式；0 使用 T/R/A、0 使用 u*）",
+  "definitions": {
+   "D_dec": "D_dec(a,b) = (1/N) · Σ_i 1[pred_a(i) ≠ pred_b(i)]",
+   "D_trap": "D_trap(a) = (1/N) · Σ_i 1[trap_hit(i) = True]",
+   "D_flux": "D_flux(a) = (1/N) · Σ_i |n_filtered(i) − n_paths(i)| / n_paths(i)"
+  },
+  "bootstrap": {
+   "n_resamples": 10000,
+   "seeds": [
+    42,
+    123,
+    456
+   ],
+   "ci": "95% percentile",
+   "shared_index_matrix_per_seed": true
+  },
+  "output_rule": "逐 benchmark 分别落盘（0 合并，沿 K-V3R1P1-0-D）",
+  "field_availability_audit": {
+   "E9.3_high_couple_fix|gsm8k|no_deposon": {
+    "n": 100,
+    "predicted": {
+     "key_hits": 100,
+     "value_nonnull": 94
+    },
+    "trap_hit": {
+     "key_hits": 100,
+     "value_nonnull": 100
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.3_high_couple_fix|gsm8k|v1_blocking": {
+    "n": 100,
+    "predicted": {
+     "key_hits": 100,
+     "value_nonnull": 100
+    },
+    "trap_hit": {
+     "key_hits": 100,
+     "value_nonnull": 1
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.3_high_couple_fix|gsm8k|v2_tunneling": {
+    "n": 100,
+    "predicted": {
+     "key_hits": 100,
+     "value_nonnull": 94
+    },
+    "trap_hit": {
+     "key_hits": 100,
+     "value_nonnull": 98
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.3_high_couple_fix|gsm8k|unified": {
+    "n": 100,
+    "predicted": {
+     "key_hits": 100,
+     "value_nonnull": 100
+    },
+    "trap_hit": {
+     "key_hits": 100,
+     "value_nonnull": 2
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.3_high_couple_fix|gsm8k|high_couple": {
+    "n": 100,
+    "predicted": {
+     "key_hits": 100,
+     "value_nonnull": 100
+    },
+    "trap_hit": {
+     "key_hits": 100,
+     "value_nonnull": 7
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.3_high_couple_fix|strategyqa|no_deposon": {
+    "n": 99,
+    "predicted": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "trap_hit": {
+     "key_hits": 99,
+     "value_nonnull": 99
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.3_high_couple_fix|strategyqa|v1_blocking": {
+    "n": 99,
+    "predicted": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "trap_hit": {
+     "key_hits": 99,
+     "value_nonnull": 99
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.3_high_couple_fix|strategyqa|v2_tunneling": {
+    "n": 99,
+    "predicted": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "trap_hit": {
+     "key_hits": 99,
+     "value_nonnull": 99
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.3_high_couple_fix|strategyqa|unified": {
+    "n": 99,
+    "predicted": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "trap_hit": {
+     "key_hits": 99,
+     "value_nonnull": 99
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.3_high_couple_fix|strategyqa|high_couple": {
+    "n": 99,
+    "predicted": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "trap_hit": {
+     "key_hits": 99,
+     "value_nonnull": 99
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.4_equal_weight_decoy_control|gsm8k|no_deposon": {
+    "n": 100,
+    "predicted": {
+     "key_hits": 100,
+     "value_nonnull": 94
+    },
+    "trap_hit": {
+     "key_hits": 100,
+     "value_nonnull": 98
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.4_equal_weight_decoy_control|gsm8k|unified": {
+    "n": 100,
+    "predicted": {
+     "key_hits": 100,
+     "value_nonnull": 100
+    },
+    "trap_hit": {
+     "key_hits": 100,
+     "value_nonnull": 2
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.4_equal_weight_decoy_control|strategyqa|no_deposon": {
+    "n": 99,
+    "predicted": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "trap_hit": {
+     "key_hits": 99,
+     "value_nonnull": 99
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.4_equal_weight_decoy_control|strategyqa|unified": {
+    "n": 99,
+    "predicted": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "trap_hit": {
+     "key_hits": 99,
+     "value_nonnull": 99
+    },
+    "n_paths": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "n_filtered": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    }
+   },
+   "E9.5_rule_baseline|gsm8k|(flat_unnamed)": {
+    "n": 100,
+    "predicted": {
+     "key_hits": 100,
+     "value_nonnull": 100
+    },
+    "trap_hit": {
+     "key_hits": 100,
+     "value_nonnull": 0
+    },
+    "n_paths": {
+     "key_hits": 100,
+     "value_nonnull": 100
+    },
+    "n_filtered": {
+     "key_hits": 100,
+     "value_nonnull": 100
+    }
+   },
+   "E9.5_rule_baseline|strategyqa|(flat_unnamed)": {
+    "n": 99,
+    "predicted": {
+     "key_hits": 0,
+     "value_nonnull": 0
+    },
+    "trap_hit": {
+     "key_hits": 99,
+     "value_nonnull": 99
+    },
+    "n_paths": {
+     "key_hits": 99,
+     "value_nonnull": 99
+    },
+    "n_filtered": {
+     "key_hits": 99,
+     "value_nonnull": 99
+    }
+   }
+  },
+  "per_benchmark": {
+   "gsm8k": {
+    "benchmark": "gsm8k",
+    "n_ids": 100,
+    "arms": [
+     "high_couple",
+     "no_deposon",
+     "rule_baseline",
+     "unified",
+     "v1_blocking",
+     "v2_tunneling"
+    ],
+    "flat_arm_identification": {
+     "arm": "rule_baseline",
+     "evidence_implied_accuracy": 0.87,
+     "e95_rule_baseline_accuracy": 0.87,
+     "e95_unified_accuracy": 0.85,
+     "identified": true,
+     "unified_also_matches": false,
+     "identification_unique": true,
+     "identification_caveat": "strategyqa 实测 rule_baseline 与 unified 精度完全相同 ⇒ 臂归属证据不唯一；该 benchmark 已按 `predicted` 0 命中判不可算 ⇒ 归属不参与任何读数"
+    },
+    "prediction_field_name_observed": "predicted",
+    "four_field_hits": {
+     "predicted": 600,
+     "trap_hit": 600,
+     "n_paths": 100,
+     "n_filtered": 100
+    },
+    "computable": true,
+    "verdict": "COMPUTED",
+    "D_dec": {
+     "no_deposon|v1_blocking": {
+      "point": 0.98,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.980089,
+       "ci95_lo": 0.95,
+       "ci95_hi": 1.0
+      },
+      "seed123": {
+       "mean_bootstrap": 0.9799630000000001,
+       "ci95_lo": 0.95,
+       "ci95_hi": 1.0
+      },
+      "seed456": {
+       "mean_bootstrap": 0.980234,
+       "ci95_lo": 0.95,
+       "ci95_hi": 1.0
+      }
+     },
+     "no_deposon|v2_tunneling": {
+      "point": 0.02,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.020125,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.05
+      },
+      "seed123": {
+       "mean_bootstrap": 0.019879,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.05
+      },
+      "seed456": {
+       "mean_bootstrap": 0.020062,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.05
+      }
+     },
+     "no_deposon|unified": {
+      "point": 0.97,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.9701220000000002,
+       "ci95_lo": 0.93,
+       "ci95_hi": 1.0
+      },
+      "seed123": {
+       "mean_bootstrap": 0.9699049999999999,
+       "ci95_lo": 0.93,
+       "ci95_hi": 1.0
+      },
+      "seed456": {
+       "mean_bootstrap": 0.9701930000000001,
+       "ci95_lo": 0.93,
+       "ci95_hi": 1.0
+      }
+     },
+     "no_deposon|rule_baseline": {
+      "point": 0.99,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.9900760000000001,
+       "ci95_lo": 0.97,
+       "ci95_hi": 1.0
+      },
+      "seed123": {
+       "mean_bootstrap": 0.990043,
+       "ci95_lo": 0.97,
+       "ci95_hi": 1.0
+      },
+      "seed456": {
+       "mean_bootstrap": 0.990168,
+       "ci95_lo": 0.97,
+       "ci95_hi": 1.0
+      }
+     },
+     "v1_blocking|v2_tunneling": {
+      "point": 0.96,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.9599639999999999,
+       "ci95_lo": 0.92,
+       "ci95_hi": 0.99
+      },
+      "seed123": {
+       "mean_bootstrap": 0.960084,
+       "ci95_lo": 0.92,
+       "ci95_hi": 0.99
+      },
+      "seed456": {
+       "mean_bootstrap": 0.9601720000000001,
+       "ci95_lo": 0.92,
+       "ci95_hi": 0.99
+      }
+     },
+     "unified|v1_blocking": {
+      "point": 0.01,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.009966999999999998,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.03
+      },
+      "seed123": {
+       "mean_bootstrap": 0.010058,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.03
+      },
+      "seed456": {
+       "mean_bootstrap": 0.010041,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.03
+      }
+     },
+     "unified|v2_tunneling": {
+      "point": 0.95,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.949997,
+       "ci95_lo": 0.9,
+       "ci95_hi": 0.99
+      },
+      "seed123": {
+       "mean_bootstrap": 0.950026,
+       "ci95_lo": 0.9,
+       "ci95_hi": 0.99
+      },
+      "seed456": {
+       "mean_bootstrap": 0.950131,
+       "ci95_lo": 0.9,
+       "ci95_hi": 0.99
+      }
+     },
+     "high_couple|no_deposon": {
+      "point": 0.92,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.920017,
+       "ci95_lo": 0.86,
+       "ci95_hi": 0.97
+      },
+      "seed123": {
+       "mean_bootstrap": 0.91984,
+       "ci95_lo": 0.86,
+       "ci95_hi": 0.97
+      },
+      "seed456": {
+       "mean_bootstrap": 0.920407,
+       "ci95_lo": 0.86,
+       "ci95_hi": 0.97
+      }
+     },
+     "high_couple|v1_blocking": {
+      "point": 0.06,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.060072,
+       "ci95_lo": 0.02,
+       "ci95_hi": 0.11
+      },
+      "seed123": {
+       "mean_bootstrap": 0.060123,
+       "ci95_lo": 0.02,
+       "ci95_hi": 0.11
+      },
+      "seed456": {
+       "mean_bootstrap": 0.059827,
+       "ci95_lo": 0.02,
+       "ci95_hi": 0.11
+      }
+     },
+     "high_couple|v2_tunneling": {
+      "point": 0.9,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.8998920000000001,
+       "ci95_lo": 0.84,
+       "ci95_hi": 0.95
+      },
+      "seed123": {
+       "mean_bootstrap": 0.899961,
+       "ci95_lo": 0.84,
+       "ci95_hi": 0.95
+      },
+      "seed456": {
+       "mean_bootstrap": 0.9003450000000001,
+       "ci95_lo": 0.84,
+       "ci95_hi": 0.95
+      }
+     },
+     "high_couple|unified": {
+      "point": 0.05,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.050105000000000004,
+       "ci95_lo": 0.01,
+       "ci95_hi": 0.1
+      },
+      "seed123": {
+       "mean_bootstrap": 0.050065,
+       "ci95_lo": 0.01,
+       "ci95_hi": 0.1
+      },
+      "seed456": {
+       "mean_bootstrap": 0.049786000000000004,
+       "ci95_lo": 0.01,
+       "ci95_hi": 0.1
+      }
+     },
+     "high_couple|rule_baseline": {
+      "point": 0.07,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.070059,
+       "ci95_lo": 0.03,
+       "ci95_hi": 0.12
+      },
+      "seed123": {
+       "mean_bootstrap": 0.070203,
+       "ci95_lo": 0.02,
+       "ci95_hi": 0.12
+      },
+      "seed456": {
+       "mean_bootstrap": 0.06976100000000002,
+       "ci95_lo": 0.02,
+       "ci95_hi": 0.12
+      }
+     },
+     "rule_baseline|v1_blocking": {
+      "point": 0.01,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.009987000000000001,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.03
+      },
+      "seed123": {
+       "mean_bootstrap": 0.01008,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.03
+      },
+      "seed456": {
+       "mean_bootstrap": 0.009934,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.03
+      }
+     },
+     "rule_baseline|v2_tunneling": {
+      "point": 0.97,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.969951,
+       "ci95_lo": 0.93,
+       "ci95_hi": 1.0
+      },
+      "seed123": {
+       "mean_bootstrap": 0.9701639999999999,
+       "ci95_lo": 0.93,
+       "ci95_hi": 1.0
+      },
+      "seed456": {
+       "mean_bootstrap": 0.9701060000000001,
+       "ci95_lo": 0.93,
+       "ci95_hi": 1.0
+      }
+     },
+     "rule_baseline|unified": {
+      "point": 0.02,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.019954000000000003,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.05
+      },
+      "seed123": {
+       "mean_bootstrap": 0.020138,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.05
+      },
+      "seed456": {
+       "mean_bootstrap": 0.019975,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.05
+      }
+     }
+    },
+    "D_dec_diag": {
+     "no_deposon|v1_blocking": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.13999999999999999,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.98
+     },
+     "no_deposon|v2_tunneling": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.13999999999999999,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.02
+     },
+     "no_deposon|unified": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.17058722109231983,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.97
+     },
+     "no_deposon|rule_baseline": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.09949874371066199,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.99
+     },
+     "v1_blocking|v2_tunneling": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.19595917942265426,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.96
+     },
+     "unified|v1_blocking": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.09949874371066199,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.01
+     },
+     "unified|v2_tunneling": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.21794494717703375,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.95
+     },
+     "high_couple|no_deposon": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.2712931993250107,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.92
+     },
+     "high_couple|v1_blocking": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.23748684174075835,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.06
+     },
+     "high_couple|v2_tunneling": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.3,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.9
+     },
+     "high_couple|unified": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.2179449471770337,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.05
+     },
+     "high_couple|rule_baseline": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.25514701644346144,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.07
+     },
+     "rule_baseline|v1_blocking": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.09949874371066199,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.01
+     },
+     "rule_baseline|v2_tunneling": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.17058722109231983,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.97
+     },
+     "rule_baseline|unified": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.13999999999999999,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.02
+     }
+    },
+    "D_trap": {
+     "no_deposon": {
+      "point": 1.0,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 1.0,
+       "ci95_lo": 1.0,
+       "ci95_hi": 1.0
+      },
+      "seed123": {
+       "mean_bootstrap": 1.0,
+       "ci95_lo": 1.0,
+       "ci95_hi": 1.0
+      },
+      "seed456": {
+       "mean_bootstrap": 1.0,
+       "ci95_lo": 1.0,
+       "ci95_hi": 1.0
+      }
+     },
+     "v1_blocking": {
+      "point": 0.01,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.009987000000000001,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.03
+      },
+      "seed123": {
+       "mean_bootstrap": 0.01008,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.03
+      },
+      "seed456": {
+       "mean_bootstrap": 0.009934,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.03
+      }
+     },
+     "v2_tunneling": {
+      "point": 0.98,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.979875,
+       "ci95_lo": 0.95,
+       "ci95_hi": 1.0
+      },
+      "seed123": {
+       "mean_bootstrap": 0.9801209999999999,
+       "ci95_lo": 0.95,
+       "ci95_hi": 1.0
+      },
+      "seed456": {
+       "mean_bootstrap": 0.9799380000000001,
+       "ci95_lo": 0.95,
+       "ci95_hi": 1.0
+      }
+     },
+     "unified": {
+      "point": 0.02,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.019954000000000003,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.05
+      },
+      "seed123": {
+       "mean_bootstrap": 0.020138,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.05
+      },
+      "seed456": {
+       "mean_bootstrap": 0.019975,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.05
+      }
+     },
+     "high_couple": {
+      "point": 0.07,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.070059,
+       "ci95_lo": 0.03,
+       "ci95_hi": 0.12
+      },
+      "seed123": {
+       "mean_bootstrap": 0.070203,
+       "ci95_lo": 0.02,
+       "ci95_hi": 0.12
+      },
+      "seed456": {
+       "mean_bootstrap": 0.06976100000000002,
+       "ci95_lo": 0.02,
+       "ci95_hi": 0.12
+      }
+     },
+     "rule_baseline": {
+      "point": 0.0,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.0,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.0
+      },
+      "seed123": {
+       "mean_bootstrap": 0.0,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.0
+      },
+      "seed456": {
+       "mean_bootstrap": 0.0,
+       "ci95_lo": 0.0,
+       "ci95_hi": 0.0
+      }
+     }
+    },
+    "D_trap_diag": {
+     "no_deposon": {
+      "n": 100,
+      "n_distinct": 1,
+      "std": 0.0,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 1.0
+     },
+     "v1_blocking": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.09949874371066199,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.01
+     },
+     "v2_tunneling": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.13999999999999999,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.98
+     },
+     "unified": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.13999999999999999,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.02
+     },
+     "high_couple": {
+      "n": 100,
+      "n_distinct": 2,
+      "std": 0.25514701644346144,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.07
+     },
+     "rule_baseline": {
+      "n": 100,
+      "n_distinct": 1,
+      "std": 0.0,
+      "is_binary": true,
+      "gate_non_degenerate": false,
+      "mean": 0.0
+     }
+    },
+    "D_flux": {
+     "no_deposon": {
+      "point": null,
+      "N": 100,
+      "computable": false,
+      "reason": "n_paths/n_filtered 在该臂 0 命中"
+     },
+     "v1_blocking": {
+      "point": null,
+      "N": 100,
+      "computable": false,
+      "reason": "n_paths/n_filtered 在该臂 0 命中"
+     },
+     "v2_tunneling": {
+      "point": null,
+      "N": 100,
+      "computable": false,
+      "reason": "n_paths/n_filtered 在该臂 0 命中"
+     },
+     "unified": {
+      "point": null,
+      "N": 100,
+      "computable": false,
+      "reason": "n_paths/n_filtered 在该臂 0 命中"
+     },
+     "high_couple": {
+      "point": null,
+      "N": 100,
+      "computable": false,
+      "reason": "n_paths/n_filtered 在该臂 0 命中"
+     },
+     "rule_baseline": {
+      "point": 0.27166666666666667,
+      "N": 100,
+      "seed42": {
+       "mean_bootstrap": 0.27165825,
+       "ci95_lo": 0.2633333333333333,
+       "ci95_hi": 0.2816666666666666
+      },
+      "seed123": {
+       "mean_bootstrap": 0.27166066666666666,
+       "ci95_lo": 0.2633333333333333,
+       "ci95_hi": 0.2816666666666666
+      },
+      "seed456": {
+       "mean_bootstrap": 0.2716015,
+       "ci95_lo": 0.2633333333333333,
+       "ci95_hi": 0.2816666666666666
+      }
+     }
+    },
+    "D_flux_diag": {
+     "rule_baseline": {
+      "n": 100,
+      "n_distinct": 3,
+      "std": 0.046577295374940396,
+      "is_binary": false,
+      "gate_non_degenerate": false,
+      "mean": 0.27166666666666667
+     }
+    },
+    "D_flux_arm_level_gap": [
+     "high_couple",
+     "no_deposon",
+     "unified",
+     "v1_blocking",
+     "v2_tunneling"
+    ],
+    "construct_degen_self_check": {
+     "rule": "n_distinct > 3 + std > 0（K-V3R1P1-0-A）",
+     "binary_single_column": {
+      "D_dec_per_pair_indicator": {
+       "no_deposon|v1_blocking": {
+        "n_distinct": 2,
+        "std": 0.13999999999999999,
+        "is_binary": true
+       },
+       "no_deposon|v2_tunneling": {
+        "n_distinct": 2,
+        "std": 0.13999999999999999,
+        "is_binary": true
+       },
+       "no_deposon|unified": {
+        "n_distinct": 2,
+        "std": 0.17058722109231983,
+        "is_binary": true
+       },
+       "no_deposon|rule_baseline": {
+        "n_distinct": 2,
+        "std": 0.09949874371066199,
+        "is_binary": true
+       },
+       "v1_blocking|v2_tunneling": {
+        "n_distinct": 2,
+        "std": 0.19595917942265426,
+        "is_binary": true
+       },
+       "unified|v1_blocking": {
+        "n_distinct": 2,
+        "std": 0.09949874371066199,
+        "is_binary": true
+       },
+       "unified|v2_tunneling": {
+        "n_distinct": 2,
+        "std": 0.21794494717703375,
+        "is_binary": true
+       },
+       "high_couple|no_deposon": {
+        "n_distinct": 2,
+        "std": 0.2712931993250107,
+        "is_binary": true
+       },
+       "high_couple|v1_blocking": {
+        "n_distinct": 2,
+        "std": 0.23748684174075835,
+        "is_binary": true
+       },
+       "high_couple|v2_tunneling": {
+        "n_distinct": 2,
+        "std": 0.3,
+        "is_binary": true
+       },
+       "high_couple|unified": {
+        "n_distinct": 2,
+        "std": 0.2179449471770337,
+        "is_binary": true
+       },
+       "high_couple|rule_baseline": {
+        "n_distinct": 2,
+        "std": 0.25514701644346144,
+        "is_binary": true
+       },
+       "rule_baseline|v1_blocking": {
+        "n_distinct": 2,
+        "std": 0.09949874371066199,
+        "is_binary": true
+       },
+       "rule_baseline|v2_tunneling": {
+        "n_distinct": 2,
+        "std": 0.17058722109231983,
+        "is_binary": true
+       },
+       "rule_baseline|unified": {
+        "n_distinct": 2,
+        "std": 0.13999999999999999,
+        "is_binary": true
+       }
+      },
+      "D_trap_indicator": {
+       "no_deposon": {
+        "n_distinct": 1,
+        "std": 0.0,
+        "is_binary": true
+       },
+       "v1_blocking": {
+        "n_distinct": 2,
+        "std": 0.09949874371066199,
+        "is_binary": true
+       },
+       "v2_tunneling": {
+        "n_distinct": 2,
+        "std": 0.13999999999999999,
+        "is_binary": true
+       },
+       "unified": {
+        "n_distinct": 2,
+        "std": 0.13999999999999999,
+        "is_binary": true
+       },
+       "high_couple": {
+        "n_distinct": 2,
+        "std": 0.25514701644346144,
+        "is_binary": true
+       },
+       "rule_baseline": {
+        "n_distinct": 1,
+        "std": 0.0,
+        "is_binary": true
+       }
+      },
+      "note": "D_dec / D_trap 的 per-item 序列为 0/1 指示量 ⇒ 结构性二值，n_distinct ≤ 2 恒成立；沿 PI 拍板③ 二值单列"
+     },
+     "non_binary_series_gate": {
+      "D_flux_per_arm": {
+       "rule_baseline": {
+        "n_distinct": 3,
+        "std": 0.046577295374940396,
+        "gate_non_degenerate": false
+       }
+      },
+      "D_dec_pairs_passing": [],
+      "D_flux_arms_passing": []
+     }
+    },
+    "judgment_b": {
+     "criterion": "≥3 个臂对上 n_distinct > 3 且 std > 0",
+     "arm_pairs_total_D_dec": 15,
+     "arm_pairs_passing_non_binary_gate": 0,
+     "arm_level_passing_D_flux": 0,
+     "qualifying_count": 0,
+     "pass": false,
+     "alert_hit": true,
+     "reading_registered": "臂对级读数只有 D_dec（提案 B 字面 D_flux 为单臂指标）；D_dec per-item 序列结构性二值 ⇒ 二值单列后臂对级n_distinct>3 通过数 = 0；D_flux 仅 rule_baseline 单臂可算"
+    },
+    "judgment_c": {
+     "criterion": "3 seed（42/123/456）× 10k resamples 下臂间大小序 3/3 不变",
+     "n_resamples": 10000,
+     "seeds": [
+      42,
+      123,
+      456
+     ],
+     "orders_by_seed": {
+      "seed42": [
+       "unified|v1_blocking",
+       "rule_baseline|v1_blocking",
+       "rule_baseline|unified",
+       "no_deposon|v2_tunneling",
+       "high_couple|unified",
+       "high_couple|v1_blocking",
+       "high_couple|rule_baseline",
+       "high_couple|v2_tunneling",
+       "high_couple|no_deposon",
+       "unified|v2_tunneling",
+       "v1_blocking|v2_tunneling",
+       "rule_baseline|v2_tunneling",
+       "no_deposon|unified",
+       "no_deposon|v1_blocking",
+       "no_deposon|rule_baseline"
+      ],
+      "seed123": [
+       "unified|v1_blocking",
+       "rule_baseline|v1_blocking",
+       "no_deposon|v2_tunneling",
+       "rule_baseline|unified",
+       "high_couple|unified",
+       "high_couple|v1_blocking",
+       "high_couple|rule_baseline",
+       "high_couple|v2_tunneling",
+       "high_couple|no_deposon",
+       "unified|v2_tunneling",
+       "v1_blocking|v2_tunneling",
+       "no_deposon|unified",
+       "rule_baseline|v2_tunneling",
+       "no_deposon|v1_blocking",
+       "no_deposon|rule_baseline"
+      ],
+      "seed456": [
+       "rule_baseline|v1_blocking",
+       "unified|v1_blocking",
+       "rule_baseline|unified",
+       "no_deposon|v2_tunneling",
+       "high_couple|unified",
+       "high_couple|v1_blocking",
+       "high_couple|rule_baseline",
+       "high_couple|v2_tunneling",
+       "high_couple|no_deposon",
+       "unified|v2_tunneling",
+       "v1_blocking|v2_tunneling",
+       "rule_baseline|v2_tunneling",
+       "no_deposon|unified",
+       "no_deposon|v1_blocking",
+       "no_deposon|rule_baseline"
+      ]
+     },
+     "point_estimate_order": [
+      "rule_baseline|v1_blocking",
+      "unified|v1_blocking",
+      "no_deposon|v2_tunneling",
+      "rule_baseline|unified",
+      "high_couple|unified",
+      "high_couple|v1_blocking",
+      "high_couple|rule_baseline",
+      "high_couple|v2_tunneling",
+      "high_couple|no_deposon",
+      "unified|v2_tunneling",
+      "v1_blocking|v2_tunneling",
+      "no_deposon|unified",
+      "rule_baseline|v2_tunneling",
+      "no_deposon|v1_blocking",
+      "no_deposon|rule_baseline"
+     ],
+     "orders_identical_3of3": false,
+     "discordant_pairs": {
+      "seed42_vs_seed123": [
+       [
+        "no_deposon|unified",
+        "rule_baseline|v2_tunneling"
+       ],
+       [
+        "no_deposon|v2_tunneling",
+        "rule_baseline|unified"
+       ]
+      ],
+      "seed123_vs_seed456": [
+       [
+        "no_deposon|unified",
+        "rule_baseline|v2_tunneling"
+       ],
+       [
+        "no_deposon|v2_tunneling",
+        "rule_baseline|unified"
+       ],
+       [
+        "rule_baseline|v1_blocking",
+        "unified|v1_blocking"
+       ]
+      ],
+      "seed42_vs_seed456": [
+       [
+        "rule_baseline|v1_blocking",
+        "unified|v1_blocking"
+       ]
+      ]
+     },
+     "n_pairwise_comparisons": 105,
+     "n_agreements_all3seeds": 102,
+     "pass": false,
+     "alert_hit": true,
+     "ci_overlap_note": "面 3 各臂对 95% CI 宽度见 D_dec 条目；序稳定 ≠ CI 互不重叠（0 跨面主张）"
+    },
+    "predicted_none_records": {
+     "high_couple": 0,
+     "no_deposon": 6,
+     "rule_baseline": 0,
+     "unified": 0,
+     "v1_blocking": 0,
+     "v2_tunneling": 6
+    },
+    "none_treatment": "predicted 为 null 的 item 按字面参与 1[pred_a≠pred_b] 比较（null 与数值互异）；0 归一化、0 剔除（剔除即私设）"
+   },
+   "strategyqa": {
+    "benchmark": "strategyqa",
+    "n_ids": 99,
+    "arms": [
+     "high_couple",
+     "no_deposon",
+     "rule_baseline",
+     "unified",
+     "v1_blocking",
+     "v2_tunneling"
+    ],
+    "flat_arm_identification": {
+     "arm": "rule_baseline",
+     "evidence_implied_accuracy": 0.898989898989899,
+     "e95_rule_baseline_accuracy": 0.898989898989899,
+     "e95_unified_accuracy": 0.898989898989899,
+     "identified": true,
+     "unified_also_matches": true,
+     "identification_unique": false,
+     "identification_caveat": "strategyqa 实测 rule_baseline 与 unified 精度完全相同 ⇒ 臂归属证据不唯一；该 benchmark 已按 `predicted` 0 命中判不可算 ⇒ 归属不参与任何读数"
+    },
+    "prediction_field_name_observed": "pred",
+    "four_field_hits": {
+     "predicted": 0,
+     "trap_hit": 594,
+     "n_paths": 99,
+     "n_filtered": 99
+    },
+    "computable": false,
+    "verdict": "INCOMPUTABLE_GAMMA",
+    "gamma": [
+     {
+      "id": "G21-F3",
+      "trigger": "四字段之一 0 命中（pred/predicted 面：predicted 键命中 = 0） ⇒ 按 benchmark 粒度判不可算",
+      "observation": "该 benchmark 预测字段实测名为 'pred'；0 归因、0 用别名改判"
+     }
+    ]
+   }
+  }
+ },
+ "judgment": {
+  "a_face2_repro_3of3_within_5pct": {
+   "pass": false,
+   "alert_hit": true,
+   "n_within": 2,
+   "n_total": 3
+  },
+  "b_face3_discriminating": {
+   "per_benchmark": {
+    "gsm8k": false,
+    "strategyqa": null
+   },
+   "pass": false,
+   "alert_hit": true
+  },
+  "c_face3_order_stability": {
+   "per_benchmark": {
+    "gsm8k": false,
+    "strategyqa": null
+   },
+   "pass": false,
+   "alert_hit": true
+  },
+  "all_three_pass": false,
+  "any_alert_hit": true
+ },
+ "new_verdict": "REMAINS_UNKNOWN",
+ "legacy_verdict": "item_21 = 不明（占位已除，测法轴恒等 + 资产缺口双重根因）",
+ "rejudge_tier_v1_4tier": "不明分支（判据未全满足 + γ）⇒ 维持原标注，显式登记 γ，归 V4 收尾整理待拍板桶",
+ "gamma_registry": [
+  {
+   "id": "G21-1",
+   "trigger": "面 3 四字段之一 0 命中 ⇒ 该 benchmark 不可算",
+   "status": "triggered_for_strategyqa",
+   "detail": {
+    "benchmark": "strategyqa",
+    "field": "predicted",
+    "observed_field_name": "pred"
+   }
+  },
+  {
+   "id": "G21-2",
+   "trigger": "n_paths/n_filtered 在 E9.3/E9.4 臂 0 命中 ⇒ D_flux 仅单臂可算",
+   "status": "registered_as_arm_level_limit",
+   "detail": {
+    "arm_level_gap": [
+     "high_couple",
+     "no_deposon",
+     "unified",
+     "v1_blocking",
+     "v2_tunneling"
+    ]
+   }
+  },
+  {
+   "id": "G21-3",
+   "trigger": "deposon 侧 D(M,T) 逆向重建判不可行（提案 A-3）",
+   "status": "triggered",
+   "detail": {
+    "computable": false,
+    "reason": "tools/distortion_calculator.py 本仓 + 仓外按名全扫 0 命中；核心理论输入 u*(a_t) 与理论界 L/U 未交付（bb7ca9838150 §3.5/§8/§9：理论界由王老师给定、不在 P-B 内自创）⇒ 逆向重建须自创理论 = 违 §9",
+    "proposal_A3_ruling": "不可行 + γ（提案 A-3，PI 已照案采纳）",
+    "fallback_condition_A4": "PI 不允仓外只读或回填件跑不动 ⇒ 面 2 判不可算 + γ",
+    "reverse_rebuild_attempted": false
+   }
+  },
+  {
+   "id": "G21-4",
+   "trigger": "锚版 3 BOSS 脚本全仓 0 命中 ⇒ 漂移差异内容不可核",
+   "status": "unverifiable_no_attribution"
+  },
+  {
+   "id": "G21-5",
+   "trigger": "D_dec per-item 序列结构性二值 ⇒ 防退化门 n_distinct>3 在臂对级不可达",
+   "status": "triggered",
+   "detail": {
+    "gsm8k": {
+     "criterion": "≥3 个臂对上 n_distinct > 3 且 std > 0",
+     "arm_pairs_total_D_dec": 15,
+     "arm_pairs_passing_non_binary_gate": 0,
+     "arm_level_passing_D_flux": 0,
+     "qualifying_count": 0,
+     "pass": false,
+     "alert_hit": true,
+     "reading_registered": "臂对级读数只有 D_dec（提案 B 字面 D_flux 为单臂指标）；D_dec per-item 序列结构性二值 ⇒ 二值单列后臂对级n_distinct>3 通过数 = 0；D_flux 仅 rule_baseline 单臂可算"
+    }
+   }
+  }
+ ],
+ "zero_touch_declaration": {
+  "existing_files_modified": 0,
+  "derived_json_merged_into_existing": false,
+  "llm_calls": 0,
+  "proxy": false,
+  "key_reads": 0
+ },
+ "determinism": "无墙钟时间戳；同输入重跑本 JSON 逐字节一致（重跑自证见汇报）"
+}

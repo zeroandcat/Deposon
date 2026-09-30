@@ -1,0 +1,1096 @@
+{
+  "schema": "v3_recheck_formal_data/26b_p_j_three_ontology/1",
+  "nature": "正式判定档：逐本体出 K-V3R-26 正式 verdict（区别于 26 preexp = 探索性档 verdict=null）",
+  "date": "2026-09-27",
+  "produced_by": "Mavis 团队 worker（Mavis root session 派工；PI 2026-09-27 问卷 ask_75126c38abf2c134a1591672 Q1 拍板「三本体全跑」）",
+  "dispatch_inputs": [
+    {
+      "path": "results/_v3_recheck_prereg_v1_2026_09_27.md",
+      "sha12_measured": "88052d7db895",
+      "role": "K-V3R-26 / TH-V3R-26 / §2.3 四档 改判规则表 字面锚（0 擅调）"
+    },
+    {
+      "path": "results/_v3_recheck_26_preexp_data_2026_09_27.json",
+      "sha12_measured": "177c88e1bd82",
+      "role": "预实验数据件（只读；扰动表 SHA-12 + 逐本体率 一致性核对面）"
+    },
+    {
+      "path": "results/_v3_recheck_26_preexp_report_2026_09_27.md",
+      "sha12_measured": "0a2b5c837c83",
+      "role": "预实验报告（只读；§6 择优段 = 本件三本体选择依据）"
+    },
+    {
+      "path": "results/_v3_recheck_26_preexp_executor_2026_09_27.py",
+      "sha12_measured": "775217a462f5",
+      "role": "fallback 纪律锚 = 本件 O1/O3/O5 构造字面来源（逐字沿用）"
+    },
+    {
+      "path": "results/_v3_recheck_26_executor_2026_09_27.py",
+      "sha12_measured": "46c326c756c3",
+      "role": "第一梯队 executor（只读；O1 基线连续性锚）"
+    },
+    {
+      "path": "results/_v3_recheck_26_result_2026_09_27.json",
+      "sha12_measured": "eb6a99dd46dd",
+      "role": "第一梯队落地件（只读；O1 逐字复现对照面）"
+    },
+    {
+      "path": "results/_v3_recheck_26_rescript_2026_09_27.md",
+      "sha12_measured": "3d9ad5f1540d",
+      "role": "第一梯队改判件（只读；原 V3 标注 + 档位字面来源）"
+    },
+    {
+      "path": "results/_p_j_convergence_basin_2026_09_16/p_j_convergence_basin_results_2026_09_16.json",
+      "sha12_measured": "a9ad1de618f5",
+      "role": "9 model T_frac60 真分布 + legacy 面 9/9 ≡ 0.1 原读数"
+    },
+    {
+      "path": "results/deposon_v3_physical_opt_60cells_2026_09_11.json",
+      "sha12_measured": "c659695aa23c",
+      "role": "9 model 真实起始三元组 (T60,R60,A60)"
+    }
+  ],
+  "kill_line": {
+    "id": "K-V3R-26",
+    "literal": "K-V3R-26: P-J 重构造（真 convergence_rate 定义 + 真 perturbation ±0.05×100）后 convergence_rate n_distinct > 3 + std > 0 → PASS（改判）；仍 n_distinct ≤ 1 → FAIL（维持假证伪）",
+    "th_literal": "TH-V3R-26: convergence_rate 形式（无预注册阈值，由 K-V3R-26 重定义）= n_iter / n_budget",
+    "th_form_frozen": "convergence_rate_m = mean_j(n_iter_j) / n_budget, j=1..100",
+    "per_ontology_independent": true,
+    "literal_gap_2_to_3": "K-V3R-26 字面只定义 n_distinct ≥ 4（PASS）与 n_distinct ≤ 1（FAIL）；2 ≤ n_distinct ≤ 3 为字面空档。本件对空档输出 UNDECIDED_BY_LITERAL_GAP，0 私设阈值、不归拢任一侧。",
+    "no_private_clause_added": true
+  },
+  "construct": {
+    "n_budget": 100,
+    "jitter": "+-0.05 uniform on T_frac60 (clip [0,1])",
+    "seed": 20260927,
+    "priority": "surplus_first",
+    "tolerance": "TOL = 1e-6（O3/O5 统一；O1 为整数精确命中）",
+    "paired_sampling": "3 本体共用同一批扰动抽样（rng 流与第一梯队 / preexp 逐字同）=> 配对比较成立",
+    "perturbation_table_sha12": "0b23943c898c",
+    "perturbation_stream_matches_preexp": true,
+    "models": [
+      "doubao-seed-2.0-lite",
+      "glm-5.3",
+      "deepseek-v4-flash",
+      "doubao-seed-evolving",
+      "minimax-m3",
+      "glm-5.3-flash",
+      "kimi-k2.7-code",
+      "doubao-seed-2.1-turbo",
+      "deepseek-v4-pro"
+    ],
+    "t_frac60_real": [
+      0.8667,
+      0.8667,
+      0.7667,
+      0.7333,
+      0.7,
+      0.7,
+      0.6333,
+      0.6,
+      0.5333
+    ],
+    "literal_source": "O1/O3/O5 构造与实现常数逐字沿 results/_v3_recheck_26_preexp_executor_2026_09_27.py（775217a462f5）"
+  },
+  "pre_run_degenerate_gate": {
+    "gate_literal": "K-V3R-0-A：n_distinct > 3 + std > 0；任一输入字段 n_distinct ≤ 3 = 退化警报",
+    "fields": {
+      "pj_T_frac60": {
+        "n": 9,
+        "n_distinct": 7,
+        "std": 0.10659488672794401,
+        "gate_pass": true
+      },
+      "60cells_cos_sim": {
+        "n": 9,
+        "n_distinct": 8,
+        "std": 0.06006708800773012,
+        "gate_pass": true
+      },
+      "60cells_D_fix2_cosine": {
+        "n": 9,
+        "n_distinct": 8,
+        "std": 0.060067088007730106,
+        "gate_pass": true
+      },
+      "60cells_T30": {
+        "n": 9,
+        "n_distinct": 7,
+        "std": 3.197221015541813,
+        "gate_pass": true
+      },
+      "pj_legacy_convergence_rates_CONTROL": {
+        "n": 9,
+        "n_distinct": 1,
+        "std": 0.0,
+        "gate_pass": false,
+        "note": "对照组：原 V3 判据输入预期退化（沿 prereg §2.2 K-V3R-26「仍 n_distinct ≤ 1 → FAIL」的预期对象），不计入 gate_alarm（K-V3R-0-A 的自证对象是新构造的输入面，非原标注面）"
+      }
+    },
+    "degenerate_alarm_hit": false
+  },
+  "legacy_face": {
+    "source": "results/_p_j_convergence_basin_2026_09_16/p_j_convergence_basin_results_2026_09_16.json",
+    "convergence_rates": [
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "n_distinct": 1,
+    "std": 0.0,
+    "verdict": "UNVERIFIED（判据退化）",
+    "ontology_independent": true,
+    "note": "沿原 V3 阈值字面（K-V3R-0-C 双口径第二口径）；本体无关，3 本体共享同一读数"
+  },
+  "per_ontology": {
+    "O1_discrete_cell_redistribution": {
+      "n_iter_cap": 60,
+      "new_verdict": "PASS",
+      "kill_line_hit": false,
+      "kill_line_pass": true,
+      "kill_line_branch_literal": "n_distinct>3 且 std>0 → PASS（改判）",
+      "criteria_evidence": {
+        "rates": {
+          "n": 9,
+          "n_distinct": 9,
+          "std": 0.0012788884062167251,
+          "rel_std": 0.08641137879842738,
+          "min": 0.0132,
+          "max": 0.0173,
+          "mean": 0.014799999999999999,
+          "median": 0.0149,
+          "iqr": 0.0020999999999999994
+        },
+        "draw_level": {
+          "n": 900,
+          "n_iter_n_distinct": 4,
+          "floor_share_n_iter_eq_0": 0.16,
+          "cap_hit_share_n_iter_eq_cap": 0.0,
+          "rail_share_0_or_cap": 0.16,
+          "n_iter_mean": 1.48,
+          "n_iter_median": 1.0,
+          "n_iter_max": 3,
+          "total_steps": 1332
+        }
+      },
+      "legacy_verdict": "UNVERIFIED（判据退化）",
+      "dual_caliber_consistency": "不一致（new PASS vs legacy UNVERIFIED/判据退化）",
+      "diagnostics_not_criteria": {
+        "final_target_distance": {
+          "metric": "|T_final − T*|（cell）",
+          "mean": 0.0,
+          "median": 0.0,
+          "max": 0.0
+        },
+        "spearman_rho_T_frac60_vs_rate": 0.17647681943136376,
+        "n_same_Tfrac60_pairs": 2,
+        "same_Tfrac60_pair_max_relative_rate_gap": 0.07894736842105271,
+        "total_iteration_steps": 1332,
+        "ols_r2_rate_on_T_frac60": 0.019953734083265173
+      },
+      "per_model": [
+        {
+          "model": "doubao-seed-2.0-lite",
+          "start_triple_TRA": [
+            52,
+            8,
+            0
+          ],
+          "n_iter_mean": 1.58,
+          "n_iter_min": 0,
+          "n_iter_max": 3,
+          "n_iter_distinct": 4,
+          "convergence_rate": 0.0158
+        },
+        {
+          "model": "glm-5.3",
+          "start_triple_TRA": [
+            52,
+            6,
+            2
+          ],
+          "n_iter_mean": 1.46,
+          "n_iter_min": 0,
+          "n_iter_max": 3,
+          "n_iter_distinct": 4,
+          "convergence_rate": 0.0146
+        },
+        {
+          "model": "deepseek-v4-flash",
+          "start_triple_TRA": [
+            46,
+            10,
+            4
+          ],
+          "n_iter_mean": 1.49,
+          "n_iter_min": 0,
+          "n_iter_max": 3,
+          "n_iter_distinct": 4,
+          "convergence_rate": 0.0149
+        },
+        {
+          "model": "doubao-seed-evolving",
+          "start_triple_TRA": [
+            44,
+            12,
+            4
+          ],
+          "n_iter_mean": 1.73,
+          "n_iter_min": 0,
+          "n_iter_max": 3,
+          "n_iter_distinct": 4,
+          "convergence_rate": 0.0173
+        },
+        {
+          "model": "minimax-m3",
+          "start_triple_TRA": [
+            42,
+            16,
+            2
+          ],
+          "n_iter_mean": 1.34,
+          "n_iter_min": 0,
+          "n_iter_max": 3,
+          "n_iter_distinct": 4,
+          "convergence_rate": 0.0134
+        },
+        {
+          "model": "glm-5.3-flash",
+          "start_triple_TRA": [
+            42,
+            2,
+            16
+          ],
+          "n_iter_mean": 1.33,
+          "n_iter_min": 0,
+          "n_iter_max": 3,
+          "n_iter_distinct": 4,
+          "convergence_rate": 0.013300000000000001
+        },
+        {
+          "model": "kimi-k2.7-code",
+          "start_triple_TRA": [
+            38,
+            16,
+            6
+          ],
+          "n_iter_mean": 1.32,
+          "n_iter_min": 0,
+          "n_iter_max": 3,
+          "n_iter_distinct": 4,
+          "convergence_rate": 0.0132
+        },
+        {
+          "model": "doubao-seed-2.1-turbo",
+          "start_triple_TRA": [
+            36,
+            4,
+            20
+          ],
+          "n_iter_mean": 1.52,
+          "n_iter_min": 0,
+          "n_iter_max": 3,
+          "n_iter_distinct": 4,
+          "convergence_rate": 0.0152
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "start_triple_TRA": [
+            32,
+            4,
+            24
+          ],
+          "n_iter_mean": 1.55,
+          "n_iter_min": 0,
+          "n_iter_max": 3,
+          "n_iter_distinct": 4,
+          "convergence_rate": 0.0155
+        }
+      ]
+    },
+    "O3_logit_normal_form": {
+      "n_iter_cap": 100000,
+      "new_verdict": "PASS",
+      "kill_line_hit": false,
+      "kill_line_pass": true,
+      "kill_line_branch_literal": "n_distinct>3 且 std>0 → PASS（改判）",
+      "criteria_evidence": {
+        "rates": {
+          "n": 9,
+          "n_distinct": 8,
+          "std": 0.0044661691265184735,
+          "rel_std": 0.01290551664376365,
+          "min": 0.33899999999999997,
+          "max": 0.3557,
+          "mean": 0.34606666666666663,
+          "median": 0.3454,
+          "iqr": 0.0037000000000000366
+        },
+        "draw_level": {
+          "n": 900,
+          "n_iter_n_distinct": 20,
+          "floor_share_n_iter_eq_0": 0.0,
+          "cap_hit_share_n_iter_eq_cap": 0.0,
+          "rail_share_0_or_cap": 0.0,
+          "n_iter_mean": 34.60666666666667,
+          "n_iter_median": 36.0,
+          "n_iter_max": 38,
+          "total_steps": 31146
+        }
+      },
+      "legacy_verdict": "UNVERIFIED（判据退化）",
+      "dual_caliber_consistency": "不一致（new PASS vs legacy UNVERIFIED/判据退化）",
+      "diagnostics_not_criteria": {
+        "final_target_distance": {
+          "metric": "|x_final − x0|（T 份额）",
+          "mean": 8.647909432613683e-07,
+          "median": 8.598979515106464e-07,
+          "max": 9.995643001081689e-07
+        },
+        "spearman_rho_T_frac60_vs_rate": 0.3038001727066967,
+        "n_same_Tfrac60_pairs": 2,
+        "same_Tfrac60_pair_max_relative_rate_gap": 0.0167146974063403,
+        "total_iteration_steps": 31146,
+        "ols_r2_rate_on_T_frac60": 0.10626559615711917
+      },
+      "per_model": [
+        {
+          "model": "doubao-seed-2.0-lite",
+          "T_frac60_real": 0.8667,
+          "n_iter_mean": 34.99,
+          "n_iter_min": 25,
+          "n_iter_max": 38,
+          "n_iter_distinct": 12,
+          "convergence_rate": 0.34990000000000004
+        },
+        {
+          "model": "glm-5.3",
+          "T_frac60_real": 0.8667,
+          "n_iter_mean": 34.41,
+          "n_iter_min": 20,
+          "n_iter_max": 38,
+          "n_iter_distinct": 13,
+          "convergence_rate": 0.34409999999999996
+        },
+        {
+          "model": "deepseek-v4-flash",
+          "T_frac60_real": 0.7667,
+          "n_iter_mean": 34.78,
+          "n_iter_min": 21,
+          "n_iter_max": 38,
+          "n_iter_distinct": 13,
+          "convergence_rate": 0.3478
+        },
+        {
+          "model": "doubao-seed-evolving",
+          "T_frac60_real": 0.7333,
+          "n_iter_mean": 35.57,
+          "n_iter_min": 26,
+          "n_iter_max": 38,
+          "n_iter_distinct": 12,
+          "convergence_rate": 0.3557
+        },
+        {
+          "model": "minimax-m3",
+          "T_frac60_real": 0.7,
+          "n_iter_mean": 34.48,
+          "n_iter_min": 14,
+          "n_iter_max": 38,
+          "n_iter_distinct": 14,
+          "convergence_rate": 0.3448
+        },
+        {
+          "model": "glm-5.3-flash",
+          "T_frac60_real": 0.7,
+          "n_iter_mean": 34.25,
+          "n_iter_min": 24,
+          "n_iter_max": 38,
+          "n_iter_distinct": 14,
+          "convergence_rate": 0.3425
+        },
+        {
+          "model": "kimi-k2.7-code",
+          "T_frac60_real": 0.6333,
+          "n_iter_mean": 33.9,
+          "n_iter_min": 20,
+          "n_iter_max": 38,
+          "n_iter_distinct": 16,
+          "convergence_rate": 0.33899999999999997
+        },
+        {
+          "model": "doubao-seed-2.1-turbo",
+          "T_frac60_real": 0.6,
+          "n_iter_mean": 34.54,
+          "n_iter_min": 11,
+          "n_iter_max": 38,
+          "n_iter_distinct": 13,
+          "convergence_rate": 0.3454
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "T_frac60_real": 0.5333,
+          "n_iter_mean": 34.54,
+          "n_iter_min": 14,
+          "n_iter_max": 38,
+          "n_iter_distinct": 14,
+          "convergence_rate": 0.3454
+        }
+      ]
+    },
+    "O5_replicator_ode_softlimit": {
+      "n_iter_cap": 200000,
+      "new_verdict": "PASS",
+      "kill_line_hit": false,
+      "kill_line_pass": true,
+      "kill_line_branch_literal": "n_distinct>3 且 std>0 → PASS（改判）",
+      "criteria_evidence": {
+        "rates": {
+          "n": 9,
+          "n_distinct": 9,
+          "std": 16.980008842717528,
+          "rel_std": 0.4128045508003189,
+          "min": 17.9501,
+          "max": 72.0337,
+          "mean": 41.13328888888889,
+          "median": 35.767399999999995,
+          "iqr": 25.152900000000002
+        },
+        "draw_level": {
+          "n": 900,
+          "n_iter_n_distinct": 784,
+          "floor_share_n_iter_eq_0": 0.0,
+          "cap_hit_share_n_iter_eq_cap": 0.0,
+          "rail_share_0_or_cap": 0.0,
+          "n_iter_mean": 4113.328888888889,
+          "n_iter_median": 3450.0,
+          "n_iter_max": 11356,
+          "total_steps": 3701996
+        }
+      },
+      "legacy_verdict": "UNVERIFIED（判据退化）",
+      "dual_caliber_consistency": "不一致（new PASS vs legacy UNVERIFIED/判据退化）",
+      "diagnostics_not_criteria": {
+        "final_target_distance": {
+          "metric": "max_i |x_i − f_i|（三元组份额）",
+          "mean": 9.987877560556936e-07,
+          "median": 9.99121991428903e-07,
+          "max": 9.999995823281593e-07
+        },
+        "spearman_rho_T_frac60_vs_rate": 0.26051340011296553,
+        "n_same_Tfrac60_pairs": 2,
+        "same_Tfrac60_pair_max_relative_rate_gap": 1.2020741511249802,
+        "total_iteration_steps": 3701996,
+        "ols_r2_rate_on_T_frac60": 0.06273101532334968
+      },
+      "per_model": [
+        {
+          "model": "doubao-seed-2.0-lite",
+          "start_triple_TRA": [
+            52,
+            8,
+            0
+          ],
+          "f_target_min_component": 0.0,
+          "f_target_min_component_class": "A",
+          "f_target_min_component_draw_index": 0,
+          "f_target_triple_at_min_draw": [
+            0.8264518660720135,
+            0.17354813392798651,
+            0.0
+          ],
+          "f_target_per_component_minima_over_draws": [
+            0.8175113781644244,
+            0.08434941904408944,
+            0.0
+          ],
+          "f_target_field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+          "n_iter_mean": 1795.01,
+          "n_iter_min": 1218,
+          "n_iter_max": 2690,
+          "n_iter_distinct": 81,
+          "convergence_rate": 17.9501
+        },
+        {
+          "model": "glm-5.3",
+          "start_triple_TRA": [
+            52,
+            6,
+            2
+          ],
+          "f_target_min_component": 0.020947561152689448,
+          "f_target_min_component_class": "A",
+          "f_target_min_component_draw_index": 52,
+          "f_target_triple_at_min_draw": [
+            0.9162097553892422,
+            0.06284268345806834,
+            0.020947561152689448
+          ],
+          "f_target_per_component_minima_over_draws": [
+            0.8185831924167666,
+            0.06284268345806834,
+            0.020947561152689448
+          ],
+          "f_target_field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+          "n_iter_mean": 7203.37,
+          "n_iter_min": 2900,
+          "n_iter_max": 11356,
+          "n_iter_distinct": 98,
+          "convergence_rate": 72.0337
+        },
+        {
+          "model": "deepseek-v4-flash",
+          "start_triple_TRA": [
+            46,
+            10,
+            4
+          ],
+          "f_target_min_component": 0.052423168144199506,
+          "f_target_min_component_class": "A",
+          "f_target_min_component_draw_index": 57,
+          "f_target_triple_at_min_draw": [
+            0.8165189114953018,
+            0.13105792036049874,
+            0.052423168144199506
+          ],
+          "f_target_per_component_minima_over_draws": [
+            0.7180321473537922,
+            0.13105792036049874,
+            0.052423168144199506
+          ],
+          "f_target_field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+          "n_iter_mean": 3576.74,
+          "n_iter_min": 1753,
+          "n_iter_max": 4865,
+          "n_iter_distinct": 85,
+          "convergence_rate": 35.767399999999995
+        },
+        {
+          "model": "doubao-seed-evolving",
+          "start_triple_TRA": [
+            44,
+            12,
+            4
+          ],
+          "f_target_min_component": 0.054207888711741564,
+          "f_target_min_component_class": "A",
+          "f_target_min_component_draw_index": 18,
+          "f_target_triple_at_min_draw": [
+            0.7831684451530337,
+            0.1626236661352247,
+            0.054207888711741564
+          ],
+          "f_target_per_component_minima_over_draws": [
+            0.6835141372200474,
+            0.1626236661352247,
+            0.054207888711741564
+          ],
+          "f_target_field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+          "n_iter_mean": 3702.78,
+          "n_iter_min": 2326,
+          "n_iter_max": 4638,
+          "n_iter_distinct": 88,
+          "convergence_rate": 37.0278
+        },
+        {
+          "model": "minimax-m3",
+          "start_triple_TRA": [
+            42,
+            16,
+            2
+          ],
+          "f_target_min_component": 0.027982630201451614,
+          "f_target_min_component_class": "A",
+          "f_target_min_component_draw_index": 42,
+          "f_target_triple_at_min_draw": [
+            0.7481563281869356,
+            0.22386104161161283,
+            0.027982630201451614
+          ],
+          "f_target_per_component_minima_over_draws": [
+            0.6532041430641646,
+            0.22386104161161283,
+            0.027982630201451614
+          ],
+          "f_target_field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+          "n_iter_mean": 5916.96,
+          "n_iter_min": 963,
+          "n_iter_max": 7899,
+          "n_iter_distinct": 95,
+          "convergence_rate": 59.1696
+        },
+        {
+          "model": "glm-5.3-flash",
+          "start_triple_TRA": [
+            42,
+            2,
+            16
+          ],
+          "f_target_min_component": 0.027962581423409412,
+          "f_target_min_component_class": "R",
+          "f_target_min_component_draw_index": 22,
+          "f_target_triple_at_min_draw": [
+            0.7483367671893153,
+            0.027962581423409412,
+            0.2237006513872753
+          ],
+          "f_target_per_component_minima_over_draws": [
+            0.6502115183736383,
+            0.027962581423409412,
+            0.2237006513872753
+          ],
+          "f_target_field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+          "n_iter_mean": 5829.42,
+          "n_iter_min": 3342,
+          "n_iter_max": 7908,
+          "n_iter_distinct": 93,
+          "convergence_rate": 58.294200000000004
+        },
+        {
+          "model": "kimi-k2.7-code",
+          "start_triple_TRA": [
+            38,
+            16,
+            6
+          ],
+          "f_target_min_component": 0.08660009340170155,
+          "f_target_min_component_class": "A",
+          "f_target_min_component_draw_index": 80,
+          "f_target_triple_at_min_draw": [
+            0.682466324193761,
+            0.23093358240453749,
+            0.08660009340170155
+          ],
+          "f_target_per_component_minima_over_draws": [
+            0.584116094831555,
+            0.23093358240453749,
+            0.08660009340170155
+          ],
+          "f_target_field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+          "n_iter_mean": 2343.85,
+          "n_iter_min": 1114,
+          "n_iter_max": 3050,
+          "n_iter_distinct": 93,
+          "convergence_rate": 23.438499999999998
+        },
+        {
+          "model": "doubao-seed-2.1-turbo",
+          "start_triple_TRA": [
+            36,
+            4,
+            20
+          ],
+          "f_target_min_component": 0.05843536849472112,
+          "f_target_min_component_class": "R",
+          "f_target_min_component_draw_index": 66,
+          "f_target_triple_at_min_draw": [
+            0.6493877890316733,
+            0.05843536849472112,
+            0.2921768424736056
+          ],
+          "f_target_per_component_minima_over_draws": [
+            0.5514770412485798,
+            0.05843536849472112,
+            0.2921768424736056
+          ],
+          "f_target_field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+          "n_iter_mean": 3337.7,
+          "n_iter_min": 333,
+          "n_iter_max": 4174,
+          "n_iter_distinct": 100,
+          "convergence_rate": 33.376999999999995
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "start_triple_TRA": [
+            32,
+            4,
+            24
+          ],
+          "f_target_min_component": 0.059640272735596626,
+          "f_target_min_component_class": "R",
+          "f_target_min_component_draw_index": 15,
+          "f_target_triple_at_min_draw": [
+            0.5825180908508236,
+            0.059640272735596626,
+            0.35784163641357974
+          ],
+          "f_target_per_component_minima_over_draws": [
+            0.4839322424120774,
+            0.059640272735596626,
+            0.35784163641357974
+          ],
+          "f_target_field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+          "n_iter_mean": 3314.13,
+          "n_iter_min": 723,
+          "n_iter_max": 4073,
+          "n_iter_distinct": 98,
+          "convergence_rate": 33.1413
+        }
+      ],
+      "o5_min_target_component_split": {
+        "note": "派工单硬要求：O5 保留意见（离散度含机制性成分）须正式跑同报逐 model 最小目标分量 + ρ(最小分量, n_iter_mean)。以下全为诊断面，0 判据（不进入 K-V3R-26 判定）。",
+        "per_model_min_target_component": [
+          {
+            "model": "doubao-seed-2.0-lite",
+            "start_triple_TRA": [
+              52,
+              8,
+              0
+            ],
+            "f_target_min_component": 0.0,
+            "f_target_min_component_class": "A",
+            "f_target_min_component_draw_index": 0,
+            "f_target_triple_at_min_draw": [
+              0.8264518660720135,
+              0.17354813392798651,
+              0.0
+            ],
+            "f_target_per_component_minima_over_draws": [
+              0.8175113781644244,
+              0.08434941904408944,
+              0.0
+            ],
+            "field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+            "n_iter_mean": 1795.01,
+            "convergence_rate": 17.9501,
+            "n_iter_distinct": 81
+          },
+          {
+            "model": "glm-5.3",
+            "start_triple_TRA": [
+              52,
+              6,
+              2
+            ],
+            "f_target_min_component": 0.020947561152689448,
+            "f_target_min_component_class": "A",
+            "f_target_min_component_draw_index": 52,
+            "f_target_triple_at_min_draw": [
+              0.9162097553892422,
+              0.06284268345806834,
+              0.020947561152689448
+            ],
+            "f_target_per_component_minima_over_draws": [
+              0.8185831924167666,
+              0.06284268345806834,
+              0.020947561152689448
+            ],
+            "field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+            "n_iter_mean": 7203.37,
+            "convergence_rate": 72.0337,
+            "n_iter_distinct": 98
+          },
+          {
+            "model": "deepseek-v4-flash",
+            "start_triple_TRA": [
+              46,
+              10,
+              4
+            ],
+            "f_target_min_component": 0.052423168144199506,
+            "f_target_min_component_class": "A",
+            "f_target_min_component_draw_index": 57,
+            "f_target_triple_at_min_draw": [
+              0.8165189114953018,
+              0.13105792036049874,
+              0.052423168144199506
+            ],
+            "f_target_per_component_minima_over_draws": [
+              0.7180321473537922,
+              0.13105792036049874,
+              0.052423168144199506
+            ],
+            "field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+            "n_iter_mean": 3576.74,
+            "convergence_rate": 35.767399999999995,
+            "n_iter_distinct": 85
+          },
+          {
+            "model": "doubao-seed-evolving",
+            "start_triple_TRA": [
+              44,
+              12,
+              4
+            ],
+            "f_target_min_component": 0.054207888711741564,
+            "f_target_min_component_class": "A",
+            "f_target_min_component_draw_index": 18,
+            "f_target_triple_at_min_draw": [
+              0.7831684451530337,
+              0.1626236661352247,
+              0.054207888711741564
+            ],
+            "f_target_per_component_minima_over_draws": [
+              0.6835141372200474,
+              0.1626236661352247,
+              0.054207888711741564
+            ],
+            "field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+            "n_iter_mean": 3702.78,
+            "convergence_rate": 37.0278,
+            "n_iter_distinct": 88
+          },
+          {
+            "model": "minimax-m3",
+            "start_triple_TRA": [
+              42,
+              16,
+              2
+            ],
+            "f_target_min_component": 0.027982630201451614,
+            "f_target_min_component_class": "A",
+            "f_target_min_component_draw_index": 42,
+            "f_target_triple_at_min_draw": [
+              0.7481563281869356,
+              0.22386104161161283,
+              0.027982630201451614
+            ],
+            "f_target_per_component_minima_over_draws": [
+              0.6532041430641646,
+              0.22386104161161283,
+              0.027982630201451614
+            ],
+            "field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+            "n_iter_mean": 5916.96,
+            "convergence_rate": 59.1696,
+            "n_iter_distinct": 95
+          },
+          {
+            "model": "glm-5.3-flash",
+            "start_triple_TRA": [
+              42,
+              2,
+              16
+            ],
+            "f_target_min_component": 0.027962581423409412,
+            "f_target_min_component_class": "R",
+            "f_target_min_component_draw_index": 22,
+            "f_target_triple_at_min_draw": [
+              0.7483367671893153,
+              0.027962581423409412,
+              0.2237006513872753
+            ],
+            "f_target_per_component_minima_over_draws": [
+              0.6502115183736383,
+              0.027962581423409412,
+              0.2237006513872753
+            ],
+            "field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+            "n_iter_mean": 5829.42,
+            "convergence_rate": 58.294200000000004,
+            "n_iter_distinct": 93
+          },
+          {
+            "model": "kimi-k2.7-code",
+            "start_triple_TRA": [
+              38,
+              16,
+              6
+            ],
+            "f_target_min_component": 0.08660009340170155,
+            "f_target_min_component_class": "A",
+            "f_target_min_component_draw_index": 80,
+            "f_target_triple_at_min_draw": [
+              0.682466324193761,
+              0.23093358240453749,
+              0.08660009340170155
+            ],
+            "f_target_per_component_minima_over_draws": [
+              0.584116094831555,
+              0.23093358240453749,
+              0.08660009340170155
+            ],
+            "field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+            "n_iter_mean": 2343.85,
+            "convergence_rate": 23.438499999999998,
+            "n_iter_distinct": 93
+          },
+          {
+            "model": "doubao-seed-2.1-turbo",
+            "start_triple_TRA": [
+              36,
+              4,
+              20
+            ],
+            "f_target_min_component": 0.05843536849472112,
+            "f_target_min_component_class": "R",
+            "f_target_min_component_draw_index": 66,
+            "f_target_triple_at_min_draw": [
+              0.6493877890316733,
+              0.05843536849472112,
+              0.2921768424736056
+            ],
+            "f_target_per_component_minima_over_draws": [
+              0.5514770412485798,
+              0.05843536849472112,
+              0.2921768424736056
+            ],
+            "field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+            "n_iter_mean": 3337.7,
+            "convergence_rate": 33.376999999999995,
+            "n_iter_distinct": 100
+          },
+          {
+            "model": "deepseek-v4-pro",
+            "start_triple_TRA": [
+              32,
+              4,
+              24
+            ],
+            "f_target_min_component": 0.059640272735596626,
+            "f_target_min_component_class": "R",
+            "f_target_min_component_draw_index": 15,
+            "f_target_triple_at_min_draw": [
+              0.5825180908508236,
+              0.059640272735596626,
+              0.35784163641357974
+            ],
+            "f_target_per_component_minima_over_draws": [
+              0.4839322424120774,
+              0.059640272735596626,
+              0.35784163641357974
+            ],
+            "field_note": "f_target_min_component = 逐抽三元组最小分量的最小值；f_target_triple_at_min_draw = 取得该全局最小值的那一抽的完整三元组；f_target_per_component_minima_over_draws = 每个分量各自在 100 抽上的最小值（**不是**同一抽的三元组，两字段口径不同，不得混读）",
+            "n_iter_mean": 3314.13,
+            "convergence_rate": 33.1413,
+            "n_iter_distinct": 98
+          }
+        ],
+        "spearman_rho_min_target_component_vs_n_iter_mean": -0.36666666666666664,
+        "spearman_rho_min_target_component_vs_convergence_rate": -0.36666666666666664,
+        "spearman_rho_T_frac60_vs_convergence_rate": 0.26051340011296553,
+        "ols_variance_decomposition_of_rate": {
+          "r2_on_min_target_component_alone": 0.1266397062375536,
+          "r2_on_T_frac60_alone": 0.06273101532334968,
+          "r2_on_both_together": 0.12676822441862146,
+          "residual_share_unexplained": 0.8732317755813785,
+          "reading": "r2_on_both − r2_on_T_frac60 = 最小目标份额在 T_frac60 之外带来的**增量**解释力 = 机制性成分的可量化下界（2 预测最小二乘，9 点，诊断量非判据）"
+        },
+        "matched_pair_mechanism_contrast": [
+          {
+            "model_a": "doubao-seed-2.0-lite",
+            "model_b": "glm-5.3",
+            "T_frac60_shared": 0.8667,
+            "start_triple_a": [
+              52,
+              8,
+              0
+            ],
+            "start_triple_b": [
+              52,
+              6,
+              2
+            ],
+            "f_target_min_component_a": 0.0,
+            "f_target_min_component_b": 0.020947561152689448,
+            "convergence_rate_a": 17.9501,
+            "convergence_rate_b": 72.0337,
+            "rate_relative_gap": 1.2020741511249802,
+            "reading": "T_frac60 完全相同 => 差值不可归因于 T_frac60 / 盆地深度；只能来自起始三元组结构与最小目标份额（机制性成分）"
+          },
+          {
+            "model_a": "minimax-m3",
+            "model_b": "glm-5.3-flash",
+            "T_frac60_shared": 0.7,
+            "start_triple_a": [
+              42,
+              16,
+              2
+            ],
+            "start_triple_b": [
+              42,
+              2,
+              16
+            ],
+            "f_target_min_component_a": 0.027982630201451614,
+            "f_target_min_component_b": 0.027962581423409412,
+            "convergence_rate_a": 59.1696,
+            "convergence_rate_b": 58.294200000000004,
+            "rate_relative_gap": 0.014905017545831125,
+            "reading": "T_frac60 完全相同 => 差值不可归因于 T_frac60 / 盆地深度；只能来自起始三元组结构与最小目标份额（机制性成分）"
+          }
+        ],
+        "mechanism_component_statement": "实测拆解：ρ(最小目标分量, n_iter_mean) = -0.3667，ρ(最小目标分量, convergence_rate) = -0.3667，ρ(T_frac60, convergence_rate) = 0.2605。方差分解（OLS，9 点，诊断量非判据）：rate ~ 最小分量 R² = 0.1266；rate ~ T_frac60 R² = 0.0627；两者同入 R² = 0.1268（未解释残余份额 0.8732）。⇒ **T_frac60 之外的增量解释力 = 0.0640** 即「最小份额瓶颈」这一机制性成分的可量化下界；T_frac60 相同的配对（doubao-seed-2.0-lite vs glm-5.3; minimax-m3 vs glm-5.3-flash）给出纯机制对比：同 T_frac60 下 rate 仍差 120.2%，该差值**不可**归因于盆地深度。结论：O5 跨 model 离散度**同时**含 「T_frac60 / 盆地深度」与「最小目标份额机制」两类成分，且残余份额 87.3% 无法由两者解释 —— O5 的离散度不可全部归因于任一类（preexp §6 保留意见在正式跑中**维持**）。"
+      }
+    }
+  },
+  "three_ontology_summary": {
+    "verdicts": {
+      "O1_discrete_cell_redistribution": "PASS",
+      "O3_logit_normal_form": "PASS",
+      "O5_replicator_ode_softlimit": "PASS"
+    },
+    "same_direction": true,
+    "agreement_statement": "同向（3/3 本体新构造 verdict 一致 = PASS）",
+    "summary_branch": "三本体同向 PASS ⇒ 改判建议按同向给：新构造下 P-J 收敛盆地非退化，沿 §2.3 第 2 行（PASS + 沿原 V3 阈值字面不一致）⇒ 维持原 V3 标注（UNVERIFIED，不动）+ 显式登记新构造 verdict + 归「不明」分支 + γ",
+    "rule_literal": "派工单：三本体同向 ⇒ 改判建议按同向给；分歧 ⇒ 维持原标注＋登记分歧＋γ（不择优不聚合掩盖，逐本体并报）",
+    "revise_tier_4_docket": [
+      "档1：PASS + 一致 ⇒ 原 V3 报告不动；立改判件入勘误链 E-41.x 系",
+      "档2：PASS + 不一致 ⇒ 维持原 V3 标注（不动）+ 显式登记新构造 verdict；归「不明」分支",
+      "档3：FAIL（即原标注维持）⇒ 0 改判动作；原报告 byte 0 触动",
+      "档4：不明（构造不可行 / 素材不足）⇒ 维持原标注 + 显式登记 γ；归「V4 收尾整理」桶"
+    ],
+    "hit_tier": [
+      "档2：PASS + 不一致",
+      "档2：PASS + 不一致",
+      "档2：PASS + 不一致"
+    ],
+    "hit_tier_all_same": true
+  },
+  "consistency_with_preexp_and_26": {
+    "O1_discrete_cell_redistribution": {
+      "vs_preexp_per_model_rate_identical": true,
+      "vs_preexp_rates_n_distinct": 9,
+      "vs_preexp_verdict": "n/a（preexp 探索性档，verdict = null）",
+      "vs_26_landed_result_identical": true,
+      "note": "派工单硬要求：O1 应与 26 落地件逐字同 —— 沿同一 rng 流 + 同一构造字面 复算，9/9 convergence_rate 逐字相同"
+    },
+    "O3_logit_normal_form": {
+      "vs_preexp_per_model_rate_identical": true,
+      "vs_preexp_rates_n_distinct": 8,
+      "vs_preexp_verdict": "n/a（preexp 探索性档，verdict = null）"
+    },
+    "O5_replicator_ode_softlimit": {
+      "vs_preexp_per_model_rate_identical": true,
+      "vs_preexp_rates_n_distinct": 9,
+      "vs_preexp_verdict": "n/a（preexp 探索性档，verdict = null）"
+    }
+  },
+  "reproducibility_in_process": {
+    "c4_in_process_full_recompute_identical": true,
+    "per_ontology": {
+      "O1_discrete_cell_redistribution": true,
+      "O3_logit_normal_form": true,
+      "O5_replicator_ode_softlimit": true
+    },
+    "note": "进程内全量二次重算逐字自比；进程外双跑比对（两次落盘件 SHA-12 逐字相同）由 worker 核验并登记于报告"
+  },
+  "runtime": "0 LLM; numpy + hashlib + json only; no network; read-only inputs; 0 改动既有件",
+  "iron_rules": {
+    "kill_line_K_V3R_26_untouched": true,
+    "no_private_clause_no_threshold_tuning": true,
+    "0_LLM": true,
+    "no_proxy": true,
+    "no_key_in_prompt_json_disk": true,
+    "read_only_inputs": true,
+    "derived_json_not_merged": true,
+    "existing_26_and_preexp_series_untouched": true,
+    "formal_verdict_this_piece": true
+  },
+  "verdict": {
+    "O1_discrete_cell_redistribution": "PASS",
+    "O3_logit_normal_form": "PASS",
+    "O5_replicator_ode_softlimit": "PASS"
+  },
+  "verdict_note": "正式判定档：本件出 K-V3R-26 逐本体正式 verdict（3 本体独立判定）+ 双口径并报。",
+  "reproducibility": {
+    "payload_sha12": "dda3da2f1c49",
+    "note": "payload_sha12 = hashlib.sha256(canonical json of payload_core).hexdigest()[:12]"
+  }
+}
