@@ -1,0 +1,736 @@
+{
+ "task": "P-D B3 Merkle 22 caption chain re-walk -- V0.4 coordinate space",
+ "task_id": "V3X-C5B-RUNNER-2026-09-29-A1",
+ "date": "2026-09-29",
+ "generator": "deposon_team/plugins/_p_d_b3_merkle_22caption_runner_v0_4_2026_09_29.py",
+ "method": "0 LLM, 0 network, 0 API call inside this runner; pure hashlib + numpy + json",
+ "caliber": {
+  "n_components": 3,
+  "planes_per_dim": 6,
+  "hyperplanes_shape": [
+   18,
+   3
+  ],
+  "code_len_bit": 18,
+  "hex_width": 5,
+  "d_over_2_reference": 9.0,
+  "d_over_2_note": "K-V3DF-5-2 随维度派生的理论参照值, 0 新设判定阈值",
+  "semantic_hash": "18-bit LSH on SVD-3 coords x 18 hyperplanes (np.random.seed(42)), sign bits -> 5 hex",
+  "byte_hash": "SHA-256(caption_id)[0:12] (12 hex)",
+  "dual": "byte_hash[:6] + semantic_hash = 11 hex (42 bit)",
+  "spec_ref_pending": "docs/V3X/P_D_FINGERPRINT_V0_4_SPEC.md (待 doc-writer 棒 2b 新增, 本件 0 代拟正文)"
+ },
+ "input_selfcheck": {
+  "raw_embedding_reproduction_max_abs_dev_vs_stored_svd2": 0.0089821568,
+  "raw_embedding_reproduces_stored_svd2": false,
+  "svd_var_explained_k": 0.792848
+ },
+ "id_correspondence": {
+  "n_graph_ids": 22,
+  "n_caption_ids": 22,
+  "positional_match": true,
+  "raw_concept_ids_match": true
+ },
+ "frozen_proof": {
+  "file": "corpus/v20/index.json",
+  "sha256_before_write": "8423ffe266afad008aa18744f74892f13bbb7d4d6a193d1ccac206c489c22d1c",
+  "sha256_after_write": "8423ffe266afad008aa18744f74892f13bbb7d4d6a193d1ccac206c489c22d1c",
+  "unchanged": true
+ },
+ "zero_overwrite_proof": {
+  "policy": "0 覆写 2026-09-16 两件 B3 既有产出 + 既有 runner",
+  "sha12_before": {
+   "corpus/v20/index_v2_2026_09_16.json": "efe05ad775de",
+   "results/deposon_p_d_b3_merkle_22_caption_2026_09_16.json": "b5873afb9d29",
+   "corpus/v20_caption_surface/_p_d_b3_merkle_22caption_runner_2026_09_16.py": "d2cd7acb29a1"
+  },
+  "sha12_after": {
+   "corpus/v20/index_v2_2026_09_16.json": "efe05ad775de",
+   "results/deposon_p_d_b3_merkle_22_caption_2026_09_16.json": "b5873afb9d29",
+   "corpus/v20_caption_surface/_p_d_b3_merkle_22caption_runner_2026_09_16.py": "d2cd7acb29a1"
+  },
+  "unchanged": true
+ },
+ "anchors": {
+  "values": [
+   "7d6d3d39fad8",
+   "f88d855aaf83",
+   "e66e44e63f5a"
+  ],
+  "source": "docs/V3X/P_F_V0_1_UPGRADE_2026_09_11.md §2.3 B3 Merkle",
+  "anchor0_equals_existing_chain_current_root": {
+   "existing_chain": "verifier/runs/2026-09-04_pd_v0.jsonl",
+   "existing_prev_hash": "000000000000",
+   "existing_current_root": "7d6d3d39fad8",
+   "match": true
+  },
+  "root_note": "新口径下 root 由逐节 SHA-256 导出, 必异于 2026-09-16 件的 root; V0.3 spec L265「root 必须保持」与改坐标空间在数学上互斥, PI 确认批 5 裁「由新增 V0.4 专用 spec 承载」; 本件 0 代拟该 spec 正文, 0 判档位"
+ },
+ "chain_convention": {
+  "state_0": "anchors[0]",
+  "link_i": "SHA-256(f\"{state_(i-1)}|{caption_id}|{dual}\")[0:12], i=1..22",
+  "ext_1": "SHA-256(f\"{state_22}|anchor|{anchors[1]}\")[0:12]",
+  "merkle_root": "SHA-256(f\"{ext_1}|anchor|{anchors[2]}\")[0:12]"
+ },
+ "per_caption": [
+  {
+   "caption_id": "L_algorithm_process",
+   "byte_hash": "e07ebcfbf9ba",
+   "semantic_hash": "006d8",
+   "dual": "e07ebc006d8",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.522025,
+    0.609207,
+    -0.362677
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "7d6d3d39fad8",
+    "link_input": "7d6d3d39fad8|L_algorithm_process|e07ebc006d8",
+    "node_state": "c38c2a601130",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "L_biological_taxonomy",
+   "byte_hash": "bff92145e971",
+   "semantic_hash": "03eed",
+   "dual": "bff92103eed",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.900694,
+    -0.090054,
+    -0.079444
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "c38c2a601130",
+    "link_input": "c38c2a601130|L_biological_taxonomy|bff92103eed",
+    "node_state": "caeb07bed99f",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "L_geography_world",
+   "byte_hash": "64ad5fc2c7e0",
+   "semantic_hash": "03eed",
+   "dual": "64ad5f03eed",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.889058,
+    -0.141297,
+    0.008487
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "caeb07bed99f",
+    "link_input": "caeb07bed99f|L_geography_world|64ad5f03eed",
+    "node_state": "34030ebe17d1",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "L_historical_causality",
+   "byte_hash": "fbfa04f1128c",
+   "semantic_hash": "01ad5",
+   "dual": "fbfa0401ad5",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.717823,
+    0.265687,
+    0.348008
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "34030ebe17d1",
+    "link_input": "34030ebe17d1|L_historical_causality|fbfa0401ad5",
+    "node_state": "b1cca037e9d5",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "L_physics_concepts",
+   "byte_hash": "dbe8caaa4bfd",
+   "semantic_hash": "03eed",
+   "dual": "dbe8ca03eed",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.878698,
+    -0.126882,
+    -0.024365
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "b1cca037e9d5",
+    "link_input": "b1cca037e9d5|L_physics_concepts|dbe8ca03eed",
+    "node_state": "2b236ebd6687",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "L_project_management",
+   "byte_hash": "5fe6baab5410",
+   "semantic_hash": "03eed",
+   "dual": "5fe6ba03eed",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.906994,
+    -0.136827,
+    0.015172
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "2b236ebd6687",
+    "link_input": "2b236ebd6687|L_project_management|5fe6ba03eed",
+    "node_state": "1d798ec40890",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S1",
+   "byte_hash": "3696ad59777e",
+   "semantic_hash": "008d5",
+   "dual": "3696ad008d5",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.581916,
+    0.500442,
+    0.514085
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "1d798ec40890",
+    "link_input": "1d798ec40890|S1|3696ad008d5",
+    "node_state": "60eac2923b69",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S1_n35",
+   "byte_hash": "6d92596542c2",
+   "semantic_hash": "03eed",
+   "dual": "6d925903eed",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.902149,
+    -0.1453,
+    -0.086124
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "60eac2923b69",
+    "link_input": "60eac2923b69|S1_n35|6d925903eed",
+    "node_state": "45f7d65c2759",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S1_n45",
+   "byte_hash": "d22455b290c0",
+   "semantic_hash": "006d4",
+   "dual": "d22455006d4",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.597852,
+    0.543164,
+    0.02063
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "45f7d65c2759",
+    "link_input": "45f7d65c2759|S1_n45|d22455006d4",
+    "node_state": "3201ea4e1d94",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S1_n60",
+   "byte_hash": "a71ac717c393",
+   "semantic_hash": "03eed",
+   "dual": "a71ac703eed",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.906151,
+    -0.134554,
+    -0.006996
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "3201ea4e1d94",
+    "link_input": "3201ea4e1d94|S1_n60|a71ac703eed",
+    "node_state": "b2e24065505e",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S2",
+   "byte_hash": "adfa2b24c2d9",
+   "semantic_hash": "01edd",
+   "dual": "adfa2b01edd",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.749272,
+    0.329979,
+    -0.023687
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "b2e24065505e",
+    "link_input": "b2e24065505e|S2|adfa2b01edd",
+    "node_state": "607de4d956b0",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S2_n20",
+   "byte_hash": "6c76eaea53d5",
+   "semantic_hash": "03eed",
+   "dual": "6c76ea03eed",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.908153,
+    -0.130048,
+    -0.044388
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "607de4d956b0",
+    "link_input": "607de4d956b0|S2_n20|6c76ea03eed",
+    "node_state": "a7effe62c5eb",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S2_n35",
+   "byte_hash": "831a5b3a2c65",
+   "semantic_hash": "006d8",
+   "dual": "831a5b006d8",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.558888,
+    0.621236,
+    -0.245229
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "a7effe62c5eb",
+    "link_input": "a7effe62c5eb|S2_n35|831a5b006d8",
+    "node_state": "5ce82a44c1c0",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S2_n45",
+   "byte_hash": "3174b72cf536",
+   "semantic_hash": "01ecd",
+   "dual": "3174b701ecd",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.866012,
+    -0.047618,
+    -0.05777
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "5ce82a44c1c0",
+    "link_input": "5ce82a44c1c0|S2_n45|3174b701ecd",
+    "node_state": "3f2cb890ce5d",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S2_n60",
+   "byte_hash": "2242e1fb732a",
+   "semantic_hash": "03eed",
+   "dual": "2242e103eed",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.844894,
+    -0.095881,
+    -0.088042
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "3f2cb890ce5d",
+    "link_input": "3f2cb890ce5d|S2_n60|2242e103eed",
+    "node_state": "d3028952a1e1",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S3",
+   "byte_hash": "44d6a8a73edd",
+   "semantic_hash": "01ecd",
+   "dual": "44d6a801ecd",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.892824,
+    -0.097516,
+    0.009414
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "d3028952a1e1",
+    "link_input": "d3028952a1e1|S3|44d6a801ecd",
+    "node_state": "08a30c2cfe79",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S4",
+   "byte_hash": "b1d3eb8f3293",
+   "semantic_hash": "03eed",
+   "dual": "b1d3eb03eed",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.905042,
+    -0.10591,
+    -0.016716
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "08a30c2cfe79",
+    "link_input": "08a30c2cfe79|S4|b1d3eb03eed",
+    "node_state": "ec04dfa75fd0",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S5",
+   "byte_hash": "1cdcbd57e7e2",
+   "semantic_hash": "01ecd",
+   "dual": "1cdcbd01ecd",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.898877,
+    -0.097122,
+    0.020516
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "ec04dfa75fd0",
+    "link_input": "ec04dfa75fd0|S5|1cdcbd01ecd",
+    "node_state": "2c3ac7c97c67",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S6",
+   "byte_hash": "b12f76a4b782",
+   "semantic_hash": "01eed",
+   "dual": "b12f7601eed",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.904992,
+    -0.146045,
+    0.040906
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "2c3ac7c97c67",
+    "link_input": "2c3ac7c97c67|S6|b12f7601eed",
+    "node_state": "30f20839b0bd",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S6_n20",
+   "byte_hash": "803f0b9079ca",
+   "semantic_hash": "03eef",
+   "dual": "803f0b03eef",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.900947,
+    -0.167983,
+    0.044622
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "30f20839b0bd",
+    "link_input": "30f20839b0bd|S6_n20|803f0b03eef",
+    "node_state": "90e5493971bd",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S6_n35",
+   "byte_hash": "0e89a90afea3",
+   "semantic_hash": "03eed",
+   "dual": "0e89a903eed",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.921827,
+    -0.128234,
+    -0.027823
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "90e5493971bd",
+    "link_input": "90e5493971bd|S6_n35|0e89a903eed",
+    "node_state": "de088ec810e3",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  },
+  {
+   "caption_id": "S6_n60",
+   "byte_hash": "6abc0c5ac060",
+   "semantic_hash": "01eed",
+   "dual": "6abc0c01eed",
+   "dual_hex_width": 11,
+   "coords_k": [
+    -0.849281,
+    -0.131297,
+    0.047056
+   ],
+   "diff_registration_vs_f4": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "diff_registration_vs_v3phys": {
+    "semantic_hash_identical": false,
+    "dual_identical": false
+   },
+   "chain": {
+    "parent_state": "de088ec810e3",
+    "link_input": "de088ec810e3|S6_n60|6abc0c01eed",
+    "node_state": "bbd61495cb5d",
+    "link_verified": true,
+    "self_verified_only": true
+   }
+  }
+ ],
+ "diff_registration": {
+  "note": "新口径下与 2026-09-16 件的逐条比对必不一致; 本面仅作差异登记, 0 作通过依据 (提案件 §5.3 连带后果②; 0 自裁, 留 PI 确认是否改判为新件自证)",
+  "vs_f4_semantic_identical_count": 0,
+  "vs_f4_dual_identical_count": 0,
+  "vs_v3phys_semantic_identical_count": 0,
+  "vs_v3phys_dual_identical_count": 0,
+  "reference_files": [
+   "results/deposon_v2_phase4_f4_2026_09_11.json",
+   "results/deposon_v3_physical_opt_2026_09_11.json"
+  ]
+ },
+ "chain_summary": {
+  "state_22_after_22_captions": "bbd61495cb5d",
+  "ext_1_after_anchor2": "bf492f1c8424",
+  "b3_merkle_root": "45ef859b2be9",
+  "independent_rewalk_ok": true
+ },
+ "decision_lines_36_substitute": {
+  "substitution_note": "α×β=30 档 + δ×γ×ρ=216 档在仓内无展开定义; 沿用 results/deposon_v3_physical_opt_60cells_2026_09_11.json 的 decision_lines_36",
+  "structure": "9 model × 4 T_frac bins = 36 档判定线预注册",
+  "thresholds": {
+   "P_C_cosine": {
+    "PASS": "cos_sim >= 0.85",
+    "GRAY": "0.70 <= cos_sim < 0.85",
+    "FAIL": "cos_sim < 0.70"
+   },
+   "P_E_eps": {
+    "PASS": "eps < 0.30",
+    "GRAY": "0.30 <= eps < 0.50",
+    "FAIL": "eps >= 0.50"
+   }
+  },
+  "verdict_summary": {
+   "PC_in_bin": {
+    "PASS": 8,
+    "GRAY": 1,
+    "FAIL": 0
+   },
+   "PE_in_bin": {
+    "PASS": 5,
+    "GRAY": 3,
+    "FAIL": 1
+   }
+  }
+ },
+ "cross_source_2model_087": {
+  "file": "results/deposon_game_theory_eval_2026_09_10.json",
+  "note_path": "5_candidates_evaluation.P-A_equilibrium_stabilization.note",
+  "note_verbatim": "doubao-seed-2.0-lite (26/30=0.867) + glm-5.3 (26/30=0.867) form the v2 equilibrium cluster at exact T_frac=0.867. v3 §6 expected \"26-cell models\" — both are 26/30. deepseek-v4-flash (23/30=0.767) is just below. This is a fuzzy equilibrium cluster, not a fixed point (variance 0 in cluster)."
+ },
+ "self_check": {
+  "forbidden_tokens_policy": "禁用词表 8 项, 见本 runner FORBIDDEN_TOKENS 常量 (拼接构造)",
+  "forbidden_tokens_found": {},
+  "integrity_index_v3_ok": true,
+  "integrity_results_ok": true
+ },
+ "no_verdict_notice": "本件 0 判档位; PASS/FAIL/KD 归 verdict-keeper",
+ "integrity": {
+  "content_sha256": "57c2fc71b3d14e53ec9e3bd306593f6d4b8f207afc8b6f097cf9675da1c17d84",
+  "content_hash_scope": "full file bytes with integrity.content_sha256 set to empty string",
+  "path_sha256": "1e5a741a8c03c6a82b09e20e5968b8c5e388b347302f2172c59d31db8ce3375c",
+  "path_hashed": "results/deposon_p_d_b3_merkle_22_caption_v0_4_2026_09_29.json",
+  "anchor_sha256": "c4cae1ed9ee543a12bda58e82e3c9c35bd3aa4caef9bc26d3a42c8e60cf366f1",
+  "anchor_hashed": "7d6d3d39fad8|f88d855aaf83|e66e44e63f5a"
+ }
+}

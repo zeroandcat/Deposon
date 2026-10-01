@@ -1,0 +1,2322 @@
+{
+  "task": "V3-N #32 CPATH 理论模拟实测 (补齐 Trae 回函 §1.2 #32「不明」实测面)",
+  "date": "2026-10-01",
+  "author": "Mavis 团队 worker (agent: worker)",
+  "rerun_of": "deposon_team/plugins/_v3n_cpath_live_2026_09_27.py (5248ba7ac21c / 19,823 B) — 执行逻辑逐字沿用, 0 改动",
+  "rerun_trigger": "T1 ark key 恢复 (runtime env 存在性已核) + T2 配额重置点 2026-09-30 23:59:59 +0800 已过 + T3 PI 放行 (排期 v4 T1-5 「#32 补跑」 + 本晨开工批)",
+  "rerun_extractor_open_face": "抽取器口径未裁 (426cfe18cf65 §8-2 待 PI): stored 22/30 vs 同抽取器重判 24/30, 差额 -2 全在 gsm8k; 本次按 runner 现字面执行, 0 新设 0 代裁",
+  "rerun_prior_state": "_v3_n_cpath_live_data_2026_09_27.json (25374af92f88) 09-30 重跑停在第 1 次 embedding 即 429 AccountQuotaExceeded, with-RAG 0 条; 首跑 09-27 768c 12/30 仅 stdout 存活已丢失(不补写)",
+  "rerun_no_overwrite": "上游 runner OUT_JSON 指向既有件 _v3_n_cpath_live_data_2026_09_27.json; 本副本改新名输出, 既有件 0 触动",
+  "design_source": "docs/V3X/CPATH_SIMULATION_REPORT_2026_09_10.md §7.2 (5 步字面)",
+  "verdict_criteria_literal": {
+    "theoretical_margin_band": "0% ~ +26.7% (原报告 §5, 完美 oracle 边界)",
+    "no_rag_baseline": "22/30 = 73.3% (原报告 §3/§4.3)",
+    "new_thresholds_introduced": 0
+  },
+  "endpoints": {
+    "chat_base": "https://ark.cn-beijing.volces.com/api/coding/v3",
+    "chat_model": "glm-latest",
+    "embedding_endpoint": "https://ark.cn-beijing.volces.com/api/coding/v3/embeddings",
+    "embedding_model": "doubao-embedding-vision-251215",
+    "note": "逐字沿用 baseline 件; Volcengine Ark 非 teamorouter/openrouter → tun 代理不适用"
+  },
+  "extractor_declaration": {
+    "why_redeclared": "baseline 件只落盘抽取结果, 抽取器本体不可得; 为隔离 RAG 效应, no-RAG 与 with-RAG 用同一抽取器重判",
+    "gsm8k": "优先首个 **bold** 数字, 否则首个数字; 与 expected 比 |Δ| <= 1e-6*|exp|",
+    "strategyqa": "首个 \\b(yes|no)\\b (忽略大小写); 与 expected 字符串比"
+  },
+  "input_chain": {
+    "baseline_30cells": {
+      "path": "results/deposon_volcengine_glm_latest_30cells_v2_2026_09_10.json",
+      "exists": true,
+      "bytes": 32995
+    },
+    "caption_embedding_meta": {
+      "path": "results/deposon_volcengine_22caption_embedding_2026_09_10.json",
+      "exists": true,
+      "bytes": 4559
+    },
+    "caption_text_22": {
+      "path": "corpus/v20/strip_captions_22.json",
+      "exists": true,
+      "bytes": 12798
+    },
+    "corpus_index": {
+      "path": "corpus/v20/index.json",
+      "exists": true,
+      "bytes": 7335
+    }
+  },
+  "retrieval": [
+    {
+      "id": 1,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "L_algorithm_process",
+          "cos": 0.1554
+        },
+        {
+          "caption_id": "L_historical_causality",
+          "cos": 0.1365
+        },
+        {
+          "caption_id": "S2_n35",
+          "cos": 0.1301
+        }
+      ],
+      "top3_T_frac_mean": -0.598
+    },
+    {
+      "id": 2,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "S6_n60",
+          "cos": 0.1484
+        },
+        {
+          "caption_id": "S1_n45",
+          "cos": 0.1456
+        },
+        {
+          "caption_id": "S4",
+          "cos": 0.1405
+        }
+      ],
+      "top3_T_frac_mean": -0.7832
+    },
+    {
+      "id": 3,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "S6_n60",
+          "cos": 0.2259
+        },
+        {
+          "caption_id": "S6_n35",
+          "cos": 0.2073
+        },
+        {
+          "caption_id": "S3",
+          "cos": 0.1879
+        }
+      ],
+      "top3_T_frac_mean": -0.8889
+    },
+    {
+      "id": 4,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "L_project_management",
+          "cos": 0.1165
+        },
+        {
+          "caption_id": "L_algorithm_process",
+          "cos": 0.1149
+        },
+        {
+          "caption_id": "S1",
+          "cos": 0.1134
+        }
+      ],
+      "top3_T_frac_mean": -0.6693
+    },
+    {
+      "id": 5,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "L_project_management",
+          "cos": 0.0875
+        },
+        {
+          "caption_id": "L_algorithm_process",
+          "cos": 0.0804
+        },
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.0796
+        }
+      ],
+      "top3_T_frac_mean": -0.7747
+    },
+    {
+      "id": 6,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "L_physics_concepts",
+          "cos": 0.1275
+        },
+        {
+          "caption_id": "S2_n35",
+          "cos": 0.1241
+        },
+        {
+          "caption_id": "S1",
+          "cos": 0.1226
+        }
+      ],
+      "top3_T_frac_mean": -0.6725
+    },
+    {
+      "id": 7,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "L_physics_concepts",
+          "cos": 0.1762
+        },
+        {
+          "caption_id": "L_biological_taxonomy",
+          "cos": 0.1569
+        },
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.1512
+        }
+      ],
+      "top3_T_frac_mean": -0.894
+    },
+    {
+      "id": 8,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "S6_n60",
+          "cos": 0.2125
+        },
+        {
+          "caption_id": "S1_n60",
+          "cos": 0.2098
+        },
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.2064
+        }
+      ],
+      "top3_T_frac_mean": -0.8849
+    },
+    {
+      "id": 9,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "S3",
+          "cos": 0.1781
+        },
+        {
+          "caption_id": "S2_n20",
+          "cos": 0.1658
+        },
+        {
+          "caption_id": "L_physics_concepts",
+          "cos": 0.1573
+        }
+      ],
+      "top3_T_frac_mean": -0.8942
+    },
+    {
+      "id": 10,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.099
+        },
+        {
+          "caption_id": "L_algorithm_process",
+          "cos": 0.0982
+        },
+        {
+          "caption_id": "L_physics_concepts",
+          "cos": 0.0967
+        }
+      ],
+      "top3_T_frac_mean": -0.7666
+    },
+    {
+      "id": 11,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "S3",
+          "cos": 0.1226
+        },
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.1225
+        },
+        {
+          "caption_id": "L_physics_concepts",
+          "cos": 0.1214
+        }
+      ],
+      "top3_T_frac_mean": -0.8915
+    },
+    {
+      "id": 12,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "S6_n20",
+          "cos": 0.1566
+        },
+        {
+          "caption_id": "S2_n35",
+          "cos": 0.1506
+        },
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.1404
+        }
+      ],
+      "top3_T_frac_mean": -0.7839
+    },
+    {
+      "id": 13,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.1653
+        },
+        {
+          "caption_id": "L_geography_world",
+          "cos": 0.1549
+        },
+        {
+          "caption_id": "S5",
+          "cos": 0.1505
+        }
+      ],
+      "top3_T_frac_mean": -0.8952
+    },
+    {
+      "id": 14,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.1747
+        },
+        {
+          "caption_id": "L_biological_taxonomy",
+          "cos": 0.1703
+        },
+        {
+          "caption_id": "S1_n45",
+          "cos": 0.1695
+        }
+      ],
+      "top3_T_frac_mean": -0.7982
+    },
+    {
+      "id": 15,
+      "benchmark": "gsm8k",
+      "top3": [
+        {
+          "caption_id": "S3",
+          "cos": 0.1359
+        },
+        {
+          "caption_id": "L_algorithm_process",
+          "cos": 0.1221
+        },
+        {
+          "caption_id": "S2_n20",
+          "cos": 0.1173
+        }
+      ],
+      "top3_T_frac_mean": -0.7744
+    },
+    {
+      "id": 1,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_historical_causality",
+          "cos": 0.1505
+        },
+        {
+          "caption_id": "S5",
+          "cos": 0.1371
+        },
+        {
+          "caption_id": "S2_n35",
+          "cos": 0.1212
+        }
+      ],
+      "top3_T_frac_mean": -0.7241
+    },
+    {
+      "id": 2,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_geography_world",
+          "cos": 0.1119
+        },
+        {
+          "caption_id": "L_biological_taxonomy",
+          "cos": 0.0907
+        },
+        {
+          "caption_id": "L_project_management",
+          "cos": 0.0666
+        }
+      ],
+      "top3_T_frac_mean": -0.8986
+    },
+    {
+      "id": 3,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_historical_causality",
+          "cos": 0.1847
+        },
+        {
+          "caption_id": "S6_n20",
+          "cos": 0.1353
+        },
+        {
+          "caption_id": "L_physics_concepts",
+          "cos": 0.1242
+        }
+      ],
+      "top3_T_frac_mean": -0.8322
+    },
+    {
+      "id": 4,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_project_management",
+          "cos": 0.1458
+        },
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.1286
+        },
+        {
+          "caption_id": "L_algorithm_process",
+          "cos": 0.127
+        }
+      ],
+      "top3_T_frac_mean": -0.7747
+    },
+    {
+      "id": 5,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_geography_world",
+          "cos": 0.1608
+        },
+        {
+          "caption_id": "S5",
+          "cos": 0.1593
+        },
+        {
+          "caption_id": "S3",
+          "cos": 0.1566
+        }
+      ],
+      "top3_T_frac_mean": -0.8943
+    },
+    {
+      "id": 6,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_geography_world",
+          "cos": 0.1198
+        },
+        {
+          "caption_id": "S2",
+          "cos": 0.1162
+        },
+        {
+          "caption_id": "S2_n60",
+          "cos": 0.1134
+        }
+      ],
+      "top3_T_frac_mean": -0.8275
+    },
+    {
+      "id": 7,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_biological_taxonomy",
+          "cos": 0.1645
+        },
+        {
+          "caption_id": "L_physics_concepts",
+          "cos": 0.123
+        },
+        {
+          "caption_id": "S3",
+          "cos": 0.1192
+        }
+      ],
+      "top3_T_frac_mean": -0.8931
+    },
+    {
+      "id": 8,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_biological_taxonomy",
+          "cos": 0.1747
+        },
+        {
+          "caption_id": "L_historical_causality",
+          "cos": 0.158
+        },
+        {
+          "caption_id": "L_physics_concepts",
+          "cos": 0.1519
+        }
+      ],
+      "top3_T_frac_mean": -0.8338
+    },
+    {
+      "id": 9,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_geography_world",
+          "cos": 0.1186
+        },
+        {
+          "caption_id": "L_project_management",
+          "cos": 0.0977
+        },
+        {
+          "caption_id": "L_algorithm_process",
+          "cos": 0.0904
+        }
+      ],
+      "top3_T_frac_mean": -0.7712
+    },
+    {
+      "id": 10,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_physics_concepts",
+          "cos": 0.1646
+        },
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.1584
+        },
+        {
+          "caption_id": "S5",
+          "cos": 0.1576
+        }
+      ],
+      "top3_T_frac_mean": -0.8927
+    },
+    {
+      "id": 11,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_historical_causality",
+          "cos": 0.0895
+        },
+        {
+          "caption_id": "L_geography_world",
+          "cos": 0.089
+        },
+        {
+          "caption_id": "L_biological_taxonomy",
+          "cos": 0.0883
+        }
+      ],
+      "top3_T_frac_mean": -0.8363
+    },
+    {
+      "id": 12,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_biological_taxonomy",
+          "cos": 0.2128
+        },
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.1874
+        },
+        {
+          "caption_id": "S2",
+          "cos": 0.1838
+        }
+      ],
+      "top3_T_frac_mean": -0.8502
+    },
+    {
+      "id": 13,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_geography_world",
+          "cos": 0.1444
+        },
+        {
+          "caption_id": "L_biological_taxonomy",
+          "cos": 0.1397
+        },
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.1151
+        }
+      ],
+      "top3_T_frac_mean": -0.8965
+    },
+    {
+      "id": 14,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "S6_n60",
+          "cos": 0.2994
+        },
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.2525
+        },
+        {
+          "caption_id": "S6",
+          "cos": 0.2477
+        }
+      ],
+      "top3_T_frac_mean": -0.8845
+    },
+    {
+      "id": 15,
+      "benchmark": "strategyqa",
+      "top3": [
+        {
+          "caption_id": "L_geography_world",
+          "cos": 0.2521
+        },
+        {
+          "caption_id": "S1_n35",
+          "cos": 0.1877
+        },
+        {
+          "caption_id": "S6_n60",
+          "cos": 0.1767
+        }
+      ],
+      "top3_T_frac_mean": -0.8787
+    }
+  ],
+  "no_rag_rescored": [
+    {
+      "id": 1,
+      "benchmark": "gsm8k",
+      "extracted": 18.0,
+      "expected": 18.0,
+      "is_correct": true,
+      "stored_is_correct": false,
+      "stored_ms": 4699.9
+    },
+    {
+      "id": 2,
+      "benchmark": "gsm8k",
+      "extracted": 5.0,
+      "expected": 5.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 3335.8
+    },
+    {
+      "id": 3,
+      "benchmark": "gsm8k",
+      "extracted": 40.0,
+      "expected": 40.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2044.1
+    },
+    {
+      "id": 4,
+      "benchmark": "gsm8k",
+      "extracted": 1430.0,
+      "expected": 1430.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 3697.3
+    },
+    {
+      "id": 5,
+      "benchmark": "gsm8k",
+      "extracted": 36.0,
+      "expected": 36.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2997.4
+    },
+    {
+      "id": 6,
+      "benchmark": "gsm8k",
+      "extracted": 8000.0,
+      "expected": 8000.0,
+      "is_correct": true,
+      "stored_is_correct": false,
+      "stored_ms": 1555.8
+    },
+    {
+      "id": 7,
+      "benchmark": "gsm8k",
+      "extracted": 36.0,
+      "expected": 36.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2861.3
+    },
+    {
+      "id": 8,
+      "benchmark": "gsm8k",
+      "extracted": 6.0,
+      "expected": 6.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2079.7
+    },
+    {
+      "id": 9,
+      "benchmark": "gsm8k",
+      "extracted": 40.0,
+      "expected": 40.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2866.2
+    },
+    {
+      "id": 10,
+      "benchmark": "gsm8k",
+      "extracted": 140.0,
+      "expected": 140.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 1767.7
+    },
+    {
+      "id": 11,
+      "benchmark": "gsm8k",
+      "extracted": 2125.0,
+      "expected": 2125.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2363.3
+    },
+    {
+      "id": 12,
+      "benchmark": "gsm8k",
+      "extracted": 32.0,
+      "expected": 32.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2302.6
+    },
+    {
+      "id": 13,
+      "benchmark": "gsm8k",
+      "extracted": 50.0,
+      "expected": 50.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 3219.7
+    },
+    {
+      "id": 14,
+      "benchmark": "gsm8k",
+      "extracted": 122.0,
+      "expected": 122.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 1635.9
+    },
+    {
+      "id": 15,
+      "benchmark": "gsm8k",
+      "extracted": 34.0,
+      "expected": 34.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 4129.3
+    },
+    {
+      "id": 1,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "Yes",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 4861.2
+    },
+    {
+      "id": 2,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 3030.3
+    },
+    {
+      "id": 3,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "Yes",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 7262.4
+    },
+    {
+      "id": 4,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 8565.6
+    },
+    {
+      "id": 5,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "Yes",
+      "is_correct": false,
+      "stored_is_correct": false,
+      "stored_ms": 10133.2
+    },
+    {
+      "id": 6,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 5239.0
+    },
+    {
+      "id": 7,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "No",
+      "is_correct": false,
+      "stored_is_correct": false,
+      "stored_ms": 5887.5
+    },
+    {
+      "id": 8,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 3731.2
+    },
+    {
+      "id": 9,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "Yes",
+      "is_correct": false,
+      "stored_is_correct": false,
+      "stored_ms": 22812.1
+    },
+    {
+      "id": 10,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "No",
+      "is_correct": false,
+      "stored_is_correct": false,
+      "stored_ms": 10971.8
+    },
+    {
+      "id": 11,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 4808.9
+    },
+    {
+      "id": 12,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 5837.3
+    },
+    {
+      "id": 13,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "Yes",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 16247.4
+    },
+    {
+      "id": 14,
+      "benchmark": "strategyqa",
+      "extracted": null,
+      "expected": "Yes",
+      "is_correct": false,
+      "stored_is_correct": false,
+      "stored_ms": 38944.4
+    },
+    {
+      "id": 15,
+      "benchmark": "strategyqa",
+      "extracted": null,
+      "expected": "Yes",
+      "is_correct": false,
+      "stored_is_correct": false,
+      "stored_ms": 90278.0
+    }
+  ],
+  "with_rag": [
+    {
+      "id": 1,
+      "benchmark": "gsm8k",
+      "extracted": 18.0,
+      "expected": 18.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_algorithm_process",
+        "L_historical_causality",
+        "S2_n35"
+      ],
+      "top3_cos": [
+        0.1554,
+        0.1365,
+        0.1301
+      ],
+      "ms": 3470.1,
+      "usage": {
+        "completion_tokens": 171,
+        "prompt_tokens": 718,
+        "total_tokens": 889,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 169
+        }
+      },
+      "response_text": "18"
+    },
+    {
+      "id": 2,
+      "benchmark": "gsm8k",
+      "extracted": 5.0,
+      "expected": 5.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "S6_n60",
+        "S1_n45",
+        "S4"
+      ],
+      "top3_cos": [
+        0.1484,
+        0.1456,
+        0.1405
+      ],
+      "ms": 1681.6,
+      "usage": {
+        "completion_tokens": 73,
+        "prompt_tokens": 870,
+        "total_tokens": 943,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 69
+        }
+      },
+      "response_text": "**5**"
+    },
+    {
+      "id": 3,
+      "benchmark": "gsm8k",
+      "extracted": 40.0,
+      "expected": 40.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "S6_n60",
+        "S6_n35",
+        "S3"
+      ],
+      "top3_cos": [
+        0.2259,
+        0.2073,
+        0.1879
+      ],
+      "ms": 2010.0,
+      "usage": {
+        "completion_tokens": 100,
+        "prompt_tokens": 800,
+        "total_tokens": 900,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 70
+        }
+      },
+      "response_text": "**40**\n\n(7 adopted + 21 from Patchy (3×7) + 12 from Trixie = 40 kittens)"
+    },
+    {
+      "id": 4,
+      "benchmark": "gsm8k",
+      "extracted": 1430.0,
+      "expected": 1430.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_project_management",
+        "L_algorithm_process",
+        "S1"
+      ],
+      "top3_cos": [
+        0.1165,
+        0.1149,
+        0.1134
+      ],
+      "ms": 2120.9,
+      "usage": {
+        "completion_tokens": 112,
+        "prompt_tokens": 580,
+        "total_tokens": 692,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 71
+        }
+      },
+      "response_text": "**1430**\n\n($500 + $800 = $1300; insurance = 10% × $1300 = $130; total = $1300 + $130 = $1430)"
+    },
+    {
+      "id": 5,
+      "benchmark": "gsm8k",
+      "extracted": 36.0,
+      "expected": 36.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_project_management",
+        "L_algorithm_process",
+        "S1_n35"
+      ],
+      "top3_cos": [
+        0.0875,
+        0.0804,
+        0.0796
+      ],
+      "ms": 2605.9,
+      "usage": {
+        "completion_tokens": 98,
+        "prompt_tokens": 652,
+        "total_tokens": 750,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 94
+        }
+      },
+      "response_text": "**36**"
+    },
+    {
+      "id": 6,
+      "benchmark": "gsm8k",
+      "extracted": 8000.0,
+      "expected": 8000.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_physics_concepts",
+        "S2_n35",
+        "S1"
+      ],
+      "top3_cos": [
+        0.1275,
+        0.1241,
+        0.1226
+      ],
+      "ms": 2457.2,
+      "usage": {
+        "completion_tokens": 142,
+        "prompt_tokens": 557,
+        "total_tokens": 699,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 97
+        }
+      },
+      "response_text": "**8000**\n\n(Harald sold x copies, Marilyn sold 10x; x + 10x = 88,000 → 11x = 88,000 → x = 8,000.)"
+    },
+    {
+      "id": 7,
+      "benchmark": "gsm8k",
+      "extracted": 36.0,
+      "expected": 36.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_physics_concepts",
+        "L_biological_taxonomy",
+        "S1_n35"
+      ],
+      "top3_cos": [
+        0.1762,
+        0.1569,
+        0.1512
+      ],
+      "ms": 2705.8,
+      "usage": {
+        "completion_tokens": 167,
+        "prompt_tokens": 732,
+        "total_tokens": 899,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 112
+        }
+      },
+      "response_text": "**36**\n\n(Lee's time is 38s, so Gerald's original time was 38 + 2 = 40s. A 10% speed improvement reduces his time by 10%: 40 × 0.90 = 36 seconds.)"
+    },
+    {
+      "id": 8,
+      "benchmark": "gsm8k",
+      "extracted": 6.0,
+      "expected": 6.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "S6_n60",
+        "S1_n60",
+        "S1_n35"
+      ],
+      "top3_cos": [
+        0.2125,
+        0.2098,
+        0.2064
+      ],
+      "ms": 3635.0,
+      "usage": {
+        "completion_tokens": 238,
+        "prompt_tokens": 938,
+        "total_tokens": 1176,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 236
+        }
+      },
+      "response_text": "6"
+    },
+    {
+      "id": 9,
+      "benchmark": "gsm8k",
+      "extracted": 40.0,
+      "expected": 40.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "S3",
+        "S2_n20",
+        "L_physics_concepts"
+      ],
+      "top3_cos": [
+        0.1781,
+        0.1658,
+        0.1573
+      ],
+      "ms": 2041.3,
+      "usage": {
+        "completion_tokens": 134,
+        "prompt_tokens": 550,
+        "total_tokens": 684,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 96
+        }
+      },
+      "response_text": "**40**\n\nBrian has 20 − 5 = 15 games at the time of comparison, so Bobby has 3 × 15 − 5 = 40 video games."
+    },
+    {
+      "id": 10,
+      "benchmark": "gsm8k",
+      "extracted": 140.0,
+      "expected": 140.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "S1_n35",
+        "L_algorithm_process",
+        "L_physics_concepts"
+      ],
+      "top3_cos": [
+        0.099,
+        0.0982,
+        0.0967
+      ],
+      "ms": 2036.3,
+      "usage": {
+        "completion_tokens": 102,
+        "prompt_tokens": 660,
+        "total_tokens": 762,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 73
+        }
+      },
+      "response_text": "**140**\n\n(2 hours/day × 7 days = 14 hours; 14 hours × $10/hour = $140)"
+    },
+    {
+      "id": 11,
+      "benchmark": "gsm8k",
+      "extracted": 2125.0,
+      "expected": 2125.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "S3",
+        "S1_n35",
+        "L_physics_concepts"
+      ],
+      "top3_cos": [
+        0.1226,
+        0.1225,
+        0.1214
+      ],
+      "ms": 2254.4,
+      "usage": {
+        "completion_tokens": 134,
+        "prompt_tokens": 657,
+        "total_tokens": 791,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 102
+        }
+      },
+      "response_text": "**2125**\n\n(500 + 3×500 + 500/4 = 500 + 1500 + 125 = 2125)"
+    },
+    {
+      "id": 12,
+      "benchmark": "gsm8k",
+      "extracted": 32.0,
+      "expected": 32.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "S6_n20",
+        "S2_n35",
+        "S1_n35"
+      ],
+      "top3_cos": [
+        0.1566,
+        0.1506,
+        0.1404
+      ],
+      "ms": 2539.5,
+      "usage": {
+        "completion_tokens": 187,
+        "prompt_tokens": 605,
+        "total_tokens": 792,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 112
+        }
+      },
+      "response_text": "**32**\n\nAnakin: 10 starfish + 6 sea horses + 3 clownfish = 19\nLocsin: (10−5) starfish + (6−3) sea horses + (3+2) clownfish = 5 + 3 + 5 = 13\n\nTotal: 19 + 13 = **32**"
+    },
+    {
+      "id": 13,
+      "benchmark": "gsm8k",
+      "extracted": 50.0,
+      "expected": 50.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "S1_n35",
+        "L_geography_world",
+        "S5"
+      ],
+      "top3_cos": [
+        0.1653,
+        0.1549,
+        0.1505
+      ],
+      "ms": 1769.4,
+      "usage": {
+        "completion_tokens": 101,
+        "prompt_tokens": 710,
+        "total_tokens": 811,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 97
+        }
+      },
+      "response_text": "**50**"
+    },
+    {
+      "id": 14,
+      "benchmark": "gsm8k",
+      "extracted": 122.0,
+      "expected": 122.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "S1_n35",
+        "L_biological_taxonomy",
+        "S1_n45"
+      ],
+      "top3_cos": [
+        0.1747,
+        0.1703,
+        0.1695
+      ],
+      "ms": 1516.7,
+      "usage": {
+        "completion_tokens": 73,
+        "prompt_tokens": 757,
+        "total_tokens": 830,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 69
+        }
+      },
+      "response_text": "**122**"
+    },
+    {
+      "id": 15,
+      "benchmark": "gsm8k",
+      "extracted": 34.0,
+      "expected": 34.0,
+      "is_correct": true,
+      "top3_caption_ids": [
+        "S3",
+        "L_algorithm_process",
+        "S2_n20"
+      ],
+      "top3_cos": [
+        0.1359,
+        0.1221,
+        0.1173
+      ],
+      "ms": 2550.8,
+      "usage": {
+        "completion_tokens": 171,
+        "prompt_tokens": 580,
+        "total_tokens": 751,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 114
+        }
+      },
+      "response_text": "**34**\n\n(Costs: tickets $20.25 + food ($20.25 − $4.50 = $15.75) + rides (2 × $33 = $66) = $102 total; $102 ÷ 3 = $34 each)"
+    },
+    {
+      "id": 1,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "Yes",
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_historical_causality",
+        "S5",
+        "S2_n35"
+      ],
+      "top3_cos": [
+        0.1505,
+        0.1371,
+        0.1212
+      ],
+      "ms": 5323.7,
+      "usage": {
+        "completion_tokens": 386,
+        "prompt_tokens": 704,
+        "total_tokens": 1090,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 270
+        }
+      },
+      "response_text": "**Yes**\n\nLord Voldemort is associated with Igor Karkaroff, the headmaster of Durmstrang Institute. Karkaroff was a former Death Eater who bore the Dark Mark and served Voldemort before being captured and imprisoned in Azkaban. He secured his release by naming fellow Death Eaters to the Ministry of Magic (including Barty Crouch Jr.), and his fear of Voldemort's return was a key plot element in *Harry Potter and the Goblet of Fire*, during which Durmstrang participated in the Triwizard Tournament hosted at Hogwarts."
+    },
+    {
+      "id": 2,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_geography_world",
+        "L_biological_taxonomy",
+        "L_project_management"
+      ],
+      "top3_cos": [
+        0.1119,
+        0.0907,
+        0.0666
+      ],
+      "ms": 2678.2,
+      "usage": {
+        "completion_tokens": 141,
+        "prompt_tokens": 668,
+        "total_tokens": 809,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 87
+        }
+      },
+      "response_text": "**No.**\n\nInjera is a traditional sourdough flatbread from Ethiopia and Eritrea (East African cuisine), while Taco Bell is a fast-food chain serving Mexican-inspired food. Taco Bell's menu does not include injera or any Ethiopian dishes."
+    },
+    {
+      "id": 3,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "Yes",
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_historical_causality",
+        "S6_n20",
+        "L_physics_concepts"
+      ],
+      "top3_cos": [
+        0.1847,
+        0.1353,
+        0.1242
+      ],
+      "ms": 7592.4,
+      "usage": {
+        "completion_tokens": 324,
+        "prompt_tokens": 597,
+        "total_tokens": 921,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 172
+        }
+      },
+      "response_text": "**Yes.**\n\nThe modern Brazilian Navy — with frigates, submarines, missile-equipped warships, naval aviation, radar, and modern propulsion — would possess an overwhelming technological advantage over the oar-and-sail-powered galleys of 31 BC. Even a single modern warship could engage the combined fleets of Octavian and Antony from far beyond the range of ancient ramming tactics, projectiles, or boarding attempts. The roughly two-millennia gap in firepower, speed, range, and detection capability means the modern force could decisively control the outcome of the battle, regardless of which side it supported.\n\n(The provided concept graphs concerning WWI causality, biological taxonomy, and physics concepts are not relevant to this counterfactual military question.)"
+    },
+    {
+      "id": 4,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_project_management",
+        "S1_n35",
+        "L_algorithm_process"
+      ],
+      "top3_cos": [
+        0.1458,
+        0.1286,
+        0.127
+      ],
+      "ms": 7166.6,
+      "usage": {
+        "completion_tokens": 439,
+        "prompt_tokens": 616,
+        "total_tokens": 1055,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 197
+        }
+      },
+      "response_text": "**No.**\n\nRetail work, while often considered an entry-level job, requires specific skills and attributes that not everyone possesses:\n\n1. **Interpersonal skills** – Retail involves constant customer interaction, which is challenging for people with social anxiety or poor communication skills.\n\n2. **Emotional labor** – Dealing with difficult or rude customers while maintaining composure demands patience and emotional regulation that not everyone has.\n\n3. **Physical demands** – Long hours of standing, lifting inventory, and staying active can be unsuitable for people with certain physical limitations or health conditions.\n\n4. **Multitasking under pressure** – Handling transactions, answering questions, and managing stock simultaneously requires a particular type of attention and stress tolerance.\n\n5. **Schedule flexibility** – Retail often involves nights, weekends, and holidays, which doesn't fit everyone's life circumstances.\n\nWhile retail has a relatively low barrier to entry compared to many professions, \"low barrier to entry\" is not the same as \"suited for anybody.\" Job suitability depends on an individual's temperament, abilities, and circumstances.\n\n(Note: The provided concept graphs about project management, animals/physics, and algorithm processes are unrelated to this question about retail career suitability.)"
+    },
+    {
+      "id": 5,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "Yes",
+      "is_correct": false,
+      "top3_caption_ids": [
+        "L_geography_world",
+        "S5",
+        "S3"
+      ],
+      "top3_cos": [
+        0.1608,
+        0.1593,
+        0.1566
+      ],
+      "ms": 4004.2,
+      "usage": {
+        "completion_tokens": 270,
+        "prompt_tokens": 636,
+        "total_tokens": 906,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 193
+        }
+      },
+      "response_text": "**No**\n\nJohn Gall (author of *Systemantics* and originator of Gall's Law) was a pediatrician associated with Ann Arbor, Michigan, while Stanford University is located in Stanford, California — so they are not from the same city. (Note: the provided concept graphs contain no information about John Gall or Stanford University, so this answer is based on general knowledge.)"
+    },
+    {
+      "id": 6,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_geography_world",
+        "S2",
+        "S2_n60"
+      ],
+      "top3_cos": [
+        0.1198,
+        0.1162,
+        0.1134
+      ],
+      "ms": 2711.8,
+      "usage": {
+        "completion_tokens": 160,
+        "prompt_tokens": 724,
+        "total_tokens": 884,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 89
+        }
+      },
+      "response_text": "**No.**\n\nMichael is not an unpopular name in the United States — quite the opposite. It has historically been one of the most popular male names in the country, holding the #1 spot for boys for many decades (roughly from the 1950s through the 1990s) and consistently ranking among the top names since then."
+    },
+    {
+      "id": 7,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "No",
+      "is_correct": false,
+      "top3_caption_ids": [
+        "L_biological_taxonomy",
+        "L_physics_concepts",
+        "S3"
+      ],
+      "top3_cos": [
+        0.1645,
+        0.123,
+        0.1192
+      ],
+      "ms": 3352.7,
+      "usage": {
+        "completion_tokens": 180,
+        "prompt_tokens": 641,
+        "total_tokens": 821,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 108
+        }
+      },
+      "response_text": "**Yes.**\n\nHuman sexual reproduction requires the combination of a sperm cell and an egg cell. Since two biological males cannot produce an egg cell, a gay male couple cannot conceive a child through natural reproduction alone. They can, however, become parents through other means such as adoption or assisted reproductive technologies (e.g., surrogacy with a donor egg)."
+    },
+    {
+      "id": 8,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_biological_taxonomy",
+        "L_historical_causality",
+        "L_physics_concepts"
+      ],
+      "top3_cos": [
+        0.1747,
+        0.158,
+        0.1519
+      ],
+      "ms": 3120.3,
+      "usage": {
+        "completion_tokens": 188,
+        "prompt_tokens": 717,
+        "total_tokens": 905,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 120
+        }
+      },
+      "response_text": "**No.**\n\nMartin Luther was the founder of **Lutheranism** (the Protestant denomination that emerged from the Reformation), while Martin Luther King Jr. was a **Baptist** minister. Although both are Protestant traditions, Lutheranism and the Baptist church are distinct denominations, so they were not of the same sect."
+    },
+    {
+      "id": 9,
+      "benchmark": "strategyqa",
+      "extracted": null,
+      "expected": "Yes",
+      "is_correct": false,
+      "top3_caption_ids": [
+        "L_geography_world",
+        "L_project_management",
+        "L_algorithm_process"
+      ],
+      "top3_cos": [
+        0.1186,
+        0.0977,
+        0.0904
+      ],
+      "ms": 7925.1,
+      "usage": {
+        "completion_tokens": 512,
+        "prompt_tokens": 629,
+        "total_tokens": 1141,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 512
+        }
+      },
+      "response_text": ""
+    },
+    {
+      "id": 10,
+      "benchmark": "strategyqa",
+      "extracted": null,
+      "expected": "No",
+      "is_correct": false,
+      "top3_caption_ids": [
+        "L_physics_concepts",
+        "S1_n35",
+        "S5"
+      ],
+      "top3_cos": [
+        0.1646,
+        0.1584,
+        0.1576
+      ],
+      "ms": 8400.6,
+      "usage": {
+        "completion_tokens": 512,
+        "prompt_tokens": 654,
+        "total_tokens": 1166,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 512
+        }
+      },
+      "response_text": ""
+    },
+    {
+      "id": 11,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_historical_causality",
+        "L_geography_world",
+        "L_biological_taxonomy"
+      ],
+      "top3_cos": [
+        0.0895,
+        0.089,
+        0.0883
+      ],
+      "ms": 2620.3,
+      "usage": {
+        "completion_tokens": 178,
+        "prompt_tokens": 729,
+        "total_tokens": 907,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 98
+        }
+      },
+      "response_text": "**No.**\n\nBoris Yeltsin died on April 23, 2007, more than a year before the 2008 Summer Olympics were held in Beijing (August 2008). Therefore, he could not have watched the 2008 Summer Olympics.\n\n(Note: The provided concept graphs about historical causality, world geography, and biological taxonomy are not relevant to answering this question.)"
+    },
+    {
+      "id": 12,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_biological_taxonomy",
+        "S1_n35",
+        "S2"
+      ],
+      "top3_cos": [
+        0.2128,
+        0.1874,
+        0.1838
+      ],
+      "ms": 3161.4,
+      "usage": {
+        "completion_tokens": 176,
+        "prompt_tokens": 647,
+        "total_tokens": 823,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 88
+        }
+      },
+      "response_text": "**No.**\n\nTonsillitis is the inflammation of the tonsils, which are lymphoid tissues located in the throat. Tonsils are anatomical structures found in mammals (and to some extent birds), but fish do not possess tonsils. While fish do have lymphoid tissues that serve immune functions, they lack the specific tonsillar structures required for tonsillitis to occur. Therefore, fish cannot get tonsillitis."
+    },
+    {
+      "id": 13,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "Yes",
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_geography_world",
+        "L_biological_taxonomy",
+        "S1_n35"
+      ],
+      "top3_cos": [
+        0.1444,
+        0.1397,
+        0.1151
+      ],
+      "ms": 3134.6,
+      "usage": {
+        "completion_tokens": 191,
+        "prompt_tokens": 681,
+        "total_tokens": 872,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 138
+        }
+      },
+      "response_text": "**Yes**\n\nTony Bennett had four children (Danny, Dae, Joanna, and Antonia) and was married three times (to Patricia Beech, Sandra Grant, and Susan Crow). Since 4 > 3, he had more children than wives."
+    },
+    {
+      "id": 14,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "Yes",
+      "is_correct": false,
+      "top3_caption_ids": [
+        "S6_n60",
+        "S1_n35",
+        "S6"
+      ],
+      "top3_cos": [
+        0.2994,
+        0.2525,
+        0.2477
+      ],
+      "ms": 6101.9,
+      "usage": {
+        "completion_tokens": 429,
+        "prompt_tokens": 818,
+        "total_tokens": 1247,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 338
+        }
+      },
+      "response_text": "**No.**\n\nJavier Sotomayor's high jump world record stands at 2.45 meters (about 8 feet). Even Bengal cats, which are among the most athletic domestic cat breeds and exceptional jumpers, can typically leap only about 1.5–2 meters (roughly 5–6.5 feet) — impressive relative to their size, but still well short of the 2.45-meter record."
+    },
+    {
+      "id": 15,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "Yes",
+      "is_correct": true,
+      "top3_caption_ids": [
+        "L_geography_world",
+        "S1_n35",
+        "S6_n60"
+      ],
+      "top3_cos": [
+        0.2521,
+        0.1877,
+        0.1767
+      ],
+      "ms": 3960.8,
+      "usage": {
+        "completion_tokens": 266,
+        "prompt_tokens": 772,
+        "total_tokens": 1038,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 152
+        }
+      },
+      "response_text": "**Yes.**\n\nTenzing Norgay was one of the first two climbers (alongside Edmund Hillary) to summit Mount Everest in 1953 — the world's highest peak at 8,849 meters. Snowdon (Yr Wyddfa), the highest mountain in Wales, stands at only about 1,085 meters and is a popular hiking destination that many casual walkers complete. For a mountaineer of Norgay's legendary skill and experience, climbing Snowdon would be trivially easy — truly \"a piece of cake.\""
+    }
+  ],
+  "llm_call_ledger": {
+    "total_calls": 36,
+    "embeddings_calls": 6,
+    "chat_calls": 30,
+    "min_interval_enforced_s": 2.5,
+    "serial": true,
+    "concurrent_burst": false,
+    "key_plaintext_in_outputs": false,
+    "key_source": "runtime env ARK_API_KEY (不落盘/不入 prompt/不入 JSON/不入 log)",
+    "per_call": [
+      {
+        "url_suffix": "coding/v3/embeddings",
+        "model": "doubao-embedding-vision-251215",
+        "kind": "embeddings",
+        "n_items": 10,
+        "http": 200,
+        "ms": 731.3,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/embeddings",
+        "model": "doubao-embedding-vision-251215",
+        "kind": "embeddings",
+        "n_items": 10,
+        "http": 200,
+        "ms": 1014.5,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/embeddings",
+        "model": "doubao-embedding-vision-251215",
+        "kind": "embeddings",
+        "n_items": 2,
+        "http": 200,
+        "ms": 650.5,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/embeddings",
+        "model": "doubao-embedding-vision-251215",
+        "kind": "embeddings",
+        "n_items": 10,
+        "http": 200,
+        "ms": 668.4,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/embeddings",
+        "model": "doubao-embedding-vision-251215",
+        "kind": "embeddings",
+        "n_items": 10,
+        "http": 200,
+        "ms": 662.0,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/embeddings",
+        "model": "doubao-embedding-vision-251215",
+        "kind": "embeddings",
+        "n_items": 10,
+        "http": 200,
+        "ms": 645.6,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 3470.1,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 1681.6,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 2009.9,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 2120.8,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 2605.9,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 2457.1,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 2705.7,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 3634.9,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 2041.3,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 2036.2,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 2254.4,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 2539.5,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 1769.3,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 1516.6,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 2550.8,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 5323.6,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 2678.1,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 7592.3,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 7166.5,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 4004.1,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 2711.6,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 3352.5,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 3120.2,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 7925.0,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 8400.6,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 2620.3,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 3161.3,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 3134.6,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 6101.9,
+        "attempt": 1
+      },
+      {
+        "url_suffix": "coding/v3/chat/completions",
+        "model": "glm-latest",
+        "kind": "chat",
+        "n_items": 1,
+        "http": 200,
+        "ms": 3960.7,
+        "attempt": 1
+      }
+    ]
+  },
+  "outcome": {
+    "status": "COMPLETED",
+    "elapsed_s": 111.5
+  },
+  "caption_22_rebuilt": [
+    {
+      "id": "L_algorithm_process",
+      "family": "L",
+      "N": 38,
+      "n_named": 29,
+      "text_len": 328
+    },
+    {
+      "id": "L_biological_taxonomy",
+      "family": "L",
+      "N": 42,
+      "n_named": 22,
+      "text_len": 304
+    },
+    {
+      "id": "L_geography_world",
+      "family": "L",
+      "N": 45,
+      "n_named": 16,
+      "text_len": 305
+    },
+    {
+      "id": "L_historical_causality",
+      "family": "L",
+      "N": 36,
+      "n_named": 23,
+      "text_len": 367
+    },
+    {
+      "id": "L_physics_concepts",
+      "family": "L",
+      "N": 35,
+      "n_named": 31,
+      "text_len": 297
+    },
+    {
+      "id": "L_project_management",
+      "family": "L",
+      "N": 33,
+      "n_named": 36,
+      "text_len": 294
+    },
+    {
+      "id": "S1",
+      "family": "S",
+      "N": 20,
+      "n_named": 19,
+      "text_len": 163
+    },
+    {
+      "id": "S1_n35",
+      "family": "S",
+      "N": 35,
+      "n_named": 34,
+      "text_len": 252
+    },
+    {
+      "id": "S1_n45",
+      "family": "S",
+      "N": 45,
+      "n_named": 44,
+      "text_len": 302
+    },
+    {
+      "id": "S1_n60",
+      "family": "S",
+      "N": 60,
+      "n_named": 59,
+      "text_len": 369
+    },
+    {
+      "id": "S2",
+      "family": "S",
+      "N": 31,
+      "n_named": 14,
+      "text_len": 232
+    },
+    {
+      "id": "S2_n20",
+      "family": "S",
+      "N": 20,
+      "n_named": 9,
+      "text_len": 184
+    },
+    {
+      "id": "S2_n35",
+      "family": "S",
+      "N": 35,
+      "n_named": 16,
+      "text_len": 250
+    },
+    {
+      "id": "S2_n45",
+      "family": "S",
+      "N": 45,
+      "n_named": 21,
+      "text_len": 315
+    },
+    {
+      "id": "S2_n60",
+      "family": "S",
+      "N": 60,
+      "n_named": 29,
+      "text_len": 381
+    },
+    {
+      "id": "S3",
+      "family": "S",
+      "N": 30,
+      "n_named": 21,
+      "text_len": 228
+    },
+    {
+      "id": "S4",
+      "family": "S",
+      "N": 40,
+      "n_named": 58,
+      "text_len": 268
+    },
+    {
+      "id": "S5",
+      "family": "S",
+      "N": 45,
+      "n_named": 7,
+      "text_len": 280
+    },
+    {
+      "id": "S6",
+      "family": "S",
+      "N": 45,
+      "n_named": 17,
+      "text_len": 307
+    },
+    {
+      "id": "S6_n20",
+      "family": "S",
+      "N": 20,
+      "n_named": 17,
+      "text_len": 183
+    },
+    {
+      "id": "S6_n35",
+      "family": "S",
+      "N": 35,
+      "n_named": 17,
+      "text_len": 257
+    },
+    {
+      "id": "S6_n60",
+      "family": "S",
+      "N": 60,
+      "n_named": 17,
+      "text_len": 391
+    }
+  ],
+  "caption_construction_literal": "f\"Concept graph {graph_id} (family={family}, structure={structure}, N={N}, n_named={n_named}): \" + '; '.join(labels)",
+  "no_rag_summary": {
+    "rescored_pass": 24,
+    "rescored_rate": 0.8,
+    "gsm8k": "15/15",
+    "strategyqa": "9/15",
+    "stored_pass": 22,
+    "stored_rate": 0.7333,
+    "note": "stored 22/30 由不可得抽取器产生; 本脚本以声明抽取器重判得 24/30, 差额根因 = 抽取器口径差异(非 RAG 效应)"
+  },
+  "embedding_dim": 2048,
+  "with_rag_summary": {
+    "n_completed": 30,
+    "n_planned": 30,
+    "pass_on_completed": 25,
+    "note": "全部 30 条完成",
+    "total_tokens": 26954,
+    "pass": 25,
+    "rate": 0.8333,
+    "gsm8k": "15/15",
+    "strategyqa": "10/15"
+  },
+  "verdict": {
+    "no_rag_rescored": "24/30 (80.0%)",
+    "with_rag": "25/30 (83.3%)",
+    "measured_margin_vs_rescored_no_rag": "+0.0333 (+3.3 pp)",
+    "original_report_band": "0% ~ +26.7%",
+    "margin_in_band": true,
+    "verdict_literal": "成立 (实测边际落在原报告 0% ~ +26.7% 带内)"
+  }
+}

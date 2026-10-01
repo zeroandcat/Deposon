@@ -1,0 +1,447 @@
+{
+ "task_id": "V3X-C5B-FIX-2026-10-01-A1",
+ "task": "C5 B 组修复件: SVD 2->3 + 18-bit LSH 重算 + 修后四读数套 + 跨 seed 非退化对照",
+ "date": "2026-10-01T09:25:22+08:00",
+ "generator": ".tmp/_v5_c5_b_fix_readings_2026_10_01.py",
+ "caliber": {
+  "n_components": 3,
+  "planes_per_dim": 6,
+  "hyperplanes_shape": [
+   18,
+   3
+  ],
+  "code_len_bit": 18,
+  "hex_width": 5,
+  "d_over_2_reference": 9.0,
+  "lsh_seed": 42,
+  "dual_rule": "byte_hash[:6] + semantic_hash = 11 hex (42 bit)",
+  "dual_field_name_note": "现名 dual_24bit 在 18 bit 档名实比 24/42, 偏离较 12 bit 档扩大 (halt §3.2); 字段命名归 protocol-keeper 冻结件, 本件 0 自定"
+ },
+ "input_selfcheck": {
+  "raw_embeddings": [
+   "results\\_v5_v3_deg_c5_b_raw_embeddings_2026_09_29.json",
+   "1088fdd2b197"
+  ],
+  "f4": [
+   "results\\deposon_v2_phase4_f4_2026_09_11.json",
+   "cf7682348617"
+  ],
+  "captions": [
+   "corpus\\v20\\strip_captions_22.json",
+   "6a2656878745"
+  ],
+  "baseline_12bit_reproduce_vs_f4": "22/22",
+  "svd_var_explained": {
+   "2": 0.764974,
+   "3": 0.792848,
+   "4": 0.817153
+  },
+  "reproduce_max_abs_dev_vs_stored_svd2": 0.0089821568,
+  "reproduce_within_4dp": false,
+  "reproduction_note": "新调 API 的 SVD-2 与盘上存储 svd2_coords 最大绝对偏差 8.98e-03 (未达 4 位小数级), 但方差解释率 k=2 实测 0.764974 与存储 0.765 一致 => 同嵌入集的非确定性抖动, 非不同嵌入集; 本件如实登记, 0 判档位"
+ },
+ "per_caption": [
+  {
+   "caption_id": "L_algorithm_process",
+   "byte_hash": "e07ebcfbf9ba",
+   "semantic_hash": "006d8",
+   "dual": "e07ebc006d8",
+   "coords_k3": [
+    -0.522025,
+    0.609207,
+    -0.362677
+   ],
+   "gt_class": "L(llm_dag)"
+  },
+  {
+   "caption_id": "L_biological_taxonomy",
+   "byte_hash": "bff92145e971",
+   "semantic_hash": "03eed",
+   "dual": "bff92103eed",
+   "coords_k3": [
+    -0.900694,
+    -0.090054,
+    -0.079444
+   ],
+   "gt_class": "L(llm_dag)"
+  },
+  {
+   "caption_id": "L_geography_world",
+   "byte_hash": "64ad5fc2c7e0",
+   "semantic_hash": "03eed",
+   "dual": "64ad5f03eed",
+   "coords_k3": [
+    -0.889058,
+    -0.141297,
+    0.008487
+   ],
+   "gt_class": "L(llm_dag)"
+  },
+  {
+   "caption_id": "L_historical_causality",
+   "byte_hash": "fbfa04f1128c",
+   "semantic_hash": "01ad5",
+   "dual": "fbfa0401ad5",
+   "coords_k3": [
+    -0.717823,
+    0.265687,
+    0.348008
+   ],
+   "gt_class": "L(llm_dag)"
+  },
+  {
+   "caption_id": "L_physics_concepts",
+   "byte_hash": "dbe8caaa4bfd",
+   "semantic_hash": "03eed",
+   "dual": "dbe8ca03eed",
+   "coords_k3": [
+    -0.878698,
+    -0.126882,
+    -0.024365
+   ],
+   "gt_class": "L(llm_dag)"
+  },
+  {
+   "caption_id": "L_project_management",
+   "byte_hash": "5fe6baab5410",
+   "semantic_hash": "03eed",
+   "dual": "5fe6ba03eed",
+   "coords_k3": [
+    -0.906994,
+    -0.136827,
+    0.015172
+   ],
+   "gt_class": "L(llm_dag)"
+  },
+  {
+   "caption_id": "S1",
+   "byte_hash": "3696ad59777e",
+   "semantic_hash": "008d5",
+   "dual": "3696ad008d5",
+   "coords_k3": [
+    -0.581916,
+    0.500442,
+    0.514085
+   ],
+   "gt_class": "S1(chain)"
+  },
+  {
+   "caption_id": "S1_n35",
+   "byte_hash": "6d92596542c2",
+   "semantic_hash": "03eed",
+   "dual": "6d925903eed",
+   "coords_k3": [
+    -0.902149,
+    -0.1453,
+    -0.086124
+   ],
+   "gt_class": "S1(chain)"
+  },
+  {
+   "caption_id": "S1_n45",
+   "byte_hash": "d22455b290c0",
+   "semantic_hash": "006d4",
+   "dual": "d22455006d4",
+   "coords_k3": [
+    -0.597852,
+    0.543164,
+    0.02063
+   ],
+   "gt_class": "S1(chain)"
+  },
+  {
+   "caption_id": "S1_n60",
+   "byte_hash": "a71ac717c393",
+   "semantic_hash": "03eed",
+   "dual": "a71ac703eed",
+   "coords_k3": [
+    -0.906151,
+    -0.134554,
+    -0.006996
+   ],
+   "gt_class": "S1(chain)"
+  },
+  {
+   "caption_id": "S2",
+   "byte_hash": "adfa2b24c2d9",
+   "semantic_hash": "01edd",
+   "dual": "adfa2b01edd",
+   "coords_k3": [
+    -0.749272,
+    0.329979,
+    -0.023687
+   ],
+   "gt_class": "S2(tree)"
+  },
+  {
+   "caption_id": "S2_n20",
+   "byte_hash": "6c76eaea53d5",
+   "semantic_hash": "03eed",
+   "dual": "6c76ea03eed",
+   "coords_k3": [
+    -0.908153,
+    -0.130048,
+    -0.044388
+   ],
+   "gt_class": "S2(tree)"
+  },
+  {
+   "caption_id": "S2_n35",
+   "byte_hash": "831a5b3a2c65",
+   "semantic_hash": "006d8",
+   "dual": "831a5b006d8",
+   "coords_k3": [
+    -0.558888,
+    0.621236,
+    -0.245229
+   ],
+   "gt_class": "S2(tree)"
+  },
+  {
+   "caption_id": "S2_n45",
+   "byte_hash": "3174b72cf536",
+   "semantic_hash": "01ecd",
+   "dual": "3174b701ecd",
+   "coords_k3": [
+    -0.866012,
+    -0.047618,
+    -0.05777
+   ],
+   "gt_class": "S2(tree)"
+  },
+  {
+   "caption_id": "S2_n60",
+   "byte_hash": "2242e1fb732a",
+   "semantic_hash": "03eed",
+   "dual": "2242e103eed",
+   "coords_k3": [
+    -0.844894,
+    -0.095881,
+    -0.088042
+   ],
+   "gt_class": "S2(tree)"
+  },
+  {
+   "caption_id": "S3",
+   "byte_hash": "44d6a8a73edd",
+   "semantic_hash": "01ecd",
+   "dual": "44d6a801ecd",
+   "coords_k3": [
+    -0.892824,
+    -0.097516,
+    0.009414
+   ],
+   "gt_class": "S3-S6(misc)"
+  },
+  {
+   "caption_id": "S4",
+   "byte_hash": "b1d3eb8f3293",
+   "semantic_hash": "03eed",
+   "dual": "b1d3eb03eed",
+   "coords_k3": [
+    -0.905042,
+    -0.10591,
+    -0.016716
+   ],
+   "gt_class": "S3-S6(misc)"
+  },
+  {
+   "caption_id": "S5",
+   "byte_hash": "1cdcbd57e7e2",
+   "semantic_hash": "01ecd",
+   "dual": "1cdcbd01ecd",
+   "coords_k3": [
+    -0.898877,
+    -0.097122,
+    0.020516
+   ],
+   "gt_class": "S3-S6(misc)"
+  },
+  {
+   "caption_id": "S6",
+   "byte_hash": "b12f76a4b782",
+   "semantic_hash": "01eed",
+   "dual": "b12f7601eed",
+   "coords_k3": [
+    -0.904992,
+    -0.146045,
+    0.040906
+   ],
+   "gt_class": "S3-S6(misc)"
+  },
+  {
+   "caption_id": "S6_n20",
+   "byte_hash": "803f0b9079ca",
+   "semantic_hash": "03eef",
+   "dual": "803f0b03eef",
+   "coords_k3": [
+    -0.900947,
+    -0.167983,
+    0.044622
+   ],
+   "gt_class": "S3-S6(misc)"
+  },
+  {
+   "caption_id": "S6_n35",
+   "byte_hash": "0e89a90afea3",
+   "semantic_hash": "03eed",
+   "dual": "0e89a903eed",
+   "coords_k3": [
+    -0.921827,
+    -0.128234,
+    -0.027823
+   ],
+   "gt_class": "S3-S6(misc)"
+  },
+  {
+   "caption_id": "S6_n60",
+   "byte_hash": "6abc0c5ac060",
+   "semantic_hash": "01eed",
+   "dual": "6abc0c01eed",
+   "coords_k3": [
+    -0.849281,
+    -0.131297,
+    0.047056
+   ],
+   "gt_class": "S3-S6(misc)"
+  }
+ ],
+ "readings": {
+  "KV3DF_5_1_four_readings": {
+   "stored_n_distinct_codes": 9,
+   "stored_distribution": {
+    "006d4": 1,
+    "006d8": 2,
+    "008d5": 1,
+    "01ad5": 1,
+    "01ecd": 3,
+    "01edd": 1,
+    "01eed": 2,
+    "03eed": 10,
+    "03eef": 1
+   },
+   "hamming_pairs_total": 231,
+   "hamming_pairs_zero": 50,
+   "hamming_mean_observed": 3.026,
+   "hamming_expected_random_d_over_2": 9.0,
+   "class_intra_hamming": {
+    "L(llm_dag)": 3.6,
+    "S1(chain)": 5.33,
+    "S2(tree)": 3.4,
+    "S3-S6(misc)": 1.33
+   }
+  },
+  "KV3DF_5_2_reference": {
+   "d_over_2": 9.0,
+   "code_len_bit": 18,
+   "derivation": "d/2 = 18/2 = 9.0 (随投影维数派生, 0 新设阈值)"
+  },
+  "KV3DF_5_3_cross_seed": {
+   "note": "跨 seed 非退化对照; 缺的是修后配置的两项 (基线侧 12-bit 7-seed 已在盘)",
+   "repaired_per_seed": [
+    {
+     "seed": 42,
+     "n_distinct": 9,
+     "hamming_mean_observed": 3.026,
+     "hamming_pairs_zero": 50,
+     "alarm_n_distinct_le_3": false
+    },
+    {
+     "seed": 43,
+     "n_distinct": 7,
+     "hamming_mean_observed": 2.991,
+     "hamming_pairs_zero": 106,
+     "alarm_n_distinct_le_3": false
+    },
+    {
+     "seed": 44,
+     "n_distinct": 8,
+     "hamming_mean_observed": 2.13,
+     "hamming_pairs_zero": 81,
+     "alarm_n_distinct_le_3": false
+    },
+    {
+     "seed": 45,
+     "n_distinct": 6,
+     "hamming_mean_observed": 2.398,
+     "hamming_pairs_zero": 121,
+     "alarm_n_distinct_le_3": false
+    },
+    {
+     "seed": 46,
+     "n_distinct": 6,
+     "hamming_mean_observed": 3.766,
+     "hamming_pairs_zero": 121,
+     "alarm_n_distinct_le_3": false
+    },
+    {
+     "seed": 47,
+     "n_distinct": 8,
+     "hamming_mean_observed": 2.714,
+     "hamming_pairs_zero": 60,
+     "alarm_n_distinct_le_3": false
+    },
+    {
+     "seed": 48,
+     "n_distinct": 6,
+     "hamming_mean_observed": 1.632,
+     "hamming_pairs_zero": 84,
+     "alarm_n_distinct_le_3": false
+    }
+   ],
+   "baseline_12bit_per_seed_on_disk": [
+    {
+     "seed": 42,
+     "n_distinct": 6
+    },
+    {
+     "seed": 43,
+     "n_distinct": 4
+    },
+    {
+     "seed": 44,
+     "n_distinct": 4
+    },
+    {
+     "seed": 45,
+     "n_distinct": 4
+    },
+    {
+     "seed": 46,
+     "n_distinct": 4
+    },
+    {
+     "seed": 47,
+     "n_distinct": 3
+    },
+    {
+     "seed": 48,
+     "n_distinct": 5
+    }
+   ]
+  }
+ },
+ "cross_seed_control": {
+  "impl": "numpy RandomState(210021) 均匀分布 22x3 坐标 + 同 18bit/5hex 构造",
+  "n_distinct": 20,
+  "hamming_mean": 9.147,
+  "hamming_zero_count": 2
+ },
+ "degradation_guard": {
+  "threshold_n_distinct_le": 3,
+  "semantic_hash_codelen_n_distinct": 9,
+  "semantic_hash_codelen_alarm": false,
+  "root_predup_dual_n_distinct": 22,
+  "root_predup_dual_alarm": false,
+  "byte_hash_primary_n_distinct": 22,
+  "byte_hash_primary_alarm": false,
+  "any_alarm": false
+ },
+ "no_verdict_notice": "本件 0 判档位; PASS/FAIL/KD 归 verdict-keeper",
+ "boundary": {
+  "old_values_reused": "无; 2.47/2.67/2.80/0.57 全部现算, 0 沿用",
+  "no_threshold_change": "d/2 = 9.0 系随维度派生的算术值, 非新设阈值",
+  "no_existing_file_modified": true,
+  "no_key": "本脚本 0 读 key; key 仅上游 fetch runtime 使用"
+ }
+}
