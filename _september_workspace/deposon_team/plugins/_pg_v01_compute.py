@@ -23,7 +23,7 @@ Task
 严守 7 铁律 (第 1 条放宽但本任务不调 LLM, 第 2-7 条严守):
 - 0 LLM (本任务纯 numpy, 第 1 条放宽但仍 0 调用)
 - 0 proxy
-- 0 API 网关 (OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / WeChat)
+- 0 API 网关 (OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / 线上)
 - key 不入 prompt / JSON / 落盘 (runtime Path().read_text())
 - 不动 16 frozen (沿 _verify_15frozen.py + _verify_pg_v0.py 验证)
 - 不动 verifier / mavis / .builtin / scripts/ 目录
@@ -370,7 +370,7 @@ def main():
     iron = {
         "0_LLM_calls": True,
         "no_proxy": True,
-        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_WeChatAPI": True,
+        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_线上API": True,
         "no_pip_install_at_runtime": True,
         "no_api_key_read": True,
         "16_frozen_unchanged_pre_post": True,
@@ -443,8 +443,8 @@ def main():
         },
         "next_steps": [
             "reviewer-a 静态审 + reviewer-b /tmp 重跑双审 (沿 P-F V0.1 §5)",
-            "等 D5 (2026-09-16) 王老师 WeChat 决策点拍板 P-G V0.1 → V1 升级",
-            "D7 (2026-09-18) 5 锚 PASS/FAIL 终极判死 + 推王老师 WeChat",
+            "等 D5 (2026-09-16) 外部顾问 线上 决策点拍板 P-G V0.1 → V1 升级",
+            "D7 (2026-09-18) 5 锚 PASS/FAIL 终极判死 + 推外部顾问 线上",
         ],
     }
 

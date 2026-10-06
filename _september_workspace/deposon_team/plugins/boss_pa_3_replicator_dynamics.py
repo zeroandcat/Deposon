@@ -231,7 +231,7 @@ def main():
         "iron_rule_compliance": {
             "0_LLM_calls": True,
             "no_proxy": True,
-            "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_WeChatAPI": True,
+            "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_线上API": True,
             "no_pip_install": True,
             "no_touch_verifier_mavis_builtin": True,
             "no_touch_scripts_dir": True,

@@ -355,7 +355,7 @@ md_lines.append(f"**P-L v3 Phase 2 完成度**: 4 backbone 完整跑测 (Mistral
 md_lines.append(f"**P2 verdict**: {beta_summary['p2_implementation_robustness_verdict']}")
 md_lines.append("")
 md_lines.append("**下游建议** (供 Mavis 聚合):")
-md_lines.append("- 已知 4 backbone (Mistral Large 2512 + qwen3 + glm53 + doubao partial) 可作为 D7 王老师 WeChat 推送的 P2 主证据")
+md_lines.append("- 已知 4 backbone (Mistral Large 2512 + qwen3 + glm53 + doubao partial) 可作为 D7 外部顾问 线上 推送的 P2 主证据")
 md_lines.append("- GPT-4o 通道 (TeamoRouter) 阻塞, 建议下游 worker 尝试其他 VPN / 端点 (e.g. 自建 OpenAI 代理) 后再补")
 md_lines.append("- 沿 Coze §2.1 / GLM §3 / Trae §4 共识: Spearman 不是塌缩判死指标, β CI 重叠才是")
 md_lines.append("")

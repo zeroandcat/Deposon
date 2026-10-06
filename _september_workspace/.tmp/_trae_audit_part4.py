@@ -113,7 +113,7 @@ for label, txt, var in [("sub", ta, "KW_V2"), ("main", tb, "KEYWORDS_V2")]:
 # ---------- R-18 ----------
 w("\n===== R-18 =====")
 for nm in ["_v4_commission_paper_final_glm_2026_09_24_v4.md",
-           "_v4_commission_wechat_report_coze_2026_09_24_v4.md"]:
+           "_v4_commission_online_report_coze_2026_09_24_v4.md"]:
     f = MAIN / "letters" / nm
     if not f.exists():
         w(f"  {nm}: MISSING")

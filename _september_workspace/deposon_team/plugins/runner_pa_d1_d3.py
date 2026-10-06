@@ -152,7 +152,7 @@ def main():
     iron = {
         "0_LLM_calls": True,
         "no_proxy": True,
-        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_WeChatAPI": True,
+        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_线上API": True,
         "no_pip_install": True,
         "no_touch_verifier_mavis_builtin": True,
         "no_touch_scripts_dir": True,
@@ -457,7 +457,7 @@ def main():
         f"16/16 frozen 0 触动 + 540/540 守恒 + 3 BOSS 自测全 DIFFERENTIATED + "
         f"5 锚 (含 {authorized_drift_count} 已知合法返工) PASS. "
         "5 锚 JSON 自身 (03c6c01f3697) 0 触动. "
-        "待 D7 终极判死 (2026-09-18) 推王老师 WeChat."
+        "待 D7 终极判死 (2026-09-18) 推外部顾问 线上."
     )
 
     # ---------- 9. 组装 result ----------
@@ -536,9 +536,9 @@ def main():
         "pa_direction_verdict_midterm": pa_direction_verdict,
         "verdict": pa_direction_verdict,
         "next_steps": [
-            "D5 (2026-09-16): 王老师 WeChat 决策点通知, 中期评估: 5 锚全 PASS + BOSS 自测全 DIFFERENTIATED → P-A 方向中期 PASS",
-            "D7 (2026-09-18): 5 锚终极判死 + 推 D0 末群 + 王老师 WeChat",
-            "如 D5 王老师 ack: 沿 P-A 路径继续 6 月单论文 (不在 V3.X 1 周判死范围内)",
+            "D5 (2026-09-16): 外部顾问 线上 决策点通知, 中期评估: 5 锚全 PASS + BOSS 自测全 DIFFERENTIATED → P-A 方向中期 PASS",
+            "D7 (2026-09-18): 5 锚终极判死 + 推 D0 末群 + 外部顾问 线上",
+            "如 D5 外部顾问 ack: 沿 P-A 路径继续 6 月单论文 (不在 V3.X 1 周判死范围内)",
             "如 D7 任一 5 锚漂移: 全 P-A 撤回 (沿 P-A V0 spec §8)",
             "5 锚 JSON 已知合法返工 (tools/llm_client.py + tools/exp_harness.py 沿 KT_B1_REWORK_REPORT §四): 是否更新 5 锚 JSON 旧 SHA → 新 SHA, 需 user 决策 (沿 7 铁律第 6 条: 不擅自修改 frozen)",
         ],

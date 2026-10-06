@@ -153,7 +153,7 @@ def main():
     print()
 
     print('===== D7 后清理完成 =====')
-    print(f'  等 user re-commit + 王老师 WeChat 推送 D7 终极判死 1 条')
+    print(f'  等 user re-commit + 外部顾问 线上 推送 D7 终极判死 1 条')
 
 
 if __name__ == '__main__':

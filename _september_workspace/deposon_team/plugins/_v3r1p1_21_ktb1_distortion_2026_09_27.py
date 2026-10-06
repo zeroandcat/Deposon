@@ -184,7 +184,7 @@ def compute_face2(v19: dict) -> dict:
             "computable": False,
             "reason": ("tools/distortion_calculator.py 本仓 + 仓外按名全扫 0 命中；"
                        "核心理论输入 u*(a_t) 与理论界 L/U 未交付（bb7ca9838150 §3.5/§8/§9："
-                       "理论界由王老师给定、不在 P-B 内自创）⇒ 逆向重建须自创理论 = 违 §9"),
+                       "理论界由外部顾问给定、不在 P-B 内自创）⇒ 逆向重建须自创理论 = 违 §9"),
             "proposal_A3_ruling": "不可行 + γ（提案 A-3，PI 已照案采纳）",
             "fallback_condition_A4": "PI 不允仓外只读或回填件跑不动 ⇒ 面 2 判不可算 + γ",
             "reverse_rebuild_attempted": False,

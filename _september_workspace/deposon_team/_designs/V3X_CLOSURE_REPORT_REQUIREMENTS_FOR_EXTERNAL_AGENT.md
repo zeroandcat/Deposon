@@ -6,7 +6,7 @@
 > **日期**: 2026-09-16 11:30
 > **配套**:
 > - `deposon_team/_designs/V3X_GAME_THEORY_NON_EUCLIDEAN_MASTER_NARRATIVE_2026_09_16.py` (Mavis 内部设计,9244B)
-> - `docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` (王老师 WeChat 推送需求,8037B)
+> - `docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` (外部顾问 线上 推送需求,8037B)
 > - `docs/V3X/D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` (D7 前 V3 完善,10692B)
 > - `docs/V3X/V3X_1WEEK_KILL_REPORT_2026_09_18.md` (1 周判死报告 1 页,verdict 填)
 > - `docs/V3X/P_G_V01_REPORT_2026_09_15.md` (P-G V0.1 双曲 transport 报告)
@@ -143,10 +143,10 @@ docs/V3X/V3X_GAME_THEORY_NON_EUCLIDEAN_CLOSURE_REPORT_2026_09_18.md
 [0 LLM / 0 proxy / 0 网关 / key 不入 prompt/JSON/落盘 / 不动 18 frozen + P-G V0/V0.1 / 不动 verifier/mavis/.builtin/scripts/ / 不创建临时文件]
 
 ## §8 不擅自决定
-[等 user 拍板 / 不擅自决定 5 锚终极 PASS/FAIL / 不擅自启动新方向 / 不擅自推王老师 WeChat]
+[等 user 拍板 / 不擅自决定 5 锚终极 PASS/FAIL / 不擅自启动新方向 / 不擅自推外部顾问 线上]
 
 ## §9 后续
-[D7 (2026-09-18) 当日执行 + D7 后下游(arxiv V4 包装 / 王老师 1 周判死反馈 / V4 升级路线)]
+[D7 (2026-09-18) 当日执行 + D7 后下游(arxiv V4 包装 / 外部顾问 1 周判死反馈 / V4 升级路线)]
 ```
 
 ---
@@ -171,7 +171,7 @@ docs/V3X/V3X_GAME_THEORY_NON_EUCLIDEAN_CLOSURE_REPORT_2026_09_18.md
 |---|---|
 | 1. 0 LLM 调用 | ✓ 严守(外部 agent 不调 LLM)|
 | 2. 不设 proxy | ✓ 严守 |
-| 3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API | ✓ 严守 |
+| 3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API | ✓ 严守 |
 | 4. key 永不入 prompt/JSON/落盘 | ✓ 严守 |
 | 5. 不动 5 锚 JSON | ✓ 严守(`03c6c01f3697` 0 触动)|
 | 6. 不动 4 SPEC V0.1 + v19/v21 + corpus_v20 + 16 frozen + P-G V0 + P-G V0.1 | ✓ 严守 |
@@ -201,7 +201,7 @@ docs/V3X/V3X_GAME_THEORY_NON_EUCLIDEAN_CLOSURE_REPORT_2026_09_18.md
 - ❌ 不写 docs/V3X/ 文档(委外)
 - ❌ 不擅自动 18 frozen + P-G V0 + P-G V0.1
 - ❌ 不擅自启动新方向(沿 user 13:39 不急定位V4)
-- ❌ 不擅自推王老师 WeChat(等 user 委托 coze)
+- ❌ 不擅自推外部顾问 线上(等 user 委托 coze)
 
 ---
 

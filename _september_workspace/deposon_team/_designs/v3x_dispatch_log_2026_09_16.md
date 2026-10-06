@@ -82,7 +82,7 @@ Mavis-20260916-1255-KIMI-7-DIRECTIONS-DISPATCH
 |---|---|
 | 1. 0 LLM 调用 | ✓ 严守(纯文本 + numpy 复算)|
 | 2. 不设 proxy | ✓ 严守 |
-| 3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API | ✓ 严守 |
+| 3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API | ✓ 严守 |
 | 4. key 永不入 prompt/JSON/落盘 | ✓ 严守 |
 | 5. 不动 5 锚 JSON(`03c6c01f3697`)| ✓ 严守 |
 | 6. 不动 4 SPEC V0.1 + v19/v21 + corpus/v20 + 16 frozen + P-G V0 + P-G V0.1 | ✓ 严守 |
@@ -98,7 +98,7 @@ Mavis-20260916-1255-KIMI-7-DIRECTIONS-DISPATCH
 - ❌ 不擅自动 4 个新 agent 的 README.md
 - ❌ 不擅自落 docs/V3X/ 报告(委外 agent 写,沿 user 11:15)
 - ❌ 不擅自重做 9 个实验组(已实跑完成)
-- ❌ 不擅自推王老师 WeChat(等 user 委托 coze)
+- ❌ 不擅自推外部顾问 线上(等 user 委托 coze)
 - ❌ 不擅自动 18 frozen + P-G V0 + P-G V0.1
 
 ---

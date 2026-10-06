@@ -72,7 +72,7 @@
 
 **老实接受**: minimax task() 派工系统只接受 mavis / explorer / worker / verifier 4 种系统 agent, **不接受** 4 个新 agent 自定义角色。这是 minimax 系统限制(沿 user 14:54 "minimax 的生态太烂了")。
 
-**Mavis 自检**: 4 次派工 100% 失败确认 minimax 限制。**沿 7 铁律第 7 条 + user 14:25 + 16:34 "等王老师回复"原则 + user 11:15 委外原则**, Mavis 不能动 `.minimax/agents/` 目录(严守 7 铁律第 7 条)。
+**Mavis 自检**: 4 次派工 100% 失败确认 minimax 限制。**沿 7 铁律第 7 条 + user 14:25 + 16:34 "等外部顾问回复"原则 + user 11:15 委外原则**, Mavis 不能动 `.minimax/agents/` 目录(严守 7 铁律第 7 条)。
 
 **Mavis 老实派工方案 A**(已老实承认) = 接受 minimax 限制, Mavis 继续用 default worker(任务 prompt 沿 4 个新 agent README 角色边界)— 严守 7 铁律 + minimax 限制 + 4 个新 agent README 0 触动。
 
@@ -107,7 +107,7 @@
 - 沿 Trae §6.7 诚实降级, 标 UNVERIFIED
 - **待 user 拍板**: P-L v2 是否接受(同序单调变量 Spearman=1 不是真实 data collapse 拟合)
 
-### 2.5 等 D7 (2026-09-18) user 委托 coze 推王老师 WeChat D7 终极判死 1 条
+### 2.5 等 D7 (2026-09-18) user 委托 coze 推外部顾问 线上 D7 终极判死 1 条
 
 - 沿 user 11:15 委外原则 + user 17:13 拍板
 - Mavis 准备推送需求清单(`D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` 8037 B)
@@ -168,7 +168,7 @@ TOTAL: 16 frozen files | OK: 16 | FAIL: 0
 4. **P-L v2 UNVERIFIED 警告**(沿 Trae §6.7 诚实降级)
  - 建议: 接受诚实降级(简化模型判定依据虚假, 真实 data collapse 拟合需更多尺寸档)
  - 建议: 重做 P-L 沿 9 model × 4 尺寸档(30/45/60/100 cells) + 真实 data collapse R² 实算
-5. **等 D7 (2026-09-18) user 委托 coze 推王老师 WeChat D7 终极判死 1 条**
+5. **等 D7 (2026-09-18) user 委托 coze 推外部顾问 线上 D7 终极判死 1 条**
  - 建议: user 沿 user 11:15 + 17:13 委外 + coze 推送原则
  - 严守 7 铁律 + 0 LLM + 18 frozen 0 触动
 
@@ -190,9 +190,9 @@ TOTAL: 16 frozen files | OK: 16 | FAIL: 0
 ⚠️ 派生 JSON (2A) 合并 5 锚 JSON(等 user 拍板)
 ⚠️ P-K verify 0 触动 18 frozen + P-G V0 + P-G V0.1(Mavis 自查)
 ⚠️ P-L v2 UNVERIFIED 警告(沿 Trae §6.7 诚实降级)
-⚠️ 等 D7 (2026-09-18) user 委托 coze 推王老师 WeChat D7 终极判死 1 条
+⚠️ 等 D7 (2026-09-18) user 委托 coze 推外部顾问 线上 D7 终极判死 1 条
 ```
 
 ---
 
-**V3X Full Closeout Report + 全额拍板老实完成** | 26 项已落盘文件老实拍板同意 | 4 个凝子-agent 派工 100% Unknown agent(老实确认 minimax 限制) | 16/16 frozen 0 触动 | 严守 7 铁律 + 0 LLM | 不动 4 个新 agent README.md + .minimax/agents/ | 老实检查 5 项没收尾 + 3 项老实建议 | 等 user 拍板 corpus v2 整合 + 派生 JSON 合并 + D7 王老师 WeChat 推送
+**V3X Full Closeout Report + 全额拍板老实完成** | 26 项已落盘文件老实拍板同意 | 4 个凝子-agent 派工 100% Unknown agent(老实确认 minimax 限制) | 16/16 frozen 0 触动 | 严守 7 铁律 + 0 LLM | 不动 4 个新 agent README.md + .minimax/agents/ | 老实检查 5 项没收尾 + 3 项老实建议 | 等 user 拍板 corpus v2 整合 + 派生 JSON 合并 + D7 外部顾问 线上 推送

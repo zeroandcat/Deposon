@@ -368,8 +368,8 @@ def md_to_tex(md_path: Path, lang: str):
     if lang == 'cn':
         text = re.sub(r'^\*\*Deposon: .+\*\*\s*$', '', text, flags=re.MULTILINE)
     # 3. Strip Wang/NSFC
-    text = re.sub(r'王子贺（?[^）\n]*）?', '', text)
-    text = re.sub(r'王子贺', '', text)
+    text = re.sub(r'外部合作导师〔匿名〕（?[^）\n]*）?', '', text)
+    text = re.sub(r'外部合作导师〔匿名〕', '', text)
     text = re.sub(r'NSFC\s*[\d\-]+', '', text)
     text = re.sub(r'\(grant\s*\d+[\d–\-]*\)', '', text)
 

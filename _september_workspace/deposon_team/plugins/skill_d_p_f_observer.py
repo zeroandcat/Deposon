@@ -108,7 +108,7 @@ def main():
     iron = {
         "0_LLM_calls": True,
         "no_proxy": True,
-        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_WeChatAPI": True,
+        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_线上API": True,
         "no_pip_install": True,
         "no_touch_verifier_mavis_builtin": True,
         "no_touch_scripts_dir": True,
@@ -228,7 +228,7 @@ def main():
             "D1 (2026-09-12): 9 model 实际 API 抽样 (1 model × 5 cells 验证 B1 fingerprinting)",
             "D3 (2026-09-14): B3 Merkle P-D V0.1 3 根指纹 + 22 caption dual_24bit 链式核验",
             "D5 (2026-09-16): canonical 5 值工件补齐决策 (是否落盘 boss_f*.py 真实脚本)",
-            "D7 (2026-09-18): 5 锚 PASS/FAIL 终极判死, 推 D0 末群内 + 王老师 WeChat",
+            "D7 (2026-09-18): 5 锚 PASS/FAIL 终极判死, 推 D0 末群内 + 外部顾问 线上",
         ],
         "current_phase": "V0.1 已落盘, 等 D1 启动",
     }

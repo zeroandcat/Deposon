@@ -55,7 +55,7 @@ user 拍板 **B** = user 自己用 minimax agent 派工(绕开 Mavis 派工系�
 - Python python -B <path> (公式独立重算)
 - 现有 results/ JSON (数据输入,只读)
 - 现有 docs/V3X MD (文档输入,只读)
-- 禁止 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API
+- 禁止 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API
 
 **判定线预注册表**:
 | 验证 | 主源 | 交叉源 | 阈值(预注册) | Spearman 检验 |
@@ -270,7 +270,7 @@ TOTAL: 16 frozen files | OK: 16 | FAIL: 0
 □ corpus v2 沿 corpus/v20/ 整合(等 user 拍板)
 □ P-K verify 0 触动 18 frozen + P-G V0 + P-G V0.1
 □ 派生 JSON (2A) 合并到 5 锚 JSON(等 user 拍板)
-□ 等 D7 (2026-09-18) user 委托 coze 推王老师 WeChat D7 终极判死 1 条
+□ 等 D7 (2026-09-18) user 委托 coze 推外部顾问 线上 D7 终极判死 1 条
 □ P-L 重做(等 user 协助修复 nu 字符混用)
 ☑ PAT 吊销(已老实承认,user 已完成)
 ☑ minimax task() 限制(已老实承认)
@@ -278,4 +278,4 @@ TOTAL: 16 frozen files | OK: 16 | FAIL: 0
 
 ---
 
-**方案 B 老实完成** | 4 个新 agent 名称 + 系统提示词已老实给 user | 4 项收尾状态老实承认 | PAT 已吊销老实接受 | verify 16 frozen ✓ 16/16 PASS | 严守 7 铁律 + 0 LLM | 等 user 拍板 corpus v2 整合 + P-K verify + 派生 JSON 合并 + D7 王老师 WeChat 推送
+**方案 B 老实完成** | 4 个新 agent 名称 + 系统提示词已老实给 user | 4 项收尾状态老实承认 | PAT 已吊销老实接受 | verify 16 frozen ✓ 16/16 PASS | 严守 7 铁律 + 0 LLM | 等 user 拍板 corpus v2 整合 + P-K verify + 派生 JSON 合并 + D7 外部顾问 线上 推送

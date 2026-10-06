@@ -29,7 +29,7 @@
 ### 0.2 Mavis 角色边界(沿 user 11:15)
 
 - **Mavis 不擅自动 4 个新 agent 的 README.md**(严守 7 铁律第 7 条)
-- **Mavis 不擅自动 .minimax/agents/ 目录**(严守 user 14:25 + 16:34 "等王老师回复")
+- **Mavis 不擅自动 .minimax/agents/ 目录**(严守 user 14:25 + 16:34 "等外部顾问回复")
 - **Mavis 严守不写 docs/V3X/**(沿 user 11:15 委外原则)— Mavis 提需求,委外 agent 写
 - **Trae 代码修复由 Trae 自审完成**(沿 user 14:56 Trae 自审协议)— Mavis 严守不动 Trae 代码
 
@@ -92,7 +92,7 @@
 - 严守 7 铁律第 5 条"不动 5 锚 JSON"
 - 严守 7 铁律第 6 条"不动 4 SPEC V0.1 + v19/v21 + corpus/v20 + 16 frozen + P-G V0 + P-G V0.1"
 - 严守 7 铁律第 7 条"不动 verifier/mavis/.builtin/scripts/"
-- 严守 user 14:56 "等王老师回复"原则
+- 严守 user 14:56 "等外部顾问回复"原则
 
 ### 2.3 Trae 修复后落盘 10 新文件(2026-09-15 13:08 ~ 13:39)
 
@@ -184,7 +184,7 @@
 |---|---|
 | 1. 0 LLM 调用 | ✓ 严守(纯文本 + numpy 复算 stored verdict)|
 | 2. 不设 proxy | ✓ 严守 |
-| 3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API | ✓ 严守(仅 volcengine coding-plan 允许)|
+| 3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API | ✓ 严守(仅 volcengine coding-plan 允许)|
 | 4. key 永不入 prompt/JSON/落盘 | ✓ 严守(沿 user 17:21 验证 + 17:26 拍板 C 清理 90 文件)|
 | 5. 不动 5 锚 JSON(`03c6c01f3697`)| ✓ 严守 |
 | 6. 不动 4 SPEC V0.1 + v19/v21 + corpus/v20 + 16 frozen + P-G V0 + P-G V0.1 | ✓ 严守(16/16 PASS)|
@@ -210,7 +210,7 @@ TOTAL: 16 frozen files | OK: 16 | FAIL: 0
 - ❌ 不擅自动 4 个新 agent 的 README.md
 - ❌ 不擅自动 .minimax/agents/ 目录
 - ❌ 不擅自落 docs/V3X/ 报告(委外)
-- ❌ 不擅自推王老师 WeChat(等 user 委托 coze)
+- ❌ 不擅自推外部顾问 线上(等 user 委托 coze)
 - ❌ 不擅自重做已实跑实验(9 个实验组已完成, 沿 v3_phys JSON 复算)
 - ❌ 不擅自修复实验 3.4 P-D B3 Merkle(corpus 缺 captions, 等 user 拍板)
 - ❌ 不擅自启动 KIMI 7 方向(等 user 拍板)
@@ -240,7 +240,7 @@ TOTAL: 16 frozen files | OK: 16 | FAIL: 0
 ### 8.3 立即处理(仍待 user)
 
 - [ ] 吊销 PAT `ghp_Ecfr…RAG`
-- [ ] 等 D7 (2026-09-18) user 委托 coze 推王老师 WeChat D7 终极判死 1 条
+- [ ] 等 D7 (2026-09-18) user 委托 coze 推外部顾问 线上 D7 终极判死 1 条
 - [ ] 派生 JSON (2A) 合并到 5 锚 JSON(待 user 拍板)
 - [ ] 实验 3.4 P-D B3 Merkle corpus 缺 captions 字段(待 user 拍板)
 

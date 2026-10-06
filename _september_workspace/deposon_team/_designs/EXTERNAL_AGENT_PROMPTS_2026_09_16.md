@@ -55,7 +55,7 @@
 
 - ❌ 不调 LLM(0 LLM calls,严守 user 17:38 + 17:41)
 - ❌ 不设 proxy
-- ❌ 不调 OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / WeChat API
+- ❌ 不调 OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / 线上 API
 - ❌ 不动 5 锚 `03c6c01f3697` + 4 SPEC V0.1 + v19/v21 + corpus/v20 + 16 frozen + P-G V0 + P-G V0.1
 - ❌ 不擅自动 `verifier/mavis/.builtin/scripts/`
 - ❌ 不动 200+ 已落盘文件 + 现有 PDF/MD
@@ -112,7 +112,7 @@
 
 - ❌ 不调 LLM(0 LLM calls)
 - ❌ 不设 proxy
-- ❌ 不调 OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / WeChat API
+- ❌ 不调 OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / 线上 API
 - ❌ 不动 5 锚 `03c6c01f3697` + 4 SPEC V0.1 + v19/v21 + corpus/v20 + 16 frozen + P-G V0 + P-G V0.1
 - ❌ 不擅自动 `verifier/mavis/.builtin/scripts/`
 - ❌ 不动 200+ 已落盘文件
@@ -171,7 +171,7 @@
 
 - ❌ 不调 LLM(0 LLM calls,严守 user 17:38 + 17:41)
 - ❌ 不设 proxy
-- ❌ 不调 OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / WeChat API
+- ❌ 不调 OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / 线上 API
 - ❌ 不动 5 锚 `03c6c01f3697` + 4 SPEC V0.1 + v19/v21 + corpus/v20 + 16 frozen + P-G V0 + P-G V0.1
 - ❌ 不擅自动 `verifier/mavis/.builtin/scripts/`
 - ❌ 不动 200+ 已落盘文件
@@ -238,7 +238,7 @@ TOTAL: 16 frozen files | OK: 16 | FAIL: 0
   1. GLM/minimax 制品(deposon_team/products/glm_artifact_v_<date>.json + minimax_artifact_v_<date>.json)
   2. 重设计 v42 verifier(deposon_team/verifier/v42_v2_<date>.py + 性能报告)
   3. 实验 3.4 P-D B3 Merkle corpus 22 captions(corpus/v20/index_v2_<date>.json)
-□ 等 D7 (2026-09-18) user 委托 coze 推王老师 WeChat D7 终极判死 1 条
+□ 等 D7 (2026-09-18) user 委托 coze 推外部顾问 线上 D7 终极判死 1 条
 □ 吊销 PAT ghp_Ecfr…RAG
 ```
 

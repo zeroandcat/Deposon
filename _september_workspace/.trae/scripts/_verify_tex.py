@@ -175,7 +175,7 @@ for lang, spec in PKGS.items():
     check(tex.count(BS + "footnote{") == 1, "exactly one \\footnote in document")
     check(not re.search(r"^---\s*$", tex, re.MULTILINE), "no standalone '---' horizontal-rule lines")
     check("¹" not in tex, "superscript-1 declaration paragraph removed")
-    check("王子贺" not in tex and "NSFC" not in tex, "no 王子贺 / NSFC strings")
+    check("外部合作导师〔匿名〕" not in tex and "NSFC" not in tex, "no 外部合作导师〔匿名〕 / NSFC strings")
 
     # footnote language
     fnm = re.search(RB + r"footnote\{(.*?)\}", tex, re.DOTALL)

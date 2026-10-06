@@ -28,7 +28,7 @@
       "P-F_RESEARCH": "V0",
       "QUICK_KILL_6_DIRECTIONS": "V0.2 (Mavis 内部)"
     },
-    "note": "P-F V0 草稿预登记: spec_sha256 / research_sha256 字段在 V0 草稿期不写死, 待 V0.1 升级时由 successor 子代理计算实际 SHA-256 前 12 位填入。沿用 Mavis 内部 '测法即锚' 纪律: 5 锚对应 5 BOSS 测法脚本, 而非 5 个冻结工件 (P-D 模式)。P-F 启动条件未触发 (P-A/P-B/P-C/P-D 4 方向均在跑, 尚未满足 '至少 3 个 FAIL / 主动放弃')。王老师 2026-09-08 回 '不指定', P-F 启动决策由 Mavis 后续根据 P-A-D 结果定。"
+    "note": "P-F V0 草稿预登记: spec_sha256 / research_sha256 字段在 V0 草稿期不写死, 待 V0.1 升级时由 successor 子代理计算实际 SHA-256 前 12 位填入。沿用 Mavis 内部 '测法即锚' 纪律: 5 锚对应 5 BOSS 测法脚本, 而非 5 个冻结工件 (P-D 模式)。P-F 启动条件未触发 (P-A/P-B/P-C/P-D 4 方向均在跑, 尚未满足 '至少 3 个 FAIL / 主动放弃')。外部顾问 2026-09-08 回 '不指定', P-F 启动决策由 Mavis 后续根据 P-A-D 结果定。"
   },
   "5_boss_anchor_spec": {
     "PF_BOSS_01_fingerprint": {
@@ -74,7 +74,7 @@
     "number_provenance": "P-F 主张用 '>5pp' 通用表达, 具体数字待 D2 实测",
     "verifier_discipline": "5 BOSS 测法用 /tmp 副本, 不碰真实仓库",
     "pre_registration": "5 锚先冻结 SHA-256 前 12 位 (V0 占位, V0.1 算真值)",
-    "push_strategy": "不主动发, 等 D0 末群内公布 + 王老师 WeChat 通知"
+    "push_strategy": "不主动发, 等 D0 末群内公布 + 外部顾问 线上 通知"
   },
   "reference_files": {
     "research": "docs/V3X/P_F_RESEARCH_2026_09_09.md",

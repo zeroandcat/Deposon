@@ -40,7 +40,7 @@
 ### 1.2 严守 7 铁律(不动 .minimax/agents/)
 
 - ❌ 严守 7 铁律第 7 条"不动 verifier/mavis/.builtin/scripts/"
-- ❌ 严守 user 14:25 + 16:34 "等王老师回复"原则
+- ❌ 严守 user 14:25 + 16:34 "等外部顾问回复"原则
 - ❌ 严守 user 11:15 委外原则(Mavis 提需求,委外 agent 写)
 - ❌ 严守 user 13:39 "不急定位V4"(不启动新方向)
 
@@ -151,7 +151,7 @@ TOTAL: 16 frozen files | OK: 16 | FAIL: 0
 - ❌ 不擅自创建新 agent(Mavis 不能动 .minimax/agents/)
 - ❌ 不擅自修改 4 个新 agent 的 README.md
 - ❌ 不擅自落 docs/V3X/ 报告(委外,沿 user 11:15)
-- ❌ 不擅自推王老师 WeChat(等 user 委托 coze)
+- ❌ 不擅自推外部顾问 线上(等 user 委托 coze)
 - ❌ 不擅自启动新方向(沿 user 13:39 "不急定位V4")
 - ❌ 不擅自吊销 PAT(等 user 操作)
 - ❌ 不擅自合并派生 JSON (2A) 到 5 锚 JSON
@@ -177,7 +177,7 @@ TOTAL: 16 frozen files | OK: 16 | FAIL: 0
 ### 6.3 立即处理(沿 user 17:13 + 14:56 + 13:18)
 
 - [ ] 吊销 PAT `ghp_Ecfr…RAG`
-- [ ] 等 D7 (2026-09-18) user 委托 coze 推王老师 WeChat D7 终极判死 1 条
+- [ ] 等 D7 (2026-09-18) user 委托 coze 推外部顾问 线上 D7 终极判死 1 条
 - [ ] 派生 JSON (2A) 合并到 5 锚 JSON(待 user 拍板)
 - [ ] 实验 3.4 P-D B3 Merkle corpus 缺 captions 字段(待 user 拍板)
 - [ ] **等 LLM 额度恢复**(user 13:18 拍板)

@@ -48,7 +48,7 @@ def sec(tag, fn):
 # ---- R-6: 三组委托信 (v3 与 v4) 定位 ----
 def r6():
     res = {}
-    for label in ["commission_paper", "commission_wechat", "commission_upload_executor"]:
+    for label in ["commission_paper", "commission_线上", "commission_upload_executor"]:
         found = []
         for r in ROOTS:
             for p in r.glob(f"*{label}*"):

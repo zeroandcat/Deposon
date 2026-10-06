@@ -487,7 +487,7 @@ deposon V3.X 挂点预筛 - 复审 **火山方舟 Coding Plan** 下 `glm-latest`
 
 ## 7. 后续动作
 
-- **PASS (≥24/30)**: glm-latest 挂入 deposon V3.X 候选池,可参与王老师 WeChat 5 候选(连同 P-A/B/C/D + V4.1-Flash)挂点讨论
+- **PASS (≥24/30)**: glm-latest 挂入 deposon V3.X 候选池,可参与外部顾问 线上 5 候选(连同 P-A/B/C/D + V4.1-Flash)挂点讨论
 - **PARTIAL (18-23/30)**: 留待人工复审,2 周后可再跑 1 次
 - **FAIL (<18/30)**: 排除出 V3.X 候选池,记录 1 周判死 FAIL 原因
 """

@@ -35,7 +35,7 @@ def fstat(p):
 r6 = {}
 for label, pat in [
     ("paper", "_v4_commission_paper*"),
-    ("wechat", "_v4_commission_wechat*"),
+    ("线上", "_v4_commission_线上*"),
     ("upload_executor", "_v4_commission_upload_executor*"),
 ]:
     cands = sorted(list((MAIN / "results").glob(pat)) + list((MAIN / "letters").glob(pat))
@@ -46,10 +46,10 @@ out("R-6 file inventory (v3/v4 commission letters)", r6)
 # 在每份里找 v1/v2 版本槽位行
 slot = {}
 for c in sorted(list((MAIN / "results").glob("*commission_paper*v3*"))
-                + list((MAIN / "results").glob("*commission_wechat*v3*"))
+                + list((MAIN / "results").glob("*commission_线上*v3*"))
                 + list((MAIN / "results").glob("*commission_upload_executor*v3*"))
                 + list((MAIN / "letters").glob("*commission_paper*v3*"))
-                + list((MAIN / "letters").glob("*commission_wechat*v3*"))):
+                + list((MAIN / "letters").glob("*commission_线上*v3*"))):
     slot[c.name] = {"L1-12": [ln.strip()[:200] for ln in
                               c.read_text(encoding="utf-8", errors="replace")
                               .splitlines()[:12]]}
@@ -152,9 +152,9 @@ if a.exists() and b.exists():
         r17["only_in_main"] = sorted(set(lb) - set(la))
 out("R-17", r17)
 
-# ---------- R-18: paper / wechat v4 委托信 §Z 自记字节 ----------
+# ---------- R-18: paper / 线上 v4 委托信 §Z 自记字节 ----------
 r18 = {}
-for pat in ["*commission_paper*v4*", "*commission_wechat*v4*"]:
+for pat in ["*commission_paper*v4*", "*commission_线上*v4*"]:
     for p in sorted(list((MAIN / "results").glob(pat)) + list((MAIN / "letters").glob(pat))):
         t = p.read_text(encoding="utf-8", errors="replace")
         r18[p.name] = {"stat": fstat(p),

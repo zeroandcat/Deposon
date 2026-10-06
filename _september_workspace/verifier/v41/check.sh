@@ -7,7 +7,7 @@ O=/mnt/agents/output; R=$O/deposon-repo; fail=0
 for k in ECR 已闭合 T-P1c 398 deposon_v22_e95ci Newcombe; do grep -q "$k" $O/deposon_成果汇报_2026.md || { echo "FAIL report-anchor:$k"; fail=1; }; done
 # 3 V3文档禁忌词与锚点
 ! grep -qE "PoA|已证|相变" $R/docs/V3X_COLLAB_DIRECTIONS.md || { echo "FAIL v3-stale"; fail=1; }
-for k in T-P1c deposon_v22_e95ci 王子贺; do grep -q "$k" $R/docs/V3X_COLLAB_DIRECTIONS.md || { echo "FAIL v3-anchor:$k"; fail=1; }; done
+for k in T-P1c deposon_v22_e95ci 外部合作导师〔匿名〕; do grep -q "$k" $R/docs/V3X_COLLAB_DIRECTIONS.md || { echo "FAIL v3-anchor:$k"; fail=1; }; done
 # 4 压缩包含新文件且时间新于旧包
 unzip -l $O/deposon_core_bundle_final.zip | grep -q "成果汇报_2026.md" || { echo "FAIL zip-report"; fail=1; }
 unzip -p $O/deposon_core_bundle_final.zip deposon-repo/docs/V3X_COLLAB_DIRECTIONS.md | grep -q T-P1c || { echo "FAIL zip-v3-stale"; fail=1; }

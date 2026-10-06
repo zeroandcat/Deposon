@@ -95,7 +95,7 @@ v0 + v1 dual verify
 PATCH_5ANCHOR_RECONCILE_V2_2026_09_17.md (this doc)
   ↓
 Q3 reconcile done (V2)
-  ↓ Ready for D7 王老师 WeChat push
+  ↓ Ready for D7 外部顾问 线上 push
   ↓ KIMI 凝子-agent GitHub upload
 ```
 

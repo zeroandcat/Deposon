@@ -1,7 +1,7 @@
 """P-G BOSS-PG-2: Hyperbolic classification collapse check (PRE-REGISTRATION SCAFFOLDING).
 
 Status: PRE-REGISTRATION (2026-09-15, D3 mid-window, V0.1 launch).
-Real script logic intentionally left as TODO; awaiting D5 launch + 王老师 WeChat拍板.
+Real script logic intentionally left as TODO; awaiting D5 launch + 外部顾问 线上拍板.
 
 Purpose
 -------
@@ -44,7 +44,7 @@ Iron rules (will be enforced at real implementation)
 - 不创建临时文件 (verify 脚本例外)
 
 D5 拍板后真实脚本落盘位置: deposon_team/plugins/boss_pg_2_hyperbolic_classification_collapse.py
-D7 终极判死: 5 锚 PASS/FAIL 综合 → 推王老师 WeChat
+D7 终极判死: 5 锚 PASS/FAIL 综合 → 推外部顾问 线上
 """
 from __future__ import annotations
 

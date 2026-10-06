@@ -1,7 +1,7 @@
 """P-G BOSS-PG-1: Riemannian degeneracy check (PRE-REGISTRATION SCAFFOLDING).
 
 Status: PRE-REGISTRATION (2026-09-15, D3 mid-window, V0.1 launch).
-Real script logic intentionally left as TODO; awaiting D5 launch + 王老师 WeChat拍板.
+Real script logic intentionally left as TODO; awaiting D5 launch + 外部顾问 线上拍板.
 
 Purpose
 -------
@@ -47,7 +47,7 @@ Iron rules (will be enforced at real implementation)
 - 不创建临时文件 (verify 脚本例外)
 
 D5 拍板后真实脚本落盘位置: deposon_team/plugins/boss_pg_1_riemannian_degenerate.py
-D7 终极判死: 5 锚 PASS/FAIL 综合 → 推王老师 WeChat
+D7 终极判死: 5 锚 PASS/FAIL 综合 → 推外部顾问 线上
 """
 from __future__ import annotations
 
@@ -111,7 +111,7 @@ if __name__ == '__main__':
 
 
 # ---------- SELF-CHECK (P-F V0.1 §5 纪律, Trae 2026-09-16 追加, 标记 TRAE_SELFCHECK_2026_09_16) ----------
-# 命名勘误 lineage: 命名不变; SCAFFOLDING 保持(修复点 4 option_A: 等 540-LLM 数据 + 王老师拍板后升实跑); 本 SELF-CHECK 仅锁定预注册常数与 scaffolding 状态
+# 命名勘误 lineage: 命名不变; SCAFFOLDING 保持(修复点 4 option_A: 等 540-LLM 数据 + 外部顾问拍板后升实跑); 本 SELF-CHECK 仅锁定预注册常数与 scaffolding 状态
 import os as _os_sc
 assert _os_sc.path.basename(__file__) == 'boss_pg_1_riemannian_degenerate.py', '文件名漂移: ' + __file__
 assert C_NEAR_EUCLIDEAN < C_TRUE_HYPERBOLIC

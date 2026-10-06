@@ -126,7 +126,7 @@ def audit(texpath, label):
     # content rules
     R['has_yuanqihao'] = ('袁祺皓' in text) or ('Qihao' in text) or ('Yuanqihao' in text) or ('Qihao Yuan' in text)
     R['has_ruc_chem'] = ('中国人民大学' in text and ('化学与生命资源' in text)) or ('Renmin University' in text)
-    R['mentions_wangzihe'] = '王子贺' in text
+    R['mentions_external_mentor'] = '王子贺' in text
     R['mentions_kimi'] = ('KIMI' in text) or ('Kimi' in text) or ('Moonshot' in text)
     R['fund_numbers'] = re.findall(r'(?:Grant|基金|NSFC|国家自然科学基金)[^\n]{0,40}', text)
     # AI residue outside the AI section (rough): count mentions of common AI names in whole doc
@@ -158,7 +158,7 @@ def show(R):
     print('  footnotes        :', R['footnotes'])
     print('  quote begin/end  :', R['quote_begin'], R['quote_end'])
     print('  袁祺皓/RUC chem    :', R['has_yuanqihao'], R['has_ruc_chem'])
-    print('  王子贺 present    :', R['mentions_wangzihe'], '| fund hits:', R['fund_numbers'])
+    print('  外部合作导师〔匿名〕 present    :', R['mentions_external_mentor'], '| fund hits:', R['fund_numbers'])
     print('  KIMI/Moonshot    :', R['mentions_kimi'], '| ai_name_hits:', R['ai_name_hits'])
     print('  title            :', R['title'])
     print('  author           :', R['author'])
