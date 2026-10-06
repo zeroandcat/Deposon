@@ -5,7 +5,7 @@
 > **状态**: V0 草稿(待 D1 改 P-F 调研 V0.1 + 5 BOSS URL 落地后升级)
 > **位置**: `docs/V3X/P_F_SPEC_V0.md`
 > **关联**:
-> - v3 提案 §6(王老师致,2026-09-04,4 页 PDF)Phase 0 一周判死承诺 6 方向之第 5 备选
+> - v3 提案 §6(外部顾问致,2026-09-04,4 页 PDF)Phase 0 一周判死承诺 6 方向之第 5 备选
 > - Mavis 内部 `QUICK_KILL_6_DIRECTIONS.md` V0.2 方向 6 + BOSS-F1~F5
 > - Mavis 内部 `P_F_RESEARCH_2026_09_09.md` V0 调研稿(本任务配套)
 > - 7 条铁律(双审、API key 不入 prompt、术语红线、数字溯源、verifier 纪律、预登记、推送策略)
@@ -27,7 +27,7 @@ P-F **不是**:
 
 P-F **不**与 P-A / P-B / P-C / P-D 并行 1 周判死。P-F 启动必须先满足:
 - ✅ P-A / P-B / P-C / P-D 4 方向中**至少 3 个 FAIL / BOSS 撞上 / 主动放弃**
-- ✅ 王老师新指令(若王老师主动指定 P-F 优先,则此条件豁免)
+- ✅ 外部顾问新指令(若外部顾问主动指定 P-F 优先,则此条件豁免)
 - ✅ P-F 调研 V0.1 落地(5 BOSS 各 ≥ 2 个可访问 URL 补查完成)
 - ✅ IMMACULATE GitHub 仓库可访问性验证通过
 - ✅ D1 reviewer-a 静态审通过
@@ -253,18 +253,18 @@ def main() -> int:
 
 ---
 
-## 8. 与王老师 / BPA / 7 铁律关系
+## 8. 与外部顾问 / BPA / 7 铁律关系
 
-### 8.1 王老师 = WeChat 顾问模式(沿用 V3X 锚定)
+### 8.1 外部顾问 = 线上 顾问模式(沿用 V3X 锚定)
 
 - D1 / D3 / D5 报告各 5-10 min/周 内可读
-- 王老师不主动推,等他回(沿用 7 铁律"推送策略")
-- P-F 启动决策由王老师 ack(他回"启动 P-F" 即可,无需长答复)
+- 外部顾问不主动推,等他回(沿用 7 铁律"推送策略")
+- P-F 启动决策由外部顾问 ack(他回"启动 P-F" 即可,无需长答复)
 
 ### 8.2 BPA(Best Practice Alternative)
 
 - 沿用 Mavis 内部 `BPA_PILOT_2026_09_09_mavis.md` V0 模板
-- D6 出 BPA 报告给王老师
+- D6 出 BPA 报告给外部顾问
 
 ### 8.3 7 条铁律兼容
 
@@ -284,11 +284,11 @@ def main() -> int:
 
 - **D1**: P-F 调研 V0.1 落地(5 BOSS 各 ≥ 2 个 URL)+ 5 锚 JSON 落地 + IMMACULATE GitHub 可访问性验证
 - **D2**: 实现 4 任务族 harness + 5 BOSS baseline 真实现(pilot 5 cell)
-- **D3**: pilot 50 calls 跑通 + D3 WeChat 1(王老师 ack)
+- **D3**: pilot 50 calls 跑通 + D3 线上 1(外部顾问 ack)
 - **D4**: 全 300 calls + 5 BOSS 测法全部跑通
 - **D5**: reviewer-b 判死 + 5 攻击 + 5 BOSS 测法裁定
 - **D6**: 失败模式处理 / GRAY 扩 cell / 若 5 BOSS 测法全 PASS 则 P-F 方向 PASS
-- **D7**: 一页摘要(对外, 给王老师)+ 完整中文判死报告(内部)+ BOSS 测法结果回写到 QUICK_KILL_6_DIRECTIONS.md V0.3
+- **D7**: 一页摘要(对外, 给外部顾问)+ 完整中文判死报告(内部)+ BOSS 测法结果回写到 QUICK_KILL_6_DIRECTIONS.md V0.3
 
 ---
 
@@ -326,7 +326,7 @@ def main() -> int:
 | **数字溯源** | P-F 主张用 ">5pp accuracy-perf-cost" 通用表达,具体数字待 D2 实测;所有引用数字均带 §N 标号 | ✅ |
 | **verifier 纪律** | §10 复现协议用 /tmp 副本,不碰真实仓库 | ✅ |
 | **预登记** | §6 5 锚先冻结 SHA-256 前 12 位(占位,实现时算) | ✅ 占位 |
-| **推送策略** | 不主动发,等 D0 末群内公布 + 王老师 WeChat 通知 | ✅ |
+| **推送策略** | 不主动发,等 D0 末群内公布 + 外部顾问 线上 通知 | ✅ |
 
 ---
 
@@ -335,7 +335,7 @@ def main() -> int:
 1. **数据集大小**: 100-200 节点 vs 200-300 节点?待 D1 调研 IMMACULATE 原始 benchmark 规模后定
 2. **5 BOSS 测法细化**: 每个 BOSS 的具体阈值(>5pp / 1% 开销 / 95% 审计率 / 证明时间)待 D2 实测
 3. **5 锚算锚时机**: P-F 启动 D1 算, V0 草稿期不写死(沿用 P-D V0.1.2 纪律)
-4. **王老师三问**: P-F 启动决策需王老师 ack,他回"启动 P-F" 即可
+4. **外部顾问三问**: P-F 启动决策需外部顾问 ack,他回"启动 P-F" 即可
 5. **reviewer-b 路径**: /tmp 副本 vs 原仓库复跑?沿用 P-D V0.1.2 模式用 /tmp 副本
 6. **GRAY 扩 cell**: 1-5pp 灰区扩 cell 数量(n=300 → n=900?)?待 D2 pilot 跑后定
 7. **攻击**: P-F 5 BOSS 测法本身的抗攻击(防 IMMACULATE GitHub 仓库被替换)? 待 D1 调研
@@ -356,7 +356,7 @@ def main() -> int:
 - ✅ §5 判死标准 5pp accuracy-perf-cost
 - ✅ §6 5 锚占位待 P-F 启动 D1 填入
 - ✅ §7 数据源沿用 v19 / v20_gt,不引入新数据集
-- ✅ §8 王老师 WeChat 模式 + BPA + 7 铁律
+- ✅ §8 外部顾问 线上 模式 + BPA + 7 铁律
 - ✅ §9 1 周预筛时序 D1-D7(启动后)
 - ✅ §10 已知边界与陷阱(沿用 P-D P1 教训 + P-F 特有陷阱)
 - ✅ §11 7 铁律兼容表
@@ -371,7 +371,7 @@ def main() -> int:
 
 ## 14. 引用与版本
 
-- **v3 提案**: 《Deposon × 王子贺老师 合作提案》(2026-09-04, 4 页 PDF, 致: 王子贺 人大高瓴人工智能学院)
+- **v3 提案**: 《Deposon × 外部合作导师〔匿名〕 合作提案》(2026-09-04, 4 页 PDF, 致: 外部合作导师〔匿名〕)
 - **Mavis 内部**:
   - `docs/V3X/QUICK_KILL_6_DIRECTIONS.md` V0.2(方向 6 P-F + BOSS-F1~F5)
   - `docs/V3X/P_F_RESEARCH_2026_09_09.md` V0(本任务配套调研)
@@ -398,7 +398,7 @@ def main() -> int:
   - §5 判死标准 5pp accuracy-perf-cost
   - §6 5 锚占位
   - §7 数据源沿用 v19 / v20_gt
-  - §8 王老师 + BPA + 7 铁律
+  - §8 外部顾问 + BPA + 7 铁律
   - §9 1 周预筛时序
   - §10 已知边界与陷阱
   - §11 7 铁律兼容表
@@ -406,10 +406,10 @@ def main() -> int:
   - §14 引用与版本
 - **触发**: 用户派 P-F 方向 worker 子代理启动预登记
 - **下次升级触发**:
-  - P-F 启动 D1(P-A-D 至少 3 个 FAIL / 王老师新指令)+ 5 锚 JSON 落地
+  - P-F 启动 D1(P-A-D 至少 3 个 FAIL / 外部顾问新指令)+ 5 锚 JSON 落地
   - P-F 调研 V0.1 落地(5 BOSS 各 ≥ 2 个可访问 URL)
   - P-F 1 周判死 PASS/FAIL 后,回写 5 BOSS 实测结果到 QUICK_KILL_6_DIRECTIONS.md V0.3
 
 ---
 
-**P-F SPEC V0 草稿结束, 待 P-A-D 4 方向至少 3 个 FAIL / 王老师新指令后才进入 V0.1 + 1 周判死。**
+**P-F SPEC V0 草稿结束, 待 P-A-D 4 方向至少 3 个 FAIL / 外部顾问新指令后才进入 V0.1 + 1 周判死。**

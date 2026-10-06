@@ -5,7 +5,7 @@
 > **状态**: V0 调研稿(本任务为 P-F 方向预登记配套调研,不是结论)
 > **位置**: `docs/V3X/P_F_RESEARCH_2026_09_09.md`
 > **关联**:
-> - v3 提案 §6(王老师致,2026-09-04,4 页 PDF)第六节"Phase 0: 一周判死承诺"6 方向之一
+> - v3 提案 §6(外部顾问致,2026-09-04,4 页 PDF)第六节"Phase 0: 一周判死承诺"6 方向之一
 > - Mavis 内部 `QUICK_KILL_6_DIRECTIONS.md` V0.2 方向 6 + 5 个潜在 BOSS
 > - 7 条铁律(双审、API key 不入 prompt、术语红线、数字溯源、verifier 纪律、预登记、推送策略)
 
@@ -43,7 +43,7 @@ P-F = **模型指纹 + 透明审计方向** = 探索 deposon 散射层 + 密码�
 
 ### 1.2 与 v3 提案 §6 关系
 
-v3 提案 §6 列出 Phase 0 一周判死承诺 6 方向(P-A 平衡稳定化、P-B 失真上界、P-C 两相结构、LLM 议价、P-D 指纹、**P-F 可验证审计 = IMMACULATE 风格**)中,P-F 是**第 5 备选**(QUICK_KILL_6_DIRECTIONS.md V0.2 方向 6)。王老师 2026-09-08 回"不指定"后,Mavis 自由推进 4 方向(P-A / P-B / P-C / P-D),**P-F 暂未启动**。本次调研是为"如果 P-A-D 全部 BOSS 判死 / 失败后,P-F 是 V3X 备份启动项"做前置准备。
+v3 提案 §6 列出 Phase 0 一周判死承诺 6 方向(P-A 平衡稳定化、P-B 失真上界、P-C 两相结构、LLM 议价、P-D 指纹、**P-F 可验证审计 = IMMACULATE 风格**)中,P-F 是**第 5 备选**(QUICK_KILL_6_DIRECTIONS.md V0.2 方向 6)。外部顾问 2026-09-08 回"不指定"后,Mavis 自由推进 4 方向(P-A / P-B / P-C / P-D),**P-F 暂未启动**。本次调研是为"如果 P-A-D 全部 BOSS 判死 / 失败后,P-F 是 V3X 备份启动项"做前置准备。
 
 ### 1.3 与 P-A / P-B / P-C / P-D 关系
 
@@ -177,7 +177,7 @@ P-F 的 1 周预筛**风险高于** P-A / P-B / P-C / P-D:
 - **新代码量大**:需要新写 LDD 距离度量 + VC 集成层 + TEE 远程认证脚本 + CoT 公开 baseline,**至少 1500-2500 行新代码**。
 - **依赖外部仓库**:IMMACULATE GitHub(已知 URL)+ EZKL GitHub + vLLM / SGLang 任一选 1,**多仓库协同 = 兼容性风险**。
 - **BOSS 风险最高**:5 BOSS 任何 1 个 PASS = P-F 主张降级(QUICK_KILL_6_DIRECTIONS.md V0.2 已明确)。
-- **王老师 3 时点回报**:D1 / D3 / D5 报告必须 5-10 min/周 内可读,新方向的复杂性会拉长报告时间。
+- **外部顾问 3 时点回报**:D1 / D3 / D5 报告必须 5-10 min/周 内可读,新方向的复杂性会拉长报告时间。
 
 **预筛前必须确认**:P-A / P-B / P-C / P-D **至少 3 个 FAIL / BOSS 撞上 / 主动放弃**,才启动 P-F。否则 1 周预算被 P-F 吞掉,P-A-D 后续方向无时间。
 
@@ -235,7 +235,7 @@ deposon 散射层在 P-A / P-B / P-C 都有"守恒律"主张(P-F **不直接依�
 ## 6. V0 → V0.1 升级触发条件
 
 - ✅ 5 BOSS 各 ≥ 2 个可访问 URL 落地
-- ✅ P-F 启动决策(P-A-D 至少 3 个 FAIL / 主动放弃 / 或王老师新指令)
+- ✅ P-F 启动决策(P-A-D 至少 3 个 FAIL / 主动放弃 / 或外部顾问新指令)
 - ✅ IMMACULATE GitHub 仓库可访问性验证
 - ✅ D1 reviewer-a 静态审通过
 
@@ -245,7 +245,7 @@ deposon 散射层在 P-A / P-B / P-C 都有"守恒律"主张(P-F **不直接依�
 
 ## 7. 引用与版本
 
-- **v3 提案**: 《Deposon × 王子贺老师 合作提案》(2026-09-04, 4 页 PDF, 致: 王子贺 人大高瓴人工智能学院)
+- **v3 提案**: 《Deposon × 外部合作导师〔匿名〕 合作提案》(2026-09-04, 4 页 PDF, 致: 外部合作导师〔匿名〕)
 - **Mavis 内部**:
   - `docs/V3X/QUICK_KILL_6_DIRECTIONS.md` V0.2(方向 6 P-F + BOSS-F1~F5)
   - `docs/THINKING_V3_GT_CONTRIB_2026.md` Q5(硬惩罚冲突) + Q-C1(守恒≠真值)

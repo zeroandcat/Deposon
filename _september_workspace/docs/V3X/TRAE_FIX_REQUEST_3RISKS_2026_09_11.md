@@ -4,7 +4,7 @@
 > **发自**: Mavis (Mavis / Mavis, 沿 P_F_SPEC §5 / V7 §8.A / v3 §6)
 > **任务 ID**: DEPSON-TRAE-FIX-REQ-2026-09-11
 > **触发**: user 2026-09-11 17:13 选选项 A"解决 3 风险" → 17:23 user "写需求委托 trae 修"
-> **紧迫**: 王老师 1 周判死窗口 2026-09-11 → 09-18, D7 终极判死 2026-09-18
+> **紧迫**: 外部顾问 1 周判死窗口 2026-09-11 → 09-18, D7 终极判死 2026-09-18
 > **严守**: 7 铁律 0 触动(0 LLM / 0 proxy / 0 网关 / key 不入 prompt / 5 锚 0 触动 / 11 frozen 0 触动 / 不创建临时文件)
 > **配套报告**:
 > - `docs/V3X/RISK3_V0_FIXES_2026_09_11.md` (3 风险实算 + 2 方案矛盾)
@@ -14,7 +14,7 @@
 
 ## §0 委托原则 (Trae 必读)
 
-1. **0 LLM 严守**: 本次修 3 风险全程纯 Python stdlib (json + hashlib + math + numpy 已允许用于实算), **0 LLM 调用**, 不调 OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / WeChat API / coding-plan。
+1. **0 LLM 严守**: 本次修 3 风险全程纯 Python stdlib (json + hashlib + math + numpy 已允许用于实算), **0 LLM 调用**, 不调 OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / 线上 API / coding-plan。
 2. **不动 5 锚 JSON**: `verifier/handoff/KT_ABC1_anchors_sha256_12.json` 全文 SHA-12 `03c6c01f3697` 严守 0 触动。
 3. **不动 4 SPEC V0.1**: `KT_A1_SPEC_V0.1.md` / `KT_B1_SPEC_V0.1.md` / `KT_C1_SPEC_V0.1.md` / `KT_D0_SPEC_V0.1.md` 0 触动。
 4. **不动 v19/v21/corpus_v20**: `results/deposon_v19_*.json` / `deposon_v21_gtformal.json` / `corpus/v20/index.json` 0 触动。
@@ -221,12 +221,12 @@ erratum 期望 (V7 §8.A):  ae80bbba4f7b
 
 | 路径 | agent | 1 周判死时序 | 状态 |
 |---|---|---|---|
-| P-A deepen | deposon-pa-deepen | D1 (09-12) 启动 → D7 (09-18) 5 锚 PASS/FAIL | 等王老师选挂点 |
-| P-C verify | deposon-pc-verify | D3 (09-14) 启动 → D7 (09-18) R^2 + b_CI 终极判死 | 等王老师选挂点 |
-| P-E physics | deposon-physics-formula | D3 (09-14) 启动 → D7 (09-18) 9 model × 60 cells 复跑 + 阈值口径统一 | 等王老师选挂点 |
-| P-F observer | deposon-pf-observer | D1 (09-12) 启动 → D5 (09-16) 1 model × 5 cells 验证 B1 fingerprinting | 等王老师选挂点 |
+| P-A deepen | deposon-pa-deepen | D1 (09-12) 启动 → D7 (09-18) 5 锚 PASS/FAIL | 等外部顾问选挂点 |
+| P-C verify | deposon-pc-verify | D3 (09-14) 启动 → D7 (09-18) R^2 + b_CI 终极判死 | 等外部顾问选挂点 |
+| P-E physics | deposon-physics-formula | D3 (09-14) 启动 → D7 (09-18) 9 model × 60 cells 复跑 + 阈值口径统一 | 等外部顾问选挂点 |
+| P-F observer | deposon-pf-observer | D1 (09-12) 启动 → D5 (09-16) 1 model × 5 cells 验证 B1 fingerprinting | 等外部顾问选挂点 |
 
-**3 风险修完是 4 路径启动的前置条件**, 王老师 1 周判死窗口 2026-09-11 → 09-18, 4 路径必须 D7 前出 5 锚 PASS/FAIL。
+**3 风险修完是 4 路径启动的前置条件**, 外部顾问 1 周判死窗口 2026-09-11 → 09-18, 4 路径必须 D7 前出 5 锚 PASS/FAIL。
 
 ---
 

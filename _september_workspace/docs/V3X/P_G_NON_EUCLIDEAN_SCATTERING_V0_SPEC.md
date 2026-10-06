@@ -145,7 +145,7 @@ P-G(非欧散射层)  ×  P-F(observer 角色)
 - Poincare ball    - fingerprinting
 - 双曲 transport    - BOSS 自测
 - 双曲守恒律       - 5 锚 PASS/FAIL
-- 双曲失真界       - 王老师 WeChat 通知
+- 双曲失真界       - 外部顾问 线上 通知
 ─────────────────────────────────────
 P-G 升级 V3.X 既有 6 方向的"隐空间几何"
 P-F 沿用 V0.1 observer 角色不动
@@ -163,7 +163,7 @@ P-F 沿用 V0.1 observer 角色不动
 | D1 | 2026-09-16 | (D5 决策点) P-G V0 是否升 V0.1? | 等 user 拍板 |
 | D3 | 2026-09-17 | (若 V0.1) 落 boss_pg_*.py SCAFFOLDING | 沿 P-F V0.1 §5 |
 | D5 | 2026-09-17 | (若 V0.1) 9 model × 60 cells 双曲 transport 实算 | 0 LLM |
-| D7 | 2026-09-18 | (若 V0.1) 5 锚 PASS/FAIL + 推王老师 WeChat | D7 终极 |
+| D7 | 2026-09-18 | (若 V0.1) 5 锚 PASS/FAIL + 推外部顾问 线上 | D7 终极 |
 
 ### 4.2 边界(沿 7 铁律)
 
@@ -179,7 +179,7 @@ P-F 沿用 V0.1 observer 角色不动
 
 - 0 LLM 调用
 - 不设 proxy
-- 不调 OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / WeChat API
+- 不调 OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / 线上 API
 - key 永不入 prompt / JSON / 落盘 (runtime Path().read_text())
 - 沿用 9 model × 60 cells 已实算数据(`results/deposon_v3_physical_opt_60cells_2026_09_11.json`)
 
@@ -191,7 +191,7 @@ P-F 沿用 V0.1 observer 角色不动
 |---|---|---|
 | 1 | 0 LLM 调用 | ✅ 纯文本编辑 |
 | 2 | 不设 proxy | ✅ 0 proxy 设置 |
-| 3 | 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API | ✅ 0 网关调用 |
+| 3 | 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API | ✅ 0 网关调用 |
 | 4 | key 永不入 prompt/JSON/落盘 | ✅ 0 key 字面量 |
 | 5 | 不动 5 锚 JSON | ✅ SHA-12 `03c6c01f3697` 0 触动 |
 | 6 | 不动 4 SPEC V0.1 + v19/v21 + corpus_v20 + 200+ 已落盘 + 现有 PDF/MD + 4 plugin spec | ✅ 严守 0 触动 |
@@ -204,7 +204,7 @@ P-F 沿用 V0.1 observer 角色不动
 ### 6.1 V0.1 触发条件(任一满足即触发)
 
 1. user 2026-09-16 D5 决策点拍板"P-G V0 → V0.1"
-2. 王老师 WeChat 回复"关注 P-G 方向"
+2. 外部顾问 线上 回复"关注 P-G 方向"
 3. 4 路径 D1-D3 中期有 ≥ 1 路径 FAIL 且根因指向"隐空间几何不够"
 
 ### 6.2 V0.1 落盘内容(严守 P-F V0.1 §5 判定线预注册)

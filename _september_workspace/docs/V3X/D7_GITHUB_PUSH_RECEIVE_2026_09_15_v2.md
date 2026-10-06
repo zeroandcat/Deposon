@@ -138,7 +138,7 @@ TOTAL: 16 frozen files | OK: 16 | FAIL: 0
 - ⏸️ **D7 后清理源仓文档**(沿 `_d7_post_anchor_rotation_remediation_2026_09_18.py`)
 - ⏸️ **re-commit** 到 zeroandcat/Deposon main
 - ⏸️ **追加 commit**(interim → D7 终极)
-- ⏸️ **王老师 WeChat D7 终极判死推送 1 条**
+- ⏸️ **外部顾问 线上 D7 终极判死推送 1 条**
 
 ### 8.3 立即处理
 
@@ -146,4 +146,4 @@ TOTAL: 16 frozen files | OK: 16 | FAIL: 0
 
 ---
 
-**接收报告 V2 修正** | 沿 user 17:21 修正 + 17:26 拍板 C | D7 后清理计划就绪 | 16/16 frozen 0 触动 | 严守 7 铁律 + 0 LLM | 等 D7 (2026-09-18) 当日执行 5 锚实算 + 清理源仓 + re-commit + 王老师 WeChat
+**接收报告 V2 修正** | 沿 user 17:21 修正 + 17:26 拍板 C | D7 后清理计划就绪 | 16/16 frozen 0 触动 | 严守 7 铁律 + 0 LLM | 等 D7 (2026-09-18) 当日执行 5 锚实算 + 清理源仓 + re-commit + 外部顾问 线上

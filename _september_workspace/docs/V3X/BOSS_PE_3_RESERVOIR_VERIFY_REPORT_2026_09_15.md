@@ -204,13 +204,13 @@ verifier 输出: 14/15 frozen PASS, 1 FAIL。
 
 - **D5 (2026-09-16)**: P-E 5 锚终极判死 + D_fix2 阈值 (strict/loose) 拍板 (沿 `deposon_pe_d1_d3_2026_09_15.json` D_fix2_threshold_recommendation: strict)
 - **D5**: 派 reviewer-a 静态审 + reviewer-b 复跑双审本 JSON + 报告
-- **D7 (2026-09-18)**: 5 锚终极判死 + 推王老师 WeChat D7 决策点 (P-E 选/弃挂点)
+- **D7 (2026-09-18)**: 5 锚终极判死 + 推外部顾问 线上 D7 决策点 (P-E 选/弃挂点)
 - **BOSS-PE-3 真值已确认**, 不需要补实验, 不消耗额外 volcengine 调用
 
-### 10.3 王老师 WeChat 决策 (沿 P-E 选/弃挂点)
+### 10.3 外部顾问 线上 决策 (沿 P-E 选/弃挂点)
 
 - **建议挂点保留**: P-E (3 modality conservation) — BOSS-PE-3 PASS 确认 P-E 不是简化类比, 是独立科学问题
-- **回报形式**: 沿 `WANG_TEACHER_PROGRESS_REPORT_2026_09_11.md` 模板, 1 周 5-10 min 决策点
+- **回报形式**: 沿 `EXTERNAL_ADVISOR_PROGRESS_REPORT_2026_09_11.md` 模板, 1 周 5-10 min 决策点
 
 ---
 

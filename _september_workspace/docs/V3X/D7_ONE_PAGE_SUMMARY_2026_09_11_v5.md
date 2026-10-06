@@ -1,6 +1,6 @@
-# V3X BCD 收尾 + 6 候选评级更新 — 致王老师进展报告 D7(2026-09-11 v5)
+# V3X BCD 收尾 + 6 候选评级更新 — 致外部顾问进展报告 D7(2026-09-11 v5)
 
-> **致**:王老师
+> **致**:外部顾问
 > **来自**:Deposon 项目组 / Mavis Worker
 > **报告日期**:2026-09-11
 > **依据**:V7 综合最终判死报告 + Trae 4 项验证反馈 + BCD 收尾(本批 worker 2026-09-11 13:22 输出)
@@ -90,10 +90,10 @@
 
 **附件清单**(2026-09-11 全部落盘 `docs/V3X/`):
 - V3X 综合报告(沿 V7,不动)
-- `WANG_TEACHER_PROGRESS_REPORT_2026_09_11.md`(前版王老师报告)
+- `EXTERNAL_ADVISOR_PROGRESS_REPORT_2026_09_11.md`(前版外部顾问报告)
 - `CANONICAL_5_UNVERIFIED_NOTE_2026_09_11.md`(本批,阶段 B)
 - `V3_PHYSICAL_OPT_60CELLS_2026_09_11.md`(本批,阶段 D)
 - `D7_ONE_PAGE_SUMMARY_2026_09_11_v5.md`(本批,阶段 A)
 - `deposon_v3_physical_opt_60cells_2026_09_11.json`(本批,阶段 D JSON)
 
-**待 user 决策**:是否批准王老师报告 WeChat 发送(若 1 条 WeChat 选挂点即启动 P-F 1 周判死 D1+D2 阶段)
+**待 user 决策**:是否批准外部顾问报告 线上 发送(若 1 条 线上 选挂点即启动 P-F 1 周判死 D1+D2 阶段)

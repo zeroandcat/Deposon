@@ -15,7 +15,7 @@
 | 1 | **boss_pc 命名一致性** (option_C) | Trae 选项 | **部分通过** ⚠️ | 文件改名 ✓ / 攻击脚本移出 ✓ / 报告勘误 ✓ / INFILE_REPL 锚未全覆盖(详见 §3 N3) |
 | 2 | race condition reconcile | Trae 选 | **通过** ✓ | `_verify_pg_v0.py` skill_d 行 reconcile + 协议写进 FROZEN POLICY 注释 |
 | 3 | 5 锚 JSON 派生补丁 (option_A) | Trae 选 | **通过** ✓ | 派生 JSON 保持独立 + 读取顺序写入 FROZEN POLICY(option B 否决依据扎实) |
-| 4 | boss_pg SCAFFOLDING (option_A) | Trae 选 | **通过裁定 + SELF-CHECK 实际跑挂** ✗ | 政策正确(等 540-LLM + 王老师拍板),但下游 SELF-CHECK tail **3/3 NameError**(详见 §3 N1) |
+| 4 | boss_pg SCAFFOLDING (option_A) | Trae 选 | **通过裁定 + SELF-CHECK 实际跑挂** ✗ | 政策正确(等 540-LLM + 外部顾问拍板),但下游 SELF-CHECK tail **3/3 NameError**(详见 §3 N1) |
 | 5 | 命名 vs 内容 (option_C) | Trae 选 | **通过** ✓ | 与修复点 1 同一裁定; BOSS(普适类)与 Attack(KT-C1 §5)双轴分离 |
 | 6 | frozen 列表动态冻结 | Trae 选 | **通过** ✓ | FROZEN POLICY 注释追加 + TOTAL 15→len(files_15) bug 修 + LETTER 指针刷新 |
 | 7 | P-F V0.1 §5 预注册纪律 (9 scripts) | Trae 选 | **追加完成但运行时 5/9 FAIL** ✗⚠️ | 标记 `TRAE_SELFCHECK_2026_09_16` 追加到位; **运行时实测:5/9 SELF-CHECK 抛异常后崩**(详见 §3 N1+N2) |
@@ -127,7 +127,7 @@ NameError: name '_src_sc' is not defined
 **影响**:
 1. 修复点 7 声称"9 个脚本 SELF-CHECK 尾块全部到位"——文件层正确(标记在尾块中存在);但**运行层 3/9 实际抛 NameError**,Trae 的 SELF-CHECK ALL PASS 自检只走了 `compile()` 检语法,不跑模块顶层——这条断言永远到不了。
 2. P-G SCAFFOLDING 状态机依赖 SELF-CHECK 锁住 `TODO` 标记防静默实跑——此锁形同虚设。
-3. 后续 boss_pg 升实跑时(等王老师拍板),若有 worker `import boss_pg_*` 会被 NameError 阻断。
+3. 后续 boss_pg 升实跑时(等外部顾问拍板),若有 worker `import boss_pg_*` 会被 NameError 阻断。
 
 **建议处置**(Mavis 决策, 不在 reviewer-a 严守范围):
 - 选项 A:把 `with open(__file__, 'r', encoding='utf-8') as _f_sc: _src_sc = _f_sc.read()` 块**前置**到 `body_asserts` 之前(`footer()` 模板调整)— 适用于 boss_pg_1

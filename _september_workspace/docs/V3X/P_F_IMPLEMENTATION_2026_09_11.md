@@ -201,7 +201,7 @@
 
 ### §4.1 旧规则(撤销)
 
-> P-F V0 仅"预登记"不"启动";启动条件 = P-A/P-B/P-C/P-D 4 方向中至少 3 个 FAIL / BOSS 撞上 / 主动放弃;王老师新指令;P-F 调研 V0.1 落地;IMMACULATE GitHub 可访问性验证通过;D1 reviewer-a 静态审通过 [来源: P_F_SPEC_V0 §0.2]
+> P-F V0 仅"预登记"不"启动";启动条件 = P-A/P-B/P-C/P-D 4 方向中至少 3 个 FAIL / BOSS 撞上 / 主动放弃;外部顾问新指令;P-F 调研 V0.1 落地;IMMACULATE GitHub 可访问性验证通过;D1 reviewer-a 静态审通过 [来源: P_F_SPEC_V0 §0.2]
 
 **4 方向状态** (2026-09-11 11:43 之前):
 - P-A: ✅ PASS(2 model 0.867,1.3× Bayesian)
@@ -215,7 +215,7 @@
 
 > user 2026-09-11 11:44 主动让 P-F 调方向(撤销之前 1/5 FAIL 启动条件严守不擅自触发的硬性规则)
 
-**新规则**: user 11:44 主动 trigger → P-F 立即启动;改为"user 主动 trigger → P-F 立即启动",沿 P_F_SPEC_V0 §0.2 "王老师主动指定 P-F 优先,则此条件豁免" 类比规则(user 11:44 主动 = user 作为最终决策人)
+**新规则**: user 11:44 主动 trigger → P-F 立即启动;改为"user 主动 trigger → P-F 立即启动",沿 P_F_SPEC_V0 §0.2 "外部顾问主动指定 P-F 优先,则此条件豁免" 类比规则(user 11:44 主动 = user 作为最终决策人)
 
 **约束保留**(user 11:44 未撤销):
 - ✅ 5 锚 JSON + 4 SPEC V0.1 + v19/v21 + corpus/v20 全部不动
@@ -267,7 +267,7 @@ V3X = T 主导 + A 抑制 + R 微扰 = no-RAG + 双 model baseline + P-D 账指�
 | **4 数字溯源** | 所有数字带来源(9 model T/R/A 沿 EMBEDDING_VISION_V1_IMPL §2.2; v19 2.2e-16 沿 V3 v4; KT-B1 attack 22.5% 沿 KT_B1_REWORK_REPORT; 1.11e-16 实测沿 V6 §2.4; 5 锚 03c6c01f3697 实算; P-F 5 BOSS 沿 P_F_SPEC_V0 §4.2; 6 候选 P-F 沿 V6 §4.2) | ✅ |
 | **5 verifier 纪律** | P-F 5 BOSS 测法用 /tmp 副本(沿 P_F_SPEC_V0 §10.2 陷阱), 不碰真实仓库; 本任务未创建 P-F BOSS 测法脚本(V0 草稿期仅占位) | ✅ |
 | **6 预登记** | 5 锚沿用 `KT_ABC1_anchors_sha256_12.json` SHA-12 03c6c01f3697(实算验证未动); P-F 5 锚在 P_F_PREDECISION JSON 占位(000000000000), V0.1 升级时算真值 | ✅ |
-| **7 推送策略** | 不主动发, 等 D0 末群内公布 + 王老师 WeChat 通知; 本报告输出后等 user 进一步指令 | ✅ |
+| **7 推送策略** | 不主动发, 等 D0 末群内公布 + 外部顾问 线上 通知; 本报告输出后等 user 进一步指令 | ✅ |
 
 ---
 
@@ -283,7 +283,7 @@ V3X = T 主导 + A 抑制 + R 微扰 = no-RAG + 双 model baseline + P-D 账指�
 
 ### §7.2 P-F 已触发,等 user 进一步指令
 
-- **A) 发 D7 摘要**(1 页给王老师,沿 P_F_SPEC_V0 §9 时序)
+- **A) 发 D7 摘要**(1 页给外部顾问,沿 P_F_SPEC_V0 §9 时序)
 - **B) 跑 V3 综合报告 V7**(叠加 4 候选 P-A/B/C/D + P-E + P-F 6 候选整合,沿 V6 §4.3 模式升级 V7)
 - **C) 沿 v3 §6 物理公式进一步优化**(P-F 实施已触发,1 周判死 D1 调研 + D2 实现可启动)
 - **D) 派独立子代理 (due-diligence-worker) 补查 5 BOSS 各 ≥ 2 个可访问 URL**,落地 P_F_RESEARCH_V0.1.md(P_F_RESEARCH_V0 §5.2 触发)
@@ -330,8 +330,8 @@ V3X = T 主导 + A 抑制 + R 微扰 = no-RAG + 双 model baseline + P-D 账指�
 
 | 时间 | 事件 |
 |---|---|
-| 2026-09-04 | v3 提案 §6 列出 6 方向(P-A/B/C/D/LLM 议价/P-F),王老师致 |
-| 2026-09-08 | 王老师回"不指定",Mavis 自由推进 4 方向(P-A/B/C/D),P-F 暂未启动 |
+| 2026-09-04 | v3 提案 §6 列出 6 方向(P-A/B/C/D/LLM 议价/P-F),外部顾问致 |
+| 2026-09-08 | 外部顾问回"不指定",Mavis 自由推进 4 方向(P-A/B/C/D),P-F 暂未启动 |
 | 2026-09-09 V0 | P_F_SPEC_V0 + P_F_RESEARCH_V0 落地,5 BOSS 沿用占位,5 锚预登记 JSON 落地(`000000000000`),P-F V0 草稿期不启动 |
 | 2026-09-09 V0.2 | QUICK_KILL_6_DIRECTIONS.md 升级 V0.2(加 6 方向 BOSS 列表,19 个 BOSS) |
 | 2026-09-09 V3 v4 | V3 v4 主线判死 4 PASS + 1 死 + 1 引用 PASS(P-A/P-B/P-D PASS,P-C DEAD) |
@@ -346,7 +346,7 @@ V3X = T 主导 + A 抑制 + R 微扰 = no-RAG + 双 model baseline + P-D 账指�
 
 ### §8.3 附录 C — 引用与版本
 
-- **v3 提案**: 《Deposon × 王子贺老师 合作提案》(2026-09-04, 4 页 PDF, 致: 王子贺 人大高瓴人工智能学院)
+- **v3 提案**: 《Deposon × 外部合作导师〔匿名〕 合作提案》(2026-09-04, 4 页 PDF, 致: 外部合作导师〔匿名〕)
 - **P-F 已落盘 3 文件** (V0 草稿期, 沿用未动):
   - `docs/V3X/P_F_SPEC_V0.md` (19804 B, SHA-12 `de90faf362c5`)
   - `docs/V3X/P_F_RESEARCH_2026_09_09.md` (17603 B, SHA-12 `98085df7811a`)

@@ -15,7 +15,7 @@
 |---|---|---|---|
 | 1 | 0 LLM 调用 | ✅ 严守 | 本任务纯文本审 + SHA-12 复算(本地 hashlib),0 LLM calls |
 | 2 | 不设 proxy | ✅ 严守 | 0 proxy 设置,无任何 HTTP 调用 |
-| 3 | 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API | ✅ 严守 | 0 网关调用,纯本地 read-only 文本审 |
+| 3 | 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API | ✅ 严守 | 0 网关调用,纯本地 read-only 文本审 |
 | 4 | key 永不入 prompt/JSON/落盘 | ✅ 严守 | 本任务不读 key,0 key 字面量,本报告不写 key |
 | 5 | 不动 16 frozen 文件 | ✅ 严守 | 仅 read-only 读 8 文档,0 写操作 |
 | 6 | 不动 verifier/mavis/.builtin/scripts/ 目录 | ✅ 严守 | 0 访问 |
@@ -273,7 +273,7 @@
 - 数学可复算: D_fix2 = 1 - cos([T,A], [T_c,A_c]) 是确定性公式,给定 (T_frac, A_frac) → 唯一值 ✅
 - A channel 时序敏感性: volcengine timing 变化导致 A_frac 漂移,3 of 9 models (glm-5.3-flash + doubao-seed-2.1-turbo + deepseek-v4-pro) A-channel count 变化 5+
 - Caveats 4 条诚实记录 (Worker A format / Worker D format / deepseek-v4-pro partial / A channel sensitivity)
-- Next Action 等 user 拍板 D_fix2 metric 真值验证 PARTIAL_PASS → 推进王老师 1 周判死
+- Next Action 等 user 拍板 D_fix2 metric 真值验证 PARTIAL_PASS → 推进外部顾问 1 周判死
 
 **综合 verdict**: ⚠️ **PASS with GRAY** (数据完整 + 7 铁律 + 0 触动 + 诚实 PARTIAL_PASS 标注 + 不擅自决定阈值归属 user)
 
@@ -344,7 +344,7 @@
 |---|---|---|
 | 1 | 0 LLM 调用 | ✅ 0 调用,纯文本审 + Python stdlib (hashlib) SHA-12 复算 |
 | 2 | 不设 proxy | ✅ 0 proxy |
-| 3 | 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API | ✅ 0 网关 |
+| 3 | 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API | ✅ 0 网关 |
 | 4 | key 永不入 prompt/JSON/落盘 | ✅ 0 key (本任务不读 key,本报告无 key 字面量) |
 | 5 | 不动 16 frozen + P-G V0 + P-G V0.1 | ✅ 0 触动 (本任务 8 文档均 read-only) |
 | 6 | 不动 verifier/mavis/.builtin/scripts/ | ✅ 0 访问 |
@@ -377,7 +377,7 @@
 3. **D_fix2 metric PARTIAL_PASS** (GRAY):
    - 数学可复算 ✅ / 分布非 bit-exact 可复算 ⚠️
    - 阈值归属待 user 拍板 (strict / loose / 其他)
-   - 修复权属: user 决议 → 沿 V0.1 推进王老师 1 周判死
+   - 修复权属: user 决议 → 沿 V0.1 推进外部顾问 1 周判死
 
 4. **P-C 路径 R^2<0.3 幂律死** (FAIL_H0):
    - 拟合 1 R^2=`0.1986` (<0.3) / 拟合 2 R^2=`0.2670` (<0.3)
@@ -394,8 +394,8 @@
 
 ### 4.3 reviewer-a 给 Mavis 父会话的 1 周判死建议
 
-- **D5 (2026-09-16)**: 推王老师 WeChat 决策点 — 等 user 拍板 D_fix2 threshold (strict/loose) + boss_pc_* 命名冲突修复 + 5 锚 JSON 派生 patch reconcile
-- **D7 (2026-09-18)**: 5 锚终极判死 (P-A 5 锚 + P-C 5 锚 + P-E 5 锚 + P-F 5 锚 + P-G V0.1 5 锚 = 25 锚总 PASS/FAIL 综合) + 1 周预筛结果 → 推王老师 WeChat
+- **D5 (2026-09-16)**: 推外部顾问 线上 决策点 — 等 user 拍板 D_fix2 threshold (strict/loose) + boss_pc_* 命名冲突修复 + 5 锚 JSON 派生 patch reconcile
+- **D7 (2026-09-18)**: 5 锚终极判死 (P-A 5 锚 + P-C 5 锚 + P-E 5 锚 + P-F 5 锚 + P-G V0.1 5 锚 = 25 锚总 PASS/FAIL 综合) + 1 周预筛结果 → 推外部顾问 线上
 
 ---
 
@@ -424,7 +424,7 @@
 
 **0 触动声明**: reviewer-a 对 8 目标文档均 read-only,唯一新增产出为本报告 (`docs/V3X/REVIEWER_A_STATIC_AUDIT_2026_09_15.md`),不在 16 frozen / P-G V0 / P-G V0.1 列表。
 
-**下一步**: Mavis 沿双审纪律,待 reviewer-b /tmp 重跑完成后,推 D5 综合王老师 WeChat (1 条)。
+**下一步**: Mavis 沿双审纪律,待 reviewer-b /tmp 重跑完成后,推 D5 综合外部顾问 线上 (1 条)。
 
 ---
 

@@ -562,8 +562,8 @@ V3X 真实 2 周工作量 = no-RAG + (doubao-seed-2.0-lite + glm-5.3) 双 baseli
 
 | 时间 | 事件 | 输出 |
 |---|---|---|
-| 2026-09-04 | v3 提案致王老师 PDF | V3X_Collab_Prop.pdf (272 KB) |
-| 2026-09-08 | 王老师回"不指定" | 4 方向 P-A/B/C/D 自由推进 |
+| 2026-09-04 | v3 提案致外部顾问 PDF | V3X_Collab_Prop.pdf (272 KB) |
+| 2026-09-08 | 外部顾问回"不指定" | 4 方向 P-A/B/C/D 自由推进 |
 | 2026-09-09 D0-D7 | 4 SPEC V0 + V1 阶段版 + D7 摘要 | 16 份文件 149.2 KB |
 | 2026-09-09 V0 | P_F_SPEC_V0 + P_F_RESEARCH_V0 + P_F_PREDECISION 落地 | 3 文件 41.1 KB |
 | 2026-09-09 V3 v4 | V3 v4 主线判死 | 4 PASS + 1 死 + 1 引用 PASS |

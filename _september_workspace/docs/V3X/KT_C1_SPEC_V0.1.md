@@ -36,7 +36,7 @@
 
 ## 1. 目标与判死线
 
-### 1.1 对外判死线(王老师视角, 沿用 v3 提案第六节 KT-C1 行原文)
+### 1.1 对外判死线(外部顾问视角, 沿用 v3 提案第六节 KT-C1 行原文)
 
 > 含环 328 图残余 r 对循环空间维数 d 的 log-log 回归; R²<0.3 或斜率 b 的 95%CI 含 0 → 幂律死
 
@@ -131,7 +131,7 @@ SHA-256 前 12 位: 9d9ae5001c57 (V0.1 真实值, 锚 ID = KT_C1_V21_FROZEN)
 
 ### 2.5 严格冻结流程
 
-1. D0 末: 本 SPEC V0.1 + 5 锚 SHA-256 前 12 位在 WeChat 群内公布(已落地)
+1. D0 末: 本 SPEC V0.1 + 5 锚 SHA-256 前 12 位在 线上 群内公布(已落地)
 2. D1 上午: 复制仓库到 `/tmp/deposon_kt_c1_audit_<timestamp>/` 副本
 3. D1 下午: 在副本上跑主实验 + 双跑, 结果冻结为 `results/v3x_kt_c1/kt_c1_run_<timestamp>.json`
 4. D1 末: 跑 reviewer-b 独立 /tmp 副本审计, 验 R² ± 0.05, b 95% CI ± 0.1
@@ -263,7 +263,7 @@ b 95% CI = bootstrap percentile (B=10000)
 
 ### 5.4 攻击不通过的处理
 
-任一攻击不通过 → 报告"攻击 X 不通过" → 重审实现 → 王老师 WeChat 通知 → **不撤回**整 KT-C1(攻击不通过 ≠ 主张错)。
+任一攻击不通过 → 报告"攻击 X 不通过" → 重审实现 → 外部顾问 线上 通知 → **不撤回**整 KT-C1(攻击不通过 ≠ 主张错)。
 
 ---
 
@@ -308,7 +308,7 @@ b 95% CI = bootstrap percentile (B=10000)
 
 - `results/v3x_kt_c1/audit_reviewer_b_<timestamp>.json`(审计结果)
 - `results/v3x_kt_c1/audit_diff_<timestamp>.md`(与原值差异表)
-- 任意超差 → 在 WeChat 通知王老师, 5 分钟内 ack 是否撤回
+- 任意超差 → 在 线上 通知外部顾问, 5 分钟内 ack 是否撤回
 
 ---
 
@@ -328,7 +328,7 @@ b 95% CI = bootstrap percentile (B=10000)
 
 ### 8.3 D7 末
 
-- 一页摘要(对外, 微信友好版): KT-C1 判死/判活 + 关键数字
+- 一页摘要(对外, 线上友好版): KT-C1 判死/判活 + 关键数字
 - 完整中文判死报告(内部, 10-15 页): 含 SPEC + 拟合详情 + BOSS 测法 + 攻击结果 + 复跑审计
 - BOSS-C1 FAIL 降级主张回写到 `QUICK_KILL_6_DIRECTIONS.md` V0.3
 
@@ -347,7 +347,7 @@ b 95% CI = bootstrap percentile (B=10000)
 | **R²<0.3** | 主实验 log-log 回归 R²<0.3 | **幂律死 = FAIL_H0** = 有效交付(死也是资产)— V0.1 阶段预判已 DEAD |
 | **b 95% CI 含 0** | 斜率不显著 | **幂律死 = FAIL_H0** = 有效交付 |
 | **η 扫描 δ>20%** | 双跑相变点偏离理论 | **相变死 = FAIL_H0** = 有效交付 |
-| **GRAY 灰区** | 0.3 ≤ R² ≤ 0.7 且 b 显著非 0 | Mavis 自主扩 cell 重判, 王老师仅 ack |
+| **GRAY 灰区** | 0.3 ≤ R² ≤ 0.7 且 b 显著非 0 | Mavis 自主扩 cell 重判, 外部顾问仅 ack |
 | **BOSS-C1 撞上**(V0.1 已确认) | 2D Ising 普适类预测与 deposon 符合(偏差 0.9% < 20%) | 主张降级"散射层展现 2D Ising 普适类行为", 标度律"无新增信息"— **V0.1 阶段已确认 FAIL** |
 | **BOSS-C2 未撞上**(V0.1 已确认) | Transverse field Ising 映射不成立(g/J 差 68%) | 主张保留(超出 transverse field Ising)— **V0.1 阶段已确认 PASS** |
 | **BOSS-C3 未撞上**(V0.1 已确认) | Reservoir Computing 双稳态不覆盖(ESN 不展示双稳态) | 主张保留(双稳态非通用特性)— **V0.1 阶段已确认 PASS** |
@@ -369,7 +369,7 @@ b 95% CI = bootstrap percentile (B=10000)
 | **D0**(今日) | 5 锚预登记 + §0.5 BOSS 测法节冻结 | Mavis + successor | 本 SPEC V0.1 公布 + 锚 JSON 已落地 | 否 |
 | **D1** | SPEC 冻结(V0.1) + 机械回归主 + 双跑 + BOSS-C1 2D Ising baseline(已实现) | data | KT-C1 报告 1-2 页 | 依赖 5 锚(已落地) |
 | **D2** | BOSS-C2 Transverse Ising 跑通(已实现, self_test PASS) | data | KT-C1 报告附录 C.2 | 否 |
-| **D3** | BOSS-C3 Reservoir 跑通(已实现, self_test PASS) + D3 微信中期简报(含 KT-C1 三行状态) | data + Mavis | 中期简报 + KT-C1 完整 BOSS 结果 | 否 |
+| **D3** | BOSS-C3 Reservoir 跑通(已实现, self_test PASS) + D3 线上中期简报(含 KT-C1 三行状态) | data + Mavis | 中期简报 + KT-C1 完整 BOSS 结果 | 否 |
 | **D4** | 独立重跑审计(reviewer-b 在 /tmp 副本) | reviewer-b | 4 份审计报告 | 依赖 D1-D3 |
 | **D5** | 附赠臂收尾(BPA 先导数据, 与 KT-C1 独立) | Mavis | BPA 先导数据 1-2 页 | 否 |
 | **D6** | 工件入账、成稿(中文判死报告 10-15 页) | paper-cn | 中文报告草稿 | 依赖 D1-D4 |
@@ -396,7 +396,7 @@ b 95% CI = bootstrap percentile (B=10000)
 | ✅ **数字溯源** | 全部数字从 frozen 锚 JSON 字段路径引(v3 提案附录 B + 本 SPEC §6 5 锚真实 SHA-256); 主实验 SHA `7df20f7b3084` + 双跑 SHA `b7e3c3717d11` + BOSS 测法 SHA `d47722a1123a` / `ce2196c90cbc` / `506d85c37e11` 全部从 `KT_ABC1_anchors_sha256_12.json` §anchors/KT-C1 + §boss_baselines/KT-C1 引用 | §6 + §2.2 + §2.3 + §4.1-4.3 |
 | ✅ **verifier 纪律** | §7 复现协议用 /tmp 副本; 不碰 HANDOFF_MACHINE_READABLE.json / results/*.json / verifier/vN/ | §7 + D0_FREEZE_PREP §6 |
 | ✅ **预登记** | §6 5 锚 SHA-256 前 12 位 D0 末已算, 先于运行冻结并公布, 任何 ≥ 1 锚漂移 → 全 KT-C1 撤回 | §6 + §9 失败模式 |
-| ✅ **推送策略** | 不主动发, 等 D0 末群内公布 + D1 末 1-2 页报告 + D3 末 WeChat 中期简报 + D7 末 WeChat 一行判死结果 | §8 交付 + v3 提案第八节 |
+| ✅ **推送策略** | 不主动发, 等 D0 末群内公布 + D1 末 1-2 页报告 + D3 末 线上 中期简报 + D7 末 线上 一行判死结果 | §8 交付 + v3 提案第八节 |
 
 **V0 草稿差异**: V0 草稿 §11 7 条铁律为零散自检, V0.1 升级为结构化表格, 7 条逐条展开 + 引用具体节 + 锚 SHA-256 对应。
 
@@ -411,7 +411,7 @@ b 95% CI = bootstrap percentile (B=10000)
 | **U-C1-03**(V0 草稿) | 95% bootstrap CI 抽样数 B=10000 是否够: 沿用 P-D V0 §4 协议, B=10000 是默认值 | D1 下午 | data | **沿用默认值** |
 | **U-C1-04**(V0 草稿) | reviewer-b 副本路径: `/tmp/deposon_kt_c1_audit_<timestamp>/` 是占位, 实际由 reviewer-b 启动时定 | D1 末 | reviewer-b | **沿用占位** |
 | **U-C1-05**(V0.1 新加) | 主实验 R² 实际数值 + b 95% CI 实际区间(V0.1 阶段 self_test 标注 DEAD, D1 末报告需填实际 R²) | D1 末 | data | **V0.1 预判 DEAD, 死也是资产** |
-| **U-C1-06**(V0.1 新加) | BOSS-C1 FAIL 主张降级是否需要王老师额外 ack, 还是仅一行 WeChat 通知 | D5 末 | 王老师 WeChat | **待 D5 末** |
+| **U-C1-06**(V0.1 新加) | BOSS-C1 FAIL 主张降级是否需要外部顾问额外 ack, 还是仅一行 线上 通知 | D5 末 | 外部顾问 线上 | **待 D5 末** |
 | **U-C1-07**(V0.1 新加) | BOSS-C2/C3 self_test PASS 是否在 D1-D3 末复跑时仍维持(PASS 状态可能受 D2 完整实现影响) | D3 末 | data | **V0.1 阶段预判 PASS, 需 D3 末确认** |
 | **U-C1-08**(V0.1 新加) | 抗攻击 A1/A2/A3 任一不通过时是否影响 BOSS-C1 主张降级结论(攻击不通过 ≠ 主张错) | D5 末 | Mavis | **沿用 V0 草稿: 不撤回** |
 | **U-C1-09**(V0.1 新加) | D7 末 BOSS-C1 FAIL 主张降级回写到 `QUICK_KILL_6_DIRECTIONS.md` V0.3 的具体段落 / 表格位置 | D7 末 | successor | **待 D7 末** |
@@ -436,7 +436,7 @@ b 95% CI = bootstrap percentile (B=10000)
 
 ## 13. 引用与版本(V0.1 新加)
 
-- **v3 提案**: 《Deposon × 王子贺老师 合作提案》(2026-09-04, 4 页 PDF, 致: 王子贺 人大高瓴人工智能学院)
+- **v3 提案**: 《Deposon × 外部合作导师〔匿名〕 合作提案》(2026-09-04, 4 页 PDF, 致: 外部合作导师〔匿名〕)
 - **Mavis P-C V0 spec**: `docs/V3X/P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md` V0(2026-09-09)
 - **Mavis QUICK_KILL_6_DIRECTIONS.md V0.2**: `docs/V3X/QUICK_KILL_6_DIRECTIONS.md` 方向 3 P-C + BOSS-C1/C2/C3
 - **Mavis D0_FREEZE_PREP_2026_09_09.md**: `docs/V3X/D0_FREEZE_PREP_2026_09_09.md` §0 信息源综合 + §1 D0 任务定义 + §3 排程
@@ -490,7 +490,7 @@ b 95% CI = bootstrap percentile (B=10000)
 
 ### V0 主体保持冻结
 
-- §1.1 对外判死线(王老师视角)
+- §1.1 对外判死线(外部顾问视角)
 - §1.2 内部判死线(η 扫描)
 - §1.3 双跑设计(4 个统计检验)
 - §1.4 数据已冻结

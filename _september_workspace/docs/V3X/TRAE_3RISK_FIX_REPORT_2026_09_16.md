@@ -14,7 +14,7 @@
 | 1 | boss_pc 命名一致性 | **option_C** | 预注册回正: Ising 系实跑脚本(曾被 D5 以 P-E 框架落盘为 boss_pe_*)改名回报告 §4 预注册名 boss_pc_1/2/3; 攻击脚本移出 boss_ 命名空间 |
 | 2 | race condition | ✅ 已 reconcile | _verify_pg_v0.py skill_d 期望值 f4c68d146141 → 3e369a1f6171(Mavis 只更新了 _verify_15frozen.py, 残留即信中 BOSS-PE-3 worker 观察到的 1/15 FAIL) |
 | 3 | 5 锚 JSON 派生补丁 | **option_A** | 派生 JSON 保持独立; 读取顺序(先派生 value_v3x_new, fallback 5 锚旧值)写入 FROZEN POLICY 注释; D7 后统一 reconcile。option B 否决: 保持 03c6c01f3697 同时改内容在 SHA 语义上不可能 |
-| 4 | boss_pg SCAFFOLDING | **option_A** | 保持 scaffolding——540-LLM 数据(bg_44d89fa8)未落盘 + 王老师未拍板, 提前升实跑违反预注册纪律; 风格差异是分阶段管线非 bug |
+| 4 | boss_pg SCAFFOLDING | **option_A** | 保持 scaffolding——540-LLM 数据(bg_44d89fa8)未落盘 + 外部顾问未拍板, 提前升实跑违反预注册纪律; 风格差异是分阶段管线非 bug |
 | 5 | 命名 vs 内容 | **option_C** | 与修复点 1 同一裁定: BOSS(普适类自测, boss_ 前缀)与 Attack(KT-C1 §5 抗攻击检查, attack_ 前缀)两条独立命名轴, 每文件单一语义, 不混合 |
 | 6 | frozen 列表动态冻结 | ✅ 已写注释 | "动态冻结 + reconcile 协议"政策块插入 _verify_15frozen.py(拍板记录→OLD→NEW 审计痕迹→其余条目须全 PASS); 附修 "TOTAL: 15"标签 bug(实为 16 项) + NEWLY LANDED 指针刷新 |
 | 7 | P-F V0.1 §5 预注册纪律 | ✅ 已落地 | 9 个 boss/attack 脚本全部追加 SELF-CHECK 尾块(标记 TRAE_SELFCHECK_2026_09_16: 文件名防漂移 + 预注册常数锁定 + OUT round-trip + scaffolding TODO 锁定); 2 个 patch 脚本自带预注册判定线 + SELF-CHECK + 二跑 |
@@ -48,7 +48,7 @@
 
 ## §4 修复点 4 详解 — boss_pg 保持 SCAFFOLDING(option_A)
 
-三个 boss_pg 自身 docstring 即预注册("awaiting D5 launch + 王老师 WeChat拍板"); 540-LLM 数据仍在 bg_44d89fa8 跑批; **提前升实跑 = 违反我们正在落实的预注册纪律**。与 boss_pc(已实跑)的风格差异是分阶段管线, 非 bug。升级路径已锁定: D7 拍板后按 P-F V0.1 §5 同款流程(预注册常数已在位 → 实跑 → SELF-CHECK 全过 → 二跑)。本任务给 boss_pg 追加的 SELF-CHECK 仅锁定 scaffolding 状态(TODO 标记 + 常数一致), 防止未拍板被静默实跑。
+三个 boss_pg 自身 docstring 即预注册("awaiting D5 launch + 外部顾问 线上拍板"); 540-LLM 数据仍在 bg_44d89fa8 跑批; **提前升实跑 = 违反我们正在落实的预注册纪律**。与 boss_pc(已实跑)的风格差异是分阶段管线, 非 bug。升级路径已锁定: D7 拍板后按 P-F V0.1 §5 同款流程(预注册常数已在位 → 实跑 → SELF-CHECK 全过 → 二跑)。本任务给 boss_pg 追加的 SELF-CHECK 仅锁定 scaffolding 状态(TODO 标记 + 常数一致), 防止未拍板被静默实跑。
 
 ## §5 修复点 7 详解 — SELF-CHECK 尾块(9 脚本)
 
@@ -91,7 +91,7 @@
 1. 双审两个 patch + 9 个尾块(沿委托信 §12 纪律)
 2. boss_pc_1/2/3 重跑时写新 OUT 路径(results/boss_pc_*_2026_09_15.json), 历史 boss_pe_* 结果保留不动
 3. D7 后 5 锚 JSON V0.2/V3X 升级时, 按派生 JSON metadata.note 统一 reconcile P_A_LLM_CLIENT/P_A_HARNESS
-4. boss_pg_* 升实跑须等 540-LLM 数据落盘 + 王老师拍板, 升级沿 P-F V0.1 §5 流程
+4. boss_pg_* 升实跑须等 540-LLM 数据落盘 + 外部顾问拍板, 升级沿 P-F V0.1 §5 流程
 5. P-G V0 spec 5 锚占位为"手填=手算"生成(非算法生成), _verify_pg_v0 已给 recomputed 全 PASS——建议 spec 升级时改算法生成留工件(沿 R3 erratum 工件三件套原则)
 
 —— Trae code, 2026-09-16

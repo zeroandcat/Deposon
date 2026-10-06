@@ -27,7 +27,7 @@
 |---|---|---|---|
 | 1 | 0 LLM 调用 | ✅ 0 调用 | 纯文本编辑 + 哈希计算 + 数学实算 |
 | 2 | 不设 proxy | ✅ 0 proxy | 严守 |
-| 3 | 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API | ✅ 0 网关调用 | 严守 |
+| 3 | 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API | ✅ 0 网关调用 | 严守 |
 | 4 | key 永不入 prompt/JSON/落盘 | ✅ 0 key 字面量 | runtime Path().read_text() 仅 V0.1 声明; 本任务纯 Python 不读 key |
 | 5 | 不动 5 锚 JSON 自身 SHA-12 = `03c6c01f3697` | ✅ 0 触动(option_A 路径) | 派生 patch JSON 落盘, 不动 frozen 5 锚 JSON (详 §2A) |
 | 6 | 不动 16 frozen + P-G V0 + P-G V0.1 | ⚠️ 部分严守 (skill_d 改动) | skill_d 是 user 12:01 1A 拍板豁免 (详 §1A); P-G V0 + V0.1 0 触动; 其他 15 frozen 0 触动 |
@@ -424,7 +424,7 @@ P-G V0 spec (`docs/V3X/P_G_NON_EUCLIDEAN_SCATTERING_V0_SPEC.md`) SHA-12 = `2f076
 ### §8.3 D7 (2026-09-18) 终极判死节点
 
 - P-F V0.1 5 锚 + P-G V0.1 5 锚 = 10 锚总 PASS/FAIL 综合
-- P-G V0 → V0.1 升级拍板 (王老师 WeChat 4A 决策)
+- P-G V0 → V0.1 升级拍板 (外部顾问 线上 4A 决策)
 - P-C D5 (2026-09-16) 全 1880 calls 完成 + eta_scan 9 档实算
 - 5 锚 JSON V0.2 / V3X 正式升级 (新 SHA 含 P_A 2 锚更新 + skill_d V0.1)
 

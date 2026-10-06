@@ -5,7 +5,7 @@
 > **状态**: **V0.1 冻结版**(SPEC 文本先于运行冻结,5 锚 SHA-256 已预登记,§11 7 条铁律兼容 + §12 已知未决项已固化)
 > **位置**: `docs/V3X/KT_A1_SPEC_V0.1.md`
 > **关联**:
-> - v3 提案(王老师致, 2026-09-04)第六节 KT-A1 行:对外判死线 = g_a* 随 λ_gap 单调(十分位分组 + Mann-Whitney 单侧)
+> - v3 提案(外部顾问致, 2026-09-04)第六节 KT-A1 行:对外判死线 = g_a* 随 λ_gap 单调(十分位分组 + Mann-Whitney 单侧)
 > - Mavis 内部 P-A 平衡稳定化 V0 spec V0.2(2026-09-09,加 §0.5 BOSS 测法节):内部主指标 = 稳定化成本倍数 ≤ 1.3×(H1)/ ≥ 2.0×(H0)
 > - Mavis 内部 QUICK_KILL_6_DIRECTIONS.md V0.2 方向 1 + BOSS-A1/A2/A3
 > - Mavis 内部 D0_FREEZE_PREP_2026_09_09.md §0 信息源综合 + §1 D0 任务定义
@@ -15,7 +15,7 @@
 
 ## 0. 元信息与 3 信息源综合(决策依据)
 
-KT-A1 是 v3 提案(王老师致, 2026-09-04, 4 页 PDF)第六节"Phase 0: 一周判死承诺"中列出的 4 条全新机械判死线之一, 对应 P-A′(SPPE 的稳定化成本)。该提案的 KT-A1 行定义对外判死线为:
+KT-A1 是 v3 提案(外部顾问致, 2026-09-04, 4 页 PDF)第六节"Phase 0: 一周判死承诺"中列出的 4 条全新机械判死线之一, 对应 P-A′(SPPE 的稳定化成本)。该提案的 KT-A1 行定义对外判死线为:
 
 > "稳定化所需最小耗散 g_a* 随谱瓶颈 λ_gap 单调;十分位分组序统计量 + Mann-Whitney 单侧检验"
 
@@ -44,7 +44,7 @@ KT-A1 验证"deposon 散射层的稳定化成本在小规模受控概念图上�
 
 ### 1.2 双判死线双跑设计
 
-**对外判死线(v3 提案 KT-A1 原文, 王老师视角)**:
+**对外判死线(v3 提案 KT-A1 原文, 外部顾问视角)**:
 - **描述**: 22 受控概念图上, 对每图算 g_a*(λ_gap), 然后按 λ_gap 十分位分 10 组, 序统计量 + Mann-Whitney 单侧检验单调性。
 - **PASS 条件**: Mann-Whitney 单侧 p < 0.05 且 g_a* 中位数随分位单调递增
 - **FAIL 条件**: p ≥ 0.05 或 中位数序列出现反转
@@ -63,7 +63,7 @@ KT-A1 验证"deposon 散射层的稳定化成本在小规模受控概念图上�
 - SPEC 文本先于运行冻结(2026-09-09 D0 草稿; V0.1 2026-09-09 升级, §6 5 锚 SHA-256 已填真实值, 沿用 P-A V0 spec V0.2 模式)
 - 5 锚 SHA-256 前 12 位在 D0 末由 successor 子代理算, 写入 `verifier/handoff/KT_ABC1_anchors_sha256_12.json` §anchors/KT-A1(本 V0.1 已固化)
 - 任何 ≥ 1 锚漂移 → 全 KT-A1 撤回(P-A V0 spec §2 + 本 SPEC §6)
-- 判死线 SPEC 不因王老师答复内容回溯修改(v3 提案第八节"判死线 SPEC 不受影响")
+- 判死线 SPEC 不因外部顾问答复内容回溯修改(v3 提案第八节"判死线 SPEC 不受影响")
 - **V0.1 新增**: D5 报告须含 BOSS-A1/A2/A3 测法 + P-A 判死裁定对照(沿用 P-A V0 spec §10 D5 增项)
 - **V0.1 新增**: D6 若 BOSS 测法全 PASS 则 P-A 方向 PASS;任一 BOSS 测法撞上则降级主张(沿用 P-A V0 spec §10 D6 增项)
 - **V0.1 新增**: D7 末 BOSS 测法结果回写到 `QUICK_KILL_6_DIRECTIONS.md` V0.3(沿用 P-A V0 spec §10 D7 增项)
@@ -240,7 +240,7 @@ seed = 42, 123, 456 三套, 看 cost 倍数 std/mean > 0.2 则报"种子敏感"�
 
 ### 5.4 攻击结果裁定
 
-- A1 不稳定 → 重审实现, 王老师 ack 是否撤回
+- A1 不稳定 → 重审实现, 外部顾问 ack 是否撤回
 - A2 温度敏感 → 重审实现, 提示词模板可能需要更严格规范
 - A3 种子敏感 → 重审实现, RNG 可能被 LLM 玩家污染
 
@@ -305,26 +305,26 @@ cp -r /path/to/deposon-repo "${AUDIT_DIR}"
 | D4 | 全 300 calls + BOSS-A2 Potential Game 闭式 + BOSS-A3 Replicator Dynamics | `results/v3x_kt_a1/full_d4.json` | data |
 | D5 | reviewer-b 判死 + 3 攻击 + **BOSS-A1/A2/A3 测法 + P-A 判死裁定对照**(V0.1 增项) | `docs/V3X/KT_A1_V0_RESULTS_2026_09_09_mavis.md` | reviewer-b + data |
 | D6 | 失败模式处理 / GRAY 扩 cell / **若 BOSS 测法全 PASS 则 P-A 方向 PASS;任一 BOSS 测法撞上则降级主张**(V0.1 增项) | (续 D5 报告) | Mavis + v3x |
-| D7 | 一页摘要(对外, 给王老师)+ 完整中文判死报告(内部) | `docs/V3X/KT_A1_V0_PAPER_zh.md` + WeChat | paper-cn + successor |
+| D7 | 一页摘要(对外, 给外部顾问)+ 完整中文判死报告(内部) | `docs/V3X/KT_A1_V0_PAPER_zh.md` + 线上 | paper-cn + successor |
 | D7 | **BOSS 测法结果回写到 QUICK_KILL_6_DIRECTIONS.md V0.3**(V0.1 增项) | `docs/V3X/QUICK_KILL_6_DIRECTIONS.md` | successor |
 
 D5 报告 1-2 页: 成本倍数表 + 95% CI + 对外 Mann-Whitney p 值 + 判死裁定 + 攻击结果 + BOSS-A1/A2/A3 裁定。
 
-D7 一页摘要(对外): 只列对外判死线结果 + P-A 方向 PASS/FAIL/GRAY + 王老师 ack 按钮。
+D7 一页摘要(对外): 只列对外判死线结果 + P-A 方向 PASS/FAIL/GRAY + 外部顾问 ack 按钮。
 
 ---
 
-## 9. 失败模式(与王老师 WeChat 同步, 沿用 P-A V0 spec §8)
+## 9. 失败模式(与外部顾问 线上 同步, 沿用 P-A V0 spec §8)
 
 - **5 锚漂移 ≥ 1** → 全 KT-A1 撤回
 - **判死 H0**(cost 倍数 ≥ 2.0×) → P-A 方向 FAIL, 撤 V3.X 整个 P-A 候选
 - **判死 H1**(cost 倍数 ≤ 1.3×)+ **对外 Mann-Whitney p ≥ 0.05** → "成本合理但单调不成立", 降级为"工程化系统"主张(与 BOSS-A1 RBR/RM 同款降级)
-- **判死 GRAY**(1.3 < cost < 2.0) → Mavis 自主扩 cell(n=300 → n=900)重判, 王老师仅 ack
+- **判死 GRAY**(1.3 < cost < 2.0) → Mavis 自主扩 cell(n=300 → n=900)重判, 外部顾问仅 ack
 - **BOSS-A1 RBR/RM ≤ 1.3×** → 主张降级为"工程化系统"
 - **BOSS-A2 Potential Game 能闭式证明** → 主张降级为"包装"
 - **BOSS-A3 ESS 与 deposon 平衡点重合** → 主张降级为"通用进化博弈特例"
-- **A1/A2/A3 攻击任一不通过** → 重审实现, 王老师 ack 是否撤回
-- **王老师答复内容要求改判死线** → 不接受(沿用 v3 提案第八节"判死线 SPEC 不受影响"), 但可调后续深度排序
+- **A1/A2/A3 攻击任一不通过** → 重审实现, 外部顾问 ack 是否撤回
+- **外部顾问答复内容要求改判死线** → 不接受(沿用 v3 提案第八节"判死线 SPEC 不受影响"), 但可调后续深度排序
 
 ---
 
@@ -333,7 +333,7 @@ D7 一页摘要(对外): 只列对外判死线结果 + P-A 方向 PASS/FAIL/GRAY
 - **D0**(2026-09-09): 锚点预登记 successor 子代理算 5 锚 SHA-256 前 12 位(已落地 `KT_ABC1_anchors_sha256_12.json`)+ 本 SPEC V0.1 冻结(§6 真实值已填)+ §0.5 BOSS 测法节冻结(已包含在 Mavis P-A V0 spec V0.2 升级中)
 - **D1**: Mavis 改 Mavis P-A V0 spec §1 加 BOSS 测法节(本 SPEC §4 内容纳入); 5 锚 JSON 落地
 - **D2**: 实现 LLM 玩家 + 3 机制 + 4 任务族 harness + BOSS-A1 RBR/RM baseline(已实现, 真实 SHA `91a62de1fa50`)→ 跑通 pilot 5 cell
-- **D3**: pilot 50 calls 跑通 + BOSS-A1 baseline 跑通 + 触发 D3 WeChat 1
+- **D3**: pilot 50 calls 跑通 + BOSS-A1 baseline 跑通 + 触发 D3 线上 1
 - **D4**: 全 300 calls + BOSS-A2 Potential Game 闭式(已实现, SHA `b6339d9f2435`)+ BOSS-A3 Replicator Dynamics 跑通(已实现, SHA `27d04f1e3b3e`)
 - **D5**: reviewer-b 判死 + 3 攻击 + BOSS-A1/A2/A3 测法 + P-A 判死裁定对照 + D5 报告
 - **D6**: 失败模式处理 / GRAY 扩 cell / 若 BOSS 测法全 PASS 则 P-A 方向 PASS; 任一 BOSS 测法撞上则降级主张
@@ -351,7 +351,7 @@ D7 一页摘要(对外): 只列对外判死线结果 + P-A 方向 PASS/FAIL/GRAY
 | ✅ **数字溯源** | 全部数字从 frozen 锚 JSON 字段路径引(v3 提案附录 B + P-A V0 spec §2 5 锚 + 本 SPEC §6 真实 SHA-256);本 SPEC 不写新数字 | §6 5 锚 + §3.1 对外判死线 + §3.2 内部判死线 |
 | ✅ **verifier 纪律** | §7 复现协议用 /tmp 副本; 不碰 HANDOFF_MACHINE_READABLE.json / results/*.json / verifier/vN/ | §7 + D0_FREEZE_PREP §6 |
 | ✅ **预登记** | §6 5 锚 SHA-256 前 12 位 D0 末已算, 先于运行冻结并公布, 任何 ≥ 1 锚漂移 → 全 KT-A1 撤回 | §6 + §9 失败模式 |
-| ✅ **推送策略** | 不主动发, 等 D0 末群内公布 + D7 末 WeChat 一行判死结果 | §8 交付 + v3 提案第八节 |
+| ✅ **推送策略** | 不主动发, 等 D0 末群内公布 + D7 末 线上 一行判死结果 | §8 交付 + v3 提案第八节 |
 
 **V0.1 与 V0 草稿的差异**: V0 草稿中 §11 是 7 条简短自检,V0.1 升级为表格形式逐条展开 + 引用具体节 + 锚 SHA-256 对应。V0.1 还吸收了 P-A V0 spec V0.2 §9 的"key 安全 runtime 读取"细节。
 
@@ -367,9 +367,9 @@ D7 一页摘要(对外): 只列对外判死线结果 + P-A 方向 PASS/FAIL/GRAY
 | **U-A1-04** | BOSS-A2 Potential Game 闭式证明是否成立: 22 受控概念图是否能转化为 Potential Game 形式,φ 单调下 H1 主张是否可闭式 | D4 末 | data |
 | **U-A1-05** | BOSS-A3 Replicator Dynamics 跑 22 图后 ESS 平衡点是否与 deposon 散射层平衡点重合 | D4 末 | data |
 | **U-A1-06** | GRAY 扩 cell(n=300 → n=900)的触发条件: 1.3× < 成本倍数 < 2.0× 或 CI 跨边界时是否需要扩,还是直接判 GRAY 出内部报告 | D5 末 | Mavis |
-| **U-A1-07** | 攻击 A1/A2/A3 任一不通过时, 是否要"重审实现"或"重审整套 KT-A1 设计" | D5 末 | Mavis + 王老师 ack |
-| **U-A1-08** | D7 一页摘要 vs D5 报告 vs 中文判死报告(10-15 页)的格式与受众人群差异, 是否在 D5 末定稿(王老师 ack 按钮 vs Mavis 工程审) | D5 末 | Mavis + paper-cn |
-| **U-A1-09** | 王老师 D0 三问默认值(沿用 v3 提案第六节 + P-A V0 spec §1.4)是否在 D1 末前 ack | D1 末 | 王老师 WeChat |
+| **U-A1-07** | 攻击 A1/A2/A3 任一不通过时, 是否要"重审实现"或"重审整套 KT-A1 设计" | D5 末 | Mavis + 外部顾问 ack |
+| **U-A1-08** | D7 一页摘要 vs D5 报告 vs 中文判死报告(10-15 页)的格式与受众人群差异, 是否在 D5 末定稿(外部顾问 ack 按钮 vs Mavis 工程审) | D5 末 | Mavis + paper-cn |
+| **U-A1-09** | 外部顾问 D0 三问默认值(沿用 v3 提案第六节 + P-A V0 spec §1.4)是否在 D1 末前 ack | D1 末 | 外部顾问 线上 |
 | **U-A1-10** | D7 末 BOSS 测法结果回写到 QUICK_KILL_6_DIRECTIONS.md V0.3 的具体段落 / 表格位置 | D7 末 | successor |
 
 **V0 草稿自检** (V0 阶段 §12 self-review 内容, V0.1 折叠到升级记录 §"V0 自检折叠"):
@@ -393,7 +393,7 @@ D7 一页摘要(对外): 只列对外判死线结果 + P-A 方向 PASS/FAIL/GRAY
 
 ## 13. 引用与版本
 
-- **v3 提案**: 《Deposon × 王子贺老师 合作提案》(2026-09-04, 4 页 PDF, 致: 王子贺 人大高瓴人工智能学院)
+- **v3 提案**: 《Deposon × 外部合作导师〔匿名〕 合作提案》(2026-09-04, 4 页 PDF, 致: 外部合作导师〔匿名〕)
 - **Mavis P-A V0 spec**: `docs/V3X/P_A_EQUILIBRIUM_STABILIZATION_V0_SPEC.md` V0.1 → V0.2(2026-09-09 加 §0.5 BOSS 测法节)
 - **Mavis QUICK_KILL_6_DIRECTIONS.md V0.2**: `docs/V3X/QUICK_KILL_6_DIRECTIONS.md` 方向 1 P-A + BOSS-A1/A2/A3
 - **Mavis D0_FREEZE_PREP_2026_09_09.md**: `docs/V3X/D0_FREEZE_PREP_2026_09_09.md` §0 信息源综合 + §1 D0 任务定义 + §3 排程

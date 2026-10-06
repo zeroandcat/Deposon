@@ -6,7 +6,7 @@
 > **配套**:
 > - `V3X_GAME_THEORY_NON_EUCLIDEAN_MASTER_NARRATIVE_2026_09_16.py` (Mavis 内部设计, 9244B)
 > - `V3X_CLOSURE_REPORT_REQUIREMENTS_FOR_EXTERNAL_AGENT.md` (委外需求清单, 8714B)
-> - `D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` (王老师 WeChat 推送, 8037B)
+> - `D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` (外部顾问 线上 推送, 8037B)
 > - `V3X_1WEEK_KILL_REPORT_2026_09_18.md` (1 周判死报告 1 页)
 > - `P_G_V01_REPORT_2026_09_15.md` (P-G V0.1 双曲 transport)
 > - `D5_DECISIONS_LAND_REPORT_2026_09_15.md` (5 项 D5 决策)
@@ -404,7 +404,7 @@
 - ✅ D7 后清理源仓文档(90 文件 ark- → ark-[REDACTED], 沿 user 17:26 拍板 C)
 - ✅ 1 周判死报告 1 页摘要(verdict 填)
 - ✅ 5 项 D5 决策落盘
-- ✅ 王老师 WeChat 推送需求(3 条)
+- ✅ 外部顾问 线上 推送需求(3 条)
 
 ### 4.5 V3 阶段成果收束结论
 
@@ -445,7 +445,7 @@
 |---|---|
 | 1. 0 LLM 调用 | ✓ 严守(纯 Python + numpy + 沿 v3_phys JSON 复算)|
 | 2. 不设 proxy | ✓ 严守 |
-| 3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API | ✓ 严守 |
+| 3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API | ✓ 严守 |
 | 4. key 永不入 prompt/JSON/落盘 | ✓ 严守(沿 user 17:21 验证 + 17:26 拍板 C 清理)|
 | 5. 不动 5 锚 JSON(`03c6c01f3697`)| ✓ 严守 |
 | 6. 不动 4 SPEC V0.1 + v19/v21 + corpus_v20 + 16 frozen + P-G V0 + P-G V0.1 | ✓ 严守(16/16 PASS)|
@@ -460,7 +460,7 @@
 - ❌ 不擅自启动 6 个旧方向补充实验 — 等 user 拍板
 - ❌ 不擅自落盘 P-H V0 spec(委外 agent 写 `docs/V3X/P_H_HYPERBOLIC_V0_SPEC.md`)| - ❌ 不擅自写 docs/V3X/ 报告(沿 user 11:15 委外)
 - ❌ 不擅自启动 D7 (2026-09-18) 实算(等 D7 当日)
-- ❌ 不擅自推王老师 WeChat(等 user 委托 coze)
+- ❌ 不擅自推外部顾问 线上(等 user 委托 coze)
 - ❌ 不擅自启动新方向(沿 user 13:39 不急定位V4)
 - ❌ 不擅自动 18 frozen + P-G V0 + P-G V0.1
 
@@ -500,7 +500,7 @@
 □ 吊销 PAT ghp_Ecfr…RAG
 □ D7 (2026-09-18) 当日 5 锚 9m × 60c 终极实算
 □ D7 后 re-commit 到 zeroandcat/Deposon main
-□ D7 推王老师 WeChat D7 终极判死 1 条
+□ D7 推外部顾问 线上 D7 终极判死 1 条
 ```
 
 ---

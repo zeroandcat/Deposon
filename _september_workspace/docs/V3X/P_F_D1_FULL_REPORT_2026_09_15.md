@@ -201,7 +201,7 @@
 
 | # | 铁律 | 状态 | 证据 |
 |---|---|---|---|
-| 1 | 0 LLM 调用 | ✅ **放宽** (user 11:28 拍板) | 仅 volcengine coding-plan: 1 sanity + 5 cells = 6 calls for `doubao-seed-2.0-lite` (FRESH); 0 调用 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API |
+| 1 | 0 LLM 调用 | ✅ **放宽** (user 11:28 拍板) | 仅 volcengine coding-plan: 1 sanity + 5 cells = 6 calls for `doubao-seed-2.0-lite` (FRESH); 0 调用 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API |
 | 2 | 0 proxy | ✅ 严守 | 0 HTTP_PROXY/HTTPS_PROXY 操作; 脚本启动时 `os.environ.pop(k, None)` for 6 个 proxy keys |
 | 3 | 仅 volcengine coding-plan | ✅ 严守 | 仅调 `https://ark.cn-beijing.volces.com/api/coding/v3/chat/completions` (volcengine 火山方舟 Coding Plan); 0 调其他 LLM 网关 |
 | 4 | key runtime 读 | ✅ 严守 | `Path(r'C:\Users\Administrator\Desktop\AI\LLM API.txt').read_text()` runtime 读; `key_truncated = api_key[:20]+'...'+api_key[-4:]` 仅用于显示, 完整 key 不入 prompt / JSON / 落盘 |
@@ -228,7 +228,7 @@
 
 - **B1** (D3 待做): B3 Merkle P-D V0.1 3 根指纹 + 22 caption dual_24bit 链式核验 (2026-09-14 已过, 沿 P-F V0.1 trigger)
 - **B2** (D5 待做): canonical 5 值工件补齐决策 (是否落盘 boss_f*.py 真实脚本), 等 user
-- **B3** (D7 待做): 5 锚终极判死 + 推 D0 末群 + 王老师 WeChat (2026-09-18)
+- **B3** (D7 待做): 5 锚终极判死 + 推 D0 末群 + 外部顾问 线上 (2026-09-18)
 - **R1**: 9 model × 5 cells chain_hash (D1) 与 30 cells × 9 model chain_hash (V0.1) 不同是预期 (cell count 差异); D1 算法与 V0.1 算法 100% 一致
 - **R2**: 5 锚中期评估 NOT final PASS/FAIL, 严守 7 铁律 user 11:44 主动 trigger 后未撤销 '不擅自判定 PASS/FAIL' 原则
 - **R3**: P-F V0.1 JSON ghost path `.mavis/scripts/p_f/` 未落盘真实脚本 (沿 Trae erratum); boss_pf_*.py 待 D5 user 决策
@@ -241,9 +241,9 @@
 | 时间 | 触发 | 任务 | 输出 |
 |---|---|---|---|
 | D1 (2026-09-15) | user 12:01 拍板 "1" (P-F observer D1 完整版) | **9 model × 5 cells REAL API 抽样 (本报告)** | `results/deposon_pf_d1_full_9m5c_2026_09_15.json` (SHA-12 e13d6e87b0b9) + 本 MD |
-| D3 (2026-09-15) | user 17:41 王老师 WeChat 决策点 | B3 Merkle 跨 (P-D 3 根 + 5 锚 + 22 caption) 链式核验 | (待 user 拍板) |
-| D5 (2026-09-16) | 王老师 WeChat 决策 | canonical 5 值工件补齐决策 (是否落盘 boss_f*.py) + P-F IMMACULATE trigger 检查 | (待 user 拍板) |
-| D7 (2026-09-18) | 5 锚终极判死 | 5 锚终极 PASS/FAIL + 推 D0 末群 + 王老师 WeChat 1 周预筛结果 | (待 D7) |
+| D3 (2026-09-15) | user 17:41 外部顾问 线上 决策点 | B3 Merkle 跨 (P-D 3 根 + 5 锚 + 22 caption) 链式核验 | (待 user 拍板) |
+| D5 (2026-09-16) | 外部顾问 线上 决策 | canonical 5 值工件补齐决策 (是否落盘 boss_f*.py) + P-F IMMACULATE trigger 检查 | (待 user 拍板) |
+| D7 (2026-09-18) | 5 锚终极判死 | 5 锚终极 PASS/FAIL + 推 D0 末群 + 外部顾问 线上 1 周预筛结果 | (待 D7) |
 
 **D1 mid-term 状态**: `all_mid_term_stable = True` (5 锚全部 STABLE_*)
 

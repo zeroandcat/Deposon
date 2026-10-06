@@ -1834,15 +1834,15 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 **(ii) 三封委托信 v3 出件**（沿派工单 B 字面）：
 - KIMI 上传委托信 v3：`letters/_v4_commission_upload_executor_2026_09_24_v3.md`（SHA-12 + 字节落盘后实测）
-- coze 项目汇报 wechat 委托信 v3：`letters/_v4_commission_wechat_report_coze_2026_09_24_v3.md`（SHA-12 + 字节落盘后实测）
+- coze 项目汇报 线上 委托信 v3：`letters/_v4_commission_online_report_coze_2026_09_24_v3.md`（SHA-12 + 字节落盘后实测）
 - GLM 论文终稿委托信 v3：`letters/_v4_commission_paper_final_glm_2026_09_24_v3.md`（SHA-12 + 字节落盘后实测；**涉 GLM 表述一律「以 PI 的 github 为唯一权威源（受托方已知）」**沿 `ask_9c8751ec` 字面）
 - v1 + v2 委托信 6 件**全部 0 触动**（沿 PI 2026-09-23「v1/v2 件一律不覆盖」纪律 + 派工单 B 字面）
 
 **(iii) v1 + v2 委托信 6 件 0 触动自查**：
 - `letters/_v4_commission_upload_executor_2026_09_24.md` v1（13,012 B · `ADFA7DD03F76`）= 未触动 ✓
 - `letters/_v4_commission_upload_executor_2026_09_24_v2.md` v2（13,012 B · `ADFA7DD03F76` 派生）= 未触动 ✓
-- `letters/_v4_commission_wechat_report_coze_2026_09_24.md` v1（7,197 B · `15F8227308BC`）= 未触动 ✓
-- `letters/_v4_commission_wechat_report_coze_2026_09_24_v2.md` v2（7,197 B · `15F8227308BC` 派生）= 未触动 ✓
+- `letters/_v4_commission_online_report_coze_2026_09_24.md` v1（7,197 B · `15F8227308BC`）= 未触动 ✓
+- `letters/_v4_commission_online_report_coze_2026_09_24_v2.md` v2（7,197 B · `15F8227308BC` 派生）= 未触动 ✓
 - `letters/_v4_commission_paper_final_glm_2026_09_24.md` v1（10,515 B · `53A425FE1BD2`）= 未触动 ✓
 - `letters/_v4_commission_paper_final_glm_2026_09_24_v2.md` v2（10,515 B · `53A425FE1BD2` 派生）= 未触动 ✓
 
@@ -1921,7 +1921,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 | PI 派工锚 `ask_822b1e27` | PI 2026-09-26 18:42 th23_span=跨度 3 天解读达标 supersede | E-35.1 d + E-35.2 字面源 |
 | `results/_v3_v4_achievements_inventory_3dir_addendum_v2_2026_09_26.md` | （落盘后实测） | E-35.4 (i) 清单补账件 v2 字面源 |
 | `letters/_v4_commission_upload_executor_2026_09_24_v3.md` | （落盘后实测） | E-35.4 (ii) KIMI 上传委托信 v3 字面源 |
-| `letters/_v4_commission_wechat_report_coze_2026_09_24_v3.md` | （落盘后实测） | E-35.4 (ii) coze wechat 委托信 v3 字面源 |
+| `letters/_v4_commission_online_report_coze_2026_09_24_v3.md` | （落盘后实测） | E-35.4 (ii) coze 线上 委托信 v3 字面源 |
 | `letters/_v4_commission_paper_final_glm_2026_09_24_v3.md` | （落盘后实测） | E-35.4 (ii) GLM 论文终稿委托信 v3 字面源 |
 | `results/_v4_maindir_cleanup_moves_ledger_v6_2026_09_26.md` | `CC498BC28525`（37,629 B） | E-35.6 归档二棒 6 项路径差异追溯口径字面源 |
 | `results/_v4_pi_cot_v2_verdict_v2.md` | `5D79E67A4E9D`（33,723 B） | E-35.5 正式裁决复合定性字面源 |
@@ -2107,7 +2107,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 | 时点 | 计数 | 来源 |
 |---|--:|---|
-| **19:50 快照** | **986** | COZE v4 委托信 §2.2 字面（沿 `letters/_v4_commission_wechat_report_coze_2026_09_24_v4.md` L38，SHA-12 `802C705E1469`，21,433 B）——三目录实测终态 MAIN 986 / ARCHIVE 1,669 / SUB 467 |
+| **19:50 快照** | **986** | COZE v4 委托信 §2.2 字面（沿 `letters/_v4_commission_online_report_coze_2026_09_24_v4.md` L38，SHA-12 `802C705E1469`，21,433 B）——三目录实测终态 MAIN 986 / ARCHIVE 1,669 / SUB 467 |
 | **COZE 22:16 复测** | **1,004** | COZE 通报字面（沿派工单字面；本地仓内未检索到 1,004 字面值独立件，疑 COZE 通报原文内口传数字——本棒按派工单字面登记） |
 | **核实实测** | **1,006** | 本棒实测（PowerShell `Get-ChildItem -Recurse -File \| Measure-Object`，2026-09-26 22:35 时点） |
 
@@ -2171,7 +2171,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 | `results/_upload_execution_receipt_kimi_2026_09_26.md`（KIMI 上传回执） | `B4AC31F917F3` | 4,191 | E-37.1 §1/§2 算术勘误 + E-37.4 415/42/13/23 字面源 |
 | `D:\私人资料\deposon-sub\results\_archive_2026_09_20\fiction_that_feeds_back.pdf`（FTFB 23 页） | `2D9EDC8C7303` | 356,123 | E-37.3 FTFB 路径修正字面源 |
 | `letters/_v4_commission_paper_final_glm_2026_09_24_v4.md`（v4 委托件，**E-37.3 引用失实对象**） | `D5337702CEC9` | 21,433 | E-37.3 L89 引用字面源 |
-| `letters/_v4_commission_wechat_report_coze_2026_09_24_v4.md`（COZE v4 通报，**E-37.2 986 字面源**） | `802C705E1469` | 21,433 | E-37.2 19:50 986 字面源 |
+| `letters/_v4_commission_online_report_coze_2026_09_24_v4.md`（COZE v4 通报，**E-37.2 986 字面源**） | `802C705E1469` | 21,433 | E-37.2 19:50 986 字面源 |
 | `letters/_v4_commission_upload_executor_reply_v3_exec_2026_09_26.md`（v3 exec 回函，**派工单字面 4,471 B 实际挂此处**） | `631BB517F79D` | 4,471 | E-37.1 派工单字面差异对照 |
 | `_non_upload_local_archive\results\_remote_version_freeze_2026_09_26\`（**23 件覆盖前留档**目录） | 沿 KIMI 回执 §2 字面 | — | E-37.4 留档前置字面源 |
 
@@ -2347,14 +2347,14 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 > **v22 性质**：**仅追加** §22.22（E-39 4 子条：E-39.1 触发源 + E-39.2 周报 §八 登记值 + E-39.3 盘上实测值 + E-39.4 差异性质 + 处置）+ §22.23（v22 SHA 自核 3 小节）+ §22.24（E-39 边界声明）+ 新末行；**0 处修改** v21 既有 §1–§22.21 内容 + 0 处修改 E-1…E-38 旧行 + v21 末行 `*出证：Mavis 团队（原 V3 期出证 Trae code）· v21 续 ...*` 一字不动（历史快照）
 > **派工单锚**：doc-writer `agent-0032834a3e04` 派工单（2026-09-26 23:35+ 派发，棒 1 字面，沿 E-22 主轴 Phase 1）
-> **触发**（PI 派工单字面）：**PI 附件《deposon_v3x_weekly_2026_09_26》（V3X 周报 D7–D14，2026-09-26，致王子贺）§八 登记本勘误链 = 239,387 B / SHA-12 `849D76BE3A06`**（其件内所载前版锚 = 225,731 B / `CA8B95DDAA70`）
+> **触发**（PI 派工单字面）：**PI 附件《deposon_v3x_weekly_2026_09_26》（V3X 周报 D7–D14，2026-09-26，致外部合作导师〔匿名〕）§八 登记本勘误链 = 239,387 B / SHA-12 `849D76BE3A06`**（其件内所载前版锚 = 225,731 B / `CA8B95DDAA70`）
 > **边界**：R4 key 永不明文 / R5 frozen 只追加（**追加前 275,754 B prefix SHA-12 = `2c63da9f7a69` 必保持**）/ V1-V3 资产 0 触动 / V4 frozen 链 0 触动 / 不擅自调阈值 / 不擅自重写 paper §4.4 / 不编造 / 署名如实不冒充
 
 #### §22.22.1 E-39.1 触发源 + 上游表述（沿派工单字面）
 
 - **触发源**（沿 2026-09-26 23:35+ doc-writer 棒 1 派工单字面，PI 派发 4 要素）：**本勘误链在 PI 附件《deposon_v3x_weekly_2026_09_26》§八 中的登记值 vs 盘上实测值存在差异**——派工单要求登记（4 要素）+ 自核 + 边界声明 + 新末行；本棒按派工单字面落地
 - **上游 PI 表述（按派工单字面登记）**：
-  - **PI 附件《deposon_v3x_weekly_2026_09_26》（V3X 周报 D7–D14，2026-09-26，致王子贺）§八** = 登记本勘误链为 **239,387 B / SHA-12 `849D76BE3A06`**（其件内所载前版锚 = 225,731 B / `CA8B95DDAA70`）
+  - **PI 附件《deposon_v3x_weekly_2026_09_26》（V3X 周报 D7–D14，2026-09-26，致外部合作导师〔匿名〕）§八** = 登记本勘误链为 **239,387 B / SHA-12 `849D76BE3A06`**（其件内所载前版锚 = 225,731 B / `CA8B95DDAA70`）
   - **派工单字面**：周报登记口径与盘上实测口径不一致（周报取数时点 / 登记口径 vs 盘上实测）—— 沿周报自身先例（其「诚实边界」自载「**引用面字节登记误差 4 例……只登记不修，本件数字一律以盘上实测为准**」）
 
 **E-39.1 状态**：**字面登记完成**（沿 2026-09-26 doc-writer 棒 1 派工单字面 + PI 附件表述按字面录入）。
@@ -3206,19 +3206,19 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 | **R-3** | 高 | `_v4_supp_l14v3_batch*_executor.py` L506-508 / L780-782（回函记 56 件） | `tun_compliance` 判据只查 endpoint 字符串是否以 `/chat/completions` 结尾，**不验是否真穿 tun**；落盘字段名 `tun_compliance_teamo_endpoint` **名实相符** | **PI 已拍板：仅加读法提示注记**（见 §22.37.5） |
 | **R-4** | 高 | `deposon-sub/results/_test_conv_out.txt` | 实为 `d2b` JSON 却以 `.txt` 命名 + 含 UTF-8 BOM + `fingerprint_self_hash_after_birth` = 占位值 `aaaaabbbbbb` | **登记**（本棒已实测三项，见下注） |
 | **R-5** | 高 | `_v3_n_recheck_llm_verdict_2026_09_27.md` §2.2/§5 vs `_v3_n_cpath_live_data_2026_09_27.json` | 判决件记「成功 18 / top-3 30/30 / with-RAG 完成」vs 数据件实测 `BLOCKED_BY_ENDPOINT_QUOTA` / `total_calls=1` / `with_rag=[]` ⇒ **同一实验两份记录互斥** | **PI 已拍板根因 + 降级口径**（见 §22.37.2） |
-| **R-6** | 高 | 三组 v3 委托信（paper / wechat / upload_executor）L6/§Z/§7 | **v2 槽位错挂 v1 身份值**（件内各 3 处一致重复）；§Z 均漏列 v1 行；**v3 族已上传** ⇒ A 档不动原件 | **登记（本包未拍板）** |
+| **R-6** | 高 | 三组 v3 委托信（paper / 线上 / upload_executor）L6/§Z/§7 | **v2 槽位错挂 v1 身份值**（件内各 3 处一致重复）；§Z 均漏列 v1 行；**v3 族已上传** ⇒ A 档不动原件 | **登记（本包未拍板）** |
 | **R-7** | 中 | `_v3_calibration_change_note_for_coze_glm_2026_09_27.md` §2.8 L329 | 把**在盘件** `deposon_v20_baselines.json`（16,987 B / `6EDB2AEC1660`）仍列为「3 件真缺件…不再补件」 | **PI 已拍板：事实修正 + 废版维持**（见 §22.37.3） |
 | **R-8** | 中 | `_v4_pi_cot_v2_result_v2.json` / `_coding_review_2026_09_26.md` §2.3 vs `_ruleset_v2.json`(`v2_keyword_count=263`) | v2 词表总数 **201 vs 263** 两口径并存 | **PI 已拍板：两表分立禁互引**（见 §22.37.4） |
 | **R-9** | 中 | `_v3_supplement_verdict_2026_09_23.md` §1 C3/C4 vs `_v3_construct_degradation_diag_2026_09_23.json` | C3：MD 写 14/22 + 8/22，JSON 实为 `{1:18, 200:4}`；C4：MD 写「16/4/2」，JSON 为 `{1.0:4, 2.0:2, 200.0:16}` ⇒ 互斥 | **登记（本包未拍板）** |
 | **R-10** | 中 | 9 件 `_v4_pi_cot_v2_dataset_addendum_*` | `fingerprint_self_hash_after_birth` 自报指纹与实测 SHA-12 **普遍漂移**（d1 自报 `6F76EAE13FA0` vs 实测 `172093A23E4B`）；`coding_review` §5.7 只列 2 件 vs d3c 自述「七件」 | **登记（本包未拍板）** |
-| **R-11** | 中 | `_v4_commission_upload_channel_authorization_2026_09_26.md` §2.4 L149 vs §4.2 L214 | 同件内 E-35 / E-36 边界自相矛盾；波及 wechat 回函 v4 的版本归属 | **登记（本包未拍板）** |
+| **R-11** | 中 | `_v4_commission_upload_channel_authorization_2026_09_26.md` §2.4 L149 vs §4.2 L214 | 同件内 E-35 / E-36 边界自相矛盾；波及 线上 回函 v4 的版本归属 | **登记（本包未拍板）** |
 | **R-12** | 中 | `_v4_supp_l14v3_batch1_executor.py` L504-508 等 | `tun_compliance` 判据（**同 R-3**） | **随 R-3 读法提示面处理**（本包未单独拍板） |
 | **R-13** | 中 | `_v4_commission_upload_executor_reply_v3_2026_09_24.md` L14 | 表头「43 项（Tag-A 30 + Tag-B 10 + E 表内 3）」与本件 §2 表 44 行 + 源件 v3 §2.4 的 4 件 E 表均不符 | **登记（本包未拍板）** |
 | **R-14** | 中 | `_v4_supp_prereg_v02_add_L14V3_2026_09_24.md` L22/L526 | 记 `add_T1` = 48,738 B，而 add_T15 / add_T15r2 与 evidence_audit L136 均记 52,942 B / `802DECE2286A` ⇒ **陈旧值** | **PI 已拍板：登记不修**（见 §22.37.4） |
 | **R-15** | 中 | `_v4_supp_t15r2_executor.py` L13/L1320/L1487 vs `_v4_supp_prereg_v02_add_T15r2_2026_09_26.md` | executor 自报「+62 calls」vs 预登记「+60 calls / 180」⇒ 计数口径不一致 | **PI 已拍板：降级为「预算 vs 实耗」注记**（见 §22.37.4） |
 | **R-16** | 低 | `_v3_v4_achievements_inventory_2026_09_24.md` §2.2 | 把 `_result.json` / `_verdict.md` / `_prereg.md` 记为 NOT-ON-DISK（误报）；勘误 E1 已更正但**原盘点件未回改** | **登记（本包未拍板）** |
 | **R-17** | 低 | `deposon-sub/_tmp_v2_redesign.py` `KW_V2` vs `_v4_pi_cot_v2_ruleset_v2_executor.py` `KEYWORDS_V2` | 两个「v2 词表」内容不一致（含重复词）⇒ 可复现性风险 | **登记（本棒已实测两表，见 §22.37.4 注）** |
-| **R-18** | 低 | paper / wechat 两组 v4 委托信 §Z | 自记字节 31,167 / 21,069；实测 31,531 / `D5337702CEC9`、21,433 / `802C705E1469` ⇒ 出件后追加致自记值过期 | **登记（本包未拍板）** |
+| **R-18** | 低 | paper / 线上 两组 v4 委托信 §Z | 自记字节 31,167 / 21,069；实测 31,531 / `D5337702CEC9`、21,433 / `802C705E1469` ⇒ 出件后追加致自记值过期 | **登记（本包未拍板）** |
 | **R-19** | 低 | `_v4_maindir_cleanup_manifest_2026_09_24.md` / `_noise_cleanup_manifest_v2/v3…md` | 多轮 `after − before ≠ 实际删除数`（文内已老实交代「活态计数」，但数字非确定性） | **登记（本包未拍板）** |
 | **R-20** | 低 | `deposon-sub/_check_conv_archive.ps1` 末尾 | `---DONE---` 后又 `Write-Output 'DONE'` + 4 空行（冗余死输出） | **登记（本包未拍板）** |
 | **R-21** | 低 | `_v4_track2_multimodel_verdict_2026_09_23.md` §4 | 自扫称「11 模式」，`rerun.py` 的 `SENSITIVE_PATTERNS` 实为 10 个 | **登记（本包未拍板）** |
@@ -3814,7 +3814,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 | 本链 **L2003**（v19 节） | 「…**本件 v19 E-36 同步追加**…」 |
 
 ⇒ **矛盾成立**：同件 L149 把 v18 描述为含 E-36，而同件 L214 的 v17→v18 差额只归因 E-35 ⇒ **若 v18 已含 E-36，则该差额归因漏算 E-36**。**精确定位 = v18 = E-1…E-35；E-36 首现于 v19**。**处置：登记，0 改该委托信任一字面**。
-- **次生面（如实登记 · 部分未独立复现）**：该函 §4.2 钉 `e4ver = v18`（`CA8B95DDAA70` · 225,731 B），而本链已推进 —— **追加前实测 v28 末态 508,443 B / `CFD251E771A9`**，追加后 = v29 ⇒ **该函 E-4 锚已过期**（上游慢处置 A 记为「已推进至 v22+」，**本棒以实测 v28 取代该下限表述**）。勘误「波及 wechat 回函 v4 的版本归属」一支 **慢处置 A 标 `[未独立复现]`；本棒同样未逐处比对，如实沿该未复现标记，0 推定**。
+- **次生面（如实登记 · 部分未独立复现）**：该函 §4.2 钉 `e4ver = v18`（`CA8B95DDAA70` · 225,731 B），而本链已推进 —— **追加前实测 v28 末态 508,443 B / `CFD251E771A9`**，追加后 = v29 ⇒ **该函 E-4 锚已过期**（上游慢处置 A 记为「已推进至 v22+」，**本棒以实测 v28 取代该下限表述**）。勘误「波及 线上 回函 v4 的版本归属」一支 **慢处置 A 标 `[未独立复现]`；本棒同样未逐处比对，如实沿该未复现标记，0 推定**。
 
 #### §22.43.5 E-47.5 余项结项登记（4 项 · 全部登记性 · **执行未发生**）
 
@@ -3950,7 +3950,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
   - **E-47.3** = **已登记更正**（R-9 拆开 / R-2 方向 + 补测范围 / R-20·R-21 字面；**0 回改历史行，旧行作历史快照**）
   - **E-47.4** = **已登记**（R-10 9/9 全漂移 · coding review 少列 7 件 · d3c 两读法 / R-14 第 3 处「末态 hash」为假 / R-11 v18 = E-1…E-35 · E-36 首现 v19）
   - **E-47.5** = **已结项（登记性）**（checkpoint 原子写 = 下棒加 · cpath_r1 同款先例；v2 词表权威 263 落常设；t15r2 r1 `E0936A68FA82` 挂遗留待跑；R-4 作废与慢处置 B 案 A/B 并记）
-- **本棒独立核验面 vs 字面沿用面（老实交代）**：本棒**独立实测核验**= v28 末态锚（508,443 B / `CFD251E771A9` ＋ 无 BOM ＋ 纯 LF ＋ 末行 LF 尾）＋ **上列 22+ 件上游件 SHA-12 与字节逐件 `hashlib` / `Get-FileHash` 复算**（含与 `1A8648083228` / `5A6BB7F70418` / `5294e4a2bd14` / `E0936A68FA82` / `6EFFE5EF7AE6` / `41D6C28CA87C` 等登记值的**逐件一致核对**）＋ R-4 三项缺陷字节层复核（**BOM 首 3 字节 `EF BB BF`** ＋ schema 字面 ＋ 占位值命中）＋ **R-4 与 d2b 件逐 key 比对复算（18 键 / 差异键数 0）** ＋ **R-10 九件 addendum 逐件实测 SHA-12 × 逐件自报字段读取 = 9/9 DRIFT** ＋ coding review §5.7 L429-L436 字面读盘 ＋ **d3c `honesty_note` L42 原文读盘（自指循环披露）** ＋ R-9 C3/C4 四处字面读盘（MD L30/L31 ＋ JSON L136-138 / L179-182）＋ **R-2 单件逻辑链逐行读盘（L355 / L677-L682）** ＋ **R-2 族范围复算（52 件 glob → 10 件含硬编码 `"proxy_used": False` / 19 处；含 `no_proxy_compliance` = 同 10 件）** ＋ **R-20 `.ps1` 末 8 行逐行读盘（L45-L49 = 5 空行 · 共 50 行）** ＋ **R-21 `SENSITIVE_PATTERNS` L138-L149 逐条读盘（10 个）＋ `rerun.py` 不存在核验** ＋ **R-14 三处字面读盘（add_L14V3 L22/L526 ＋ activation L3）＋ add_T1 实测 52,942 B** ＋ **R-11 三处字面读盘（本链 L1741 / L1743 / L2003 ＋ 委托信 L87 / L149 / L214）** ＋ **`KEYWORDS_V2` AST 复算（6 键 / 263 / unique 260 / dups 3）** ＋ **t15r2 非原子写逐行读盘（L468-L471）＋ cpath v0 vs r1 的 `os.replace` 命中计数（0 vs 5）** ＋ **`.tmp/_t15r2_records.json` 不存在（`Test-Path = False`）** ＋ **本链全文 15 组检索式查重**（`E-47` / `F-3` / `F-4a` / `F-4b` / `v1.4 生效节` / `登记作废` / `假绿` / `9/9` / `全漂移` / `歧义` / `52 件中 10 件` / `E0936A68FA82` / `永不可能` / `非原子` / `263` / `KEYWORDS_V2` / `d3c` / `honesty_note` / `_v4_track2_multimodel_rerun` / `12/12` / `慢处置`）+ **PI `ask_79fd9fad41e57ba8040361a8` 全仓 0 命中核验**；本棒**仅沿上游 / 派工单字面、未独立复现**= **v1.4 生效节 §A.2–§A.5 全部读数（`range(r2)` 0.0 / 1.8527e-04 / `norm_max_resid` 2.6716e-15 / 4.7197e+12 分离度 / 12 cases 逐案级联表 / float64 饱和带推导）** ＋ **8b executor `EPS = 1e-12`（L60）与 `FLOAT_NOISE_SS_TOT_CEIL = 1e-24`（L65）常量字面**（仅沿 prereg 转述，**本棒未读 08b executor 该两行**）＋ **t15r2 r1 的三关验证结果（`py_compile` / 契约 / 告警 / 日志 / 永不 raise / 负向对照）** ＋ **慢处置 A / 慢处置 B 两件的其余未复核条目（R-6 / R-13 / R-15 / R-16 / R-17 / R-18 / R-19 各条现象复核）** ＋ **R-11「波及 wechat 回函 v4 的版本归属」一支** ＋ **R-10 每个 drift 的具体追加源（未逐件 diff）** ＋ **PI 两份问卷原件字面（均不在盘）**——以上**如实交代为未独立复现**
+- **本棒独立核验面 vs 字面沿用面（老实交代）**：本棒**独立实测核验**= v28 末态锚（508,443 B / `CFD251E771A9` ＋ 无 BOM ＋ 纯 LF ＋ 末行 LF 尾）＋ **上列 22+ 件上游件 SHA-12 与字节逐件 `hashlib` / `Get-FileHash` 复算**（含与 `1A8648083228` / `5A6BB7F70418` / `5294e4a2bd14` / `E0936A68FA82` / `6EFFE5EF7AE6` / `41D6C28CA87C` 等登记值的**逐件一致核对**）＋ R-4 三项缺陷字节层复核（**BOM 首 3 字节 `EF BB BF`** ＋ schema 字面 ＋ 占位值命中）＋ **R-4 与 d2b 件逐 key 比对复算（18 键 / 差异键数 0）** ＋ **R-10 九件 addendum 逐件实测 SHA-12 × 逐件自报字段读取 = 9/9 DRIFT** ＋ coding review §5.7 L429-L436 字面读盘 ＋ **d3c `honesty_note` L42 原文读盘（自指循环披露）** ＋ R-9 C3/C4 四处字面读盘（MD L30/L31 ＋ JSON L136-138 / L179-182）＋ **R-2 单件逻辑链逐行读盘（L355 / L677-L682）** ＋ **R-2 族范围复算（52 件 glob → 10 件含硬编码 `"proxy_used": False` / 19 处；含 `no_proxy_compliance` = 同 10 件）** ＋ **R-20 `.ps1` 末 8 行逐行读盘（L45-L49 = 5 空行 · 共 50 行）** ＋ **R-21 `SENSITIVE_PATTERNS` L138-L149 逐条读盘（10 个）＋ `rerun.py` 不存在核验** ＋ **R-14 三处字面读盘（add_L14V3 L22/L526 ＋ activation L3）＋ add_T1 实测 52,942 B** ＋ **R-11 三处字面读盘（本链 L1741 / L1743 / L2003 ＋ 委托信 L87 / L149 / L214）** ＋ **`KEYWORDS_V2` AST 复算（6 键 / 263 / unique 260 / dups 3）** ＋ **t15r2 非原子写逐行读盘（L468-L471）＋ cpath v0 vs r1 的 `os.replace` 命中计数（0 vs 5）** ＋ **`.tmp/_t15r2_records.json` 不存在（`Test-Path = False`）** ＋ **本链全文 15 组检索式查重**（`E-47` / `F-3` / `F-4a` / `F-4b` / `v1.4 生效节` / `登记作废` / `假绿` / `9/9` / `全漂移` / `歧义` / `52 件中 10 件` / `E0936A68FA82` / `永不可能` / `非原子` / `263` / `KEYWORDS_V2` / `d3c` / `honesty_note` / `_v4_track2_multimodel_rerun` / `12/12` / `慢处置`）+ **PI `ask_79fd9fad41e57ba8040361a8` 全仓 0 命中核验**；本棒**仅沿上游 / 派工单字面、未独立复现**= **v1.4 生效节 §A.2–§A.5 全部读数（`range(r2)` 0.0 / 1.8527e-04 / `norm_max_resid` 2.6716e-15 / 4.7197e+12 分离度 / 12 cases 逐案级联表 / float64 饱和带推导）** ＋ **8b executor `EPS = 1e-12`（L60）与 `FLOAT_NOISE_SS_TOT_CEIL = 1e-24`（L65）常量字面**（仅沿 prereg 转述，**本棒未读 08b executor 该两行**）＋ **t15r2 r1 的三关验证结果（`py_compile` / 契约 / 告警 / 日志 / 永不 raise / 负向对照）** ＋ **慢处置 A / 慢处置 B 两件的其余未复核条目（R-6 / R-13 / R-15 / R-16 / R-17 / R-18 / R-19 各条现象复核）** ＋ **R-11「波及 线上 回函 v4 的版本归属」一支** ＋ **R-10 每个 drift 的具体追加源（未逐件 diff）** ＋ **PI 两份问卷原件字面（均不在盘）**——以上**如实交代为未独立复现**
 - **skill 加载实录**：本 turn **0 加载专项 skill**（派工单未指定）⇒ 实质纪律锚沿 **v28 §22.40–§22.42 追加节格式字面** ＋ v27 §22.37–§22.39 ＋ 派工单锚 ＋ `2A65C1274202` 同类生效登记件字面；**0 虚构任何 skill 指令为纪律依据**（沿 v1.4 §6 / §A.0 同款 fallback 体例）
 - **临时区产物（如实登记 · 留痕可查）**：本棒新建 **`.tmp/_e47_docwriter_count.py`**（1,124 B / `33CC563B9471`，只读 AST 计数复算脚本，**非预登记产物件、0 派生 JSON**）⇒ **按 PI 2026-09-27 拍板口径（文件数一类归「V4 收尾整理」批量校正），本棒不单独对账、如实登记现状即可**；**未尝试任何删除**（本机硬安全策略：删除须走可恢复删除通道）
 

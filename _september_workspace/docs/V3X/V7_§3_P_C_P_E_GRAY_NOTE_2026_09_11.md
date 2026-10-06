@@ -76,7 +76,7 @@
 | B4 ZKML | 4 | **ZKML 综述**(GPT-2 证明 2024 年 ~1h → 2025 年 <25s zkGPT;LLaMA-3 8B 仍 150 s/token)+ EZKL 官方 + Kudelski + ekx | 🟠 N/A 维持但**事实校正**(LLaMA-7B 证明时间按 2025 现状更新) |
 | B5 CoT 透明审计 | 3 | **OpenAI+DeepMind+Anthropic+Meta 联合 CoT 论文**(arXiv:2507.11473,40+ 作者,核心词 fragile)+ 2 强化论文 | 🟡 OBSERVED_WITH_QUALIFIER 权威佐证 |
 
-**§3.2 B5 联合 CoT 论文关键事实**(王老师进展报告 §4 引用)
+**§3.2 B5 联合 CoT 论文关键事实**(外部顾问进展报告 §4 引用)
 
 - arXiv:2507.11473 *Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety*
 - 40+ 作者横跨 OpenAI / DeepMind / Anthropic / Meta / UK AISI / METR / Apollo,含 Ilya Sutskever / Hinton / Schulman 专家背书

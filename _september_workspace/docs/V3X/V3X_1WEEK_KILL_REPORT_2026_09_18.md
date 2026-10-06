@@ -106,7 +106,7 @@
 
 - **D_fix2 8/1/0 分布**(A channel timing 敏感,strict 6/2/1 与 loose 7/2/0 不匹配)
 - **2/9 model 不 match v3_phys stored**(glm-5.3-flash + deepseek-v4-pro)
-- **user 拍板 A**:接受 PARTIAL_PASS + 阈值调整(沿 V0.1 + 王老师 WeChat 选挂点)
+- **user 拍板 A**:接受 PARTIAL_PASS + 阈值调整(沿 V0.1 + 外部顾问 线上 选挂点)
 - **2A 派生 JSON 落盘**:`KT_ABC1_anchors_sha256_12_V3X_P_A_PATCH_2026_09_15.json` (5049 B, SHA-12 `da517c1153c`)
 
 ---
@@ -122,7 +122,7 @@
 - ✅ **Transfer 11 子目录**(节省 234.34 MB / 78.2%)
 - ✅ **KIMI 协助 github 上传准备**(5 文件 43.6 KB)
 - ⏸️ **github release tag**(user D7 前手动)
-- ⏸️ **王老师 WeChat 推送**(沿"每周 1-2 条"模式,本轮累计 2 条)
+- ⏸️ **外部顾问 线上 推送**(沿"每周 1-2 条"模式,本轮累计 2 条)
 
 ---
 
@@ -147,12 +147,12 @@
 - ❌ 不擅自启动新方向(沿 "不急定位V4")
 - ❌ 不擅自落 D_fix2 新阈值(等 D7 拍板)
 - ❌ 不擅自落 P-G V1(等 D7 后)
-- ❌ 不擅自推王老师 WeChat(等 user 拍板)
+- ❌ 不擅自推外部顾问 线上(等 user 拍板)
 - ❌ 不擅自执行 git push(等 user D7 前手动)
 
 ---
 
-## §8 王老师 WeChat 通知(沿"每周 1-2 条"模式)
+## §8 外部顾问 线上 通知(沿"每周 1-2 条"模式)
 
 - **D5 (2026-09-16)** 中期评估 1 条(已推)
 - **D7 (2026-09-18)** 终极判死 1 条(本报告 + 5 锚 PASS/FAIL)
@@ -170,7 +170,7 @@
  - github release tag `v3.0.0-1week-kill-2026-09-18`
 - **D7 后**:
  - arxiv 论文 V4 包装(非欧散射层作为 V4 章节)— 沿 user 13:39 不急定位
- - 王老师 1 周判死反馈
+ - 外部顾问 1 周判死反馈
  - deposon-V3X → V4 升级路线
 
 ---

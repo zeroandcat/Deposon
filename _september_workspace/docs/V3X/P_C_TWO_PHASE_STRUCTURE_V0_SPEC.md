@@ -114,13 +114,13 @@ def kill_decision(r_squared, beta_lo, beta_hi):
 - D7：`docs/V3X/P_C_V0_PAPER_zh.md`（中文短稿 ≤ 8 页）
 - 全程：所有脚本 + handoff 锚点 + 复跑日志落仓库 `results/v3x_pc_v0/`
 
-## 8. 失败模式（与王老师 WeChat 同步）
+## 8. 失败模式（与外部顾问 线上 同步）
 
 - 5 锚漂移 ≥ 1 → 全 V0 撤回
 - 判死 H0（R² < 0.3 或 CI 含 0）→ P-C 方向 FAIL，撤 V3.X 整个 P-C 候选
-- 判死 GRAY（0.3 ≤ R² ≤ 0.7）→ Mavis 自主扩图族（n=100 → n=300）重判，王老师仅 ack
-- 攻击 A1/A2/A3 任一不通过 → 重审实现，王老师 ack 是否撤回
-- **D1 pilot 后相变点未锁定** → v3x 子代理返工，王老师 ack 是否需要改 spec
+- 判死 GRAY（0.3 ≤ R² ≤ 0.7）→ Mavis 自主扩图族（n=100 → n=300）重判，外部顾问仅 ack
+- 攻击 A1/A2/A3 任一不通过 → 重审实现，外部顾问 ack 是否撤回
+- **D1 pilot 后相变点未锁定** → v3x 子代理返工，外部顾问 ack 是否需要改 spec
 
 ## 9. 与 deposon 铁律的兼容性
 
@@ -130,7 +130,7 @@ def kill_decision(r_squared, beta_lo, beta_hi):
 - ✅ /tmp 副本做所有重跑
 - ✅ 不签 18 月 / 多论文规划
 - ✅ 不上生产
-- ✅ 不重做王老师已有工作
+- ✅ 不重做外部顾问已有工作
 - ✅ 相变点定位由 v3x 子代理 D1 pilot 锁定（不在 P-C 内自创）
 
 ## 10. 时间线（D1-D7）
@@ -139,7 +139,7 @@ def kill_decision(r_squared, beta_lo, beta_hi):
 |---|---|---|
 | D1 | pilot n=20 锁相变点 + 出本 spec final + 5 锚预登记 | v3x + successor |
 | D2 | 实现 scaling_probe + 7 档 N × 10 任务 harness | data |
-| D3 | pilot 50 calls (1 个 N 档 × 5 图) 跑通，触发 WeChat 1 | data + v3x |
+| D3 | pilot 50 calls (1 个 N 档 × 5 图) 跑通，触发 线上 1 | data + v3x |
 | D4 | 全 1880 calls + 幂律回归 + R² 报告 | data |
 | D5 | reviewer-b 判死 + 3 攻击 + D5 报告 | reviewer-b + data |
 | D6 | 失败模式处理 / GRAY 扩 cell（如需）| Mavis + v3x |

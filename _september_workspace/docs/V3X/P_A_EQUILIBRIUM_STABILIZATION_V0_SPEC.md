@@ -130,12 +130,12 @@ def kill_decision(mean_mult, ci_lo, ci_hi):
 - D7：`docs/V3X/P_A_V0_PAPER_zh.md`（中文短稿 ≤ 8 页）
 - 全程：所有脚本 + handoff 锚点 + 复跑日志落仓库 `results/v3x_pa_v0/`
 
-## 8. 失败模式（与王老师 WeChat 同步）
+## 8. 失败模式（与外部顾问 线上 同步）
 
 - 5 锚漂移 ≥ 1 → 全 V0 撤回
 - 判死 H0（H_mult ≥ 2.0）→ P-A 方向 FAIL，撤 V3.X 整个 P-A 候选
-- 判死 GRAY（1.3 < H_mult < 2.0）→ Mavis 自主扩 cell（n=300 → n=900）重判，王老师仅 ack
-- 攻击 A1/A2/A3 任一不通过 → 重审实现，王老师 ack 是否撤回
+- 判死 GRAY（1.3 < H_mult < 2.0）→ Mavis 自主扩 cell（n=300 → n=900）重判，外部顾问仅 ack
+- 攻击 A1/A2/A3 任一不通过 → 重审实现，外部顾问 ack 是否撤回
 
 ## 9. 与 deposon 铁律的兼容性
 
@@ -145,7 +145,7 @@ def kill_decision(mean_mult, ci_lo, ci_hi):
 - ✅ /tmp 副本做所有重跑
 - ✅ 不签 18 月 / 多论文规划
 - ✅ 不上生产
-- ✅ 不重做王老师已有工作
+- ✅ 不重做外部顾问已有工作
 
 ## 10. 时间线（D1-D7）
 
@@ -153,7 +153,7 @@ def kill_decision(mean_mult, ci_lo, ci_hi):
 |---|---|---|
 | D1 | 出本 spec + 5 锚预登记 + §0.5 BOSS 测法节 | v3x + successor |
 | D2 | 实现 LLM 玩家 + 3 机制 + 4 任务族 harness + BOSS-A1 RBR/RM baseline 占位 | data |
-| D3 | pilot 50 calls (5 cells) 跑通，触发 WeChat 1 + BOSS-A1 baseline 跑通 | data + v3x |
+| D3 | pilot 50 calls (5 cells) 跑通，触发 线上 1 + BOSS-A1 baseline 跑通 | data + v3x |
 | D4 | 全 300 calls + 初步 cost 表 + BOSS-A2 Potential Game 闭式证明 + BOSS-A3 Replicator Dynamics 跑通 | data |
 | D5 | reviewer-b 判死 + 3 攻击 + **BOSS-A1/A2/A3 测法 + P-A 判死裁定对照** + D5 报告 | reviewer-b + data |
 | D6 | 失败模式处理 / GRAY 扩 cell（如需）/ **若 BOSS 测法全 PASS 则 P-A 方向 PASS；任一 BOSS 测法撞上则降级主张** | Mavis + v3x |

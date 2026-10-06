@@ -70,7 +70,7 @@ P-E risk3 decision JSON (`results/deposon_risk3_seff_decision_2026_09_11.json`, 
 - **Recommendation**:
   - **D_fix2 metric is well-defined** (失真界语义清晰, 双判据 pass).
   - **D_fix2 阈值待 user 拍板**: strict 6+2+1 与 loose 7+2+0 都不完美匹配 fresh 实算。
-  - **王老师 1 周判死前需 user 决议**: 沿 strict 阈值 (D_fix2 <0.05 PASS) 还是 loose 阈值 (D_fix2 <0.10 PASS) 落盘？
+  - **外部顾问 1 周判死前需 user 决议**: 沿 strict 阈值 (D_fix2 <0.05 PASS) 还是 loose 阈值 (D_fix2 <0.10 PASS) 落盘？
 
 ## Deliverables
 
@@ -92,6 +92,6 @@ P-E risk3 decision JSON (`results/deposon_risk3_seff_decision_2026_09_11.json`, 
 
 ## Next Action
 
-- **等 user 拍板 D_fix2 metric 真值验证 PARTIAL_PASS → 推进王老师 1 周判死**
-- 若 user 接受 PARTIAL_PASS verdict + 阈值调整 → 沿 V0.1 沿用 + 王老师 WeChat 选挂点
+- **等 user 拍板 D_fix2 metric 真值验证 PARTIAL_PASS → 推进外部顾问 1 周判死**
+- 若 user 接受 PARTIAL_PASS verdict + 阈值调整 → 沿 V0.1 沿用 + 外部顾问 线上 选挂点
 - 若 user 要求严格 6+2+1 分布 → 重跑 9 model x 60 cells 全 fresh (修复所有 4 worker A/D 模型 + 补跑 deepseek-v4-pro 残 8 cells)
