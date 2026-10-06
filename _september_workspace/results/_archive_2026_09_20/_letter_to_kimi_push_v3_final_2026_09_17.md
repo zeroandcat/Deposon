@@ -179,7 +179,7 @@ KIMI 推完 0 触动此 5 件 (远端 SHA-12 保持原值, 本地有更新版本
 | 2026-09-17 23:00 CST | user chat 给 KIMI 发送本 spec | user |
 | 2026-09-17 23:00-23:30 CST | KIMI 沿 7 步方案执行 push | KIMI 凝子-agent |
 | 2026-09-18 9:00 CST | Mavis 跑 v0+v1 verify 复验 + 0 触动最终验 | Mavis |
-| 2026-09-18 晚 CST | D7 王老师 WeChat 推送 (user) | user |
+| 2026-09-18 晚 CST | D7 外部顾问 线上 推送 (user) | user |
 | 2026-09-19 起 | V4 1 分支 (下周 deposon 二作含 V3+V4) | Mavis + 4 协作方 |
 
 ---
@@ -193,7 +193,7 @@ KIMI 推完 0 触动此 5 件 (远端 SHA-12 保持原值, 本地有更新版本
 - ❌ Mavis 不动 push (KIMI 凝子-agent 独立执行, 严守 7 铁律)
 - ❌ Mavis 不调 LLM (0 LLM, 沿 9 铁律)
 - ❌ Mavis 不动回拉远端 (本地副本只读, 远端不动)
-- ❌ Mavis 不调 WeChat (user 自行)
+- ❌ Mavis 不调 线上 (user 自行)
 
 ### KIMI 凝子-agent 边界 (待执行, 严守)
 - ❌ KIMI 不重 push 1+2 批 (已沿 22:00 推完, KIMI 不动)

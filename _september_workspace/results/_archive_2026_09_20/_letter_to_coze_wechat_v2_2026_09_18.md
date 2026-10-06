@@ -1,11 +1,11 @@
-# LETTER TO COZE · 2026-09-18 · V3 终稿 R5 wechat 文稿起草委托
-## deposon V3X 1 周判死 paper V3 终稿 wechat 文稿起草 · coze 执行
+# LETTER TO COZE · 2026-09-18 · V3 终稿 R5 线上 文稿起草委托
+## deposon V3X 1 周判死 paper V3 终稿 线上 文稿起草 · coze 执行
 
-> **起草方**: Mavis (deposon V3X 1 周判死主理, team lead 主导, 沿 user 13:14 + 17:13 "GLM 完稿后我会发给你而你据此派遣撰写 coze wechat 文稿需求" 拍板)
+> **起草方**: Mavis (deposon V3X 1 周判死主理, team lead 主导, 沿 user 13:14 + 17:13 "GLM 完稿后我会发给你而你据此派遣撰写 coze 线上 文稿需求" 拍板)
 > **起草时点**: 2026-09-18 20:46 CST
-> **委托目标**: 沿查理 V3 终稿全文 R5 (双盲版 12 页, 9 章 + 44 引用 + 双语摘要), 委托 coze 沿 V3 终稿写 **wechat 文稿** (≤ 200 字, 沿 user 13:14 + 17:13 "coze wechat 文稿需求")
+> **委托目标**: 沿查理 V3 终稿全文 R5 (双盲版 12 页, 9 章 + 44 引用 + 双语摘要), 委托 coze 沿 V3 终稿写 **线上 文稿** (≤ 200 字, 沿 user 13:14 + 17:13 "coze 线上 文稿需求")
 > **委托边界**: 0 LLM API 调用 (coze 沿 spec 起草, Mavis 不动 LLM 跑实验)
-> **不通过 minimax task() 派**: coze = 4 协作方之一 (KIMI / Trae / GLM / Coze), user 走 chat 沟通, Mavis 不动 push / 不调 WeChat / 不跑实验
+> **不通过 minimax task() 派**: coze = 4 协作方之一 (KIMI / Trae / GLM / Coze), user 走 chat 沟通, Mavis 不动 push / 不调 线上 / 不跑实验
 
 **派工新规 (沿 user 10:22 + 12:55 + 20:46 "不依赖 worker 长大吗" 强化)**:
 - ✅ 必带 skill 名字: `scientific-research-workflows:scientific-writing` (sha256 `611965fcb6208a5dbeb28d594ad7ca0f8b1f8fd62fc33c189e56a50e49db19cb`) + `academic-paper-assistant:academic-paper-polish` (sha256 `01afed6776375edeb642ee7bae9effb127332c571572768c2d329b56c6c87e53`)
@@ -20,13 +20,13 @@
 
 - **查理 V3 终稿全文 R5** 已沿内参转呈说明 + 终稿全文 md (SHA-12 `42e4310f…`) 于 2026-09-18 20:46 CST 落盘 → **本端即依此起草 coze 委托信**
 - **GLM 完稿 V2** 已沿 KIMI → GLM 委托信 (25,751 B, SHA-12 `3de722dc9e39`, 沿 Trae P0-3 修复后实测) 提交 → GLM 回函 V2 模板 (44,191 B, SHA-12 `972401e056f6`, 沿 Trae P0-3 + P1-5 修复集成后实测) 已起草待填栏值
-- **现时点 (2026-09-18 20:46 CST) → coze wechat 文稿发布 ~24 h 余**
+- **现时点 (2026-09-18 20:46 CST) → coze 线上 文稿发布 ~24 h 余**
 - **沿本端 8 处 edit 完成 GLM 回函模板更新** (10 处 edit, 沿 Trae 修复清单 §4 SHA 对照 + 修复回执单 §3.1)
-- **coze 委托 = 沿 V3 终稿全文 R5 + GLM 回函模板对齐, 起 wechat 文稿草稿** (≤ 200 字, 双语或单语 user 拍板)
+- **coze 委托 = 沿 V3 终稿全文 R5 + GLM 回函模板对齐, 起 线上 文稿草稿** (≤ 200 字, 双语或单语 user 拍板)
 
 ---
 
-## §1 V3 终稿 R5 全文 9 章关键内容摘要 (coze 写 wechat 文稿用)
+## §1 V3 终稿 R5 全文 9 章关键内容摘要 (coze 写 线上 文稿用)
 
 ### §1.1 标题 + 双语摘要核心主张 (沿 `查理_deposon_V3终稿全文_R5_2026-09-18.md` line 1-21)
 
@@ -72,13 +72,13 @@
 
 ---
 
-## §2 coze 写 wechat 文稿内容要求
+## §2 coze 写 线上 文稿内容要求
 
 ### §2.1 文稿格式
 
 - **长度**: ≤ 200 字 (沿 user 13:14 + 17:13 拍板)
 - **双语**: user 拍板 (中文 + 英文双版本 或 单语)
-- **渠道**: WeChat 公众号 / 朋友圈 / 群消息
+- **渠道**: 线上 公众号 / 朋友圈 / 群消息
 - **语气**: 学术 + 简洁, 不夸张, 不渲染; 沿 `academic-paper-polish` "Preserve author's technical meaning"
 
 ### §2.2 必须包含要素 (5 件)
@@ -91,23 +91,23 @@
 
 ### §2.3 必须严格遵守的保密与消歧 (沿内参转呈说明 §四 + §五)
 
-1. **名称消歧**: 王老师侧 KT-C1 (R²=0.0007, 外部源件所载) **≠** 本仓 KT_C1 (R²=0.1986/0.2670, FAIL_H0); 终稿 §4 已两处显式消歧, **wechat 文稿不得混写**
-2. **保密**: 沿内参转呈说明 §五, V3 阶段终稿**仅供王老师内部参考**, **不外传、不引用、不作为文献引用**; wechat 文稿发布版仅作学术成果预告, 详细数据以正式发布版为准
-3. **GLM V2 对齐**: 终稿 R5 与 GLM 回函 V2 模板 (44,191 B, SHA-12 `972401E056F6`) 数字全对齐 (完稿时间 17:27, tex SHA `95fc9ba9…`, PDF 12 页 SHA `3b792178…`, 5 制品 5/5, 16 锚 16/16); wechat 文稿数字必须沿终稿对齐, **不擅自更改口径**
+1. **名称消歧**: 外部顾问侧 KT-C1 (R²=0.0007, 外部源件所载) **≠** 本仓 KT_C1 (R²=0.1986/0.2670, FAIL_H0); 终稿 §4 已两处显式消歧, **线上 文稿不得混写**
+2. **保密**: 沿内参转呈说明 §五, V3 阶段终稿**仅供外部顾问内部参考**, **不外传、不引用、不作为文献引用**; 线上 文稿发布版仅作学术成果预告, 详细数据以正式发布版为准
+3. **GLM V2 对齐**: 终稿 R5 与 GLM 回函 V2 模板 (44,191 B, SHA-12 `972401E056F6`) 数字全对齐 (完稿时间 17:27, tex SHA `95fc9ba9…`, PDF 12 页 SHA `3b792178…`, 5 制品 5/5, 16 锚 16/16); 线上 文稿数字必须沿终稿对齐, **不擅自更改口径**
 
 ### §2.4 不写事项 (沿内参转呈说明 + 9 铁律严守)
 
 - ❌ 不擅自为新数据调阈值 (T=2.0 严守不动)
 - ❌ 不擅自重写 paper §4.4 / §7.2
 - ❌ 不擅自合并派生 JSON 到 5 锚 JSON
-- ❌ 不写 wechat 文稿正文 (coze 写, Mavis 不写)
+- ❌ 不写 线上 文稿正文 (coze 写, Mavis 不写)
 - ❌ 不擅自调 API key 持久化策略
 - ❌ 不擅自复跑 frozen benchmark / frozen handoff
 - ❌ 不擅自扩写 AI 披露口径
 
 ---
 
-## §3 沿 coze 委托的 wechat 文稿草稿模板 (coze 起草用, ≤ 200 字, 中文)
+## §3 沿 coze 委托的 线上 文稿草稿模板 (coze 起草用, ≤ 200 字, 中文)
 
 > **coze 沿以下骨架起草, user 拍板最终版本**:
 >
@@ -188,7 +188,7 @@
 | **LLM 调用** | 本委托信 0 LLM 调用 (0 LLM 起草), 沿 `academic-paper-polish` §"No fabricated support" 严守 |
 | **学术润色原则** | 严守 `academic-paper-polish` §"Preserve the author's technical meaning, numbers, equations, citations, uncertainty, and claim strength"——所有数字仅复述, 不擅自更改口径 |
 | **安全规则** | 严守 `scientific-writing` §"Non-negotiable safety rules"——双盲话语清除 + 双审双 PASS 闸门 + AI 披露口径不擅自扩写 |
-| **保密边界** | 严守内参转呈说明 §五, V3 阶段终稿仅供王老师内部参考, 不外传、不引用、不作为文献引用 |
+| **保密边界** | 严守内参转呈说明 §五, V3 阶段终稿仅供外部顾问内部参考, 不外传、不引用、不作为文献引用 |
 | **诚实披露** | 自报 SHA-12 全部以实测替换 (沿 skill §7 验证流程, 不留占位符); 自报 byte 数也以 `Get-ChildItem` 实测替换 |
 
 ---
@@ -210,7 +210,7 @@
 | IMRaD 节点 | 本委托信节点 | rebuttal 7 步映射 |
 |---|---|---|
 | **I**ntroduction | §0 时点对齐 + §1 V3 终稿 9 章摘要 | step 1 record comment + step 2 classify |
-| **M**ethods | §2 coze wechat 文稿要求 + §3 草稿模板 | step 3 identify affected + step 4 revise registries |
+| **M**ethods | §2 coze 线上 文稿要求 + §3 草稿模板 | step 3 identify affected + step 4 revise registries |
 | **R**esults | §4 输入资产 SHA-12 + §5 7+9 铁律严守 | step 5 re-run audits |
 | **D**iscussion | §6 老实交代 + §7 模板元信息 | step 6 draft response + step 7 obtain human approval |
 
@@ -221,7 +221,7 @@
 | Preserve author's technical meaning | 所有数字仅复述, 不擅自更改 (85.0% / Adendum 17 / P2 降格 / FPR=4.4%) |
 | Never invent experimental results | 全部数字沿 V3 终稿 R5 全文 + 内参转呈说明实测落账 |
 | If wording is ambiguous, state the ambiguity | 保密与消歧如实入账 (§2.3) |
-| Treat phrase banks as options, not claims | wechat 文稿草稿模板仅建议, 不强写 |
+| Treat phrase banks as options, not claims | 线上 文稿草稿模板仅建议, 不强写 |
 | Avoid weak phrases | 不用 "it can be seen that" / "in order to" / "due to the fact that" |
 
 ### §7.4 作者与生成元信息
@@ -268,15 +268,15 @@ R1 修订 (19 处)
 
 | 名 | 值 |
 |---|---|
-| **王老师侧 KT-C1** (幂律主张) | R²=0.0007, 死于外部侧自设判死线 (该数值为外部源件所载, 非本仓实测) |
+| **外部顾问侧 KT-C1** (幂律主张) | R²=0.0007, 死于外部侧自设判死线 (该数值为外部源件所载, 非本仓实测) |
 | **本仓 KT_C1** (跨模态 dpath 实验) | R²=0.1986/0.2670, FAIL_H0 |
 | **消歧要求** | 两处数字各归各源, **不得混写**; 终稿 §4 已两处显式消歧 |
 
-### §8.4 附录 D: 保密请求 (沿内参转呈说明 §五, 供 coze 写 wechat 文稿时严守)
+### §8.4 附录 D: 保密请求 (沿内参转呈说明 §五, 供 coze 写 线上 文稿时严守)
 
-1. V3 阶段终稿仅供王老师**内部参考**, 请勿外传、勿引用;
+1. V3 阶段终稿仅供外部顾问**内部参考**, 请勿外传、勿引用;
 2. 终稿数字与结论**以正式发布版为准** (当前为阶段产出, 后续实验可能修订);
-3. 沿内参转呈说明 + 本委托信 §2.3, **wechat 文稿不得渲染 / 不得夸大 / 不得擅自扩写**; 仅作学术成果预告, 详细数据以正式发布版为准。
+3. 沿内参转呈说明 + 本委托信 §2.3, **线上 文稿不得渲染 / 不得夸大 / 不得擅自扩写**; 仅作学术成果预告, 详细数据以正式发布版为准。
 
 ---
 

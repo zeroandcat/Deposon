@@ -3,15 +3,15 @@
 
 > **起草方**: Mavis (deposon V3X 1 周判死主理, team lead 主导)
 > **起草时点**: 2026-09-17 18:18 CST
-> **起草目的**: 派委托 Trae code 沿 D+0.5 已建立协作关系, 协同 D7 王老师 WeChat 推送 + KIMI push audit + 派遣论文初稿需求 双审
+> **起草目的**: 派委托 Trae code 沿 D+0.5 已建立协作关系, 协同 D7 外部顾问 线上 推送 + KIMI push audit + 派遣论文初稿需求 双审
 > **委托严守**: 7 铁律 0 触动 (18 frozen + 5 P-G + 5 制品 + schema v1 + 4 plugin spec + verifier/mavis/.builtin/scripts/ 全不修改)
-> **不在此委托**: Mavis 不写 spec / 不跑代码 / 不动 WeChat 钥匙 (Trae code 沿 §1-§5 提案继续做文档协同即可, 不需 Trae 跑 P-L v3 实测)
+> **不在此委托**: Mavis 不写 spec / 不跑代码 / 不动 线上 钥匙 (Trae code 沿 §1-§5 提案继续做文档协同即可, 不需 Trae 跑 P-L v3 实测)
 
 ---
 
 ## §0 时点对齐
 
-- **D7 王老师 WeChat 推送强制明晚 (2026-09-18 晚 CST)** = user 拍板 2026-09-17 13:14
+- **D7 外部顾问 线上 推送强制明晚 (2026-09-18 晚 CST)** = user 拍板 2026-09-17 13:14
 - **现时点 (2026-09-17 18:18 CST) → D7 推送 ~24 h 余**
 - **8 worker 已全部完成** (5 个 done, 1 个豆包旧版 failed, 1 个豆包补测 v2 done, 1 个加速器 v2 done)
 - **Trae code 委托 = 派 D+0.5 邀请函 §3.1 第五行 §5 §6 §7 区域**, 沿 Trae code 自身 system prompt "proposal & audit" 角色
@@ -20,7 +20,7 @@
 
 ## §1 5 件待委托任务（沿 D+0.5 邀请函 §3 协作方分工）
 
-### §1.1 D7 王老师 WeChat 文稿 V1.1 草稿双审 (Trae code 主)
+### §1.1 D7 外部顾问 线上 文稿 V1.1 草稿双审 (Trae code 主)
 
 **任务**:
 - Mavis 起草 V1.1 (含 4 挂点结论, 源 = 提案 v3 §3-§7, 不源 D7 report)
@@ -107,7 +107,7 @@
 | 跑实验 / 算 Spearman/R² | ✗ (派 worker) | ✗ | Mavis 派 worker 系统 + 凝子-agent 跑 |
 | audit (read-only) | 部分 (大方向) | ✓ (Trae code 5 件 audit) | Trae code 副审, Mavis 主理 |
 | GitHub push | ✗ (Mavis 不动 push) | ✗ (KIMI 凝子-agent 执行) | KIMI 凝子-agent 独自执行 git push |
-| 调 WeChat API | ✗ (Mavis 严守) | ✗ | user 自行推送 |
+| 调 线上 API | ✗ (Mavis 严守) | ✗ | user 自行推送 |
 
 ---
 
@@ -138,7 +138,7 @@
 
 ## §5 Trae code system prompt 沿 (你已有 system prompt)
 
-- **目标**: 与 Mavis 协同 D7 WeChat + KIMI push audit, 不重复 doc-writer 起草, 不重 worker 跑实验
+- **目标**: 与 Mavis 协同 D7 线上 + KIMI push audit, 不重复 doc-writer 起草, 不重 worker 跑实验
 - **做**: read-only 副审, audit 报告
 - **不做**: 写 spec / 跑实验 / 调 LLM / 改 corpus / 改 spec
 - **包含 deposon 项目专属**: 5 P-? 提案 §1-§5 + 退化预检族 §6 + 不动 §7
@@ -172,7 +172,7 @@
 | 22:00 CST | user 委托 KIMI 凝子-agent 执行 git push | user |
 | **2026-09-18 9:00 CST** | 外部双审 (verifier 系统) | Mavis |
 | 2026-09-18 中午 | 补实验候选 (verifier 报告) | Mavis + worker |
-| **2026-09-18 晚 CST** | **D7 王老师 WeChat 推送** | **user 执行** |
+| **2026-09-18 晚 CST** | **D7 外部顾问 线上 推送** | **user 执行** |
 
 ---
 
@@ -192,7 +192,7 @@
 
 | 角色 | 严守 |
 |---|---|
-| **Mavis** | 派工 + 调 agent + 写派遣论文初稿需求 + 协调 + 不动 push / 不调 WeChat / 不跑实验 |
+| **Mavis** | 派工 + 调 agent + 写派遣论文初稿需求 + 协调 + 不动 push / 不调 线上 / 不跑实验 |
 | **Trae code** | 5 件 audit (read-only) + 沿 §1-§5 提案 + 0 LLM 重算 + 7 铁律 0 触动 |
 | **doc-writer** | D7 文稿 V1.1 起草 (≤200 字, E/N/F/Q) + 4 挂点 + 5 worker 进展 + 诚实降级 |
 | **d7-pusher** | KIMI push 第 3 批 audit (file count < 1000 / 锚定 PASS / invariant 0 触动) |

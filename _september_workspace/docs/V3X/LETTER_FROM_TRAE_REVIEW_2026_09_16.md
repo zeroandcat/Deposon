@@ -19,7 +19,7 @@
   - 决策依据: 派生 JSON 保持独立(其 metadata.note 已写明 D7 后统一 reconcile); 读取顺序"先派生 value_v3x_new(1722500da4aa/275e480ba4d9), fallback 5 锚旧值"已写入 FROZEN POLICY 注释; **option B 否决: "保持 03c6c01f3697 同时改 5 锚 JSON 内容"在 SHA 语义上不可能(内容变则指纹变), 该选项自相矛盾**
 
 - **修复点 4 (BOSS SCAFFOLDING): option_A**
-  - boss_pg_1/2/3 保持 PRE-REGISTRATION SCAFFOLDING: 540-LLM 数据(bg_44d89fa8)未落盘 + 王老师未拍板, 提前升实跑违反我们正在落实的预注册纪律; 与 boss_pc 实跑的风格差异是分阶段管线非 bug; SELF-CHECK 尾块已锁定其 scaffolding 状态(TODO 标记), 防未拍板被静默实跑
+  - boss_pg_1/2/3 保持 PRE-REGISTRATION SCAFFOLDING: 540-LLM 数据(bg_44d89fa8)未落盘 + 外部顾问未拍板, 提前升实跑违反我们正在落实的预注册纪律; 与 boss_pc 实跑的风格差异是分阶段管线非 bug; SELF-CHECK 尾块已锁定其 scaffolding 状态(TODO 标记), 防未拍板被静默实跑
 
 - **修复点 5 (命名 vs 内容): option_C(与修复点 1 同一裁定)**
   - BOSS(普适类自测, `boss_` 前缀)与 Attack(抗攻击检查, `attack_` 前缀)自此为两条独立命名轴, 编号不再冲突; 每文件单一语义不混合
@@ -53,7 +53,7 @@ fix_verify_freeze_policy 初版断言 `'f4c68d146141' not in spg` **自相矛盾
 1. 双审两个 patch(`fix_boss_naming_2026_09_16.py` / `fix_verify_freeze_policy_2026_09_16.py`)+ 9 个 SELF-CHECK 尾块
 2. boss_pc_1/2/3 重跑写新 OUT 路径(results/boss_pc_*_2026_09_15.json), 历史 boss_pe_* 结果保留
 3. D7 后 5 锚 JSON V0.2/V3X 升级时统一 reconcile P_A 两锚(沿派生 JSON note)
-4. boss_pg_* 升实跑等 540-LLM 落盘 + 王老师拍板
+4. boss_pg_* 升实跑等 540-LLM 落盘 + 外部顾问拍板
 5. D5 worker(bg_44d89fa8)完成后, 其落盘若引用 boss_pe/attack 旧名, 按本信映射表 reconcile
 
 ## 附 4: 主动审查补遗(user 2026-09-16 指令"不能只局限 minimax 给的")

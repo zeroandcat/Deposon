@@ -93,11 +93,11 @@
 | 2 | `_v4_commission_paper_final_glm_2026_09_24_v2.md` | ② `3E4E90FB48E1` | ① `29A853444D42` |
 | 3 | `_v4_commission_paper_final_glm_2026_09_24_v3.md` | ② `3E4E90FB48E1` | ① `29A853444D42` |
 | 4 | `_v4_commission_paper_final_glm_2026_09_24_v4.md` | ①＋② 并存 | ① `29A853444D42` |
-| 5 | `_v4_commission_wechat_report_coze_2026_09_24.md` | ① | ① |
-| 6 | `_v4_commission_wechat_report_coze_2026_09_24_v2.md` | ①＋② 并存 | ① |
-| 7 | `_v4_commission_wechat_report_coze_2026_09_24_v3.md` | ①＋② 并存 | ① |
-| 8 | `_v4_commission_wechat_report_coze_2026_09_24_v4.md` | ①＋② 并存 | ① |
-| 9 | `_v4_commission_wechat_report_coze_reply_v4_2026_09_24.md` | ② | ① |
+| 5 | `_v4_commission_online_report_coze_2026_09_24.md` | ① | ① |
+| 6 | `_v4_commission_online_report_coze_2026_09_24_v2.md` | ①＋② 并存 | ① |
+| 7 | `_v4_commission_online_report_coze_2026_09_24_v3.md` | ①＋② 并存 | ① |
+| 8 | `_v4_commission_online_report_coze_2026_09_24_v4.md` | ①＋② 并存 | ① |
+| 9 | `_v4_commission_online_report_coze_reply_v4_2026_09_24.md` | ② | ① |
 | 10 | `_v4_commission_upload_executor_2026_09_24.md` | ① | — |
 | 11 | `_v4_commission_upload_executor_2026_09_24_v2.md` | ② | — |
 | 12 | `_v4_commission_upload_executor_2026_09_24_v3.md` | ② | — |

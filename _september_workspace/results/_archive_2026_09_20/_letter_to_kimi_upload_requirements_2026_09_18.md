@@ -124,14 +124,14 @@
 |---|---|---|---|---|---|
 | 26 | `_letter_to_coze_wechat_v2_2026_09_18.md` | 18,596 | 09-18 20:50 | `ECDBF3A7A9C2` | coze 委托信 V2 (沿 V3 终稿 R5 + GLM 回函 V2) |
 
-### §2.12 coze wechat 文稿 (09-18 21:03-21:29, coze 写)
+### §2.12 coze 线上 文稿 (09-18 21:03-21:29, coze 写)
 
 | # | 文件名 | 字节 | 落盘时间 | SHA-12 (本端实测) | 类别 |
 |---|---|---|---|---|---|
-| 27 | `_coze_wechat_v3_2026_09_18.md` | 7,466 | 09-18 21:03 | (coze 写, KIMI 复算) | coze wechat 文稿 v3 |
-| 28 | `_coze_wechat_v3_final_2026_09_18.md` | 11,657 | 09-18 21:04 | (coze 写, KIMI 复算) | coze wechat 文稿 final |
-| 29 | `_coze_wechat_v3_d7format_2026_09_18.md` | 8,715 | 09-18 21:08 | (coze 写, KIMI 复算) | coze wechat 文稿 D7 format |
-| 30 | `_coze_wechat_v3_d7format_2026_09_18.pdf` | 455,340 | 09-18 21:29 | (coze 写, KIMI 复算) | coze wechat 文稿 D7 format PDF |
+| 27 | `_coze_wechat_v3_2026_09_18.md` | 7,466 | 09-18 21:03 | (coze 写, KIMI 复算) | coze 线上 文稿 v3 |
+| 28 | `_coze_wechat_v3_final_2026_09_18.md` | 11,657 | 09-18 21:04 | (coze 写, KIMI 复算) | coze 线上 文稿 final |
+| 29 | `_coze_wechat_v3_d7format_2026_09_18.md` | 8,715 | 09-18 21:08 | (coze 写, KIMI 复算) | coze 线上 文稿 D7 format |
+| 30 | `_coze_wechat_v3_d7format_2026_09_18.pdf` | 455,340 | 09-18 21:29 | (coze 写, KIMI 复算) | coze 线上 文稿 D7 format PDF |
 
 ### §2.13 字节统计
 

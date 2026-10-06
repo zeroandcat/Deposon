@@ -4,14 +4,14 @@
 > **起草方**: Mavis (deposon V3X 1 周判死主理, team lead 主导)
 > **起草时点**: 2026-09-17 21:40 CST
 > **委托目标**: 沿 user 17:26 拍板「github 仅需与本地文件完备一致而无需目录一致」, 委托 KIMI 凝子-agent 沿 file_content 字节级一致 + 目录可调, 推第 3 批
-> **委托边界**: KIMI 不动 push, 0 调 WeChat, 7 铁律 0 触动 (16 frozen / 5 制品 / schema v1 / 4 plugin / verifier/.mavis/.builtin/scripts/)
+> **委托边界**: KIMI 不动 push, 0 调 线上, 7 铁律 0 触动 (16 frozen / 5 制品 / schema v1 / 4 plugin / verifier/.mavis/.builtin/scripts/)
 > **不通过 minimax task() 派**: KIMI = 4 协作方之一, user 走 chat 沟通, Mavis 不动 push
 
 ---
 
 ## §0 时点对齐
 
-- **D7 王老师 WeChat 推送** 强制明晚 (2026-09-18 晚 CST) = user 13:14 拍板
+- **D7 外部顾问 线上 推送** 强制明晚 (2026-09-18 晚 CST) = user 13:14 拍板
 - **现时点 (2026-09-17 21:40 CST) → D7 推送 ~20 h 余**
 - **8 worker 全部完成** (5 done, 1 failed 豆包旧版, 2 done 补测 v2 + 加速器 v2)
 - **5 Trae code audit 全部完成** (沿 _letter_to_trae_code_2026_09_17_final.md 18:18 委托, 19:00-20:00 CST 跑完)
@@ -143,7 +143,7 @@
 | 2026-09-17 22:00 CST | 你 chat 给 KIMI 发送 `_letter_to_kimi_push_v3_委托_2026_09_17.md` | user |
 | 2026-09-17 22:00-23:00 CST | KIMI 沿 spec 推第 3 批 | KIMI 凝子-agent |
 | 2026-09-18 9:00 CST | 外部双审 (verifier 系统) | Mavis + verifier |
-| **2026-09-18 晚 CST** | **D7 王老师 WeChat 推送** | **user 执行** |
+| **2026-09-18 晚 CST** | **D7 外部顾问 线上 推送** | **user 执行** |
 | 2026-09-19 起 | V4 1 分支 (下周 deposon 二作含 V3+V4) | Mavis + 4 协作方 |
 
 ---

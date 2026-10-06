@@ -221,7 +221,7 @@ Trae 沿 P-F V0.1 §5 纪律修改 boss_pc_1/2/3 + boss_pe_1/2/3 + boss_pg_1/2/3
 Trae 修复全程必须严守 7 铁律:
 1. 0 LLM 调用
 2. 不设 proxy
-3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API
+3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API
 4. key 永不入 prompt/JSON/落盘
 5. 不动 5 锚 JSON 自身 (`03c6c01f3697`)
 6. 不动 4 SPEC V0.1 + v19/v21 + corpus_v20 + 200+ 已落盘 + 现有 PDF/MD + 4 个 plugin spec
@@ -291,7 +291,7 @@ Trae 修复全程必须严守 7 铁律:
 - **回信模板**: 见 §10
 - **Mavis 复审纪律**: Trae 修复后, Mavis 派 reviewer-a 静态审 + reviewer-b /tmp 重跑双审
 - **D5 (09-16) 收尾**: 等 D_fix2 worker (bg_44d89fa8) 完成 + verify
-- **D7 (09-18) 收束**: 5 锚终极 PASS/FAIL + 1 周判死报告 1 页 + 王老师 WeChat 推送
+- **D7 (09-18) 收束**: 5 锚终极 PASS/FAIL + 1 周判死报告 1 页 + 外部顾问 线上 推送
 
 ---
 

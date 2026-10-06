@@ -44,7 +44,7 @@
 |---|---|
 | 1 | 0 LLM 调用(Mavis 端)— KIMI 自己的 LLM 调用由 user 监控 |
 | 2 | 不设 proxy |
-| 3 | 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API |
+| 3 | 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API |
 | 4 | key 永不入 prompt/JSON/落盘(KIMI key 由 Moonshot AI 处理)|
 | 5 | 不动 5 锚 JSON(`03c6c01f3697`)|
 | 6 | 不动 4 SPEC V0.1 + v19/v21 + corpus_v20 + 16 frozen + P-G V0 + P-G V0.1 |
@@ -181,7 +181,7 @@ Ref: TRAE_FIX_REREQUEST_3RISKS_2026_09_11, LETTER_TO_TRAE_REVIEW_2026_09_16
 - 沿 user 11:28 + 13:39: 非欧几何作为方法论不急定位 V4
 
 ## 后续
-- 王老师 WeChat 通知(沿"每周 1-2 条"模式)
+- 外部顾问 线上 通知(沿"每周 1-2 条"模式)
 - P-G V0.1 上升 V1 决策待 D7 后 1 周
 - arxiv 论文 V4 包装(非欧散射层作为 V4 章节)
 ```
@@ -213,7 +213,7 @@ D5 (2026-09-16) — Trae 修复启动(沿 LETTER_TO_TRAE_REVIEW_2026_09_16.md 8 
 D6 (2026-09-17) — Trae 修复回信 + Mavis 双审 Trae 修复
 D6 (2026-09-17) — ⭐ **trae 修复后触发**:KIMI 协助生成 V3X_1WEEK_KILL_REPORT_2026_09_18.md + README_V3X_1WEEK.md + github release notes
 D7 (2026-09-18) 前 — ⭐ user 手动执行 git commit + push → github 公开仓库
-D7 (2026-09-18) — 5 锚终极 PASS/FAIL 拍板 + 1 周判死报告 + 王老师 WeChat 推送
+D7 (2026-09-18) — 5 锚终极 PASS/FAIL 拍板 + 1 周判死报告 + 外部顾问 线上 推送
 ```
 
 **关键触发**(沿 user 14:54):
@@ -260,4 +260,4 @@ D7 (2026-09-18) — 5 锚终极 PASS/FAIL 拍板 + 1 周判死报告 + 王老师
 
 ---
 
-**委托信结束** | 严守 7 铁律 0 触动 18 frozen | KIMI 自己处理 key | D7 (2026-09-18) 1 周判死报告 1 页 + 王老师 WeChat 推送 | 沿 user 14:31 指令
+**委托信结束** | 严守 7 铁律 0 触动 18 frozen | KIMI 自己处理 key | D7 (2026-09-18) 1 周判死报告 1 页 + 外部顾问 线上 推送 | 沿 user 14:31 指令
