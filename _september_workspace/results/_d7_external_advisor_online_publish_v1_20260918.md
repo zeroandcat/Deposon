@@ -1,10 +1,10 @@
-# 王老师 WeChat 推送文稿 · V1.0 FINAL · D7 (2026-09-18 晚 CST)
+# 外部顾问 线上 推送文稿 · V1.0 FINAL · D7 (2026-09-18 晚 CST)
 
-> **主送**: 王老师 (deposon 学术合作导师, WeChat 顾问模式 ~5-10 min/周)
+> **主送**: 外部顾问 (deposon 学术合作导师, 线上顾问模式 ~5-10 min/周)
 > **时点**: 2026-09-18 晚 CST (北京时间)
 > **版本**: V1.0 FINAL — 最强数据 (5 worker 全部完, 沿用户拍板"等所有 worker 完再派")
-> **起草**: doc-writer 凝子-agent (agent-0032834a3e04), 沿用户 17:13 严守"不调 WeChat API"
-> **配套模板**: `docs/V3X/D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md` (Mavis 09-16 提前版)
+> **起草**: doc-writer 凝子-agent (agent-0032834a3e04), 沿用户 17:13 严守"不调 线上 API"
+> **配套模板**: `docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` (Mavis 09-16 提前版)
 > **实测源**: `results/_v3x_d0_5_aggregation_2026_09_17.md` + `results/_p_l_v3_phase2_report_20260917_142748.md`
 > **严守**: 7 铁律 0 触动 (16 frozen + 5 P-G + 5 制品 + schema v1 + 4 plugin spec + verifier/mavis/.builtin/scripts/)
 
@@ -13,7 +13,7 @@
 ## §0 推送主体（≤ 150 字, E/N/F/Q 流 + 4 拍板 + 失败诚实披露）
 
 ```
-王老师, deposon V3X 1 周判死 D7 (2026-09-18) V1.0 最强数据汇报:
+外部顾问, deposon V3X 1 周判死 D7 (2026-09-18) V1.0 最强数据汇报:
 
 【E 现状】
 V3X 1 周判死 D+0 起点, 18 frozen (16 anchor+2 JSON) 0 触动 21/21 PASS, 5 制品+schema v1+PATCH V2 已落。
@@ -38,7 +38,7 @@ P1 R²=0.7447+P3 Q=0.1929 双 FAIL (size scaling+塌缩失败); P2 β CI 3 backb
 - 聚合:       results/_v3x_d0_5_aggregation_2026_09_17.md (12,010 B)
 - PATCH V2:   deposon_team/_designs/V3X_PATCH_5ANCHOR_RECONCILE_V2_2026_09_17.md (6,802 B)
 - KIMI safe:  results/_kimi_safe_batch_push_v1_2026_09_17.json (7,280 B)
-- D7 模板:    docs/V3X/D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md
+- D7 模板:    docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md
 
 — Mavis (deposon V3X 1 周判死主理, D7 = 2026-09-18 晚 CST)
 ```
@@ -61,7 +61,7 @@ P1 R²=0.7447+P3 Q=0.1929 双 FAIL (size scaling+塌缩失败); P2 β CI 3 backb
 
 ---
 
-## §2 18 frozen + 5 制品 SHA-12 对账（供王老师核对）
+## §2 18 frozen + 5 制品 SHA-12 对账（供外部顾问核对）
 
 ### 2.1 16 anchor SHA-12 (来自 PATCH V2 §2)
 
@@ -173,7 +173,7 @@ P1 R²=0.7447+P3 Q=0.1929 双 FAIL (size scaling+塌缩失败); P2 β CI 3 backb
 - **doc-writer 凝子-agent (本)**: spec 文稿专属, 不写脚本 / 不跑实验 / 不动 corpus / 不动 anchor schema
 - **anchor-guard 凝子-agent**: anchor schema 守护 (不动)
 - **corpus-keep 凝子-agent**: corpus 守护 (不动)
-- **d7-pusher 凝子-agent**: D7 WeChat 推送执行 (本任务不调, 沿用户 17:13)
+- **d7-pusher 凝子-agent**: D7 线上 推送执行 (本任务不调, 沿用户 17:13)
 - **recheck-runner 凝子-agent**: 跨 worker 复算
 - **不与系统 agent 重叠**: worker / verifier / mavis / explore 边界清晰
 
@@ -182,18 +182,18 @@ P1 R²=0.7447+P3 Q=0.1929 双 FAIL (size scaling+塌缩失败); P2 β CI 3 backb
 ## §7 不擅自决定 (沿用户 14:56 + 17:13)
 
 - ❌ 不擅自启动推送 (等用户在真实 D7 委托 coze / KIMI)
-- ❌ 不擅自决定推送时间 (等王老师回复 WeChat)
+- ❌ 不擅自决定推送时间 (等外部顾问回复 线上)
 - ❌ 不擅自启动新方向 (沿 user 13:39 不急定位 V4)
 - ❌ 不擅自动 18 frozen + 5 P-G + 5 制品 + schema v1 + 4 plugin spec
 
 ---
 
-## §8 D7 后 1 周推送预告 (沿"王老师 WeChat 顾问"模式, 每周 1-2 条)
+## §8 D7 后 1 周推送预告 (沿"外部线上顾问"模式, 每周 1-2 条)
 
 | 周次 | 主题 | 推送通道 |
 |---|---|---|
-| D7 终期 (2026-09-18 晚 CST) | **本 V1.0 最强数据文稿** (本文件) | WeChat (待 user 委托) |
-| D7 后 1 周 (2026-09-25 前后) | P-G V0.1 升 V1 决策 + arxiv V4 包装决策 + 王老师 1 周判死反馈 | WeChat (精简版 ~5 min) |
+| D7 终期 (2026-09-18 晚 CST) | **本 V1.0 最强数据文稿** (本文件) | 线上 (待 user 委托) |
+| D7 后 1 周 (2026-09-25 前后) | P-G V0.1 升 V1 决策 + arxiv V4 包装决策 + 外部顾问 1 周判死反馈 | 线上 (精简版 ~5 min) |
 
 ---
 
@@ -201,7 +201,7 @@ P1 R²=0.7447+P3 Q=0.1929 双 FAIL (size scaling+塌缩失败); P2 β CI 3 backb
 
 | 版本 | 日期 | 变更 |
 |---|---|---|
-| V0 (模板) | 2026-09-16 11:07 | Mavis 提前版, 沿 §4 推送内容模板 (`D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md` §2.4) |
+| V0 (模板) | 2026-09-16 11:07 | Mavis 提前版, 沿 §4 推送内容模板 (`D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` §2.4) |
 | V1.0 FINAL | 2026-09-17 14:38 CST | doc-writer 凝子-agent 起草, 沿 5 worker 全完最强数据 + 沿用户拍板"等所有 worker 完再派" |
 
 ---

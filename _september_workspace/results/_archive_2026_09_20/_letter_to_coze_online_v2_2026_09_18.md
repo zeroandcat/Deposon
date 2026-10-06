@@ -231,8 +231,8 @@
 | **作者** | Mavis root (session `mvs_bbeb804b1a6a41109be740636eed1709`), 沿 user 20:46 "不依赖 worker 算长大吗" + 12:55 强化 + 派工新规, 本端自起草 (非派 worker) |
 | **派工** | 自起草 (沿 user 17:02 老实承认 + 12:55 不派 worker); 之前 worker `bg_0ff6aa89` failed (网络错误), 不重派 |
 | **生成日期** | 2026-09-18 20:46 CST |
-| **任务 ID** | LETTER-TO-COZE-WECHAT-V2-2026-09-18 |
-| **报告路径** | `D:/私人资料/deposon-repo/results/_letter_to_coze_wechat_v2_2026_09_18.md` |
+| **任务 ID** | LETTER-TO-COZE-ONLINE-V2-2026-09-18 |
+| **报告路径** | `D:/私人资料/deposon-repo/results/_letter_to_coze_online_v2_2026_09_18.md` |
 | **派工新规** | 必带 skill `scientific-research-workflows:scientific-writing` (sha256 `611965...`) + `academic-paper-assistant:academic-paper-polish` (sha256 `01afed...`); 必带 plugin `@scientific-research-workflows` + `@academic-paper-assistant`; 严守 7+9 铁律 |
 
 ---
@@ -280,4 +280,4 @@ R1 修订 (19 处)
 
 ---
 
-**委托信结束** | 严守 7 铁律 + 9 铁律 0 触动 18 frozen + 5 制品 SHA-12 + 16 frozen anchors 16/16 | Mavis root · session `mvs_bbeb804b1a6a41109be740636eed1709` · 2026-09-18 20:46 CST · task LETTER-TO-COZE-WECHAT-V2-2026-09-18 · 自起草 (沿 user 17:02 + 12:55 强化 + 20:46 "不依赖 worker 算长大吗")
+**委托信结束** | 严守 7 铁律 + 9 铁律 0 触动 18 frozen + 5 制品 SHA-12 + 16 frozen anchors 16/16 | Mavis root · session `mvs_bbeb804b1a6a41109be740636eed1709` · 2026-09-18 20:46 CST · task LETTER-TO-COZE-ONLINE-V2-2026-09-18 · 自起草 (沿 user 17:02 + 12:55 强化 + 20:46 "不依赖 worker 算长大吗")

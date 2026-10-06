@@ -12,7 +12,7 @@
 
 - **撤销 09-16 提前 D7 实际执行** — 真实 D7 = **2026-09-18**
 - **09-16 演练版本保留**(1 周判死报告 verdict 填 + D7 后清理脚本 + 接收报告)作为 D7 当日参考
-- **王老师 WeChat 推送** — user 委托 coze,Mavis 提需求(已落盘 `D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md`)
+- **王老师 WeChat 推送** — user 委托 coze,Mavis 提需求(已落盘 `D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md`)
 - **团队改进** — 沿 user 11:07 反馈,Mavis 准备建议
 - **V3 完善** — 沿 user 11:07 "产出论文 + 不留尾巴"
 

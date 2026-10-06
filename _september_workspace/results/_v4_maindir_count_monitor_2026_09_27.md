@@ -144,7 +144,7 @@ with_temp  = 1009
 | 13 | `results/_upload_execution_receipt_kimi_2026_09_26.md` | 2026-09-26 22:08:26 | 4,191 | results |
 | 14 | `.tmp/_pc.py` | 2026-09-26 22:16:09 | 431 | temp |
 | 15 | `letters/_v4_commission_wechat_report_coze_reply_v4_2026_09_24.md` | 2026-09-26 22:20:19 | 16,471 | letters |
-| 16 | `results/_coze_wechat_v4_d7format_2026_09_26.pdf` | 2026-09-26 22:49:35 | 465,366 | results |
+| 16 | `results/_coze_online_v4_d7format_2026_09_26.pdf` | 2026-09-26 22:49:35 | 465,366 | results |
 | 17 | `results/_v4_pi_cot_v3_prereg.md`（棒 2） | 2026-09-27 11:39:03 | 22,788 | results |
 | 18 | `results/_v4_supp_t15r2_methodology_template.md`（棒 3） | 2026-09-27 11:40:23 | 17,411 | results |
 
@@ -166,7 +166,7 @@ with_temp  = 1009
 |---|:-:|
 | 含临时区口径命中：棒 2 `_v4_pi_cot_v3_prereg.md` | 1 |
 | 含临时区口径命中：棒 3 `_v4_supp_t15r2_methodology_template.md` | 1 |
-| 含临时区口径命中：`_coze_wechat_v4_d7format_2026_09_26.pdf`（PDF，22:49:35） | 1 |
+| 含临时区口径命中：`_coze_online_v4_d7format_2026_09_26.pdf`（PDF，22:49:35） | 1 |
 | 含临时区口径命中：`_upload_execution_receipt_kimi_2026_09_26.md`（results/，22:08:26） | 1 |
 | 含临时区口径命中：`letters/` 收口新增 9 件 | 9 |
 | **可归因小计** | **13** |

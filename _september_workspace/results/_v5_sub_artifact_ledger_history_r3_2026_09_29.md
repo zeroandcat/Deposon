@@ -273,7 +273,7 @@
 | Y-35 | `95925a562597` L85–L90 | **corpus v2 整合与否待 PI 拍板**：KIMI 已交 22 caption + 3 根 anchors（`corpus/v20/index_v2_2026_09_16.json` 24,150 B / SHA-12 `efe05ad775de`），v3_phys `index.json`（`8423ffe266af`）0 触动；**未整合原因自记为「严守 7 铁律 + 委外原则 + 怕破坏 frozen」** ⇒ 二择一：整合进 `corpus/v20/` 或保留 index_v2 作并行版本 | PI | ③ |
 | Y-36 | `95925a562597` L92–L96 | **派生 JSON (2A) 是否合并到 5 锚 JSON 待 PI 拍板**：`verifier/handoff/KT_ABC1_anchors_sha256_12_V3X_P_A_PATCH_2026_09_15.json`（5,049 B / SHA-12 `da517c1153c`）与 5 锚 JSON 自身（`03c6c01f3697`）均 0 触动 ⇒ **本项与 PI「派生 JSON 不合并」铁律直接相接，本棒 0 合并、0 代拍板** | PI | ③ |
 | Y-37 | `95925a562597` L104–L108 | **P-L v2 的 UNVERIFIED 警告是否接受待 PI 拍板**：实跑 Max R²=1.0 系简化模型 `t^nu` vs `t*eta` 沿 `T_frac60` 单调变换的 Spearman=1，**不是真实 data collapse 拟合**；件沿 Trae §6.7 诚实降级标 UNVERIFIED | PI | ③ |
-| Y-38 | `95925a562597` L110–L114 | **D7 王老师 WeChat 推送待 PI 委托 coze**：Mavis 已备需求清单（`D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md` 8,037 B），**0 推送**（沿 11:15 委外原则 + 17:13 拍板） | PI | ③ |
+| Y-38 | `95925a562597` L110–L114 | **D7 王老师 WeChat 推送待 PI 委托 coze**：Mavis 已备需求清单（`D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` 8,037 B），**0 推送**（沿 11:15 委外原则 + 17:13 拍板） | PI | ③ |
 | Y-39 | `23bb7d39bf58` L243–L246 | **「16 frozen 16/16 PASS」与别处 18 frozen 口径冲突**：本件 §5 实测写 `TOTAL: 16 frozen files | OK: 16 | FAIL: 0`，而 X-12 / Q-H6-4 记 18 frozen 且附录 A 称「18 frozen」⇒ **第三套 frozen 计数**（另两套：18 / 16+5=21） | PI / 论文面 | ③ |
 
 ### §4.3 账表 C · 未做项（Z）
@@ -591,7 +591,7 @@ X-08、X-11、X-14、X-19、X-24、X-25、X-26、X-31、X-32、X-34、X-36、X-3
 | 31 | H6 | `958188c83cf0` | 14,005 | 09-17 14:31 | `results/_adendum_FGK_complete_20260917_143033.md` **[镜像件 · 同源去重]** | **5** |
 | 32 | H6 | `958188c83cf0` | 14,005 | 09-17 14:31 | `results/_adendum_fgk_complete_20260917_143033.md._moved_20260924_1830.md` **[镜像件 · 同源去重]** | **5** |
 | 33 | H6 | `58e15c07af33` | 9,056 | 09-17 14:33 | `results/_p_l_v3_phase2_report_20260917_142748.md` | **4** |
-| 34 | H6 | `f4d5b755736a` | 9,891 | 09-17 14:39 | `results/_d7_wang_teacher_wechat_publish_v1_20260918.md` | **0 条** |
+| 34 | H6 | `f4d5b755736a` | 9,891 | 09-17 14:39 | `results/_d7_external_advisor_online_publish_v1_20260918.md` | **0 条** |
 | 35 | H6 | `71d5c23d9f76` | 8,558 | 09-17 16:23 | `results/_p_k_v3_glm_fpr_audit_report_2026-09-17T08-23-41Z.md` | **0 条** |
 | 36 | H6 | `fa5da7a307bd` | 8,102 | 09-17 16:33 | `results/_p_l_v3_phase2_or_embedding_v3_report_20260917_162614.md` | **2** |
 | 37 | H6 | `67aafb57a8ed` | 9,799 | 09-17 16:39 | `results/_p_d_v03_verification_report_20260917_163757.md` | **4** |
@@ -628,7 +628,7 @@ X-08、X-11、X-14、X-19、X-24、X-25、X-26、X-31、X-32、X-34、X-36、X-3
 | 68 | H6 | `c87eb8974268` | 10,555 | 09-18 10:30 | `results/_d05_combined_report_20260918_100853.md._moved_20260924_1830.md` **[镜像件 · 同源去重]** | **1** |
 | 69 | H6 | `ee005ea1f031` | 5,347 | 09-18 10:52 | `results/_deposon_v2scripts_reverify_20260918_105219.md` | **0 条** |
 | 70 | H6 | `e151e48ab4b4` | 20,938 | 09-18 12:09 | `results/_archive_2026_09_18/_trae_code_improvement_v2_2026_09_18.md` | **4** |
-| 71 | H6 | `7d4b5dd967e2` | 10,562 | 09-18 12:19 | `results/_archive_2026_09_20/LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md` | **0 条** |
+| 71 | H6 | `7d4b5dd967e2` | 10,562 | 09-18 12:19 | `results/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | **0 条** |
 | 72 | H6 | `120295a19655` | 1,181 | 09-18 12:41 | `results/_D05_DATA_RESCUE_NOTE_2026_09_18.md` **[镜像件 · 同源去重]** | **0 条（**镜像件**）** |
 | 73 | H6 | `120295a19655` | 1,181 | 09-18 12:41 | `results/_d05_data_rescue_note_2026_09_18.md._moved_20260924_1830.md` **[镜像件 · 同源去重]** | **0 条（**镜像件**）** |
 | 74 | H6 | `0011b7924dfb` | 11,575 | 09-18 13:07 | `results/_archive_2026_09_20/TRAE_DAILY_AUDIT_LETTER_2026_09_18.md` | **8** |
@@ -640,10 +640,10 @@ X-08、X-11、X-14、X-19、X-24、X-25、X-26、X-31、X-32、X-34、X-36、X-3
 | 80 | H6 | `2e6a31af5e4b` | 4,784 | 09-18 13:49 | `results/_archive_2026_09_20/TRAE_FIX_RECEIPT_2026_09_18.md` | **3** |
 | 81 | H6 | `90ba7f7a7fbe` | 99,702 | 09-18 13:50 | `results/_mavis_skill_inventory_2026_09_18.md` | **2** |
 | 82 | H6 | `972401e056f6` | 44,191 | 09-18 13:59 | `results/_glm_response_v2_template_2026_09_18.md` | **3** |
-| 83 | H6 | `ecdbf3a7a9c2` | 18,596 | 09-18 20:50 | `results/_archive_2026_09_20/_letter_to_coze_wechat_v2_2026_09_18.md` | **0 条** |
-| 84 | H6 | `229d76e1b86f` | 7,466 | 09-18 21:03 | `results/_coze_wechat_v3_2026_09_18.md` | **0 条** |
-| 85 | H6 | `deee45f45c5d` | 11,657 | 09-18 21:04 | `results/_coze_wechat_v3_final_2026_09_18.md` | **0 条** |
-| 86 | H6 | `905544775aee` | 8,715 | 09-18 21:08 | `results/_coze_wechat_v3_d7format_2026_09_18.md` | **0 条** |
+| 83 | H6 | `ecdbf3a7a9c2` | 18,596 | 09-18 20:50 | `results/_archive_2026_09_20/_letter_to_coze_online_v2_2026_09_18.md` | **0 条** |
+| 84 | H6 | `229d76e1b86f` | 7,466 | 09-18 21:03 | `results/_coze_online_v3_2026_09_18.md` | **0 条** |
+| 85 | H6 | `deee45f45c5d` | 11,657 | 09-18 21:04 | `results/_coze_online_v3_final_2026_09_18.md` | **0 条** |
+| 86 | H6 | `905544775aee` | 8,715 | 09-18 21:08 | `results/_coze_online_v3_d7format_2026_09_18.md` | **0 条** |
 | 87 | H6 | `6e23b54727e6` | 22,591 | 09-18 21:30 | `results/_archive_2026_09_20/_letter_to_kimi_upload_requirements_2026_09_18.md` | **1** |
 | 88 | H7 | `125998731621` | 3,441 | 09-20 17:11 | `Deposon_凝子_统一场论报告_一致性核对_20260907.md` | **1** |
 | 89 | H7 | `b1c227d54a82` | 13,254 | 09-20 17:11 | `results/_v3x_d0_5_proposal_trae_2026_09_17.md` **[A-copy · 同源去重]** | **1** |
@@ -680,7 +680,7 @@ X-08、X-11、X-14、X-19、X-24、X-25、X-26、X-31、X-32、X-34、X-36、X-3
 | `772112cf5bd4` | **重复报告** | `results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133705.md` | Adendum 7 项综合报告 13:37:05 —— 同批重复产出（同上） |
 | `d7f03fde4067` | **重复报告** | `results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133726.md` | Adendum 7 项综合报告 13:37:26 —— 同批重复产出（同上） |
 | `d66388b6532d` | **重复报告** | `results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133852.md` | Adendum 7 项综合报告 13:38:52 —— 同批重复产出（同上） |
-| `f4d5b755736a` | **文稿件** | `results/_d7_wang_teacher_wechat_publish_v1_20260918.md` | 王老师 WeChat 文稿 v1 —— 文稿件（5 处诚实交代为稿件自述非副产物），其推送待决已由 Y-38 登记 |
+| `f4d5b755736a` | **文稿件** | `results/_d7_external_advisor_online_publish_v1_20260918.md` | 王老师 WeChat 文稿 v1 —— 文稿件（5 处诚实交代为稿件自述非副产物），其推送待决已由 Y-38 登记 |
 | `71d5c23d9f76` | **排查件** | `results/_p_k_v3_glm_fpr_audit_report_2026-09-17T08-23-41Z.md` | GLM FPR 4.4% GRAY 排查 + 3 方盲测重跑 —— 其 2/45 误判定位与 TPR/FPR 口径问题已由 c3de25e6df57 的 X-98 登记 |
 | `fa9cd7ffa3f2` | **重试件** | `results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_170828.md` | vector_embedding v2 doubao retry 17:08 —— 与 2e3ec17259e2 为**同批重试两次产出**（17:08 / 17:55），其端点未实施面已由 58e15c07af33 的 Z-22 登记 |
 | `02443dd300ce` | **实验报告** | `results/_p_l_v3_phase2_closedsource_report_20260917_175544.md` | P-L v3 Phase 2 闭源 3 backbone 综合报告 —— 实验报告件；其 β CI overlap 判据缺陷已由 0d36d7cd0589 的 X-16/X-17 登记（同源主张） |
@@ -692,13 +692,13 @@ X-08、X-11、X-14、X-19、X-24、X-25、X-26、X-31、X-32、X-34、X-36、X-3
 | `40dda52e5d92` | **委托件** | `results/_archive_2026_09_20/_letter_to_kimi_push_v3_final_v2_2026_09_17.md` | KIMI push v3 委托信 final_v2 —— 纯委托件，同源 |
 | `2efdc3d7741d` | **摘要件** | `results/_coze_paper_v1_summary_2026_09_17.md` | Coze paper V1 中英摘要 —— 摘要件（36 行），其「部分拒绝」措辞缺陷已由 fe80bad08eef 的 X-22 登记 |
 | `ee005ea1f031` | **复算件** | `results/_deposon_v2scripts_reverify_20260918_105219.md` | deposon v2 scripts 复算报告（8 维 PASS/FAIL）—— 复算件，0 独立副产物段（Newcombe CI / T+R+A 守恒 / 18 锚 verify 均 PASS） |
-| `7d4b5dd967e2` | **文稿件** | `results/_archive_2026_09_20/LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md` | 王老师 WeChat 文稿 FINAL —— 同上（与 f4d5b755736a 同题，FINAL 版为准） |
+| `7d4b5dd967e2` | **文稿件** | `results/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | 王老师 WeChat 文稿 FINAL —— 同上（与 f4d5b755736a 同题，FINAL 版为准） |
 | `120295a19655` | **镜像** | `results/_D05_DATA_RESCUE_NOTE_2026_09_18.md` | **件内镜像件**（`_D05_DATA_RESCUE_NOTE` 与 `._moved_20260924_1830` 完整 SHA-256 相同，1,181 B）⇒ 每组按 1 件计，0 重复计入 |
 | `120295a19655` | **镜像** | `results/_d05_data_rescue_note_2026_09_18.md._moved_20260924_1830.md` | **件内镜像件**（`_D05_DATA_RESCUE_NOTE` 与 `._moved_20260924_1830` 完整 SHA-256 相同，1,181 B）⇒ 每组按 1 件计，0 重复计入 |
-| `ecdbf3a7a9c2` | **委托件** | `results/_archive_2026_09_20/_letter_to_coze_wechat_v2_2026_09_18.md` | LETTER TO COZE · V3 终稿 R5 wechat 文稿起草委托 —— 纯委托件（283 行，含 5 章内容摘要与文稿要求，0 独立副产物段）；其输入资产 SHA 与推送待决面已由本棒其他件登记 |
-| `229d76e1b86f` | **文稿件** | `results/_coze_wechat_v3_2026_09_18.md` | Coze WeChat v3 —— 文稿件，同 f4d5b755736a 族 |
-| `deee45f45c5d` | **文稿件** | `results/_coze_wechat_v3_final_2026_09_18.md` | Coze WeChat v3 final —— 文稿件，同上 |
-| `905544775aee` | **文稿件** | `results/_coze_wechat_v3_d7format_2026_09_18.md` | Coze WeChat v3 D7 格式版 —— 文稿件，同上 |
+| `ecdbf3a7a9c2` | **委托件** | `results/_archive_2026_09_20/_letter_to_coze_online_v2_2026_09_18.md` | LETTER TO COZE · V3 终稿 R5 wechat 文稿起草委托 —— 纯委托件（283 行，含 5 章内容摘要与文稿要求，0 独立副产物段）；其输入资产 SHA 与推送待决面已由本棒其他件登记 |
+| `229d76e1b86f` | **文稿件** | `results/_coze_online_v3_2026_09_18.md` | Coze WeChat v3 —— 文稿件，同 f4d5b755736a 族 |
+| `deee45f45c5d` | **文稿件** | `results/_coze_online_v3_final_2026_09_18.md` | Coze WeChat v3 final —— 文稿件，同上 |
+| `905544775aee` | **文稿件** | `results/_coze_online_v3_d7format_2026_09_18.md` | Coze WeChat v3 D7 格式版 —— 文稿件，同上 |
 | `9119bb791dc1` | **H7 件** | `results/_v4_gA3_seeds_judgment_draft_2026_09_22.md` | V4 gA3 seeds judgment draft —— **H7 批件**，件内 22 条新种子分维落位待 PI 复核已由 588b45430e88 的 Y-17 登记（同源主张） |
 
 **出件棒 / 参与方分布（按件头署名字面实测，0 按文件名推定）**：

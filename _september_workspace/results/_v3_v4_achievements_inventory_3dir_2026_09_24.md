@@ -523,7 +523,7 @@ Substantive items: 1283 (transient .pyc/.log: 41)
 | `docs/V3X/CANONICAL_5_UNVERIFIED_NOTE_2026_09_11.md` | `B049140E130C` | 6804 | LOCKED | C | 2026/09/11 13:30:46 |
 | `docs/V3X/CPATH_SIMULATION_REPORT_2026_09_10.md` | `DE772CD9E7BA` | 6825 | IN-EFFECT | A | 2026/09/10 20:47:18 |
 | `docs/V3X/D0_FREEZE_PREP_2026_09_09.md` | `0D1E88C258AA` | 9844 | IN-EFFECT | C | 2026/09/09 10:55:24 |
-| `docs/V3X/D3_WECHAT_MIDTERM_TEMPLATE.md` | `574D5A79E363` | 4361 | IN-EFFECT | C | 2026/09/09 11:23:41 |
+| `docs/V3X/D3_ONLINE_MIDTERM_TEMPLATE.md` | `574D5A79E363` | 4361 | IN-EFFECT | C | 2026/09/09 11:23:41 |
 | `docs/V3X/D5_DECISIONS_LAND_REPORT_2026_09_15.md` | `8FF1A7C5413F` | 21756 | IN-EFFECT | A | 2026/09/15 15:15:39 |
 | `docs/V3X/D7_GITHUB_PUSH_RECEIVE_2026_09_15_v2.md` | `2C4BB6078EE7` | 5930 | IN-EFFECT | C | 2026/09/15 17:28:16 |
 | `docs/V3X/D7_ONE_PAGE_SUMMARY_2026_09_11_v5.md` | `67063F9CB238` | 6459 | IN-EFFECT | C | 2026/09/11 13:30:46 |
@@ -531,7 +531,7 @@ Substantive items: 1283 (transient .pyc/.log: 41)
 | `docs/V3X/D7_POST_CLEANUP_PLAN_2026_09_18.json` | `0B8A1A357AAE` | 20271 | IN-EFFECT | C | 2026/09/15 17:27:45 |
 | `docs/V3X/D7_POST_CLEANUP_REPORT_2026_09_16.json` | `40955BF2ABC5` | 1248 | IN-EFFECT | C | 2026/09/16 11:01:13 |
 | `docs/V3X/D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` | `51869E3184F4` | 10692 | IN-EFFECT | C | 2026/09/16 11:09:18 |
-| `docs/V3X/D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md` | `935CB6EE3566` | 8037 | IN-EFFECT | C | 2026/09/16 11:08:22 |
+| `docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` | `935CB6EE3566` | 8037 | IN-EFFECT | C | 2026/09/16 11:08:22 |
 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `AC8997B07731` | 22442 | IN-EFFECT | C | 2026/09/10 20:22:54 |
 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | `240A7AE4BDFB` | 17803 | IN-EFFECT | A | 2026/09/10 18:16:43 |
 | `docs/V3X/DPATH_CROSS_MODAL_2026_09_10.md` | `E4EE3999F7CE` | 26460 | IN-EFFECT | C | 2026/09/16 11:01:12 |
@@ -749,11 +749,11 @@ Substantive items: 1283 (transient .pyc/.log: 41)
 | `results/_archive_manifest_non_upload_2026_09_23.json` | `B899103853CA` | 148690 | ARCHIVED | C | 2026/09/23 15:11:35 |
 | `results/_coze_paper_v1_draft_2026_09_17.md` | `C08E7ABF5EE3` | 29484 | IN-EFFECT | C | 2026/09/18 00:21:36 |
 | `results/_coze_paper_v1_summary_2026_09_17.md` | `2EFDC3D7741D` | 3624 | IN-EFFECT | C | 2026/09/18 00:20:40 |
-| `results/_coze_wechat_v3_2026_09_18.md` | `229D76E1B86F` | 7466 | IN-EFFECT | C | 2026/09/18 21:03:20 |
-| `results/_coze_wechat_v3_d7format_2026_09_18.md` | `905544775AEE` | 8715 | IN-EFFECT | C | 2026/09/18 21:08:42 |
-| `results/_coze_wechat_v3_final_2026_09_18.md` | `DEEE45F45C5D` | 11657 | IN-EFFECT | C | 2026/09/18 21:04:55 |
+| `results/_coze_online_v3_2026_09_18.md` | `229D76E1B86F` | 7466 | IN-EFFECT | C | 2026/09/18 21:03:20 |
+| `results/_coze_online_v3_d7format_2026_09_18.md` | `905544775AEE` | 8715 | IN-EFFECT | C | 2026/09/18 21:08:42 |
+| `results/_coze_online_v3_final_2026_09_18.md` | `DEEE45F45C5D` | 11657 | IN-EFFECT | C | 2026/09/18 21:04:55 |
 | `results/_cpath_sim_runner.py` | `6074D83944DC` | 18783 | IN-EFFECT | C | 2026/09/10 20:44:28 |
-| `results/_d7_wang_teacher_wechat_publish_v1_20260918.md` | `F4D5B755736A` | 9891 | IN-EFFECT | C | 2026/09/17 14:39:46 |
+| `results/_d7_external_advisor_online_publish_v1_20260918.md` | `F4D5B755736A` | 9891 | IN-EFFECT | C | 2026/09/17 14:39:46 |
 | `results/_deposon_v2scripts_kimi7_audit_20260918_105219.json` | `3DA62B979053` | 2096 | IN-EFFECT | C | 2026/09/18 10:52:19 |
 | `results/_deposon_v2scripts_reverify_20260918_105219.json` | `8AC002CCB082` | 12888 | IN-EFFECT | C | 2026/09/18 10:52:19 |
 | `results/_deposon_v2scripts_reverify_20260918_105219.md` | `EE005EA1F031` | 5347 | IN-EFFECT | C | 2026/09/18 10:52:19 |
@@ -3369,7 +3369,7 @@ Substantive items: 427 (transient .pyc/.log: 0)
 | `results/_archive_2026_09_20/LETTER_TO_TRAE_2026_09_11.md` | `7A95307A3293` | 22776 | ARCHIVED | C | 2026/09/16 11:01:12 |
 | `results/_archive_2026_09_20/LETTER_TO_TRAE_FIX_SELFCHECK_2026_09_15.md` | `C0D629DF69D8` | 7855 | ARCHIVED | C | 2026/09/15 15:31:39 |
 | `results/_archive_2026_09_20/LETTER_TO_TRAE_REVIEW_2026_09_16.md` | `1C0885D2B1FA` | 12668 | ARCHIVED | C | 2026/09/15 13:47:02 |
-| `results/_archive_2026_09_20/LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md` | `7D4B5DD967E2` | 10562 | ARCHIVED | C | 2026/09/18 12:19:45 |
+| `results/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | `7D4B5DD967E2` | 10562 | ARCHIVED | C | 2026/09/18 12:19:45 |
 | `results/_archive_2026_09_20/REVIEWER_B_TMP_RERUN_2026_09_15.md` | `8CD736BA9F91` | 21645 | ARCHIVED | C | 2026/09/15 14:24:07 |
 | `results/_archive_2026_09_20/SHA256_MANIFEST.txt` | `416DDA94CB63` | 552 | ARCHIVED | C | 2026/09/17 22:06:32 |
 | `results/_archive_2026_09_20/TRAE_CODE_FIX_LIST_2026_09_18.md` | `ACE3C6B390CB` | 9343 | ARCHIVED | C | 2026/09/18 13:49:19 |
@@ -3377,7 +3377,7 @@ Substantive items: 427 (transient .pyc/.log: 0)
 | `results/_archive_2026_09_20/TRAE_FIX_RECEIPT_2026_09_18.md` | `2E6A31AF5E4B` | 4784 | ARCHIVED | C | 2026/09/18 13:49:39 |
 | `results/_archive_2026_09_20/_audit_secret_2026_09_20_anchor_guard.py` | `19B4174F6339` | 6433 | ARCHIVED | C | 2026/09/20 09:53:50 |
 | `results/_archive_2026_09_20/_coze_paper_v1_双审报告_2026_09_17.md` | `C3DE25E6DF57` | 85573 | ARCHIVED | C | 2026/09/18 13:45:13 |
-| `results/_archive_2026_09_20/_coze_wechat_v3_d7format_2026_09_18.pdf` | `ADC99E04AC53` | 454307 | ARCHIVED | C | 2026/09/18 21:31:20 |
+| `results/_archive_2026_09_20/_coze_online_v3_d7format_2026_09_18.pdf` | `ADC99E04AC53` | 454307 | ARCHIVED | C | 2026/09/18 21:31:20 |
 | `results/_archive_2026_09_20/_d05_main_runner_2026_09_18.py` | `F3D4EC483599` | 41446 | ARCHIVED | C | 2026/09/18 10:07:57 |
 | `results/_archive_2026_09_20/_d05_md_report_only_2026_09_18.py` | `7A5BE4AEF9AC` | 13694 | ARCHIVED | C | 2026/09/18 10:16:44 |
 | `results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json` | `5D583C612D07` | 2289 | ARCHIVED | C | 2026/09/18 10:01:15 |
@@ -3394,7 +3394,7 @@ Substantive items: 427 (transient .pyc/.log: 0)
 | `results/_archive_2026_09_20/_fix_d05_rescue_2026_09_18.py` | `2C2CC3FF542A` | 3524 | ARCHIVED | C | 2026/09/18 12:41:14 |
 | `results/_archive_2026_09_20/_ftfb_pass2_results_limitations_audit_2026_09_17.md` | `CFAB992CF939` | 11390 | ARCHIVED | C | 2026/09/17 22:41:56 |
 | `results/_archive_2026_09_20/_letter_to_coze_paper_v1_委托_2026_09_17.md` | `6D72E74B3482` | 12786 | ARCHIVED | C | 2026/09/17 21:29:35 |
-| `results/_archive_2026_09_20/_letter_to_coze_wechat_v2_2026_09_18.md` | `ECDBF3A7A9C2` | 18596 | ARCHIVED | C | 2026/09/18 20:50:35 |
+| `results/_archive_2026_09_20/_letter_to_coze_online_v2_2026_09_18.md` | `ECDBF3A7A9C2` | 18596 | ARCHIVED | C | 2026/09/18 20:50:35 |
 | `results/_archive_2026_09_20/_letter_to_glm_ftfb_deep_revision_2026_09_18.md` | `3DE722DC9E39` | 26990 | ARCHIVED | C | 2026/09/18 13:45:13 |
 | `results/_archive_2026_09_20/_letter_to_kimi_push_v3_final_2026_09_17.md` | `E6F8DED3C4FF` | 10304 | ARCHIVED | C | 2026/09/17 22:55:06 |
 | `results/_archive_2026_09_20/_letter_to_kimi_push_v3_final_v2_2026_09_17.md` | `40DDA52E5D92` | 13964 | ARCHIVED | C | 2026/09/17 23:14:56 |
@@ -3436,9 +3436,9 @@ Substantive items: 427 (transient .pyc/.log: 0)
 | `results/_archive_2026_09_20/戴夫_FTFB双审包简报v3_2026-09-17.md` | `6952B3B02B96` | 8419 | ARCHIVED | C | 2026/09/17 22:06:25 |
 | `results/_coze_paper_v1_draft_2026_09_17.md` | `C08E7ABF5EE3` | 29484 | IN-EFFECT | C | 2026/09/18 00:21:36 |
 | `results/_coze_paper_v1_summary_2026_09_17.md` | `2EFDC3D7741D` | 3624 | IN-EFFECT | C | 2026/09/18 00:20:40 |
-| `results/_coze_wechat_v3_2026_09_18.md` | `229D76E1B86F` | 7466 | IN-EFFECT | C | 2026/09/18 21:03:20 |
-| `results/_coze_wechat_v3_d7format_2026_09_18.md` | `905544775AEE` | 8715 | IN-EFFECT | C | 2026/09/18 21:08:42 |
-| `results/_coze_wechat_v3_final_2026_09_18.md` | `DEEE45F45C5D` | 11657 | IN-EFFECT | C | 2026/09/18 21:04:55 |
+| `results/_coze_online_v3_2026_09_18.md` | `229D76E1B86F` | 7466 | IN-EFFECT | C | 2026/09/18 21:03:20 |
+| `results/_coze_online_v3_d7format_2026_09_18.md` | `905544775AEE` | 8715 | IN-EFFECT | C | 2026/09/18 21:08:42 |
+| `results/_coze_online_v3_final_2026_09_18.md` | `DEEE45F45C5D` | 11657 | IN-EFFECT | C | 2026/09/18 21:04:55 |
 | `results/_cpath_sim_runner.py` | `6074D83944DC` | 18783 | IN-EFFECT | C | 2026/09/10 20:44:28 |
 | `results/_d05_backbone_robustness_beta_20260918_100853.json` | `9B6F085D96DC` | 1490 | IN-EFFECT | C | 2026/09/18 10:14:58 |
 | `results/_d05_backbone_robustness_beta_20260918_100853.json._moved_20260924_1830.json` | `9B6F085D96DC` | 1490 | MOVED-20260924-1830 | C | 2026/09/18 10:14:58 |
@@ -3455,7 +3455,7 @@ Substantive items: 427 (transient .pyc/.log: 0)
 | `results/_d05_main_run_results_qwen3_failed_20260918_100853.json._moved_20260924_1830.json` | `427B18DA8114` | 18358 | MOVED-20260924-1830 | C | 2026/09/18 12:41:46 |
 | `results/_d05_opt_5_directions_results_20260918_100853.json` | `E5979133195A` | 5614 | IN-EFFECT | C | 2026/09/18 10:14:59 |
 | `results/_d05_opt_5_directions_results_20260918_100853.json._moved_20260924_1830.json` | `E5979133195A` | 5614 | MOVED-20260924-1830 | C | 2026/09/18 10:14:59 |
-| `results/_d7_wang_teacher_wechat_publish_v1_20260918.md` | `F4D5B755736A` | 9891 | IN-EFFECT | C | 2026/09/17 14:39:46 |
+| `results/_d7_external_advisor_online_publish_v1_20260918.md` | `F4D5B755736A` | 9891 | IN-EFFECT | C | 2026/09/17 14:39:46 |
 | `results/_deposon_v2scripts_kimi7_audit_20260918_105219.json` | `3DA62B979053` | 2096 | IN-EFFECT | C | 2026/09/18 10:52:19 |
 | `results/_deposon_v2scripts_reverify_20260918_105219.json` | `8AC002CCB082` | 12888 | IN-EFFECT | C | 2026/09/18 10:52:19 |
 | `results/_deposon_v2scripts_reverify_20260918_105219.md` | `EE005EA1F031` | 5347 | IN-EFFECT | C | 2026/09/18 10:52:19 |

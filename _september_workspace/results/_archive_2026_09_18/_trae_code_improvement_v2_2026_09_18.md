@@ -40,12 +40,12 @@
 | 3 | `P2 跨 backbone 强稳健` | `P2 PASS (β CI 3/3 重叠, 3 开源 + 3 闭源 backbone; doubao 10/30 INCOMPLETE + GPT-4o UNAVAILABLE; β 为 cell-level 代理斜率)` | `_p_l_v3_phase1_report_20260917_132341.md` §9.4 自披露 |
 
 **验收 (verification-before-completion Gate)**:
-1. IDENTIFY: `Select-String -Pattern '87\.0%|Adendum 13|强稳健' D:\私人资料\deposon-repo\docs\V3X\LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md`
+1. IDENTIFY: `Select-String -Pattern '87\.0%|Adendum 13|强稳健' D:\私人资料\deposon-repo\docs\V3X\LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md`
 2. RUN: 实跑命令
 3. READ: 0 命中即为修正完成
 4. VERIFY: 必改 3 处全 0 命中才声明 PASS
 
-**OUT OF SCOPE**: 同源表述 `results/_d7_wang_teacher_wechat_publish_v1_20260918.md` L32/L152 需同步 (由 user/Mavis 处置, 不归 Trae code)。
+**OUT OF SCOPE**: 同源表述 `results/_d7_external_advisor_online_publish_v1_20260918.md` L32/L152 需同步 (由 user/Mavis 处置, 不归 Trae code)。
 
 ### §1.2 KIMI push 第 3 批 Adendum C 勘误（沿 Trae code §2 audit）
 

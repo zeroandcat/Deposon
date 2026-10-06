@@ -64,7 +64,7 @@
 | 3 | 写 KT-C1 SPEC V0 草稿 | Mavis | `docs/V3X/KT_C1_SPEC_V0.md`(5-8 页) | 否 |
 | 4 | 派 successor 子代理算 3 组锚 SHA-256 前 12 位 | successor | `verifier/handoff/KT_ABC1_anchors_sha256_12.json` | 依赖 1/2/3 |
 | 5 | 写 KT-D0 证据卡(引用 P-D V0.1) | Mavis | `docs/V3X/KT_D0_EVIDENCE_CARD.md`(1-2 页) | 否 |
-| 6 | 写 D0 微信中期简报模板 | Mavis | `docs/V3X/D3_WECHAT_MIDTERM_TEMPLATE.md` | 否 |
+| 6 | 写 D0 微信中期简报模板 | Mavis | `docs/V3X/D3_ONLINE_MIDTERM_TEMPLATE.md` | 否 |
 
 ### 2.2 下午段(D0 PM, 群内公布 + 发送三问)
 

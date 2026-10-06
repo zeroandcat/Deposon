@@ -1242,8 +1242,8 @@ Bulk enumeration follows. Files here are pre-existing V1-V2 code/scripts/docs wi
 | Path | SHA-12 | Size (B) | View | Status | Modified | Note |
 |---|---|---|---|---|---|---|
 | docs/V3X/BOSS_URL_2026_09_11.md | 1BA7419178A1 | 7135 | C | IN-EFFECT | 2026/09/11 13:01:49 | BOSS URL comm |
-| docs/V3X/D3_WECHAT_MIDTERM_TEMPLATE.md | 574D5A79E363 | 4361 | C | IN-EFFECT | 2026/09/09 11:23:41 | D3 wechat midterm template |
-| docs/V3X/D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md | 935CB6EE3566 | 8037 | B | IN-EFFECT | 2026/09/16 11:08:22 | Wang-teacher wechat push req |
+| docs/V3X/D3_ONLINE_MIDTERM_TEMPLATE.md | 574D5A79E363 | 4361 | C | IN-EFFECT | 2026/09/09 11:23:41 | D3 wechat midterm template |
+| docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md | 935CB6EE3566 | 8037 | B | IN-EFFECT | 2026/09/16 11:08:22 | Wang-teacher wechat push req |
 | letters/LETTER_FROM_TRAE_2026_09_11.md | 1D3A9E52ABE3 | 13617 | B | IN-EFFECT | 2026/09/11 16:30:23 | TRAE commission / reply series |
 | letters/LETTER_FROM_TRAE_3RISK_2026_09_11.md | A1AFBF3E1296 | 5145 | B | IN-EFFECT | 2026/09/15 10:25:49 | TRAE commission / reply series |
 | letters/LETTER_FROM_TRAE_REVIEW_2026_09_16.md | 6145162379C9 | 7718 | B | IN-EFFECT | 2026/09/15 15:19:16 | TRAE commission / reply series |
@@ -1254,10 +1254,10 @@ Bulk enumeration follows. Files here are pre-existing V1-V2 code/scripts/docs wi
 | letters/TRAE_V3_REVIEW_LETTER_2026_09_23.md | 0E7600AC4478 | 7510 | B | IN-EFFECT | 2026/09/23 13:08:23 | TRAE letter series |
 | results/_coze_paper_v1_draft_2026_09_17.md | C08E7ABF5EE3 | 29484 | B | IN-EFFECT | 2026/09/18 00:21:36 | coze paper v1 draft |
 | results/_coze_paper_v1_summary_2026_09_17.md | 2EFDC3D7741D | 3624 | B | IN-EFFECT | 2026/09/18 00:20:40 | coze paper v1 summary |
-| results/_coze_wechat_v3_2026_09_18.md | 229D76E1B86F | 7466 | B | IN-EFFECT | 2026/09/18 21:03:20 | coze wechat v3 |
-| results/_coze_wechat_v3_d7format_2026_09_18.md | 905544775AEE | 8715 | B | IN-EFFECT | 2026/09/18 21:08:42 | coze wechat v3 D7 format |
-| results/_coze_wechat_v3_final_2026_09_18.md | DEEE45F45C5D | 11657 | B | IN-EFFECT | 2026/09/18 21:04:55 | coze wechat v3 final |
-| results/_d7_wang_teacher_wechat_publish_v1_20260918.md | F4D5B755736A | 9891 | B | IN-EFFECT | 2026/09/17 14:39:46 | Wang-teacher wechat v1 |
+| results/_coze_online_v3_2026_09_18.md | 229D76E1B86F | 7466 | B | IN-EFFECT | 2026/09/18 21:03:20 | coze wechat v3 |
+| results/_coze_online_v3_d7format_2026_09_18.md | 905544775AEE | 8715 | B | IN-EFFECT | 2026/09/18 21:08:42 | coze wechat v3 D7 format |
+| results/_coze_online_v3_final_2026_09_18.md | DEEE45F45C5D | 11657 | B | IN-EFFECT | 2026/09/18 21:04:55 | coze wechat v3 final |
+| results/_d7_external_advisor_online_publish_v1_20260918.md | F4D5B755736A | 9891 | B | IN-EFFECT | 2026/09/17 14:39:46 | Wang-teacher wechat v1 |
 | results/_glm_response_v2_template_2026_09_18.md | 972401E056F6 | 44191 | C | IN-EFFECT | 2026/09/18 13:59:16 | GLM response v2 template |
 | results/_kimi_safe_batch_push_v1_2026_09_17.json | 4A204FB0D682 | 7280 | C | IN-EFFECT | 2026/09/17 14:01:43 | kimi safe-batch push v1 |
 | results/_kimi_safe_batch_push_v2_full_2026_09_17.json | ADF3A8017E26 | 47954 | C | IN-EFFECT | 2026/09/17 14:51:41 | kimi safe-batch push v2 |
@@ -1731,7 +1731,7 @@ Total: 55 items
 |---|---|---|---|---|---|
 | docs/V3X/D7_ONE_PAGE_SUMMARY_2026_09_11_v5.md | V3X | KNOWLEDGE | 67063F9CB238 | 2026/09/11 13:30:46 | V3 1-page summary v5 |
 | docs/V3X/D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md | V3X | KNOWLEDGE | 51869E3184F4 | 2026/09/16 11:09:18 | V3 polish + team improvement |
-| docs/V3X/D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md | V3X | LETTERS | 935CB6EE3566 | 2026/09/16 11:08:22 | Wang-teacher wechat push req |
+| docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md | V3X | LETTERS | 935CB6EE3566 | 2026/09/16 11:08:22 | Wang-teacher wechat push req |
 | letters/LETTER_FROM_TRAE_2026_09_11.md | V3X | LETTERS | 1D3A9E52ABE3 | 2026/09/11 16:30:23 | TRAE commission / reply series |
 | letters/LETTER_FROM_TRAE_3RISK_2026_09_11.md | V3X | LETTERS | A1AFBF3E1296 | 2026/09/15 10:25:49 | TRAE commission / reply series |
 | letters/LETTER_FROM_TRAE_REVIEW_2026_09_16.md | V3X | LETTERS | 6145162379C9 | 2026/09/15 15:19:16 | TRAE commission / reply series |
@@ -1742,10 +1742,10 @@ Total: 55 items
 | letters/TRAE_V3_REVIEW_LETTER_2026_09_23.md | V3X | LETTERS | 0E7600AC4478 | 2026/09/23 13:08:23 | TRAE letter series |
 | results/_coze_paper_v1_draft_2026_09_17.md | V3X | LETTERS | C08E7ABF5EE3 | 2026/09/18 00:21:36 | coze paper v1 draft |
 | results/_coze_paper_v1_summary_2026_09_17.md | V3X | LETTERS | 2EFDC3D7741D | 2026/09/18 00:20:40 | coze paper v1 summary |
-| results/_coze_wechat_v3_2026_09_18.md | V3X | LETTERS | 229D76E1B86F | 2026/09/18 21:03:20 | coze wechat v3 |
-| results/_coze_wechat_v3_d7format_2026_09_18.md | V3X | LETTERS | 905544775AEE | 2026/09/18 21:08:42 | coze wechat v3 D7 format |
-| results/_coze_wechat_v3_final_2026_09_18.md | V3X | LETTERS | DEEE45F45C5D | 2026/09/18 21:04:55 | coze wechat v3 final |
-| results/_d7_wang_teacher_wechat_publish_v1_20260918.md | V3X | LETTERS | F4D5B755736A | 2026/09/17 14:39:46 | Wang-teacher wechat v1 |
+| results/_coze_online_v3_2026_09_18.md | V3X | LETTERS | 229D76E1B86F | 2026/09/18 21:03:20 | coze wechat v3 |
+| results/_coze_online_v3_d7format_2026_09_18.md | V3X | LETTERS | 905544775AEE | 2026/09/18 21:08:42 | coze wechat v3 D7 format |
+| results/_coze_online_v3_final_2026_09_18.md | V3X | LETTERS | DEEE45F45C5D | 2026/09/18 21:04:55 | coze wechat v3 final |
+| results/_d7_external_advisor_online_publish_v1_20260918.md | V3X | LETTERS | F4D5B755736A | 2026/09/17 14:39:46 | Wang-teacher wechat v1 |
 | results/_v3_v4_ghostref_reconciliation_2026_09_23.md | V3X | ERRATUM | 1D52DB0EBF53 | 2026/09/23 15:11:45 | V3-V4 ghostref reconciliation (full) |
 | letters/_kimi_v4_t12_review_2026_09_20.md | V4 | LETTERS | 38070FD12F31 | 2026/09/20 14:53:18 | kimi V4 review/reply series |
 | letters/_kimi_v4_theme_reply_2026_09_20.md | V4 | LETTERS | 3E37352EFB4B | 2026/09/20 17:52:32 | kimi V4 review/reply series |

@@ -1,11 +1,11 @@
-# Coze WeChat 文稿（终版）· deposon V3 终稿 R5 · 2026-09-18
+# Coze 线上 文稿（终版）· deposon V3 终稿 R5 · 2026-09-18
 
-> **委托来源**: `D:/私人资料/deposon-repo/results/_letter_to_coze_wechat_v2_2026_09_18.md`（Mavis root，task `LETTER-TO-COZE-WECHAT-V2-2026-09-18`）
+> **委托来源**: `D:/私人资料/deposon-repo/results/_letter_to_coze_online_v2_2026_09_18.md`（Mavis root，task `LETTER-TO-COZE-ONLINE-V2-2026-09-18`）
 > **依据**: 查理 V3 终稿全文 R5（SHA-12 `42e4310f9483`，9 章 + 44 引用 + 双语摘要）+ 内参转呈说明（SHA-12 `7a4933372ef5`）
 > **起草方**: Coze（4 协作方之一）
 > **时点**: 2026-09-18 CST
 > **口径**: **博弈论学者口径**（用户 21:00 拍板）· 不照搬 minimax 大纲（用户 21:02 拍板）· 不卡字数（用户 21:03 拍板）
-> **边界**: 0 LLM 调用起草；不调 WeChat API；7 铁律 + 9 铁律全守（0 触动 18 frozen + 5 制品 + schema v1 + 22 题注双指纹 + 4 plugin spec）
+> **边界**: 0 LLM 调用起草；不调 线上 API；7 铁律 + 9 铁律全守（0 触动 18 frozen + 5 制品 + schema v1 + 22 题注双指纹 + 4 plugin spec）
 
 ---
 
@@ -117,7 +117,7 @@ Staged preview; detailed data in the official release.
 
 | 要求 | 本稿落实 |
 |---|---|
-| **名称消歧** | 本仓 KT_C1 明确标注"**本仓**"并附 R²＝0.1986/0.2670；王老师侧 KT-C1（R²＝0.0007）**未出现**，无混写 |
+| **名称消歧** | 本仓 KT_C1 明确标注"**本仓**"并附 R²＝0.1986/0.2670；外部顾问侧 KT-C1（R²＝0.0007）**未出现**，无混写 |
 | **保密** | 文末"本稿为阶段成果预告，详细数据以正式发布版为准"；仅作学术成果预告，不外传、不引用、不作为文献引用 |
 | **数字口径对齐** | 全部数字沿 V3 终稿 R5 + 内参转呈说明实测落账，未擅自更改口径 |
 
@@ -157,7 +157,7 @@ Staged preview; detailed data in the official release.
 | **必带 skill 未加载** | 委托信点名的 `scientific-research-workflows:scientific-writing`（sha256 `611965fc…`）与 `academic-paper-assistant:academic-paper-polish`（sha256 `01afed67…`）**不在本机 available_skills 列表**，无法加载；动态扩展返回的均为公众号爆款向技能，与"学术克制"要求相反，故未采用。已按委托信 §2 口径要求（学术+简洁+不夸张+数字仅复述）直接起草 |
 | **字数实测** | 主稿 598 汉字 / 983 全字符；短版 156 汉字 / 386 全字符；英文版 2077 字符。均由脚本实测，非估算 |
 | **SHA 引用** | R5 终稿 `42e4310f9483`、内参说明 `7a4933372ef5` 沿委托信 §4 实测值 |
-| **未调 WeChat API** | 沿委托信 §0"不调 WeChat"，本稿仅落盘待 user 拍板 |
+| **未调 线上 API** | 沿委托信 §0"不调 线上"，本稿仅落盘待 user 拍板 |
 
 ---
 

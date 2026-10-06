@@ -110,7 +110,7 @@
 ### 2.5 等 D7 (2026-09-18) user 委托 coze 推王老师 WeChat D7 终极判死 1 条
 
 - 沿 user 11:15 委外原则 + user 17:13 拍板
-- Mavis 准备推送需求清单(`D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md` 8037 B)
+- Mavis 准备推送需求清单(`D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` 8037 B)
 - **待 user 委托 coze 推送** + 严守 7 铁律 0 触动 18 frozen + P-G V0 + P-G V0.1 + 4 plugin spec
 
 ---

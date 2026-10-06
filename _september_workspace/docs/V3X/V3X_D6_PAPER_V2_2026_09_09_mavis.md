@@ -416,7 +416,7 @@ KT-D0 = 引用 P-D V0.1 既有 PASS(9/9), 零新实验。
 - `docs/V3X/KT_B1_SPEC_V0.md`(25.3KB / 536 行)
 - `docs/V3X/KT_C1_SPEC_V0.md`(17.9KB / 382 行)
 - `docs/V3X/KT_D0_EVIDENCE_CARD.md`(6.3KB)
-- `docs/V3X/D3_WECHAT_MIDTERM_TEMPLATE.md`(4.4KB)
+- `docs/V3X/D3_ONLINE_MIDTERM_TEMPLATE.md`(4.4KB)
 - `docs/V3X/D7_ONE_PAGE_SUMMARY_TEMPLATE.md`(5.8KB)
 - `docs/V3X/KT_A1_REPORT_2026_09_09_mavis.md`(2.97KB, V1 Bayesian)
 - **`docs/V3X/KT_A1_LLM_MINI_TEST_2026_09_09_mavis.md`(1.6KB, V2 mini)**

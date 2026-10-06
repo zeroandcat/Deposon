@@ -4,7 +4,7 @@
 > **时点**: 2026-09-18 晚 CST (北京时间)
 > **版本**: V1.0 FINAL — 最强数据 (5 worker 全部完, 沿用户拍板"等所有 worker 完再派")
 > **起草**: doc-writer 凝子-agent (agent-0032834a3e04), 沿用户 17:13 严守"不调 线上 API"
-> **配套模板**: `docs/V3X/D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md` (Mavis 09-16 提前版)
+> **配套模板**: `docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` (Mavis 09-16 提前版)
 > **实测源**: `results/_v3x_d0_5_aggregation_2026_09_17.md` + `results/_p_l_v3_phase2_report_20260917_142748.md`
 > **严守**: 7 铁律 0 触动 (16 frozen + 5 P-G + 5 制品 + schema v1 + 4 plugin spec + verifier/mavis/.builtin/scripts/)
 
@@ -38,7 +38,7 @@ P1 R²=0.7447+P3 Q=0.1929 双 FAIL (size scaling+塌缩失败); P2 β CI 3 backb
 - 聚合:       results/_v3x_d0_5_aggregation_2026_09_17.md (12,010 B)
 - PATCH V2:   deposon_team/_designs/V3X_PATCH_5ANCHOR_RECONCILE_V2_2026_09_17.md (6,802 B)
 - KIMI safe:  results/_kimi_safe_batch_push_v1_2026_09_17.json (7,280 B)
-- D7 模板:    docs/V3X/D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md
+- D7 模板:    docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md
 
 — Mavis (deposon V3X 1 周判死主理, D7 = 2026-09-18 晚 CST)
 ```
@@ -201,7 +201,7 @@ P1 R²=0.7447+P3 Q=0.1929 双 FAIL (size scaling+塌缩失败); P2 β CI 3 backb
 
 | 版本 | 日期 | 变更 |
 |---|---|---|
-| V0 (模板) | 2026-09-16 11:07 | Mavis 提前版, 沿 §4 推送内容模板 (`D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md` §2.4) |
+| V0 (模板) | 2026-09-16 11:07 | Mavis 提前版, 沿 §4 推送内容模板 (`D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` §2.4) |
 | V1.0 FINAL | 2026-09-17 14:38 CST | doc-writer 凝子-agent 起草, 沿 5 worker 全完最强数据 + 沿用户拍板"等所有 worker 完再派" |
 | V1.1 数字修正 | 2026-09-18 13:00 CST | Trae code 沿 V2 改进需求 §1.1 修正 Adendum 分布 (2 处: §0 拍板(2) + §3.5): 原口径 (PASS 十三项 + 双 GRAY + 单 FAIL = 16) → "17 项 = 11 PASS (含 M/N PASS_for_death) + 2 GRAY (H/O) + 1 UNVERIFIED (A) + 2 PARTIAL (F/G) + 1 FAIL_NO_MODEL (K)", 盘上依据 `results/_trae_paper_8ch_双审_2026_09_17_200000.md` 数据点 3; 另两项 V2 修正 (复现率 87.0 改 85.0、稳健措辞降格) 经核验文稿正文 0 命中, 无需改动; §1 字数核验表为 V1.0 时点记录, 拍板(2) 修正后约 +15 字 |
 

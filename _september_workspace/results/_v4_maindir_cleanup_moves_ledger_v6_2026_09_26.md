@@ -81,7 +81,7 @@
 
 | 子类 pattern | 件数 | bytes (实测) |
 |---|---|---|
-| `*_coze_paper_*_draft_*.md` (2) + `*_coze_wechat_v3_*.md` (3) + `_d7_wang_*` (1) | 6 | 67,229 |
+| `*_coze_paper_*_draft_*.md` (2) + `*_coze_online_v3_*.md` (3) + `_d7_wang_*` (1) | 6 | 67,229 |
 | `_agent_trio_*draft_*.md` | 1 | 10,026 |
 | `_glm_response_v2_template_*.md` | 1 | 44,191 |
 | `_mavis_skill_inventory_*.md` | 1 | 99,702 |
@@ -116,10 +116,10 @@
 | 1 | `_check_conv_archive.ps1` | 2,326 | `C89D46C47026` | `deposon-sub\_check_conv_archive.ps1` | Move-Item -Force |
 | 2 | `_coze_paper_v1_draft_2026_09_17.md` | 29,484 | `C08E7ABF5EE3` | `deposon-sub\results\_coze_paper_v1_draft_2026_09_17.md` | mavis-trash (Recycle Bin) |
 | 3 | `_coze_paper_v1_summary_2026_09_17.md` | 3,624 | `2EFDC3D7741D` | `deposon-sub\results\_coze_paper_v1_summary_2026_09_17.md` | mavis-trash (Recycle Bin) |
-| 4 | `_coze_wechat_v3_2026_09_18.md` | 7,466 | `229D76E1B86F` | `deposon-sub\results\_coze_wechat_v3_2026_09_18.md` | mavis-trash (Recycle Bin) |
-| 5 | `_coze_wechat_v3_d7format_2026_09_18.md` | 8,715 | `905544775AEE` | `deposon-sub\results\_coze_wechat_v3_d7format_2026_09_18.md` | mavis-trash (Recycle Bin) |
-| 6 | `_coze_wechat_v3_final_2026_09_18.md` | 11,657 | `DEEE45F45C5D` | `deposon-sub\results\_coze_wechat_v3_final_2026_09_18.md` | mavis-trash (Recycle Bin) |
-| 7 | `_d7_wang_teacher_wechat_publish_v1_20260918.md` | 9,891 | `F4D5B755736A` | `deposon-sub\results\_d7_wang_teacher_wechat_publish_v1_20260918.md` | mavis-trash (Recycle Bin) |
+| 4 | `_coze_online_v3_2026_09_18.md` | 7,466 | `229D76E1B86F` | `deposon-sub\results\_coze_online_v3_2026_09_18.md` | mavis-trash (Recycle Bin) |
+| 5 | `_coze_online_v3_d7format_2026_09_18.md` | 8,715 | `905544775AEE` | `deposon-sub\results\_coze_online_v3_d7format_2026_09_18.md` | mavis-trash (Recycle Bin) |
+| 6 | `_coze_online_v3_final_2026_09_18.md` | 11,657 | `DEEE45F45C5D` | `deposon-sub\results\_coze_online_v3_final_2026_09_18.md` | mavis-trash (Recycle Bin) |
+| 7 | `_d7_external_advisor_online_publish_v1_20260918.md` | 9,891 | `F4D5B755736A` | `deposon-sub\results\_d7_external_advisor_online_publish_v1_20260918.md` | mavis-trash (Recycle Bin) |
 | 8 | `_agent_trio_redesign_draft_2026_09_23.md` | 10,026 | `E4320F20CAD4` | `deposon-sub\results\_agent_trio_redesign_draft_2026_09_23.md` | Move-Item -Force |
 | 9 | `_glm_response_v2_template_2026_09_18.md` | 44,191 | `972401E056F6` | `deposon-sub\results\_glm_response_v2_template_2026_09_18.md` | mavis-trash (Recycle Bin) |
 | 10 | `_mavis_skill_inventory_2026_09_18.md` | 99,702 | `90BA7F7A7FBE` | `deposon-sub\results\_mavis_skill_inventory_2026_09_18.md` | mavis-trash (Recycle Bin) |
@@ -290,7 +290,7 @@
 - **`_v3_v4_achievements_inventory_2026_09_24.md` / `_v3_v4_achievements_inventory_3dir_2026_09_24.md` / `_v3_v4_ghostref_reconciliation_2026_09_23.md` / `_archive_manifest_deposon_sub_2026_09_23.json` / `_ghostref_copy_log_2026_09_23.json` 字面引用 50 件 B 类候选**: 全部保留为字面描述性引用 (各文本均未改); 50 件 B 类候选均已 Move / Trash, 故追溯路径为 `deposon-sub/results/...` 或 `deposon-sub/...`. **明示**: 上述 inventory / reconciliation / manifest / ghostref_log 字面引用的相对路径与本棒移动后的实际路径不一致 (dest 已从 `repo/results/` 移至 `deposon-sub/results/`); 如需更新上述文本, 待 PI 拍板.
 - **`_v4_supp_l14v3_model_mapping_2026_09_24.md` + `_v4_supp_prereg_v02_add_L14V3_2026_09_24.md` + `_v4_supp_prereg_v02_add_T15r2_2026_09_26.md` + `_v4_supp_prereg_v02_add_T15_2026_09_24.md` + `_v4_supp_prereg_v02_add_T1_2026_09_24.md` + `_v4_track2_multimodel_verdict_2026_09_23.md` 字面引用** `_track2_endpoints_probe_2026_09_23.json`: 该文件已 Move-Item 至 `deposon-sub/results/_track2_endpoints_probe_2026_09_23.json`. **明示**: 6 件 prereg/model_mapping/track2_verdict 文本字面引用的相对路径与本棒移动后的实际路径不一致; 追溯口径 = 本 ledger §3.3 表 #19; 不动上述文本 (派工单 §4 保护名单 0 触动).
 - **`_v3_supplement_verdict_2026_09_23.md` 字面引用** `_track2_qwen_check_2026_09_23.json`: 该文件已 Move-Item 至 `deposon-sub/results/_track2_qwen_check_2026_09_23.json`. **明示**: 同上, 追溯口径 = 本 ledger §3.3 表 #20.
-- **`_v4_distillation_acceptance_coze_2026_09_20.md` 字面引用** `_coze_wechat_v3_2026_09_18.md` + `_coze_wechat_v3_final_2026_09_18.md`: 2 件均已 mavis-trash (dest 已存副本); 追溯口径 = 本 ledger §3.3 表 #4 / 表 #6.
+- **`_v4_distillation_acceptance_coze_2026_09_20.md` 字面引用** `_coze_online_v3_2026_09_18.md` + `_coze_online_v3_final_2026_09_18.md`: 2 件均已 mavis-trash (dest 已存副本); 追溯口径 = 本 ledger §3.3 表 #4 / 表 #6.
 - **`_v4_distillation_reply_claude_code_2026_09_20.md` + `_v4_ide_track_review_trae_code_supplement_2026_09_20.md` 字面引用** `skill_d_p_f_observer_result_2026_09_11.json`: 该文件已 mavis-trash (dest 已存副本); 追溯口径 = 本 ledger §3.3 表 #44.
 - **`TRAE_FIX_REQUEST_3RISKS_2026_09_11.md` 字面引用** `skill_c_p_e_3modality_result_2026_09_11.json` + `skill_d_p_f_observer_result_2026_09_11.json`: 2 件均已 mavis-trash (dest 已存副本); 追溯口径 = 本 ledger §3.3 表 #43 / #44.
 - **`LETTER_FROM_TRAE_REVIEW_2026_09_16.md` 字面引用** `_pc_d1_d3_2026_09_15.py`: 该文件已 mavis-trash (dest 已存副本); 追溯口径 = 本 ledger §3.3 表 #24. **(letters/ 派工单 §4 保护名单, LETTER 文本未改)**.

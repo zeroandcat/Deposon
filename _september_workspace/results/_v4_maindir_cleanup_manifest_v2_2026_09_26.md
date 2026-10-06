@@ -232,7 +232,7 @@
 #### E.1.2 归档非核心 → `D:/私人资料/deposon-sub` (0 件移动)
 
 派工单 §3 列三类：
-1. **非链上历史中间件**：本棒扫到 ~20 件 Sep 17-23 era 草稿/审计/中间件（`_agent_trio_redesign_draft_2026_09_23.md` / `_coze_paper_v1_*_2026_09_17.md` / `_coze_wechat_v3_*_2026_09_18.md` / `_d7_wang_teacher_wechat_publish_v1_20260918.md` / `_deposon_v2scripts_*_20260918_*` / `_ftfb_v3_pass*_audit_2026_09_18_*` / `_glm_response_v2_template_2026_09_18.md` / `_kimi_ftfb_s7_independent_recompute_2026_09_18.json` / `_kimi_push_v3_manifest_verifier21_cc3c92d0.json` / `_mavis_skill_inventory_2026_09_18.md` / `_probe_url_update_log_2026_09_23.md` / `_track2_*_2026_09_23.*` 等）
+1. **非链上历史中间件**：本棒扫到 ~20 件 Sep 17-23 era 草稿/审计/中间件（`_agent_trio_redesign_draft_2026_09_23.md` / `_coze_paper_v1_*_2026_09_17.md` / `_coze_online_v3_*_2026_09_18.md` / `_d7_external_advisor_online_publish_v1_20260918.md` / `_deposon_v2scripts_*_20260918_*` / `_ftfb_v3_pass*_audit_2026_09_18_*` / `_glm_response_v2_template_2026_09_18.md` / `_kimi_ftfb_s7_independent_recompute_2026_09_18.json` / `_kimi_push_v3_manifest_verifier21_cc3c92d0.json` / `_mavis_skill_inventory_2026_09_18.md` / `_probe_url_update_log_2026_09_23.md` / `_track2_*_2026_09_23.*` 等）
    - **本棒 0 件移动** = 拍板缺位（无法在不 grep 全仓引用的情况下判定"非链上"）—— **保守口径**下保留原地
 2. **旧草稿**：本棒扫到 `_tra_v0_2026_09_10.json/py` (V0.1 prototype, 9 月 10 日落地, 早期 prototype) + `_test_conv_out.txt` + `_pc_d1_d3_2026_09_15.py` 等
    - **本棒 0 件移动** = 拍板缺位；`_tra_v0_*` 命名显 "v0" 早期 prototype 标志；但引用 grep 未做完，**保守口径**下保留

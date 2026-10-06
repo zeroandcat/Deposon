@@ -233,7 +233,7 @@
 | X-74 | `4c731a625868` L163–L177 | **补账件 v2.1 的 10 项老实交代**：含 **v2 件哈希实测 `FF2154CE182D`（16,894 B）与 v1 §1 表载不符**、**Tag-A #30 唯一副本位置实测在 `_non_upload_local_archive`**、**KIMI 回函 §5 待裁定项 1/2/4 已闭环、项 3（channel 指认 Other 未填）维持原状待 PI 另行处置** | ③ |
 | X-75 | `cc498bc28525` L268–L274 | **25 件 byte-identical 副本来源不明**：派工 §3 列 51 件 B 类候选，其中 **25 件在 `deposon-sub/results/` 已有 full SHA-256 相同的副本**；**来源不明**（无前棒 ledger 记录，推测棒 1–5 期间预备份未删源端）⇒ 按「dest 已存不覆盖」trash 源不动 dst | ① |
 | X-76 | `cc498bc28525` L278–L286 | **6 项穷尽清点**：dataset 派单 7 件 → **实测盘上 10 件**（含棒 8 期间其他 worker 新增 d3a/b/c）；`.tmp/_l14v3_*` 早期 4 版本 0 移动；`_v6_w7_pre_move_state.json`（11,705 B / `099F1C58974F`）**本棒自建仍存 .tmp/**；`_tmp_*` 残件实测扫到 **4 件**（与 manifest v2 §E.2.6「本棒未扫到」**表述不一致**） | ③ |
-| X-77 | `cc498bc28525` L287–L297 | **关键链引用保留后的二次影响（10 类）**：盘点件 / ghostref / archive manifest 字面引用 50 件 B 类候选（均已 Move/Trash，**追溯口径 = 本 ledger §3.3 表**）；coding review 引用的 `_tmp_*.py` 相对路径**与移动后实际路径不一致**，如需更新待 PI 拍板；`_track2_qwen_check_*.json`、`_coze_wechat_v3_*`、`skill_*_result_*.json`、`_pc_d1_d3_*.py` 等**全部成字面悬空引用** | ① |
+| X-77 | `cc498bc28525` L287–L297 | **关键链引用保留后的二次影响（10 类）**：盘点件 / ghostref / archive manifest 字面引用 50 件 B 类候选（均已 Move/Trash，**追溯口径 = 本 ledger §3.3 表**）；coding review 引用的 `_tmp_*.py` 相对路径**与移动后实际路径不一致**，如需更新待 PI 拍板；`_track2_qwen_check_*.json`、`_coze_online_v3_*`、`skill_*_result_*.json`、`_pc_d1_d3_*.py` 等**全部成字面悬空引用** | ① |
 | X-78 | `f4435801d09f` L479–L488 | **6 条待 PI 复核项**：① L14+ activation `843E42EF4D2A` 复核生效 ② N-26 真审重判正式拍板 ③ teacher_kimi r1 是否补足 ④ K-N26-N1「J 中位非退化」是否需直接度量补正 ⑤ K-N26-N2 同 ⑥ **3 件聚合文件（`.tmp/_l14v3_aggregated_10cells_v4.json` + `_n26_metrics_v2.json` + `_sensitivity_v2.json`）是否入 `_v4_supp_l14v3_*` 产物链**（本件不擅自并入） | ③ |
 
 ### §5.2 账表 B · 上报项（Y）

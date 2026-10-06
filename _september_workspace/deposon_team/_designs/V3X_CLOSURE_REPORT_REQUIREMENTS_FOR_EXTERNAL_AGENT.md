@@ -6,7 +6,7 @@
 > **日期**: 2026-09-16 11:30
 > **配套**:
 > - `deposon_team/_designs/V3X_GAME_THEORY_NON_EUCLIDEAN_MASTER_NARRATIVE_2026_09_16.py` (Mavis 内部设计,9244B)
-> - `docs/V3X/D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md` (王老师 WeChat 推送需求,8037B)
+> - `docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` (王老师 WeChat 推送需求,8037B)
 > - `docs/V3X/D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` (D7 前 V3 完善,10692B)
 > - `docs/V3X/V3X_1WEEK_KILL_REPORT_2026_09_18.md` (1 周判死报告 1 页,verdict 填)
 > - `docs/V3X/P_G_V01_REPORT_2026_09_15.md` (P-G V0.1 双曲 transport 报告)

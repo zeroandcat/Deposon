@@ -28,7 +28,7 @@
 - 本棒 6 件审稿 / 报告源件 SHA-12 **逐件复算全部 MATCH**：`0d36d7cd0589` / `09784ff172b3` / `5198a7059c06` / `26537967db82` / `8d00c6d4a242` / `fe80bad08eef`。
 
 **诚实交代 2 · mtime 不可作唯一定序键**：
-- 盘上多批件 mtime 与件内自陈日期**不一致**（例：`results/_v3x_d0_5_proposal_trae_2026_09_17.md` mtime 09-20 17:11:14 而件尾自陈「2026-09-17」；`docs/V3X/D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md` mtime 09-16 11:08:22）。
+- 盘上多批件 mtime 与件内自陈日期**不一致**（例：`results/_v3x_d0_5_proposal_trae_2026_09_17.md` mtime 09-20 17:11:14 而件尾自陈「2026-09-17」；`docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` mtime 09-16 11:08:22）。
 - ⇒ 本件每条「最早出处」**双口径并列给出**（mtime ＋ 件内自陈日期），**0 单独以 mtime 断言定序**。
 
 **诚实交代 3 · 计数工具**：
@@ -117,7 +117,7 @@
 
 **（a）「双低于阈值」字面全树仅 2 命中**
 1. 审稿件 `deposon-sub\results\_archive_2026_09_20\review_tech_B1_grok46.md` ＝ **`09784ff172b3`** **L46**（批评语，逐字片段）：`P-C 只写「双低于阈值」，本文从未给出该阈值数字。`
-2. `deposon-sub\results\_archive_2026_09_20\_letter_to_coze_wechat_v2_2026_09_18.md` **L43**：`\| **P-C 跨模态幂律** \| **FAIL_H0** \| R²=0.1986/0.2670 双低于阈值; dpath 判定 8/9 (分母 9 模型) \|` ⇒ **该处 0 给数字**
+2. `deposon-sub\results\_archive_2026_09_20\_letter_to_coze_online_v2_2026_09_18.md` **L43**：`\| **P-C 跨模态幂律** \| **FAIL_H0** \| R²=0.1986/0.2670 双低于阈值; dpath 判定 8/9 (分母 9 模型) \|` ⇒ **该处 0 给数字**
 
 **（b）数字 0.3 的可核出处**
 | # | 件 | SHA-12 | 字节 | mtime | 行号 | 原文摘录 |
@@ -179,7 +179,7 @@
   - `P-E_3modal`（L61–98）：**6 PASS ＋ 2 GRAY（`kimi-k2.7-code` / `doubao-seed-2.1-turbo`）＋ 1 FAIL（`deepseek-v4-pro`）** ⇒ **该段 0 处 `PARTIAL_PASS`**
   - `P-F_D_fix2_strict`（L99）：`"8+1+0 (PARTIAL_PASS, A channel timing 敏感)"`；`P-F_D_fix2_loose`（L100）：`"8+1+0 (PARTIAL_PASS)"` ⇒ `PARTIAL_PASS` 在本件**只出现在 P-F 两行的自由文本串内**
   - `P-G_V0.1_dH_dE`（L101）：`"≈ 5x (range 4.4-8.0)"`
-- ⇒ **P-E 的 `PARTIAL_PASS` 不在冻结 D7 终档 JSON 内**；其在盘上的载体是 `docs/V3X/D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md` ＝ **`935cb6ee3566`**（8,037 B / mtime 09-16 11:08:22）：**L60** `| **P-E physics** | **PARTIAL_PASS** | 9 model: 6 PASS + 2 GRAY + 1 FAIL (deepseek-v4-pro)(沿 user 12:01 拍板 A 接受 + 阈值调整)|`、**L78** `#### 2.1.4 D_fix2 metric PARTIAL_PASS(user 12:01 拍板 A 接受)`、**L128** `- P-E PARTIAL_PASS (沿 A 接受 + 阈值调整)`。
+- ⇒ **P-E 的 `PARTIAL_PASS` 不在冻结 D7 终档 JSON 内**；其在盘上的载体是 `docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` ＝ **`935cb6ee3566`**（8,037 B / mtime 09-16 11:08:22）：**L60** `| **P-E physics** | **PARTIAL_PASS** | 9 model: 6 PASS + 2 GRAY + 1 FAIL (deepseek-v4-pro)(沿 user 12:01 拍板 A 接受 + 阈值调整)|`、**L78** `#### 2.1.4 D_fix2 metric PARTIAL_PASS(user 12:01 拍板 A 接受)`、**L128** `- P-E PARTIAL_PASS (沿 A 接受 + 阈值调整)`。
 
 **（d）0 裁声明**：X-31 的二分（「D7 拍板＝事后人工改写」vs「未全过＋经裁决接受＝叠床架屋」）属**档位与纪律判断**，**本棒 0 代裁** ⇒ 交 verdict-keeper。本棒只交上述值域事实（守恒函数值域不含 `PARTIAL_PASS`；P-E 段 0 处该字样）。
 
@@ -282,7 +282,7 @@
 | T-4 P-C「双低于阈值」数字 | **有（0.3，实验层）** | **手稿层无**（该句 0 给数字）；**kill-line 件不在盘** | `docs/V3X/D0_FREEZE_PREP_2026_09_09.md` **`0d1e88c258aa`** L25（09-09 10:55:24）；`docs/V3X/P_C_D1_D3_REPORT_2026_09_15.md` **`79c7321056b8`** L109／L121／L133 |
 | T-4 `KT_C1_KILL_LINE 77b49c0f8b54` 件 | **无**（两树 0 命中） | — | （负证据）转录见 `79c7321056b8` L109 |
 | T-6 `PARTIAL_PASS` 值域 | **不在冻结函数值域**（守恒函数 ＝ PASS/GRAY/FAIL） | 最早载体＝报告层字段 | 值域：`verifier/audit/conservation.py` **`4bdec2683f06`** L343–348；载体：`docs/V3X/D_FIX2_METRIC_VERIFY_REPORT_2026_09_15.md` **`0a63824f0805`** L53 |
-| T-6 P-E 的 `PARTIAL_PASS` 在冻结 D7 终档件内 | **无**（P-E 段 0 处） | 载体＝D7 requirements 报告 | `results/d7_5anchor_60cells_9model_verdict_2026_09_18.json` **`4505cca79c15`** L61–98；`docs/V3X/D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md` **`935cb6ee3566`** L60／L78／L128 |
+| T-6 P-E 的 `PARTIAL_PASS` 在冻结 D7 终档件内 | **无**（P-E 段 0 处） | 载体＝D7 requirements 报告 | `results/d7_5anchor_60cells_9model_verdict_2026_09_18.json` **`4505cca79c15`** L61–98；`docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` **`935cb6ee3566`** L60／L78／L128 |
 | T-7 「6 次 fresh LLM 调用」 | **有** | **件内自陈归属＝「沿 D_fix2 worker」**；P-F JSON 内调用次 0 出现 | `docs/V3X/V3X_1WEEK_KILL_REPORT_2026_09_18.md` **`4ffb21bb6bfa`** L69（09-16 11:03:10） |
 | T-7 P-F fresh 口径 | **有** | 1 model ＋ 5 cells ＋ 8 复用 | `results/deposon_pf_d1_full_9m5c_2026_09_15.json` **`fcb5105df0b6`** → `data_sources` |
 | T-8 T/R/A **守恒层定义** | **有**（`A=1-T-R`） | 「互斥穷尽」断言 **0 命中**；schema v1 **0 定义** | `4bdec2683f06` L73–74；负证据 `deposon_team/plugins/_v3x_frozen_schema_v1.json` **`9e99dcc4d920`** |
