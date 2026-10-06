@@ -255,7 +255,7 @@
 | Y-17 | `588b45430e88` L194–L201 | **待 PI 复核决定项 6 条**：① 17 条新种子如何分维落位 ② N-34（法律/合规）borderline productive 是否上采为 §4 开放问题 ③ Explore-C Part 1 的 14 条改写是否直接覆盖种子稿边界声明 2 + S-09/S-32/S-35 复评条件栏 ④ Part 2 的 6 条可证伪改写是否入实验轮廓扩展节 ⑤ Part 3 的 6 个新形式化工具类比是否订入 X 轨迹 8 项扩展节 ⑥ `attacks/` 语义反转是否落盘为 V4 自有 seed field 出口过滤器 | PI | ③ |
 | Y-18 | `0a2caf0a2bd2` L75–L85 | **待 PI 复核项 4 条**：① 主术语选 `18 frozen`（确认/改选，改选则 §1–§2 重拟）② 重写规则适用范围（仅约束邀请函后续版 + V4 新文档，或扩大到问卷/整合稿自身回改）③ §4.5「每条最终定义」收口后问卷尾注标「已收」 ④ §3 双处过期哈希与外部归档基座不存在的注记方式 | PI | ③ |
 | Y-19 | `f4a6bdd43962` L82–L92 | **待 PI 复核项 4 条**：① 双轨设计（Track 1 铁律现状可执行 / Track 2 待 §3.1）确认或改单轨 ② 退化算子族（§2 Track 1 四候选）确认/删减/扩充 ③ 证伪判据三分支与 margin δ 阈值的预注册值确认或改定 ④ KT-B1 baseline 勾连随 §3.2 注一并裁定 | PI | ③ |
-| Y-20 | `58e15c07af33` L156 | **下游建议 3 条**：① 已知 4 backbone 可作 D7 王老师 WeChat 推送的 P2 主证据 ② GPT-4o 通道阻塞，建议下游 worker 尝试其他 VPN / 端点（如自建 OpenAI 代理）后再补 ③ 沿 Coze/GLM/Trae 共识：Spearman 不是塌缩判死指标，β CI 重叠才是 | 下游 worker / PI | ① |
+| Y-20 | `58e15c07af33` L156 | **下游建议 3 条**：① 已知 4 backbone 可作 D7 外部顾问 线上 推送的 P2 主证据 ② GPT-4o 通道阻塞，建议下游 worker 尝试其他 VPN / 端点（如自建 OpenAI 代理）后再补 ③ 沿 Coze/GLM/Trae 共识：Spearman 不是塌缩判死指标，β CI 重叠才是 | 下游 worker / PI | ① |
 | Y-21 | `c0d629df69d8` L11 / L205 | **2 类 SELF-CHECK 尾块缺陷修补委托（Trae）**：双审抓到 Trae 报告 §6「两次跑均 ALL PASS」承诺不实 —— 实测 **5/9 尾块 import FAIL**（N1 断言用 `<=` 使 PASS 上界 == GRAY 下界；N2 `boss_id` 字段问题），影响 5/9 尾块实跑 | Trae code（受托方） | ① |
 | Y-22 | `1c0885d2b1fa` L81 / L52 | **2 处矛盾描述上报 Trae 修**：① BOSS-PE-3 worker 报告「verifier 显示 1/15 frozen FAIL: `skill_d_p_f_observer.py`」被件判为 **race condition 实证** ② D5 worker 落盘文件名（攻击测法 A1/A2/A3）与 P-C D1-D3 报告描述（2D Ising 等）**不一致** | Trae code（受托方） | ① |
 | Y-23 | `6a7b0c20a133` L86–L95 | **P-M v42 须重设计（强制修正案）**：实际 P-M 派工实跑结果为漏检最小成本 ≤ 50% 随机猜测，沿 KIMI 判死线「漏检最小成本 ≤ 随机猜测成本 → v42 须重设计（非项目判死，是强制修正案，如实披露）」；新 verifier 须满足 3 条（漏检最小成本 > 50% 随机 / 抗扰动 > 10 档 budget / 攻击面 O(n)） | 受托 agent → PI | ① |
@@ -263,8 +263,8 @@
 | Y-25 | `ddf0d1aa96d2` L115 / 8c07ab5aa968 L56 | **退化预检横切修复建议（Trae §6.0 + GLM §6.1 共同主张）**：在 0-LLM hashlib 复算层加 4 类不变性预检（输入向量方差>0 / 秩不恒同 / 标签非硬编码 / 检测率不低于随机基线），任一失败 → 直接 UNVERIFIED、禁止产 PASS/SECURE；件记「这是 P-L 之外 4 项 Adendum 共同的根因族修复」 | 协议棒 / 执行棒 | ④（同源已由 r1 X-23 / Y-01 计入） |
 | Y-26 | `ecb406570615` L88–L150 | **§X 修订 ledger 8 缺陷（F-1 … F-8）**：F-1 自报 SHA-12 失真 → 实测替换 / F-2 D6 分项不全 → 15 个 `@` 实测 10 TeX 宏 + 4 tabularx + 1 正文字段路径 / F-3 `<a href="mailto:">` 虚构归因 → 删去不实归因 / F-4 D1–D6 论述可信度补强 → 显式 §7.1 引言口径 / F-5 C-3 引语伪字面化 → 实测字面引号 / F-6「outright」误归 M1/M3/M4 → 实测仅属 M3 / F-7 [R36]「无题录」错 → 实测题录齐全（TeX L466）/ F-8 8192 B 占位失真 → 实测替换 | 受托 auditor → PI | ④（已在本件 ledger 内逐条闭合） |
 | Y-27 | `413ddb0bd00e` L116–L147 | **§X 修订 ledger 4 缺陷 + 3 数字更正**：F-3 D6 `@` 归因在 en.wikisource.org URL 不实 → 删除 + 实证 10+4+1 分布 / F-4「confidential channel until camera-ready」paraphrase 不实引用 → 实测引文 L310/L366 / F-8 报告字节数未填值 → 实测 11,390 B / F-8 修订版 3 处数字更正（87.0%→85.0% = 51/60；Adendum 18→11 PASS + 2 GRAY + 1 UNVERIFIED + 2 PARTIAL + 1 FAIL_NO_MODEL = 17；P2 强稳健→开源 3/3 + 闭源 3/3，OR×OR 1/6 = GRAY） | 受托 auditor → PI | ④（已在本件 ledger 内逐条闭合） |
-| Y-28 | `6d72e74b3482` L110–L125 | **Coze 委托边界 6 条（件记 user 17:02 老实承认误读 PDF = 上周 D7 wechat）**：0 LLM API 调用 / 沿 8 章 outline 不自创结构 / 引用 5 audit 综合产物 / 4 挂点结论源 = 提案 v3 §3–§7 **不源 D7 report** / 4 项必改数字 / 4 件 push README 声明；**不写新 spec（留给 doc-writer）/ 不调 API / 不动 push / 不动 WeChat 钥匙** | Coze（受托方） | ④（已随件落盘） |
-| Y-29 | `c1791a7811f3` L101–L113 / L191–L204 | **Mavis / Trae code / doc-writer 严守边界表**：Mavis 派工 + 调 agent + 不动 push / 不调 WeChat / 不跑实验；Trae code 5 件 audit (read-only) + 沿 §1-§5 提案 + 0 LLM 重算；doc-writer 仅 D7 文稿 V1.1 起草（≤200 字 E/N/F/Q）+ 4 挂点 + 5 worker 进展 + 诚实降级；**GitHub push 由 KIMI 凝子-agent 独自执行** | PI / 各受托方 | ④（边界条款本身已生效） |
+| Y-28 | `6d72e74b3482` L110–L125 | **Coze 委托边界 6 条（件记 user 17:02 老实承认误读 PDF = 上周 D7 线上）**：0 LLM API 调用 / 沿 8 章 outline 不自创结构 / 引用 5 audit 综合产物 / 4 挂点结论源 = 提案 v3 §3–§7 **不源 D7 report** / 4 项必改数字 / 4 件 push README 声明；**不写新 spec（留给 doc-writer）/ 不调 API / 不动 push / 不动 线上 钥匙** | Coze（受托方） | ④（已随件落盘） |
+| Y-29 | `c1791a7811f3` L101–L113 / L191–L204 | **Mavis / Trae code / doc-writer 严守边界表**：Mavis 派工 + 调 agent + 不动 push / 不调 线上 / 不跑实验；Trae code 5 件 audit (read-only) + 沿 §1-§5 提案 + 0 LLM 重算；doc-writer 仅 D7 文稿 V1.1 起草（≤200 字 E/N/F/Q）+ 4 挂点 + 5 worker 进展 + 诚实降级；**GitHub push 由 KIMI 凝子-agent 独自执行** | PI / 各受托方 | ④（边界条款本身已生效） |
 | Y-30 | `fd38a2a1ea05` L14–L32 / c3de25e6df57 L27–L45 | **审稿必改 7 项（M1-M7）+ 建议改项 5 项（S1-S5）**：M1 P2 判定自相矛盾（阻断）/ M2「必改/数字修正」编辑框未合并（阻断）/ M3 黑话泛滥（判死/挂点/轧平/账本，阻断）/ M4 拼写 Adendum→Addendum（阻断）/ M6 学术限制章节混入工程推送指令 / M7 代码段属实现细节；S1-S5 含内部代号翻译、7 铁律声明移附录、L=60 未纳入拟合须解释、摘要 Addendum 分布移正文、β 须补回归公式 | PI / 论文面 | ① |
 | Y-31 | `8d00c6d4a242` L53–L62 | **审稿建议 5 条**：① 公开所有 SPEC 文件与判定脚本（验证预登记纪律与「零 LLM 判定」的唯一途径）② 补充阈值设定依据（R²≥0.9、Q>0.15、FPR<1% 等关键阈值的预登记原文或先验论证）③ 重新评估 SHA-12 安全性（升级哈希长度或量化碰撞风险）④ 弱化「三态分离」独立性宣称 ⑤ 附录提供完整分母定义表 | PI / 论文面 | ③ |
 | Y-32 | `09784ff172b3` L103 | **审稿建议 5 条**：把主张降到作者真正有的东西（一份带满长哈希的预登记失败记录，**不要再卖「四路径终局拍板」**）/ 统计改走预注册分析计划（PAP）+ 模拟校准 FPR 功效，**禁止 CI 重叠、禁止三点 R2 杀线** / P-L v2 伪影写短方法注即可 / 「五线坐标系」与 [4][5] 自引矩阵可删至附录 / 若坚持资产层叙事须 release 一个可 `sha256sum -c` 的 bundle | PI / 论文面 | ① |
@@ -273,7 +273,7 @@
 | Y-35 | `95925a562597` L85–L90 | **corpus v2 整合与否待 PI 拍板**：KIMI 已交 22 caption + 3 根 anchors（`corpus/v20/index_v2_2026_09_16.json` 24,150 B / SHA-12 `efe05ad775de`），v3_phys `index.json`（`8423ffe266af`）0 触动；**未整合原因自记为「严守 7 铁律 + 委外原则 + 怕破坏 frozen」** ⇒ 二择一：整合进 `corpus/v20/` 或保留 index_v2 作并行版本 | PI | ③ |
 | Y-36 | `95925a562597` L92–L96 | **派生 JSON (2A) 是否合并到 5 锚 JSON 待 PI 拍板**：`verifier/handoff/KT_ABC1_anchors_sha256_12_V3X_P_A_PATCH_2026_09_15.json`（5,049 B / SHA-12 `da517c1153c`）与 5 锚 JSON 自身（`03c6c01f3697`）均 0 触动 ⇒ **本项与 PI「派生 JSON 不合并」铁律直接相接，本棒 0 合并、0 代拍板** | PI | ③ |
 | Y-37 | `95925a562597` L104–L108 | **P-L v2 的 UNVERIFIED 警告是否接受待 PI 拍板**：实跑 Max R²=1.0 系简化模型 `t^nu` vs `t*eta` 沿 `T_frac60` 单调变换的 Spearman=1，**不是真实 data collapse 拟合**；件沿 Trae §6.7 诚实降级标 UNVERIFIED | PI | ③ |
-| Y-38 | `95925a562597` L110–L114 | **D7 王老师 WeChat 推送待 PI 委托 coze**：Mavis 已备需求清单（`D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` 8,037 B），**0 推送**（沿 11:15 委外原则 + 17:13 拍板） | PI | ③ |
+| Y-38 | `95925a562597` L110–L114 | **D7 外部顾问 线上 推送待 PI 委托 coze**：Mavis 已备需求清单（`D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` 8,037 B），**0 推送**（沿 11:15 委外原则 + 17:13 拍板） | PI | ③ |
 | Y-39 | `23bb7d39bf58` L243–L246 | **「16 frozen 16/16 PASS」与别处 18 frozen 口径冲突**：本件 §5 实测写 `TOTAL: 16 frozen files | OK: 16 | FAIL: 0`，而 X-12 / Q-H6-4 记 18 frozen 且附录 A 称「18 frozen」⇒ **第三套 frozen 计数**（另两套：18 / 16+5=21） | PI / 论文面 | ③ |
 
 ### §4.3 账表 C · 未做项（Z）
@@ -493,7 +493,7 @@
 | **Q-H6-21** | Y-35 | **corpus v2 整合择一**：KIMI 已交 22 caption + 3 根 anchors（`corpus/v20/index_v2_2026_09_16.json` 24,150 B / `efe05ad775de`），v3_phys `index.json`（`8423ffe266af`）0 触动 ⇒ **整合进 `corpus/v20/`** 还是 **保留 index_v2 作并行版本**（本棒 0 合并、0 改名） | PI |
 | **Q-H6-22** | Y-36 | **派生 JSON (2A) 合并择一**：`KT_ABC1_anchors_sha256_12_V3X_P_A_PATCH_2026_09_15.json`（5,049 B / `da517c1153c`）是否合并到 5 锚 JSON（`03c6c01f3697`）⇒ **本项与 PI「派生 JSON 不合并」铁律直接相接，本棒 0 合并、0 代行拍板** | PI |
 | **Q-H6-23** | Y-37 / X-05 | **P-L v2 的 UNVERIFIED 警告是否接受**：实跑 Max R²=1.0 系简化模型 `t^nu` vs `t*eta` 沿 `T_frac60` 单调变换的 Spearman=1，**不是真实 data collapse 拟合** ⇒ **接受 UNVERIFIED 降级** 还是 **重跑多尺寸档** | PI |
-| **Q-H6-24** | Y-38 | **D7 王老师 WeChat 推送是否委托 coze**：Mavis 已备需求清单（8,037 B），本棒 0 推送 ⇒ **是否派发**（沿 PI 2026-09-24「对外文稿须 PI 明示派发」口径） | PI |
+| **Q-H6-24** | Y-38 | **D7 外部顾问 线上 推送是否委托 coze**：Mavis 已备需求清单（8,037 B），本棒 0 推送 ⇒ **是否派发**（沿 PI 2026-09-24「对外文稿须 PI 明示派发」口径） | PI |
 
 > **本棒 ③ 归线 42 条 ⇒ 新增问项 24 条**（Q-H6-1 … Q-H6-24），其余 ③ 条为**非问项的待拍板面**（含口径留痕、PI 桶归类、源件已明记的待裁定项）⇒ **本棒不把每条 ③ 都变成问项**，仅列**可执行择一动作**的问项。
 > **连同 r1 的 9 条 + r2 的 33 条，待 PI 拍板项累计 66 条** ⇒ 按 PI「一次问全 ≤4 题/轮」口径，**须 17 轮**。**本棒 0 代问**（无提问工具面 / 越权）。
@@ -680,7 +680,7 @@ X-08、X-11、X-14、X-19、X-24、X-25、X-26、X-31、X-32、X-34、X-36、X-3
 | `772112cf5bd4` | **重复报告** | `results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133705.md` | Adendum 7 项综合报告 13:37:05 —— 同批重复产出（同上） |
 | `d7f03fde4067` | **重复报告** | `results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133726.md` | Adendum 7 项综合报告 13:37:26 —— 同批重复产出（同上） |
 | `d66388b6532d` | **重复报告** | `results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133852.md` | Adendum 7 项综合报告 13:38:52 —— 同批重复产出（同上） |
-| `f4d5b755736a` | **文稿件** | `results/_d7_external_advisor_online_publish_v1_20260918.md` | 王老师 WeChat 文稿 v1 —— 文稿件（5 处诚实交代为稿件自述非副产物），其推送待决已由 Y-38 登记 |
+| `f4d5b755736a` | **文稿件** | `results/_d7_external_advisor_online_publish_v1_20260918.md` | 外部顾问 线上 文稿 v1 —— 文稿件（5 处诚实交代为稿件自述非副产物），其推送待决已由 Y-38 登记 |
 | `71d5c23d9f76` | **排查件** | `results/_p_k_v3_glm_fpr_audit_report_2026-09-17T08-23-41Z.md` | GLM FPR 4.4% GRAY 排查 + 3 方盲测重跑 —— 其 2/45 误判定位与 TPR/FPR 口径问题已由 c3de25e6df57 的 X-98 登记 |
 | `fa9cd7ffa3f2` | **重试件** | `results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_170828.md` | vector_embedding v2 doubao retry 17:08 —— 与 2e3ec17259e2 为**同批重试两次产出**（17:08 / 17:55），其端点未实施面已由 58e15c07af33 的 Z-22 登记 |
 | `02443dd300ce` | **实验报告** | `results/_p_l_v3_phase2_closedsource_report_20260917_175544.md` | P-L v3 Phase 2 闭源 3 backbone 综合报告 —— 实验报告件；其 β CI overlap 判据缺陷已由 0d36d7cd0589 的 X-16/X-17 登记（同源主张） |
@@ -692,13 +692,13 @@ X-08、X-11、X-14、X-19、X-24、X-25、X-26、X-31、X-32、X-34、X-36、X-3
 | `40dda52e5d92` | **委托件** | `results/_archive_2026_09_20/_letter_to_kimi_push_v3_final_v2_2026_09_17.md` | KIMI push v3 委托信 final_v2 —— 纯委托件，同源 |
 | `2efdc3d7741d` | **摘要件** | `results/_coze_paper_v1_summary_2026_09_17.md` | Coze paper V1 中英摘要 —— 摘要件（36 行），其「部分拒绝」措辞缺陷已由 fe80bad08eef 的 X-22 登记 |
 | `ee005ea1f031` | **复算件** | `results/_deposon_v2scripts_reverify_20260918_105219.md` | deposon v2 scripts 复算报告（8 维 PASS/FAIL）—— 复算件，0 独立副产物段（Newcombe CI / T+R+A 守恒 / 18 锚 verify 均 PASS） |
-| `7d4b5dd967e2` | **文稿件** | `results/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | 王老师 WeChat 文稿 FINAL —— 同上（与 f4d5b755736a 同题，FINAL 版为准） |
+| `7d4b5dd967e2` | **文稿件** | `results/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | 外部顾问 线上 文稿 FINAL —— 同上（与 f4d5b755736a 同题，FINAL 版为准） |
 | `120295a19655` | **镜像** | `results/_D05_DATA_RESCUE_NOTE_2026_09_18.md` | **件内镜像件**（`_D05_DATA_RESCUE_NOTE` 与 `._moved_20260924_1830` 完整 SHA-256 相同，1,181 B）⇒ 每组按 1 件计，0 重复计入 |
 | `120295a19655` | **镜像** | `results/_d05_data_rescue_note_2026_09_18.md._moved_20260924_1830.md` | **件内镜像件**（`_D05_DATA_RESCUE_NOTE` 与 `._moved_20260924_1830` 完整 SHA-256 相同，1,181 B）⇒ 每组按 1 件计，0 重复计入 |
-| `ecdbf3a7a9c2` | **委托件** | `results/_archive_2026_09_20/_letter_to_coze_online_v2_2026_09_18.md` | LETTER TO COZE · V3 终稿 R5 wechat 文稿起草委托 —— 纯委托件（283 行，含 5 章内容摘要与文稿要求，0 独立副产物段）；其输入资产 SHA 与推送待决面已由本棒其他件登记 |
-| `229d76e1b86f` | **文稿件** | `results/_coze_online_v3_2026_09_18.md` | Coze WeChat v3 —— 文稿件，同 f4d5b755736a 族 |
-| `deee45f45c5d` | **文稿件** | `results/_coze_online_v3_final_2026_09_18.md` | Coze WeChat v3 final —— 文稿件，同上 |
-| `905544775aee` | **文稿件** | `results/_coze_online_v3_d7format_2026_09_18.md` | Coze WeChat v3 D7 格式版 —— 文稿件，同上 |
+| `ecdbf3a7a9c2` | **委托件** | `results/_archive_2026_09_20/_letter_to_coze_online_v2_2026_09_18.md` | LETTER TO COZE · V3 终稿 R5 线上 文稿起草委托 —— 纯委托件（283 行，含 5 章内容摘要与文稿要求，0 独立副产物段）；其输入资产 SHA 与推送待决面已由本棒其他件登记 |
+| `229d76e1b86f` | **文稿件** | `results/_coze_online_v3_2026_09_18.md` | Coze 线上 v3 —— 文稿件，同 f4d5b755736a 族 |
+| `deee45f45c5d` | **文稿件** | `results/_coze_online_v3_final_2026_09_18.md` | Coze 线上 v3 final —— 文稿件，同上 |
+| `905544775aee` | **文稿件** | `results/_coze_online_v3_d7format_2026_09_18.md` | Coze 线上 v3 D7 格式版 —— 文稿件，同上 |
 | `9119bb791dc1` | **H7 件** | `results/_v4_gA3_seeds_judgment_draft_2026_09_22.md` | V4 gA3 seeds judgment draft —— **H7 批件**，件内 22 条新种子分维落位待 PI 复核已由 588b45430e88 的 Y-17 登记（同源主张） |
 
 **出件棒 / 参与方分布（按件头署名字面实测，0 按文件名推定）**：
@@ -708,7 +708,7 @@ X-08、X-11、X-14、X-19、X-24、X-25、X-26、X-31、X-32、X-34、X-36、X-3
 | **Mavis（主理 / 起草）** | 多数 | 信 / 收尾报告 / 派工记录类；本台账**只引述不代其出证** |
 | **Mavis Worker（subagent）** | 6 | 件头字面「作者：Mavis Worker」等 |
 | **Trae code（受托方）** | 9 | 审稿 / 修复清单 / 回执；**本台账只引述不代其出证** |
-| **Coze（受托方）** | 8 | paper 草稿 / wechat 文稿 / 双审；同上 |
+| **Coze（受托方）** | 8 | paper 草稿 / 线上 文稿 / 双审；同上 |
 | **KIMI（受托方）** | 3 | 委托信类 |
 | **GLM / an invited reader team** | 4 | 双审报告 / 回函模板 |
 | **戴夫 / 戴夫-格式专家（受托方）** | 1 | FTFB 双审包简报 |

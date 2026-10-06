@@ -368,7 +368,7 @@
 - `r4-H9-X39` | C | `docs/V3X/KT_A1_REPORT_2026_09_09_mavis.md` | `b6b1fe6a48d9` | L57–59 | ## 6. 已知边界(D2 简化版) 〔- Bayesian baseline 用"6 baseline 最高分"近似, 严格意义应是"已知机制 + 支付 → 决策"〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H9-X40` | C | `docs/V3X/KT_A1_SPEC_V0.md` | `b5bcf86f4c76` | L27–28 | **v3 提案 vs Mavis 内部 spec 冲突显式标注**: 〔- 冲突 1: v3 提案 KT-A1 原文用 "g_a* 随 λ_gap 单调" 描述对外判死线, 但 Mavis P-A V0 spec 主指标是 "成本倍数"——这两个不是同一指标。本 SPEC V0 用"双跑"兼容, 在 §1.2 显式说"两套判死线都跑"。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H9-X41` | C | `docs/V3X/KT_A1_SPEC_V0.md` | `b5bcf86f4c76` | L257–259 | **任何 ≥ 1 锚漂移 → 全 KT-A1 撤回**。 〔**说明**: KT-A1 沿用 P-A V0 spec §2 的 5 锚, 不引入新锚。这是因为 KT-A1 是 P-A V0 spec 在 v3 提案语境下的对外映射, 内部判死线 + 攻击脚本 + 22 受控概念图 + 300 cells 全部沿用, 不需新增冻结工件。g_a* 序统计量(Mann-Whitne…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H9-X42` | C | `docs/V3X/KT_A1_SPEC_V0.md` | `b5bcf86f4c76` | L309–311 | ## 9. 失败模式(与王老师 WeChat 同步, 沿用 P-A V0 spec §8) 〔- **5 锚漂移 ≥ 1** → 全 KT-A1 撤回〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H9-X42` | C | `docs/V3X/KT_A1_SPEC_V0.md` | `b5bcf86f4c76` | L309–311 | ## 9. 失败模式(与外部顾问 线上 同步, 沿用 P-A V0 spec §8) 〔- **5 锚漂移 ≥ 1** → 全 KT-A1 撤回〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H9-X43` | C | `docs/V3X/KT_A1_SPEC_V0.md` | `b5bcf86f4c76` | L366–368 | **未发现冲突**: v3 提案 vs Mavis P-A V0 spec 已在 §0 显式标注 3 处差异并通过"双跑"兼容, 无新冲突。 〔**待 D1 由 Mavis 完成**: 5 锚 SHA-256 前 12 位实际计算, 写入 `verifier/handoff/P_A_V0_anchors_sha256_12.json`。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H9-X44` | C | `docs/V3X/KT_B1_FULL_ATTACK_200_2026_09_09_mavis.md` | `17de2b575941` | L29–31 | ## 4. 已知边界 〔- 整体 diff 不区分"破坏 T+R+A"和"无关字段改动"〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H9-X45` | C | `docs/V3X/KT_B1_FULL_ATTACK_2026_09_09_mavis.md` | `09582c9cd13b` | L22–24 | ## 3. 已知边界(诚实声明) 〔- check_conservation 简化版: 只检查改后 JSON 字段, 没"改后重算 T+R+A" → 攻击者漏检率高〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -442,8 +442,8 @@
 - `r4-H9-Y08` | C | `docs/V3X/OVERSEAS_OPEN_SMOKE_2026_09_10.md` | `668deef383ee` | L91–95 | ## §6 下一步建议(供父 agent 决策) 〔| **本次 5 cells 中 5/5 HTTP 200 = 接入成功** ✓ | 可考虑 **30 cells 边际验证**(对同一 model,改 reasoning off / max_tokens=1024,验证 GSM8K 真分数) |〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 - `r4-H9-Y09` | C | `docs/V3X/TEAM_RESTRUCTURING_PROPOSAL_2026_09_11.md` | `86cc56e3b4d7` | L1–3 | # 团队重组 + 插件 + 技能分配建议文档 (2026-09-11) 〔> **任务来源**: user 2026-09-11 16:51 委托(基于 D7 V7 报告 §"六、下一步"4 路径)〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 - `r4-H9-Y10` | C | `docs/V3X/TEAM_RESTRUCTURING_PROPOSAL_2026_09_11.md` | `86cc56e3b4d7` | L133–135 | ### 7.1 本建议文档**不擅自执行** 〔4 路径 plugins / skills 是建议, **不擅自落盘**任何 plugin / skill / 派单。等 user 决定后, 由 user 派 worker 子代理实施。〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
-- `r4-H9-Y11` | C | `docs/V3X/V2_PHASE2_3_INTEGRATION_2026_09_11.md` | `8178e61e7c97` | L196–198 | ## 10. 后续建议 (给王老师) 〔1. **P-C + P-D 优先**: 2 PASS 已锁定, 可作为 V2 启动阶段核心交付〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
-- `r4-H9-Y12` | C | `docs/V3X/V2_PHASE6_INTEGRATION_2026_09_11.md` | `cb751546d470` | L122–125 | ## 6. V2 启动后下一步建议 (给王老师) 〔1. **P-C 优先** (STRONG_PASS, 流程保障) — Wang WeChat 一句话确认〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
+- `r4-H9-Y11` | C | `docs/V3X/V2_PHASE2_3_INTEGRATION_2026_09_11.md` | `8178e61e7c97` | L196–198 | ## 10. 后续建议 (给外部顾问) 〔1. **P-C + P-D 优先**: 2 PASS 已锁定, 可作为 V2 启动阶段核心交付〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
+- `r4-H9-Y12` | C | `docs/V3X/V2_PHASE6_INTEGRATION_2026_09_11.md` | `cb751546d470` | L122–125 | ## 6. V2 启动后下一步建议 (给外部顾问) 〔1. **P-C 优先** (STRONG_PASS, 流程保障) — Wang 线上 一句话确认〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 - `r4-H9-Y13` | C | `docs/V3X/V4_1_FLASH_60CELLS_V2_STARTUP_2026_09_10.md` | `dcc051a1f316` | L187–191 | ### 6.2 强烈建议:**启动 300 cells 全量** 〔| ✅ 85% 超过 85% 阈值 | next_phase 明确写 "若 60 cells ≥ 51/60 = 85%,启动" |〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 - `r4-H9-Y14` | C | `docs/V3X/V4_1_FLASH_60CELLS_V2_STARTUP_2026_09_10.md` | `dcc051a1f316` | L198–202 | ### 6.3 300 cells 建议配置 〔| model | `deepseek/deepseek-v4.1-flash` | 严格字面,沿用 |〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 - `r4-H9-Y15` | C | `docs/V3X/V4_1_FLASH_RAG_BASELINE_2026_09_10.md` | `c769ff8690c1` | L207–209 | ## 8. 下一步建议 〔**结论: 路径 B (受控概念图 caption 作为 RAG context) 对 V4.1-Flash 修复 0 个 cell, 净回归 1 cell, 不可推广。**〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
@@ -496,7 +496,7 @@
 | `docs/V3X/TEAM_EXPANSION_PROPOSAL_2026_09_11.md` | `5a501a1489ab` | 19,569 B | 2026-09-11 17:04 | 件内 0 命中副产物段（标题作用域抽取） |
 | `docs/V3X/VOLCENGINE_GLM_LATEST_30CELLS_V2_2026_09_10.md` | `64c31da160a9` | 3,292 B | 2026-09-10 20:20 | 件内 0 命中副产物段（标题作用域抽取） |
 | `docs/V3X/D7_ONE_PAGE_SUMMARY_2026_09_10_v3.md` | `796301aeb116` | 5,042 B | 2026-09-10 16:05 | 件内 0 命中副产物段（标题作用域抽取） |
-| `docs/V3X/WANG_TEACHER_PROGRESS_REPORT_2026_09_11.md` | `7bbb557c99d3` | 6,770 B | 2026-09-11 13:15 | 件内 0 命中副产物段（标题作用域抽取） |
+| `docs/V3X/EXTERNAL_ADVISOR_PROGRESS_REPORT_2026_09_11.md` | `7bbb557c99d3` | 6,770 B | 2026-09-11 13:15 | 件内 0 命中副产物段（标题作用域抽取） |
 | `paper/deposon_arxiv_en_pkg/README.md` | `7da70fbc5f34` | 1,504 B | 2026-09-08 16:50 | 件内 0 命中副产物段（标题作用域抽取） |
 | `paper/deposon_paper_final_en.md` | `8b75c03eab99` | 67,724 B | 2026-09-08 14:44 | 件内 0 命中副产物段（标题作用域抽取） |
 | `.trae/build/deposon_arxiv_en/README.md` | `8fee86325da5` | 1,500 B | 2026-09-09 14:14 | 件内 0 命中副产物段（标题作用域抽取） |
@@ -507,7 +507,7 @@
 | `.trae/snapshots/audit3_gold/deposon_arxiv_cn/README.md` | `b46d517174b5` | 1,433 B | 2026-09-08 23:55 | 件内 0 命中副产物段（标题作用域抽取） |
 | `docs/V3X/D7_ONE_PAGE_SUMMARY_2026_09_09_actual.md` | `c9c0cffec327` | 3,811 B | 2026-09-09 14:36 | 件内 0 命中副产物段（标题作用域抽取） |
 | `docs/V3X/FESHBACH_LINDBLAD_SIM_2026_09_10.md` | `e1205b5a6cae` | 6,963 B | 2026-09-10 22:09 | 件内 0 命中副产物段（标题作用域抽取） |
-| `docs/V3X/D3_WECHAT_MIDTERM_2026_09_09_actual.md` | `f05368a625c6` | 2,337 B | 2026-09-09 14:36 | 件内 0 命中副产物段（标题作用域抽取） |
+| `docs/V3X/D3_ONLINE_MIDTERM_2026_09_09_actual.md` | `f05368a625c6` | 2,337 B | 2026-09-09 14:36 | 件内 0 命中副产物段（标题作用域抽取） |
 | `docs/V3X/EMBEDDING_OPENROUTER_5MODELS_2026_09_10.md` | `f30201b95fee` | 7,349 B | 2026-09-10 16:56 | 件内 0 命中副产物段（标题作用域抽取） |
 | `docs/V3X/GAME_THEORY_EVAL_2026_09_10.md` | `ffb1bd98d929` | 14,246 B | 2026-09-10 21:54 | 件内 0 命中副产物段（标题作用域抽取） |
 
@@ -574,7 +574,7 @@
 - `r4-H10-X50` | C | `results/_p_l_v3_phase1_report_20260917_132341.md` | `b41a17eda169` | L13–14 | **单 backbone size scaling (30/45/100) R^2 = 0.7447 (FAIL, <0.9)**, **P3 Q = 0.1929 (FAIL, >0.15)**. 〔**Spearman vs baseline 30 cells overlap: L=30=0.3750 (worker C PASS), L=45=0.1667, L=100=0.1667 (均 << 0.95, 破同序成立)**.〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X51` | C | `results/_p_l_v3_phase1_report_20260917_132341.md` | `b41a17eda169` | L18–19 | **老实交代**: 〔- 60 档 (mean T_frac60=0.7111) 是 9 model aggregate (跨 backbone), 与单 backbone (30/45/100) 不可比, 仅作 reference.〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X52` | C | `results/_p_l_v3_phase1_report_20260917_132341.md` | `b41a17eda169` | L180–182 | ## §8 综合 PASS/FAIL/GRAY 判死 〔| 命题 | 指标 | 阈值 | 实测 | verdict |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H10-X53` | C | `results/_p_l_v3_phase1_report_20260917_132341.md` | `b41a17eda169` | L221–223 | **P-L v3 Phase 1 完成** · 综合 verdict = **FAIL** · P1 R^2 = 0.7447 (FAIL) · P3 Q = 0.1929 (FAIL) · Spearman L=30 = 0.3750 ( 〔**建议下游**: Mavis 聚合此 P-L v3 Phase 1 + 综合 MD, 作为 D7 (2026-09-18) 王老师 WeChat 推送前的 P-L 主命题三态分离证据. Phase 2 (跨 backbone 实现稳健性) 需启动, 检查 P1 是否在多 backbone 上稳健成立.〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H10-X53` | C | `results/_p_l_v3_phase1_report_20260917_132341.md` | `b41a17eda169` | L221–223 | **P-L v3 Phase 1 完成** · 综合 verdict = **FAIL** · P1 R^2 = 0.7447 (FAIL) · P3 Q = 0.1929 (FAIL) · Spearman L=30 = 0.3750 ( 〔**建议下游**: Mavis 聚合此 P-L v3 Phase 1 + 综合 MD, 作为 D7 (2026-09-18) 外部顾问 线上 推送前的 P-L 主命题三态分离证据. Phase 2 (跨 backbone 实现稳健性) 需启动, 检查 P1 是否在多 backbone 上稳健成立.〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X54` | C | `results/_p_l_v3_phase2_closedsource_report_20260917_175544.md` | `02443dd300ce` | L18–20 | ## 1. 加速器降级欺诈验证 (response.model == request.model) 〔| backbone | request_model | sanity response | per-cell downgrade 出现? | 判定 |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X55` | C | `results/_p_l_v3_phase2_or_embedding_v3_report_20260917_162614.md` | `fa5da7a307bd` | L89–91 | ## §6 失败披露 / INCOMPLETE 〔- **working: 4/8 candidates** selected for L=30〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X56` | C | `results/_p_l_v3_phase2_or_embedding_v3_report_20260917_162614.md` | `fa5da7a307bd` | L99–100 | **Stub 4 backbones (Phase 2 之前跑失败, cosine matrix = null, β CI 不可计算)**: 〔- `doubao`: β CI = N/A (embeddings unavailable, status=INCOMPLETE)〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -593,7 +593,7 @@
 - `r4-H10-X69` | C | `results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_172206.md` | `2e3ec17259e2` | L132–134 | ## §6 失败披露 / INCOMPLETE 〔**working: 5/6 candidates** selected for L=30〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X70` | C | `results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_172206.md` | `2e3ec17259e2` | L137–138 | **失败/跳过明细**: 〔- `doubao-text-240715` (`doubao-embedding-text-240715`): status=FAILED〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X71` | C | `results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_172206.md` | `2e3ec17259e2` | L176–177 | **Stub 4 backbones (Phase 2 之前跑失败, cosine matrix = null, β CI 不可计算)**: 〔- `doubao` (original stub from `_p_l_v3_vector_embedding_doubao_L30_20260917_142748.json`): β CI = N/A (status=INCOMPLETE)〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H10-X72` | C | `results/_v4_alias_table_2026_09_22.md` | `ad54d7e9e89b` | L47–49 | ## 边界声明 〔本稿由 Mavis 起草（沿 §3.4 PI 拍板「建立别名表即可」+ 三稿代拟先例）。起草过程 0 LLM 调用、0 外部 URL、0 GitHub/WeChat 操作、0 密钥、0 frozen 制品/schema/锚文件触动；层-名-锚逐条对照问卷 §3.4 决策点与盘上锚原文。**PI 复核通过，已生效**（…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H10-X72` | C | `results/_v4_alias_table_2026_09_22.md` | `ad54d7e9e89b` | L47–49 | ## 边界声明 〔本稿由 Mavis 起草（沿 §3.4 PI 拍板「建立别名表即可」+ 三稿代拟先例）。起草过程 0 LLM 调用、0 外部 URL、0 GitHub/线上 操作、0 密钥、0 frozen 制品/schema/锚文件触动；层-名-锚逐条对照问卷 §3.4 决策点与盘上锚原文。**PI 复核通过，已生效**（…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X73` | C | `results/_v4_d1_decisions_2026_09_22.md` | `a00826ed0e21` | L26–28 | ## 边界声明 〔本件仅记录 PI 拍板口径，不构成对 D1 制品的任何改动；18 frozen 与 9 网格 0 触动沿 D1 自证不变；0 LLM / 0 key / 0 外部 URL。诞生即 SHA-12。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X74` | C | `results/_v4_d5_rootcause_notes.md` | `1ded0240f532` | L1–5 | # V4 D5 FAIL 根因诊断说明（素材稿 · 三对象） 〔**棒型**：D5 根因分析棒（不重跑实验、不动判定）〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X75` | C | `results/_v4_d5_rootcause_notes.md` | `1ded0240f532` | L115–116 | 5. **真实信号缺失是主因**： 〔- 控制算子「token_rearrange」与 3 个 proxy 算子在「保字面 vs 破坏字面」二维上落在相近位置〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -1019,7 +1019,7 @@
 - `r4-H12a-X56` | docs | `SYNTHESIS_mind_game.md` | `0f36aaeeda6f` | L127–128 | **结构给骨架以地形，语义给叶部以内容，账簿给思考以诚实，攻击给防御以边界—— 〔四者不可互相替代，只在各自的价值域里称王；元认知的全部工作，〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12a-X57` | docs | `THINKING_V3_GT_CONTRIB_2026.md` | `8c1d733f9182` | L30–33 | ### 1.3 诚实结论（判死级表述） 〔1. **无共享不变量**：同构的最低门槛是存在从一个理论映射到另一个理论的守恒量/不等式。测不准有 σ_xσ_p≥ℏ/2；混合劣势没有任何对应不等式，甚至连一个"稀释常数"都未出现。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12a-X58` | docs | `THINKING_V3_GT_CONTRIB_2026.md` | `8c1d733f9182` | L65–66 | 1. **统一实体 + 极限态**：v1 阻塞 / v2 穿越是同一 Deposon 在 g_aether 参数下的两个极限态。 〔2. **三通道守恒**：E_in = E_transmitted + E_reflected + E_aether；T+R+A=1 会计恒等式（1.X 已验证至 2.2×10⁻¹⁶）。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H12a-X59` | docs | `THINKING_V3_GT_CONTRIB_2026.md` | `8c1d733f9182` | L91–92 | #### C4：极限态统一（v1 阻塞/v2 穿越同一实体的两相）⇒ **机制的两相结构与相变** 〔- 映射：g_aether→0 阻塞相 / g_aether→大 穿越相，是同一参数族的两个极限。博弈论对应：**同一博弈在"强审计"与"弱审计"制度下的两相**，中间是连续的制度空间。这与王子贺固定价格机制工作的精神同构——他们研究"简单机制在信息参数变化时近似比如何连续变化"，我们提供"审计强度参数化"的另一族。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H12a-X59` | docs | `THINKING_V3_GT_CONTRIB_2026.md` | `8c1d733f9182` | L91–92 | #### C4：极限态统一（v1 阻塞/v2 穿越同一实体的两相）⇒ **机制的两相结构与相变** 〔- 映射：g_aether→0 阻塞相 / g_aether→大 穿越相，是同一参数族的两个极限。博弈论对应：**同一博弈在"强审计"与"弱审计"制度下的两相**，中间是连续的制度空间。这与外部合作导师〔匿名〕固定价格机制工作的精神同构——他们研究"简单机制在信息参数变化时近似比如何连续变化"，我们提供"审计强度参数化"的另一族。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12a-X60` | docs | `THINKING_V3_GT_CONTRIB_2026.md` | `8c1d733f9182` | L114–115 | **Q5：v3 定义里有没有零件其实与博弈论相冲突？** 〔建议答案：有——**blocked→final_prob×0.1 的硬惩罚**。机制设计要求对参与者的响应是激励相容的，而 ×0.1 是**外在工程惩罚**，不经过参与者的效用函数。如果被审计方是策略性智能体，它会学习规避"被 block 的特征"而非"变得诚实"——Goodhart 定律的直接入口。这提醒我们：v3…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12a-X61` | docs | `reviews/review_gtformal_integration_v2X.md` | `325c9d87787b` | L67–69 | ### 3. §7.1 局限五化 / 附录 A 两行 / 附录 C / §6.4 清单——通过 〔- §7.1「主要局限有五」逐条计数：判死 / consistency / 单一厂商 / 题库 n=40 /〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12a-X62` | docs | `reviews/review_salvage_integration_v2X.md` | `96ae50306f36` | L10–11 | **第 20 条宣称的六项论文改动中，三项（4b/4c/4d）在论文正文中完全缺失。** 〔修订记录声称已执行，但 `paper/v2/deposon_paper_v2X.md`（mtime 与 REVISION_LOG 同步）〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -1093,7 +1093,7 @@
 ### §9.1 X · 新发现（缺陷 / 局限 / 诚实交代 / 风险） — **80** 条
 
 - `r4-H12b-X01` | docs | `V3X_COLLAB_DIRECTIONS.md` | `5a27c2350036` | L45–47 | **预登记判死线样板**：对抗性实验——构造一个知道审计协议的操纵者，任务为「生成满足 T+R+A=1（容差 1e−12）但结论错误的路径」。判死线（对「守恒审计有检测力」这一猜想）：若操纵者在 n≥200 次独立尝试中**成功率 ≥ 50 〔**双方分工建议**：我方出审计协议实现与攻击者构造环境；对方出「可验证宣言」的机制设计形式化（宣言空间、验证成本、激励约束）与失真界的理论刻画。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H12b-X02` | docs | `V3X_COLLAB_DIRECTIONS.md` | `5a27c2350036` | L69–71 | **问题陈述**：v3 原始定义中 v1 阻塞 / v2 穿越是同一实体在 g_aether 参数下的两个极限态。博弈论翻译：**同一博弈在「强审计」与「弱审计」制度下是连续参数族的两相**，中间是连续的制度空间。这与王老师固定价格机制工作 〔**与王工作的挂点**：固定价格机制「结构参数→紧保证」方法论的平行问题；亦可与其信息设计议程合流（审计强度 = 一种连续的信息结构参数）。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H12b-X02` | docs | `V3X_COLLAB_DIRECTIONS.md` | `5a27c2350036` | L69–71 | **问题陈述**：v3 原始定义中 v1 阻塞 / v2 穿越是同一实体在 g_aether 参数下的两个极限态。博弈论翻译：**同一博弈在「强审计」与「弱审计」制度下是连续参数族的两相**，中间是连续的制度空间。这与外部顾问固定价格机制工作 〔**与王工作的挂点**：固定价格机制「结构参数→紧保证」方法论的平行问题；亦可与其信息设计议程合流（审计强度 = 一种连续的信息结构参数）。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X03` | docs | `V3X/AGENT_TEAM_OPT_V2_2026_09_11.md` | `bbd074b76526` | L17–21 | ### A 组: 实现方(生产侧)缺陷 — 8 项 〔| E1 | **参数未声明** | V3_PHYSICAL_OPT §3 原公式隐含 λ=0.5, 全文无声明, 只能从表值反推 | 任何人无法直接复现原公式列 |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X04` | docs | `V3X/BOSS_B123_BUGFIX_2026_09_09.md` | `9352a1675b10` | L40–42 | ## 2. 自测结果(3/3 仍 FAIL,但根因已变) 〔| 脚本 | 改前错误 | 改后错误 | 字段名 bug 状态 |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X05` | docs | `V3X/BOSS_B123_BUGFIX_2026_09_09.md` | `9352a1675b10` | L71–73 | ## 4. Blocker / 风险(必须 parent 决策) 〔**新发现的 v19 frozen JSON schema/数据问题**(超出"只改字段名"worker 范围):〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -1110,7 +1110,7 @@
 - `r4-H12b-X16` | docs | `V3X/CPATH_SIMULATION_REPORT_2026_09_10.md` | `de772cd9e7ba` | L87–91 | ### 4.3 理论答对率边界 〔| no-RAG (实际) | **73.3%** | GLM-5.3 30 cells v2 baseline |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X17` | docs | `V3X/CPATH_SIMULATION_REPORT_2026_09_10.md` | `de772cd9e7ba` | L98–100 | **核心结论**: C 路径 RAG 理论边际 **0% ~ +26.7%**(完美 oracle 边界),但前提是 top-3 caption 真的能 cover LLM 答错的 8 cells: 〔GLM-5.3 30 cells 答错的 8 cells:〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X18` | docs | `V3X/D0_FREEZE_PREP_2026_09_09.md` | `0d1e88c258aa` | L42–43 | 2. 攻击实验的"结论错误",按终态标签翻转还是评分阈值判?**默认:标签翻转** 〔3. 标度实验更关心审计强度参数还是环结构参数?**默认:环结构 d**〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H12b-X19` | docs | `V3X/D0_FREEZE_PREP_2026_09_09.md` | `0d1e88c258aa` | L124–128 | ## 5. 风险与缓解(沿用 v3 提案第七节 + 内部补全) 〔| 王老师没空看微信 | 三问全部带默认值,不回复即按默认执行;每月至多一次简报 |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H12b-X19` | docs | `V3X/D0_FREEZE_PREP_2026_09_09.md` | `0d1e88c258aa` | L124–128 | ## 5. 风险与缓解(沿用 v3 提案第七节 + 内部补全) 〔| 外部顾问没空看线上 | 三问全部带默认值,不回复即按默认执行;每月至多一次简报 |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X20` | docs | `V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `ac8997b07731` | L154–155 | #### §3.3.1 V4.1-Flash 30 cells v3 失败列表 〔- **R(纯反射,4 cells)**:〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X21` | docs | `V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `ac8997b07731` | L163–164 | #### §3.3.2 Doubao-seed-code 30 cells 失败列表 〔- **R(纯反射,1 cell)**:〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X22` | docs | `V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `ac8997b07731` | L170–171 | #### §3.3.3 GPT-6 TeamoRouter 30 cells 失败列表 〔- **R(纯反射,2 cells)**:〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -1119,7 +1119,7 @@
 - `r4-H12b-X25` | docs | `V3X/DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | `240a7ae4bdfb` | L316–318 | ## §9 已知限制与诚实声明 〔1. **Stage 3 仅完成 10/30 cells** — gsm8k_7/10 在 doubao-seed-code 上 60s+ 死循环,导致 gsm8k_11-15 + strategyqa_1-15 未跑〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X26` | docs | `V3X/KT_A1_SPEC_V0.1.md` | `78b71d404366` | L28–29 | **v3 提案 vs Mavis 内部 spec 冲突显式标注**(沿用 V0 草稿,V0.1 不再展开): 〔- 冲突 1: v3 提案 KT-A1 原文用 "g_a* 随 λ_gap 单调" 描述对外判死线, 但 Mavis P-A V0 spec 主指标是 "成本倍数"——本 SPEC V0.1 用"双跑"兼容, 在 §1.2 显式说"两套判死线都跑"。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X27` | docs | `V3X/KT_A1_SPEC_V0.1.md` | `78b71d404366` | L263–265 | **任何 ≥ 1 锚漂移 → 全 KT-A1 撤回**。 〔**V0.1 与 V0 草稿的差异**: V0 草稿中 5 个 `<TO_BE_FILLED>` 占位在 V0.1 已由 D0 末实际值替换。P_A_ECR_BASELINE 与 P_A_KILL_LINE 共享前 12 位 `bd1caab42b4c`,因两者均从 P-A V0 spec 文档算;P_A_FROZE…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H12b-X28` | docs | `V3X/KT_A1_SPEC_V0.1.md` | `78b71d404366` | L317–319 | ## 9. 失败模式(与王老师 WeChat 同步, 沿用 P-A V0 spec §8) 〔- **5 锚漂移 ≥ 1** → 全 KT-A1 撤回〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H12b-X28` | docs | `V3X/KT_A1_SPEC_V0.1.md` | `78b71d404366` | L317–319 | ## 9. 失败模式(与外部顾问 线上 同步, 沿用 P-A V0 spec §8) 〔- **5 锚漂移 ≥ 1** → 全 KT-A1 撤回〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X29` | docs | `V3X/KT_B1_REWORK_REPORT_2026_09_10.md` | `baef94e393de` | L1–4 | # KT-B1 Option A 返工修复总结报告 〔> **执行方**: orchestrator（独立复跑+验收）〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X30` | docs | `V3X/KT_B1_REWORK_REPORT_2026_09_10.md` | `baef94e393de` | L34–36 | **发现过程**：锚 JSON 全量核验时发现 3 个 BOSS-B 脚本 SHA-12 与锚值不一致。/tmp 冻结快照（reviewer-b 原始跑）SHA = 锚值 → 漂移发生在快照之后。diff 显示统一把 `predicted` 〔**根因分析**：v19 有两种记录形态——gsm8k 用 `predicted`/`best_path`（800 条），strategyqa 用 `pred`/`path`（792 条）。有人做了半吊子修复：只改了 strategyqa 的 `pred`，却把 gsm8k 的 `predicted` 读取全丢失（`…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X31` | docs | `V3X/KT_B1_REWORK_REPORT_2026_09_10.md` | `baef94e393de` | L114–118 | ### 返工涉及文件（锚旧值 → 当前） 〔| `verifier/audit/conservation.py` | `3aa661cfbab5` | `4bdec2683f06` | V0.3 返工 + 修 2 bug |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -1138,12 +1138,12 @@
 - `r4-H12b-X44` | docs | `V3X/KT_D0_SPEC_V0.1.md` | `cce8e9a1b00e` | L165–167 | ### 7.3 失败处理 〔- 任意一项超差 → 撤回整 KT-D0 + P-D V0.1〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X45` | docs | `V3X/PHASE_B_DELIVERY_2026_09_09.md` | `ba53d73e3937` | L109–110 | ### 4.1 阻塞 〔- **无** — 4 任务全部完成, 无阻塞〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X46` | docs | `V3X/PHASE_B_DELIVERY_2026_09_09.md` | `ba53d73e3937` | L112–114 | ### 4.2 风险(诚实声明) 〔1. **KT-B1 BOSS 测法代码 bug**(B1/B2/B3 `_extract_200_questions` 用错字段名 "predicted" 应为 "pred"):〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H12b-X47` | docs | `V3X/P_A_EQUILIBRIUM_STABILIZATION_V0_SPEC.md` | `bd1caab42b4c` | L133–135 | ## 8. 失败模式（与王老师 WeChat 同步） 〔- 5 锚漂移 ≥ 1 → 全 V0 撤回〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H12b-X48` | docs | `V3X/P_B_DISTORTION_BOUND_V0_SPEC.md` | `bb7ca9838150` | L123–125 | ## 8. 失败模式（与王老师 WeChat 同步） 〔- 5 锚漂移 ≥ 1 → 全 V0 撤回〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H12b-X47` | docs | `V3X/P_A_EQUILIBRIUM_STABILIZATION_V0_SPEC.md` | `bd1caab42b4c` | L133–135 | ## 8. 失败模式（与外部顾问 线上 同步） 〔- 5 锚漂移 ≥ 1 → 全 V0 撤回〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H12b-X48` | docs | `V3X/P_B_DISTORTION_BOUND_V0_SPEC.md` | `bb7ca9838150` | L123–125 | ## 8. 失败模式（与外部顾问 线上 同步） 〔- 5 锚漂移 ≥ 1 → 全 V0 撤回〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X49` | docs | `V3X/P_C_P_E_V0_1_VERIFICATION_2026_09_12.md` | `ee043a13f801` | L1–3 | # R4 重测报告: P-C/P-E 60 cells 严格守恒 + GRAY→PASS 边界判定 (2026-09-12) 〔> **作者**: Trae code (orchestrator/QA)〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X50` | docs | `V3X/P_C_P_E_V0_1_VERIFICATION_2026_09_12.md` | `ee043a13f801` | L29–33 | ## §3 P-E ε 的口径审计(关键发现: "0.41 FAIL→0.29 PASS"不成立) 〔| A. H2 守恒偏差 | (1-tt_off)+ii_off+ti_off 对目标 2.0 的偏差 | **0.4114** | V2 阶段 5 原版, 阈值 **0.10** → FAIL |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X51` | docs | `V3X/P_C_P_E_V0_1_VERIFICATION_2026_09_12.md` | `ee043a13f801` | L50–51 | 2. P-E: ε 口径未统一 + 阈值漂移 + V2 阶段 5 原判定(FAIL)未被同口径推翻 〔3. 唯一 PASS 项: 60 cells 守恒(residual=0), 但这是 P-B 已有结论的 60 cells 复认, 不是 P-C/P-E 新证据〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H12b-X52` | docs | `V3X/P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md` | `d427b2f57c33` | L117–119 | ## 8. 失败模式（与王老师 WeChat 同步） 〔- 5 锚漂移 ≥ 1 → 全 V0 撤回〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H12b-X52` | docs | `V3X/P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md` | `d427b2f57c33` | L117–119 | ## 8. 失败模式（与外部顾问 线上 同步） 〔- 5 锚漂移 ≥ 1 → 全 V0 撤回〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X53` | docs | `V3X/P_C_V0_1_VERIFICATION_2026_09_12.md` | `00c7b7ceccdc` | L20–22 | **新增实锤(3 个公式缺陷)**: 〔1. **λ=0.5 未声明**: 原公式值反推 λ = 0.0022/((2/30)×(2/30)) = **0.495 ≈ 0.5**, V3_PHYSICAL_OPT 全文未声明 λ 取值〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X54` | docs | `V3X/P_C_V0_1_VERIFICATION_2026_09_12.md` | `00c7b7ceccdc` | L45–47 | ### §3.1 "比值>2 = 过修正"不成立的理由 〔比值 fix1/fix2 = 4.34 只是**标度比**(两修正对不同度量的均值之比), 不构成"过修正"的统计证据。任取单调重标度可任意改变该比值。过修正的正确判据应检验: 修正是否放大了噪声/伪差异。本数据 9 model 仅 4 档 T_frac(0.8667/0.7333/0.6000/0.5333), 修…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X55` | docs | `V3X/P_C_V0_1_VERIFICATION_2026_09_12.md` | `00c7b7ceccdc` | L49–51 | ### §3.2 "CV=0.728 过修正"不成立的理由 〔CV = std/mean 大说明组间离散强于组内, 对"区分度指标"而言是**好事**。修正 2 CV=1.312 反而更大, 按 Mavis 逻辑修正 2 更"过修正"——自相矛盾。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -1170,7 +1170,7 @@
 - `r4-H12b-X76` | docs | `V3X/V3X_D6_PAPER_zh.md` | `feae8af2fefe` | L156–157 | **降级主张**: 〔- 原主张: deposon 散射层在两相结构图族上展现独立标度律〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X77` | docs | `V3X/V3X_DAILY_KILL_V2_PLAN.md` | `37e97e1e7b7f` | L12–14 | ## 0. 诚实声明(为什么 V1 偷工减料) 〔V1(D0-D7 7 天交付)实际做了 3 类偷工:〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X78` | docs | `V3X/V3X_DAILY_KILL_V2_PLAN.md` | `37e97e1e7b7f` | L315–319 | ## 5. 风险与缓解 〔| API 调用失败 / 超 budget | 7 条铁律 runtime 读 API key, 失败立即停;预算可控 |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H12b-X79` | docs | `V3X/V3X_DAILY_KILL_V2_PLAN.md` | `37e97e1e7b7f` | L332–334 | 3. **调方向** — 改 P-F (新) IMMACULATE 风格可验证审计(差异化机会, 风险高) 〔**Mavis 自由推进原则**: 王老师"不指定"=Mavis 自由选方向, 优先 P-A 方向。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H12b-X79` | docs | `V3X/V3X_DAILY_KILL_V2_PLAN.md` | `37e97e1e7b7f` | L332–334 | 3. **调方向** — 改 P-F (新) IMMACULATE 风格可验证审计(差异化机会, 风险高) 〔**Mavis 自由推进原则**: 外部顾问"不指定"=Mavis 自由选方向, 优先 P-A 方向。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X80` | docs | `V3X/V7_§3_P_C_P_E_GRAY_NOTE_2026_09_11.md` | `f80cc4e1fb7f` | L95–97 | **§3.4 诚实披露** 〔- 本机 web 工具不可达,18 URL 由 Trae 2026-09-11 完成(Mavis 阶段 D 报 network_error 的 2 个 URL: arxiv 2410.18882 + guo-yanpei/Immaculate 本轮未再尝试,以新检索可达来源替代)〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 
 ### §9.2 Y · 上报项（建议 / 移交 / 待裁定 / 需 PI 决定） — **13** 条
@@ -1279,7 +1279,7 @@
 - `r4-H12c-X31` | docs | `V3X/P_F_IMPLEMENTATION_2026_09_11.md` | `edd048eaa721` | L294–295 | **Blocker**: 〔- user 进一步指令未到位(本任务明确:实施综合报告,不擅自决定下一步)〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12c-X32` | docs | `V3X/P_G_NON_EUCLIDEAN_SCATTERING_V0_SPEC.md` | `2f0765a1d39d` | L46–47 | **关键不冲突**:**P-G 是空间升级,P-F 是 observer 角色**。两者可叠加: 〔- P-G = 非欧散射层(隐空间几何)〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12c-X33` | docs | `V3X/P_G_NON_EUCLIDEAN_SCATTERING_V0_SPEC.md` | `2f0765a1d39d` | L168–170 | ### 4.2 边界(沿 7 铁律) 〔- **不动 P-F V0.1**(SHA-12 `b10fae0da66d` 严守 0 触动)〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H12c-X34` | docs | `V3X/P_G_V01_REPORT_2026_09_15.md` | `9a6b08d03e0c` | L293–297 | 4. **D7 (2026-09-18) 终极判死**: 5 锚 PASS/FAIL 综合 (P-G 5/5 + P-F 5/5 = 10 锚总) → 推王老师 WeChat 〔**P-G V0.1 报告结束** | 0 LLM 0 网关 | 16 frozen + P-G V0 spec 严守 0 触动 | 5/5 锚 V0.1 PASS | 540 cells 实算完成 | 等 D5 决策〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H12c-X34` | docs | `V3X/P_G_V01_REPORT_2026_09_15.md` | `9a6b08d03e0c` | L293–297 | 4. **D7 (2026-09-18) 终极判死**: 5 锚 PASS/FAIL 综合 (P-G 5/5 + P-F 5/5 = 10 锚总) → 推外部顾问 线上 〔**P-G V0.1 报告结束** | 0 LLM 0 网关 | 16 frozen + P-G V0 spec 严守 0 触动 | 5/5 锚 V0.1 PASS | 540 cells 实算完成 | 等 D5 决策〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12c-X35` | docs | `V3X/REVIEWER_A_STATIC_AUDIT_2026_09_15.md` | `575572872e9a` | L317–319 | ### 3.1 8 文档逐项 PASS/FAIL/GRAY 表 〔| # | 文档 | 数据完整性 | 7 铁律声明 | 0 触动声明 | SHA-12 一致 | 命名一致性 | 综合 verdict |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12c-X36` | docs | `V3X/REVIEWER_A_STATIC_AUDIT_2026_09_15.md` | `575572872e9a` | L333–334 | 1. **8/8 文档全部 PASS 或 PASS with GRAY** — 无 FAIL 文档 〔2. **命名冲突 (GRAY)** — boss_pc_* 命名 vs P-C D1-D3 §4 命名冲突,已在 LETTER_TO_TRAE §1+§5 列为修复点,待 Trae 修复〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12c-X37` | docs | `V3X/REVIEWER_A_STATIC_AUDIT_2026_09_15.md` | `575572872e9a` | L365–367 | ### 4.1 reviewer-a 静态审发现的关键冲突 〔1. **boss_pc_* 命名冲突** (GRAY):〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -1417,7 +1417,7 @@
 
 ### §12.2 Y · 上报项（建议 / 移交 / 待裁定 / 需 PI 决定） — **5** 条
 
-- `r4-H13a-Y01` | letters | `LETTER_FROM_TRAE_2026_09_11.md` | `1d3a9e52abe3` | L106–108 | ## §五 给王老师进展报告的三个修正建议(§5 用) 〔沿你信 §5 结构出报告时, 建议对 §3(6 候选评级)做三处校准:〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
+- `r4-H13a-Y01` | letters | `LETTER_FROM_TRAE_2026_09_11.md` | `1d3a9e52abe3` | L106–108 | ## §五 给外部顾问进展报告的三个修正建议(§5 用) 〔沿你信 §5 结构出报告时, 建议对 §3(6 候选评级)做三处校准:〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 - `r4-H13a-Y02` | letters | `TRAE_FIX_REQUEST_3RISKS_2026_09_11.md` | `62c4af080ea3` | L75–77 | ### 1.5 user 决策建议 (供 Trae 参考, 不强制) 〔- 沿 v3 §6 阈值规则"严格 < 0.30 PASS" → 方案 A〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 - `r4-H13a-Y03` | letters | `TRAE_FIX_REQUEST_3RISKS_2026_09_11.md` | `62c4af080ea3` | L135–137 | ### 2.6 user 决策建议 (供 Trae 参考, 不强制) 〔- 方案 A 立即可执行, 沿 5 锚 JSON 真值, 1 周判死窗口无延迟〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 - `r4-H13a-Y04` | letters | `TRAE_FIX_REQUEST_3RISKS_2026_09_11.md` | `62c4af080ea3` | L186–188 | ### 3.5 user 决策建议 (供 Trae 参考, 不强制) 〔- 方案 B 最实用: 1 周判死窗口不重写公式, 用现有守恒残差 / KL 散度换 metric, 立即可用〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
@@ -1471,9 +1471,9 @@
 - `r4-H13b-X18` | letters | `_v4_commission_upload_executor_2026_09_24_v2.md` | `ff2154ce182d` | L148–150 | ### 4.4 失败处置 〔- 任一件上传失败（SHA 不一致 / 通道报错 / 网络中断 / 凭据失效等）——执行方立即停手并以回函件形式报告 PI / doc-writer / parent〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H13b-X19` | letters | `_v4_commission_upload_executor_2026_09_24_v2.md` | `ff2154ce182d` | L167–168 | 2. 失败件列表（如有）+ 失败根因 〔3. 通道使用清单（如使用 teamorouter / openrouter，需注明走 tun 代理）〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H13b-X20` | letters | `_v4_commission_upload_executor_2026_09_24_v2.md` | `ff2154ce182d` | L172–174 | ## 7. 老实交代 〔- 本件不含任何 API key / 凭据 / token——执行方自备〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H13b-X21` | letters | `_v4_commission_wechat_report_coze_2026_09_24.md` | `15f8227308bc` | L84–86 | ## 7. 老实交代 〔- 本件不含大纲；行文结构由 coze 自由发挥。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H13b-X22` | letters | `_v4_commission_wechat_report_coze_2026_09_24_v2.md` | `389c51e70d19` | L114–116 | ## 7. 老实交代 〔- 本件不含大纲；行文结构由 coze 自由发挥。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H13b-X23` | letters | `_v4_distillation_acceptance_coze_2026_09_20.md` | `3a8cb7b9d041` | L41–43 | ### 先撤回：我最初判为「不一致」、回查后确认是我读错范围的六条 〔**R1. `R² = 0.0007` 不是外源数字被误挂到本仓 P-C。** 我最初据 `查理_V3终稿内参转呈说明_2026-09-18_…md` L25–28（「王老师侧 KT-C1 幂律主张：R²=0.0007 …该数值为外部源件所载，非本仓实测」）判定邀请函 §2.3 L75 把外源数值挂给了本仓 P-C。…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H13b-X21` | letters | `_v4_commission_online_report_coze_2026_09_24.md` | `15f8227308bc` | L84–86 | ## 7. 老实交代 〔- 本件不含大纲；行文结构由 coze 自由发挥。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H13b-X22` | letters | `_v4_commission_online_report_coze_2026_09_24_v2.md` | `389c51e70d19` | L114–116 | ## 7. 老实交代 〔- 本件不含大纲；行文结构由 coze 自由发挥。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H13b-X23` | letters | `_v4_distillation_acceptance_coze_2026_09_20.md` | `3a8cb7b9d041` | L41–43 | ### 先撤回：我最初判为「不一致」、回查后确认是我读错范围的六条 〔**R1. `R² = 0.0007` 不是外源数字被误挂到本仓 P-C。** 我最初据 `查理_V3终稿内参转呈说明_2026-09-18_…md` L25–28（「外部顾问侧 KT-C1 幂律主张：R²=0.0007 …该数值为外部源件所载，非本仓实测」）判定邀请函 §2.3 L75 把外源数值挂给了本仓 P-C。…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H13b-X24` | letters | `_v4_distillation_acceptance_coze_2026_09_20.md` | `3a8cb7b9d041` | L73–75 | ## §4 边界 〔- **对 V1–V3 只读**：本会话未修改任何冻结资产；只在 `results/` 下新增通信件（既定惯例）。接受时点抽查 8/8 冻结 SHA 未变：`03C6C01F3697` / `9E1CCBDCEACC` / `268AB1239A8A` / `6A2656878745` / `063AC8D00542…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H13b-X25` | letters | `_v4_distillation_acceptance_kimi_2026_09_20.md` | `a4d194dbf9ad` | L46–48 | ## §4 边界 〔- **对 V1–V3 只读**：未修改任何冻结资产；本会话只在 `results/` 下新增通信件（既定惯例）。接受时点抽查 6/6 冻结 SHA 未变（`03C6C01F3697` / `268AB1239A8A` / `6A2656878745` / `063AC8D00542` / `EFE05AD775DE…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H13b-X26` | letters | `_v4_distillation_reply_claude_code_2026_09_20.md` | `d39cb17b051b` | L298–300 | ### 5.7 A correction against my own §4: the seed I recommended rests on a file whose verdict is FAIL 〔**Anchor: S-17, S-36, S-37. Classification: hard on-disk fact, and it revises my own closing paragraph.**〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -1587,12 +1587,12 @@
 - `r4-H13c-X32` | letters | `_v4_commission_upload_executor_reply_v3_2026_09_24.md` | `50592e36ecad` | L87–89 | ## 6. 边界声明 〔- 未修改、未移动、未删除盘上任何文件；未上传任何文件到任何公网渠道。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H13c-X33` | letters | `_v4_commission_upload_executor_reply_v3_exec_2026_09_26.md` | `631bb517f79d` | L27–29 | ## 3. 诚实记录：一次行尾事件与修正 〔首版提交中 `results/_v4_pi_cot_v2_ruleset_v2.json`（A-26）远端 blob 与表载不符：该件本地为 CRLF 行尾，Windows git 默认 autocrlf 在入库时转成 LF（远端 5,839 B `E6F1CC65A49B`，表载为 CRLF 6,179 B `C5…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H13c-X34` | letters | `_v4_commission_upload_executor_reply_v3_exec_2026_09_26.md` | `631bb517f79d` | L44–46 | ## 6. 边界声明 〔- 本地盘 0 修改：未改动、移动、删除任何本地文件；临时克隆与临时文件已清理。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H13c-X35` | letters | `_v4_commission_wechat_report_coze_2026_09_24_v3.md` | `e5b63d181b15` | L131–133 | ## 7. 老实交代 〔- 本件不含大纲；行文结构由 coze 自由发挥。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H13c-X36` | letters | `_v4_commission_wechat_report_coze_2026_09_24_v4.md` | `802c705e1469` | L1–3 | # 项目汇报 wechat 委托信 v4（coze 受托 · 上传圈定后 + 边界口径更新） 〔> **出件方**：doc-writer（agent-0032834a3e04）〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H13c-X37` | letters | `_v4_commission_wechat_report_coze_2026_09_24_v4.md` | `802c705e1469` | L141–143 | ### 3.3 边界口径更新（v4 新增 · 沿 PI 2026-09-26 20:27 字面） 〔- **「也是边界」 = SUB 入界**（沿 PI 2026-09-26 20:27 原文字面；圈定件 §2 已实测落账）——`deposon-sub/` 整目录在圈定件 §3.2 中实测 35 件清单一（根 7 + results/ 23 + results/_archive_2026_09_21/ 5），全部放行〕 ｜ **本棒逐条覆盖**（默认 `①` → 判 `②`）：依据见 §1.4 第 4 条 ｜ V4 收尾整理（parent 批量校正） ｜ ②
-- `r4-H13c-X38` | letters | `_v4_commission_wechat_report_coze_2026_09_24_v4.md` | `802c705e1469` | L167–169 | ## 7. 老实交代 〔- 本件不含大纲；行文结构由 coze 自由发挥。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H13c-X39` | letters | `_v4_commission_wechat_report_coze_2026_09_24_v4.md` | `802c705e1469` | L182–183 | 8. **新增** §3.3 边界口径更新段（SUB 入界 / 三目录 986/1669/467 / 应上传尽上传） 〔- L4 verdict 字面引用沿 v17/v19 §22.7 E-34.2 字面，workspace 中无独立 `_v4_supp_l4_verdict.md` 文件可锚定；本 v4 件不擅自补造独立 L4 verdict 文件（沿 PI 2026-09-23「不擅自补造 / 沿既有字面」纪律）。〕 ｜ **本棒逐条覆盖**（默认 `①` → 判 `②`）：依据见 §1.4 第 4 条 ｜ V4 收尾整理（parent 批量校正） ｜ ②
-- `r4-H13c-X40` | letters | `_v4_commission_wechat_report_coze_reply_v4_2026_09_24.md` | `c60dfd7c0f45` | L163–165 | ## §4 老实交代 〔1. **委托件自身字节**：委托件 §7 记该件 21,069 B；本件出件时实测 21,433 B · `802C705E1469`，差 364 B。该件明确不回填自身 SHA，其后有追加属预期行为；本件按实测值引用，不作「件内数字有误」的判定。〕 ｜ **本棒逐条覆盖**（默认 `①` → 判 `②`）：依据见 §1.4 第 4 条 ｜ V4 收尾整理（parent 批量校正） ｜ ②
+- `r4-H13c-X35` | letters | `_v4_commission_online_report_coze_2026_09_24_v3.md` | `e5b63d181b15` | L131–133 | ## 7. 老实交代 〔- 本件不含大纲；行文结构由 coze 自由发挥。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H13c-X36` | letters | `_v4_commission_online_report_coze_2026_09_24_v4.md` | `802c705e1469` | L1–3 | # 项目汇报 线上 委托信 v4（coze 受托 · 上传圈定后 + 边界口径更新） 〔> **出件方**：doc-writer（agent-0032834a3e04）〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H13c-X37` | letters | `_v4_commission_online_report_coze_2026_09_24_v4.md` | `802c705e1469` | L141–143 | ### 3.3 边界口径更新（v4 新增 · 沿 PI 2026-09-26 20:27 字面） 〔- **「也是边界」 = SUB 入界**（沿 PI 2026-09-26 20:27 原文字面；圈定件 §2 已实测落账）——`deposon-sub/` 整目录在圈定件 §3.2 中实测 35 件清单一（根 7 + results/ 23 + results/_archive_2026_09_21/ 5），全部放行〕 ｜ **本棒逐条覆盖**（默认 `①` → 判 `②`）：依据见 §1.4 第 4 条 ｜ V4 收尾整理（parent 批量校正） ｜ ②
+- `r4-H13c-X38` | letters | `_v4_commission_online_report_coze_2026_09_24_v4.md` | `802c705e1469` | L167–169 | ## 7. 老实交代 〔- 本件不含大纲；行文结构由 coze 自由发挥。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H13c-X39` | letters | `_v4_commission_online_report_coze_2026_09_24_v4.md` | `802c705e1469` | L182–183 | 8. **新增** §3.3 边界口径更新段（SUB 入界 / 三目录 986/1669/467 / 应上传尽上传） 〔- L4 verdict 字面引用沿 v17/v19 §22.7 E-34.2 字面，workspace 中无独立 `_v4_supp_l4_verdict.md` 文件可锚定；本 v4 件不擅自补造独立 L4 verdict 文件（沿 PI 2026-09-23「不擅自补造 / 沿既有字面」纪律）。〕 ｜ **本棒逐条覆盖**（默认 `①` → 判 `②`）：依据见 §1.4 第 4 条 ｜ V4 收尾整理（parent 批量校正） ｜ ②
+- `r4-H13c-X40` | letters | `_v4_commission_online_report_coze_reply_v4_2026_09_24.md` | `c60dfd7c0f45` | L163–165 | ## §4 老实交代 〔1. **委托件自身字节**：委托件 §7 记该件 21,069 B；本件出件时实测 21,433 B · `802C705E1469`，差 364 B。该件明确不回填自身 SHA，其后有追加属预期行为；本件按实测值引用，不作「件内数字有误」的判定。〕 ｜ **本棒逐条覆盖**（默认 `①` → 判 `②`）：依据见 §1.4 第 4 条 ｜ V4 收尾整理（parent 批量校正） ｜ ②
 - `r4-H13c-X41` | letters | `_v4_walkthrough_bugfix_reply_trae_code_2026_09_27.md` | `f86b8b6c8ed2` | L109–113 | #### §A.3-1 件内口径标注差异（`new_verdict` vs 合取报 FAIL） 〔| #1 | `verdict.new_verdict = "PASS"`（literal）与改判件 §4.5/§6.4「合取报 FAIL」并存；另列 `new_verdict_converged_only = "FAIL"` | **两记载均不应作为最终档**。受托方判：主读数 = artifact-free ⇒ …〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H13c-X42` | letters | `_v4_walkthrough_bugfix_reply_trae_code_2026_09_27.md` | `f86b8b6c8ed2` | L224–226 | #### **根因定因（委托件 §B.2 记「偏差机制未定因」；受托方本次已定因，非编造）** 〔> **v1 件 §0.2 / §0.1 的「实测 SHA-12」列，实为 `hashlib.sha1(全文字节).hexdigest()[:12]`（大写展示），非 `sha256`。**〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H13c-X43` | letters | `_v4_walkthrough_bugfix_reply_trae_code_2026_09_27.md` | `f86b8b6c8ed2` | L290–292 | #### 受托方独立复核：**4/4 不符**（复现失败成立） 〔| §3.1 行 | 声明 (n, nd, std) | 实测 (n, nd, **std_pop**) | 判定 |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -1823,7 +1823,7 @@
 
 #### `r4-H9-Y11` ｜ C ｜ `docs/V3X/V2_PHASE2_3_INTEGRATION_2026_09_11.md` ｜ `8178e61e7c97` ｜ L196
 
-> 原文：## 10. 后续建议 (给王老师)
+> 原文：## 10. 后续建议 (给外部顾问)
 > 　L198：1. **P-C + P-D 优先**: 2 PASS 已锁定, 可作为 V2 启动阶段核心交付
 > 　L199：2. **P-A 保留**: 双主线 86.67% baseline 稳定, 60 cells 85% 与 no-RAG 几乎一致
 > 　L200：3. **P-B 降级**: DELTA 1.30 GRAY 不稳健, 应放弃 DELTA 差分作为信号, 仅用相对阈值
@@ -1832,8 +1832,8 @@
 
 #### `r4-H9-Y12` ｜ C ｜ `docs/V3X/V2_PHASE6_INTEGRATION_2026_09_11.md` ｜ `cb751546d470` ｜ L122
 
-> 原文：## 6. V2 启动后下一步建议 (给王老师)
-> 　L125：1. **P-C 优先** (STRONG_PASS, 流程保障) — Wang WeChat 一句话确认
+> 原文：## 6. V2 启动后下一步建议 (给外部顾问)
+> 　L125：1. **P-C 优先** (STRONG_PASS, 流程保障) — Wang 线上 一句话确认
 > 　L126：2. **P-D 优先** (PASS, 工程交付) — V0.2 升级文档可读
 > 　L127：3. **P-A 保留** (GRAY, 1 周内跟踪) — 60 cells 数据已就位
 
@@ -1978,7 +1978,7 @@
 > 原文：## §10 总结与下游建议
 > 　L151：**P-L v3 Phase 2 完成度**: 4 backbone 完整跑测 (Mistral/qwen3/glm53/Mistral L=60 复用) + 1 部分 (doubao) + 1 缺失 (GPT-4o)
 > 　L152：**P2 verdict**: PASS (β CI 重叠)
-> 　L155：- 已知 4 backbone (Mistral Large 2512 + qwen3 + glm53 + doubao partial) 可作为 D7 王老师 WeChat 推送的 P2 主证据
+> 　L155：- 已知 4 backbone (Mistral Large 2512 + qwen3 + glm53 + doubao partial) 可作为 D7 外部顾问 线上 推送的 P2 主证据
 
 - **归线理由**：上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ **承接方**：PI 拍板（parent 转问卷）
 
@@ -2224,7 +2224,7 @@
 
 > 原文：### 1.4 自行追问（deep-probe 式，含建议答案）
 > 　L43：**Q1：如果要让"同构"主张从判死升级为可检验猜想，最小实验是什么？**
-> 　L44：建议答案：构造一个两人博弈，玩家 A 选 λ∈[0,1] 混合两种推理通道（先验/场），玩家 B（自然）选择任务域。若存在 payoff 函数使 λ*∈(0,1) 严格优于两端（内点最优），则"混合劣势"被反例判死；若所有任务族上 λ* 恒在端点，则混合劣势从"经验观察"升级为"结构性定理候选"，此时才有资格谈同构。**这本质上是把 §4.2 从回归问题改写为博弈问题——正好是王子贺方向的入口。**
+> 　L44：建议答案：构造一个两人博弈，玩家 A 选 λ∈[0,1] 混合两种推理通道（先验/场），玩家 B（自然）选择任务域。若存在 payoff 函数使 λ*∈(0,1) 严格优于两端（内点最优），则"混合劣势"被反例判死；若所有任务族上 λ* 恒在端点，则混合劣势从"经验观察"升级为"结构性定理候选"，此时才有资格谈同构。**这本质上是把 §4.2 从回归问题改写为博弈问题——正好是外部合作导师〔匿名〕方向的入口。**
 > 　L46：**Q2：测不准原理的信息论版本（熵不确定性关系 H(x)+H(p)≥log(πℏ)）是否比标准差版本更适合做类比？**
 
 - **归线理由**：上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ **承接方**：PI 拍板（parent 转问卷）
@@ -2471,10 +2471,10 @@
 
 #### `r4-H13a-Y01` ｜ letters ｜ `LETTER_FROM_TRAE_2026_09_11.md` ｜ `1d3a9e52abe3` ｜ L106
 
-> 原文：## §五 给王老师进展报告的三个修正建议(§5 用)
+> 原文：## §五 给外部顾问进展报告的三个修正建议(§5 用)
 > 　L108：沿你信 §5 结构出报告时, 建议对 §3(6 候选评级)做三处校准:
 > 　L110：1. **P-C/P-E 维持 GRAY** 且注明"判定线待预注册后重测"(不是"PENDING 验证"——当前判定线已被推翻)
-> 　L111：2. **P-F TRIGGERED 附一行**: "V0.1 锚值链已 100% 复算可复现; canonical 声明值待工件化"——这是加分项, 应向王老师展示
+> 　L111：2. **P-F TRIGGERED 附一行**: "V0.1 锚值链已 100% 复算可复现; canonical 声明值待工件化"——这是加分项, 应向外部顾问展示
 
 - **归线理由**：上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ **承接方**：PI 拍板（parent 转问卷）
 
@@ -2782,7 +2782,7 @@
 | 99 | H9 | C | `796301aeb116` | 5,042 B | 2026-09-10 16:05 | `docs/V3X/D7_ONE_PAGE_SUMMARY_2026_09_10_v3.md` | 0 |
 | 100 | H9 | C | `7997a650cce3` | 1,731 B | 2026-09-09 13:36 | `docs/V3X/REVIEWER_B_AUDIT_2026_09_09_mavis.md` | 1 |
 | 101 | H9 | C | `7b79ae4e947d` | 6,776 B | 2026-09-11 13:09 | `docs/V3X/R1_R4_TRAE_REPORT_2026_09_11.md` | 1 |
-| 102 | H9 | C | `7bbb557c99d3` | 6,770 B | 2026-09-11 13:15 | `docs/V3X/WANG_TEACHER_PROGRESS_REPORT_2026_09_11.md` | 0 |
+| 102 | H9 | C | `7bbb557c99d3` | 6,770 B | 2026-09-11 13:15 | `docs/V3X/EXTERNAL_ADVISOR_PROGRESS_REPORT_2026_09_11.md` | 0 |
 | 103 | H9 | C | `7da70fbc5f34` | 1,504 B | 2026-09-08 16:50 | `paper/deposon_arxiv_en_pkg/README.md` | 0 |
 | 104 | H9 | C | `8178e61e7c97` | 11,678 B | 2026-09-11 11:34 | `docs/V3X/V2_PHASE2_3_INTEGRATION_2026_09_11.md` | 2 |
 | 105 | H9 | C | `86cc56e3b4d7` | 12,083 B | 2026-09-11 17:01 | `docs/V3X/TEAM_RESTRUCTURING_PROPOSAL_2026_09_11.md` | 4 |
@@ -2809,7 +2809,7 @@
 | 126 | H9 | C | `d5d22fce2686` | 7,124 B | 2026-09-10 16:49 | `docs/V3X/GPT6_TEAMOROUTER_SMOKE_2026_09_10.md` | 4 |
 | 127 | H9 | C | `dcc051a1f316` | 11,549 B | 2026-09-10 17:35 | `docs/V3X/V4_1_FLASH_60CELLS_V2_STARTUP_2026_09_10.md` | 3 |
 | 128 | H9 | C | `e1205b5a6cae` | 6,963 B | 2026-09-10 22:09 | `docs/V3X/FESHBACH_LINDBLAD_SIM_2026_09_10.md` | 0 |
-| 129 | H9 | C | `f05368a625c6` | 2,337 B | 2026-09-09 14:36 | `docs/V3X/D3_WECHAT_MIDTERM_2026_09_09_actual.md` | 0 |
+| 129 | H9 | C | `f05368a625c6` | 2,337 B | 2026-09-09 14:36 | `docs/V3X/D3_ONLINE_MIDTERM_2026_09_09_actual.md` | 0 |
 | 130 | H9 | C | `f1170ffa4ca6` | 1,615 B | 2026-09-09 11:50 | `docs/V3X/KT_A1_LLM_MINI_TEST_2026_09_09_mavis.md` | 1 |
 | 131 | H9 | C | `f30201b95fee` | 7,349 B | 2026-09-10 16:56 | `docs/V3X/EMBEDDING_OPENROUTER_5MODELS_2026_09_10.md` | 0 |
 | 132 | H9 | C | `f5311bf1c946` | 26,660 B | 2026-09-10 21:56 | `docs/V3X/V3X_D7_V3_FINAL_REPORT_2026_09_10_V5.md` | 3 |
@@ -3080,11 +3080,11 @@
 | 397 | H13b | letters | `00593014cbd3` | 71,084 B | 2026-09-20 21:53 | `_v4_distillation_reply_coze_2026_09_20.md` | 5 |
 | 398 | H13b | letters | `0e7600ac4478` | 7,510 B | 2026-09-23 13:08 | `TRAE_V3_REVIEW_LETTER_2026_09_23.md` | 1 |
 | 399 | H13b | letters | `0ff6c042b845` | 9,048 B | 2026-09-21 11:12 | `_v4_distillation_brainstorm_reply_codex_2026_09_21.md` | 0 |
-| 400 | H13b | letters | `15f8227308bc` | 7,197 B | 2026-09-24 18:55 | `_v4_commission_wechat_report_coze_2026_09_24.md` | 1 |
+| 400 | H13b | letters | `15f8227308bc` | 7,197 B | 2026-09-24 18:55 | `_v4_commission_online_report_coze_2026_09_24.md` | 1 |
 | 401 | H13b | letters | `21d384cf3422` | 7,488 B | 2026-09-20 17:35 | `_v4_ide_track_review_trae_work_2026_09_20.md` | 2 |
 | 402 | H13b | letters | `3205593030bc` | 6,301 B | 2026-09-20 17:11 | `_v4_acceptance_trae_code_2026_09_20.md` | 2 |
 | 403 | H13b | letters | `38070fd12f31` | 6,644 B | 2026-09-20 14:53 | `_kimi_v4_t12_review_2026_09_20.md` | 6 |
-| 404 | H13b | letters | `389c51e70d19` | 10,599 B | 2026-09-24 20:05 | `_v4_commission_wechat_report_coze_2026_09_24_v2.md` | 1 |
+| 404 | H13b | letters | `389c51e70d19` | 10,599 B | 2026-09-24 20:05 | `_v4_commission_online_report_coze_2026_09_24_v2.md` | 1 |
 | 405 | H13b | letters | `3a8cb7b9d041` | 14,295 B | 2026-09-20 18:03 | `_v4_distillation_acceptance_coze_2026_09_20.md` | 2 |
 | 406 | H13b | letters | `3caf4e653a68` | 7,176 B | 2026-09-20 17:36 | `_v4_acceptance_trae_work_v1.0_2026_09_20.md` | 1 |
 | 407 | H13b | letters | `3d9f73519f6c` | 53,539 B | 2026-09-20 16:41 | `_v4_distillation_invitation_2026_09_20_v1.0.md` | 0 |
@@ -3126,13 +3126,13 @@
 | 443 | H13c | letters | `631bb517f79d` | 4,471 B | 2026-09-26 19:53 | `_v4_commission_upload_executor_reply_v3_exec_2026_09_26.md` | 3 |
 | 444 | H13c | letters | `6ac3cb09567b` | 105,136 B | 2026-09-27 19:20 | `TRAE_V4_WALKTHROUGH_BUGFIX_REQUEST_2026_09_27.md` | 6 |
 | 445 | H13c | letters | `76d0b60e6bdc` | 23,368 B | 2026-09-26 21:29 | `_letter_to_pi_upload_application_approval_2026_09_26.md` | 3 |
-| 446 | H13c | letters | `802c705e1469` | 21,433 B | 2026-09-26 21:25 | `_v4_commission_wechat_report_coze_2026_09_24_v4.md` | 4 |
+| 446 | H13c | letters | `802c705e1469` | 21,433 B | 2026-09-26 21:25 | `_v4_commission_online_report_coze_2026_09_24_v4.md` | 4 |
 | 447 | H13c | letters | `9a98abf3119a` | 20,610 B | 2026-09-27 20:28 | `_v4_wide_walkthrough_reply_trae_code_2026_09_27.md` | 3 |
 | 448 | H13c | letters | `c20d4f58f5c8` | 25,091 B | 2026-09-26 19:20 | `_v4_commission_upload_executor_2026_09_24_v3.md` | 3 |
-| 449 | H13c | letters | `c60dfd7c0f45` | 16,471 B | 2026-09-26 22:20 | `_v4_commission_wechat_report_coze_reply_v4_2026_09_24.md` | 1 |
+| 449 | H13c | letters | `c60dfd7c0f45` | 16,471 B | 2026-09-26 22:20 | `_v4_commission_online_report_coze_reply_v4_2026_09_24.md` | 1 |
 | 450 | H13c | letters | `d5337702cec9` | 31,531 B | 2026-09-26 21:25 | `_v4_commission_paper_final_glm_2026_09_24_v4.md` | 4 |
 | 451 | H13c | letters | `dda07ad77910` | 42,948 B | 2026-09-27 20:43 | `_v3_calibration_change_note_for_coze_glm_2026_09_27.md` | 6 |
-| 452 | H13c | letters | `e5b63d181b15` | 13,898 B | 2026-09-26 19:19 | `_v4_commission_wechat_report_coze_2026_09_24_v3.md` | 1 |
+| 452 | H13c | letters | `e5b63d181b15` | 13,898 B | 2026-09-26 19:19 | `_v4_commission_online_report_coze_2026_09_24_v3.md` | 1 |
 | 453 | H13c | letters | `f86b8b6c8ed2` | 60,139 B | 2026-09-27 20:13 | `_v4_walkthrough_bugfix_reply_trae_code_2026_09_27.md` | 5 |
 | 454 | H13c | letters | `f8f4ae2e7b9b` | 11,575 B | 2026-09-26 20:04 | `_v4_commission_upload_channel_authorization_reply_kimi_2026_09_26.md` | 2 |
 | 455 | H13d | letters | `498215a9ec7d` | 51,013 B | 2026-09-28 18:47 | `_v5_rj5_external_rederive_request_EN_2026_09_28.md` | 2 |

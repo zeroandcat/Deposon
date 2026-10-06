@@ -1,6 +1,6 @@
 # V4 §1.1.1 最小可证伪实验轮廓代拟稿（Mavis 代拟，PI 委托 2026-09-22）
 
-**委托留痕**：PI 于组 A 首批问卷（ask_f8837a5b3c168ef3d6e8c18a，2026-09-22）对 §1.1.1 答复「委托 Mavis 代拟」。本稿为代拟草案，回填问卷作答栏后**待 PI 复核确认生效**。本稿起草过程：0 LLM / 0 外部 URL / 0 GitHub / 0 WeChat / 0 密钥；未触动任何 V1–V3 冻结资产（教师侧素材全部只读）。
+**委托留痕**：PI 于组 A 首批问卷（ask_f8837a5b3c168ef3d6e8c18a，2026-09-22）对 §1.1.1 答复「委托 Mavis 代拟」。本稿为代拟草案，回填问卷作答栏后**待 PI 复核确认生效**。本稿起草过程：0 LLM / 0 外部 URL / 0 GitHub / 0 线上 / 0 密钥；未触动任何 V1–V3 冻结资产（教师侧素材全部只读）。
 
 **作答对象**：邀请函 §4.1（`3D9F73519F6C:252`）——"What is the smallest, falsifiable experiment that can distinguish 'distilled from teacher X' from 'trained independently on similar data'?"——按题面要求克服 R5（KIMI-K3，散度定义）与 B6（Trae code，binning/KDE）两个 blocker。
 

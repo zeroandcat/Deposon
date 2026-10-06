@@ -296,11 +296,11 @@ PAT = rb'(sk-[A-Za-z0-9]{8,}|tp-[A-Za-z0-9]{8,}|ark-[A-Za-z0-9]{8,}|API_KEY\s*[=
 | 18 | letters | `adfa7dd03f76` | 13,012 | 3 | 19, 136, 169 | rel_path_results×3 | 2026-09-24 18:56:08 | `letters/_v4_commission_upload_executor_2026_09_24.md` |
 | 19 | letters | `ff2154ce182d` | 16,894 | 2 | 24, 192 | rel_path_results×2 | 2026-09-24 20:05:57 | `letters/_v4_commission_upload_executor_2026_09_24_v2.md` |
 | 20 | letters | `c20d4f58f5c8` | 25,091 | 3 | 32, 152, 227 | rel_path_results×2 ＋ quoted_bare_name×1 | 2026-09-26 19:20:04 | `letters/_v4_commission_upload_executor_2026_09_24_v3.md` |
-| 21 | letters | `15f8227308bc` | 7,197 | 2 | 19, 99 | rel_path_results×2 | 2026-09-24 18:55:26 | `letters/_v4_commission_wechat_report_coze_2026_09_24.md` |
-| 22 | letters | `389c51e70d19` | 10,599 | 2 | 22, 131 | rel_path_results×2 | 2026-09-24 20:05:56 | `letters/_v4_commission_wechat_report_coze_2026_09_24_v2.md` |
-| 23 | letters | `e5b63d181b15` | 13,898 | 2 | 26, 149 | rel_path_results×2 | 2026-09-26 19:19:29 | `letters/_v4_commission_wechat_report_coze_2026_09_24_v3.md` |
-| 24 | letters | `802c705e1469` | 21,433 | 2 | 29, 198 | rel_path_results×2 | 2026-09-26 21:25:16 | `letters/_v4_commission_wechat_report_coze_2026_09_24_v4.md` |
-| 25 | letters | `c60dfd7c0f45` | 16,471 | 1 | 117 | rel_path_results×1 | 2026-09-26 22:20:19 | `letters/_v4_commission_wechat_report_coze_reply_v4_2026_09_24.md` |
+| 21 | letters | `15f8227308bc` | 7,197 | 2 | 19, 99 | rel_path_results×2 | 2026-09-24 18:55:26 | `letters/_v4_commission_online_report_coze_2026_09_24.md` |
+| 22 | letters | `389c51e70d19` | 10,599 | 2 | 22, 131 | rel_path_results×2 | 2026-09-24 20:05:56 | `letters/_v4_commission_online_report_coze_2026_09_24_v2.md` |
+| 23 | letters | `e5b63d181b15` | 13,898 | 2 | 26, 149 | rel_path_results×2 | 2026-09-26 19:19:29 | `letters/_v4_commission_online_report_coze_2026_09_24_v3.md` |
+| 24 | letters | `802c705e1469` | 21,433 | 2 | 29, 198 | rel_path_results×2 | 2026-09-26 21:25:16 | `letters/_v4_commission_online_report_coze_2026_09_24_v4.md` |
+| 25 | letters | `c60dfd7c0f45` | 16,471 | 1 | 117 | rel_path_results×1 | 2026-09-26 22:20:19 | `letters/_v4_commission_online_report_coze_reply_v4_2026_09_24.md` |
 | 26 | results | `34f2c63306b8` | 56,714 | 167 | 148, 164–243, 245–331 | rel_path_results×167 | 2026-09-28 19:09:12 | `results/_archive_cleanup_non_upload_2026_09_28.md` |
 | 27 | results | `c64146c4ccac` | 23,152 | 5 | 5, 126, 213, 246, 257 | rel_path_results×5 | 2026-09-24 20:04:58 | `results/_v3_v4_achievements_inventory_3dir_addendum_2026_09_24.md` |
 | 28 | results | `24c64cc23907` | 37,212 | 2 | 5, 387 | rel_path_results×2 | 2026-09-26 19:18:37 | `results/_v3_v4_achievements_inventory_3dir_addendum_v2_2026_09_26.md` |

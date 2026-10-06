@@ -1,6 +1,6 @@
 # V4 §4.6 统一术语代拟稿（Mavis 代拟，PI 委托 2026-09-22）
 
-**委托留痕**：PI 于组 A 首批问卷（ask_f8837a5b3c168ef3d6e8c18a，2026-09-22）对 §4.6 答复「委托 Mavis 代拟」。本稿为代拟草案，回填问卷作答栏后**待 PI 复核确认生效**。本稿起草过程：0 LLM / 0 外部 URL / 0 GitHub / 0 WeChat / 0 密钥；未触动任何 V1–V3 冻结资产（18 frozen / schema v1 / verifier / P-G v0+v01 / plugin spec 全部只读）。
+**委托留痕**：PI 于组 A 首批问卷（ask_f8837a5b3c168ef3d6e8c18a，2026-09-22）对 §4.6 答复「委托 Mavis 代拟」。本稿为代拟草案，回填问卷作答栏后**待 PI 复核确认生效**。本稿起草过程：0 LLM / 0 外部 URL / 0 GitHub / 0 线上 / 0 密钥；未触动任何 V1–V3 冻结资产（18 frozen / schema v1 / verifier / P-G v0+v01 / plugin spec 全部只读）。
 
 **作答对象**：问卷 §4.6（`results/_v4_pi_decision_questionnaire_2026_09_21_v1.1.md`，行号对回填前基线 SHA-12 `88F48F82E08B` / 739 行；所引行均在本轮回填点 L581 之前，回填后行号不变）。PI 已于组 D 收尾批（2026-09-22）拍路径 B「统一为单一术语」；本稿给出该路径的待收内容：具体统一术语 + 每条原引用重写规则。
 

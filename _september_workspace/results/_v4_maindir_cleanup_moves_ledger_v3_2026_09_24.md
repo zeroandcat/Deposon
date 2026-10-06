@@ -315,7 +315,7 @@ v2 ledger §6.1 报告 before=1440, after=1324, 差 -116; 理论差 = 1440 - 125
 | 5 | `.tmp/_r4_key_scan_results_2026_09_24.json` | 18:54:06 | anchor-guard r4 扫描 (新件) | R4 辖区 | +1 (in 1332) |
 | 6 | `results/_v3_v4_achievements_inventory_3dir_erratum_2026_09_24.md` | 18:55:03 | evidence-auditor erratum | R4 留痕链 | +1 (in 1332) |
 | 7 | `results/_v4_r4_key_purge_manifest_2026_09_24.md` | 18:55:22 | anchor-guard r4 扫描 | R4 留痕链 | +1 (in 1332) |
-| 8 | `letters/_v4_commission_wechat_report_coze_2026_09_24.md` | 18:55:26 | 派发前快照 | letters protected | +1 (in 1332) |
+| 8 | `letters/_v4_commission_online_report_coze_2026_09_24.md` | 18:55:26 | 派发前快照 | letters protected | +1 (in 1332) |
 | 9 | `letters/_v4_commission_paper_final_glm_2026_09_24.md` | 18:55:43 | 派发前快照 | letters protected | +1 (in 1332) |
 | (10) | `letters/_v4_commission_upload_executor_2026_09_24.md` | 18:56:08 | 派发前快照 | letters protected | +1 (in 1332) |
 

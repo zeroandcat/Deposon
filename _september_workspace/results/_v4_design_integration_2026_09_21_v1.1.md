@@ -1174,7 +1174,7 @@ worker 实测（`Get-FileHash` + 全 `results/` 递归扫描，排除 `_archive_
 - **第二轮更新（v1.1）所作动作**：仅在 input 侧读取、worker 实测、生成新 .md 文件；未触动：
   - v1.0 整合稿与 v1.0 问卷（自验 4 重算 SHA-12 应仍为 `4B10CDE29C27` / `6A3A2D8EE357`）。
   - 任何 18 frozen 制品、P-G v0 / v0.1、schema v1、verifier/、plugin spec。
-  - 任何 LLM API / 任何外部 URL / 任何 WeChat / 任何 GitHub 操作。
+  - 任何 LLM API / 任何外部 URL / 任何 线上 / 任何 GitHub 操作。
   - 任何密钥 / 端点 / 专有提示词。
 - **行数与哈希自测双口径（PI 拍板 P6）**：整合稿 v1.1 canonical 行数 = `[System.IO.File]::ReadAllLines(path, [System.Text.Encoding]::UTF8).Length`；本节交付前自验 1 / 2 / 5 项给出本稿最终 SHA-12 / 字节 / 行数。
 - **谁拍的板 / 谁复算的 / 哪些是文件外宣称**：

@@ -137,13 +137,13 @@ with_temp  = 1009
 | 6 | `letters/_v4_commission_upload_channel_authorization_reply_kimi_2026_09_26.md` | 2026-09-26 20:04:44 | 11,575 | letters |
 | 7 | `letters/_letter_to_pi_upload_application_local_unique_overwrite_2026_09_26.md` | 2026-09-26 20:45:07 | 36,945 | letters |
 | 8 | `letters/_letter_to_pi_upload_scoping_verdict_2026_09_26.md` | 2026-09-26 21:04:15 | 68,449 | letters |
-| 9 | `letters/_v4_commission_wechat_report_coze_2026_09_24_v4.md` | 2026-09-26 21:16:25 | 21,433 | letters |
+| 9 | `letters/_v4_commission_online_report_coze_2026_09_24_v4.md` | 2026-09-26 21:16:25 | 21,433 | letters |
 | 10 | `letters/_v4_commission_paper_final_glm_2026_09_24_v4.md` | 2026-09-26 21:17:02 | 31,531 | letters |
 | 11 | `letters/_letter_to_pi_upload_application_supplement_2026_09_26.md` | 2026-09-26 21:28:18 | 9,151 | letters |
 | 12 | `letters/_letter_to_pi_upload_application_approval_2026_09_26.md` | 2026-09-26 21:29:31 | 23,368 | letters |
 | 13 | `results/_upload_execution_receipt_kimi_2026_09_26.md` | 2026-09-26 22:08:26 | 4,191 | results |
 | 14 | `.tmp/_pc.py` | 2026-09-26 22:16:09 | 431 | temp |
-| 15 | `letters/_v4_commission_wechat_report_coze_reply_v4_2026_09_24.md` | 2026-09-26 22:20:19 | 16,471 | letters |
+| 15 | `letters/_v4_commission_online_report_coze_reply_v4_2026_09_24.md` | 2026-09-26 22:20:19 | 16,471 | letters |
 | 16 | `results/_coze_online_v4_d7format_2026_09_26.pdf` | 2026-09-26 22:49:35 | 465,366 | results |
 | 17 | `results/_v4_pi_cot_v3_prereg.md`（棒 2） | 2026-09-27 11:39:03 | 22,788 | results |
 | 18 | `results/_v4_supp_t15r2_methodology_template.md`（棒 3） | 2026-09-27 11:40:23 | 17,411 | results |

@@ -496,7 +496,7 @@ L161 ## §6 时点
 L162
 L163 - 任务 spec 落盘: 2026-09-17 11:00 CST
 L164 - 任务派工: Mavis 派 external agent (worker system 或 recheck-runner 凝子)
-L165 - D7 (2026-09-18) 王老师 WeChat push 前必须有 P-L v3 结果
+L165 - D7 (2026-09-18) 外部顾问 线上 push 前必须有 P-L v3 结果
 L166
 L167 ---
 L168
@@ -573,7 +573,7 @@ L81  | = 1.0 | 同序单调实证 | P-L 假设证伪 |
 
 ```text
 （L25 · 0d1e88c258aa）
-| **KT-C1** | 残余 r vs 维数 d log-log, R²<0.3 死 | P-C 两相结构 V0 spec(6.3KB) | η 扫描相变点 ± 20% | 王老师版"图族回归"vs Mavis 版"参数扫描" — **数据集同源 v21,可双跑** |
+| **KT-C1** | 残余 r vs 维数 d log-log, R²<0.3 死 | P-C 两相结构 V0 spec(6.3KB) | η 扫描相变点 ± 20% | 外部顾问版"图族回归"vs Mavis 版"参数扫描" — **数据集同源 v21,可双跑** |
 
 （L107-L111 · 79c7321056b8）
 ## §3 R^2 + b_CI 复算 (沿 KT_C1_KILL_LINE)

@@ -19,7 +19,7 @@
 
 ### 0.1 Policy update flagged by PI on 2026-09-24
 
-PI decision recorded in the parent session: the **paper final draft + project-report WeChat commission letter will not contain an outline**; GLM / coze are free to structure as they wish. This inventory therefore acts as a **raw materials baseline** for the GLM / coze drafting agents.
+PI decision recorded in the parent session: the **paper final draft + project-report 线上 commission letter will not contain an outline**; GLM / coze are free to structure as they wish. This inventory therefore acts as a **raw materials baseline** for the GLM / coze drafting agents.
 
 ### 0.2 Today's cleanup chain (B-path 125 moves)
 
@@ -2291,7 +2291,7 @@ Substantive items: 993 (transient .pyc/.log: 237)
 | `docs/SPEC_v1.8.md` | `AD0E445714D9` | 9850 | IN-EFFECT | C | 2026/08/23 23:19:47 |
 | `docs/SPEC_v1.9.md` | `3302A4BEB968` | 6771 | IN-EFFECT | C | 2026/08/24 01:16:16 |
 | `docs/V3X/COZE_PROJECT_PROGRESS_REQUIREMENTS_2026_09_11.md` | `7855AD5BEA08` | 15951 | IN-EFFECT | C | 2026/09/11 14:04:08 |
-| `docs/V3X/D3_WECHAT_MIDTERM_2026_09_09_actual.md` | `F05368A625C6` | 2337 | IN-EFFECT | C | 2026/09/09 14:36:18 |
+| `docs/V3X/D3_ONLINE_MIDTERM_2026_09_09_actual.md` | `F05368A625C6` | 2337 | IN-EFFECT | C | 2026/09/09 14:36:18 |
 | `docs/V3X/D7_GITHUB_PUSH_RECEIVE_2026_09_15.md` | `192611233696` | 5580 | IN-EFFECT | C | 2026/09/15 17:14:54 |
 | `docs/V3X/D7_ONE_PAGE_SUMMARY_2026_09_09_actual.md` | `C9C0CFFEC327` | 3811 | IN-EFFECT | C | 2026/09/09 14:36:18 |
 | `docs/V3X/D7_ONE_PAGE_SUMMARY_2026_09_10_v3.md` | `796301AEB116` | 5042 | IN-EFFECT | C | 2026/09/10 16:05:55 |
@@ -2388,7 +2388,7 @@ Substantive items: 993 (transient .pyc/.log: 237)
 | `docs/V3X/VOLCENGINE_EMBEDDING_30CELLS_2026_09_10.md` | `449BA3A244D3` | 12659 | IN-EFFECT | C | 2026/09/16 11:01:13 |
 | `docs/V3X/VOLCENGINE_GLM_LATEST_30CELLS_V2_2026_09_10.md` | `64C31DA160A9` | 3292 | IN-EFFECT | C | 2026/09/10 20:20:49 |
 | `docs/V3X/VOLCENGINE_SEED_CODE_30CELLS_2026_09_10.md` | `3911394B86D5` | 15862 | IN-EFFECT | C | 2026/09/16 11:01:13 |
-| `docs/V3X/WANG_TEACHER_PROGRESS_REPORT_2026_09_11.md` | `7BBB557C99D3` | 6770 | IN-EFFECT | C | 2026/09/11 13:15:31 |
+| `docs/V3X/EXTERNAL_ADVISOR_PROGRESS_REPORT_2026_09_11.md` | `7BBB557C99D3` | 6770 | IN-EFFECT | C | 2026/09/11 13:15:31 |
 
 #### 4.2.12 figures/  (33 items)
 

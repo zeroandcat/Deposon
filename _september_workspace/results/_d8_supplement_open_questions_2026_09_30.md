@@ -283,7 +283,7 @@ SQ-01｜<题面字面>
 - **派生 JSON 不合并**：落盘目标为**新件**，**0 覆写任何既有 dataset / addendum、0 合并任何派生 JSON**
 - **0 自拟阶段名**：本件题号用 `SQ-` 前缀（**不是 V5 / V6 等阶段名**；阶段命名权在 PI）—— 沿 PI 2026-09-29「阶段/版本命名只能由 PI 定义」纪律
 - **隐私面**：本件不含任何 PI 推理全文；key 永不明文（0 读取 / 0 落盘 / 0 入 prompt / 0 入 JSON / 0 入 log）
-- **0 LLM / 0 API / 0 proxy / 0 gateway**；0 调 WeChat / GitHub 等外部 API
+- **0 LLM / 0 API / 0 proxy / 0 gateway**；0 调 线上 / GitHub 等外部 API
 - **succeeded ≠ 跑完**：本件 = **题面产出**，**不是采集完成**；采集是否完成以落盘新件 + SHA-12 核验为准
 
 ---

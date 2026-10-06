@@ -21,7 +21,7 @@
 **5 件综合结论**（沿 D7 report §3 模式）：
 - 核心资产层一致完好 (18 frozen 22/22, 5 制品 SHA 5/5, schema v1 21/21)
 - 叙述层 3 数字漂移 + 1 矛盾复发，全部有盘上实值可修
-- 0 LLM / 0 API / 0 调 WeChat / 0 调 GitHub，7 铁律 0 触动
+- 0 LLM / 0 API / 0 调 线上 / 0 调 GitHub，7 铁律 0 触动
 
 ---
 
@@ -90,12 +90,12 @@
 
 ## §4 5 件 audit 挂点回扣 (沿提案 v3 §3-§7 + D7 report §3 模式)
 
-| 挂点 | 王老师 D7 报告源 | 我们 P-L v3 + 7 worker 源 | 一致性 |
+| 挂点 | 外部顾问 D7 报告源 | 我们 P-L v3 + 7 worker 源 | 一致性 |
 |---|---|---|---|
-| 挂点 1: 9 模型 × 60 题账本 | 王老师 540/540 账全轧平, 双主线 26/30 0.867 | 我们 3 开源 backbone β CI overlap + 3 闭源 backbone β CI overlap, OR embedding GRAY 1/6 | ✓ 一致 (实现稳健) |
-| 挂点 2: 5 锚 + 双指纹 | 王老师 KT-D0 主锚 `03C6C01F3697` | 我们 22/22 caption dual_24bit PASS, b3 root=`75596bbabdb8` 一致 | ✓ 一致 |
-| 挂点 3: 「挂上也是交付」 | 王老师 KT-C1 R²=0.0007 判死 | 我们 Phase 1 R²=0.7447 FAIL, Phase 2 GRAY, FPR 4.4% 老实入 §7.2 | ✓ 同质 |
-| 挂点 4: 4 协作方 + 5 worker 收敛 | 王老师 9 模型 + 540 账 | 我们 5 worker + 7 制品 + 18 frozen + 4 plugin spec + schema v1 | ✓ 同方法论 (4 协作方聚合收敛 + 诚实降级 + 0 LLM 重算 + 7 铁律 0 触动) |
+| 挂点 1: 9 模型 × 60 题账本 | 外部顾问 540/540 账全轧平, 双主线 26/30 0.867 | 我们 3 开源 backbone β CI overlap + 3 闭源 backbone β CI overlap, OR embedding GRAY 1/6 | ✓ 一致 (实现稳健) |
+| 挂点 2: 5 锚 + 双指纹 | 外部顾问 KT-D0 主锚 `03C6C01F3697` | 我们 22/22 caption dual_24bit PASS, b3 root=`75596bbabdb8` 一致 | ✓ 一致 |
+| 挂点 3: 「挂上也是交付」 | 外部顾问 KT-C1 R²=0.0007 判死 | 我们 Phase 1 R²=0.7447 FAIL, Phase 2 GRAY, FPR 4.4% 老实入 §7.2 | ✓ 同质 |
+| 挂点 4: 4 协作方 + 5 worker 收敛 | 外部顾问 9 模型 + 540 账 | 我们 5 worker + 7 制品 + 18 frozen + 4 plugin spec + schema v1 | ✓ 同方法论 (4 协作方聚合收敛 + 诚实降级 + 0 LLM 重算 + 7 铁律 0 触动) |
 
 ---
 
@@ -127,7 +127,7 @@
 
 **Coze 委托 spec 落**:
 - 8 章 outline (§1 Introduction / §2 V3X 设计 / §3 P-C + P-D 双 PASS / §4 P-L v3 三态分离 / §5 17 Adendum / §6 限制 / §7 结论 / §8 派生建议)
-- 字数: V1.0 ≤ 150 字 (WeChat), V1.1 ≤ 200 字 (含 4 挂点 + 5 worker 进展), paper 全文 ≤ 8 页
+- 字数: V1.0 ≤ 150 字 (线上), V1.1 ≤ 200 字 (含 4 挂点 + 5 worker 进展), paper 全文 ≤ 8 页
 - 引用规范: KIMI 7 方向 + Trae §6 退化预检 + Coze 3 态分离 + GLM §5 复现前提
 - 8 件 SHA-12 自验: 5 制品 + 18 frozen + schema v1 + 4 plugin spec
 
@@ -171,7 +171,7 @@
 4. **P-K FPR 4.4% > 1% 阈值 GRAY** 老实入 paper §7.2, 不重 push 调阈值
 5. **OR 4 embedding P2 verdict GRAY (1/6)** 老实入 paper §7.2, 不重 push 加 embedding
 6. **2 脚本 (_fix_adendum_c + _goal_completion_audit)** 是 Trae code 写的, Mavis 不写脚本 (沿 7 铁律边界)
-7. **Mavis 不调 WeChat 钥匙** (王老师推送由 user 执行, 明晚 18:00-21:00 CST)
+7. **Mavis 不调 线上 钥匙** (外部顾问推送由 user 执行, 明晚 18:00-21:00 CST)
 8. **Mavis 不动 push** (KIMI 凝子-agent 独立执行 git push, Mavis 准备 manifest)
 9. **Mavis 不动 paper 写作** (Coze 凝子-agent 起正式版, Mavis 写需求 + 边界)
 

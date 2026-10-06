@@ -15,7 +15,7 @@ Deposon V3X P-C 路径 D1-D3 中期验证脚本 (2026-09-15)
 严守 7 铁律:
   1. 0 LLM 调用
   2. 不设 proxy
-  3. 不调 OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / WeChat API
+  3. 不调 OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / 线上 API
   4. key 永不入 prompt / JSON / 落盘
   5. 不动 16 frozen 文件
   6. 不动 verifier / mavis / .builtin / scripts/ 目录
@@ -501,7 +501,7 @@ def main():
         "5_anchor_mid_verdict": "5/5 PASS (KT-C1 锚全部沿用, SHA-12 实算一致)",
         "next_steps_d5_d7": [
             "D5 (2026-09-16): η 扫描 9 档 + 拍板 boss_pc_*.py 落盘 (user 授权)",
-            "D7 (2026-09-18): 5 锚终极判死 + 推王老师 WeChat D7 决策点",
+            "D7 (2026-09-18): 5 锚终极判死 + 推外部顾问 线上 D7 决策点",
         ],
     }
 
@@ -564,7 +564,7 @@ def main():
         "next_steps_for_mavis_review": [
             "D5 (2026-09-16) 拍板 boss_pc_*.py 落盘 + η 扫描 9 档实算",
             "D5 派 reviewer-a 静态审 + reviewer-b /tmp 重跑双审本 JSON + 报告",
-            "D7 (2026-09-18) 5 锚终极判死 + 推王老师 WeChat D7 决策点",
+            "D7 (2026-09-18) 5 锚终极判死 + 推外部顾问 线上 D7 决策点",
         ],
     }
 
@@ -593,7 +593,7 @@ def main():
     md_lines.append("|---|---|")
     md_lines.append("| 1. 0 LLM 调用 | ✅ 0 调用 / 0 网络 |")
     md_lines.append("| 2. 不设 proxy | ✅ 已清空 HTTP_PROXY/HTTPS_PROXY/ALL_PROXY/NO_PROXY |")
-    md_lines.append("| 3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API | ✅ 0 API 调用 |")
+    md_lines.append("| 3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API | ✅ 0 API 调用 |")
     md_lines.append("| 4. key 永不入 prompt/JSON/落盘 | ✅ 0 key 引用 (本任务不需 key) |")
     md_lines.append("| 5. 不动 16 frozen 文件 | ✅ 16/16 PASS (修前修后 SHA-12 一致) |")
     md_lines.append("| 6. 不动 verifier/mavis/.builtin/scripts/ 目录 | ✅ 0 触动 |")
@@ -766,7 +766,7 @@ def main():
     md_lines.append("|---|---|---|")
     md_lines.append("| D5 (2026-09-16) | η 扫描 9 档实算 + 拍板 boss_pc_*.py 落盘 (user 授权) | η 扫描 JSON + 3 BOSS 脚本 (待 user 授权) |")
     md_lines.append("| D5 (2026-09-16) | reviewer-a 静态审 + reviewer-b /tmp 重跑双审本 JSON + 报告 | 2 份审计报告 |")
-    md_lines.append("| D7 (2026-09-18) | 5 锚终极判死 + 推王老师 WeChat D7 决策点 | D7 一页摘要 + 5 锚 PASS/FAIL + WeChat 通知 |")
+    md_lines.append("| D7 (2026-09-18) | 5 锚终极判死 + 推外部顾问 线上 D7 决策点 | D7 一页摘要 + 5 锚 PASS/FAIL + 线上 通知 |")
     md_lines.append("")
     md_lines.append("---")
     md_lines.append("")
@@ -775,7 +775,7 @@ def main():
     md_lines.append("```")
     md_lines.append("0 LLM 调用              : PASS (0 调用 / 0 网络 / 0 proxy)")
     md_lines.append("不设 proxy              : PASS (已清空 HTTP_PROXY 等 8 项)")
-    md_lines.append("不调外部 API            : PASS (0 调用 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API)")
+    md_lines.append("不调外部 API            : PASS (0 调用 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API)")
     md_lines.append("key 永不入 prompt/JSON/落盘 : PASS (本任务不需 key, 0 key 引用)")
     md_lines.append("不动 16 frozen 文件      : PASS (16/16 SHA-12 一致, 0 触动)")
     md_lines.append("不动 verifier/mavis/.builtin/scripts/ 目录 : PASS (0 触动)")

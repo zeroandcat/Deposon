@@ -162,7 +162,7 @@ def fit_data_collapse(x, y, log_x, log_y):
 
 - 任务 spec 落盘: 2026-09-17 11:00 CST
 - 任务派工: Mavis 派 external agent (worker system 或 recheck-runner 凝子)
-- D7 (2026-09-18) 王老师 WeChat push 前必须有 P-L v3 结果
+- D7 (2026-09-18) 外部顾问 线上 push 前必须有 P-L v3 结果
 
 ---
 

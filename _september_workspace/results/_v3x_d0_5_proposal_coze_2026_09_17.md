@@ -126,7 +126,7 @@ Coze 复读 `d7_5anchor_60cells_9model_verdict_2026_09_18.json` 时，注意到�
 
 - **现状**：`P-F_D_fix2_strict` 与 `P-F_D_fix2_loose` 均为 `8+1+0 (PARTIAL_PASS, A channel timing 敏感)`。
 - **增补动作**：固定 A channel 的 timing protocol（消除时序噪声），重测 P-F，把 PARTIAL_PASS 收敛为 PASS 或暴露真实 FAIL。
-- **价值**：PARTIAL_PASS 是"判死未完成"的中间态，D7 王老师推送前最好不留 PARTIAL。
+- **价值**：PARTIAL_PASS 是"判死未完成"的中间态，D7 外部顾问推送前最好不留 PARTIAL。
 
 ### 6.5（低）P-G `dH_dE ≈ 5x`（range 4.4–8.0）区间过宽
 

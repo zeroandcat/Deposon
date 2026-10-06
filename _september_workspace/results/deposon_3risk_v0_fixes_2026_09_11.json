@@ -219,7 +219,7 @@
   "iron_7_compliance": {
     "1. 0 LLM 调用": "纯 Python stdlib (json + hashlib + math), 0 LLM calls",
     "2. 不设 proxy": "本次会话 0 proxy 设置",
-    "3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API": "全程 stdlib, 0 网关调用",
+    "3. 不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API": "全程 stdlib, 0 网关调用",
     "4. key 永不入 prompt/JSON/落盘": "0 key 读取, 0 key 字符串, 0 key 写入",
     "5. 不动 5 锚 JSON": "只读 SHA-12 验证: 03c6c01f3697 (期望 03c6c01f3697, 0 修改)",
     "6. 不动 4 SPEC V0.1 + v19/v21 + corpus/v20 + 200+ 已落盘 + 现有 PDF/MD + 4 个 plugin spec": "0 读取写入操作",
@@ -228,14 +228,14 @@
   },
   "user_3_options": {
     "A": "解决 3 风险 (本次任务, 已输出 2 文件)",
-    "B": "沿用当前 (不修, 等王老师 1 周判死)",
+    "B": "沿用当前 (不修, 等外部顾问 1 周判死)",
     "C": "进一步指令 (待 user 派)"
   },
   "wang_teacher_1week_window": {
     "start": "2026-09-11",
     "end": "2026-09-18",
     "current_phase": "V0.1 已落盘, 等 D1 启动 (2026-09-12)",
-    "status": "等王老师回复"
+    "status": "等外部顾问回复"
   },
-  "next_action": "等 user 决定 3 风险归属后, 沿 V0.1 沿用 + 王老师 1 周判死"
+  "next_action": "等 user 决定 3 风险归属后, 沿 V0.1 沿用 + 外部顾问 1 周判死"
 }

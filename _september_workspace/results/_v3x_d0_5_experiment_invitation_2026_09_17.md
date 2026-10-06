@@ -15,7 +15,7 @@
 - **V3X 判死**：5 候选 P-A/P-B/P-C/P-D/LLM 议价已评估；其中 **P-C + P-D 双 PASS**，60 cells 51/60 (85.0%) STRONG_PASS；F-3 DELTA 1.05 NOISE 推翻。
 - **18 frozen 0 触动**：含 conservation.py V0 = `4bdec2683f06`（沿 Q2 reconcile）；4 plugin spec + P-G V0/V0.1 全 PASS。
 - **5 制品 P-K verify 全 PASS**：KIMI (24,150 B) + GLM_1 (19,685 B) + GLM_2 (13,150 B) + coze (10,978 B) + MiniMax (25,347 B)。
-- **D7 终极判死**：2026-09-18 王老师 WeChat 推送（用户委托 coze 转，Mavis 不动钥匙）。
+- **D7 终极判死**：2026-09-18 外部顾问 线上 推送（用户委托 coze 转，Mavis 不动钥匙）。
 - **唯一缺口**：**P-L v2 沿 Trae §6.7 诚实降级**——Spearman=1 由同序单调变量产生，非真实 data collapse 拟合。本邀请函目标即填补此缺口。
 
 ---
@@ -127,8 +127,8 @@ Trae 在 §6.7 节沿诚实降级原则披露：
 | 14:00 – 15:00 CST | Mavis 聚合 + 用户拍板 |
 | 15:00 – 18:00 CST | 派 worker 跑实验（沿 30-60 min 单 backbone 估） |
 | 18:00 – 22:00 CST | 验证 + 写 P-L v3 制品 |
-| 22:00 CST | 提交 D7 王老师 WeChat 文稿草稿（含 P-L v3 真实数据） |
-| D7（2026-09-18） | 用户委托 coze 转推王老师 WeChat |
+| 22:00 CST | 提交 D7 外部顾问 线上 文稿草稿（含 P-L v3 真实数据） |
+| D7（2026-09-18） | 用户委托 coze 转推外部顾问 线上 |
 
 ---
 
@@ -150,7 +150,7 @@ Trae 在 §6.7 节沿诚实降级原则披露：
 
 1. **minimax task() 派工限制**：本轮实验 worker 派工只接受 mavis/explorer/worker/verifier 4 系统 agent；如需凝子-pa-deepen（已派 1 次 mavis-trash 删原 deposon-*）需走 `.minimax/agents/agent-XXX/` 实例路径。
 2. **P-L v2 §6.7 降级不能翻案**：本邀请函目标不是"重新辩护 P-L v2"，而是**用真实验替代 Spearman=1 的不可验证结论**。
-3. **D7 WeChat 文稿由 Mavis 起草 + 你复制粘贴**：Mavis 仍不动 WeChat 钥匙。
+3. **D7 线上 文稿由 Mavis 起草 + 你复制粘贴**：Mavis 仍不动 线上 钥匙。
 
 ---
 

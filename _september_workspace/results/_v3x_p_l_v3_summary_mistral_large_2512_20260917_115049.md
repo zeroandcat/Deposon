@@ -166,4 +166,4 @@ this_md_sha256_12           = (fs read at end of run; 同 §0 锚)
 ---
 
 —— **P-L v3 真重测完成**, **fit_status = PASS**, 可正式替代 P-L v2 入 paper。  
-**建议下游**: Mavis 聚合此 P-L v3 JSON + 本 MD 报告, 作为 D7 (2026-09-18) 王老师 WeChat 推送前的 P-L 主张唯一证据材料。
+**建议下游**: Mavis 聚合此 P-L v3 JSON + 本 MD 报告, 作为 D7 (2026-09-18) 外部顾问 线上 推送前的 P-L 主张唯一证据材料。

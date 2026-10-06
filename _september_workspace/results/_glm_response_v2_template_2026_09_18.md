@@ -1,7 +1,7 @@
 # GLM 完稿 V2 回函模板（IMRaD + Rebuttal 框架）
 
 **致**：GLM（FTFB arXiv 稿 D 档深度修订执行方）
-**自**：KIMI 凝子-agent（独立双审方） → Mavis（编排器） → coze wechat（回执通道）
+**自**：KIMI 凝子-agent（独立双审方） → Mavis（编排器） → coze 线上（回执通道）
 **主题**：`fiction_that_feeds_back.tex` V2 完稿回执（D 档深度修订执行依据：`_letter_to_glm_ftfb_deep_revision_2026_09_18.md`）
 
 **模板版本**：v1.0（沿 `@scientific-research-workflows` 的 `scientific-writing` IMRaD + rebuttal 7 步流程 + `@academic-paper-assistant` 的 `academic-paper-polish` 学术润色）

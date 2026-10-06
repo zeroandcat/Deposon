@@ -657,7 +657,7 @@ v1.1 按 PI 拍板 P3：codex 两件从附件副本升级为 `results/` 副本�
 
 ## §6 末段老实交代
 
-v1.1 本版本在 v1.0 基底上做最小增量改动；本文件未触动任何 V1–V3 资产（results/、corpus/、docs/V3X/、deposon_team/、verifier/、attacks/、deposon_team/plugins/、scripts/ 全树未读 / 未写）。本文件未触动任何 frozen 制品 / frozen schema / frozen 锚文件。本文件未调用任何 LLM API / 任何外部 URL / 任何 GitHub 操作 / 任何 WeChat 操作。本文件未引入任何密钥 / 端点 / 专有提示词。
+v1.1 本版本在 v1.0 基底上做最小增量改动；本文件未触动任何 V1–V3 资产（results/、corpus/、docs/V3X/、deposon_team/、verifier/、attacks/、deposon_team/plugins/、scripts/ 全树未读 / 未写）。本文件未触动任何 frozen 制品 / frozen schema / frozen 锚文件。本文件未调用任何 LLM API / 任何外部 URL / 任何 GitHub 操作 / 任何 线上 操作。本文件未引入任何密钥 / 端点 / 专有提示词。
 
 本文件仅**新增**了 `D:\私人资料\deposon-repo\results\_v4_pi_decision_questionnaire_2026_09_21_v1.1.md` 一份文件；该文件为 PI 拍板问卷 v1.1 版草稿，不视为邀请函的 v1.x 后续版本，也不视为对邀请函任何条目的实质修订。
 
@@ -669,7 +669,7 @@ v1.1 本版本在 v1.0 基底上做最小增量改动；本文件未触动任何
 - **A-4 断行自检**：PI 已接受（2026-09-21）按此定稿。除已修复的 A-1（`descriptive` 拆词）外，整合稿 v1.1 与问卷 v1.1 全文无其它词中断行实例。
 - **行数口径 PI 拍板 P6**：本稿 canonical 行数 = `[System.IO.File]::ReadAllLines(path, [System.Text.Encoding]::UTF8).Length`；v1.0 整合稿 = 1,041 行 / 119,732 B / SHA-12 `4B10CDE29C27`；v1.0 问卷 = 587 行 / 67,686 B / SHA-12 `6A3A2D8EE357`（两份原件未被动过；详见自验 4）。`Get-Content` 不指定 `-Encoding` 所得的 636 / 277 行数作废。
 - **GLM 查理件（ac74a04efeb2）老实交代**：本会话 worker 仅读该件摘要要点（§0 锚表），未逐行重核；v1.1 §0 / §4.14 仅以 PI 拍板 P1 提供的要点呈现；详细原文在 P1 后续 PI 裁定是否独立重读。
-- **0 LLM / 0 API / 0 WeChat / 0 GitHub**：本稿与整合稿 v1.1 同守。
+- **0 LLM / 0 API / 0 线上 / 0 GitHub**：本稿与整合稿 v1.1 同守。
 - **codex 落盘脚手架遗留**：组 A 复算动作的执行 worker 在仓库根目录留了 6 个脚手架文件（`_worker_drop_c2a1.ps1` 等），已如实上报；PI 尚未裁定是否清理。本稿与整合稿 v1.1 不引用、不清理、不修改这些脚手架。
 - **C7 锚文件修订注记（2026-09-22）**：`verifier/handoff/KT_ABC1_anchors_sha256_12.json` 已于 2026-09-22 按 PI 单件明示授权（组 D 第一批 C7 处置拍板 + 微确认 4 题，两轮问卷）修订：SHA-12 由 `03C6C01F3697`（6,680 B / 189 行）变为 `6E9CD8CD8E07`（11,318 B / 219 行）。修订内容：frozen_runs 5→3（v17/v18 按 PI 微确认移除、v20 改远端实测 `84CE9B028B0C`）、P_A_LLM_CLIENT（`1722500DA4AA`）/ P_A_HARNESS（`275E480BA4D9`）/ KT_B1_AUDIT_FUNCTION（`4BDEC2683F06`）改实测值、15 处 `.mavis/scripts` 系保留原值 + not_found 注记、新增 metadata.revision 块。上文「本文件未触动任何 frozen 制品 / frozen schema / frozen 锚文件」声明仅指 v1.1 撰写会话（2026-09-21）本身；本修订为会话外 PI 授权的独立动作。修订前原件已备份（scratch `_backup_KT_ABC1_anchors_pre_C7fix_2026_09_22.json`，实测 `03C6C01F3697`）。远端 `_september_workspace/verifier/handoff/` 孪生副本仍为旧版未同步（已在锚文件 metadata.revision.remote_twin_note 声明）；全仓引用旧哈希 `03C6C01F3697` 的文档本轮一律未动（2026-09-22 ripgrep 全量实测：repo 106 件 / 293 处 + sub 71 件 / 143 处，合计 177 件 / 436 处，含归档目录、问卷/整合稿各版本、letters、docs/V3X、sub 插件与锚文件自身 metadata 自引用；先前 174 件清单为锚文件修订前口径，以本轮实测为准）。
 

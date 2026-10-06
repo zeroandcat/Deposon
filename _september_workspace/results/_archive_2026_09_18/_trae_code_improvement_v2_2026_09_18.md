@@ -149,7 +149,7 @@
 | 18:00 CST | KIMI push 第 3 批 manifest 落盘 (30 文件估) | Mavis |
 | 19:00 CST | d7-pusher audit push 前副审 | d7-pusher |
 | 21:00 CST | user 委托 KIMI 凝子-agent 执行 git push | user |
-| **2026-09-18 晚 CST** | **D7 王老师 WeChat 推送** | **user 执行** |
+| **2026-09-18 晚 CST** | **D7 外部顾问 线上 推送** | **user 执行** |
 
 ---
 
@@ -291,7 +291,7 @@
 7. **Phase 1 R²=0.7447 FAIL** 老实入 paper §7.2
 8. **P-L data collapse 部分拒绝** (size scaling 失败, 跨 backbone 跨实现稳健)
 9. **2 脚本 (_fix_adendum_c + _goal_completion_audit)** 是 Trae code 写的, Mavis 不写脚本 (沿 7 铁律边界)
-10. **Mavis 不调 WeChat 钥匙** (王老师推送由 user 执行, 明晚 18:00-21:00 CST)
+10. **Mavis 不调 线上 钥匙** (外部顾问推送由 user 执行, 明晚 18:00-21:00 CST)
 11. **Mavis 不动 push** (KIMI 凝子-agent 独立执行 git push, Mavis 准备 manifest)
 12. **Mavis 不动 paper 写作** (Coze 凝子-agent 起正式版, Mavis 写需求 + 边界)
 13. **用户 V2 委托提的 3 bg_ IDs 找不到** — 老实交代, 落账源 = aggregated §3 9 task IDs

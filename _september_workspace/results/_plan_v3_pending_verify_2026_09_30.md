@@ -341,7 +341,7 @@ R1 Test-Path [artifacts] = False    R2 Test-Path [artifacts] = False
 
 ---
 
-### #17 GLM 论文终稿／coze wechat 报告委托面回函状态
+### #17 GLM 论文终稿／coze 线上 报告委托面回函状态
 
 **结论：⏸ 事实登记 —— 仓内 `letters/` 面已扫清；受托方自有工作区面 0 坐实（不可及）。**
 
@@ -369,20 +369,20 @@ R1 Test-Path [artifacts] = False    R2 Test-Path [artifacts] = False
 | mtime | 件名 |
 |---|---|
 | 09-27 20:43:21 | `_v3_calibration_change_note_for_coze_glm_2026_09_27.md` |
-| 09-26 22:20:19 | **`_v4_commission_wechat_report_coze_reply_v4_2026_09_24.md`** ← **唯一带 `reply` 字样的受托方回函** |
+| 09-26 22:20:19 | **`_v4_commission_online_report_coze_reply_v4_2026_09_24.md`** ← **唯一带 `reply` 字样的受托方回函** |
 | 09-26 21:25:21 | `_v4_commission_paper_final_glm_2026_09_24_v4.md` |
-| 09-26 21:25:16 | `_v4_commission_wechat_report_coze_2026_09_24_v4.md` |
+| 09-26 21:25:16 | `_v4_commission_online_report_coze_2026_09_24_v4.md` |
 | 09-26 19:19:09 | `_v4_commission_paper_final_glm_2026_09_24_v3.md` |
-| 09-26 19:19:29 | `_v4_commission_wechat_report_coze_2026_09_24_v3.md` |
+| 09-26 19:19:29 | `_v4_commission_online_report_coze_2026_09_24_v3.md` |
 | 09-24 20:05:57 | `_v4_commission_paper_final_glm_2026_09_24_v2.md` |
-| 09-24 20:05:56 | `_v4_commission_wechat_report_coze_2026_09_24_v2.md` |
+| 09-24 20:05:56 | `_v4_commission_online_report_coze_2026_09_24_v2.md` |
 | 09-24 18:55:43 | `_v4_commission_paper_final_glm_2026_09_24.md` |
-| 09-24 18:55:26 | `_v4_commission_wechat_report_coze_2026_09_24.md` |
+| 09-24 18:55:26 | `_v4_commission_online_report_coze_2026_09_24.md` |
 | 09-20 21:53:15 | `_v4_distillation_reply_coze_2026_09_20.md` |
 | 09-20 18:03:55 | `_v4_distillation_acceptance_coze_2026_09_20.md` |
 | 09-20 14:58:15 | `_v4_acceptance_coze_2026_09_20.md` |
 
-**⇒ 关键事实**：仓内**唯一** GLM／coze 受托方回函为 `_v4_commission_wechat_report_coze_reply_v4_2026_09_24.md`，mtime **09-26 22:20:19**。**GLM 论文终稿线 0 回函**（`_paper_final_glm_` 全系 5 件**均无 `reply` 字样**，最新 v4 止于 09-26 21:25:21）。
+**⇒ 关键事实**：仓内**唯一** GLM／coze 受托方回函为 `_v4_commission_online_report_coze_reply_v4_2026_09_24.md`，mtime **09-26 22:20:19**。**GLM 论文终稿线 0 回函**（`_paper_final_glm_` 全系 5 件**均无 `reply` 字样**，最新 v4 止于 09-26 21:25:21）。
 
 **（丙）受托方工作区面**：
 

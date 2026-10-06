@@ -97,7 +97,7 @@
 2. **未动 5 锚不变式**：`aeefb8ef6972 / 9bbe43f41fa8 / 6e9673205dc0 / 68a5b08ef007 / 6b09de9911c0` 仅做只读验证，未改；
 3. **未动 54 条文献池**：R01–R54 零重编号，零增删；
 4. **未调阈值**：FPR/显著性/McNemar/p 等阈值全部按 paper 原文口径读；**沿 KIMI 7 方向"不允许为新数据调阈值"，T=2.0 严格不调**（P-K FAIL 处置节，详见 §X.3）；
-5. **未调 API / WeChat / push**：0 调用；
+5. **未调 API / 线上 / push**：0 调用；
 6. **未擅自评审**：严守 §2.1–§2.5 五维度，未对 background/methodology/novelty/双盲（Pass 1 bg_12083701 的范围）发表意见；
 7. **0 LLM**：本报告全文由 worker 模型直写，无 LLM API 调用；用户 LLM API key 未读未入 JSON/log/MD。
 

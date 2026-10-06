@@ -336,7 +336,7 @@
 
 | # | 件 | SHA-12（落盘后实测） | 字节 | 受托方 |
 |:-:|---|---|---|---|
-| 1 | `letters/_v4_commission_wechat_report_coze_2026_09_24_v2.md` | （落盘后实测） | — | coze |
+| 1 | `letters/_v4_commission_online_report_coze_2026_09_24_v2.md` | （落盘后实测） | — | coze |
 | 2 | `letters/_v4_commission_paper_final_glm_2026_09_24_v2.md` | （落盘后实测） | — | GLM |
 | 3 | `letters/_v4_commission_upload_executor_2026_09_24_v2.md` | （落盘后实测） | — | 上传执行方 |
 
@@ -344,7 +344,7 @@
 
 | # | 件 | SHA-12（落盘后填） | 字节（落盘后填） | 受托方 |
 |:-:|---|---|---|---|
-| 1 | `letters/_v4_commission_wechat_report_coze_2026_09_24_v3.md` | （落盘后实测） | （落盘后实测） | coze |
+| 1 | `letters/_v4_commission_online_report_coze_2026_09_24_v3.md` | （落盘后实测） | （落盘后实测） | coze |
 | 2 | `letters/_v4_commission_paper_final_glm_2026_09_24_v3.md` | （落盘后实测） | （落盘后实测） | GLM |
 | 3 | `letters/_v4_commission_upload_executor_2026_09_24_v3.md` | （落盘后实测） | （落盘后实测） | KIMI（上传执行） |
 
@@ -355,7 +355,7 @@
   - 上传信（KIMI）：上传清单 vs no-upload 清单按最终布局重排（`_non_upload_local_archive` 全 1,669 件与 dataset 推理全文隐私面 10 件严禁上传；上传底账 = 主目录 Tag-A 正式成果件新路径）
   - GLM 信：正式裁决引用 `5D79E67A4E9D` 复合定性（FAIL · 2 复合 + 2 β）+ N-26 真证伪 `F4435801D09F` 为论文负面结果章素材；**涉 GLM 表述一律「以 PI 的 github 为唯一权威源（受托方已知）」**（沿 ask_9c8751ec 原文「KIMI与GLM知道即可」「你侧无额外补充」字面）
   - coze 信：素材底账同步本件 §3 + §4 + §5 + §6 全链
-  - **三封委托信 v3 仍不含大纲**（沿 PI 2026-09-24 原文「我决定论文终稿及项目汇报 wechat 委托信中不含大纲，交由 GLM 与 coze 自由发挥，每次因为大纲而校准口径都很费功夫」字面）
+  - **三封委托信 v3 仍不含大纲**（沿 PI 2026-09-24 原文「我决定论文终稿及项目汇报 线上 委托信中不含大纲，交由 GLM 与 coze 自由发挥，每次因为大纲而校准口径都很费功夫」字面）
 
 ---
 

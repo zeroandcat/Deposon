@@ -180,7 +180,7 @@
 
 | # | 件 | 路径 | 盘 SHA-12 | 字节 | 受托方 |
 |:-:|---|---|---|---|---|
-| 1 | v1 项目汇报 wechat 委托信 | `letters/_v4_commission_wechat_report_coze_2026_09_24.md` | `15F8227308BC` | 7,197 | coze |
+| 1 | v1 项目汇报 线上 委托信 | `letters/_v4_commission_online_report_coze_2026_09_24.md` | `15F8227308BC` | 7,197 | coze |
 | 2 | v1 论文终稿委托信 | `letters/_v4_commission_paper_final_glm_2026_09_24.md` | `53A425FE1BD2` | 10,515 | GLM |
 | 3 | v1 上传委托信 | `letters/_v4_commission_upload_executor_2026_09_24.md` | `ADFA7DD03F76` | 13,012 | 上传执行方 |
 
@@ -191,7 +191,7 @@
 
 | # | 件 | 路径 | SHA-12（落盘后填） | 字节（落盘后填） | 受托方 |
 |:-:|---|---|---|---|---|
-| 1 | v2 项目汇报 wechat 委托信 | `letters/_v4_commission_wechat_report_coze_2026_09_24_v2.md` | （落盘后实测） | （落盘后实测） | coze |
+| 1 | v2 项目汇报 线上 委托信 | `letters/_v4_commission_online_report_coze_2026_09_24_v2.md` | （落盘后实测） | （落盘后实测） | coze |
 | 2 | v2 论文终稿委托信 | `letters/_v4_commission_paper_final_glm_2026_09_24_v2.md` | （落盘后实测） | （落盘后实测） | GLM |
 | 3 | v2 上传委托信 | `letters/_v4_commission_upload_executor_2026_09_24_v2.md` | （落盘后实测） | （落盘后实测） | 上传执行方 |
 
@@ -202,7 +202,7 @@
   - 上传信：上传清单 vs no-upload 清单按最终布局重排（`_non_upload_local_archive` 全 1,669 件与 dataset 推理全文隐私面严禁上传；上传底账 = 主目录 Tag-A 正式成果件新路径）
   - GLM 信：勘误链 v14 E-31 引用加入素材底账
   - coze 信：素材底账同步补账件
-- **仍不含大纲口径不变**：GLM/coze 自由发挥声明沿 v1；PI 2026-09-24 原文「我决定论文终稿及项目汇报 wechat 委托信中不含大纲，交由 GLM 与 coze 自由发挥，每次因为大纲而校准口径都很费功夫」
+- **仍不含大纲口径不变**：GLM/coze 自由发挥声明沿 v1；PI 2026-09-24 原文「我决定论文终稿及项目汇报 线上 委托信中不含大纲，交由 GLM 与 coze 自由发挥，每次因为大纲而校准口径都很费功夫」
 
 ---
 

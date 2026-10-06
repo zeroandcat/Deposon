@@ -1064,7 +1064,7 @@ D8-01｜<题面字面>
 - **派生 JSON 不合并**：建议落盘目标为**新件** `results/_v4_pi_cot_v3_dataset_addendum_d8_*.json`，**0 覆写 dataset v1.2/v1.3、0 合并任何既有 JSON**
 - **不外推**：§6 账目为**基于 2026-09-28 盘上实测的算术推演**，**不是判定**；正式判定须全部入库后重算
 - **隐私面**：本件不含任何 PI 推理全文；key 永不明文（0 读取 / 0 落盘 / 0 入 prompt / 0 入 JSON / 0 入 log）
-- **0 LLM / 0 API / 0 proxy / 0 gateway**；0 调 WeChat / GitHub 等外部 API
+- **0 LLM / 0 API / 0 proxy / 0 gateway**；0 调 线上 / GitHub 等外部 API
 - **succeeded ≠ 跑完**：本件 = **题面产出**，**不是采集完成**；采集是否完成以落盘新件 + SHA-12 核验为准
 
 ---

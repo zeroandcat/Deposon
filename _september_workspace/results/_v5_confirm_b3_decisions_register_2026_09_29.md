@@ -207,11 +207,11 @@
 | 2 | `_v4_commission_paper_final_glm_2026_09_24_v2.md` | `3E4E90FB48E1` / 355,687 | `29A853444D42` / 192,160 | L22 / L30 / L142 / L145 |
 | 3 | `_v4_commission_paper_final_glm_2026_09_24_v3.md` | `3E4E90FB48E1` / 355,687 | `29A853444D42` / 192,160 | L27 / L36 / L168 / L172 |
 | 4 | `_v4_commission_paper_final_glm_2026_09_24_v4.md` | `3E4E90FB48E1` / 355,687 | `29A853444D42` / 192,160 | L30 / L39 / L256 / L260 |
-| 5 | `_v4_commission_wechat_report_coze_2026_09_24.md` | `2FADEA9F6259` / 355,369 | `29A853444D42` / 192,160 | L19 / L25 / L99 |
-| 6 | `_v4_commission_wechat_report_coze_2026_09_24_v2.md` | `3E4E90FB48E1` / 355,687 | `29A853444D42` / 192,160 | L22 / L47 / L131 |
-| 7 | `_v4_commission_wechat_report_coze_2026_09_24_v3.md` | `3E4E90FB48E1` / 355,687 | `29A853444D42` / 192,160 | L26 / L50 / L149 |
-| 8 | `_v4_commission_wechat_report_coze_2026_09_24_v4.md` | `3E4E90FB48E1` / 355,687 | `29A853444D42` / 192,160 | L29 / L53 / L198 |
-| 9 | `_v4_commission_wechat_report_coze_reply_v4_2026_09_24.md` | `3E4E90FB48E1` / 355,687 | `29A853444D42` / 192,160 | L117 / L122 |
+| 5 | `_v4_commission_online_report_coze_2026_09_24.md` | `2FADEA9F6259` / 355,369 | `29A853444D42` / 192,160 | L19 / L25 / L99 |
+| 6 | `_v4_commission_online_report_coze_2026_09_24_v2.md` | `3E4E90FB48E1` / 355,687 | `29A853444D42` / 192,160 | L22 / L47 / L131 |
+| 7 | `_v4_commission_online_report_coze_2026_09_24_v3.md` | `3E4E90FB48E1` / 355,687 | `29A853444D42` / 192,160 | L26 / L50 / L149 |
+| 8 | `_v4_commission_online_report_coze_2026_09_24_v4.md` | `3E4E90FB48E1` / 355,687 | `29A853444D42` / 192,160 | L29 / L53 / L198 |
+| 9 | `_v4_commission_online_report_coze_reply_v4_2026_09_24.md` | `3E4E90FB48E1` / 355,687 | `29A853444D42` / 192,160 | L117 / L122 |
 | 10 | `_v4_commission_upload_executor_2026_09_24.md` | `2FADEA9F6259` / 355,369 | — | L19 / L136 / L169 |
 | 11 | `_v4_commission_upload_executor_2026_09_24_v2.md` | `3E4E90FB48E1` / 355,687 | — | L24 / L192 |
 | 12 | `_v4_commission_upload_executor_2026_09_24_v3.md` | `3E4E90FB48E1` / 355,687 | — | L32 / L227（另 L152 两行**仅路径、0 值**） |

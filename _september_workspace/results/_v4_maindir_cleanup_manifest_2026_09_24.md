@@ -142,7 +142,7 @@
 | `results/` | 906 | V1-V3 frozen 派生/V3 ghostref 链/V4 supp L1-L14 链/V4 pi-cot V2 链/pi-cot prereg 链/_v4_prereg 链/manifest 基线/inventory(详见 §D) |
 | `docs/` | 134 | V1-V3 SPEC_/Findings_/LESSONS_/V3X frozen 文档(SPEC_V0_1, KT_A1/B1/C1, P_A-F, P_G, REVIEWER_A/B 等) |
 | `verifier/` | 117 | V1-V3 frozen 运行系统(runs/ v1-v43 历史 + check.py/.sh + handoff anchors + audit/conservation.py + kill_lines/kt_b1_kill_decision.py) |
-| `letters/` | 41 | V4 commission + reply + wechat 委托回函链 |
+| `letters/` | 41 | V4 commission + reply + 线上 委托回函链 |
 | `deposon_team/` | 38 | P-G plugin v0/v01 + frozen 18 _verify_* + boss_pa_/pc_/pg_ |
 | `corpus/` | 41 | V1.4 frozen corpus(v20 + caption_surface + index) |
 | `reviews/` | 32 | V1-V3 review 系列(independent, deep_probe, peer_review, literature_scan) |
@@ -218,7 +218,7 @@
 | ~530 | V1-V3 frozen 文档/代码/测试/工具/攻击 (`docs/` 134 + `verifier/` 117 + `deposon_team/` 38 + `corpus/` 41 + `reviews/` 32 + `tests/` 23 + `scripts/` 10 + `paper/` 5 + `tools/` 5 + `attacks/` 4 + `.trae/` 2 + 根目录 V1-V3 frozen ~115 件) | **否** | V1-V3 frozen 只读资产(R5 沿用底线不变) |
 | ~250 | `results/` 下 V3/V4 frozen 派生件(`_v4_pi_cot_v2_*` / `_v4_supp_*` 全系 / `_v4_prereg_v02_*` 八件 / `_v4_seeds_prereg_*` / `_v4_methods_prereg_*` / `_v4_pi_decision_*` / `_v4_v5_*` / `_v4_track2_*` 等) | **否** | 派工单禁动清单 + R5/R6/R7 沿用 |
 | ~243 | `results/` 下 `_adendum_*` / `_p_l_v3_*` / `_p_d_v03_*` / `_p_k_v3_*` / `_kimi_push_v3_manifest_*` / `_kimi_safe_batch_push_*` / `_mavis_skill_inventory_*` / `_ghostref_copy_log_*` / `_v2_*` / `_tra_v0_*` / `_coze_*` / `_d05_*` / `_deposon_v2scripts_*` / `_ftfb_*` / `_glm_*` / `_cpath_sim_runner.py` / `_probe_url_update_log_*` / `_track2_*` / `_agent_trio_redesign_*` 等 35 类 | **否** | 全部被 `inventory` / `ghostref_reconciliation` / `ghostref_copy_log` / `archive_manifest` / `docs/V3X/` / `letters/` 中 frozen 件以文件名引用(本棒逐件 grep 验证 35 件候选均非 0 引用) |
-| 41 | `letters/` 下 V4 commission/reply + D7 wechat 委托回函 | **否** | V4 委托链 + 派工单禁动清单(docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md 链) |
+| 41 | `letters/` 下 V4 commission/reply + D7 线上 委托回函 | **否** | V4 委托链 + 派工单禁动清单(docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md 链) |
 | 8 | `.tmp/` 链上保留件(§E 灰区) | **否**(临时目录名,待 PI 拍板是否归档) | 派工单「链上不动」+ 灰区规则 |
 | **~1072** | **不可动合计** | — | — |
 | **+437** = **1437 - 1000** | 主目录最终计数 | — | — |

@@ -12,7 +12,7 @@
     "iron_rule_status": {
       "rule_1_0_LLM_calls": "RELAXED (user 11:28 拍板, 仅 volcengine coding-plan)",
       "rule_2_0_proxy": "STRICT (0 HTTP_PROXY/HTTPS_PROXY 操作)",
-      "rule_3_only_volcengine_coding_plan": "STRICT (不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API)",
+      "rule_3_only_volcengine_coding_plan": "STRICT (不调 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API)",
       "rule_4_key_runtime_only": "STRICT (Path().read_text() runtime 读, 不入 prompt/JSON/落盘)",
       "rule_5_不动_16_frozen": "STRICT (沿 _verify_15frozen.py 验证, 不动 16 个文件)",
       "rule_6_不动_verifier_mavis_builtin_scripts": "STRICT (0 触动)",
@@ -1038,7 +1038,7 @@
   "blockers_remaining_risks": [
     "D3 (2026-09-16, 即 D5): B3 Merkle P-D V0.1 3 根指纹 + 22 caption dual_24bit 链式核验 (本 D1 已沿 P-D PASS 留 cross-check)",
     "D5 (2026-09-16): canonical 5 值工件补齐决策 (是否落盘 boss_f*.py 真实脚本), 等 user",
-    "D7 (2026-09-18): 5 锚终极判死 + 推 D0 末群 + 王老师 WeChat",
+    "D7 (2026-09-18): 5 锚终极判死 + 推 D0 末群 + 外部顾问 线上",
     "R1: D1 5 cells × 9 model chain_hash 与 V0.1 30 cells × 9 model chain_hash 不同是预期 (cell count 差异)",
     "R2: 5 锚中期评估 NOT final PASS/FAIL, 严守 7 铁律 user 11:44 主动 trigger 后未撤销 '不擅自判定 PASS/FAIL' 原则",
     "R3: P-F V0.1 JSON ghost path .mavis/scripts/p_f/ 未落盘真实脚本 (沿 Trae erratum); boss_pf_*.py 待 D5 user 决策"

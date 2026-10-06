@@ -267,7 +267,7 @@
 
 ### 7.2 25 件 trash-only 的 byte-identical 副本来源老实交代
 
-> 派工单 §3 列出 51 件 B 类候选 (一棒点名 ~30-40 件: coze/wechat/track2/llm_prior_cache/quizbank/v20_*/attack_pc_* 等族). 实测搬运 (mavis-trash + Move-Item) 时发现 **25 件候选在 `deposon-sub/results/` 已有 byte-identical 副本** (full SHA-256 = src SHA-256):
+> 派工单 §3 列出 51 件 B 类候选 (一棒点名 ~30-40 件: coze/线上/track2/llm_prior_cache/quizbank/v20_*/attack_pc_* 等族). 实测搬运 (mavis-trash + Move-Item) 时发现 **25 件候选在 `deposon-sub/results/` 已有 byte-identical 副本** (full SHA-256 = src SHA-256):
 >
 > - **byte-identical 来源**: 不明 (无前棒 ledger 记录); 推测为某次预备份 (棒 1-5 期间) 将 B 类候选预复制至 `deposon-sub/results/`, 但未删除源端 → 形成 src+dst 双副本. 本棒按"dest 已存不覆盖"原则对 25 件 **trash 源不动 dst** (0 覆盖既有件 ✓).
 > - **51 件最终状态**: 25 件 trash (src 离开 repo, dst 沿用预存副本) + 26 件 Move (src 移至 dst 新建副本) → repo 51 件源离开 ✓ + dst 51 件副本全在 (25 预存 + 26 新建) ✓.

@@ -64,7 +64,7 @@
 
 ## 7 铁律 0 触动声明
 
-1. 论文 PDF/TeX/MD 字节级**未触动**（仅读 + grep + line 抽读）；2. 5 锚 (aeefb8ef6972 / 9bbe43f41fa8 / 6e9673205dc0 / 68a5b08ef007 / 6b09de9911c0) **未触动**；3. 54 条文献池 R01–R54 **零重编号**（grep 全唯一 Rnn 数 = 54 个数）；4. 阈值 / tolerance / emergencystretch / raggedright 等 **未触碰**；5. API / WeChat / push **全程未调**；6. **0 LLM 调用**（no model used），grep 严格证；7. 14 名个人偏好 (S4 工程纪律) 全程遵守 — 本报告完全在本端 narrative flow 完成。
+1. 论文 PDF/TeX/MD 字节级**未触动**（仅读 + grep + line 抽读）；2. 5 锚 (aeefb8ef6972 / 9bbe43f41fa8 / 6e9673205dc0 / 68a5b08ef007 / 6b09de9911c0) **未触动**；3. 54 条文献池 R01–R54 **零重编号**（grep 全唯一 Rnn 数 = 54 个数）；4. 阈值 / tolerance / emergencystretch / raggedright 等 **未触碰**；5. API / 线上 / push **全程未调**；6. **0 LLM 调用**（no model used），grep 严格证；7. 14 名个人偏好 (S4 工程纪律) 全程遵守 — 本报告完全在本端 narrative flow 完成。
 
 ## Pass 1 老实交代
 

@@ -17,7 +17,7 @@
 |---|---|---|---|
 | 1 | 0 LLM 调用 | ✅ 严守 | 纯 numpy + scipy + stdlib (json + hashlib), 0 调用, 0 网络 |
 | 2 | 0 proxy | ✅ 严守 | 0 proxy 设置; 任务脚本未引用任何 HTTP 客户端 |
-| 3 | 0 网关 (OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChatAPI) | ✅ 严守 | 0 调用外部 API |
+| 3 | 0 网关 (OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上API) | ✅ 严守 | 0 调用外部 API |
 | 4 | key 不入 prompt/JSON/落盘 | ✅ 严守 | 0 key 字面量 (本任务纯 numpy, 不读 key) |
 | 5 | 16 frozen 0 触动 + P-G V0 spec 0 触动 | ✅ 严守 | 17/17 文件修前修后 SHA-12 完全一致 (详 §3) |
 | 6 | 不动 verifier/mavis/.builtin/scripts/ | ✅ 严守 | 0 访问, 0 写入 |
@@ -355,7 +355,7 @@ C:\Users\ADMINI~1\AppData\Local\Temp\deposon_reviewer_b_2026_09_15\
 ```
 0 LLM 调用              : PASS (0 调用 / 0 网络 / 0 proxy)
 0 proxy                 : PASS (0 proxy 设置)
-0 网关                  : PASS (0 调用 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/WeChat API)
+0 网关                  : PASS (0 调用 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API)
 key 不入 prompt/JSON/落盘 : PASS (0 key 字面量, 任务纯 numpy 不读 key)
 16 frozen + P-G V0 spec 0 触动 : PASS (17/17 修前修后 SHA-12 完全一致)
 不动 verifier/mavis/.builtin/scripts/ : PASS (0 访问, 0 写入)
@@ -368,9 +368,9 @@ key 不入 prompt/JSON/落盘 : PASS (0 key 字面量, 任务纯 numpy 不读 ke
 
 | 时点 | 动作 | 输出 | 责任人 |
 |---|---|---|---|
-| **D5 (2026-09-16)** | Mavis 沿双审纪律 (reviewer-a 静态审 + reviewer-b /tmp 重跑已完成), 推 D5 综合王老师 WeChat (1 条) | D5 WeChat | Mavis |
-| **D7 (2026-09-18)** | 5 锚终极判死 (P-A / P-C / P-E / P-F / P-G V0.1 综合) + 王老师 WeChat ack | D7 一页摘要 + 5 锚 PASS/FAIL | Mavis |
-| **王老师 WeChat** | 5 路径 verdict 综合 (沿 PLAN V0.2 启判 4 路径 + 新增 P-G V0.1) | WeChat 1 条 | Mavis |
+| **D5 (2026-09-16)** | Mavis 沿双审纪律 (reviewer-a 静态审 + reviewer-b /tmp 重跑已完成), 推 D5 综合外部顾问 线上 (1 条) | D5 线上 | Mavis |
+| **D7 (2026-09-18)** | 5 锚终极判死 (P-A / P-C / P-E / P-F / P-G V0.1 综合) + 外部顾问 线上 ack | D7 一页摘要 + 5 锚 PASS/FAIL | Mavis |
+| **外部顾问 线上** | 5 路径 verdict 综合 (沿 PLAN V0.2 启判 4 路径 + 新增 P-G V0.1) | 线上 1 条 | Mavis |
 
 ---
 
