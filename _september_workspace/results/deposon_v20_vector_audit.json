@@ -1,0 +1,35 @@
+{
+ "experiment": "deposon_v20_vector_audit",
+ "spec_version": "v2.0",
+ "spec": "用户指令 2026-08-28：deposon 向量属性（单纯形非负，负值无意义）",
+ "config": {
+  "n_steps": 50,
+  "beta_schedule": "linear",
+  "prior": "uniform_out",
+  "lr": 0.1,
+  "lam_smooth": 0.01,
+  "field_guidance": true,
+  "energy_mode": "aggregate",
+  "seed": 0
+ },
+ "n_tasks": 1740,
+ "violations": {
+  "v1_viol": [],
+  "v2_viol": [],
+  "v3_viol": [],
+  "v4_viol": []
+ },
+ "violation_counts": {
+  "v1_viol": 0,
+  "v2_viol": 0,
+  "v3_viol": 0,
+  "v4_viol": 0
+ },
+ "all_pass": true,
+ "runtime_sec": 64.394,
+ "honesty": [
+  "no LLM API calls issued：全部本地数值审计。",
+  "-np.inf 仅作为 mask 外占位（排序域外），不是场分值；场分值域为 [0,1] 单纯形权重，负值无物理意义，V1/V4 以 < -1e-9 为违规。",
+  "审计发现违规即如实列出任务级明细，不美化。"
+ ]
+}

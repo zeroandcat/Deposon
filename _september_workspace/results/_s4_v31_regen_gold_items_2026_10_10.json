@@ -1,0 +1,1453 @@
+{
+ "artifact": "_s4_v31_regen_gold_items_2026_10_10.json",
+ "date": "2026-10-10",
+ "kind": "per_item_registration",
+ "step": "二（重生成）",
+ "note": "逐件登记 JSON；⛔ 与汇总 JSON（_s4_v31_readings_summary_2026_10_10.json）分离不合并（K-EX-10）",
+ "authority": {
+  "clearance": {
+   "file": "results/_s4_regen_golive_clearance_2026_10_10.md",
+   "sha12": "80d8905b9762"
+  },
+  "sequence": {
+   "file": "results/_s4_execution_sequence_review_2026_10_10.md",
+   "sha12": "0e1eb2fdd25e"
+  },
+  "kwtable": {
+   "file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+   "sha12": "1b7bcbcce589"
+  },
+  "killline": {
+   "file": "results/_s4_kex_killline_freeze_2026_10_10.md",
+   "sha12": "6269d0c6fd10"
+  },
+  "vclause": {
+   "file": "results/_s4_vclause_1_6_revision_2026_10_10.md",
+   "sha12": "017b3cf38ae3"
+  },
+  "plan": {
+   "file": "results/_s4_regen_execution_plan_2026_10_10.md",
+   "sha12": "70e22220350d"
+  },
+  "executor_readonly": {
+   "file": "results/_v4_pi_cot_v3_ruleset_v3_executor.py",
+   "sha12": "8a81d90c69ba"
+  },
+  "old_readings_anchor_readonly": {
+   "file": "results/_s4_face_five_lines_ci_readings_execution_2026_10_09.md",
+   "sha12": "73550514152d"
+  },
+  "heldout": {
+   "file": "results/_s4_heldout_sampling_seed42_items_2026_10_09.json",
+   "sha12": "6a670e629dca"
+  }
+ },
+ "heldout_fingerprint": {
+  "sha12": "acedff01d18c",
+  "recomputed": "acedff01d18c",
+  "match": true
+ },
+ "face": {
+  "n_events": 179,
+  "n_held": 26,
+  "n_train": 153,
+  "r1_key_order": "件名字节序 × idx 升序"
+ },
+ "pipeline_selftest": {
+  "method": "同一代码路径施于 gold=V3/model=V3，与 73550514152d 在册读数逐位比对",
+  "nw_sim_mean": 0.32032967032967036,
+  "bootstrap_ci": [
+   0.18186813186813186,
+   0.44999999999999996
+  ],
+  "nled_sim_mean": 0.14743589743589744,
+  "B_num_den": [
+   9,
+   21
+  ],
+  "C_num_den": [
+   3,
+   5
+  ],
+  "all_bit_identical": true
+ },
+ "single_variable_check": {
+  "pred_identical_across_gold_versions": true,
+  "tree_depth_identical": true,
+  "label_distribution_identical": true
+ },
+ "model_side_declaration_per_item": {
+  "gold_kwtable": "V3.1",
+  "gold_kwtable_sha12": "1b7bcbcce589",
+  "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+  "model_tree": "V3",
+  "model_tree_source": "8a81d90c69ba",
+  "training_label_kwtable": "KEYWORDS_V3",
+  "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+  "mixed_object": true,
+  "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+ },
+ "counts": {
+  "n_items": 26,
+  "n_shifted_in_heldout": 9,
+  "n_total_hit_entries": 42,
+  "n_new_word_hit_entries": 16
+ },
+ "items": [
+  {
+   "order": 0,
+   "global_idx": 8,
+   "file": "_s4_open_questions_addendum_2026_10_09.json",
+   "src_idx": 0,
+   "q_id": "S4Q-01",
+   "q_id_json_raw": "S4Q-01",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "KD，独立复审，尽量立即重构重算",
+   "corpus_len": 16,
+   "seq_v3": [
+    "TIMING"
+   ],
+   "seq_v31": [
+    "TIMING"
+   ],
+   "seq_t1_only": [
+    "TIMING"
+   ],
+   "primary_v3": "TIMING",
+   "primary_v31": "TIMING",
+   "diff_vs_v3": "same",
+   "pred_model_side": "TIMING",
+   "hit_words_v31": [
+    {
+     "word": "立即",
+     "layer": "TIMING",
+     "char_pos": 10
+    }
+   ],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {
+    "TIMING": 10
+   },
+   "n_keywords_hit_v3_feature": 1,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 1,
+   "global_idx": 11,
+   "file": "_s4_open_questions_addendum_2026_10_09.json",
+   "src_idx": 3,
+   "q_id": "S4Q-04",
+   "q_id_json_raw": "S4Q-04",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "是否实干，如果有重要素材应看未看，为保证实验质量必须加派",
+   "corpus_len": 28,
+   "seq_v3": [],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "seq_t1_only": [
+    "CRITERIA"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "CRITERIA",
+   "diff_vs_v3": "changed",
+   "pred_model_side": "UNKNOWN",
+   "hit_words_v31": [
+    {
+     "word": "保证",
+     "layer": "CRITERIA",
+     "char_pos": 18
+    },
+    {
+     "word": "质量",
+     "layer": "CRITERIA",
+     "char_pos": 22
+    }
+   ],
+   "hit_words_new_only": [
+    {
+     "word": "保证",
+     "layer": "CRITERIA",
+     "char_pos": 18
+    },
+    {
+     "word": "质量",
+     "layer": "CRITERIA",
+     "char_pos": 22
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 18
+   },
+   "n_keywords_hit_v3_feature": 0,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 2,
+   "global_idx": 12,
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "src_idx": 0,
+   "q_id": "S4T-01",
+   "q_id_json_raw": "S4T-01",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "，不误导",
+   "corpus_len": 4,
+   "seq_v3": [
+    "CRITERIA",
+    "RISK"
+   ],
+   "seq_v31": [
+    "CRITERIA",
+    "RISK"
+   ],
+   "seq_t1_only": [
+    "CRITERIA",
+    "RISK"
+   ],
+   "primary_v3": "CRITERIA",
+   "primary_v31": "CRITERIA",
+   "diff_vs_v3": "same",
+   "pred_model_side": "RISK",
+   "hit_words_v31": [
+    {
+     "word": "不误导",
+     "layer": "CRITERIA",
+     "char_pos": 1
+    },
+    {
+     "word": "误导",
+     "layer": "RISK",
+     "char_pos": 2
+    }
+   ],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {
+    "CRITERIA": 1,
+    "RISK": 2
+   },
+   "n_keywords_hit_v3_feature": 2,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 3,
+   "global_idx": 15,
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "src_idx": 3,
+   "q_id": "S4T-04",
+   "q_id_json_raw": "S4T-04",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "，实事求是",
+   "corpus_len": 5,
+   "seq_v3": [
+    "CRITERIA"
+   ],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "seq_t1_only": [
+    "CRITERIA"
+   ],
+   "primary_v3": "CRITERIA",
+   "primary_v31": "CRITERIA",
+   "diff_vs_v3": "same",
+   "pred_model_side": "CRITERIA",
+   "hit_words_v31": [
+    {
+     "word": "求是",
+     "layer": "CRITERIA",
+     "char_pos": 3
+    }
+   ],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {
+    "CRITERIA": 3
+   },
+   "n_keywords_hit_v3_feature": 1,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 4,
+   "global_idx": 17,
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "src_idx": 5,
+   "q_id": "S4T-06",
+   "q_id_json_raw": "S4T-06",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "，需要填写思考，不是吗？",
+   "corpus_len": 12,
+   "seq_v3": [],
+   "seq_v31": [],
+   "seq_t1_only": [],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "UNKNOWN",
+   "diff_vs_v3": "same",
+   "pred_model_side": "UNKNOWN",
+   "hit_words_v31": [],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {},
+   "n_keywords_hit_v3_feature": 0,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 5,
+   "global_idx": 19,
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "src_idx": 7,
+   "q_id": "S4T-08",
+   "q_id_json_raw": "S4T-08",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "，PI有事后推翻权",
+   "corpus_len": 9,
+   "seq_v3": [],
+   "seq_v31": [
+    "KILL_LINE"
+   ],
+   "seq_t1_only": [
+    "KILL_LINE"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "KILL_LINE",
+   "diff_vs_v3": "changed",
+   "pred_model_side": "UNKNOWN",
+   "hit_words_v31": [
+    {
+     "word": "推翻",
+     "layer": "KILL_LINE",
+     "char_pos": 6
+    }
+   ],
+   "hit_words_new_only": [
+    {
+     "word": "推翻",
+     "layer": "KILL_LINE",
+     "char_pos": 6
+    }
+   ],
+   "layer_first_pos_v31": {
+    "KILL_LINE": 6
+   },
+   "n_keywords_hit_v3_feature": 0,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 6,
+   "global_idx": 22,
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "src_idx": 10,
+   "q_id": "S4T-11",
+   "q_id_json_raw": "S4T-11",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "，防记忆效应",
+   "corpus_len": 6,
+   "seq_v3": [],
+   "seq_v31": [
+    "RISK"
+   ],
+   "seq_t1_only": [],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "RISK",
+   "diff_vs_v3": "changed",
+   "pred_model_side": "UNKNOWN",
+   "hit_words_v31": [
+    {
+     "word": "记忆效应",
+     "layer": "RISK",
+     "char_pos": 2
+    }
+   ],
+   "hit_words_new_only": [
+    {
+     "word": "记忆效应",
+     "layer": "RISK",
+     "char_pos": 2
+    }
+   ],
+   "layer_first_pos_v31": {
+    "RISK": 2
+   },
+   "n_keywords_hit_v3_feature": 0,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 7,
+   "global_idx": 40,
+   "file": "_v4_pi_cot_v2_dataset_addendum_d2b_2026_09_26.json",
+   "src_idx": 3,
+   "q_id": "Q39",
+   "q_id_json_raw": "Q39",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "",
+   "corpus_len": 0,
+   "seq_v3": [],
+   "seq_v31": [],
+   "seq_t1_only": [],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "UNKNOWN",
+   "diff_vs_v3": "same",
+   "pred_model_side": "UNKNOWN",
+   "hit_words_v31": [],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {},
+   "n_keywords_hit_v3_feature": 0,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 8,
+   "global_idx": 44,
+   "file": "_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json",
+   "src_idx": 3,
+   "q_id": "Q43",
+   "q_id_json_raw": "Q43",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "实事求是",
+   "corpus_len": 4,
+   "seq_v3": [
+    "CRITERIA"
+   ],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "seq_t1_only": [
+    "CRITERIA"
+   ],
+   "primary_v3": "CRITERIA",
+   "primary_v31": "CRITERIA",
+   "diff_vs_v3": "same",
+   "pred_model_side": "TIMING",
+   "hit_words_v31": [
+    {
+     "word": "求是",
+     "layer": "CRITERIA",
+     "char_pos": 2
+    }
+   ],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {
+    "CRITERIA": 2
+   },
+   "n_keywords_hit_v3_feature": 1,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 9,
+   "global_idx": 45,
+   "file": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+   "src_idx": 0,
+   "q_id": "Q44",
+   "q_id_json_raw": "Q44",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "派兼职，改了以后要测试吧",
+   "corpus_len": 12,
+   "seq_v3": [
+    "DELEGATE"
+   ],
+   "seq_v31": [
+    "DELEGATE"
+   ],
+   "seq_t1_only": [
+    "DELEGATE"
+   ],
+   "primary_v3": "DELEGATE",
+   "primary_v31": "DELEGATE",
+   "diff_vs_v3": "same",
+   "pred_model_side": "DELEGATE",
+   "hit_words_v31": [
+    {
+     "word": "派兼职",
+     "layer": "DELEGATE",
+     "char_pos": 0
+    }
+   ],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {
+    "DELEGATE": 0
+   },
+   "n_keywords_hit_v3_feature": 1,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 10,
+   "global_idx": 50,
+   "file": "_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json",
+   "src_idx": 1,
+   "q_id": "Q49",
+   "q_id_json_raw": "Q49",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "相信直接参与者，动机与建议同等重要，建议也许天真但动机总是真实",
+   "corpus_len": 31,
+   "seq_v3": [],
+   "seq_v31": [],
+   "seq_t1_only": [],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "UNKNOWN",
+   "diff_vs_v3": "same",
+   "pred_model_side": "UNKNOWN",
+   "hit_words_v31": [],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {},
+   "n_keywords_hit_v3_feature": 0,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 11,
+   "global_idx": 51,
+   "file": "_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json",
+   "src_idx": 2,
+   "q_id": "Q50",
+   "q_id_json_raw": "Q50",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "需要的旧职责一定包含于新的，不需要的也用不上，新出现的有兜底的worker",
+   "corpus_len": 37,
+   "seq_v3": [
+    "DELEGATE"
+   ],
+   "seq_v31": [
+    "DELEGATE"
+   ],
+   "seq_t1_only": [
+    "DELEGATE"
+   ],
+   "primary_v3": "DELEGATE",
+   "primary_v31": "DELEGATE",
+   "diff_vs_v3": "same",
+   "pred_model_side": "TIMING",
+   "hit_words_v31": [
+    {
+     "word": "worker",
+     "layer": "DELEGATE",
+     "char_pos": 31
+    }
+   ],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {
+    "DELEGATE": 31
+   },
+   "n_keywords_hit_v3_feature": 1,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 12,
+   "global_idx": 64,
+   "file": "_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json",
+   "src_idx": 3,
+   "q_id": "Q17_third_read",
+   "q_id_json_raw": null,
+   "q_id_disclosure": "heldout JSON q_id 为 null；executor L758 回落 pair_id",
+   "corpus_verbatim": "AB，就像庖丁解牛，落到实处终会回归优雅，每一个优雅的数学公式只是因为没展开 || D1原读: 数学等价，物理唯一，哲学命题，虚实闭合",
+   "corpus_len": 67,
+   "seq_v3": [
+    "CRITERIA"
+   ],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "seq_t1_only": [
+    "CRITERIA"
+   ],
+   "primary_v3": "CRITERIA",
+   "primary_v31": "CRITERIA",
+   "diff_vs_v3": "same",
+   "pred_model_side": "COST",
+   "hit_words_v31": [
+    {
+     "word": "庖丁解牛",
+     "layer": "CRITERIA",
+     "char_pos": 5
+    },
+    {
+     "word": "落到实处",
+     "layer": "CRITERIA",
+     "char_pos": 10
+    },
+    {
+     "word": "优雅",
+     "layer": "CRITERIA",
+     "char_pos": 18
+    },
+    {
+     "word": "优雅",
+     "layer": "CRITERIA",
+     "char_pos": 24
+    },
+    {
+     "word": "数学等价",
+     "layer": "CRITERIA",
+     "char_pos": 48
+    },
+    {
+     "word": "物理唯一",
+     "layer": "CRITERIA",
+     "char_pos": 53
+    },
+    {
+     "word": "哲学命题",
+     "layer": "CRITERIA",
+     "char_pos": 58
+    },
+    {
+     "word": "虚实闭合",
+     "layer": "CRITERIA",
+     "char_pos": 63
+    }
+   ],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {
+    "CRITERIA": 5
+   },
+   "n_keywords_hit_v3_feature": 8,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 13,
+   "global_idx": 72,
+   "file": "_v4_pi_cot_v3_dataset_addendum_d6_2026_09_28.json",
+   "src_idx": 0,
+   "q_id": "DF6-1",
+   "q_id_json_raw": "DF6-1",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "",
+   "corpus_len": 0,
+   "seq_v3": [],
+   "seq_v31": [],
+   "seq_t1_only": [],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "UNKNOWN",
+   "diff_vs_v3": "same",
+   "pred_model_side": "UNKNOWN",
+   "hit_words_v31": [],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {},
+   "n_keywords_hit_v3_feature": 0,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 14,
+   "global_idx": 80,
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 1,
+   "q_id": "D8-02",
+   "q_id_json_raw": "D8-02",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "相信新阶段会比旧阶段更进步",
+   "corpus_len": 13,
+   "seq_v3": [
+    "TIMING"
+   ],
+   "seq_v31": [
+    "TIMING"
+   ],
+   "seq_t1_only": [
+    "TIMING"
+   ],
+   "primary_v3": "TIMING",
+   "primary_v31": "TIMING",
+   "diff_vs_v3": "same",
+   "pred_model_side": "CRITERIA",
+   "hit_words_v31": [
+    {
+     "word": "阶段",
+     "layer": "TIMING",
+     "char_pos": 3
+    },
+    {
+     "word": "阶段",
+     "layer": "TIMING",
+     "char_pos": 8
+    }
+   ],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {
+    "TIMING": 3
+   },
+   "n_keywords_hit_v3_feature": 2,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 15,
+   "global_idx": 82,
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 3,
+   "q_id": "D8-04",
+   "q_id_json_raw": "D8-04",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "540条可能因模型下架等原因不可重采如kimi2.7",
+   "corpus_len": 26,
+   "seq_v3": [
+    "RISK",
+    "DELEGATE"
+   ],
+   "seq_v31": [
+    "RISK",
+    "DELEGATE"
+   ],
+   "seq_t1_only": [
+    "RISK",
+    "DELEGATE"
+   ],
+   "primary_v3": "RISK",
+   "primary_v31": "RISK",
+   "diff_vs_v3": "same",
+   "pred_model_side": "CRITERIA",
+   "hit_words_v31": [
+    {
+     "word": "不可",
+     "layer": "RISK",
+     "char_pos": 14
+    },
+    {
+     "word": "kimi",
+     "layer": "DELEGATE",
+     "char_pos": 19
+    }
+   ],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {
+    "RISK": 14,
+    "DELEGATE": 19
+   },
+   "n_keywords_hit_v3_feature": 2,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 16,
+   "global_idx": 86,
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 7,
+   "q_id": "D8-08",
+   "q_id_json_raw": "D8-08",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "不可机械判死，否则不是与死同行，而是自杀诅咒",
+   "corpus_len": 22,
+   "seq_v3": [
+    "RISK",
+    "KILL_LINE",
+    "CRITERIA"
+   ],
+   "seq_v31": [
+    "RISK",
+    "KILL_LINE",
+    "CRITERIA"
+   ],
+   "seq_t1_only": [
+    "RISK",
+    "KILL_LINE",
+    "CRITERIA"
+   ],
+   "primary_v3": "RISK",
+   "primary_v31": "RISK",
+   "diff_vs_v3": "same",
+   "pred_model_side": "CRITERIA",
+   "hit_words_v31": [
+    {
+     "word": "不可",
+     "layer": "RISK",
+     "char_pos": 0
+    },
+    {
+     "word": "判死",
+     "layer": "KILL_LINE",
+     "char_pos": 4
+    },
+    {
+     "word": "与死同行",
+     "layer": "CRITERIA",
+     "char_pos": 11
+    }
+   ],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {
+    "KILL_LINE": 4,
+    "CRITERIA": 11,
+    "RISK": 0
+   },
+   "n_keywords_hit_v3_feature": 3,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 17,
+   "global_idx": 99,
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 20,
+   "q_id": "D8-21",
+   "q_id_json_raw": "D8-21",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "此外无需<=2~3，<=3即可，但因PI而异且要注意防回退",
+   "corpus_len": 29,
+   "seq_v3": [],
+   "seq_v31": [
+    "RISK"
+   ],
+   "seq_t1_only": [
+    "RISK"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "RISK",
+   "diff_vs_v3": "changed",
+   "pred_model_side": "UNKNOWN",
+   "hit_words_v31": [
+    {
+     "word": "回退",
+     "layer": "RISK",
+     "char_pos": 27
+    }
+   ],
+   "hit_words_new_only": [
+    {
+     "word": "回退",
+     "layer": "RISK",
+     "char_pos": 27
+    }
+   ],
+   "layer_first_pos_v31": {
+    "RISK": 27
+   },
+   "n_keywords_hit_v3_feature": 0,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 18,
+   "global_idx": 105,
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 26,
+   "q_id": "D8-27",
+   "q_id_json_raw": "D8-27",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "噪声不应被引用而应转写，诚然探针可能构造缺陷影响结论，但那是复核的事了",
+   "corpus_len": 35,
+   "seq_v3": [],
+   "seq_v31": [
+    "RISK",
+    "CRITERIA"
+   ],
+   "seq_t1_only": [
+    "CRITERIA"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "RISK",
+   "diff_vs_v3": "changed",
+   "pred_model_side": "UNKNOWN",
+   "hit_words_v31": [
+    {
+     "word": "噪声",
+     "layer": "RISK",
+     "char_pos": 0
+    },
+    {
+     "word": "缺陷",
+     "layer": "RISK",
+     "char_pos": 20
+    },
+    {
+     "word": "复核",
+     "layer": "CRITERIA",
+     "char_pos": 30
+    }
+   ],
+   "hit_words_new_only": [
+    {
+     "word": "噪声",
+     "layer": "RISK",
+     "char_pos": 0
+    },
+    {
+     "word": "缺陷",
+     "layer": "RISK",
+     "char_pos": 20
+    },
+    {
+     "word": "复核",
+     "layer": "CRITERIA",
+     "char_pos": 30
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 30,
+    "RISK": 0
+   },
+   "n_keywords_hit_v3_feature": 0,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 19,
+   "global_idx": 116,
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 37,
+   "q_id": "D8-38",
+   "q_id_json_raw": "D8-38",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "LLM检验蒸馏成果是后面的事",
+   "corpus_len": 14,
+   "seq_v3": [],
+   "seq_v31": [
+    "KILL_LINE",
+    "TIMING"
+   ],
+   "seq_t1_only": [],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "KILL_LINE",
+   "diff_vs_v3": "changed",
+   "pred_model_side": "UNKNOWN",
+   "hit_words_v31": [
+    {
+     "word": "检验",
+     "layer": "KILL_LINE",
+     "char_pos": 3
+    },
+    {
+     "word": "后面",
+     "layer": "TIMING",
+     "char_pos": 10
+    }
+   ],
+   "hit_words_new_only": [
+    {
+     "word": "检验",
+     "layer": "KILL_LINE",
+     "char_pos": 3
+    },
+    {
+     "word": "后面",
+     "layer": "TIMING",
+     "char_pos": 10
+    }
+   ],
+   "layer_first_pos_v31": {
+    "KILL_LINE": 3,
+    "TIMING": 10
+   },
+   "n_keywords_hit_v3_feature": 0,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 20,
+   "global_idx": 118,
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 39,
+   "q_id": "D8-40",
+   "q_id_json_raw": "D8-40",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "对抗遗忘，与死同行是对抗遗忘的过程，也是对抗机械的过程",
+   "corpus_len": 27,
+   "seq_v3": [
+    "CRITERIA"
+   ],
+   "seq_v31": [
+    "RISK",
+    "CRITERIA"
+   ],
+   "seq_t1_only": [
+    "RISK",
+    "CRITERIA"
+   ],
+   "primary_v3": "CRITERIA",
+   "primary_v31": "RISK",
+   "diff_vs_v3": "changed",
+   "pred_model_side": "DELEGATE",
+   "hit_words_v31": [
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 2
+    },
+    {
+     "word": "与死同行",
+     "layer": "CRITERIA",
+     "char_pos": 5
+    },
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 12
+    }
+   ],
+   "hit_words_new_only": [
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 2
+    },
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 12
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 5,
+    "RISK": 2
+   },
+   "n_keywords_hit_v3_feature": 1,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 21,
+   "global_idx": 124,
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 45,
+   "q_id": "D8-46",
+   "q_id_json_raw": "D8-46",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "实事求是",
+   "corpus_len": 4,
+   "seq_v3": [
+    "CRITERIA"
+   ],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "seq_t1_only": [
+    "CRITERIA"
+   ],
+   "primary_v3": "CRITERIA",
+   "primary_v31": "CRITERIA",
+   "diff_vs_v3": "same",
+   "pred_model_side": "TIMING",
+   "hit_words_v31": [
+    {
+     "word": "求是",
+     "layer": "CRITERIA",
+     "char_pos": 2
+    }
+   ],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {
+    "CRITERIA": 2
+   },
+   "n_keywords_hit_v3_feature": 1,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 22,
+   "global_idx": 130,
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 51,
+   "q_id": "D8-52",
+   "q_id_json_raw": "D8-52",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "先由PI复核，人是活的，PI是人",
+   "corpus_len": 16,
+   "seq_v3": [],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "seq_t1_only": [
+    "CRITERIA"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "CRITERIA",
+   "diff_vs_v3": "changed",
+   "pred_model_side": "UNKNOWN",
+   "hit_words_v31": [
+    {
+     "word": "复核",
+     "layer": "CRITERIA",
+     "char_pos": 4
+    }
+   ],
+   "hit_words_new_only": [
+    {
+     "word": "复核",
+     "layer": "CRITERIA",
+     "char_pos": 4
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 4
+   },
+   "n_keywords_hit_v3_feature": 0,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 23,
+   "global_idx": 136,
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 57,
+   "q_id": "D8-58r",
+   "q_id_json_raw": "D8-58r",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "随时有新文件，包括每日整理文件夹，不可能无噪声下随时校正",
+   "corpus_len": 28,
+   "seq_v3": [
+    "RISK"
+   ],
+   "seq_v31": [
+    "RISK"
+   ],
+   "seq_t1_only": [
+    "RISK"
+   ],
+   "primary_v3": "RISK",
+   "primary_v31": "RISK",
+   "diff_vs_v3": "same",
+   "pred_model_side": "CRITERIA",
+   "hit_words_v31": [
+    {
+     "word": "不可",
+     "layer": "RISK",
+     "char_pos": 17
+    },
+    {
+     "word": "噪声",
+     "layer": "RISK",
+     "char_pos": 21
+    }
+   ],
+   "hit_words_new_only": [
+    {
+     "word": "噪声",
+     "layer": "RISK",
+     "char_pos": 21
+    }
+   ],
+   "layer_first_pos_v31": {
+    "RISK": 17
+   },
+   "n_keywords_hit_v3_feature": 1,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 24,
+   "global_idx": 144,
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 65,
+   "q_id": "D8-66",
+   "q_id_json_raw": "D8-66",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "全量推进防遗忘，但也注意防回退，不过本场景应不涉及进程对抗",
+   "corpus_len": 29,
+   "seq_v3": [
+    "TIMING"
+   ],
+   "seq_v31": [
+    "TIMING",
+    "RISK"
+   ],
+   "seq_t1_only": [
+    "TIMING",
+    "RISK"
+   ],
+   "primary_v3": "TIMING",
+   "primary_v31": "TIMING",
+   "diff_vs_v3": "changed",
+   "pred_model_side": "CRITERIA",
+   "hit_words_v31": [
+    {
+     "word": "全量",
+     "layer": "TIMING",
+     "char_pos": 0
+    },
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 5
+    },
+    {
+     "word": "回退",
+     "layer": "RISK",
+     "char_pos": 13
+    }
+   ],
+   "hit_words_new_only": [
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 5
+    },
+    {
+     "word": "回退",
+     "layer": "RISK",
+     "char_pos": 13
+    }
+   ],
+   "layer_first_pos_v31": {
+    "RISK": 5,
+    "TIMING": 0
+   },
+   "n_keywords_hit_v3_feature": 1,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  },
+  {
+   "order": 25,
+   "global_idx": 176,
+   "file": "_v4_pi_cot_v3_dataset_addendum_s3_d1fill_2026_10_01.json",
+   "src_idx": 4,
+   "q_id": "DF1-6",
+   "q_id_json_raw": "DF1-6",
+   "q_id_disclosure": null,
+   "corpus_verbatim": "",
+   "corpus_len": 0,
+   "seq_v3": [],
+   "seq_v31": [],
+   "seq_t1_only": [],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "UNKNOWN",
+   "diff_vs_v3": "same",
+   "pred_model_side": "UNKNOWN",
+   "hit_words_v31": [],
+   "hit_words_new_only": [],
+   "layer_first_pos_v31": {},
+   "n_keywords_hit_v3_feature": 0,
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "gold_kwtable_file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化"
+   }
+  }
+ ]
+}

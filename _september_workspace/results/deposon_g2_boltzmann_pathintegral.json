@@ -1,0 +1,54 @@
+{
+  "task": "G2 时间换质量: Boltzmann退火路径选择 + 路径积分(Born规则)集成",
+  "api_consumption": 0,
+  "setup": {
+    "graph_source": "缓存decompose (unified场, 与原评测同图同参数)",
+    "boltzmann": "出边采样 p_i∝exp((w_i-b_i)/T), 即边能E_i=b_i-w_i (低能=高权低势垒); 退火T:1.0→0.05几何",
+    "path_integral": "K=20条独立轨迹(T=0.5), 答案聚合 argmax_a Σ_p transmitted_p² (Born规则)",
+    "cost_def": "平均每题节点级散射评估次数",
+    "seed": 42
+  },
+  "methods": {
+    "argmax_field": {
+      "simple_acc": 1.0,
+      "traps_acc": 1.0,
+      "avg_cost": 12.1,
+      "K": "-",
+      "说明": "基线: BFS候选+场透射argmax (=unified)"
+    },
+    "boltzmann_single": {
+      "simple_acc": 0.01,
+      "traps_acc": 0.02,
+      "avg_cost": 3.0,
+      "K": 1,
+      "说明": "单轨迹T=0.3无场筛选: 诱饵边w-b最大, 采样被陷阱支配"
+    },
+    "boltzmann_annealed": {
+      "simple_acc": 1.0,
+      "traps_acc": 1.0,
+      "avg_cost": 54.0,
+      "K": 20,
+      "说明": "K=20退火轨迹+场透射择优: 追平argmax但4.5倍能量成本"
+    },
+    "path_integral_born": {
+      "simple_acc": 1.0,
+      "traps_acc": 1.0,
+      "avg_cost": 51.0,
+      "K": 20,
+      "说明": "Born规则聚合: 追平argmax, 4.2倍成本"
+    },
+    "majority_vote": {
+      "simple_acc": 0.19,
+      "traps_acc": 0.17,
+      "avg_cost": 51.0,
+      "K": 20,
+      "说明": "同K多数投票(不乘t²): 17-19%, 集成本身无救"
+    }
+  },
+  "findings": [
+    "负面结果(如实): 两基准已被argmax_field饱和(100%), 退火与路径积分均未带来提升, 反付出4.2-4.5倍能量成本",
+    "阳性对照发现: 同K=20轨迹下 Born规则(Σt²)=100% vs 多数投票=17-19% —— 振幅平方加权(含场透射信息)是集成的有效成分, 单纯集成采样不是",
+    "单轨迹Boltzmann(1-2%)甚至低于贪心基线(7-10%): 采样在高温段引入额外噪声, 且诱饵边在E=b-w度量下仍是全局最低能级",
+    "结论: 在已饱和合成集上\"时间换质量\"无收益; Born-vs-投票对照值得保留为机制证据 (物理振幅携带的信息不可被纯计数替代)"
+  ]
+}
