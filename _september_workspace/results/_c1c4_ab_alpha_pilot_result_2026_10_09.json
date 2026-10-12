@@ -1,0 +1,4350 @@
+{
+  "artifact": "V3-05 · AB 预实验 · α 案（P-2 去镜像-非对称交叉 · 换域 标签→arm）· 预实验读数",
+  "case": "α",
+  "date": "2026-10-09",
+  "baton": "V3-05 · AB 预实验并跑 · 棒 1a/1b（构造 + 预实验跑）",
+  "author": "worker",
+  "定位": "**预实验**（PI 2026-10-09 卡答：「AB预实验并跑，择优转正」）⇒ ⛔ 0 判档 / 0 转正 / 0 宣告达标；判定归 verdict-keeper，转正 ＝ 后续另棒",
+  "授权锚": {
+    "ask_id": "ask_7afd6a8e4721444e9899a761",
+    "题①逐字": "AB预实验并跑，择优转正",
+    "题②逐字": "须重声明（另定）",
+    "推论": "α 换域后旧门槛（TH-V3R-1 之 1.3×/2.0×）须重声明、另定 ⇒ 本预实验 **0 以旧门槛作终判**，只比机制面与门面读数"
+  },
+  "0_LLM_calls": 0,
+  "0_network_calls": 0,
+  "spec_sources_sha12_跑前实测": {
+    "results/_c1c4_input_gap_fill_plan_2026_10_09.md": "9f5675633e03",
+    "results/_v5_v3_deg_reopen_line_2026_09_29.md": "2ea1c2cee65d",
+    "results/_v5_v3_deg_fix_prereg_2026_09_29.md": "98286cc1aec7",
+    "results/_v5_confirm_b7_decisions_register_2026_09_29.md": "0a80ae035042",
+    "results/_v5_v3_deg_p1_reopen_result_2026_09_29.json": "b86d6740d487",
+    "deposon_team/plugins/boss_pa_1_rbr_rm_v3df_c1c4_2026_09_29.py": "7761f2c339e6",
+    "deposon_team/plugins/boss_pa_1_rbr_rm.py": "5cc594147e00"
+  },
+  "输入链": {
+    "per_graph 源": "results/deposon_v20_baselines.json",
+    "sha12": "6edb2aec1660",
+    "n_graphs": 22
+  },
+  "构造定义": {
+    "族": "α · P-2 · 去镜像-非对称交叉（策略空间换域：标签 → arm）",
+    "A_动作域": "sA ∈ {0,1} = arm：0 = deposon `field_mean` ／ 1 = best baseline",
+    "B_动作域": "sB ∈ {0,1} = 标签：0 = named ／ 1 = filler",
+    "arm差口径_跑前写死": "E_L = a_L − b_L；signed · 不取绝对值 · 不截断",
+    "uA": "u_A(0,sB) = E_{sB}；u_A(1,sB) = 0.0",
+    "uB": "u_B(sB,0) = a_{sB}（A 选 deposon）；u_B(sB,1) = b_{sB}（A 选 baseline）",
+    "δ_A(sB)": "= E_{sB} ⇒ 随 sB 取两态、可正可负 ⇒ Q-1 满足",
+    "δ_B(sA)": "= a_named − b_named (sA=0) ／ b_named − b_filler (sA=1) ⇒ 随 sA 变",
+    "未采备选_跑前登记": [
+      "arm 差取绝对值（⇒ 抹平可正可负、退回 ±同一常数面）",
+      "arm 差截断至 0（⇒ 造 δ_A ≡ 0 平局格，best-response 退化）",
+      "arm 差改用 deposon_freq 差",
+      "B 保持 V3 冻结镜像赋格（⇒ B 的 BR 与 A 的 arm 无关 ⇒ N-2 未破）"
+    ],
+    "新设数值切点数": 0
+  },
+  "Q1_自证": {
+    "逐图": [
+      {
+        "graph_id": "L_algorithm_process",
+        "E_named (a_named − b_named)": 0.034482758621,
+        "E_filler (a_filler − b_filler)": 0.105263157895,
+        "delta_A(sB=named)": 0.034482758621,
+        "delta_A(sB=filler)": 0.105263157895,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": 0.034482758621,
+        "delta_B(sA=baseline)": 0.016333938294
+      },
+      {
+        "graph_id": "L_biological_taxonomy",
+        "E_named (a_named − b_named)": -0.045454545455,
+        "E_filler (a_filler − b_filler)": -0.105263157895,
+        "delta_A(sB=named)": -0.045454545455,
+        "delta_A(sB=filler)": -0.105263157895,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": -0.045454545455,
+        "delta_B(sA=baseline)": 0.076555023923
+      },
+      {
+        "graph_id": "L_geography_world",
+        "E_named (a_named − b_named)": 0.125,
+        "E_filler (a_filler − b_filler)": -0.178571428571,
+        "delta_A(sB=named)": 0.125,
+        "delta_A(sB=filler)": -0.178571428571,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": true,
+        "delta_B(sA=deposon)": 0.125,
+        "delta_B(sA=baseline)": -0.116071428571
+      },
+      {
+        "graph_id": "L_historical_causality",
+        "E_named (a_named − b_named)": -0.130434782609,
+        "E_filler (a_filler − b_filler)": 0.09375,
+        "delta_A(sB=named)": -0.130434782609,
+        "delta_A(sB=filler)": 0.09375,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": true,
+        "delta_B(sA=deposon)": -0.130434782609,
+        "delta_B(sA=baseline)": -0.076086956522
+      },
+      {
+        "graph_id": "L_physics_concepts",
+        "E_named (a_named − b_named)": -0.096774193548,
+        "E_filler (a_filler − b_filler)": -0.125,
+        "delta_A(sB=named)": -0.096774193548,
+        "delta_A(sB=filler)": -0.125,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": -0.096774193548,
+        "delta_B(sA=baseline)": 0.068548387097
+      },
+      {
+        "graph_id": "L_project_management",
+        "E_named (a_named − b_named)": -0.166666666667,
+        "E_filler (a_filler − b_filler)": 0.066666666667,
+        "delta_A(sB=named)": -0.166666666667,
+        "delta_A(sB=filler)": 0.066666666667,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": true,
+        "delta_B(sA=deposon)": -0.166666666667,
+        "delta_B(sA=baseline)": 0.155555555556
+      },
+      {
+        "graph_id": "S1",
+        "E_named (a_named − b_named)": 0.0,
+        "E_filler (a_filler − b_filler)": 0.0,
+        "delta_A(sB=named)": 0.0,
+        "delta_A(sB=filler)": 0.0,
+        "Q1_非恒定同一常数": false,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": 0.0,
+        "delta_B(sA=baseline)": 0.157894736842
+      },
+      {
+        "graph_id": "S1_n35",
+        "E_named (a_named − b_named)": 0.058823529412,
+        "E_filler (a_filler − b_filler)": 0.0,
+        "delta_A(sB=named)": 0.058823529412,
+        "delta_A(sB=filler)": 0.0,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": 0.058823529412,
+        "delta_B(sA=baseline)": 0.029411764706
+      },
+      {
+        "graph_id": "S1_n45",
+        "E_named (a_named − b_named)": 0.0,
+        "E_filler (a_filler − b_filler)": 0.0,
+        "delta_A(sB=named)": 0.0,
+        "delta_A(sB=filler)": 0.0,
+        "Q1_非恒定同一常数": false,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": 0.0,
+        "delta_B(sA=baseline)": 0.068181818182
+      },
+      {
+        "graph_id": "S1_n60",
+        "E_named (a_named − b_named)": 0.050847457627,
+        "E_filler (a_filler − b_filler)": 0.0,
+        "delta_A(sB=named)": 0.050847457627,
+        "delta_A(sB=filler)": 0.0,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": 0.050847457627,
+        "delta_B(sA=baseline)": 0.0
+      },
+      {
+        "graph_id": "S2",
+        "E_named (a_named − b_named)": 0.071428571429,
+        "E_filler (a_filler − b_filler)": -0.0625,
+        "delta_A(sB=named)": 0.071428571429,
+        "delta_A(sB=filler)": -0.0625,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": true,
+        "delta_B(sA=deposon)": 0.071428571429,
+        "delta_B(sA=baseline)": -0.053571428571
+      },
+      {
+        "graph_id": "S2_n20",
+        "E_named (a_named − b_named)": 0.222222222222,
+        "E_filler (a_filler − b_filler)": 0.1,
+        "delta_A(sB=named)": 0.222222222222,
+        "delta_A(sB=filler)": 0.1,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": 0.222222222222,
+        "delta_B(sA=baseline)": 0.0
+      },
+      {
+        "graph_id": "S2_n35",
+        "E_named (a_named − b_named)": 0.0625,
+        "E_filler (a_filler − b_filler)": 0.055555555556,
+        "delta_A(sB=named)": 0.0625,
+        "delta_A(sB=filler)": 0.055555555556,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": 0.0625,
+        "delta_B(sA=baseline)": 0.0625
+      },
+      {
+        "graph_id": "S2_n45",
+        "E_named (a_named − b_named)": 0.047619047619,
+        "E_filler (a_filler − b_filler)": 0.0,
+        "delta_A(sB=named)": 0.047619047619,
+        "delta_A(sB=filler)": 0.0,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": 0.047619047619,
+        "delta_B(sA=baseline)": 0.004140786749
+      },
+      {
+        "graph_id": "S2_n60",
+        "E_named (a_named − b_named)": 0.0,
+        "E_filler (a_filler − b_filler)": 0.033333333333,
+        "delta_A(sB=named)": 0.0,
+        "delta_A(sB=filler)": 0.033333333333,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": 0.0,
+        "delta_B(sA=baseline)": 0.068965517241
+      },
+      {
+        "graph_id": "S3",
+        "E_named (a_named − b_named)": 0.142857142857,
+        "E_filler (a_filler − b_filler)": 0.0,
+        "delta_A(sB=named)": 0.142857142857,
+        "delta_A(sB=filler)": 0.0,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": 0.142857142857,
+        "delta_B(sA=baseline)": 0.047619047619
+      },
+      {
+        "graph_id": "S4",
+        "E_named (a_named − b_named)": -0.068965517241,
+        "E_filler (a_filler − b_filler)": 0.0,
+        "delta_A(sB=named)": -0.068965517241,
+        "delta_A(sB=filler)": 0.0,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": -0.068965517241,
+        "delta_B(sA=baseline)": 0.122988505747
+      },
+      {
+        "graph_id": "S5",
+        "E_named (a_named − b_named)": -0.142857142857,
+        "E_filler (a_filler − b_filler)": -0.095238095238,
+        "delta_A(sB=named)": -0.142857142857,
+        "delta_A(sB=filler)": -0.095238095238,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": -0.142857142857,
+        "delta_B(sA=baseline)": 0.190476190476
+      },
+      {
+        "graph_id": "S6",
+        "E_named (a_named − b_named)": 0.411764705882,
+        "E_filler (a_filler − b_filler)": 0.0,
+        "delta_A(sB=named)": 0.411764705882,
+        "delta_A(sB=filler)": 0.0,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": 0.411764705882,
+        "delta_B(sA=baseline)": 0.058823529412
+      },
+      {
+        "graph_id": "S6_n20",
+        "E_named (a_named − b_named)": 0.117647058824,
+        "E_filler (a_filler − b_filler)": 0.0,
+        "delta_A(sB=named)": 0.117647058824,
+        "delta_A(sB=filler)": 0.0,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": 0.117647058824,
+        "delta_B(sA=baseline)": 0.352941176471
+      },
+      {
+        "graph_id": "S6_n35",
+        "E_named (a_named − b_named)": 0.294117647059,
+        "E_filler (a_filler − b_filler)": -0.090909090909,
+        "delta_A(sB=named)": 0.294117647059,
+        "delta_A(sB=filler)": -0.090909090909,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": true,
+        "delta_B(sA=deposon)": 0.294117647059,
+        "delta_B(sA=baseline)": 0.085561497326
+      },
+      {
+        "graph_id": "S6_n60",
+        "E_named (a_named − b_named)": 0.411764705882,
+        "E_filler (a_filler − b_filler)": 0.0,
+        "delta_A(sB=named)": 0.411764705882,
+        "delta_A(sB=filler)": 0.0,
+        "Q1_非恒定同一常数": true,
+        "Q1_随sB变号": false,
+        "delta_B(sA=deposon)": 0.411764705882,
+        "delta_B(sA=baseline)": 0.058823529412
+      }
+    ],
+    "n_图_满足Q1非恒定": 20,
+    "n_图_22": 22,
+    "n_图_随sB变号": 5,
+    "判定": "20/22 图的 δ_A 随 sB 取两态（非恒为 ±同一常数）⇒ Q-1 部分满足"
+  },
+  "Q3_取格自证": {
+    "本件取格": "get_A(uA,sA,sB)=uA[sA][sB] ／ get_B(uB,sB,sA)=uB[sB][sA]（通用参照）",
+    "既有件776L282_A行取格": "ua = (a11,a12) if sB==0 else (a21,a22)（0 采用，仅作对照）",
+    "镜像矩阵下_逐格不等数": 0,
+    "α非对称矩阵下_逐格不等数": 48,
+    "实测含义": "镜像下 0 不等 ⇒ 该取格在旧构造下为 **no-op**（故既往读数不因本发现而变动，0 翻案）；α 下 48/88 不等 ⇒ 换域后若沿用该行会**静默出错**（立线件 Q-3 预警兑现）",
+    "B行取格": "ub = (b11,b21) if sA==0 else (b12,b22) —— 逐格核对**与通用参照一致**（0 不等）"
+  },
+  "Q2_处置": {
+    "两σ臂并报": [
+      "R2处置档 (σ ∝ max(0, R − min R); 精确相等 ⇒ 均匀 0.5/0.5)",
+      "R2未处置档 (前代语义: σ ∝ max(0, R); 全 ≤ 0 ⇒ None ⇒ 冻结)"
+    ],
+    "处置档": "σ ∝ max(0, R − min R)；精确相等 ⇒ 均匀 0.5/0.5",
+    "未处置档": "σ ∝ max(0, R)；全 ≤ 0 ⇒ None ⇒ 不重采样（冻结面）",
+    "跑前写死": true,
+    "0 跑后择一": true
+  },
+  "跑前自证_输入字段": {
+    "v20_field_mean_named (盘上真实, 逐图)": {
+      "n": 22,
+      "n_distinct": 18,
+      "std": 0.14387844761985397,
+      "min": 0.043478260869565216,
+      "max": 0.47058823529411764,
+      "mean": 0.18086082437313453,
+      "distinct_values": [
+        0.043478,
+        0.050847,
+        0.055556,
+        0.068182,
+        0.068966,
+        0.088235,
+        0.095238,
+        0.096774,
+        0.103448,
+        0.12069,
+        0.125,
+        0.136364,
+        0.142857,
+        0.157895,
+        0.1875,
+        0.190476,
+        0.222222,
+        0.470588
+      ]
+    },
+    "v20_field_mean_filler (盘上真实, 逐图)": {
+      "n": 22,
+      "n_distinct": 10,
+      "std": 0.07982172619434252,
+      "min": 0.0,
+      "max": 0.34375,
+      "mean": 0.04529599484547997,
+      "distinct_values": [
+        0.0,
+        0.033333,
+        0.043478,
+        0.055556,
+        0.0625,
+        0.066667,
+        0.1,
+        0.133333,
+        0.157895,
+        0.34375
+      ]
+    },
+    "v20_best_baseline_named (盘上真实, 逐图)": {
+      "n": 22,
+      "n_distinct": 17,
+      "std": 0.09181319995612257,
+      "min": 0.0,
+      "max": 0.35294117647058826,
+      "mean": 0.11722800623418914,
+      "distinct_values": [
+        0.0,
+        0.029412,
+        0.047619,
+        0.058824,
+        0.0625,
+        0.068182,
+        0.068966,
+        0.071429,
+        0.157895,
+        0.173913,
+        0.176471,
+        0.181818,
+        0.189655,
+        0.193548,
+        0.222222,
+        0.285714,
+        0.352941
+      ]
+    },
+    "v20_best_baseline_filler (盘上真实, 逐图)": {
+      "n": 22,
+      "n_distinct": 10,
+      "std": 0.06816102224271066,
+      "min": 0.0,
+      "max": 0.25,
+      "mean": 0.05451931571652812,
+      "distinct_values": [
+        0.0,
+        0.043478,
+        0.052632,
+        0.066667,
+        0.090909,
+        0.095238,
+        0.105263,
+        0.125,
+        0.178571,
+        0.25
+      ]
+    },
+    "deposon_freq_派生 (盘上真实, 逐图)": {
+      "n": 22,
+      "n_distinct": 10,
+      "std": 0.2607844811626778,
+      "min": 0.11228070175438597,
+      "max": 1.0,
+      "mean": 0.8129428621578213,
+      "distinct_values": [
+        0.112281,
+        0.294118,
+        0.395833,
+        0.644172,
+        0.674157,
+        0.686567,
+        0.689655,
+        0.692308,
+        0.695652,
+        1.0
+      ]
+    },
+    "α |E_named| arm 差 (逐图)": {
+      "n": 22,
+      "n_distinct": 18,
+      "std": 0.11537467801111094,
+      "min": 0.0,
+      "max": 0.4117647058823529,
+      "mean": 0.12282853162774696,
+      "distinct_values": [
+        0.0,
+        0.034483,
+        0.045455,
+        0.047619,
+        0.050847,
+        0.058824,
+        0.0625,
+        0.068966,
+        0.071429,
+        0.096774,
+        0.117647,
+        0.125,
+        0.130435,
+        0.142857,
+        0.166667,
+        0.222222,
+        0.294118,
+        0.411765
+      ]
+    },
+    "α |E_filler| arm 差 (逐图)": {
+      "n": 22,
+      "n_distinct": 12,
+      "std": 0.053143808359382545,
+      "min": 0.0,
+      "max": 0.17857142857142858,
+      "mean": 0.050547749366529275,
+      "distinct_values": [
+        0.0,
+        0.033333,
+        0.055556,
+        0.0625,
+        0.066667,
+        0.090909,
+        0.09375,
+        0.095238,
+        0.1,
+        0.105263,
+        0.125,
+        0.178571
+      ]
+    }
+  },
+  "跑前自证_输出读数列": {
+    "C1 rm_iter · R2处置·主臂 (22, literal)": {
+      "n": 22,
+      "n_distinct": 16,
+      "std": 68.8348874883746,
+      "min": 6.0,
+      "max": 200.0,
+      "mean": 108.4090909090909,
+      "distinct_values": [
+        6.0,
+        35.0,
+        50.0,
+        51.0,
+        54.0,
+        68.0,
+        69.0,
+        80.0,
+        88.0,
+        122.0,
+        125.0,
+        136.0,
+        142.0,
+        157.0,
+        190.0,
+        200.0
+      ]
+    },
+    "C1 rm_iter · R2处置·主臂 (artifact-free)": {
+      "n": 17,
+      "n_distinct": 15,
+      "std": 54.21104472561117,
+      "min": 6.0,
+      "max": 190.0,
+      "mean": 81.47058823529412,
+      "distinct_values": [
+        6.0,
+        35.0,
+        50.0,
+        51.0,
+        54.0,
+        68.0,
+        69.0,
+        80.0,
+        88.0,
+        122.0,
+        125.0,
+        136.0,
+        142.0,
+        157.0,
+        190.0
+      ]
+    },
+    "C1 rm_iter · R2处置·对照臂 (22, literal)": {
+      "n": 22,
+      "n_distinct": 2,
+      "std": 66.57581274738752,
+      "min": 6.0,
+      "max": 200.0,
+      "mean": 173.54545454545453,
+      "distinct_values": [
+        6.0,
+        200.0
+      ]
+    },
+    "C1 rm_iter · R2未处置·主臂 (22, literal)": {
+      "n": 22,
+      "n_distinct": 15,
+      "std": 67.00536551847519,
+      "min": 6.0,
+      "max": 200.0,
+      "mean": 110.0909090909091,
+      "distinct_values": [
+        6.0,
+        35.0,
+        50.0,
+        51.0,
+        68.0,
+        69.0,
+        88.0,
+        122.0,
+        125.0,
+        136.0,
+        142.0,
+        157.0,
+        178.0,
+        190.0,
+        200.0
+      ]
+    },
+    "C1 rm_iter · R2未处置·对照臂 (22, literal)": {
+      "n": 22,
+      "n_distinct": 2,
+      "std": 66.57581274738752,
+      "min": 6.0,
+      "max": 200.0,
+      "mean": 173.54545454545453,
+      "distinct_values": [
+        6.0,
+        200.0
+      ]
+    },
+    "C1 play D-1 · R2处置·主臂 (22)": {
+      "n": 22,
+      "n_distinct": 6,
+      "std": 34.48550420104076,
+      "min": 0.0,
+      "max": 157.0,
+      "mean": 11.5,
+      "distinct_values": [
+        0.0,
+        1.0,
+        2.0,
+        5.0,
+        66.0,
+        157.0
+      ]
+    },
+    "C1 play D-2 · R2处置·主臂 (22, 按n_iter)": {
+      "n": 22,
+      "n_distinct": 6,
+      "std": 34.48550420104076,
+      "min": 44.0,
+      "max": 201.0,
+      "mean": 189.5,
+      "distinct_values": [
+        44.0,
+        135.0,
+        196.0,
+        199.0,
+        200.0,
+        201.0
+      ]
+    },
+    "C1 play D-2 · R2处置·主臂 (22, 按实走轮数)": {
+      "n": 22,
+      "n_distinct": 17,
+      "std": 73.41780134081249,
+      "min": 1.0,
+      "max": 199.0,
+      "mean": 97.9090909090909,
+      "distinct_values": [
+        1.0,
+        3.0,
+        7.0,
+        35.0,
+        49.0,
+        50.0,
+        54.0,
+        69.0,
+        79.0,
+        87.0,
+        122.0,
+        125.0,
+        136.0,
+        142.0,
+        189.0,
+        196.0,
+        199.0
+      ]
+    },
+    "C1 play D-1 · R2未处置·主臂 (22)": {
+      "n": 22,
+      "n_distinct": 4,
+      "std": 1.165091419816027,
+      "min": 0.0,
+      "max": 6.0,
+      "mean": 1.2272727272727273,
+      "distinct_values": [
+        0.0,
+        1.0,
+        2.0,
+        6.0
+      ]
+    },
+    "C1 play D-2 · R2未处置·主臂 (22, 按n_iter)": {
+      "n": 22,
+      "n_distinct": 4,
+      "std": 1.165091419816027,
+      "min": 195.0,
+      "max": 201.0,
+      "mean": 199.77272727272728,
+      "distinct_values": [
+        195.0,
+        199.0,
+        200.0,
+        201.0
+      ]
+    },
+    "C3 bayes_iter_true · α (176, literal)": {
+      "n": 176,
+      "n_distinct": 3,
+      "std": 362.72913533356365,
+      "min": 1.0,
+      "max": 2000.0,
+      "mean": 69.22727272727273,
+      "distinct_values": [
+        1.0,
+        2.0,
+        2000.0
+      ]
+    },
+    "C3 bayes_iter_true · α (artifact-free)": {
+      "n": 170,
+      "n_distinct": 2,
+      "std": 0.2749016810717158,
+      "min": 1.0,
+      "max": 2.0,
+      "mean": 1.0823529411764705,
+      "distinct_values": [
+        1.0,
+        2.0
+      ]
+    },
+    "C4 rbr_mult · rbr新构造重算 (176, literal)": {
+      "n": 176,
+      "n_distinct": 5,
+      "std": 73.52505910837812,
+      "min": 0.1,
+      "max": 200.0,
+      "mean": 36.04886363636364,
+      "distinct_values": [
+        0.1,
+        1.0,
+        2.0,
+        100.0,
+        200.0
+      ]
+    },
+    "C4 rbr_mult · rbr新构造重算 (artifact-free)": {
+      "n": 170,
+      "n_distinct": 4,
+      "std": 74.49503919759961,
+      "min": 1.0,
+      "max": 200.0,
+      "mean": 37.31764705882353,
+      "distinct_values": [
+        1.0,
+        2.0,
+        100.0,
+        200.0
+      ]
+    },
+    "C4 rbr_mult · rbr真收敛判据 (176, literal)": {
+      "n": 176,
+      "n_distinct": 4,
+      "std": 0.5457123272253833,
+      "min": 0.001,
+      "max": 2.0,
+      "mean": 1.5568522727272727,
+      "distinct_values": [
+        0.001,
+        1.0,
+        1.5,
+        2.0
+      ]
+    },
+    "C4 rbr_mult · rbr真收敛判据 (artifact-free)": {
+      "n": 170,
+      "n_distinct": 3,
+      "std": 0.4688940090206973,
+      "min": 1.0,
+      "max": 2.0,
+      "mean": 1.611764705882353,
+      "distinct_values": [
+        1.0,
+        1.5,
+        2.0
+      ]
+    },
+    "C4 rm_mult · 附加派生 (176, literal)": {
+      "n": 176,
+      "n_distinct": 22,
+      "std": 69.22076292956103,
+      "min": 0.003,
+      "max": 200.0,
+      "mean": 102.17207954545455,
+      "distinct_values": [
+        0.003,
+        0.04,
+        0.1,
+        3.0,
+        6.0,
+        27.0,
+        35.0,
+        50.0,
+        51.0,
+        54.0,
+        68.0,
+        69.0,
+        80.0,
+        88.0,
+        100.0,
+        122.0,
+        125.0,
+        136.0,
+        142.0,
+        157.0,
+        190.0,
+        200.0
+      ]
+    },
+    "C4 rm_mult · 附加派生 (artifact-free)": {
+      "n": 170,
+      "n_distinct": 19,
+      "std": 67.6722858332434,
+      "min": 3.0,
+      "max": 200.0,
+      "mean": 105.7764705882353,
+      "distinct_values": [
+        3.0,
+        6.0,
+        27.0,
+        35.0,
+        50.0,
+        51.0,
+        54.0,
+        68.0,
+        69.0,
+        80.0,
+        88.0,
+        100.0,
+        122.0,
+        125.0,
+        136.0,
+        142.0,
+        157.0,
+        190.0,
+        200.0
+      ]
+    },
+    "C2 rbr_iter · α新构造重算 (22)": {
+      "n": 22,
+      "n_distinct": 3,
+      "std": 83.34614915226976,
+      "min": 1.0,
+      "max": 200.0,
+      "mean": 46.31818181818182,
+      "distinct_values": [
+        1.0,
+        2.0,
+        200.0
+      ]
+    },
+    "C2 rbr_iter · 镜像冻结对照 (22, 连带影响面)": {
+      "n": 22,
+      "n_distinct": 2,
+      "std": 56.92099788303083,
+      "min": 2.0,
+      "max": 200.0,
+      "mean": 182.0,
+      "distinct_values": [
+        2.0,
+        200.0
+      ]
+    }
+  },
+  "K_RO_0_1": {
+    "判据": "开跑前自证门：逐输入字段 ＋ 逐输出读数列报 n_distinct/min/max/std；任一读数列 n_distinct ≤ 3 ⇒ 不得进入正式跑（改构造，或判「不明」＝ KD ＋ γ）",
+    "数值门槛": "0 新设（引用 K-V3DF-0-1 的 3 字面）",
+    "自证读数": {
+      "输入字段": {
+        "v20_field_mean_named (盘上真实, 逐图)": {
+          "n": 22,
+          "n_distinct": 18,
+          "std": 0.14387844761985397,
+          "min": 0.043478260869565216,
+          "max": 0.47058823529411764,
+          "mean": 0.18086082437313453,
+          "distinct_values": [
+            0.043478,
+            0.050847,
+            0.055556,
+            0.068182,
+            0.068966,
+            0.088235,
+            0.095238,
+            0.096774,
+            0.103448,
+            0.12069,
+            0.125,
+            0.136364,
+            0.142857,
+            0.157895,
+            0.1875,
+            0.190476,
+            0.222222,
+            0.470588
+          ]
+        },
+        "v20_field_mean_filler (盘上真实, 逐图)": {
+          "n": 22,
+          "n_distinct": 10,
+          "std": 0.07982172619434252,
+          "min": 0.0,
+          "max": 0.34375,
+          "mean": 0.04529599484547997,
+          "distinct_values": [
+            0.0,
+            0.033333,
+            0.043478,
+            0.055556,
+            0.0625,
+            0.066667,
+            0.1,
+            0.133333,
+            0.157895,
+            0.34375
+          ]
+        },
+        "v20_best_baseline_named (盘上真实, 逐图)": {
+          "n": 22,
+          "n_distinct": 17,
+          "std": 0.09181319995612257,
+          "min": 0.0,
+          "max": 0.35294117647058826,
+          "mean": 0.11722800623418914,
+          "distinct_values": [
+            0.0,
+            0.029412,
+            0.047619,
+            0.058824,
+            0.0625,
+            0.068182,
+            0.068966,
+            0.071429,
+            0.157895,
+            0.173913,
+            0.176471,
+            0.181818,
+            0.189655,
+            0.193548,
+            0.222222,
+            0.285714,
+            0.352941
+          ]
+        },
+        "v20_best_baseline_filler (盘上真实, 逐图)": {
+          "n": 22,
+          "n_distinct": 10,
+          "std": 0.06816102224271066,
+          "min": 0.0,
+          "max": 0.25,
+          "mean": 0.05451931571652812,
+          "distinct_values": [
+            0.0,
+            0.043478,
+            0.052632,
+            0.066667,
+            0.090909,
+            0.095238,
+            0.105263,
+            0.125,
+            0.178571,
+            0.25
+          ]
+        },
+        "deposon_freq_派生 (盘上真实, 逐图)": {
+          "n": 22,
+          "n_distinct": 10,
+          "std": 0.2607844811626778,
+          "min": 0.11228070175438597,
+          "max": 1.0,
+          "mean": 0.8129428621578213,
+          "distinct_values": [
+            0.112281,
+            0.294118,
+            0.395833,
+            0.644172,
+            0.674157,
+            0.686567,
+            0.689655,
+            0.692308,
+            0.695652,
+            1.0
+          ]
+        },
+        "α |E_named| arm 差 (逐图)": {
+          "n": 22,
+          "n_distinct": 18,
+          "std": 0.11537467801111094,
+          "min": 0.0,
+          "max": 0.4117647058823529,
+          "mean": 0.12282853162774696,
+          "distinct_values": [
+            0.0,
+            0.034483,
+            0.045455,
+            0.047619,
+            0.050847,
+            0.058824,
+            0.0625,
+            0.068966,
+            0.071429,
+            0.096774,
+            0.117647,
+            0.125,
+            0.130435,
+            0.142857,
+            0.166667,
+            0.222222,
+            0.294118,
+            0.411765
+          ]
+        },
+        "α |E_filler| arm 差 (逐图)": {
+          "n": 22,
+          "n_distinct": 12,
+          "std": 0.053143808359382545,
+          "min": 0.0,
+          "max": 0.17857142857142858,
+          "mean": 0.050547749366529275,
+          "distinct_values": [
+            0.0,
+            0.033333,
+            0.055556,
+            0.0625,
+            0.066667,
+            0.090909,
+            0.09375,
+            0.095238,
+            0.1,
+            0.105263,
+            0.125,
+            0.178571
+          ]
+        }
+      },
+      "输出读数列": {
+        "C1 rm_iter · R2处置·主臂 (22, literal)": {
+          "n": 22,
+          "n_distinct": 16,
+          "std": 68.8348874883746,
+          "min": 6.0,
+          "max": 200.0,
+          "mean": 108.4090909090909,
+          "distinct_values": [
+            6.0,
+            35.0,
+            50.0,
+            51.0,
+            54.0,
+            68.0,
+            69.0,
+            80.0,
+            88.0,
+            122.0,
+            125.0,
+            136.0,
+            142.0,
+            157.0,
+            190.0,
+            200.0
+          ]
+        },
+        "C1 rm_iter · R2处置·主臂 (artifact-free)": {
+          "n": 17,
+          "n_distinct": 15,
+          "std": 54.21104472561117,
+          "min": 6.0,
+          "max": 190.0,
+          "mean": 81.47058823529412,
+          "distinct_values": [
+            6.0,
+            35.0,
+            50.0,
+            51.0,
+            54.0,
+            68.0,
+            69.0,
+            80.0,
+            88.0,
+            122.0,
+            125.0,
+            136.0,
+            142.0,
+            157.0,
+            190.0
+          ]
+        },
+        "C1 rm_iter · R2处置·对照臂 (22, literal)": {
+          "n": 22,
+          "n_distinct": 2,
+          "std": 66.57581274738752,
+          "min": 6.0,
+          "max": 200.0,
+          "mean": 173.54545454545453,
+          "distinct_values": [
+            6.0,
+            200.0
+          ]
+        },
+        "C1 rm_iter · R2未处置·主臂 (22, literal)": {
+          "n": 22,
+          "n_distinct": 15,
+          "std": 67.00536551847519,
+          "min": 6.0,
+          "max": 200.0,
+          "mean": 110.0909090909091,
+          "distinct_values": [
+            6.0,
+            35.0,
+            50.0,
+            51.0,
+            68.0,
+            69.0,
+            88.0,
+            122.0,
+            125.0,
+            136.0,
+            142.0,
+            157.0,
+            178.0,
+            190.0,
+            200.0
+          ]
+        },
+        "C1 rm_iter · R2未处置·对照臂 (22, literal)": {
+          "n": 22,
+          "n_distinct": 2,
+          "std": 66.57581274738752,
+          "min": 6.0,
+          "max": 200.0,
+          "mean": 173.54545454545453,
+          "distinct_values": [
+            6.0,
+            200.0
+          ]
+        },
+        "C1 play D-1 · R2处置·主臂 (22)": {
+          "n": 22,
+          "n_distinct": 6,
+          "std": 34.48550420104076,
+          "min": 0.0,
+          "max": 157.0,
+          "mean": 11.5,
+          "distinct_values": [
+            0.0,
+            1.0,
+            2.0,
+            5.0,
+            66.0,
+            157.0
+          ]
+        },
+        "C1 play D-2 · R2处置·主臂 (22, 按n_iter)": {
+          "n": 22,
+          "n_distinct": 6,
+          "std": 34.48550420104076,
+          "min": 44.0,
+          "max": 201.0,
+          "mean": 189.5,
+          "distinct_values": [
+            44.0,
+            135.0,
+            196.0,
+            199.0,
+            200.0,
+            201.0
+          ]
+        },
+        "C1 play D-2 · R2处置·主臂 (22, 按实走轮数)": {
+          "n": 22,
+          "n_distinct": 17,
+          "std": 73.41780134081249,
+          "min": 1.0,
+          "max": 199.0,
+          "mean": 97.9090909090909,
+          "distinct_values": [
+            1.0,
+            3.0,
+            7.0,
+            35.0,
+            49.0,
+            50.0,
+            54.0,
+            69.0,
+            79.0,
+            87.0,
+            122.0,
+            125.0,
+            136.0,
+            142.0,
+            189.0,
+            196.0,
+            199.0
+          ]
+        },
+        "C1 play D-1 · R2未处置·主臂 (22)": {
+          "n": 22,
+          "n_distinct": 4,
+          "std": 1.165091419816027,
+          "min": 0.0,
+          "max": 6.0,
+          "mean": 1.2272727272727273,
+          "distinct_values": [
+            0.0,
+            1.0,
+            2.0,
+            6.0
+          ]
+        },
+        "C1 play D-2 · R2未处置·主臂 (22, 按n_iter)": {
+          "n": 22,
+          "n_distinct": 4,
+          "std": 1.165091419816027,
+          "min": 195.0,
+          "max": 201.0,
+          "mean": 199.77272727272728,
+          "distinct_values": [
+            195.0,
+            199.0,
+            200.0,
+            201.0
+          ]
+        },
+        "C3 bayes_iter_true · α (176, literal)": {
+          "n": 176,
+          "n_distinct": 3,
+          "std": 362.72913533356365,
+          "min": 1.0,
+          "max": 2000.0,
+          "mean": 69.22727272727273,
+          "distinct_values": [
+            1.0,
+            2.0,
+            2000.0
+          ]
+        },
+        "C3 bayes_iter_true · α (artifact-free)": {
+          "n": 170,
+          "n_distinct": 2,
+          "std": 0.2749016810717158,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.0823529411764705,
+          "distinct_values": [
+            1.0,
+            2.0
+          ]
+        },
+        "C4 rbr_mult · rbr新构造重算 (176, literal)": {
+          "n": 176,
+          "n_distinct": 5,
+          "std": 73.52505910837812,
+          "min": 0.1,
+          "max": 200.0,
+          "mean": 36.04886363636364,
+          "distinct_values": [
+            0.1,
+            1.0,
+            2.0,
+            100.0,
+            200.0
+          ]
+        },
+        "C4 rbr_mult · rbr新构造重算 (artifact-free)": {
+          "n": 170,
+          "n_distinct": 4,
+          "std": 74.49503919759961,
+          "min": 1.0,
+          "max": 200.0,
+          "mean": 37.31764705882353,
+          "distinct_values": [
+            1.0,
+            2.0,
+            100.0,
+            200.0
+          ]
+        },
+        "C4 rbr_mult · rbr真收敛判据 (176, literal)": {
+          "n": 176,
+          "n_distinct": 4,
+          "std": 0.5457123272253833,
+          "min": 0.001,
+          "max": 2.0,
+          "mean": 1.5568522727272727,
+          "distinct_values": [
+            0.001,
+            1.0,
+            1.5,
+            2.0
+          ]
+        },
+        "C4 rbr_mult · rbr真收敛判据 (artifact-free)": {
+          "n": 170,
+          "n_distinct": 3,
+          "std": 0.4688940090206973,
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.611764705882353,
+          "distinct_values": [
+            1.0,
+            1.5,
+            2.0
+          ]
+        },
+        "C4 rm_mult · 附加派生 (176, literal)": {
+          "n": 176,
+          "n_distinct": 22,
+          "std": 69.22076292956103,
+          "min": 0.003,
+          "max": 200.0,
+          "mean": 102.17207954545455,
+          "distinct_values": [
+            0.003,
+            0.04,
+            0.1,
+            3.0,
+            6.0,
+            27.0,
+            35.0,
+            50.0,
+            51.0,
+            54.0,
+            68.0,
+            69.0,
+            80.0,
+            88.0,
+            100.0,
+            122.0,
+            125.0,
+            136.0,
+            142.0,
+            157.0,
+            190.0,
+            200.0
+          ]
+        },
+        "C4 rm_mult · 附加派生 (artifact-free)": {
+          "n": 170,
+          "n_distinct": 19,
+          "std": 67.6722858332434,
+          "min": 3.0,
+          "max": 200.0,
+          "mean": 105.7764705882353,
+          "distinct_values": [
+            3.0,
+            6.0,
+            27.0,
+            35.0,
+            50.0,
+            51.0,
+            54.0,
+            68.0,
+            69.0,
+            80.0,
+            88.0,
+            100.0,
+            122.0,
+            125.0,
+            136.0,
+            142.0,
+            157.0,
+            190.0,
+            200.0
+          ]
+        },
+        "C2 rbr_iter · α新构造重算 (22)": {
+          "n": 22,
+          "n_distinct": 3,
+          "std": 83.34614915226976,
+          "min": 1.0,
+          "max": 200.0,
+          "mean": 46.31818181818182,
+          "distinct_values": [
+            1.0,
+            2.0,
+            200.0
+          ]
+        },
+        "C2 rbr_iter · 镜像冻结对照 (22, 连带影响面)": {
+          "n": 22,
+          "n_distinct": 2,
+          "std": 56.92099788303083,
+          "min": 2.0,
+          "max": 200.0,
+          "mean": 182.0,
+          "distinct_values": [
+            2.0,
+            200.0
+          ]
+        }
+      }
+    },
+    "门判定": {
+      "输入字段过门": {
+        "v20_field_mean_named (盘上真实, 逐图)": true,
+        "v20_field_mean_filler (盘上真实, 逐图)": true,
+        "v20_best_baseline_named (盘上真实, 逐图)": true,
+        "v20_best_baseline_filler (盘上真实, 逐图)": true,
+        "deposon_freq_派生 (盘上真实, 逐图)": true,
+        "α |E_named| arm 差 (逐图)": true,
+        "α |E_filler| arm 差 (逐图)": true
+      },
+      "输出读数列过门": {
+        "C1 rm_iter · R2处置·主臂 (22, literal)": true,
+        "C1 rm_iter · R2处置·主臂 (artifact-free)": true,
+        "C1 rm_iter · R2处置·对照臂 (22, literal)": false,
+        "C1 rm_iter · R2未处置·主臂 (22, literal)": true,
+        "C1 rm_iter · R2未处置·对照臂 (22, literal)": false,
+        "C1 play D-1 · R2处置·主臂 (22)": true,
+        "C1 play D-2 · R2处置·主臂 (22, 按n_iter)": true,
+        "C1 play D-2 · R2处置·主臂 (22, 按实走轮数)": true,
+        "C1 play D-1 · R2未处置·主臂 (22)": true,
+        "C1 play D-2 · R2未处置·主臂 (22, 按n_iter)": true,
+        "C3 bayes_iter_true · α (176, literal)": false,
+        "C3 bayes_iter_true · α (artifact-free)": false,
+        "C4 rbr_mult · rbr新构造重算 (176, literal)": true,
+        "C4 rbr_mult · rbr新构造重算 (artifact-free)": true,
+        "C4 rbr_mult · rbr真收敛判据 (176, literal)": true,
+        "C4 rbr_mult · rbr真收敛判据 (artifact-free)": false,
+        "C4 rm_mult · 附加派生 (176, literal)": true,
+        "C4 rm_mult · 附加派生 (artifact-free)": true,
+        "C2 rbr_iter · α新构造重算 (22)": false,
+        "C2 rbr_iter · 镜像冻结对照 (22, 连带影响面)": false
+      }
+    },
+    "落态": "FAIL",
+    "落态依据": "输入字段 7/7 过门；输出读数列 13/20 过门，退化读数列 = ['C1 rm_iter · R2处置·对照臂 (22, literal)', 'C1 rm_iter · R2未处置·对照臂 (22, literal)', 'C3 bayes_iter_true · α (176, literal)', 'C3 bayes_iter_true · α (artifact-free)', 'C4 rbr_mult · rbr真收敛判据 (artifact-free)', 'C2 rbr_iter · α新构造重算 (22)', 'C2 rbr_iter · 镜像冻结对照 (22, 连带影响面)']",
+    "裁权": "落态为按冻结判据字面的机械套用；**终态裁权归 verdict-keeper**，本件 0 代裁",
+    "预实验定位": "本件为 **AB 预实验**（PI 2026-10-09「AB预实验并跑，择优转正」）⇒ 读数**仅供 α/β 两案机制面与门面读数之对比**，⛔ **0 代 PI 定档、0 转正、0 宣告达标**；且 α 换域后旧门槛（TH-V3R-1 之 1.3×/2.0×）**须重声明另定** ⇒ 本件 **0 以旧门槛作终判**"
+  },
+  "K_RO_0_2": {
+    "判据": "门域声明门：PI 指定的读数列在门内/在门外须逐列点名并跑前写入；0 概括收窄、0 跑后追加",
+    "声明": {
+      "K-RO-0-2 门域声明": "**0 收窄**：本棒把**全部**输出读数列**逐列点名列入门内**（共 20 列，逐列报 n_distinct/min/max/std）；literal 与 artifact-free **两读并报、0 择一**（沿立线件 §3-R 建议 + K-V3DF-3-1 双读并报纪律）。**0 概括收窄、0 跑后追加**；因 0 收窄，本件**0 冒充「同素材复跑」的削弱门**，也无收窄代价可报。",
+      "门域内读数列": [
+        "C1 rm_iter · R2处置·主臂 (22, literal)",
+        "C1 rm_iter · R2处置·主臂 (artifact-free)",
+        "C1 rm_iter · R2处置·对照臂 (22, literal)",
+        "C1 rm_iter · R2未处置·主臂 (22, literal)",
+        "C1 rm_iter · R2未处置·对照臂 (22, literal)",
+        "C1 play D-1 · R2处置·主臂 (22)",
+        "C1 play D-2 · R2处置·主臂 (22, 按n_iter)",
+        "C1 play D-2 · R2处置·主臂 (22, 按实走轮数)",
+        "C1 play D-1 · R2未处置·主臂 (22)",
+        "C1 play D-2 · R2未处置·主臂 (22, 按n_iter)",
+        "C3 bayes_iter_true · α (176, literal)",
+        "C3 bayes_iter_true · α (artifact-free)",
+        "C4 rbr_mult · rbr新构造重算 (176, literal)",
+        "C4 rbr_mult · rbr新构造重算 (artifact-free)",
+        "C4 rbr_mult · rbr真收敛判据 (176, literal)",
+        "C4 rbr_mult · rbr真收敛判据 (artifact-free)",
+        "C4 rm_mult · 附加派生 (176, literal)",
+        "C4 rm_mult · 附加派生 (artifact-free)",
+        "C2 rbr_iter · α新构造重算 (22)",
+        "C2 rbr_iter · 镜像冻结对照 (22, 连带影响面)"
+      ],
+      "门外读数列": [],
+      "PI 是否逐列点名过": "派工单未给出门内/门外清单 ⇒ 本棒按 **0 收窄** 处置（最保守：全部列进门内）并显式登记该事实"
+    },
+    "跑前写入证据": {
+      "载体": "本构造件 `boss_pa_1_rbr_rm_v3df_ab_alpha_2026_10_09.py` 之模块级字面常量",
+      "定义位置": "`K_RO_0_2_DECLARATION` / `K_RO_0_2_IN_DOMAIN` / `K_RO_0_2_OUT_DOMAIN`",
+      "先于执行": "三常量定义于 `main()` 之前 ⇒ 跑前写入、跑后 0 追加",
+      "门域声明文本_sha12": "c079de417dd5",
+      "构造件_sha12": "06016f90fd3a"
+    },
+    "落态": "PASS",
+    "落态依据": "门域声明已在本构造件内逐列点名（20 列全在门内、0 收窄、literal/af 并报），跑前写入且 0 跑后追加"
+  },
+  "K_V3DF_0_2": {
+    "判据": "四件受护基线跑前＝跑后 SHA-12 一致，0 补救式回写",
+    "登记值": {
+      "deposon_team/plugins/boss_pa_1_rbr_rm.py": "5cc594147e00",
+      "results/boss_pa_1_rbr_rm_result_2026_09_15.json": "c7c59e0d2f6c",
+      "results/deposon_v2_phase4_f4_2026_09_11.json": "cf7682348617",
+      "docs/V3X/P_D_FINGERPRINT_V0_3_SPEC.md": "f119f2f30287"
+    },
+    "跑前实测": {
+      "deposon_team/plugins/boss_pa_1_rbr_rm.py": "5cc594147e00",
+      "results/boss_pa_1_rbr_rm_result_2026_09_15.json": "c7c59e0d2f6c",
+      "results/deposon_v2_phase4_f4_2026_09_11.json": "cf7682348617",
+      "docs/V3X/P_D_FINGERPRINT_V0_3_SPEC.md": "f119f2f30287"
+    },
+    "跑后实测": {
+      "deposon_team/plugins/boss_pa_1_rbr_rm.py": "5cc594147e00",
+      "results/boss_pa_1_rbr_rm_result_2026_09_15.json": "c7c59e0d2f6c",
+      "results/deposon_v2_phase4_f4_2026_09_11.json": "cf7682348617",
+      "docs/V3X/P_D_FINGERPRINT_V0_3_SPEC.md": "f119f2f30287"
+    },
+    "落态": "PASS",
+    "落态依据": "四件跑前＝跑后＝登记值"
+  },
+  "K_V3DF_1_1_反向风险": {
+    "判据": "C1 判据臂 rm_iter：n_distinct ≥ 4 且 std > 0",
+    "反向风险核查_沿立线件3R": {
+      "literal": {
+        "判据臂": "R2处置档 (σ ∝ max(0, R − min R); 精确相等 ⇒ 均匀 0.5/0.5) · 主臂 (1/(t+1)·ΣR)",
+        "n_distinct": 16,
+        "std": 68.8348874883746,
+        "取值": [
+          6.0,
+          35.0,
+          50.0,
+          51.0,
+          54.0,
+          68.0,
+          69.0,
+          80.0,
+          88.0,
+          122.0,
+          125.0,
+          136.0,
+          142.0,
+          157.0,
+          190.0,
+          200.0
+        ],
+        "过门_n_distinct_ge_4": true,
+        "过门_全条件": true
+      },
+      "artifact-free": {
+        "判据臂": "R2处置档 (σ ∝ max(0, R − min R); 精确相等 ⇒ 均匀 0.5/0.5) · 主臂 (1/(t+1)·ΣR)",
+        "n_distinct": 15,
+        "std": 54.21104472561117,
+        "取值": [
+          6.0,
+          35.0,
+          50.0,
+          51.0,
+          54.0,
+          68.0,
+          69.0,
+          80.0,
+          88.0,
+          122.0,
+          125.0,
+          136.0,
+          142.0,
+          157.0,
+          190.0
+        ],
+        "过门_n_distinct_ge_4": true,
+        "过门_全条件": true
+      }
+    },
+    "落态": "PASS",
+    "落态依据": "**反向风险（§3-R：新构造使更多图更早收敛 ⇒ rm_iter 更集中 ⇒ 可能反向不过门）本α案实测**：literal 读数 n_distinct = 16、std = 68.834887 ⇒ 过门；artifact-free 读数 n_distinct = 15、std = 54.211045 ⇒ 过门。两读并报、0 择一。",
+    "裁权": "0 代裁"
+  },
+  "簇A_E_退化消除": [
+    {
+      "簇": "簇A_C1对照臂",
+      "列": "簇A_C1对照臂 (新: R2处置·对照臂)",
+      "P-1_n_distinct": 2,
+      "α_过门": false,
+      "消除": "未消除（退化）"
+    },
+    {
+      "簇": "簇A_C1对照臂",
+      "列": "簇A_C1对照臂 (R2未处置·对照臂)",
+      "P-1_n_distinct": 2,
+      "α_过门": false,
+      "消除": "未消除（退化）"
+    },
+    {
+      "簇": "簇B1_play_D1",
+      "列": "簇B1_play_D1 (R2处置)",
+      "P-1_n_distinct": 2,
+      "α_过门": true,
+      "消除": "过门"
+    },
+    {
+      "簇": "簇B2_play_D2_按n_iter",
+      "列": "簇B2_play_D2_按n_iter (R2处置)",
+      "P-1_n_distinct": 2,
+      "α_过门": true,
+      "消除": "过门"
+    },
+    {
+      "簇": "簇C_bayes_iter_true_literal",
+      "列": "簇C_bayes_iter_true_literal",
+      "P-1_n_distinct": null,
+      "α_过门": false,
+      "消除": "未消除（退化）"
+    },
+    {
+      "簇": "簇C_bayes_iter_true_af",
+      "列": "簇C_bayes_iter_true_af",
+      "P-1_n_distinct": null,
+      "α_过门": false,
+      "消除": "未消除（退化）"
+    },
+    {
+      "簇": "簇D_rbr_mult_新构造_literal",
+      "列": "簇D_rbr_mult_新构造_literal",
+      "P-1_n_distinct": null,
+      "α_过门": true,
+      "消除": "过门"
+    },
+    {
+      "簇": "簇D_rbr_mult_新构造_af",
+      "列": "簇D_rbr_mult_新构造_af",
+      "P-1_n_distinct": null,
+      "α_过门": true,
+      "消除": "过门"
+    },
+    {
+      "簇": "簇E_C2_新构造",
+      "列": "簇E_C2_新构造",
+      "P-1_n_distinct": null,
+      "α_过门": false,
+      "消除": "未消除（退化）"
+    }
+  ],
+  "C1_四臂": {
+    "R2处置档 (σ ∝ max(0, R − min R); 精确相等 ⇒ 均匀 0.5/0.5) · 主臂 (1/(t+1)·ΣR)": {
+      "sigma_arm": "R2处置档 (σ ∝ max(0, R − min R); 精确相等 ⇒ 均匀 0.5/0.5)",
+      "convergence_arm": "主臂 (1/(t+1)·ΣR)",
+      "stat": {
+        "n": 22,
+        "n_distinct": 16,
+        "std": 68.8348874883746,
+        "min": 6.0,
+        "max": 200.0,
+        "mean": 108.4090909090909,
+        "distinct_values": [
+          6.0,
+          35.0,
+          50.0,
+          51.0,
+          54.0,
+          68.0,
+          69.0,
+          80.0,
+          88.0,
+          122.0,
+          125.0,
+          136.0,
+          142.0,
+          157.0,
+          190.0,
+          200.0
+        ]
+      },
+      "artifact_free": {
+        "definition": "剔除触 n_iter=200 上限（= 真·不收敛）之图后的读数",
+        "n_cells_kept": 17,
+        "n_cells_removed_as_cap": 5,
+        "stat": {
+          "n": 17,
+          "n_distinct": 15,
+          "std": 54.21104472561117,
+          "min": 6.0,
+          "max": 190.0,
+          "mean": 81.47058823529412,
+          "distinct_values": [
+            6.0,
+            35.0,
+            50.0,
+            51.0,
+            54.0,
+            68.0,
+            69.0,
+            80.0,
+            88.0,
+            122.0,
+            125.0,
+            136.0,
+            142.0,
+            157.0,
+            190.0
+          ]
+        },
+        "note": "口径名显式标注 artifact-free，0 静默剔除（K-V3DF-3-2 同款纪律）"
+      },
+      "cap_触顶": "5/22",
+      "R2_冻结面证据": {
+        "n_graphs_profile_全程冻结": 3,
+        "n_graphs_至少重采样过一次": 22,
+        "sigma_none_轮次_合计": 0
+      },
+      "逐图 rm_iter": [
+        6,
+        136,
+        200,
+        6,
+        125,
+        6,
+        157,
+        88,
+        68,
+        50,
+        80,
+        122,
+        69,
+        51,
+        35,
+        190,
+        54,
+        142,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    "R2处置档 (σ ∝ max(0, R − min R); 精确相等 ⇒ 均匀 0.5/0.5) · 对照臂 (max(ΣR), 与 V3 同形)": {
+      "sigma_arm": "R2处置档 (σ ∝ max(0, R − min R); 精确相等 ⇒ 均匀 0.5/0.5)",
+      "convergence_arm": "对照臂 (max(ΣR), 与 V3 同形)",
+      "stat": {
+        "n": 22,
+        "n_distinct": 2,
+        "std": 66.57581274738752,
+        "min": 6.0,
+        "max": 200.0,
+        "mean": 173.54545454545453,
+        "distinct_values": [
+          6.0,
+          200.0
+        ]
+      },
+      "artifact_free": {
+        "definition": "剔除触 n_iter=200 上限（= 真·不收敛）之图后的读数",
+        "n_cells_kept": 3,
+        "n_cells_removed_as_cap": 19,
+        "stat": {
+          "n": 3,
+          "n_distinct": 1,
+          "std": 0.0,
+          "min": 6.0,
+          "max": 6.0,
+          "mean": 6.0,
+          "distinct_values": [
+            6.0
+          ]
+        },
+        "note": "口径名显式标注 artifact-free，0 静默剔除（K-V3DF-3-2 同款纪律）"
+      },
+      "cap_触顶": "19/22",
+      "R2_冻结面证据": {
+        "n_graphs_profile_全程冻结": 3,
+        "n_graphs_至少重采样过一次": 22,
+        "sigma_none_轮次_合计": 0
+      },
+      "逐图 rm_iter": [
+        6,
+        200,
+        200,
+        6,
+        200,
+        6,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    "R2未处置档 (前代语义: σ ∝ max(0, R); 全 ≤ 0 ⇒ None ⇒ 冻结) · 主臂 (1/(t+1)·ΣR)": {
+      "sigma_arm": "R2未处置档 (前代语义: σ ∝ max(0, R); 全 ≤ 0 ⇒ None ⇒ 冻结)",
+      "convergence_arm": "主臂 (1/(t+1)·ΣR)",
+      "stat": {
+        "n": 22,
+        "n_distinct": 15,
+        "std": 67.00536551847519,
+        "min": 6.0,
+        "max": 200.0,
+        "mean": 110.0909090909091,
+        "distinct_values": [
+          6.0,
+          35.0,
+          50.0,
+          51.0,
+          68.0,
+          69.0,
+          88.0,
+          122.0,
+          125.0,
+          136.0,
+          142.0,
+          157.0,
+          178.0,
+          190.0,
+          200.0
+        ]
+      },
+      "artifact_free": {
+        "definition": "剔除触 n_iter=200 上限（= 真·不收敛）之图后的读数",
+        "n_cells_kept": 18,
+        "n_cells_removed_as_cap": 4,
+        "stat": {
+          "n": 18,
+          "n_distinct": 14,
+          "std": 57.3748772827435,
+          "min": 6.0,
+          "max": 190.0,
+          "mean": 90.11111111111111,
+          "distinct_values": [
+            6.0,
+            35.0,
+            50.0,
+            51.0,
+            68.0,
+            69.0,
+            88.0,
+            122.0,
+            125.0,
+            136.0,
+            142.0,
+            157.0,
+            178.0,
+            190.0
+          ]
+        },
+        "note": "口径名显式标注 artifact-free，0 静默剔除（K-V3DF-3-2 同款纪律）"
+      },
+      "cap_触顶": "4/22",
+      "R2_冻结面证据": {
+        "n_graphs_profile_全程冻结": 3,
+        "n_graphs_至少重采样过一次": 19,
+        "sigma_none_轮次_合计": 1482
+      },
+      "逐图 rm_iter": [
+        6,
+        136,
+        178,
+        6,
+        125,
+        6,
+        157,
+        88,
+        68,
+        50,
+        125,
+        122,
+        69,
+        51,
+        35,
+        190,
+        68,
+        142,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    "R2未处置档 (前代语义: σ ∝ max(0, R); 全 ≤ 0 ⇒ None ⇒ 冻结) · 对照臂 (max(ΣR), 与 V3 同形)": {
+      "sigma_arm": "R2未处置档 (前代语义: σ ∝ max(0, R); 全 ≤ 0 ⇒ None ⇒ 冻结)",
+      "convergence_arm": "对照臂 (max(ΣR), 与 V3 同形)",
+      "stat": {
+        "n": 22,
+        "n_distinct": 2,
+        "std": 66.57581274738752,
+        "min": 6.0,
+        "max": 200.0,
+        "mean": 173.54545454545453,
+        "distinct_values": [
+          6.0,
+          200.0
+        ]
+      },
+      "artifact_free": {
+        "definition": "剔除触 n_iter=200 上限（= 真·不收敛）之图后的读数",
+        "n_cells_kept": 3,
+        "n_cells_removed_as_cap": 19,
+        "stat": {
+          "n": 3,
+          "n_distinct": 1,
+          "std": 0.0,
+          "min": 6.0,
+          "max": 6.0,
+          "mean": 6.0,
+          "distinct_values": [
+            6.0
+          ]
+        },
+        "note": "口径名显式标注 artifact-free，0 静默剔除（K-V3DF-3-2 同款纪律）"
+      },
+      "cap_触顶": "19/22",
+      "R2_冻结面证据": {
+        "n_graphs_profile_全程冻结": 3,
+        "n_graphs_至少重采样过一次": 19,
+        "sigma_none_轮次_合计": 2443
+      },
+      "逐图 rm_iter": [
+        6,
+        200,
+        200,
+        6,
+        200,
+        6,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    }
+  },
+  "C1_play_读数": {
+    "R2处置档 (σ ∝ max(0, R − min R); 精确相等 ⇒ 均匀 0.5/0.5) · 主臂 (1/(t+1)·ΣR)": {
+      "D-1": {
+        "n": 22,
+        "n_distinct": 6,
+        "std": 34.48550420104076,
+        "min": 0.0,
+        "max": 157.0,
+        "mean": 11.5,
+        "distinct_values": [
+          0.0,
+          1.0,
+          2.0,
+          5.0,
+          66.0,
+          157.0
+        ]
+      },
+      "D-2_按n_iter": {
+        "n": 22,
+        "n_distinct": 6,
+        "std": 34.48550420104076,
+        "min": 44.0,
+        "max": 201.0,
+        "mean": 189.5,
+        "distinct_values": [
+          44.0,
+          135.0,
+          196.0,
+          199.0,
+          200.0,
+          201.0
+        ]
+      },
+      "D-2_按实走轮数": {
+        "n": 22,
+        "n_distinct": 17,
+        "std": 73.41780134081249,
+        "min": 1.0,
+        "max": 199.0,
+        "mean": 97.9090909090909,
+        "distinct_values": [
+          1.0,
+          3.0,
+          7.0,
+          35.0,
+          49.0,
+          50.0,
+          54.0,
+          69.0,
+          79.0,
+          87.0,
+          122.0,
+          125.0,
+          136.0,
+          142.0,
+          189.0,
+          196.0,
+          199.0
+        ]
+      },
+      "同向性_逐图": {
+        "L_algorithm_process": false,
+        "L_biological_taxonomy": true,
+        "L_geography_world": false,
+        "L_historical_causality": false,
+        "L_physics_concepts": true,
+        "L_project_management": false,
+        "S1": true,
+        "S1_n35": true,
+        "S1_n45": true,
+        "S1_n60": true,
+        "S2": true,
+        "S2_n20": true,
+        "S2_n35": true,
+        "S2_n45": true,
+        "S2_n60": true,
+        "S3": true,
+        "S4": true,
+        "S5": true,
+        "S6": false,
+        "S6_n20": false,
+        "S6_n35": false,
+        "S6_n60": false
+      },
+      "n_同向": 14,
+      "n_不同向": 8,
+      "D-1_是否擦门槛": false,
+      "D-2_是否擦门槛": false
+    },
+    "R2未处置档 (前代语义: σ ∝ max(0, R); 全 ≤ 0 ⇒ None ⇒ 冻结) · 主臂 (1/(t+1)·ΣR)": {
+      "D-1": {
+        "n": 22,
+        "n_distinct": 4,
+        "std": 1.165091419816027,
+        "min": 0.0,
+        "max": 6.0,
+        "mean": 1.2272727272727273,
+        "distinct_values": [
+          0.0,
+          1.0,
+          2.0,
+          6.0
+        ]
+      },
+      "D-2_按n_iter": {
+        "n": 22,
+        "n_distinct": 4,
+        "std": 1.165091419816027,
+        "min": 195.0,
+        "max": 201.0,
+        "mean": 199.77272727272728,
+        "distinct_values": [
+          195.0,
+          199.0,
+          200.0,
+          201.0
+        ]
+      },
+      "D-2_按实走轮数": {
+        "n": 22,
+        "n_distinct": 18,
+        "std": 66.67376167479804,
+        "min": 7.0,
+        "max": 200.0,
+        "mean": 109.86363636363636,
+        "distinct_values": [
+          7.0,
+          35.0,
+          50.0,
+          51.0,
+          67.0,
+          68.0,
+          69.0,
+          88.0,
+          120.0,
+          122.0,
+          125.0,
+          136.0,
+          142.0,
+          157.0,
+          177.0,
+          190.0,
+          199.0,
+          200.0
+        ]
+      },
+      "同向性_逐图": {
+        "L_algorithm_process": false,
+        "L_biological_taxonomy": true,
+        "L_geography_world": true,
+        "L_historical_causality": false,
+        "L_physics_concepts": true,
+        "L_project_management": false,
+        "S1": true,
+        "S1_n35": true,
+        "S1_n45": true,
+        "S1_n60": true,
+        "S2": true,
+        "S2_n20": true,
+        "S2_n35": true,
+        "S2_n45": true,
+        "S2_n60": true,
+        "S3": true,
+        "S4": true,
+        "S5": true,
+        "S6": false,
+        "S6_n20": false,
+        "S6_n35": false,
+        "S6_n60": false
+      },
+      "n_同向": 15,
+      "n_不同向": 7,
+      "D-1_是否擦门槛": false,
+      "D-2_是否擦门槛": false
+    }
+  },
+  "C3_逐格": [
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.1875
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.125
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.16666666666666666
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.15555555555555556
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.08035714285714285
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.07142857142857142
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    }
+  ],
+  "C2_逐图": [
+    {
+      "graph_id": "L_algorithm_process",
+      "α新构造_rbr_iter": 200,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "L_geography_world",
+      "α新构造_rbr_iter": 200,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "α新构造_rbr_iter": 200,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "L_project_management",
+      "α新构造_rbr_iter": 200,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S1",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S1_n35",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S1_n45",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S1_n60",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 2,
+      "盘上V3_rbr_iter": 2
+    },
+    {
+      "graph_id": "S2",
+      "α新构造_rbr_iter": 200,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S2_n20",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 2,
+      "盘上V3_rbr_iter": 2
+    },
+    {
+      "graph_id": "S2_n35",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S2_n45",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S2_n60",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S3",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S4",
+      "α新构造_rbr_iter": 2,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S5",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S6",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S6_n20",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S6_n35",
+      "α新构造_rbr_iter": 2,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    },
+    {
+      "graph_id": "S6_n60",
+      "α新构造_rbr_iter": 1,
+      "镜像冻结对照_rbr_iter": 200,
+      "盘上V3_rbr_iter": 200
+    }
+  ],
+  "受护件": {
+    "跑前": {
+      "deposon_team/plugins/boss_pa_1_rbr_rm.py": "5cc594147e00",
+      "results/boss_pa_1_rbr_rm_result_2026_09_15.json": "c7c59e0d2f6c",
+      "results/deposon_v2_phase4_f4_2026_09_11.json": "cf7682348617",
+      "docs/V3X/P_D_FINGERPRINT_V0_3_SPEC.md": "f119f2f30287"
+    },
+    "跑后": {
+      "deposon_team/plugins/boss_pa_1_rbr_rm.py": "5cc594147e00",
+      "results/boss_pa_1_rbr_rm_result_2026_09_15.json": "c7c59e0d2f6c",
+      "results/deposon_v2_phase4_f4_2026_09_11.json": "cf7682348617",
+      "docs/V3X/P_D_FINGERPRINT_V0_3_SPEC.md": "f119f2f30287"
+    },
+    "登记": {
+      "deposon_team/plugins/boss_pa_1_rbr_rm.py": "5cc594147e00",
+      "results/boss_pa_1_rbr_rm_result_2026_09_15.json": "c7c59e0d2f6c",
+      "results/deposon_v2_phase4_f4_2026_09_11.json": "cf7682348617",
+      "docs/V3X/P_D_FINGERPRINT_V0_3_SPEC.md": "f119f2f30287"
+    },
+    "一致": true
+  },
+  "0_回改确认": "0 修改任何既有件 1 byte（受护四件跑前＝跑后＝登记值）；本件为**新名**构造件 ＋**新名** result JSON，0 合并/0 覆写任何既有派生 JSON",
+  "诚实限制": [
+    "本件为**预实验**：⛔ 0 判档 / 0 转正 / 0 宣告达标；K-* 落态仅为**按冻结判据字面的机械套用**，终态裁权归 verdict-keeper（棒 3）",
+    "α 为**换域** ⇒ 全部读数 0 与旧读数直接比较；TH-V3R-1 的 1.3×/2.0× 解释须重声明（PI 令）",
+    "本件 0 独立重验（棒 2 verifier 的职责）；SHA-12 独立复算归棒 2",
+    "artifact-free 口径 ＝ 剔除触 n_iter=200 上限之格；该口径的取舍沿 K-V3DF-3-1 双读并报，0 择一",
+    "Q-3 取格面为 worker 层实测发现，**0 代改既有件 `7761f2c339e6`**、0 翻转其既往读数"
+  ]
+}

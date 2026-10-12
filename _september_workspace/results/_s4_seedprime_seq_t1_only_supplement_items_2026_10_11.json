@@ -1,0 +1,1224 @@
+{
+ "artifact": "_s4_seedprime_seq_t1_only_supplement_items_2026_10_11.json",
+ "date": "2026-10-11",
+ "kind": "seq_t1_only_layer_supplement",
+ "step": "补层子步（⛔ 非 S4′ 读数产出面）",
+ "note": "新 held-out（seed′）26 件之 seq_t1_only 层；8 件在册者本棒仅复算核验，18 件为本棒补出。⛔ 物理分离：⛔ 0 并入任何既有 README / 主读数面（K-RJ-6）；⛔ 0 供下游直接引用（V-CLAUSE-1.4 未解）。",
+ "authority": {
+  "ruling": {
+   "file": "results/_s3prime_alert_disposition_judgment_2026_10_11.md",
+   "sha12": "e7fcbc290a7e",
+   "section": "§6-4-2 实质面（三约束拟稿）"
+  },
+  "selfcert": {
+   "file": "results/_s3prime_degeneracy_selfcert_2026_10_11.md",
+   "sha12": "e4d96a516289",
+   "section": "§5 G-1 / G-2 / G-4"
+  },
+  "new_set": {
+   "file": "_s4_heldout_sampling_seedprime_items_2026_10_10.json",
+   "sha12": "6cbb8ba01bfb"
+  },
+  "on_disk_sequence_face": {
+   "file": "_s4_v31_regen_gold_items_2026_10_10.json",
+   "sha12": "4125cb2df92b"
+  },
+  "face_ii_disp": {
+   "file": "_s4_v31_displacement_items_2026_10_10.json",
+   "sha12": "6f020c03e52c"
+  },
+  "executor_readonly": {
+   "file": "results/_v4_pi_cot_v3_ruleset_v3_executor.py",
+   "sha12": "8a81d90c69ba"
+  },
+  "runner_readonly": {
+   "file": ".tmp/s4_regen_runner.py",
+   "sha12": "70467364bdb1"
+  },
+  "kwtable_t1_source": {
+   "file": ".tmp/prep.py",
+   "sha12": "e401c8e50f93",
+   "lines": "L7–L9",
+   "note": "⛔ 0 import（其 import 期即跑 S4′ 读数面）；词表逐字转录"
+  }
+ },
+ "mechanism": {
+  "seq_t1_only": "extract_sequence(reasoning_full, KEYWORDS_T1)",
+  "mechanism_source": "s4_regen_runner.py L67–L99（逐字沿 executor 8a81d90c69ba L478–L519 · 唯一差异：词表入参）",
+  "keywords_t1": {
+   "KILL_LINE": [
+    "判死线",
+    "判死",
+    "判对死因",
+    "通过",
+    "不通过",
+    "PASS",
+    "FAIL",
+    "阈值",
+    "边界",
+    "达标",
+    "不达标",
+    "kill",
+    "Kill",
+    "KILL",
+    "立案",
+    "完工",
+    "跑完",
+    "跑通",
+    "判据",
+    "判据序列",
+    "真证伪",
+    "假证伪",
+    "实证",
+    "证伪",
+    "死兆",
+    "否决",
+    "PASS判定",
+    "FAIL判定",
+    "FALSIFY",
+    "PASS 立案",
+    "完工标准",
+    "通过门槛",
+    "推翻"
+   ],
+   "COST": [
+    "成本",
+    "贵",
+    "便宜",
+    "廉价",
+    "量化",
+    "投入",
+    "开销",
+    "费用",
+    "价格",
+    "付费",
+    "花费",
+    "算力",
+    "消耗",
+    "资源",
+    "资金",
+    "经费",
+    "算账",
+    "无尽资源",
+    "资金有限",
+    "财力",
+    "花钱",
+    "收费",
+    "资源留给",
+    "资源不够",
+    "没钱",
+    "省钱"
+   ],
+   "CRITERIA": [
+    "准则",
+    "原则",
+    "口径",
+    "规范",
+    "约束",
+    "标准",
+    "大材小用",
+    "落到实处",
+    "与死同行",
+    "虚实回路",
+    "FTFB",
+    "诚实",
+    "不误导",
+    "价值观",
+    "世界观",
+    "道德",
+    "伦理",
+    "顶层",
+    "根",
+    "接口",
+    "协议",
+    "deposon",
+    "凝子",
+    "大一统",
+    "大一统定义",
+    "硬核",
+    "客观",
+    "区别于",
+    "区别",
+    "区分",
+    "庖丁解牛",
+    "数学等价",
+    "物理唯一",
+    "哲学命题",
+    "虚实闭合",
+    "时代铁律",
+    "PI铁律",
+    "PI 铁律",
+    "唯物主义",
+    "唯物史观",
+    "朴素哲学",
+    "马哲",
+    "一视同仁",
+    "一杆进洞",
+    "落地",
+    "实操",
+    "优雅",
+    "优雅回归",
+    "外审",
+    "反哺",
+    "判据结构",
+    "判据优先序",
+    "顶层设计",
+    "准则应用",
+    "诚实边界",
+    "判死先于",
+    "可判",
+    "可证伪",
+    "判死线先于",
+    "F-C3",
+    "T/D/R",
+    "接口协议",
+    "万物理论",
+    "大一统理论",
+    "大一统命题",
+    "严谨",
+    "求是",
+    "数学恒等",
+    "软化",
+    "不软化",
+    "派工单",
+    "规则集",
+    "判据类型",
+    "结构相似度",
+    "复核",
+    "质量",
+    "保证"
+   ],
+   "RISK": [
+    "风险",
+    "误报",
+    "假fail",
+    "假pass",
+    "假 FAIL",
+    "假 PASS",
+    "危害",
+    "危机",
+    "过敏",
+    "不稳定",
+    "陷阱",
+    "可疑",
+    "漏洞",
+    "危险",
+    "隐患",
+    "瑕疵",
+    "假",
+    "过敏反应",
+    "误导",
+    "误导性",
+    "不一致",
+    "冲突",
+    "不一",
+    "错定",
+    "错位",
+    "假fail",
+    "假pass",
+    "假证",
+    "过敏感",
+    "BUG",
+    "bug",
+    "假证伪",
+    "不可靠",
+    "不可信",
+    "不安全",
+    "不稳",
+    "不可",
+    "回退",
+    "遗忘"
+   ],
+   "TIMING": [
+    "时机",
+    "暂缓",
+    "立即",
+    "后续",
+    "步骤",
+    "中途",
+    "分批",
+    "抽样",
+    "全量",
+    "两步",
+    "三步",
+    "现在",
+    "未来",
+    "当下",
+    "过去",
+    "今天",
+    "昨天",
+    "明天",
+    "近",
+    "远",
+    "近期",
+    "远期",
+    "先斩后奏",
+    "补测",
+    "续采",
+    "重判",
+    "重做",
+    "续做",
+    "实时",
+    "等待",
+    "轮询",
+    "初稿先行",
+    "回收站",
+    "补一晚",
+    "几天后",
+    "三读",
+    "跨日",
+    "续",
+    "判后再判",
+    "分批上线",
+    "不宣称",
+    "按计划",
+    "逐步",
+    "迭代",
+    "接续",
+    "待",
+    "分阶段",
+    "阶段"
+   ],
+   "DELEGATE": [
+    "委托",
+    "分派",
+    "派单",
+    "受托",
+    "起草",
+    "转交",
+    "GLM",
+    "coze",
+    "kimi",
+    "agent",
+    "主轴",
+    "共同体",
+    "受托方",
+    "派出",
+    "我派",
+    "代为",
+    "代理",
+    "派工",
+    "Mavis",
+    "mavis",
+    "sub-agent",
+    "subagent",
+    "VS code",
+    "VSCode",
+    "vs code",
+    "外援",
+    "第三方",
+    "第三方汇总",
+    "verifier",
+    "组织行为学",
+    "集群",
+    "转派",
+    "派给",
+    "派去",
+    "协助",
+    "求助",
+    "派兼职",
+    "起草类",
+    "委派",
+    "托付",
+    "交代",
+    "worker",
+    "doc-writer",
+    "agent 集群",
+    "Mavis 永不",
+    "Mavis自撰"
+   ]
+  },
+  "keywords_v31_source": ".tmp/s4_regen_runner.py L54–L64（V31_NEW_WORDS + KEYWORDS_V3）",
+  "keywords_v3_source": "executor 8a81d90c69ba L202",
+  "phrase_patterns_source": "executor 8a81d90c69ba L299（extract_sequence Step 3 沿用）",
+  "kwtable_selfcheck": {
+   "t1_strictly_contains_v3": true,
+   "v31_minus_t1": [
+    "后面",
+    "噪声",
+    "失实",
+    "对齐",
+    "挂起",
+    "检验",
+    "缺陷",
+    "观察者效应",
+    "记忆效应"
+   ],
+   "diff_n": 9
+  },
+  "corpus_source": "build_s4_face() L170–L192（R1 序 179 件；load_addendum_event_v3 之 reasoning_full）"
+ },
+ "runtime": {
+  "python": "3.14.7",
+  "network": 0,
+  "endpoint_calls": 0,
+  "api_key": 0,
+  "llm_calls": 0,
+  "note": "R4 key 永不明文 / 0 读 key / 0 读 .env"
+ },
+ "control_checks": {
+  "on_disk_8_recomputed_bit_identical": true,
+  "face_ii_has_zero_seq_t1_only": true,
+  "n_events": 179,
+  "kwtable_diff_9": true
+ },
+ "constraints_declared": {
+  "c1_scope": "仅入缺口消解（G-1 / G-2 / G-4）；⛔ 0 入判定链；⛔ 0 供判定；⛔ 0 支 J-1；⛔ 0 据以闭 K-RJ-5。",
+  "c2_recompute": "补层完成后须回 S3′ 复算并重审 K-RJ-5；⛔ 0 径闭（见复算就绪说明）。",
+  "c3_physical_separation": "V-CLAUSE-1.4 之「⛔ 0 供下游直接引用」持续有效；产出物物理分离、⛔ 0 并入主读数面（K-RJ-6）。"
+ },
+ "not_produced_here": [
+  "pred_model_side（18 件）—— 须跑树预测 ＝ S4′ worker 面，本棒 ⛔ 0 跑",
+  "逐件贡献 nw_sim(pred, seq_v31) − nw_sim(pred, seq_t1_only) —— 依赖 pred_model_side",
+  "五线读数（A/Ap/B/C/D）＋ CI ＋ bootstrap —— ⛔ S4′ 读数产出面",
+  "seq_v3 / primary_v3 / divergent / critical —— ⛔ 非本棒授权层"
+ ],
+ "stats": {
+  "n_new_set_items": 26,
+  "n_on_disk_verified": 8,
+  "n_supplemented": 18,
+  "n_movable_supplemented": 0,
+  "n_movable_total": 0,
+  "n_empty_seq_t1_only": 7,
+  "n_distinct_seq_t1_only_full": 7,
+  "n_qid_null_heldout_json": 4
+ },
+ "items": [
+  {
+   "order_in_r1_key": 0,
+   "r1_key": "_s4_substrate_topup_addendum_2026_10_09.json#0",
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "src_idx": 0,
+   "global_idx": 12,
+   "q_id_heldout_json": "S4T-01",
+   "q_id_resolved": "S4T-01",
+   "corpus_verbatim": "，不误导",
+   "corpus_len": 4,
+   "seq_t1_only": [
+    "CRITERIA",
+    "RISK"
+   ],
+   "seq_t1_only_primary": "CRITERIA",
+   "seq_v31": [
+    "CRITERIA",
+    "RISK"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "CRITERIA": 1,
+    "RISK": 2
+   },
+   "hits_t1_only": [
+    {
+     "word": "不误导",
+     "layer": "CRITERIA",
+     "char_pos": 1
+    },
+    {
+     "word": "误导",
+     "layer": "RISK",
+     "char_pos": 2
+    }
+   ],
+   "status": "on_disk_verified"
+  },
+  {
+   "order_in_r1_key": 1,
+   "r1_key": "_s4_substrate_topup_addendum_2026_10_09.json#3",
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "src_idx": 3,
+   "global_idx": 15,
+   "q_id_heldout_json": "S4T-04",
+   "q_id_resolved": "S4T-04",
+   "corpus_verbatim": "，实事求是",
+   "corpus_len": 5,
+   "seq_t1_only": [
+    "CRITERIA"
+   ],
+   "seq_t1_only_primary": "CRITERIA",
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "CRITERIA": 3
+   },
+   "hits_t1_only": [
+    {
+     "word": "求是",
+     "layer": "CRITERIA",
+     "char_pos": 3
+    }
+   ],
+   "status": "on_disk_verified"
+  },
+  {
+   "order_in_r1_key": 2,
+   "r1_key": "_s4_substrate_topup_addendum_2026_10_09.json#11",
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "src_idx": 11,
+   "global_idx": 23,
+   "q_id_heldout_json": "S4T-12",
+   "q_id_resolved": "S4T-12",
+   "corpus_verbatim": "，防隐性遗忘",
+   "corpus_len": 6,
+   "seq_t1_only": [
+    "RISK"
+   ],
+   "seq_t1_only_primary": "RISK",
+   "seq_v31": [
+    "RISK"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "RISK": 4
+   },
+   "hits_t1_only": [
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 4
+    }
+   ],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 3,
+   "r1_key": "_v4_pi_cot_v2_dataset_addendum_2026_09_24.json#0",
+   "file": "_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+   "src_idx": 0,
+   "global_idx": 30,
+   "q_id_heldout_json": "q17",
+   "q_id_resolved": "q17",
+   "corpus_verbatim": "",
+   "corpus_len": 0,
+   "seq_t1_only": [],
+   "seq_t1_only_primary": "UNKNOWN",
+   "seq_v31": [],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {},
+   "hits_t1_only": [],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 4,
+   "r1_key": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json#1",
+   "file": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+   "src_idx": 1,
+   "global_idx": 46,
+   "q_id_heldout_json": "Q45",
+   "q_id_resolved": "Q45",
+   "corpus_verbatim": "宁缺勿漏",
+   "corpus_len": 4,
+   "seq_t1_only": [],
+   "seq_t1_only_primary": "UNKNOWN",
+   "seq_v31": [],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {},
+   "hits_t1_only": [],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 5,
+   "r1_key": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json#3",
+   "file": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+   "src_idx": 3,
+   "global_idx": 48,
+   "q_id_heldout_json": "Q47",
+   "q_id_resolved": "Q47",
+   "corpus_verbatim": "轮询",
+   "corpus_len": 2,
+   "seq_t1_only": [
+    "TIMING"
+   ],
+   "seq_t1_only_primary": "TIMING",
+   "seq_v31": [
+    "TIMING"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "TIMING": 0
+   },
+   "hits_t1_only": [
+    {
+     "word": "轮询",
+     "layer": "TIMING",
+     "char_pos": 0
+    }
+   ],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 6,
+   "r1_key": "_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json#2",
+   "file": "_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json",
+   "src_idx": 2,
+   "global_idx": 51,
+   "q_id_heldout_json": "Q50",
+   "q_id_resolved": "Q50",
+   "corpus_verbatim": "需要的旧职责一定包含于新的，不需要的也用不上，新出现的有兜底的worker",
+   "corpus_len": 37,
+   "seq_t1_only": [
+    "DELEGATE"
+   ],
+   "seq_t1_only_primary": "DELEGATE",
+   "seq_v31": [
+    "DELEGATE"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "DELEGATE": 31
+   },
+   "hits_t1_only": [
+    {
+     "word": "worker",
+     "layer": "DELEGATE",
+     "char_pos": 31
+    }
+   ],
+   "status": "on_disk_verified"
+  },
+  {
+   "order_in_r1_key": 7,
+   "r1_key": "_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json#0",
+   "file": "_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json",
+   "src_idx": 0,
+   "global_idx": 53,
+   "q_id_heldout_json": null,
+   "q_id_resolved": "Q1_third_read",
+   "corpus_verbatim": "大不了论文不计入该实验 || D1原读: C 不裁剪只会使我的论文可疑",
+   "corpus_len": 35,
+   "seq_t1_only": [
+    "RISK"
+   ],
+   "seq_t1_only_primary": "RISK",
+   "seq_v31": [
+    "RISK"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "RISK": 33
+   },
+   "hits_t1_only": [
+    {
+     "word": "可疑",
+     "layer": "RISK",
+     "char_pos": 33
+    }
+   ],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 8,
+   "r1_key": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json#2",
+   "file": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+   "src_idx": 2,
+   "global_idx": 59,
+   "q_id_heldout_json": null,
+   "q_id_resolved": "Q9_third_read",
+   "corpus_verbatim": "AB，既然决定补测，就要求有效 || D1原读: 为何不先抽样再全量？就像这次问卷，全量3天以上，今日至少37题",
+   "corpus_len": 56,
+   "seq_t1_only": [
+    "TIMING"
+   ],
+   "seq_t1_only_primary": "TIMING",
+   "seq_v31": [
+    "TIMING"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "TIMING": 7
+   },
+   "hits_t1_only": [
+    {
+     "word": "补测",
+     "layer": "TIMING",
+     "char_pos": 7
+    },
+    {
+     "word": "抽样",
+     "layer": "TIMING",
+     "char_pos": 29
+    },
+    {
+     "word": "全量",
+     "layer": "TIMING",
+     "char_pos": 32
+    },
+    {
+     "word": "全量",
+     "layer": "TIMING",
+     "char_pos": 42
+    }
+   ],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 9,
+   "r1_key": "_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json#1",
+   "file": "_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json",
+   "src_idx": 1,
+   "global_idx": 62,
+   "q_id_heldout_json": null,
+   "q_id_resolved": "Q12_third_read",
+   "corpus_verbatim": "BA，先打初稿，后面再补一晚的成果，或者A直接不计入截稿 || D1原读: B，具体按证据等级分流",
+   "corpus_len": 49,
+   "seq_t1_only": [
+    "TIMING"
+   ],
+   "seq_t1_only_primary": "TIMING",
+   "seq_v31": [
+    "TIMING"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [
+    "后面"
+   ],
+   "layer_first_pos_t1": {
+    "TIMING": 11
+   },
+   "hits_t1_only": [
+    {
+     "word": "补一晚",
+     "layer": "TIMING",
+     "char_pos": 11
+    }
+   ],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 10,
+   "r1_key": "_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json#3",
+   "file": "_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json",
+   "src_idx": 3,
+   "global_idx": 64,
+   "q_id_heldout_json": null,
+   "q_id_resolved": "Q17_third_read",
+   "corpus_verbatim": "AB，就像庖丁解牛，落到实处终会回归优雅，每一个优雅的数学公式只是因为没展开 || D1原读: 数学等价，物理唯一，哲学命题，虚实闭合",
+   "corpus_len": 67,
+   "seq_t1_only": [
+    "CRITERIA"
+   ],
+   "seq_t1_only_primary": "CRITERIA",
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "CRITERIA": 5
+   },
+   "hits_t1_only": [
+    {
+     "word": "庖丁解牛",
+     "layer": "CRITERIA",
+     "char_pos": 5
+    },
+    {
+     "word": "落到实处",
+     "layer": "CRITERIA",
+     "char_pos": 10
+    },
+    {
+     "word": "优雅",
+     "layer": "CRITERIA",
+     "char_pos": 18
+    },
+    {
+     "word": "优雅",
+     "layer": "CRITERIA",
+     "char_pos": 24
+    },
+    {
+     "word": "数学等价",
+     "layer": "CRITERIA",
+     "char_pos": 48
+    },
+    {
+     "word": "物理唯一",
+     "layer": "CRITERIA",
+     "char_pos": 53
+    },
+    {
+     "word": "哲学命题",
+     "layer": "CRITERIA",
+     "char_pos": 58
+    },
+    {
+     "word": "虚实闭合",
+     "layer": "CRITERIA",
+     "char_pos": 63
+    }
+   ],
+   "status": "on_disk_verified"
+  },
+  {
+   "order_in_r1_key": 11,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#11",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 11,
+   "global_idx": 90,
+   "q_id_heldout_json": "D8-12",
+   "q_id_resolved": "D8-12",
+   "corpus_verbatim": "依旧不可机械",
+   "corpus_len": 6,
+   "seq_t1_only": [
+    "RISK"
+   ],
+   "seq_t1_only_primary": "RISK",
+   "seq_v31": [
+    "RISK"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "RISK": 2
+   },
+   "hits_t1_only": [
+    {
+     "word": "不可",
+     "layer": "RISK",
+     "char_pos": 2
+    }
+   ],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 12,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#13",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 13,
+   "global_idx": 92,
+   "q_id_heldout_json": "D8-14",
+   "q_id_resolved": "D8-14",
+   "corpus_verbatim": "要为后续复合算法留下空间",
+   "corpus_len": 12,
+   "seq_t1_only": [
+    "TIMING"
+   ],
+   "seq_t1_only_primary": "TIMING",
+   "seq_v31": [
+    "TIMING"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "TIMING": 2
+   },
+   "hits_t1_only": [
+    {
+     "word": "后续",
+     "layer": "TIMING",
+     "char_pos": 2
+    },
+    {
+     "word": "续",
+     "layer": "TIMING",
+     "char_pos": 3
+    }
+   ],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 13,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#20",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 20,
+   "global_idx": 99,
+   "q_id_heldout_json": "D8-21",
+   "q_id_resolved": "D8-21",
+   "corpus_verbatim": "此外无需<=2~3，<=3即可，但因PI而异且要注意防回退",
+   "corpus_len": 29,
+   "seq_t1_only": [
+    "RISK"
+   ],
+   "seq_t1_only_primary": "RISK",
+   "seq_v31": [
+    "RISK"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "RISK": 27
+   },
+   "hits_t1_only": [
+    {
+     "word": "回退",
+     "layer": "RISK",
+     "char_pos": 27
+    }
+   ],
+   "status": "on_disk_verified"
+  },
+  {
+   "order_in_r1_key": 14,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#21",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 21,
+   "global_idx": 100,
+   "q_id_heldout_json": "D8-22",
+   "q_id_resolved": "D8-22",
+   "corpus_verbatim": "大材小用，不可机械，而应真与死同行",
+   "corpus_len": 17,
+   "seq_t1_only": [
+    "CRITERIA",
+    "RISK"
+   ],
+   "seq_t1_only_primary": "CRITERIA",
+   "seq_v31": [
+    "CRITERIA",
+    "RISK"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "CRITERIA": 0,
+    "RISK": 5
+   },
+   "hits_t1_only": [
+    {
+     "word": "大材小用",
+     "layer": "CRITERIA",
+     "char_pos": 0
+    },
+    {
+     "word": "不可",
+     "layer": "RISK",
+     "char_pos": 5
+    },
+    {
+     "word": "与死同行",
+     "layer": "CRITERIA",
+     "char_pos": 13
+    }
+   ],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 15,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#30",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 30,
+   "global_idx": 109,
+   "q_id_heldout_json": "D8-31",
+   "q_id_resolved": "D8-31",
+   "corpus_verbatim": "需要硬核",
+   "corpus_len": 4,
+   "seq_t1_only": [
+    "CRITERIA"
+   ],
+   "seq_t1_only_primary": "CRITERIA",
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "CRITERIA": 2
+   },
+   "hits_t1_only": [
+    {
+     "word": "硬核",
+     "layer": "CRITERIA",
+     "char_pos": 2
+    }
+   ],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 16,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#40",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 40,
+   "global_idx": 119,
+   "q_id_heldout_json": "D8-41",
+   "q_id_resolved": "D8-41",
+   "corpus_verbatim": "大材小用，小是具体，minimax的写作能力一般",
+   "corpus_len": 24,
+   "seq_t1_only": [
+    "CRITERIA"
+   ],
+   "seq_t1_only_primary": "CRITERIA",
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "CRITERIA": 0
+   },
+   "hits_t1_only": [
+    {
+     "word": "大材小用",
+     "layer": "CRITERIA",
+     "char_pos": 0
+    }
+   ],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 17,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#45",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 45,
+   "global_idx": 124,
+   "q_id_heldout_json": "D8-46",
+   "q_id_resolved": "D8-46",
+   "corpus_verbatim": "实事求是",
+   "corpus_len": 4,
+   "seq_t1_only": [
+    "CRITERIA"
+   ],
+   "seq_t1_only_primary": "CRITERIA",
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "CRITERIA": 2
+   },
+   "hits_t1_only": [
+    {
+     "word": "求是",
+     "layer": "CRITERIA",
+     "char_pos": 2
+    }
+   ],
+   "status": "on_disk_verified"
+  },
+  {
+   "order_in_r1_key": 18,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#51",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 51,
+   "global_idx": 130,
+   "q_id_heldout_json": "D8-52",
+   "q_id_resolved": "D8-52",
+   "corpus_verbatim": "先由PI复核，人是活的，PI是人",
+   "corpus_len": 16,
+   "seq_t1_only": [
+    "CRITERIA"
+   ],
+   "seq_t1_only_primary": "CRITERIA",
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "CRITERIA": 4
+   },
+   "hits_t1_only": [
+    {
+     "word": "复核",
+     "layer": "CRITERIA",
+     "char_pos": 4
+    }
+   ],
+   "status": "on_disk_verified"
+  },
+  {
+   "order_in_r1_key": 19,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#58",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 58,
+   "global_idx": 137,
+   "q_id_heldout_json": "D8-59r",
+   "q_id_resolved": "D8-59r",
+   "corpus_verbatim": "因地制宜",
+   "corpus_len": 4,
+   "seq_t1_only": [],
+   "seq_t1_only_primary": "UNKNOWN",
+   "seq_v31": [],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {},
+   "hits_t1_only": [],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 20,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#65",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 65,
+   "global_idx": 144,
+   "q_id_heldout_json": "D8-66",
+   "q_id_resolved": "D8-66",
+   "corpus_verbatim": "全量推进防遗忘，但也注意防回退，不过本场景应不涉及进程对抗",
+   "corpus_len": 29,
+   "seq_t1_only": [
+    "TIMING",
+    "RISK"
+   ],
+   "seq_t1_only_primary": "TIMING",
+   "seq_v31": [
+    "TIMING",
+    "RISK"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "RISK": 5,
+    "TIMING": 0
+   },
+   "hits_t1_only": [
+    {
+     "word": "全量",
+     "layer": "TIMING",
+     "char_pos": 0
+    },
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 5
+    },
+    {
+     "word": "回退",
+     "layer": "RISK",
+     "char_pos": 13
+    }
+   ],
+   "status": "on_disk_verified"
+  },
+  {
+   "order_in_r1_key": 21,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#66",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 66,
+   "global_idx": 145,
+   "q_id_heldout_json": "D8-67",
+   "q_id_resolved": "D8-67",
+   "corpus_verbatim": "下一波补可能拉高单日占比",
+   "corpus_len": 12,
+   "seq_t1_only": [],
+   "seq_t1_only_primary": "UNKNOWN",
+   "seq_v31": [],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {},
+   "hits_t1_only": [],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 22,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#75",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 75,
+   "global_idx": 154,
+   "q_id_heldout_json": "D8-76",
+   "q_id_resolved": "D8-76",
+   "corpus_verbatim": "因地制宜",
+   "corpus_len": 4,
+   "seq_t1_only": [],
+   "seq_t1_only_primary": "UNKNOWN",
+   "seq_v31": [],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {},
+   "hits_t1_only": [],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 23,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#79",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 79,
+   "global_idx": 158,
+   "q_id_heldout_json": "D8-80",
+   "q_id_resolved": "D8-80",
+   "corpus_verbatim": "尤其补充深度广度",
+   "corpus_len": 8,
+   "seq_t1_only": [],
+   "seq_t1_only_primary": "UNKNOWN",
+   "seq_v31": [],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {},
+   "hits_t1_only": [],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 24,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#83",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 83,
+   "global_idx": 162,
+   "q_id_heldout_json": "SQ-04",
+   "q_id_resolved": "SQ-04",
+   "corpus_verbatim": "最小的一步是同义映射，如与死同行-不可机械，大材小用-因地制宜，落到实处-实事求是",
+   "corpus_len": 41,
+   "seq_t1_only": [
+    "CRITERIA",
+    "RISK"
+   ],
+   "seq_t1_only_primary": "CRITERIA",
+   "seq_v31": [
+    "CRITERIA",
+    "RISK"
+   ],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {
+    "CRITERIA": 12,
+    "RISK": 17
+   },
+   "hits_t1_only": [
+    {
+     "word": "与死同行",
+     "layer": "CRITERIA",
+     "char_pos": 12
+    },
+    {
+     "word": "不可",
+     "layer": "RISK",
+     "char_pos": 17
+    },
+    {
+     "word": "大材小用",
+     "layer": "CRITERIA",
+     "char_pos": 22
+    },
+    {
+     "word": "落到实处",
+     "layer": "CRITERIA",
+     "char_pos": 32
+    },
+    {
+     "word": "求是",
+     "layer": "CRITERIA",
+     "char_pos": 39
+    }
+   ],
+   "status": "supplemented"
+  },
+  {
+   "order_in_r1_key": 25,
+   "r1_key": "_v4_pi_cot_v3_dataset_addendum_s3_d1fill_2026_10_01.json#2",
+   "file": "_v4_pi_cot_v3_dataset_addendum_s3_d1fill_2026_10_01.json",
+   "src_idx": 2,
+   "global_idx": 174,
+   "q_id_heldout_json": "DF1-4",
+   "q_id_resolved": "DF1-4",
+   "corpus_verbatim": "",
+   "corpus_len": 0,
+   "seq_t1_only": [],
+   "seq_t1_only_primary": "UNKNOWN",
+   "seq_v31": [],
+   "seq_t1_only_eq_seq_v31": true,
+   "v31_only_words_present": [],
+   "layer_first_pos_t1": {},
+   "hits_t1_only": [],
+   "status": "supplemented"
+  }
+ ]
+}

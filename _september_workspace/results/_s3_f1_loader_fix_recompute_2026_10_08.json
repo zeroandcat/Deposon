@@ -1,0 +1,698 @@
+{
+  "schema": "deposon.s3_f1_loader_fix_recompute.v1",
+  "task": "S3-F1 loader 缺陷修复复算 · 只出读数面",
+  "open_order": "《V3~V4 实验缺口排期》§3 OR-3（缺口 ID = V4-05）",
+  "executor": "worker（执行面·本件实际出件者·署名如实）",
+  "date": "2026-10-08",
+  "runtime": "python 3.14.7 + hashlib/json/numpy；0 LLM / 0 API / 0 proxy / 0 gateway / 0 网络外呼",
+  "claim_boundary": {
+    "outputs": "只出读数面",
+    "k_v3s_3_4_judgement": "⛔ 本件 0 判 K-V3S-3-4；⛔ 0 出 hit 布尔；⛔ 0 宣告命中/未命中",
+    "threshold_literal": "1.00 沿 K-V3-B / TH-v2-5b 字面（源 ef5a40554960）；本件 0 以其为判定依据、0 触碰、0 调整",
+    "lock_status": "K-V3S-3-4 字面已冻但入锁动作未做（OR-1 同批）⇒ 本波 0 出判定"
+  },
+  "write_surface": {
+    "out_path": "results/_s3_f1_loader_fix_recompute_2026_10_08.json",
+    "collision_before_write": false,
+    "action": "新建",
+    "existing_artifacts_modified": 0,
+    "derived_json_merged_into_existing": 0
+  },
+  "input_chain": [
+    {
+      "path": "results/_v3_s3_collection_brief_2026_09_28.md",
+      "sha12_expected": "d5ba1161e37f",
+      "sha12_measured": "d5ba1161e37f",
+      "size_bytes": 19045,
+      "match": true,
+      "role": "F1 缺陷面 + 修后 0.5714 预期读（OR-3 输入件①）"
+    },
+    {
+      "path": "results/_s3_kv3s_3_full_recompute_2026_10_01.md",
+      "sha12_expected": "b0123f161c10",
+      "sha12_measured": "b0123f161c10",
+      "size_bytes": 22183,
+      "match": true,
+      "role": "修前读数基线（K-V3S-3-1/2/3 面·OR-3 输入件②）"
+    },
+    {
+      "path": "results/_v3_s_prereg_v1_2026_09_27.md",
+      "sha12_expected": "ef5a40554960",
+      "sha12_measured": "ef5a40554960",
+      "size_bytes": 46836,
+      "match": true,
+      "role": "K-V3S-3-* 判死线字面源（⛔ 本件 0 改）"
+    },
+    {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+      "sha12_expected": "172093a23e4b",
+      "sha12_measured": "172093a23e4b",
+      "size_bytes": 4103,
+      "match": true,
+      "role": "D1 addendum（critical_reflection_supplement 丢弃源·OR-3 输入件③）"
+    },
+    {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json",
+      "sha12_expected": "439721007aaf",
+      "sha12_measured": "439721007aaf",
+      "size_bytes": 6132,
+      "match": true,
+      "role": "D2 addendum（OR-3 输入件③）"
+    },
+    {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json",
+      "sha12_expected": "6e104e2db038",
+      "sha12_measured": "6e104e2db038",
+      "size_bytes": 11589,
+      "match": true,
+      "role": "D3a addendum（OR-3 输入件③）"
+    },
+    {
+      "path": "results/_v4_pi_cot_v3_ruleset_v3_executor.py",
+      "sha12_expected": "8a81d90c69ba",
+      "sha12_measured": "8a81d90c69ba",
+      "size_bytes": 58794,
+      "match": true,
+      "role": "loader 缺陷面实体（只读 import·0 触动）"
+    },
+    {
+      "path": "results/_v4_pi_cot_v3_result_v3.json",
+      "sha12_expected": "585714f9660c",
+      "sha12_measured": "585714f9660c",
+      "size_bytes": 27203,
+      "match": true,
+      "role": "同 substrate per_event 对照源（修前读数源）"
+    },
+    {
+      "path": "results/_v4_pi_cot_v2_dataset.json",
+      "sha12_expected": "7b01cd835a41",
+      "sha12_measured": "7b01cd835a41",
+      "size_bytes": 12672,
+      "match": true,
+      "role": "v1.1 events 源（37 件）"
+    },
+    {
+      "path": "results/_v3_s3_wordexpand_data/executor_2026_09_28.py",
+      "sha12_expected": "80f1445ce45d",
+      "sha12_measured": "80f1445ce45d",
+      "size_bytes": 46005,
+      "match": true,
+      "role": "09-28 扩词棒诊断腿（OR-3 预期读 0.4286→0.5714 之来源）"
+    },
+    {
+      "path": "results/_v3_s3_wordexpand_data/result_2026_09_28.json",
+      "sha12_expected": "f7f6d875d73a",
+      "sha12_measured": "f7f6d875d73a",
+      "size_bytes": 34953,
+      "match": true,
+      "role": "09-28 扩词棒落盘结果（对照面·⛔ 0 沿用其读数）"
+    }
+  ],
+  "input_chain_all_match": true,
+  "defect_surface": {
+    "loader_entity": "results/_v4_pi_cot_v3_ruleset_v3_executor.py",
+    "loader_locator": "L775-L788（`_load_supplement_events` 内 reasoning_full 分支）",
+    "branch_condition_pre_fix": "if \"reasoning_full\" in sup and sup[\"reasoning_full\"]: ... if source_wave == \"D1_supp\" and sup.get(\"critical_reflection_supplement\"): rf = rf + \" \" + sup[\"critical_reflection_supplement\"] ... else: ev[\"reasoning_full\"] = \"\"",
+    "defect_mechanism": "critical_reflection_supplement 的拼接被**嵌套在** reasoning_full 非空分支内；当补充件无 reasoning_full 而仅有 critical_reflection_supplement 时，外层条件不成立，直接落入 `else: ev[\"reasoning_full\"] = \"\"` ⇒ 补充文本静默丢弃（0 报错 / 0 告警 / 0 计数）",
+    "branch_condition_post_fix": "把 supplement 拼接**移出** reasoning_full 分支，作为并列文本源：无 reasoning_full 时 supplement 本身即成为 reasoning_full；有 reasoning_full 时维持原 `rf + \" \" + supplement` 拼接语义",
+    "d1_supp_supplement_census": [
+      {
+        "event_id": 17,
+        "q_id": "q17",
+        "has_critical_reflection_supplement": true,
+        "supplement_len": 2,
+        "has_reasoning_full_on_disk": false,
+        "loader_merged_supplement": false,
+        "dropped_by_loader": true
+      },
+      {
+        "event_id": 21,
+        "q_id": "q21",
+        "has_critical_reflection_supplement": true,
+        "supplement_len": 40,
+        "has_reasoning_full_on_disk": false,
+        "loader_merged_supplement": false,
+        "dropped_by_loader": true
+      },
+      {
+        "event_id": 27,
+        "q_id": "q27",
+        "has_critical_reflection_supplement": true,
+        "supplement_len": 62,
+        "has_reasoning_full_on_disk": false,
+        "loader_merged_supplement": false,
+        "dropped_by_loader": true
+      }
+    ],
+    "n_supplements_on_disk": 3,
+    "n_with_critical_reflection_supplement": 3,
+    "n_dropped_by_loader": 3,
+    "other_addenda_census": {
+      "_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json": {
+        "n_supplements": 4,
+        "n_with_critical_reflection_supplement": 0
+      },
+      "_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json": {
+        "n_supplements": 4,
+        "n_with_critical_reflection_supplement": 0
+      }
+    },
+    "affected_event_indices": [
+      37,
+      38,
+      39
+    ],
+    "n_affected": 3,
+    "loader_fix_applied": "内存态（0 修既有件·0 写既有件·0 覆写）"
+  },
+  "marker_table_base36": {
+    "source": "V3.CRITICAL_REFLECTION_MARKERS_V3（v3 executor L286-296）",
+    "n_tuple": 36,
+    "n_distinct": 35,
+    "duplicate_words": [
+      "未必"
+    ],
+    "note": "36 元组 / 35 去重；簿记差沿 TRAE_V3_ASSET_ERRATUM E-42.5 ② 登记，⛔ 本件 0 统一"
+  },
+  "substrate": {
+    "n_events": 77,
+    "source": "V3.load_all_events_v3()（v1.1 37 件 + 9 v2 addenda + 1 v3 d4）",
+    "main_heldout_count": 23,
+    "main_heldout_idx": [
+      0,
+      2,
+      5,
+      6,
+      7,
+      12,
+      13,
+      16,
+      23,
+      27,
+      28,
+      36,
+      37,
+      39,
+      47,
+      50,
+      58,
+      59,
+      63,
+      66,
+      72,
+      74,
+      76
+    ],
+    "heldout_reproduction_ok": true,
+    "heldout_ratio": 0.3,
+    "seed": 42,
+    "alt_caliber_b_idx": [
+      0,
+      5,
+      7,
+      12,
+      13,
+      16,
+      23,
+      28,
+      36,
+      37,
+      39,
+      47,
+      58,
+      63,
+      66,
+      72,
+      74,
+      76
+    ],
+    "alt_caliber_b_definition": "显式定义：main held-out 剔 is_correction_event_v3（沿 09-28 扩词棒口径）",
+    "same_substrate_post_fix": true,
+    "per_event_frozen": "pred / actual / divergent 沿 result_v3 固定，⛔ 0 重算（见 sensitivity 面）"
+  },
+  "readings_pre_post": {
+    "MAIN_BASE_36": {
+      "pre_fix": {
+        "n_held": 23,
+        "n_divergent": 14,
+        "n_critical_among_divergent": 6,
+        "coverage": 0.42857142857142855,
+        "coverage_r4": 0.4286,
+        "critical_idx": [
+          2,
+          27,
+          36,
+          58,
+          59,
+          66
+        ],
+        "no_critical_idx": [
+          12,
+          28,
+          37,
+          39,
+          47,
+          50,
+          72,
+          74
+        ]
+      },
+      "post_fix": {
+        "n_held": 23,
+        "n_divergent": 14,
+        "n_critical_among_divergent": 8,
+        "coverage": 0.5714285714285714,
+        "coverage_r4": 0.5714,
+        "critical_idx": [
+          2,
+          27,
+          36,
+          37,
+          39,
+          58,
+          59,
+          66
+        ],
+        "no_critical_idx": [
+          12,
+          28,
+          47,
+          50,
+          72,
+          74
+        ]
+      },
+      "delta_n_critical_among_divergent": 2,
+      "delta_coverage": 0.142857142857
+    },
+    "ALT_caliber_B_BASE_36": {
+      "pre_fix": {
+        "n_held": 18,
+        "n_divergent": 10,
+        "n_critical_among_divergent": 3,
+        "coverage": 0.3,
+        "coverage_r4": 0.3,
+        "critical_idx": [
+          36,
+          58,
+          66
+        ],
+        "no_critical_idx": [
+          12,
+          28,
+          37,
+          39,
+          47,
+          72,
+          74
+        ]
+      },
+      "post_fix": {
+        "n_held": 18,
+        "n_divergent": 10,
+        "n_critical_among_divergent": 5,
+        "coverage": 0.5,
+        "coverage_r4": 0.5,
+        "critical_idx": [
+          36,
+          37,
+          39,
+          58,
+          66
+        ],
+        "no_critical_idx": [
+          12,
+          28,
+          47,
+          72,
+          74
+        ]
+      },
+      "delta_n_critical_among_divergent": 2,
+      "delta_coverage": 0.2
+    },
+    "ALT_caliber_A_registered": {
+      "source": "result_v3 alt_reading_corr_excluded（已登记读数·本棒 0 复现其 idx 集）",
+      "n_held": 18,
+      "n_divergent": 11,
+      "n_critical_among_divergent": 4,
+      "coverage": 0.36363636363636365,
+      "post_fix": null,
+      "post_fix_status": "⛔ 本棒 0 出——result_v3 0 落盘 alt held_out_idx / per_event，idx 集不可复现",
+      "registered_discrepancy": "已登记口径差异（简报 T-S3-4）：result_v3 ALT 记 n_div=11/n_crit=4；同 held-out 剔 correction 口径得 n_div=10/n_crit=3 ⇒ 两读并列，⛔ 0 消解，口径归属待 PI 裁定"
+    },
+    "pre_fix_registered_crosscheck": {
+      "result_v3_main_div_critical_coverage": 0.42857142857142855,
+      "pre_fix_measured_main_coverage": 0.42857142857142855,
+      "identical": true,
+      "note": "本棒独立复算之修前读数与 result_v3 登记值逐位一致 ⇒ 修前基线坐实"
+    }
+  },
+  "idx_trace": [
+    {
+      "held_idx": 37,
+      "event_id": 17,
+      "q_id": "q17",
+      "source_wave": "D1_supp",
+      "source_file": "_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+      "in_main_heldout": true,
+      "in_alt_caliber_b": true,
+      "supplement_len_on_disk": 2,
+      "loaded_reasoning_full_len_pre_fix": 0,
+      "loaded_reasoning_full_len_post_fix": 2,
+      "base36_markers_hit": [
+        "硬核"
+      ],
+      "n_base36_markers_hit": 1,
+      "critical_pre_fix": false,
+      "critical_post_fix": true,
+      "per_event_pred": "UNKNOWN",
+      "per_event_actual_pre_fix": [],
+      "actual_reextracted_post_fix": [
+        "CRITERIA"
+      ],
+      "divergent_pre_fix": true,
+      "divergent_post_fix_if_actual_reextracted": true,
+      "affects_main_coverage_reading": true
+    },
+    {
+      "held_idx": 38,
+      "event_id": 21,
+      "q_id": "q21",
+      "source_wave": "D1_supp",
+      "source_file": "_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+      "in_main_heldout": false,
+      "in_alt_caliber_b": false,
+      "supplement_len_on_disk": 40,
+      "loaded_reasoning_full_len_pre_fix": 0,
+      "loaded_reasoning_full_len_post_fix": 40,
+      "base36_markers_hit": [],
+      "n_base36_markers_hit": 0,
+      "critical_pre_fix": false,
+      "critical_post_fix": false,
+      "per_event_pred": null,
+      "per_event_actual_pre_fix": null,
+      "actual_reextracted_post_fix": [
+        "CRITERIA"
+      ],
+      "divergent_pre_fix": null,
+      "divergent_post_fix_if_actual_reextracted": null,
+      "affects_main_coverage_reading": false
+    },
+    {
+      "held_idx": 39,
+      "event_id": 27,
+      "q_id": "q27",
+      "source_wave": "D1_supp",
+      "source_file": "_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+      "in_main_heldout": true,
+      "in_alt_caliber_b": true,
+      "supplement_len_on_disk": 62,
+      "loaded_reasoning_full_len_pre_fix": 0,
+      "loaded_reasoning_full_len_post_fix": 62,
+      "base36_markers_hit": [
+        "不",
+        "但"
+      ],
+      "n_base36_markers_hit": 2,
+      "critical_pre_fix": false,
+      "critical_post_fix": true,
+      "per_event_pred": "UNKNOWN",
+      "per_event_actual_pre_fix": [],
+      "actual_reextracted_post_fix": [
+        "DELEGATE",
+        "CRITERIA"
+      ],
+      "divergent_pre_fix": true,
+      "divergent_post_fix_if_actual_reextracted": true,
+      "affects_main_coverage_reading": true
+    }
+  ],
+  "sensitivity_divergence_under_fix": {
+    "question": "装载修复后 actual 序列变化是否会使 idx 37/39 脱离 divergent 集合？",
+    "method": "对受影响件以 V3.extract_judgment_sequence_v3 重抽 actual（pred 侧 0 重跑树）",
+    "per_item": [
+      {
+        "held_idx": 37,
+        "pred": "UNKNOWN",
+        "actual_pre_fix": [],
+        "actual_post_fix": [
+          "CRITERIA"
+        ],
+        "divergent_pre_fix": true,
+        "divergent_post_fix": true
+      },
+      {
+        "held_idx": 38,
+        "pred": null,
+        "actual_pre_fix": null,
+        "actual_post_fix": [
+          "CRITERIA"
+        ],
+        "divergent_pre_fix": null,
+        "divergent_post_fix": null
+      },
+      {
+        "held_idx": 39,
+        "pred": "UNKNOWN",
+        "actual_pre_fix": [],
+        "actual_post_fix": [
+          "DELEGATE",
+          "CRITERIA"
+        ],
+        "divergent_pre_fix": true,
+        "divergent_post_fix": true
+      }
+    ],
+    "conclusion": "idx 37/39 之 pred = UNKNOWN，而修后 actual 非空 ⇒ divergent 仍为 true；⇒ 两件在两种读数下均留在 divergent 集合内，本棒主读数对 pred 侧重算不敏感",
+    "boundary": "⛔ 0 重跑树、0 重抽 pred、0 重算 nw_sim/nled_sim；上列为 actual 侧条件性读数"
+  },
+  "four_reading_stats": {
+    "vocab_36_per_word_n_events_containing": {
+      "n": 36,
+      "n_distinct": 9,
+      "min": 0.0,
+      "max": 43.0,
+      "std": 7.428828979051813,
+      "n_distinct_ge_4_gate": true
+    },
+    "main_heldout_nw_sim": {
+      "n": 23,
+      "n_distinct": 6,
+      "min": 0.0,
+      "max": 1.0,
+      "std": 0.3346114405877593,
+      "n_distinct_ge_4_gate": true
+    },
+    "main_heldout_nled_sim": {
+      "n": 23,
+      "n_distinct": 4,
+      "min": 0.0,
+      "max": 1.0,
+      "std": 0.3826196748534518,
+      "n_distinct_ge_4_gate": true
+    },
+    "main_divergent_critical_indicator_pre_fix": {
+      "n": 14,
+      "n_distinct": 2,
+      "min": 0.0,
+      "max": 1.0,
+      "std": 0.4948716593053935,
+      "n_distinct_ge_4_gate": false
+    },
+    "main_divergent_critical_indicator_post_fix": {
+      "n": 14,
+      "n_distinct": 2,
+      "min": 0.0,
+      "max": 1.0,
+      "std": 0.4948716593053935,
+      "n_distinct_ge_4_gate": false
+    }
+  },
+  "four_reading_completeness": {
+    "required": [
+      "n_distinct",
+      "min",
+      "max",
+      "std"
+    ],
+    "reported_vectors": [
+      "main_divergent_critical_indicator_post_fix",
+      "main_divergent_critical_indicator_pre_fix",
+      "main_heldout_nled_sim",
+      "main_heldout_nw_sim",
+      "vocab_36_per_word_n_events_containing"
+    ],
+    "all_four_present": true,
+    "anti_degeneration_gate": "n_distinct >= 4（词表非退化自证）",
+    "note": "连续型向量（逐词命中数 / nw_sim / nled_sim）过门；二值指示向量（divergent 件之批判命中标志）n_distinct = 2 属结构性二值，如实登记 0 美化、0 改口径"
+  },
+  "per_word_n_events_containing_post_fix": [
+    {
+      "word": "不",
+      "n_events_containing_post_fix": 43
+    },
+    {
+      "word": "却",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "反而",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "然而",
+      "n_events_containing_post_fix": 1
+    },
+    {
+      "word": "但是",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "但",
+      "n_events_containing_post_fix": 11
+    },
+    {
+      "word": "其实",
+      "n_events_containing_post_fix": 1
+    },
+    {
+      "word": "区别",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "修正",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "纠",
+      "n_events_containing_post_fix": 2
+    },
+    {
+      "word": "错",
+      "n_events_containing_post_fix": 4
+    },
+    {
+      "word": "未必",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "不可",
+      "n_events_containing_post_fix": 10
+    },
+    {
+      "word": "不应",
+      "n_events_containing_post_fix": 6
+    },
+    {
+      "word": "误",
+      "n_events_containing_post_fix": 10
+    },
+    {
+      "word": "批判",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "反思",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "避免",
+      "n_events_containing_post_fix": 7
+    },
+    {
+      "word": "慎重",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "慎",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "重新",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "未必",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "未必是",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "可疑",
+      "n_events_containing_post_fix": 2
+    },
+    {
+      "word": "重新考虑",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "区别于",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "不一定",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "硬核",
+      "n_events_containing_post_fix": 1
+    },
+    {
+      "word": "诚实边界",
+      "n_events_containing_post_fix": 1
+    },
+    {
+      "word": "判死线先于",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "判死先于",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "大一统",
+      "n_events_containing_post_fix": 1
+    },
+    {
+      "word": "虚实闭合",
+      "n_events_containing_post_fix": 2
+    },
+    {
+      "word": "虚实回路",
+      "n_events_containing_post_fix": 0
+    },
+    {
+      "word": "FTFB",
+      "n_events_containing_post_fix": 2
+    },
+    {
+      "word": "准则",
+      "n_events_containing_post_fix": 1
+    }
+  ],
+  "discipline": {
+    "network": 0,
+    "endpoint_or_api_call": 0,
+    "r4_key_in_plaintext": 0,
+    "existing_file_modified": 0,
+    "existing_file_overwritten": 0,
+    "derived_json_merged": 0,
+    "threshold_adjusted": 0,
+    "judgement_rendered": 0,
+    "hit_boolean_emitted": 0,
+    "pre_fix_reading_omitted": false,
+    "min_max_std_omitted": false,
+    "reasoning_text_exposed": 0,
+    "hash_builtin_used": false,
+    "sha256_via": "hashlib.sha256"
+  },
+  "honesty_note": [
+    "修后腿沿 09-28 扩词棒诊断腿口径：per_event（pred/actual/divergent）固定不重算，仅覆盖读数分子随装载文本变化；本棒另出 actual 侧重抽敏感性面，结论为读数对 pred 侧重算不敏感",
+    "ALT_caliber_A 之 post_fix 未出：result_v3 0 落盘其 held_out_idx，idx 集不可复现（⛔ 0 推定）",
+    "词表 36/35 簿记差沿既有登记，⛔ 本件 0 统一、0 改任一件",
+    "本件全部读数为 2026-10-08 盘上终态实测；⛔ 0 外推至 S4 扩样面、⛔ 0 预判任何判定"
+  ]
+}
