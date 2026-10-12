@@ -70,7 +70,7 @@ import requests as _requests
 # ============================================================
 # 常量与路径
 # ============================================================
-ROOT = Path("D:/私人资料/deposon-repo")
+ROOT = Path("_september_workspace")
 RESULTS_DIR = ROOT / "results"
 TMP_DIR = ROOT / ".tmp"
 
@@ -79,7 +79,7 @@ SELFCERT_PATH = TMP_DIR / "_t1_qwen_temp_sweep_selfcert.json"
 PROBE_LOG_PATH = TMP_DIR / "_t1_qwen_temp_sweep_probe_log.json"
 READINGS_PATH = TMP_DIR / "_t1_qwen_temp_sweep_readings.json"
 
-KEY_SOURCE_PATH = Path("C:/Users/Administrator/Desktop/AI/LLM API.txt")
+KEY_SOURCE_PATH = Path("〔本机用户目录〕/Desktop/AI/LLM API.txt")
 CAPTIONS_PATH = ROOT / "corpus/v20_caption_surface/strip_captions_22.json"
 CAPTIONS_SHA12_EXPECTED = "6A2656878745"
 

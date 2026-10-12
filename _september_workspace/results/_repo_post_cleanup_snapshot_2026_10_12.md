@@ -10,12 +10,12 @@
 
 | 区 | 绝对路径 | 件数 | bytes | 末次 mtime |
 |---|---|---|---|---|
-| $root | `D:\私人资料\deposon-repo` | **1699** | **54441729** | 2026-10-12 03:09:00 |
-| $root | `D:\私人资料\deposon-sub` | **1187** | **58731756** | 2026-10-12 01:54:54 |
+| $root | `_september_workspace` | **1699** | **54441729** | 2026-10-12 03:09:00 |
+| $root | `_september_workspace` | **1187** | **58731756** | 2026-10-12 01:54:54 |
 
 ## 2. 逐目录分布
 
-### `D:\私人资料\deposon-repo`
+### `_september_workspace`
 
 | 目录 | 件数 | bytes | 目录 mtime |
 |---|---|---|---|
@@ -37,7 +37,7 @@
 | *(根散件)* | 72 | 1020964 | — |
 | **小计** | **1699** | **54441729** | |
 
-### `D:\私人资料\deposon-sub`
+### `_september_workspace`
 
 | 目录 | 件数 | bytes | 目录 mtime |
 |---|---|---|---|
@@ -58,7 +58,7 @@
 
 SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序：区 → 相对路径（稳定序）。
 
-### 区 `D:\私人资料\deposon-repo`
+### 区 `_september_workspace`
 
 | # | 相对路径 | bytes | mtime | SHA-12 |
 |---|---|---|---|---|
@@ -718,7 +718,7 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 | 654 | `docs\V3X\CPATH_SIMULATION_REPORT_2026_09_10.md` | 6825 | 2026-09-10 20:47:18 | `de772cd9e7ba` |
 | 655 | `docs\V3X\D_FIX2_METRIC_VERIFY_REPORT_2026_09_15.md` | 7352 | 2026-09-15 14:07:47 | `0a63824f0805` |
 | 656 | `docs\V3X\D0_FREEZE_PREP_2026_09_09.md` | 9844 | 2026-09-09 10:55:24 | `0d1e88c258aa` |
-| 657 | `docs\V3X\D3_WECHAT_MIDTERM_TEMPLATE.md` | 4361 | 2026-09-09 11:23:41 | `574d5a79e363` |
+| 657 | `docs\V3X\D3_〔IM〕_MIDTERM_TEMPLATE.md` | 4361 | 2026-09-09 11:23:41 | `574d5a79e363` |
 | 658 | `docs\V3X\D5_DECISIONS_LAND_REPORT_2026_09_15.md` | 21756 | 2026-09-15 15:15:39 | `8ff1a7c5413f` |
 | 659 | `docs\V3X\D7_GITHUB_PUSH_RECEIVE_2026_09_15_v2.md` | 5930 | 2026-09-15 17:28:16 | `2c4bb6078ee7` |
 | 660 | `docs\V3X\D7_ONE_PAGE_SUMMARY_2026_09_11_v5.md` | 6459 | 2026-09-11 13:30:46 | `67063f9cb238` |
@@ -726,7 +726,7 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 | 662 | `docs\V3X\D7_POST_CLEANUP_PLAN_2026_09_18.json` | 20271 | 2026-09-15 17:27:45 | `0b8a1a357aae` |
 | 663 | `docs\V3X\D7_POST_CLEANUP_REPORT_2026_09_16.json` | 1248 | 2026-09-16 11:01:13 | `40955bf2abc5` |
 | 664 | `docs\V3X\D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` | 10692 | 2026-09-16 11:09:18 | `51869e3184f4` |
-| 665 | `docs\V3X\D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md` | 8037 | 2026-09-16 11:08:22 | `935cb6ee3566` |
+| 665 | `docs\V3X\D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 8037 | 2026-09-16 11:08:22 | `935cb6ee3566` |
 | 666 | `docs\V3X\DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | 22442 | 2026-09-10 20:22:54 | `ac8997b07731` |
 | 667 | `docs\V3X\DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | 17803 | 2026-09-10 18:16:43 | `240a7ae4bdfb` |
 | 668 | `docs\V3X\DPATH_CROSS_MODAL_2026_09_10.md` | 26460 | 2026-09-16 11:01:12 | `e4ee3999f7ce` |
@@ -838,11 +838,11 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 | 774 | `letters\_v4_commission_upload_executor_2026_09_24_v3.md` | 25091 | 2026-09-26 19:20:04 | `c20d4f58f5c8` |
 | 775 | `letters\_v4_commission_upload_executor_reply_v3_2026_09_24.md` | 9848 | 2026-09-26 19:35:40 | `50592e36ecad` |
 | 776 | `letters\_v4_commission_upload_executor_reply_v3_exec_2026_09_26.md` | 4471 | 2026-09-26 19:53:10 | `631bb517f79d` |
-| 777 | `letters\_v4_commission_wechat_report_coze_2026_09_24.md` | 7197 | 2026-09-24 18:55:26 | `15f8227308bc` |
-| 778 | `letters\_v4_commission_wechat_report_coze_2026_09_24_v2.md` | 10599 | 2026-09-24 20:05:56 | `389c51e70d19` |
-| 779 | `letters\_v4_commission_wechat_report_coze_2026_09_24_v3.md` | 13898 | 2026-09-26 19:19:29 | `e5b63d181b15` |
-| 780 | `letters\_v4_commission_wechat_report_coze_2026_09_24_v4.md` | 21433 | 2026-09-26 21:25:16 | `802c705e1469` |
-| 781 | `letters\_v4_commission_wechat_report_coze_reply_v4_2026_09_24.md` | 16471 | 2026-09-26 22:20:19 | `c60dfd7c0f45` |
+| 777 | `letters\_v4_commission_〔IM〕_report_coze_2026_09_24.md` | 7197 | 2026-09-24 18:55:26 | `15f8227308bc` |
+| 778 | `letters\_v4_commission_〔IM〕_report_coze_2026_09_24_v2.md` | 10599 | 2026-09-24 20:05:56 | `389c51e70d19` |
+| 779 | `letters\_v4_commission_〔IM〕_report_coze_2026_09_24_v3.md` | 13898 | 2026-09-26 19:19:29 | `e5b63d181b15` |
+| 780 | `letters\_v4_commission_〔IM〕_report_coze_2026_09_24_v4.md` | 21433 | 2026-09-26 21:25:16 | `802c705e1469` |
+| 781 | `letters\_v4_commission_〔IM〕_report_coze_reply_v4_2026_09_24.md` | 16471 | 2026-09-26 22:20:19 | `c60dfd7c0f45` |
 | 782 | `letters\_v4_d1_response_workbuddy_2026_09_20.md` | 14881 | 2026-09-20 14:36:48 | `bc663b671994` |
 | 783 | `letters\_v4_d1_review_codex_2026_09_20.md` | 4506 | 2026-09-21 11:12:20 | `48387412b109` |
 | 784 | `letters\_v4_distillation_acceptance_coze_2026_09_20.md` | 14295 | 2026-09-20 18:03:55 | `3a8cb7b9d041` |
@@ -1764,7 +1764,7 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 
 **区小计：1699 件**
 
-### 区 `D:\私人资料\deposon-sub`
+### 区 `_september_workspace`
 
 | # | 相对路径 | bytes | mtime | SHA-12 |
 |---|---|---|---|---|
@@ -1920,7 +1920,7 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 | 150 | `results\_archive_2026_09_20\_archive_manifest_2026_09_20.json` | 35682 | 2026-09-20 11:07:34 | `4dd89950bf11` |
 | 151 | `results\_archive_2026_09_20\_audit_secret_2026_09_20_anchor_guard.py` | 6433 | 2026-09-20 09:53:50 | `19b4174f6339` |
 | 152 | `results\_archive_2026_09_20\_coze_paper_v1_双审报告_2026_09_17.md` | 85573 | 2026-09-18 13:45:13 | `c3de25e6df57` |
-| 153 | `results\_archive_2026_09_20\_coze_wechat_v3_d7format_2026_09_18.pdf` | 454307 | 2026-09-18 21:31:20 | `adc99e04ac53` |
+| 153 | `results\_archive_2026_09_20\_coze_〔IM〕_v3_d7format_2026_09_18.pdf` | 454307 | 2026-09-18 21:31:20 | `adc99e04ac53` |
 | 154 | `results\_archive_2026_09_20\_d05_main_runner_2026_09_18.py` | 41446 | 2026-09-18 10:07:57 | `f3d4ec483599` |
 | 155 | `results\_archive_2026_09_20\_d05_md_report_only_2026_09_18.py` | 13694 | 2026-09-18 10:16:44 | `7a5be4aef9ac` |
 | 156 | `results\_archive_2026_09_20\_d05_sanity_3backbone_2026_09_18.py` | 5458 | 2026-09-18 10:00:35 | `a29291a60956` |
@@ -1937,7 +1937,7 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 | 167 | `results\_archive_2026_09_20\_fix_d05_rescue_2026_09_18.py` | 3524 | 2026-09-18 12:41:14 | `2c2cc3ff542a` |
 | 168 | `results\_archive_2026_09_20\_ftfb_pass2_results_limitations_audit_2026_09_17.md` | 11390 | 2026-09-17 22:41:56 | `cfab992cf939` |
 | 169 | `results\_archive_2026_09_20\_letter_to_coze_paper_v1_委托_2026_09_17.md` | 12786 | 2026-09-17 21:29:35 | `6d72e74b3482` |
-| 170 | `results\_archive_2026_09_20\_letter_to_coze_wechat_v2_2026_09_18.md` | 18596 | 2026-09-18 20:50:35 | `ecdbf3a7a9c2` |
+| 170 | `results\_archive_2026_09_20\_letter_to_coze_〔IM〕_v2_2026_09_18.md` | 18596 | 2026-09-18 20:50:35 | `ecdbf3a7a9c2` |
 | 171 | `results\_archive_2026_09_20\_letter_to_glm_ftfb_deep_revision_2026_09_18.md` | 26990 | 2026-09-18 13:45:13 | `3de722dc9e39` |
 | 172 | `results\_archive_2026_09_20\_letter_to_kimi_push_v3_final_2026_09_17.md` | 10304 | 2026-09-17 22:55:06 | `e6f8ded3c4ff` |
 | 173 | `results\_archive_2026_09_20\_letter_to_kimi_push_v3_final_v2_2026_09_17.md` | 13964 | 2026-09-17 23:14:56 | `40dda52e5d92` |
@@ -2072,10 +2072,10 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 | 302 | `results\_confirm_round_2026_10_01_register.md` | 14500 | 2026-10-01 00:35:17 | `23a97e340fdf` |
 | 303 | `results\_coze_paper_v1_draft_2026_09_17.md` | 29484 | 2026-09-18 00:21:36 | `c08e7abf5ee3` |
 | 304 | `results\_coze_paper_v1_summary_2026_09_17.md` | 3624 | 2026-09-18 00:20:40 | `2efdc3d7741d` |
-| 305 | `results\_coze_wechat_v3_2026_09_18.md` | 7466 | 2026-09-18 21:03:20 | `229d76e1b86f` |
-| 306 | `results\_coze_wechat_v3_d7format_2026_09_18.md` | 8715 | 2026-09-18 21:08:42 | `905544775aee` |
-| 307 | `results\_coze_wechat_v3_final_2026_09_18.md` | 11657 | 2026-09-18 21:04:55 | `deee45f45c5d` |
-| 308 | `results\_coze_wechat_v4_d7format_2026_09_26.pdf` | 465366 | 2026-09-26 22:50:54 | `a82881653520` |
+| 305 | `results\_coze_〔IM〕_v3_2026_09_18.md` | 7466 | 2026-09-18 21:03:20 | `229d76e1b86f` |
+| 306 | `results\_coze_〔IM〕_v3_d7format_2026_09_18.md` | 8715 | 2026-09-18 21:08:42 | `905544775aee` |
+| 307 | `results\_coze_〔IM〕_v3_final_2026_09_18.md` | 11657 | 2026-09-18 21:04:55 | `deee45f45c5d` |
+| 308 | `results\_coze_〔IM〕_v4_d7format_2026_09_26.pdf` | 465366 | 2026-09-26 22:50:54 | `a82881653520` |
 | 309 | `results\_cpath_sim_runner.py` | 18783 | 2026-09-10 20:44:28 | `6074d83944dc` |
 | 310 | `results\_d05_backbone_robustness_beta_20260918_100853.json` | 1490 | 2026-09-18 10:14:58 | `9b6f085d96dc` |
 | 311 | `results\_d05_combined_report_20260918_100853.md` | 10555 | 2026-09-18 10:30:53 | `c87eb8974268` |
@@ -2092,7 +2092,7 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 | 322 | `results\_d1_backfill_event_id_prefix_proposal_2026_10_01.md` | 14074 | 2026-10-01 12:28:08 | `2636394df918` |
 | 323 | `results\_d1_backfill_readiness_pack_2026_10_01.md` | 26462 | 2026-10-01 11:49:06 | `ed644fb07f88` |
 | 324 | `results\_d1_ruling_and_s3_transition_2026_10_01.md` | 28370 | 2026-10-10 11:37:23 | `dc9cb0e02922` |
-| 325 | `results\_d7_wang_teacher_wechat_publish_v1_20260918.md` | 9891 | 2026-09-17 14:39:46 | `f4d5b755736a` |
+| 325 | `results\_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` | 9891 | 2026-09-17 14:39:46 | `f4d5b755736a` |
 | 326 | `results\_d8_closeout_protocol_recompute_2026_09_30.md` | 31007 | 2026-09-30 22:57:20 | `57aba2cd26a6` |
 | 327 | `results\_d8_dup_overlap_disposal_2026_09_30.md` | 32350 | 2026-09-30 14:14:24 | `de8691727842` |
 | 328 | `results\_day_close_register_2026_10_01.md` | 33115 | 2026-10-01 16:55:26 | `6dbac1d1bcd6` |
@@ -2966,7 +2966,7 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 2. **本件自身不在 §3 指纹表内**（自指不可解）：快照枚举时 deposon-repo 为 **1,699 件**（含登记件）；本件落盘后终态为 **1,700 件**。deposon-sub 恒为 **1,187 件**（本件不落 sub）。
 3. **转移件之旧路径已失效**：723 条「旧路径 → 新路径」映射见 _v4_closeout_bulk_reorganize_register_2026_10_12.md §5。凡按 deposon-repo/results/... 字面查找者，须先查该映射表。
 4. 两区互为同一上传分区（镜像/分工），计数时**勿重复计** 12 件 SAME_IDENTITY 双份（该 12 件两区同哈希并存，见登记件 §6）。
-5. deposon-repo/results 内 600 件被活执行体按绝对路径钉住（ROOT = Path('D:/私人资料/deposon-repo')），**勿搬动**，否则断链。
+5. deposon-repo/results 内 600 件被活执行体按绝对路径钉住（ROOT = Path('_september_workspace')），**勿搬动**，否则断链。
 
 ---
 

@@ -39,7 +39,7 @@
 
 **v1.1 §0.x 锚表新增（PI 拍板 P1）**：
 
-GLM 查理件：附件路径 `C:\Users\Administrator\.minimax\v2\assets\2026\09\20\15-30-44-659-asset_20260920-153044-659_ac74a04efeb2_0a7da13e-查理_V4接受回执与D1首轮反馈_2026-09-20.md`，SHA-12 `ac74a04efeb2`；对象为 `results/_v4_experiment_invitation_2026_09_20.md` (`4E8C0EA57028`，实验邀请函 draft v0.1，**非**蒸馏邀请函)；署名「GLM 接收侧 paper-track 审查」，5-agent 团队执笔标注为查理。本件不在本问卷的蒸馏主题未决项内占位（详见 §7 第二轮复算结论汇总）。
+GLM 查理件：附件路径 `〔本机用户目录〕/.minimax/v2/assets/2026/09/20/15-30-44-659-asset_20260920-153044-659_ac74a04efeb2_0a7da13e-查理_V4接受回执与D1首轮反馈_2026-09-20.md`，SHA-12 `ac74a04efeb2`；对象为 `results/_v4_experiment_invitation_2026_09_20.md` (`4E8C0EA57028`，实验邀请函 draft v0.1，**非**蒸馏邀请函)；署名「GLM 接收侧 paper-track 审查」，5-agent 团队执笔标注为查理。本件不在本问卷的蒸馏主题未决项内占位（详见 §7 第二轮复算结论汇总）。
 
 ---
 
@@ -102,50 +102,50 @@ GLM 查理件：附件路径 `C:\Users\Administrator\.minimax\v2\assets\2026\09\
 
 ### §2.1 Mavis / `doc-writer`（主题回复 v1.2）
 
-- **§2.1.a** Mavis 提议加入邀请函 §4 的开放问题第 8 条：「**Is the V1–V3 asset stack large enough to support a theme that, by construction, requires both teacher-side and student-side samples?**」原文："the stack contains one generic knowledge-distillation baseline" of Mavis 主张，盘上**有** KT-B1 系列（见 §3.3）。挂：§1.1 §4.5 与 §3.2。锚：`D:\私人资料\deposon-repo\results\_v4_theme_reply_mavis_2026_09_20_v1.2.md`（SHA-12 `3ECF5B38048E`）§4 (d) L196；36,826 B。
+- **§2.1.a** Mavis 提议加入邀请函 §4 的开放问题第 8 条：「**Is the V1–V3 asset stack large enough to support a theme that, by construction, requires both teacher-side and student-side samples?**」原文："the stack contains one generic knowledge-distillation baseline" of Mavis 主张，盘上**有** KT-B1 系列（见 §3.3）。挂：§1.1 §4.5 与 §3.2。锚：`_september_workspace/results/_v4_theme_reply_mavis_2026_09_20_v1.2.md`（SHA-12 `3ECF5B38048E`）§4 (d) L196；36,826 B。
 
 ### §2.2 Trae code / IDE-track（逐字引用邀请函 §5.1 L271；邀请函 `3D9F73519F6C:271`）
 
-- **§2.2.a** Trae code 提议加入邀请函 §4 的开放问题："**what is the chance-level attribution rate for the existing five-artifact panel (two same-lineage artifacts, one differently-shaped record), and is the recorded 4.4% FPR distinguishable from it?**" 原文："Without a null model, the number has no reference class; with one, the same number becomes evidence." 挂：§1.1 §4.5、§1.2 §7.1、§3.2。锚：`D:\私人资料\deposon-repo\results\_v4_distillation_reply_trae_code_2026_09_20.md`（SHA-12 `E87EC8F7E2FE`）§(d) L79 与 Addendum I A L85–L92；43,570 B。
+- **§2.2.a** Trae code 提议加入邀请函 §4 的开放问题："**what is the chance-level attribution rate for the existing five-artifact panel (two same-lineage artifacts, one differently-shaped record), and is the recorded 4.4% FPR distinguishable from it?**" 原文："Without a null model, the number has no reference class; with one, the same number becomes evidence." 挂：§1.1 §4.5、§1.2 §7.1、§3.2。锚：`_september_workspace/results/_v4_distillation_reply_trae_code_2026_09_20.md`（SHA-12 `E87EC8F7E2FE`）§(d) L79 与 Addendum I A L85–L92；43,570 B。
 - **§2.2.b** Trae code 提出"trap-benchmark spec, brought on disk"（Addendum I B），作为 S-36 的"most worth pursuing" 路径——把 V1 paper 的 trap design（arXiv:2609.09001）首次落到盘上，作 S-36 的"who labels GT"问题的可执行答案之一。挂：§1.1 §4.5、§3.2。锚：`E87EC8F7E2FE:96–101`（Addendum I B 段）。
 - **§2.2.c** Trae code 提出"Measurement-instrument stability probe"（Addendum I C）作为邀请函 §4 缺失种子；该种子挂在 §3.3 第 8 条与 §3.3 第 9 条的盘上实测案例。锚：`E87EC8F7E2FE:103–110`。
 
 ### §2.3 Trae work / IDE-track（逐字引用邀请函 §5.1 L272；邀请函 `3D9F73519F6C:272`）
 
-- **§2.3.a** Trae work 提议加入邀请函 §4 的开放问题："**For every cross-vendor statistic in this stack, how many independent sides does the denominator actually contain — and which on-disk artifact states that number?**" 原文："Until that is answered, 'cross-vendor' is a claim about directories, not about independence." 挂：§1.1 §4.5、§1.2 §7.1、§3.4（5 厂商同谱系问题）。锚：`D:\私人资料\deposon-repo\results\_v4_theme_reply_trae_work_2026_09_20_v1.2.md`（SHA-12 `6BEE6EC434BD`）Closing 段 L139；28,395 B。
+- **§2.3.a** Trae work 提议加入邀请函 §4 的开放问题："**For every cross-vendor statistic in this stack, how many independent sides does the denominator actually contain — and which on-disk artifact states that number?**" 原文："Until that is answered, 'cross-vendor' is a claim about directories, not about independence." 挂：§1.1 §4.5、§1.2 §7.1、§3.4（5 厂商同谱系问题）。锚：`_september_workspace/results/_v4_theme_reply_trae_work_2026_09_20_v1.2.md`（SHA-12 `6BEE6EC434BD`）Closing 段 L139；28,395 B。
 
 ### §2.4 Claude Code / IDE-track（含跨子代理复算）（逐字引用邀请函 §5.1 L274 GLM/271 paper-track 旁类 IDE-track 回函通道；邀请函 `3D9F73519F6C:271–279`）
 
-- **§2.4.a** Claude Code 报告"邀请函 §0.2 L26 'V1–V3 has zero distillation experiments on disk' 与盘上 KT-B1 系列抵触"（见 §3.3 第 3 条详细引文）。该报告本身不是新开放问题，但它把邀请函 §0.2 推入"需要 PI 重新裁定"的状态。挂：§3.3 第 3 条。锚：`D:\私人资料\deposon-repo\results\_v4_distillation_reply_claude_code_2026_09_20.md`（SHA-12 `D39CB17B051B`）§5.11 L360–L385；64,212 B。
+- **§2.4.a** Claude Code 报告"邀请函 §0.2 L26 'V1–V3 has zero distillation experiments on disk' 与盘上 KT-B1 系列抵触"（见 §3.3 第 3 条详细引文）。该报告本身不是新开放问题，但它把邀请函 §0.2 推入"需要 PI 重新裁定"的状态。挂：§3.3 第 3 条。锚：`_september_workspace/results/_v4_distillation_reply_claude_code_2026_09_20.md`（SHA-12 `D39CB17B051B`）§5.11 L360–L385；64,212 B。
 - **§2.4.b** Claude Code 报告"邀请函 §8 表 8 行未填 SHA-12"——`_v4_brainstorm_seeds_2026_09_20.md` 等 8 处被 PI 标 `(see SHA-12)`；该报告对"长期引用"留下 open question。挂：§1.2 §7.16、§3.9。锚：`D39CB17B051B:68`。
 
 ### §2.5 coze / paper-track（逐字引用邀请函 §5.1 L274；邀请函 `3D9F73519F6C:274`）
 
-- **§2.5.a** coze 提议"种子场性质标签取值域不闭合"：邀请函 §3.0 L140 用 `disk fact` / `pure speculative` 二分；§2 用 `re-fit hypothesis (not calibrated)` 第三档；§3 的 40 条种子没有任何一条带 `disk fact` 标签；21/40 条在 Related asset 行点名了盘上制品但仍标 `pure speculative`。coze 提议合并取值域：`re-fit hypothesis` 并入 §3.0。挂：§1.1 §4.9、§3.4。锚：`D:\私人资料\deposon-repo\results\_v4_distillation_reply_coze_2026_09_20.md`（SHA-12 `00593014CBD3`）Engagement 段 L21–L33；71,084 B。
+- **§2.5.a** coze 提议"种子场性质标签取值域不闭合"：邀请函 §3.0 L140 用 `disk fact` / `pure speculative` 二分；§2 用 `re-fit hypothesis (not calibrated)` 第三档；§3 的 40 条种子没有任何一条带 `disk fact` 标签；21/40 条在 Related asset 行点名了盘上制品但仍标 `pure speculative`。coze 提议合并取值域：`re-fit hypothesis` 并入 §3.0。挂：§1.1 §4.9、§3.4。锚：`_september_workspace/results/_v4_distillation_reply_coze_2026_09_20.md`（SHA-12 `00593014CBD3`）Engagement 段 L21–L33；71,084 B。
 - **§2.5.b** coze 提出 N-01 ~ N-08 八条候选种子；其中 **N-01 "端点在不在冒充它自己宣称的那个教师"** 的载体是 `results/_p_l_v3_phase2_closedsource_report_20260917_175544.md`（盘上文件名内含 phase2 字符串，非创作层 phase 框架；5,909 B · SHA-12 `02443DD300CE`）。挂：§1.1 §4.7（Dimension 6 in-scope 讨论相邻）。锚：`00593014CBD3:300–309`（N-01 段）。
 - **§2.5.c** coze 提出 N-04 "评测的参照推理本身就是某个模型的输出"，载体是 `results/deposon_benchmark_v1_4_strategyqa_details.json`（235,779 B · SHA-12 `A63EBEA7B29A`），L13/L18 等 396 处来源标签全部为 `kimi_api`。挂：§1.1 §4.5、§3.2。锚：`00593014CBD3:336–346`。
 
 ### §2.6 workbuddy / workplace-bundle
 
 - **§2.6.a** workbuddy 在 part 1 / part 2 / brainstorm 三遍中均未在 §4 末尾提议新增开放问题；其 C1–C5 站不住的 5 条全部已在邀请函本身 §4 / §7 范围内处理，挂载见各条原始锚。
-- **§2.6.b** workbuddy brainstorm 提出"把 anti-distillation 反转"为"教师主动移除散射层使其不可被提取"——是 S-25/S-26/S-27 维度的"教学侧反向操作"提法，挂：§1.1 §4.7（Dimension 6 / 反蒸馏的语义边界）。锚：`D:\私人资料\deposon-repo\results\_v4_distillation_theme_reply_workbuddy_brainstorm_2026_09_21.md`（SHA-12 `CDB27CD3008C`）透镜① 条目 7 L26；13,553 B。
+- **§2.6.b** workbuddy brainstorm 提出"把 anti-distillation 反转"为"教师主动移除散射层使其不可被提取"——是 S-25/S-26/S-27 维度的"教学侧反向操作"提法，挂：§1.1 §4.7（Dimension 6 / 反蒸馏的语义边界）。锚：`_september_workspace/results/_v4_distillation_theme_reply_workbuddy_brainstorm_2026_09_21.md`（SHA-12 `CDB27CD3008C`）透镜① 条目 7 L26；13,553 B。
 - **§2.6.c** workbuddy brainstorm 提出"用 embedding 全 NOISE 做负向预注册"，载体是 `deposon_v3_v7_summary_2026_09_11.json` 高 2 失败原因。挂：§1.1 §4.9、§3.6。锚：`CDB27CD3008C:37`。
 
 ### §2.7 kimi / paper-track（逐字引用邀请函 §5.1 L270；邀请函 `3D9F73519F6C:270`）
 
-- **§2.7.a** kimi 提议加入邀请函 §4 的开放问题：「**哪些盘上工件真的含模型输出原文，哪些只有哈希或判别值？**」原文："§8 资产表只列字节与哈希、不列内容形状，这是核资产清单的盲区。" 挂：§1.2 §7.1、§3.5、§3.8。锚：`D:\私人资料\deposon-repo\results\_kimi_v4_theme_reply_2026_09_20.md` §4 (d) L45；7,372 B。
+- **§2.7.a** kimi 提议加入邀请函 §4 的开放问题：「**哪些盘上工件真的含模型输出原文，哪些只有哈希或判别值？**」原文："§8 资产表只列字节与哈希、不列内容形状，这是核资产清单的盲区。" 挂：§1.2 §7.1、§3.5、§3.8。锚：`_september_workspace/results/_kimi_v4_theme_reply_2026_09_20.md` §4 (d) L45；7,372 B。
 - **§2.7.b** kimi 提议加入种子场："同输入跨厂商输出对比作为行为基线，今天能建成什么样"——直接坐在 by_model 层与 `deposon_v2_phase1_60cells_2026_09_11.json`（盘上文件名内含 phase1 字符串，非创作层 phase 框架）逐格输出上。挂：§1.1 §4.5。锚：`_kimi_v4_theme_reply_2026_09_20.md:45` §4 (c)。
 
 ### §2.8 豆包工作 / workplace-bundle
 
-- **§2.8.a** 豆包工作（v1.0 主题回复 + 21 条 brainstorm）提议加入邀请函 §4 的开放问题："**V1–V3 资产的采集时间窗口是否足以捕捉蒸馏效应的时间维度？**" 原文："现有 artifacts 均为 2026-09-11 至 09-18 期间的冻结快照。若蒸馏效应存在延迟显现或行为漂移，则单一时点快照可能低估或高估蒸馏信号的稳定性。" 挂：§1.1 §4.11、§3.5。锚：`C:\Users\Administrator\.minimax\v2\assets\2026\09\21\11-12-20-747-asset_20260921-111220-747_19c97b5cff3c_6cf18b87-_v4_theme_reply_doubao_2026_09_20_v1.0.md`（SHA-12 `19C97B5CFF3C`）§结尾 (d) L83；8,070 B。
-- **§2.8.b** 豆包工作 brainstorm 提出 24 条新种子（均不带 `orig-asset` 标注，纯猜测或重拟合假设）。前两类为"词表分布在温度缩放下的不变性残留"与"教师侧系统性认知噪声注入作为可控反蒸馏机制"。挂：§1.1 §4.7（Dimension 6 in-scope 讨论相邻）。锚：`C:\Users\Administrator\.minimax\v2\assets\2026\09\21\11-12-20-766-asset_20260921-111220-766_a18e58c8e2a3_bdb4bc12-_v4_theme_brainstorm_doubao_2026_09_21_v1.0.md`（SHA-12 `A18E58C8E2A3`）§一 想法 1–2 L13–L17；19,389 B。
+- **§2.8.a** 豆包工作（v1.0 主题回复 + 21 条 brainstorm）提议加入邀请函 §4 的开放问题："**V1–V3 资产的采集时间窗口是否足以捕捉蒸馏效应的时间维度？**" 原文："现有 artifacts 均为 2026-09-11 至 09-18 期间的冻结快照。若蒸馏效应存在延迟显现或行为漂移，则单一时点快照可能低估或高估蒸馏信号的稳定性。" 挂：§1.1 §4.11、§3.5。锚：`〔本机用户目录〕/.minimax/v2/assets/2026/09/21/11-12-20-747-asset_20260921-111220-747_19c97b5cff3c_6cf18b87-_v4_theme_reply_doubao_2026_09_20_v1.0.md`（SHA-12 `19C97B5CFF3C`）§结尾 (d) L83；8,070 B。
+- **§2.8.b** 豆包工作 brainstorm 提出 24 条新种子（均不带 `orig-asset` 标注，纯猜测或重拟合假设）。前两类为"词表分布在温度缩放下的不变性残留"与"教师侧系统性认知噪声注入作为可控反蒸馏机制"。挂：§1.1 §4.7（Dimension 6 in-scope 讨论相邻）。锚：`〔本机用户目录〕/.minimax/v2/assets/2026/09/21/11-12-20-766-asset_20260921-111220-766_a18e58c8e2a3_bdb4bc12-_v4_theme_brainstorm_doubao_2026_09_21_v1.0.md`（SHA-12 `A18E58C8E2A3`）§一 想法 1–2 L13–L17；19,389 B。
 
 ### §2.9 署名 `an invited reader team (multi-agent)`（PI 拍板 P2 已拍板：唯一归属 GLM（2026-09-21）；磁盘署名如实并存）
 
 756 + 761 联合件；v1.1 按 PI 拍板 P2 唯一归属 GLM；磁盘署名原文 `From: an invited reader team (multi-agent)` 在 §2.9 / §4.1 并存记录，不删除。
 
-- **§2.9.a** 提议加入邀请函 §4 的开放问题："the referent of **'output-distribution baseline'** — four of five `by_model/` slots store in-repo artifact hashes or indices rather than model-output text, and the only text-bearing slot contains 0–7 character answers; whether a teacher baseline means text or artifact bytes is a ruling the PI can make now." 挂：§1.1 §4.5、§3.5、§3.4。锚：`C:\Users\Administrator\.minimax\v2\assets\2026\09\21\11-12-20-756-asset_20260921-111220-756_c78cfb42e33d_e371e458-_v4_distillation_theme_reply_2026_09_20_v1.0.md`（SHA-12 `C78CFB42E33D`）Closing (d) L87；18,841 B。
+- **§2.9.a** 提议加入邀请函 §4 的开放问题："the referent of **'output-distribution baseline'** — four of five `by_model/` slots store in-repo artifact hashes or indices rather than model-output text, and the only text-bearing slot contains 0–7 character answers; whether a teacher baseline means text or artifact bytes is a ruling the PI can make now." 挂：§1.1 §4.5、§3.5、§3.4。锚：`〔本机用户目录〕/.minimax/v2/assets/2026/09/21/11-12-20-756-asset_20260921-111220-756_c78cfb42e33d_e371e458-_v4_distillation_theme_reply_2026_09_20_v1.0.md`（SHA-12 `C78CFB42E33D`）Closing (d) L87；18,841 B。
 - **§2.9.b** 提议"common-cause vs. direct-cause separability"作为邀请函缺失种子：给定一个学生与若干候选教师共享公开语料，哪些可观测量把"共享数据"与"蒸馏"分开，分离在多大样本量下消失。挂：§1.1 §4.5。锚：`C78CFB42E33D:87`（Closing (c) 段）。
 
 ### §2.10 codex（D1 review + brainstorm 已落盘 results/，PI 拍板 P3，2026-09-21）
@@ -265,7 +265,7 @@ v1.1 按 PI 拍板 P3：codex 两件从附件副本升级为 `results/` 副本�
 
 ### §3.5 邀请函对资产的覆盖缺口：`results/` 实有 202 条 JSON 而邀请函只引用其中一部分；`_p_l_v3_vector_embedding_*` 家族 21 个文件 / 19 JSON 一条都不在 prompt pack §4 的 31 条清单内
 
-**决策点**：本会话实测（`Get-ChildItem -Path 'D:\私人资料\deposon-repo\results\' -Filter '*.json' | Measure-Object`）返回 202 个 JSON；邀请函 §8 资产表共 30 行（25 行有完整路径 + 字节 + SHA-12，5 行 "(see SHA-12)" 占位符），prompt pack §4 索引共 31 条；`_p_l_v3_vector_embedding_*` 家族在 `results/` 实有 21 个文件（19 个 `.json` + 2 个 `.md`），prompt pack §4 的 31 条一条都没列它。Claude Code §5.12 L391 报告 "results/ holds 202" 与 "the invitation references 14 distinct `results/*.json` paths" 之比。本条要让 PI 决定的是：V4 是否纳入 prompt pack §4 / 邀请函 §8 未列的资产？
+**决策点**：本会话实测（`Get-ChildItem -Path '_september_workspace/results/' -Filter '*.json' | Measure-Object`）返回 202 个 JSON；邀请函 §8 资产表共 30 行（25 行有完整路径 + 字节 + SHA-12，5 行 "(see SHA-12)" 占位符），prompt pack §4 索引共 31 条；`_p_l_v3_vector_embedding_*` 家族在 `results/` 实有 21 个文件（19 个 `.json` + 2 个 `.md`），prompt pack §4 的 31 条一条都没列它。Claude Code §5.12 L391 报告 "results/ holds 202" 与 "the invitation references 14 distinct `results/*.json` paths" 之比。本条要让 PI 决定的是：V4 是否纳入 prompt pack §4 / 邀请函 §8 未列的资产？
 
 **并列可选路径**（PI 任选其一、不选、并列、提新路径）：
 
@@ -277,8 +277,8 @@ v1.1 按 PI 拍板 P3：codex 两件从附件副本升级为 `results/` 副本�
 
 **盘上锚**：
 
-- `Get-ChildItem -Path 'D:\私人资料\deposon-repo\results\' -Filter '*.json' | Measure-Object` 返回 202（派工单 §2.5 派给本任务的"派单 5 件"实测数字）。
-- `Get-ChildItem -Path 'D:\私人资料\deposon-repo\results\' -Filter '_p_l_v3_vector_embedding_*'` 返回 21 个文件（19 `.json` + 2 `.md`）。
+- `Get-ChildItem -Path '_september_workspace/results/' -Filter '*.json' | Measure-Object` 返回 202（派工单 §2.5 派给本任务的"派单 5 件"实测数字）。
+- `Get-ChildItem -Path '_september_workspace/results/' -Filter '_p_l_v3_vector_embedding_*'` 返回 21 个文件（19 `.json` + 2 `.md`）。
 - 邀请函 §8 L368–L401（30 行资产表）：`3D9F73519F6C:368–401`。
 - prompt pack §4（31 条索引）：`results\_v4_distillation_prompt_pack_2026_09_20_v1.0.md:30–60`（具体行号可未抽查，已用派工单"§2.5"实测）。
 - Claude Code §5.12 L391："The invitation references 14 distinct `results/*.json` paths. `results/` holds 202. That ratio is not an accusation — the invitation is theme-first and deliberately does not inventory the program — but it is the reason ideas 5.1 through 5.4 were available to an outside reader at all"：`D39CB17B051B:391`。
@@ -402,8 +402,8 @@ v1.1 按 PI 拍板 P3：codex 两件从附件副本升级为 `results/` 副本�
 
 **决策点**：附件侧有两份文件署名 `an invited reader team (multi-agent)`，文件名无厂商：
 
-- 756：`C:\Users\Administrator\.minimax\v2\assets\2026\09\21\11-12-20-756-asset_20260921-111220-756_c78cfb42e33d_e371e458-_v4_distillation_theme_reply_2026_09_20_v1.0.md`，18,841 B，SHA-12 `C78CFB42E33D`，89 行（PowerShell `ReadAllLines` UTF8）。
-- 761：`C:\Users\Administrator\.minimax\v2\assets\2026\09\21\11-12-20-761-asset_20260921-111220-761_8295c3201f20_ee5ad31d-_v4_distillation_theme_reply_addendum_2026_09_20_v1.0.md`，14,153 B，SHA-12 `8295C3201F20`，91 行（PowerShell `ReadAllLines` UTF8）。
+- 756：`〔本机用户目录〕/.minimax/v2/assets/2026/09/21/11-12-20-756-asset_20260921-111220-756_c78cfb42e33d_e371e458-_v4_distillation_theme_reply_2026_09_20_v1.0.md`，18,841 B，SHA-12 `C78CFB42E33D`，89 行（PowerShell `ReadAllLines` UTF8）。
+- 761：`〔本机用户目录〕/.minimax/v2/assets/2026/09/21/11-12-20-761-asset_20260921-111220-761_8295c3201f20_ee5ad31d-_v4_distillation_theme_reply_addendum_2026_09_20_v1.0.md`，14,153 B，SHA-12 `8295C3201F20`，91 行（PowerShell `ReadAllLines` UTF8）。
 
 761 是 756 的 addendum（self-stated "Same drafting agent, same channel per §5.4"）。两份均无厂商署名。派工单 §2.3 标其为「**归属未定**」。
 
@@ -420,7 +420,7 @@ v1.1 按 PI 拍板 P3：codex 两件从附件副本升级为 `results/` 副本�
 
 **盘上锚**：
 
-- 756 路径 / 字节 / SHA-12：`C:\Users\Administrator\.minimax\v2\assets\2026\09\21\11-12-20-756-asset_20260921-111220-756_c78cfb42e33d_e371e458-_v4_distillation_theme_reply_2026_09_20_v1.0.md`，18,841 B，`C78CFB42E33D`，89 行。
+- 756 路径 / 字节 / SHA-12：`〔本机用户目录〕/.minimax/v2/assets/2026/09/21/11-12-20-756-asset_20260921-111220-756_c78cfb42e33d_e371e458-_v4_distillation_theme_reply_2026_09_20_v1.0.md`，18,841 B，`C78CFB42E33D`，89 行。
 - 761 路径 / 字节 / SHA-12：同目录 `11-12-20-761-asset_...md`，14,153 B，`8295C3201F20`，91 行。
 - 761 文件第 3 行："Assembled by the same drafting agent from four parallel brainstorm files by our LLM multi-agent team"（指 756 + 761 是同一团队，但团队名仅为 `an invited reader team (multi-agent)`）。
 - 派工单 §2.3 第 6 项："归属未定（署名 `an invited reader team (multi-agent)`，文件名无厂商）"。
@@ -428,7 +428,7 @@ v1.1 按 PI 拍板 P3：codex 两件从附件副本升级为 `results/` 副本�
 
 ### §4.2 coze 件 results 与附件同哈希该引哪个 — PI 拍板 P3（2026-09-21）：引用统一取 results/
 
-**决策点**：派工单 §2.2 第 11 项标 coze 件为 `D:\私人资料\deposon-repo\results\_v4_distillation_reply_coze_2026_09_20.md`，71,084 B，SHA-12 `00593014CBD3`，459 行。派工单 §2.3 也列了 coze 件的附件副本 `11-12-20-773-asset_..._00593014cbd3_...md`（与 results/ 同哈希 / 同字节）。
+**决策点**：派工单 §2.2 第 11 项标 coze 件为 `_september_workspace/results/_v4_distillation_reply_coze_2026_09_20.md`，71,084 B，SHA-12 `00593014CBD3`，459 行。派工单 §2.3 也列了 coze 件的附件副本 `11-12-20-773-asset_..._00593014cbd3_...md`（与 results/ 同哈希 / 同字节）。
 
 **v1.1 PI 拍板 P3**：codex 778/782 复制落盘 results/ 后引用（已执行）；coze 件 results/ 与附件同哈希（00593014CBD3），引用统一取 results/ 件。
 
@@ -441,8 +441,8 @@ v1.1 按 PI 拍板 P3：codex 两件从附件副本升级为 `results/` 副本�
 
 **盘上锚**：
 
-- results/ 副本：`D:\私人资料\deposon-repo\results\_v4_distillation_reply_coze_2026_09_20.md`，71,084 B，SHA-12 `00593014CBD3`。
-- 附件副本（SHA-12 同 `00593014CBD3`）：`C:\Users\Administrator\.minimax\v2\assets\2026\09\21\11-12-20-773-asset_20260921-111220-773_00593014cbd3_80c74bcd-_v4_distillation_reply_coze_2026_09_20.md`。
+- results/ 副本：`_september_workspace/results/_v4_distillation_reply_coze_2026_09_20.md`，71,084 B，SHA-12 `00593014CBD3`。
+- 附件副本（SHA-12 同 `00593014CBD3`）：`〔本机用户目录〕/.minimax/v2/assets/2026/09/21/11-12-20-773-asset_20260921-111220-773_00593014cbd3_80c74bcd-_v4_distillation_reply_coze_2026_09_20.md`。
 
 ### §4.3 codex / 豆包 / 未定件（756 / 761）仅有附件副本、是否要落盘到 results/ — PI 拍板 P3（2026-09-21）：codex 已落盘 / 豆包维持 / 756/761 维持附件
 
@@ -657,9 +657,9 @@ v1.1 按 PI 拍板 P3：codex 两件从附件副本升级为 `results/` 副本�
 
 ## §6 末段老实交代
 
-v1.1 本版本在 v1.0 基底上做最小增量改动；本文件未触动任何 V1–V3 资产（results/、corpus/、docs/V3X/、deposon_team/、verifier/、attacks/、deposon_team/plugins/、scripts/ 全树未读 / 未写）。本文件未触动任何 frozen 制品 / frozen schema / frozen 锚文件。本文件未调用任何 LLM API / 任何外部 URL / 任何 GitHub 操作 / 任何 线上 操作。本文件未引入任何密钥 / 端点 / 专有提示词。
+v1.1 本版本在 v1.0 基底上做最小增量改动；本文件未触动任何 V1–V3 资产（results/、corpus/、docs/V3X/、deposon_team/、verifier/、attacks/、deposon_team/plugins/、scripts/ 全树未读 / 未写）。本文件未触动任何 frozen 制品 / frozen schema / frozen 锚文件。本文件未调用任何 LLM API / 任何外部 URL / 任何 GitHub 操作 / 任何 〔IM〕 操作。本文件未引入任何密钥 / 端点 / 专有提示词。
 
-本文件仅**新增**了 `D:\私人资料\deposon-repo\results\_v4_pi_decision_questionnaire_2026_09_21_v1.1.md` 一份文件；该文件为 PI 拍板问卷 v1.1 版草稿，不视为邀请函的 v1.x 后续版本，也不视为对邀请函任何条目的实质修订。
+本文件仅**新增**了 `_september_workspace/results/_v4_pi_decision_questionnaire_2026_09_21_v1.1.md` 一份文件；该文件为 PI 拍板问卷 v1.1 版草稿，不视为邀请函的 v1.x 后续版本，也不视为对邀请函任何条目的实质修订。
 
 §3 九条中未能核到出处的条目清单（待 §6 自测报告一并出）：本会话已对 §3.1、§3.2、§3.3、§3.4、§3.5、§3.6、§3.7、§3.8、§3.9 每条均给出至少一条 `path:SHA-12:行号` 锚；其中 §3.2 注中关于"Claude Code §5.11 报告的 KT-B1 KD baseline 是否被视为 V4 学生侧素材"已留 PI 在 §5 表勾连栏中决定。
 
@@ -669,7 +669,7 @@ v1.1 本版本在 v1.0 基底上做最小增量改动；本文件未触动任何
 - **A-4 断行自检**：PI 已接受（2026-09-21）按此定稿。除已修复的 A-1（`descriptive` 拆词）外，整合稿 v1.1 与问卷 v1.1 全文无其它词中断行实例。
 - **行数口径 PI 拍板 P6**：本稿 canonical 行数 = `[System.IO.File]::ReadAllLines(path, [System.Text.Encoding]::UTF8).Length`；v1.0 整合稿 = 1,041 行 / 119,732 B / SHA-12 `4B10CDE29C27`；v1.0 问卷 = 587 行 / 67,686 B / SHA-12 `6A3A2D8EE357`（两份原件未被动过；详见自验 4）。`Get-Content` 不指定 `-Encoding` 所得的 636 / 277 行数作废。
 - **GLM 查理件（ac74a04efeb2）老实交代**：本会话 worker 仅读该件摘要要点（§0 锚表），未逐行重核；v1.1 §0 / §4.14 仅以 PI 拍板 P1 提供的要点呈现；详细原文在 P1 后续 PI 裁定是否独立重读。
-- **0 LLM / 0 API / 0 线上 / 0 GitHub**：本稿与整合稿 v1.1 同守。
+- **0 LLM / 0 API / 0 〔IM〕 / 0 GitHub**：本稿与整合稿 v1.1 同守。
 - **codex 落盘脚手架遗留**：组 A 复算动作的执行 worker 在仓库根目录留了 6 个脚手架文件（`_worker_drop_c2a1.ps1` 等），已如实上报；PI 尚未裁定是否清理。本稿与整合稿 v1.1 不引用、不清理、不修改这些脚手架。
 - **C7 锚文件修订注记（2026-09-22）**：`verifier/handoff/KT_ABC1_anchors_sha256_12.json` 已于 2026-09-22 按 PI 单件明示授权（组 D 第一批 C7 处置拍板 + 微确认 4 题，两轮问卷）修订：SHA-12 由 `03C6C01F3697`（6,680 B / 189 行）变为 `6E9CD8CD8E07`（11,318 B / 219 行）。修订内容：frozen_runs 5→3（v17/v18 按 PI 微确认移除、v20 改远端实测 `84CE9B028B0C`）、P_A_LLM_CLIENT（`1722500DA4AA`）/ P_A_HARNESS（`275E480BA4D9`）/ KT_B1_AUDIT_FUNCTION（`4BDEC2683F06`）改实测值、15 处 `.mavis/scripts` 系保留原值 + not_found 注记、新增 metadata.revision 块。上文「本文件未触动任何 frozen 制品 / frozen schema / frozen 锚文件」声明仅指 v1.1 撰写会话（2026-09-21）本身；本修订为会话外 PI 授权的独立动作。修订前原件已备份（scratch `_backup_KT_ABC1_anchors_pre_C7fix_2026_09_22.json`，实测 `03C6C01F3697`）。远端 `_september_workspace/verifier/handoff/` 孪生副本仍为旧版未同步（已在锚文件 metadata.revision.remote_twin_note 声明）；全仓引用旧哈希 `03C6C01F3697` 的文档本轮一律未动（2026-09-22 ripgrep 全量实测：repo 106 件 / 293 处 + sub 71 件 / 143 处，合计 177 件 / 436 处，含归档目录、问卷/整合稿各版本、letters、docs/V3X、sub 插件与锚文件自身 metadata 自引用；先前 174 件清单为锚文件修订前口径，以本轮实测为准）。
 

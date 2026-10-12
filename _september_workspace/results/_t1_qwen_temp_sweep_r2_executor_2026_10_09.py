@@ -52,7 +52,7 @@ for _stream in (sys.stdout, sys.stderr):
 # ============================================================
 # 常量与路径 (r2 独立 prefix, ⛔ 0 覆写 r1 任一件)
 # ============================================================
-ROOT = Path("D:/私人资料/deposon-repo")
+ROOT = Path("_september_workspace")
 RESULTS_DIR = ROOT / "results"
 TMP_DIR = ROOT / ".tmp"
 
@@ -62,7 +62,7 @@ PROBE_LOG_PATH = TMP_DIR / "_t1_qwen_temp_sweep_r2_probe_log.json"
 CALIB_PATH = TMP_DIR / "_t1_r2_calib_max_tokens_2026_10_09.json"
 RESULT_PATH = RESULTS_DIR / "_t1_qwen_temp_sweep_r2_result_2026_10_09.json"
 
-KEY_SOURCE_PATH = Path("C:/Users/Administrator/Desktop/AI/LLM API.txt")
+KEY_SOURCE_PATH = Path("〔本机用户目录〕/Desktop/AI/LLM API.txt")
 CAPTIONS_PATH = ROOT / "corpus/v20_caption_surface/strip_captions_22.json"
 CAPTIONS_SHA12_EXPECTED = "6A2656878745"
 
@@ -904,7 +904,7 @@ def cmd_aggregate() -> None:
         },
         "constraint": {
             "no_key_on_disk": True,
-            "key_source": "C:/Users/Administrator/Desktop/AI/LLM API.txt (slot 23)",
+            "key_source": "〔本机用户目录〕/Desktop/AI/LLM API.txt (slot 23)",
             "key_value_in_artifacts": False,
             "inter_call_sleep_s": INTER_CALL_SERIAL_S,
             "watchdog_s": WATCHDOG_S,

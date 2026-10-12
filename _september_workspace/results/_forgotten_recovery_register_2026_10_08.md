@@ -14,8 +14,8 @@
 
 | 源 | 路径 | 访问方式 |
 |---|---|---|
-| 任务库 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` | **只读** URI `?mode=ro`，SQL 全参数占位；0 写入、0 checkpoint |
-| 回执面 | `C:\Users\Administrator\.minimax\background-tasks\<task_id>\` | 逐件读 `summary.txt`；缺则读 `output.log` |
+| 任务库 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` | **只读** URI `?mode=ro`，SQL 全参数占位；0 写入、0 checkpoint |
+| 回执面 | `〔本机用户目录〕/.minimax/background-tasks/<task_id>\` | 逐件读 `summary.txt`；缺则读 `output.log` |
 
 ### §1.2 目标集判定口径
 
@@ -68,7 +68,7 @@
 | A8 | `bg_b7755687` | 10-08 16:13 | N-3① T-1 §7.2 更正件（VK） | 产物：更正/脚注件 1 件。声明：根因确证属**登记计数瑕疵面**（§7.2「非证伪=13」vs 明细实列 12 行，差量 ±1；四栏和 18 vs 明细覆盖 17）。异常（2 项已写入件内自证）；未闭/待 PI（4 项）：更正是否生效即锁、「十八行」口径二择一、第 17 行归属、下游两件是否同步更正及权属。 | `results/_t1_7_2_correction_2026_10_08.md` **MATCH** `cb0195c06647`／16,476 B |
 | A9 | `bg_aadf2110` | 10-08 16:18 | N-3③ 缺件深挖检索回执（EA） | 产物：检索回执 1 件。声明：四项缺件**全部实存且 MATCH 登记值**（R-93/94 主仓 `results/`、R-114/115 归档区 `results/`）；远端 HEAD tree `72c5839` 下四路径 404、`commits?path=` 全史返回空数组 ⇒ 远端确无，GLM 记载属实；三面 .git 全 0。异常：GitHub code search 需认证（401）→ 改 git trees/commits 接口绕过（未越权）。 | `results/_pending_supply_search_receipt_2026_10_08.md` **MATCH** `11bbee2bea42`／12,595 B |
 | A10 | `bg_c6d03c39` | 10-08 16:20 | N-7 G4 剩面只读探 | 产物：探件 1 件。声明：sqlite（474,656,768 B）与 outbox（实测 6,335 B）两载体均已探完且可读；**E1–E4 四项在两载体中均为「无」**。异常：①上棒件 §6 实况仅有 §6.1，**不存在 §6.3**（与派工描述有偏差，如实登记）；②outbox 三处字节互异（3,113／6,335／8,402）；③⛔ 0 假闭环——闭环门「仍需 runtime 打点 E1–E4」**未被解除**；④`results/` 另 4 件 16:00–16:17 mtime 件非本棒产出。 | `results/_g4_residual_probe_2026_10_08.md` **MATCH** `3554aa156e08`／23,025 B |
-| A11 | `bg_abc079a2` | 09-16 11:31 | 建目录 `deposon_team/_designs` | 声明：`CREATED: D:\私人资料\deposon-repo\deposon_team\_designs`。 | **OUTSIDE**：该目录已不在主仓，现存 `deposon-sub/deposon_team/_designs` 与归档区 `_non_upload_local_archive/deposon_team/_designs`。属后续迁移/归档所致，创建动作本身当时成功 |
+| A11 | `bg_abc079a2` | 09-16 11:31 | 建目录 `deposon_team/_designs` | 声明：`CREATED: _september_workspace/deposon_team/_designs`。 | **OUTSIDE**：该目录已不在主仓，现存 `deposon-sub/deposon_team/_designs` 与归档区 `_non_upload_local_archive/deposon_team/_designs`。属后续迁移/归档所致，创建动作本身当时成功 |
 | A12 | `bg_a9111db0` | 09-21 20:10 | 空目录树清点（10 棵 maximal empty tree） | 声明：REPO_FILES=620、ALL_DIRS=87、EMPTY_TREES=10、ROOT_VERIFIER_EXISTS（119 件）、`LIST_FILE_WRITTEN=10`、`ALL_CHECKS=PASS`。待办：把 `results/` 下 10 棵空树（含 `_p_j_convergence_basin_2026_09_16`、`_v3x_18frozen_remeasure_2026_09_16` 等）回填或删并 —— **本棒仅列清单，未处置**。 | **不可判**（回执未给清单文件路径）；`ALL_CHECKS=PASS` 为棒方自述，未独立复核 |
 
 ### §2.2 组 B：subagent · canceled（中断，产物多未落）——共 12 件
@@ -114,7 +114,7 @@
 | D11 | `bg_2805a36d` | 09-21 20:07 | JSON 读档统计（同名异内容分类） | 异常：**命令本身 ParserError**（`$j` 变量在 `-Command` 内被吞，出现 `.B_same_name_diff_content` 空变量）→ 该棒**0 有效产出**。 | **不可判**（0 产出，不编造） |
 | D12 | `bg_4f26cd53` | 09-21 20:09 | trash：主仓 19 个目录（`.trae/audit`、`.trae/deliverables`、`paper/deposon_arxiv_{cn,en}_pkg`、`results/_archive_2026_09_18` 等） | 声明：19 目录逐一 moved。异常：status=failed（内部报错 `/app.asar/node_modules/@mavis/local-runt…`），但 trash 主体动作**已执行**。 | 逐条实测：`figures`、`v3x-1week-kill-2026-09-18`、`.workbuddy`、`_d05_bg_21191cee_trash_2026_09_18`、`paper/deposon_arxiv_*`、`results/_archive_2026_09_18`、`_coze_paper_v1_review_2026_09_17` 等 **MISSING_TRUE（预期）**；`deposon_team/{products,verifier,_designs}`、`.trae/{audit,deliverables}`、`docs/FTFB_EXTERNAL_REVIEW_R2_2026_09_17` 等在 `deposon-sub` 或归档区 **OUTSIDE 存续** |
 | D13 | `bg_5aee3983` | 09-18 21:27 | `Get-ChildItem results -File` 清点 | 异常：`Background bash failed: Parent-death guardian target registration timed out` → **0 产出**。 | **不可判** |
-| D14 | `bg_df7601e7` | 09-18 10:42 | 沿 mavis-trash 删除 `bg_21191cee` 真产出 6 文件 | 声明：5 件 `✓ 移走`、1 件 `✗ 不存在`（`_d05_sanity_3backbone_20260918_100110.json`）；保留 KIMI 的 `_letter_to_glm_ftfb_deep_revision_2026_09_18.md`（24,857 B）；Trash `_d05_bg_21191cee_trash_2026_09_18`（5 件）；v0+v1 verify 复跑 0 触动。 | 5 件移走对象 **MISSING_TRUE（预期）**；保留件 `docs/V3X/P_G_NON_EUCLIDEAN_SCATTERING_V0_SPEC.md` **MATCH**（在盘，`2f0765a1d39d`／12,501 B——⚠ 棒方未给该件指纹，此为本次独立实测）；trash 目录 `D:\私人资料\deposon-repo\_d05_bg_21191cee_trash_2026_09_18` 后续已由 D12 清理 ⇒ **MISSING_TRUE（预期）** |
+| D14 | `bg_df7601e7` | 09-18 10:42 | 沿 mavis-trash 删除 `bg_21191cee` 真产出 6 文件 | 声明：5 件 `✓ 移走`、1 件 `✗ 不存在`（`_d05_sanity_3backbone_20260918_100110.json`）；保留 KIMI 的 `_letter_to_glm_ftfb_deep_revision_2026_09_18.md`（24,857 B）；Trash `_d05_bg_21191cee_trash_2026_09_18`（5 件）；v0+v1 verify 复跑 0 触动。 | 5 件移走对象 **MISSING_TRUE（预期）**；保留件 `docs/V3X/P_G_NON_EUCLIDEAN_SCATTERING_V0_SPEC.md` **MATCH**（在盘，`2f0765a1d39d`／12,501 B——⚠ 棒方未给该件指纹，此为本次独立实测）；trash 目录 `_september_workspace/_d05_bg_21191cee_trash_2026_09_18` 后续已由 D12 清理 ⇒ **MISSING_TRUE（预期）** |
 
 ### §2.5 组 E：subagent · lost（回执目录不存在，回执面不可恢复）——共 5 件
 
@@ -233,7 +233,7 @@
 ### §4.4 测量仪器自审（诚实交代误差源）
 
 1. **路径提取为正则近似**：从回执文本抽 `[A-Za-z]:[\\/]...` 与 `results/…` 相对路径，个别路径带尾随符号（如 `` ` ``、`;`）已清洗，但**可能漏抽**以裸文件名（无目录前缀）形式出现的产物。此偏差方向为**低估 MISSING 率 / 高估不可判率**。
-2. **`MISSING_TRUE` 的强度**：均由三面（repo 1,719 件／sub 503 件／归档区 39,244 件，合计 41,467 件）**完整遍历**后的精确文件名 0 命中得出，非抽样。三面之外的目录（如 `Deposon_v1_2_0_交付包`、`C:\Users\Administrator\.minimax\agents\`）**未纳入**——故 `MISSING_TRUE` 的准确表述是「本件三面内确无」，跨全盘存在性的更强断言未作。
+2. **`MISSING_TRUE` 的强度**：均由三面（repo 1,719 件／sub 503 件／归档区 39,244 件，合计 41,467 件）**完整遍历**后的精确文件名 0 命中得出，非抽样。三面之外的目录（如 `Deposon_v1_2_0_交付包`、`〔本机用户目录〕/.minimax/agents/`）**未纳入**——故 `MISSING_TRUE` 的准确表述是「本件三面内确无」，跨全盘存在性的更强断言未作。
 3. **负结论二次确认**：3 个关键日志（`_volc_22cap_emb.log`、worker_c 两 .log）除首轮索引外，另做一次无早停的独立全遍历复核，两轮一致。
 4. **A7 登记值差异未归因**：棒方 `FCCFCC869E7A`／257,362 B 与实测 `41f5f1689d09`／857,551 B 的差异，本件只**登记不解释**（可能为 v20→v21→后续多轮追加）。判定权属：勘误链本体属 verdict-keeper，审计 ≠ 翻案。
 5. **`bg_4f26cd53` status=failed 但动作已执行**：其 trash 主体动作在失败前已完成（回执逐行 `moved to trash` 有据）。本件按「动作已发生」定性为可忽略，同时保留 failed 状态原样登记，未替其改判。
@@ -253,7 +253,7 @@
 
 | 项 | 值 |
 |---|---|
-| 路径 | `D:\私人资料\deposon-repo\results\_forgotten_recovery_register_2026_10_08.md` |
+| 路径 | `_september_workspace/results/_forgotten_recovery_register_2026_10_08.md` |
 | SHA-256[:12] | 填入前实测 `fc94788390fe`（**自指约定**：本字段填入即改变文件哈希，故此处只记「填入前」值；填入后的终值以交付回报所载为准） |
 | 字节 | 填入前实测 **33,809 B**（同自指约定；填入后终值见交付回报） |
 | 落盘后实测（版式） | UTF-8 无 BOM（`BOM=False`）／CR=0／LF=261（**纯 LF**） |

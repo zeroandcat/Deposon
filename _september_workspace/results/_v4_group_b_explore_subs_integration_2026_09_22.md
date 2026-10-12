@@ -2,7 +2,7 @@
 
 - **性质**：组 B 代拟稿 `_v4_group_b_17letters_judgment_draft_2026_09_22.md`（已生效 `99B835595DFB`/24,822 B/176 行）的**整合补充**——PI 2026-09-22 贴出 explore 三 sub（Explore-A/B/C）+ Mavis 自读盘 3 条 idea 的产出（**此前未入代拟稿**），本稿逐条吸收
 - **本稿不动**：`99B835595DFB` 代拟稿本体；任何 V1–V3 资产（letters/、corpus/、docs/、deposon_team/、verifier/、attacks/、scripts/、invitation、prompt pack）
-- **本稿动**：仅 `D:\私人资料\deposon-repo\results\` 下新增一份本文件
+- **本稿动**：仅 `_september_workspace/results/` 下新增一份本文件
 - **数据基础**：
   - Explore-A 子代理 `bg_07d2f308`（session `mvs_ab29ef091f8c43dfa8e41f6bb5063bdf`）：12 条 raw idea（N-01 ~ N-12），4 条 disk fact
   - Explore-B 子代理 `bg_ca668ff1`（session `mvs_7f1607ae4f3646709550171a4d701d8f`）：7 个原 7 维之外新维度（D8–D14）+ 3 个空档（D1/D2/D7-Gap）= 10 条 raw idea
@@ -178,7 +178,7 @@ PI 复核时请用 `node_size > 0` 验证；Mavis 不擅自补列。
 
 ## §7 边界声明
 
-本稿由 Mavis 起草（PI 2026-09-22 贴出 explore 三 sub + Mavis 自读盘 3 条 idea 后整合补充）。起草过程 0 LLM 调用、0 外部 URL、0 GitHub/线上 操作、0 密钥、0 frozen 制品/schema/锚文件/任何 V1–V3 资产触动；本稿仅**新增**一份整合补充件（`D:\私人资料\deposon-repo\results\_v4_group_b_explore_subs_integration_2026_09_22.md`）；组 B 代拟稿本体 `99B835595DFB` 与问卷 v1.1 不动。**PI 已复核通过，已生效**（PI 2026-09-22，问卷 ask_4e6dbcd296637dfdfc3809ed）；与代拟稿并列生效，问卷回填在 §1.2.x / §2.x / §4.x 决策点后续执行。问卷本体仍为权威。
+本稿由 Mavis 起草（PI 2026-09-22 贴出 explore 三 sub + Mavis 自读盘 3 条 idea 后整合补充）。起草过程 0 LLM 调用、0 外部 URL、0 GitHub/〔IM〕 操作、0 密钥、0 frozen 制品/schema/锚文件/任何 V1–V3 资产触动；本稿仅**新增**一份整合补充件（`_september_workspace/results/_v4_group_b_explore_subs_integration_2026_09_22.md`）；组 B 代拟稿本体 `99B835595DFB` 与问卷 v1.1 不动。**PI 已复核通过，已生效**（PI 2026-09-22，问卷 ask_4e6dbcd296637dfdfc3809ed）；与代拟稿并列生效，问卷回填在 §1.2.x / §2.x / §4.x 决策点后续执行。问卷本体仍为权威。
 
 **未处置的悬挂项**（PI 已声明，未在本稿处理）：
 - 21 vs 22 caption 口径（沿 §1.2.2 已派）

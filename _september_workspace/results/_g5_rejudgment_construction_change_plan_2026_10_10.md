@@ -329,7 +329,7 @@
 | **命名合规** | ✅ `_g5_rejudgment_construction_change_plan_2026_10_10.md` —— `_主题_日期`、0 阶段前缀、⛔ 0 `_v5_`／`_v4_`／`_v3_` |
 | **0 网络／0 skill／0 LLM** | ✅ 未调用（仅本地只读检索 ＋ 本机哈希核算） |
 | **临时脚本清理** | ✅ 本棒 **0 新建临时脚本**（无须清理） |
-| **0 触及非上传归档面** | ✅ ⛔ **0** 触及 `D:\私人资料\_non_upload_local_archive` |
+| **0 触及非上传归档面** | ✅ ⛔ **0** 触及 `〔本地归档区〕` |
 | **署名如实** | ✅ protocol-keeper（`agent-3e0c193da529` · 本分支会话 `mvs_aceeab4492a44bd0b496636aebfb210a`）· ⛔ **0 冒充** PI／parent／worker／verifier／verdict-keeper／evidence-auditor／doc-writer |
 
 ---

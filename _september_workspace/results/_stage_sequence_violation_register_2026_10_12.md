@@ -103,7 +103,7 @@ PI 两责成立：① **③段未尽即开④**（违段序铁律）—— 该�
 
 ## §6 ⛔ 本件 0 作之事项（逐字列明）
 
-① ⛔ **0 再派④段棒**（俟③毕）｜② ⛔ **0 产出④段任何件**｜③ ⛔ **0 越段**｜④ ⛔ **0 回改任何既有件一字**｜⑤ ⛔ **0 掩盖本条违纪**｜⑥ ⛔ **0 将「PI 期望明早交付」充作「越段授权」**｜⑦ ⛔ **0 填估值／推断值**（§3 之结构皆实测）｜⑧ ⛔ **0 动** `deposon-sub` 内任何件（本件**仅列目录** ＋ 件数 ＋ mtime，⛔ 0 读其内容、⛔ 0 移动）｜⑨ ⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`｜⑩ ⛔ 0 网络／0 skill／0 LLM／0 API key／0 读 `.env`｜⑪ ⛔ 0 宣告任何闭／开／段之毕｜⑫ ⛔ 0 冒充 PI／parent／worker／verdict-keeper／verifier／doc-writer／protocol-keeper／Trae code／KIMI／GLM／coze
+① ⛔ **0 再派④段棒**（俟③毕）｜② ⛔ **0 产出④段任何件**｜③ ⛔ **0 越段**｜④ ⛔ **0 回改任何既有件一字**｜⑤ ⛔ **0 掩盖本条违纪**｜⑥ ⛔ **0 将「PI 期望明早交付」充作「越段授权」**｜⑦ ⛔ **0 填估值／推断值**（§3 之结构皆实测）｜⑧ ⛔ **0 动** `deposon-sub` 内任何件（本件**仅列目录** ＋ 件数 ＋ mtime，⛔ 0 读其内容、⛔ 0 移动）｜⑨ ⛔ **0 触及** `〔本地归档区〕`｜⑩ ⛔ 0 网络／0 skill／0 LLM／0 API key／0 读 `.env`｜⑪ ⛔ 0 宣告任何闭／开／段之毕｜⑫ ⛔ 0 冒充 PI／parent／worker／verdict-keeper／verifier／doc-writer／protocol-keeper／Trae code／KIMI／GLM／coze
 
 ---
 

@@ -150,7 +150,7 @@ T15r2 体例给两条路（「承接 r1 120 ＋ 补 r2 增量」或「全量」�
 | 看门狗 | `WATCHDOG_S = 600` s／批 | 沿 r1 字面 |
 | 单 call 超时 | `90` s | 沿 r1 字面 |
 | 批上限 | `BATCH_CALL_LIMIT = 30` | 沿 r1 字面（登记） |
-| 凭据槽 | `key_index_1based = 23`（`C:/Users/Administrator/Desktop/AI/LLM API.txt`） | 沿 r1 字面 |
+| 凭据槽 | `key_index_1based = 23`（`〔本机用户目录〕/Desktop/AI/LLM API.txt`） | 沿 r1 字面 |
 | 代理 | `use_proxy = False`（`unset_proxy()` 清 `https_proxy`/`http_proxy`/`all_proxy`） | 沿 r1 字面 |
 | checkpoint | `.tmp/_t1_qwen_temp_sweep_r2_records.json` | **r2 独立 prefix**；⛔ 0 触 r1 之 `_t1_qwen_temp_sweep_records.json` |
 | 起止 | 主跑 16:59:26 → 18:01:09；补跑至 18:03:12 | 当轮实测 |

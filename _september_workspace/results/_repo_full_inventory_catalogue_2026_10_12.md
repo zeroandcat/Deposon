@@ -1,6 +1,6 @@
 # 仓面全量文件夹整理之盘面编目（成果清单 v2.0 之底本）
 
-> 📌 **状态栏**：📋 **全量清点＋归类＋编目**（**0 物理移动／0 重命名／0 删除／0 改路径**）｜🟢 **实测域 ＝ `D:\私人资料\deposon-repo` 全仓（含 `.mavis`/`.tmp`/`.trae` 等隐藏面）**｜⛔ **禁触区 `D:\私人资料\_non_upload_local_archive` ＝ 0 读 0 写 0 列目录**｜⚠ **另二区（`deposon-sub`／`Deposon_v1_2_0_交付包`）仅列存在性与件数，0 深读**｜⛔ **0 立成果清单、0 出收尾桶**（二者为后续棒）｜⛔ 0 回改任何既有件一字｜⛔ 0 网络／0 skill／0 LLM／0 API key／0 读 `.env`
+> 📌 **状态栏**：📋 **全量清点＋归类＋编目**（**0 物理移动／0 重命名／0 删除／0 改路径**）｜🟢 **实测域 ＝ `_september_workspace` 全仓（含 `.mavis`/`.tmp`/`.trae` 等隐藏面）**｜⛔ **禁触区 `〔本地归档区〕` ＝ 0 读 0 写 0 列目录**｜⚠ **另二区（`deposon-sub`／`Deposon_v1_2_0_交付包`）仅列存在性与件数，0 深读**｜⛔ **0 立成果清单、0 出收尾桶**（二者为后续棒）｜⛔ 0 回改任何既有件一字｜⛔ 0 网络／0 skill／0 LLM／0 API key／0 读 `.env`
 
 ---
 
@@ -38,9 +38,9 @@ deposon-repo 实测 **2557 件 / 89,904,628 B / 15 目录 ＋ 顶层 73 件**；
 
 | 区 | 存在 | 文件件数 | 目录数 | 总 bytes | 最早 mtime | 最新 mtime | 顶层子目录 |
 |:--|:-:|-:|-:|-:|:--|:--|:--|
-| `D:\私人资料\deposon-sub` | ✅ TRUE | **517** | 42 | 35,047,715 | 2026-08-22 21:07:01 | 2026-09-30 19:28:23 | `.trae`, `deposon_team`, `docs`, `results`, `tmp_movedout_2026_09_28`, `tmp_movedout_2026_09_29`, `tmp_movedout_2026_10_01`, `tmp_movedout_2026_10_09` |
-| `D:\私人资料\Deposon_v1_2_0_交付包` | ✅ TRUE | **23** | 2 | 3,243,552 | 2026-08-22 00:16:19 | 2026-08-22 14:42:01 | `output`, `upload` |
-| `D:\私人资料\_non_upload_local_archive` | ⛔ **未核得** | **未核得** | 未核得 | 未核得 | 未核得 | 未核得 | ⛔ **禁触区：0 读 0 写 0 列目录** |
+| `_september_workspace` | ✅ TRUE | **517** | 42 | 35,047,715 | 2026-08-22 21:07:01 | 2026-09-30 19:28:23 | `.trae`, `deposon_team`, `docs`, `results`, `tmp_movedout_2026_09_28`, `tmp_movedout_2026_09_29`, `tmp_movedout_2026_10_01`, `tmp_movedout_2026_10_09` |
+| `〔本地资料区〕/Deposon_v1_2_0_交付包` | ✅ TRUE | **23** | 2 | 3,243,552 | 2026-08-22 00:16:19 | 2026-08-22 14:42:01 | `output`, `upload` |
+| `〔本地归档区〕` | ⛔ **未核得** | **未核得** | 未核得 | 未核得 | 未核得 | 未核得 | ⛔ **禁触区：0 读 0 写 0 列目录** |
 
 ---
 
@@ -158,7 +158,7 @@ deposon-repo 实测 **2557 件 / 89,904,628 B / 15 目录 ＋ 顶层 73 件**；
 | `results\_confirm_b9_tension_annex_2026_10_01.md` | `F28724A99A0C` | 19454 | 2026-10-01 10:29:54 | 读数/结果＋成果件面 |
 | `results\_confirm_round_2_2026_10_01_register.md` | `817302144788` | 22327 | 2026-10-01 09:44:14 | 登记＋读数/结果＋成果件面 |
 | `results\_confirm_round_2026_10_01_register.md` | `23A97E340FDF` | 14500 | 2026-10-01 00:35:17 | 登记＋读数/结果＋成果件面 |
-| `results\_coze_wechat_v4_d7format_2026_09_26.pdf` | `A82881653520` | 465366 | 2026-09-26 22:50:54 | 读数/结果＋成果件面 |
+| `results\_coze_〔IM〕_v4_d7format_2026_09_26.pdf` | `A82881653520` | 465366 | 2026-09-26 22:50:54 | 读数/结果＋成果件面 |
 | `results\_cpath_e3_sign_normalization_2026_10_01.md` | `E67EBCCC82C9` | 19740 | 2026-10-01 14:06:32 | 读数/结果＋成果件面 |
 | `results\_criterion_application_scope_prereg_2026_10_01.md` | `C4E3338619C6` | 50322 | 2026-10-01 16:02:40 | 判死线/准入门＋读数/结果＋成果件面 |
 | `results\_d05_b_coincidence_checks_exec_2026_10_10.md` | `840FBF08CAF4` | 21061 | 2026-10-10 12:10:50 | 核查＋读数/结果＋成果件面 |
@@ -1446,11 +1446,11 @@ deposon-repo 实测 **2557 件 / 89,904,628 B / 15 目录 ＋ 顶层 73 件**；
 | `letters\_v4_commission_upload_executor_2026_09_24_v3.md` | `C20D4F58F5C8` | 25091 | 2026-09-26 19:20:04 | 委托＋委托·回函面 |
 | `letters\_v4_commission_upload_executor_reply_v3_2026_09_24.md` | `50592E36ECAD` | 9848 | 2026-09-26 19:35:40 | 回函＋委托＋委托·回函面 |
 | `letters\_v4_commission_upload_executor_reply_v3_exec_2026_09_26.md` | `631BB517F79D` | 4471 | 2026-09-26 19:53:10 | 回函＋委托＋委托·回函面 |
-| `letters\_v4_commission_wechat_report_coze_2026_09_24.md` | `15F8227308BC` | 7197 | 2026-09-24 18:55:26 | 委托＋报告＋委托·回函面 |
-| `letters\_v4_commission_wechat_report_coze_2026_09_24_v2.md` | `389C51E70D19` | 10599 | 2026-09-24 20:05:56 | 委托＋报告＋委托·回函面 |
-| `letters\_v4_commission_wechat_report_coze_2026_09_24_v3.md` | `E5B63D181B15` | 13898 | 2026-09-26 19:19:29 | 委托＋报告＋委托·回函面 |
-| `letters\_v4_commission_wechat_report_coze_2026_09_24_v4.md` | `802C705E1469` | 21433 | 2026-09-26 21:25:16 | 委托＋报告＋委托·回函面 |
-| `letters\_v4_commission_wechat_report_coze_reply_v4_2026_09_24.md` | `C60DFD7C0F45` | 16471 | 2026-09-26 22:20:19 | 回函＋委托＋报告＋委托·回函面 |
+| `letters\_v4_commission_〔IM〕_report_coze_2026_09_24.md` | `15F8227308BC` | 7197 | 2026-09-24 18:55:26 | 委托＋报告＋委托·回函面 |
+| `letters\_v4_commission_〔IM〕_report_coze_2026_09_24_v2.md` | `389C51E70D19` | 10599 | 2026-09-24 20:05:56 | 委托＋报告＋委托·回函面 |
+| `letters\_v4_commission_〔IM〕_report_coze_2026_09_24_v3.md` | `E5B63D181B15` | 13898 | 2026-09-26 19:19:29 | 委托＋报告＋委托·回函面 |
+| `letters\_v4_commission_〔IM〕_report_coze_2026_09_24_v4.md` | `802C705E1469` | 21433 | 2026-09-26 21:25:16 | 委托＋报告＋委托·回函面 |
+| `letters\_v4_commission_〔IM〕_report_coze_reply_v4_2026_09_24.md` | `C60DFD7C0F45` | 16471 | 2026-09-26 22:20:19 | 回函＋委托＋报告＋委托·回函面 |
 | `letters\_v4_d1_response_workbuddy_2026_09_20.md` | `BC663B671994` | 14881 | 2026-09-20 14:36:48 | 委托·回函面 |
 | `letters\_v4_d1_review_codex_2026_09_20.md` | `48387412B109` | 4506 | 2026-09-21 11:12:20 | 评审＋委托·回函面 |
 | `letters\_v4_distillation_acceptance_coze_2026_09_20.md` | `3A8CB7B9D041` | 14295 | 2026-09-20 18:03:55 | 委托·回函面 |
@@ -1565,7 +1565,7 @@ deposon-repo 实测 **2557 件 / 89,904,628 B / 15 目录 ＋ 顶层 73 件**；
 | `docs\V3X\CPATH_SIMULATION_REPORT_2026_09_10.md` | `DE772CD9E7BA` | 6825 | 2026-09-10 20:47:18 | 报告＋文档面 |
 | `docs\V3X\D_FIX2_METRIC_VERIFY_REPORT_2026_09_15.md` | `0A63824F0805` | 7352 | 2026-09-15 14:07:47 | 核查＋报告＋文档面 |
 | `docs\V3X\D0_FREEZE_PREP_2026_09_09.md` | `0D1E88C258AA` | 9844 | 2026-09-09 10:55:24 | 文档面 |
-| `docs\V3X\D3_WECHAT_MIDTERM_TEMPLATE.md` | `574D5A79E363` | 4361 | 2026-09-09 11:23:41 | 文档面 |
+| `docs\V3X\D3_〔IM〕_MIDTERM_TEMPLATE.md` | `574D5A79E363` | 4361 | 2026-09-09 11:23:41 | 文档面 |
 | `docs\V3X\D5_DECISIONS_LAND_REPORT_2026_09_15.md` | `8FF1A7C5413F` | 21756 | 2026-09-15 15:15:39 | 报告＋文档面 |
 | `docs\V3X\D7_GITHUB_PUSH_RECEIVE_2026_09_15_v2.md` | `2C4BB6078EE7` | 5930 | 2026-09-15 17:28:16 | 文档面 |
 | `docs\V3X\D7_ONE_PAGE_SUMMARY_2026_09_11_v5.md` | `67063F9CB238` | 6459 | 2026-09-11 13:30:46 | 文档面 |
@@ -1573,7 +1573,7 @@ deposon-repo 实测 **2557 件 / 89,904,628 B / 15 目录 ＋ 顶层 73 件**；
 | `docs\V3X\D7_POST_CLEANUP_PLAN_2026_09_18.json` | `0B8A1A357AAE` | 20271 | 2026-09-15 17:27:45 | 文档面 |
 | `docs\V3X\D7_POST_CLEANUP_REPORT_2026_09_16.json` | `40955BF2ABC5` | 1248 | 2026-09-16 11:01:13 | 报告＋文档面 |
 | `docs\V3X\D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` | `51869E3184F4` | 10692 | 2026-09-16 11:09:18 | 文档面 |
-| `docs\V3X\D7_WANG_TEACHER_WECHAT_PUSH_REQUIREMENTS_2026_09_18.md` | `935CB6EE3566` | 8037 | 2026-09-16 11:08:22 | 文档面 |
+| `docs\V3X\D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | `935CB6EE3566` | 8037 | 2026-09-16 11:08:22 | 文档面 |
 | `docs\V3X\DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `AC8997B07731` | 22442 | 2026-09-10 20:22:54 | 文档面 |
 | `docs\V3X\DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | `240A7AE4BDFB` | 17803 | 2026-09-10 18:16:43 | 核查＋文档面 |
 | `docs\V3X\DPATH_CROSS_MODAL_2026_09_10.md` | `E4EE3999F7CE` | 26460 | 2026-09-16 11:01:12 | 文档面 |
@@ -3653,7 +3653,7 @@ deposon-repo 实测 **2557 件 / 89,904,628 B / 15 目录 ＋ 顶层 73 件**；
 | `results\_archive_manifest_non_upload_2026_09_23.json` | `B899103853CA` | 148690 | 5886 |
 | `results\_archive_manifest_non_upload_v2_2026_09_28.json` | `84EEF669234B` | 236651 | 9539 |
 | `results\_archive_manifest_non_upload_v3_2026_09_28.json` | `A2E4C5A9B713` | 204256 | 8681 |
-| `results\_coze_wechat_v4_d7format_2026_09_26.pdf` | `A82881653520` | 465366 | 1626 |
+| `results\_coze_〔IM〕_v4_d7format_2026_09_26.pdf` | `A82881653520` | 465366 | 1626 |
 | `results\_freeze_receipt_2026_10_01_q1.md` | `9B7101BC09BD` | 698 | 1 |
 | `results\_ghostref_copy_log_2026_09_23.json` | `8CD133D0896F` | 129780 | 2777 |
 | `results\_p_i_real_labels_2026_09_16\p_i_real_labels_results_2026_09_16.json` | `E934819EE9ED` | 1043 | 46 |
@@ -3887,7 +3887,7 @@ deposon-repo 实测 **2557 件 / 89,904,628 B / 15 目录 ＋ 顶层 73 件**；
 
 ## §9 ⛔ 本件 0 作之事项（逐条）
 
-① ⛔ **0 回改**任何既有件一字（含 `plan.md` 等会话面件）｜② ⛔ **0 物理移动／0 重命名／0 删除／0 改路径**任何仓内文件（一切「应移动/应归档」之判断**仅登记为提案**，归 PI）｜③ ⛔ **0 新建第二个文件**（临时脚本只落 `%TEMP%`）｜④ ⛔ **0 立成果清单**、⛔ **0 出收尾桶**（二者为后续棒）｜⑤ ⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录）｜⑥ ⛔ **0 深读／0 改写** `deposon-sub` 与 `Deposon_v1_2_0_交付包`｜⑦ ⛔ **0 断言**漂移根因、⛔ **0 断言**任何「最终」读数、⛔ **0 断言** T1.5 四读数之对应｜⑧ ⛔ **0 判**撞名件之性质、⛔ 0 删、0 合、0 改名｜⑨ ⛔ **0 赋任一** `k_v3s_4_4_*` 布尔｜⑩ ⛔ **0 改任何阈值／门柱／判死线**｜⑪ ⛔ **0 宣告**任何闭／开／段之毕（含③段自身）｜⑫ ⛔ **0 代 PI 拍板**｜⑬ ⛔ **0 冒充** PI／parent／worker／verdict-keeper／verifier／doc-writer／protocol-keeper／Trae code｜⑭ ⛔ 0 网络／0 skill／0 LLM／0 API key／0 读 `.env`｜⑮ ⛔ **0 填**「未核得」项之估值或推断值
+① ⛔ **0 回改**任何既有件一字（含 `plan.md` 等会话面件）｜② ⛔ **0 物理移动／0 重命名／0 删除／0 改路径**任何仓内文件（一切「应移动/应归档」之判断**仅登记为提案**，归 PI）｜③ ⛔ **0 新建第二个文件**（临时脚本只落 `%TEMP%`）｜④ ⛔ **0 立成果清单**、⛔ **0 出收尾桶**（二者为后续棒）｜⑤ ⛔ **0 触及** `〔本地归档区〕`（0 读 0 写 0 列目录）｜⑥ ⛔ **0 深读／0 改写** `deposon-sub` 与 `Deposon_v1_2_0_交付包`｜⑦ ⛔ **0 断言**漂移根因、⛔ **0 断言**任何「最终」读数、⛔ **0 断言** T1.5 四读数之对应｜⑧ ⛔ **0 判**撞名件之性质、⛔ 0 删、0 合、0 改名｜⑨ ⛔ **0 赋任一** `k_v3s_4_4_*` 布尔｜⑩ ⛔ **0 改任何阈值／门柱／判死线**｜⑪ ⛔ **0 宣告**任何闭／开／段之毕（含③段自身）｜⑫ ⛔ **0 代 PI 拍板**｜⑬ ⛔ **0 冒充** PI／parent／worker／verdict-keeper／verifier／doc-writer／protocol-keeper／Trae code｜⑭ ⛔ 0 网络／0 skill／0 LLM／0 API key／0 读 `.env`｜⑮ ⛔ **0 填**「未核得」项之估值或推断值
 
 ---
 
@@ -3895,10 +3895,10 @@ deposon-repo 实测 **2557 件 / 89,904,628 B / 15 目录 ＋ 顶层 73 件**；
 
 | 源 | 角色 | 取用方式 |
 |:--|:--|:--|
-| `D:\私人资料\deposon-repo`（全仓） | 编目主体 | `Get-ChildItem -Recurse -File -Force` ＋ `Get-FileHash -Algorithm SHA256`（⛔ **0 用内建 `hash()`**） |
+| `_september_workspace`（全仓） | 编目主体 | `Get-ChildItem -Recurse -File -Force` ＋ `Get-FileHash -Algorithm SHA256`（⛔ **0 用内建 `hash()`**） |
 | `results\_five_stage_chain_design_reconstruction_2026_10_12.md` | ③段设计规格之盘面对账源（`plan.md` §四③ 之转述件） | 只读 1 处（12,625 B／`BFF2FB754564`） |
-| `D:\私人资料\deposon-sub` | 仅存在性・件数・bytes・mtime | 仅元数据枚举 |
-| `D:\私人资料\Deposon_v1_2_0_交付包` | 仅存在性・件数・bytes・mtime | 仅元数据枚举 |
+| `_september_workspace` | 仅存在性・件数・bytes・mtime | 仅元数据枚举 |
+| `〔本地资料区〕/Deposon_v1_2_0_交付包` | 仅存在性・件数・bytes・mtime | 仅元数据枚举 |
 | `%TEMP%\deposon_inv\`（本棒临时工作区） | CSV 中间件与脚本 | 棒末经可恢复通道清理 |
 
 📌 **本件自身指纹（落盘后实测自报）**：SHA-12 ／ bytes ／ BOM ＝ False ／ CRLF ＝ 0 —— 📌 **自指哈希不可内含于自身文件**（写入即改哈希），故其**实测值在本棒回报正文自报**；版式纪律（UTF-8 无 BOM·纯 LF）由落盘后 `Get-FileHash`＋`Length`＋前三字节＋CR 计数四项实测佐证。

@@ -340,7 +340,7 @@
 ## §6 复算命令逐项登记（**他人可原样复跑**）
 
 ```powershell
-# 工作目录 = 仓根 D:\私人资料\deposon-repo
+# 工作目录 = 仓根 _september_workspace
 $env:PYTHONIOENCODING='utf-8'
 
 # ① 输入件 SHA-256／SHA-12／bytes／mtime（§0 表逐行）

@@ -2,7 +2,7 @@
 """_tdf_s1c — Part 3：项 4 逐行复算 + 项 5 FIX-D 定位 + 项 6 模式提取 + 项 8 哈希级 + 项 9 引用链（只读）"""
 import hashlib, json, os, re
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo'); RES = REPO / 'results'
+REPO = Path(r'_september_workspace'); RES = REPO / 'results'
 def sha12b(b): return hashlib.sha256(b).hexdigest()[:12]
 def sha12(p): return sha12b(Path(p).read_bytes())
 def T(p): return Path(p).read_text(encoding='utf-8', errors='ignore')

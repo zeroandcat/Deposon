@@ -7,7 +7,7 @@ _tdf_s2_apply — A 类追加式注记（3 件 rescript）+ B 类新名新件（
 import hashlib
 from pathlib import Path
 
-REPO = Path(r'D:\私人资料\deposon-repo'); RES = REPO / 'results'
+REPO = Path(r'_september_workspace'); RES = REPO / 'results'
 def sha12b(b): return hashlib.sha256(b).hexdigest()[:12]
 
 MARK = '附录 · 勘误注记（受托方 Trae code · 2026-10-12'

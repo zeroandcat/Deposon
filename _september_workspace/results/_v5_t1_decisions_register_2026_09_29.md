@@ -7,7 +7,7 @@
 - **本棒触发**：PI 2026-09-29 派工单「deposon V4 T1 攒批登记棒（protocol-keeper）」—— 批 1–3 拍板结果逐项落册 ＋ 转办单区
 - **本棒性质**（protocol-keeper 职责边界）：**登记拍板结果 + 固化口径 + 路由转办**。**0 跑实验、0 出判定裁决、0 查证据链、0 代任何棒执行授权动作**。凡派工单只给「登记授权」而未给「执行权」者，一律落 §13 转办单。
 - **哈希口径**：`hashlib.sha256(全文字节).hexdigest()[:12]`，**小写**（禁内建 `hash()`）
-- **skill**：派工单**未指定 skill 名** ⇒ 本棒**0 加载任何 skill、0 引用、0 虚构其条文**。补充实测（同日 11:31）：`C:/Users/Administrator/.minimax/plugins` **目录存在但实测 0 项（空目录）** ⇒ 与盘上既有件（`_v5_gamma_r1_v2_withdraw_2026_09_29.md` §0 所记 `scientific-research-workflows:experimental-design` → Local skill not found）**同因**。本棒实质纪律锚 = 派工单字面 ＋ 盘上既有件字面。
+- **skill**：派工单**未指定 skill 名** ⇒ 本棒**0 加载任何 skill、0 引用、0 虚构其条文**。补充实测（同日 11:31）：`〔本机用户目录〕/.minimax/plugins` **目录存在但实测 0 项（空目录）** ⇒ 与盘上既有件（`_v5_gamma_r1_v2_withdraw_2026_09_29.md` §0 所记 `scientific-research-workflows:experimental-design` → Local skill not found）**同因**。本棒实质纪律锚 = 派工单字面 ＋ 盘上既有件字面。
 - **铁律执行**：**新名件**｜**既有件 0 触动**（全部引件只读）｜**0 新设阈值**｜**0 擅调任何 `TH-*` / `K-*` 字面**｜**派生 JSON 0 合并、0 新增**｜**R4 key 永不明文**（本棒 **0 读 key**）｜**18 frozen 与 9 网格 0 触动**｜**署名如实**
 
 ---
@@ -201,7 +201,7 @@ D8 之外尚差                                  =   4 件（需补）
 | 项 | 内容 |
 |---|---|
 | **拍板出处** | `ask_e1bdb06e5eee79a2d5b47559` q3（承接问项 **Q-H1-7** / 账目 **Y-03**） |
-| **提案源头（盘上）** | `_v5_sub_artifact_ledger_history_r1_2026_09_29.md` L194（源件 `759c25b21ed4` L129）：「**PARTIAL_PASS 是『判死未完成』的中间态**，D7 外部顾问推送前最好不留 PARTIAL」 |
+| **提案源头（盘上）** | `_v5_sub_artifact_ledger_history_r1_2026_09_29.md` L194（源件 `759c25b21ed4` L129）：「**PARTIAL_PASS 是『判死未完成』的中间态**，D7 〔W老师〕推送前最好不留 PARTIAL」 |
 
 **落册语义（措辞纪律 · 项目级）**
 

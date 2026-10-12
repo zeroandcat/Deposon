@@ -72,7 +72,7 @@ PI 原文: **「授权扩容B路径,且盘点出来的无需上传的工具文�
 
 ## 3. A 类对账 (34 件 · 全部干净移动 · 0 同名冲突)
 
-> 目标: `D:/私人资料/_non_upload_local_archive/results/` (含 `_archive_2026_09_21/` 与 `_archive_2026_09_20/` 新建子目录)
+> 目标: `〔本地归档区〕/results/` (含 `_archive_2026_09_21/` 与 `_archive_2026_09_20/` 新建子目录)
 > 通道: PowerShell `Move-Item -Force` (atomic, content preserved)
 > 总 bytes: **139,958** (本棒 A 类小计)
 > 同名冲突: **0 件** (目标目录在 move 前新建, 0 既有件)
@@ -81,8 +81,8 @@ PI 原文: **「授权扩容B路径,且盘点出来的无需上传的工具文�
 
 | # | 旧路径 (repo/results/) | 新路径 (_non_upload_local_archive/results/) | SHA-12 (实测 2026-09-24 19:07) | bytes | 类别 |
 |---|---|---|---|---|---|
-| A1 | `D:/私人资料/deposon-repo/results/_p_d_v03_22caption_verification_20260917_163757.json` | `D:/私人资料/_non_upload_local_archive/results/_p_d_v03_22caption_verification_20260917_163757.json` | DFBCC5D6FC34 | 13775 | A_p_d_v03 |
-| A2 | `D:/私人资料/deposon-repo/results/_p_d_v03_verification_report_20260917_163757.md` | `D:/私人资料/_non_upload_local_archive/results/_p_d_v03_verification_report_20260917_163757.md` | 67AAFB57A8ED | 9799 | A_p_d_v03 |
+| A1 | `_september_workspace/results/_p_d_v03_22caption_verification_20260917_163757.json` | `〔本地归档区〕/results/_p_d_v03_22caption_verification_20260917_163757.json` | DFBCC5D6FC34 | 13775 | A_p_d_v03 |
+| A2 | `_september_workspace/results/_p_d_v03_verification_report_20260917_163757.md` | `〔本地归档区〕/results/_p_d_v03_verification_report_20260917_163757.md` | 67AAFB57A8ED | 9799 | A_p_d_v03 |
 
 ### 3.2 `_archive_2026_09_21/` 工具类文件 (23 件 · probe/scan/verify 脚本/工具 log/一次性 .py/.ps1 + 工具类 .md 草稿)
 
@@ -151,7 +151,7 @@ PI 原文: **「授权扩容B路径,且盘点出来的无需上传的工具文�
 
 ## 4. B 类对账 (7 件 · 全部干净移动 · 0 同名冲突)
 
-> 目标: `D:/私人资料/deposon-sub/results/_archive_2026_09_21/` (新建子目录)
+> 目标: `_september_workspace/results/_archive_2026_09_21/` (新建子目录)
 > 通道: PowerShell `Move-Item -Force`
 > 总 bytes: **775,407** (本棒 B 类小计)
 > 同名冲突: **0 件** (目标目录在 move 前新建, 0 既有件)
@@ -197,10 +197,10 @@ PI 原文: **「授权扩容B路径,且盘点出来的无需上传的工具文�
 
 | 目录 | before (实测 2026-09-24 19:00, 含棒 3→棒 4 间 +8 真新件) | after (实测 2026-09-24 19:11:30) | delta | 备注 |
 |---|---|---|---|---|
-| `D:/私人资料/deposon-repo` | **1332** | **1295** | **-37** | 移动 41 件出仓 -41; 棒 4 期间新增 4 件 (本棒新建 v3 ledger + .tmp/ 2 件 scratch + 1 件 R4 purge actions) +4; net -37 ✓ |
-| `D:/私人资料/_non_upload_local_archive` | 1230 (棒 3 after, 来自 inventory 18:35) | **1264** | **+34** | A 类 34 件全部入仓 ✓ |
-| `D:/私人资料/deposon-sub` | 427 (棒 3 after, 来自 inventory 18:35) | **434** | **+7** | B 类 7 件全部入仓 ✓ |
-| `D:/私人资料/deposon-repo/.tmp/` (本棒 scratch + R4) | 2 (仅 R4 件) | 4 (+2) | +2 | 本棒写入 `_v4_worker4_move_script_2026_09_24.ps1` (10962 bytes) + `_v4_worker4_move_log_2026_09_24.txt` (7452 bytes) 用于执行 + 自验; 后续 PI 拍板可清理 |
+| `_september_workspace` | **1332** | **1295** | **-37** | 移动 41 件出仓 -41; 棒 4 期间新增 4 件 (本棒新建 v3 ledger + .tmp/ 2 件 scratch + 1 件 R4 purge actions) +4; net -37 ✓ |
+| `〔本地归档区〕` | 1230 (棒 3 after, 来自 inventory 18:35) | **1264** | **+34** | A 类 34 件全部入仓 ✓ |
+| `_september_workspace` | 427 (棒 3 after, 来自 inventory 18:35) | **434** | **+7** | B 类 7 件全部入仓 ✓ |
+| `_september_workspace/.tmp/` (本棒 scratch + R4) | 2 (仅 R4 件) | 4 (+2) | +2 | 本棒写入 `_v4_worker4_move_script_2026_09_24.ps1` (10962 bytes) + `_v4_worker4_move_log_2026_09_24.txt` (7452 bytes) 用于执行 + 自验; 后续 PI 拍板可清理 |
 
 > **核对 (末次实测 2026-09-24 19:11:30)**: repo 实际 = 1295 = 1332 - 41 + 4 (v3 ledger + .tmp/ 2 件 scratch + R4 purge actions 1 件); ARCH 实际 = 1264 = 1230 + 34 (A 类入仓); SUB 实际 = 434 = 427 + 7 (B 类入仓); 三目录理论 delta = -41 + 34 + 7 = 0 (封闭系统, 总文件数守恒) ✓
 > 移动事实落地完整: 41 件源 SHA-12 = 目标 SHA-12 全数对齐, 0 失败, 0 覆盖
@@ -315,7 +315,7 @@ v2 ledger §6.1 报告 before=1440, after=1324, 差 -116; 理论差 = 1440 - 125
 | 5 | `.tmp/_r4_key_scan_results_2026_09_24.json` | 18:54:06 | anchor-guard r4 扫描 (新件) | R4 辖区 | +1 (in 1332) |
 | 6 | `results/_v3_v4_achievements_inventory_3dir_erratum_2026_09_24.md` | 18:55:03 | evidence-auditor erratum | R4 留痕链 | +1 (in 1332) |
 | 7 | `results/_v4_r4_key_purge_manifest_2026_09_24.md` | 18:55:22 | anchor-guard r4 扫描 | R4 留痕链 | +1 (in 1332) |
-| 8 | `letters/_v4_commission_online_report_coze_2026_09_24.md` | 18:55:26 | 派发前快照 | letters protected | +1 (in 1332) |
+| 8 | `letters/_v4_commission_〔IM〕_report_coze_2026_09_24.md` | 18:55:26 | 派发前快照 | letters protected | +1 (in 1332) |
 | 9 | `letters/_v4_commission_paper_final_glm_2026_09_24.md` | 18:55:43 | 派发前快照 | letters protected | +1 (in 1332) |
 | (10) | `letters/_v4_commission_upload_executor_2026_09_24.md` | 18:56:08 | 派发前快照 | letters protected | +1 (in 1332) |
 
@@ -347,7 +347,7 @@ v2 ledger §6.1 报告 before=1440, after=1324, 差 -116; 理论差 = 1440 - 125
 - v2 ledger 本棒实测 54 件全部成功移动, SHA-12 实测与 v1 ledger 子项 SHA-12 一致 (派工单 §1.2 「本棒实测以 125 件为基线, 不擅自补件也不擅自减件」沿用)
 - 不存在「测量丢失 5 件」或「派工单授权范围外多移 5 件」; 仅 v1 ledger 数字笔误
 
-**派工单 §派工单 §老实交代锚** (v2 ledger §1.2): 「本棒严格按派工单 §A/C/G 列出的子类 pattern 在 `D:/私人资料/deposon-repo/results/` 与 `D:/私人资料/deposon-repo/.tmp/` 实测枚举; v1 ledger 的 131 数字含 A 类的算数偏差 5 件 (v1 子项累加 = 54 ≠ v1 总计 59); 本棒实测以 125 件为基线, 不擅自补件也不擅自减件」 → 沿用, **算数偏差已老实交代, 不修数**
+**派工单 §派工单 §老实交代锚** (v2 ledger §1.2): 「本棒严格按派工单 §A/C/G 列出的子类 pattern 在 `_september_workspace/results/` 与 `_september_workspace/.tmp/` 实测枚举; v1 ledger 的 131 数字含 A 类的算数偏差 5 件 (v1 子项累加 = 54 ≠ v1 总计 59); 本棒实测以 125 件为基线, 不擅自补件也不擅自减件」 → 沿用, **算数偏差已老实交代, 不修数**
 
 ### 7.3 派工单 §派工单 §根因定位灰区余项 (老实交代, 不擅自修)
 

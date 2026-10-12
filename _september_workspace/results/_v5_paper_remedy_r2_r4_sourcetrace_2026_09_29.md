@@ -21,14 +21,14 @@
 
 ## §1 检索范围与方法（供下游对账）
 
-**范围**：`D:\私人资料\deposon-repo`（主仓，本棒 0 写入）＋ sibling `D:\私人资料\deposon-sub`（**只读**）。检索面 = 全树 `*.md / *.json / *.py / *.tex`。
+**范围**：`_september_workspace`（主仓，本棒 0 写入）＋ sibling `_september_workspace`（**只读**）。检索面 = 全树 `*.md / *.json / *.py / *.tex`。
 
 **诚实交代 1 · 源件路径的两面**：
-- 编排件 / 台账所列 `results/_archive_2026_09_20/review_*.md` 与 `results/_glm_v3_双审报告_2026_09_18.md` 在**主仓内 0 命中**；实体在 sibling `D:\私人资料\deposon-sub\results\`（**同相对路径**）。
+- 编排件 / 台账所列 `results/_archive_2026_09_20/review_*.md` 与 `results/_glm_v3_双审报告_2026_09_18.md` 在**主仓内 0 命中**；实体在 sibling `_september_workspace/results/`（**同相对路径**）。
 - 本棒 6 件审稿 / 报告源件 SHA-12 **逐件复算全部 MATCH**：`0d36d7cd0589` / `09784ff172b3` / `5198a7059c06` / `26537967db82` / `8d00c6d4a242` / `fe80bad08eef`。
 
 **诚实交代 2 · mtime 不可作唯一定序键**：
-- 盘上多批件 mtime 与件内自陈日期**不一致**（例：`results/_v3x_d0_5_proposal_trae_2026_09_17.md` mtime 09-20 17:11:14 而件尾自陈「2026-09-17」；`docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` mtime 09-16 11:08:22）。
+- 盘上多批件 mtime 与件内自陈日期**不一致**（例：`results/_v3x_d0_5_proposal_trae_2026_09_17.md` mtime 09-20 17:11:14 而件尾自陈「2026-09-17」；`docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` mtime 09-16 11:08:22）。
 - ⇒ 本件每条「最早出处」**双口径并列给出**（mtime ＋ 件内自陈日期），**0 单独以 mtime 断言定序**。
 
 **诚实交代 3 · 计数工具**：
@@ -117,12 +117,12 @@
 
 **（a）「双低于阈值」字面全树仅 2 命中**
 1. 审稿件 `deposon-sub\results\_archive_2026_09_20\review_tech_B1_grok46.md` ＝ **`09784ff172b3`** **L46**（批评语，逐字片段）：`P-C 只写「双低于阈值」，本文从未给出该阈值数字。`
-2. `deposon-sub\results\_archive_2026_09_20\_letter_to_coze_online_v2_2026_09_18.md` **L43**：`\| **P-C 跨模态幂律** \| **FAIL_H0** \| R²=0.1986/0.2670 双低于阈值; dpath 判定 8/9 (分母 9 模型) \|` ⇒ **该处 0 给数字**
+2. `deposon-sub\results\_archive_2026_09_20\_letter_to_coze_〔IM〕_v2_2026_09_18.md` **L43**：`\| **P-C 跨模态幂律** \| **FAIL_H0** \| R²=0.1986/0.2670 双低于阈值; dpath 判定 8/9 (分母 9 模型) \|` ⇒ **该处 0 给数字**
 
 **（b）数字 0.3 的可核出处**
 | # | 件 | SHA-12 | 字节 | mtime | 行号 | 原文摘录 |
 |---|---|---|---:|---|---|---|
-| 1（最早） | `docs/V3X/D0_FREEZE_PREP_2026_09_09.md` | **`0d1e88c258aa`** | 9,844 | **09-09 10:55:24** | **L25** | `\| **KT-C1** \| 残余 r vs 维数 d log-log, R²<0.3 死 \| P-C 两相结构 V0 spec(6.3KB) \| η 扫描相变点 ± 20% \| 外部顾问版"图族回归"vs Mavis 版"参数扫描" — **数据集同源 v21,可双跑** \|` |
+| 1（最早） | `docs/V3X/D0_FREEZE_PREP_2026_09_09.md` | **`0d1e88c258aa`** | 9,844 | **09-09 10:55:24** | **L25** | `\| **KT-C1** \| 残余 r vs 维数 d log-log, R²<0.3 死 \| P-C 两相结构 V0 spec(6.3KB) \| η 扫描相变点 ± 20% \| 〔W老师〕版"图族回归"vs Mavis 版"参数扫描" — **数据集同源 v21,可双跑** \|` |
 | 2 | `docs/V3X/P_C_D1_D3_REPORT_2026_09_15.md` | **`79c7321056b8`** | 13,419 | 09-15 15:08:22 | **L109** | `**判死线 (KT_C1_KILL_LINE 77b49c0f8b54)**: \`R^2<0.3 OR b_CI 含 0\` → FAIL_H0 (幂律死)  ` |
 | 2b | 同上 | 同上 | 同上 | 同上 | L110 / L111 | 判活线 `**判活线**: \`R^2>0.7 AND b_lo>0\` → PASS_H1 (幂律成立)  ` ／ 灰区 `**灰区**: \`0.3 <= R^2 <= 0.7 AND b 显著非 0\` → GRAY (Mavis 自主扩 cell 重判)` |
 | 2c | 同上 | 同上 | 同上 | 同上 | L121 / L133 | `- 条件 1 (R^2<0.3): \`True\` → R^2=0.1986` ／ `- 条件 1 (R^2<0.3): \`True\` → R^2=0.2670` |
@@ -132,7 +132,7 @@
 
 **（d）0.3 自身来源**：两件内 **0 文献 / 0 校准 / 0 模拟（0 命中）**。
 
-**（e）同名异物登记（沿盘上既有字面，0 裁决）**：`letters\_v3_calibration_change_note_for_coze_glm_2026_09_27.md` **L295** 逐字：`**「外部顾问侧 KT-C1」**（幂律主张，**R²=0.0007**，外部源件所载）≠ 本仓 \`KT_C1\`（跨模态 dpath 实验，**R²=0.1986 / 0.2670**，FAIL_H0）= **同名异物**，各归各源**不得混写**`。审稿件 L124 另记「挂点 3 KT-C1 R²=0.0007」为外部件。
+**（e）同名异物登记（沿盘上既有字面，0 裁决）**：`letters\_v3_calibration_change_note_for_coze_glm_2026_09_27.md` **L295** 逐字：`**「〔W老师〕侧 KT-C1」**（幂律主张，**R²=0.0007**，外部源件所载）≠ 本仓 \`KT_C1\`（跨模态 dpath 实验，**R²=0.1986 / 0.2670**，FAIL_H0）= **同名异物**，各归各源**不得混写**`。审稿件 L124 另记「挂点 3 KT-C1 R²=0.0007」为外部件。
 
 ---
 
@@ -169,7 +169,7 @@
 - `docs/V3X/D_FIX2_METRIC_VERIFY_REPORT_2026_09_15.md` ＝ **`0a63824f0805`**（7,352 B / mtime 09-15 14:07:47）
   - **L53**：`- **metric_truth_verdict**: \`PARTIAL_PASS\``
   - L65 复述：`**D_fix2 metric truth verdict**: \`PARTIAL_PASS\``
-  - L95 / L96 逐字：`- 等 user 拍板 D_fix2 metric 真值验证 PARTIAL_PASS → 推进外部顾问 1 周判死` ／ `- 若 user 接受 PARTIAL_PASS verdict + 阈值调整 → 沿 V0.1 沿用 + 外部顾问 线上 选挂点`
+  - L95 / L96 逐字：`- 等 user 拍板 D_fix2 metric 真值验证 PARTIAL_PASS → 推进〔W老师〕 1 周判死` ／ `- 若 user 接受 PARTIAL_PASS verdict + 阈值调整 → 沿 V0.1 沿用 + 〔W老师〕 〔IM〕 选挂点`
   - ⇒ **报告层字段 ＋ 写「等 user 拍板」**，0 冻结函数输出痕迹。
 
 **（c）D7 终档冻结 JSON 内的分布（本棒逐行复核）**
@@ -179,7 +179,7 @@
   - `P-E_3modal`（L61–98）：**6 PASS ＋ 2 GRAY（`kimi-k2.7-code` / `doubao-seed-2.1-turbo`）＋ 1 FAIL（`deepseek-v4-pro`）** ⇒ **该段 0 处 `PARTIAL_PASS`**
   - `P-F_D_fix2_strict`（L99）：`"8+1+0 (PARTIAL_PASS, A channel timing 敏感)"`；`P-F_D_fix2_loose`（L100）：`"8+1+0 (PARTIAL_PASS)"` ⇒ `PARTIAL_PASS` 在本件**只出现在 P-F 两行的自由文本串内**
   - `P-G_V0.1_dH_dE`（L101）：`"≈ 5x (range 4.4-8.0)"`
-- ⇒ **P-E 的 `PARTIAL_PASS` 不在冻结 D7 终档 JSON 内**；其在盘上的载体是 `docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` ＝ **`935cb6ee3566`**（8,037 B / mtime 09-16 11:08:22）：**L60** `| **P-E physics** | **PARTIAL_PASS** | 9 model: 6 PASS + 2 GRAY + 1 FAIL (deepseek-v4-pro)(沿 user 12:01 拍板 A 接受 + 阈值调整)|`、**L78** `#### 2.1.4 D_fix2 metric PARTIAL_PASS(user 12:01 拍板 A 接受)`、**L128** `- P-E PARTIAL_PASS (沿 A 接受 + 阈值调整)`。
+- ⇒ **P-E 的 `PARTIAL_PASS` 不在冻结 D7 终档 JSON 内**；其在盘上的载体是 `docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` ＝ **`935cb6ee3566`**（8,037 B / mtime 09-16 11:08:22）：**L60** `| **P-E physics** | **PARTIAL_PASS** | 9 model: 6 PASS + 2 GRAY + 1 FAIL (deepseek-v4-pro)(沿 user 12:01 拍板 A 接受 + 阈值调整)|`、**L78** `#### 2.1.4 D_fix2 metric PARTIAL_PASS(user 12:01 拍板 A 接受)`、**L128** `- P-E PARTIAL_PASS (沿 A 接受 + 阈值调整)`。
 
 **（d）0 裁声明**：X-31 的二分（「D7 拍板＝事后人工改写」vs「未全过＋经裁决接受＝叠床架屋」）属**档位与纪律判断**，**本棒 0 代裁** ⇒ 交 verdict-keeper。本棒只交上述值域事实（守恒函数值域不含 `PARTIAL_PASS`；P-E 段 0 处该字样）。
 
@@ -282,7 +282,7 @@
 | T-4 P-C「双低于阈值」数字 | **有（0.3，实验层）** | **手稿层无**（该句 0 给数字）；**kill-line 件不在盘** | `docs/V3X/D0_FREEZE_PREP_2026_09_09.md` **`0d1e88c258aa`** L25（09-09 10:55:24）；`docs/V3X/P_C_D1_D3_REPORT_2026_09_15.md` **`79c7321056b8`** L109／L121／L133 |
 | T-4 `KT_C1_KILL_LINE 77b49c0f8b54` 件 | **无**（两树 0 命中） | — | （负证据）转录见 `79c7321056b8` L109 |
 | T-6 `PARTIAL_PASS` 值域 | **不在冻结函数值域**（守恒函数 ＝ PASS/GRAY/FAIL） | 最早载体＝报告层字段 | 值域：`verifier/audit/conservation.py` **`4bdec2683f06`** L343–348；载体：`docs/V3X/D_FIX2_METRIC_VERIFY_REPORT_2026_09_15.md` **`0a63824f0805`** L53 |
-| T-6 P-E 的 `PARTIAL_PASS` 在冻结 D7 终档件内 | **无**（P-E 段 0 处） | 载体＝D7 requirements 报告 | `results/d7_5anchor_60cells_9model_verdict_2026_09_18.json` **`4505cca79c15`** L61–98；`docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` **`935cb6ee3566`** L60／L78／L128 |
+| T-6 P-E 的 `PARTIAL_PASS` 在冻结 D7 终档件内 | **无**（P-E 段 0 处） | 载体＝D7 requirements 报告 | `results/d7_5anchor_60cells_9model_verdict_2026_09_18.json` **`4505cca79c15`** L61–98；`docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` **`935cb6ee3566`** L60／L78／L128 |
 | T-7 「6 次 fresh LLM 调用」 | **有** | **件内自陈归属＝「沿 D_fix2 worker」**；P-F JSON 内调用次 0 出现 | `docs/V3X/V3X_1WEEK_KILL_REPORT_2026_09_18.md` **`4ffb21bb6bfa`** L69（09-16 11:03:10） |
 | T-7 P-F fresh 口径 | **有** | 1 model ＋ 5 cells ＋ 8 复用 | `results/deposon_pf_d1_full_9m5c_2026_09_15.json` **`fcb5105df0b6`** → `data_sources` |
 | T-8 T/R/A **守恒层定义** | **有**（`A=1-T-R`） | 「互斥穷尽」断言 **0 命中**；schema v1 **0 定义** | `4bdec2683f06` L73–74；负证据 `deposon_team/plugins/_v3x_frozen_schema_v1.json` **`9e99dcc4d920`** |

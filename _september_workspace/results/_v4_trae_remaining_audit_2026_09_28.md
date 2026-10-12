@@ -14,7 +14,7 @@
 |---|---|---|
 | 既有件 0 触动（被引件只登记） | ✓ 遵守 | `results/_v4_supp_t15r2_executor.py` = 84,884 B / `4B5B720D5CDA`（修复前后各测 1 次，同值 MATCH）；`_v4_supp_t15_executor.py` = `558E635F9BA6` MATCH；`_v4_supp_t15r2_result.json` = `C69AB0E3002E`；`_v4_supp_t15r2_verdict.md` = `8355724A26E3`；勘误链本体 `docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md` = 508,443 B / `CFD251E771A9` |
 | 核验类只读 + 可修面新名件修 | ✓ 遵守 | 唯一改动 = 新建 `results/_v4_supp_t15r2_executor_r1_2026_09_28.py`（新名）+ 本件；**0 处修改既有件字节** |
-| deposon-sub 副区件改动须先呈报不擅动 | ✓ 遵守 | 副区 `D:/私人资料/deposon-sub/`（workspace 外）本棒**只读 0 写**；R-4 / R-17 / R-20 三条全部只读核验，处置建议见 §4 待拍板 |
+| deposon-sub 副区件改动须先呈报不擅动 | ✓ 遵守 | 副区 `_september_workspace`（workspace 外）本棒**只读 0 写**；R-4 / R-17 / R-20 三条全部只读核验，处置建议见 §4 待拍板 |
 | key 永不明文 | ✓ 遵守 | 本棒 0 次 API 调用、0 次读 key 文件；产物内 0 处 key 字面 |
 | 0 编造 | ✓ 遵守 | 凡未能独立复现的条目，逐条标 `[未独立复现]`（见 R-19 两条）；勘误原文与实测不符处，如实标 `[勘误表述需更正]`（R-9 C4 / R-16 / R-20） |
 | 署名如实 | ✓ 遵守 | 末行 = Mavis 团队 worker 出件｜2026-09-28；**未沿用 Trae code / doc-writer 名头** |
@@ -130,7 +130,7 @@ L682:  no_proxy_compliance = (no_proxy_used_count == len(quadruples))    ← 恒
 
 ### §3.2 R-4 · 副区假 `.txt` —— 三项全复现 + 新增跨区重复发现
 
-**实测**（`D:/私人资料/deposon-sub/results/_test_conv_out.txt`，7,568 B / `6EFFE5EF7AE6`，mtime 2026-09-26 17:16:43）：
+**实测**（`_september_workspace/results/_test_conv_out.txt`，7,568 B / `6EFFE5EF7AE6`，mtime 2026-09-26 17:16:43）：
 
 | 现象 | 实测 |
 |---|---|
@@ -149,12 +149,12 @@ L682:  no_proxy_compliance = (no_proxy_used_count == len(quadruples))    ← 恒
 | 组 | v3 件 | 沿革行自称「v2 =」 | 实测 v1 值 | 实测 v2 值 | 判定 |
 |---|---|---|---|---|---|
 | paper | `letters/_v4_commission_paper_final_glm_2026_09_24_v3.md`（20,989 B / `614DF9879696`） | `53A425FE1BD2` | `53A425FE1BD2` | `F3B3E13A0F1B` | **= v1 值** |
-| 线上 | `letters/_v4_commission_online_report_coze_2026_09_24_v3.md`（13,898 B / `E5B63D181B15`） | `15F8227308BC` | `15F8227308BC` | `389C51E70D19` | **= v1 值** |
+| 〔IM〕 | `letters/_v4_commission_〔IM〕_report_coze_2026_09_24_v3.md`（13,898 B / `E5B63D181B15`） | `15F8227308BC` | `15F8227308BC` | `389C51E70D19` | **= v1 值** |
 | upload_executor | `letters/_v4_commission_upload_executor_2026_09_24_v3.md`（25,091 B / `C20D4F58F5C8`） | `ADFA7DD03F76` | `ADFA7DD03F76` | `FF2154CE182D` | **= v1 值** |
 
-**字节亦双错**：paper v3 L167 §Z 表「委托信 v2（0 触动）｜`_v2.md`｜10,515｜`53A425FE1BD2`」—— 10,515 B 是 **v1** 字节（v2 实为 13,749 B）；线上 v3 L148 同构（记 7,197 B / v1 值，v2 实为 10,599 B）。**故「字节 + SHA」两栏同时挂 v1 值**，与勘误「件内各 3 处一致重复」吻合（沿革行 L6 + 纪律行 + §Z 表行）。
+**字节亦双错**：paper v3 L167 §Z 表「委托信 v2（0 触动）｜`_v2.md`｜10,515｜`53A425FE1BD2`」—— 10,515 B 是 **v1** 字节（v2 实为 13,749 B）；〔IM〕 v3 L148 同构（记 7,197 B / v1 值，v2 实为 10,599 B）。**故「字节 + SHA」两栏同时挂 v1 值**，与勘误「件内各 3 处一致重复」吻合（沿革行 L6 + 纪律行 + §Z 表行）。
 
-**前向已自纠**：v4 两件已按实测写正确值并在件内显式登记该缺陷 —— paper v4 L234、线上 v4 L179/L180（**v3 件 0 触动，未回头改**，沿「v1/v2 件一律不覆盖」纪律）。**⇒ R-6 已扩散 A 档登记成立，且前向修正已落地，处置闭环。**
+**前向已自纠**：v4 两件已按实测写正确值并在件内显式登记该缺陷 —— paper v4 L234、〔IM〕 v4 L179/L180（**v3 件 0 触动，未回头改**，沿「v1/v2 件一律不覆盖」纪律）。**⇒ R-6 已扩散 A 档登记成立，且前向修正已落地，处置闭环。**
 
 ### §3.4 R-9 · C3/C4 分布 —— 一真一歧（如实拆开，不合并表述）
 
@@ -221,7 +221,7 @@ L682:  no_proxy_compliance = (no_proxy_used_count == len(quadruples))    ← 恒
 
 **矛盾确认**：同件 L149 把 **v18** 描述为「E-1…E-36 全部勘误条目所在件」，而同件 L214 正确地把 v17→v18 的 27,527 B 差额归因为「E-35 6 子条」—— **若 v18 已含 E-36，则该差额归因漏算 E-36**。同一件内两处口径互相排斥，勘误原文成立。
 
-**次生面（本棒补测）**：该函 §4.2 钉 `e4ver = v18`（`CA8B95DDAA70` · 225,731 B），而**盘上勘误链本体已推进至 v22+（508,443 B / `CFD251E771A9`）** ⇒ 该函 E-4 锚本身**已过期**。勘误「波及 线上 回函 v4 的版本归属」一支，本棒**未独立复现**（未逐处比对 线上 回函 v4 的版本归属表述），如实标注。
+**次生面（本棒补测）**：该函 §4.2 钉 `e4ver = v18`（`CA8B95DDAA70` · 225,731 B），而**盘上勘误链本体已推进至 v22+（508,443 B / `CFD251E771A9`）** ⇒ 该函 E-4 锚本身**已过期**。勘误「波及 〔IM〕 回函 v4 的版本归属」一支，本棒**未独立复现**（未逐处比对 〔IM〕 回函 v4 的版本归属表述），如实标注。
 
 ### §3.7 R-13 · 43 vs 44 —— 确认，差额 = 1 且定位到 E-4
 
@@ -294,7 +294,7 @@ L682:  no_proxy_compliance = (no_proxy_used_count == len(quadruples))    ← 恒
 
 | 面 | 结构 | 重复词 |
 |---|---|---|
-| 副区 `D:/私人资料/deposon-sub/_tmp_v2_redesign.py`（13,762 B / `4CD07B3A7DEA`）`KW_V2` | **dict，增量式**：`KW_V1["KILL_LINE"] + (...)` 等 4 键 | **有**：KILL_LINE 中 `"立案"` ×2、`"完工"` ×2；RISK 中 `"假fail"` ×2、`"假pass"` ×2 |
+| 副区 `_september_workspace/_tmp_v2_redesign.py`（13,762 B / `4CD07B3A7DEA`）`KW_V2` | **dict，增量式**：`KW_V1["KILL_LINE"] + (...)` 等 4 键 | **有**：KILL_LINE 中 `"立案"` ×2、`"完工"` ×2；RISK 中 `"假fail"` ×2、`"假pass"` ×2 |
 | 主目录 `results/_v4_pi_cot_v2_ruleset_v2_executor.py`（52,465 B / `EB22F13D571C`）`KEYWORDS_V2` | **dict，独立全量表**：`(...)` 元组字面量 4 键 | 所检段落**未见重复**（`立案`/`完工` 各 1 次） |
 
 **关键更正**：两表**本就设计为不同物** —— 副区是「v1 词表 + v2 增量」的**草稿**，主目录是**落地的独立全量表**。故「内容不一致」不构成缺陷：主目录 COST 含 v1 基线词（成本/廉价/量化/投入/开销/费用/付费/花费/算力/消耗）与 `"没钱"`，副区走 `KW_V1[...]` 继承同一基线，属**预期差异**。
@@ -308,7 +308,7 @@ L682:  no_proxy_compliance = (no_proxy_used_count == len(quadruples))    ← 恒
 | 件 | 实测 | §Z 自记 | 差 |
 |---|---|---|---|
 | `letters/_v4_commission_paper_final_glm_2026_09_24_v4.md` | **31,531 B** / `D5337702CEC9` | 31,167 | **+364** |
-| `letters/_v4_commission_online_report_coze_2026_09_24_v4.md` | **21,433 B** / `802C705E1469` | 21,069 | **+364** |
+| `letters/_v4_commission_〔IM〕_report_coze_2026_09_24_v4.md` | **21,433 B** / `802C705E1469` | 21,069 | **+364** |
 
 **自记值实测仍为 31,167 / 21,069**（勘误所述与现盘一致）。差额 364 B 两件**完全相同**，指向同一追加段。
 
@@ -332,7 +332,7 @@ L682:  no_proxy_compliance = (no_proxy_used_count == len(quadruples))    ← 恒
 
 ### §3.14 R-20 · `.ps1` 末尾死输出 —— 确认，空行数勘误记 4 实为 5
 
-`D:/私人资料/deposon-sub/_check_conv_archive.ps1`（2,326 B / `C89D46C47026`，LF / 无 BOM，共 50 行）末尾逐行：
+`_september_workspace/_check_conv_archive.ps1`（2,326 B / `C89D46C47026`，LF / 无 BOM，共 50 行）末尾逐行：
 
 ```
 L44: Write-Output ('---DONE---')
@@ -403,7 +403,7 @@ L50: Write-Output 'DONE'
 
 ### §5.3 本棒未能独立复现的项（如实交代，不臆断）
 
-- **R-11 的「波及 线上 回函 v4 的版本归属」**：未逐处比对，标 `[未独立复现]`。同件的 E-4 锚过期（v18 → 现盘 v22+）本棒已实测，属**另一子面**。
+- **R-11 的「波及 〔IM〕 回函 v4 的版本归属」**：未逐处比对，标 `[未独立复现]`。同件的 E-4 锚过期（v18 → 现盘 v22+）本棒已实测，属**另一子面**。
 - **R-19 的 3 件中的 2 件**（`_v4_maindir_cleanup_manifest_2026_09_24.md` / `_v4_maindir_cleanup_manifest_v2_2026_09_26.md`）+ `_v4_noise_cleanup_manifest_v4_2026_09_27.md`：本棒检索式 0 命中，标 `[未独立复现]`。
 - **R-16 文本层**：现盘点件已不含 NOT-ON-DISK 字面 ⇒ 无法复现勘误所述的「原始误报文本」；本棒只报现盘事实 + 新观察（在盘 2 件未登记），**不判定**其成因与时点。
 - **R-10 的 drift 成因**：本棒**未逐件 diff** 确认每个 drift 是否均由落盘后追加引起（coding review L439 对 d1 给出该解释）；本棒只确认「9/9 全漂移」这一事实与「字段名 `_after_birth` 决定其为出生时快照」这一构造层推断。

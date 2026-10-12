@@ -1,11 +1,11 @@
 # GLM 完稿 V2 回函模板（IMRaD + Rebuttal 框架）
 
 **致**：GLM（FTFB arXiv 稿 D 档深度修订执行方）
-**自**：KIMI 凝子-agent（独立双审方） → Mavis（编排器） → coze 线上（回执通道）
+**自**：KIMI 凝子-agent（独立双审方） → Mavis（编排器） → coze 〔IM〕（回执通道）
 **主题**：`fiction_that_feeds_back.tex` V2 完稿回执（D 档深度修订执行依据：`_letter_to_glm_ftfb_deep_revision_2026_09_18.md`）
 
 **模板版本**：v1.0（沿 `@scientific-research-workflows` 的 `scientific-writing` IMRaD + rebuttal 7 步流程 + `@academic-paper-assistant` 的 `academic-paper-polish` 学术润色）
-**模板路径**：`D:/私人资料/deposon-repo/results/_glm_response_v2_template_2026_09_18.md`
+**模板路径**：`_september_workspace/results/_glm_response_v2_template_2026_09_18.md`
 **委托信基准指纹（沿 Trae code 修复清单 P0-3 + 修复回执单 §3.1 已加注盘上实测替代基准）**：SHA-256 = `d060f75dbe9f`（ftfb_arxiv.tex 实测，原 `9de366a6c4d60443273d60edde7d9bc2074b3909afaf9a4d6f56afb4425e81f9` 无对象可比，GLM 开工门禁已闭合）
 **严守**：7 铁律 + 9 铁律（0 LLM / no key on disk / no proxy / no gateway）——详见 §5
 
@@ -17,7 +17,7 @@
 
 | 项 | 实测值 |
 |---|---|
-| 委托信路径 | `D:/私人资料/deposon-repo/results/_letter_to_glm_ftfb_deep_revision_2026_09_18.md` |
+| 委托信路径 | `_september_workspace/results/_letter_to_glm_ftfb_deep_revision_2026_09_18.md` |
 | 委托信 SHA-12 | `3de722dc9e39`（25,751 B；沿 Trae code 修复 P0-3 门禁勘误注记后实测，原 `85a81b4fd9aa`） |
 | 委托信基准指纹（tex） | `d060f75dbe9f`（SHA-256，沿 Trae P0-3 修复后实测替代，原 `9de366a6c4d60443273d60edde7d9bc2074b3909afaf9a4d6f56afb4425e81f9` 无对象可比） |
 | 委托信修订项 | P0-1（双盲话语）/ P0-2（时态清零）/ P0-3（R13/R14 闭合）/ P0-4（§7 指针）/ P1-5（R42–R45 补全）/ P1-6（Landauer 措辞）/ P1-7（Čapek 归因）/ P1-8（奇点锚类别）/ P2-9（自述压缩）/ P2-10（§1.2 正面论证）/ P2-11（F-C1 写实）/ P2-12（标签统一）/ P2-13（句长拆分）/ P2-14（批注清理）/ P2-15（§7 独立性更新） |
@@ -421,11 +421,11 @@
 
 | 输入资产 | 路径 | 字节数 | SHA-12（本端实测） |
 |---|---|---|---|
-| 现有 GLM 委托信（KIMI → GLM，Trae 修复 P0-3 后） | `D:/私人资料/deposon-repo/results/_letter_to_glm_ftfb_deep_revision_2026_09_18.md` | 25,751 | `3de722dc9e39` |
-| Pass 1 双审报告（修订版，Trae 修复 P1-5 缺陷闭环表后） | `D:/私人资料/deposon-repo/results/_ftfb_v3_pass1_audit_2026_09_18_corrected.md` | 18,841 | `ecb406570615` |
-| Pass 2 双审报告（修订版，Trae 修复 P1-5 缺陷闭环表后） | `D:/私人资料/deposon-repo/results/_ftfb_v3_pass2_audit_2026_09_18_corrected.md` | 27,233 | `413ddb0bd00e` |
-| D+0.5 综合报告 | `D:/私人资料/deposon-repo/results/_d05_combined_report_20260918_100853.md` | 10,555 | `c87eb8974268` |
-| v2scripts 复算报告 | `D:/私人资料/deposon-repo/results/_deposon_v2scripts_reverify_20260918_105219.md` | 5,347 | `ee005ea1f031` |
+| 现有 GLM 委托信（KIMI → GLM，Trae 修复 P0-3 后） | `_september_workspace/results/_letter_to_glm_ftfb_deep_revision_2026_09_18.md` | 25,751 | `3de722dc9e39` |
+| Pass 1 双审报告（修订版，Trae 修复 P1-5 缺陷闭环表后） | `_september_workspace/results/_ftfb_v3_pass1_audit_2026_09_18_corrected.md` | 18,841 | `ecb406570615` |
+| Pass 2 双审报告（修订版，Trae 修复 P1-5 缺陷闭环表后） | `_september_workspace/results/_ftfb_v3_pass2_audit_2026_09_18_corrected.md` | 27,233 | `413ddb0bd00e` |
+| D+0.5 综合报告 | `_september_workspace/results/_d05_combined_report_20260918_100853.md` | 10,555 | `c87eb8974268` |
+| v2scripts 复算报告 | `_september_workspace/results/_deposon_v2scripts_reverify_20260918_105219.md` | 5,347 | `ee005ea1f031` |
 
 > **诚实标注**：上述 SHA-12 全部为本端 `Get-FileHash SHA256` 截取前 12 位实测值。如派工提示中列出的 SHA-12 与本端实测存在偏差（如 pass2 的 `B7B2EE72725B5` vs `b7b8e72725b5`），以本端实测为准——派工提示可能存在打字错位。
 
@@ -457,7 +457,7 @@
 | **框架** | `scientific-research-workflows:scientific-writing` v2.0（IMRaD + rebuttal 7 步流程 + Non-negotiable safety rules + Evidence binding） |
 | **学术润色** | `academic-paper-assistant:academic-paper-polish`（Section-Specific Guidance + Scope and integrity + No fabricated support + Vocabulary） |
 | **插件** | `@scientific-research-workflows` + `@academic-paper-assistant` |
-| **路径规范** | Mavis plugin-cache 实际路径（`sha256-tree-v1-...`）——严禁引 Trae IDE 缓存（`C:/Users/Administrator/.trae-cn/...`） |
+| **路径规范** | Mavis plugin-cache 实际路径（`sha256-tree-v1-...`）——严禁引 Trae IDE 缓存（`〔本机用户目录〕/.trae-cn/...`） |
 | **自加载规范** | 仅可引 Mavis plugin-cache 实际可加载的 SKILL.md（sha256 实测路径），不引 Trae IDE 缓存 |
 
 ### §7.2 IMRaD + rebuttal 框架映射
@@ -485,7 +485,7 @@
 |---|---|
 | Mavis plugin-cache 实际路径（`sha256-tree-v1-611965fcb6208a5dbeb28d594ad7ca0f8b1f8fd62fc33c189e56a50e49db19cb` for scientific-writing） | ✅ 沿用 |
 | Mavis plugin-cache 实际路径（`sha256-tree-v1-01afed6776375edeb642ee7bae9effb127332c571572768c2d329b56c6c87e53` for academic-paper-polish） | ✅ 沿用 |
-| Trae IDE 缓存路径（`C:/Users/Administrator/.trae-cn/...`） | ❌ 严禁 |
+| Trae IDE 缓存路径（`〔本机用户目录〕/.trae-cn/...`） | ❌ 严禁 |
 | Muratkankoylan 等用户拉取的 GitHub skill 仓库 | ❌ 严禁（除非 user 触发） |
 | user agent skill 目录 | ❌ 严禁擅改（沿 user 17:02 边界严守） |
 
@@ -497,7 +497,7 @@
 | **派工** | 父 agent（session `mvs_bbeb804b1a6a41109be740636eed1709`） |
 | **生成日期** | 2026-09-18 |
 | **任务 ID** | GLM-V2-回函模板-2026-09-18 |
-| **报告路径** | `D:/私人资料/deposon-repo/results/_glm_response_v2_template_2026_09_18.md` |
+| **报告路径** | `_september_workspace/results/_glm_response_v2_template_2026_09_18.md` |
 | **本端更新（Trae 修复后）** | 2026-09-18 沿 Trae code 修复清单 §4 SHA 对照表 + 修复回执单 §3.1 已做 9 处精确 edit：(1) §0.1 委托信 SHA-12 (`85a81b4fd9aa` → `3de722dc9e39`)；(2) §0.1 委托信基准指纹 (`9de366a6...` → `d060f75dbe9f`)；(3) §0.1 委托信修订项加 P0-3 门禁勘误条目；(4) §0.2 双盲基线；(5) §1.1 验收协议步骤 1；(6) §2.1 新指纹比对；(7) §4 老实交代增加 P0-3 门禁条目 + Trae SHA 对照；(8) §6.1 输入资产 SHA-12 全表；(9) 新增 §1.4 Trae 修复集成状态段。**沿派工新规 (user 10:22 + 12:55)**：必带 skill `scientific-research-workflows:scientific-writing` (sha256 `611965...`) + `academic-paper-assistant:academic-paper-polish` (sha256 `01afed...`)。**严守 7 铁律 + 9 铁律**：GLM 回函模板不在 18 frozen / 5 制品 / schema v1 / 4 plugin spec / verifier/ 范围；更新是 Mavis 自己改 Mavis 派的产物，不动 frozen。 |
 
 ---

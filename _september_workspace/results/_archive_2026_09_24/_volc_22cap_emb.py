@@ -18,7 +18,7 @@ import numpy as np
 from datetime import datetime, timezone, timedelta
 
 # ---- 1. Load API key at runtime (NEVER persisted) ----
-KEY_FILE = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
+KEY_FILE = r'〔本机用户目录〕/Desktop/AI/LLM API.txt'
 with io.open(KEY_FILE, 'r', encoding='gb18030') as f:
     key_text = f.read()
 # The file has 2 ARK keys; the FIRST may be stale. Use the SECOND one
@@ -38,7 +38,7 @@ for k in ['HTTP_PROXY', 'HTTPS_PROXY', 'http_proxy', 'https_proxy', 'ALL_PROXY',
     os.environ.pop(k, None)
 
 # ---- 3. Reconstruct 22 captions from corpus (read-only) ----
-CORPUS_DIR = r'D:\私人资料\deposon-repo\corpus\v20'
+CORPUS_DIR = r'_september_workspace/corpus/v20'
 index = json.load(open(os.path.join(CORPUS_DIR, 'index.json'), encoding='utf-8'))
 assert index['n_graphs'] == 22, f"expected 22 graphs, got {index['n_graphs']}"
 
@@ -251,7 +251,7 @@ out = {
                                    '4 SPEC V0.1 frozen files'],
     },
 }
-OUT_JSON = r'D:\私人资料\deposon-repo\results\deposon_volcengine_22caption_embedding_2026_09_10.json'
+OUT_JSON = r'_september_workspace/results/deposon_volcengine_22caption_embedding_2026_09_10.json'
 with open(OUT_JSON, 'w', encoding='utf-8') as f:
     json.dump(out, f, ensure_ascii=False, indent=2)
 print(f"[OK] JSON written: {OUT_JSON} ({os.path.getsize(OUT_JSON)} bytes)")

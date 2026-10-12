@@ -5,7 +5,7 @@
 **Prior version:** v1.0（2026-09-21，单次首版）
 **Date:** 2026-09-21
 **Drafted by:** `doc-writer` (Mavis 8-agent team, deposon workspace). Human principal investigator retains final approval and is the sole accountable author. AI is not an author.
-**Scope:** This document merges, by description only, every recipient-side reply received against `D:\私人资料\deposon-repo\results\_v4_distillation_invitation_2026_09_20_v1.0.md` (SHA-12 `3D9F73519F6C`, 411 lines) and its companion prompt pack `D:\私人资料\deposon-repo\results\_v4_distillation_prompt_pack_2026_09_20_v1.0.md` (SHA-12 `E5C37E90255B`, 384 lines). No recipient reply is ranked, scored, selected, or preferred. No framework keywords appear in this document; where a quoted passage on disk uses them, the passage is flagged as 引文 with the path, sha, line range.
+**Scope:** This document merges, by description only, every recipient-side reply received against `_september_workspace/results/_v4_distillation_invitation_2026_09_20_v1.0.md` (SHA-12 `3D9F73519F6C`, 411 lines) and its companion prompt pack `_september_workspace/results/_v4_distillation_prompt_pack_2026_09_20_v1.0.md` (SHA-12 `E5C37E90255B`, 384 lines). No recipient reply is ranked, scored, selected, or preferred. No framework keywords appear in this document; where a quoted passage on disk uses them, the passage is flagged as 引文 with the path, sha, line range.
 **三类陈述显式分标**：本文中 `on-disk fact` 标路径 + SHA-12 + 行号；`re-fit hypothesis` 显式声明该假设依赖既有 artifact 未作为该用途构建；`pure speculation` 显式声明磁盘无对应 artifact。
 
 ## 本版本变更摘要（v1.0 → v1.1，第二轮）
@@ -23,7 +23,7 @@
 
 ## §0 输入清单与锚
 
-本节记录被本稿引用、被本稿读毕的文件，分两类目录：`D:\私人资料\deposon-repo\results\`（PI 主仓库回函集，下称 `results/`）与 `C:\Users\Administrator\.minimax\v2\assets\2026\09\21\`（附件侧目录，下称 `assets/`）。每行给出 SHA-12（实算，十六进制大写）、字节数（实算）、行数（实算，使用 `ReadAllLines`；与 `Get-Content | Measure-Object -Line` 双口径对照，不一致时以 `ReadAllLines` 为准并在本行加注）。"已知锚"列采用 PI 派工单第 2 节给出的字节 / 行数；"本轮自测"列是本会话内重新计算结果。
+本节记录被本稿引用、被本稿读毕的文件，分两类目录：`_september_workspace/results/`（PI 主仓库回函集，下称 `results/`）与 `〔本机用户目录〕/.minimax/v2/assets/2026/09/21/`（附件侧目录，下称 `assets/`）。每行给出 SHA-12（实算，十六进制大写）、字节数（实算）、行数（实算，使用 `ReadAllLines`；与 `Get-Content | Measure-Object -Line` 双口径对照，不一致时以 `ReadAllLines` 为准并在本行加注）。"已知锚"列采用 PI 派工单第 2 节给出的字节 / 行数；"本轮自测"列是本会话内重新计算结果。
 
 ### §0.1 邀请侧与种子文件（results/）
 
@@ -71,7 +71,7 @@
 
 | 参与方 | 完整文件名 | 本轮 SHA-12 | 本轮字节 / 路径 |
 |---|---|---|---|
-| GLM（查理 / 5-agent 团队，实验邀请函 v0.1 审查件） | `C:\Users\Administrator\.minimax\v2\assets\2026\09\20\15-30-44-659-asset_20260920-153044-659_ac74a04efeb2_0a7da13e-查理_V4接受回执与D1首轮反馈_2026-09-20.md` | `ac74a04efeb2` | 附件侧不落盘 |
+| GLM（查理 / 5-agent 团队，实验邀请函 v0.1 审查件） | `〔本机用户目录〕/.minimax/v2/assets/2026/09/20/15-30-44-659-asset_20260920-153044-659_ac74a04efeb2_0a7da13e-查理_V4接受回执与D1首轮反馈_2026-09-20.md` | `ac74a04efeb2` | 附件侧不落盘 |
 
 **要点**（一行）：对象为 `results/_v4_experiment_invitation_2026_09_20.md`（SHA-12 `4E8C0EA57028`，实验邀请函 draft v0.1，**非**蒸馏邀请函）；署名 "GLM 接收侧 paper-track 审查"；三方首轮审查整合（爱丽丝—方法学 11 条 / 鲍勃—可执行性 12 条 / 阿兰—文献定位 6 条，查理执笔合并）；含 7 组阻塞级问题表、7 条非阻塞建议、提请 PI 澄清 5 项、接受条件（须修订至 v0.2）。
 
@@ -820,7 +820,7 @@
 
 ### §4.14 GLM（查理 / 5-agent 团队）— 实验邀请函审查件（新增本轮，PI 拍板 P1）
 
-`C:\Users\Administrator\.minimax\v2\assets\2026\09\20\15-30-44-659-asset_20260920-153044-659_ac74a04efeb2_0a7da13e-查理_V4接受回执与D1首轮反馈_2026-09-20.md`：
+`〔本机用户目录〕/.minimax/v2/assets/2026/09/20/15-30-44-659-asset_20260920-153044-659_ac74a04efeb2_0a7da13e-查理_V4接受回执与D1首轮反馈_2026-09-20.md`：
 
 - **对象**：`results/_v4_experiment_invitation_2026_09_20.md`（SHA-12 `4E8C0EA57028`，实验邀请函 draft v0.1，**非**蒸馏邀请函）。本件不并入 §1 / §2 / §3 / §4 / §5 对蒸馏邀请函的既有论述（独立呈现，不参与 §1 横切批评计数）。
 - **署名与通道**：磁盘署名「GLM 接收侧 paper-track 审查」（PI 拍板 P1：「两份都在附件中，agentmore 模式，5-agent 团队，所以标注为查理」）；5-agent 团队分别为爱丽丝 / 鲍勃 / 阿兰 / … / 查理（执笔合并）。
@@ -1170,11 +1170,11 @@ worker 实测（`Get-FileHash` + 全 `results/` 递归扫描，排除 `_archive_
 
 ## §8 老实交代
 
-- **本任务 0 LLM / 0 API / 0 其他文件改动**：本稿是 v1.0 → v1.1 的版本化更新，新文件落盘到 `D:\私人资料\deposon-repo\results\_v4_design_integration_2026_09_21_v1.1.md`；未触动 §0.1–§0.6 列出的 18 个输入文件；v1.0 原文件（`4B10CDE29C27`，119,732 B，1,041 行）未被动过（详见自验 4）。
+- **本任务 0 LLM / 0 API / 0 其他文件改动**：本稿是 v1.0 → v1.1 的版本化更新，新文件落盘到 `_september_workspace/results/_v4_design_integration_2026_09_21_v1.1.md`；未触动 §0.1–§0.6 列出的 18 个输入文件；v1.0 原文件（`4B10CDE29C27`，119,732 B，1,041 行）未被动过（详见自验 4）。
 - **第二轮更新（v1.1）所作动作**：仅在 input 侧读取、worker 实测、生成新 .md 文件；未触动：
   - v1.0 整合稿与 v1.0 问卷（自验 4 重算 SHA-12 应仍为 `4B10CDE29C27` / `6A3A2D8EE357`）。
   - 任何 18 frozen 制品、P-G v0 / v0.1、schema v1、verifier/、plugin spec。
-  - 任何 LLM API / 任何外部 URL / 任何 线上 / 任何 GitHub 操作。
+  - 任何 LLM API / 任何外部 URL / 任何 〔IM〕 / 任何 GitHub 操作。
   - 任何密钥 / 端点 / 专有提示词。
 - **行数与哈希自测双口径（PI 拍板 P6）**：整合稿 v1.1 canonical 行数 = `[System.IO.File]::ReadAllLines(path, [System.Text.Encoding]::UTF8).Length`；本节交付前自验 1 / 2 / 5 项给出本稿最终 SHA-12 / 字节 / 行数。
 - **谁拍的板 / 谁复算的 / 哪些是文件外宣称**：

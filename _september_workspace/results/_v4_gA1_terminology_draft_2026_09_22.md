@@ -1,6 +1,6 @@
 # V4 §4.6 统一术语代拟稿（Mavis 代拟，PI 委托 2026-09-22）
 
-**委托留痕**：PI 于组 A 首批问卷（ask_f8837a5b3c168ef3d6e8c18a，2026-09-22）对 §4.6 答复「委托 Mavis 代拟」。本稿为代拟草案，回填问卷作答栏后**待 PI 复核确认生效**。本稿起草过程：0 LLM / 0 外部 URL / 0 GitHub / 0 线上 / 0 密钥；未触动任何 V1–V3 冻结资产（18 frozen / schema v1 / verifier / P-G v0+v01 / plugin spec 全部只读）。
+**委托留痕**：PI 于组 A 首批问卷（ask_f8837a5b3c168ef3d6e8c18a，2026-09-22）对 §4.6 答复「委托 Mavis 代拟」。本稿为代拟草案，回填问卷作答栏后**待 PI 复核确认生效**。本稿起草过程：0 LLM / 0 外部 URL / 0 GitHub / 0 〔IM〕 / 0 密钥；未触动任何 V1–V3 冻结资产（18 frozen / schema v1 / verifier / P-G v0+v01 / plugin spec 全部只读）。
 
 **作答对象**：问卷 §4.6（`results/_v4_pi_decision_questionnaire_2026_09_21_v1.1.md`，行号对回填前基线 SHA-12 `88F48F82E08B` / 739 行；所引行均在本轮回填点 L581 之前，回填后行号不变）。PI 已于组 D 收尾批（2026-09-22）拍路径 B「统一为单一术语」；本稿给出该路径的待收内容：具体统一术语 + 每条原引用重写规则。
 
@@ -30,7 +30,7 @@
 1. **schema name 字段混淆源**：`_v3x_frozen_schema_v1.json` 内 KT_ABC1 条目 `name` 字段为「5 anchors JSON」——S-11「5 KT anchors」混淆的源头（问卷 §4.5 路径 C 已注记）。schema 属冻结资产，禁改；V4 引用该字段时括注其语义为「KT 锚文件（自身即 KT 五值中的第 5 值）」。
 2. **校验器文件名历史口径**：`_verify_15frozen.py` 文件名含「15」，实际校验 18 frozen（16 锚 + 2 anchor JSON 自身，见其 L4 注释与 L24–L41 的 16 条 + 尾部 2 JSON 逻辑）；「15」系 V3 时代 15 锚口径的历史命名。文件属冻结资产，禁改，注记。
 3. **双处过期期望哈希 `03c6c01f3697`**：C7 锚文件修订（2026-09-22，`03C6C01F3697` 6,680 B / 189 行 → `6E9CD8CD8E07` 11,318 B / 219 行）后，schema L12（KT_ABC1 条目 expected 值）与 `_verify_15frozen.py` L25（期望哈希）两处期望值均已过期。两件均属冻结资产，禁改，只注记；fresh 跑 `_verify_15frozen.py` 对 KT_ABC1 条目将 FAIL（repo 现副本 `6E9CD8CD8E07`）——V4 引用校验结果时区分两种口径：「历史 16/16 PASS（修订前）」与「fresh 跑 FAIL（修订后，预期内）」。
-4. **外部归档基座不存在**：`_v3x_frozen_schema_v1.json` 的 `path_fallback` 与 `_verify_15frozen.py` ARCHIVE_BASE 指向 `D:\私人资料\_archive_deposon_2026_09_17`；该字面路径 2026-09-22 实测不存在（`Test-Path -LiteralPath` = False）。父目录 `D:\私人资料` 下实际存在 `_non_upload_local_archive`（1,176 件 / 21 个顶级目录，含 .mavis/.trae/corpus/results/verifier 等），其内无 `_archive_deposon_2026_09_17` 子目录。归档 fallback 当前不可用，注记。
+4. **外部归档基座不存在**：`_v3x_frozen_schema_v1.json` 的 `path_fallback` 与 `_verify_15frozen.py` ARCHIVE_BASE 指向 `〔本地资料区〕/_archive_deposon_2026_09_17`；该字面路径 2026-09-22 实测不存在（`Test-Path -LiteralPath` = False）。父目录 `〔本地资料区〕` 下实际存在 `_non_upload_local_archive`（1,176 件 / 21 个顶级目录，含 .mavis/.trae/corpus/results/verifier 等），其内无 `_archive_deposon_2026_09_17` 子目录。归档 fallback 当前不可用，注记。
 
 ## 4 Claude Code §1.7「仅两文出现」陈述的实测修正
 
@@ -51,8 +51,8 @@ Claude Code 回函 §1.7（`D39CB17B051B:54–62`，问卷 §4.6 L544 转录）�
 
 | 文件（deposon-sub 内路径） | SHA-12 | 大小 / 行数 | `18 frozen` 命中行 |
 |---|---|---|---|
-| `D:\私人资料\deposon-sub\results\_adendum_FGK_complete_20260917_143033.md` | `958188C83CF0` | 14,005 B / 231 行 | L20, L166（与 Claude Code 所引**精确吻合**） |
-| `D:\私人资料\deposon-sub\results\_archive_2026_09_18\_trae_5audit_aggregated_2026_09_17.md` | `43265E4BF2BE` | 11,465 B / 188 行 | L19, L22, L98, L120, L132, L159, L184（共 7 处；Claude Code 所引 5 处为其子集，未引 L98 / L184） |
+| `_september_workspace/results/_adendum_FGK_complete_20260917_143033.md` | `958188C83CF0` | 14,005 B / 231 行 | L20, L166（与 Claude Code 所引**精确吻合**） |
+| `_september_workspace/results/_archive_2026_09_18/_trae_5audit_aggregated_2026_09_17.md` | `43265E4BF2BE` | 11,465 B / 188 行 | L19, L22, L98, L120, L132, L159, L184（共 7 处；Claude Code 所引 5 处为其子集，未引 L98 / L184） |
 
 结论：Claude Code 的行号引用真实（其所读副本在 deposon-sub 仓）；「仅两文出现」作为引用面陈述失实。V4 引用面不沿用该陈述；deposon-repo 与 deposon-sub 系两仓，跨仓引用一律带仓标识。
 
