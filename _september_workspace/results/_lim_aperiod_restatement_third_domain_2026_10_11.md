@@ -8,7 +8,7 @@
 - **命名合规**：`_主题_日期`，⛔ **0 `_v5_`／`_v4_`／`_v3_` 等 V-阶段前缀**（沿 PI 2026-09-29 命名裁 `57024f2cd30a` §1.2② ＋ 10-01 补记）。
 - **出件**：**worker**（分支会话 `mvs_5c3bf97ad4a34d0ea440dfbe1c4674b3`｜**署名如实** · ⛔ **0 冒充** PI／parent／verifier／verdict-keeper／protocol-keeper／doc-writer）。
 - **状态**：✅ **`LIM-A″` 三段重述声明已出 · ✅ 依据表已落册 · ✅ 自算射程已明示 · ✅ ⚠ 不掩盖声明已载明**；⛔ **0 自验／0 验收**（归 verifier）｜⛔ **0 自判毕**｜⛔ **0 判档**（0 出 `pass`／`af`／`kd`／`fail`／`give-up` 五终判之一）｜⛔ **0 赋任一 `k_v3s_4_4_*` 布尔**｜⛔ **0 宣告任何 `K-RJ-*` 之闭／开或终判词变更**｜⛔ **0 宣告五段链①毕**
-- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（⛔ **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络／0 skill／0 LLM**｜⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`
+- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（⛔ **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络／0 skill／0 LLM**｜⛔ **0 触及** `〔本地归档区〕`
 - **日期**：2026-10-11
 
 ---
@@ -186,7 +186,7 @@
 - ⛔ **0 宣告五段链①毕**｜⛔ **0 自判毕**｜⛔ **0 宣告 `S5″` 完成**｜⛔ **0 宣告任何门柱已过／未过**。
 - ⛔ **0 代 PI 给值或裁**｜⛔ **0 就重述方向另作选择**（PI 已明示）｜⛔ **0 回呈采认卡**。
 - ⛔ **0 跨域比大小**（沿 `K-RJ-6`）｜⛔ **0 外推**至第一域／第二域／任何未登记之构造变更。
-- ⛔ **0 网络 · 0 skill · 0 LLM · 0 读 `.env` · 0 触及** `D:\私人资料\_non_upload_local_archive`｜⛔ **0 冒充** parent／PI／verifier／verdict-keeper／protocol-keeper／doc-writer。
+- ⛔ **0 网络 · 0 skill · 0 LLM · 0 读 `.env` · 0 触及** `〔本地归档区〕`｜⛔ **0 冒充** parent／PI／verifier／verdict-keeper／protocol-keeper／doc-writer。
 
 ---
 

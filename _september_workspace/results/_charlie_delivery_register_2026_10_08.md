@@ -2,7 +2,7 @@
 
 > **性质**：执行登记件（接收/复制/落册实测自证）。0 判定 0 代裁 0 回改既有件。
 > **执行方署名**：worker（deposon-repo 执行 worker）——署名如实，不冒充 PI / doc-writer / protocol-keeper / verdict-keeper / evidence-auditor / 查理 / GLM / coze 等任一他方。
-> **工作区**：`D:\私人资料\deposon-repo`
+> **工作区**：`_september_workspace`
 > **落册时点**：2026-10-08
 
 ---
@@ -24,8 +24,8 @@
 
 | # | 源件全路径 | 实测 sha256[:12] | 预期 sha256[:12] | 对拍 | 实测字节 | 预期字节 | 对拍 | 源件 mtime |
 |---|---|---|---|---|---|---|---|---|
-| ① | `C:\Users\Administrator\.minimax\v2\assets\2026\10\02\00-19-43-967-asset_20261002-001943-967_3c5059319ffe_f3a0f24b-查理_glm_dualtrack_paper_sole_letter_2026_10_01.md` | `3c5059319ffe` | `3c5059319ffe` | ✅ 逐位一致 | 13,105 | 13,105 | ✅ 一致 | 2026-10-02 00:19:43 |
-| ② | `C:\Users\Administrator\.minimax\v2\assets\2026\10\02\00-19-43-973-asset_20261002-001943-973_fd39cf811232_a5408aaf-查理_deposon双主线论文终稿_2026-10-01_v0.3.md` | `fd39cf811232` | `fd39cf811232` | ✅ 逐位一致 | 236,425 | 236,425 | ✅ 一致 | 2026-10-02 00:19:43 |
+| ① | `〔本机用户目录〕/.minimax/v2/assets/2026/10/02/00-19-43-967-asset_20261002-001943-967_3c5059319ffe_f3a0f24b-查理_glm_dualtrack_paper_sole_letter_2026_10_01.md` | `3c5059319ffe` | `3c5059319ffe` | ✅ 逐位一致 | 13,105 | 13,105 | ✅ 一致 | 2026-10-02 00:19:43 |
+| ② | `〔本机用户目录〕/.minimax/v2/assets/2026/10/02/00-19-43-973-asset_20261002-001943-973_fd39cf811232_a5408aaf-查理_deposon双主线论文终稿_2026-10-01_v0.3.md` | `fd39cf811232` | `fd39cf811232` | ✅ 逐位一致 | 236,425 | 236,425 | ✅ 一致 | 2026-10-02 00:19:43 |
 
 **结论**：两件实测与 PI 给定预期**逐位一致**，无偏差，故未触发「不一致即停手」分支。
 
@@ -35,9 +35,9 @@
 
 | 目标路径 | 落册前存在性 |
 |---|---|
-| `D:\私人资料\deposon-repo\letters\查理_glm_dualtrack_paper_sole_letter_2026_10_01.md` | **0 存在**（无撞名） |
-| `D:\私人资料\deposon-repo\letters\查理_deposon双主线论文终稿_2026-10-01_v0.3.md` | **0 存在**（无撞名） |
-| `D:\私人资料\deposon-repo\results\_charlie_delivery_register_2026_10_08.md`（本登记件） | **0 存在**（无撞名） |
+| `_september_workspace/letters/查理_glm_dualtrack_paper_sole_letter_2026_10_01.md` | **0 存在**（无撞名） |
+| `_september_workspace/letters/查理_deposon双主线论文终稿_2026-10-01_v0.3.md` | **0 存在**（无撞名） |
+| `_september_workspace/results/_charlie_delivery_register_2026_10_08.md`（本登记件） | **0 存在**（无撞名） |
 
 落册前 `letters/` 目录存在，文件数 **84 件**（`-File -Force` 计数）。
 
@@ -47,8 +47,8 @@
 
 | # | dest 全路径 | dest sha256[:12] | dest 字节 | dest mtime | 与源件逐件对拍 |
 |---|---|---|---|---|---|
-| ① | `D:\私人资料\deposon-repo\letters\查理_glm_dualtrack_paper_sole_letter_2026_10_01.md` | `3c5059319ffe` | 13,105 | 2026-10-02 00:19:43 | ✅ 全哈希等值（`MATCH_1 = True`） |
-| ② | `D:\私人资料\deposon-repo\letters\查理_deposon双主线论文终稿_2026-10-01_v0.3.md` | `fd39cf811232` | 236,425 | 2026-10-02 00:19:43 | ✅ 全哈希等值（`MATCH_2 = True`） |
+| ① | `_september_workspace/letters/查理_glm_dualtrack_paper_sole_letter_2026_10_01.md` | `3c5059319ffe` | 13,105 | 2026-10-02 00:19:43 | ✅ 全哈希等值（`MATCH_1 = True`） |
+| ② | `_september_workspace/letters/查理_deposon双主线论文终稿_2026-10-01_v0.3.md` | `fd39cf811232` | 236,425 | 2026-10-02 00:19:43 | ✅ 全哈希等值（`MATCH_2 = True`） |
 
 落册后 `letters/` 文件数 **86 件**（＝84 + 2，与新增 2 件相符）。
 
@@ -88,9 +88,9 @@
 
 | 检索面 | 范围 | 命中 |
 |---|---|---|
-| 工作区全库 | `D:\私人资料\deposon-repo`（ripgrep，忽略大小写） | **0 命中** |
+| 工作区全库 | `_september_workspace`（ripgrep，忽略大小写） | **0 命中** |
 | 工作区文件名 | 全库 glob `**/*查理*` | **0 命中** |
-| 附件区文件名 | `C:\Users\Administrator\.minimax\v2\assets` 全量递归 204 件 | **0 命中**（`e5c6ed0e0953` 文件名命中数 = 0） |
+| 附件区文件名 | `〔本机用户目录〕/.minimax/v2/assets` 全量递归 204 件 | **0 命中**（`e5c6ed0e0953` 文件名命中数 = 0） |
 | 附件区正文 | 同批件正文检索 `e5c6ed0e0953` | 仅命中**本回函自身 §三导语（第 36 行）与 §五（第 105 行）两处引用**，无被取代件实体 |
 
 附件区另存 6 件历史「查理」件（均属 2026-09-18 / 2026-09-20 批次，**非**本次 `e5c6ed0e0953`）：

@@ -5,7 +5,7 @@
 - **本件**：`results/_f4_direction1_seed_and_domain_draft_2026_10_11.md`（**新名新建 · 0 覆写**；落前 `Test-Path` ＝ **`False`** ＋ 全仓 glob 查重见 §E-1）
 - **命名合规**：`_主题_日期` 三段式；首段 `_f4_` ＝ **出口编号标识非阶段号** ⇒ 合 PI 2026-09-29 命名裁（`57024f2cd30a` §1.2②）＋ 10-01 补记；⛔ `_v5_`／`_v4_`／`_v3_`
 - **出件**：**protocol-keeper（口径与预登记官）**（`agent-3e0c193da529` · 分支会话 `mvs_0f85e98fb43d4e3ba89eca4c48daf2d7`｜**署名如实** · ⛔ **0 冒充** PI／parent／worker／verifier／verdict-keeper／evidence-auditor／doc-writer）
-- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（本棒 **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 派生 JSON 新建或合并**｜⛔ **0 触及 `D:\私人资料\_non_upload_local_archive`**
+- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（本棒 **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 派生 JSON 新建或合并**｜⛔ **0 触及 `〔本地归档区〕`**
 - **日期**：2026-10-11
 - **状态**：🟡 **草案 · 候 PI 核准生效（生效即锁 · 冻后 0 改）** ＋ 📋 `seed″` 三条候选规则**已实测其值**（机械求值）＋ 📋 同族公式（`seed′` 公式）**经本棒独立复现**（§1-3）＋ 📋 三面不可比之承受**已由 PI 明示**（照录，见 §B-5）
 

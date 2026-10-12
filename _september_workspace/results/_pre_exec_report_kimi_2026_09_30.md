@@ -45,7 +45,7 @@
 
 ## §5 W3 复验结论（委托 §2.2 三项 + §2.4 脱敏）
 
-- 件本体：`D:\私人资料\AUDIT_2026-08-30.json` · **3,143 B / `ED5EB708F332`** 与表载逐字一致 ✅
+- 件本体：`〔本地资料区〕/AUDIT_2026-08-30.json` · **3,143 B / `ED5EB708F332`** 与表载逐字一致 ✅
 - 身份 #1：`results/sha256_preregistration_anchors.status="PASS 5/5"`（嵌套于 results/ 下，委托 §2.2 路径描述与实测结构差异已核明）· `traceability_spot_checks` **9 条** · `overall=PASS` ✅
 - 身份 #2：被 `deposon-sub\results\_kimi_ftfb_s7_independent_recompute_2026_09_18.json:99` 引作 `prior_independent_audit`，原文逐字一致 ✅
 - 身份 #3：件内 5 锚与盘上现值 **5/5 吻合**（0 漂移）✅

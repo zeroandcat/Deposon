@@ -75,7 +75,7 @@ export function readRegistrySkillByName(registry, name, options = {}) {
 
 | 项 | 在册旧值（09‑29 版） | **本棒实测（2026-10-09）** | 判定 |
 |---|---|---|---|
-| `app.asar` 路径 | 在册安装产物 | `C:\Users\Administrator\AppData\Local\Programs\MiniMax Code\resources\app.asar` | 可得 |
+| `app.asar` 路径 | 在册安装产物 | `〔本机用户目录〕/AppData/Local/Programs/MiniMax Code\resources\app.asar` | 可得 |
 | 字节 | **426,404,876 B** | **395,844,226 B** | ⚠️ 不等（**−30,560,650 B**） |
 | mtime | 2026‑09‑29 22:25:34 | **2026-10-04 20:46:02** | ⚠️ 已变更 |
 | SHA‑256 | 未在册 | `ce221e8d84c045c6cffd751ba834dcbd4b9a4805867d9748d639fcae4f36338d` | **与登记件 §2.1 逐字一致** ⇒ 版本未再漂移 |

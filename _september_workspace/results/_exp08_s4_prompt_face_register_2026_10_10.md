@@ -29,7 +29,7 @@
 |---|---|
 | **件名** | `_s4_topup_questionnaire_design_2026_10_09.md` |
 | **仓内相对路径** | `results/_s4_topup_questionnaire_design_2026_10_09.md`（**repo 相对路径规范**） |
-| **绝对路径** | `D:\私人资料\deposon-repo\results\_s4_topup_questionnaire_design_2026_10_09.md` |
+| **绝对路径** | `_september_workspace/results/_s4_topup_questionnaire_design_2026_10_09.md` |
 | **SHA-256（实测）** | 见 §5 自证面（⛔ 本件**不自写入本件**，随交付回执回报） |
 | **SHA-12** | **`b8f8f987f21b`** |
 | **bytes** | **38,466** |

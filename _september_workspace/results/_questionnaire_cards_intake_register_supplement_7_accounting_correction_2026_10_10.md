@@ -4,7 +4,7 @@
 - **被补正之断言（原文照录 · 一字不改）**：
   > 「**2. 全表行数之活库变动** —— 第七批落册读时点 419 行 → 本批读时点 **423** 行（`answered` 416→420、`pending` 1→1、`superseded` 2→2）；**其差 4 行与本批四卡之建卡相对应，另建之他卡（若存在）⛔ 0 转录。**」
   —— 引 `1fb8eac82781` **§2.4「与既有登记件之差异登记」第 2 条**（**原位留存 · 本件 0 触动**）。
-- **复核第一源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（表 `questionnaire_requests`），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。**本棒读得时点 ＝ 2026-10-10 17:03:43.801 +0800**（库 mtime 同刻实测）。
+- **复核第一源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`（表 `questionnaire_requests`），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。**本棒读得时点 ＝ 2026-10-10 17:03:43.801 +0800**（库 mtime 同刻实测）。
 - **本件**：`results/_questionnaire_cards_intake_register_supplement_7_accounting_correction_2026_10_10.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False` ＋ 全仓同名 glob **0** 命中实测，§5.1）。
 - **命名合规**：`_主题_日期`；⛔ **0 带 V-阶段前缀**（0 `_v3_`／`_v4_`／`_v5_`）；沿既有 `_supplement_` 续编体例之**勘正支**命名（`_…_correction_` 独立成件，⛔ **0 并入 `_supplement_8_` 之转录序列** —— 本件**非**落册转录件，不占批次序号）。
 - **出件**：**doc-writer（文稿起草官）**（分支会话 `mvs_9468407f5d14454d86bcd1eb20a050a4` · **署名如实** · ⛔ **0 冒充** PI／parent／protocol-keeper／worker／verdict-keeper／verifier／evidence-auditor）。
@@ -35,7 +35,7 @@
 
 | 项 | 值 |
 |:--|:--|
-| 库路径 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` |
+| 库路径 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` |
 | 库文件大小（读得时点） | `474656768` bytes |
 | 库文件 mtime（读得时点，CST） | **`2026-10-10 17:03:43.801760 +0800`** |
 | 接入方式 | `sqlite3.connect("file:...?mode=ro", uri=True)` —— **只读**（0 写入／0 修改／0 建表／0 提交） |
@@ -133,7 +133,7 @@
 | **本棒写动作** | **新增 1 件**（本件）＋ `.tmp` 内临时核验脚本（**非交付件**，已以 `rm --` 清理干净） |
 | **运行时库** | **只读**（`mode=ro`）—— 0 写入／0 修改／0 建表／0 提交／0 checkpoint |
 | **0 派生 JSON** | ⛔ **0 新建／0 合并**任何派生物 JSON |
-| **归档禁区** | **未触及** —— ⛔ **0 访问／0 读取** `D:\私人资料\_non_upload_local_archive`（本棒全仓哈希检索时已显式排除该路径） |
+| **归档禁区** | **未触及** —— ⛔ **0 访问／0 读取** `〔本地归档区〕`（本棒全仓哈希检索时已显式排除该路径） |
 
 ### 5.3 本件逐项纪律对照
 
