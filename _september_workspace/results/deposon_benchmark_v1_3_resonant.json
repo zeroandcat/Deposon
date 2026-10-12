@@ -1,0 +1,82 @@
+{
+  "experiment": "P1-1 conjugate-map activation (M2): delta!=0 resonance channel",
+  "api_consumption": 0,
+  "method": {
+    "E_0": "节点 resonance_energy = 构造期 energy (不变)",
+    "E_photon": "(1+cos(path_emb, node_emb))/2 ∈ [0,1], path_emb=路径节点确定性嵌入的归一化均值 (deterministic_embedding, 64d)",
+    "modes": {
+      "resonant": "所有节点散射输入改为E_photon",
+      "resonant_hybrid": "仅非trap节点用E_photon, trap保持类型强绑定(δ=0)"
+    },
+    "graph_and_paths": "与unified完全同图同路径集合, 仅散射输入改变",
+    "note": "deterministic_embedding为哈希式确定性嵌入(无语义), E_photon是语义匹配的结构代理; 路径嵌入含节点自身, 引入自我相似偏置(E_photon均值≈0.7)"
+  },
+  "results": {
+    "unified": {
+      "traps_acc": 1.0,
+      "simple_acc": 1.0,
+      "delta": "≡0 (共振休眠)"
+    },
+    "resonant": {
+      "traps_acc": 1.0,
+      "simple_acc": 1.0,
+      "traps_avg_ether": 0.37453360340514186,
+      "delta_by_type": {
+        "number": {
+          "n": 400,
+          "mean": 0.39128629926658026,
+          "std": 0.09328627234698289,
+          "min": 0.23619860777964635,
+          "max": 0.6122138387780485
+        },
+        "operation": {
+          "n": 116,
+          "mean": 0.4316647532383606,
+          "std": 0.08327081076479141,
+          "min": 0.25466011923987086,
+          "max": 0.4805883401805565
+        },
+        "answer": {
+          "n": 400,
+          "mean": 0.7395980102105056,
+          "std": 0.10481421607308218,
+          "min": 0.5240280213176738,
+          "max": 0.9197014454009101
+        },
+        "trap": {
+          "n": 300,
+          "mean": 0.6547252127847739,
+          "std": 0.11767812944224686,
+          "min": 0.49745575593816904,
+          "max": 0.8196214618835099
+        }
+      },
+      "trap_reflection": {
+        "mean": 0.7832557690941863,
+        "min": 0.756718128176932,
+        "frac_below_block_threshold_0.7": 0.0
+      }
+    },
+    "resonant_hybrid": {
+      "traps_acc": 1.0,
+      "simple_acc": 1.0,
+      "traps_avg_ether": 0.367547401294771,
+      "trap_reflection": {
+        "mean": 0.838709677419355,
+        "min": 0.8387096774193549
+      }
+    }
+  },
+  "findings": [
+    "δ≠0 激活成功: 各类型δ均值0.39~0.74 (原≡0), 共振通道进入工作状态",
+    "性能无损: resonant 与 resonant_hybrid 在 traps/simple 均保持100% (unified同为100%)",
+    "预判的张力确实存在但限于幅度: 朴素resonant下trap反射率从0.839降至均值0.783(min0.757), 方向符合预期(语义失配→g_eff下降→阻断削弱), 但δ≤0.9受[0,1]量纲约束, g_eff仍足以维持r>0.7阻断阈值, 0%阻断失效",
+    "resonant_hybrid (trap保持强绑定) 彻底消除该张力: trap r恒=0.839",
+    "诚实声明: 当前E_photon基于哈希嵌入而非真语义, 结论为\"δ≠0在动力学上可行且无损\", 真语义嵌入下的行为需真实embedding模型验证"
+  ],
+  "physics_audit": {
+    "t_plus_r_plus_a_max_deviation": 2.220446049250313e-16,
+    "tolerance": 1e-06,
+    "passed": true
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "test": "Wilcoxon 符号秩检验（非参数配对检验）",
+  "test_id": "wilcoxon",
+  "statistic": 17.5,
+  "p_value": 0.003052,
+  "effect_size": {
+    "r": 0.8333
+  },
+  "stats": {
+    "field_named": {
+      "n": 20,
+      "median": 0.1307
+    },
+    "random_named": {
+      "n": 20,
+      "median": 0.0588
+    }
+  },
+  "normality_check": "Shapiro-Wilk W = 0.8701, p = 0.01182（数据不服从正态分布）",
+  "selection_reason": [
+    "配对差值不服从正态分布 → 选择 Wilcoxon 符号秩检验"
+  ],
+  "alpha": 0.05,
+  "interpretation": [
+    "检验方法：Wilcoxon 符号秩检验（非参数配对检验）",
+    "显著性水平：α = 0.05",
+    "结论：p = 0.003052 < 0.05，差异/关联具有统计学显著性。",
+    "效应量：|r| = 0.8333（大效应量）",
+    "通俗解读：配对数据之间存在显著差异。"
+  ]
+}

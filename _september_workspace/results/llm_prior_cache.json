@@ -1,0 +1,56 @@
+{
+ "spec_version": "v1.6",
+ "model": "kimi-for-coding",
+ "endpoint": "https://api.kimi.com/coding/v1/chat/completions",
+ "n_labels": 45,
+ "prompt_sha256": "aa6b63f0935b5f7d7881a0ad0713152e8bea1338d45d82840ea0311675f776e5",
+ "n_prior_edges": 9,
+ "prior": [
+  {
+   "parent": 0,
+   "child": 1,
+   "confidence": 1.0
+  },
+  {
+   "parent": 1,
+   "child": 2,
+   "confidence": 0.9
+  },
+  {
+   "parent": 1,
+   "child": 3,
+   "confidence": 0.85
+  },
+  {
+   "parent": 1,
+   "child": 4,
+   "confidence": 0.85
+  },
+  {
+   "parent": 1,
+   "child": 5,
+   "confidence": 0.8
+  },
+  {
+   "parent": 1,
+   "child": 6,
+   "confidence": 0.85
+  },
+  {
+   "parent": 1,
+   "child": 8,
+   "confidence": 0.85
+  },
+  {
+   "parent": 6,
+   "child": 7,
+   "confidence": 0.95
+  },
+  {
+   "parent": 8,
+   "child": 9,
+   "confidence": 0.95
+  }
+ ],
+ "note": "真实 Kimi API 响应落盘缓存, 供复现; API key 仅存在于运行时环境变量, 不写入本文件。"
+}
