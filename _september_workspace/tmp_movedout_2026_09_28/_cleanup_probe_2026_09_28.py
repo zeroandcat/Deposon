@@ -8,7 +8,7 @@ import hashlib
 import pathlib
 import sys
 
-ROOT = pathlib.Path(r"D:/私人资料/deposon-repo")
+ROOT = pathlib.Path(r"_september_workspace")
 TMP = ROOT / ".tmp"
 RESULTS = ROOT / "results"
 

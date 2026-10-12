@@ -37,7 +37,7 @@
 
 | 项 | 值 |
 |:--|:--|
-| 库路径／表 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` ／ `questionnaire_requests` |
+| 库路径／表 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` ／ `questionnaire_requests` |
 | 接入方式 | `sqlite3.connect("file:...?mode=ro", uri=True)` —— **只读**（⛔ 0 写入／0 提交） |
 | **读得时点** | **2026-10-10 18:58:50 +0800**（**两读点恒等** · 全库 **438** 行 ⇒ **0 漂移**） |
 | 目标行 | `request_id` ＝ **`ask_4cce7bab04bc02647de1155c`**（`status` ＝ `answered`；`answered_at` ＝ 2026-10-10 **18:25:59.277** +0800） |
@@ -193,7 +193,7 @@ stepId: typeb | selectedOptionIds: ["jia"] | selectedOther: false
 - **0 改类型码面**：⛔ **0 改**任何件之 `displacement_type` 之值；⛔ **0 增设第 5 类**；⛔ **0 改** `seq_v3`／`seq_v31`／`layer_first_pos_v31`／`new_hit_words` 任一既有字段。
 - **0 回改轮 52 件**：`debd88fc150c`／`2bda07af86fc`／`f48601fee958` **各 0 字节改动**（仅只读与引证）。
 - **0 翻案**：⛔ **0 改**任何既有判定、⛔ **0 赋** `k_*` 布尔、⛔ **0 调** `TH-*`／`K-*` 任何字面。
-- **V1–V3 资产 0 触动**；**R5 frozen 0 追加**；⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`。
+- **V1–V3 资产 0 触动**；**R5 frozen 0 追加**；⛔ **0 触及** `〔本地归档区〕`。
 - **R4**：⛔ **0 读 key／0 读 `.env`／0 落盘凭据**；本件**不含任何 key 形态字面**。
 - **0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 跑 runner**。
 
@@ -224,7 +224,7 @@ stepId: typeb | selectedOptionIds: ["jia"] | selectedOther: false
 | **R4 key 永不明文** | ✅ ⛔ 0 读 `.env`／key；0 载任何 key／凭证 |
 | **命名合规** | ✅ §8.3（`_主题_日期` ＋ `_round56_` ＝ 轮次编号；**0 V-阶段前缀**） |
 | **0 网络／0 skill／0 LLM／0 实验** | ✅ 未调用（仅本机只读检索 ＋ 本机哈希核算 ＋ 运行时库 `mode=ro` 只读核录 ＋ 两件 JSON 只读解析） |
-| **0 触及禁触目录** | ✅ ⛔ 0 触及 `D:\私人资料\_non_upload_local_archive` |
+| **0 触及禁触目录** | ✅ ⛔ 0 触及 `〔本地归档区〕` |
 
 ---
 

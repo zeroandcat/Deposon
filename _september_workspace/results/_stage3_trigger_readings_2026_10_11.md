@@ -8,7 +8,7 @@
   2. `results/_stage3_trigger_readings_items_2026_10_11.json`（**`079108c62a82`** · 21,049 B · 逐件登记 JSON）
   3. `results/_s4prime_readings_runner_2026_10_11.py`（**`0aa414188361`** · 23,766 B · **可复现执行体**；沿第二域体例 `_s4prime_five_lines_runner_2026_10_11.py` 之置位）
 - **出件**：**worker**（分支会话 `mvs_bf4b918183004c5d9c91624830e1cf68`｜**署名如实** · ⛔ **0 冒充** PI／parent／protocol-keeper／verifier／verdict-keeper／evidence-auditor／doc-writer）
-- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（⛔ **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 API key**｜⛔ **0 触及 `D:\私人资料\_non_upload_local_archive`**（0 读、0 写、0 列目录）
+- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（⛔ **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 API key**｜⛔ **0 触及 `〔本地归档区〕`**（0 读、0 写、0 列目录）
 - **日期**：**2026-10-11**（落盘时点）
 - **构造面 vs 真实面（构造自由度申报）**：本件之论据面 ＝ **S4 冻结面 179 行（21 件 `*addendum*.json` · 0 改）** ＋ **第三构造域 26 件**（`c34835ad59cf`）＋ **`MD` 生效定义式之冻结字面**（`5d8cd0d1676f` §2）＋ **模型侧既有机制**（`8a81d90c69ba` 之 `build_tree`／`predict_tree`／`nw_sim`／`nled_sim`，含 `UNKNOWN` 空标签兜底）｜**外推边界 ＝ 第三构造域（`c34835ad59cf` 之 26 件 ＋ 该 26 件之 `MD` 轴）** ⇒ ⛔ **0 外推**至第一集（`acedff01d18c`）／第二集（`3c25e1a2ea94`）、⛔ **0 外推**至第三集外之任何件、⛔ 0 外推至任何未登记之构造变更、⛔ 0 外推至五线／CI、⛔ 0 外推至 v1.1 基础面
 
@@ -325,7 +325,7 @@
 ## §9 可复现路径（**逐字**）
 
 ```
-cd D:\私人资料\deposon-repo\results
+cd _september_workspace/results
 python _s4prime_readings_runner_2026_10_11.py
 ```
 

@@ -10,9 +10,9 @@ import os, sys, json, time, hashlib
 import numpy as np
 from datetime import datetime, timezone, timedelta
 
-DPATH_REF = r'D:\私人资料\deposon-repo\results\deposon_dpath_cross_modal_2026_09_10.json'
-VOLC_22CAP_REF = r'D:\私人资料\deposon-repo\results\deposon_volcengine_22caption_embedding_2026_09_10.json'
-SPEC_DIR = r'D:\私人资料\deposon-repo\docs\V3X'
+DPATH_REF = r'_september_workspace/results/deposon_dpath_cross_modal_2026_09_10.json'
+VOLC_22CAP_REF = r'_september_workspace/results/deposon_volcengine_22caption_embedding_2026_09_10.json'
+SPEC_DIR = r'_september_workspace/docs/V3X'
 
 LOG_LINES = []
 def log(msg):
@@ -23,7 +23,7 @@ def log(msg):
 
 def main():
     # 锚校验
-    anchor_path = r'D:\私人资料\deposon-repo\verifier\handoff\KT_ABC1_anchors_sha256_12.json'
+    anchor_path = r'_september_workspace/verifier/handoff/KT_ABC1_anchors_sha256_12.json'
     anchor_sha = hashlib.sha256(open(anchor_path, 'rb').read()).hexdigest()[:12]
     assert anchor_sha == '03c6c01f3697', f'5 锚 SHA 变: {anchor_sha}'
     log(f'ANCHOR_OK SHA-12={anchor_sha}')
@@ -237,7 +237,7 @@ for cid, (x, y) in svd2.items():
         },
     }
 
-    output_json = r'D:\私人资料\deposon-repo\results\deposon_v2_phase4_f4_2026_09_11.json'
+    output_json = r'_september_workspace/results/deposon_v2_phase4_f4_2026_09_11.json'
     with open(output_json, 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     log(f'OUTPUT_SAVED {output_json}')
@@ -245,7 +245,7 @@ for cid, (x, y) in svd2.items():
     log('DONE')
     
     # Write log
-    log_path = r'D:\私人资料\deposon-repo\results\deposon_v2_phase4_f4_2026_09_11.log'
+    log_path = r'_september_workspace/results/deposon_v2_phase4_f4_2026_09_11.log'
     with open(log_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(LOG_LINES))
     return 0

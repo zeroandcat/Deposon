@@ -5,7 +5,7 @@
   - **卡R9**（`ask_e9891b4bf1f9a615ef2f897d`，库内 `title` 逐字：「**deposon 轮56 卡R9 · 收口卡（上）（构造种子＋界分残项）**」）；**卡答时点 ＝ 2026-10-10 18:59:07.309 +0800**（库内 `answered_at` ＝ `submittedAt` ＝ `1791629947309` 实测换算）；`status` ＝ `answered`；创建 18:57:30.596；`session_id` ＝ `mvs_bbeb804b1a6a41109be740636eed1709`。
   - **`v3v6` 之 PI 答（实测逐字）**：`selectedOptionIds` ＝ `["jia"]`；`selectedOther` ＝ `false`；选项 `jia` 逐字：「**甲·①另出修订件＋②即启用**」，其 `description` 逐字：「另出明文排除修订件＋即启用（以启用登记件落痕）」。
   - **本件所落者 ＝ 该答之第 ① 项**（「另出明文排除修订件」）⇒ **封「因不明／因难而止」落 `give-up` 之后门**；同答第 ② 项（`G-2` 即启用）**不属本件**，归 `results/_round56_g2_enable_and_v1_rule_register_2026_10_10.md`（另名登记件）。
-- **卡答第一源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（表 `questionnaire_requests`；`request_id` ＝ `ask_e9891b4bf1f9a615ef2f897d` 命中 **1** 行），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。**本棒读得时点 ＝ 2026-10-10 19:09:40.245 +0800**（逐字落盘文本之取样时点；首次只读命中 ＝ 19:09:25.996 +0800）。⛔ **0 网络 · 0 写库 · 0 改库 · 0 建表 · 0 提交**。
+- **卡答第一源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`（表 `questionnaire_requests`；`request_id` ＝ `ask_e9891b4bf1f9a615ef2f897d` 命中 **1** 行），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。**本棒读得时点 ＝ 2026-10-10 19:09:40.245 +0800**（逐字落盘文本之取样时点；首次只读命中 ＝ 19:09:25.996 +0800）。⛔ **0 网络 · 0 写库 · 0 改库 · 0 建表 · 0 提交**。
 - **⚠ 读得时点 ≠ 卡答时点（诚实交代 · 0 混同）**：`answered_at`（18:59:07.309）＝ **效力发生时点**；本棒读库之时（19:09:40.245）＝ **证据取得时点**；二者**不可混同**。⛔ **0 以活库 mtime 代表任一时点**。
 - **⚠ 转录一致性声明（如实 · 非漏报）**：派工单所载 `v3v6` ＝ `jia`（甲·另出修订件）经**本棒以库原件独立复核**，与库内 `reply_payload` 之 `answers` **逐项相符（0 分歧）**。本棒**未**依赖转述，一律以**库原件**为准。
 - **本件**：`results/_round56_gu_backdoor_exclusion_revision_2026_10_10.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False` ＋ `results/*round56_g2*`／`*backdoor*`／`*round56*revision*` glob **0** 命中实测，§7.1）。
@@ -41,7 +41,7 @@ PI 于卡R9 `v3v6` 裁「**①另出修订件**」⇒ 本件即该**另名修订
 
 | 项 | 值 |
 |:--|:--|
-| 库路径 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` |
+| 库路径 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` |
 | 表 | `questionnaire_requests` |
 | 卡R9 命中 | **1** 行（`request_id` ＝ `ask_e9891b4bf1f9a615ef2f897d`） |
 | 接入方式 | `sqlite3.connect("file:...?mode=ro", uri=True)` —— **只读**（0 写入／0 修改／0 建表／0 提交） |
@@ -154,7 +154,7 @@ PI 于卡R9 `v3v6` 裁「**①另出修订件**」⇒ 本件即该**另名修订
 | **派生 JSON** | ⛔ **0 新建／0 合并**（仅**只读**查询运行时库之既有 `reply_payload`） |
 | **临时脚本** | 落 `%TEMP%`（非工作区）· 执行毕经 `rm --` **可恢复删除通道**清理 ⇒ 实测残留 **0**；⛔ **0 落盘于工作区** |
 | **运行时库** | **只读**（`mode=ro`）—— 0 写入／0 修改／0 建表／0 提交 |
-| **`D:\私人资料\_non_upload_local_archive`** | ⛔ **0 触及** |
+| **`〔本地归档区〕`** | ⛔ **0 触及** |
 | **阈值／门柱／`TH-*`／`K-*`／`N*`** | ⛔ **0 调** |
 
 ### 5.2 源件「候 PI 核准」标记之留原状（**明示 · 0 兼顾体面**）

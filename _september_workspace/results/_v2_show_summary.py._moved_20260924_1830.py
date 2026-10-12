@@ -1,11 +1,11 @@
 """Show 5 stage summaries"""
 import json
 for j in [1,2,3,4,5]:
-    p = {1: r'D:\私人资料\deposon-repo\results\deposon_v2_phase1_60cells_2026_09_11.json',
-         2: r'D:\私人资料\deposon-repo\results\deposon_v2_phase2_f2_2026_09_11.json',
-         3: r'D:\私人资料\deposon-repo\results\deposon_v2_phase3_f3_2026_09_11.json',
-         4: r'D:\私人资料\deposon-repo\results\deposon_v2_phase4_f4_2026_09_11.json',
-         5: r'D:\私人资料\deposon-repo\results\deposon_v2_phase5_f5_2026_09_11.json'}[j]
+    p = {1: r'_september_workspace/results/deposon_v2_phase1_60cells_2026_09_11.json',
+         2: r'_september_workspace/results/deposon_v2_phase2_f2_2026_09_11.json',
+         3: r'_september_workspace/results/deposon_v2_phase3_f3_2026_09_11.json',
+         4: r'_september_workspace/results/deposon_v2_phase4_f4_2026_09_11.json',
+         5: r'_september_workspace/results/deposon_v2_phase5_f5_2026_09_11.json'}[j]
     d = json.load(open(p,encoding='utf-8'))
     phase = d.get('phase', '?')
     print(f'=== Stage {j}: {phase[:80]} ===')

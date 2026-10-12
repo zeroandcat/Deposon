@@ -13,7 +13,7 @@
     - `sc1c`（header「sc1 确认＋6-1 字面」）—— question 逐字：「sc1 确认＋6-1：「全语料」硬约束按『非硬约束·维持 24 先行采行＋另议保留』登记若何？6-1 定义字面（若给即直采）？」；选项：`jia`「甲·确认（6-1 未闭）」（desc「无字面；6-1 维持未闭（落差存册）」）／`yi`「乙·确认＋给字面」（desc「确认并现给「全语料」定义字面（可写入『其他」）」）／`bing`「丙·需改」（desc「注明须改之处」）／**`ding`「丁·另议」（desc「候 PI 另定」）**。
   - ⚠ **关键事实（如实 · 非漏报）**：PI 之 Other 栏**逐字仅「D且直接采认」六字**，⛔ **0 含任何定义字面**；且 **PI 未勾选 `yi`（乙·确认＋给字面）** ⇒ **字面之给出者非 PI 本人**，本件所出字面**系依「另议＋直接采认」令之拟案**（效力位见 §2.2-④）。
 - **采认依据之令（PI 同日标准令 · 照录在册）**：`results/_round56_v4_kd_row_correction_revision_2026_10_10.md`（`048eb7b0d8a2` 系其自报值，本棒未复算，见 §6-3）§2.3 注记载 PI 于卡R10 同族答法之体例；「另议毕项时，直接采认」之标准令见 `results/_round56_g2_enable_and_v1_rule_register_2026_10_10.md`（`5f4a2e2f0d61` 系其自报值）§7-1。⇒ **本件为「另议」路径之出件产物，毕后径行采认（0 再回呈采认卡）**；**采认≠生效登记**，生效登记走后续登记批。
-- **卡答第一源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（表 `questionnaire_requests`，`request_id` ＝ `ask_505edb1aa66152180df47f99`，**1 行命中**），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。⛔ **0 网络 · 0 写库 · 0 改库 · 0 建表 · 0 提交 · 0 checkpoint**。
+- **卡答第一源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`（表 `questionnaire_requests`，`request_id` ＝ `ask_505edb1aa66152180df47f99`，**1 行命中**），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。⛔ **0 网络 · 0 写库 · 0 改库 · 0 建表 · 0 提交 · 0 checkpoint**。
 - **本件**：`results/_round56_idx_sc1_resolution_2026_10_10.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False` ＋ glob **0** 命中实测，见 §6-1）。
 - **命名合规**：`_主题_日期`；首段 `_round56_` ＝ **轮次编号**（**非**阶段前缀，⛔ 非 `_v3_`／`_v4_`／`_v5_` 之 V-阶段族）⇒ 合 PI 2026-09-29 命名裁（`57024f2cd30a` §1.2②）＋ 10-01 补记「派工建议名亦须合规」。
 - **出件**：**verdict-keeper（判定收口官）**（`agent-3a4d09ba3c90` · 分支会话 `mvs_c0ceef5ad9984f24bbee395a1a697a0e`｜**署名如实** · ⛔ **0 冒充** PI／parent／worker／protocol-keeper／doc-writer／evidence-auditor／verifier）。
@@ -307,7 +307,7 @@
 | 既有件触动数 | **0** —— §1 十七项锚**全部只读**；⛔ **0 编辑／0 覆写／0 追加／0 改名／0 移动／0 删除** |
 | 产出件数 | **1**（本件）；⛔ **0 派生 JSON 新建或合并** |
 | 临时脚本 | 1 件（读库用），落 `%TEMP%`，执行毕经 `Remove-Item -LiteralPath` 清理 ⇒ **残留 ＝ 0**（本棒实测 `Test-Path=False`）；⚠ **本棒 0 以裸 `rm` 绕过可恢复删除通道**（沿 OS 平台之等效可恢复删除路径） |
-| R5／V1–V3 | **frozen 0 追加；V1–V3 资产 0 触动**；⛔ **0 触及** `D:\私人资料\_non_upload_local_archive` |
+| R5／V1–V3 | **frozen 0 追加；V1–V3 资产 0 触动**；⛔ **0 触及** `〔本地归档区〕` |
 | R4 | ⛔ **0 读 key／0 读 `.env`／0 落盘凭据**；本件**不含任何 key 形态字面** |
 | 网络／skill／LLM | **0 网络 ／ 0 skill ／ 0 LLM**；⛔ 0 跑 executor／0 跑 runner／0 复算读数 |
 

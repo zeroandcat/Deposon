@@ -20,7 +20,7 @@
 | 3 | `docs/V3X/P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md` | **`d427b2f57c33`** | 6,301 | ✅ 一致（与 `b69d65cbb329` §0 表第 4 行同值） | ⭐ **五锚清单唯一字面来源**（§2 L17–L29，本 turn **逐行直读**，非转录） |
 | 4 | `verifier/handoff/KT_ABC1_anchors_sha256_12.json` | **`03c6c01f3697`** | 6,680 | —（派工单未给，本 turn 定位） | ⭐ **兄弟族（P_A/P_B/P_C1 命名混淆，见 §3 注）锚登记载体**，含 5 值 frozen-run roster |
 | 5 | `docs/V3X/RISK3_V0_FIXES_2026_09_11.md` | **`c00d1c22e7ed`** | 13,271 | —（本 turn 定位） | §6.2 KT-A1 锚表（L205–L211）＝ roster 的**第二处**登记副本 |
-| 6 | `D:/私人资料/deposon_bundle_embedded.md` | 20,577,910 | — | — | 2026-09-01 全库快照（base64 包裹 zip，638 条）—— **本 turn 纯内存解码，0 落盘** |
+| 6 | `〔本地资料区〕/deposon_bundle_embedded.md` | 20,577,910 | — | — | 2026-09-01 全库快照（base64 包裹 zip，638 条）—— **本 turn 纯内存解码，0 落盘** |
 
 ---
 
@@ -43,11 +43,11 @@
 
 | 面 | 范围 | 方法 | 本 turn 结果 |
 |---|---|---|---|
-| ① | 工作区全树 `D:/私人资料/deposon-repo/` | 文件名 glob（`*scal*` / `*probe*` / `*anchor*` / `*baseline*` / `*gtformal*` / `*llm_client*` / `*scaling_probe*` / `*P_C_V0_anchors*` / `*deposon_v1[789]*` / `*deposon_v2[01]*`）＋ **全树 SHA-256 复算 1,617 件** | `scaling_probe` 命名 **0 命中**；锚值命中见 §3 |
-| ② | `D:/私人资料/deposon-sub/`（仓外只读） | 同上 · 全树复算 **476 件** | 0 命中（`tmp_movedout_2026_09_28/` 已扫） |
-| ③ | `D:/私人资料/_non_upload_local_archive/`（仓外只读 · 逐层） | 同上 · 全树复算 **1,458 件**；含 `.trae/snapshots/`、`backups/`、`.mavis/`、`verify_archive_backup/`、`verifier/handoff/`、`verifier/runs/`、`tools/` 逐层列举 | 0 命中 `scaling_probe`；`backups/`·`.mavis/`·`verify_archive_backup/` 内 **0** 件 `llm_client|scaling|exp_harness|anchors` |
-| ③b | `D:/私人资料/Deposon_v1_2_0_交付包/`（仓外只读） | 全树复算 **23 件** | 0 命中（`upload/` + `output/` 全为 V1.2.0 期交付物） |
-| ④ | Windows 回收站 `C:\$Recycle.Bin` / `D:\$Recycle.Bin` | **只读扫描**，列目录 + 读 `$I` 元数据 | **0 与五锚相关**（详见下） |
+| ① | 工作区全树 `_september_workspace` | 文件名 glob（`*scal*` / `*probe*` / `*anchor*` / `*baseline*` / `*gtformal*` / `*llm_client*` / `*scaling_probe*` / `*P_C_V0_anchors*` / `*deposon_v1[789]*` / `*deposon_v2[01]*`）＋ **全树 SHA-256 复算 1,617 件** | `scaling_probe` 命名 **0 命中**；锚值命中见 §3 |
+| ② | `_september_workspace`（仓外只读） | 同上 · 全树复算 **476 件** | 0 命中（`tmp_movedout_2026_09_28/` 已扫） |
+| ③ | `〔本地归档区〕`（仓外只读 · 逐层） | 同上 · 全树复算 **1,458 件**；含 `.trae/snapshots/`、`backups/`、`.mavis/`、`verify_archive_backup/`、`verifier/handoff/`、`verifier/runs/`、`tools/` 逐层列举 | 0 命中 `scaling_probe`；`backups/`·`.mavis/`·`verify_archive_backup/` 内 **0** 件 `llm_client|scaling|exp_harness|anchors` |
+| ③b | `〔本地资料区〕/Deposon_v1_2_0_交付包/`（仓外只读） | 全树复算 **23 件** | 0 命中（`upload/` + `output/` 全为 V1.2.0 期交付物） |
+| ④ | Windows 回收站 `〔回收站〕` / `〔本机路径〕/$Recycle.Bin` | **只读扫描**，列目录 + 读 `$I` 元数据 | **0 与五锚相关**（详见下） |
 | ⑤ | `.tmp/`（工作区）、`_non_upload_local_archive/tmp/.tmp`、`%TEMP%` | 目录枚举 + 名称 glob | 0 命中（`%TEMP%` 命中 4 件均属他族：`anchor_fp.py` / `pk_anchor.py` / `verif_v3_div/anchors.py` / `vfy_sandbox/results/deposon_v20_baselines.json`） |
 | ⑥ | 历史台账 / 勘误链 / 档案 manifest 的**路径字面** | `grep` 内容面 | 7 件含五锚 ID；沿引件链**先核后引**定位到 `03c6c01f3697` 与 `c00d1c22e7ed` 两处登记副本（§3 关键） |
 | ⑥b | 2026-09-01 全库快照 `deposon_bundle_embedded.md` | **纯内存** base64 解码 → `zipfile` 目录遍历（638 条）＋ 逐成员内容面扫描 | `tools/` 仅 2 条（`make_figures_v2*.py`）；`verifier/handoff/` **0 条**；`docs/V3X/` **0 条**；全文 **0 条**内容含 `scaling_probe` / `P_C_V0_anchors` |
@@ -56,13 +56,13 @@
 
 | 盘 | 件 | 字节 | mtime | 读出结论 |
 |---|---|---:|---|---|
-| `C:\$Recycle.Bin\S-1-5-21-…-500\` | `$I52NDVM` | 156 | 2026-09-28 16:12:28 | 版本 2 · 原大小 **378,100 B** · 删除时刻 2026-09-28 08:12:28 · 原路径 `C:\Users\Administrator\Downloads\…docx`（**与五锚 0 关联**） |
+| `〔回收站〕/S-1-5-21-…-500/` | `$I52NDVM` | 156 | 2026-09-28 16:12:28 | 版本 2 · 原大小 **378,100 B** · 删除时刻 2026-09-28 08:12:28 · 原路径 `〔本机用户目录〕/Downloads/…docx`（**与五锚 0 关联**） |
 | 同目录 | `$R52NDVM`（数据体） | — | — | ⛔ **不存在** ⇒ 该条即便恢复亦 0 内容 |
-| `C:\…`、`D:\…` | `desktop.ini` ×2 | 129 | 2026-09-21 | 系统件 · 0 关 |
+| `〔本机路径〕/…`、`〔本机路径〕/…` | `desktop.ini` ×2 | 129 | 2026-09-21 | 系统件 · 0 关 |
 
 ⇒ **回收站 0 五锚相关件**（全盘仅 1 条已删项，且数据体已不在）。
 
-**补充覆盖面（派工单 6 面之外，本 turn 顺带扫及）**：`D:/私人资料/` 顶层 38 项全部列举（含 `deposon_bundle_embedded.md`、`deposon_bundle_selfextract.sh`、`HANDOFF_MACHINE_READABLE.json`、`SESSION_BOOTSTRAP_PROMPT.md`、`AUDIT_2026-08-30.json`）。**四根目录均 0 `.git`** ⇒ **0 版本历史可回溯**（无 git 对象库、无 stash、无 reflog 面）。
+**补充覆盖面（派工单 6 面之外，本 turn 顺带扫及）**：`〔本地资料区〕` 顶层 38 项全部列举（含 `deposon_bundle_embedded.md`、`deposon_bundle_selfextract.sh`、`HANDOFF_MACHINE_READABLE.json`、`SESSION_BOOTSTRAP_PROMPT.md`、`AUDIT_2026-08-30.json`）。**四根目录均 0 `.git`** ⇒ **0 版本历史可回溯**（无 git 对象库、无 stash、无 reflog 面）。
 
 ---
 
@@ -138,7 +138,7 @@
 | ② `deposon-sub/` | 同名 + 全树 476 件复算 | **0 命中** |
 | ③ `_non_upload_local_archive/` | 同名 + 全树 1,458 件复算 + `backups/`·`.mavis/`·`verify_archive_backup/`·`tmp/`·`.trae/snapshots/` 逐层 | **0 命中** |
 | ③b 交付包 | 全树 23 件复算 | **0 命中** |
-| ④ 回收站 | `C:\$Recycle.Bin` + `D:\$Recycle.Bin` 逐目录列举 | **0 命中**（唯一 `$I52NDVM` 与本锚 0 关联，且 `$R` 数据体已不在） |
+| ④ 回收站 | `〔回收站〕` + `〔本机路径〕/$Recycle.Bin` 逐目录列举 | **0 命中**（唯一 `$I52NDVM` 与本锚 0 关联，且 `$R` 数据体已不在） |
 | ⑤ `.tmp/` + `%TEMP%` | 名称 glob + 目录枚举 | **0 命中** |
 | ⑥b 2026-09-01 全库快照 | bundle 638 条：目录遍历（`tools/` 仅 2 条 `make_figures*`）＋ **逐成员内容面** 扫 `scaling_probe` / `P_C_V0_anchors` | **0 命中** |
 | git 面 | 四根目录 `.git` | **0 `.git`** ⇒ 0 历史可回溯 |
@@ -146,7 +146,7 @@
 **⇒ 该锚 = 全部检索面 0 命中，登记「不可得」**（非「在盘待核」）。
 
 **最近邻线索（线索 · 非本锚）**：
-- `D:/私人资料/deposon-sub/deposon_team/plugins/_p_l_p_c_finite_size_scaling_runner_2026_09_16.py` = 9,177 B / **`bca06b3cc2f7`**；产物 `results/_p_l_p_c_finite_size_scaling_2026_09_16/p_l_p_c_finite_size_scaling_results_2026_09_16.json` = 9,076 B / **`664e7cc05aec`**（工作区 ＋ `deposon-sub` ＋ `_non_upload_local_archive` **三处同指纹**）。
+- `_september_workspace/deposon_team/plugins/_p_l_p_c_finite_size_scaling_runner_2026_09_16.py` = 9,177 B / **`bca06b3cc2f7`**；产物 `results/_p_l_p_c_finite_size_scaling_2026_09_16/p_l_p_c_finite_size_scaling_results_2026_09_16.json` = 9,076 B / **`664e7cc05aec`**（工作区 ＋ `deposon-sub` ＋ `_non_upload_local_archive` **三处同指纹**）。
 - ⚠️ **该件 0 是本锚**：`a8da321b64d2` L183 已逐字判否（其 N 轴面为 `p_c_36_dang_R2_distribution`，非 spec §3.1 图族规模 N；`elapsed_seconds = 0.005299`；0 逐档原始观测）⇒ **本件仅作「最近邻」登记，0 建议顶替、0 视为找回**。
 
 ---
@@ -203,7 +203,7 @@
 | 7 | 0 恢复 bundle 落盘 | ✅ 2026-09-01 全库快照**纯内存** base64 + `zipfile` 解码，**0 写盘** |
 | 8 | 0 网络自取 | ✅ 全程本地只读 |
 
-**遗留未覆盖**：① `C:` / `D:` 全盘**非 deposon 相关**目录未逐件扫（本 turn 仅扫 `D:/私人资料/` 4 根 ＋ 回收站 ＋ `%TEMP%` ＋ 2026-09-01 bundle）；② 无 git 历史、无云端备份、无离线介质面（**PI 持有面**）0 可触及；③ `E:` 及其他盘符**未探**（盘上未见该盘符线索，0 编造其存在）。
+**遗留未覆盖**：① `C:` / `D:` 全盘**非 deposon 相关**目录未逐件扫（本 turn 仅扫 `〔本地资料区〕` 4 根 ＋ 回收站 ＋ `%TEMP%` ＋ 2026-09-01 bundle）；② 无 git 历史、无云端备份、无离线介质面（**PI 持有面**）0 可触及；③ `E:` 及其他盘符**未探**（盘上未见该盘符线索，0 编造其存在）。
 
 ---
 

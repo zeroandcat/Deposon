@@ -147,7 +147,7 @@ executor L361–L362 之 prereg **字面公式** `(raw + |gap|×(len_a+len_b)) /
 | 8 | **0 宣告五段链①毕** | |
 | 9 | **0 冒充 parent／PI／worker／verdict-keeper** | 本件仅 verifier 面之独立核定 |
 | 10 | **0 网络／0 skill／0 LLM／0 读 `.env`** | 全程离线 |
-| 11 | **0 触及** `D:\私人资料\_non_upload_local_archive` | |
+| 11 | **0 触及** `〔本地归档区〕` | |
 | 12 | **0 新建第二个交付件** | 临时脚本 4 支**仅落 `%TEMP%`**，用毕清理（见 §5.1） |
 | 13 | **0 以「尚未检查／未读／未计算」充作 known defect** | 本件 `U-6` 之核定**基于实测复算与源码级溯因** |
 | 14 | **0 就 `E-5` 之公式出入作裁** | 仅如实登记，归 protocol／verdict-keeper |

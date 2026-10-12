@@ -220,7 +220,7 @@ def fingerprint(held_sorted):
 - ⛔ **0 改判死线一字**（`fd4ec7559342` §3 之 `K-RJ-8′` 字面仅**逐字照录**于本件 §3.1）。
 - ⛔ **0 宣告**五段链①毕。
 - ⛔ **0 网络／0 skill／0 LLM／0 读 `.env`／0 落盘凭据**。
-- ⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`。
+- ⛔ **0 触及** `〔本地归档区〕`。
 - ⛔ **0 冒充** parent／PI／worker／verdict-keeper／protocol-keeper／doc-writer。
 - ⛔ **0 判档**（未出 `pass`／`af`／`kd`／`fail`／`give-up` 五终判之任一）。
 
