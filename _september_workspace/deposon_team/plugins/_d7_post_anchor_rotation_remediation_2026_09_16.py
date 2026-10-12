@@ -12,7 +12,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-BASE = Path(r'D:\私人资料\deposon-repo')
+BASE = Path(r'_september_workspace')
 
 # 严守 0 触动的 18 frozen
 FROZEN_18 = {
@@ -153,7 +153,7 @@ def main():
     print()
 
     print('===== D7 后清理完成 =====')
-    print(f'  等 user re-commit + 外部顾问 线上 推送 D7 终极判死 1 条')
+    print(f'  等 user re-commit + 〔W老师〕 〔IM〕 推送 D7 终极判死 1 条')
 
 
 if __name__ == '__main__':

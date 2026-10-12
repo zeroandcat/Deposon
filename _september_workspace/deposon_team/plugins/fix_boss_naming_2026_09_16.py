@@ -25,7 +25,7 @@ fix_boss_naming_2026_09_16.py — 修复点 1/5/7: BOSS/Attack 命名空间回�
 import os
 import hashlib
 
-BASE = r'D:\私人资料\deposon-repo'
+BASE = r'_september_workspace'
 PLUG = os.path.join(BASE, 'deposon_team', 'plugins')
 
 # ---------- 预注册: 改名映射 ----------
@@ -150,7 +150,7 @@ FOOTERS = {
         "if OUT.exists():\n    import json as _json_sc\n    _json_sc.loads(OUT.read_text(encoding='utf-8'))"),
     'boss_pg_1_riemannian_degenerate.py': footer(
         'boss_pg_1_riemannian_degenerate.py',
-        '命名不变; SCAFFOLDING 保持(修复点 4 option_A: 等 540-LLM 数据 + 外部顾问拍板后升实跑); '
+        '命名不变; SCAFFOLDING 保持(修复点 4 option_A: 等 540-LLM 数据 + 〔W老师〕拍板后升实跑); '
         '本 SELF-CHECK 仅锁定预注册常数与 scaffolding 状态',
         "assert C_NEAR_EUCLIDEAN < C_TRUE_HYPERBOLIC\n"
         "assert DEGENERACY_DELTA_THRESHOLD_GRAY < DEGENERACY_DELTA_THRESHOLD_PASS\n"

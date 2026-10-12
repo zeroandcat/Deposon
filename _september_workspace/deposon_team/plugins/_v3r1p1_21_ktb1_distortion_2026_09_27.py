@@ -25,8 +25,8 @@ import json
 import os
 import sys
 
-REPO = r"D:/私人资料/deposon-repo"
-EXT_ROOT = r"D:/私人资料/_non_upload_local_archive"
+REPO = r"_september_workspace"
+EXT_ROOT = r"〔本地归档区〕"
 EXT_BOSS_DIR = os.path.join(EXT_ROOT, "scripts", "scripts", "kt_b1")
 BOSS_DRIFT = {"B1_Sinkhorn_OT": "boss_b1_sinkhorn_ot.py",
               "B2_KD": "boss_b2_kd.py",
@@ -184,7 +184,7 @@ def compute_face2(v19: dict) -> dict:
             "computable": False,
             "reason": ("tools/distortion_calculator.py 本仓 + 仓外按名全扫 0 命中；"
                        "核心理论输入 u*(a_t) 与理论界 L/U 未交付（bb7ca9838150 §3.5/§8/§9："
-                       "理论界由外部顾问给定、不在 P-B 内自创）⇒ 逆向重建须自创理论 = 违 §9"),
+                       "理论界由〔W老师〕给定、不在 P-B 内自创）⇒ 逆向重建须自创理论 = 违 §9"),
             "proposal_A3_ruling": "不可行 + γ（提案 A-3，PI 已照案采纳）",
             "fallback_condition_A4": "PI 不允仓外只读或回填件跑不动 ⇒ 面 2 判不可算 + γ",
             "reverse_rebuild_attempted": False,
@@ -512,7 +512,7 @@ def main() -> int:
         },
         "input_chain": input_chain,
         "external_readonly": {
-            "external_archive": "D:/私人资料/_non_upload_local_archive/",
+            "external_archive": "〔本地归档区〕",
             "items": boss_files,
             "copied_into_repo": 0, "wrote_external": False,
             "declaration": "只读取用授权：0 复制入仓 / 0 写入 / 0 移出 / 0 删除 / 0 改 ACL",

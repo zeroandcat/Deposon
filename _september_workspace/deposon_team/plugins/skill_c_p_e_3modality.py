@@ -6,9 +6,9 @@ Deposon V3X 路径 ② 扩展:三模态守恒 ε 检测
 (沿 V2 阶段 5 F-5: 9 model × 30 cells 三模态 text/image/text×image 守恒检测)
 
 输入:
-  D:\\私人资料\\deposon-repo\\results\\deposon_dpath_cross_modal_2026_09_10.json
-  D:\\私人资料\\deposon-repo\\results\\deposon_v3_physical_opt_60cells_2026_09_11.json
-  D:\\私人资料\\deposon-repo\\verifier\\handoff\\KT_ABC1_anchors_sha256_12.json
+  _september_workspace/results/deposon_dpath_cross_modal_2026_09_10.json
+  _september_workspace/results/deposon_v3_physical_opt_60cells_2026_09_11.json
+  _september_workspace/verifier/handoff/KT_ABC1_anchors_sha256_12.json
 
 输出:
   1. stdout 打印三模态 ε 分布 (text/image/cross) + 9 model ε 60 cells
@@ -26,7 +26,7 @@ import hashlib
 import sys
 import datetime
 
-REPO_ROOT = r"D:\私人资料\deposon-repo"
+REPO_ROOT = r"_september_workspace"
 DPATH_JSON = os.path.join(REPO_ROOT, "results", "deposon_dpath_cross_modal_2026_09_10.json")
 V3_PHYS_JSON = os.path.join(REPO_ROOT, "results", "deposon_v3_physical_opt_60cells_2026_09_11.json")
 ANCHOR_JSON = os.path.join(REPO_ROOT, "verifier", "handoff", "KT_ABC1_anchors_sha256_12.json")
@@ -49,7 +49,7 @@ def main():
     iron = {
         "0_LLM_calls": True,
         "no_proxy": True,
-        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_线上API": True,
+        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_〔IM〕API": True,
         "no_pip_install": True,
         "no_touch_verifier_mavis_builtin": True,
         "no_touch_scripts_dir": True,

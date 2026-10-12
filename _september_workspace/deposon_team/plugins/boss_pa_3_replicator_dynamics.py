@@ -17,8 +17,8 @@ BOSS-P-A3: Replicator Dynamics + ESS
   - 比较 ESS 频率 vs deposon 频率 (Hamming 距离 + L_inf)
 
 输入:
-  D:/私人资料/deposon-repo/results/deposon_v20_baselines.json
-  D:/私人资料/deposon-repo/verifier/handoff/KT_ABC1_anchors_sha256_12.json
+  _september_workspace/results/deposon_v20_baselines.json
+  _september_workspace/verifier/handoff/KT_ABC1_anchors_sha256_12.json
 
 输出:
   stdout: 每图 ESS + deposon 频率 + Hamming 距离 + verdict
@@ -43,7 +43,7 @@ import hashlib
 # ============================================================================
 # 路径常量
 # ============================================================================
-REPO_ROOT = r"D:/私人资料/deposon-repo"
+REPO_ROOT = r"_september_workspace"
 V20_BASELINES = os.path.join(REPO_ROOT, "results", "deposon_v20_baselines.json")
 ANCHOR_JSON = os.path.join(REPO_ROOT, "verifier", "handoff", "KT_ABC1_anchors_sha256_12.json")
 OUT_JSON = os.path.join(REPO_ROOT, "results", "boss_pa_3_replicator_dynamics_result_2026_09_15.json")
@@ -231,7 +231,7 @@ def main():
         "iron_rule_compliance": {
             "0_LLM_calls": True,
             "no_proxy": True,
-            "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_线上API": True,
+            "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_〔IM〕API": True,
             "no_pip_install": True,
             "no_touch_verifier_mavis_builtin": True,
             "no_touch_scripts_dir": True,
@@ -299,7 +299,7 @@ assert _os_pa.path.basename(__file__) == 'boss_pa_3_replicator_dynamics.py', '�
 with open(__file__, 'r', encoding='utf-8') as _f_pa:
     _src_pa = _f_pa.read()
 assert 'TRAE_SELFCHECK_2026_09_16_PA' in _src_pa
-_p_out_pa = _os_pa.path.join(r'D:/私人资料/deposon-repo', 'results', 'boss_pa_3_replicator_dynamics_result_2026_09_15.json')
+_p_out_pa = _os_pa.path.join(r'_september_workspace', 'results', 'boss_pa_3_replicator_dynamics_result_2026_09_15.json')
 if _os_pa.path.exists(_p_out_pa):
     import json as _json_pa
     _json_pa.loads(open(_p_out_pa, 'r', encoding='utf-8').read())

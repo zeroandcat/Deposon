@@ -5,7 +5,7 @@
 >   - PI 2026-09-26 18:24 原文「整理文件夹包括清噪声、删垃圾与中间文件、归档无需上传文件与非核心文件、更新清单与委托」—— 一棒已清噪声 (mavis-trash 28 件), 本棒补归档两件套（**授权明确**, 一棒保守未动的 A/B 类本棒执行）
 >   - 派工单 §3 「A/B 类归档两件套」+ §4 「主目录实测 <1000」 + §4 保护名单
 > **不动既有 ledger**: v1 (`SHA-12=4025E871726B`, 18,829 B) + v2 (`64C4EF850025`, 47,909 B) + v3 (`8F5136E176B8`, 31,689 B) + v4 (37,047 B) + v5 (`272E8C752406`, 46,058 B)
-> **本棒执行明细**: 51 件 B 类候选 (44 件 results/ + 7 件 root) → `D:/私人资料/deposon-sub/` (含 `deposon-sub/results/`); 处理策略:
+> **本棒执行明细**: 51 件 B 类候选 (44 件 results/ + 7 件 root) → `_september_workspace` (含 `deposon-sub/results/`); 处理策略:
 >   - **25 件**: 目标目录已有 byte-identical 副本 (SHA-256 全等), 故**源 mavis-trash 回收站** (Recycle Bin 可恢复), 目标保留不动 (0 覆盖既有件)
 >   - **26 件**: 目标目录无副本, 故**源 → 目标 Move-Item -Force** (atomic move, content preserved)
 > **总移动 bytes**: 650,433 B (实测 src SHA256 verify + dst SHA256 verify 51/51 byte-identical)
@@ -20,7 +20,7 @@
 |---|---|
 | 派工单期望消化件数 | 51 件 B 类 (44 件 results/ + 7 件 root) |
 | **本棒实测处置件数** | **51 件** (25 件 trash-only + 26 件 Move-Item) |
-| **目标选择** | `D:/私人资料/deposon-sub/` (B 路径); trash → Recycle Bin (mavis-trash 可恢复) |
+| **目标选择** | `_september_workspace` (B 路径); trash → Recycle Bin (mavis-trash 可恢复) |
 | **同名冲突处置** | **0 件覆盖** (25 件 dest 已存在 = byte-identical 故不动 dest; 26 件 dest 缺席故 Move) |
 | **通道** | `Move-Item -Force` (atomic move, content preserved) + `mavis-trash.cmd` (Microsoft.VisualBasic.FileIO → Recycle Bin) |
 | **frozen 锚件 0 触动** | ✓ (6 件 SHA-12 前后对照一致) |
@@ -81,7 +81,7 @@
 
 | 子类 pattern | 件数 | bytes (实测) |
 |---|---|---|
-| `*_coze_paper_*_draft_*.md` (2) + `*_coze_online_v3_*.md` (3) + `_d7_wang_*` (1) | 6 | 67,229 |
+| `*_coze_paper_*_draft_*.md` (2) + `*_coze_〔IM〕_v3_*.md` (3) + `_d7_wang_*` (1) | 6 | 67,229 |
 | `_agent_trio_*draft_*.md` | 1 | 10,026 |
 | `_glm_response_v2_template_*.md` | 1 | 44,191 |
 | `_mavis_skill_inventory_*.md` | 1 | 99,702 |
@@ -116,10 +116,10 @@
 | 1 | `_check_conv_archive.ps1` | 2,326 | `C89D46C47026` | `deposon-sub\_check_conv_archive.ps1` | Move-Item -Force |
 | 2 | `_coze_paper_v1_draft_2026_09_17.md` | 29,484 | `C08E7ABF5EE3` | `deposon-sub\results\_coze_paper_v1_draft_2026_09_17.md` | mavis-trash (Recycle Bin) |
 | 3 | `_coze_paper_v1_summary_2026_09_17.md` | 3,624 | `2EFDC3D7741D` | `deposon-sub\results\_coze_paper_v1_summary_2026_09_17.md` | mavis-trash (Recycle Bin) |
-| 4 | `_coze_online_v3_2026_09_18.md` | 7,466 | `229D76E1B86F` | `deposon-sub\results\_coze_online_v3_2026_09_18.md` | mavis-trash (Recycle Bin) |
-| 5 | `_coze_online_v3_d7format_2026_09_18.md` | 8,715 | `905544775AEE` | `deposon-sub\results\_coze_online_v3_d7format_2026_09_18.md` | mavis-trash (Recycle Bin) |
-| 6 | `_coze_online_v3_final_2026_09_18.md` | 11,657 | `DEEE45F45C5D` | `deposon-sub\results\_coze_online_v3_final_2026_09_18.md` | mavis-trash (Recycle Bin) |
-| 7 | `_d7_external_advisor_online_publish_v1_20260918.md` | 9,891 | `F4D5B755736A` | `deposon-sub\results\_d7_external_advisor_online_publish_v1_20260918.md` | mavis-trash (Recycle Bin) |
+| 4 | `_coze_〔IM〕_v3_2026_09_18.md` | 7,466 | `229D76E1B86F` | `deposon-sub\results\_coze_〔IM〕_v3_2026_09_18.md` | mavis-trash (Recycle Bin) |
+| 5 | `_coze_〔IM〕_v3_d7format_2026_09_18.md` | 8,715 | `905544775AEE` | `deposon-sub\results\_coze_〔IM〕_v3_d7format_2026_09_18.md` | mavis-trash (Recycle Bin) |
+| 6 | `_coze_〔IM〕_v3_final_2026_09_18.md` | 11,657 | `DEEE45F45C5D` | `deposon-sub\results\_coze_〔IM〕_v3_final_2026_09_18.md` | mavis-trash (Recycle Bin) |
+| 7 | `_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` | 9,891 | `F4D5B755736A` | `deposon-sub\results\_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` | mavis-trash (Recycle Bin) |
 | 8 | `_agent_trio_redesign_draft_2026_09_23.md` | 10,026 | `E4320F20CAD4` | `deposon-sub\results\_agent_trio_redesign_draft_2026_09_23.md` | Move-Item -Force |
 | 9 | `_glm_response_v2_template_2026_09_18.md` | 44,191 | `972401E056F6` | `deposon-sub\results\_glm_response_v2_template_2026_09_18.md` | mavis-trash (Recycle Bin) |
 | 10 | `_mavis_skill_inventory_2026_09_18.md` | 99,702 | `90BA7F7A7FBE` | `deposon-sub\results\_mavis_skill_inventory_2026_09_18.md` | mavis-trash (Recycle Bin) |
@@ -167,7 +167,7 @@
 
 ---
 
-## 4. A 类（无需上传） → `D:/私人资料/_non_upload_local_archive`
+## 4. A 类（无需上传） → `〔本地归档区〕`
 
 ### 4.1 派工单本棒执行明细
 
@@ -218,9 +218,9 @@
 
 | 目录 | before (实测 2026-09-26 19:00, 本棒启动前) | after (实测 2026-09-26 19:10, 本棒收口后) | delta | 备注 |
 |---|---|---|---|---|
-| `D:/私人资料/deposon-repo` | **1,035** (派工单 §3 报告 1,131 含本棒期间新增) | **986** | **-49** | 本棒删除 51 件源 + 本棒期间其他 worker 净新增 (含 `_v4_pi_cot_v2_verdict_v2.md` 等 ruleset_v2 系新件 2 件 + 棒 8 自创建 `_v6_w7_pre_move_state.json` 1 件, 已删除) |
-| `D:/私人资料/_non_upload_local_archive` | 1,669 | **1,669** | **0** | 本棒 0 件移入 (A 类 0 件移动 + B 类不在 A 路径) |
-| `D:/私人资料/deposon-sub` | 441 | **467** | **+26** | 本棒 Move-Item 26 件新建副本 (其余 25 件已存在副本 byte-identical, 故 sub 净增量 = 26) |
+| `_september_workspace` | **1,035** (派工单 §3 报告 1,131 含本棒期间新增) | **986** | **-49** | 本棒删除 51 件源 + 本棒期间其他 worker 净新增 (含 `_v4_pi_cot_v2_verdict_v2.md` 等 ruleset_v2 系新件 2 件 + 棒 8 自创建 `_v6_w7_pre_move_state.json` 1 件, 已删除) |
+| `〔本地归档区〕` | 1,669 | **1,669** | **0** | 本棒 0 件移入 (A 类 0 件移动 + B 类不在 A 路径) |
+| `_september_workspace` | 441 | **467** | **+26** | 本棒 Move-Item 26 件新建副本 (其余 25 件已存在副本 byte-identical, 故 sub 净增量 = 26) |
 
 > **核对 (末次实测 2026-09-26 19:10)**:
 > - repo 实际 = 986 = 1,035 - 51 (本棒 trashes/moves) + 2 (本棒期间其他 worker 新增 ruleset_v2 verdict + result_v2 / ruleset_v2 / 1.pyc 已存在但 _v6_w7_pre_move_state.json 已 trashed) → 净 -49 (实测; 派工单估值 1,131→<1000 = -131, 本棒超额完成)
@@ -267,7 +267,7 @@
 
 ### 7.2 25 件 trash-only 的 byte-identical 副本来源老实交代
 
-> 派工单 §3 列出 51 件 B 类候选 (一棒点名 ~30-40 件: coze/线上/track2/llm_prior_cache/quizbank/v20_*/attack_pc_* 等族). 实测搬运 (mavis-trash + Move-Item) 时发现 **25 件候选在 `deposon-sub/results/` 已有 byte-identical 副本** (full SHA-256 = src SHA-256):
+> 派工单 §3 列出 51 件 B 类候选 (一棒点名 ~30-40 件: coze/〔IM〕/track2/llm_prior_cache/quizbank/v20_*/attack_pc_* 等族). 实测搬运 (mavis-trash + Move-Item) 时发现 **25 件候选在 `deposon-sub/results/` 已有 byte-identical 副本** (full SHA-256 = src SHA-256):
 >
 > - **byte-identical 来源**: 不明 (无前棒 ledger 记录); 推测为某次预备份 (棒 1-5 期间) 将 B 类候选预复制至 `deposon-sub/results/`, 但未删除源端 → 形成 src+dst 双副本. 本棒按"dest 已存不覆盖"原则对 25 件 **trash 源不动 dst** (0 覆盖既有件 ✓).
 > - **51 件最终状态**: 25 件 trash (src 离开 repo, dst 沿用预存副本) + 26 件 Move (src 移至 dst 新建副本) → repo 51 件源离开 ✓ + dst 51 件副本全在 (25 预存 + 26 新建) ✓.
@@ -290,7 +290,7 @@
 - **`_v3_v4_achievements_inventory_2026_09_24.md` / `_v3_v4_achievements_inventory_3dir_2026_09_24.md` / `_v3_v4_ghostref_reconciliation_2026_09_23.md` / `_archive_manifest_deposon_sub_2026_09_23.json` / `_ghostref_copy_log_2026_09_23.json` 字面引用 50 件 B 类候选**: 全部保留为字面描述性引用 (各文本均未改); 50 件 B 类候选均已 Move / Trash, 故追溯路径为 `deposon-sub/results/...` 或 `deposon-sub/...`. **明示**: 上述 inventory / reconciliation / manifest / ghostref_log 字面引用的相对路径与本棒移动后的实际路径不一致 (dest 已从 `repo/results/` 移至 `deposon-sub/results/`); 如需更新上述文本, 待 PI 拍板.
 - **`_v4_supp_l14v3_model_mapping_2026_09_24.md` + `_v4_supp_prereg_v02_add_L14V3_2026_09_24.md` + `_v4_supp_prereg_v02_add_T15r2_2026_09_26.md` + `_v4_supp_prereg_v02_add_T15_2026_09_24.md` + `_v4_supp_prereg_v02_add_T1_2026_09_24.md` + `_v4_track2_multimodel_verdict_2026_09_23.md` 字面引用** `_track2_endpoints_probe_2026_09_23.json`: 该文件已 Move-Item 至 `deposon-sub/results/_track2_endpoints_probe_2026_09_23.json`. **明示**: 6 件 prereg/model_mapping/track2_verdict 文本字面引用的相对路径与本棒移动后的实际路径不一致; 追溯口径 = 本 ledger §3.3 表 #19; 不动上述文本 (派工单 §4 保护名单 0 触动).
 - **`_v3_supplement_verdict_2026_09_23.md` 字面引用** `_track2_qwen_check_2026_09_23.json`: 该文件已 Move-Item 至 `deposon-sub/results/_track2_qwen_check_2026_09_23.json`. **明示**: 同上, 追溯口径 = 本 ledger §3.3 表 #20.
-- **`_v4_distillation_acceptance_coze_2026_09_20.md` 字面引用** `_coze_online_v3_2026_09_18.md` + `_coze_online_v3_final_2026_09_18.md`: 2 件均已 mavis-trash (dest 已存副本); 追溯口径 = 本 ledger §3.3 表 #4 / 表 #6.
+- **`_v4_distillation_acceptance_coze_2026_09_20.md` 字面引用** `_coze_〔IM〕_v3_2026_09_18.md` + `_coze_〔IM〕_v3_final_2026_09_18.md`: 2 件均已 mavis-trash (dest 已存副本); 追溯口径 = 本 ledger §3.3 表 #4 / 表 #6.
 - **`_v4_distillation_reply_claude_code_2026_09_20.md` + `_v4_ide_track_review_trae_code_supplement_2026_09_20.md` 字面引用** `skill_d_p_f_observer_result_2026_09_11.json`: 该文件已 mavis-trash (dest 已存副本); 追溯口径 = 本 ledger §3.3 表 #44.
 - **`TRAE_FIX_REQUEST_3RISKS_2026_09_11.md` 字面引用** `skill_c_p_e_3modality_result_2026_09_11.json` + `skill_d_p_f_observer_result_2026_09_11.json`: 2 件均已 mavis-trash (dest 已存副本); 追溯口径 = 本 ledger §3.3 表 #43 / #44.
 - **`LETTER_FROM_TRAE_REVIEW_2026_09_16.md` 字面引用** `_pc_d1_d3_2026_09_15.py`: 该文件已 mavis-trash (dest 已存副本); 追溯口径 = 本 ledger §3.3 表 #24. **(letters/ 派工单 §4 保护名单, LETTER 文本未改)**.

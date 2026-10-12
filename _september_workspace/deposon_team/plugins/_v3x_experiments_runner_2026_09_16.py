@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """V3X 实验实跑 runner (2026-09-16)
-沿 user 12:33 "暂无 LLM 额度,但除推外部顾问 线上 外无需等 D7"
+沿 user 12:33 "暂无 LLM 额度,但除推〔W老师〕 〔IM〕 外无需等 D7"
 立即执行: 3 新方向 + 6 旧方向补充 + 5 锚 9m × 60c 终极实算
 
 0 LLM 严守 + 7 铁律 + 18 frozen 0 触动 + P-G V0 + P-G V0.1
@@ -16,7 +16,7 @@ from pathlib import Path
 
 import numpy as np
 
-BASE = Path(r'D:\私人资料\deposon-repo')
+BASE = Path(r'_september_workspace')
 PHYS_JSON = BASE / 'results' / 'deposon_v3_physical_opt_60cells_2026_09_11.json'
 OUT_DIR = BASE / 'results' / '_v3x_experiments_2026_09_16'
 OUT_DIR.mkdir(parents=True, exist_ok=True)

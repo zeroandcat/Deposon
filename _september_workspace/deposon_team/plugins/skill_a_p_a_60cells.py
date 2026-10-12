@@ -7,16 +7,16 @@ Deposon V3X 路径 ①:深耕 P-A 均衡稳定化
 (沿 V2 阶段 1-3.5 9 model × 60 cells 守恒 540/540 baseline 验算)
 
 输入:
-  D:\\私人资料\\deposon-repo\\results\\deposon_v2_phase1_60cells_2026_09_11.json
-  D:\\私人资料\\deposon-repo\\results\\deposon_v3_physical_opt_60cells_2026_09_11.json
-  D:\\私人资料\\deposon-repo\\verifier\\handoff\\KT_ABC1_anchors_sha256_12.json
+  _september_workspace/results/deposon_v2_phase1_60cells_2026_09_11.json
+  _september_workspace/results/deposon_v3_physical_opt_60cells_2026_09_11.json
+  _september_workspace/verifier/handoff/KT_ABC1_anchors_sha256_12.json
 
 输出(两件):
   1. stdout 打印 60 cells + 9 model × 60 cells = 540 守恒明细
   2. JSON 落盘到 results/skill_a_p_a_60cells_result_2026_09_11.json
 
 严守 7 铁律:
-  - 0 LLM calls / 0 proxy / 0 网关 (OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / 线上 API)
+  - 0 LLM calls / 0 proxy / 0 网关 (OpenRouter / TeamoRouter / V4.1-Flash / GPT-6 / agent-plan / 〔IM〕 API)
   - 不动 5 锚 + 4 SPEC V0.1 + v19/v21 + corpus/v20 + 200+ 已落盘 + 现有 PDF/MD 报告
   - 不动 V3X 项目内 scripts/ 目录
   - 不动 .minimax/agents 下 verifier / mavis / .builtin 目录
@@ -33,7 +33,7 @@ import sys
 import datetime
 
 # ---------- 路径常量(绝对,严守不动 scripts/) ----------
-REPO_ROOT = r"D:\私人资料\deposon-repo"
+REPO_ROOT = r"_september_workspace"
 PHASE1_JSON = os.path.join(REPO_ROOT, "results", "deposon_v2_phase1_60cells_2026_09_11.json")
 V3_PHYS_JSON = os.path.join(REPO_ROOT, "results", "deposon_v3_physical_opt_60cells_2026_09_11.json")
 ANCHOR_JSON = os.path.join(REPO_ROOT, "verifier", "handoff", "KT_ABC1_anchors_sha256_12.json")
@@ -76,7 +76,7 @@ def main():
     iron = {
         "0_LLM_calls": True,
         "no_proxy": True,
-        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_线上API": True,
+        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_〔IM〕API": True,
         "no_pip_install": True,
         "no_touch_verifier_mavis_builtin": True,
         "no_touch_scripts_dir": True,

@@ -32,7 +32,7 @@
 
 | 口径 | 定义 | 实测命令 |
 |---|---|---|
-| **主目录** | `D:\私人资料\deposon-repo\` 下递归所有文件，**排除 `.git/`** | `Get-ChildItem -Path $ws -Recurse -File \| Where-Object { $_.FullName -notmatch '[\\\/]\.git[\\\/]' }` |
+| **主目录** | `_september_workspace` 下递归所有文件，**排除 `.git/`** | `Get-ChildItem -Path $ws -Recurse -File \| Where-Object { $_.FullName -notmatch '[\\\/]\.git[\\\/]' }` |
 | **通用口径** | 主目录基础上**进一步排除**：(a) `.tmp/` 子树；(c) `__pycache__/` 子树；(d) `.pyc` / `.log` / `.bak` / `.tmp` / `.swp` / `.part` 扩展名 | 在主目录查询上叠加 `Where-Object { $_.FullName -notmatch '[\\\/]\.tmp[\\\/]' -and ... -and $_.Extension -notmatch '^\.(pyc\|log\|bak\|tmp\|swp\|part)$' }` |
 | **含临时区口径** | = 主目录全量（即含 `.tmp/` + `__pycache__/` + `.pyc` + `.log` 等临时区文件） | 同主目录查询 |
 | **快照口径** | 2026-09-26 19:50 冻结时点登记值（986 / 930 / 1,004），**不重算** | 仅登记，PI 复核用 |
@@ -51,7 +51,7 @@
 ### C.1 实测命令（PowerShell 5.1 / 7+ 通用）
 
 ```powershell
-$ws = 'D:\私人资料\deposon-repo'
+$ws = '_september_workspace'
 
 # 主目录
 $maindir = Get-ChildItem -Path $ws -Recurse -File |
@@ -137,14 +137,14 @@ with_temp  = 1009
 | 6 | `letters/_v4_commission_upload_channel_authorization_reply_kimi_2026_09_26.md` | 2026-09-26 20:04:44 | 11,575 | letters |
 | 7 | `letters/_letter_to_pi_upload_application_local_unique_overwrite_2026_09_26.md` | 2026-09-26 20:45:07 | 36,945 | letters |
 | 8 | `letters/_letter_to_pi_upload_scoping_verdict_2026_09_26.md` | 2026-09-26 21:04:15 | 68,449 | letters |
-| 9 | `letters/_v4_commission_online_report_coze_2026_09_24_v4.md` | 2026-09-26 21:16:25 | 21,433 | letters |
+| 9 | `letters/_v4_commission_〔IM〕_report_coze_2026_09_24_v4.md` | 2026-09-26 21:16:25 | 21,433 | letters |
 | 10 | `letters/_v4_commission_paper_final_glm_2026_09_24_v4.md` | 2026-09-26 21:17:02 | 31,531 | letters |
 | 11 | `letters/_letter_to_pi_upload_application_supplement_2026_09_26.md` | 2026-09-26 21:28:18 | 9,151 | letters |
 | 12 | `letters/_letter_to_pi_upload_application_approval_2026_09_26.md` | 2026-09-26 21:29:31 | 23,368 | letters |
 | 13 | `results/_upload_execution_receipt_kimi_2026_09_26.md` | 2026-09-26 22:08:26 | 4,191 | results |
 | 14 | `.tmp/_pc.py` | 2026-09-26 22:16:09 | 431 | temp |
-| 15 | `letters/_v4_commission_online_report_coze_reply_v4_2026_09_24.md` | 2026-09-26 22:20:19 | 16,471 | letters |
-| 16 | `results/_coze_online_v4_d7format_2026_09_26.pdf` | 2026-09-26 22:49:35 | 465,366 | results |
+| 15 | `letters/_v4_commission_〔IM〕_report_coze_reply_v4_2026_09_24.md` | 2026-09-26 22:20:19 | 16,471 | letters |
+| 16 | `results/_coze_〔IM〕_v4_d7format_2026_09_26.pdf` | 2026-09-26 22:49:35 | 465,366 | results |
 | 17 | `results/_v4_pi_cot_v3_prereg.md`（棒 2） | 2026-09-27 11:39:03 | 22,788 | results |
 | 18 | `results/_v4_supp_t15r2_methodology_template.md`（棒 3） | 2026-09-27 11:40:23 | 17,411 | results |
 
@@ -166,7 +166,7 @@ with_temp  = 1009
 |---|:-:|
 | 含临时区口径命中：棒 2 `_v4_pi_cot_v3_prereg.md` | 1 |
 | 含临时区口径命中：棒 3 `_v4_supp_t15r2_methodology_template.md` | 1 |
-| 含临时区口径命中：`_coze_online_v4_d7format_2026_09_26.pdf`（PDF，22:49:35） | 1 |
+| 含临时区口径命中：`_coze_〔IM〕_v4_d7format_2026_09_26.pdf`（PDF，22:49:35） | 1 |
 | 含临时区口径命中：`_upload_execution_receipt_kimi_2026_09_26.md`（results/，22:08:26） | 1 |
 | 含临时区口径命中：`letters/` 收口新增 9 件 | 9 |
 | **可归因小计** | **13** |

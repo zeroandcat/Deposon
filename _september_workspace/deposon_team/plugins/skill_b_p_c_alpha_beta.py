@@ -6,8 +6,8 @@ Deposon V3X 路径 ②:补 P-C 判定标准 (α-β 模板冗余 + 5 锚判定线
 0 LLM / 0 proxy / 0 API 调用的纯 Python + stdlib 复算脚本
 
 输入:
-  D:\\私人资料\\deposon-repo\\results\\deposon_v3_physical_opt_60cells_2026_09_11.json
-  D:\\私人资料\\deposon-repo\\verifier\\handoff\\KT_ABC1_anchors_sha256_12.json
+  _september_workspace/results/deposon_v3_physical_opt_60cells_2026_09_11.json
+  _september_workspace/verifier/handoff/KT_ABC1_anchors_sha256_12.json
 
 输出:
   1. stdout 打印 36 档判定 (9 model × 4 T_frac bins, 9 in_bin + 27 out_of_bin)
@@ -27,7 +27,7 @@ import hashlib
 import sys
 import datetime
 
-REPO_ROOT = r"D:\私人资料\deposon-repo"
+REPO_ROOT = r"_september_workspace"
 V3_PHYS_JSON = os.path.join(REPO_ROOT, "results", "deposon_v3_physical_opt_60cells_2026_09_11.json")
 ANCHOR_JSON = os.path.join(REPO_ROOT, "verifier", "handoff", "KT_ABC1_anchors_sha256_12.json")
 OUT_JSON = os.path.join(REPO_ROOT, "results", "skill_b_p_c_alpha_beta_result_2026_09_11.json")
@@ -67,7 +67,7 @@ def main():
     iron = {
         "0_LLM_calls": True,
         "no_proxy": True,
-        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_线上API": True,
+        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_〔IM〕API": True,
         "no_pip_install": True,
         "no_touch_verifier_mavis_builtin": True,
         "no_touch_scripts_dir": True,

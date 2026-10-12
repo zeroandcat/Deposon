@@ -9,12 +9,12 @@ Deposon V3X P-A 路径 D1-D3 主聚合脚本:
   - D1-D3 综合 verdict 与 5 锚 PASS/FAIL 中期评估
 
 输入:
-  D:/私人资料/deposon-repo/results/deposon_v2_phase1_60cells_2026_09_11.json
-  D:/私人资料/deposon-repo/results/deposon_v3_physical_opt_60cells_2026_09_11.json
-  D:/私人资料/deposon-repo/results/boss_pa_1_rbr_rm_result_2026_09_15.json
-  D:/私人资料/deposon-repo/results/boss_pa_2_potential_game_result_2026_09_15.json
-  D:/私人资料/deposon-repo/results/boss_pa_3_replicator_dynamics_result_2026_09_15.json
-  D:/私人资料/deposon-repo/verifier/handoff/KT_ABC1_anchors_sha256_12.json
+  _september_workspace/results/deposon_v2_phase1_60cells_2026_09_11.json
+  _september_workspace/results/deposon_v3_physical_opt_60cells_2026_09_11.json
+  _september_workspace/results/boss_pa_1_rbr_rm_result_2026_09_15.json
+  _september_workspace/results/boss_pa_2_potential_game_result_2026_09_15.json
+  _september_workspace/results/boss_pa_3_replicator_dynamics_result_2026_09_15.json
+  _september_workspace/verifier/handoff/KT_ABC1_anchors_sha256_12.json
 
 输出 (2 件):
   1. results/deposon_pa_d1_d3_2026_09_15.json (D1-D3 综合数据 + verdict)
@@ -39,7 +39,7 @@ import datetime
 # ============================================================================
 # 路径常量
 # ============================================================================
-REPO_ROOT = r"D:/私人资料/deposon-repo"
+REPO_ROOT = r"_september_workspace"
 PHASE1_JSON = os.path.join(REPO_ROOT, "results", "deposon_v2_phase1_60cells_2026_09_11.json")
 V3_PHYS_JSON = os.path.join(REPO_ROOT, "results", "deposon_v3_physical_opt_60cells_2026_09_11.json")
 BOSS1_JSON = os.path.join(REPO_ROOT, "results", "boss_pa_1_rbr_rm_result_2026_09_15.json")
@@ -152,7 +152,7 @@ def main():
     iron = {
         "0_LLM_calls": True,
         "no_proxy": True,
-        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_线上API": True,
+        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_〔IM〕API": True,
         "no_pip_install": True,
         "no_touch_verifier_mavis_builtin": True,
         "no_touch_scripts_dir": True,
@@ -457,7 +457,7 @@ def main():
         f"16/16 frozen 0 触动 + 540/540 守恒 + 3 BOSS 自测全 DIFFERENTIATED + "
         f"5 锚 (含 {authorized_drift_count} 已知合法返工) PASS. "
         "5 锚 JSON 自身 (03c6c01f3697) 0 触动. "
-        "待 D7 终极判死 (2026-09-18) 推外部顾问 线上."
+        "待 D7 终极判死 (2026-09-18) 推〔W老师〕 〔IM〕."
     )
 
     # ---------- 9. 组装 result ----------
@@ -536,9 +536,9 @@ def main():
         "pa_direction_verdict_midterm": pa_direction_verdict,
         "verdict": pa_direction_verdict,
         "next_steps": [
-            "D5 (2026-09-16): 外部顾问 线上 决策点通知, 中期评估: 5 锚全 PASS + BOSS 自测全 DIFFERENTIATED → P-A 方向中期 PASS",
-            "D7 (2026-09-18): 5 锚终极判死 + 推 D0 末群 + 外部顾问 线上",
-            "如 D5 外部顾问 ack: 沿 P-A 路径继续 6 月单论文 (不在 V3.X 1 周判死范围内)",
+            "D5 (2026-09-16): 〔W老师〕 〔IM〕 决策点通知, 中期评估: 5 锚全 PASS + BOSS 自测全 DIFFERENTIATED → P-A 方向中期 PASS",
+            "D7 (2026-09-18): 5 锚终极判死 + 推 D0 末群 + 〔W老师〕 〔IM〕",
+            "如 D5 〔W老师〕 ack: 沿 P-A 路径继续 6 月单论文 (不在 V3.X 1 周判死范围内)",
             "如 D7 任一 5 锚漂移: 全 P-A 撤回 (沿 P-A V0 spec §8)",
             "5 锚 JSON 已知合法返工 (tools/llm_client.py + tools/exp_harness.py 沿 KT_B1_REWORK_REPORT §四): 是否更新 5 锚 JSON 旧 SHA → 新 SHA, 需 user 决策 (沿 7 铁律第 6 条: 不擅自修改 frozen)",
         ],

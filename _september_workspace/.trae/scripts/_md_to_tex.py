@@ -27,7 +27,7 @@ import re
 import shutil
 from pathlib import Path
 
-REPO = Path(r"D:\私人资料\deposon-repo")
+REPO = Path(r"_september_workspace")
 CN_MD = REPO / "paper" / "deposon_paper_final_cn.md"
 EN_MD = REPO / "paper" / "deposon_paper_final_en.md"
 PKG = REPO / "paper" / "deposon_arxiv_2026"
@@ -368,8 +368,8 @@ def md_to_tex(md_path: Path, lang: str):
     if lang == 'cn':
         text = re.sub(r'^\*\*Deposon: .+\*\*\s*$', '', text, flags=re.MULTILINE)
     # 3. Strip Wang/NSFC
-    text = re.sub(r'外部合作导师〔匿名〕（?[^）\n]*）?', '', text)
-    text = re.sub(r'外部合作导师〔匿名〕', '', text)
+    text = re.sub(r'〔当事人W〕（?[^）\n]*）?', '', text)
+    text = re.sub(r'〔当事人W〕', '', text)
     text = re.sub(r'NSFC\s*[\d\-]+', '', text)
     text = re.sub(r'\(grant\s*\d+[\d–\-]*\)', '', text)
 
@@ -781,7 +781,7 @@ def make_tex(lang: str, md_path: Path, out_path: Path):
         title_block = (
             "\\title{" + cn_title + " \\\\[2mm] \\large \\textit{" + en_title + "}}\n"
             "\\author{袁祺皓 \\\\\n"
-            "School of Chemistry and Life Resources, Renmin University of China \\\\\n"
+            "School of Chemistry and Life Resources, 〔高校R〕 University of China \\\\\n"
             "\\texttt{github.com/zeroandcat/Deposon}}\n"
             "\\date{2026-09-08}\n"
         )
@@ -791,7 +791,7 @@ def make_tex(lang: str, md_path: Path, out_path: Path):
         title_block = (
             f"\\title{{{en_title}}}\n"
             "\\author{Qihao Yuan \\\\\n"
-            "School of Chemistry and Life Resources, Renmin University of China \\\\\n"
+            "School of Chemistry and Life Resources, 〔高校R〕 University of China \\\\\n"
             "\\texttt{github.com/zeroandcat/Deposon}}\n"
             "\\date{2026-09-08}\n"
         )

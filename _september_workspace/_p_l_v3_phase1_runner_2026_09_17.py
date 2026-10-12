@@ -26,11 +26,11 @@ import urllib.error
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
-KEY_FILE = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
+KEY_FILE = r'〔本机用户目录〕/Desktop/AI/LLM API.txt'
 OR_BASE = 'https://openrouter.ai/api/v1'
 CHAT_MODEL = 'mistralai/mistral-large-2512'
 
-DEPOSON_ROOT = Path(r'D:\私人资料\deposon-repo')
+DEPOSON_ROOT = Path(r'_september_workspace')
 RESULTS_DIR = DEPOSON_ROOT / 'results'
 
 # 输入资产 (只读)
@@ -740,7 +740,7 @@ lines.append(f"**P-L v3 Phase 1 完成** · 综合 verdict = **{overall}** · "
              f"P1 R² = {R2:.4f} ({P1_verdict}) · P3 Q = {Q:.4f} ({P3_verdict}) · "
              f"Spearman L=30 = {all_results[30]['spearman_vs_baseline']:.4f} (worker C PASS)")
 lines.append("")
-lines.append(f"**建议下游**: Mavis 聚合此 P-L v3 Phase 1 + 综合 MD, 作为 D7 (2026-09-18) 外部顾问 线上 推送前的 P-L 主命题三态分离唯一证据材料.")
+lines.append(f"**建议下游**: Mavis 聚合此 P-L v3 Phase 1 + 综合 MD, 作为 D7 (2026-09-18) 〔W老师〕 〔IM〕 推送前的 P-L 主命题三态分离唯一证据材料.")
 
 OUT_MD.write_text('\n'.join(lines), encoding='utf-8')
 log(f"综合 MD 落盘 -> {OUT_MD}  size={OUT_MD.stat().st_size}B")

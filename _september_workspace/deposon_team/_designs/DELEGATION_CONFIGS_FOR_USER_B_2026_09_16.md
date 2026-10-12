@@ -29,7 +29,7 @@ user 拍板 **B** = user 自己用 minimax agent 派工(绕开 Mavis 派工系�
 
 **名称**: `deposon-pa-deepen`
 
-**路径**: `C:\Users\Administrator\.minimax\agents\deposon-pa-deepen\README.md` (严守 7 铁律第 7 条不动)
+**路径**: `〔本机用户目录〕/.minimax/agents/deposon-pa-deepen/README.md` (严守 7 铁律第 7 条不动)
 
 **系统提示词**(供 user 复制到 minimax 派工 system prompt):
 ```
@@ -55,7 +55,7 @@ user 拍板 **B** = user 自己用 minimax agent 派工(绕开 Mavis 派工系�
 - Python python -B <path> (公式独立重算)
 - 现有 results/ JSON (数据输入,只读)
 - 现有 docs/V3X MD (文档输入,只读)
-- 禁止 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/线上 API
+- 禁止 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/〔IM〕 API
 
 **判定线预注册表**:
 | 验证 | 主源 | 交叉源 | 阈值(预注册) | Spearman 检验 |
@@ -72,7 +72,7 @@ user 拍板 **B** = user 自己用 minimax agent 派工(绕开 Mavis 派工系�
 
 **名称**: `deposon-pc-verify`
 
-**路径**: `C:\Users\Administrator\.minimax\agents\deposon-pc-verify\README.md`
+**路径**: `〔本机用户目录〕/.minimax/agents/deposon-pc-verify/README.md`
 
 **系统提示词**:
 ```
@@ -114,7 +114,7 @@ user 拍板 **B** = user 自己用 minimax agent 派工(绕开 Mavis 派工系�
 
 **名称**: `deposon-physics-formula`
 
-**路径**: `C:\Users\Administrator\.minimax\agents\deposon-physics-formula\README.md`
+**路径**: `〔本机用户目录〕/.minimax/agents/deposon-physics-formula/README.md`
 
 **系统提示词**:
 ```
@@ -150,7 +150,7 @@ user 拍板 **B** = user 自己用 minimax agent 派工(绕开 Mavis 派工系�
 
 **名称**: `deposon-pf-observer`
 
-**路径**: `C:\Users\Administrator\.minimax\agents\deposon-pf-observer\README.md`
+**路径**: `〔本机用户目录〕/.minimax/agents/deposon-pf-observer/README.md`
 
 **系统提示词**:
 ```
@@ -270,7 +270,7 @@ TOTAL: 16 frozen files | OK: 16 | FAIL: 0
 □ corpus v2 沿 corpus/v20/ 整合(等 user 拍板)
 □ P-K verify 0 触动 18 frozen + P-G V0 + P-G V0.1
 □ 派生 JSON (2A) 合并到 5 锚 JSON(等 user 拍板)
-□ 等 D7 (2026-09-18) user 委托 coze 推外部顾问 线上 D7 终极判死 1 条
+□ 等 D7 (2026-09-18) user 委托 coze 推〔W老师〕 〔IM〕 D7 终极判死 1 条
 □ P-L 重做(等 user 协助修复 nu 字符混用)
 ☑ PAT 吊销(已老实承认,user 已完成)
 ☑ minimax task() 限制(已老实承认)
@@ -278,4 +278,4 @@ TOTAL: 16 frozen files | OK: 16 | FAIL: 0
 
 ---
 
-**方案 B 老实完成** | 4 个新 agent 名称 + 系统提示词已老实给 user | 4 项收尾状态老实承认 | PAT 已吊销老实接受 | verify 16 frozen ✓ 16/16 PASS | 严守 7 铁律 + 0 LLM | 等 user 拍板 corpus v2 整合 + P-K verify + 派生 JSON 合并 + D7 外部顾问 线上 推送
+**方案 B 老实完成** | 4 个新 agent 名称 + 系统提示词已老实给 user | 4 项收尾状态老实承认 | PAT 已吊销老实接受 | verify 16 frozen ✓ 16/16 PASS | 严守 7 铁律 + 0 LLM | 等 user 拍板 corpus v2 整合 + P-K verify + 派生 JSON 合并 + D7 〔W老师〕 〔IM〕 推送

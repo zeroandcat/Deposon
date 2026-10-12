@@ -9,15 +9,15 @@
 
 ## 0. 背景与定位
 
-外部顾问 线上 2026-09-08 回复"无指示",开放 V3.X 5 候选自由探索(博弈论转向 / 原脑图 / 其他潜力方向)。用户定义"其他可能潜力方向"包括 LLM 议价与 deposon 向量属性发挥。
+〔W老师〕 〔IM〕 2026-09-08 回复"无指示",开放 V3.X 5 候选自由探索(博弈论转向 / 原脑图 / 其他潜力方向)。用户定义"其他可能潜力方向"包括 LLM 议价与 deposon 向量属性发挥。
 
 V3.X 原 4 方向(P-A / P-B / P-C / P-D)中 P-D 已接近收尾(代码 PASS,仅 A1 CLI 衔接 P1 待修),P-A/P-B/P-C 是博弈论转向,本提案不重复。
 
 **P-E 的具体落点**: 在不重写 V3.X 主线工程的前提下,沿**已冻结的 deposon 向量属性**(T+R+A=1 守恒 / 散射层)路径,集成 `doubao-embedding-vision` 提供的 multi-vector 嵌入层,实证检验 3 项预登记猜想是否在嵌入空间成立。**不**与 P-D 冲突(指纹协议在更上层,本方向在嵌入层)。
 
-### 与外部顾问工作的挂点
+### 与〔W老师〕工作的挂点
 
-- 外部顾问近期议程"机制设计 × 信息设计"对应"玩家向机制证明什么"
+- 〔W老师〕近期议程"机制设计 × 信息设计"对应"玩家向机制证明什么"
 - P-D 是"披露承诺装置",P-E 是"披露的内容(向量表示)是否在嵌入空间守恒"
 - 两者互补:P-E 回答"向量属性跨嵌入维度是否保持",P-D 回答"声明是否可独立验证"
 
@@ -33,7 +33,7 @@ V3.X 原 4 方向(P-A / P-B / P-C / P-D)中 P-D 已接近收尾(代码 PASS,仅 
 - **doubao-embedding-vision**: 火山引擎 2026 年新模型
 - 关键特性: multi-vector 输出 + 压缩传输 + 视频输入(本研究只用文本/图节点,视频特性留接口)
 - **API 沿用之前 KIMI/GLM 鉴权流程,只换模型 ID**
-- **API key 路径**: `C:/Users/Administrator/Desktop/AI/新建文本文档.txt`
+- **API key 路径**: `〔本机用户目录〕/Desktop/AI/新建文本文档.txt`
 - **7 条铁律**: runtime `Path().read_text()` 读取,**永不落盘/永不进 prompt/永不写入检测规则**
 - spec 阶段不读 key,实现 step 才读
 
@@ -54,7 +54,7 @@ V3.X 原 4 方向(P-A / P-B / P-C / P-D)中 P-D 已接近收尾(代码 PASS,仅 
 ### 本次 P-E 设计如何避开
 
 1. **攻击脚本无参直跑**: §6 三个攻击脚本全部"无参 + 临时副本自建"(`tempfile.TemporaryDirectory` 内自建工件 + 自攻击),与 V0.1.2 同款约定。**禁止**沿用 P-D V0.1.1 的 `--missing <path>` 类带参 CLI 模式。
-2. **真实仓库绝对零接触**: 攻击脚本 + 实现都不在真实仓库 `d:/私人资料/deposon-repo` 下运行,全部在 `C:\Users\Administrator\AppData\Local\Temp\deposon-e-audit-<ts>\` 副本内执行。**禁止** `python attacks/X.py` 沿仓库根直跑(会触碰冻结锚)。
+2. **真实仓库绝对零接触**: 攻击脚本 + 实现都不在真实仓库 `d:/私人资料/deposon-repo` 下运行,全部在 `〔本机用户目录〕/AppData/Local/Temp/deposon-e-audit-<ts>\` 副本内执行。**禁止** `python attacks/X.py` 沿仓库根直跑(会触碰冻结锚)。
 3. **不诱导锚删除**: §6 三个攻击脚本设计时**禁止**任何"接收路径 + 删除该路径"类 CLI 形态。若必须传路径,只能传"在 tmpdir 副本内自建的工件路径",且副本结束自动清理。
 4. **错误码 spec/implementation 一致**: §5 列出的 5 个错误码必须实现完整输出(包括 `E_KEY_LEAK`),不允许 spec 列了但实现不抛。
 5. **key 安全**沿用 P-D R5 思路: API 调用走 runtime `Path().read_text()`,源码无 key 字面量,无 `kimi/ark/sk-/AKIA/长 hex` 串。E5 边界扫描仿 P-D R5 静态审计。
@@ -237,7 +237,7 @@ V0 判死线 = **表达力线**(性能差异,不在 V0 范围)。
 # Windows PowerShell (Win32 long path 兼容)
 $ts = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
 $dst = Join-Path $env:TEMP "deposon-e-audit-$ts"
-Copy-Item -Path "D:/私人资料/deposon-repo" -Destination $dst -Recurse -Force
+Copy-Item -Path "_september_workspace" -Destination $dst -Recurse -Force
 Push-Location $dst
 python attacks/a1_embedding_determinism.py
 python attacks/a2_conservation_drift.py
@@ -313,14 +313,14 @@ P_A_EQUILIBRIUM_INTERFACE = None  # P-A 接口位(只读不接)
 | 2 | 实现 + 单元测试(实测 1 次 API 确认输出格式 → 写 E1-E5) | `pe_*.py` + `tests/test_pe_*.py` | **读**(按 7 条铁律) |
 | 3 | 派独立子代理双审(reviewer-a 静态 + reviewer-b /tmp 重跑) | 两份独立审查报告 | 不用 |
 | 4 | 跑小规模实验(100-200 节点) | 性能对比报告 + 3/3 攻击脚本结果 | **读** |
-| 5 | 决策 PASS/FAIL → 给外部顾问等回 | 判死报告 | 不用 |
+| 5 | 决策 PASS/FAIL → 给〔W老师〕等回 | 判死报告 | 不用 |
 
 ---
 
 ## 10. 关键约束(沿用 V3.X 铁律)
 
 1. **V3.X 5 候选 P-A/B/C/D + LLM 议价都是合法候选,不刻意避开** —— P-E 是"其他潜力方向"的子项,不替代 P-A/B/C/D
-2. **外部顾问 = 线上 顾问,等他回** —— 本方向独立推进,不给外部顾问主动推
+2. **〔W老师〕 = 〔IM〕 顾问,等他回** —— 本方向独立推进,不给〔W老师〕主动推
 3. **1 周判死模式** —— 任一攻击 FAIL 即归档,不回溯
 4. **数字溯源公理** —— 所有数值引用自冻结 JSON 字段路径(spec §1 锁定的 5 锚 SHA-256[0:12] 即用)
 5. **钥匙安全** —— runtime `Path().read_text()` 读取,**永不落盘/永不进 prompt/永不写入检测规则**

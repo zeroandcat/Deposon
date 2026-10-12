@@ -13,7 +13,7 @@ from datetime import datetime, timezone, timedelta
 import numpy as np
 from scipy.stats import linregress
 
-DEPOSON_ROOT = Path(r'D:\私人资料\deposon-repo')
+DEPOSON_ROOT = Path(r'_september_workspace')
 RESULTS_DIR = DEPOSON_ROOT / 'results'
 
 TS = '20260917_132341'
@@ -329,7 +329,7 @@ lines.append(f"**P-L v3 Phase 1 完成** · 综合 verdict = **{overall}** · "
              f"Spearman L=30 = {sp_30:.4f} (worker C PASS, 破 backbone 同序)")
 lines.append("")
 lines.append(f"**建议下游**: Mavis 聚合此 P-L v3 Phase 1 + 综合 MD, "
-             f"作为 D7 (2026-09-18) 外部顾问 线上 推送前的 P-L 主命题三态分离证据. "
+             f"作为 D7 (2026-09-18) 〔W老师〕 〔IM〕 推送前的 P-L 主命题三态分离证据. "
              f"Phase 2 (跨 backbone 实现稳健性) 需启动, 检查 P1 是否在多 backbone 上稳健成立.")
 
 OUT_MD.write_text('\n'.join(lines), encoding='utf-8')

@@ -7,9 +7,9 @@ Deposon V3X 路径 ③ + ④ 合并:P-F 1 周判死 observer
   路径 ④:P-F 1 周判死 observer (2026-09-11 → 2026-09-18)
 
 输入:
-  D:\\私人资料\\deposon-repo\\verifier\\handoff\\P_F_PREDECISION_2026_09_11_V0.1.json
-  D:\\私人资料\\deposon-repo\\verifier\\handoff\\KT_ABC1_anchors_sha256_12.json
-  D:\\私人资料\\deposon-repo\\results\\deposon_v3_physical_opt_60cells_2026_09_11.json
+  _september_workspace/verifier/handoff/P_F_PREDECISION_2026_09_11_V0.1.json
+  _september_workspace/verifier/handoff/KT_ABC1_anchors_sha256_12.json
+  _september_workspace/results/deposon_v3_physical_opt_60cells_2026_09_11.json
 
 输出:
   1. stdout 打印物理公式 S_eff(E) 投影 + canonical 5 值对比 + 1 周判死综合
@@ -27,7 +27,7 @@ import hashlib
 import sys
 import datetime
 
-REPO_ROOT = r"D:\私人资料\deposon-repo"
+REPO_ROOT = r"_september_workspace"
 P_F_V01_JSON = os.path.join(REPO_ROOT, "verifier", "handoff", "P_F_PREDECISION_2026_09_11_V0.1.json")
 ANCHOR_JSON = os.path.join(REPO_ROOT, "verifier", "handoff", "KT_ABC1_anchors_sha256_12.json")
 V3_PHYS_JSON = os.path.join(REPO_ROOT, "results", "deposon_v3_physical_opt_60cells_2026_09_11.json")
@@ -108,7 +108,7 @@ def main():
     iron = {
         "0_LLM_calls": True,
         "no_proxy": True,
-        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_线上API": True,
+        "no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_〔IM〕API": True,
         "no_pip_install": True,
         "no_touch_verifier_mavis_builtin": True,
         "no_touch_scripts_dir": True,
@@ -228,7 +228,7 @@ def main():
             "D1 (2026-09-12): 9 model 实际 API 抽样 (1 model × 5 cells 验证 B1 fingerprinting)",
             "D3 (2026-09-14): B3 Merkle P-D V0.1 3 根指纹 + 22 caption dual_24bit 链式核验",
             "D5 (2026-09-16): canonical 5 值工件补齐决策 (是否落盘 boss_f*.py 真实脚本)",
-            "D7 (2026-09-18): 5 锚 PASS/FAIL 终极判死, 推 D0 末群内 + 外部顾问 线上",
+            "D7 (2026-09-18): 5 锚 PASS/FAIL 终极判死, 推 D0 末群内 + 〔W老师〕 〔IM〕",
         ],
         "current_phase": "V0.1 已落盘, 等 D1 启动",
     }

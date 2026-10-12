@@ -5,7 +5,7 @@
 | 项 | 内容 |
 |---|---|
 | **件名** | `_plan_v3_pending_verify_2026_09_30.md`（**新名新建** · 落盘前 2 轮 × 4 目录 `Test-Path` 均 `False` ＋ 全仓 `*plan_v3*` / `*pending_verify*` glob 均 0 命中） |
-| **落点** | `D:\私人资料\deposon-repo\results\`（与 `results/` 面同目录，服从仓内既有惯例） |
+| **落点** | `_september_workspace/results/`（与 `results/` 面同目录，服从仓内既有惯例） |
 | **输入锚** | `plan_v3_2026_09_30.md`（`4b1ec1dbf19f`）§八 17 条 ＋ §七／§九 参照 · **本棒只读，0 覆写** |
 | **本件性质** | **核实与处置登记册**。**不是**预登记件、**不是**判定件、**不是**授权件；⛔ **0 代 PI 拍板 / 0 代裁 / 0 代答**。凡「处置」列均为**册登记建议**，非既成裁决。 |
 | **0 触动** | 全程**只读**既有件 ＋ **唯一写入 ＝ 本件 1 件**（新名）。0 修改 0 覆写 0 删除 0 合并任何既有件。 |
@@ -341,7 +341,7 @@ R1 Test-Path [artifacts] = False    R2 Test-Path [artifacts] = False
 
 ---
 
-### #17 GLM 论文终稿／coze 线上 报告委托面回函状态
+### #17 GLM 论文终稿／coze 〔IM〕 报告委托面回函状态
 
 **结论：⏸ 事实登记 —— 仓内 `letters/` 面已扫清；受托方自有工作区面 0 坐实（不可及）。**
 
@@ -369,20 +369,20 @@ R1 Test-Path [artifacts] = False    R2 Test-Path [artifacts] = False
 | mtime | 件名 |
 |---|---|
 | 09-27 20:43:21 | `_v3_calibration_change_note_for_coze_glm_2026_09_27.md` |
-| 09-26 22:20:19 | **`_v4_commission_online_report_coze_reply_v4_2026_09_24.md`** ← **唯一带 `reply` 字样的受托方回函** |
+| 09-26 22:20:19 | **`_v4_commission_〔IM〕_report_coze_reply_v4_2026_09_24.md`** ← **唯一带 `reply` 字样的受托方回函** |
 | 09-26 21:25:21 | `_v4_commission_paper_final_glm_2026_09_24_v4.md` |
-| 09-26 21:25:16 | `_v4_commission_online_report_coze_2026_09_24_v4.md` |
+| 09-26 21:25:16 | `_v4_commission_〔IM〕_report_coze_2026_09_24_v4.md` |
 | 09-26 19:19:09 | `_v4_commission_paper_final_glm_2026_09_24_v3.md` |
-| 09-26 19:19:29 | `_v4_commission_online_report_coze_2026_09_24_v3.md` |
+| 09-26 19:19:29 | `_v4_commission_〔IM〕_report_coze_2026_09_24_v3.md` |
 | 09-24 20:05:57 | `_v4_commission_paper_final_glm_2026_09_24_v2.md` |
-| 09-24 20:05:56 | `_v4_commission_online_report_coze_2026_09_24_v2.md` |
+| 09-24 20:05:56 | `_v4_commission_〔IM〕_report_coze_2026_09_24_v2.md` |
 | 09-24 18:55:43 | `_v4_commission_paper_final_glm_2026_09_24.md` |
-| 09-24 18:55:26 | `_v4_commission_online_report_coze_2026_09_24.md` |
+| 09-24 18:55:26 | `_v4_commission_〔IM〕_report_coze_2026_09_24.md` |
 | 09-20 21:53:15 | `_v4_distillation_reply_coze_2026_09_20.md` |
 | 09-20 18:03:55 | `_v4_distillation_acceptance_coze_2026_09_20.md` |
 | 09-20 14:58:15 | `_v4_acceptance_coze_2026_09_20.md` |
 
-**⇒ 关键事实**：仓内**唯一** GLM／coze 受托方回函为 `_v4_commission_online_report_coze_reply_v4_2026_09_24.md`，mtime **09-26 22:20:19**。**GLM 论文终稿线 0 回函**（`_paper_final_glm_` 全系 5 件**均无 `reply` 字样**，最新 v4 止于 09-26 21:25:21）。
+**⇒ 关键事实**：仓内**唯一** GLM／coze 受托方回函为 `_v4_commission_〔IM〕_report_coze_reply_v4_2026_09_24.md`，mtime **09-26 22:20:19**。**GLM 论文终稿线 0 回函**（`_paper_final_glm_` 全系 5 件**均无 `reply` 字样**，最新 v4 止于 09-26 21:25:21）。
 
 **（丙）受托方工作区面**：
 
@@ -453,7 +453,7 @@ R1 Test-Path [artifacts] = False    R2 Test-Path [artifacts] = False
 
 | 项 | 实测 |
 |---|---|
-| 路径 | `D:\私人资料\_non_upload_local_archive\_movedout_scratch_2026_09_29\verif_doubt6_v_20260928\_v5_trae_doubt6_verify_2026_09_28.md`（另有同内容副本 `_merged_canonical_snapshot_224910.md`） |
+| 路径 | `〔本地归档区〕/_movedout_scratch_2026_09_29/verif_doubt6_v_20260928/_v5_trae_doubt6_verify_2026_09_28.md`（另有同内容副本 `_merged_canonical_snapshot_224910.md`） |
 | SHA-12 | **`ffda214d1917`**（与本件附记-1 所记「混合体」值**逐字吻合**） |
 | 字节 | **51,778 B** |
 | mtime | 2026-09-28 22:46:33 |

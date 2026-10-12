@@ -9,7 +9,7 @@ import sys
 import tarfile
 from pathlib import Path
 
-PAPER = Path(r"D:\私人资料\deposon-repo\paper")
+PAPER = Path(r"_september_workspace/paper")
 BS = chr(92)        # one literal backslash, for str ops (`in`, count, find)
 RB = BS + BS        # two backslashes in a regex pattern = one literal backslash
 
@@ -175,7 +175,7 @@ for lang, spec in PKGS.items():
     check(tex.count(BS + "footnote{") == 1, "exactly one \\footnote in document")
     check(not re.search(r"^---\s*$", tex, re.MULTILINE), "no standalone '---' horizontal-rule lines")
     check("¹" not in tex, "superscript-1 declaration paragraph removed")
-    check("外部合作导师〔匿名〕" not in tex and "NSFC" not in tex, "no 外部合作导师〔匿名〕 / NSFC strings")
+    check("〔当事人W〕" not in tex and "NSFC" not in tex, "no 〔当事人W〕 / NSFC strings")
 
     # footnote language
     fnm = re.search(RB + r"footnote\{(.*?)\}", tex, re.DOTALL)
