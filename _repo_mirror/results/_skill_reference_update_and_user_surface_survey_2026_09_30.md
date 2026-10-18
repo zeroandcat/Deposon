@@ -34,7 +34,7 @@
 | `peer-review/SKILL.md`（plugin 面） | `fed0262d707a` / **11,639** B | 一致 |
 | `verification-before-completion/SKILL.md` | `2befe7fc55bc` / **3,646** B | 一致 |
 | `academic-paper-polish/SKILL.md` | `23d90731e1fe` / **7,095** B | 一致 |
-| `C:\Users\Administrator\.minimax` | **Junction** → `D:\Users\Administrator\.minimax` | 一致 |
+| `〔本机用户目录〕\.minimax` | **Junction** → `〔本机用户目录〕\.minimax` | 一致 |
 
 **命中数口径已对账（本棒新增）**：依据件 §3.1 的「命中数」为 **出现次数**（occurrence）口径；本棒初测用 **行数**口径，两者不等。本棒**两种口径同时给出**并已**逐件对齐**——按出现次数计，29 件文字件与依据件 §3.1 **逐字全等**（9/9/4/4/4/1/2/1 · 3/5/4/1/1/1/1/1/1/1/1/2/1/2/2/4/3/4/4）。**口径差异系测量法差异，非件面差异。**
 

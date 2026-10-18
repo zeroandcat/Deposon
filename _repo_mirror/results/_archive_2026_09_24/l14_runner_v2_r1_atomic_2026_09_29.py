@@ -27,7 +27,7 @@ import math
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-sys.path.insert(0, 'D:/私人资料/deposon-repo/results')
+sys.path.insert(0, '_repo_mirror/results')
 from _v4_supp_l14_n11full_executor import (
     read_api_key, call_chat, ROUTES,
     unset_proxy_for_qwen_mimo,
@@ -47,7 +47,7 @@ from _v4_supp_l14_n11full_executor import (
 MAX_TOKENS = 100
 
 # Checkpoint file
-CHECKPOINT = Path("D:/私人资料/deposon-repo/.tmp/_l14_records.json")
+CHECKPOINT = Path("_repo_mirror/.tmp/_l14_records.json")
 
 # ============================================================
 # [写侧原子写补正 2026-09-29] 派工: Mavis (root session)「V4 checkpoint 尾 3 件修订棒」(PI 拍板 ask_e8c605dd1d9b662df6a33923 q2)
@@ -451,11 +451,11 @@ result_obj = {
         "small_batch_strategy": "1 prompt x 5 teachers x 2 re-asks per Bash invocation",
     },
     "inputs": {
-        "prereg_v02": {"path": str(PREREG_V02.relative_to(Path("D:/私人资料/deposon-repo"))),
+        "prereg_v02": {"path": str(PREREG_V02.relative_to(Path("_repo_mirror"))),
                        "sha12": sha12_file(PREREG_V02),
                        "expected_sha12": PREREG_V02_SHA12_EXPECTED,
                        "match": sha12_file(PREREG_V02).lower() == PREREG_V02_SHA12_EXPECTED.lower()},
-        "captions": {"path": str(CAPTIONS_PATH.relative_to(Path("D:/私人资料/deposon-repo"))),
+        "captions": {"path": str(CAPTIONS_PATH.relative_to(Path("_repo_mirror"))),
                      "sha12": sha12_file(CAPTIONS_PATH),
                      "expected_sha12": CAPTIONS_SHA12_EXPECTED,
                      "match": sha12_file(CAPTIONS_PATH).lower() == CAPTIONS_SHA12_EXPECTED.lower()},
@@ -525,7 +525,7 @@ hits = self_scan_text(result_text)
 print(f"  hits: {hits}")
 
 # Save result.json (same-file update, allowed per PI interrupt-recovery directive)
-OUT_RESULT = Path("D:/私人资料/deposon-repo/results/_v4_supp_l14_n11full_result.json")
+OUT_RESULT = Path("_repo_mirror/results/_v4_supp_l14_n11full_result.json")
 print("\n--- saving result.json ---")
 with open(OUT_RESULT, "w", encoding="utf-8") as f:
     f.write(result_text)
@@ -536,11 +536,11 @@ print("\n--- saving post hashes ---")
 files_to_check = [
     ("prereg_v02", PREREG_V02, PREREG_V02_SHA12_EXPECTED),
     ("prereg_n", PREREG_N, PREREG_N_SHA12_EXPECTED),
-    ("l2_supp_result", Path("D:/私人资料/deposon-repo/results/_v4_supp_l2_n11supp_result.json"), "FF7B167AE43F"),
-    ("l2_supp_verdict", Path("D:/私人资料/deposon-repo/results/_v4_supp_l2_n11supp_verdict.md"), "E433A06E7BFB"),
-    ("l2_supp_executor", Path("D:/私人资料/deposon-repo/results/_v4_supp_l2_n11supp_executor.py"), "0D455B42CD07"),
-    ("proxy_generators", Path("D:/私人资料/deposon-repo/results/_v4_proxy_student_generators.py"), "5BA916D1DD24"),
-    ("distill_min_measure", Path("D:/私人资料/deposon-repo/results/_v4_distill_min_measure.py"), "21771E66AF67"),
+    ("l2_supp_result", Path("_repo_mirror/results/_v4_supp_l2_n11supp_result.json"), "FF7B167AE43F"),
+    ("l2_supp_verdict", Path("_repo_mirror/results/_v4_supp_l2_n11supp_verdict.md"), "E433A06E7BFB"),
+    ("l2_supp_executor", Path("_repo_mirror/results/_v4_supp_l2_n11supp_executor.py"), "0D455B42CD07"),
+    ("proxy_generators", Path("_repo_mirror/results/_v4_proxy_student_generators.py"), "5BA916D1DD24"),
+    ("distill_min_measure", Path("_repo_mirror/results/_v4_distill_min_measure.py"), "21771E66AF67"),
     ("captions", CAPTIONS_PATH, CAPTIONS_SHA12_EXPECTED),
 ]
 post_lines = []
@@ -552,21 +552,21 @@ for name, p, expected in files_to_check:
     if not ok:
         frozen_ok = False
 for tname, trel, expected in TEACHER_PATHS_REL:
-    p = Path("D:/私人资料/deposon-repo") / trel
+    p = Path("_repo_mirror") / trel
     actual = sha12_file(p)
     ok = actual.lower() == expected.lower()
     post_lines.append(f"{tname}: {actual} (expected {expected}) {'OK' if ok else 'CHANGED'}")
     if not ok:
         frozen_ok = False
 
-OUT_POST = Path("D:/私人资料/deposon-repo/results/_v4_supp_l14_n11full_post_hashes_2026_09_24.txt")
+OUT_POST = Path("_repo_mirror/results/_v4_supp_l14_n11full_post_hashes_2026_09_24.txt")
 with open(OUT_POST, "w", encoding="utf-8") as f:
     f.write("\n".join(post_lines) + "\n")
     f.write("\n--- NEW this baton ---\n")
     new_files = [
-        ("executor_self", Path("D:/私人资料/deposon-repo/results/_v4_supp_l14_n11full_executor.py")),
+        ("executor_self", Path("_repo_mirror/results/_v4_supp_l14_n11full_executor.py")),
         ("result", OUT_RESULT),
-        ("verdict", Path("D:/私人资料/deposon-repo/results/_v4_supp_l14_n11full_verdict.md")),
+        ("verdict", Path("_repo_mirror/results/_v4_supp_l14_n11full_verdict.md")),
     ]
     for n, p in new_files:
         if p.exists():

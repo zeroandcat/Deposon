@@ -52,7 +52,7 @@ from typing import Dict, List, Tuple, Optional
 # ============================================================================
 # 路径常量 (只读访问, 不修改)
 # ============================================================================
-REPO_ROOT = r"D:/私人资料/deposon-repo"
+REPO_ROOT = r"_repo_mirror"
 RUNNER_DIR = os.path.join(REPO_ROOT, "deposon_team", "plugins")
 RESULTS_DIR = os.path.join(REPO_ROOT, "results")
 

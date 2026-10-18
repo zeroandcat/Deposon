@@ -3,7 +3,7 @@
   "task": "Deposon v2 scripts 复算 (read-only 验证 frozen verdicts + SHA-256 锚一致性)",
   "date": "2026-09-18",
   "method": "0 LLM / 仅 hashlib + 复算 verdict 纯函数 / 严守 7+9 铁律",
-  "repo": "D:\\私人资料\\deposon-repo",
+  "repo": "_repo_mirror",
   "llm_calls": 0,
   "key_reads": 0,
   "frozen_modified": false
@@ -11,57 +11,57 @@
  "section_1_sha256_anchors": {
   "input_assets": {
    "deposon_v22_p1c": {
-    "path": "D:\\私人资料\\deposon-repo\\results\\deposon_v22_p1c.json",
+    "path": "_repo_mirror\\results\\deposon_v22_p1c.json",
     "sha12": "2bed4de3a57c",
     "size_B": 763
    },
    "deposon_v21_gtformal": {
-    "path": "D:\\私人资料\\deposon-repo\\results\\deposon_v21_gtformal.json",
+    "path": "_repo_mirror\\results\\deposon_v21_gtformal.json",
     "sha12": "9d9ae5001c57",
     "size_B": 69204
    },
    "deposon_v22_e95ci": {
-    "path": "D:\\私人资料\\deposon-repo\\results\\deposon_v22_e95ci.json",
+    "path": "_repo_mirror\\results\\deposon_v22_e95ci.json",
     "sha12": "928bcfbdb7c3",
     "size_B": 1496
    },
    "deposon_v3_v7_summary": {
-    "path": "D:\\私人资料\\deposon-repo\\results\\deposon_v3_v7_summary_2026_09_11.json",
+    "path": "_repo_mirror\\results\\deposon_v3_v7_summary_2026_09_11.json",
     "sha12": "063ac8d00542",
     "size_B": 25049
    },
    "v3x_d7_v3_final_v7": {
-    "path": "D:\\私人资料\\deposon-repo\\docs\\V3X\\V3X_D7_V3_FINAL_REPORT_2026_09_11_V7.md",
+    "path": "_repo_mirror\\docs\\V3X\\V3X_D7_V3_FINAL_REPORT_2026_09_11_V7.md",
     "sha12": "4a08521f8de1",
     "size_B": 38545
    },
    "schema_v1": {
-    "path": "D:\\私人资料\\deposon-repo\\deposon_team\\plugins\\_v3x_frozen_schema_v1.json",
+    "path": "_repo_mirror\\deposon_team\\plugins\\_v3x_frozen_schema_v1.json",
     "sha12": "9e99dcc4d920",
     "size_B": 12919
    },
    "run_v20_vector_audit": {
-    "path": "D:\\私人资料\\deposon-repo\\run_v20_vector_audit.py",
+    "path": "_repo_mirror\\run_v20_vector_audit.py",
     "sha12": "16a270a6bdab",
     "size_B": 4717
    },
    "run_v21_gtformal": {
-    "path": "D:\\私人资料\\deposon-repo\\run_v21_gtformal.py",
+    "path": "_repo_mirror\\run_v21_gtformal.py",
     "sha12": "9bbe43f41fa8",
     "size_B": 16600
    },
    "run_v22_e95ci": {
-    "path": "D:\\私人资料\\deposon-repo\\run_v22_e95ci.py",
+    "path": "_repo_mirror\\run_v22_e95ci.py",
     "sha12": "8470e3ce8cae",
     "size_B": 3058
    },
    "run_v22_p1c": {
-    "path": "D:\\私人资料\\deposon-repo\\run_v22_p1c.py",
+    "path": "_repo_mirror\\run_v22_p1c.py",
     "sha12": "6e9673205dc0",
     "size_B": 7236
    },
    "svg_mindmap_ingest": {
-    "path": "D:\\私人资料\\deposon-repo\\svg_mindmap_ingest.py",
+    "path": "_repo_mirror\\svg_mindmap_ingest.py",
     "sha12": "fa661fd759ed",
     "size_B": 8811
    }
@@ -204,7 +204,7 @@
   ]
  },
  "section_3_schema_v1": {
-  "path": "D:\\私人资料\\deposon-repo\\deposon_team\\plugins\\_v3x_frozen_schema_v1.json",
+  "path": "_repo_mirror\\deposon_team\\plugins\\_v3x_frozen_schema_v1.json",
   "size_B": 12919,
   "sha12": "9e99dcc4d920",
   "anchors_count": 16,
@@ -392,7 +392,7 @@
  },
  "section_11_eight_dim_verdict": {
   "1_run_v20_vector_audit_py_exists": {
-   "path": "D:\\私人资料\\deposon-repo\\run_v20_vector_audit.py",
+   "path": "_repo_mirror\\run_v20_vector_audit.py",
    "sha12": "16a270a6bdab",
    "exists": true,
    "pass": true

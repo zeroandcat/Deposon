@@ -4,9 +4,9 @@
 > **件名**：`results/_trae_issues_dfamily_corrections_register_2026_10_12.md`
 > **上游输入**：`letters/_trae_dfamily_original_text_reply_2026_10_12.md`（D 族原文索取回函 · ⛔ 0 回改）
 > **批 2 背景**：`results/_trae_issues_batch2_corrections_register_2026_10_12.md` 之 D-2／D-6／D-10／D-12／D-14／D-15／D-16 七项宿主 0 定位
-> **盘面**：`D:\私人资料\deposon-repo`（可写）｜`D:\私人资料\deposon-sub`（**只读 · 0 写**）。D 族宿主**六项在 sub 面**（D-2／D-6／D-10／D-12／D-13／D-15／D-16 所在件之一部分），D-14 之 R-2 委托件与 D-8 映射件在 repo 面。
+> **盘面**：`_repo_mirror`（可写）｜`_repo_mirror`（**只读 · 0 写**）。D 族宿主**六项在 sub 面**（D-2／D-6／D-10／D-12／D-13／D-15／D-16 所在件之一部分），D-14 之 R-2 委托件与 D-8 映射件在 repo 面。
 > **实测纪律**：本件所有 SHA-12／bytes／行文均为**本棒逐件实测**（`os.stat` + `hashlib.sha256` 全文件摘要 + 逐行 UTF-8 严格解码），⛔ 0 沿用回函、勘误件或任何上下文之记忆值；凡本棒未复算者**逐处标注「未复算」**，⛔ 0 以转录充实测。
-> **硬边界**：⛔ 0 回改任何既有件一字（含回函、批 2 件、全部 D 族宿主）｜0 移动／重命名／删除｜0 触 `D:\私人资料\_non_upload_local_archive`｜0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜0 改终判词／阈值／门柱｜0 赋 `k_v3s_4_4_*` 布尔｜0 代 PI 裁。
+> **硬边界**：⛔ 0 回改任何既有件一字（含回函、批 2 件、全部 D 族宿主）｜0 移动／重命名／删除｜0 触 `〔本地归档区〕`｜0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜0 改终判词／阈值／门柱｜0 赋 `k_v3s_4_4_*` 布尔｜0 代 PI 裁。
 
 ---
 
@@ -30,7 +30,7 @@
 
 ## §1 D-2 · 五行 bytes 载值不符
 
-- **宿主件（实测绝对路径）**：`D:\私人资料\deposon-sub\results\_round56_review_effectivity_register_3_2026_10_10.md`
+- **宿主件（实测绝对路径）**：`_repo_mirror\results\_round56_review_effectivity_register_3_2026_10_10.md`
 - **§位＋行号**：§1「18 行输入链表」· **L37／L39／L49／L50／L51**（表行 #4／#6／#16／#17／#18）
 - **原文照录（盘上逐字）**：
 
@@ -56,7 +56,7 @@ L51: | 18 | `results/_u5_fingerprint_relocation_erratum_2026_10_10.md` | **`200c
 
   - 五实体 repo 面**均不存在**（`Test-Path=False`）⇒ 唯一落位为 sub 面，路径可解析。
 - **差异**：五行 **bytes 列**载值与盘上实测不符（SHA 列五行全等 ⇒ 差异仅在记录面，0 引证影响）。#18 指纹盘上为 **`200c7e4c57cb`**（12 位）。
-- **来源**：勘误件 `D:\私人资料\deposon-sub\results\_register3_bytes_erratum_2026_10_11.md`（`f9f6805a7b76` / 13,294 B）§2-1 实测列 L41–L45 · 落盘后实测列 L55–L59。
+- **来源**：勘误件 `_repo_mirror\results\_register3_bytes_erratum_2026_10_11.md`（`f9f6805a7b76` / 13,294 B）§2-1 实测列 L41–L45 · 落盘后实测列 L55–L59。
 - **更正内容**：**正确值＝ 25,698／27,778／21,966／50,079／24,999**（本棒实测，5/5 与勘误件逐位吻合）。**理由**：bytes 为「落盘后逐件实测」铁律之产物；本棒复算证明勘误件之值为真、宿主 §1 表载值为陈旧记录值。**成因 0 断言**（可能为换算／誊录／他因，沿勘误件口径）。⛔ 0 回改宿主；下游须引勘误件 `f9f6805a7b76` 为准。
 - **状态**：✅ 已更正（登记值面）· 差异成立 · 本棒补齐回函「未复算」缺口。
 - **是否须 PI 裁**：**是** —— 是否于宿主另立附注（⛔ 0 自裁）。
@@ -65,7 +65,7 @@ L51: | 18 | `results/_u5_fingerprint_relocation_erratum_2026_10_10.md` | **`200c
 
 ## §2 D-6 · 时序块「±22h」且自称全实测
 
-- **宿主件（实测绝对路径）**：`D:\私人资料\deposon-sub\results\_s6doubleprime_terminal_verdicts_2026_10_11.md`
+- **宿主件（实测绝对路径）**：`_repo_mirror\results\_s6doubleprime_terminal_verdicts_2026_10_11.md`
 - **§位＋行号**：§4-3「判别要件① 之时序实测」· 块头 **L168**、失实行 **L171**（时序块 L168–L177）
 - **原文照录（盘上逐字）**：
 
@@ -76,8 +76,8 @@ L171: 2026-10-11 14:03:16   (04495ef4b343 之判死线本体 · 早于向-1 之�
 
 - **实测值（本棒逐件实测）**：
   - 宿主 = `bba3b889d849` / **76,910 B**（BOM False / CR 0 / TAB 0）
-  - 真值件 `D:\私人资料\deposon-sub\results\_g5_rejudgment_face_prereg_2026_10_10.md` = `04495ef4b343` / **35,097 B**；本棒 `os.stat` 实测 **`LastWriteTime` ＝ `2026-10-10 16:04:10.636`**、`CreationTime` **同值**（⇒ 该件自落盘起未被改写）。
-  - 勘误件 `D:\私人资料\deposon-sub\results\_s7doubleprime_verification_erratum_2026_10_11.md` = `9ff40693e4ac` / 32,822 B；其 L47／L51／L235 载真值 `2026-10-10 16:04:10.636`。
+  - 真值件 `_repo_mirror\results\_g5_rejudgment_face_prereg_2026_10_10.md` = `04495ef4b343` / **35,097 B**；本棒 `os.stat` 实测 **`LastWriteTime` ＝ `2026-10-10 16:04:10.636`**、`CreationTime` **同值**（⇒ 该件自落盘起未被改写）。
+  - 勘误件 `_repo_mirror\results\_s7doubleprime_verification_erratum_2026_10_11.md` = `9ff40693e4ac` / 32,822 B；其 L47／L51／L235 载真值 `2026-10-10 16:04:10.636`。
 - **差异**：宿主 L171 载 `2026-10-11 14:03:16`，盘上真值 `2026-10-10 16:04:10.636` ⇒ **漂移 ＝ 21 小时 59 分 06 秒（「±22h」成立）**。且块头 L168 自称「本棒实测 `LastWriteTime`」，**失实者恰为自称之实测面**（单条失实；同块其余 10 条沿子代理实测，本棒未逐条复算 ⇒ 标注「未复算」）。
 - **来源**：勘误件 `9ff40693e4ac` §2-1（L47 实测表／L51 更正后字面／L52 结论行）。
 - **更正内容**：**正确值＝ `2026-10-10 16:04:10.636`**（本棒实测，与勘误件**逐位吻合**）。**理由**：文件系统属性为可复算客观量，且 `CreationTime` ＝ `LastWriteTime` 互证该值未被改写。⛔ 0 判为「结论错」—— 断言「早于向-1 之全部构造动作」**反而更强成立**（真值更早 ⇒ 时序判据更严），0 判定影响。
@@ -88,7 +88,7 @@ L171: 2026-10-11 14:03:16   (04495ef4b343 之判死线本体 · 早于向-1 之�
 
 ## §3 D-8 · 10-12 跨区移 723 件后路径迁移失效
 
-- **宿主件（实测绝对路径）**：`D:\私人资料\deposon-repo\results\_v4_closeout_bulk_reorganize_register_2026_10_12.md`
+- **宿主件（实测绝对路径）**：`_repo_mirror\results\_v4_closeout_bulk_reorganize_register_2026_10_12.md`
 - **§位＋行号**：**L13–L14**（两库件数表）、**L33**（转移件引用强度）、**L35**（映射表条目数）、**L247／L249／L250**（转移件数与复算）、**L258 起**（723 条映射表）
 - **原文照录（盘上逐字·摘）**：
 
@@ -113,7 +113,7 @@ L250: | SHA-256 复算 | **MATCH 723 / FAIL 0 / PRE_MISMATCH 0** |
 
 ## §4 D-10 · 「（若存在）」实存在
 
-- **宿主件（实测绝对路径）**：`D:\私人资料\deposon-sub\results\_questionnaire_cards_intake_register_supplement_7_2026_10_10.md`
+- **宿主件（实测绝对路径）**：`_repo_mirror\results\_questionnaire_cards_intake_register_supplement_7_2026_10_10.md`
 - **§位＋行号**：**§2.4 第 2 条 · L804**（上下文 L803 另载「本批四卡＝轮 49–52」）
 - **原文照录（盘上逐字）**：
 
@@ -123,7 +123,7 @@ L804: 2. **全表行数之活库变动** —— 第七批落册读时点 419 行
 
 - **实测值（本棒逐件实测）**：
   - 宿主 = `1fb8eac82781` / **52,602 B**（BOM False / CR 0 / TAB 0；全件 850 行，L804 在界内）
-  - 补正件 = `D:\私人资料\deposon-sub\results\_questionnaire_cards_intake_register_supplement_7_accounting_correction_2026_10_10.md`（`a651f76a6547` / 17,517 B，回函载）
+  - 补正件 = `_repo_mirror\results\_questionnaire_cards_intake_register_supplement_7_accounting_correction_2026_10_10.md`（`a651f76a6547` / 17,517 B，回函载）
 - **差异**：句中「另建之他卡**（若存在）**」之不确定措辞与实况不符 —— 实况为**确实存在**（轮 53 卡 `ask_9bb02f1b68a419c8855fef60`）。附带：419 行之 status 分布为**活库时点值**，复读时已漂移（原句未带时点限定）。
 - **来源**：补正件 `a651f76a6547` §0 · 子代理实测（`ask_9bb02f1b68a419c8855fef60`）。
 - **更正内容**：**正确口径＝「另建之他卡确实存在（轮 53 卡）；+4 行集合 ＝ {轮 50,51,52,53 卡}，与『本批四卡』{轮 49–52} 之交集 ＝ 3（轮 49 已在 419 内）」**。**理由**：账目断言与实况不符即失真；⛔ 0 以「若存在」之对冲措辞充事实陈述。
@@ -135,7 +135,7 @@ L804: 2. **全表行数之活库变动** —— 第七批落册读时点 419 行
 
 ## §5 D-12 · 登记滞后 4 处（**＋ 本棒新增勘误：回函 §1.4「旧值」列误植**）
 
-- **宿主件（实测绝对路径）**：`D:\私人资料\deposon-sub\results\_registry_lag_correction_batch_2026_10_01.md`
+- **宿主件（实测绝对路径）**：`_repo_mirror\results\_registry_lag_correction_batch_2026_10_01.md`
 - **§位＋行号**：**L1**（件头）、**L21**（覆盖面）、**L22**（⛔ 0 做）、**§1 四处指纹漂移 · L42（映射摘要行）＋ L50／L51／L52／L53（四对象逐行）**
 - **原文照录（盘上逐字）**：
 
@@ -152,7 +152,7 @@ L53: | 4 | `92ac9a956bd3` | ❌ **0 命中** | `b5a50447b4da` | ✅ `results/_v5
 
 - **实测值（本棒逐件实测）**：
   - 宿主 = `5b86fbf0cbbd` / **36,367 B**（BOM False / CR 0 / TAB 0；全件 336 行）
-  - **四对象本棒独立实测**（均在 **repo 面** `D:\私人资料\deposon-repo\results\`，sub 面**均不存在**）：
+  - **四对象本棒独立实测**（均在 **repo 面** `_repo_mirror\results\`，sub 面**均不存在**）：
 
 | # | 对象（repo 面） | 盘上实测 SHA-12 | 盘上实测 bytes | 宿主所载旧值 | 宿主所载新值 | 本棒判定 |
 |---|---|---|---|---|---|---|
@@ -162,7 +162,7 @@ L53: | 4 | `92ac9a956bd3` | ❌ **0 命中** | `b5a50447b4da` | ✅ `results/_v5
 | 4 | `_v5_bulk_activation_2026_09_28.md` | `b5a50447b4da` | 39,378 | `92ac9a956bd3` | `b5a50447b4da` | 新值＋bytes（39,378）逐位吻合 ✅ |
 
   - **全库哈希级复算**：本棒对 repo＋sub 两面 **2,956 件**逐件 `SHA-256` 取前 12 位（去重 2,876 值）⇒ 宿主所载**四个旧值 `0a2b5c837c83`／`c300e74a082c`／`7e2b0bb39cfe`／`92ac9a956bd3` 哈希命中 ＝ 0/4**；**四个新值 ＝ 4/4 命中**。⇒ 宿主 L50–L53 之「旧值 0 命中」断言**成立**（其口径 ＝「无任何在盘文件之当前哈希为此值」，非字符串 0 命中）。
-  - 37 版勘误链 `D:\私人资料\deposon-repo\docs\V3X\TRAE_V3_ASSET_ERRATUM_2026_09_23.md` = `41f5f1689d09` / **857,551 B**（本棒实测，BOM False / CR 0 / TAB 0）。
+  - 37 版勘误链 `_repo_mirror\docs\V3X\TRAE_V3_ASSET_ERRATUM_2026_09_23.md` = `41f5f1689d09` / **857,551 B**（本棒实测，BOM False / CR 0 / TAB 0）。
 - **差异（两处）**：
   1. **「登记滞后」本体成立** —— 登记在前、漂移在后（快照时点正确、后续追加致陈旧），4 处新值唯一命中、纯文末追加、非破链。
   2. 🔴 **本棒新增勘误：回函 §1.4 之「旧值」列误植** —— 回函将 `a46230e344af`（项1）、`8dcf5e1e6dde`（项3）、`b5a50447b4da`（项4）列作**旧值**并称「4 件旧值盘上 0 命中、新值唯一命中」；实测三者**恰为该四对象之当前盘上哈希（= 新值）且全部命中**，而真正 0 命中者为 `0a2b5c837c83`／`c300e74a082c`／`7e2b0bb39cfe`／`92ac9a956bd3`。⇒ **回函该列新旧值整体错位**（项 2 之 `c300e74a082c → ae81d9b59054` 一项无误，余三项误植）。回函为 ⛔ 0 回改件，**以本件另名承销**。
@@ -175,7 +175,7 @@ L53: | 4 | `92ac9a956bd3` | ❌ **0 命中** | `b5a50447b4da` | ✅ `results/_v5
 
 ## §6 D-13 · 占位哈希 `B18FF4177289`
 
-- **宿主件（实测绝对路径）**：`D:\私人资料\deposon-sub\results\_asset_identity_reconciliation_2026_10_01.md`
+- **宿主件（实测绝对路径）**：`_repo_mirror\results\_asset_identity_reconciliation_2026_10_01.md`
 - **§位＋行号**：**§2.2 L157（标题「`B18FF4177289` 之性质（**决定性实测**）」）／L159（三面 41,392 件逐件 SHA-256 之自陈域）／L170（性质判定）／L178（结论）／L180（自指不可能性）／L204（`post_birth_self_hash_to_be_filled=true`）／L305（A3 行）**
 - **原文照录（盘上逐字·摘）**：
 
@@ -202,9 +202,9 @@ L180: **结构性佐证（自指不可能性）**：一文件**不能包含自�
 ## §7 D-14 · 委托件转述失真（R-2 措辞）
 
 - **宿主件（实测绝对路径 · 双件）**：
-  - 勘误件（转述更正之在册面）`D:\私人资料\deposon-sub\results\_commission_closeout_erratum_and_supplement_2026_10_11.md`
-  - R-2 归属委托件（失真所在）`D:\私人资料\deposon-repo\letters\_commission_pending_pi_gaps_closeout_EN_2026_10_11.md`
-  - 盘上原文面 `D:\私人资料\deposon-sub\results\_g11_krj4_effectivity_register_2026_10_11.md`
+  - 勘误件（转述更正之在册面）`_repo_mirror\results\_commission_closeout_erratum_and_supplement_2026_10_11.md`
+  - R-2 归属委托件（失真所在）`_repo_mirror\letters\_commission_pending_pi_gaps_closeout_EN_2026_10_11.md`
+  - 盘上原文面 `_repo_mirror\results\_g11_krj4_effectivity_register_2026_10_11.md`
 - **§位＋行号**：勘误件 **§1 L13（标题「须以此为准」）／L20（R-2 盘上原文行）／L30（与委托件对照行）**；委托件 **L51**；盘上原文面 `17168119eccc` **§4-1**（R-1–R-6 六项清单之在册原文面）
 - **原文照录（盘上逐字·两句并列）**：
 
@@ -229,8 +229,8 @@ L180: **结构性佐证（自指不可能性）**：一文件**不能包含自�
 ## §8 D-15 · 授权锚 0 盘上命中族（**＋ 本棒新增勘误：两处「0 命中」字面自指失准**）
 
 - **宿主件（实测绝对路径 · 本棒实测样本 1／2）**：
-  - 样本 1 `D:\私人资料\deposon-sub\results\_v5_confirm_b1_decisions_register_2026_09_29.md`（L8 拍板出处／L12 诚实前置）
-  - 样本 2 `D:\私人资料\deposon-sub\results\_b01_recompute_sec4_2_erratum_2026_10_10.md`（L5 授权锚）
+  - 样本 1 `_repo_mirror\results\_v5_confirm_b1_decisions_register_2026_09_29.md`（L8 拍板出处／L12 诚实前置）
+  - 样本 2 `_repo_mirror\results\_b01_recompute_sec4_2_erratum_2026_10_10.md`（L5 授权锚）
   - 样本 3–5 **未定位**（沿子代理登记，本棒未逐一定址 ⇒ 标注「未定位」）
 - **§位＋行号**：样本 1 · **L8／L12**；样本 2 · **L5**
 - **原文照录（盘上逐字）**：
@@ -260,9 +260,9 @@ L180: **结构性佐证（自指不可能性）**：一文件**不能包含自�
 ## §9 D-16 · 终判分布跨件漂移（互斥）
 
 - **宿主件（实测绝对路径 · 三件全在 sub 面）**：
-  - `D:\私人资料\deposon-sub\results\_krj_all_terminal_verdicts_2026_10_11.md`
-  - `D:\私人资料\deposon-sub\results\_gate_one_pi_endorsement_register_2026_10_12.md`
-  - `D:\私人资料\deposon-sub\results\_gate_one_declared_adoption_register_2026_10_11.md`
+  - `_repo_mirror\results\_krj_all_terminal_verdicts_2026_10_11.md`
+  - `_repo_mirror\results\_gate_one_pi_endorsement_register_2026_10_12.md`
+  - `_repo_mirror\results\_gate_one_declared_adoption_register_2026_10_11.md`
 - **§位＋行号**：`_krj_all_` **L12（状态栏）／L26（K-RJ-4）／L28（K-RJ-6）**；`_gate_one_pi_endorsement_` **L40（`pass` 分布）／L41（`kd` 分布）**；`_gate_one_declared_adoption_` **L119（权威面指向行）**
 - **原文照录（盘上逐字·互斥四行）**：
 
@@ -292,7 +292,7 @@ L180: **结构性佐证（自指不可能性）**：一文件**不能包含自�
 
 1. **实测域**：本棒一切 SHA-12／bytes／行文均逐件实测（`hashlib.sha256` 全文件摘要 ＋ 严格 UTF-8 解码 ＋ `os.stat`）；全库哈希级复算覆盖 **repo＋sub 两面 2,956 件**（去重 2,876 值）。⛔ 0 沿用记忆值。
 2. **回函未复算处之补齐**：D-2 五实体 bytes（回函自陈「未复算」→ 本棒 **5/5 实测吻合**）；D-6 真值时点（→ **逐位吻合**）；D-12 四对象新值＋旧值 0 命中（→ **4/4 吻合 · 4/4 哈希 0 命中**）；D-8 路径失效抽样（→ **4/4 `Test-Path=False`**）；D-13 占位哈希（→ **0 命中**）。
-3. **⚠ 如实交代（一次越界，已即刻止）**：本棒初次执行字面检索时，搜索根误设为 `D:\私人资料`，致工具输出**列出了** `_non_upload_local_archive` 下若干文件之**路径名**（**仅路径字符串**）。该棒即刻停止、未读取其中任何文件、未写入、未移动；其后全部检索**改以 `deposon-repo`／`deposon-sub` 两根分列**。⇒ 该区「0 读」成立，**「0 列目录」不成立 —— 如实登记，不文过**。
+3. **⚠ 如实交代（一次越界，已即刻止）**：本棒初次执行字面检索时，搜索根误设为 `〔本地资料区〕`，致工具输出**列出了** `_non_upload_local_archive` 下若干文件之**路径名**（**仅路径字符串**）。该棒即刻停止、未读取其中任何文件、未写入、未移动；其后全部检索**改以 `deposon-repo`／`deposon-sub` 两根分列**。⇒ 该区「0 读」成立，**「0 列目录」不成立 —— 如实登记，不文过**。
 4. **未实测之项（0 冒充实测）**：① D-10 轮 53 卡在**运行时库**之存在（禁触面，⛔ 0 读）；② D-15 样本 3–5 未定位；③ D-13 所称「三面 41,392 件」之**第三面**（归档区，⛔ 0 触）；④ D-6 时序块其余 10 条逐条时点；⑤ D-8 之 723 条引用面逐条复算（抽样 4 件）。
 5. **⛔ 0 做**：0 回改任何既有件一字（含 `ce91320d4f28` 回函、`592800923f3f` 批 2 件、全部 D 族宿主、`d11d75ba6236` ②段回函）｜0 移动／重命名／删除｜0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜0 改终判词／阈值／门柱｜0 赋 `k_v3s_4_4_*` 布尔｜0 代 PI 拍板（§2／§3／§9 之「建议」均候 PI 择）｜0 触他棒产物（`_trae_dfamily_reply_intake*`／`_bd_fixes_summary*`／`_trae_issues_batch2*`／`_batch1_*`／`_d9_*`／`_c4_*`／`_c1_*`／`_u5_*`／`_gate1_*`／`_itemH_*`／`_degradation_*`／`letters/`）。
 6. **本棒新增产物**：本件 1（**新名 · 0 覆写**；落前 `Test-Path=False` ＋ 同名 glob 0 命中）＋ **中件 1**（`.tmp\_dfam_corr_src_2026_10_12.md`，落盘中转稿：⛔ 0 经 GBK／PowerShell 管道中转中文，故先写中件、再以 `io.open(..., encoding='utf-8', newline='\n', errors='strict')` 生成正式件；中件按项目 `.tmp` 惯例留存，**未删除** ⛔ 0 删既有件，亦 0 删自有件）。

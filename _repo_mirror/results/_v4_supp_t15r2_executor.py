@@ -96,7 +96,7 @@ import requests as _requests
 # ============================================================
 # 常量与路径
 # ============================================================
-ROOT = Path("D:/私人资料/deposon-repo")
+ROOT = Path("_repo_mirror")
 RESULTS_DIR = ROOT / "results"
 TMP_DIR = ROOT / ".tmp"
 
@@ -110,8 +110,8 @@ T15R2_PROBE_LOG_PATH = TMP_DIR / "_t15r2_probe_log.json"
 T15R2_RESULT_PATH = RESULTS_DIR / "_v4_supp_t15r2_result.json"
 
 # Key source (沿 T1.5 executor § key loading)
-KEY_SOURCE_PATH = Path("C:/Users/Administrator/Desktop/AI/LLM API.txt")
-CAPTIONS_PATH = Path("D:/私人资料/deposon-repo/corpus/v20_caption_surface/strip_captions_22.json")
+KEY_SOURCE_PATH = Path("〔本机用户目录〕/Desktop/AI/LLM API.txt")
+CAPTIONS_PATH = Path("_repo_mirror/corpus/v20_caption_surface/strip_captions_22.json")
 CAPTIONS_SHA12_EXPECTED = "6A2656878745"
 
 # T1.5r2 / T1.5 / T1 字面 SHA-12 锚 (核对一致后用, 一字不动)

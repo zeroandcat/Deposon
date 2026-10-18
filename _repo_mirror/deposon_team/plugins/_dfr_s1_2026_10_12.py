@@ -2,7 +2,7 @@
 """_dfr_s1 — D 族 7+2 项宿主件现值机验（repo/sub 两面；只读；归档区 0 触）"""
 import hashlib, os
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo'); SUB = Path(r'D:\私人资料\deposon-sub')
+REPO = Path(r'_repo_mirror'); SUB = Path(r'_repo_mirror')
 def sha12b(b): return hashlib.sha256(b).hexdigest()[:12]
 
 TARGETS = {
@@ -35,7 +35,7 @@ def find(fn):
             if fn in fns:
                 p = os.path.join(dp, fn)
                 b = open(p, 'rb').read()
-                return (p.replace('D:\\私人资料\\', ''), sha12b(b), len(b))
+                return (p.replace('〔本地资料区〕\\', ''), sha12b(b), len(b))
     return None
 
 print('=== D 族宿主件现值（repo/sub 两面实测） ===')

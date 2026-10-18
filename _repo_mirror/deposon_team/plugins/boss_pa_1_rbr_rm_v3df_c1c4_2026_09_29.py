@@ -48,7 +48,7 @@ from typing import Optional
 # 路径常量（全部为只读输入；输出为新名件）
 # ============================================================================
 
-REPO_ROOT = r"D:/私人资料/deposon-repo"
+REPO_ROOT = r"_repo_mirror"
 V20_BASELINES = os.path.join(REPO_ROOT, "results", "deposon_v20_baselines.json")
 SRC_RESULT = os.path.join(REPO_ROOT, "results", "boss_pa_1_rbr_rm_result_2026_09_15.json")
 SRC_RUNNER = os.path.join(REPO_ROOT, "deposon_team", "plugins", "boss_pa_1_rbr_rm.py")
@@ -1067,7 +1067,7 @@ assert _os_v3df.path.basename(__file__) == "boss_pa_1_rbr_rm_v3df_c1c4_2026_09_2
 with open(__file__, "r", encoding="utf-8") as _f_v3df:
     _src_v3df = _f_v3df.read()
 assert "V3DF_SELFCHECK_2026_09_29" in _src_v3df
-_out_v3df = _os_v3df.path.join(r"D:/私人资料/deposon-repo", "results",
+_out_v3df = _os_v3df.path.join(r"_repo_mirror", "results",
                                "_v5_v3_deg_fix_c1c4_result_2026_09_29.json")
 if _os_v3df.path.exists(_out_v3df):
     import json as _json_v3df

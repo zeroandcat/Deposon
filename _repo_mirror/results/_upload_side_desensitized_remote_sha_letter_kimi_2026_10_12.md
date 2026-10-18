@@ -6,7 +6,7 @@
 - 登记件数：**461** 件（全部经三方核验：远端 blob sha1 == 下表值，逐件实测于本函生成时刻，漂移 0 件）
 - 远端 SHA 口径：GitHub git blob sha1（40 位全值）；bytes 为远端字节数
 - 本地原件：一律未改动；远端为脱敏/更正版。远端旧版留档于 `_non_upload_local_archive\results\_remote_version_freeze_2026_10_12\`（474 件指纹对拍一致）
-- 映射口径：〔W老师〕→〔W老师〕、〔当事人W〕→〔当事人W〕、〔IM〕/〔IM〕→〔IM〕、〔高校R〕/〔高校R〕/〔高校R〕/〔高校R〕→〔高校R〕、〔机构G〕/〔机构G〕→〔机构G〕、ark 语境 UUID→〔密钥已脱敏〕；`D:/私人资料/deposon-repo|deposon-sub/…`→`_september_workspace/…`，归档区→〔本地归档区〕，其余本机路径→〔本地资料区〕/〔本机用户目录〕/〔回收站〕/〔本机路径〕
+- 映射口径：〔W老师〕→〔W老师〕、〔当事人W〕→〔当事人W〕、〔IM〕/〔IM〕→〔IM〕、〔高校R〕/〔高校R〕/〔高校R〕/〔高校R〕→〔高校R〕、〔机构G〕/〔机构G〕→〔机构G〕、ark 语境 UUID→〔密钥已脱敏〕；`_repo_mirror|deposon-sub/…`→`_september_workspace/…`，归档区→〔本地归档区〕，其余本机路径→〔本地资料区〕/〔本机用户目录〕/〔回收站〕/〔本机路径〕
 
 | # | 远端路径 | bytes | 远端 blob sha1 | 移除项 |
 |---:|---|---:|---|---|

@@ -1,7 +1,7 @@
 """Final all-files verification for the D3r2 + D5 pair."""
 import hashlib, json, os, re
 
-ROOT_R = "D:/私人资料/deposon-repo/results"
+ROOT_R = "_repo_mirror/results"
 
 files = {
     "_v4_manifest_distill_min_v1.json": ("6D1563A4AE23", 6563),

@@ -38,10 +38,10 @@
 
 | 标签 | 绝对路径 | 本棒处置 |
 |:--|:--|:--|
-| MAIN | `D:\私人资料\deposon-repo` | ✅ 全量实测逐件（§4.1）|
-| SUB | `D:\私人资料\deposon-sub` | ✅ 全量实测逐件（§4.2）|
-| ARCHIVE | `D:\私人资料\_non_upload_local_archive` | ⛔ **本棒 0 读 0 写 0 列目录 0 入清单** ⇒ **未核得（禁触区）**，见 §9-N-1 |
-| GLM | `D:\私人资料\GLM` | ⛔ **本棒 0 触**（派工单明列）|
+| MAIN | `_repo_mirror` | ✅ 全量实测逐件（§4.1）|
+| SUB | `_repo_mirror` | ✅ 全量实测逐件（§4.2）|
+| ARCHIVE | `〔本地归档区〕` | ⛔ **本棒 0 读 0 写 0 列目录 0 入清单** ⇒ **未核得（禁触区）**，见 §9-N-1 |
+| GLM | `〔本地资料区〕\GLM` | ⛔ **本棒 0 触**（派工单明列）|
 
 ### §2.2 「全件枚举逐件附 SHA-12」vs v2.0「`.tmp` 仅汇总」—— **已查惯例，本件按派工单明令取前者（偏离已登记）**
 
@@ -260,7 +260,7 @@
 | 36 | `docs/V3X/D7_POST_CLEANUP_PLAN_2026_09_18.json` | `docs/V3X/D7_POST_CLEANUP_PLAN_2026_09_18.json` | 20,271 | `0b8a1a357aae` | ✅ 新在位·旧已离位 |
 | 37 | `docs/V3X/D7_POST_CLEANUP_REPORT_2026_09_16.json` | `docs/V3X/D7_POST_CLEANUP_REPORT_2026_09_16.json` | 1,248 | `40955bf2abc5` | ✅ 新在位·旧已离位 |
 | 38 | `docs/V3X/D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` | `docs/V3X/D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` | 10,692 | `51869e3184f4` | ✅ 新在位·旧已离位 |
-| 39 | `docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | `docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 8,037 | `935cb6ee3566` | ✅ 新在位·旧已离位 |
+| 39 | `docs/V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | `docs/V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 8,037 | `935cb6ee3566` | ✅ 新在位·旧已离位 |
 | 40 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `docs/V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | 22,442 | `ac8997b07731` | ✅ 新在位·旧已离位 |
 | 41 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | `docs/V3X/DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | 17,803 | `240a7ae4bdfb` | ✅ 新在位·旧已离位 |
 | 42 | `docs/V3X/DPATH_CROSS_MODAL_2026_09_10.md` | `docs/V3X/DPATH_CROSS_MODAL_2026_09_10.md` | 26,460 | `e4ee3999f7ce` | ✅ 新在位·旧已离位 |
@@ -412,8 +412,8 @@
 
 | 区 | 路径 | 件数 | bytes | 末次 mtime |
 |:--|:--|--:|--:|:--|
-| REPO | `D:\私人资料\deposon-repo` | **4,282** | **189,657,496** | 2026-10-18 00:58:56 |
-| SUB | `D:\私人资料\deposon-sub` | **1,276** | **60,166,418** | 2026-10-15 13:01:46 |
+| REPO | `_repo_mirror` | **4,282** | **189,657,496** | 2026-10-18 00:58:56 |
+| SUB | `_repo_mirror` | **1,276** | **60,166,418** | 2026-10-15 13:01:46 |
 | **合计** | —— | **5,558** | **249,823,914** | —— |
 
 **分区 · 类别**
@@ -425,7 +425,7 @@
 
 📌 **分型（md／py／json／其他）汇总见 §11-A-3（🆕 新增面）**；**两区计数多读并列见 §5**；**今晚增量面见 §7**。
 
-### §4.1 区 `D:\私人资料\deposon-repo`（4,282 件 ／ 189,657,496 bytes）
+### §4.1 区 `_repo_mirror`（4,282 件 ／ 189,657,496 bytes）
 
 **逐目录分布**
 
@@ -4844,7 +4844,7 @@
 | 4281 | `verifier/v8/check.py` | 3,210 | 2026-08-23 21:40:59 | `01b63b1a9c5f` | 成果面 |
 | 4282 | `verifier/v9/check.py` | 5,352 | 2026-08-23 23:46:50 | `5faad917d839` | 成果面 |
 
-### §4.2 区 `D:\私人资料\deposon-sub`（1,276 件 ／ 60,166,418 bytes）
+### §4.2 区 `_repo_mirror`（1,276 件 ／ 60,166,418 bytes）
 
 📌 **图例 `†`**：该件系 ③段-R2 **由 repo 净转移**而来（**141** 件）——**本表所列路径为准**，其原 repo 路径见 **§3.3** 对应行。
 
@@ -5041,7 +5041,7 @@
 | 145 | `docs/V3X/D7_POST_CLEANUP_PLAN_2026_09_18.json` | 20,271 | 2026-09-15 17:27:45 | `0b8a1a357aae` | 成果面 †141 |
 | 146 | `docs/V3X/D7_POST_CLEANUP_REPORT_2026_09_16.json` | 1,248 | 2026-09-16 11:01:13 | `40955bf2abc5` | 成果面 †141 |
 | 147 | `docs/V3X/D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` | 10,692 | 2026-09-16 11:09:18 | `51869e3184f4` | 成果面 †141 |
-| 148 | `docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 8,037 | 2026-09-16 11:08:22 | `935cb6ee3566` | 成果面 †141 |
+| 148 | `docs/V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 8,037 | 2026-09-16 11:08:22 | `935cb6ee3566` | 成果面 †141 |
 | 149 | `docs/V3X/D_FIX2_METRIC_VERIFY_REPORT_2026_09_15.md` | 7,352 | 2026-09-15 14:07:47 | `0a63824f0805` | 成果面 †141 |
 | 150 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | 22,442 | 2026-09-10 20:22:54 | `ac8997b07731` | 成果面 †141 |
 | 151 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | 17,803 | 2026-09-10 18:16:43 | `240a7ae4bdfb` | 成果面 †141 |
@@ -5188,7 +5188,7 @@
 | 292 | `results/_archive_2026_09_20/LETTER_TO_KIMI_GITHUB_UPLOAD_2026_09_18.md` | 13,286 | 2026-09-15 14:55:36 | `8875bf0bc50d` | 成果面 |
 | 293 | `results/_archive_2026_09_20/LETTER_TO_TRAE_2026_09_11.md` | 22,776 | 2026-09-16 11:01:12 | `7a95307a3293` | 成果面 |
 | 294 | `results/_archive_2026_09_20/LETTER_TO_TRAE_REVIEW_2026_09_16.md` | 12,668 | 2026-09-15 13:47:02 | `1c0885d2b1fa` | 成果面 |
-| 295 | `results/_archive_2026_09_20/LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md` | 10,562 | 2026-09-18 12:19:45 | `7d4b5dd967e2` | 成果面 |
+| 295 | `results/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | 10,562 | 2026-09-18 12:19:45 | `7d4b5dd967e2` | 成果面 |
 | 296 | `results/_archive_2026_09_20/p_i_curvature_audit_probe_results_2026_09_16.json` | 2,637 | 2026-09-16 17:37:31 | `ae07f5551e87` | 成果面 |
 | 297 | `results/_archive_2026_09_20/review_content_A1_glm51.md` | 7,617 | 2026-09-18 00:35:54 | `fd38a2a1ea05` | 成果面 |
 | 298 | `results/_archive_2026_09_20/review_content_A2_kimik3.md` | 24,843 | 2026-09-18 09:28:57 | `a964defb923d` | 成果面 |
@@ -5302,7 +5302,7 @@
 | 406 | `results/_d1_backfill_event_id_prefix_proposal_2026_10_01.md` | 14,074 | 2026-10-01 12:28:08 | `2636394df918` | 成果面 |
 | 407 | `results/_d1_backfill_readiness_pack_2026_10_01.md` | 26,462 | 2026-10-01 11:49:06 | `ed644fb07f88` | 成果面 |
 | 408 | `results/_d1_ruling_and_s3_transition_2026_10_01.md` | 28,370 | 2026-10-10 11:37:23 | `dc9cb0e02922` | 成果面 |
-| 409 | `results/_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` | 9,891 | 2026-09-17 14:39:46 | `f4d5b755736a` | 成果面 |
+| 409 | `results/_d7_external_advisor_〔IM〕_publish_v1_20260918.md` | 9,891 | 2026-09-17 14:39:46 | `f4d5b755736a` | 成果面 |
 | 410 | `results/_d8_closeout_protocol_recompute_2026_09_30.md` | 31,007 | 2026-09-30 22:57:20 | `57aba2cd26a6` | 成果面 |
 | 411 | `results/_d8_dup_overlap_disposal_2026_09_30.md` | 32,350 | 2026-09-30 14:14:24 | `de8691727842` | 成果面 |
 | 412 | `results/_day_close_register_2026_10_01.md` | 33,115 | 2026-10-01 16:55:26 | `6dbac1d1bcd6` | 成果面 |

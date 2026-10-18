@@ -14,7 +14,7 @@ import urllib.error
 os.environ['PYTHONIOENCODING'] = 'utf-8'
 
 # ============ 自带 log,直接写文件 (避免 stdout 重定向编码问题) ============
-LOG_PATH = r'D:\私人资料\deposon-repo\verifier\_worker_a_run.log'
+LOG_PATH = r'_repo_mirror\verifier\_worker_a_run.log'
 _log_fh = open(LOG_PATH, 'w', encoding='utf-8', buffering=1)  # line buffered
 
 def log(msg):
@@ -28,7 +28,7 @@ def log(msg):
         pass
 
 # ============ 1. 读 key (GB18030 → env) ============
-key_file = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
+key_file = r'〔本机用户目录〕\Desktop\AI\LLM API.txt'
 try:
     with open(key_file, 'r', encoding='gb18030') as f:
         content = f.read()
@@ -152,8 +152,8 @@ def normalize_answer(ans):
 
 
 # ============ 4. 加载 benchmark 题目 ============
-GSM_FILE = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_gsm8k_details.json'
-STR_FILE = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_strategyqa_details.json'
+GSM_FILE = r'_repo_mirror\results\deposon_benchmark_v1_4_gsm8k_details.json'
+STR_FILE = r'_repo_mirror\results\deposon_benchmark_v1_4_strategyqa_details.json'
 
 with open(GSM_FILE, 'r', encoding='utf-8') as f:
     gsm_all = json.load(f)
@@ -323,7 +323,7 @@ out_json = {
 }
 
 # 写 JSON
-out_json_path = r'D:\私人资料\deposon-repo\results\deposon_volcengine_worker_a_2026_09_10.json'
+out_json_path = r'_repo_mirror\results\deposon_volcengine_worker_a_2026_09_10.json'
 os.makedirs(os.path.dirname(out_json_path), exist_ok=True)
 with open(out_json_path, 'w', encoding='utf-8') as f:
     json.dump(out_json, f, ensure_ascii=False, indent=2)
@@ -414,7 +414,7 @@ md_lines.append(f"---")
 md_lines.append(f"")
 md_lines.append(f"*报告生成: worker A, 2026-09-10 21:13 (Asia/Shanghai)*")
 
-out_md_path = r'D:\私人资料\deposon-repo\docs\V3X\VOLCENGINE_9MODEL_30CELLS_WORKER_A_2026_09_10.md'
+out_md_path = r'_repo_mirror\docs\V3X\VOLCENGINE_9MODEL_30CELLS_WORKER_A_2026_09_10.md'
 os.makedirs(os.path.dirname(out_md_path), exist_ok=True)
 with open(out_md_path, 'w', encoding='utf-8') as f:
     f.write('\n'.join(md_lines))

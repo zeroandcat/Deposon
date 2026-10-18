@@ -3,8 +3,8 @@
 import hashlib, json, re
 from pathlib import Path
 
-REPO = Path(r'D:\私人资料\deposon-repo')
-SUB = Path(r'D:\私人资料\deposon-sub')
+REPO = Path(r'_repo_mirror')
+SUB = Path(r'_repo_mirror')
 sha12 = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12].upper()
 
 print('=== 1. boss_pa_1 degeneracy 复核 (rm_iter / rbr_multiplier / rm_multiplier) ===')

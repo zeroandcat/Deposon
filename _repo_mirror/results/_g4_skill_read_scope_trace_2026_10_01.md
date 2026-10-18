@@ -20,7 +20,7 @@
 
 - 本棒**未打开、未读取** `config.yaml`（含 `apiKey` 等密钥字段，**值未读**）。
 - 本棒**未读取** `mcp.json`、`local-runtime.auth.json` 等含敏感值文件。
-- 本件**不含**任何密钥／token／端点值；凡涉 `dataDir` 一律沿**运行时 `activeDataDir`**（`C:\Users\Administrator\.minimax`）与**存在性探测**得出，**0 由配置值推导**。
+- 本件**不含**任何密钥／token／端点值；凡涉 `dataDir` 一律沿**运行时 `activeDataDir`**（`〔本机用户目录〕\.minimax`）与**存在性探测**得出，**0 由配置值推导**。
 - 本棒**0 落盘**任何配置值（写入面仅本件 ＋ scratch 脚本）。
 
 ---

@@ -70,10 +70,10 @@
 ### 2.3 处置动作证据
 
 ```
-$ & "C:\Users\Administrator\.minimax\bin\mavis-trash.cmd" "D:/私人资料/deposon-repo/results/_v4_v5_probe_test.log"
-mavis-trash: moved to trash: 'D:/私人资料/deposon-repo/results/_v4_v5_probe_test.log'
+$ & "〔本机用户目录〕\.minimax\bin\mavis-trash.cmd" "_repo_mirror/results/_v4_v5_probe_test.log"
+mavis-trash: moved to trash: '_repo_mirror/results/_v4_v5_probe_test.log'
 
-$ Test-Path "D:/私人资料/deposon-repo/results/_v4_v5_probe_test.log"
+$ Test-Path "_repo_mirror/results/_v4_v5_probe_test.log"
 False   # 确认 #1 已落盘消失, 入回收站
 ```
 
@@ -129,7 +129,7 @@ False   # 确认 #1 已落盘消失, 入回收站
 
 | 检查项 | 结果 |
 |---|---|
-| `Test-Path` on `D:/私人资料/deposon-repo/results/_v4_v5_probe_test.log` | **False** ✓ (落盘消失) |
+| `Test-Path` on `_repo_mirror/results/_v4_v5_probe_test.log` | **False** ✓ (落盘消失) |
 | 多编码复扫 (2903 文件) | `files_with_hits = 2` ✓ (#1 trashed 后, 仅剩 #2 + #3 链上件) |
 | `0 假阳性` (本次扫描) | ✓ (上轮 41 件 GB18030 假阳性 (Mavis `ask_` 工具 ID 类) 已严格排除) |
 | 新增文件 (本棒) | `.tmp/_r4_key_scan_2026_09_24.py` (扫描脚本, 中间产物, 留存审计) + `.tmp/_r4_key_scan_results_2026_09_24.json` (扫描结果, 含 SHA-12 指纹但**无 key 明文**) |

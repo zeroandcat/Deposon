@@ -15,7 +15,7 @@
 |---|---|---|
 | 自测 BOSS 数 | **3/9** (KT-A1 暂退化 / KT-B1 升级版 0% / KT-C1 4 文件 + 3 BOSS) | **9/9 全跑** |
 | 自测方法 | 引用 5 锚 JSON `boss_baselines.self_test` 字段 | **真实跑** `python <脚本>` + 抓 SHA-256 / 主指标 / FAIL or PASS |
-| 自测环境 | (引用) | **主仓** `D:\私人资料\deposon-repo` (无 /tmp 副本, 因未改 frozen data) |
+| 自测环境 | (引用) | **主仓** `_repo_mirror` (无 /tmp 副本, 因未改 frozen data) |
 | 自测时间 | D5 末(2026-09-09 早) | **D5 Phase B(2026-09-09 14:00 - 14:16 CST)** |
 
 **输出位置**: `docs/V3X/PHASE_B_TMP/boss_*.log`(9 个 BOSS 自测日志)
@@ -270,7 +270,7 @@ ESN BOSS-C3:
 **真实自测**: 本任务所有 9 BOSS 自测数据来自 `docs/V3X/PHASE_B_TMP/boss_*.log`, **非引用、非估算**。9 个 BOSS 脚本均**真实跑通**(B1/B2/B3 跑出 TypeError 但脚本**启动 + 加载 v19 成功**)。
 
 **自测时间**: 2026-09-09 14:00 - 14:16 CST(D5 Phase B)
-**自测环境**: Windows 11 + Python 3.14, 主仓 `D:\私人资料\deposon-repo` (无 /tmp 副本, 因未改 frozen data)
+**自测环境**: Windows 11 + Python 3.14, 主仓 `_repo_mirror` (无 /tmp 副本, 因未改 frozen data)
 
 ---
 

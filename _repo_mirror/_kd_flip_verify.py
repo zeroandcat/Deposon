@@ -5,7 +5,7 @@ import hashlib
 import io
 import os
 
-P = r"D:\私人资料\deposon-repo\results\_kd_flip_census_2026_10_17.md"
+P = r"_repo_mirror\results\_kd_flip_census_2026_10_17.md"
 
 with io.open(P, "rb") as f:
     raw = f.read()

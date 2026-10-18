@@ -3,7 +3,7 @@
 import os, io, json, sys, fnmatch, hashlib
 from collections import Counter
 
-REPO = r"D:\私人资料\deposon-repo"
+REPO = r"_repo_mirror"
 TMP = os.path.join(REPO, ".tmp")
 LST = os.path.join(REPO, ".mavis", "scripts", "cleanup511", "exec_list.json")
 sys.path.insert(0, os.path.join(REPO, ".mavis", "scripts", "cleanup511"))

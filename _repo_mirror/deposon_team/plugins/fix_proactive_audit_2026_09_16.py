@@ -25,7 +25,7 @@ fix_proactive_audit_2026_09_16.py — 主动审查发现的可修项集中修复
 import os
 import hashlib
 
-BASE = r'D:\私人资料\deposon-repo'
+BASE = r'_repo_mirror'
 PLUG = os.path.join(BASE, 'deposon_team', 'plugins')
 
 
@@ -158,7 +158,7 @@ assert _os_pa.path.basename(__file__) == '{fname}', '文件名漂移: ' + __file
 with open(__file__, 'r', encoding='utf-8') as _f_pa:
     _src_pa = _f_pa.read()
 assert '{PA_MARKER}' in _src_pa
-_p_out_pa = _os_pa.path.join(r'D:/私人资料/deposon-repo', 'results', '{out_json}')
+_p_out_pa = _os_pa.path.join(r'_repo_mirror', 'results', '{out_json}')
 if _os_pa.path.exists(_p_out_pa):
     import json as _json_pa
     _json_pa.loads(open(_p_out_pa, 'r', encoding='utf-8').read())

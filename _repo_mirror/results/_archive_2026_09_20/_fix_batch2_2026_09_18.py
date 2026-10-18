@@ -10,7 +10,7 @@ Trae 2026-09-18 批量修复脚本 (走读改进 #2 批)
 import hashlib, os, re
 from pathlib import Path
 
-ROOT = Path(r'D:\私人资料\deposon-repo')
+ROOT = Path(r'_repo_mirror')
 MARK = 'TRAE_FIXED_2026_09_18'
 sha_table = []
 

@@ -15,11 +15,11 @@ import time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import recycle_channel as rc
 
-TARGET = r"D:\私人资料\_non_upload_local_archive\whitelist_backup_2026_10_17"
-BACKUP = r"D:\私人资料\deposon-repo\.tmp\whitelist_backup_2026_10_17"
+TARGET = r"〔本地归档区〕\whitelist_backup_2026_10_17"
+BACKUP = r"_repo_mirror\.tmp\whitelist_backup_2026_10_17"
 SID = r"S-1-5-21-1515631758-409240343-2904948024-500"
-INV = r"D:\私人资料\deposon-repo\tools\_archive_purge_2026_10_17\inventory_compare.json"
-OUT = r"D:\私人资料\deposon-repo\tools\_archive_purge_2026_10_17\step3_bulk_result.json"
+INV = r"_repo_mirror\tools\_archive_purge_2026_10_17\inventory_compare.json"
+OUT = r"_repo_mirror\tools\_archive_purge_2026_10_17\step3_bulk_result.json"
 
 
 def sha12(p):

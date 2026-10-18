@@ -25,7 +25,7 @@
 ### 2.1 /tmp 副本(Task A 完整版审计)
 
 ```
-C:\tmp\review_20260909T140401\
+〔本机路径〕\tmp\review_20260909T140401\
 ├── kt_a1\ (5 cells: BOSS-A1/A2/A3 + Bayesian + 5 锚)
 │   ├── audit_full.py (SHA 26d49b786b8b)
 │   ├── boss_a1_rbr_rm.py (SHA 91a62de1fa50)
@@ -134,7 +134,7 @@ docs/V3X/PHASE_B_TMP/
 | 维度 | 简化版 | 完整版(Phase B) | 差异 |
 |---|---|---|---|
 | Task A cell 数 | 1 cell / SPEC | **5 cells / SPEC** | 完整版底线 ≥ 5 |
-| Task A /tmp 副本 | 无(直接主仓) | **有**(C:\tmp\review_20260909T140401\) | 完整版有副本 |
+| Task A /tmp 副本 | 无(直接主仓) | **有**(〔本机路径〕\tmp\review_20260909T140401\) | 完整版有副本 |
 | Task A audit 方法 | 字段检查 / 整体 diff | **升级版 audit**(整体 diff + conservation.check_conservation) | 完整版沿用升级版 |
 | Task B N | 200 pairs | **328 pairs** | 完整版用 v21 frozen 全部含环 |
 | Task B bootstrap | 1000 | **10000** | 完整版 CI 宽度更窄(±1.79 → ±1.21) |

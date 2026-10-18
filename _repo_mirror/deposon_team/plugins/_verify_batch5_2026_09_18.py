@@ -8,7 +8,7 @@
 import hashlib, json, os
 from pathlib import Path
 
-ROOT = Path(r'D:\私人资料\deposon-repo')
+ROOT = Path(r'_repo_mirror')
 
 def sha12(p):
     return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12]

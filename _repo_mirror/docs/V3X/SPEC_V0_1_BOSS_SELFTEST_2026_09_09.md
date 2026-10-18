@@ -194,7 +194,7 @@ KT_D0_SPEC_V0.1.md 实际结构(从已读部分):
 ## 8. 自测时间 + 日志路径
 
 **自测时间**: 2026-09-09 14:00 - 14:16 CST(D5 Phase B)
-**自测环境**: Windows 11 + Python 3.14, 主仓 `D:\私人资料\deposon-repo`
+**自测环境**: Windows 11 + Python 3.14, 主仓 `_repo_mirror`
 **自测日志**: `docs/V3X/PHASE_B_TMP/boss_*.log`(9 个文件, 共 ~10 KB)
 
 **详细输出**: `docs/V3X/BOSS_SELFTEST_PHASE_B_2026_09_09.md`(15 KB, 9 BOSS 详细裁定 + 残留差异清单)

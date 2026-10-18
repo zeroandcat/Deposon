@@ -2,7 +2,7 @@
 import re
 import sys
 
-path = r'C:\Users\Administrator\Desktop\AI\新建文本文档.txt'
+path = r'〔本机用户目录〕\Desktop\AI\新建文本文档.txt'
 with open(path, 'rb') as f:
     raw = f.read()
 text = raw.decode('gb18030', errors='replace')
@@ -14,7 +14,7 @@ if matches:
     k = matches[0]
     print(f"FOUND_KEY len={len(k)} prefix={k[:12]}... suffix={k[-6:]}")
     # Write only a marker to a temp file for the next step to read
-    with open(r'D:\私人资料\deposon-repo\tools\_key_marker.tmp', 'w', encoding='utf-8') as mf:
+    with open(r'_repo_mirror\tools\_key_marker.tmp', 'w', encoding='utf-8') as mf:
         mf.write("KEY_PRESENT\n")
     # Save the key length so we can verify
     print(f"KEY_LEN={len(k)}")

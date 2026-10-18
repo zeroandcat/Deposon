@@ -6,7 +6,7 @@ Hardcoded OLD -> NEW mapping based on body first-appearance order.
 import re
 from pathlib import Path
 
-REPO = Path(r"D:\私人资料\deposon-repo")
+REPO = Path(r"_repo_mirror")
 CN_MD = REPO / "paper" / "deposon_paper_final_cn.md"
 EN_MD = REPO / "paper" / "deposon_paper_final_en.md"
 BIB = REPO / "paper" / "references.bib"

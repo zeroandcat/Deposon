@@ -48,7 +48,7 @@
 
 | 项 | 本棒实测值 |
 |:--|:--|
-| **检索根（6 根 · 含运行时附件面）** | ① `D:\私人资料\deposon-repo` ② `D:\私人资料\deposon-sub` ③ `D:\私人资料\Deposon_v1_2_0_交付包` ④ `D:\私人资料\GLM` ⑤ `D:\私人资料\_non_upload_local_archive`（归档区）⑥ **`C:\Users\Administrator\.minimax\v2\assets`（运行时附件面）** —— **6 根实测 `exists=True` 全真** |
+| **检索根（6 根 · 含运行时附件面）** | ① `_repo_mirror` ② `_repo_mirror` ③ `〔本地资料区〕\Deposon_v1_2_0_交付包` ④ `〔本地资料区〕\GLM` ⑤ `〔本地归档区〕`（归档区）⑥ **`〔本机用户目录〕\.minimax\v2\assets`（运行时附件面）** —— **6 根实测 `exists=True` 全真** |
 | 剪枝目录 | `.git`／`.idea`／`.mypy_cache`／`.pytest_cache`／`.tmp`／`.venv`／`__pycache__`／`node_modules`／`venv`／`.ipynb_checkpoints` |
 | 遍历目录数 | **19,634** |
 | 枚举文件数 | **42,637** |
@@ -56,7 +56,7 @@
 | **`.env`／密钥类跳过（⛔ 0 读）** | **1** |
 | **未作内容扫描之超大件（>8 MB）** | **4**（如实计数，⛔ 不沿用前棒之「3 件」） |
 | **`os.walk` `onerror` 收集项** | **0** → ✅ **断言 `遍历错误数 == 0` 通过** |
-| **阴性结论之射程** | 仅上列 6 根之内；`D:\私人资料` 之其余目录、盘外、远端 github **不在本棒阴性结论射程内** |
+| **阴性结论之射程** | 仅上列 6 根之内；`〔本地资料区〕` 之其余目录、盘外、远端 github **不在本棒阴性结论射程内** |
 
 **双通道判定（文件名 ＋ 内容／SHA）**
 
@@ -330,7 +330,7 @@
 
 | 项 | 值 |
 |:--|:--|
-| **路径** | `D:\私人资料\deposon-repo\results\_batch9_deliberation_judgment_2026_10_14.md` |
+| **路径** | `_repo_mirror\results\_batch9_deliberation_judgment_2026_10_14.md` |
 | **编码** | UTF-8 **无 BOM**｜`io.open(..., encoding='utf-8', newline='\n', errors='strict')` |
 | **行尾** | **纯 LF**（`0x0D` 计数 ＝ **0**） |
 | **TAB／CTRL／U+FFFD** | **0** ／ **0** ／ **0** |

@@ -3,7 +3,7 @@
 import os
 from pathlib import Path
 
-base = Path(r'D:\私人资料')
+base = Path(r'〔本地资料区〕')
 ROOT = base / 'deposon-repo'
 
 print('=== v7_summary 全域搜索 (两个归档区) ===')

@@ -2,7 +2,7 @@
 
 > **授权**：PI 卡 `ask_ac388fb8cb83c9f2a6bc85f9` · `d9_fix` 采 **A** · 本轮另裁 **A-甲**＝连带 5 根定义行一齐改，合计 30 行
 >
-> **本棒权限**：**唯一获准编辑 `.py` 的棒**（仅 5 件）；⛔ 0 移动/重命名/删除任何件；⛔ 0 触 `D:\私人资料\_non_upload_local_archive`
+> **本棒权限**：**唯一获准编辑 `.py` 的棒**（仅 5 件）；⛔ 0 移动/重命名/删除任何件；⛔ 0 触 `〔本地归档区〕`
 >
 > **底本**：`results/_d9_relpath_rewrite_map_2026_10_12.md` · SHA-12 `c3167a531e0e` · 21,352 B · ⛔ 0 回改（逐字回读并作唯一改写依据）
 >
@@ -74,7 +74,7 @@
 | H5 L99 | `REPO\results\_s4_seedprime_seq_t1_only_supplement_items_2026_10_11.json` | True | `a834e0e7121a` | 28,030 | MATCH |
 
 **24/24 全部 MATCH，0 不符**。另实测 **24 行旧址（`SUB\results\…`）`exists = False`**，与「悬空」前提一致。
-目录名实测 `私人资料` = `U+79C1 U+4EBA U+8D44 U+6599`（4 字），与底本 `D:\????\…` 之 4 字掩码吻合。
+目录名实测 `私人资料` = `U+79C1 U+4EBA U+8D44 U+6599`（4 字），与底本 `〔本机路径〕\????\…` 之 4 字掩码吻合。
 
 ### 1.4 跳过行与 0 改动行实测
 
@@ -87,17 +87,17 @@
 
 ## 2. 执行口径（A-甲）及其逐文件适配
 
-底本 A-甲：`REPO_RESULTS = pathlib.Path(r"D:\私人资料\deposon-repo\results")`，H3 另定义 `REPO_ROOT`。
+底本 A-甲：`REPO_RESULTS = pathlib.Path(r"_repo_mirror\results")`，H3 另定义 `REPO_ROOT`。
 
 **适配说明（⛔ 0 增删任何 import，故按各件既有 import 体例落笔）**：
 
 | 件 | 既有 import | 定义行（新增 1 根／件） |
 |---|---|---|
-| H1 | `import pathlib` | `REPO_RESULTS = pathlib.Path(r"D:\私人资料\deposon-repo\results")` |
-| H2 | `import pathlib` | `REPO_RESULTS = pathlib.Path(r"D:\私人资料\deposon-repo\results")` |
-| H3 | `from pathlib import Path` | `REPO_ROOT = Path(r"D:\私人资料\deposon-repo")` |
-| H4 | **无 pathlib**（仅 `os`） | `REPO_RESULTS = r"D:\私人资料\deposon-repo\results"`（纯 raw str） |
-| H5 | **无 pathlib**（仅 `os`） | `REPO_RESULTS = r"D:\私人资料\deposon-repo\results"`（纯 raw str） |
+| H1 | `import pathlib` | `REPO_RESULTS = pathlib.Path(r"_repo_mirror\results")` |
+| H2 | `import pathlib` | `REPO_RESULTS = pathlib.Path(r"_repo_mirror\results")` |
+| H3 | `from pathlib import Path` | `REPO_ROOT = Path(r"_repo_mirror")` |
+| H4 | **无 pathlib**（仅 `os`） | `REPO_RESULTS = r"_repo_mirror\results"`（纯 raw str） |
+| H5 | **无 pathlib**（仅 `os`） | `REPO_RESULTS = r"_repo_mirror\results"`（纯 raw str） |
 
 H4/H5 以纯字符串常量承之，语义与 A-甲「显式绝对路径常量」等同，且免增 import；⛔ 0 重定义既有 `RESULTS`／`REPO`（其后续引用一律保持原样，见 §5）。
 
@@ -112,7 +112,7 @@ H4/H5 以纯字符串常量承之，语义与 A-甲「显式绝对路径常量�
 | 行 | BEFORE | AFTER |
 |---|---|---|
 | 旧 L37 → 新 L37（**不改**） | `REPO = RESULTS.parent` | 同左（0 改动） |
-| **新增 新 L38** | — | `REPO_RESULTS = pathlib.Path(r"D:\私人资料\deposon-repo\results")` |
+| **新增 新 L38** | — | `REPO_RESULTS = pathlib.Path(r"_repo_mirror\results")` |
 | 旧 L40 → 新 L41 | `RUNNER_FIVE = RESULTS / "_s4prime_five_lines_runner_2026_10_11.py"` | `RUNNER_FIVE = REPO_RESULTS / "_s4prime_five_lines_runner_2026_10_11.py"` |
 | 旧 L42 → 新 L43 | `EXECUTOR = RESULTS / "_v4_pi_cot_v3_ruleset_v3_executor.py"` | `EXECUTOR = REPO_RESULTS / "_v4_pi_cot_v3_ruleset_v3_executor.py"` |
 | 旧 L45 → 新 L46 | `HOLDOUT_D1 = RESULTS / "_s4_heldout_sampling_seed42_items_2026_10_09.json"` | `HOLDOUT_D1 = REPO_RESULTS / "_s4_heldout_sampling_seed42_items_2026_10_09.json"` |
@@ -126,7 +126,7 @@ H4/H5 以纯字符串常量承之，语义与 A-甲「显式绝对路径常量�
 | 行 | BEFORE | AFTER |
 |---|---|---|
 | 旧 L38 → 新 L38（**不改**） | `REPO = RESULTS.parent` | 同左（0 改动） |
-| **新增 新 L39** | — | `REPO_RESULTS = pathlib.Path(r"D:\私人资料\deposon-repo\results")` |
+| **新增 新 L39** | — | `REPO_RESULTS = pathlib.Path(r"_repo_mirror\results")` |
 | 旧 L39 → 新 L40 | `EXECUTOR = RESULTS / "_v4_pi_cot_v3_ruleset_v3_executor.py"` | `EXECUTOR = REPO_RESULTS / "_v4_pi_cot_v3_ruleset_v3_executor.py"` |
 | 旧 L43 → 新 L44 | `NEW_HELDOUT_JSON = RESULTS / "_s4_heldout_sampling_seedthird_items_2026_10_11.json"` | `NEW_HELDOUT_JSON = REPO_RESULTS / "_s4_heldout_sampling_seedthird_items_2026_10_11.json"` |
 | 旧 L45 → 新 L46 | `OLD_HELDOUT_JSON = RESULTS / "_s4_heldout_sampling_seed42_items_2026_10_09.json"  # 仅供管道同源自证` | `OLD_HELDOUT_JSON = REPO_RESULTS / "_s4_heldout_sampling_seed42_items_2026_10_09.json"  # 仅供管道同源自证`（**行尾注释逐字保留**） |
@@ -138,7 +138,7 @@ H4/H5 以纯字符串常量承之，语义与 A-甲「显式绝对路径常量�
 | 行 | BEFORE | AFTER |
 |---|---|---|
 | 旧 L56 → 新 L56（**不改**） | `REPO = Path(__file__).resolve().parent.parent` | 同左（0 改动） |
-| **新增 新 L57** | — | `REPO_ROOT = Path(r"D:\私人资料\deposon-repo")` |
+| **新增 新 L57** | — | `REPO_ROOT = Path(r"_repo_mirror")` |
 | 旧 L57 → 新 L58 | `SRC_V3_PHYS = REPO / "results" / "deposon_v3_physical_opt_60cells_2026_09_11.json"` | `SRC_V3_PHYS = REPO_ROOT / "results" / "deposon_v3_physical_opt_60cells_2026_09_11.json"` |
 | 旧 L58 → 新 L59 | `SRC_PE3 = REPO / "results" / "deposon_boss_pe_3_reservoir_verify_9m60c_2026_09_15.json"` | `SRC_PE3 = REPO_ROOT / "results" / "deposon_boss_pe_3_reservoir_verify_9m60c_2026_09_15.json"` |
 | 旧 L59 → 新 L60（**0 改动**） | `SRC_BOSS_PA1 = REPO / "results" / "boss_pa_1_rbr_rm_result_2026_09_15.json"` | 同左（底本 §2.6：两区同 SHA 同 bytes） |
@@ -151,7 +151,7 @@ H4/H5 以纯字符串常量承之，语义与 A-甲「显式绝对路径常量�
 | 行 | BEFORE | AFTER |
 |---|---|---|
 | 旧 L60 → 新 L60（**不改**） | `RESULTS = os.path.abspath(os.path.join(HERE, os.pardir, "results"))` | 同左（0 改动） |
-| **新增 新 L61** | — | `REPO_RESULTS = r"D:\私人资料\deposon-repo\results"` |
+| **新增 新 L61** | — | `REPO_RESULTS = r"_repo_mirror\results"` |
 | 旧 L67 → 新 L68 | `    RESULTS, "_s4_heldout_sampling_seedprime_items_2026_10_10.json"` | `    REPO_RESULTS, "_s4_heldout_sampling_seedprime_items_2026_10_10.json"` |
 | 旧 L70 → 新 L71 | `    RESULTS, "_s4_heldout_sampling_seed42_items_2026_10_09.json"` | `    REPO_RESULTS, "_s4_heldout_sampling_seed42_items_2026_10_09.json"` |
 
@@ -160,7 +160,7 @@ H4/H5 以纯字符串常量承之，语义与 A-甲「显式绝对路径常量�
 | 行 | BEFORE | AFTER |
 |---|---|---|
 | 旧 L73 → 新 L73（**不改**） | `RESULTS = os.path.abspath(os.path.join(HERE))` | 同左（0 改动） |
-| **新增 新 L74** | — | `REPO_RESULTS = r"D:\私人资料\deposon-repo\results"` |
+| **新增 新 L74** | — | `REPO_RESULTS = r"_repo_mirror\results"` |
 | 旧 L82 → 新 L83 | `    RESULTS, "_s4_heldout_sampling_seedthird_items_2026_10_11.json"` | `    REPO_RESULTS, "_s4_heldout_sampling_seedthird_items_2026_10_11.json"` |
 | 旧 L85 → 新 L86 | `    RESULTS, "_s4_heldout_sampling_seedthird_items_register_2026_10_11.md"` | `    REPO_RESULTS, "_s4_heldout_sampling_seedthird_items_register_2026_10_11.md"` |
 | 旧 L88 → 新 L89 | `    RESULTS, "_s4_heldout_sampling_seed42_items_2026_10_09.json"` | `    REPO_RESULTS, "_s4_heldout_sampling_seed42_items_2026_10_09.json"` |
@@ -254,7 +254,7 @@ H4/H5 以纯字符串常量承之，语义与 A-甲「显式绝对路径常量�
 
 - ⛔ 0 回改任何既有 markdown／无关件一字（含底本 `c3167a531e0e`、723 映射表 `2b244f0760b4`、错讹正误件 `7395034a09aa`）。
 - ⛔ 0 写入他棒产物名域（`_d9_relpath_rewrite_map_*`／`_d9_runner_input_relpath_erratum_*`／`_gate1_*`／`_itemH_*`／`_degradation_*`／`_pi_batch_rulings_*`／`_trae_issues_*`／`letters/`）。
-- ⛔ 0 移动／重命名／删除；⛔ 0 触 `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录）。
+- ⛔ 0 移动／重命名／删除；⛔ 0 触 `〔本地归档区〕`（0 读 0 写 0 列目录）。
 - ⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT；⛔ 0 改终判词／阈值／门柱；⛔ 0 赋 `k_v3s_4_4_*` 布尔。
 - ⛔ **0 执行任何 runner**；⛔ **0 宣告 D9 已闭**——**D9 收束权不在本棒**，回写完成 ＝ 待 PI／他棒复核收束。
 

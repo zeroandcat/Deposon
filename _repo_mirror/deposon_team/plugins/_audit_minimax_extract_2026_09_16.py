@@ -12,7 +12,7 @@ _audit_minimax_extract_2026_09_16.py — minimax-m3 30cells 提取器精度审�
 import json
 import re
 
-SRC = r'D:\私人资料\deposon-repo\results\deposon_volcengine_minimax_m3_30cells_2026_09_10.json'
+SRC = r'_repo_mirror\results\deposon_volcengine_minimax_m3_30cells_2026_09_10.json'
 
 
 def extract_num_v2(s):

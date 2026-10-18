@@ -580,7 +580,7 @@ def build_rescript(r: Dict[str, Any]) -> str:
     A("| 项 | 内容 |")
     A("|---|---|")
     A("| 派工指定 skill | `scientific-research-workflows:experimental-design`（plugin `@scientific-research-workflows`） |")
-    A("| 实测状态 | **Local skill not found** —— `C:/Users/Administrator/.minimax/plugins` 实测 **0 项**（空目录），`.minimax/skills` 下无该 skill 目录 |")
+    A("| 实测状态 | **Local skill not found** —— `〔本机用户目录〕/.minimax/plugins` 实测 **0 项**（空目录），`.minimax/skills` 下无该 skill 目录 |")
     A("| 处置 | **按纪律锚 fallback**：prereg §2.1 S1 六条字面 + v3 executor 度量实现段 |")
     A("| 老实交代 | **未加载该 skill 的任何指令**；本件 0 引用、0 虚构其条文。若 PI 要求该 skill 到位后重跑，须重跑本 executor |")
     A("")
@@ -958,7 +958,7 @@ def main() -> Dict[str, Any]:
         "runtime": "python3 + numpy；0 LLM / 0 proxy / 0 gateway",
         "skill": {
             "requested": "scientific-research-workflows:experimental-design (plugin @scientific-research-workflows)",
-            "status": "Local skill not found — C:/Users/Administrator/.minimax/plugins 实测 0 项（空目录）",
+            "status": "Local skill not found — 〔本机用户目录〕/.minimax/plugins 实测 0 项（空目录）",
             "fallback": "纪律锚 fallback = prereg §2.1 S1 六条字面 + v3 executor 度量实现段",
             "disclosure": "未加载该 skill 的任何指令；0 引用、0 虚构其条文",
         },

@@ -5,7 +5,7 @@ _audit_v3_runners_2026_09_16.py — V3 全实验(P-A~P-O)runner 静态审计: �
 主职: 走读并改进 V3 全部实验代码。本脚本自动化最高价值的三类检测:
   1) 幽灵引用: 脚本内引用的 repo 相对路径是否存在(改名/删除后未同步的引用)
   2) 纪律缺失: 是否含 SELF-CHECK 块 / __main__ guard
-  3) 硬编码: 绝对路径(C:\\ / D:\\ ) / 预登记阈值是否分散硬编码
+  3) 硬编码: 绝对路径(〔本机路径〕\\ / 〔本机路径〕\\ ) / 预登记阈值是否分散硬编码
 
 0 LLM / 只读 / 不改任何文件
 """
@@ -13,7 +13,7 @@ import os
 import re
 import glob
 
-BASE = r'D:\私人资料\deposon-repo'
+BASE = r'_repo_mirror'
 PLUG = os.path.join(BASE, 'deposon_team', 'plugins')
 
 TARGETS = sorted(

@@ -1,7 +1,7 @@
 """Smoke test: 1 chat call + 1 embed call to verify the API works."""
 import os, sys, io, re, json, time, urllib.request, urllib.error
 
-KEY_FILE = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
+KEY_FILE = r'〔本机用户目录〕\Desktop\AI\LLM API.txt'
 BASE_URL = 'https://ark.cn-beijing.volces.com/api/coding/v3'
 
 text = io.open(KEY_FILE, 'r', encoding='gb18030').read()

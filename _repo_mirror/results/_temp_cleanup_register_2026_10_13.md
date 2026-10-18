@@ -2,7 +2,7 @@
 
 - **任务**：`%TEMP%` 清理执行棒（甲案）
 - **执行时点**：2026-10-13 11:50 — 12:10 CST
-- **对象根**：`C:\Users\Administrator\AppData\Local\Temp`（`%TEMP%`，顶层件）
+- **对象根**：`〔本机用户目录〕\AppData\Local\Temp`（`%TEMP%`，顶层件）
 - **登记件**：`results/_temp_cleanup_register_2026_10_13.md`（新件，0 回改任何既有件）
 
 ---
@@ -101,7 +101,7 @@
 - **实测：本机 PowerShell 之 `rm` 为 Alias，定义 = `Remove-Item`（永久删除）**，本地运行时**未**将其路由至 trusted launcher。
 - 故若照字面执行 `rm --`，将构成派工单 ⛔「0 裸 Remove-Item（永久）」之直接违反。
 - **实际执行**：直调 trusted launcher 本身
-  `C:\Users\Administrator\.minimax\bin\mavis-trash.cmd -- <26 个前斜杠字面绝对路径>`
+  `〔本机用户目录〕\.minimax\bin\mavis-trash.cmd -- <26 个前斜杠字面绝对路径>`
 - 该 launcher 之实现（`mavis-trash.js`）内部调用
   `[Microsoft.VisualBasic.FileIO.FileSystem]::DeleteFile(path,'OnlyErrorDialogs','SendToRecycleBin')` ⇒ 回收站通道，可恢复。
 - **⛔ 0 `-Force`｜⛔ 0 变量传参（26 条路径全部字面量）｜⛔ 0 裸 `Remove-Item`｜单一顶层调用一次完成**
@@ -127,10 +127,10 @@
 
 ### 7.1 回收站位置
 
-- **`C:\$Recycle.Bin\S-1-5-21-1515631758-409240343-2904948024-500\`** ← 本棒实际去向
+- **`〔回收站〕\`** ← 本棒实际去向
   - `$I` 元数据条目：**25**（含 1 条先前既存之 `Downloads` 项）
   - `$R` 数据文件：**24**，合计 **156.04 MB**
-- **`D:\$Recycle.Bin`**：**0 件**（空）。
+- **`〔回收站〕`**：**0 件**（空）。
   > 派工单所指「枚举 D: 回收站 `$R`」与实况不符——本机 %TEMP% 在 C:，回收站未重定向至 D:。故改枚举 C:，方能实证。
 
 ### 7.2 逐件结论
@@ -148,7 +148,7 @@
   - launcher 回报 **26/26 moved to trash、exit 0**，无报错。
 - **自证不成立之部分（须上报 PI）**：
   - 事后枚举 `$I` 元数据发现：**26 件中仅 24 件有 `$I` 记录**。
-  - `OllamaSetup.exe` 与 `gfw-install-9YoLUMAV.exe`（合计 **1,568.78 MB，占本次回收量 91.0%**）在 `C:\$Recycle.Bin\...\500\` 下**既无 `$I` 亦无 `$R`**，SID 目录内亦无任何 ≥1MB 之对应数据文件（实测最大者为 `$RE7MDDO.exe` 63.608 MB）。
+  - `OllamaSetup.exe` 与 `gfw-install-9YoLUMAV.exe`（合计 **1,568.78 MB，占本次回收量 91.0%**）在 `〔回收站〕\...\500\` 下**既无 `$I` 亦无 `$R`**，SID 目录内亦无任何 ≥1MB 之对应数据文件（实测最大者为 `$RE7MDDO.exe` 63.608 MB）。
   - 判定：`Microsoft.VisualBasic.FileIO` 之 `SendToRecycleBin` 在回收站容量不足时**静默回退为永久删除**，而 launcher 仍回报成功（exit 0）。此为**通道自身之静默降级**，非本棒回退为永久删除操作。
   - 故「0 永久删」之**预期未达成**：26 件中 **2 件（1,568.78 MB）已不可恢复**。
   - **本棒遵令未做任何补救性永久删除，亦未做任何回退尝试**；依派工单「若报错或部分失败 ⇒ 即刻停止、如实报、⛔ 0 回退永久删除」之纪律，就地停止并如实登记。
@@ -159,7 +159,7 @@
 |---|---|
 | ⛔ 0 回改任何既有件 | ✅ 仅新建本登记件 |
 | ⛔ 0 删「未决」件与「不动」者 | ✅ 未决 5,479 件、251 目录全数留存 |
-| 🔴 归档区 `D:\私人资料\_non_upload_local_archive` | ✅ 0 读 0 写 0 列目录（本棒无例外） |
+| 🔴 归档区 `〔本地归档区〕` | ✅ 0 读 0 写 0 列目录（本棒无例外） |
 | ⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT | ✅ |
 | ⛔ 0 触碰他棒产物（`_log_purge*`／`_repo_noise*`／`_zone_balance*`／`_d9_*`／`_gate1_*`／`letters/`） | ✅ 未写未读 |
 | 🔴 可恢复通道 | ⚠ 见 §7.3：24/26 可恢复，2/26 已被通道静默永久删除 |

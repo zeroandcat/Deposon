@@ -149,12 +149,12 @@
 
 | 路径 | 落盘 | SHA-12 | 时点 |
 |---|---|---|---|
-| `D:/私人资料/deposon-repo/results/_trae_d7_v1_audit_20260917_190000.json` | 5 件 audit 综合 (1 JSON) | 待算 | 19:00 CST |
-| `D:/私人资料/deposon-repo/results/_trae_d7_v1_audit_20260917_190000.md` | 5 件 audit 综合 (1 MD) | 待算 | 19:00 CST |
-| `D:/私人资料/deposon-repo/results/_trae_corpus_5_audit_20260917_193000.md` | 5 制品 audit | 待算 | 19:30 CST |
-| `D:/私人资料/deposon-repo/results/_trae_anchor_18_audit_20260917_193000.md` | 18 frozen audit | 待算 | 19:30 CST |
-| `D:/私人资料/deposon-repo/results/_trae_kimi_push_v3_audit_20260917_193000.md` | KIMI push 第 3 批 audit | 待算 | 19:30 CST |
-| `D:/私人资料/deposon-repo/results/_trae_paper_8ch_双审_20260917_200000.md` | 8 章 outline 双审 | 待算 | 20:00 CST |
+| `_repo_mirror/results/_trae_d7_v1_audit_20260917_190000.json` | 5 件 audit 综合 (1 JSON) | 待算 | 19:00 CST |
+| `_repo_mirror/results/_trae_d7_v1_audit_20260917_190000.md` | 5 件 audit 综合 (1 MD) | 待算 | 19:00 CST |
+| `_repo_mirror/results/_trae_corpus_5_audit_20260917_193000.md` | 5 制品 audit | 待算 | 19:30 CST |
+| `_repo_mirror/results/_trae_anchor_18_audit_20260917_193000.md` | 18 frozen audit | 待算 | 19:30 CST |
+| `_repo_mirror/results/_trae_kimi_push_v3_audit_20260917_193000.md` | KIMI push 第 3 批 audit | 待算 | 19:30 CST |
+| `_repo_mirror/results/_trae_paper_8ch_双审_20260917_200000.md` | 8 章 outline 双审 | 待算 | 20:00 CST |
 
 ---
 

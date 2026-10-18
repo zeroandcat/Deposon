@@ -76,7 +76,7 @@ bootstrap_ci                  = [0.3722222222222222, 0.6611111111111111]
 ## §4 复现步骤
 
 ```powershell
-cd 'D:/私人资料/deposon-repo'
+cd '_repo_mirror'
 $env:PYTHONIOENCODING='utf-8'
 python .tmp/_run_recheck_r1.py
 ```

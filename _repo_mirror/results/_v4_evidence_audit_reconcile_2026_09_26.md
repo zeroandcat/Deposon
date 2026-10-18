@@ -13,7 +13,7 @@
 |:-:|---|---|---|---|---|---|
 | **1** | batch1_r6 result SHA 链/盘双记 | SHA-12 `A4F851154551` / 58,369 B | SHA-12 `6B92BBFF7180` / 57,925 B | **❌ 不一致**（SHA + bytes 双漂） | 文件**被重写**（CreationTime 2026-09-24 22:08:45 vs LastWriteTime 2026-09-25 00:27:42；后改 -444 B）；mapping.md 创建于 23:14:26（在原 drop 与改写之间），故记录原值 | E-32.6 #1 勘误追加式补「modify_after_drop」+ 双 SHA 字面登记；不动文件本体（R5 frozen 触禁） |
 | **2** | mapping 文件 L19/L20 SHA 字面错 | L19 `CB37B699FF73`（result）/ L20 `5BE9DFE83A27`（executor） | L19 → `8C125E257AF8` / L20 → `E7418F47A130` | **❌ 不一致**（bytes 一致 62,887 B + 55,317 B；仅 SHA 错） | mapping 起草时**哈希算错**（非文件被改；mapping 文件 SHA-12 `98A779D61C1E` 与登记一致 = 未触动） | E-32.6 #2 勘误追加式补「mapping 文件 hash 字面错」+ 实际盘 SHA 字面登记；mapping.md 按 R5 不擅改；batch8_r1_result.json L163 已披露一致事实 |
-| **3** | 清理 v3 棒 archive/sub 目录误报 | `_non_upload_local_archive` 不存在 (0) / `deposon-sub` 不存在 (0)（相对路径基准 `D:/私人资料/deposon-repo/`） | archive `D:/私人资料/_non_upload_local_archive` = **1,669 件** / sub `D:/私人资料/deposon-sub` = **441 件**（**仓外父级路径**） | **❌ 不一致**（误报） | **相对路径基准错**——清理 v3 棒以 `D:/私人资料/deposon-repo`（workspace）为基准解析相对路径，但 archive/sub 实为 repo **兄弟目录**（父级 `D:/私人资料/`） | E-32.6 #2（已登记 1,669 + 441）保留 + 增补「路径基准错」根因 + 处置「v3 棒产物为历史事实保留不动」 |
+| **3** | 清理 v3 棒 archive/sub 目录误报 | `_non_upload_local_archive` 不存在 (0) / `deposon-sub` 不存在 (0)（相对路径基准 `_repo_mirror/`） | archive `〔本地归档区〕` = **1,669 件** / sub `_repo_mirror` = **441 件**（**仓外父级路径**） | **❌ 不一致**（误报） | **相对路径基准错**——清理 v3 棒以 `_repo_mirror`（workspace）为基准解析相对路径，但 archive/sub 实为 repo **兄弟目录**（父级 `〔本地资料区〕/`） | E-32.6 #2（已登记 1,669 + 441）保留 + 增补「路径基准错」根因 + 处置「v3 棒产物为历史事实保留不动」 |
 | **4** | T1 verdict / result 锚标错（清理 v3 棒 L37 / L44 / L220） | cleanup v3 棒标 `D6CB03A4657E` = T1 verdict 锚 + `F1B5E49F3058` = T1.5 锚（非 T1 verdict） | `D6CB03A4657E` = `results/_v4_supp_t1_result.json` (82,365 B) / `F1B5E49F3058` = `results/_v4_supp_t1_verdict.md` (27,538 B) | **❌ 不一致**（cleanup v3 棒**标签互换**：t1_verdict 实是 F1B5E49F3058，非 D6CB03A4657E） | cleanup v3 棒**两处字段填写错**：(a) L37 把 `add_T1_2026_09_24.md` 的 SHA-12 `802DECE2286A` + 字节 52,942 错填到 t1_verdict.md 名下；(b) 因 (a) 推断 F1B5E49F3058 不属 t1_verdict，错误重路由到 T1.5（grep 命中 t15_* 是 T1.5 对 T1 verdict 的正向引用，非 T1.5 自锚） | E-32.6 #3 勘误追加式补正确映射：F1B5E49F3058=T1 verdict.md / D6CB03A4657E=T1 result.json / 802DECE2286A=add_T1_2026_09_24.md（不动 cleanup v3 棒；为历史事实保留） |
 
 ---
@@ -96,19 +96,19 @@ mapping 文件本身 SHA = `98A779D61C1E` 与登记一致 → mapping 文件**�
 
 | 目录 | 路径 | 存在 | 文件数 |
 |---|---|:-:|:-:|
-| `_non_upload_local_archive` | `D:/私人资料/deposon-repo/_non_upload_local_archive` | **False** | 0 |
-| `deposon-sub` | `D:/私人资料/deposon-repo/deposon-sub` | **False** | 0 |
+| `_non_upload_local_archive` | `_repo_mirror/_non_upload_local_archive` | **False** | 0 |
+| `deposon-sub` | `_repo_mirror/deposon-sub` | **False** | 0 |
 
 **盘实测字面值**（`Test-Path` + `Get-ChildItem -Recurse -File`）：
 
 | 路径 | Test-Path | 文件数（递归） |
 |---|:-:|:-:|
-| `D:/私人资料/deposon-repo/_non_upload_local_archive` | False | 0 |
-| `D:/私人资料/deposon-repo/deposon-sub` | False | 0 |
-| `D:/私人资料/_non_upload_local_archive` | **True** | **1,669** |
-| `D:/私人资料/deposon-sub` | **True** | **441** |
+| `_repo_mirror/_non_upload_local_archive` | False | 0 |
+| `_repo_mirror/deposon-sub` | False | 0 |
+| `〔本地归档区〕` | **True** | **1,669** |
+| `_repo_mirror` | **True** | **441** |
 
-**根因判定（与用户假设一致）**：**相对路径基准错**——清理 v3 棒以 workspace 根 `D:/私人资料/deposon-repo` 为基准解析相对路径 `_non_upload_local_archive` / `deposon-sub`，但两目录实为 repo **兄弟目录**（父级 `D:/私人资料/`），非 repo 子目录。v3 棒 lookup 路径时未跨出 workspace 边界外探 + 未识别仓外父级路径存在性。
+**根因判定（与用户假设一致）**：**相对路径基准错**——清理 v3 棒以 workspace 根 `_repo_mirror` 为基准解析相对路径 `_non_upload_local_archive` / `deposon-sub`，但两目录实为 repo **兄弟目录**（父级 `〔本地资料区〕/`），非 repo 子目录。v3 棒 lookup 路径时未跨出 workspace 边界外探 + 未识别仓外父级路径存在性。
 
 **对照 E-32.6 已登记事实**：§21.6 E-32.6 #2 已登记「archive = 1,669 件 / sub = 441 件」字面值；§21.7.5 §F 核验实测 24,491 B 与 6F3F6FA3AB1D 一致。本审链**复算确认 1,669 / 441 字面值无误** + **补充根因「相对路径基准错」**。
 
@@ -194,9 +194,9 @@ t1_verdict.md 自报 SHA 表**自洽**（t1_result.json = D6CB03A4657E；add_T1 
 
 > **定案（evidence-auditor 实测 2026-09-26）**：
 > - 清理 v3 棒 §F L256-257 字面：`_non_upload_local_archive` / `deposon-sub` 均 False (0)
-> - 实测：两目录在 `D:/私人资料/deposon-repo/`（workspace 子路径）下**不存在**（与 v3 棒一致）；但在 `D:/私人资料/`（workspace **父级路径**）下**存在**，分别 **1,669 件 / 441 件**
+> - 实测：两目录在 `_repo_mirror/`（workspace 子路径）下**不存在**（与 v3 棒一致）；但在 `〔本地资料区〕/`（workspace **父级路径**）下**存在**，分别 **1,669 件 / 441 件**
 > - 用户预期「1230+ / 441+」 → 实测 **1,669 / 441**（1669 ≥ 1230 ✓；441 = 441 ✓）
-> - **根因**：**相对路径基准错**——清理 v3 棒以 workspace 根 `D:/私人资料/deposon-repo` 为基准解析相对路径，但 archive/sub 实为 workspace **兄弟目录**（父级 `D:/私人资料/`）；v3 棒未跨出 workspace 边界外探 + 未识别仓外父级路径
+> - **根因**：**相对路径基准错**——清理 v3 棒以 workspace 根 `_repo_mirror` 为基准解析相对路径，但 archive/sub 实为 workspace **兄弟目录**（父级 `〔本地资料区〕/`）；v3 棒未跨出 workspace 边界外探 + 未识别仓外父级路径
 > - **不动 v3 棒产物**（已落盘 `6F3F6FA3AB1D` / 24,491 B，按 R5 frozen 不擅改）；本勘误仅记录误报事实 + 正确路径基准
 
 ### C.4 §21.6 E-32.6 #3 — T1 verdict / result 锚标错（cleanup v3 棒标签互换）

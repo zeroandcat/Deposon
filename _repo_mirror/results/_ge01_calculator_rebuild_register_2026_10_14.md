@@ -51,7 +51,7 @@
 | ① 文件名通道 | `Test-Path tools/distortion_calculator.py` | 🔴 **False** |
 | ① 文件名通道 | glob `tools/distortion_calculator*.py`（窄根） | 🔴 **0 命中** |
 | ① 文件名通道 | `os.walk` 三根：basename 含 `distortion_calculator`（大小写不敏感） | 🔴 **0 命中**｜`deposon-repo` **2,224** 件 ＋ `deposon-sub` **1,189** 件 ＋ `.minimax/workspace` **1** 件 ＝ **3,414** 件 |
-| ① 文件名通道（扩展射程） | `os.walk` 运行时全域 `C:\Users\Administrator\.minimax` | 🔴 **0 命中**｜**70,312** 件 |
+| ① 文件名通道（扩展射程） | `os.walk` 运行时全域 `〔本机用户目录〕\.minimax` | 🔴 **0 命中**｜**70,312** 件 |
 | ② 目录 census 通道 | `tools/` 逐件字节 census（**落盘前**） | 🔴 **5 件**（`exp_harness.py`／`llm_client.py`／`make_figures_v2.py`／`make_figures_v2_en.py`／`read_key.py`）⇒ **无该件** |
 | **遍历完整性** | `os.walk` `onerror` 计数 | ✅ **0**（两次全树遍历皆 0） |
 
@@ -60,7 +60,7 @@
 
 ### §2-2 重建件（**本棒唯一代码产物**）
 
-**路径**（锚②字面，0 改）：`tools/distortion_calculator.py`｜**绝对路径**：`D:\私人资料\deposon-repo\tools\distortion_calculator.py`
+**路径**（锚②字面，0 改）：`tools/distortion_calculator.py`｜**绝对路径**：`_repo_mirror\tools\distortion_calculator.py`
 
 | 层 | 内容（设计件 §3-1 之五层） | 本棒落法 |
 |:-:|:--|:--|
@@ -110,7 +110,7 @@
 
 | 项 | 值 |
 |:--|:--|
-| 路径 | `D:\私人资料\deposon-repo\tools\distortion_calculator.py` |
+| 路径 | `_repo_mirror\tools\distortion_calculator.py` |
 | **SHA-256（全文 → 前 12 位）** | **`410a12482eef`** |
 | **bytes** | **40,611** |
 | BOM | **False** |

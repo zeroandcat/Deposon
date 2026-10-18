@@ -6,7 +6,7 @@
 
 ## §0 一句话结论
 
-PI 就 P-4 之待决项 **U‑P4‑1** 明示授权（选项**甲**）：**授权就 sub 候选③址新建该件（新名·⛔0 覆写）**。本棒据此在 `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit\conservation.py` **新建**该件，内容为回拉件 `results/_p4_pulled_back_conservation.py_2026_10_12`（`4bdec2683f06` / 22,105 B）之**逐字节**副本（**0 改动 / 0 转码 / 0 改行尾**）；落前 `Test-Path` **False** ⇒ **0 冲突**、**未停手**。⇒ **H3 L62 `SRC_ANCHOR_FALLBACK` 之实际解析值由不存在转为存在** ⇒ **P-4 就地消解成立**。
+PI 就 P-4 之待决项 **U‑P4‑1** 明示授权（选项**甲**）：**授权就 sub 候选③址新建该件（新名·⛔0 覆写）**。本棒据此在 `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py` **新建**该件，内容为回拉件 `results/_p4_pulled_back_conservation.py_2026_10_12`（`4bdec2683f06` / 22,105 B）之**逐字节**副本（**0 改动 / 0 转码 / 0 改行尾**）；落前 `Test-Path` **False** ⇒ **0 冲突**、**未停手**。⇒ **H3 L62 `SRC_ANCHOR_FALLBACK` 之实际解析值由不存在转为存在** ⇒ **P-4 就地消解成立**。
 
 ---
 
@@ -26,11 +26,11 @@ PI 就 P-4 之待决项 **U‑P4‑1** 明示授权（选项**甲**）：**授�
 
 ### §2-1 H3 现态（`deposon-sub` **只读核** · 本棒 0 编辑）
 
-**H3 ＝ `_v3_recheck_05_executor_2026_09_28.py`**（`D:\私人资料\deposon-sub\results\`，共 **735** 行）
+**H3 ＝ `_v3_recheck_05_executor_2026_09_28.py`**（`_repo_mirror\results\`，共 **735** 行）
 
 ```
 L56  REPO = Path(__file__).resolve().parent.parent
-L57  REPO_ROOT = Path(r"D:\私人资料\deposon-repo")
+L57  REPO_ROOT = Path(r"_repo_mirror")
 L61  SRC_ANCHOR_MAIN = REPO_ROOT / "verifier" / "audit" / "conservation.py"
 L62  SRC_ANCHOR_FALLBACK = REPO / "_archive_deposon_2026_09_17" / "verifier" / "audit" / "conservation.py"
 L63  OUT_JSON = REPO_ROOT / "results" / "_v3_recheck_05_result_2026_09_28.json"
@@ -38,16 +38,16 @@ L63  OUT_JSON = REPO_ROOT / "results" / "_v3_recheck_05_result_2026_09_28.json"
 
 📌 全文件 `SRC_ANCHOR_FALLBACK` **唯一定义处于 L62**（另一处命中为 **L126** 之引用 `"exists": SRC_ANCHOR_FALLBACK.exists()`，⛔ 非定义）。📌 **本棒 0 编辑 H3**（前后 SHA-12 `65f8a7514f34` / **38,733 B** / mtime `2026-10-12T23:53:11` 一致）。
 
-**⇒ 静态解析（⛔ 未执行 H3 · 纯路径推导）**：`REPO` ＝ H3 所在 `results\` 之**上级** ＝ **`D:\私人资料\deposon-sub`** ⇒ `SRC_ANCHOR_FALLBACK` 之解析值 ＝ **候选址 ③**。
+**⇒ 静态解析（⛔ 未执行 H3 · 纯路径推导）**：`REPO` ＝ H3 所在 `results\` 之**上级** ＝ **`_repo_mirror`** ⇒ `SRC_ANCHOR_FALLBACK` 之解析值 ＝ **候选址 ③**。
 
 ### §2-2 4 候选址（逐字 · 出处 `dba255b2b734` §2-2，佐以 `0ea7852c4511` §1.4 行 83）
 
 | **#** | **候选址逐字** | **建前 `Test-Path`** | **建后复测 `Test-Path`** |
 | :-: | :-- | :-: | :-: |
-| ① | `D:\私人资料\deposon-repo\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | **False** | **False**（未动） |
-| ② | `D:\私人资料\deposon-repo\_archive_deposon_2026_09_17_backup\verifier\audit\conservation.py` | **False** | **False**（未动） |
-| ③ | `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | **False** | 🟢 **True**（**本棒新建**） |
-| ④ | `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17_backup\verifier\audit\conservation.py` | **False** | **False**（未动） |
+| ① | `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | **False** | **False**（未动） |
+| ② | `_repo_mirror\_archive_deposon_2026_09_17_backup\verifier\audit\conservation.py` | **False** | **False**（未动） |
+| ③ | `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | **False** | 🟢 **True**（**本棒新建**） |
+| ④ | `_repo_mirror\_archive_deposon_2026_09_17_backup\verifier\audit\conservation.py` | **False** | **False**（未动） |
 
 📌 建前 **4/4 False**（与检索棒独立吻合）⇒ **0 冲突、0 覆写**；建后 **③ True、①②④ 仍 False**（本棒**仅动 ③**）。
 
@@ -59,7 +59,7 @@ L63  OUT_JSON = REPO_ROOT / "results" / "_v3_recheck_05_result_2026_09_28.json"
 
 | **项** | **值** |
 | :-- | :-- |
-| **字节源** | `D:\私人资料\deposon-repo\results\_p4_pulled_back_conservation.py_2026_10_12` |
+| **字节源** | `_repo_mirror\results\_p4_pulled_back_conservation.py_2026_10_12` |
 | **源 SHA-12** | **`4bdec2683f06`**（全 ＝ `4bdec2683f061669ae4098fd08d73efa9ecda06a21e81722bdadc202191b2454`） |
 | **源 bytes** | **22,105** |
 | **源 mtime** | `2026-10-13T00:04:37`（**本棒前后未变** ⇒ **0 改回拉件**） |
@@ -78,9 +78,9 @@ L63  OUT_JSON = REPO_ROOT / "results" / "_v3_recheck_05_result_2026_09_28.json"
 
 | **级** | **路径** | **建前** | **动作** | **建后** |
 | :-: | :-- | :-: | :-- | :-: |
-| L1 | `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17` | **False** | **CREATED** | **True** |
-| L2 | `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier` | **False** | **CREATED** | **True** |
-| L3 | `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit` | **False** | **CREATED** | **True** |
+| L1 | `_repo_mirror\_archive_deposon_2026_09_17` | **False** | **CREATED** | **True** |
+| L2 | `_repo_mirror\_archive_deposon_2026_09_17\verifier` | **False** | **CREATED** | **True** |
+| L3 | `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit` | **False** | **CREATED** | **True** |
 
 📌 3 级目录建前皆 **False** ⇒ **本棒新建**（⛔ 0 复用、⛔ 0 移动、⛔ 0 删除既有目录）。
 
@@ -94,7 +94,7 @@ L63  OUT_JSON = REPO_ROOT / "results" / "_v3_recheck_05_result_2026_09_28.json"
 
 | **项** | **新建件** | **回拉件（基准）** | **判定** |
 | :-- | :-- | :-- | :-: |
-| **路径** | `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | `results\_p4_pulled_back_conservation.py_2026_10_12` | — |
+| **路径** | `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | `results\_p4_pulled_back_conservation.py_2026_10_12` | — |
 | **SHA-12** | **`4bdec2683f06`** | **`4bdec2683f06`** | ✅ **一致** |
 | **SHA-256（全）** | `4bdec2683f061669ae4098fd08d73efa9ecda06a21e81722bdadc202191b2454` | 同左 | ✅ **一致** |
 | **bytes** | **22,105** | **22,105** | ✅ **一致** |
@@ -146,7 +146,7 @@ L63  OUT_JSON = REPO_ROOT / "results" / "_v3_recheck_05_result_2026_09_28.json"
 
 | **#** | **差分类别** | **路径** |
 | :-: | :-- | :-- |
-| **1** | **NEW**（唯一新增） | `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit\conservation.py` |
+| **1** | **NEW**（唯一新增） | `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py` |
 | — | **SIZE_CHANGED** | **0 件** |
 
 📌 建前 1,188 件**逐路径逐字节**入集合、建后逐件比对 ⇒ **0 件尺寸变动、0 件消失、0 件重命名** ⇒ **0 覆写、0 覆盖、0 删除、0 移动**成立。📌 目录 **+3** 恰为 §3-3 之 L1–L3，**无第四条**。
@@ -186,7 +186,7 @@ L63  OUT_JSON = REPO_ROOT / "results" / "_v3_recheck_05_result_2026_09_28.json"
 
 | **#** | **对象** | **授权来源** |
 | :-: | :-- | :-- |
-| **1** | `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit\conservation.py`（22,105 B / `4bdec2683f06`）＋ 其 **3 级**中间目录 | **PI 甲裁** `ask_0bbe075ddb9384473f717902` / `p4_inplace` |
+| **1** | `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py`（22,105 B / `4bdec2683f06`）＋ 其 **3 级**中间目录 | **PI 甲裁** `ask_0bbe075ddb9384473f717902` / `p4_inplace` |
 | **2** | `results\_p4_inplace_resolution_register_2026_10_13.md`（本件） | 派工单交付要求 |
 
 📌 **除此二者 0 新建**；⛔ 0 删除、⛔ 0 移动、⛔ 0 重命名、⛔ 0 回改任何既有件。

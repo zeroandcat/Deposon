@@ -45,36 +45,36 @@
 
 | 文件 | SHA-12 | 大小 | 用途 |
 |---|---|---|---|
-| `D:/私人资料/deposon-repo/results/_trae_5audit_aggregated_2026_09_17.md` | 待算 (~11,465 B) | 11,465 B | 5 audit 综合 (1 句话) |
-| `D:/私人资料/deposon-repo/results/_trae_d7_v1_audit_20260917_190000.md` | `e240ca712be6` | 7,855 B | §1.1 D7 文稿 V1.1 双审 |
-| `D:/私人资料/deposon-repo/results/_trae_d7_v1_audit_20260917_190000.json` | `3184b30b7b0d` | 4,253 B | §1.1 机读综合 |
-| `D:/私人资料/deposon-repo/results/_trae_kimi_push_v3_audit_20260917_193000.md` | `8ece24be6b8a` | 3,281 B | §1.2 KIMI push 第 3 批副审 |
-| `D:/私人资料/deposon-repo/results/_trae_corpus_5_audit_20260917_193000.md` | `f2a655cd5e54` | 3,467 B | §1.4 5 制品 audit |
-| `D:/私人资料/deposon-repo/results/_trae_anchor_18_audit_20260917_193000.md` | `4af67e6cbe71` | 3,449 B | §1.5 18 frozen 巡逻 |
-| `D:/私人资料/deposon-repo/results/_trae_paper_8ch_双审_20260917_200000.md` | `bec666969ffc` | 4,040 B | §1.3 派遣论文初稿需求双审 |
-| `D:/私人资料/deposon-repo/docs/V3X/TRAE_CODE_IMPROVEMENT_LETTER_2026_09_17.md` | `53a90b9efbb9` | 5,154 B | 改进说明信 |
+| `_repo_mirror/results/_trae_5audit_aggregated_2026_09_17.md` | 待算 (~11,465 B) | 11,465 B | 5 audit 综合 (1 句话) |
+| `_repo_mirror/results/_trae_d7_v1_audit_20260917_190000.md` | `e240ca712be6` | 7,855 B | §1.1 D7 文稿 V1.1 双审 |
+| `_repo_mirror/results/_trae_d7_v1_audit_20260917_190000.json` | `3184b30b7b0d` | 4,253 B | §1.1 机读综合 |
+| `_repo_mirror/results/_trae_kimi_push_v3_audit_20260917_193000.md` | `8ece24be6b8a` | 3,281 B | §1.2 KIMI push 第 3 批副审 |
+| `_repo_mirror/results/_trae_corpus_5_audit_20260917_193000.md` | `f2a655cd5e54` | 3,467 B | §1.4 5 制品 audit |
+| `_repo_mirror/results/_trae_anchor_18_audit_20260917_193000.md` | `4af67e6cbe71` | 3,449 B | §1.5 18 frozen 巡逻 |
+| `_repo_mirror/results/_trae_paper_8ch_双审_20260917_200000.md` | `bec666969ffc` | 4,040 B | §1.3 派遣论文初稿需求双审 |
+| `_repo_mirror/docs/V3X/TRAE_CODE_IMPROVEMENT_LETTER_2026_09_17.md` | `53a90b9efbb9` | 5,154 B | 改进说明信 |
 
 ### §2.2 2 改后 JSON (Trae code Adendum C 勘误)
 
 | 文件 | SHA-12 | 改动 |
 |---|---|---|
-| `D:/私人资料/deposon-repo/results/_adendum_C_pm_attack_surface_v2_20260917_133852.json` | `6eba63788ca8` (改后) | 原 `d64e8e2e2518` (改前) |
-| `D:/私人资料/deposon-repo/results/_adendum_C_pm_attack_surface_v2_20260917_133726.json` | `193ba7d66412` (改后) | 原 `9c5ca0fed3ef` (改前) |
+| `_repo_mirror/results/_adendum_C_pm_attack_surface_v2_20260917_133852.json` | `6eba63788ca8` (改后) | 原 `d64e8e2e2518` (改前) |
+| `_repo_mirror/results/_adendum_C_pm_attack_surface_v2_20260917_133726.json` | `193ba7d66412` (改后) | 原 `9c5ca0fed3ef` (改前) |
 
 ### §2.3 2 脚本 (Trae code 写)
 
 | 文件 | SHA-12 | 用途 |
 |---|---|---|
-| `D:/私人资料/deposon-repo/deposon_team/plugins/_fix_adendum_c_erratum_2026_09_17.py` | `eb44de412de5` | Adendum C 勘误幂等脚本 |
-| `D:/私人资料/deposon-repo/deposon_team/plugins/_goal_completion_audit_2026_09_17.py` | `5c18b72e7bb3` | 完成审计脚本 |
+| `_repo_mirror/deposon_team/plugins/_fix_adendum_c_erratum_2026_09_17.py` | `eb44de412de5` | Adendum C 勘误幂等脚本 |
+| `_repo_mirror/deposon_team/plugins/_goal_completion_audit_2026_09_17.py` | `5c18b72e7bb3` | 完成审计脚本 |
 
 ### §2.4 委托源 (Mavis 写, user 转 KIMI)
 
 | 文件 | SHA-12 | 用途 |
 |---|---|---|
-| `D:/私人资料/deposon-repo/results/_letter_to_trae_code_2026_09_17_final.md` | `c1791a7811f3` | Trae code 委托源 (Mavis 18:18 写) |
-| `D:/私人资料/deposon-repo/results/_trae_5audit_aggregated_2026_09_17.md` | 待算 | 5 audit 综合 (Mavis 21:30 写) |
-| `D:/私人资料/deposon-repo/results/_letter_to_coze_paper_v1_委托_2026_09_17.md` | 待算 | Coze 委托 (Mavis 21:35 写) |
+| `_repo_mirror/results/_letter_to_trae_code_2026_09_17_final.md` | `c1791a7811f3` | Trae code 委托源 (Mavis 18:18 写) |
+| `_repo_mirror/results/_trae_5audit_aggregated_2026_09_17.md` | 待算 | 5 audit 综合 (Mavis 21:30 写) |
+| `_repo_mirror/results/_letter_to_coze_paper_v1_委托_2026_09_17.md` | 待算 | Coze 委托 (Mavis 21:35 写) |
 
 ### §2.5 8 worker 全部产物 (KIMI 第 3 批新增 12+ 文件)
 
@@ -152,14 +152,14 @@
 
 | 件 | 路径 | 用途 |
 |---|---|---|
-| Trae code 委托源 | `D:/私人资料/deposon-repo/results/_letter_to_trae_code_2026_09_17_final.md` (10,690 B) | Trae code 派工源 |
-| 5 audit 综合 | `D:/私人资料/deposon-repo/results/_trae_5audit_aggregated_2026_09_17.md` (11,465 B) | 5 audit 综合 (1 句话) |
-| 改进说明信 | `D:/私人资料/deposon-repo/docs/V3X/TRAE_CODE_IMPROVEMENT_LETTER_2026_09_17.md` (5,154 B) | Trae code 直接改 + 前后 SHA |
-| 聚合文档 | `D:/私人资料/deposon-repo/results/_v3x_d0_5_aggregation_2026_09_17.md` (12,010 B) | Mavis 18:30 派 |
-| 派遣论文初稿需求 | `D:/私人资料/deposon-repo/results/_trae_paper_8ch_双审_20260917_200000.md` (4,040 B) | Trae code §1.3 |
-| KIMI push v2 manifest | `D:/私人资料/deposon-repo/results/_kimi_safe_batch_push_v2_full_2026_09_17.json` (47,954 B) | 79 files / 1.1 MB (1+2 批) |
-| P-L v3 综合报告 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase2_report_20260917_142748.md` (9,056 B) | Phase 1+2 综合 |
-| PATCH V2 | `D:/私人资料/deposon-repo/deposon_team/_designs/V3X_PATCH_5ANCHOR_RECONCILE_V2_2026_09_17.md` (6,802 B) | B2.2 reconcile |
+| Trae code 委托源 | `_repo_mirror/results/_letter_to_trae_code_2026_09_17_final.md` (10,690 B) | Trae code 派工源 |
+| 5 audit 综合 | `_repo_mirror/results/_trae_5audit_aggregated_2026_09_17.md` (11,465 B) | 5 audit 综合 (1 句话) |
+| 改进说明信 | `_repo_mirror/docs/V3X/TRAE_CODE_IMPROVEMENT_LETTER_2026_09_17.md` (5,154 B) | Trae code 直接改 + 前后 SHA |
+| 聚合文档 | `_repo_mirror/results/_v3x_d0_5_aggregation_2026_09_17.md` (12,010 B) | Mavis 18:30 派 |
+| 派遣论文初稿需求 | `_repo_mirror/results/_trae_paper_8ch_双审_20260917_200000.md` (4,040 B) | Trae code §1.3 |
+| KIMI push v2 manifest | `_repo_mirror/results/_kimi_safe_batch_push_v2_full_2026_09_17.json` (47,954 B) | 79 files / 1.1 MB (1+2 批) |
+| P-L v3 综合报告 | `_repo_mirror/results/_p_l_v3_phase2_report_20260917_142748.md` (9,056 B) | Phase 1+2 综合 |
+| PATCH V2 | `_repo_mirror/deposon_team/_designs/V3X_PATCH_5ANCHOR_RECONCILE_V2_2026_09_17.md` (6,802 B) | B2.2 reconcile |
 
 ---
 
@@ -178,7 +178,7 @@
 | no_verifier_mavis_builtin_scripts_touch | ✅ 不动 verifier/ mavis/ .trae/ .builtin/scripts/ 内容 |
 
 **KIMI push 必验** (Mavis 派工前 + KIMI 完推后):
-- Mavis 派工前: `D:/私人资料/deposon-repo/results/_kimi_safe_batch_push_v3_full_2026_09_17.json` 落 (KIMI 推的 manifest 镜像)
+- Mavis 派工前: `_repo_mirror/results/_kimi_safe_batch_push_v3_full_2026_09_17.json` 落 (KIMI 推的 manifest 镜像)
 - KIMI 完推后: Mavis 用 v0+v1 verify 16/16 + 5/5 PASS 复验 (沿 _verify_15frozen_v1.py + _verify_pg_v0_v1.py)
 
 ---
@@ -208,7 +208,7 @@
 
 ## §10 委托交付 (Mavis 期望)
 
-- KIMI 第 3 批 manifest 镜像落: `D:/私人资料/deposon-repo/results/_kimi_safe_batch_push_v3_full_2026_09_17.json` (KIMI 推完写)
+- KIMI 第 3 批 manifest 镜像落: `_repo_mirror/results/_kimi_safe_batch_push_v3_full_2026_09_17.json` (KIMI 推完写)
 - push 后 v0+v1 verify 16/16 + 5/5 PASS 复验 (严守 0 触动)
 - KIMI 自身如要追加 metadata 写 commit message + tag (沿 _v3x_dispatch_log_2026_09_16.md 风格)
 - 4 vector_embedding 大文件策略: 直推 (默认) / LFS (可)

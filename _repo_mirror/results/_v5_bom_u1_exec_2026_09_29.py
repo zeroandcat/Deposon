@@ -45,7 +45,7 @@ if hasattr(sys.stderr, "reconfigure"):
     except Exception:
         pass
 
-REPO = pathlib.Path(r"D:\私人资料\deposon-repo")
+REPO = pathlib.Path(r"_repo_mirror")
 
 # 阈值声明：本棒 0 新设阈值（沿预登记 §4「阈值沿原预登记 0 新设」）
 THRESHOLD_NUMBERS: list = []

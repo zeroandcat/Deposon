@@ -105,7 +105,7 @@
 
 ## §6 逐件执行记录（实跑 5／5）
 
-**工作目录** ＝ 各 runner 所在目录 `D:\私人资料\deposon-sub\results`（保 `__file__` 语义）｜**限时** ＝ 每件 ≤900 s｜**命令** ＝ `python <runner>`
+**工作目录** ＝ 各 runner 所在目录 `_repo_mirror\results`（保 `__file__` 语义）｜**限时** ＝ 每件 ≤900 s｜**命令** ＝ `python <runner>`
 
 | 件 | 跑否 | 退出码 | 耗时(s) | 超时 | stdout 字符 | stderr 字符 | runner 跑后未变 |
 |:-:|:--:|:--:|--:|:--:|--:|--:|:--:|
@@ -253,7 +253,7 @@ wrote _s5doubleprime_five_lines_readings_2026_10_11.json  sha12=839fb5452578  by
 
 ## §8 全树 0 他改之自证
 
-**方法**：路径 ＋ size ＋ mtime(ns) **全树递归快照**，`before`（任何动作之前）／`after`（跑毕之后）逐路径比对。归档区 `D:\私人资料\_non_upload_local_archive` **0 读 0 写 0 列目录**（遍历内置断言，越界即抛）。
+**方法**：路径 ＋ size ＋ mtime(ns) **全树递归快照**，`before`（任何动作之前）／`after`（跑毕之后）逐路径比对。归档区 `〔本地归档区〕` **0 读 0 写 0 列目录**（遍历内置断言，越界即抛）。
 
 | 树 | before 件数 | after 件数 | added | deleted | **size-changed** | mtime-only |
 |:--|--:|--:|--:|--:|--:|--:|

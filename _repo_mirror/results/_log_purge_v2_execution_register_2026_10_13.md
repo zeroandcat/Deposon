@@ -6,7 +6,7 @@
 
 ## §0 一句话结论
 
-PI 裁「**接受降级·直清（静默永久删，⚠ 不可逆）**」⇒ 第 1 轮经 C 路径失败（junction 拒收）后，**改以真实实体路径** `D:\Users\Administrator\AppData\Roaming\MiniMax\logs\` 执行，**35 件全部经 `mavis-trash` 移出**（无失败、无截断、无 `Remove-Item`）；日志仓由 **19,762.0 MB 降至 470.3 MB（−99.8%）**。🔴 **但 D: 盘空间未释放**（free 28.2 → 27.3 GB，反降 0.9 GB 系今日卷持续写入）——因 19,299.2 MB **仍在 D: 回收站内**，而该站实测上限仅 2,048／5,092／**10,240 MB** ⇒ **已超限约 9 GB**，Windows 将于其回收清空/空间告急时**永久清除最旧项**。
+PI 裁「**接受降级·直清（静默永久删，⚠ 不可逆）**」⇒ 第 1 轮经 C 路径失败（junction 拒收）后，**改以真实实体路径** `〔本机用户目录〕\AppData\Roaming\MiniMax\logs\` 执行，**35 件全部经 `mavis-trash` 移出**（无失败、无截断、无 `Remove-Item`）；日志仓由 **19,762.0 MB 降至 470.3 MB（−99.8%）**。🔴 **但 D: 盘空间未释放**（free 28.2 → 27.3 GB，反降 0.9 GB 系今日卷持续写入）——因 19,299.2 MB **仍在 D: 回收站内**，而该站实测上限仅 2,048／5,092／**10,240 MB** ⇒ **已超限约 9 GB**，Windows 将于其回收清空/空间告急时**永久清除最旧项**。
 
 ---
 
@@ -24,8 +24,8 @@ PI 裁「**接受降级·直清（静默永久删，⚠ 不可逆）**」⇒ 第
 
 | **轮** | **路径** | **结果** |
 | :-: | :-- | :-- |
-| 第 1 轮 | `C:\Users\Administrator\AppData\Roaming\MiniMax\logs\…` | 🔴 **失败 35/35** —— 该路径为 **Junction**（`LinkType=Junction` → `Target=D:\Users\Administrator\AppData\Roaming\MiniMax`）；`mavis-trash` 报 `refused to trash redirecting reparse point` |
-| **本轮** | `D:/Users/Administrator/AppData/Roaming/MiniMax/logs/…`（**真实实体**） | 🟢 **35/35 移出**（`mavis-trash: moved to trash` 逐件回报） |
+| 第 1 轮 | `〔本机用户目录〕\AppData\Roaming\MiniMax\logs\…` | 🔴 **失败 35/35** —— 该路径为 **Junction**（`LinkType=Junction` → `Target=〔本机用户目录〕\AppData\Roaming\MiniMax`）；`mavis-trash` 报 `refused to trash redirecting reparse point` |
+| **本轮** | `〔本机用户目录〕/AppData/Roaming/MiniMax/logs/…`（**真实实体**） | 🟢 **35/35 移出**（`mavis-trash: moved to trash` 逐件回报） |
 
 📌 两轮登记**并存**：第 1 轮 `results/_log_purge_register_2026_10_13.md`（`d0d5ba7a7cde`·8,855 B）**⛔ 0 回改**。
 
@@ -79,7 +79,7 @@ PI 裁「**接受降级·直清（静默永久删，⚠ 不可逆）**」⇒ 第
 - 全部 35 件经 **一次顶层 `rm --`**（字面前斜杠绝对路径）分两批发出，**每件均回报 `mavis-trash: moved to trash`**；
 - ⚠ 守卫曾拦下一处 `& rm -- $t`（**变量传参**）形式 ⇒ 已改字面路径重发（合「⛔ 0 传变量」纪律）；
 - 0 网络／0 skill／0 LLM／0 读 `.env`／0 PAT／0 远端写；
-- 归档区 `D:\私人资料\_non_upload_local_archive` **0 读 0 写 0 列目录**；
+- 归档区 `〔本地归档区〕` **0 读 0 写 0 列目录**；
 - 本件系新立件，**⛔ 0 回改**任何既有件。
 
 ---
@@ -95,4 +95,4 @@ PI 裁「**接受降级·直清（静默永久删，⚠ 不可逆）**」⇒ 第
 
 ---
 
-*件止。parent（deposon 链主 · 本轮亲办 · 登记体）· 2026-10-13 · **日志仓清理执行登记（第 2 轮）** —— PI 裁「**接受降级·直清**」⇒ 改以**实体路径** `D:\Users\Administrator\AppData\Roaming\MiniMax\logs\`（绕第 1 轮 junction 拒收）**35/35 移出**；日志仓 **19,762.0 MB → 470.3 MB（−99.8%）**，逐类仅留 `*-10-13.log` 与 `truncate-main-0929.ps1`（后者未执行未改）｜🔴 **⚠ 空间未释放**：19,299.2 MB 入 D: 回收站，而该站上限 10,240 MB ⇒ **已超限约 9 GB**，Windows 将惰性永久清除最旧项（PI 已裁接受）｜⛔ 0 永久删／0 截断／0 变量传参（守卫拦下一处变量形式已改字面）／0 触归档区｜未决：①是否清空 D: 回收站以真正释放（须 PI 明示，将连带清除站内其他小件）②清除时点不可预期 ③`observability` 478.7MB 是否同案 ④**日志保留策略未定⇒同类爆仓将重现**｜⛔ 0 回改（第 1 轮件原样在册）·*
+*件止。parent（deposon 链主 · 本轮亲办 · 登记体）· 2026-10-13 · **日志仓清理执行登记（第 2 轮）** —— PI 裁「**接受降级·直清**」⇒ 改以**实体路径** `〔本机用户目录〕\AppData\Roaming\MiniMax\logs\`（绕第 1 轮 junction 拒收）**35/35 移出**；日志仓 **19,762.0 MB → 470.3 MB（−99.8%）**，逐类仅留 `*-10-13.log` 与 `truncate-main-0929.ps1`（后者未执行未改）｜🔴 **⚠ 空间未释放**：19,299.2 MB 入 D: 回收站，而该站上限 10,240 MB ⇒ **已超限约 9 GB**，Windows 将惰性永久清除最旧项（PI 已裁接受）｜⛔ 0 永久删／0 截断／0 变量传参（守卫拦下一处变量形式已改字面）／0 触归档区｜未决：①是否清空 D: 回收站以真正释放（须 PI 明示，将连带清除站内其他小件）②清除时点不可预期 ③`observability` 478.7MB 是否同案 ④**日志保留策略未定⇒同类爆仓将重现**｜⛔ 0 回改（第 1 轮件原样在册）·*

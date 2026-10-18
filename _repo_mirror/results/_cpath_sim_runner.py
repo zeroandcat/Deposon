@@ -16,7 +16,7 @@ import numpy as np
 from datetime import datetime, timezone, timedelta
 
 # ============ 配置 ============
-WORKSPACE = r'D:\私人资料\deposon-repo'
+WORKSPACE = r'_repo_mirror'
 EMB_FILE = os.path.join(WORKSPACE, 'results', 'deposon_volcengine_22caption_embedding_2026_09_10.json')
 CELLS_FILE = os.path.join(WORKSPACE, 'results', 'deposon_volcengine_glm_latest_30cells_v2_2026_09_10.json')
 OUT_JSON = os.path.join(WORKSPACE, 'results', 'deposon_cpath_simulation_2026_09_10.json')

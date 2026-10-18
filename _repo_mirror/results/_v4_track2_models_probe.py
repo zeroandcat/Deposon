@@ -15,7 +15,7 @@ import time
 import requests as _requests
 
 PROXY_HTTP = "http://127.0.0.1:1018"
-KEY_SOURCE = os.environ.get("DEPOSON_KEY_FILE", "C:/Users/Administrator/Desktop/AI/LLM API.txt")
+KEY_SOURCE = os.environ.get("DEPOSON_KEY_FILE", "〔本机用户目录〕/Desktop/AI/LLM API.txt")
 
 URLS = [
     ("qwen_plan", "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1", 23, False),

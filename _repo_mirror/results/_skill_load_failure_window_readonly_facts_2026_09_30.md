@@ -131,7 +131,7 @@
 
 | 命中类型 | 实际内容（实测摘引） |
 |---|---|
-| **工具入参回显** | `FsToolPermissionChecker checkPermissions called, toolName=grep, input={"pattern":"plugin-cache\|sha256-tree-v1\|Local skill not found","path":"D:\\私人资料\\deposon-repo",…}` |
+| **工具入参回显** | `FsToolPermissionChecker checkPermissions called, toolName=grep, input={"pattern":"plugin-cache\|sha256-tree-v1\|Local skill not found","path":"_repo_mirror",…}` |
 | **命令文本回显** | `BashToolPermissionChecker … input={"command":"…Select-String… -Pattern 'Local skill not found' -SimpleMatch…"}` |
 | **写入件正文回显** | `FsToolPermissionChecker … toolName=write, input={"path":"…\\_skill_cache_inventory_and_reference_update_advice_2026_09_30.md","content":"# skill 目录 / plugin-cache 现状盘点…"}` |
 

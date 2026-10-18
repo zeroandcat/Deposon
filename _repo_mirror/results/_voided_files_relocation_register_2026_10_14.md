@@ -32,7 +32,7 @@ PI 所裁为**「授权移动」**，非删除。本棒据此严守：
 
 ### §1-3 方法（可复算）
 
-1. **移动前核引用**（沿「移动交付件前须核引用」纪律）：**双通道** ＝ 文件名通道 ＋ 内容正则通道；遍历器 `os.walk`；**断言遍历错误 ＝ 0**；检索根 ＝ `D:\私人资料\deposon-repo`（含 `.mavis`／`.trae`／`.vscode`／`.tmp` 等**运行时附件面，0 排除**）。
+1. **移动前核引用**（沿「移动交付件前须核引用」纪律）：**双通道** ＝ 文件名通道 ＋ 内容正则通道；遍历器 `os.walk`；**断言遍历错误 ＝ 0**；检索根 ＝ `_repo_mirror`（含 `.mavis`／`.trae`／`.vscode`／`.tmp` 等**运行时附件面，0 排除**）。
 2. **落点占用核**：`Test-Path` ＋ 全仓 glob 双检；**占用则中止**（⛔ 0 覆盖）。
 3. **移动**：同卷 `shutil.move`（保 mtime）。
 4. **移动后逐件复算指纹**：SHA-12／bytes 与移动前对比 ⇒ 证「**仅移动、未改内容**」。
@@ -47,7 +47,7 @@ PI 所裁为**「授权移动」**，非删除。本棒据此严守：
 | :-- | :-- |
 | 遍历文件数 | **1,935** |
 | 遍历错误数 | **0**（`os.walk` `onerror` 断言） |
-| 检索根 | `D:\私人资料\deposon-repo`（含运行时附件面） |
+| 检索根 | `_repo_mirror`（含运行时附件面） |
 | 文件名通道命中 | **2**（＝被移动两件**自身**，非他件引用） |
 | 内容正则通道命中 | **13** |
 
@@ -92,8 +92,8 @@ PI 所裁为**「授权移动」**，非删除。本棒据此严守：
 
 | # | 旧路径（已失效） | → 新路径（现存） |
 | :-: | :-- | :-- |
-| 1 | `D:\私人资料\deposon-repo\results\_ge01_epsilon_sensitivity_grid_design_2026_10_13.md` | `D:\私人资料\deposon-repo\results\_archive_2026-10-14\voided\_ge01_epsilon_sensitivity_grid_design_2026_10_13.md` |
-| 2 | `D:\私人资料\deposon-repo\results\_four_class_backtrace_inventory_2026_10_13.md` | `D:\私人资料\deposon-repo\results\_archive_2026-10-14\voided\_four_class_backtrace_inventory_2026_10_13.md` |
+| 1 | `_repo_mirror\results\_ge01_epsilon_sensitivity_grid_design_2026_10_13.md` | `_repo_mirror\results\_archive_2026-10-14\voided\_ge01_epsilon_sensitivity_grid_design_2026_10_13.md` |
+| 2 | `_repo_mirror\results\_four_class_backtrace_inventory_2026_10_13.md` | `_repo_mirror\results\_archive_2026-10-14\voided\_four_class_backtrace_inventory_2026_10_13.md` |
 
 **权威面不变**（二者**均未移动、未改动**，仍驻 `results\`）：
 
@@ -138,7 +138,7 @@ PI 所裁为**「授权移动」**，非删除。本棒据此严守：
 
 | 项 | 值 |
 | :-- | :-- |
-| **路径** | `D:\私人资料\deposon-repo\results\_voided_files_relocation_register_2026_10_14.md` |
+| **路径** | `_repo_mirror\results\_voided_files_relocation_register_2026_10_14.md` |
 | **bytes** |       9587 |
 | **SHA-12** | `604ec0ce0922` |
 | **SHA-12 口径** | 自文件首字节起、至本 `**SHA-12**` 所在行**行首（不含该行）**之全部字节之 SHA-256 前 12 位（**前缀口径**；因全文哈希具自指性，故采前缀口径以保可复算） |

@@ -25,7 +25,7 @@
 |:-:|:--|:-:|--:|--:|:-:|:-:|:-:|
 | 1 | `results/_r5_spec_pack_retrieved_2026_10_13/鲍勃_minimax实验委托规格包_2026_10_12.md` | `bb66c577673b` | 14,758 | 172 | False | 0 | 0 |
 | 2 | 同上 `.asset.json` | `5ca1aa500fd8` | 1,037 | 17 | False | 0 | 0 |
-| 3 | `C:/Users/Administrator/.minimax/v2/assets/2026/10/12/20-24-14-645-…_f71ae4210f50_…md`（**运行时附件面**·委托回函） | `f71ae4210f50` | 9,385 | — | — | — | — |
+| 3 | `〔本机用户目录〕/.minimax/v2/assets/2026/10/12/20-24-14-645-…_f71ae4210f50_…md`（**运行时附件面**·委托回函） | `f71ae4210f50` | 9,385 | — | — | — | — |
 | 4 | `results/_ge01_H_enumeration_round2_2026_10_13.md`（判读依据件） | `ff2afb7a634b` | 37,191 | 288 | False | 0 | 0 |
 | 5 | `docs/V3X/P_B_DISTORTION_BOUND_V0_SPEC.md`（**本机活件**） | `423c84de20d5` | 15,457 | 177 | False | 0 | 0 |
 | 6 | `results/_pulled_back_P_B_DISTORTION_BOUND_V0_SPEC_2026_10_13.md`（pulled-back 副本） | `bb7ca9838150` | 7,126 | 152 | False | 0 | 0 |
@@ -63,8 +63,8 @@
 |:-:|:--|--:|:-:|
 | 1 | `docs/V3X/P_B_DISTORTION_BOUND_V0_SPEC.md`（**活件**） | 15,457 | `423c84de20d5` |
 | 2 | `results/_pulled_back_P_B_DISTORTION_BOUND_V0_SPEC_2026_10_13.md` | 7,126 | `bb7ca9838150` |
-| 3 | `D:/私人资料/_non_upload_local_archive/results/_remote_version_freeze_2026_09_26/P_B_DISTORTION_BOUND_V0_SPEC.md` | 7,126 | `bb7ca9838150` |
-| 4 | `D:/私人资料/_non_upload_local_archive/results/_remote_version_freeze_2026_10_12/P_B_DISTORTION_BOUND_V0_SPEC.md.remote_2026_10_12` | 11,246 | `638150884d18` |
+| 3 | `〔本地归档区〕/results/_remote_version_freeze_2026_09_26/P_B_DISTORTION_BOUND_V0_SPEC.md` | 7,126 | `bb7ca9838150` |
+| 4 | `〔本地归档区〕/results/_remote_version_freeze_2026_10_12/P_B_DISTORTION_BOUND_V0_SPEC.md.remote_2026_10_12` | 11,246 | `638150884d18` |
 
 **SHA-12 通道**（6 根全树，目标值逐个命中）：
 
@@ -81,7 +81,7 @@
 
 | 项 | 值 |
 |:--|:--|
-| 检索根（**6**） | `D:/私人资料/deposon-repo`（1,940 件）｜`D:/私人资料/_non_upload_local_archive`（**39,720**·归档区）｜`D:/私人资料/deposon-sub`（1,189）｜`D:/私人资料/GLM`（16）｜`D:/私人资料/Deposon_v1_2_0_交付包`（23）｜`C:/Users/Administrator/.minimax/v2/assets`（220·**运行时附件面**） |
+| 检索根（**6**） | `_repo_mirror`（1,940 件）｜`〔本地归档区〕`（**39,720**·归档区）｜`_repo_mirror`（1,189）｜`〔本地资料区〕/GLM`（16）｜`〔本地资料区〕/Deposon_v1_2_0_交付包`（23）｜`〔本机用户目录〕/.minimax/v2/assets`（220·**运行时附件面**） |
 | 遍历文件总数 | **43,108** |
 | 实际入 SHA census | **43,104** |
 | >20 MB 跳过（仅登记，⛔ 0 内容扫描） | **4** |

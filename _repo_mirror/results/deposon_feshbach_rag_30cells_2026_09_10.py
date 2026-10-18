@@ -13,12 +13,12 @@ import urllib.request, urllib.error
 import numpy as np
 from numpy.linalg import norm
 
-KEY_FILE = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
-GSM8K_FILE = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_gsm8k_details.json'
-STQ_FILE = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_strategyqa_details.json'
-EMB_FILE = r'D:\私人资料\deposon-repo\results\deposon_volcengine_22caption_embedding_2026_09_10.json'
-OUTPUT_JSON = r'D:\私人资料\deposon-repo\results\deposon_feshbach_rag_30cells_2026_09_10.json'
-OUTPUT_LOG = r'D:\私人资料\deposon-repo\results\deposon_feshbach_rag_30cells_2026_09_10.log'
+KEY_FILE = r'〔本机用户目录〕\Desktop\AI\LLM API.txt'
+GSM8K_FILE = r'_repo_mirror\results\deposon_benchmark_v1_4_gsm8k_details.json'
+STQ_FILE = r'_repo_mirror\results\deposon_benchmark_v1_4_strategyqa_details.json'
+EMB_FILE = r'_repo_mirror\results\deposon_volcengine_22caption_embedding_2026_09_10.json'
+OUTPUT_JSON = r'_repo_mirror\results\deposon_feshbach_rag_30cells_2026_09_10.json'
+OUTPUT_LOG = r'_repo_mirror\results\deposon_feshbach_rag_30cells_2026_09_10.log'
 BASE_URL = 'https://ark.cn-beijing.volces.com/api/coding/v3'
 MODEL = 'doubao-seed-2.0-lite'
 SANITY_PROMPT = 'What is 1+1?'

@@ -454,7 +454,7 @@
 
 | 项 | 值 |
 | :--|:--|
-| 目标路径 | `D:\私人资料\deposon-repo\results\_ext5_verdict_2026_10_17.md` |
+| 目标路径 | `_repo_mirror\results\_ext5_verdict_2026_10_17.md` |
 | `Test-Path`（落盘前实测） | **`False`** |
 | `results\` 精确 glob（`*_ext5_verdict_2026_10_17.md`） | **0 命中** |
 | 全仓递归 glob（`*ext5_verdict*`） | **0 命中** |

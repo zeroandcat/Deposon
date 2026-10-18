@@ -13,7 +13,7 @@ from datetime import datetime, timezone, timedelta
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', line_buffering=True)
 
 # Key
-with io.open(r'C:\Users\Administrator\Desktop\AI\LLM API.txt', 'r', encoding='gb18030') as f:
+with io.open(r'〔本机用户目录〕\Desktop\AI\LLM API.txt', 'r', encoding='gb18030') as f:
     key_text = f.read()
 all_ark = re.findall(r'ark-[a-zA-Z0-9-]+', key_text)
 API_KEY = all_ark[1] if len(all_ark) >= 2 else all_ark[0]
@@ -54,7 +54,7 @@ def query_chat(prompt, timeout=60):
 
 
 # Load stage 2
-STAGE2 = json.load(open(r'D:\私人资料\deposon-repo\results\deposon_v3x_6way_stage2_2026_09_10.json', encoding='utf-8'))
+STAGE2 = json.load(open(r'_repo_mirror\results\deposon_v3x_6way_stage2_2026_09_10.json', encoding='utf-8'))
 T_22 = np.array([STAGE2['T_values'][k] for k in sorted(STAGE2['T_values'].keys())])
 R_22 = np.array([STAGE2['R_values'][k] for k in sorted(STAGE2['R_values'].keys())])
 A_22 = np.array([STAGE2['A_values'][k] for k in sorted(STAGE2['A_values'].keys())])
@@ -63,11 +63,11 @@ TRA_22 = np.stack([T_22, R_22, A_22], axis=1)
 TRA_22_n = TRA_22 / (np.linalg.norm(TRA_22, axis=1, keepdims=True) + 1e-12)
 
 # Load cell questions
-gsm = json.load(open(r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_gsm8k_details.json', encoding='utf-8'))
-strat = json.load(open(r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_strategyqa_details.json', encoding='utf-8'))
+gsm = json.load(open(r'_repo_mirror\results\deposon_benchmark_v1_4_gsm8k_details.json', encoding='utf-8'))
+strat = json.load(open(r'_repo_mirror\results\deposon_benchmark_v1_4_strategyqa_details.json', encoding='utf-8'))
 
 # Captions
-CORPUS_DIR = r'D:\私人资料\deposon-repo\corpus\v20'
+CORPUS_DIR = r'_repo_mirror\corpus\v20'
 idx = json.load(open(os.path.join(CORPUS_DIR, 'index.json'), encoding='utf-8'))
 captions = []
 for g in idx['graphs']:
@@ -268,7 +268,7 @@ out = {
     'total_passed': total_ok,
     'verdict': verdict,
 }
-OUT = r'D:\私人资料\deposon-repo\results\deposon_v3x_6way_stage3_2026_09_10.json'
+OUT = r'_repo_mirror\results\deposon_v3x_6way_stage3_2026_09_10.json'
 with open(OUT, 'w', encoding='utf-8') as f:
     json.dump(out, f, ensure_ascii=False, indent=2)
 print(f"\n[OK] Stage 3 saved: {OUT} ({os.path.getsize(OUT)} bytes)")

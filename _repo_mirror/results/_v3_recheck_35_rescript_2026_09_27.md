@@ -117,7 +117,7 @@
 
 ## §7 只读与 0 触动声明
 
-- **仓外只读取用**（K-V3R1P1-0-F）：`D:/私人资料/_non_upload_local_archive/results/gt2_attacker_cache/` 4 件，跑前/跑后逐件复读 `sha12 + bytes` **完全一致**（`external_readonly.pre_post_identical = true`）；**0 复制入仓 / 0 写入 / 0 移出 / 0 删除 / 0 改 ACL**；本仓 `results/gt2_attacker_cache/` **仍不存在**
+- **仓外只读取用**（K-V3R1P1-0-F）：`〔本地归档区〕/results/gt2_attacker_cache/` 4 件，跑前/跑后逐件复读 `sha12 + bytes` **完全一致**（`external_readonly.pre_post_identical = true`）；**0 复制入仓 / 0 写入 / 0 移出 / 0 删除 / 0 改 ACL**；本仓 `results/gt2_attacker_cache/` **仍不存在**
   - `algorithm_process.json` `ddda494f014a` / 2,782 B ｜ `biological_taxonomy.json` `0f0a4329c34f` / 2,385 B ｜ `historical_causality.json` `86af2ef6b66c` / 2,341 B ｜ `physics_concepts.json` `9c74bb8206c0` / 2,386 B
 - **既有件 0 触动**：`run_v20_gt2b.py`（`361aff516219`）、`run_v19_meanfield.py`（`67ef3779478a`）、`deposon_protocol.py`、`mindmap_corpus_v20.py`、`corpus/v20/index.json`、6 件 L 族图面、`results/deposon_v20_gt2b.json`（`a2ae7997ee67`）、v1 / v1.1 预登记 —— **全部只读，0 字节改动**（哈希基线落 `result.input_chain` / `result.corpus_files`）
 - **派生 JSON 0 合并**：新名独立件 `results/_v3_recheck_35_result_2026_09_27.json`，0 并入 `deposon_v20_gt2b.json` 或任何 `_v3_n_*`

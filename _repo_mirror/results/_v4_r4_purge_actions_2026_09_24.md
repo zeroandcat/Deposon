@@ -87,7 +87,7 @@
 
 | 字段 | 值 |
 |---|---|
-| 路径 | `D:/私人资料/deposon-sub/results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json` |
+| 路径 | `_repo_mirror/results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json` |
 | 定位段 | 行 39 + 行 54 之 `"key"` 字段值 |
 | redact 前 SHA-12 | `5D583C612D07` |
 | redact 前 bytes | 2,289 |
@@ -167,7 +167,7 @@
 | 1 | `6CD6FE9FB32F` | `results/_v4_v5_probe_test.log` (SHA-12 `B70E89448A3F`) + `results/_v3_v4_achievements_inventory_3dir_2026_09_24.md` §5.6 证据段 (redact 后) | OpenRouter (sk-or-v1- prefix) | **CLOSED — 已废弃测试 key, 无需轮换 (PI 拍板 ask_d38952e0 r4_rotate=no_need, 2026-09-24 19:00)** |
 | 2 | `00249F41B80D` | 同 #1 | teamorouter (sk-teamo- prefix) | **CLOSED — 已废弃测试 key, 无需轮换 (PI 拍板同上)** |
 | 3 | `96D5AE961FB5` | 同 #1 | sk-ad9b56- prefix (provider 推断不明) | **CLOSED — 已废弃测试 key, 无需轮换 (PI 拍板同上)** |
-| 4 | `D6760FC68827` | `D:/私人资料/deposon-sub/results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json` (行 39 + 54, redact 后) | OpenRouter (sk-or-v1- prefix) | **CLOSED — 已废弃测试 key, 无需轮换 (PI 拍板同上)** |
+| 4 | `D6760FC68827` | `_repo_mirror/results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json` (行 39 + 54, redact 后) | OpenRouter (sk-or-v1- prefix) | **CLOSED — 已废弃测试 key, 无需轮换 (PI 拍板同上)** |
 
 **结案后行为**:
 - 这 4 个 key 指纹不再追踪, 不发起 incident response (无轮换 / 无 provider 报备).
@@ -193,26 +193,26 @@
 ### 5.2 本棒实测验证 (2026-09-24 19:02)
 
 ```
-$ Test-Path "D:\私人资料\deposon-repo\results\_v4_pi_cot_v2_result.json"
+$ Test-Path "_repo_mirror\results\_v4_pi_cot_v2_result.json"
 True
-$ Test-Path "D:\私人资料\deposon-repo\results\_v4_pi_cot_v2_verdict.md"
+$ Test-Path "_repo_mirror\results\_v4_pi_cot_v2_verdict.md"
 True
-$ Test-Path "D:\私人资料\deposon-repo\results\_v4_pi_cot_v2_prereg.md"
+$ Test-Path "_repo_mirror\results\_v4_pi_cot_v2_prereg.md"
 True
 
-$ sha = (Get-FileHash -Path "D:\私人资料\deposon-repo\results\_v4_pi_cot_v2_result.json" -Algorithm SHA256).Hash.ToUpper()
+$ sha = (Get-FileHash -Path "_repo_mirror\results\_v4_pi_cot_v2_result.json" -Algorithm SHA256).Hash.ToUpper()
 $sha.Substring(0,12)
 1665F367B2C4   # ✓ MATCH §2.2 登记 SHA-12
 
-$ sha = (Get-FileHash -Path "D:\私人资料\deposon-repo\results\_v4_pi_cot_v2_verdict.md" -Algorithm SHA256).Hash.ToUpper()
+$ sha = (Get-FileHash -Path "_repo_mirror\results\_v4_pi_cot_v2_verdict.md" -Algorithm SHA256).Hash.ToUpper()
 $sha.Substring(0,12)
 EB9AD4193CF2   # ✓ MATCH
 
-$ sha = (Get-FileHash -Path "D:\私人资料\deposon-repo\results\_v4_pi_cot_v2_prereg.md" -Algorithm SHA256).Hash.ToUpper()
+$ sha = (Get-FileHash -Path "_repo_mirror\results\_v4_pi_cot_v2_prereg.md" -Algorithm SHA256).Hash.ToUpper()
 $sha.Substring(0,12)
 CC25C5149CE1   # ✓ MATCH
 
-$ Get-ChildItem -Path "D:\私人资料\deposon-repo\results\_v4_pi_cot_v2*" | Select-Object Name
+$ Get-ChildItem -Path "_repo_mirror\results\_v4_pi_cot_v2*" | Select-Object Name
 _v4_pi_cot_v2_collection_log.md
 _v4_pi_cot_v2_dataset.json
 _v4_pi_cot_v2_dataset_addendum_2026_09_24.json
@@ -291,7 +291,7 @@ _v4_pi_cot_v2_verdict.md                                   # ← 无 _ruleset_ �
 
 ### 6.3 JSON 行 24 ark- key 未 redact 之老实交代
 
-- **派工单显式授权范围**: 「`D:/私人资料/deposon-sub/results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json`... 行 39/54 附近的独立 key（指纹 D6760FC68827）」— 仅指向行 39 + 54 之 sk-or-v1- key.
+- **派工单显式授权范围**: 「`_repo_mirror/results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json`... 行 39/54 附近的独立 key（指纹 D6760FC68827）」— 仅指向行 39 + 54 之 sk-or-v1- key.
 - **派工单边界**: 「只动上述 2 件 redact + 新建 1 件清单; 其余（含 `.tmp/_r4_key_scan_*` 审计件、letters/ 3 封委托信、清理链 ledger、四棒在移文件）一概不碰」— 在 redact 范围内, 仅 39/54 行 + D6760FC68827 是指定目标.
 - **JSON 行 24 实际有 ark- key**: `key_sha12=7348FC7D6C33`（volcengine ark-style, UUID 格式, fingerprint 未被 manifest 扫描捕获, 属扫描盲点 — 因 manifest §1 正则 `ark-[A-Za-z0-9]{16,}-[A-Za-z0-9]{8,}` 要求 16+ 连续 alphanumeric 而 UUID 多 dash 结构不满足; 本棒不复述 plaintext）
 - **本棒不擅动**: 按派工单字面边界 + 不擅自重写原则, 行 24 ark- key **本棒不动**. 由 PI 决定 (a) 接受 (b) 另派 doc-writer/verdict-keeper redact (c) 重建 archive manifest 排除.

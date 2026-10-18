@@ -11,7 +11,7 @@ import os
 import re
 from collections import Counter
 
-ROOT = r"D:\私人资料\deposon-repo"
+ROOT = r"_repo_mirror"
 
 # \bkd\b but only where kd is a TERMINAL-VERDICT word, not part of a KD-* id, not "kd_" keys.
 TERM = [

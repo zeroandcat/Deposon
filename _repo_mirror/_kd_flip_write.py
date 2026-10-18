@@ -5,7 +5,7 @@ Self-referential paradox: the piece may NOT carry its own SHA-12/bytes.
 import io
 import os
 
-ROOT = r"D:\私人资料\deposon-repo"
+ROOT = r"_repo_mirror"
 TARGET = os.path.join(ROOT, "results", "_kd_flip_census_2026_10_17.md")
 
 BODY = """# 全仓 `kd` 面之翻转前景普查件（2026-10-17 · PI ≈21:29 令「请核查也许可翻转 kd，归入①毕链」· **消解面 · 复算审计类 · 0 代裁 · 0 宣告①毕**）

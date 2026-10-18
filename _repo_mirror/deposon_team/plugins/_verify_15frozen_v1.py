@@ -4,8 +4,8 @@ Reads schema from _v3x_frozen_schema_v1.json instead of hardcoded tuple.
 """
 import hashlib, json, os
 
-REPO_BASE = r'D:\私人资料\deposon-repo'
-ARCHIVE_BASE = r'D:\私人资料\_archive_deposon_2026_09_17'
+REPO_BASE = r'_repo_mirror'
+ARCHIVE_BASE = r'〔本地资料区〕\_archive_deposon_2026_09_17'
 SCHEMA_PATH = os.path.join(REPO_BASE, 'deposon_team', 'plugins', '_v3x_frozen_schema_v1.json')
 
 with open(SCHEMA_PATH, 'r', encoding='utf-8') as f:

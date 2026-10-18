@@ -303,7 +303,7 @@
 
 | 项 | 值 |
 | :-- | :-- |
-| **路径** | `D:\私人资料\deposon-repo\results\_n_distinct_grain_verdict_2026_10_17.md` |
+| **路径** | `_repo_mirror\results\_n_distinct_grain_verdict_2026_10_17.md` |
 | **落前门证** | `Test-Path` ＝ **`False`**；`glob`（`results/*n_distinct_grain*`）命中 ＝ **`0`**；`glob`（`results/*grain*`）命中 ＝ **`0`** ⇒ 无既有件被覆盖 |
 | **落盘方式** | Python **`io.open(path, 'w', encoding='utf-8', newline='\n')`** 直写（**UTF-8 无 BOM · 纯 LF**） |
 | **字节级自报** | 落盘后**亲测回读**所得（**SHA-12／bytes／BOM ＝ 0／CRLF ＝ 0／U+FFFD ＝ 0**）见报回 |

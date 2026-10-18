@@ -1,6 +1,6 @@
 # Deposon: A Physics-Constrained Scattering Layer for Auditable LLM Reasoning Path Selection
 
-> Authors: Qihao Yuan; School of Chemistry and Life Resources, Renmin University of China; Research Assistant ([email to be added])
+> Authors: Qihao Yuan; School of Chemistry and Life Resources, 〔高校R〕 University of China; Research Assistant ([email to be added])
 > Target venues: NeurIPS Workshop / arXiv preprint (cs.AI, cs.CL)
 > Version: v1.4-draft (GSM8K results to be filled)
 > Companion code version: Deposon Agents v1.3.1 (evaluation prompt version v1.3.1, seed=42)

@@ -3,7 +3,7 @@
 import hashlib
 from pathlib import Path
 
-ROOT = Path(r'D:\私人资料\deposon-repo')
+ROOT = Path(r'_repo_mirror')
 sha12 = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12].upper()
 
 print('=== 全部归档/迁移目录 ===')

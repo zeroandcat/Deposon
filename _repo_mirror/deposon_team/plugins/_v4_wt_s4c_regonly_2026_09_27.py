@@ -2,7 +2,7 @@
 """_v4_wt_s4c_regonly — §B 只登记档证据抽取（B3/B6/B7/B9/B10）（只读）"""
 import hashlib, json, re
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo'); RES = REPO / 'results'
+REPO = Path(r'_repo_mirror'); RES = REPO / 'results'
 def sha12(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12]
 def T(p): return Path(p).read_text(encoding='utf-8')
 

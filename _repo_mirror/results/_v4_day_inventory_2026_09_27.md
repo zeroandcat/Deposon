@@ -6,7 +6,7 @@
 > **性质**：新建独立审链登记件；只读实测 + 1 次授权范围内的 `.tmp` 临时件清理；不动任何交付件 / 证据件
 > **边界**：R5 frozen 只追加 / V1–V3 只读不动 / 派生 JSON 不合并 / 不覆盖既有件 / 0 擅调阈值 / key 永不明文无例外 / 仓外目录只读 0 写入
 > **口径锚**：`results/_v4_maindir_count_monitor_2026_09_27.md`（SHA-12 `71e9cc179bec`）+ `results/_v4_maindir_cleanup_moves_ledger_v6_2026_09_26.md`（SHA-12 `CC498BC28525`）
-> **skill 状态**：`scientific-research-workflows:statistical-analysis`（plugin `@scientific-research-workflows`）**本地加载实测 `Local skill not found`**；`C:\Users\Administrator\.minimax\plugins\` 实测为空目录；按纪律锚 fallback 格式字面执行（详见 §F.6）
+> **skill 状态**：`scientific-research-workflows:statistical-analysis`（plugin `@scientific-research-workflows`）**本地加载实测 `Local skill not found`**；`〔本机用户目录〕\.minimax\plugins\` 实测为空目录；按纪律锚 fallback 格式字面执行（详见 §F.6）
 > **SHA-12 定义**：`hashlib.sha256(bytes).hexdigest()[:12]`（hexdigest 输出已小写）
 
 ---
@@ -267,7 +267,7 @@
 
 | 口径 | 定义 | 实测命令 |
 |---|---|---|
-| **主目录** | `D:\私人资料\deposon-repo\` 下递归所有文件，**排除 `.git/`** | `Get-ChildItem -Recurse -File -Force \| Where-Object { $_.FullName -notmatch '[\\/]\.git[\\/]' }` |
+| **主目录** | `_repo_mirror\` 下递归所有文件，**排除 `.git/`** | `Get-ChildItem -Recurse -File -Force \| Where-Object { $_.FullName -notmatch '[\\/]\.git[\\/]' }` |
 | **通用口径** | 主目录基础上再排除 `.tmp/` 子树 + `__pycache__/` 子树 + `.pyc/.log/.bak/.tmp/.swp/.part` 扩展名 | 主目录查询上叠加排除 |
 | **含临时区口径** | = 主目录全量（含临时区文件） | 同主目录查询 |
 
@@ -294,9 +294,9 @@
 
 | 目录 | 路径 | 件数 | 字节 | 对 v6 ledger（09-26 19:09） |
 |---|---|---:|---:|---|
-| **主** | `D:\私人资料\deposon-repo` | **1,144** | 35,368,794 | 986 → **+158** |
-| **归档** | `D:\私人资料\_non_upload_local_archive` | **1,696** | 338,433,933 | 1,669 → **+27** |
-| **副** | `D:\私人资料\deposon-sub` | **467** | 34,337,769 | 467 → **0** ✓ |
+| **主** | `_repo_mirror` | **1,144** | 35,368,794 | 986 → **+158** |
+| **归档** | `〔本地归档区〕` | **1,696** | 338,433,933 | 1,669 → **+27** |
+| **副** | `_repo_mirror` | **467** | 34,337,769 | 467 → **0** ✓ |
 
 > **口径对齐实证**：v6 ledger §0 记 `SUB=467`，本棒实测 `SUB=467` **逐件全等** ⇒ 本棒计数方法与既有建制口径**一致**，delta 可跨棒比较。
 > **归档 +27 / 副 0**：归档增量来自 09-26 19:09 之后的归档动作；副目录本棒**0 写入**（铁律：仓外目录只读 0 写入，本棒对 `_non_upload_local_archive` 与 `deposon-sub` **全程只读**）。
@@ -434,7 +434,7 @@ accounting_formula = "72 (v2 baseline) + 8 (D3 wave2/3 post-v2) + 5 (D4) = 85 ev
 
 - 派工要求 `scientific-research-workflows:statistical-analysis`（plugin `@scientific-research-workflows`）
 - **加载实测**：`Local skill not found: scientific-research-workflows:statistical-analysis`
-- **plugin 缓存实测**：`C:\Users\Administrator\.minimax\plugins\` 实测**空目录**（0 项）；`C:\Users\Administrator\.minimax\` 全盘递归检索 `scientific` 命名的 skill / plugin 目录 → **0 命中**
+- **plugin 缓存实测**：`〔本机用户目录〕\.minimax\plugins\` 实测**空目录**（0 项）；`〔本机用户目录〕\.minimax\` 全盘递归检索 `scientific` 命名的 skill / plugin 目录 → **0 命中**
 - **处置**：沿 v15 erratum `6844BF36F762` §20.7 末段先例 + `71e9cc179bec` §E.6 既有口径，**按 fallback 纪律锚字面格式**执行
 - **未编造** skill 不存在的任何虚构指令
 

@@ -119,7 +119,7 @@
 
 | 项 | 本棒实测 |
 |---|---|
-| **实体落位** | `D:\私人资料\_non_upload_local_archive\results\_v4_supp_l14_n11full_verdict.md` —— **仓外归档面** |
+| **实体落位** | `〔本地归档区〕\results\_v4_supp_l14_n11full_verdict.md` —— **仓外归档面** |
 | **盘上实测 SHA-12** | **`8eef73bf9856`** / **19,697 B** ⇒ ⭐ **与派工单字面 `8EEF73BF9856` 逐字 MATCH** |
 | **链 record 自报值** | `764F24A21AC8`（沿 `.tmp/_v16_full_decoded.txt` L1250/L1334 逐字）⇒ **链 record ≠ 盘实测** |
 | **既有拍板语义** | 沿该记逐字：「**引用沿自报值 `764F24A21AC8`**」＋「**verdict 本体不动**：盘实测 `8EEF73BF9856` 是 cleanup 后迁仓文件之**事实 SHA**（沿 v14 §20.5），**非「覆写 verdict 本体」**」 |

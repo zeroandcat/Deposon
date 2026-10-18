@@ -16,8 +16,8 @@ _fix_minimax_extract_2026_09_16.py — 修 minimax 生成脚本 extract_number �
 import json
 import re
 
-SRC_PY = r'D:\私人资料\deposon-repo\results\deposon_volcengine_minimax_m3_30cells_2026_09_10.py'
-SRC_JSON = r'D:\私人资料\deposon-repo\results\deposon_volcengine_minimax_m3_30cells_2026_09_10.json'
+SRC_PY = r'_repo_mirror\results\deposon_volcengine_minimax_m3_30cells_2026_09_10.py'
+SRC_JSON = r'_repo_mirror\results\deposon_volcengine_minimax_m3_30cells_2026_09_10.json'
 
 
 def rd(p):
@@ -42,12 +42,12 @@ old_ret2 = "            return float(m[-1])"
 assert py.count(old_bold) == 1 and py.count(old_gen) == 1, 'extract_number 锚点异常'
 # 两处 return float(m[-1]) 都要加 replace; 但第一处(bold)与第二处(gen)文本相同, 需精确区分
 # 用更大上下文区分: bold 分支后的 return 与 gen 分支后的 return
-bold_block_old = "    if m:\n        try:\n            return float(m[-1])\n        except Exception:\n            pass\n    m = re.findall(r'-?\\d+(?:\\.\\d+)?', s)"
-bold_block_new = "    if m:\n        try:\n            return float(m[-1].replace(',', ''))\n        except Exception:\n            pass\n    m = re.findall(r'-?\\d[\\d,]*(?:\\.\\d+)?', s)"
+bold_block_old = "    if 〔本机路径〕\n        try:\n            return float(m[-1])\n        except Exception:\n            pass\n    m = re.findall(r'-?\\d+(?:\\.\\d+)?', s)"
+bold_block_new = "    if 〔本机路径〕\n        try:\n            return float(m[-1].replace(',', ''))\n        except Exception:\n            pass\n    m = re.findall(r'-?\\d[\\d,]*(?:\\.\\d+)?', s)"
 assert py.count(bold_block_old) == 1, 'bold 块锚点异常'
 py = py.replace(bold_block_old, bold_block_new, 1)
-gen_block_old = "    m = re.findall(r'-?\\d[\\d,]*(?:\\.\\d+)?', s)\n    if m:\n        try:\n            return float(m[-1])\n        except Exception:\n            return None\n    return None"
-gen_block_new = "    m = re.findall(r'-?\\d[\\d,]*(?:\\.\\d+)?', s)\n    if m:\n        try:\n            return float(m[-1].replace(',', ''))\n        except Exception:\n            return None\n    return None"
+gen_block_old = "    m = re.findall(r'-?\\d[\\d,]*(?:\\.\\d+)?', s)\n    if 〔本机路径〕\n        try:\n            return float(m[-1])\n        except Exception:\n            return None\n    return None"
+gen_block_new = "    m = re.findall(r'-?\\d[\\d,]*(?:\\.\\d+)?', s)\n    if 〔本机路径〕\n        try:\n            return float(m[-1].replace(',', ''))\n        except Exception:\n            return None\n    return None"
 assert py.count(gen_block_old) == 1, 'gen 块锚点异常'
 py = py.replace(gen_block_old, gen_block_new, 1)
 wr(SRC_PY, py)

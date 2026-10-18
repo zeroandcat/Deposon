@@ -2,7 +2,7 @@
 """D05 产物 SHA-12 校验器 — Trae 2026-09-18 走读改进 #2 修复版 (TRAE_FIXED_2026_09_18)
 
 原版缺陷 (修复依据):
-1. 路径拼接 `r'D:\\...\\results\\\\' + f`: raw string 以双反斜杠结尾 + 相对拼接,
+1. 路径拼接 `r'〔本机路径〕\\...\\results\\\\' + f`: raw string 以双反斜杠结尾 + 相对拼接,
    且校验列表引用的 2 个文件 (deepseek 主跑 / qwen3 failed) 已随 bg_21191cee
    任务 trash 化移位 — 原版现在重跑必 FileNotFoundError。
 2. 无 β _meta 交叉核对, 无 trash 副本对照。
@@ -14,8 +14,8 @@ import hashlib
 import json
 from pathlib import Path
 
-RESULTS = Path(r'D:\私人资料\deposon-repo\results')
-TRASH = Path(r'D:\私人资料\deposon-repo\_d05_bg_21191cee_trash_2026_09_18\results')
+RESULTS = Path(r'_repo_mirror\results')
+TRASH = Path(r'_repo_mirror\_d05_bg_21191cee_trash_2026_09_18\results')
 TS = '20260918_100853'
 
 FILES = [

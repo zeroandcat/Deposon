@@ -87,7 +87,7 @@
 | 轮 | # | 探针 | 真值 |
 |---:|---:|---|---|
 | **1** | 1 | `Test-Path results/_pack_d_closeout_register_2026_10_01.md`（相对精确名） | **False** |
-| 1 | 2 | `Test-Path` 绝对路径 `D:\私人资料\deposon-repo\results\_pack_d_closeout_register_2026_10_01.md` | **False** |
+| 1 | 2 | `Test-Path` 绝对路径 `_repo_mirror\results\_pack_d_closeout_register_2026_10_01.md` | **False** |
 | 1 | 3 | `results/*pack_d_closeout*` 递归 | **0 命中** |
 | 1 | 4 | `results/*pack*` 递归（近形面） | **4 命中**：`_d1_backfill_readiness_pack_…`／`_v5_b12_verify_pack_q1_q3_q4_…`／`_v5_clearance_o15_ready_pack_…`／`_verdict_pack_d_prep_…` —— **均非同名** |
 | **2** | 5 | 全仓递归 `*closeout_register*` | **1 命中**（`_v4_closeout_bucket_register_2026_10_01.md`）—— **异名** |

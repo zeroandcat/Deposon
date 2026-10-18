@@ -5,7 +5,7 @@
 - **采集协议锚**：`results/_v4_pi_cot_v2_questionnaire_v1.md`（`7b14cdb31d21`）§0 六条采集协议 + §1 judge_type 6 类编码表 + §3 反转配对索引
 - **上游件**：`results/_v3_s3_wordexpand_data/result_2026_09_28.json`（`f7f6d875d73a`）扩词段读数（本件 D6 波题面设计直接引用其发现面）
 - **日期**：2026-09-28
-- **skill**：`scientific-research-workflows:experimental-design` → **`Local skill not found`**（`C:/Users/Administrator/.minimax/plugins` 实测 0 项，空目录）⇒ fallback 到 prereg §2.3 字面 + `questionnaire_v1` §0 字面；**0 引用、0 虚构该 skill 任何条文**
+- **skill**：`scientific-research-workflows:experimental-design` → **`Local skill not found`**（`〔本机用户目录〕/.minimax/plugins` 实测 0 项，空目录）⇒ fallback 到 prereg §2.3 字面 + `questionnaire_v1` §0 字面；**0 引用、0 虚构该 skill 任何条文**
 - **0 代答声明**：本件**只出题面**，**PI 实时答题由 parent 走 `ask_user` 问卷**。本棒 **0 虚构任何 PI 判定值、0 预设答案、0 补造语料**。
 
 ---

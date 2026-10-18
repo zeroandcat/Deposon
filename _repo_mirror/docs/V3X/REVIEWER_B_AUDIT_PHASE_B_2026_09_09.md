@@ -14,7 +14,7 @@
 
 | 维度 | 简化版 | 完整版 |
 |---|---|---|
-| /tmp 副本 | 无(直接在主仓跑) | **有** — `C:\tmp\review_20260909T140401\{kt_a1,kt_b1,kt_c1,kt_d0}\` |
+| /tmp 副本 | 无(直接在主仓跑) | **有** — `〔本机路径〕\tmp\review_20260909T140401\{kt_a1,kt_b1,kt_c1,kt_d0}\` |
 | cell 数 / SPEC | 1 cell | **5 cells** (≥ 5, 完整版底线) |
 | audit 方法 | 仅检查 audit 字段或整体 diff | **整体 diff + conservation.check_conservation()**(升级版 audit) |
 | 攻击 / 实验规模 | 50/类 或 200 pairs | **75 总攻击(B1) / 328 pairs + 10000 bootstrap(C1) / 5 cells × 完整 BOSS 测法(A1+C1)** |
@@ -199,7 +199,7 @@
 ## 8. /tmp 副本清单(verifier 可重跑)
 
 ```
-C:\tmp\review_20260909T140401\
+〔本机路径〕\tmp\review_20260909T140401\
 ├── kt_a1\
 │   ├── audit_full.py (SHA 26d49b786b8b)
 │   ├── boss_a1_rbr_rm.py (SHA 91a62de1fa50, 沿用 KT_ABC1_anchors_sha256_12.json)

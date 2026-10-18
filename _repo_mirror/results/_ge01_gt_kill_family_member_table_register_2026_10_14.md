@@ -173,7 +173,7 @@
 
 ### §4-4 **旁族／历史／他仓**面（**Tier-4 · 非本锚，登记以免遗**）
 
-`docs/V3X/KT_A1_SPEC_V0.1.md`｜`docs/V3X/KT_B1_SPEC_V0.1.md`｜`docs/V3X/P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md`｜`docs/V3X/V3X_DAILY_KILL_V2_PLAN.md`｜`verifier/handoff/KT_ABC1_anchors_sha256_12.json` ＋ 其 `.bak_2026_09_23.json`｜归档区 `docs/V3X/KT_A1_SPEC_V0.md`、`docs/V3X/KT_B1_SPEC_V0.md`、`results/_remote_version_freeze_2026_09_26/{KT_B1_SPEC_V0.1.md, P_B_DISTORTION_BOUND_V0_SPEC.md}`、`verifier/handoff/KT_ABC1_anchors_sha256_12.json`｜`deposon-sub/results/` 5 件｜`C:/Users/Administrator/.minimax/v2/assets/` 2 件。
+`docs/V3X/KT_A1_SPEC_V0.1.md`｜`docs/V3X/KT_B1_SPEC_V0.1.md`｜`docs/V3X/P_C_TWO_PHASE_STRUCTURE_V0_SPEC.md`｜`docs/V3X/V3X_DAILY_KILL_V2_PLAN.md`｜`verifier/handoff/KT_ABC1_anchors_sha256_12.json` ＋ 其 `.bak_2026_09_23.json`｜归档区 `docs/V3X/KT_A1_SPEC_V0.md`、`docs/V3X/KT_B1_SPEC_V0.md`、`results/_remote_version_freeze_2026_09_26/{KT_B1_SPEC_V0.1.md, P_B_DISTORTION_BOUND_V0_SPEC.md}`、`verifier/handoff/KT_ABC1_anchors_sha256_12.json`｜`deposon-sub/results/` 5 件｜`〔本机用户目录〕/.minimax/v2/assets/` 2 件。
 
 ---
 
@@ -212,7 +212,7 @@
 1. **逐字回读优先于转引**：凡落笔转述他件内容者，**均已开卷回读并标行号**；⛔ 0 凭记忆或臆测节号。
 2. **元数据逐件实测**：`hashlib.sha256(字节).hexdigest()[:12]`（小写 12 位），⛔ **禁内建 `hash()`**（spec 包 §5-1 逐字纪律）。
 3. **阴性结论双通道 ＋ 遍历错误断言**：见 §4 之口径；`os.walk(onerror=…)` 收集器断言遍历错误 ＝ **0**（**本棒实测通过**）。
-4. **检索根 6 根含运行时附件面**（`C:/Users/Administrator/.minimax/v2/assets`）。
+4. **检索根 6 根含运行时附件面**（`〔本机用户目录〕/.minimax/v2/assets`）。
 5. ⛔ **0 代裁**：凡「择定／释义／排序细则」者，一律留 PI 或另议棒。
 
 ### §6-2 本棒实测之源件指纹（**本棒自算**）

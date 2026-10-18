@@ -8,7 +8,7 @@ from datetime import datetime
 from collections import defaultdict
 
 CUTOFF = datetime(2026, 9, 23, 12, 0, 0).timestamp()
-ROOTS = [r'D:\私人资料\deposon-repo', r'D:\私人资料\deposon-sub']
+ROOTS = [r'_repo_mirror', r'_repo_mirror']
 SKIP_DIR = {'__pycache__', '.git', 'node_modules', '.trae'}
 
 rows = []
@@ -47,6 +47,6 @@ print()
 print('=== 逐件（时间 / 字节 / 路径） ===')
 for mt, sz, p in rows:
     ts = datetime.fromtimestamp(mt).strftime('%m-%d %H:%M:%S')
-    rel = p.replace(r'D:\私人资料' + os.sep, '')
+    rel = p.replace(r'〔本地资料区〕' + os.sep, '')
     print(f'  {ts}  {sz:>9,}  {rel}')
 print('_wide_s1 DONE')

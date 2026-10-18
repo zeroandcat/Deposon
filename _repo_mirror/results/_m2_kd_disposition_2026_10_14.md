@@ -59,7 +59,7 @@
 
 ### §2-2 甲面·本棒实测之运行时佐证（**新证 · 此前未有人取得**）
 
-📌 **检索根（按 `KD-新-2` 之训，显式声明）**：① `D:\私人资料` 全树（**43,060** 文件）；② `C:\Users\Administrator\.minimax` 全树（**69,301** 文件，含**运行时附件面** `v2\assets` 与**会话面** `v2\sessions`）；③ `v2\sessions` 定向。📌 **`os.walk` 遍历错误 ＝ 0**（断言已立）。📌 **双通道**：通道甲＝`os.walk`＋全文匹配；通道乙＝`glob` 递归＋字段级正则提取。
+📌 **检索根（按 `KD-新-2` 之训，显式声明）**：① `〔本地资料区〕` 全树（**43,060** 文件）；② `〔本机用户目录〕\.minimax` 全树（**69,301** 文件，含**运行时附件面** `v2\assets` 与**会话面** `v2\sessions`）；③ `v2\sessions` 定向。📌 **`os.walk` 遍历错误 ＝ 0**（断言已立）。📌 **双通道**：通道甲＝`os.walk`＋全文匹配；通道乙＝`glob` 递归＋字段级正则提取。
 
 命中之**运行时任务记录**（逐字·摘）：
 
@@ -68,7 +68,7 @@
 及 `task_query` 回执逐字（摘）：
 > 「`- bg_b40818cb-37d2-42a5-a9a0-92ffd17b2168 [subagent/canceled] 起草 GLM 回函 V2 模板 (session_id=mvs_a6df178c78194960a49a6b432b57d2e3 execution_mode=background)`」
 
-**证据文件（本棒实测）**：`C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\snapshots\g000000000019--ctx_3125f0b7-be1c-4f63-9b62-9d5c18107041.jsonl`｜SHA-12 **`7cbb417ab979`**｜**1,741,895 B**｜UTF-8 无 BOM｜**CR ＝ 0**｜全文命中 **35** 处。
+**证据文件（本棒实测）**：`〔本机用户目录〕\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\snapshots\g000000000019--ctx_3125f0b7-be1c-4f63-9b62-9d5c18107041.jsonl`｜SHA-12 **`7cbb417ab979`**｜**1,741,895 B**｜UTF-8 无 BOM｜**CR ＝ 0**｜全文命中 **35** 处。
 
 **本棒换算（时区为本机 GMT+8）**：
 
@@ -208,7 +208,7 @@
 | 项 | 值 |
 | :-: | :-- |
 | 件名 | `_m2_kd_disposition_2026_10_14.md` |
-| 路径 | `D:\私人资料\deposon-repo\results\` |
+| 路径 | `_repo_mirror\results\` |
 | 版本 | v0.1（**新立**；⛔ 0 覆盖任何既有件） |
 | 落前占用检查 | `Test-Path=False` ＋ glob **0 命中** ⇒ 未占用，未启用 `_r1` |
 | 编码/行尾 | UTF-8 **无 BOM** ／ 纯 **LF**（经 `io.open(..., encoding='utf-8', newline='\n', errors='strict')` 直写，⛔ 0 经 PowerShell 管道中转） |

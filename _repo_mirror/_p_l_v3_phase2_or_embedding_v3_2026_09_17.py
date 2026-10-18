@@ -38,7 +38,7 @@ IRON_7 = {
     'proxy_used': 'http://127.0.0.1:1018 (HTTPS_PROXY/HTTP_PROXY) + socks5://127.0.0.1:1018 (all_proxy)',
     'no_gateway': True,
     'no_key_in_prompt_json_disk': True,
-    'key_loaded_runtime_from': r'C:\Users\Administrator\Desktop\AI\LLM API.txt',
+    'key_loaded_runtime_from': r'〔本机用户目录〕\Desktop\AI\LLM API.txt',
     'key_storage': 'runtime env var OPENROUTER_API_KEY only, never written to disk/log',
     'no_18_frozen_touch': True,
     'no_p_g_v0_touch': True,
@@ -60,9 +60,9 @@ def log(msg):
 
 
 # ---------- paths ----------
-DEPOSON_ROOT = Path(r'D:\私人资料\deposon-repo')
+DEPOSON_ROOT = Path(r'_repo_mirror')
 RESULTS_DIR = DEPOSON_ROOT / 'results'
-KEY_FILE = Path(r'C:\Users\Administrator\Desktop\AI\LLM API.txt')
+KEY_FILE = Path(r'〔本机用户目录〕\Desktop\AI\LLM API.txt')
 
 
 # ---------- proxy 1018 (per user 15:38) ----------
@@ -571,7 +571,7 @@ md.append('')
 md.append('## §4 Iron-7 compliance 声明')
 md.append('')
 md.append('- ✅ 0 LLM 重 hash (本 runner 仅 embedding, 不调 chat)')
-md.append(f'- ✅ key runtime 读自 `C:\\Users\\Administrator\\Desktop\\AI\\LLM API.txt`, 仅保留 `prefix={or_key[:14]}...`, 全程不入 JSON / log / stdout / md (除上面前 14 字符 nonce)')
+md.append(f'- ✅ key runtime 读自 `〔本机用户目录〕\\Desktop\\AI\\LLM API.txt`, 仅保留 `prefix={or_key[:14]}...`, 全程不入 JSON / log / stdout / md (除上面前 14 字符 nonce)')
 md.append(f'- ✅ OR embedding 通过 1018 proxy 调用, 3 env: HTTPS_PROXY, HTTP_PROXY, all_proxy')
 md.append('- ✅ response.model == request.model 逐 cell 校验 (用户 13:39 防降级欺诈)')
 md.append('- ✅ 502/503/504/408 自动 retry 3 次 (backoff 1-3s), 不阻塞其他 backbone')

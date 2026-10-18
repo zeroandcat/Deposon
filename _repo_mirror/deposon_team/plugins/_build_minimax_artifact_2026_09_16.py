@@ -28,7 +28,7 @@ import json
 import hashlib
 import os
 
-BASE = r'D:\私人资料\deposon-repo'
+BASE = r'_repo_mirror'
 SRC = os.path.join(BASE, 'results', 'deposon_volcengine_minimax_m3_30cells_2026_09_10.json')
 OUT_DIR = os.path.join(BASE, 'deposon_team', 'products')
 OUT = os.path.join(OUT_DIR, 'minimax_artifact_v_2026_09_16.json')

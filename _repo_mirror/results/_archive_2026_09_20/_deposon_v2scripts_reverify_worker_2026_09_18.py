@@ -89,7 +89,7 @@ FROZEN_18 = [
     ("deposon_team/plugins/skill_d_p_f_observer.py", "3e369a1f6171", "plugin_d 15927B"),
 ]
 
-ARCHIVE_BASE = r"D:\私人资料\_archive_deposon_2026_09_17"
+ARCHIVE_BASE = r"〔本地资料区〕\_archive_deposon_2026_09_17"
 
 
 def resolve_anchor(rel):

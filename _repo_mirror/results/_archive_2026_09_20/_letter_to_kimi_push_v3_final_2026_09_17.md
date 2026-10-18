@@ -26,7 +26,7 @@
 
 ### §1.1 358 件移出 (Mavis 已执行, 沿 7 铁律 0 触动)
 
-Mavis 已将 358 件 KIMI 标记的"排除项"沿 6 类移出至 `D:\私人资料\_archive_deposon_2026_09_17_excluded_358\`:
+Mavis 已将 358 件 KIMI 标记的"排除项"沿 6 类移出至 `〔本地资料区〕\_archive_deposon_2026_09_17_excluded_358\`:
 
 | 类别 | 件数 (Mavis 移动) | 说明 |
 |---|---|---|
@@ -41,7 +41,7 @@ Mavis 已将 358 件 KIMI 标记的"排除项"沿 6 类移出至 `D:\私人资�
 
 ### §1.2 verifier/ 已恢复 (Mavis 已执行, 沿 7 铁律 0 触动)
 
-Mavis 已将 `D:\私人资料\_archive_deposon_2026_09_17\verifier\` 恢复至 `D:\私人资料\deposon-repo\verifier\`. 102 文件恢复, 3 frozen verifier SHA-12 全对:
+Mavis 已将 `〔本地资料区〕\_archive_deposon_2026_09_17\verifier\` 恢复至 `_repo_mirror\verifier\`. 102 文件恢复, 3 frozen verifier SHA-12 全对:
 
 - `verifier/audit/conservation.py` (22,105 B, SHA-12=`4bdec2683f06`) ✓
 - `verifier/handoff/KT_ABC1_anchors_sha256_12.json` (6,680 B, SHA-12=`03c6c01f3697`) ✓
@@ -55,7 +55,7 @@ Mavis 已将 `D:\私人资料\_archive_deposon_2026_09_17\verifier\` 恢复至 `
 
 ### §2.1 推 442 件 (14 changed + 428 新增)
 
-**文件源 (沿 §3 路径清单)**: `D:\私人资料\deposon-repo\_mirror_pushable.json` (沿 KIMI 已落 22:02 CST)
+**文件源 (沿 §3 路径清单)**: `_repo_mirror\_mirror_pushable.json` (沿 KIMI 已落 22:02 CST)
 
 **新增 14 件 changed**:
 ```
@@ -89,7 +89,7 @@ run_v20_photonics.py
 
 **文件源 (只读远端)**: KIMI 凝子-agent 沿 git read API 拉 `verifier/audit/` + `verifier/handoff/` + `verifier/runs/` + `verifier/v1-v35/` + `verifier/kill_lines/` + `verifier/README.md`
 
-**写入位置**: `D:\私人资料\deposon-repo\verifier\` (本地副本, 远端不动)
+**写入位置**: `_repo_mirror\verifier\` (本地副本, 远端不动)
 
 **不动远端**: 远端 verifier/ 99 件 SHA-12 保持原值, KIMI 拉本地只增加 repo 一份, 不覆盖远端
 
@@ -128,7 +128,7 @@ KIMI 推完 0 触动此 5 件 (远端 SHA-12 保持原值, 本地有更新版本
 1. **分批推送**, 每批 ≤50 件 (批 1 = 14 changed, 批 2-N = 428 local_only 按目录切分)
 2. 每批走 **git-data API** (blob→tree→commit→ref PATCH, **非 force**)
 3. 每批推后 `GET git/trees/<commit>?recursive=1` 做 **git-SHA1 全量比对** (contents API 对 >1MB 文件返回空, 必须用 tree 比对)
-4. 每批写 **manifest 镜像**入 `D:\私人资料\deposon-repo\results\_kimi_push_v3_manifest_*.json`
+4. 每批写 **manifest 镜像**入 `_repo_mirror\results\_kimi_push_v3_manifest_*.json`
 5. 推送前对候选文件做 **密钥扫描**; 正则必须泛化, 绝不写入真实密钥片段
 6. **frozen 工件绝不触碰**; 任何重跑审计在 /tmp 副本执行
 7. **API key 永不落盘、永不进 prompt**
@@ -153,9 +153,9 @@ KIMI 推完 0 触动此 5 件 (远端 SHA-12 保持原值, 本地有更新版本
 
 | 件 | 路径 | 用途 |
 |---|---|---|
-| 沿 7 步方案推完 manifest | `D:\私人资料\deposon-repo\results\_kimi_push_v3_manifest_<commit>.json` | 每批 manifest 镜像 |
+| 沿 7 步方案推完 manifest | `_repo_mirror\results\_kimi_push_v3_manifest_<commit>.json` | 每批 manifest 镜像 |
 | 沿 7 步方案推完 commit 链 | `<commit_hash>` | bb1f085f → 5dd8221b → ee0b82fc → 292ba94d → **新 commit v3 final** |
-| verifier 99 件本地副本 | `D:\私人资料\deposon-repo\verifier\` (102 文件, 含 3 frozen + v1-v35 check.py + runs/...) | 沿决策 3 本地回拉 |
+| verifier 99 件本地副本 | `_repo_mirror\verifier\` (102 文件, 含 3 frozen + v1-v35 check.py + runs/...) | 沿决策 3 本地回拉 |
 | v0+v1 verify 复跑 | `_verify_15frozen_v1.py + _verify_pg_v0_v1.py` | 16/16 + 5/5 PASS 复验 (Mavis 已验, KIMI 推完再验 1 次) |
 | 0 触动最终验 | 全 repo verify (沿 7 铁律) | 18 frozen + 5 制品 + schema v1 + 4 plugin + verifier + 9 铁律 |
 

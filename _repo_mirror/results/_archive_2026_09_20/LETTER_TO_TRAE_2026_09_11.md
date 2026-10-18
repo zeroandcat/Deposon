@@ -273,7 +273,7 @@ User 2026-09-11 12:30 指令:**"再写一封信委托 Trae 修 bug,等回信后�
 | 5 | **R1-R4 综合报告**:1 份 | 整合 4 个验证结果 + 综合判定 + 11 frozen 文件 SHA-12 沿用声明 | `R1_R4_TRAE_REPORT_2026_09_11.md` (8-12 KB)|
 | 6 | **回信**:Trae 6 节结构回信 | 沿本信 §0-§6 结构,12-18 KB | `LETTER_FROM_TRAE_2026_09_11.md` |
 
-**反馈路径**: 5 个输出文件全部落盘到 `D:\私人资料\deposon-repo\docs\V3X\`。24h 内回信后 Mavis 立即出给〔W老师〕看的项目进展报告(§5)。
+**反馈路径**: 5 个输出文件全部落盘到 `_repo_mirror\docs\V3X\`。24h 内回信后 Mavis 立即出给〔W老师〕看的项目进展报告(§5)。
 
 ### §4.1 关键诚实(再次强调)
 
@@ -295,7 +295,7 @@ Mavis 收到 Trae 修完信(`LETTER_FROM_TRAE_2026_09_11.md`)+ R1-R4 综合报�
 
 ### §5.2 输出参数
 
-- **路径**: `D:\私人资料\deposon-repo\docs\V3X\WANG_TEACHER_PROGRESS_REPORT_2026_09_11.md`
+- **路径**: `_repo_mirror\docs\V3X\EXTERNAL_ADVISOR_PROGRESS_REPORT_2026_09_11.md`
 - **目标大小**: 1 页 A4(3-5 KB)
 - **形式**: 中文 PDF(给〔W老师〕发 〔IM〕 时直接附 PDF)
 - **诚实声明**: 7 铁律严守 + 0 LLM + 11 个 frozen 文件 SHA-12 沿用 0 触动
@@ -340,7 +340,7 @@ Mavis 收到 Trae 修完信(`LETTER_FROM_TRAE_2026_09_11.md`)+ R1-R4 综合报�
 | 5 | R3 验证 `P_F_V0_1_VERIFICATION_2026_09_12.md` | 3-5 KB | ⏳ 待 Trae |
 | 6 | R4 重测 `P_C_P_E_V0_1_VERIFICATION_2026_09_12.md` | 4-6 KB | ⏳ 待 Trae |
 | 7 | R1-R4 综合 `R1_R4_TRAE_REPORT_2026_09_11.md` | 8-12 KB | ⏳ 待 Trae |
-| 8 | 〔W老师〕进展报告 `WANG_TEACHER_PROGRESS_REPORT_2026_09_11.md` | 3-5 KB | ⏳ 待 Trae 回信后 Mavis |
+| 8 | 〔W老师〕进展报告 `EXTERNAL_ADVISOR_PROGRESS_REPORT_2026_09_11.md` | 3-5 KB | ⏳ 待 Trae 回信后 Mavis |
 
 ### §6.2 Mavis 状态
 

@@ -186,7 +186,7 @@
 
 | 项 | 值（实测） |
 |---|---|
-| **实际落点** | `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\artifacts\plan.md` |
+| **实际落点** | `〔本机用户目录〕\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\artifacts\plan.md` |
 | **指纹/字节** | `858e734e80a0`（sha256[:12]）／13,799 B／123 行 |
 | **mtime** | 2026-10-01 00:40:28 |
 | **同目录底本件** | `artifacts\plan_v3_2026_09_30.md`＝41,512 B／mtime 2026-09-30 17:25（`plan.md` §0 自述底本＝`4b1ec1dbf19f`／37,769 B，**追加后**现 41,512 B —— 字面**互证一致**） |

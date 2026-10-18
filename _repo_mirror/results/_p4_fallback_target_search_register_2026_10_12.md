@@ -6,7 +6,7 @@
 
 ## §0 一句话结论
 
-PI 就 P-4（H3 `SRC_ANCHOR_FALLBACK` 之 4 候选址两区皆缺）指示「从归档区找或回查记录」，经卡 `ask_f91f1fbd916f95395d4dfb3f` 明示例外（**① 同前例禁触区 `D:\私人资料\_non_upload_local_archive` 且扩及本目的**；**② 同前例：列目录 ＋ 只读检索（0 写）**），后追加令「**此外如获得，请回拉**」。本棒在该区（**39,718 文件 / 19,461 目录 / 1,388,732,209 B**）以**名／尺寸／哈希**三式互证，**命中唯一实体** `verifier\audit\conservation.py`（**`4bdec2683f06` · 22,105 B**），已**只读取件回拉**至工作区 `results/`（SHA-12／bytes 逐位一致）。⇒ **P-4 之「补址内容」已获得**；惟**「就地消解（补回 4 候选址之一）」未及执行**，理由与待决见 §6／§8。
+PI 就 P-4（H3 `SRC_ANCHOR_FALLBACK` 之 4 候选址两区皆缺）指示「从归档区找或回查记录」，经卡 `ask_f91f1fbd916f95395d4dfb3f` 明示例外（**① 同前例禁触区 `〔本地归档区〕` 且扩及本目的**；**② 同前例：列目录 ＋ 只读检索（0 写）**），后追加令「**此外如获得，请回拉**」。本棒在该区（**39,718 文件 / 19,461 目录 / 1,388,732,209 B**）以**名／尺寸／哈希**三式互证，**命中唯一实体** `verifier\audit\conservation.py`（**`4bdec2683f06` · 22,105 B**），已**只读取件回拉**至工作区 `results/`（SHA-12／bytes 逐位一致）。⇒ **P-4 之「补址内容」已获得**；惟**「就地消解（补回 4 候选址之一）」未及执行**，理由与待决见 §6／§8。
 
 ---
 
@@ -26,26 +26,26 @@ PI 就 P-4（H3 `SRC_ANCHOR_FALLBACK` 之 4 候选址两区皆缺）指示「从
 
 ### §2-1 H3 现态（`deposon-sub` 只读核 · **本棒 0 编辑**）
 
-**H3 ＝ `_v3_recheck_05_executor_2026_09_28.py`**（现居 `D:\私人资料\deposon-sub\results\`）
+**H3 ＝ `_v3_recheck_05_executor_2026_09_28.py`**（现居 `_repo_mirror\results\`）
 
 ```
 L56  REPO = Path(__file__).resolve().parent.parent
-L57  REPO_ROOT = Path(r"D:\私人资料\deposon-repo")
+L57  REPO_ROOT = Path(r"_repo_mirror")
 L62  SRC_ANCHOR_FALLBACK = REPO / "_archive_deposon_2026_09_17" / "verifier" / "audit" / "conservation.py"
 ```
 
 📌 **行号订正（事实登记·非回改）**：派工单记 **L61** ＝ **改写前**行号（执行登记件 `0ea7852c4511` §1.4 行 83）；因改写**插入 1 定义行**，现态实测该行位于 **L62**（复核件 `732cfae29bbc` §2.2 行 84／补修登记 `cddb7a196473` C-2 行 137 **均记 L62**）⇒ 行号已同步，字面**一字未动**。
 
-⇒ **实际解析值**（`REPO` ＝ `D:\私人资料\deposon-sub`）＝ **候选址 ③**。
+⇒ **实际解析值**（`REPO` ＝ `_repo_mirror`）＝ **候选址 ③**。
 
 ### §2-2 4 候选址（**逐字** · 出处 `0ea7852c4511` §1.4 行 83，佐以 `d6ff7e9b4bd6` §2.3 L119）
 
 | **#** | **候选址逐字** | **本棒复测 `exists`** |
 | :-: | :-- | :-: |
-| ① | `D:\私人资料\deposon-repo\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | **False** |
-| ② | `D:\私人资料\deposon-repo\_archive_deposon_2026_09_17_backup\verifier\audit\conservation.py` | **False** |
-| ③ | `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | **False** |
-| ④ | `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17_backup\verifier\audit\conservation.py` | **False** |
+| ① | `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | **False** |
+| ② | `_repo_mirror\_archive_deposon_2026_09_17_backup\verifier\audit\conservation.py` | **False** |
+| ③ | `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | **False** |
+| ④ | `_repo_mirror\_archive_deposon_2026_09_17_backup\verifier\audit\conservation.py` | **False** |
 
 📌 **本棒独立复测 4/4 皆 False** ＝ 与复核件／补修登记之「皆 False」**独立吻合**。
 
@@ -53,7 +53,7 @@ L62  SRC_ANCHOR_FALLBACK = REPO / "_archive_deposon_2026_09_17" / "verifier" / "
 
 `results/_v3x_conservation_anchor_2026_09_17.txt`（锚存根）逐字：
 
-- L4 **「Actual location (after 2026-09-17 file trim): D:/私人资料/_archive_deposon_2026_09_17/verifier/audit/conservation.py」**
+- L4 **「Actual location (after 2026-09-17 file trim): 〔本地资料区〕/_archive_deposon_2026_09_17/verifier/audit/conservation.py」**
 - L6 **「V0 SHA-256[12]: 4bdec2683f06」**｜L7 **「Original size: 22,105 bytes」**
 
 ⇒ **已知指纹 ＝ `4bdec2683f06`、已知字节 ＝ 22,105**（尺寸式与哈希式据此立项）。
@@ -62,7 +62,7 @@ L62  SRC_ANCHOR_FALLBACK = REPO / "_archive_deposon_2026_09_17" / "verifier" / "
 
 ## §3 检索范围与规模（**先报规模** · ⛔ 0 无界全量枚举）
 
-**范围** ＝ `D:\私人资料\_non_upload_local_archive` **全区**（⛔ 0 跨区通配、⛔ 0 出此区）。**顶层 34 项**（31 目录 ＋ 3 文件），顶层含 `verifier`／`verify_archive_backup`／`backups`／`results` 等，`verifier` 之 mtime **2026/9/17 23:00:18** 与 V0 trim 同日。
+**范围** ＝ `〔本地归档区〕` **全区**（⛔ 0 跨区通配、⛔ 0 出此区）。**顶层 34 项**（31 目录 ＋ 3 文件），顶层含 `verifier`／`verify_archive_backup`／`backups`／`results` 等，`verifier` 之 mtime **2026/9/17 23:00:18** 与 V0 trim 同日。
 
 **规模（单次有界递归遍历 · 耗时 10.1 s）**
 
@@ -89,7 +89,7 @@ L62  SRC_ANCHOR_FALLBACK = REPO / "_archive_deposon_2026_09_17" / "verifier" / "
 
 **逐式命中明细**
 
-- **式 A／D 命中（同 1 件）**：`D:\私人资料\_non_upload_local_archive\verifier\audit\conservation.py` · **22,105 B** · mtime **2026-09-10T09:29:22**
+- **式 A／D 命中（同 1 件）**：`〔本地归档区〕\verifier\audit\conservation.py` · **22,105 B** · mtime **2026-09-10T09:29:22**
 - **式 E 另 1 件（⛔ 非匹配·已排除）**：`…\_non_upload_local_archive\.trae\snapshots\p0p1_fix_20260909\verifier__audit__conservation.py` · **2,597 B** · `5959acd1e683` · mtime 2026-09-09T13:20:56 —— **字节与指纹均不符**，系 Trae 快照残件，**0 采**
 - **式 F 结果**：`4bdec2683f06`（22,105 B，**符**已知指纹）／`5959acd1e683`（2,597 B，**不符**）
 
@@ -103,7 +103,7 @@ L62  SRC_ANCHOR_FALLBACK = REPO / "_archive_deposon_2026_09_17" / "verifier" / "
 
 | **项** | **值** |
 | :-- | :-- |
-| 实体路径 | `D:\私人资料\_non_upload_local_archive\verifier\audit\conservation.py` |
+| 实体路径 | `〔本地归档区〕\verifier\audit\conservation.py` |
 | SHA-12 | **`4bdec2683f06`** |
 | bytes | **22,105** |
 | mtime | **2026-09-10T09:29:22** |
@@ -117,7 +117,7 @@ L62  SRC_ANCHOR_FALLBACK = REPO / "_archive_deposon_2026_09_17" / "verifier" / "
 | ③ sub\_archive_deposon_2026_09_17\… | **False** | 同上；**③ ＝ H3 L62 之实际解析值** |
 | ④ sub\…_backup\… | **False** | 同上 |
 
-**旁证（内容等同之第二源）**：命中实体与**主路径锚** `D:\私人资料\deposon-repo\verifier\audit\conservation.py` **SHA-12 同为 `4bdec2683f06`、bytes 同为 22,105、mtime 同为 2026-09-10T09:29:22** ⇒ 命中实体即 **V0 守恒锚本体**（与锚存根 L6／L7 逐字记载**双证吻合**）。
+**旁证（内容等同之第二源）**：命中实体与**主路径锚** `_repo_mirror\verifier\audit\conservation.py` **SHA-12 同为 `4bdec2683f06`、bytes 同为 22,105、mtime 同为 2026-09-10T09:29:22** ⇒ 命中实体即 **V0 守恒锚本体**（与锚存根 L6／L7 逐字记载**双证吻合**）。
 
 📌 **如实界定**：**4 候选址本身仍皆 False**（本棒 ⛔ 0 新建、⛔ 0 臆造新址）；本棒所得为**「内容在何处」之事实**，**非**「4 候选址已可解析」之事实。二者**不得混同**。
 
@@ -127,8 +127,8 @@ L62  SRC_ANCHOR_FALLBACK = REPO / "_archive_deposon_2026_09_17" / "verifier" / "
 
 | **项** | **值** |
 | :-- | :-- |
-| **原址（归档 · 只读取件）** | `D:\私人资料\_non_upload_local_archive\verifier\audit\conservation.py` |
-| **回拉落点（保底①·工作区新件）** | `D:\私人资料\deposon-repo\results\_p4_pulled_back_conservation.py_2026_10_12` |
+| **原址（归档 · 只读取件）** | `〔本地归档区〕\verifier\audit\conservation.py` |
+| **回拉落点（保底①·工作区新件）** | `_repo_mirror\results\_p4_pulled_back_conservation.py_2026_10_12` |
 | **SHA-12（原件 → 回拉件）** | `4bdec2683f06` → **`4bdec2683f06`**（**一致**） |
 | **bytes（原件 → 回拉件）** | **22,105 → 22,105**（**一致**） |
 | **逐字节校验** | **`BYTE_IDENTICAL=True`**（全字节串等值比较） |
@@ -138,7 +138,7 @@ L62  SRC_ANCHOR_FALLBACK = REPO / "_archive_deposon_2026_09_17" / "verifier" / "
 
 **⛔ 最优②之未执行（须 PI／parent 决）**：PI 令②「若 4 候选址之一为工作区路径 ⇒ **补回该址**以**消解 P-4（使 H3 兜底址可解析）**」。实测：
 
-- **唯能使 H3 L62 之解析转为 True 者 ＝ 候选 ③** `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit\conservation.py`（因 `REPO` ＝ sub）；
+- **唯能使 H3 L62 之解析转为 True 者 ＝ 候选 ③** `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py`（因 `REPO` ＝ sub）；
 - 该址**现无同名件**（`Test-Path` **False**）⇒ **0 冲突**；
 - **惟该址位于 `deposon-sub` 树内 —— 派工单明定「`deposon-sub` **只读」** ⇒ 本棒**无权新建**，故**停手不写**（⛔ 0 静默写入只读树）；
 - 候选 ①②（`deposon-repo` 内）虽属工作区且可写，但 **⛔ 0 使 H3 兜底址可解析**（其 `REPO` 指向 sub）⇒ 写入之**不达 PI 令②之目的**、且会新增一「候选为 True 却仍 0 解析」之混同面 ⇒ **本棒 0 写**，留待 PI／parent 定。
@@ -180,9 +180,9 @@ L62  SRC_ANCHOR_FALLBACK = REPO / "_archive_deposon_2026_09_17" / "verifier" / "
 
 | **#** | **未决** | **所需最小决定** |
 | :-: | :-- | :-- |
-| **U‑P4‑1** | 是否授权在 **`D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit\conservation.py`** **新建**该件（＝候选 ③，0 覆写、无冲突），以使 H3 L62 解析为 True | **PI／parent 二择一**：**(a)** 解除本棒「`deposon-sub` 只读」限定、**授权**新建；**(b)** 改派有 sub 写权者执行。**（本棒 0 代决、0 代写）** |
+| **U‑P4‑1** | 是否授权在 **`_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py`** **新建**该件（＝候选 ③，0 覆写、无冲突），以使 H3 L62 解析为 True | **PI／parent 二择一**：**(a)** 解除本棒「`deposon-sub` 只读」限定、**授权**新建；**(b)** 改派有 sub 写权者执行。**（本棒 0 代决、0 代写）** |
 | **U‑P4‑2** | H3 之 **L61→L62** 行号订正（事实登记）是否随 P-4 终裁一并留痕 | 随 P-4 终裁之 PI 裁 |
-| **U‑P4‑3** | 归档根 `_archive_deposon_2026_09_17` 之**原实体去向**：该区 0 命中该根名（式 B／C 皆 0），命中实体居 `_non_upload_local_archive\verifier\audit\` ⇒ 疑**trim 根已被平铺并入**本禁触区 | 登记为**事实**；**本棒 ⛔ 0 断言「永不存在」、⛔ 0 越区追查**（`D:\私人资料\_archive_deposon_2026_09_17\…` 本棒实测 **False**，然**该址不在本例外区**，⛔ 0 扩及） |
+| **U‑P4‑3** | 归档根 `_archive_deposon_2026_09_17` 之**原实体去向**：该区 0 命中该根名（式 B／C 皆 0），命中实体居 `_non_upload_local_archive\verifier\audit\` ⇒ 疑**trim 根已被平铺并入**本禁触区 | 登记为**事实**；**本棒 ⛔ 0 断言「永不存在」、⛔ 0 越区追查**（`〔本地资料区〕\_archive_deposon_2026_09_17\…` 本棒实测 **False**，然**该址不在本例外区**，⛔ 0 扩及） |
 
 ---
 

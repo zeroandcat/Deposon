@@ -33,7 +33,7 @@ def log(msg):
     print(line, flush=True)
     _log_lines.append(line)
 
-DEPOSON_ROOT = Path(r'D:\私人资料\deposon-repo')
+DEPOSON_ROOT = Path(r'_repo_mirror')
 RESULTS_DIR = DEPOSON_ROOT / 'results'
 
 # ============== Setup proxy 1018 ==============
@@ -64,7 +64,7 @@ except Exception as e:
     sys.exit(2)
 
 # ============== Load key runtime ==============
-KEY_FILE = Path(r'C:\Users\Administrator\Desktop\AI\LLM API.txt')
+KEY_FILE = Path(r'〔本机用户目录〕\Desktop\AI\LLM API.txt')
 content_bytes = KEY_FILE.read_bytes()
 text = None
 for enc in ('utf-8', 'gbk', 'gb18030', 'utf-8-sig'):

@@ -56,8 +56,8 @@
 
 | 目标根 | 沿用惯例 | 落前 `Test-Path` |
 |---|---|---|
-| `D:\私人资料\_non_upload_local_archive\_movedout_scratch_2026_10_01\` | 沿 `_movedout_scratch_2026_09_29`／`_2026_09_30` 既例（`moved-out + 日期`） | **False** ⇒ 0 覆盖 |
-| `D:\私人资料\deposon-sub\tmp_movedout_2026_10_01\` | 完全对齐 `tmp_movedout_2026_09_28`／`2026_09_29` 先例 | **False** ⇒ 0 覆盖 |
+| `〔本地归档区〕\_movedout_scratch_2026_10_01\` | 沿 `_movedout_scratch_2026_09_29`／`_2026_09_30` 既例（`moved-out + 日期`） | **False** ⇒ 0 覆盖 |
+| `_repo_mirror\tmp_movedout_2026_10_01\` | 完全对齐 `tmp_movedout_2026_09_28`／`2026_09_29` 先例 | **False** ⇒ 0 覆盖 |
 
 逐件 `dest_exists=False` **4/4**；目录内新建 `errata_drafts_2026_10_01\`／`verif_doubt6_prestate\` 均为本轮新建，**0 重名**。
 
@@ -91,10 +91,10 @@
 
 | 目标件 | 拉回路径（原位复原，单批 `shutil.move` 即可，0 覆盖） |
 |---|---|
-| `_e50_c1.md` | `D:\私人资料\_non_upload_local_archive\_movedout_scratch_2026_10_01\errata_drafts_2026_10_01\` → `D:\私人资料\deposon-repo\.tmp\` |
+| `_e50_c1.md` | `〔本地归档区〕\_movedout_scratch_2026_10_01\errata_drafts_2026_10_01\` → `_repo_mirror\.tmp\` |
 | `_e50_c2.md` | 同上 |
-| `baseline_pre.json` | `D:\私人资料\_non_upload_local_archive\_movedout_scratch_2026_10_01\verif_doubt6_prestate\` → `D:\私人资料\deposon-repo\.tmp\verif_doubt6\` |
-| `_docwriter_wt2_enum_final_2026_09_30.tsv` | `D:\私人资料\deposon-sub\tmp_movedout_2026_10_01\` → `D:\私人资料\deposon-repo\.tmp\` |
+| `baseline_pre.json` | `〔本地归档区〕\_movedout_scratch_2026_10_01\verif_doubt6_prestate\` → `_repo_mirror\.tmp\verif_doubt6\` |
+| `_docwriter_wt2_enum_final_2026_09_30.tsv` | `_repo_mirror\tmp_movedout_2026_10_01\` → `_repo_mirror\.tmp\` |
 
 > **转移为移动而非复制**：源路径已 0 存在（`src_gone=True`），故**拉回＝反向移动**，0 数据丢失、0 覆盖风险。复原后 SHA-12 应分别为上表值。
 
@@ -131,7 +131,7 @@
 
 ### §3.4 可恢复性抽样枚举（**回收站实证**）
 
-`Shell.Application` 回收站命名空间枚举：**14 件**，其中本棒 **8/8 逐件命中**（原位置 `D:\私人资料\deposon-repo\.tmp`、删除日期 `2026/10/1 16:33`、尺寸与 §3.3 逐件吻合）：
+`Shell.Application` 回收站命名空间枚举：**14 件**，其中本棒 **8/8 逐件命中**（原位置 `_repo_mirror\.tmp`、删除日期 `2026/10/1 16:33`、尺寸与 §3.3 逐件吻合）：
 
 ```
 name=[kimi_recheck.py]        size=[1.84 KB]  from=[…\deposon-repo\.tmp] when=[2026/10/1 16:33]  <== 本棒

@@ -2,7 +2,7 @@
 """_v4_wide_s8_fix3 — F3: track2 models_probe / reprobe 的 fetch_key 缺陷修复（幂等+后验证）"""
 import hashlib, re
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo'); RES = REPO / 'results'
+REPO = Path(r'_repo_mirror'); RES = REPO / 'results'
 def sha12(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12]
 
 OLD_A = '''def fetch_key(idx):
@@ -71,8 +71,8 @@ for fn, OLD, NEW in (('_v4_track2_models_probe.py', OLD_A, NEW_A),
         print('    !! 未按预期匹配，跳过（不改）'); continue
     t2 = t.replace(OLD, NEW)
     # 同时把 KEY_SOURCE 硬编码路径改为环境变量可覆盖
-    t3, nk = re.subn(r'(KEY_SOURCE\s*=\s*)["\']C:/Users/Administrator/Desktop/AI/LLM API\.txt["\']',
-                     r'\1os.environ.get("DEPOSON_KEY_FILE", "C:/Users/Administrator/Desktop/AI/LLM API.txt")', t2)
+    t3, nk = re.subn(r'(KEY_SOURCE\s*=\s*)["\']〔本机用户目录〕/Desktop/AI/LLM API\.txt["\']',
+                     r'\1os.environ.get("DEPOSON_KEY_FILE", "〔本机用户目录〕/Desktop/AI/LLM API.txt")', t2)
     if 'import os' not in t3:
         t3 = t3.replace('import sys', 'import os\nimport sys', 1)
     p.write_text(t3, encoding='utf-8')

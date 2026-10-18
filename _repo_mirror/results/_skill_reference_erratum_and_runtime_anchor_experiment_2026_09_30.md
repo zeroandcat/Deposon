@@ -55,10 +55,10 @@
 
 | 项 | 实测 |
 |---|---|
-| `C:\Users\Administrator\.minimax` | **Junction（ReparsePoint）**，target = `D:\Users\Administrator\.minimax` |
-| `D:\Users\Administrator\.minimax` | 实体目录（非联接） |
+| `〔本机用户目录〕\.minimax` | **Junction（ReparsePoint）**，target = `〔本机用户目录〕\.minimax` |
+| `〔本机用户目录〕\.minimax` | 实体目录（非联接） |
 | 同一文件两路径哈希 | `f835a31244ad` / 33,780 B / 09-18 11:39:54（**C、D 两路径完全一致 ⇒ 同一实体**） |
-| 加载器 Location 自报形态 | `files:///D:/Users/Administrator/.minimax/skills/<name>/SKILL.md`（**D 盘实体路径**，非 C 盘联接路径） |
+| 加载器 Location 自报形态 | `files:///〔本机用户目录〕/.minimax/skills/<name>/SKILL.md`（**D 盘实体路径**，非 C 盘联接路径） |
 
 ---
 
@@ -133,11 +133,11 @@
 
 | # | 请求名（逐字） | 结果 | Location（自报） | 内容指纹对齐 | 判定面 |
 |---|---|---|---|---|---|
-| B-01 | `scientific-writing` | ✅ 成功 | `files:///D:/Users/Administrator/.minimax/skills/scientific-writing/SKILL.md` | `f835a31244ad` / 33,780 B（`allowed-tools` + `MIT license` 逐字吻合） | **用户面** |
-| B-02 | `peer-review` | ✅ 成功 | `files:///D:/Users/Administrator/.minimax/skills/peer-review/SKILL.md` | `1a07d4a72406` / 23,119 B（逐字吻合） | **用户面** |
-| B-03 | `docx` | ✅ 成功 | `files:///D:/Users/Administrator/.minimax/skills/docx/SKILL.md` | `cfbabd72b1ae` / 20,084 B（`license: Proprietary` 逐字吻合） | **用户面** |
-| B-04 | `pdf` | ✅ 成功 | `files:///D:/Users/Administrator/.minimax/skills/pdf/SKILL.md` | `9f78b8359fbd` / 8,072 B（逐字吻合） | **用户面** |
-| B-05 | `xlsx` | ✅ 成功 | `files:///D:/Users/Administrator/.minimax/skills/xlsx/SKILL.md` | `55591d7decc1` / 11,464 B（逐字吻合） | **用户面** |
+| B-01 | `scientific-writing` | ✅ 成功 | `files:///〔本机用户目录〕/.minimax/skills/scientific-writing/SKILL.md` | `f835a31244ad` / 33,780 B（`allowed-tools` + `MIT license` 逐字吻合） | **用户面** |
+| B-02 | `peer-review` | ✅ 成功 | `files:///〔本机用户目录〕/.minimax/skills/peer-review/SKILL.md` | `1a07d4a72406` / 23,119 B（逐字吻合） | **用户面** |
+| B-03 | `docx` | ✅ 成功 | `files:///〔本机用户目录〕/.minimax/skills/docx/SKILL.md` | `cfbabd72b1ae` / 20,084 B（`license: Proprietary` 逐字吻合） | **用户面** |
+| B-04 | `pdf` | ✅ 成功 | `files:///〔本机用户目录〕/.minimax/skills/pdf/SKILL.md` | `9f78b8359fbd` / 8,072 B（逐字吻合） | **用户面** |
+| B-05 | `xlsx` | ✅ 成功 | `files:///〔本机用户目录〕/.minimax/skills/xlsx/SKILL.md` | `55591d7decc1` / 11,464 B（逐字吻合） | **用户面** |
 
 > **B 臂 5/5 成功，命中面 5/5 为用户面；plugin-cache 面 0 次命中。** 5 组的 plugin-cache 副本**均在盘在位**（`31f4fb3c0df5` / `fed0262d707a` / `12e5a0cccd0c` / `e39aa05f43db` / `6eab2cbf5606`），**本次无一被选中**。
 
@@ -174,7 +174,7 @@
 
 | id | 起因件原候选 | 本棒今日新增/复测**事实** | 事实层状态 |
 |---|---|---|---|
-| **C1** | 「PI 所猜『路径改变』在盘上事实层不成立」 | 复测：写死路径下的实体**全部在位**、SHA-12 逐字对得上（§0.2，5/5）。**新增事实**：`C:\Users\Administrator\.minimax` 是指向 `D:\Users\Administrator\.minimax` 的 **Junction**；加载器自报的是 **D 盘实体路径**（§0.4）。故「路径未变、实体同一」成立，**但「盘上写死的盘符字面 ≠ 运行时自报字面」为新增事实** | **加强**（并新增一条字面差异事实） |
+| **C1** | 「PI 所猜『路径改变』在盘上事实层不成立」 | 复测：写死路径下的实体**全部在位**、SHA-12 逐字对得上（§0.2，5/5）。**新增事实**：`〔本机用户目录〕\.minimax` 是指向 `〔本机用户目录〕\.minimax` 的 **Junction**；加载器自报的是 **D 盘实体路径**（§0.4）。故「路径未变、实体同一」成立，**但「盘上写死的盘符字面 ≠ 运行时自报字面」为新增事实** | **加强**（并新增一条字面差异事实） |
 | **C2** | 同名遮蔽 / 解析面优先级 | B 臂 5/5：**裸名一律解析到用户面**，plugin-cache 副本在位却 0 次命中；**同时** C 臂 2/2：`experimental-design`、`academic-paper-polish` 用户面**无同名**仍失败 | **削弱**：「同名遮蔽」**不能单独解释**失败——无同名者同样失败（与 C3 同向） |
 | **C3** | `experimental-design` 反证：不止一个因素 | 直接实测：C-01 裸名失败、A-02 限定名失败（2/2），尽管盘上树唯一、`SKILL.md` 在位；C-02 复现同一形态 | **事实层已验证**（该候选本就是「反证」性质，现获直接实测支持） |
 | **C4** | 运行时/组件边界（时序邻接） | **本棒 0 新证据**：未读更新日志 / changelog / 版本号；未复测 `.builtin-skills` mtime、未复测 `skill-hub.json`、未复测 `.minimax\plugins\` 空目录（均沿用起因件实测，**本棒不冒认**） | **未推进**（诚实记为空白，不以沉默充作「无变化」） |

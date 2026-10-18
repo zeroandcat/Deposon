@@ -16,7 +16,7 @@
 ## §1 锚版 3 件定位结果（哈希实测）
 
 **位置**：与漂移版**同目录、同 basename 的 `.bak` 兄弟文件**
-`D:\私人资料\_non_upload_local_archive\scripts\scripts\kt_b1\`
+`〔本地归档区〕\scripts\scripts\kt_b1\`
 
 | BOSS | 锚版 SHA-12（实测） | 字节 | 锚版路径 | mtime |
 |---|---|---|---|---|
@@ -38,7 +38,7 @@
 
 ## §2 检索证据面（3 路 × 3 扫描根）
 
-**扫描根显式声明**：`deposon-repo`、`deposon-sub`、`_non_upload_local_archive`（`deposon-repo/deposon-sub` 与 `D:/私人资料/Downloads` **不存在**，已实测登记）。
+**扫描根显式声明**：`deposon-repo`、`deposon-sub`、`_non_upload_local_archive`（`deposon-repo/deposon-sub` 与 `〔本地资料区〕/Downloads` **不存在**，已实测登记）。
 
 | 路 | 检索式 | 命中数 | 命中物 |
 |---|---|---|---|
@@ -114,7 +114,7 @@
 
 - **skill 未加载**：本 Turn 工具集内无 skill 加载入口（无 `skill` / `tool_search`）⇒ 派工单指定 skill **未加载到**；按纪律锚 fallback 按派工单字面执行，**0 编造 skill 指令**。
 - **本棒未跑锚版复算**：只做资产回填与备料登记。锚版 3 件的 D(M,T) 复算值**未产出**，腿 (a) 的真判仍待执行棒跑数后由 verdict-keeper 裁。
-- **锚版唯一性结论边界**：「各 1 份」限于本棒 3 个扫描根；仓外 `D:/私人资料/Downloads` 实测**不存在**，未纳入该结论。
+- **锚版唯一性结论边界**：「各 1 份」限于本棒 3 个扫描根；仓外 `〔本地资料区〕/Downloads` 实测**不存在**，未纳入该结论。
 - **`.trae` 快照层未判为锚版**：`_non_upload_local_archive/.trae/snapshots/p0p1_fix_20260909/` 下扁平命名快照（`ec18de386ff5` / `2c33c5395df0` / `51b57f13a731`）哈希**不等于**锚版三值 ⇒ 为**第三版更早态**，0 冒充锚版。
 - **succeeded ≠ 跑完**：完成宣告以本件落盘核验（字节 + SHA-12）为准，值见最终汇报。
 

@@ -2,7 +2,7 @@
 
 **Deposon: A Physics-Constrained Scattering Layer for Auditable LLM Reasoning Path Selection**
 
-> 作者：袁祺皓，中国人民大学化学与生命资源学院，科研助理（[email to be added]）
+> 作者：袁祺皓，中国〔高校R〕化学与生命资源学院，科研助理（[email to be added]）
 > 目标venue候选：NeurIPS Workshop / AAAI / arXiv 预印本（cs.AI, cs.CL）
 > 版本：v1.4（GSM8K 全量终版结果已回填，见 §4.2）
 > 对应代码版本：Deposon Agents v1.3.1（评测 prompt 版本 v1.3.1，seed=42）

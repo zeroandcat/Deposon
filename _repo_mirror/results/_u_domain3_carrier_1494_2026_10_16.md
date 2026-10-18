@@ -297,7 +297,7 @@
 | 项 | 值 |
 | :-- | :-- |
 | **件路径** | `results/_u_domain3_carrier_1494_2026_10_16.md` |
-| **绝对路径** | `D:\私人资料\deposon-repo\results\_u_domain3_carrier_1494_2026_10_16.md` |
+| **绝对路径** | `_repo_mirror\results\_u_domain3_carrier_1494_2026_10_16.md` |
 | **SHA-12** | `（外部报出·见交付回报）` |
 | **SHA-256（full）** | `（外部报出·见交付回报）` |
 | **bytes** | `（外部报出·见交付回报）` |

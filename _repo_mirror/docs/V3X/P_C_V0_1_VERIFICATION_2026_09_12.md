@@ -2,7 +2,7 @@
 
 > **作者**: Trae code (orchestrator/QA)
 > **验证对象**: `LETTER_TO_TRAE_2026_09_11.md` §1.1 (R1) + `V3_PHYSICAL_OPT_2026_09_11.md` §3/§6
-> **方法**: 0 LLM / 0 网络, 本地实算(临时脚本 `C:\tmp\r1r3r4_verify_20260911.py`, 用后删)
+> **方法**: 0 LLM / 0 网络, 本地实算(临时脚本 `〔本机路径〕\tmp\r1r3r4_verify_20260911.py`, 用后删)
 > **数据**: 数据源α = V3_PHYSICAL_OPT / V1 §2.2 (9 model × 30 cells); 数据源β = GAME_THEORY_EVAL volcengine 实测 (交叉验证)
 
 ---

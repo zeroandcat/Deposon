@@ -23,7 +23,7 @@ import math
 import random
 from pathlib import Path
 
-BASE = Path(r'D:\私人资料\deposon-repo')
+BASE = Path(r'_repo_mirror')
 V3_PHYS = BASE / 'results' / 'deposon_v3_physical_opt_60cells_2026_09_11.json'
 OUT = BASE / 'results' / 'boss_pc_1_real_2d_ising_2026_09_15.json'
 

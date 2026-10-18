@@ -51,7 +51,7 @@
 
 ### 通道② ｜ 仓内派生转录面（**本棒实测** · 三通道分离 ＋ 自指剔除）
 
-**扫描范围**：`os.walk` **全仓**（`D:\私人资料\deposon-repo`）· 逐件读原始字节 · 排除 `.git`／`__pycache__`／`node_modules`／`.venv`／`venv`；**⛔ 剔除本棒探针二件之自指命中**（`.tmp/docwriter_v41_probe.py`／`.tmp/docwriter_v41_scan2.py`）。**实测扫描 2,805 件 · 累计读取 112,656,523 B · 遍历错误 ＝ 0**。
+**扫描范围**：`os.walk` **全仓**（`_repo_mirror`）· 逐件读原始字节 · 排除 `.git`／`__pycache__`／`node_modules`／`.venv`／`venv`；**⛔ 剔除本棒探针二件之自指命中**（`.tmp/docwriter_v41_probe.py`／`.tmp/docwriter_v41_scan2.py`）。**实测扫描 2,805 件 · 累计读取 112,656,523 B · 遍历错误 ＝ 0**。
 
 | 字面 | 文件名通道 | 内容通道（处／件） | 命中之件 |
 | :-- | :-: | :-: | :-- |

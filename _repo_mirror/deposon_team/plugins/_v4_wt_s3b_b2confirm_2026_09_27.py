@@ -2,7 +2,7 @@
 """_v4_wt_s3b_b2confirm — B2 定因确认：全表 SHA-1 假设 15/15 + §0.1 三行（只读）"""
 import hashlib
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_repo_mirror')
 
 ROWS = [
  ('1',     'results/boss_pa_1_rbr_rm_result_2026_09_15.json',                          'D9E14ED29FB9'),

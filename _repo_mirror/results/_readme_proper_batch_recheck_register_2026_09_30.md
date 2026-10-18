@@ -1,7 +1,7 @@
 # README 扶正批 · 7 项重核 ＋ 扶正执行 · 落册登记件
 
 - **件名**：`results/_readme_proper_batch_recheck_register_2026_09_30.md`（**新名 · 无版本前缀**）
-- **路径**：`D:\私人资料\deposon-repo\results\_readme_proper_batch_recheck_register_2026_09_30.md`
+- **路径**：`_repo_mirror\results\_readme_proper_batch_recheck_register_2026_09_30.md`
 - **落盘时点**：2026-09-30 17:12 (+0800)
 - **出件**：**protocol-keeper**（`agent-3e0c193da529`，本棒实际出件者）｜**棒别**：README 扶正批 · 7 项重核棒（**登记类 · 非起草实验件 · 非预登记件**）
 - **派工**：parent 派工单（PI 2026-09-30 拍板卷 `ask_3109ce0430454d83459db9e5` **q4 答「重核后扶正」**）
@@ -157,7 +157,7 @@ PI 裁「**重核后扶正**」＝ 对 README 扶正批尾项 **7 项**（M-R1�
 | 轮次 | 时点 | 检查面 | 结果 |
 |---:|---|---|---|
 | ① | 17:08 | 4 目录（`deposon-repo`／`deposon-sub`／`_non_upload_local_archive`／`Deposon_v1_2_0_交付包`）精确同名 ＋ 近名 glob（`*readme*proper*`／`*proper*recheck*`／`*readme*batch*`） | **0 命中** |
-| ② | 17:12 | 同上 4 目录 ＋ **全 `D:\私人资料` 近名 glob** | **0 命中** |
+| ② | 17:12 | 同上 4 目录 ＋ **全 `〔本地资料区〕` 近名 glob** | **0 命中** |
 
 ⇒ **0 覆写任何既有件**（沿 README §5-6「新名件落盘前 0 撞名实测（≥2 次）」纪律）。
 

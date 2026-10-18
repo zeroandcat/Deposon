@@ -437,10 +437,10 @@ TOTAL: 423 unique (441 raw - 14 duplicates)
 1. **路径不可解析**：本清单 423 条条目的路径均为**相对形态**（如 `skills\abstract-writing\SKILL.md`、
    `v2\plugin-cache\official\sha256-tree-v1-...\academic-paper-polish\SKILL.md`），
    但**未声明 base path**。抽查 5 条（含 `.builtin-skills\code-review\SKILL.md`）在本仓及
-   `D:\私人资料` 下均不存在。按本项目"路径可对回"的自我标准，**423 条路径当前一条都无法核验**。
+   `〔本地资料区〕` 下均不存在。按本项目"路径可对回"的自我标准，**423 条路径当前一条都无法核验**。
 
    → 使用前请补 base path 声明（推测为 Mavis 的 plugin-cache 根，形如
-   `C:\Users\Administrator\.minimax\v2\plugin-cache\...`），或随清单附生成命令。
+   `〔本机用户目录〕\.minimax\v2\plugin-cache\...`），或随清单附生成命令。
 
 2. **中文描述编码乱码**：部分条目的中文描述存在 GBK/UTF-8 编码错位
    （如 openclaw-self-evolution-pack / b2b-lead-engine / codex-* 系列 / 末行"论文写作专家"条目），

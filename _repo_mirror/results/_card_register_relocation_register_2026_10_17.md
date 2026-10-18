@@ -176,7 +176,7 @@
 
 | 项 | 值 |
 | :-- | :-- |
-| **路径** | `D:\私人资料\deposon-repo\results\_card_register_relocation_register_2026_10_17.md` |
+| **路径** | `_repo_mirror\results\_card_register_relocation_register_2026_10_17.md` |
 | **bytes** |  28,415 |
 | **SHA-12** | `3bcca232e8e9` |
 | **SHA-12 口径** | 自文件首字节起、至本 `**SHA-12**` 所在行**行首（不含该行）**之全部字节之 SHA-256 前 12 位（**前缀口径**·承先例 §6；因全文哈希具自指性，故采前缀口径以保可复算）|

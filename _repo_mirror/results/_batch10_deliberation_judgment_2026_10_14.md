@@ -60,7 +60,7 @@
 | **乙·进度面** | 该棒进度是否为 `0%` | 🟡 **不可独立核验** | ✅ **已证实为 `0%`**（第一方 `output.log` 在盘） |
 | **丙·内容面** | 该棒是否产出可归属之实体 | ⛔ **永缺** | 🟠 **须二分**：交付物面（V2 模板）**永缺**；执行痕迹面（`output.log`／`summary.txt`）**在盘且可归属** |
 ### §2-2 甲面·运行时记录字段级实测（本棒独立 · **两源互证**）
-**源一 · 会话快照**（本棒实测）：`C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\snapshots\g000000000019--ctx_3125f0b7-be1c-4f63-9b62-9d5c18107041.jsonl`｜SHA-12 **`7cbb417ab979`**｜**1,741,895 B**｜UTF-8 无 BOM｜**CR ＝ 0**。该 task_id 记录对象之**实测键集（10 键）**：`created_at`、`description`、`ended_at`、`execution_mode`、`kind`、`last_error`、`parent_task_id`、`session_id`、`status`、`task_id` —— **无任何产出／进度字段**。
+**源一 · 会话快照**（本棒实测）：`〔本机用户目录〕\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\snapshots\g000000000019--ctx_3125f0b7-be1c-4f63-9b62-9d5c18107041.jsonl`｜SHA-12 **`7cbb417ab979`**｜**1,741,895 B**｜UTF-8 无 BOM｜**CR ＝ 0**。该 task_id 记录对象之**实测键集（10 键）**：`created_at`、`description`、`ended_at`、`execution_mode`、`kind`、`last_error`、`parent_task_id`、`session_id`、`status`、`task_id` —— **无任何产出／进度字段**。
 | 字段 | 本棒实测值 |
 | :-: | :-- |
 | `kind` | `subagent` |
@@ -72,11 +72,11 @@
 | `ended_at` | `1789703686715` → **2026-09-18 11:54:46**（GMT+8） |
 | 全程 | **31,367 ms**（≈ 31.4 s） |
 | `last_error` | **`runtime-shutdown`** |
-**源二 · 运行时 DB**（**本棒新发现 · 前棒未检**）：`D:\私人资料\_non_upload_local_archive\_movedout_scratch_2026_09_30\evidence_backup_2026_09_28\runtime-state.sqlite`（**474,656,768 B**）与 `…_evidence_backup_2026_09_30\runtime-state.sqlite`（同尺寸）及**现行库** `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` 之表 `local_runtime_background_tasks` 行 `task_id` ＝ 该棒（**1 行**）。`record_json` 逐字段（本棒实测）：`status` ＝ `canceled`；`description` ＝ 「起草 GLM 回函 V2 模板」；`createdAt` ＝ `1789703655348`；`startedAt` ＝ `1789703656360`；`endedAt` ＝ `1789703686715`；`lastError` ＝ `{message:runtime-shutdown,code:TASK_CANCELED}`；`ownerSessionId` ＝ `mvs_bbeb804b1a6a41109be740636eed1709`；`metadata.childSessionId` ＝ `mvs_a6df178c78194960a49a6b432b57d2e3`；`metadata.canonicalRole` ＝ `worker`；`toolCallId` ＝ `call_01a0b2a683c472efae61c219`。
+**源二 · 运行时 DB**（**本棒新发现 · 前棒未检**）：`〔本地归档区〕\_movedout_scratch_2026_09_30\evidence_backup_2026_09_28\runtime-state.sqlite`（**474,656,768 B**）与 `…_evidence_backup_2026_09_30\runtime-state.sqlite`（同尺寸）及**现行库** `〔本机用户目录〕\.minimax\v2\sqlite\runtime-state.sqlite` 之表 `local_runtime_background_tasks` 行 `task_id` ＝ 该棒（**1 行**）。`record_json` 逐字段（本棒实测）：`status` ＝ `canceled`；`description` ＝ 「起草 GLM 回函 V2 模板」；`createdAt` ＝ `1789703655348`；`startedAt` ＝ `1789703656360`；`endedAt` ＝ `1789703686715`；`lastError` ＝ `{message:runtime-shutdown,code:TASK_CANCELED}`；`ownerSessionId` ＝ `mvs_bbeb804b1a6a41109be740636eed1709`；`metadata.childSessionId` ＝ `mvs_a6df178c78194960a49a6b432b57d2e3`；`metadata.canonicalRole` ＝ `worker`；`toolCallId` ＝ `call_01a0b2a683c472efae61c219`。
 **事件流**（表 `local_runtime_background_task_events` · 本棒实测 **4 条**）：`created` @1789703655348 → `status_changed {status:running}` @1789703656379 → `output_updated` @1789703686731 → `completed {status:canceled}` @1789703686733。
 ✅ **两源逐位相符**（`canceled`／`runtime-shutdown`／起止毫秒／全程 31,367 ms），且与真锚 `c981347cffad` 行 84 之「09-18 11:54」「异常：`runtime-shutdown`」「起草 GLM 回函 V2 模板」**三项逐位相符**；同件行 74 之分节标题自判其为「canceled（**中断**）」⇒ **在册自身已判其为中断**。🔴 **新增精度**：`lastError.code` ＝ **`TASK_CANCELED`**（源一所无）。
 ### §2-3 🔴 乙面·「0%」**已由第一方证据证实**（前棒 `KD-M2-3` 之不可核验结论被更强证据取代 · ⛔ 0 回改原登记）
-**发现路径**：源二 `record_json` 之 `outputRef` 字段 ＝ `{kind:file,uri:C:\\Users\\Administrator\\.minimax\\background-tasks\\bg_b40818cb-37d2-42a5-a9a0-92ffd17b2168\\output.log,offset:187,updatedAt:1789703686715}`。
+**发现路径**：源二 `record_json` 之 `outputRef` 字段 ＝ `{kind:file,uri:〔本机用户目录〕\\.minimax\\background-tasks\\bg_b40818cb-37d2-42a5-a9a0-92ffd17b2168\\output.log,offset:187,updatedAt:1789703686715}`。
 **该文件在盘**（本棒实测）：`output.log` **187 B**｜SHA-12 **`778636a0cfae`**；同目录 `summary.txt` **159 B**｜SHA-12 **`43ee275d6ad5`**。逐字（`output.log` 全 6 行）：
 「<PROGRESS>>> 
 任务:[WORKER-GLM-V2-REPLY] 场景:[学术回函模板] 进度:0% 当前:[扫描6 输入资产 + SHA-12 验真](M1/N5)
@@ -88,10 +88,10 @@
 ### §2-4 🔴 丙面·**须二分**（本棒勘正前棒「内容永缺」之过宽断言）
 **子分面丙一 · 交付物面（V2 模板本身）**：**永缺** —— 该棒全程仅 31.4 s，`output.log` 之全部内容为进度块 ＋ 中止标记，**0 字模板内容**；`letters/查理_glm_dualtrack_paper_sole_letter_2026_10_01.md` 距其终止 **13 日**且自陈为「终件」，**仍不可归因**（沿真锚「不判 FOUND」之谨慎；本棒 0 断言「该件非本棒产出」）。
 **子分面丙二 · 执行痕迹面**：`output.log`（187 B）与 `summary.txt`（159 B）**在盘且可归属**（其目录名即 task_id）⇒ 前棒「本棒无可归属之产物实体」之断言**过宽**，应限缩为「**无交付物、无转录，仅存进度／中止痕迹**」。
-**阴性面·双通道复算（本棒实测 · 检索根已声明）**：检索根 ① `D:\私人资料` 全树（＝ **43,095** 文件）；② `C:\Users\Administrator\.minimax` 全树（＝ **69,502** 文件，含运行时附件面 `v2\assets` 与会话面 `v2\sessions`）。📌 **`os.walk` 遍历错误 ＝ 0**（两根皆 0）；📌 **读文件错误 ＝ 0**。needle ＝ base64(`mvs_a6df178c78194960a49a6b432b57d2e3`) ＝ `bXZzX2E2ZGYxNzhjNzgxOTQ5NjBhNDlhNmI0MzJiNTdkMmUz`。
+**阴性面·双通道复算（本棒实测 · 检索根已声明）**：检索根 ① `〔本地资料区〕` 全树（＝ **43,095** 文件）；② `〔本机用户目录〕\.minimax` 全树（＝ **69,502** 文件，含运行时附件面 `v2\assets` 与会话面 `v2\sessions`）。📌 **`os.walk` 遍历错误 ＝ 0**（两根皆 0）；📌 **读文件错误 ＝ 0**。needle ＝ base64(`mvs_a6df178c78194960a49a6b432b57d2e3`) ＝ `bXZzX2E2ZGYxNzhjNzgxOTQ5NjBhNDlhNmI0MzJiNTdkMmUz`。
 | 通道 | 根 | 文件数 | walk 错误 | needle 命中 |
 | :-: | :-- | --: | --: | --: |
-| 甲（`os.walk` ＋ 字节子串） | `D:\私人资料` | 43,095 | **0** | **4** |
+| 甲（`os.walk` ＋ 字节子串） | `〔本地资料区〕` | 43,095 | **0** | **4** |
 | 甲 | `.minimax` | 69,502 | **0** | **30** |
 📌 **命中逐条归类（全部 34 处，无一转录实体）**：① `results\_m2_kd_disposition_2026_10_14.md`（前棒自身正文引该 needle）② `.tmp\m2_docwriter_write.py`（前棒探针脚本）③④ 两份 `runtime-state.sqlite` 之**父会话消息**（`data_json` 提及该子会话 id，其 `session_id` 列为**父会话** `mvs_bbeb804b1a6a41109be740636eed1709`，**非**该子会话）⑤⑥ `.minimax\background-tasks\bg_7360583d-…\output.log`／`summary.txt`（他棒产物）⑦ 报告输出缓存 ⑧⑨ 今日两个会话 `messages.jsonl`（本棒自身与兄弟棒回执）⑩ 现行库及其备份／WAL ⑪ 观测日志 ⑫⑬ parent 会话之 `.history-mutation-*` 快照（多份同体）。
 📌 **通道乙 · 等值判定（本棒实测 · 三库并测）**：`local_runtime_message_rows` 中 `session_id` **等值** ＝ 该子会话者 **0 行**；`local_runtime_sessions` 中 `session_id` 等值者 **0 行**；`local_runtime_task_session_bindings` 命中 **0**。⇒ **子会话转录确不在盘**（文件系统与 DB 两面皆 0），前棒此一判断**成立**。⚠ 惟其**表述**（「丙面内容永缺」）**过宽**，如上须二分。
@@ -180,11 +180,11 @@
 **`Q5`**（新问 · 因本棒两处勘正而生）：前棒 `KD-M2-3`（「0% 未证」）与 `KD-M2-A`（「内容永缺」）之登记字面**已与新证不符** —— 请明示是否**另立勘正登记面**（⛔ 0 由本棒回改前件）。
 ⚠ 五问皆属「须 PI 择」面 ⇒ **本棒 ⛔ 0 代立、⛔ 0 代裁**。
 ### §5-4 本棒 0 作之事项（逐条）
-① ⛔ **0 回改**任何既有件一字（本棒触动既有件数 ＝ **0**，全部只读）｜② ⛔ **0 代** PI 裁／择／确认（含 0 代定判准、0 代落终判）｜③ ⛔ **0 宣告** `M-2` 之闭、⛔ **0 宣告**①毕｜④ ⛔ **0 复现**该棒、0 执行任何 runner｜⑤ ⛔ **0 编造**其应产出之内容｜⑥ ⛔ **0 断言**「10-01 之件非本棒产出」｜⑦ ⛔ **0 由终判推人责**｜⑧ ⛔ **0 读** `.env`｜⑨ ⛔ **0 上传**／⛔ **0 远端写**｜⑩ ⛔ **0 移动／重命名／删除**任何文件（本棒临时件仅落于系统 `C:\Users\ADMINI~1\AppData\Local\Temp`）｜⑪ ⛔ **0 以单通道**作阴性判据（§2-4 之双通道 ＋ 等值判定 ＋ walk 错误 0）｜⑫ ⛔ **0 沿用**他件自报指纹（§1-1 九行均本棒重算）｜⑬ ⛔ **0 联网**（本棒证据面全为本地运行时面之直取）。
+① ⛔ **0 回改**任何既有件一字（本棒触动既有件数 ＝ **0**，全部只读）｜② ⛔ **0 代** PI 裁／择／确认（含 0 代定判准、0 代落终判）｜③ ⛔ **0 宣告** `M-2` 之闭、⛔ **0 宣告**①毕｜④ ⛔ **0 复现**该棒、0 执行任何 runner｜⑤ ⛔ **0 编造**其应产出之内容｜⑥ ⛔ **0 断言**「10-01 之件非本棒产出」｜⑦ ⛔ **0 由终判推人责**｜⑧ ⛔ **0 读** `.env`｜⑨ ⛔ **0 上传**／⛔ **0 远端写**｜⑩ ⛔ **0 移动／重命名／删除**任何文件（本棒临时件仅落于系统 `〔本机用户目录〕\AppData\Local\Temp`）｜⑪ ⛔ **0 以单通道**作阴性判据（§2-4 之双通道 ＋ 等值判定 ＋ walk 错误 0）｜⑫ ⛔ **0 沿用**他件自报指纹（§1-1 九行均本棒重算）｜⑬ ⛔ **0 联网**（本棒证据面全为本地运行时面之直取）。
 ### §5-5 落盘自报（**字节级 · 落盘后复算**）
 | 项 | 值 |
 | :-: | :-- |
-| **路径** | `D:\私人资料\deposon-repo\results\_batch10_deliberation_judgment_2026_10_14.md` |
+| **路径** | `_repo_mirror\results\_batch10_deliberation_judgment_2026_10_14.md` |
 | **编码** | UTF-8 **无 BOM**｜经 `io.open(..., encoding=..., newline=chr(10), errors=strict)` 由 Python **直写**（⛔ 0 经 PowerShell 管道中转正文） |
 | **行尾** | **纯 LF**（`0x0D` 计数 ＝ **0**） |
 | **TAB／CTRL／U+FFFD** | **0** ／ **0** ／ **0** |

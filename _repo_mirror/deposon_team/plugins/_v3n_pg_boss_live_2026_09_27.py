@@ -42,7 +42,7 @@ import numpy as np
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-REPO = r"D:\私人资料\deposon-repo"
+REPO = r"_repo_mirror"
 PG_JSON = os.path.join(REPO, "results", "deposon_pg_v01_9m60c_2026_09_15.json")
 OUT_JSON = os.path.join(REPO, "results", "_v3_n_pg_boss_live_data_2026_09_27.json")
 

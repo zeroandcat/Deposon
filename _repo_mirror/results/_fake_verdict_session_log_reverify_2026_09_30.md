@@ -107,9 +107,9 @@ SHA256 的哈希: <小写 64 位十六进制>
 
 ```powershell
 $files = @(
-  'D:/私人资料/deposon-repo/letters/_v4_distillation_reply_trae_code_v3_review_2026_09_23.md',
-  'D:/私人资料/deposon-repo/results/_v3_supplement_verdict_2026_09_23.md',
-  'D:/私人资料/deposon-repo/results/_v4_pi_cot_v3_prereg.md',
+  '_repo_mirror/letters/_v4_distillation_reply_trae_code_v3_review_2026_09_23.md',
+  '_repo_mirror/results/_v3_supplement_verdict_2026_09_23.md',
+  '_repo_mirror/results/_v4_pi_cot_v3_prereg.md',
   ... （共 18 条路径，与 v1 §0.1＋§0.2 全 18 行一一对应）
 )
 foreach ($f in $files) {
@@ -130,7 +130,7 @@ foreach ($f in $files) {
 `bg_9e0d9a1e-03b1-406e-bd88-9f54181446c7`（**13:33:29.973 → 13:33:33.500**）命令字面（0 改动）：
 
 ```powershell
-$b = [System.IO.File]::ReadAllBytes('D:/私人资料/deposon-repo/results/_v3_recheck_prereg_v1_2026_09_27.md')
+$b = [System.IO.File]::ReadAllBytes('_repo_mirror/results/_v3_recheck_prereg_v1_2026_09_27.md')
 $sha = [System.Security.Cryptography.SHA1]::Create().ComputeHash($b)      # ← 实算 SHA-1
 $hex = ($sha | ForEach-Object { $_.ToString('X2') }) -join ''
 ...
@@ -297,7 +297,7 @@ foreach ($f in $files) {
 5. **未读 main-09-27.log** —— 该件已于 09-28 22:47:55 被截断为 0 B（件② §8.1 记载，本棒 0 复核该清空事件本身）；**本轮结论不依赖该面**。
 6. **A.5／A.6 两读法并存面不合并** —— 件① §A.5 记「5 项全未勾选 ⇒ 尚未生效」，§A.6.2 记「① ② 已于 23:17 采纳」；本棒**只如实并记**，**0 指定现行有效面**。
 7. **本棒未做实验、未出判定** —— 0 跑补审、0 改任何 K-*／TH-*、0 改判定档位、0 碰 kill-line、0 动 V1–V3 frozen 件。
-8. **命令原文中的中文路径已原样保留**（`D:/私人资料/…`）—— 属**路径**非凭据；R4 扫描 0 命中。
+8. **命令原文中的中文路径已原样保留**（`〔本地资料区〕/…`）—— 属**路径**非凭据；R4 扫描 0 命中。
 
 ---
 

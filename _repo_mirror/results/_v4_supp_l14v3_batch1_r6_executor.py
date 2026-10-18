@@ -104,10 +104,10 @@ import requests as _requests
 # ============================================================
 # 路径与常量
 # ============================================================
-ROOT = "D:/私人资料/deposon-repo"
+ROOT = "_repo_mirror"
 RESULTS_DIR = os.path.join(ROOT, "results")
 CAPTIONS_PATH = os.path.join(ROOT, "corpus", "v20_caption_surface", "strip_captions_22.json")
-KEY_SOURCE_PATH = "C:/Users/Administrator/Desktop/AI/LLM API.txt"
+KEY_SOURCE_PATH = "〔本机用户目录〕/Desktop/AI/LLM API.txt"
 BATCH1_RESULT_PATH = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch1_result.json")
 R2_RESULT_PATH = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch1_r2_result.json")
 R3_RESULT_PATH = os.path.join(RESULTS_DIR, "_v4_supp_l14v3_batch1_r3_result.json")

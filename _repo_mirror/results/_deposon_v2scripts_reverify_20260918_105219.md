@@ -1,7 +1,7 @@
 # Deposon v2 Scripts 复算详细报告 — 2026-09-18
 
 - 时间戳: `20260918_105219`
-- Composite JSON: `D:\私人资料\deposon-repo\results\_deposon_v2scripts_reverify_20260918_105219.json`
+- Composite JSON: `_repo_mirror\results\_deposon_v2scripts_reverify_20260918_105219.json`
 - 方法: 0 LLM / 仅 hashlib + 复算 verdict 纯函数
 - LLM 调用次数: 0
 - 读取 API key: 0

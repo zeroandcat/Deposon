@@ -21,8 +21,8 @@
 5. **不动 4 个 plugin spec**: `deposon_team/plugins/skill_a_p_a_60cells.py` (9078B `b1463bb24403`) / `skill_b_p_c_alpha_beta.py` (8699B `e5a299f69a22`) / `skill_c_p_e_3modality.py` (8915B `e19e76c5da7e`) / `skill_d_p_f_observer.py` (10981B `f4c68d146141`) 0 触动。
 6. **不动现有 PDF/MD** (~70 份 docs/V3X/) + 200+ 已落盘 JSON。
 7. **不动 .minimax/agents 下** verifier / mavis / .builtin / scripts/ 目录。
-8. **修 3 风险** 在 `D:\私人资料\deposon-repo\deposon_team\plugins\fix_*.py` 新建(用户可选用),或 在 `/tmp/fix_*.py` 临时目录新建(不落盘)→ 修后让 Mavis 复审。
-9. **key 永不入 prompt / JSON / 落盘**: 不读 `C:\Users\Administrator\Desktop\AI\新建文本文档.txt`, 如必须读,用 `Path().read_text()` runtime 读。
+8. **修 3 风险** 在 `_repo_mirror\deposon_team\plugins\fix_*.py` 新建(用户可选用),或 在 `/tmp/fix_*.py` 临时目录新建(不落盘)→ 修后让 Mavis 复审。
+9. **key 永不入 prompt / JSON / 落盘**: 不读 `〔本机用户目录〕\Desktop\AI\新建文本文档.txt`, 如必须读,用 `Path().read_text()` runtime 读。
 10. **0 触动声明**: Trae 修完后, 须 verify 11 frozen 文件 SHA-12 全 0 触动 (沿 §7 验证表)。
 
 ---

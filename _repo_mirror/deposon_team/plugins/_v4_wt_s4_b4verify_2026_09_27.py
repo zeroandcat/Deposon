@@ -2,7 +2,7 @@
 """_v4_wt_s4_b4verify — B4 独立复核：第一梯队 #26 rescript §3.1 表 4 行 vs 源 JSON 重算（只读）"""
 import hashlib, json, statistics
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo'); RES = REPO / 'results'
+REPO = Path(r'_repo_mirror'); RES = REPO / 'results'
 
 def sha12(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12]
 

@@ -27,7 +27,7 @@
 | 法 | 查询 | 结果 |
 |---|---|---|
 | `Test-Path`（相对路径） | `results\_t1_substrate_gap_census_2026_10_01.md` | **False**（未占用） |
-| `Test-Path`（绝对路径） | `D:\私人资料\deposon-repo\results\_t1_substrate_gap_census_2026_10_01.md` | **False**（未占用） |
+| `Test-Path`（绝对路径） | `_repo_mirror\results\_t1_substrate_gap_census_2026_10_01.md` | **False**（未占用） |
 | glob（全域递归） | `**/*t1_substrate*` | **1 命中** ＝ `_t1_substrate_gap_precondition_2026_10_01.md`（**异名**：`_precondition_` ≠ `_census_`） |
 | glob（全域递归） | `**/*substrate_gap*` | **1 命中** ＝ 同上（**异名**） |
 | glob（全域递归） | `**/*census*` | **0 命中** |

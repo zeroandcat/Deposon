@@ -8,7 +8,7 @@
 ## 一、结果总览
 
 - **474 个远端路径全部处理完毕，三方核验 ALL_OK**：链式 ff-only 4 跳全对、474/474 sha+size 一致、远端 blob 3,051→3,063（+12 新增，0 删除）、`_september_workspace/letters/` 0 件、16 遗留路径全在位。
-- **留档（两拍第一拍，先于一切覆盖）**：474 件远端当时版本全部拉回，落 `D:\私人资料\_non_upload_local_archive\results\_remote_version_freeze_2026_10_12\`（文件名附 `.remote_2026_10_12` 后缀），逐件 git-sha1 对拍 **474/474 一致，0 失败**；manifest：`_freeze_manifest_2026_10_12_r2.json`（新名，0 覆写既有）。本轮对归档区仅新增写入本轮冻结目录，未读未列未动其他任何归档内容。
+- **留档（两拍第一拍，先于一切覆盖）**：474 件远端当时版本全部拉回，落 `〔本地归档区〕\results\_remote_version_freeze_2026_10_12\`（文件名附 `.remote_2026_10_12` 后缀），逐件 git-sha1 对拍 **474/474 一致，0 失败**；manifest：`_freeze_manifest_2026_10_12_r2.json`（新名，0 覆写既有）。本轮对归档区仅新增写入本轮冻结目录，未读未列未动其他任何归档内容。
 
 ## 二、四项裁示逐条执行
 
@@ -23,7 +23,7 @@
 
 ### 3) E8 域外 273 → 留档更正为远端路径 ✅
 - 273 件 = 267 已推件（覆盖更正）+ 6 件在 blocked12（并入第 2 条首推）。
-- 路径更正映射（全文 3,515 处字面替换）：`D:/私人资料/deposon-repo|deposon-sub/…`→`_september_workspace/…`；`_non_upload_local_archive/…`→`〔本地归档区〕/…`；其余 `D:/私人资料/…`→`〔本地资料区〕/…`；`C:/Users/Administrator/…`→`〔本机用户目录〕/…`；`C:/$Recycle.Bin`→`〔回收站〕`；其余盘符→`〔本机路径〕`。
+- 路径更正映射（全文 3,515 处字面替换）：`_repo_mirror|deposon-sub/…`→`_september_workspace/…`；`_non_upload_local_archive/…`→`〔本地归档区〕/…`；其余 `〔本地资料区〕/…`→`〔本地资料区〕/…`；`〔本机用户目录〕/…`→`〔本机用户目录〕/…`；`〔回收站〕`→`〔回收站〕`；其余盘符→`〔本机路径〕`。
 
 ### 4) 16 敏感面路径 → 拉回留档＋脱敏/更正覆盖 ✅
 - 实覆盖 4 件：`_archive_manifest_2026_09_20.json`（〔IM〕×4 脱敏，本地新版覆盖）；`_d05_sanity_3backbone_2026_09_18.py`（绝对路径×2 更正）；`_d05_sanity_3backbone_20260918_100110.json`（archive 侧，本地新版覆盖）；根侧 `results/_d05_sanity_3backbone_20260918_100110.json`（无本地原位件，以 SUB 侧归档正本字节覆盖更正）。

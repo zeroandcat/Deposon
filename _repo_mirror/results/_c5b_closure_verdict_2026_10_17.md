@@ -23,7 +23,7 @@
 **载体**：`results\_c5_split_into_c5a_c5b_2026_10_17.md`｜**本棒实测 SHA-12 `c9e304e43274`／28,902 B／LF=260／CR=0／BOM=False**（⛔ 非沿用其 §10 之自报 `c3ce2bb53af1`／28,097 B／243 LF —— 该自报系其 §10 栏追加前之正文值，与全文件值不同，本棒以**全文件实测**为准）。
 
 > **§4-4 L169–171 逐字**（三条判死线，**测量前已冻结**）：
-> - **`K-C5B-1`**：「**载体在位** —— 回执件在 `letters/` **或** `D:\私人资料\GLM`（**稳定交付面**）在位；且**归属面**须自陈所答受托方（grok／copilot agent）——**unattributable receipt ⛔ 0 计入**」
+> - **`K-C5B-1`**：「**载体在位** —— 回执件在 `letters/` **或** `〔本地资料区〕\GLM`（**稳定交付面**）在位；且**归属面**须自陈所答受托方（grok／copilot agent）——**unattributable receipt ⛔ 0 计入**」
 > - **`K-C5B-2`**：「**逐格交付表在载** —— 回执件载 `T-2`／`T-3` **各 15 格**（3 机制 × 5 任务族）之**逐格交付表**（§7.1：每项须以**一行终判词**收束：*derivable (with value/rule)*／*derivable-with-relaxation*／*underivable as stated (obstruction)*）」
 > - **`K-C5B-3`**：「**函外指纹回执在载** —— 附 `path + SHA-12 + bytes + line count` 之指纹回执，且**在交付文件之外**（`hashlib.sha256`·⛔ **0** 用语言内建 `hash()`）」
 
@@ -33,7 +33,7 @@
 
 | 条款 | 行 | 逐字要点 |
 | :-- | :-: | :-- |
-| **§7.6** | L147 | 回执**计入**之三条件：「a reply artefact is present **either** in the repository's `letters/` **or** under `D:\私人资料\GLM` …, **and** it carries the **per-cell delivery table for both `T-2` and `T-3`**, **and** the **out-of-file fingerprint receipt** (SHA-12 / bytes / line count) required by §5.2」｜「Our `C5` item (G-D03 adjudication, receipt-in-place) is judged mechanically on **that artefact's presence**」｜「The artefact must state **which addressee it answers** — grok or copilot agent — so the registry can attribute the receipt **per face**; **an unattributable receipt cannot be counted against `C5`**」 |
+| **§7.6** | L147 | 回执**计入**之三条件：「a reply artefact is present **either** in the repository's `letters/` **or** under `〔本地资料区〕\GLM` …, **and** it carries the **per-cell delivery table for both `T-2` and `T-3`**, **and** the **out-of-file fingerprint receipt** (SHA-12 / bytes / line count) required by §5.2」｜「Our `C5` item (G-D03 adjudication, receipt-in-place) is judged mechanically on **that artefact's presence**」｜「The artefact must state **which addressee it answers** — grok or copilot agent — so the registry can attribute the receipt **per face**; **an unattributable receipt cannot be counted against `C5`**」 |
 | **§5.2** | L121 | 「report the fingerprint of each delivered file as **path + SHA-12 + byte count + line count** (SHA-256, first 12 hex, lowercase; `hashlib.sha256`, not a language built-in `hash()`). Fingerprints are reported **with** the delivery, **outside the delivered files**」 |
 | **§7.1** | L142 | 「carrying a per-cell table across all 15 cells for each, and **ending each of the two items with a one-line verdict**: *derivable (with value/rule)* / *derivable-with-relaxation (name the relaxation)* / *underivable as stated (obstruction)*」 |
 | **§5.3** | L125 | 「Mark every cell you cannot supply, item by item, **with its reason**. **A cell left `null` with a stated reason is a complete delivery for that cell** and does not disqualify the rest.」 |
@@ -77,7 +77,7 @@
 
 | 要素 | 实测 | 锚 |
 | :-- | :-- | :--|
-| `path` | ✅ **完整路径**：`c:\Users\Administrator\codex-workspace\REPLY_FROM_COPILOT_AGENT_T2_T3_THEORY_INPUTS_2026_10_17.md` | RECEIPT L3 |
+| `path` | ✅ **完整路径**：`〔本机用户目录〕\codex-workspace\REPLY_FROM_COPILOT_AGENT_T2_T3_THEORY_INPUTS_2026_10_17.md` | RECEIPT L3 |
 | `SHA-12` | ✅ `597caf8ba5bc`（另附 SHA-256 全串 64 位） | RECEIPT L4–5 |
 | `byte count` | ✅ `30459` | RECEIPT L6 |
 | `line count` | ✅ `318`（并载行数定义「number of newline-terminated lines」） | RECEIPT L7–8 |
@@ -101,7 +101,7 @@
 
 **⇒ 结论：一件可归属之回执即足；以「grok 面未答」为由维持 `C5-b` 未闭者， ⛔ 无判死线依据。**
 
-⚠ **但**：grok 面仍为**独立开口项**（姊妹函 `6922929bfda8` 之回执两面 0 在盘）—— 本判 ⛔ **0** 主张该面已闭，⛔ **0** 主张委托已毕（**如实限定**：本棒实测射程 ＝ `letters/`；**未**复扫 `D:\私人资料\GLM`，故「两面 0 在盘」系**沿拆桩件 §4-4 与登记件 U-2 之载**，非本棒重测）。
+⚠ **但**：grok 面仍为**独立开口项**（姊妹函 `6922929bfda8` 之回执两面 0 在盘）—— 本判 ⛔ **0** 主张该面已闭，⛔ **0** 主张委托已毕（**如实限定**：本棒实测射程 ＝ `letters/`；**未**复扫 `〔本地资料区〕\GLM`，故「两面 0 在盘」系**沿拆桩件 §4-4 与登记件 U-2 之载**，非本棒重测）。
 
 ---
 
@@ -204,7 +204,7 @@ PI 10-17 ≈15:09 令为「本次委托 grok，copilot agent」，**两受托方
 
 | 项 | 值 |
 | :-- | :-- |
-| 目标路径 | `D:\私人资料\deposon-repo\results\_c5b_closure_verdict_2026_10_17.md` |
+| 目标路径 | `_repo_mirror\results\_c5b_closure_verdict_2026_10_17.md` |
 | `Test-Path`（落盘前） | **False** |
 | glob `results/_c5b_closure*`（落盘前） | **0 命中** |
 | 处置 | **0 覆盖**，未需 `_r1` |
@@ -221,7 +221,7 @@ PI 10-17 ≈15:09 令为「本次委托 grok，copilot agent」，**两受托方
 
 | 项 | 值 |
 | :-- | :-- |
-| 绝对路径 | `D:\私人资料\deposon-repo\results\_c5b_closure_verdict_2026_10_17.md` |
+| 绝对路径 | `_repo_mirror\results\_c5b_closure_verdict_2026_10_17.md` |
 | SHA-12 | `e081a0081676` |
 | bytes | `25423` |
 | LF 行数 | `219` |

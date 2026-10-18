@@ -52,15 +52,15 @@
 | # | 本地实体（相对主区/副区） | 本地 SHA-12 | 远端新路径 | 远端 SHA-12 | 一致性 |
 |---:|---|---|---|---|---|
 | 1 | `repo/docs/V3X/D3_〔IM〕_MIDTERM_TEMPLATE.md` | `574d5a79e363` | `_september_workspace/docs/V3X/D3_ONLINE_MIDTERM_TEMPLATE.md` | `b3e00ba108a1` | 字节不同（内容亦已替换） |
-| 2 | `repo/docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | `935cb6ee3566` | `…/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` | `244b76b690f0` | 字节不同 |
-| 3 | `sub/results/_archive_2026_09_20/LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md` | **`7d4b5dd967e2`** | `…/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | `ff37f39264bc` | ✅ **本地 SHA ＝ T2 §4.3 所记 pre 值 `7d4b5dd9`** ⇒ 本地仍持**改前态** |
+| 2 | `repo/docs/V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | `935cb6ee3566` | `…/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` | `244b76b690f0` | 字节不同 |
+| 3 | `sub/results/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | **`7d4b5dd967e2`** | `…/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | `ff37f39264bc` | ✅ **本地 SHA ＝ T2 §4.3 所记 pre 值 `7d4b5dd9`** ⇒ 本地仍持**改前态** |
 | 4 | `sub/results/_archive_2026_09_20/_coze_〔IM〕_v3_d7format_2026_09_18.pdf` | **`adc99e04ac53`** | `…/_coze_online_v3_d7format_2026_09_18.pdf` | `adc99e04ac53` | ✅ **pre ＝ post（rename-only）** ⇒ 远端 PDF 字节**未改**，仅改名 |
 | 5 | `sub/results/_archive_2026_09_20/_letter_to_coze_〔IM〕_v2_2026_09_18.md` | **`ecdbf3a7a9c2`** | `…/_letter_to_coze_online_v2_2026_09_18.md` | `dc3e56adc3fc` | ✅ **本地 ＝ T2 §4.3 pre 值 `ecdbf3a7`** ⇒ 本地改前态 |
 | 6 | `sub/results/_coze_〔IM〕_v3_2026_09_18.md` | `229d76e1b86f` | `_september_workspace/results/_coze_online_v3_2026_09_18.md` | `53c9c1ab2d12` | 字节不同 |
 | 7 | `sub/results/_coze_〔IM〕_v3_d7format_2026_09_18.md` | `905544775aee` | `…/_coze_online_v3_d7format_2026_09_18.md` | `debe3761c565` | 字节不同 |
 | 8 | `sub/results/_coze_〔IM〕_v3_final_2026_09_18.md` | `deee45f45c5d` | `…/_coze_online_v3_final_2026_09_18.md` | `36439bc12bba` | 字节不同 |
 | 9 | `repo/results/_coze_〔IM〕_v4_d7format_2026_09_26.pdf` | **`a82881653520`** | `…/_coze_online_v4_d7format_2026_09_26.pdf` | `a82881653520` | ✅ **pre ＝ post（rename-only）** |
-| 10 | `sub/results/_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` | `f4d5b755736a` | `…/_d7_external_advisor_online_publish_v1_20260918.md` | `788fbdd8c12f` | 字节不同 |
+| 10 | `sub/results/_d7_external_advisor_〔IM〕_publish_v1_20260918.md` | `f4d5b755736a` | `…/_d7_external_advisor_online_publish_v1_20260918.md` | `788fbdd8c12f` | 字节不同 |
 
 > ✅ **本地旧名按名检索远端 ＝ 0**（15 件逐件实测，见 §1.3）⇒ 改名在远端**全部生效**；**本地 15 件全为改名前态**。
 > ⚠ **登记 U-1（PDF 同源风险）**：#4／#9 两件 PDF 本地与远端**字节全等** ⇒ 二者**内含字面状态相同**；远端仅改名未动内容。**「远端已淡化」对 rename-only PDF 不成立** —— 其字节态仍为改前态（沿 `3f806e44a13f` §7 B-2「仅能证明字节未变，不能证明其内无目标字面」同款边界）。
@@ -70,7 +70,7 @@
 | # | 区 | 本地路径 | 本地 SHA-12 | 字节 | 远端按名 | 分类 |
 |---:|---|---|---|---:|---:|---|
 | 1 | 主 | `docs/V3X/D3_〔IM〕_MIDTERM_TEMPLATE.md` | `574d5a79e363` | 4,361 | 0 | 批⑤ 改名件 |
-| 2 | 主 | `docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | `935cb6ee3566` | 8,037 | 0 | 批⑤ 改名件 |
+| 2 | 主 | `docs/V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | `935cb6ee3566` | 8,037 | 0 | 批⑤ 改名件 |
 | 3 | 主 | `letters/_v4_commission_〔IM〕_report_coze_2026_09_24.md` | `15f8227308bc` | 7,197 | **0** | ⚠ **本地独有** |
 | 4 | 主 | `letters/_v4_commission_〔IM〕_report_coze_2026_09_24_v2.md` | `389c51e70d19` | 10,599 | **0** | ⚠ **本地独有** |
 | 5 | 主 | `letters/_v4_commission_〔IM〕_report_coze_2026_09_24_v3.md` | `e5b63d181b15` | 13,898 | **0** | ⚠ **本地独有** |
@@ -80,8 +80,8 @@
 | 9 | 副 | `results/_coze_〔IM〕_v3_2026_09_18.md` | `229d76e1b86f` | 7,466 | **0** | 批⑤ 改名件 |
 | 10 | 副 | `results/_coze_〔IM〕_v3_d7format_2026_09_18.md` | `905544775aee` | 8,715 | **0** | 批⑤ 改名件 |
 | 11 | 副 | `results/_coze_〔IM〕_v3_final_2026_09_18.md` | `deee45f45c5d` | 11,657 | **0** | 批⑤ 改名件 |
-| 12 | 副 | `results/_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` | `f4d5b755736a` | 9,891 | **0** | 批⑤ 改名件 |
-| 13 | 副 | `results/_archive_2026_09_20/LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md` | `7d4b5dd967e2` | 10,562 | **0** | 批⑤ 改名件 |
+| 12 | 副 | `results/_d7_external_advisor_〔IM〕_publish_v1_20260918.md` | `f4d5b755736a` | 9,891 | **0** | 批⑤ 改名件 |
+| 13 | 副 | `results/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | `7d4b5dd967e2` | 10,562 | **0** | 批⑤ 改名件 |
 | 14 | 副 | `results/_archive_2026_09_20/_coze_〔IM〕_v3_d7format_2026_09_18.pdf` | `adc99e04ac53` | 454,307 | **0** | 批⑤ 改名件（rename-only） |
 | 15 | 副 | `results/_archive_2026_09_20/_letter_to_coze_〔IM〕_v2_2026_09_18.md` | `ecdbf3a7a9c2` | 18,596 | **0** | 批⑤ 改名件 |
 
@@ -94,7 +94,7 @@
 
 | 悬空引用名 | 本地 | 远端 | 判定 |
 |---|---:|---:|---|
-| `WANG_TEACHER_PROGRESS_REPORT` | 0 | 0 | ✅ 纯文本悬空引用，0 实体 |
+| `EXTERNAL_ADVISOR_PROGRESS_REPORT` | 0 | 0 | ✅ 纯文本悬空引用，0 实体 |
 | `D3_〔IM〕_MIDTERM_2026_09_09_actual` | 0 | 0 | ✅ 同上 |
 | `count_〔IM〕.py` | 0 | 0 | ✅ 同上 |
 | `count_online.py`（批④ 改名后名） | 0 | 0 | ✅ 同上（仓外临时脚本） |
@@ -127,9 +127,9 @@
 | 渠道 | `〔IM〕` / `〔IM〕` / `〔IM〕` | **`线上`**（词内嵌） | 批⑤ 改名 ＋ 键名 `…_agent_plan_线上API`（生产侧 9 件） |
 | 渠道（文件名前缀） | `_coze_〔IM〕_` | **`_coze_online_`** | 批⑤ #4–#9 |
 | 渠道（文件名片段） | `_〔IM〕_` / `_〔IM〕_` | **`_ONLINE_`** | 批⑤ #1/#2 |
-| 自然人（文件名前缀） | `_WANG_TEACHER_` / `_wang_teacher_` | **`_EXTERNAL_ADVISOR_`** | 批⑤ #2/#3/#10 |
+| 自然人（文件名前缀） | `_EXTERNAL_ADVISOR_` / `_external_advisor_` | **`_EXTERNAL_ADVISOR_`** | 批⑤ #2/#3/#10 |
 | 判定键 | `…_agent_plan_〔IM〕API` | **`…_agent_plan_线上API`** | 生产侧 9 件 plugin 已生效 |
-| 判定键（人名检查） | `mentions_wangzihe` 类键名 | **`mentions_external_mentor`** | `compare_versions.py:129`（**键名已改**） |
+| 判定键（人名检查） | `mentions_〔当事人W〕` 类键名 | **`mentions_external_mentor`** | `compare_versions.py:129`（**键名已改**） |
 | 机构缩写（文件/台账） | `_ruc_chem` 类键名 | **（未改，见执行单 §3.4）** | `compare_versions.py:128` `has_ruc_chem` **仍在位** |
 
 ### 3.2 ⚠ 键名替换高危约束（**上传前必读**）
@@ -205,7 +205,7 @@
 | **授权边界** | ⛔ **仅限文件名**；⛔ **不含**内容面处置（内容面另循淡化口径/PI 裁）；⛔ **不含**本地件（PI 裁 ④「本地保持 0 回改」）；⛔ **不含**删除 |
 | **当态** | 远端文件名 `(?i)(wang\|〔IM〕)` **0 件** ⇒ **授权暂无适用对象**（0 动作） |
 | **触发后动作** | 改名 ＋ **同 commit** 路径锚回写 ＋ SHA 漂移登记件 ＋ 批号顺延（D8…） |
-| **映射约定** | 沿 §3.1：`_WANG_TEACHER_`→`_EXTERNAL_ADVISOR_`；`_〔IM〕_`/`_〔IM〕_`→`_ONLINE_`/`_online_` |
+| **映射约定** | 沿 §3.1：`_EXTERNAL_ADVISOR_`→`_EXTERNAL_ADVISOR_`；`_〔IM〕_`/`_〔IM〕_`→`_ONLINE_`/`_online_` |
 | **执行主体** | ⛔ **本件 0 执行、0 联系受托方**；通道候 PI 派（见执行单 §8） |
 
 ---

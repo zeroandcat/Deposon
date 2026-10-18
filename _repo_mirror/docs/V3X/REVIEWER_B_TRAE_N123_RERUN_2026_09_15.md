@@ -37,11 +37,11 @@
 
 | 项 | 值 |
 |---|---|
-| 临时根目录 | `D:/tmp/deposon_reviewer_b_n123_2026_09_15/` |
+| 临时根目录 | `〔本机路径〕/tmp/deposon_reviewer_b_n123_2026_09_15/` |
 | 镜像内容 | `deposon_team/plugins/` (12 尾块 + 4 skill_x) + `verifier/handoff/` (KT_ABC1 + P_F_PREDECISION) + `docs/V3X/` (KT_A1/B1/C1/D0 + P_F_V0 + P_F_RESEARCH + P_F_V0_1_UPGRADE + P_G_V0_SPEC) + `results/` (v19/v21) + `corpus/v20/` |
 | 验证后处置 | 见 §5 清理步骤 (验证后清理) |
 
-**BASE 覆写**: 3 个 fix 脚本的 `BASE = r'D:\私人资料\deposon-repo'` 在 /tmp 副本内覆写为 `BASE = r'D:\tmp\deposon_reviewer_b_n123_2026_09_15'` (本任务唯一允许的副本改动)。
+**BASE 覆写**: 3 个 fix 脚本的 `BASE = r'_repo_mirror'` 在 /tmp 副本内覆写为 `BASE = r'〔本机路径〕\tmp\deposon_reviewer_b_n123_2026_09_15'` (本任务唯一允许的副本改动)。
 
 ---
 

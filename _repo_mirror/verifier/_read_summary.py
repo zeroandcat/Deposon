@@ -1,5 +1,5 @@
 import json, os
-os.chdir('D:/私人资料/deposon-repo')
+os.chdir('_repo_mirror')
 data = json.load(open('results/deposon_volcengine_9model_30cells_2026_09_10.json', 'r', encoding='utf-8'))
 print('Total elapsed:', data.get('total_elapsed_s'), 's')
 print('Best:', data.get('best_model'), data.get('best_pass_rate'))

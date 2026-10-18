@@ -81,7 +81,7 @@
 
 ### §4-1 census（阴性结论 · 双通道 ＋ 遍历断言）
 
-- **检索根（4 根 · 含运行时附件面）**：`D:\私人资料\deposon-repo`｜`D:\私人资料\GLM`｜`C:\Users\Administrator\.minimax\sessions`｜`C:\Users\Administrator\.minimax\scratch`
+- **检索根（4 根 · 含运行时附件面）**：`_repo_mirror`｜`〔本地资料区〕\GLM`｜`〔本机用户目录〕\.minimax\sessions`｜`〔本机用户目录〕\.minimax\scratch`
 - **遍历**：文件 **2,248** 件｜**`os.walk` 遍历错误 ＝ 0**（断言通过）
 - **双通道**：ⓐ Python 全量逐行扫描 ／ ⓑ ripgrep 检索工具 —— 两通道独立复现一致
 - **判准**：「曾以「闭合」载 `C5`」＝ 同一行内**并现** `C5` 与闭合类词面（闭合／已闭）

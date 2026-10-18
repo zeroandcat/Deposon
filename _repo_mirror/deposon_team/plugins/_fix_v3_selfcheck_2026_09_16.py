@@ -16,7 +16,7 @@ import os
 import hashlib
 import importlib.util
 
-PLUG = r'D:\私人资料\deposon-repo\deposon_team\plugins'
+PLUG = r'_repo_mirror\deposon_team\plugins'
 MARKER = 'TRAE_SELFCHECK_2026_09_16_V3'
 
 TARGETS = [
@@ -144,7 +144,7 @@ FR = [
     ('results/deposon_v21_gtformal.json', '9d9ae5001c57'),
     ('corpus/v20/index.json', '8423ffe266af'),
 ]
-BASE = r'D:\私人资料\deposon-repo'
+BASE = r'_repo_mirror'
 for rel, exp in FR:
     with open(os.path.join(BASE, rel), 'rb') as f:
         got = sha12_bytes(f.read())

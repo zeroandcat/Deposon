@@ -19,7 +19,7 @@
 ## §0 上传时点对齐 (沿 user 21:26 拍板)
 
 - **上次 KIMI push** = 2026-09-17 23:34:06 CST, `_kimi_push_v3_manifest_batch10_1b753116.json` (5,007 B, batch10 of 10 batches)
-- **自此后新增需要上传留痕的**: ~30 件 (沿 `D:\私人资料\deposon-repo\results\` 下 09-17 23:34:06 之后落地)
+- **自此后新增需要上传留痕的**: ~30 件 (沿 `_repo_mirror\results\` 下 09-17 23:34:06 之后落地)
 - **现时点 (2026-09-18 21:26 CST) → KIMI push ~0 时滞 (立即推送)**
 - **本仓无 git** (沿 Trae FIX_RECEIPT §2.1 "本仓不是 git 仓库"), 无 commit SHA 可报, 以**文件级 SHA-256/12** 替代 (沿 P-D 指纹体系与 verifier 锚机制)
 - **沿派工新规 5 件必带** (user 10:22 + 12:10 + 17:02 + 20:46 强化)
@@ -41,7 +41,7 @@
 
 ## §2 自上次 KIMI push (2026-09-17 23:34:06) 之后**新增需要上传留痕的清单** (沿 explorer 职责 + Mavis 自执行)
 
-> 老实交代: 沿 `D:\私人资料\deposon-repo\results\` 下落地时间 > `2026-09-17 23:34:06` 的文件。Mavis 自执行 explorer 职责, 沿派工新规 5 件必带 (skill + plugin 名字 + 严守 7+9 铁律)。
+> 老实交代: 沿 `_repo_mirror\results\` 下落地时间 > `2026-09-17 23:34:06` 的文件。Mavis 自执行 explorer 职责, 沿派工新规 5 件必带 (skill + plugin 名字 + 严守 7+9 铁律)。
 
 ### §2.1 早期遗留 (09-18 0:20-0:21, coze paper v1 摘要 + draft)
 
@@ -186,9 +186,9 @@
 
 | # | 文件名 | 字节 | 落盘时间 | 不上传理由 |
 |---|---|---|---|---|
-| 16 | `D:\私人资料\deposon-repo\docs\V3X\TRAE_DAILY_AUDIT_LETTER_2026_09_18.md` | 11,575 | 09-18 12:44 | Trae 全日走读 (内部) |
-| 17 | `D:\私人资料\deposon-repo\docs\V3X\TRAE_CODE_FIX_LIST_2026_09_18.md` | 11,228 | 09-18 13:00 | Trae 修复清单 (内部) |
-| 18 | `D:\私人资料\deposon-repo\docs\V3X\TRAE_FIX_RECEIPT_2026_09_18.md` | 5,200 | 09-18 13:00 | Trae 修复回执单 (内部) |
+| 16 | `_repo_mirror\docs\V3X\TRAE_DAILY_AUDIT_LETTER_2026_09_18.md` | 11,575 | 09-18 12:44 | Trae 全日走读 (内部) |
+| 17 | `_repo_mirror\docs\V3X\TRAE_CODE_FIX_LIST_2026_09_18.md` | 11,228 | 09-18 13:00 | Trae 修复清单 (内部) |
+| 18 | `_repo_mirror\docs\V3X\TRAE_FIX_RECEIPT_2026_09_18.md` | 5,200 | 09-18 13:00 | Trae 修复回执单 (内部) |
 
 ### §3.4 共 18 件无需上传归档清单 (待 user 拍板移出)
 
@@ -241,7 +241,7 @@
 ### 自加载边界 (沿派工新规)
 
 - ✅ Mavis plugin-cache 实际路径 (`sha256-tree-v1-611965fcb6208...` for scientific-writing + `sha256-tree-v1-01afed6776375...` for academic-paper-polish)
-- ❌ 严禁引 Trae IDE 缓存路径 (`C:\Users\Administrator\.trae-cn\...`)
+- ❌ 严禁引 Trae IDE 缓存路径 (`〔本机用户目录〕\.trae-cn\...`)
 - ❌ 严禁引 Muratkankoylan 等用户拉取的 GitHub skill 仓库 (除非 user 触发)
 - ❌ 严禁擅自改 user agent skill 目录 (沿 user 17:02 边界严守)
 - ❌ 严禁擅自移出 §3 归档清单文件 (沿 corpus-keep 职责, 等 user 拍板)
@@ -254,7 +254,7 @@
 |---|---|
 | **本端自起草 (不派 worker)** | 沿 user 20:46 "不依赖 worker 算长大吗" + 12:55 强化 + 派工新规, 本委托信由 Mavis 自行起草 (沿 doc-writer 职责); 之前 worker `bg_0ff6aa89` failed (网络错误 `ERR_HTTP2_PING_FAILED`, 0 产物老实交代), 不重派, Mavis 自行 write 文件 |
 | **派 8 agent (沿 team memory)** | 实际派工: **doc-writer** (本委托信起草) + **explorer** (找上次 push 基线 + 列新增清单) + **corpus-keep** (列无需上传归档清单, 等 user 拍板) — Mavis 三个 agent 自执行, 不派 worker (沿 user 20:46 强化) |
-| **数字复述** | 本委托信所有数字 (30 件字节总和 ~882 KB + 18 frozen + 5 制品 + 16 锚 16/16) 均沿 `D:\私人资料\deposon-repo\results\` 实测落账, 未自报占位 |
+| **数字复述** | 本委托信所有数字 (30 件字节总和 ~882 KB + 18 frozen + 5 制品 + 16 锚 16/16) 均沿 `_repo_mirror\results\` 实测落账, 未自报占位 |
 | **API key** | 本委托信模板不含任何 API key; 沿 7 铁律 / 9 铁律严守, key runtime 读不入 prompt / JSON / log |
 | **LLM 调用** | 本委托信 0 LLM 调用 (0 LLM 起草), 沿 `academic-paper-polish` §"No fabricated support" 严守 |
 | **学术润色原则** | 严守 `academic-paper-polish` §"Preserve the author's technical meaning, numbers, equations, citations, uncertainty, and claim strength"——所有数字仅复述, 不擅自更改口径 |
@@ -272,7 +272,7 @@
 | **框架** | `scientific-research-workflows:scientific-writing` v2.0 (IMRaD + rebuttal 7 步流程 + Non-negotiable safety rules + Evidence binding) |
 | **学术润色** | `academic-paper-assistant:academic-paper-polish` (Section-Specific Guidance + Scope and integrity + No fabricated support + Vocabulary) |
 | **插件** | `@scientific-research-workflows` + `@academic-paper-assistant` |
-| **路径规范** | Mavis plugin-cache 实际路径 (`sha256-tree-v1-...`) ——严禁引 Trae IDE 缓存 (`C:\Users\Administrator\.trae-cn\...`) |
+| **路径规范** | Mavis plugin-cache 实际路径 (`sha256-tree-v1-...`) ——严禁引 Trae IDE 缓存 (`〔本机用户目录〕\.trae-cn\...`) |
 | **自加载规范** | 仅可引 Mavis plugin-cache 实际可加载的 SKILL.md (sha256 实测路径), 不引 Trae IDE 缓存 |
 
 ### §7.2 IMRaD + rebuttal 框架映射
@@ -289,7 +289,7 @@
 | `academic-paper-polish` 原则 | 本委托信落地 |
 |---|---|
 | Preserve author's technical meaning | 所有数字仅复述 (30 件字节总和 + 18 frozen + 5 制品 + 16 锚) |
-| Never invent experimental results | 全部数字沿 `D:\私人资料\deposon-repo\results\` 实测落账 |
+| Never invent experimental results | 全部数字沿 `_repo_mirror\results\` 实测落账 |
 | If wording is ambiguous, state the ambiguity | 上传基线 (23:34:06) + 新增清单 (30 件) + 无需上传 (18 件) 实测 |
 | Treat phrase banks as options, not claims | 措辞仅复述委托信 + 双审报告, 不擅自扩写 |
 | Avoid weak phrases | 不用 "it can be seen that" / "in order to" / "due to the fact that" |
@@ -302,7 +302,7 @@
 | **派工 agent** | **doc-writer** (本委托信起草) + **explorer** (找上次 push 基线 + 列新增清单) + **corpus-keep** (列无需上传归档清单, 等 user 拍板) — 沿 8 agent 团队记忆 (user 20:54 拍板) |
 | **生成日期** | 2026-09-18 21:26 CST |
 | **任务 ID** | LETTER-TO-KIMI-UPLOAD-REQUIREMENTS-2026-09-18 |
-| **报告路径** | `D:/私人资料/deposon-repo/results/_letter_to_kimi_upload_requirements_2026_09_18.md` |
+| **报告路径** | `_repo_mirror/results/_letter_to_kimi_upload_requirements_2026_09_18.md` |
 | **派工新规** | 必带 skill `scientific-research-workflows:scientific-writing` (sha256 `611965...`) + `academic-paper-assistant:academic-paper-polish` (sha256 `01afed...`); 必带 plugin `@scientific-research-workflows` + `@academic-paper-assistant`; 严守 7+9 铁律 |
 
 ---
@@ -311,7 +311,7 @@
 
 ### §8.1 附录 A: KIMI push v3 batch10 manifest (上次上传基线, 2026-09-17 23:34:06)
 
-- **路径**: `D:\私人资料\deposon-repo\results\_kimi_push_v3_manifest_batch10_1b753116.json`
+- **路径**: `_repo_mirror\results\_kimi_push_v3_manifest_batch10_1b753116.json`
 - **字节**: 5,007 B
 - **SHA-12**: `1b753116` (本端实测)
 - **内容**: 沿 push_v3_manifest 既有格式, 含 batch10 commit 信息

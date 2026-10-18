@@ -11,7 +11,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-BASE = Path(r'D:\私人资料\deposon-repo')
+BASE = Path(r'_repo_mirror')
 OUT_DIR = BASE / 'results' / '_v3x_p_k_verify_2026_09_16'
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -21,17 +21,17 @@ def v3x_p_k_verify_18frozen():
 
     沿 4 方制品 读 JSON 验证制品 0 触动 18 frozen:
     - KIMI 制品: corpus/v20/index_v2_2026_09_16.json (24150B)
-    - GLM 制品: C:\\Users\\Administrator\\Downloads\\鲍勃_P-K盲测GLM槽位产出_2026-09-16\\deposon_p_k_three_way_glm_slot_blind_test_2026_09_16.json
-    - coze 制品: C:\\Users\\Administrator\\Coze\\Drive\\扣子\\Downloads\\deposon_coze_artifacts\\coze_artifact_v_2026_09_16.json
+    - GLM 制品: 〔本机用户目录〕\\Downloads\\鲍勃_P-K盲测GLM槽位产出_2026-09-16\\deposon_p_k_three_way_glm_slot_blind_test_2026_09_16.json
+    - coze 制品: 〔本机用户目录〕\\Coze\\Drive\\扣子\\Downloads\\deposon_coze_artifacts\\coze_artifact_v_2026_09_16.json
     - minimax 制品: deposon_team/products/minimax_artifact_v_2026_09_16.json (25347B)
 
     沿制品 JSON 内容 hash + 制品路径 hash + 制品沿 18 frozen 的 0 触动声明
     """
     artifacts = [
         ('KIMI', 'corpus/v20/index_v2_2026_09_16.json'),
-        ('GLM_1', r'C:\Users\Administrator\Downloads\鲍勃_P-K盲测GLM槽位产出_2026-09-16\deposon_p_k_three_way_glm_slot_blind_test_2026_09_16.json'),
-        ('GLM_2', r'C:\Users\Administrator\Downloads\鲍勃_P-K盲测GLM槽位产出_2026-09-16\glm_artifact_v_2026_09_16.json'),
-        ('coze', r'C:\Users\Administrator\Coze\Drive\扣子\Downloads\deposon_coze_artifacts\coze_artifact_v_2026_09_16.json'),
+        ('GLM_1', r'〔本机用户目录〕\Downloads\鲍勃_P-K盲测GLM槽位产出_2026-09-16\deposon_p_k_three_way_glm_slot_blind_test_2026_09_16.json'),
+        ('GLM_2', r'〔本机用户目录〕\Downloads\鲍勃_P-K盲测GLM槽位产出_2026-09-16\glm_artifact_v_2026_09_16.json'),
+        ('coze', r'〔本机用户目录〕\Coze\Drive\扣子\Downloads\deposon_coze_artifacts\coze_artifact_v_2026_09_16.json'),
         ('minimax', 'deposon_team/products/minimax_artifact_v_2026_09_16.json'),
     ]
 

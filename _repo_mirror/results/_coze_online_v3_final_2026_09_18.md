@@ -1,6 +1,6 @@
 # Coze 线上 文稿（终版）· deposon V3 终稿 R5 · 2026-09-18
 
-> **委托来源**: `D:/私人资料/deposon-repo/results/_letter_to_coze_online_v2_2026_09_18.md`（Mavis root，task `LETTER-TO-COZE-ONLINE-V2-2026-09-18`）
+> **委托来源**: `_repo_mirror/results/_letter_to_coze_online_v2_2026_09_18.md`（Mavis root，task `LETTER-TO-COZE-ONLINE-V2-2026-09-18`）
 > **依据**: 查理 V3 终稿全文 R5（SHA-12 `42e4310f9483`，9 章 + 44 引用 + 双语摘要）+ 内参转呈说明（SHA-12 `7a4933372ef5`）
 > **起草方**: Coze（4 协作方之一）
 > **时点**: 2026-09-18 CST

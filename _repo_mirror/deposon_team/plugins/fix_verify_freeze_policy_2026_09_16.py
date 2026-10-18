@@ -16,7 +16,7 @@ fix_verify_freeze_policy_2026_09_16.py — 修复点 2/3/6: verify 脚本 reconc
 """
 import hashlib
 
-BASE = r'D:\私人资料\deposon-repo'
+BASE = r'_repo_mirror'
 V15 = BASE + r'\deposon_team\plugins\_verify_15frozen.py'
 VPG = BASE + r'\deposon_team\plugins\_verify_pg_v0.py'
 

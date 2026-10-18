@@ -6,7 +6,7 @@
 | **棒别** | 主会话 `mvs_bbeb804b1a6a41109be740636eed1709` 全历史取证与结构化总结棒 |
 | **署名** | `worker`（⛔ 0 用 KIMI／GLM／coze／Trae／鲍勃 名头） |
 | **时点** | 2026-10-14 12:5x–13:3x（白班·PI 在岗时段） |
-| **触发令** | PI 2026-10-14 12:46 逐字：「`<filepath>D:/私人资料/GLM</filepath>` 如果说的是整包则不可复现，毕竟已掺入其他文件请勘误，此外请批量总结主会话mvs_bbeb804b1a6a41109be740636eed1709全历史上下文以对抗遗忘并制成备忘录」 |
+| **触发令** | PI 2026-10-14 12:46 逐字：「`<filepath>〔本地资料区〕/GLM</filepath>` 如果说的是整包则不可复现，毕竟已掺入其他文件请勘误，此外请批量总结主会话mvs_bbeb804b1a6a41109be740636eed1709全历史上下文以对抗遗忘并制成备忘录」 |
 | **件性质** | **取证汇总件 · 历史备忘录**；⛔ 非判定件 · ⛔ 非终判件 · ⛔ 非五终判之任一 · ⛔ 非毕判断件 |
 | **射程** | 只读汇总：⛔ 0 回改任何既有件一字（本棒触动既有件数 ＝ **0**）· ⛔ 0 移动／重命名／删除 · ⛔ 0 宣告任何项之闭 · ⛔ 0 宣告①毕 · ⛔ 0 代 PI 裁／释／择／确认／给值 · ⛔ 0 径行采认（一切推断与建议一律标「**候 PI 核准**」） |
 | **状态** | **已落盘 · 候 PI 核准** |
@@ -35,10 +35,10 @@
 
 | 项 | 值（本棒实测） |
 | :-- | :-- |
-| **现行面库** | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（`mode=ro` 只读 URI 打开，⛔ 0 写） |
+| **现行面库** | `〔本机用户目录〕\.minimax\v2\sqlite\runtime-state.sqlite`（`mode=ro` 只读 URI 打开，⛔ 0 写） |
 | **目标表** | `local_runtime_message_rows`（列：`id`／`session_id`／`msg_id`／`role`／`turn_id`／`created_at_ms`／`data_json`／`source`／`source_context_json`；`UNIQUE(session_id,msg_id)`） |
 | **会话标识** | `mvs_bbeb804b1a6a41109be740636eed1709`（`agent_name=mavis`／`session_type=branch`／`history_relative_dir=2026/09/01/02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5`） |
-| **备份面库** | `C:\Users\Administrator\.minimax\v2\sqlite\backups\runtime-state-before-v2-migration-1790692702937-….sqlite`（同表同会话） |
+| **备份面库** | `〔本机用户目录〕\.minimax\v2\sqlite\backups\runtime-state-before-v2-migration-1790692702937-….sqlite`（同表同会话） |
 | **兄弟面（同根库）** | `local_runtime_pi_history_rows`、`local_runtime_messages`、`local_runtime_background_tasks`、`questionnaire_requests`、`local_runtime_communication_messages` —— 均作交叉校验用，⛔ 0 写 |
 | **时间口径** | `created_at_ms`（epoch 毫秒）经本机时区换算，**一律记为 CST（UTC+8）** |
 
@@ -85,16 +85,16 @@
 | :-- | :-- |
 | **抽取源** | assistant 回执文本中「文件名 ↔ 12 位十六进制指纹」邻近共现（文件名正则 ＋ 上下文 ±1 行指纹正则） |
 | **抽取结果** | 918 个不同文件名（其中 254 个为 `2026_10_08`–`2026_10_14` 近日期件） |
-| **索引面** | `D:\私人资料\deposon-repo`、`D:\私人资料\deposon-sub` 两根 `os.walk` |
+| **索引面** | `_repo_mirror`、`_repo_mirror` 两根 `os.walk` |
 | **实测指纹** | `hashlib.sha256(file_bytes).hexdigest()[:12].upper()` ＋ `os.path.getsize` —— **⛔ 0 沿用他件自报值**，全部逐件复算 |
-| **遍历完整性** | 索引 3,329 件（两根）／阴性探查 43,117 件（含运行时附件面与 `D:\私人资料` 全树），**遍历错误 0** |
+| **遍历完整性** | 索引 3,329 件（两根）／阴性探查 43,117 件（含运行时附件面与 `〔本地资料区〕` 全树），**遍历错误 0** |
 
 ### §1-6 阴性结论之双通道方法（本件所有「0 命中」结论均遵此法）
 
 | 通道 | 仪器 | 检索根（含运行时附件面） |
 | :-- | :-- | :-- |
-| **A（文件名索引）** | Python `os.walk(..., onerror=…)` ＋ 子串（不区分大小写）匹配 | ①`deposon-repo` ②`deposon-sub` ③`.minimax\v2\assets`（**运行时附件面**）④`.minimax\v2\sessions` ⑤`D:\私人资料` 全树 |
-| **B（内容通道）** | Grep 工具全文检索同名串 | `D:\私人资料` 全域（含 `.tmp` 临时件面） |
+| **A（文件名索引）** | Python `os.walk(..., onerror=…)` ＋ 子串（不区分大小写）匹配 | ①`deposon-repo` ②`deposon-sub` ③`.minimax\v2\assets`（**运行时附件面**）④`.minimax\v2\sessions` ⑤`〔本地资料区〕` 全树 |
+| **B（内容通道）** | Grep 工具全文检索同名串 | `〔本地资料区〕` 全域（含 `.tmp` 临时件面） |
 | **C（运行时面核验）** | 承 `_unclosed_47_status_review_2026_10_14.md` 之教训：**凡阴性结论必含运行时附件面**，否则外推失效（见 §5-KD-4） |
 
 ---
@@ -203,9 +203,9 @@
 ### T13｜GLM 面：双轨论文委托、证据包、线索册与「整包不可复现」勘误（10-12 → 10-14）
 
 - **时段**：2026-10-12 13:36 → 10-14 12:46。
-- **事件要点**：GLM 论文委托 v0.6 派发（以 GitHub 为源）；内部真线索册（涵盖远端全文件、**永不上传**、V4 主线更正为含 LLM 教师而非仅 PI 教师）；线索册本地＋远端双版合一以供 coze/GLM；GLM 回函与证据包自解包脚本落地于 `D:\私人资料\GLM\`；PI 于 10-14 12:46 就「整包」口径下令勘误 —— 因 GLM 交付目录已掺入其他文件、整包不可复现。
+- **事件要点**：GLM 论文委托 v0.6 派发（以 GitHub 为源）；内部真线索册（涵盖远端全文件、**永不上传**、V4 主线更正为含 LLM 教师而非仅 PI 教师）；线索册本地＋远端双版合一以供 coze/GLM；GLM 回函与证据包自解包脚本落地于 `〔本地资料区〕\GLM\`；PI 于 10-14 12:46 就「整包」口径下令勘误 —— 因 GLM 交付目录已掺入其他文件、整包不可复现。
 - **PI 裁**（逐字）：「请精读三份受托交付，并据此更新线索侧为本地及远端双版合一以供coze与GLM使用并开GLM论文委托，Trea发现的问题也延后至⑤后论文侧回执时一并处置」【10-12 13:36】；「主代理直写内部真线索册以供含GLM的内部使用用不上传，涵盖远端全文件，且V4主线等更正为真实口径即包括LLM教师而不局限于PI教师」【10-12 14:12】；「远端面直接看github啊，LLM教师属敏感话题，文件开头请重申永不上传」【10-12 14:19】；「如果说的是整包则不可复现，毕竟已掺入其他文件请勘误」【10-14 12:46·本棒触发令之半】。
-- **产出件**：`D:\私人资料\GLM\_glm_dualtrack_paper_reply_2026_10_13.md`（`486A1DD8ADB1`，72,584 B；`letters/` 下同指纹副本）｜`D:\私人资料\GLM\_deposon_dualtrack_paper_evidence_pack_selfextract_2026_10_13.py`（`A48FD50D8247`，843,497 B）｜`results/_glm_evidence_pack_unpack_register_2026_10_13.md`（`5762BE8A68F8`）｜`_glm_delivery_face_disposition_register_2026_10_13.md`（`4D9F84D04CAE`）｜`_glm_crossface_item4_register_2026_10_13.md`（`2D8D5E8C58BE`）｜`_glm_commission_reply_request_2026_10_13.md`（`2992B3917050`）｜`_internal_true_clue_book_2026_10_12.md`（`355EA3C09461`，408,329 B）｜`_dualtrack_paper_clue_book_v0.6_local_remote_2026_10_12.md`（`8B2A6380EDF1`，81,707 B）｜`letters/_commission_glm_dualtrack_paper_v0.6_2026_10_12.md`（`6D1B14983555`）。
+- **产出件**：`〔本地资料区〕\GLM\_glm_dualtrack_paper_reply_2026_10_13.md`（`486A1DD8ADB1`，72,584 B；`letters/` 下同指纹副本）｜`〔本地资料区〕\GLM\_deposon_dualtrack_paper_evidence_pack_selfextract_2026_10_13.py`（`A48FD50D8247`，843,497 B）｜`results/_glm_evidence_pack_unpack_register_2026_10_13.md`（`5762BE8A68F8`）｜`_glm_delivery_face_disposition_register_2026_10_13.md`（`4D9F84D04CAE`）｜`_glm_crossface_item4_register_2026_10_13.md`（`2D8D5E8C58BE`）｜`_glm_commission_reply_request_2026_10_13.md`（`2992B3917050`）｜`_internal_true_clue_book_2026_10_12.md`（`355EA3C09461`，408,329 B）｜`_dualtrack_paper_clue_book_v0.6_local_remote_2026_10_12.md`（`8B2A6380EDF1`，81,707 B）｜`letters/_commission_glm_dualtrack_paper_v0.6_2026_10_12.md`（`6D1B14983555`）。
 - **遗留**：「整包不可复现」之勘误面（PI 12:46 同令之另半）尚未见对应勘误件 ⇒ 候 PI 核准之未闭面。
 
 ### T14｜夜间模式及其三度纠偏（10-11 → 10-14）
@@ -389,7 +389,7 @@
 
 ## §4 产出件总账（本棒逐件实测 · ⛔ 0 沿用他件自报值）
 
-> 指纹算法：`hashlib.sha256(file_bytes).hexdigest()[:12].upper()`；bytes ＝ `os.path.getsize`。检索面 ＝ `D:\私人资料\deposon-repo`、`D:\私人资料\deposon-sub`、`D:\私人资料\GLM`（`os.walk`，遍历错误 0）。共列 **95 件，全部为本棒逐件复算**（⛔ 0 沿用他件自报值）。
+> 指纹算法：`hashlib.sha256(file_bytes).hexdigest()[:12].upper()`；bytes ＝ `os.path.getsize`。检索面 ＝ `_repo_mirror`、`_repo_mirror`、`〔本地资料区〕\GLM`（`os.walk`，遍历错误 0）。共列 **95 件，全部为本棒逐件复算**（⛔ 0 沿用他件自报值）。
 
 ### 4-1 ①段收官启动与收尾卷（T8）
 
@@ -489,8 +489,8 @@
 | 件名 | SHA-12 | bytes |
 | :-- | :-: | --: |
 | `letters/_commission_glm_dualtrack_paper_v0.6_2026_10_12.md` | `6D1B14983555` | 56,360 |
-| `D:\私人资料\GLM\_glm_dualtrack_paper_reply_2026_10_13.md`（`letters/` 下同指纹副本） | `486A1DD8ADB1` | 72,584 |
-| `D:\私人资料\GLM\_deposon_dualtrack_paper_evidence_pack_selfextract_2026_10_13.py` | `A48FD50D8247` | 843,497 |
+| `〔本地资料区〕\GLM\_glm_dualtrack_paper_reply_2026_10_13.md`（`letters/` 下同指纹副本） | `486A1DD8ADB1` | 72,584 |
+| `〔本地资料区〕\GLM\_deposon_dualtrack_paper_evidence_pack_selfextract_2026_10_13.py` | `A48FD50D8247` | 843,497 |
 | `results/_glm_evidence_pack_unpack_register_2026_10_13.md` | `5762BE8A68F8` | 28,909 |
 | `results/_glm_delivery_face_disposition_register_2026_10_13.md` | `4D9F84D04CAE` | 16,662 |
 | `results/_glm_crossface_item4_register_2026_10_13.md` | `2D8D5E8C58BE` | 5,345 |
@@ -545,11 +545,11 @@
 | `results/_v3_v4_achievements_inventory_full_2026_10_09.md` | **0 命中**；实存 `results/_achievements_inventory_full_2026_10_09.md`（`DD3E9806A369`，372,318 B） |
 | `results/_v4_closeout_bucket_refresh_2026_10_09.md` | **0 命中**；实存 `results/_closeout_bucket_refresh_2026_10_09.md`（`688FBBC3AA6B`，28,851 B） |
 | `results/_pending_gaps_external_dispatch_en_2026_10_11.md` | **0 命中**；实存 `letters/_commission_pending_pi_gaps_closeout_EN_2026_10_11.md`（`0CE066E5EB3F`，22,685 B） |
-| `results/_glm_dualtrack_paper_reply_2026_10_13.md` | **0 命中**（在 repo/sub 面）；实存于 **`D:\私人资料\GLM\`**（`486A1DD8ADB1`，72,584 B） |
-| `results/_deposon_dualtrack_paper_evidence_pack_selfextract_2026_10_13.py` | **0 命中**（在 repo/sub 面）；实存于 **`D:\私人资料\GLM\`**（`A48FD50D8247`，843,497 B） |
+| `results/_glm_dualtrack_paper_reply_2026_10_13.md` | **0 命中**（在 repo/sub 面）；实存于 **`〔本地资料区〕\GLM\`**（`486A1DD8ADB1`，72,584 B） |
+| `results/_deposon_dualtrack_paper_evidence_pack_selfextract_2026_10_13.py` | **0 命中**（在 repo/sub 面）；实存于 **`〔本地资料区〕\GLM\`**（`A48FD50D8247`，843,497 B） |
 
-**方法**：通道 A（文件名索引 `os.walk` ＋ 不区分大小写子串，检索根含 `deposon-repo`／`deposon-sub`／`.minimax\v2\assets`（**运行时附件面**）／`.minimax\v2\sessions`／`D:\私人资料` 全树，**遍历错误 0**，累计 43,117 件）＋ 通道 B（Grep 内容通道，同名串全文检索 `D:\私人资料` 全域，34 文件含同名引用）。
-**结论口径**：上五项之「0 命中」**仅在声明检索根内成立**；因已含运行时附件面与 `D:\私人资料` 全树，故外推至 PI 所及范围为有效。⚠ **不得**据此推断「交付物遗失」——五项均已定位。
+**方法**：通道 A（文件名索引 `os.walk` ＋ 不区分大小写子串，检索根含 `deposon-repo`／`deposon-sub`／`.minimax\v2\assets`（**运行时附件面**）／`.minimax\v2\sessions`／`〔本地资料区〕` 全树，**遍历错误 0**，累计 43,117 件）＋ 通道 B（Grep 内容通道，同名串全文检索 `〔本地资料区〕` 全域，34 文件含同名引用）。
+**结论口径**：上五项之「0 命中」**仅在声明检索根内成立**；因已含运行时附件面与 `〔本地资料区〕` 全树，故外推至 PI 所及范围为有效。⚠ **不得**据此推断「交付物遗失」——五项均已定位。
 
 ### KD-3｜①段未闭项之当前态势（逐字回读源件）
 
@@ -564,7 +564,7 @@
 ### KD-4｜阴性外推之失效面（承前棒揭出之教训）
 
 `results/_unclosed_47_status_review_2026_10_14.md` 逐字载：`M-5` 之残余实体 `fd39cf811232` **已于运行时附件面在盘且三项登记值逐位相符** ⇒ 某件（`7a4b2695c1d5`）§4 之「0 可核地址」结论**之检索根不含运行时附件面**，其阴性在声明根内成立、但**结论外推已失效**。
-**本件遵行**：§5-KD-2 之阴性检索根已含运行时附件面（`.minimax\v2\assets`）并另行覆盖 `D:\私人资料` 全树。
+**本件遵行**：§5-KD-2 之阴性检索根已含运行时附件面（`.minimax\v2\assets`）并另行覆盖 `〔本地资料区〕` 全树。
 
 ### KD-5｜本棒通读度之边界（诚实声明）
 

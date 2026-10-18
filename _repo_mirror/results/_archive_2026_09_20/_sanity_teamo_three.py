@@ -12,7 +12,7 @@ for k in ('HTTP_PROXY','HTTPS_PROXY','http_proxy','https_proxy','ALL_PROXY','all
 os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:1018'
 os.environ['HTTP_PROXY']  = 'http://127.0.0.1:1018'
 
-raw = Path(r'C:\Users\Administrator\Desktop\AI\LLM API.txt').read_bytes()
+raw = Path(r'〔本机用户目录〕\Desktop\AI\LLM API.txt').read_bytes()
 text = ''
 for enc in ('utf-8','gbk','gb18030','utf-8-sig'):
     try: text = raw.decode(enc); break

@@ -5,7 +5,7 @@
 **署名**：`evidence-auditor`（⛔ 0 用 KIMI／GLM／coze／Trae／鲍勃 名头）
 **唯一依据**：派工单（复核两件血缘 KD 之编号面）＋ 前棒复验件 `results/_four_class_backtrace_inventory_2026_10_13_r1.md`（`1b28a9467567`）§6-1 ＋ 编号普查件 `results/_numbering_system_audit_and_definition_2026_10_13.md`（`47f20fa27a62`）＋ F5 专项 `results/_compound_numbering_census_2026_10_13.md`（`956d19e4e670`）
 **状态**：🔴 **草案·候 PI 核准**（§5 KD 与 §6 遗留皆在册未闭；⛔ 0 代裁、⛔ 0 代生效）
-**边界**：⛔ **0 回改／移动／重命名／删除任何既有件**（本棒对既有件之写动作 ＝ 0）｜⛔ **0 宣告①毕**｜⛔ 0 改终判词／阈值／门柱／判死线｜⛔ 0 赋 `k_v3s_4_4_*` 布尔｜⛔ 0 网络／0 上传／0 skill／0 LLM｜⛔ 0 读 `.env`／0 经手 PAT｜🔴 **0 触** `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录）｜`deposon-sub`、仓外 GLM 目录 未触
+**边界**：⛔ **0 回改／移动／重命名／删除任何既有件**（本棒对既有件之写动作 ＝ 0）｜⛔ **0 宣告①毕**｜⛔ 0 改终判词／阈值／门柱／判死线｜⛔ 0 赋 `k_v3s_4_4_*` 布尔｜⛔ 0 网络／0 上传／0 skill／0 LLM｜⛔ 0 读 `.env`／0 经手 PAT｜🔴 **0 触** `〔本地归档区〕`（0 读 0 写 0 列目录）｜`deposon-sub`、仓外 GLM 目录 未触
 
 > 📌 **元数据实测（本棒独立复算·非采信自报）**：`Get-FileHash` SHA-256 逐件复算，5 件 SHA-12 与登记值**逐件吻合**（见 §2-1）。
 

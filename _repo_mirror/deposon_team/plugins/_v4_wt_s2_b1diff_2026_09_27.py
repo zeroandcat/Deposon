@@ -2,7 +2,7 @@
 """_v4_wt_s2_b1diff — B1 修复面 diff：v3 原 executor vs r1 executor（只读）"""
 import difflib, hashlib, os
 
-REPO = r'D:\私人资料\deposon-repo'
+REPO = r'_repo_mirror'
 A = os.path.join(REPO, 'results', '_v4_pi_cot_v3_ruleset_v3_executor.py')
 B = os.path.join(REPO, 'results', '_v4_pi_cot_v3_ruleset_v3_executor_r1_2026_09_27.py')
 C = os.path.join(REPO, 'results', '_v4_pi_cot_v2_ruleset_v2_executor.py')

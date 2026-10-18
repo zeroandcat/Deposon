@@ -8,7 +8,7 @@ import difflib
 import hashlib
 from pathlib import Path
 
-BASE = Path(r"D:\私人资料\deposon-repo")
+BASE = Path(r"_repo_mirror")
 PLUG = BASE / "deposon_team" / "plugins"
 SRC = PLUG / "_p_d_b3_merkle_22caption_runner_v0_4_2026_10_09.py"
 

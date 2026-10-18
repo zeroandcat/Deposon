@@ -46,7 +46,7 @@
 
 ### §0.5 plan 对读（只读）
 
-- `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\artifacts\plan.md` **§9**（L115–L123）＝ parent 直记，与本件 L1 答文同源**无冲突**。
+- `〔本机用户目录〕\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\artifacts\plan.md` **§9**（L115–L123）＝ parent 直记，与本件 L1 答文同源**无冲突**。
 - ⚠️ plan §9 **只给要点**（Q3 列 ③④⑤⑩ 四要点、Q4 未展开 8 项全文）⇒ **逐项默认档全文以本件 §2 派工单转录为准**；两者**0 矛盾**（plan 为要点摘录，本件为全文转录，**不构成口径分叉**）。
 
 ---

@@ -1,6 +1,6 @@
 AI-use disclosure: This reply is AI-produced. Codex performed the reading, algebra, source retrieval, numerical checks, and drafting; three delegated Codex agents independently checked the mapping, cached papers, and local provenance. Their agreement is a check within this AI-assisted response, not independent human testimony.
 
-I have read all 415 lines of `D:\私人资料\deposon-repo\letters\_v5_rj5_external_rederive_request_EN_2026_09_28.md` in full (SHA-12 `498215a9ec7d`).
+I have read all 415 lines of `_repo_mirror\letters\_v5_rj5_external_rederive_request_EN_2026_09_28.md` in full (SHA-12 `498215a9ec7d`).
 
 **Reply to the R-J5 external re-derivation request — 2026-09-29**
 
@@ -27,7 +27,7 @@ The transverse-field matrix element also supplies a scalar prefactor, derived be
 
 Q1 is answered by the derivation below. For Q2 I verify a readable, relevant mapping in the already-cached Xiong–Wang paper, including its previously unreadable Eq. (2); I do **not** recover a verified original source for the incorrectly identified finite-temperature quantum line. For Q3 the trace reaches a documented internal implementation choice, but no named original proposer or external school of convention can be established.
 
-All repository-relative paths below resolve against `D:\私人资料\deposon-repo\`. Companion paths resolve against `C:\Users\Administrator\codex-workspace\rj5_reply_2026_09_29\`. SHA-12 means the first twelve lowercase hexadecimal characters of SHA-256 over the actual file bytes. Text line numbers count LF-delimited lines from 1. PDFs are cited by page/equation and by a companion extraction with its own hash and line range. Quotations reproduce source wording; displayed equations are mathematical transcriptions, not claims of byte-identical PDF text.
+All repository-relative paths below resolve against `_repo_mirror\`. Companion paths resolve against `〔本机用户目录〕\codex-workspace\rj5_reply_2026_09_29\`. SHA-12 means the first twelve lowercase hexadecimal characters of SHA-256 over the actual file bytes. Text line numbers count LF-delimited lines from 1. PDFs are cited by page/equation and by a companion extraction with its own hash and line range. Quotations reproduce source wording; displayed equations are mathematical transcriptions, not claims of byte-identical PDF text.
 
 **Q1. The complete transverse-field matrix-element calculation.** Take
 
@@ -106,7 +106,7 @@ K_s\sum_{i,t}s_{i,t}s_{i+1,t}
 
 The trace imposes \(s_{i,M+1}=s_{i,1}\); spatial boundaries may be periodic or open, consistently with \(H\). Equation (R7), including \(C^{NM}\), is an exact representation of \(Z_M\). The prefactor is essential for recovering the partition function and free energy. At \(b=0\), take the limit of (R4): off-diagonal entries vanish and equal-spin entries become 1. Separately substituting \(C=0\) and \(K_\tau=\infty\) would obscure this regular matrix limit.
 
-If imaginary time is measured in physical time units, \(\epsilon=\Delta\tau_{\rm physical}/\hbar\) and \(\Delta\tau_{\rm physical}=\hbar\beta/M\). This accounts for the slice spacing completely. There is no Jordan–Wigner string or unexplained factor of \(\pi\) in (R2)–(R7). Jordan–Wigner fermionization serves a different purpose: diagonalizing the quantum chain. Thus the proposed mechanism in [the request](D:/私人资料/deposon-repo/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:99), SHA-12 `498215a9ec7d`, lines 99–107, is mathematically mistaken.
+If imaginary time is measured in physical time units, \(\epsilon=\Delta\tau_{\rm physical}/\hbar\) and \(\Delta\tau_{\rm physical}=\hbar\beta/M\). This accounts for the slice spacing completely. There is no Jordan–Wigner string or unexplained factor of \(\pi\) in (R2)–(R7). Jordan–Wigner fermionization serves a different purpose: diagonalizing the quantum chain. Thus the proposed mechanism in [the request](_repo_mirror/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:99), SHA-12 `498215a9ec7d`, lines 99–107, is mathematically mistaken.
 
 **What happens to the classical critical equation.** For the ferromagnetic square-lattice Ising model on the infinite plane, use the exact classical critical condition
 
@@ -115,7 +115,7 @@ If imaginary time is measured in physical time units, \(\epsilon=\Delta\tau_{\rm
 \tag{R8}
 \]
 
-This is the classical input already distinguished in [the request](D:/私人资料/deposon-repo/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:44), SHA-12 `498215a9ec7d`, lines 44–63. I am not claiming to have newly retrieved its original historical publication. Duality gives its fixed locus; identifying that locus as the physical transition also uses the properties of this ferromagnetic square-lattice model. A numerical check of a duality identity alone is not a proof of criticality for arbitrary models.
+This is the classical input already distinguished in [the request](_repo_mirror/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:44), SHA-12 `498215a9ec7d`, lines 44–63. I am not claiming to have newly retrieved its original historical publication. Duality gives its fixed locus; identifying that locus as the physical transition also uses the properties of this ferromagnetic square-lattice model. A numerical check of a duality identity alone is not a proof of criticality for arbitrary models.
 
 Using (R6), every step of the substitution is
 
@@ -172,7 +172,7 @@ r_\Gamma=\frac{\log\coth(\beta c_T/(2M))}{2\beta c_T}.
 
 These are functions of the specified slice construction and parameters, not a universal equal pair \((1/2,1/2)\) or \((1,1)\). Alternatively, an author may define a linear field argument \(\Gamma=\epsilon b\). In that notation the mapped condition is \(\sinh(2K_s)=\sinh(2\Gamma)\), rather than the product equation. The name “dimensionless transverse field” alone does not establish which object is meant.
 
-The symmetry claim R in [the request](D:/私人资料/deposon-repo/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:128), SHA-12 `498215a9ec7d`, lines 128–136, consequently does not hold. Quantum self-duality exchanges the Pauli coefficients \(a,b\). Their maps into classical spatial and temporal bonds are different functions. At \(a=b\),
+The symmetry claim R in [the request](_repo_mirror/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:128), SHA-12 `498215a9ec7d`, lines 128–136, consequently does not hold. Quantum self-duality exchanges the Pauli coefficients \(a,b\). Their maps into classical spatial and temporal bonds are different functions. At \(a=b\),
 
 \[
 K_\tau=K_s^*,\qquad K_s^*=\tfrac12\log\coth K_s,
@@ -180,7 +180,7 @@ K_\tau=K_s^*,\qquad K_s^*=\tfrac12\log\coth K_s,
 
 which does not require \(K_s=K_\tau\). For \(\epsilon a=\epsilon b=0.1\), the two couplings are \(0.1\) and approximately \(1.15295533517606\), while their sinh product is 1. This is a concrete counterexample to the proposed equal-factor inference, without violating self-duality.
 
-**Application to the exact declaration on disk.** [The executor](D:/私人资料/deposon-repo/results/_v3_recheck_12_executor_2026_09_27.py:124), SHA-12 `4850b1cbb010`, lines 124–125, declares
+**Application to the exact declaration on disk.** [The executor](_repo_mirror/results/_v3_recheck_12_executor_2026_09_27.py:124), SHA-12 `4850b1cbb010`, lines 124–125, declares
 
 \[
 H=-\frac J4\sum\sigma^z_i\sigma^z_{i+1}-\frac h4\sum\sigma_i^x,
@@ -199,7 +199,7 @@ K_\tau=\tfrac12\log\coth(\Gamma/M)
 
 The zero-temperature equality is \(h_c/4=J/4\), hence \(h_c=J\). The invalid step is identifying the executor's \(K,\Gamma\) directly with both classical couplings in (R8). No reinterpretation of an overall factor of two repairs that identification. In spin-half notation the declared Hamiltonian becomes \(-J\sum S^zS^z-(h/2)\sum S^x\); it is not \(-J\sum S^zS^z-h\sum S^x\). Consequently, invoking “spin-half convention” alone cannot explain its equal quarter factors as a particular established convention.
 
-**Q2. What the verified papers actually provide.** Gang Xiong and X. R. Wang, *A direct calculation of critical exponents of two-dimensional anisotropic Ising model*, arXiv:cond-mat/0512369v2, contains a relevant mapping on **PDF page 1**, Eqs. **(2)–(4)**. The cached PDF is `D:\私人资料\deposon-repo\.scratch_gamma_r1\raw\p4.pdf`, SHA-12 `a35361b1dccc`. A new download from `https://arxiv.org/pdf/cond-mat/0512369` is byte-identical and saved as `xiong_wang_retrieved.pdf`. I read the full extraction and visually checked page 1.
+**Q2. What the verified papers actually provide.** Gang Xiong and X. R. Wang, *A direct calculation of critical exponents of two-dimensional anisotropic Ising model*, arXiv:cond-mat/0512369v2, contains a relevant mapping on **PDF page 1**, Eqs. **(2)–(4)**. The cached PDF is `_repo_mirror\.scratch_gamma_r1\raw\p4.pdf`, SHA-12 `a35361b1dccc`. A new download from `https://arxiv.org/pdf/cond-mat/0512369` is byte-identical and saved as `xiong_wang_retrieved.pdf`. I read the full extraction and visually checked page 1.
 
 Its Eq. (2), recovered by fresh extraction and checked on the rendered page, reads
 
@@ -216,7 +216,7 @@ Its Eqs. (3) and (4) are
 \hat H=-J\sum_n\hat\sigma_n^x\hat\sigma_{n+1}^x-h\sum_n\hat\sigma_n^z.
 \]
 
-The paper explicitly says the operators “are standard Pauli operators on site” followed by \(n\), and identifies “the equilibrium state of 2D IM vs. the ground state of 1D TFIM”. Citation: [p4_pypdf.txt](C:/Users/Administrator/codex-workspace/rj5_reply_2026_09_29/p4_pypdf.txt:49), SHA-12 `fa95b7b4f6f6`, lines 49–86; original PDF page 1, Eqs. (2)–(4) and accompanying text.
+The paper explicitly says the operators “are standard Pauli operators on site” followed by \(n\), and identifies “the equilibrium state of 2D IM vs. the ground state of 1D TFIM”. Citation: [p4_pypdf.txt](〔本机用户目录〕/codex-workspace/rj5_reply_2026_09_29/p4_pypdf.txt:49), SHA-12 `fa95b7b4f6f6`, lines 49–86; original PDF page 1, Eqs. (2)–(4) and accompanying text.
 
 The algebraic interpretation is mine: putting \(K_x=J_x/(k_BT)\) and \(K_y=J_y/(k_BT)\), their Eq. (2) gives \(K_x=\tau J\) and \(e^{-2K_y}=\tau h\). Thus \(K_y=-\frac12\log(\tau h)\) in their limiting parametrization. This agrees with the leading small-slice behavior of (R6), since \(\coth x\sim1/x\). **Their equation is an asymptotic mapping, not a quotation of the exact finite-slice coth identity.** Their \(T\) here belongs to the classical model. It is not being asserted to be the quantum chain's physical temperature.
 
@@ -225,9 +225,9 @@ On **PDF page 2**, Eqs. **(11)–(12)** give \(t=h/|J|\) and \(\Delta E=2|J||t-1
 > Thus the critical point of the ground-state CPT of the
 > 1D TFIM is at t = tc = 1 where ∆ E vanishes.
 
-Citation: [p4_pypdf.txt](C:/Users/Administrator/codex-workspace/rj5_reply_2026_09_29/p4_pypdf.txt:165), SHA-12 `fa95b7b4f6f6`, lines 165–171; original PDF SHA-12 `a35361b1dccc`, page 2. This is explicit evidence for the **ground-state** critical ratio. On page 3 the authors also state that the approximation in Eq. (3) is valid only in the extremely anisotropic limit: same extraction, SHA-12 `fa95b7b4f6f6`, lines 347–354. Its page-3 references identify Fradkin–Susskind, *Phys. Rev. D* **17**, 2637 (1978), and Suzuki, *Prog. Theor. Phys.* **56**, 1454 (1976): same extraction, lines 375–376. I verified those reference entries, not the equations or historical priority of the cited originals.
+Citation: [p4_pypdf.txt](〔本机用户目录〕/codex-workspace/rj5_reply_2026_09_29/p4_pypdf.txt:165), SHA-12 `fa95b7b4f6f6`, lines 165–171; original PDF SHA-12 `a35361b1dccc`, page 2. This is explicit evidence for the **ground-state** critical ratio. On page 3 the authors also state that the approximation in Eq. (3) is valid only in the extremely anisotropic limit: same extraction, SHA-12 `fa95b7b4f6f6`, lines 347–354. Its page-3 references identify Fradkin–Susskind, *Phys. Rev. D* **17**, 2637 (1978), and Suzuki, *Prog. Theor. Phys.* **56**, 1454 (1976): same extraction, lines 375–376. I verified those reference entries, not the equations or historical priority of the cited originals.
 
-The request locates its unreadable Eq. (2) “on the same page” as Eqs. (10)–(12). In the verified PDF, **Eq. (2) is on page 1; Eqs. (10)–(12) are on page 2**. Citation to the request's statement: [letter](D:/私人资料/deposon-repo/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:160), SHA-12 `498215a9ec7d`, lines 160–165. This is a page-reference correction; the letter did properly disclose its extraction failure.
+The request locates its unreadable Eq. (2) “on the same page” as Eqs. (10)–(12). In the verified PDF, **Eq. (2) is on page 1; Eqs. (10)–(12) are on page 2**. Citation to the request's statement: [letter](_repo_mirror/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:160), SHA-12 `498215a9ec7d`, lines 160–165. This is a page-reference correction; the letter did properly disclose its extraction failure.
 
 A second verified source exposes a more consequential reading error. Jian Ma, Lei Xu, and Xiaoguang Wang, *Reduced fidelity susceptibility in the one-dimensional transverse field Ising model*, arXiv:0808.1816v1, **PDF page 2, Eq. (5)**, writes
 
@@ -235,9 +235,9 @@ A second verified source exposes a more consequential reading error. Jian Ma, Le
 H_I=-\sum_{j=-M}^{M}\left[\lambda\sigma_j^x\sigma_{j+1}^x+\sigma_j^z\right].
 \]
 
-Its prose states that \(\lambda\) is the “Ising coupling constant in units of the transverse ﬁeld,” and that “The total spins are N = 2 M + 1”. The PDF is `D:\私人资料\deposon-repo\.scratch_gamma_r1\raw\p3.pdf`, SHA-12 `e377d6ef2afe`; the full fresh extraction is [p3_pypdf.txt](C:/Users/Administrator/codex-workspace/rj5_reply_2026_09_29/p3_pypdf.txt:120), SHA-12 `99c6a5511710`, lines 120–144. The equation was visually checked on page 2.
+Its prose states that \(\lambda\) is the “Ising coupling constant in units of the transverse ﬁeld,” and that “The total spins are N = 2 M + 1”. The PDF is `_repo_mirror\.scratch_gamma_r1\raw\p3.pdf`, SHA-12 `e377d6ef2afe`; the full fresh extraction is [p3_pypdf.txt](〔本机用户目录〕/codex-workspace/rj5_reply_2026_09_29/p3_pypdf.txt:120), SHA-12 `99c6a5511710`, lines 120–144. The equation was visually checked on page 2.
 
-Therefore \(M\) is a summation bound, and the displayed interaction/field coefficients are \(\lambda\) and 1. Restoring a field energy scale \(b\) gives \(a=b\lambda\), so \(\lambda=a/b\). By contrast, [the internal S2 record](D:/私人资料/deposon-repo/results/_v4_gamma_r1_sources_20260928_S2.md:32), SHA-12 `dcec110ca2e0`, line 32, writes an overall `-M Σ`, assigns `c_ferro=M`, `c_trans=M·λ`, and reverses the ratio. [The request](D:/私人资料/deposon-repo/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:154), SHA-12 `498215a9ec7d`, lines 154–158, quotes the correct definition and then repeats the reversed gloss. Those statements contradict the primary PDF. The narrower conclusion that Ma–Xu–Wang supplies no definition of the two classical couplings sought here remains sound. Its \(K(k)\) is a complete elliptic integral, not \(K_s\): extraction SHA-12 `99c6a5511710`, lines 439–467, PDF page 4, Eq. (21) and following text.
+Therefore \(M\) is a summation bound, and the displayed interaction/field coefficients are \(\lambda\) and 1. Restoring a field energy scale \(b\) gives \(a=b\lambda\), so \(\lambda=a/b\). By contrast, [the internal S2 record](_repo_mirror/results/_v4_gamma_r1_sources_20260928_S2.md:32), SHA-12 `dcec110ca2e0`, line 32, writes an overall `-M Σ`, assigns `c_ferro=M`, `c_trans=M·λ`, and reverses the ratio. [The request](_repo_mirror/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:154), SHA-12 `498215a9ec7d`, lines 154–158, quotes the correct definition and then repeats the reversed gloss. Those statements contradict the primary PDF. The narrower conclusion that Ma–Xu–Wang supplies no definition of the two classical couplings sought here remains sound. Its \(K(k)\) is a complete elliptic integral, not \(K_s\): extraction SHA-12 `99c6a5511710`, lines 439–467, PDF page 4, Eq. (21) and following text.
 
 Both cached papers have inconsistent visible dating: Xiong–Wang's sidebar says 4 February 2006 while its interior says “Draft on November 8, 2018”; Ma–Xu–Wang's sidebar says 13 August 2008 while its interior says “October 31, 2018”. These strings are present in their fresh extractions, respective SHA-12 values `fa95b7b4f6f6` and `99c6a5511710`, lines 1–7. I use the visible arXiv version identifiers and byte fingerprints without resolving that date discrepancy by guesswork.
 
@@ -258,11 +258,11 @@ The actual retrieval channels used here were:
 | Semantic Scholar DOI records for Pfeuty and Suzuki | HTTP 200 metadata; Pfeuty record has no PDF URL; Suzuki record supplies a precise publisher PDF URL | Bibliographic leads only |
 | Suzuki publisher PDF URL supplied by Semantic Scholar | Command did not execute: automatic approval review timed out, including the tool-permitted single retry | No HTTP result; no claim that the publisher URL itself failed |
 
-The additional delegated attempts, including exact URLs and the distinction between HTTP errors and an approval timeout, are recorded in [original_source_retrieval_ledger.txt](C:/Users/Administrator/codex-workspace/rj5_reply_2026_09_29/original_source_retrieval_ledger.txt:5), SHA-12 `2767290b9258`, lines 5–20. The timeout was not a safety rejection. The unexecuted publisher URL was `https://academic.oup.com/ptp/article-pdf/56/5/1454/5264429/56-5-1454.pdf`.
+The additional delegated attempts, including exact URLs and the distinction between HTTP errors and an approval timeout, are recorded in [original_source_retrieval_ledger.txt](〔本机用户目录〕/codex-workspace/rj5_reply_2026_09_29/original_source_retrieval_ledger.txt:5), SHA-12 `2767290b9258`, lines 5–20. The timeout was not a safety rejection. The unexecuted publisher URL was `https://academic.oup.com/ptp/article-pdf/56/5/1454/5264429/56-5-1454.pdf`.
 
-Pfeuty's full bibliographic citation and the book information are carried from [the request](D:/私人资料/deposon-repo/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:248), SHA-12 `498215a9ec7d`, lines 248–257; the new metadata corroborates Pfeuty's title and year only. For the requested equation in these originals, verified page = `null`, verified equation number = `null`, verified quotation = `null`. I have not independently verified their body text. The earlier repository search ledger is not presented as work performed by this response.
+Pfeuty's full bibliographic citation and the book information are carried from [the request](_repo_mirror/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:248), SHA-12 `498215a9ec7d`, lines 248–257; the new metadata corroborates Pfeuty's title and year only. For the requested equation in these originals, verified page = `null`, verified equation number = `null`, verified quotation = `null`. I have not independently verified their body text. The earlier repository search ledger is not presented as work performed by this response.
 
-**Q3. The attributable local source and the remaining authorship gap.** The directly located declaration is the `TFIM_CONVENTION` constant in [the executor](D:/私人资料/deposon-repo/results/_v3_recheck_12_executor_2026_09_27.py:124), SHA-12 `4850b1cbb010`, lines 124–125. Verbatim:
+**Q3. The attributable local source and the remaining authorship gap.** The directly located declaration is the `TFIM_CONVENTION` constant in [the executor](_repo_mirror/results/_v3_recheck_12_executor_2026_09_27.py:124), SHA-12 `4850b1cbb010`, lines 124–125. Verbatim:
 
 ```python
 TFIM_CONVENTION = ("H = -(J/4) Σ_i σ^z_i σ^z_{i+1} - (h/4) Σ_i σ^x_i；"
@@ -271,25 +271,25 @@ TFIM_CONVENTION = ("H = -(J/4) Σ_i σ^z_i σ^z_{i+1} - (h/4) Σ_i σ^x_i；"
 
 The immediately preceding lines 114–122 retire a failed 2×2 degeneracy derivation, then assert a replacement “standard” sinh-product condition without identifying a paper. Lines 128–148 implement its residual and closed-form solution. Their agreement tests the algebra of that asserted equation; it does not establish the physical mapping from \(H\) to that equation.
 
-[The accompanying rescript](D:/私人资料/deposon-repo/results/_v3_recheck_12_rescript_2026_09_27.md:56), SHA-12 `1cd36ac1b2c0`, lines 56–60, repeats the convention. Its line 200 explicitly begins:
+[The accompanying rescript](_repo_mirror/results/_v3_recheck_12_rescript_2026_09_27.md:56), SHA-12 `1cd36ac1b2c0`, lines 56–60, repeats the convention. Its line 200 explicitly begins:
 
 > **worker 落地选择（口径/实现量，非阈值）**：临界条件约定、
 
 That is an explicit declaration that the critical-condition convention is an internal worker implementation choice. Line 212 signs the artifact “Mavis 团队 worker 出件｜2026-09-27”. This identifies the document's stated role attribution, not an independently verified person or agent as the first proposer.
 
-[The upstream plugin](D:/私人资料/deposon-repo/deposon_team/plugins/boss_pc_2_transverse_field_ising.py:12), SHA-12 `210105a7f29a`, line 12, uses \(H=-J\sum\sigma^z\sigma^z-h\sum\sigma^x\), without quarter factors. Its line 30 states:
+[The upstream plugin](_repo_mirror/deposon_team/plugins/boss_pc_2_transverse_field_ising.py:12), SHA-12 `210105a7f29a`, line 12, uses \(H=-J\sum\sigma^z\sigma^z-h\sum\sigma^x\), without quarter factors. Its line 30 states:
 
 ```python
 PFEUTY_H_C_OVER_J = 1.0  # 1D chain Pfeuty 严格解 h_c/J = 1
 ```
 
-The full plugin contains no equal-quarter declaration. It supports the local presence of that ratio constant and its Pfeuty attribution; it does not supply the provenance of the executor's triple. [The earlier provenance document](D:/私人资料/deposon-repo/results/_v3_recheck_12_rj5_provenance_2026_09_27.md:74), SHA-12 `20f15c49feb5`, lines 74–82, explicitly labels the textbook layer “无出处” and “仍无出处”. Its lines 94–106 introduce the half-factor alternative as an unverified conditional premise, not a recovered literature convention.
+The full plugin contains no equal-quarter declaration. It supports the local presence of that ratio constant and its Pfeuty attribution; it does not supply the provenance of the executor's triple. [The earlier provenance document](_repo_mirror/results/_v3_recheck_12_rj5_provenance_2026_09_27.md:74), SHA-12 `20f15c49feb5`, lines 74–82, explicitly labels the textbook layer “无出处” and “仍无出处”. Its lines 94–106 introduce the half-factor alternative as an unverified conditional premise, not a recovered literature convention.
 
 The local provenance search used `rg` over the repository, including a pass over hidden and ignored paths, for `TFIM_CONVENTION`, spacing variants of `βJ/4`, `βh/4`, quarter-factor Hamiltonians, and Latin `beta…J…4` variants. It excluded `.git`, PDFs, JSONL, environment/credential files, lockfiles, and `node_modules`; relevant cached PDFs were read separately. Matches led to the 2026-09-27 executor/rescript/result/provenance group and later reports, letters, and verification scripts. The inspected checkout exposes no Git history. A text search cannot establish original authorship, rule out excluded archives or conversations, or order same-day declarations reliably.
 
 **Cannot be found:** no verified external proposer, paper, community, or school of convention for the complete triple was located. The strongest supported attribution is an internal, self-described worker implementation choice in the inspected 2026-09-27 artifacts. Named original authorship and earlier external provenance remain unknown. Converting between Pauli and spin-half notation demonstrates mathematical equivalence of Hamiltonian parametrizations; it does not identify who chose one or where they obtained it.
 
-**Other corrections that affect the stated question.** The finite-size pinned-spin gap ratios in [the request](D:/私人资料/deposon-repo/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:67), SHA-12 `498215a9ec7d`, lines 67–93, are numerical support for the expected critical ratio; by themselves they are not an exact proof. Restricting a spin changes the boundary Hamiltonian, and two small sizes do not supply a controlled thermodynamic extrapolation. This does not challenge the correctly stated ground-state ratio \(h_c/J=1\). The displayed chain `h_c = c_ferro = J` at the same file's line 284 is inconsistent with its own `c_ferro = J/4`; the consistent equation is \(h_c/4=J/4\).
+**Other corrections that affect the stated question.** The finite-size pinned-spin gap ratios in [the request](_repo_mirror/letters/_v5_rj5_external_rederive_request_EN_2026_09_28.md:67), SHA-12 `498215a9ec7d`, lines 67–93, are numerical support for the expected critical ratio; by themselves they are not an exact proof. Restricting a spin changes the boundary Hamiltonian, and two small sizes do not supply a controlled thermodynamic extrapolation. This does not challenge the correctly stated ground-state ratio \(h_c/J=1\). The displayed chain `h_c = c_ferro = J` at the same file's line 284 is inconsistent with its own `c_ferro = J/4`; the consistent equation is \(h_c/4=J/4\).
 
 I have not independently verified the original `Deposon_凝子_统一场论研究报告_v1.pdf`; there is no located original PDF artifact in the searches reported to this response. The letter itself discloses this missing entity at lines 220–222, SHA-12 `498215a9ec7d`. An inherited text extraction is not independent verification of the missing PDF. Any dimensional inference about its `Gamma_aether` is conditional on the quoted denominator being faithful; that symbol cannot simply be substituted for a classical Ising coupling.
 

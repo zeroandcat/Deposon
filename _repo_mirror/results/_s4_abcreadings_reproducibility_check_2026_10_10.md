@@ -277,7 +277,7 @@
 - **复算脚本**（只读留痕 · ⛔ 0 删除）：`.tmp/_abc_readings_reprocheck_2026_10_10.py` 等 5 件
 - **读数锚**：`a7aa4e9c8d47` 臂①（`a7aa4e9c8d47` `arms.arm1_keep_baseline12`）｜`73550514152d` §2.1／§2.3（面构造口径）｜`8a81d90c69ba`（executor）｜`6a670e629dca`（冻结留出集）
 - **对拍对象**：`840fbf08caf4` §2（仪器自审）＋ `586c435d1f15`（D-05 读数件）
-- **执行方法之复现命令**：`C:\Python314\python.exe .tmp/_abc_readings_reprocheck_2026_10_10.py` → `.tmp/_abc_diff_2026_10_10.py` → `.tmp/_abc_h1h2_2026_10_10.py` → `.tmp/_abc_rfd_2026_10_10.py` → `.tmp/_abc_final_2026_10_10.py`
+- **执行方法之复现命令**：`〔本机路径〕\Python314\python.exe .tmp/_abc_readings_reprocheck_2026_10_10.py` → `.tmp/_abc_diff_2026_10_10.py` → `.tmp/_abc_h1h2_2026_10_10.py` → `.tmp/_abc_rfd_2026_10_10.py` → `.tmp/_abc_final_2026_10_10.py`
 
 ---
 

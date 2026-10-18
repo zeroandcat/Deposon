@@ -3,12 +3,12 @@
 import hashlib, os, re
 from datetime import datetime
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_repo_mirror')
 B0 = datetime(2026,9,27,20,28,20).timestamp()
 EXCL = ('.evidence_backup_2026_09_28', '.evidence_backup_2026_09_30', '_movedout_scratch_2026_09_30')
 def sha12(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12]
 
-com = Path(r'D:\私人资料\deposon-repo\letters\TRAE_WALKTHROUGH_BUGFIX_AUDIT_REQUEST_2026_09_30.md').read_text(encoding='utf-8')
+com = Path(r'_repo_mirror\letters\TRAE_WALKTHROUGH_BUGFIX_AUDIT_REQUEST_2026_09_30.md').read_text(encoding='utf-8')
 rows = re.findall(r'\|\s*\d+\s*\|\s*`([^`]+)`\s*\|\s*(\d+)\s*\|', com)
 def norm2(p):
     p = p.replace('\\','/').lower()
@@ -18,7 +18,7 @@ def norm2(p):
 comm = {norm2(r[0]): int(r[1]) for r in rows}
 
 mine = {}
-for area, strip in ((r'D:\私人资料\deposon-repo', 'deposon-repo'), (r'D:\私人资料\deposon-sub', 'deposon-sub'), (r'D:\私人资料\_non_upload_local_archive', '_non_upload_local_archive')):
+for area, strip in ((r'_repo_mirror', 'deposon-repo'), (r'_repo_mirror', 'deposon-sub'), (r'〔本地归档区〕', '_non_upload_local_archive')):
     for dp, dns, fns in os.walk(area):
         dns[:] = [d for d in dns if d not in {'__pycache__','.git','.trae','.mavis'}]
         if any(x in dp for x in EXCL): continue
@@ -27,7 +27,7 @@ for area, strip in ((r'D:\私人资料\deposon-repo', 'deposon-repo'), (r'D:\私
             try: st = os.stat(q)
             except OSError: continue
             if st.st_mtime > B0:
-                key = norm2(q.replace('D:\\私人资料\\' + strip + '\\', ''))
+                key = norm2(q.replace('〔本地资料区〕\\' + strip + '\\', ''))
                 mine[key] = st.st_size
 
 only_mine = sorted(k for k in mine if k not in comm)

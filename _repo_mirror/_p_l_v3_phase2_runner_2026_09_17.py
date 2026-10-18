@@ -25,11 +25,11 @@ def log(msg):
     print(line, flush=True)
     _log_lines.append(line)
 
-DEPOSON_ROOT = Path(r'D:\私人资料\deposon-repo')
+DEPOSON_ROOT = Path(r'_repo_mirror')
 RESULTS_DIR = DEPOSON_ROOT / 'results'
 
 # 输入资产 (只读)
-KEY_FILE = Path(r'C:\Users\Administrator\Desktop\AI\LLM API.txt')
+KEY_FILE = Path(r'〔本机用户目录〕\Desktop\AI\LLM API.txt')
 BASELINE_JSON = RESULTS_DIR / 'deposon_volcengine_seed_code_30cells_2026_09_10.json'
 PHYS60_JSON = RESULTS_DIR / 'deposon_v3_physical_opt_60cells_2026_09_11.json'
 WORKER_C_JSON = RESULTS_DIR / '_v3x_p_l_v3_mistral_large_2512_20260917_115049.json'

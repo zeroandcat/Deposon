@@ -158,7 +158,7 @@ manifest 逐字、baseline 锚 JSON 逐字、64 组合重建实测、`.git` 存�
 ⑤ ⛔ **0 冒充封闭**（「不知在册」标记逐项保留）｜
 ⑥ ⛔ **0 新增判词／0 改判词／0 改终判词·阈值·门柱**｜
 ⑦ ⛔ **0 赋**任一 `k_v3s_4_4_*` 布尔｜
-⑧ ⛔ **0 触** `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录）｜
+⑧ ⛔ **0 触** `〔本地归档区〕`（0 读 0 写 0 列目录）｜
 ⑨ ⛔ **0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜
 ⑩ ⛔ **0 触碰他棒产物**（未写 `_itemH_fingerprint_provenance_*`／`_trae_issues_batch3_*`／`_gate1_*`／`_d9_*`／`_degradation_*`／`_pi_batch_rulings_*`／`letters/` 面）。
 

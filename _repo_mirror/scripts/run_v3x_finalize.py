@@ -24,8 +24,8 @@ PARTIAL_RESULTS = [
 ]
 
 # Load question texts
-gsm = json.load(open(r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_gsm8k_details.json', encoding='utf-8'))
-strat = json.load(open(r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_strategyqa_details.json', encoding='utf-8'))
+gsm = json.load(open(r'_repo_mirror\results\deposon_benchmark_v1_4_gsm8k_details.json', encoding='utf-8'))
+strat = json.load(open(r'_repo_mirror\results\deposon_benchmark_v1_4_strategyqa_details.json', encoding='utf-8'))
 
 # Build results
 cells = []
@@ -125,7 +125,7 @@ out = {
     'not_run_count': 30 - total_run,
     'verdict_partial': 'GRAY (8/10 on run GSM8K cells, model hung on 2/10; StrategyQA not run)',
 }
-OUT = r'D:\私人资料\deposon-repo\results\deposon_v3x_6way_stage3_2026_09_10.json'
+OUT = r'_repo_mirror\results\deposon_v3x_6way_stage3_2026_09_10.json'
 with open(OUT, 'w', encoding='utf-8') as f:
     json.dump(out, f, ensure_ascii=False, indent=2)
 print(f"\n[OK] Stage 3 (partial) saved: {OUT} ({os.path.getsize(OUT)} bytes)")

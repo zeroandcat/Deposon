@@ -9,8 +9,8 @@ deposon V2 阶段 5 (F-5 D 路径三模态守恒复算)
 import os, sys, json, time, hashlib
 import numpy as np
 
-DPATH_REF = r'D:\私人资料\deposon-repo\results\deposon_dpath_cross_modal_2026_09_10.json'
-OUTPUT_JSON = r'D:\私人资料\deposon-repo\results\deposon_v2_phase5_f5_2026_09_11.json'
+DPATH_REF = r'_repo_mirror\results\deposon_dpath_cross_modal_2026_09_10.json'
+OUTPUT_JSON = r'_repo_mirror\results\deposon_v2_phase5_f5_2026_09_11.json'
 
 LOG_LINES = []
 def log(msg):
@@ -21,7 +21,7 @@ def log(msg):
 
 def main():
     # 锚校验
-    anchor_path = r'D:\私人资料\deposon-repo\verifier\handoff\KT_ABC1_anchors_sha256_12.json'
+    anchor_path = r'_repo_mirror\verifier\handoff\KT_ABC1_anchors_sha256_12.json'
     anchor_sha = hashlib.sha256(open(anchor_path, 'rb').read()).hexdigest()[:12]
     assert anchor_sha == '03c6c01f3697', f'5 锚 SHA 变: {anchor_sha}'
     log(f'ANCHOR_OK SHA-12={anchor_sha}')

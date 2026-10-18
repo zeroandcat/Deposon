@@ -13,7 +13,7 @@ import zlib
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-sys.path.insert(0, 'D:/私人资料/deposon-repo/results')
+sys.path.insert(0, '_repo_mirror/results')
 from _v4_supp_l14_n11full_executor import (
     read_api_key, call_chat, ROUTES,
     unset_proxy_for_qwen_mimo, setup_proxy_for_teamo,
@@ -37,7 +37,7 @@ NEW_PROMPTS_SMALL = ["L_algorithm_process"]
 MAX_TOKENS_SMALL = 100
 
 # Output dir
-RESULTS_DIR = Path("D:/私人资料/deposon-repo/results")
+RESULTS_DIR = Path("_repo_mirror/results")
 OUT_RESULT_SMALL = RESULTS_DIR / "_v4_supp_l14_n11full_result.json"
 OUT_POST_SMALL = RESULTS_DIR / "_v4_supp_l14_n11full_post_hashes_2026_09_24.txt"
 OUT_VERDICT_SMALL = RESULTS_DIR / "_v4_supp_l14_n11full_verdict.md"
@@ -87,7 +87,7 @@ if not ping.get('ok'):
 
 # Run batch
 records = []
-checkpoint_path = Path("D:/私人资料/deposon-repo/.tmp/_l14_checkpoint.json")
+checkpoint_path = Path("_repo_mirror/.tmp/_l14_checkpoint.json")
 endpoint_start = time.time()
 teachers = ["kimi", "GLM_1", "GLM_2", "coze", "minimax"]
 
@@ -406,11 +406,11 @@ result_obj = {
         "small_batch": "10 calls (5 teachers X 1 prompt X 2 re-asks) for fitting",
     },
     "inputs": {
-        "prereg_v02": {"path": str(PREREG_V02.relative_to(Path("D:/私人资料/deposon-repo"))),
+        "prereg_v02": {"path": str(PREREG_V02.relative_to(Path("_repo_mirror"))),
                        "sha12": prereg_v02_sha,
                        "expected_sha12": PREREG_V02_SHA12_EXPECTED,
                        "match": prereg_v02_sha.lower() == PREREG_V02_SHA12_EXPECTED.lower()},
-        "captions": {"path": str(CAPTIONS_PATH.relative_to(Path("D:/私人资料/deposon-repo"))),
+        "captions": {"path": str(CAPTIONS_PATH.relative_to(Path("_repo_mirror"))),
                      "sha12": captions_sha,
                      "expected_sha12": CAPTIONS_SHA12_EXPECTED,
                      "match": True},
@@ -498,7 +498,7 @@ for name, p, expected in [
     if not ok:
         frozen_ok = False
 for tname, trel, expected in TEACHER_PATHS_REL:
-    p = Path("D:/私人资料/deposon-repo") / trel
+    p = Path("_repo_mirror") / trel
     actual = sha12_file(p)
     ok = actual.lower() == expected.lower()
     post_lines.append(f"{tname}: {actual} (expected {expected}) {'OK' if ok else 'CHANGED'}")

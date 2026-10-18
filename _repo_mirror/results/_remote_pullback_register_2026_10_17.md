@@ -5,7 +5,7 @@
 - 纪律:**只读 GET**·⛔0 远端写·⛔0 删·⛔0 凭据写入（公开仓匿名读·未用任何凭据）
 - 清单源（唯一）:`.tmp\gh_survey_r2\local_match.json`（`summary.*.absent`）＋ `.tmp\github_survey_tree.json`（blob sha/size）
 - 拉取通道:`https://raw.githubusercontent.com/{owner}/{repo}/{HEAD}/{path}`（匿名公开读·**未走 blob API**·故 0 耗 API 配额）
-- 落点:`D:\私人资料\deposon-repo\_remote_pullback_2026_10_17\`（仓内新目录·**非归档区**·保持远端相对路径结构）
+- 落点:`_repo_mirror\_remote_pullback_2026_10_17\`（仓内新目录·**非归档区**·保持远端相对路径结构）
 - 逐件核验:落盘后回读·git blob sha1 = `sha1("blob "+size+"\0"+content)` 逐位相符 ＋ bytes 相符
 
 ## 0. HEAD 复测（拉取前）

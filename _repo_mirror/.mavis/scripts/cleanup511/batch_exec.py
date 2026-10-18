@@ -7,7 +7,7 @@ NEVER uses rm / Remove-Item / unlink / rmtree.
 
 Success criterion per item (exit code is NOT evidence):
     1. target gone from its original path
-    2. exactly one new $I record appeared in D:\\$Recycle.Bin\\<SID>\\
+    2. exactly one new $I record appeared in 〔本机路径〕\\$Recycle.Bin\\<SID>\\
     3. exactly one new $R payload, same suffix as the $I
     4. $I decodes back to the original absolute path
     5. sha256 of the $R payload == sha256 recorded before the delete  (content proof)
@@ -17,7 +17,7 @@ import os, io, sys, json, time, hashlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from recycle_exec import bin_dir_for, list_bin, decode_i, send_to_bin
 
-REPO = r"D:\私人资料\deposon-repo"
+REPO = r"_repo_mirror"
 LST = os.path.join(REPO, ".mavis", "scripts", "cleanup511", "exec_list.json")
 RPT = os.path.join(REPO, ".mavis", "scripts", "cleanup511", "exec_report.json")
 

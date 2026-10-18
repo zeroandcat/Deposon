@@ -22,7 +22,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-BASE = Path(r'D:\私人资料\deposon-repo')
+BASE = Path(r'_repo_mirror')
 
 # 严守 0 触动的 18 frozen + P-G V0 spec
 FROZEN_18 = {

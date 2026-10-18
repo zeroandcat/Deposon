@@ -2,22 +2,22 @@
 
 - 执行日：2026-10-06（CST）｜执行人：鲍勃-实验分析师（代 KIMI，PAT 推送）
 - 开工 HEAD：`afd39a5`（⑥a 后）｜基线 tag：`deemph-baseline-20261006`
-- 现场枚举（附录 C 分 token 正确口径）：`results/` 并集＝**88 件**。与信载 §3.6 ⑥b 桶计数 100 差 12 件，**根因＝批⑤ B-3 回写连带清零**（`_mirror_manifest.json`、`_movedout_manifest_2026_09_21.json`、`_archive_manifest_2026_09_20.json`、`_archive_manifest_deposon_sub_2026_09_23.json`、`_ghostref_copy_log_2026_09_23.json`、`_kimi_push_v3_manifest_batch5/14_*.json`、`_v3_v4_achievements_inventory{,_3dir}`、`_v3_v4_ghostref_reconciliation`、`_v4_maindir_cleanup_manifest_v2/moves_ledger_v6`、`_v5_sub_artifact_ledger_history_r3/r4` 等，基线 token 仅为 wechat 路径字面，批⑤回写后清零——非漂移非范围变动，全程在 B5 表 2 台账可溯）。基线 tag 上 `results/` 并集实测 93 件 − 批③④⑤替换清零 19 件 ＝ 74（混合枚举污染版）→ 正确口径（分 token）88 件；93 vs 信载 100 的 7 件差为信载规划口径微差（全仓 229 并集实测与信载精确一致，见 B6a/操作清单）
+- 现场枚举（附录 C 分 token 正确口径）：`results/` 并集＝**88 件**。与信载 §3.6 ⑥b 桶计数 100 差 12 件，**根因＝批⑤ B-3 回写连带清零**（`_mirror_manifest.json`、`_movedout_manifest_2026_09_21.json`、`_archive_manifest_2026_09_20.json`、`_archive_manifest_deposon_sub_2026_09_23.json`、`_ghostref_copy_log_2026_09_23.json`、`_kimi_push_v3_manifest_batch5/14_*.json`、`_v3_v4_achievements_inventory{,_3dir}`、`_v3_v4_ghostref_reconciliation`、`_v4_maindir_cleanup_manifest_v2/moves_ledger_v6`、`_v5_sub_artifact_ledger_history_r3/r4` 等，基线 token 仅为 〔IM〕 路径字面，批⑤回写后清零——非漂移非范围变动，全程在 B5 表 2 台账可溯）。基线 tag 上 `results/` 并集实测 93 件 − 批③④⑤替换清零 19 件 ＝ 74（混合枚举污染版）→ 正确口径（分 token）88 件；93 vs 信载 100 的 7 件差为信载规划口径微差（全仓 229 并集实测与信载精确一致，见 B6a/操作清单）
 - 红线自检：R1 判定链读数 0 触动（numstat 全对称；判定词行成对只替人名）／R2 0 历史改写／R3 0 凭据
 
 ## 替换统计（§2 口径）
 
-- 王老师×132→外部顾问；WeChat×98/wechat×31/微信×1→线上（叙述形）
-- 实名+机构整串消化×1：`_coze_paper_v1_draft_2026_09_17.md`「中国人民大学高瓴人工智能学院王子贺老师」→「外部合作导师〔匿名〕」
-- 王子贺×2→外部合作导师〔匿名〕（文献方向叙述）
-- 路径形×50（可逆推）：D3_WECHAT_MIDTERM_2026_09_09_actual×6（悬空引用，目标不在仓）；_v4_commission_wechat_report_coze×38（letters/ 目标不在仓）；WANG_TEACHER_PROGRESS_REPORT_2026_09_11.md×6（仓外件名引用）
+- 〔W老师〕×132→外部顾问；〔IM〕×98/〔IM〕×31/〔IM〕×1→线上（叙述形）
+- 实名+机构整串消化×1：`_coze_paper_v1_draft_2026_09_17.md`「中国〔高校R〕〔机构G〕人工智能学院〔当事人W〕老师」→「外部合作导师〔匿名〕」
+- 〔当事人W〕×2→外部合作导师〔匿名〕（文献方向叙述）
+- 路径形×50（可逆推）：D3_〔IM〕_MIDTERM_2026_09_09_actual×6（悬空引用，目标不在仓）；_v4_commission_〔IM〕_report_coze×38（letters/ 目标不在仓）；EXTERNAL_ADVISOR_PROGRESS_REPORT_2026_09_11.md×6（仓外件名引用）
 - 英文名形：Wang-teacher×4→external advisor（catalog 描述列）
 - 合计 319 处替换
 
 ## R1/存疑保留项（不替换，报备）
 
-- **保护键名×12**：`no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_WeChatAPI`（`boss_pa_*`/`deposon_*`/`skill_*` 等 JSON/脚本判定键）——判定链机器读数面，按 R1 红线 0 触动保留，是否改键名待 PI 拍板（涉 verifier 脚本兼容）
-- **Renmin 存疑×2**：`_glm_five_items_suggestion_table_2026_10_01.md` 已发表件元数据「School of Chemistry and Life Resources, Renmin University of China」（arXiv 2609.09001 Comments 栏单位字面）——该件自身标注「⚠️ 涉可识别信息，是否照录由 PI 按 H8 定」，按 §2 细则存疑保留报备
+- **保护键名×12**：`no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_〔IM〕API`（`boss_pa_*`/`deposon_*`/`skill_*` 等 JSON/脚本判定键）——判定链机器读数面，按 R1 红线 0 触动保留，是否改键名待 PI 拍板（涉 verifier 脚本兼容）
+- **〔高校R〕 存疑×2**：`_glm_five_items_suggestion_table_2026_10_01.md` 已发表件元数据「School of Chemistry and Life Resources, 〔高校R〕 University of China」（arXiv 2609.09001 Comments 栏单位字面）——该件自身标注「⚠️ 涉可识别信息，是否照录由 PI 按 H8 定」，按 §2 细则存疑保留报备
 
 ## 逐件 pre/post SHA-256
 

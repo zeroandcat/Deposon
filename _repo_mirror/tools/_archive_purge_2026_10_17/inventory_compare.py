@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """ARCHIVE-WHITELIST-PURGE / step 1: dual-face inventory + SHA-12 comparison.
 
-Target (to purge):  D:\私人资料\_non_upload_local_archive\whitelist_backup_2026_10_17
-Backup (DO NOT TOUCH): D:\私人资料\deposon-repo\.tmp\whitelist_backup_2026_10_17
+Target (to purge):  〔本地归档区〕\whitelist_backup_2026_10_17
+Backup (DO NOT TOUCH): _repo_mirror\.tmp\whitelist_backup_2026_10_17
 """
 import hashlib
 import io
@@ -10,9 +10,9 @@ import json
 import os
 import sys
 
-TARGET = r"D:\私人资料\_non_upload_local_archive\whitelist_backup_2026_10_17"
-BACKUP = r"D:\私人资料\deposon-repo\.tmp\whitelist_backup_2026_10_17"
-OUT = r"D:\私人资料\deposon-repo\tools\_archive_purge_2026_10_17\inventory_compare.json"
+TARGET = r"〔本地归档区〕\whitelist_backup_2026_10_17"
+BACKUP = r"_repo_mirror\.tmp\whitelist_backup_2026_10_17"
+OUT = r"_repo_mirror\tools\_archive_purge_2026_10_17\inventory_compare.json"
 
 
 def sha12(p):

@@ -433,7 +433,7 @@
 
 | **项** | **值／口径** |
 | :-- | :-- |
-| **路径** | `D:\私人资料\deposon-repo\results\_night_shift_handover_2026_10_14_r2.md` |
+| **路径** | `_repo_mirror\results\_night_shift_handover_2026_10_14_r2.md` |
 | **落盘前占用检查** | `os.path.exists` 目标名 ＝ **False**；`_r1` 名 ＝ **False**；精确 glob `_night_shift_handover_2026_10_14_r2*` ＝ **0 命中**；`results\*handover*` ＝ **3 命中**（`c3d766464634` 之前版 ＋ 2026-10-12 他名二件：`…_v5_handover_pending…`／`…_handover_guide_project_initiation…`）⇒ **0 占用、0 覆盖、未需 `_r1`** |
 | **落盘方式** | Python `io.open(path,'w',encoding='utf-8',newline='\n',errors='strict')` **直写** ＋ **回读校验**（⛔ **0 经 PowerShell 管道中转 UTF-8 正文**；含 Windows 路径之字面量**一律 raw 字符串** `r"..."`） |
 | **编码** | UTF-8 **无 BOM**（首 3 字节 `EF BB BF` 未命中） |

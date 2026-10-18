@@ -3,7 +3,7 @@
 **致**：Mavis（项目统筹）、用户本人
 **自**：KIMI 凝子-agent
 **日期**：2026-09-17
-**主题**：申请授权将 GitHub 仓 `zeroandcat/Deposon`（`main`）与本地 canonical 仓 `D:\私人资料\deposon-repo\` 做成「完备一致」镜像
+**主题**：申请授权将 GitHub 仓 `zeroandcat/Deposon`（`main`）与本地 canonical 仓 `_repo_mirror\` 做成「完备一致」镜像
 
 ## 一、目的与背景
 
@@ -117,10 +117,10 @@ kill 399 件路径口径：同路径同内容 178（纯冗余）；同路径内�
 
 ## 八、溯源附录
 
-- 数据源 1：`C:\Users\Administrator\Documents\kimi\tasks\2026-08-31\05-20-23-c0a47add\_mirror_diff.json`（全量 diff 输出；脚本 `mirror_diff.py`；diff 时间 2026-09-17 22:02 CST；tree 未截断）
-- 数据源 2：`C:\Users\Administrator\Documents\kimi\tasks\2026-08-31\05-20-23-c0a47add\_mirror_pushable.json`（可推 442 件清单）
-- 数据源 3：`C:\Users\Administrator\Documents\kimi\tasks\2026-08-31\05-20-23-c0a47add\_kill_analysis.json`（kill 目录 399 件四分类核查；方法：剥前缀按路径 + git-SHA1 内容比对；核查时间 2026-09-17 22:55 CST）
-- 数据源 4：`C:\Users\Administrator\Documents\kimi\tasks\2026-08-31\05-20-23-c0a47add\_remote_only_content_analysis.json`（612 件内容口径重分；方法：git-SHA1 内容比对；时间 2026-09-17 23:05 CST）
-- 数据源 5：`C:\Users\Administrator\Documents\kimi\tasks\2026-08-31\05-20-23-c0a47add\_pushable_content_split.json`（442 件必推 / 可选拆；方法：git-SHA1 内容比对；时间 2026-09-17 23:05 CST）
+- 数据源 1：`〔本机用户目录〕\Documents\kimi\tasks\2026-08-31\05-20-23-c0a47add\_mirror_diff.json`（全量 diff 输出；脚本 `mirror_diff.py`；diff 时间 2026-09-17 22:02 CST；tree 未截断）
+- 数据源 2：`〔本机用户目录〕\Documents\kimi\tasks\2026-08-31\05-20-23-c0a47add\_mirror_pushable.json`（可推 442 件清单）
+- 数据源 3：`〔本机用户目录〕\Documents\kimi\tasks\2026-08-31\05-20-23-c0a47add\_kill_analysis.json`（kill 目录 399 件四分类核查；方法：剥前缀按路径 + git-SHA1 内容比对；核查时间 2026-09-17 22:55 CST）
+- 数据源 4：`〔本机用户目录〕\Documents\kimi\tasks\2026-08-31\05-20-23-c0a47add\_remote_only_content_analysis.json`（612 件内容口径重分；方法：git-SHA1 内容比对；时间 2026-09-17 23:05 CST）
+- 数据源 5：`〔本机用户目录〕\Documents\kimi\tasks\2026-08-31\05-20-23-c0a47add\_pushable_content_split.json`（442 件必推 / 可选拆；方法：git-SHA1 内容比对；时间 2026-09-17 23:05 CST）
 - GitHub HEAD：`292ba94dd5d5843dd78d8edff79deec86e34f794`
 - 声明：本函每个数字均可在上述 JSON 中复算。

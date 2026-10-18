@@ -387,7 +387,7 @@
 
 ```powershell
 # 锚件指纹复核（.NET SHA256，与 hashlib 同值互证）
-cd 'D:\私人资料\deposon-repo'
+cd '_repo_mirror'
 foreach($f in @('_s3_closeout_rules_case_2026_10_01.md',
                 '_s3_c4_recount_2026_10_01.md',
                 '_s3_missing_field_backfill_rule_effective_2026_10_01.md',

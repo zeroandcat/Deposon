@@ -3,7 +3,7 @@
 > **件性质**：**勘正登记件**（登记面之更正承载 —— ⛔ **非判定件** · ⛔ **非终判件** · ⛔ **非五终判之任一** · ⛔ **0 代 PI 裁** · ⛔ **0 代 PI 释义** · ⛔ **0 代 PI 择定**）—— 依 PI 2026-10-12 卡 `ask_522094907ba40ae193cc1890` 之令（**另立勘正件更新登记面 ＋ 登记族 D～L**）出件。
 > **被勘正件（0 触动 · 只读）**：`results/_gate1_gap_residuals_adoption_register_2026_10_12.md`（**`b84b9808fc71`** · 30,908 B）§2-1 **line 60**。
 > **上游件（0 触动 · 只读 · 本棒已逐字回读）**：`results/_u5_semantics_resolution_2026_10_12.md`（**`8b5f1a495a99`** · 24,046 B）§1-2 族表 · §1-3 · §5-3 项②③。
-> **版式**：UTF-8 无 BOM ｜ 纯 LF（CR ＝ 0）｜ ⛔ 0 网络 ｜ ⛔ 0 skill 加载 ｜ ⛔ 0 LLM ｜ ⛔ 0 读 `.env` ｜ ⛔ 0 经手 PAT ｜ ⛔ 0 触 `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录）｜ sub 区**只读**。
+> **版式**：UTF-8 无 BOM ｜ 纯 LF（CR ＝ 0）｜ ⛔ 0 网络 ｜ ⛔ 0 skill 加载 ｜ ⛔ 0 LLM ｜ ⛔ 0 读 `.env` ｜ ⛔ 0 经手 PAT ｜ ⛔ 0 触 `〔本地归档区〕`（0 读 0 写 0 列目录）｜ sub 区**只读**。
 
 ---
 
@@ -66,7 +66,7 @@
 
 | **项** | **值** |
 | --- | --- |
-| **检索根** | `D:\私人资料\deposon-repo`（可写区）＋ `D:\私人资料\deposon-sub`（**只读**） |
+| **检索根** | `_repo_mirror`（可写区）＋ `_repo_mirror`（**只读**） |
 | **检索串** | 字面 `U-5`（ASCII 连字符）｜**逐行全文扫描**，非抽样 |
 | **文件型** | 仅 `*.md`（递归，跳过 `.git`／`__pycache__`／`.pytest_cache`） |
 | **计数口径** | **双口径并测**（本棒新增之自核强化）：① **行级命中**＝含 `U-5` 之**行**数；② **出现次数**＝`U-5` 之 **occurrence** 数（同一行多次出现即多次计） |
@@ -127,7 +127,7 @@
 
 ### §5-2 ⛔ 禁触与合规
 
-① ⛔ **0 写**他棒产物面（`_u5_semantics_resolution_*`／`_c1_*`／`_d9_*`／`_gate1_gap*`／`_itemH_*`／`_degradation_*`／`letters/`）—— 本件落于 `results/`，与上列各面**文件名不冲突**｜② ⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`（**0 读 0 写 0 列目录**）｜③ **sub 区全程只读**（`io.open` 读模式，⛔ 0 写）｜④ ⛔ **0 赋任一** `k_v3s_4_4_*` 布尔｜⑤ ⛔ 0 网络／0 skill／0 LLM／0 API key／0 读 `.env`／0 经手 PAT／0 远端写｜⑥ ⛔ **0 跑实验／0 出读数／0 判档**（五终判词 `pass`／`af`／`kd`／`fail`／`give-up` 各 **0** 落判）｜⑦ ⛔ **0 冒充** PI／parent／verifier／verdict-keeper／independent-sub。
+① ⛔ **0 写**他棒产物面（`_u5_semantics_resolution_*`／`_c1_*`／`_d9_*`／`_gate1_gap*`／`_itemH_*`／`_degradation_*`／`letters/`）—— 本件落于 `results/`，与上列各面**文件名不冲突**｜② ⛔ **0 触及** `〔本地归档区〕`（**0 读 0 写 0 列目录**）｜③ **sub 区全程只读**（`io.open` 读模式，⛔ 0 写）｜④ ⛔ **0 赋任一** `k_v3s_4_4_*` 布尔｜⑤ ⛔ 0 网络／0 skill／0 LLM／0 API key／0 读 `.env`／0 经手 PAT／0 远端写｜⑥ ⛔ **0 跑实验／0 出读数／0 判档**（五终判词 `pass`／`af`／`kd`／`fail`／`give-up` 各 **0** 落判）｜⑦ ⛔ **0 冒充** PI／parent／verifier／verdict-keeper／independent-sub。
 
 ### §5-3 未决项（如实登记）
 
@@ -173,7 +173,7 @@
 
 | **项** | **值** |
 | --- | --- |
-| **路径** | `D:\私人资料\deposon-repo\results\_u5_referent_registry_correction_2026_10_12.md` |
+| **路径** | `_repo_mirror\results\_u5_referent_registry_correction_2026_10_12.md` |
 | **落前检查** | `os.path.exists` ＝ **False**（断言过）；glob 检索 ＝ **0 命中**（断言过）⇒ ⛔ 0 覆写任何既有件 |
 | **生成端** | `io.open(..., encoding='utf-8', newline='\n', errors='strict')` —— ⛔ **0 经 GBK／PowerShell 中转中文** |
 | **编码** | UTF-8 **无 BOM** |

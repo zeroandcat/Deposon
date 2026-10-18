@@ -15,7 +15,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import recycle_channel as rc
 
 SID = r"S-1-5-21-1515631758-409240343-2904948024-500"
-REP = r"D:\私人资料\deposon-repo\tools\_archive_purge_2026_10_17\step2_sample_verify.json"
+REP = r"_repo_mirror\tools\_archive_purge_2026_10_17\step2_sample_verify.json"
 
 
 def bin_base(name):

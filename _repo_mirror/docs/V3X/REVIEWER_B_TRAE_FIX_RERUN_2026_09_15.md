@@ -30,13 +30,13 @@
 
 | 项 | 值 |
 |---|---|
-| 临时根目录 | `D:/tmp/deposon_reviewer_b_trae_2026_09_15/` |
-| 镜像子目录 | `D:/tmp/deposon_reviewer_b_trae_2026_09_15/deposon-repo/` |
+| 临时根目录 | `〔本机路径〕/tmp/deposon_reviewer_b_trae_2026_09_15/` |
+| 镜像子目录 | `〔本机路径〕/tmp/deposon_reviewer_b_trae_2026_09_15/deposon-repo/` |
 | 镜像内容 | `deposon_team/` + `docs/` + `results/` + `verifier/` + `corpus/` (全量递归) |
 | 文件总数 | 764 个文件 |
 | 验证后处置 | 见 §5 清理步骤(保留至报告落盘后清理) |
 
-**BASE 覆写**: 3 个 fix 脚本的 `BASE = r'D:\私人资料\deposon-repo'` 在 /tmp 副本内覆写为 `BASE = r'D:\tmp\deposon_reviewer_b_trae_2026_09_15\deposon-repo'`; 验证完已恢复原值。
+**BASE 覆写**: 3 个 fix 脚本的 `BASE = r'_repo_mirror'` 在 /tmp 副本内覆写为 `BASE = r'〔本机路径〕\tmp\deposon_reviewer_b_trae_2026_09_15\deposon-repo'`; 验证完已恢复原值。
 
 ---
 

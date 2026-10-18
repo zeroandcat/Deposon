@@ -18,15 +18,15 @@ Absolute exclusions (block regardless of channels):
   R2 trajectory data plane : *measurement* *llm_calls* *records* three_seed* *_detail*
   R3 same-day 2026-10-17   : mtime calendar date
   RX sub-zone collision    : same repo-relative path (with the ".tmp/" staging
-                             prefix stripped) exists under D:\\私人资料\\deposon-sub
+                             prefix stripped) exists under _repo_mirror
 """
 import os, re, io, json, time, fnmatch, hashlib
 from bisect import bisect_right
 from collections import defaultdict
 
-REPO  = r"D:\私人资料\deposon-repo"
+REPO  = r"_repo_mirror"
 TMP   = os.path.join(REPO, ".tmp")
-SUB   = r"D:\私人资料\deposon-sub"
+SUB   = r"_repo_mirror"
 SELF  = os.path.join(REPO, ".mavis", "scripts", "cleanup511")
 OUT   = os.path.join(TMP, "cleanup511_manifest_2026_10_17.json")
 TODAY = "2026-10-17"

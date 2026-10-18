@@ -55,7 +55,7 @@ R0–R7（本文件之实现映射，逐条对应）：
   ⛔ 0 跑 S4′ 读数面：⛔ 0 调 compute_readings / build_tree / predict_tree / bootstrap_ci_v3。
   ⛔ 0 贴 dataset 内部文本字段（reasoning_full / scene_verbatim / pi_answer_verbatim）：
      产出件只载标识面 ＋ 派生之序列层（层名，非语料文本），依 fb1b696de1d6 §5.6 登记面规定。
-  ⛔ 0 触及 D:\\私人资料\\_non_upload_local_archive。
+  ⛔ 0 触及 〔本地资料区〕\\_non_upload_local_archive。
 """
 
 import hashlib
@@ -658,7 +658,7 @@ def main():
       "  2. **新集 JSON** `results/_s4_heldout_sampling_seedthird_items_2026_10_11.json`\n"
       "  3. **本登记件** `results/_s4_heldout_sampling_seedthird_items_register_2026_10_11.md`\n")
     A("- **出件**：**worker**（向-1 第三集抽取批 · 分支会话 `%s`｜**署名如实** · ⛔ 0 冒充 PI／parent／verifier／verdict-keeper／protocol-keeper／evidence-auditor／doc-writer）\n" % "mvs_544437291b604723b1f8a991c7e717e4")
-    A("- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（0 读 key／0 读 `.env`／0 落盘凭据）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 跑 S4′ 读数面**｜⛔ **0 触及 `D:\\私人资料\\_non_upload_local_archive`**\n")
+    A("- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（0 读 key／0 读 `.env`／0 落盘凭据）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 跑 S4′ 读数面**｜⛔ **0 触及 `〔本地资料区〕\\_non_upload_local_archive`**\n")
     A("- **命名合规**：`_主题_日期` 三段式；首段 `_s4_heldout_sampling_` ＝ 步骤标识非阶段号 ⇒ 合 PI 2026-09-29 命名裁（`57024f2cd30a` §1.2②）；⛔ `_v5_`／`_v4_`／`_v3_`\n")
     A("\n> 📌 **状态栏**：🟢 **第三集已抽出（一次抽取 · 26 件 · `FP3` 已生成并登记）** ＋ 🟢 **自审双门通过**（seed42 逐件全等 ＋ seed′ 逐件全等）＋ 📌 **`FP3` 待 PI 面以另立登记承载**（⛔ 0 回改 `fd4ec7559342` 一字）＋ ⛔ **0 判档 · 0 宣告过门与否 · 0 宣告 `K-RJ-5` 闭／开 · 0 宣告新链可开跑**\n")
 
@@ -811,7 +811,7 @@ def main():
     A("| ⛔ **0 回写派生面** | ✅ ⛔ 0 回写 `6f020c03e52c` 之 `in_heldout` 字段；新值**仅存于**本产出 2 件 |\n")
     A("| **R4** | ✅ key 永不明文；0 读 key／0 读 `.env`／0 落盘凭据 |\n")
     A("| **0 网络／0 skill／0 LLM** | ✅ 纯本机只读计算；⛔ 0 端点调用／0 LLM 代答 |\n")
-    A("| ⛔ **0 触及禁区** | ✅ `D:\\私人资料\\_non_upload_local_archive` **0 读、0 写、0 列目录** |\n")
+    A("| ⛔ **0 触及禁区** | ✅ `〔本地资料区〕\\_non_upload_local_archive` **0 读、0 写、0 列目录** |\n")
     A("| 编码 | ✅ UTF-8 **无 BOM** · **LF（CRLF ＝ 0）** |\n\n")
     A("\n---\n\n## §10 报回项（**⛔ 0 代裁 · 0 代立 · 0 自判闭**）\n\n")
     A("| # | 事项 | 本件处置 |\n|:-:|:--|:--|\n")

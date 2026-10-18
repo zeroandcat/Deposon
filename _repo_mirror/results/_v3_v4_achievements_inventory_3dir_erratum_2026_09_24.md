@@ -23,7 +23,7 @@
 
 ### E1.2 实测（parent 复核，2026-09-24 18:51 GMT+8）
 
-`glob results/_v4_pi_cot_v2_*` 在 `D:\私人资料\deposon-repo\results\` 下命中**含**上述三件；SHA-12 实测如下（Python `hashlib.sha256`，UTF-8 无 BOM 读取）：
+`glob results/_v4_pi_cot_v2_*` 在 `_repo_mirror\results\` 下命中**含**上述三件；SHA-12 实测如下（Python `hashlib.sha256`，UTF-8 无 BOM 读取）：
 
 | 件 | 实测 SHA-12 | 实测字节 | 与登记值 |
 |---|---|---|---|

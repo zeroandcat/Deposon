@@ -31,7 +31,7 @@
 | 本会话可用工具中**是否存在 skill 加载入口** | ✅ **存在** —— `Skill` 工具（描述：*Loads the complete SKILL.md instructions for an available local or plugin skill*） |
 | 调用是否等同 644e 件 §2 方式 | ✅ **同机制**（该件同棒同为 `Skill` 加载面真实调用） |
 | 失败返回形态 | `Local skill not found: <名>`（与 644e §2.2 逐字同形） |
-| 成功返回形态 | `# Skill: <名>` ＋ `Location: files:///D:/Users/Administrator/.minimax/skills/<目录>/SKILL.md` ＋ SKILL.md 全文 |
+| 成功返回形态 | `# Skill: <名>` ＋ `Location: files:///〔本机用户目录〕/.minimax/skills/<目录>/SKILL.md` ＋ SKILL.md 全文 |
 
 > 因此**不适用**「无加载器则停止并如实报告」的分支。**本件 0 次以文件直读冒充调用面结果**：所有「成功/失败」判定**一律以 `Skill` 工具的真实返回为唯一依据**；磁盘读取仅用于**基线指纹比对**（判定命中哪一面），不用于判定能否加载。
 
@@ -75,7 +75,7 @@
 ## §2 逐例表 · 臂 1（21 项 `name`≠目录名 · 42 次）
 
 **时刻**：全部为本会话内，2026-09-30 串行执行（分钟级连续，无跨时刻复测）。
-**Location 形态**：全部为 `files:///D:/Users/Administrator/.minimax/skills/<目录名>/SKILL.md`（**D 盘实体路径**，与 644e §0.4 一致；`C:\Users\Administrator\.minimax` 为指向 `D:\Users\Administrator\.minimax` 的 Junction）。
+**Location 形态**：全部为 `files:///〔本机用户目录〕/.minimax/skills/<目录名>/SKILL.md`（**D 盘实体路径**，与 644e §0.4 一致；`〔本机用户目录〕\.minimax` 为指向 `〔本机用户目录〕\.minimax` 的 Junction）。
 
 | # | 请求名（逐字） | 结果 | 失败原文 | Location | 内容指纹（与哪一面吻合） | 目录名 |
 |---|---|---|---|---|---|---|

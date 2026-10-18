@@ -4,7 +4,7 @@ import hashlib, os, re
 from datetime import datetime
 from pathlib import Path
 CUTOFF = datetime(2026, 9, 23, 12, 0, 0).timestamp()
-ROOTS = [r'D:\私人资料\deposon-repo', r'D:\私人资料\deposon-sub']
+ROOTS = [r'_repo_mirror', r'_repo_mirror']
 SKIP = {'__pycache__', '.git', '.trae'}
 
 newfiles = []
@@ -41,12 +41,12 @@ print()
 print('--- 未被引用的 .py 及其缺陷（可安全原地修者）---')
 DEFECTS = []
 for q in sorted(unref):
-    p = Path(q); raw = p.read_bytes(); rel = str(p).replace(r'D:\私人资料' + os.sep, '')
+    p = Path(q); raw = p.read_bytes(); rel = str(p).replace(r'〔本地资料区〕' + os.sep, '')
     t = raw.decode('utf-8', 'ignore')
     d = []
     if raw[:3] == b'\xef\xbb\xbf': d.append('BOM')
     if re.search(r'except Exception:\s*\n\s*return \[\]', t): d.append('SILENT_CKPT')
-    if 'C:/Users/Administrator/Desktop/AI/LLM API.txt' in t: d.append('KEYPATH_ABS')
+    if '〔本机用户目录〕/Desktop/AI/LLM API.txt' in t: d.append('KEYPATH_ABS')
     if re.search(r'except\s*:\s*(pass|continue)\b', t): d.append('BARE_EXCEPT')
     if re.search(r'\bopen\([^)]*\)\s*\.read\(\)', t): d.append('OPEN_NO_WITH')
     if d:
@@ -56,6 +56,6 @@ if not DEFECTS:
     print('  （无）')
 print()
 print('--- 未被引用且无上述缺陷者（抽查计数）---')
-clean = [q for q in unref if not any(True for rel, _, _ in DEFECTS if rel == str(Path(q)).replace(r"D:\私人资料"+os.sep, ""))]
+clean = [q for q in unref if not any(True for rel, _, _ in DEFECTS if rel == str(Path(q)).replace(r"〔本地资料区〕"+os.sep, ""))]
 print(f'  {len(clean)} 件')
 print('_wide_s6 DONE')

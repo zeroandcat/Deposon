@@ -26,7 +26,7 @@
 | 6 | `results/_pi_card_answers_register_2026_10_15_v17.md`（C1 锁面 · Q2 逐字） | `bc3041ec2cbc` | **`bc3041ec2cbc`** ✔ | 4,140 |
 | 7 | `results/_pi_card_answers_register_2026_10_16_v22.md`（被议裁之登记） | `e8d476480244` | **`e8d476480244`** ✔ | 5,629 |
 | 8 | `results/_pi_card_answers_register_2026_10_16_v23.md`（另议令之登记） | `a2a883a6be8e` | **`a2a883a6be8e`** ✔ | 4,889 |
-| 9 | `D:\私人资料\GLM\鲍勃_PI双裁定登记_G-E02验收线_G-E01就绪判定_2026_10_12.md`（GLM 验收线 · 归档区） | `2e7d804dad2a` | **`2e7d804dad2a`** ✔ | 19,296 |
+| 9 | `〔本地资料区〕\GLM\鲍勃_PI双裁定登记_G-E02验收线_G-E01就绪判定_2026_10_12.md`（GLM 验收线 · 归档区） | `2e7d804dad2a` | **`2e7d804dad2a`** ✔ | 19,296 |
 | 10 | `.tmp/t3_freeze_2026_10_15.json`（判死线冻结面 · `kill_lines_verbatim` 之权源） | `313f091718cc`（入锁件／执行件所载） | **`313f091718cc`** ✔ | 7,436 |
 | 11 | `.tmp/three_seed_freeze_2026_10_16.json`（三 seed 面冻结） | 未载 | **`46260e3b8426`**（本棒实测·首次入册） | 10,536 |
 

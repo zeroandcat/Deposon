@@ -4,8 +4,8 @@ list members, hash tex, and compare against last-known-good audit3_extract.
 Does NOT modify anything in the paper folder."""
 import os, sys, tarfile, hashlib, shutil
 
-WORK = r'c:\Users\Administrator\.trae-cn\work\6a9a7e1c7578e46bf7c7f60c'
-PAPER = r'd:\私人资料\deposon-repo\paper'
+WORK = r'〔本机用户目录〕\.trae-cn\work\6a9a7e1c7578e46bf7c7f60c'
+PAPER = r'〔本机路径〕\私人资料\deposon-repo\paper'
 A4 = os.path.join(WORK, 'audit4_extract')
 A3 = os.path.join(WORK, 'audit3_extract')
 

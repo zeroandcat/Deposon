@@ -243,7 +243,7 @@
 
 - **本棒新增件 ＝ 2**：`pi_rulings\_pi_card_answers_register_2026_10_17_v69.md` ＋ `results\_kd_u5_u6_s3b4_rulings_effect_2026_10_17.md`（两件落盘前均经 `Test-Path=False` ＋ `_r1` 面 ＝ `False` ＋ 全仓 glob **0 命中** 实测 ⇒ 未占用，⛔ 0 加 `_r1`）；另有探针 4 件 ＋ 写盘脚本 1 件 ＋ 校验脚本 1 件（**探针面 · 非交付件** · 落于 `.tmp/`）。
 - **既有件触动数 ＝ 0**：§0 之 **10** 项基线源件（含 `tools\distortion_calculator.py` 与五件登记／落账件）**全部只读**；本棒**未对任何既有件**执行写入／移动／重命名／删除；**落盘后逐一复算指纹** —— ✅ **8／9 逐位未变**（v65 · v67 · v36 · `0fd67a2075b7` · `1ba41ba3bbe9` · `141816a6aec9` · `0a6279970446` · **`410a12482eef` calculator**）；🔴 **1 项漂移 ＝ v68**（`0487b78ad851`／48,432 B → `da9d5195687a`／49,343 B）—— ⚠ **⛔ 0 系本棒所触**（**并发棒 `bg_e329a51e…` 之写入面**；见 §6-2 之 11）⇒ 📌 **本件 0 以「全数未变」充「0 触动」之证据**，如实登记为「**他棒 1 项漂移 ＋ 本棒 0 触动**」；🔴 **`tools\distortion_calculator.py` 之指纹落盘前后逐位一致**（`410a12482eef`／40,611 B／`CR` ＝ 0）⇒ **本棒 0 改码一面之独立证明成立**。
-- **frozen 面**：V1–V3 资产与 frozen 锚件（`exp_harness.py`／`llm_client.py`／`distortion_calculator.py`／spec／prereg）**0 写入**；**R5**：V4 frozen **只追加不修改**；归档区 `D:/私人资料/_non_upload_local_archive` **只读 0 写入 0 列目录**。
+- **frozen 面**：V1–V3 资产与 frozen 锚件（`exp_harness.py`／`llm_client.py`／`distortion_calculator.py`／spec／prereg）**0 写入**；**R5**：V4 frozen **只追加不修改**；归档区 `〔本地归档区〕` **只读 0 写入 0 列目录**。
 - **阈值面**：**0 议、0 调**。
 
 ---

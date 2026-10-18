@@ -39,9 +39,9 @@
 
 | 档 | 授权面（**候选字面**） | 覆盖对象 | 盘上字面出处 | 本件处置 |
 |---|---|---|---|---|
-| **候选 A**<br>（最小档） | `D:/私人资料/_non_upload_local_archive/results/gt2_attacker_cache/` **4 件 `.json`**：`algorithm_process.json` `ddda494f014a` / 2,782 B｜`biological_taxonomy.json` `0f0a4329c34f` / 2,385 B｜`historical_causality.json` `86af2ef6b66c` / 2,341 B｜`physics_concepts.json` `9c74bb8206c0` / 2,386 B | **仅 #35** | `138faf395f40` L120–L121；`bcc3cee23e82` L151 资产面 | ⬜ 待 PI 勾选 |
+| **候选 A**<br>（最小档） | `〔本地归档区〕/results/gt2_attacker_cache/` **4 件 `.json`**：`algorithm_process.json` `ddda494f014a` / 2,782 B｜`biological_taxonomy.json` `0f0a4329c34f` / 2,385 B｜`historical_causality.json` `86af2ef6b66c` / 2,341 B｜`physics_concepts.json` `9c74bb8206c0` / 2,386 B | **仅 #35** | `138faf395f40` L120–L121；`bcc3cee23e82` L151 资产面 | ⬜ 待 PI 勾选 |
 | **候选 B**<br>（#35 ＋ #21 面 2） | **候选 A 全部** ＋ `.../scripts/scripts/kt_b1/` **3 件脚本**（BOSS B1 Sinkhorn OT `7c2b41c008a5` / 16,404 B｜B2 KD `8c6e98034005` / 15,677 B｜B3 LLMLingua `2ded5cf0e863` / 15,389 B，**三件均为漂移版**；锚版 `19325960b8be`/`1781ea2f742d`/`c0b55e0385a4` 全仓 0 命中） | **#35 ＋ #21 面 2** | `04f6ecd482b9` L47/L51–L53；`bcc3cee23e82` L152 第 1 步、L229、L340 | ⬜ 待 PI 勾选 |
-| **候选 C**<br>（整根档） | `D:/私人资料/_non_upload_local_archive/` **整根**（**含 1,693 件 / 清理后 1,630 件** 两个盘上计数，见注 3） | **不限**（**最宽**） | `bcc3cee23e82` L69 仓外件、L171 `TH-V3R1P1-0-common-c` 字面「仓外只读回填源 ＝ `_non_upload_local_archive/`」 | ⬜ 待 PI 勾选（**本件 0 推荐、0 反对**；勾选即扩权，须 PI 自担） |
+| **候选 C**<br>（整根档） | `〔本地归档区〕/` **整根**（**含 1,693 件 / 清理后 1,630 件** 两个盘上计数，见注 3） | **不限**（**最宽**） | `bcc3cee23e82` L69 仓外件、L171 `TH-V3R1P1-0-common-c` 字面「仓外只读回填源 ＝ `_non_upload_local_archive/`」 | ⬜ 待 PI 勾选（**本件 0 推荐、0 反对**；勾选即扩权，须 PI 自担） |
 | **候选 D** | **PI 自定义**（路径 / 层 / 件类由 PI 给） | PI 定 | —— | ⬜ 待 PI 给 |
 
 **「哪根 / 哪层 / 哪类」三轴的授权颗粒度（由 PI 勾）**：

@@ -224,7 +224,7 @@
 
 | 项 | 值 |
 | :-- | :-- |
-| 路径 | `results/_pi_give_b_class_retrieval_2026_10_14.md`（工作区 `D:/私人资料/deposon-repo`） |
+| 路径 | `results/_pi_give_b_class_retrieval_2026_10_14.md`（工作区 `_repo_mirror`） |
 | 编码 | UTF-8 **无 BOM**｜`io.open(encoding='utf-8', newline='\n', errors='strict')` 落盘 |
 | 行尾 | **纯 LF**（`0x0D` 计数 ＝ 0） |
 | TAB／CTRL／U+FFFD | 0 ／ 0 ／ 0 |

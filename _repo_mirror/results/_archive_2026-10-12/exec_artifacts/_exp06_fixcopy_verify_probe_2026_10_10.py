@@ -5,7 +5,7 @@ import difflib
 import hashlib
 import pathlib
 
-BASE = pathlib.Path(r"D:\私人资料\deposon-repo")
+BASE = pathlib.Path(r"_repo_mirror")
 ORIG = BASE / "deposon_team" / "plugins" / "_p_d_b3_merkle_22caption_runner_v0_4_2026_09_29.py"
 COPY = BASE / "deposon_team" / "plugins" / "_p_d_b3_merkle_22caption_runner_selfverify_fix_2026_10_10.py"
 

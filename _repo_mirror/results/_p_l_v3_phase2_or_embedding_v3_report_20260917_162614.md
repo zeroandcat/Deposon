@@ -65,7 +65,7 @@
 ## §4 Iron-7 compliance 声明
 
 - ✅ 0 LLM 重 hash (本 runner 仅 embedding, 不调 chat)
-- ✅ key runtime 读自 `C:\Users\Administrator\Desktop\AI\LLM API.txt`, 仅保留 `prefix=sk-or-v1-24d65...`, 全程不入 JSON / log / stdout / md (除上面前 14 字符 nonce)
+- ✅ key runtime 读自 `〔本机用户目录〕\Desktop\AI\LLM API.txt`, 仅保留 `prefix=sk-or-v1-24d65...`, 全程不入 JSON / log / stdout / md (除上面前 14 字符 nonce)
 - ✅ OR embedding 通过 1018 proxy 调用, 3 env: HTTPS_PROXY, HTTP_PROXY, all_proxy
 - ✅ response.model == request.model 逐 cell 校验 (用户 13:39 防降级欺诈)
 - ✅ 502/503/504/408 自动 retry 3 次 (backoff 1-3s), 不阻塞其他 backbone

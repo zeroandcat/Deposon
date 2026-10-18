@@ -59,7 +59,7 @@
 
 | **项** | **实测值** |
 |:--|:--|
-| **检索根（6 根 · 含运行时附件面）** | ① `D:\私人资料\deposon-repo` ② `D:\私人资料\deposon-sub` ③ `D:\私人资料\Deposon_v1_2_0_交付包` ④ `D:\私人资料\GLM` ⑤ `D:\私人资料\_non_upload_local_archive`（归档区，依 PI 10-13 23:28 纠正纳入）⑥ **`C:\Users\Administrator\.minimax\v2\assets`（运行时附件面 —— 本棒依派工单「检索根须含运行时附件面」新增）** |
+| **检索根（6 根 · 含运行时附件面）** | ① `_repo_mirror` ② `_repo_mirror` ③ `〔本地资料区〕\Deposon_v1_2_0_交付包` ④ `〔本地资料区〕\GLM` ⑤ `〔本地归档区〕`（归档区，依 PI 10-13 23:28 纠正纳入）⑥ **`〔本机用户目录〕\.minimax\v2\assets`（运行时附件面 —— 本棒依派工单「检索根须含运行时附件面」新增）** |
 | **剪枝目录** | `.git`／`.idea`／`.mypy_cache`／`.pytest_cache`／`.tmp`／`.venv`／`__pycache__`／`node_modules`／`venv`／`.ipynb_checkpoints` |
 | **遍历目录数** | **19,632** |
 | **枚举文件数** | **42,634** |
@@ -67,8 +67,8 @@
 | **`.env` 类跳过（⛔ 0 读）** | **0** |
 | **`os.walk` `onerror` 收集项** | **0** |
 | **断言 `遍历错误数 == 0`** | ✅ **通过** |
-| **未作内容扫描之超大件（>8 MB）** | **3 件**（**如实列名**）：`D:\私人资料\_non_upload_local_archive\_movedout_scratch_2026_09_30\evidence_backup_2026_09_30\runtime-state.sqlite`（474,656,768 B）｜`D:\私人资料\_non_upload_local_archive\_movedout_scratch_2026_09_28\evidence_backup_2026_09_28\runtime-state.sqlite`（474,656,768 B）｜`D:\私人资料\_non_upload_local_archive\installers\installers\miktex-installer.exe`（144,785,672 B）—— 三者**均已入 SHA census**；⚠ **其内容面本棒 0 扫**（见 §5-2 之限制登记） |
-| **阴性结论之射程** | 凡本件所载「0 在盘」者，**均指上列 6 根之内**；`D:\私人资料` 之其余目录、盘外、**远端 github** **不在本棒阴性结论射程内** |
+| **未作内容扫描之超大件（>8 MB）** | **3 件**（**如实列名**）：`〔本地归档区〕\_movedout_scratch_2026_09_30\evidence_backup_2026_09_30\runtime-state.sqlite`（474,656,768 B）｜`〔本地归档区〕\_movedout_scratch_2026_09_28\evidence_backup_2026_09_28\runtime-state.sqlite`（474,656,768 B）｜`〔本地归档区〕\installers\installers\miktex-installer.exe`（144,785,672 B）—— 三者**均已入 SHA census**；⚠ **其内容面本棒 0 扫**（见 §5-2 之限制登记） |
+| **阴性结论之射程** | 凡本件所载「0 在盘」者，**均指上列 6 根之内**；`〔本地资料区〕` 之其余目录、盘外、**远端 github** **不在本棒阴性结论射程内** |
 
 ### §1-4 双通道判定原则（本棒遵行）
 
@@ -275,7 +275,7 @@
 
 | **项** | **值** |
 |:--|:--|
-| **路径** | `D:\私人资料\deposon-repo\results\_ge01_H_enumeration_round2_2026_10_13.md` |
+| **路径** | `_repo_mirror\results\_ge01_H_enumeration_round2_2026_10_13.md` |
 | **编码** | UTF-8 **无 BOM**（`EF BB BF` 未命中）｜`io.open(..., encoding='utf-8', newline='\n', errors='strict')` |
 | **行尾** | **纯 LF**（`0x0D` 计数 ＝ **0** ⇒ CRLF ＝ **0**） |
 | **TAB／CTRL／U+FFFD** | **0** ／ **0** ／ **0** |

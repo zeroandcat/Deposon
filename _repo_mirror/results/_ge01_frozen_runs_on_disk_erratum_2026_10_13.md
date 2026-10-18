@@ -32,9 +32,9 @@
 
 | **项** | **值** |
 | :-- | :-- |
-| **扫描范围** | **恰 2 根**：`D:\私人资料\deposon-repo` ＋ `D:\私人资料\GLM` |
+| **扫描范围** | **恰 2 根**：`_repo_mirror` ＋ `〔本地资料区〕\GLM` |
 | **剪枝目录名** | `.git`／`.idea`／`.mypy_cache`／`.pytest_cache`／`.tmp`／`.venv`／`__pycache__`／`node_modules`／`venv`／`.tmp_docwriter_scratch`（本棒自身临时面） |
-| **阴性结论之射程** | 凡本件所载「0 在盘」者，**均指上列 2 根之内**；⛔ **0** 声称含 `D:\私人资料` 其余目录 |
+| **阴性结论之射程** | 凡本件所载「0 在盘」者，**均指上列 2 根之内**；⛔ **0** 声称含 `〔本地资料区〕` 其余目录 |
 | **件数口径差（如实登记 · 0 掩饰）** | 本棒枚举 **1,480** 件，就绪棒报 **1,476** 件，**差 4** ＝ 就绪件自身（mtime 23:40:59，落于其自身 census 之后）＋ 其后新落 3 件（`_discipline_scope_review_and_harm_audit` 23:41:49／`_m5_k5_network_verification_register` 23:42:07／`_discipline_scope_review_corrigendum` 23:46:56）⇒ **非遍历缺陷**，`onerror` 仍为 0 |
 
 ### §1-3 独立复测声明（⛔ 0 直接采信）
@@ -184,7 +184,7 @@
 
 | **项** | **值** |
 | :-- | :-- |
-| **路径** | `D:\私人资料\deposon-repo\results\_ge01_frozen_runs_on_disk_erratum_2026_10_13.md` |
+| **路径** | `_repo_mirror\results\_ge01_frozen_runs_on_disk_erratum_2026_10_13.md` |
 | **落盘前检查** | `os.path.exists` ＝ **False**（等价 `Test-Path`）；同名前缀 `_ge01_frozen_runs_on_disk_erratum*` 落盘前 **0 命中** ⇒ 未占用，**0 加 `_r1`** |
 | **编码** | UTF-8 **无 BOM**（`EF BB BF` 未命中）｜`io.open(encoding='utf-8', newline='\n', errors='strict')` 落盘 |
 | **行尾** | **纯 LF**（`0x0D` 计数 ＝ 0） |

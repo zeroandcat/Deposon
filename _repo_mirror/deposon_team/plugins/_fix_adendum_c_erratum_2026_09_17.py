@@ -4,8 +4,8 @@ Reads both JSON files, appends erratum_2026_09_17 note, records before/after SHA
 import json, hashlib, os
 
 FILES = [
-    r'D:\私人资料\deposon-repo\results\_adendum_C_pm_attack_surface_v2_20260917_133852.json',
-    r'D:\私人资料\deposon-repo\results\_adendum_C_pm_attack_surface_v2_20260917_133726.json',
+    r'_repo_mirror\results\_adendum_C_pm_attack_surface_v2_20260917_133852.json',
+    r'_repo_mirror\results\_adendum_C_pm_attack_surface_v2_20260917_133726.json',
 ]
 ERRATUM = {
     'erratum_2026_09_17': {

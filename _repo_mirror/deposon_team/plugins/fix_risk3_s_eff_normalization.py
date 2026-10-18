@@ -25,7 +25,7 @@ fix_risk3_s_eff_normalization.py — 风险 3: S_eff 公式归一化裁定 (metr
 import json, math
 from pathlib import Path
 
-BASE = Path(r'D:\私人资料\deposon-repo')
+BASE = Path(r'_repo_mirror')
 SKILL_D = BASE / 'results' / 'skill_d_p_f_observer_result_2026_09_11.json'
 V3_PHYS = BASE / 'results' / 'deposon_v3_physical_opt_60cells_2026_09_11.json'
 OUT = BASE / 'results' / 'deposon_risk3_seff_decision_2026_09_11.json'

@@ -9,7 +9,7 @@ from datetime import datetime, timezone, timedelta
 
 CST = timezone(timedelta(hours=8))
 TS = '20260918_100853'
-DEPOSON_ROOT = Path(r'D:\私人资料\deposon-repo')
+DEPOSON_ROOT = Path(r'_repo_mirror')
 RESULTS_DIR = DEPOSON_ROOT / 'results'
 
 # 6 已落盘 JSON

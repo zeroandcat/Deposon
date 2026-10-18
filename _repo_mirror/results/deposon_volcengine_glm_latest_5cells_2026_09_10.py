@@ -10,9 +10,9 @@ deposon V3.X 挂点预筛 - 火山方舟 coding-plan 'glm-latest' 别名 5 cells
 import os, json, time, re, sys
 import urllib.request, urllib.error
 
-KEY_FILE = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
-GSM8K_FILE = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_gsm8k_details.json'
-OUTPUT_JSON = r'D:\私人资料\deposon-repo\results\deposon_volcengine_glm_latest_5cells_2026_09_10.json'
+KEY_FILE = r'〔本机用户目录〕\Desktop\AI\LLM API.txt'
+GSM8K_FILE = r'_repo_mirror\results\deposon_benchmark_v1_4_gsm8k_details.json'
+OUTPUT_JSON = r'_repo_mirror\results\deposon_volcengine_glm_latest_5cells_2026_09_10.json'
 BASE_URL = 'https://ark.cn-beijing.volces.com/api/coding/v3'
 TARGET_MODEL = 'glm-latest'
 SANITY_PROMPT = 'What is 1+1?'

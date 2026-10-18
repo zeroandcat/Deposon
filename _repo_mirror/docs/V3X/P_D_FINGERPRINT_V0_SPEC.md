@@ -179,7 +179,7 @@ V0 判死线 = **表达力线**（成本线不在 V0 范围）。
 # Windows PowerShell (Win32 long path 兼容)
 $ts = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
 $dst = Join-Path $env:TEMP "deposon-audit-$ts"
-Copy-Item -Path "D:/私人资料/deposon-repo" -Destination $dst -Recurse -Force
+Copy-Item -Path "_repo_mirror" -Destination $dst -Recurse -Force
 Push-Location $dst
 python attacks/a1_delete_anchor.py
 python attacks/a2_reshuffle_manifest.py --root <claimed>

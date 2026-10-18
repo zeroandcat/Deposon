@@ -25,7 +25,7 @@
 
 | 项 | 值 |
 |:--|:--|
-| **路径** | `D:\私人资料\deposon-repo\results\__pycache__\_s4prime_five_lines_runner_2026_10_11.cpython-314.pyc` |
+| **路径** | `_repo_mirror\results\__pycache__\_s4prime_five_lines_runner_2026_10_11.cpython-314.pyc` |
 | **SHA-12** | **`f4194cc5a522`** |
 | **SHA-256（全）** | `f4194cc5a522ecce6824f41c80c858b2e78a194c3375136deff22c84820b2f51` |
 | **bytes** | **43,685** |
@@ -211,7 +211,7 @@
 - ⛔ **0 回改任何既有件一字**——含 `72a2a0c90985`／`cddb7a196473`／`ef3317e5dbb3`／`d2aeaeedf39c`／`2f27acf42897` 及既有 `results/_d9_*`／`_gate1_*`／`_p4_*`／`letters/`／`_bob_*`／`_remote_baseline*`／`_archive_2026-10-12`（上列五件**仅只读回读**，实测指纹见 §E-1）。
 - ⛔ **0 移动／0 重命名／0 删除任何件**——**含 `u1_pyc` 之 `.pyc`**（依裁**保留**）与 `u2_h3` 之备份件（**留备份**）。
 - ⛔ **0 编辑任何 runner**（H1／H2／H3／H4／H5）——本棒系**纯登记棒**：⛔ 0 执行任何 runner、⛔ 0 跑任何实验、⛔ 0 产出／改写任何 JSON。
-- ⛔ **0 触** `D:\私人资料\_non_upload_local_archive`（**0 读 0 写 0 列目录**，**本棒无例外**）；`deposon-sub` **只读**（本棒 0 写入、0 删除、0 触碰）。
+- ⛔ **0 触** `〔本地归档区〕`（**0 读 0 写 0 列目录**，**本棒无例外**）；`deposon-sub` **只读**（本棒 0 写入、0 删除、0 触碰）。
 - ⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT／0 远端写／0 上传。
 - ⛔ **0 改终判词／阈值／门柱／判死线**（`len(files) != 21`／`sys.exit(2)`／CI95／`fail_hit` 等**仅引述并记录**）。
 - ⛔ **0 赋 `k_v3s_4_4_*` 布尔**。

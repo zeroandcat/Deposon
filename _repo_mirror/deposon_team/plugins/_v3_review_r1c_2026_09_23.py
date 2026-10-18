@@ -3,7 +3,7 @@
 import hashlib, os
 from pathlib import Path
 
-ROOT = Path(r'D:\私人资料\deposon-repo')
+ROOT = Path(r'_repo_mirror')
 sha12 = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12].upper()
 
 print('=== results/_archive_2026_09_20 内容 (3 files) ===')
@@ -16,15 +16,15 @@ for p in sorted((ROOT / 'results' / '_archive_2026_09_21').iterdir()):
     print(f'  {p.name}  {p.stat().st_size}B')
 
 print()
-print('=== repo 外候选归档目录 (D:\\私人资料 一级) ===')
-base = Path(r'D:\私人资料')
+print('=== repo 外候选归档目录 (〔本地资料区〕 一级) ===')
+base = Path(r'〔本地资料区〕')
 for p in sorted(base.iterdir()):
     if p.is_dir() and ('archive' in p.name.lower() or 'deposon' in p.name.lower()):
         n = sum(1 for _ in p.rglob('*') if _.is_file()) if p.name != 'deposon-repo' else '?'
         print(f'  {p.name}/  ({n} files)')
 
 print()
-print('=== 关键单件全盘定位（D:\\私人资料 全域搜索，限深 4） ===')
+print('=== 关键单件全盘定位（〔本地资料区〕 全域搜索，限深 4） ===')
 KEY = ['boss_pa_1_rbr_rm_result_2026_09_15.json',
        'boss_pa_2_potential_game_result_2026_09_15.json',
        'd7_5anchor_60cells_9model_verdict_2026_09_18.json',

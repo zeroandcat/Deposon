@@ -168,7 +168,7 @@ PI 指示「以文件为准核对三端点 URL + 如有出入在 verdict 声明�
 
 - 多模型 LLM 调用：qwen_plan / mimo / teamo 三端点；其他路由（件 3 已测 3 模型）只读引用未重跑
 - teamorouter 端点走代理 `http://127.0.0.1:1018` (PI 2026-09-23 补充 2 硬要求)
-- key 来自 PI 授权源文件 (`C:/Users/Administrator/Desktop/AI/LLM API.txt`)，runtime 内存读取，不落盘 / 不入产物 / 不入 log / 不入回报
+- key 来自 PI 授权源文件 (`〔本机用户目录〕/Desktop/AI/LLM API.txt`)，runtime 内存读取，不落盘 / 不入产物 / 不入 log / 不入回报
 - 18 frozen + 9 网格 0 触动；P-G v0 v01 + plugin spec / verifier 内置脚本 0 触动
 - V1–V3 资产 + V4 frozen 链 0 触动（只读引用）
 - 铁律沿用定稿 R1–R8：见 `_v4_iron_rules_review_2026_09_22.md`（含 2026-09-23 勘误）

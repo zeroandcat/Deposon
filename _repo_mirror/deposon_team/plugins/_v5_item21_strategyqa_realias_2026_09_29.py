@@ -29,7 +29,7 @@ import json
 import os
 import sys
 
-REPO = r"D:/私人资料/deposon-repo"
+REPO = r"_repo_mirror"
 ORIG_EXECUTOR = os.path.join(REPO, "deposon_team", "plugins",
                              "_v3r1p1_21_ktb1_distortion_2026_09_27.py")
 V19_REL = "results/deposon_v19_benchmark_fixes.json"

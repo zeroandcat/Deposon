@@ -3,7 +3,7 @@
 import hashlib
 from pathlib import Path
 
-ROOT = Path(r'D:\私人资料\deposon-repo')
+ROOT = Path(r'_repo_mirror')
 BAD = "    nums = # [Trae 2026-09-18 修复 P1-2 千分位] 补逗号容错\\n    nums = re.findall(r'-?\\d[\\d,]*(?:\\.\\d+)?', text)"
 GOOD = ("    # [Trae 2026-09-18 修复 P1-2 千分位] 补逗号容错\n"
         "    nums = re.findall(r'-?\\d[\\d,]*(?:\\.\\d+)?', text)")

@@ -44,11 +44,11 @@ _l14v3_aggregated_10cells_v3.json     GONE
 _l14v3_aggregated_10cells_v4.json     EXISTS  2233138  66a9b8b3dabf
 ```
 
-- **处置方式**：`mavis-trash` **可恢复删除**（走 runtime 信任启动器 `C:\Users\Administrator\.minimax\bin\mavis-trash.cmd`，非永久删除）。
+- **处置方式**：`mavis-trash` **可恢复删除**（走 runtime 信任启动器 `〔本机用户目录〕\.minimax\bin\mavis-trash.cmd`，非永久删除）。
 - **回执原文**：
   ```
-  mavis-trash: moved to trash: 'D:/私人资料/deposon-repo/.tmp/_l14v3_aggregated_10cells_v2.json'
-  mavis-trash: moved to trash: 'D:/私人资料/deposon-repo/.tmp/_l14v3_aggregated_10cells_v3.json'
+  mavis-trash: moved to trash: '_repo_mirror/.tmp/_l14v3_aggregated_10cells_v2.json'
+  mavis-trash: moved to trash: '_repo_mirror/.tmp/_l14v3_aggregated_10cells_v3.json'
   ```
 - **下游引用影响核对**：v2/v3 仅被**生成脚本自身**引用（`.tmp/_aggregate_10cells_v2.py:113-117`、`.tmp/_aggregate_10cells_v3.py:66-70` 写入+自算 SHA）+ 5 份**台账/信件文档**引用为清单行（字母表登记，非运行时输入链）。**无运行时下游消费者** ⇒ 清走不破坏输入链。
 
@@ -77,7 +77,7 @@ _l14v3_aggregated_10cells_v4.json     EXISTS  2233138  66a9b8b3dabf
 派工单给路径 `deposon-sub/results/_test_conv_out.txt`。在 `deposon-repo` 内**扫不到**（`glob **/_test_conv_out.txt` = 0 命中）；实件在**仓外兄弟目录**：
 
 ```
-D:\私人资料\deposon-sub\results\_test_conv_out.txt
+_repo_mirror\results\_test_conv_out.txt
 ```
 
 ⇒ **仓外部位**，按 9 铁律「不擅动 workspace 外」+ R5「仓外目录只读 0 写入」：**本棒只读核验，0 写入、0 改名、0 移动。**
@@ -135,7 +135,7 @@ D:\私人资料\deposon-sub\results\_test_conv_out.txt
 | 12 | `run_v20_corpus_eval.cpython-314.pyc` | 26,055 | `346b364f5464` |
 | 13 | `run_v20_gt2b.cpython-314.pyc` | 14,929 | `63ff13e1ee71` |
 
-**合计：13 件 / 234,586 B。处置**：`mavis-trash` 可恢复删除（回执 `moved to trash: 'D:/私人资料/deposon-repo/__pycache__'`）。清后复验 = **GONE** ✅
+**合计：13 件 / 234,586 B。处置**：`mavis-trash` 可恢复删除（回执 `moved to trash: '_repo_mirror/__pycache__'`）。清后复验 = **GONE** ✅
 
 ### §3.3 登记不动 8 个目录（**超出派工授权范围**，如实登记）
 

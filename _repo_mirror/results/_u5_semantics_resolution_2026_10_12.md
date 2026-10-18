@@ -2,7 +2,7 @@
 
 > **件性质**：**追解／勘测登记件**（⛔ 非判定件 · ⛔ 非终判件 · ⛔ 非五终判之任一 · ⛔ 0 代 PI 裁 · ⛔ 0 代 PI 释义）—— 依 PI 2026-10-12 卡 `ask_ac388fb8cb83c9f2a6bc85f9` step `gate1_pick` 之「派棒追解 `C-1`」令，就存留项 **C-1 ＝ `U-5` 语义本体未解（两侧读法冲突）** 出**穷尽实测**与**追解结论**。
 > **上游件（0 触动 · 只读）**：处置件 `results/_gate1_gap_three_items_disposition_2026_10_12.md`（`5cf848421c2b`·36,087 B）§2-3 `c-主项`（line 66）｜照拟登记件 `results/_gate1_gap_residuals_adoption_register_2026_10_12.md`（`b84b9808fc71`·30,908 B）§2-1（line 55–63）。
-> **版式**：UTF-8 无 BOM ｜ 纯 LF（CR ＝ 0）｜ ⛔ 0 网络 ｜ ⛔ 0 skill 加载 ｜ ⛔ 0 LLM ｜ ⛔ 0 读 `.env` ｜ ⛔ 0 经手 PAT ｜ ⛔ 0 触 `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录）｜ sub 区**只读**。
+> **版式**：UTF-8 无 BOM ｜ 纯 LF（CR ＝ 0）｜ ⛔ 0 网络 ｜ ⛔ 0 skill 加载 ｜ ⛔ 0 LLM ｜ ⛔ 0 读 `.env` ｜ ⛔ 0 经手 PAT ｜ ⛔ 0 触 `〔本地归档区〕`（0 读 0 写 0 列目录）｜ sub 区**只读**。
 
 ---
 
@@ -18,7 +18,7 @@
 
 | **项** | **值** |
 | --- | --- |
-| **检索根** | `D:\私人资料\deposon-repo`（**可写区**，本件落于其 `results/`）＋ `D:\私人资料\deposon-sub`（**只读**） |
+| **检索根** | `_repo_mirror`（**可写区**，本件落于其 `results/`）＋ `_repo_mirror`（**只读**） |
 | **检索串** | 字面 `U-5`（ASCII 连字符 U-DASH-5）｜**逐行全文扫描**，非抽样 |
 | **文件型** | 仅 `*.md`（全仓 `.md` 实体件） |
 | **命中总量** | **255 处 ／ 76 件**（repo **98** 处 ／ sub **157** 处） |
@@ -137,7 +137,7 @@
 
 ### §5-2 ⛔ 禁触与合规
 
-① ⛔ **0 写**他棒产物面（`results/_gate1_gap*`／`_d9_*`／`_itemH_*`／`_degradation_*`／`_pi_batch_rulings_*`／`_trae_issues_*`／`letters/`）｜② ⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`（**0 读 0 写 0 列目录**）｜③ **sub 区全程只读**（`io.open` 读模式，⛔ 0 写）｜④ ⛔ **0 赋任一** `k_v3s_4_4_*` 布尔｜⑤ ⛔ **0 改**任何终判词／阈值／门柱／判死线一字｜⑥ ⛔ **0 改** `MD ≡ LS × TV` 定义式任一符号｜⑦ ⛔ 0 网络／0 skill／0 LLM／0 API key／0 读 `.env`／0 经手 PAT／0 远端写｜⑧ ⛔ **0 跑实验／0 出读数／0 判档**｜⑨ ⛔ **0 冒充** PI／parent／verifier／verdict-keeper／protocol-keeper／independent-sub。
+① ⛔ **0 写**他棒产物面（`results/_gate1_gap*`／`_d9_*`／`_itemH_*`／`_degradation_*`／`_pi_batch_rulings_*`／`_trae_issues_*`／`letters/`）｜② ⛔ **0 触及** `〔本地归档区〕`（**0 读 0 写 0 列目录**）｜③ **sub 区全程只读**（`io.open` 读模式，⛔ 0 写）｜④ ⛔ **0 赋任一** `k_v3s_4_4_*` 布尔｜⑤ ⛔ **0 改**任何终判词／阈值／门柱／判死线一字｜⑥ ⛔ **0 改** `MD ≡ LS × TV` 定义式任一符号｜⑦ ⛔ 0 网络／0 skill／0 LLM／0 API key／0 读 `.env`／0 经手 PAT／0 远端写｜⑧ ⛔ **0 跑实验／0 出读数／0 判档**｜⑨ ⛔ **0 冒充** PI／parent／verifier／verdict-keeper／protocol-keeper／independent-sub。
 
 ### §5-3 未决项（如实登记）
 
@@ -154,7 +154,7 @@
 
 | **项** | **值** |
 | --- | --- |
-| **路径** | `D:\私人资料\deposon-repo\results\_u5_semantics_resolution_2026_10_12.md` |
+| **路径** | `_repo_mirror\results\_u5_semantics_resolution_2026_10_12.md` |
 | **落前检查** | `Test-Path` ＝ **False**；glob 检索 ＝ **0 命中**（⛔ 0 覆写任何既有件） |
 | **编码** | UTF-8 **无 BOM**（`io.open(encoding='utf-8', newline='\n')`） |
 | **行尾** | **纯 LF**（CR ＝ **0**）｜TAB ＝ **0**｜CTRL ＝ **0** |

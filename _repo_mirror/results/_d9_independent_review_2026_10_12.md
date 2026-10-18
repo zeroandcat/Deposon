@@ -2,9 +2,9 @@
 
 > **本棒身份**：D9 之**独立复核棒**（PI 卡 `ask_ee81e7e1571dcae5fb8793e5` · `d9_close` 裁「乙：维持挂账，候独立复核」⇒ 本件即该独立复核）。
 >
-> **独立性声明**：本件全部结论均由**本棒自建仪器**（`C:\Python314\python.exe` ＋ `ast` 解析 ＋ `sha256` ＋ `os.path.exists`）在盘上**重新实测**得出；⛔ **0 沿用执行棒之自报数值**，⛔ 0 以「执行登记载 X」代替实测（凡引用在册字面者，均标明件名＋行号并与实测**并列**）。
+> **独立性声明**：本件全部结论均由**本棒自建仪器**（`〔本机路径〕\Python314\python.exe` ＋ `ast` 解析 ＋ `sha256` ＋ `os.path.exists`）在盘上**重新实测**得出；⛔ **0 沿用执行棒之自报数值**，⛔ 0 以「执行登记载 X」代替实测（凡引用在册字面者，均标明件名＋行号并与实测**并列**）。
 >
-> **本棒权限**：**只读**。⛔ **0 编辑任何既有件**（含 5 件 `.py`——**本棒对其无编辑权**）；⛔ 0 移动／重命名／删除；⛔ **0 执行任何 runner**（仅 AST 解析与纯 `pathlib` 表达式求值）；⛔ 0 触 `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录）；`deposon-sub` **只读**。
+> **本棒权限**：**只读**。⛔ **0 编辑任何既有件**（含 5 件 `.py`——**本棒对其无编辑权**）；⛔ 0 移动／重命名／删除；⛔ **0 执行任何 runner**（仅 AST 解析与纯 `pathlib` 表达式求值）；⛔ 0 触 `〔本地归档区〕`（0 读 0 写 0 列目录）；`deposon-sub` **只读**。
 >
 > **产出**：本件（唯一新件）。
 
@@ -87,7 +87,7 @@
 
 **旧址断链前提复验**：上述 24 条之**旧址**（`SUB\results\<同名>`）实测 **全部 `exists=False`**（唯一例外为 H3 `SRC_BOSS_PA1`，旧址 `True`——即底本所载「未断链 1 条」）⇒ 「悬空」前提成立，回写确已解 24 条。
 
-**H3 `SRC_ANCHOR_FALLBACK`（L62）**：实测目标 `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit\conservation.py` **`exists=False`**；本棒复验 4 候选址（repo／repo_backup／sub／sub_backup 之 `_archive_deposon_2026_09_17`）**皆 False** ⇒ 与底本 `d6ff7e9b4bd6` §2.3 之「无可用目标」**独立吻合**。此项**经登记、候 PI**，⛔ 0 属本棒判非。
+**H3 `SRC_ANCHOR_FALLBACK`（L62）**：实测目标 `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py` **`exists=False`**；本棒复验 4 候选址（repo／repo_backup／sub／sub_backup 之 `_archive_deposon_2026_09_17`）**皆 False** ⇒ 与底本 `d6ff7e9b4bd6` §2.3 之「无可用目标」**独立吻合**。此项**经登记、候 PI**，⛔ 0 属本棒判非。
 
 **残余可达性缺口（超出 26 条常量之面）**：见 §3。
 
@@ -137,7 +137,7 @@
 
 ### 3-① 🔴 H4／H5 之域读取面 —— **硬阻断**（最重）
 
-- **事实**：H4 `_s4_heldout_sampling_seedprime_extractor` 之 `load_domain()`（L109–126）以 **`os.listdir(RESULTS)`**（L112）枚举域文件，而 `RESULTS` 仍为 `os.path.abspath(os.path.join(HERE, os.pardir, "results"))` ＝ **`D:\私人资料\deposon-sub\results`**。
+- **事实**：H4 `_s4_heldout_sampling_seedprime_extractor` 之 `load_domain()`（L109–126）以 **`os.listdir(RESULTS)`**（L112）枚举域文件，而 `RESULTS` 仍为 `os.path.abspath(os.path.join(HERE, os.pardir, "results"))` ＝ **`_repo_mirror\results`**。
 - **实测**：`SUB\results` 中 `*addendum*.json` 命中 **0 件**；`REPO\results` 中命中 **21 件**。
 - **后果**：`load_domain()` 返回空列表 ⇒ `domain_gate()`（L132）`if len(files) != 21: print("ABORT: domain file count 0 != 21"); sys.exit(2)` ⇒ **H4 一经运行即 `SystemExit(2)`**。
 - **21 件 `DOMAIN_REGISTERED` 清单**（L75–97）：本棒实测**为 21 项**（底本 `7395034a09aa` §2.4 附注载「24 条」，**实测 21**，差 3）；其声明指纹与 repo 侧现址**21/21 逐件吻合**（如 `_r_pair_addendum_2026_10_09.json` 声明 `cebc2f6ef5ec` ＝ 实测 `cebc2f6ef5ec`）。
@@ -149,14 +149,14 @@
 - **事实**：H3 保留 `REPO = Path(__file__).resolve().parent.parent`（＝ **`deposon-sub`**，未改），而 4 条输入常量已改指 **`deposon-repo`**。故：
   - **L117**：`str(v.relative_to(REPO))`（`input_chain` 推导式之 `"path"` 项）——**模块级**，`import` 即执行；
   - **L735**：`OUT_JSON.relative_to(REPO)`（收尾 print）。
-- **实测**（纯 `pathlib` 求值，⛔ 0 执行 runner）：`SRC_V3_PHYS`／`SRC_PE3`／`SRC_ANCHOR_MAIN`／`OUT_JSON` 四者 `relative_to(deposon-sub)` **皆抛** `ValueError: ... is not in the subpath of 'D:\私人资料\deposon-sub'`；**仅 `SRC_BOSS_PA1`（未改者，指向 sub）可成功**。
+- **实测**（纯 `pathlib` 求值，⛔ 0 执行 runner）：`SRC_V3_PHYS`／`SRC_PE3`／`SRC_ANCHOR_MAIN`／`OUT_JSON` 四者 `relative_to(deposon-sub)` **皆抛** `ValueError: ... is not in the subpath of '_repo_mirror'`；**仅 `SRC_BOSS_PA1`（未改者，指向 sub）可成功**。
 - **后果**：H3 **模块导入即崩**（L117 位于模块顶层），先于其任何计算 ⇒ 改写**未使其可运行**。
 - **与登记之差**：执行登记 §5 实证四称「已解析且 `exists=True` 之常量」**未含 `relative_to` 之派生表达式**；§6 残留表**未载此项**。
 
 ### 3-③ 🟡 H5 之 `.tmp` 导入面 —— **悬空**
 
 - **事实**：H5 **L314**：`sys.path.insert(0, os.path.join(REPO, ".tmp"))`，紧接 **L315** `import s4_regen_runner as R`。
-- **实测**：`REPO` ＝ `deposon-sub` ⇒ 目标 `D:\私人资料\deposon-sub\.tmp` **`isdir=False`**（`deposon-repo\.tmp` ＝ `True`，且 `s4_regen_runner.py` **确在 repo 侧**：实测 `repo\.tmp\s4_regen_runner.py` = `True`、`sub\.tmp\s4_regen_runner.py` = `False`）。
+- **实测**：`REPO` ＝ `deposon-sub` ⇒ 目标 `_repo_mirror\.tmp` **`isdir=False`**（`deposon-repo\.tmp` ＝ `True`，且 `s4_regen_runner.py` **确在 repo 侧**：实测 `repo\.tmp\s4_regen_runner.py` = `True`、`sub\.tmp\s4_regen_runner.py` = `False`）。
 - **后果**：该 `import` 触发即 **`ModuleNotFoundError`**（若代码路径抵达该行）。
 - **与登记之差**：执行登记 §6-④ 残留表**未载此项**。
 
@@ -246,7 +246,7 @@
 - ⛔ **0 回改任何既有件**一字——含 5 件 `.py`（**本棒对其无编辑权**，全程只读）、底本 `c3167a531e0e`／v2 `d6ff7e9b4bd6`／勘误 `7395034a09aa`／回写映射 `ff0a25dc2720`／执行登记 `0ea7852c4511`／723 映射表 `2b244f0760b4`。
 - ⛔ **0 移动／0 重命名／0 删除**任何件；`deposon-sub` **只读**（0 写 0 删）。
 - ⛔ **0 执行任何 runner**：全部读数经 `ast` 解析或**纯 `pathlib` 表达式求值**（`relative_to` 之 `ValueError` 系在本棒构造之等价路径对象上求值所得，**非执行 sub 件代码**）。
-- ⛔ **0 触** `D:\私人资料\_non_upload_local_archive`（**0 读 0 写 0 列目录**）。
+- ⛔ **0 触** `〔本地归档区〕`（**0 读 0 写 0 列目录**）。
 - ⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT；⛔ 0 改终判词／阈值／门柱／判死线；⛔ 0 赋 `k_v3s_4_4_*` 布尔；⛔ 0 宣告①毕。
 - ⛔ 0 写他棒产物名域（`_n2_*`／`_g2_*`／`_g1_*`／既有 `_d9_*`／`letters/`／`_bob_*`／`_remote_baseline*`／`_archive_2026-10-12`）。
 - 临时脚本仅落 `%TEMP%`（`d9_ir_probe*_2026_10_12.py` ＋ 输出 json），**未入仓**，用后清理。

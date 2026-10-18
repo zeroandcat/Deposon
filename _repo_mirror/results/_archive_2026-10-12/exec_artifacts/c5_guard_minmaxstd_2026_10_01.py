@@ -18,7 +18,7 @@ import hashlib
 import statistics
 from collections import Counter, OrderedDict
 
-REPO = r"D:/私人资料/deposon-repo"
+REPO = r"_repo_mirror"
 B3 = REPO + "/results/deposon_p_d_b3_merkle_22_caption_v0_4_2026_09_29.json"
 IDX = REPO + "/corpus/v20/index_v3_2026_09_29.json"
 FIX = REPO + "/results/c5_b_group_fix_readings_2026_10_01.json"

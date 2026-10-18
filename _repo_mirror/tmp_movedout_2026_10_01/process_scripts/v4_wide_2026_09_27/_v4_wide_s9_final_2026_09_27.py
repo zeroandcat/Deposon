@@ -2,9 +2,9 @@
 """_v4_wide_s9_final — 重建 F2/F4 改前 SHA-12（逆变换）+ 终验（只读）"""
 import hashlib, os, re
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo'); RES = REPO / 'results'; TMP = REPO / '.tmp'
-SUB = Path(r'D:\私人资料\deposon-sub')
-KEY = 'C:/Users/Administrator/Desktop/AI/LLM API.txt'
+REPO = Path(r'_repo_mirror'); RES = REPO / 'results'; TMP = REPO / '.tmp'
+SUB = Path(r'_repo_mirror')
+KEY = '〔本机用户目录〕/Desktop/AI/LLM API.txt'
 def sha12b(b): return hashlib.sha256(b).hexdigest()[:12]
 
 print('=== F2 重建：当前字节前加回 BOM = 改前 ===')

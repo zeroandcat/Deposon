@@ -110,8 +110,8 @@
 
 | 目标子目录 | 拉回路径 |
 |---|---|
-| `…\process_scripts\v4_wide_2026_09_27\`（10 件） | → `D:\私人资料\deposon-repo\deposon_team\plugins\` |
-| `…\process_scripts\v5_wa_2026_09_30\`（4 件） | → `D:\私人资料\deposon-repo\deposon_team\plugins\` |
+| `…\process_scripts\v4_wide_2026_09_27\`（10 件） | → `_repo_mirror\deposon_team\plugins\` |
+| `…\process_scripts\v5_wa_2026_09_30\`（4 件） | → `_repo_mirror\deposon_team\plugins\` |
 
 **单批反向移动即可原位复原**（移动非复制，源 0 存在 ⇒ 0 覆盖风险）；复原后 SHA-12 应为 §2 同值。
 

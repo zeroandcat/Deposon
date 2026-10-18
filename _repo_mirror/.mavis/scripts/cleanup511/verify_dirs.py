@@ -5,7 +5,7 @@ import os, sys, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from recycle_exec import bin_dir_for, list_bin
 
-REPO = r"D:\私人资料\deposon-repo"
+REPO = r"_repo_mirror"
 DIRS = [r".tmp\numaudit_20261013", r"results\_archive_2026_09_20", r"results\_archive_2026_09_21"]
 
 bindir = bin_dir_for(os.path.join(REPO, "x"))

@@ -57,7 +57,7 @@
 | 项 | 实测 |
 | :-- | :-- |
 | **Q9 之卡号** | `ask_203b9a6c112798d7bc4a1c8c`（**本棒 ⛔ 0 断言其即 `B-11` 所指之唯一标的** —— 见下「界分」） |
-| **本会话存储面之命中** | **本棒直读**：本会话存储面（`C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_…`）之 `messages.jsonl` 之逐行扫描 ＝ **2,265 件**、命中 **7** 件、**遍历错误 ＝ 0**；七命中面（本棒逐件实测 `exists` ＝ `True` ＋ 含卡号 ＝ `True`）：`messages.jsonl`｜`snapshots\g000000000086--ctx_12888aab-….jsonl`｜`snapshots\g000000000087--ctx_182027ab-….jsonl`｜`.history-mutation-054bcff6-…\snapshots\g000000000086--ctx_12888aab-….jsonl`｜`.history-mutation-054bcff6-…\snapshots\g000000000087--ctx_182027ab-….jsonl`｜`.history-mutation-157d31ac-…\messages.jsonl`｜`.history-mutation-1f1f944f-…\messages.jsonl`（探针 `.tmp/d85_probe8.py`） |
+| **本会话存储面之命中** | **本棒直读**：本会话存储面（`〔本机用户目录〕\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_…`）之 `messages.jsonl` 之逐行扫描 ＝ **2,265 件**、命中 **7** 件、**遍历错误 ＝ 0**；七命中面（本棒逐件实测 `exists` ＝ `True` ＋ 含卡号 ＝ `True`）：`messages.jsonl`｜`snapshots\g000000000086--ctx_12888aab-….jsonl`｜`snapshots\g000000000087--ctx_182027ab-….jsonl`｜`.history-mutation-054bcff6-…\snapshots\g000000000086--ctx_12888aab-….jsonl`｜`.history-mutation-054bcff6-…\snapshots\g000000000087--ctx_182027ab-….jsonl`｜`.history-mutation-157d31ac-…\messages.jsonl`｜`.history-mutation-1f1f944f-…\messages.jsonl`（探针 `.tmp/d85_probe8.py`） |
 | **本会话之创建日** | 存储面目录名载「2026\09\01」；父会话所载 `createdAt` `1788230327809` —— 📌 **与派工单元所载「本会话实始于 2026-09-01」相符**；⚠ **该 `createdAt` 之换算值之权威性 ⛔ 0 本棒复核**（本棒 0 读 `session get` 之原体） |
 | **提取面之状态** | 📌 **在途**（父会话之提取面已落 `.tmp/_b11_extract.txt` 等暂存件）⇒ ⚠ **本棒 ⛔ 0 开卷该等暂存件之正文**（其内容之取用归主代理之回查面）⇒ ⛔ **0 主张 `Q9` 之卡答逐字已被提取毕** |
 | 🔴 **界分（不软化）** | 📌 **`B-11` 之所指（何者之何答）之语境核**系父会话之回查面（其 `grep` 之结果）；**本棒仅能以本会话存储面之命中事实充「原件在本机可读面」之可核证据** ⇒ ⛔ **0 断言**该命中件内含 `Q9` 之卡答**逐字原文**、⛔ **0 断言**其含卡片服务端原体、⛔ **0 断言**其已被提取、⛔ **0 断言**`GAP-12` 之闭径条件已满足 |
@@ -164,7 +164,7 @@
 | 6 | ⚠ **分工条之射程未改** | 「主代理自行回查」**仅为特例**、且**仅限主对话历史** ⇒ 📌 本件之「归主代理回查」系**本卡 PI 之裁 ＋ 既有分工条**之合流登记，⛔ **0** 以之改写该分工条、⛔ **0** 派 `verifier` 以代其位 |
 | 7 | ⚠ **`H_face` 口径之生效 ≠ 数值之改写** | §4-3 ⇒ ⛔ **0** 改任何既有件中 `H_face` 之值、⛔ **0** 改 `tools/` 任一字节 |
 | 8 | ⚠ **本件 0 落终判** | 五终判词表（pass／af／kd／fail／give-up）之任一 **⛔ 0 落于本件**；⛔ **0 主张**任何既有终判变更 |
-| 9 | ⚠ **本件 0 联网 0 读 key 0 触归档区 0 跑实验** | R4（key 永不明文）· 归档区 `D:/私人资料/_non_upload_local_archive` ⛔ 0 读／0 写／0 列目录 |
+| 9 | ⚠ **本件 0 联网 0 读 key 0 触归档区 0 跑实验** | R4（key 永不明文）· 归档区 `〔本地归档区〕` ⛔ 0 读／0 写／0 列目录 |
 | 10 | ⚠ **既有件触动数 ＝ 0** | 本棒所写 2 件皆为新件；§0 之拟引源件与 §5 之非拟引件**仅直算指纹与字节面或定点开卷**，⛔ **0 改其任一字节** |
 
 ---

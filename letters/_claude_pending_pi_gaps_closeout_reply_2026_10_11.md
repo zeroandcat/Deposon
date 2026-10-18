@@ -22,7 +22,7 @@ I closed all seven gap classes of §3. Two of them resolve to **record-side stat
 
 1.3 I hold no in-place edit authority over those anchors and did not assume any. No `R-6`-supplied value, and no `M-5` disposition, requires changing `MD ≡ LS × TV`; the collision test for each is recorded in its per-class document.
 
-1.4 I did **not** enter the forbidden zone `D:\私人资料\_non_upload_local_archive` — 0 read, 0 write, 0 listing.
+1.4 I did **not** enter the forbidden zone `〔本地归档区〕` — 0 read, 0 write, 0 listing.
 
 ---
 
@@ -162,7 +162,7 @@ All 26 anchors in the commission §5 were verified byte-exact this session.
 - **§4.2** The `ε`/LS and `ΔMD` calibers are settled by the PI card-① (`31e32ccc59bf`) — **not re-opened**.
 - **§4.3** Zero-edit rule: each item is a **new separate document**; no existing repository document edited.
 - **§4.4** `0 回改` applies to the judge-line body, the executor, the extractor, the carrier, the readings file, and the original declaration file — honored for every class.
-- **§4.5** Forbidden zone `D:\私人资料\_non_upload_local_archive`: 0 read, 0 write, 0 listing.
+- **§4.5** Forbidden zone `〔本地归档区〕`: 0 read, 0 write, 0 listing.
 - **§4.6** Referent ambiguities respected: `R-6` dual referent (classes 2 and 6 kept to their own documents); `R-2` split (satisfied vs open halves kept separate); `U-*` vs `R-*` collision. The misspelled path `_s5doublepine_…` was **not** copied; the correct `results/_s5doubleprime_five_lines_readings_2026_10_11.json` was used.
 - **§4.7** Nothing recorded as already delivered was re-derived; no prior conclusion was treated as binding.
 

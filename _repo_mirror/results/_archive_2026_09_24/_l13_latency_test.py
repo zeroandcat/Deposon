@@ -13,7 +13,7 @@ os.environ["http_proxy"] = PROXY_HTTP
 
 # Test mimo only (no proxy in mimo case)
 def fetch_api_key(idx_1based):
-    key_path = Path("C:/Users/Administrator/Desktop/AI/LLM API.txt")
+    key_path = Path("〔本机用户目录〕/Desktop/AI/LLM API.txt")
     raw = key_path.read_bytes()
     for enc in ("utf-8", "gb18030", "gbk"):
         try:

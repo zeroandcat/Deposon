@@ -94,7 +94,7 @@
 
 | 子类 | 件数 | bytes | 派工单期望目标 | 跳过理由(实测) |
 |---|---|---|---|---|
-| `_p_l_v3_vector_embedding_*` | 21 | 23,700,948 | `D:/私人资料/_non_upload_local_archive` | 全部 ghostref_reconciliation 标 GHOST_REF_COPIED,真件在仓外 `_archive_manifest_deposon_sub_2026_09_23.json` |
+| `_p_l_v3_vector_embedding_*` | 21 | 23,700,948 | `〔本地归档区〕` | 全部 ghostref_reconciliation 标 GHOST_REF_COPIED,真件在仓外 `_archive_manifest_deposon_sub_2026_09_23.json` |
 | `_p_l_v3_real_collapse_*` | 4 | 81,730 | 同上 | 全部 ghostref_inventory 标 GHOST_REF_COPIED |
 | `_p_l_v3_robustness_*` | 11 | 135,520 | 同上 | 同上 |
 | `_p_l_v3_phase*` (1+2 不含 phase3-adendum 报告) | 9 | 66,939 | 同上 | 同上 |
@@ -109,7 +109,7 @@
 
 | 子类 | 件数 | bytes | 派工单期望目标 | 跳过理由(实测) |
 |---|---|---|---|---|
-| `_adendum_*` (results/ 下,不含 corpus/) | 28 | 263,836 | `D:/私人资料/deposon-sub` | 全部 ghostref_reconciliation 标 GHOST_REF_COPIED,真件在 `_archive_manifest_deposon_sub_2026_09_23.json` |
+| `_adendum_*` (results/ 下,不含 corpus/) | 28 | 263,836 | `_repo_mirror` | 全部 ghostref_reconciliation 标 GHOST_REF_COPIED,真件在 `_archive_manifest_deposon_sub_2026_09_23.json` |
 | `_kimi_push_v3_manifest_batch*` | 15 | 91,166 | 同上 | 全部 4 锚件均引 |
 | `_kimi_safe_batch_push_*` | 3 | 63,188 | 同上 | 全部 4 锚件均引 |
 | `_v2_*.py` | 9 | 80,371 | 同上 | 全部 4 锚件均引 (e.g. `_v2_stage1_60cells.py` GHOST_REF_COPIED sha12=8C7BD12C3A8C) |
@@ -146,10 +146,10 @@
 
 | 目录 | before (实测) | after (实测) | delta | 备注 |
 |---|---|---|---|---|
-| `D:/私人资料/deposon-repo` | **1439** | **1440** | +1 (本棒新建 ledger) | 本棒新建 1 件 ledger,0 件其他移动 |
-| `D:/私人资料/_non_upload_local_archive` | 1176 | 1176 | 0 | 本棒 0 件移动 |
-| `D:/私人资料/deposon-sub` | 364 | 364 | 0 | 本棒 0 件移动 |
-| `D:/私人资料/deposon-repo/results/_archive_2026_09_24/` (灰区目标) | 6 (预归档件已存在) | 6 | 0 | 本棒 0 件移动 |
+| `_repo_mirror` | **1439** | **1440** | +1 (本棒新建 ledger) | 本棒新建 1 件 ledger,0 件其他移动 |
+| `〔本地归档区〕` | 1176 | 1176 | 0 | 本棒 0 件移动 |
+| `_repo_mirror` | 364 | 364 | 0 | 本棒 0 件移动 |
+| `_repo_mirror/results/_archive_2026_09_24/` (灰区目标) | 6 (预归档件已存在) | 6 | 0 | 本棒 0 件移动 |
 
 > **基线修正**:第一棒 §K.1 报"主目录 after 1437",本棒实测 = **1439**(差 +2)。差异来自 results/ 实测 908 vs 第一棒报 906(差 +2)。原因:第一棒在 §K.1 报告时未把自己刚写出的 cleanup manifest + 第一棒 noise cleanup manifest 计入基线。本棒以**实测**为最终基线。
 

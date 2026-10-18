@@ -11,8 +11,8 @@ import hashlib, json, math, os, re
 from datetime import datetime, timezone
 import numpy as np
 
-REPO = r"D:\私人资料\deposon-repo"
-KWS  = r"C:\Users\Administrator\Documents\kimi\tasks\2026-08-31\05-20-23-c0a47add"
+REPO = r"_repo_mirror"
+KWS  = r"〔本机用户目录〕\Documents\kimi\tasks\2026-08-31\05-20-23-c0a47add"
 OUT_KIMI = os.path.join(REPO, "deposon_team", "products", "kimi_artifact_v_2026_09_16.json")
 OUT_RES  = os.path.join(REPO, "results", "deposon_p_k_cross_subject_fingerprint_blind_test_2026_09_16.json")
 

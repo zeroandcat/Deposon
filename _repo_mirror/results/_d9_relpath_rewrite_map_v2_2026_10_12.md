@@ -3,7 +3,7 @@
 > **件别**：**重制件（另名并列）**。
 > **替代阅读面**＝原件 `results/_d9_relpath_rewrite_map_2026_10_12.md`（SHA-12 `c3167a531e0e`，21,352 B）——**其中文正文成稿即毁**（nonAscii = 0；4,631 个字面 `?`），**不可复原**，故另名重制。
 > **操作数据逐行一致**：件名／行号／旧代码行／旧解析路径／新路径／SHA-12／bytes／风险码（A-方案·A-行、R1–R7）**一律照录原件，未改一字**；**中文正文为完整重写**，⛔ 0 引用原件 `?` 残文当正文。
-> **两处系统性替换声明**：原件中所有 `????`（4 字）均系 **`私人资料`** 被 mojibake 毁损所致；本件按实际盘面恢复为 `D:\私人资料\...`。此为**唯一**一处对 ASCII 操作数据外观的改动，且只改被毁字符、不改任何真实路径成分（`deposon-repo`／`deposon-sub`／`_non_upload_local_archive` 等 0 改动）。
+> **两处系统性替换声明**：原件中所有 `????`（4 字）均系 **`私人资料`** 被 mojibake 毁损所致；本件按实际盘面恢复为 `〔本地资料区〕\...`。此为**唯一**一处对 ASCII 操作数据外观的改动，且只改被毁字符、不改任何真实路径成分（`deposon-repo`／`deposon-sub`／`_non_upload_local_archive` 等 0 改动）。
 > **重写保真度标注**：正文按存续 ASCII 锚点（件名／行号／计数／指纹／代码行）＋本棒交底重写；凡原件中文已毁且**无 ASCII 锚点可据**者，标 `[原文已毁·不载]`；凡属本棒**据存续数据所作推断**者，标 `[重制·推断]`。⛔ 0 杜撰具体数字。
 
 ---
@@ -22,7 +22,7 @@
 | **须 PI 裁项** | **1**（L61） | 见 §2.3 与 §4.2 |
 | 风险码覆盖面 | **25** 项全量标注 | 见 §1.4；逐项标 A-行／R 码 |
 
-**路径基准**：`REPO` ＝ `D:\私人资料\deposon-repo`；`SUB` ＝ `D:\私人资料\deposon-sub`。
+**路径基准**：`REPO` ＝ `_repo_mirror`；`SUB` ＝ `_repo_mirror`。
 
 ---
 
@@ -36,7 +36,7 @@
 
 | 口径 | 底本原文口径 | 本表口径 |
 |---|---|---|
-| 存在性 | `C:\Python314\python.exe` 调 `ast` 模块 | `C:\Python314\python.exe`，**UTF-8** 读入后依 **AST 解析 + `os.path.exists` + sha256** |
+| 存在性 | `〔本机路径〕\Python314\python.exe` 调 `ast` 模块 | `〔本机路径〕\Python314\python.exe`，**UTF-8** 读入后依 **AST 解析 + `os.path.exists` + sha256** |
 | 不存在时的处置 | 以 `os.path.exists` 实测 | 依 `os.path.exists` 实测，**0 臆测** |
 | SHA-12 指纹 | 底本未载 | **新增：凡落 `sha256` 者一律取前 12 位**；与本棒 5 件基线 SHA-12 对齐（见 §1.3），0 沿底本之**旧**指纹 |
 
@@ -63,14 +63,14 @@
 | **R3** | 源与目标**同名**，且下游按原路径读取 —— 写向须在 sub 侧留痕登记 |
 | **R4** | **兜底件**：保守回退路径实测 **0 命中** |
 | **R5** | **指纹锚点**：先以本件 5 件 SHA-12 比对 723 行登记 **L649／667／668／685／781** 之 `.1` 行，**0 不符即停**，不得继续 |
-| **R6** | 路径基准须为绝对锚 `D:\私人资料\deposon-repo`，0 依赖 cwd／相对路径 |
+| **R6** | 路径基准须为绝对锚 `_repo_mirror`，0 依赖 cwd／相对路径 |
 | **R7** | `REPO_RESULTS` **双读兼容**路径，0 冲突、0 歧义 |
 
 ### 1.5 两方案（PI 择 **A**）
 
 | 方案 | 内容 | 覆盖面 |
 |---|---|---|
-| **A-全量改 REPO_RESULTS** | 于 runner 头新增 `REPO_RESULTS = pathlib.Path(r"D:\私人资料\deposon-repo\results")`，并在 H3 另补显式 `REPO_ROOT` 兜底 | **25 项**一次覆盖，余 1 项不列入 |
+| **A-全量改 REPO_RESULTS** | 于 runner 头新增 `REPO_RESULTS = pathlib.Path(r"_repo_mirror\results")`，并在 H3 另补显式 `REPO_ROOT` 兜底 | **25 项**一次覆盖，余 1 项不列入 |
 | **A-逐处回退** | 把各 `RESULTS` 改为双读：`(REPO_RESULTS / name) if not (RESULTS / name).exists() else (RESULTS / name)` | **25 项**0 遗漏、1 项冗余分支 |
 
 > **PI 已择 A（全量改 `REPO_RESULTS`）**，故本表「处置」列统一标 **A-行**；0 逐处改写、0 冗余分支。
@@ -82,7 +82,7 @@
 > **读法**：行号 ｜ 旧代码行（原文照录）｜ 旧解析路径 ｜ 新目标路径（含目标 SHA-12／bytes）｜ 处置 ｜ 风险码。
 > **A-行** ＝ 依 PI 裁 A 之 `REPO_RESULTS` 全量方案处置；**A-方案** ＝ 同族标注。
 
-### 2.1 H1 件 `D:\私人资料\deposon-sub\results\_s4prime_readings_runner_2026_10_11.py`
+### 2.1 H1 件 `_repo_mirror\results\_s4prime_readings_runner_2026_10_11.py`
 
 基线 SHA-12 `0aa414188361`／23,766 B，共 **463** 行。路径基准定位于 **L36**（`RESULTS = pathlib.Path(__file__).resolve().parent`）与 **L37**（`REPO = RESULTS.parent`）；**7/7** 全部命中。
 
@@ -96,7 +96,7 @@
 | **L53** | `D2_REGISTERED = RESULTS / "_s4prime_five_lines_readings_2026_10_11.json"` | `SUB\results\_s4prime_five_lines_readings_2026_10_11.json` | **`REPO\results\_s4prime_five_lines_readings_2026_10_11.json`**（`65a9b9be6327`，15,219 B） | A-方案·A-行 | **R2**、**R7**：改写后与产出登记口径一致 |
 | **L56** | `OUT_JSON = RESULTS / "_stage3_trigger_readings_items_2026_10_11.json"` | `SUB\results\_stage3_trigger_readings_items_2026_10_11.json` | **`REPO\results\_stage3_trigger_readings_items_2026_10_11.json`**（`079108c62a82`，21,049 B） | A-方案·A-行 | **R3**：**写向**件，下游按原路径读取，须在 sub 侧留痕 |
 
-### 2.2 H2 件 `D:\私人资料\deposon-sub\results\_s5doubleprime_five_lines_runner_2026_10_11.py`
+### 2.2 H2 件 `_repo_mirror\results\_s5doubleprime_five_lines_runner_2026_10_11.py`
 
 基线 SHA-12 `9de3c08e3863`／31,138 B，共 **591** 行。路径基准定位于 **L37**（同 H1 之 `RESULTS = pathlib.Path(__file__).resolve().parent`）与 **L38**（同族基准行）；**4/4** 全部命中。
 
@@ -107,21 +107,21 @@
 | **L45** | `OLD_HELDOUT_JSON = RESULTS / "_s4_heldout_sampling_seed42_items_2026_10_09.json"  # 〔注释原文已毁〕` | `SUB\results\...seed42_items_2026_10_09.json` | **`REPO\results\_s4_heldout_sampling_seed42_items_2026_10_09.json`**（`6a670e629dca`，20,033 B） | A-方案·A-行 | **R2**、**R7**：**旧基线件**，与 H1 L45／H4 L69／H5 L87 同件 |
 | **L585** | `    op = RESULTS / "_s5doubleprime_five_lines_readings_2026_10_11.json"` | `SUB\results\_s5doubleprime_five_lines_readings_2026_10_11.json` | **`REPO\results\_s5doubleprime_five_lines_readings_2026_10_11.json`**（`839fb5452578`，16,099 B） | A-方案·A-行 | **R3**：**写向**件（`op` 开档），**另有 4 处同族读取**须同步核对 |
 
-### 2.3 H3 件 `D:\私人资料\deposon-sub\results\_v3_recheck_05_executor_2026_09_28.py`
+### 2.3 H3 件 `_repo_mirror\results\_v3_recheck_05_executor_2026_09_28.py`
 
-基线 SHA-12 `d6c8bc163e11`／38,639 B，共 **734** 行。路径基准定位于 **L56**（`REPO = Path(__file__).resolve().parent.parent`）⇒ 基准实际指向 **`D:\私人资料\deposon-sub`**，**该件内一切 `results` 均指 sub 侧 results**；**5/6** 命中，1 项须裁（见 §2.6 与 §4.2）。
+基线 SHA-12 `d6c8bc163e11`／38,639 B，共 **734** 行。路径基准定位于 **L56**（`REPO = Path(__file__).resolve().parent.parent`）⇒ 基准实际指向 **`_repo_mirror`**，**该件内一切 `results` 均指 sub 侧 results**；**5/6** 命中，1 项须裁（见 §2.6 与 §4.2）。
 
 | 行号 | 旧代码行（照录） | 旧解析路径 | 新目标路径 | 处置 | 风险码 |
 |---|---|---|---|---|---|
-| **L57** | `SRC_V3_PHYS = REPO / "results" / "deposon_v3_physical_opt_60cells_2026_09_11.json"` | `SUB\results\deposon_v3_physical_opt_60cells_2026_09_11.json` | **`REPO\results\deposon_v3_physical_opt_60cells_2026_09_11.json`**（`c659695aa23c`，17,732 B） | A-方案·A-行·**须显式 `REPO_ROOT`**：本件 `REPO` ＝ `D:\私人资料\deposon-sub`，须另锚 `results` 根 | **R2**、**R6** |
+| **L57** | `SRC_V3_PHYS = REPO / "results" / "deposon_v3_physical_opt_60cells_2026_09_11.json"` | `SUB\results\deposon_v3_physical_opt_60cells_2026_09_11.json` | **`REPO\results\deposon_v3_physical_opt_60cells_2026_09_11.json`**（`c659695aa23c`，17,732 B） | A-方案·A-行·**须显式 `REPO_ROOT`**：本件 `REPO` ＝ `_repo_mirror`，须另锚 `results` 根 | **R2**、**R6** |
 | **L58** | `SRC_PE3 = REPO / "results" / "deposon_boss_pe_3_reservoir_verify_9m60c_2026_09_15.json"` | `SUB\results\deposon_boss_pe_3_reservoir_verify_9m60c_2026_09_15.json` | **`REPO\results\deposon_boss_pe_3_reservoir_verify_9m60c_2026_09_15.json`**（`4e4a17d43adf`，13,562 B） | A-方案·A-行·同 L57 须显式 `REPO_ROOT` | **R2**、**R6** |
-| **L60** | `SRC_ANCHOR_MAIN = REPO / "verifier" / "audit" / "conservation.py"` | `SUB\verifier\audit\conservation.py` | **`D:\私人资料\deposon-repo\verifier\audit\conservation.py`**（`4bdec2683f06`，22,105 B）—— **非 `results` 内件** | A-方案·A-行 | **R2**、**R6**：**须绕过 `results`**，直指 repo 根；旧 `SUB\verifier\audit\conservation.py` 实测 **False** |
+| **L60** | `SRC_ANCHOR_MAIN = REPO / "verifier" / "audit" / "conservation.py"` | `SUB\verifier\audit\conservation.py` | **`_repo_mirror\verifier\audit\conservation.py`**（`4bdec2683f06`，22,105 B）—— **非 `results` 内件** | A-方案·A-行 | **R2**、**R6**：**须绕过 `results`**，直指 repo 根；旧 `SUB\verifier\audit\conservation.py` 实测 **False** |
 | **L61** | `SRC_ANCHOR_FALLBACK = REPO / "_archive_deposon_2026_09_17" / "verifier" / "audit" / "conservation.py"` | `SUB\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | 〔原文已毁·不载〕**无可用目标** ⇒ **新路径保持不动、维持 False** | 〔原文已毁·不载〕**须 PI 裁** | **R4**：**兜底件、0 命中**，详见 §2.3 L61 与 §4.2；**agent 0 代决** |
 | **L62** | `OUT_JSON = REPO / "results" / "_v3_recheck_05_result_2026_09_28.json"` | `SUB\results\_v3_recheck_05_result_2026_09_28.json` | **`REPO\results\_v3_recheck_05_result_2026_09_28.json`**（`f63b36b75a51`，**450,701 B**） | A-方案·A-行 | **R3**：**写向**件，450 KB 级，须确认下游读取面已同步 |
 
 > **本件特点**：基准行为 `parent.parent`（上溯两级），故**须显式补** `REPO_ROOT` 锚点，否则 `results` 仍解析至 sub 侧；涉及 L60、L61 两行。
 
-### 2.4 H4 件 `D:\私人资料\deposon-sub\results\_s4_heldout_sampling_seedprime_extractor_2026_10_10.py`
+### 2.4 H4 件 `_repo_mirror\results\_s4_heldout_sampling_seedprime_extractor_2026_10_10.py`
 
 基线 SHA-12 `1bf6f47a590d`／18,923 B，共 **439** 行。路径基准定位于 **L59–60**（`HERE = os.path.dirname(os.path.abspath(__file__))`；`RESULTS = os.path.abspath(os.path.join(HERE, os.pardir, "results"))`）⇒ 含 `..` 上溯，**须以绝对锚覆盖**；**2/2** 全部命中。
 
@@ -132,7 +132,7 @@
 
 > **本件说明**：AST 于本件 75／95 行附近另见 `DOMAIN_REGISTERED` 一类变量，**不在 `RESULTS` 表达式域内**，故未计入 25 项；AST 全量抽取得 26 行、其中 25 行命中、1 行（L59）不列入，0 漏项。
 
-### 2.5 H5 件 `D:\私人资料\deposon-sub\results\_s4_heldout_sampling_seedthird_extractor_2026_10_11.py`
+### 2.5 H5 件 `_repo_mirror\results\_s4_heldout_sampling_seedthird_extractor_2026_10_11.py`
 
 基线 SHA-12 `068e1a7a1d04`／52,655 B，共 **841** 行。路径基准定位于 **L71–73**（`HERE = os.path.dirname(os.path.abspath(__file__))`；`REPO = os.path.abspath(os.path.join(HERE, os.pardir))`；`RESULTS = os.path.abspath(os.path.join(HERE))`）⇒ `RESULTS` 直取 `HERE`，与 `REPO` 定义不一致，**须统一**；**7/7** 全部命中。
 
@@ -169,7 +169,7 @@
 **须 PI 裁之三项（本棒仅呈案，0 代决）**
 
 1. **多件同址 9 处**：H4（L66／69）＋ H5（L81／84／87／90／93／96／99）皆为「单行两参 ＋ 续行」写法（续行 L67／70／82／85／88／91／94／97／100），改写时须**成对**处理，25 项**共 34 处**书写点〔`34` 为存续数字；括注已毁〕。
-2. **A-方案须补 `REPO_ROOT` 之一处**：H3 基准为 `parent.parent`，须新增 `REPO_RESULTS = pathlib.Path(r"D:\私人资料\deposon-repo\results")` 并显式补 `REPO_ROOT`；连同本件 5 处，**共 25 项 ＋ 5 处 ＝ 30 处**〔30 为存续数字〕。
+2. **A-方案须补 `REPO_ROOT` 之一处**：H3 基准为 `parent.parent`，须新增 `REPO_RESULTS = pathlib.Path(r"_repo_mirror\results")` 并显式补 `REPO_ROOT`；连同本件 5 处，**共 25 项 ＋ 5 处 ＝ 30 处**〔30 为存续数字〕。
 3. **R5 指纹锚点**：本件 5 件 SHA-12 须与 723 行登记 **L649／667／668／685／781** 之 `.1` 行**逐一比对**；**0 不符即停**，0 继续执行。
 
 > **须 0 副作用**：25 项／30 处的改写**全部落在路径解析层**，0 触及业务逻辑，0 改任何 `.py` 件名、0 移动任何数据件。
@@ -259,7 +259,7 @@
 1. **0 回改**：0 改任何既有件一字，0 移动／重命名／删除任何件。
 2. **0 越界**：0 引底本 §0.1 之后各节、0 引 723 登记、0 引 D9 项 `d11d75ba6236`。
 3. **0 臆断**：0 编造路径、0 编造 SHA-12／bytes、0 编造行号、0 编造计数。
-4. **0 触禁区**：0 读／0 写／0 列 `D:\私人资料\_non_upload_local_archive`；0 改／0 移 `SUB` 内任何 runner／数据件。
+4. **0 触禁区**：0 读／0 写／0 列 `〔本地归档区〕`；0 改／0 移 `SUB` 内任何 runner／数据件。
 5. **0 触他棒产物**：0 写 `_d9_runner_input_relpath_erratum_*`、`_gate1_*`、`_itemH_*`、`_degradation_*`、`_pi_batch_rulings_*`、`letters/`。
 6. **0 改判定**：0 改 D9 判定门柱、0 新增条件、0 新增估计／阈值、0 赋 `k_v3s_4_4_*` 任一布尔。
 7. **0 代裁**：A 方案已由 **PI 择定**；L61 兜底件处置**留 PI**裁，0 代裁、0 改写、0 增删文件。

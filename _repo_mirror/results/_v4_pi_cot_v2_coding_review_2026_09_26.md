@@ -376,7 +376,7 @@ CRITICAL_REFLECTION_MARKERS_V2 = CRITICAL_REFLECTION_MARKERS_V1 + (
 |---|---|---|
 | `results/_v4_pi_cot_v2_coding_review_2026_09_26.md`（本件） | **诞生即报 SHA-12 + 字节数**（见文末） | 唯一产物 |
 | 既有 14 件（v1-prereg/dataset/ruleset/executor/result/verdict + 9 个 addendum） | **未触动**（只读核验，§0 SHA-12 表） | 落盘前后 SHA-12 复验不变 |
-| 本棒临时复算脚本 `_tmp_v1_recompute.py` / `_tmp_v2_redesign.py` / `_tmp_v2_compare.json` / `_tmp_degen.py`（在 `D:/私人资料/deposon-repo/` 根目录） | **临时件，命名带 `_tmp_` 前缀，**未落盘 `results/`**，下一棒收口前清理** | protocol-keeper 派生件命名规则（避免污染 results/） |
+| 本棒临时复算脚本 `_tmp_v1_recompute.py` / `_tmp_v2_redesign.py` / `_tmp_v2_compare.json` / `_tmp_degen.py`（在 `_repo_mirror/` 根目录） | **临时件，命名带 `_tmp_` 前缀，**未落盘 `results/`**，下一棒收口前清理** | protocol-keeper 派生件命名规则（避免污染 results/） |
 | 派生 JSON 不合并 | ✓（本件为 Markdown 非 JSON，不触发合并；v2 词表字面落盘于本件 §2.2，不写独立 JSON） | — |
 | 阈值未擅调 | ✓（TH-v2-1..8 全沿用 prereg 字面） | — |
 | key 永不明文 | ✓（本件 0 key / 0 LLM / 0 proxy / 0 gateway） | — |
@@ -389,7 +389,7 @@ CRITICAL_REFLECTION_MARKERS_V2 = CRITICAL_REFLECTION_MARKERS_V1 + (
 ### §5.2 0 既有件触动自查
 
 - **本件未触动**任何既有件——所有 14 件输入仅做只读核验（§0 SHA-12 表 + 字面读取）
-- **本件未触动**主目录其他文件——临时复算件 `_tmp_*.py/json` 在 `D:/私人资料/deposon-repo/` 根目录，命名带 `_tmp_` 前缀，**不写入 `results/`** 也不触动 `D:/私人资料/deposon-repo/` 内既有件；下棒收口前由派工 agent 清理（不在本棒 scope）
+- **本件未触动**主目录其他文件——临时复算件 `_tmp_*.py/json` 在 `_repo_mirror/` 根目录，命名带 `_tmp_` 前缀，**不写入 `results/`** 也不触动 `_repo_mirror/` 内既有件；下棒收口前由派工 agent 清理（不在本棒 scope）
 - **本件未触动**V1–V3 资产——仅引用 prereg sha12 / dataset sha12 / result sha12 / verdict sha12 / ruleset sha12 / executor sha12 链溯源，未读 18 frozen / 9 网格任何一件
 - **本件未触动**3 路在跑件（按派工单「不动任何既有件（3 路在跑勿碰）」严守）
 

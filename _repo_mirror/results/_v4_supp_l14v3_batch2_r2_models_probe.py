@@ -24,8 +24,8 @@ from typing import Any, Dict, List
 
 import requests as _requests
 
-ROOT = "D:/私人资料/deposon-repo"
-KEY_SOURCE_PATH = os.environ.get("DEPOSON_KEY_FILE", "C:/Users/Administrator/Desktop/AI/LLM API.txt")
+ROOT = "_repo_mirror"
+KEY_SOURCE_PATH = os.environ.get("DEPOSON_KEY_FILE", "〔本机用户目录〕/Desktop/AI/LLM API.txt")
 ENDPOINT_TEAMO = "https://api.teamorouter.cn/v1"
 PROXY_HTTP = "http://127.0.0.1:1018"
 KEY_INDEX_TEAMO_1BASED = 15

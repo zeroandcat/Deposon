@@ -13,7 +13,7 @@ from pathlib import Path
 
 import numpy as np
 
-BASE = Path(r'D:\私人资料\deposon-repo')
+BASE = Path(r'_repo_mirror')
 
 # 5 锚 V3X 路径(沿 v3_phys JSON 已 stored verdict)
 PHYS_JSON = BASE / 'results' / 'deposon_v3_physical_opt_60cells_2026_09_11.json'

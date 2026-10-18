@@ -5,7 +5,7 @@
 > **上游授权**：PI 2026-09-29 11:52 批「预登记件 `98286cc1aec7` 生效即锁 ＋ 方向更新」（派工单字面）
 > **出件方**：**Mavis 团队 worker（V4 V3 修复执行棒）** —— 不冒充 PI / protocol-keeper / verifier / verdict-keeper / evidence-auditor / doc-writer / Trae code / codex / 任一受托方
 > **哈希口径**：`hashlib.sha256(全文字节).hexdigest()[:12]`，**小写**（禁内建 `hash()`）
-> **skill**：派工单**未指定 skill 名** ⇒ 本棒 **0 加载任何 skill、0 引用、0 虚构其条文**。沿用预登记件同日实测：`C:/Users/Administrator/.minimax/plugins` 目录存在但 0 项（空目录）。**本棒实质纪律锚 = 派工单字面 ＋ 盘上既有件字面。**
+> **skill**：派工单**未指定 skill 名** ⇒ 本棒 **0 加载任何 skill、0 引用、0 虚构其条文**。沿用预登记件同日实测：`〔本机用户目录〕/.minimax/plugins` 目录存在但 0 项（空目录）。**本棒实质纪律锚 = 派工单字面 ＋ 盘上既有件字面。**
 > **铁律执行**：**新名件**｜**既有件 0 触动**（引件全只读）｜**0 新设数值判定阈值**（§8 逐条列证）｜**18 frozen / 9 网格 0 触动、0 复算、0 复跑**｜**派生 JSON 0 合并**（只新建本棒 1 个 result JSON）｜**R4 key 永不明文**（本棒 **0 读 key**）｜**0 代判定裁决**（判定面归 verdict-keeper）｜**署名如实**｜**不编造**（退化未解除即如实登记未解除）
 
 ---

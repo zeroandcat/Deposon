@@ -16,7 +16,7 @@
   - 对照留档：T=1 档 as-run 边际 +0.025 —— 0 作阈值、0 参与判定。
   - 禁作杠杆：cfg["seed"]（v1.1 §1.3 实测 0 消费点）⇒ 本件 0 改之，并给出静态+实测双重自证。
   - 资产面：results/gt2_attacker_cache 本仓 0 命中 ⇒ 沿 K-V3R1P1-0-F **只读**仓外
-    D:/私人资料/_non_upload_local_archive/results/gt2_attacker_cache/（4 件），0 复制入仓、0 改动。
+    〔本地归档区〕/results/gt2_attacker_cache/（4 件），0 复制入仓、0 改动。
 
 输出（派生 JSON 0 合并，K-V3R1P1-0-D）：
   results/_v3_recheck_35_result_2026_09_27.json
@@ -31,8 +31,8 @@ import json
 import os
 import sys
 
-REPO = r"D:/私人资料/deposon-repo"
-EXT_CACHE = r"D:/私人资料/_non_upload_local_archive/results/gt2_attacker_cache"
+REPO = r"_repo_mirror"
+EXT_CACHE = r"〔本地归档区〕/results/gt2_attacker_cache"
 EXT_CACHE_ITEMS = ["algorithm_process.json", "biological_taxonomy.json",
                    "historical_causality.json", "physics_concepts.json"]
 OUT_PATH = os.path.join(REPO, "results", "_v3_recheck_35_result_2026_09_27.json")
@@ -415,7 +415,7 @@ def main() -> int:
                       "bytes": nbytes(os.path.join(EXT_CACHE, fn))}
                  for fn in EXT_CACHE_ITEMS}
     ext_readonly = {
-        "external_archive": "D:/私人资料/_non_upload_local_archive/",
+        "external_archive": "〔本地归档区〕/",
         "items": ext_before,
         "pre_post_comparison_basis": "sha12 + bytes（跑前/跑后逐件复读）",
         "pre_post_identical": bool(

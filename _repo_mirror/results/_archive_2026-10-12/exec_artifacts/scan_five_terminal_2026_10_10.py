@@ -5,7 +5,7 @@
 """
 import os, json, re, sys
 
-ROOT = r"D:/私人资料/deposon-repo"
+ROOT = r"_repo_mirror"
 OUT = os.path.join(ROOT, ".tmp", "five_terminal_scan_2026_10_10.json")
 EXTS = (".md", ".py", ".json", ".txt")
 

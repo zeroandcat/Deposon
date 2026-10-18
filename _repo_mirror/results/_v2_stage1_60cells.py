@@ -20,18 +20,18 @@ import numpy as np
 from datetime import datetime, timezone, timedelta
 
 # ============== Config ==============
-KEY_FILE = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
-CORPUS_DIR = r'D:\私人资料\deposon-repo\corpus\v20'
-PNG_DIR = r'D:\私人资料\deposon-repo\figures\v3x\corpus_pngs'
-GSM8K_FILE = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_gsm8k_details.json'
-STQ_FILE = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_strategyqa_details.json'
-DPATH_REF = r'D:\私人资料\deposon-repo\results\deposon_dpath_cross_modal_2026_09_10.json'
-OPENROUTER_5MODEL_REF = r'D:\私人资料\deposon-repo\results\deposon_openrouter_5model_rag_30cells_2026_09_10.json'
-VOLC_22CAP_REF = r'D:\私人资料\deposon-repo\results\deposon_volcengine_22caption_embedding_2026_09_10.json'
-OR_5MODEL_EMB_REF = r'D:\私人资料\deposon-repo\results\deposon_openrouter_embedding_5model_2026_09_10.json'
+KEY_FILE = r'〔本机用户目录〕\Desktop\AI\LLM API.txt'
+CORPUS_DIR = r'_repo_mirror\corpus\v20'
+PNG_DIR = r'_repo_mirror\figures\v3x\corpus_pngs'
+GSM8K_FILE = r'_repo_mirror\results\deposon_benchmark_v1_4_gsm8k_details.json'
+STQ_FILE = r'_repo_mirror\results\deposon_benchmark_v1_4_strategyqa_details.json'
+DPATH_REF = r'_repo_mirror\results\deposon_dpath_cross_modal_2026_09_10.json'
+OPENROUTER_5MODEL_REF = r'_repo_mirror\results\deposon_openrouter_5model_rag_30cells_2026_09_10.json'
+VOLC_22CAP_REF = r'_repo_mirror\results\deposon_volcengine_22caption_embedding_2026_09_10.json'
+OR_5MODEL_EMB_REF = r'_repo_mirror\results\deposon_openrouter_embedding_5model_2026_09_10.json'
 
-OUTPUT_JSON = r'D:\私人资料\deposon-repo\results\deposon_v2_phase1_60cells_2026_09_11.json'
-OUTPUT_LOG = r'D:\私人资料\deposon-repo\results\deposon_v2_phase1_60cells_2026_09_11.log'
+OUTPUT_JSON = r'_repo_mirror\results\deposon_v2_phase1_60cells_2026_09_11.json'
+OUTPUT_LOG = r'_repo_mirror\results\deposon_v2_phase1_60cells_2026_09_11.log'
 
 BASE_URL = 'https://ark.cn-beijing.volces.com/api/coding/v3'
 MODEL_EMB = 'doubao-embedding-vision-251215'
@@ -452,7 +452,7 @@ def main():
     log(f'KEY_OK truncated={key_truncated} proxy_cleared')
 
     # 1) Anchor SHA
-    anchor_path = r'D:\私人资料\deposon-repo\verifier\handoff\KT_ABC1_anchors_sha256_12.json'
+    anchor_path = r'_repo_mirror\verifier\handoff\KT_ABC1_anchors_sha256_12.json'
     anchor_sha = hashlib.sha256(open(anchor_path, 'rb').read()).hexdigest()[:12]
     assert anchor_sha == '03c6c01f3697', f'5 锚 SHA 变: {anchor_sha}'
     log(f'ANCHOR_OK SHA-12={anchor_sha}')

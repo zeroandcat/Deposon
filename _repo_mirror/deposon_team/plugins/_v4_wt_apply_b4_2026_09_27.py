@@ -8,7 +8,7 @@ _v4_wt_apply_b4_2026_09_27.py — B4 授权追加勘误注记（纯追加，不�
 import hashlib
 from pathlib import Path
 
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_repo_mirror')
 TARGET = REPO / 'results' / '_v3_recheck_26_rescript_2026_09_27.md'
 
 def sha12(b):

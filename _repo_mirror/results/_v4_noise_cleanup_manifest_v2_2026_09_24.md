@@ -3,7 +3,7 @@
 > by worker（执行类 / 文件治理 / 棒中间件回收站删除）
 > 本棒为 PI 授权「删除无用中间文件」(2026-09-24 原始指令) + 当轮问答确认 A/B 类噪声 → 今日实验棒 tmp 中间件 6 件回收站删除留痕
 > 不覆盖 `results/_v4_maindir_cleanup_manifest_2026_09_24.md` (SHA-12=`32cc61d394f2`)，新建独立 manifest 留痕
-> 删除通道：`mavis-trash.cmd` (trusted launcher @ `C:\Users\Administrator\.minimax\bin\mavis-trash.cmd`)
+> 删除通道：`mavis-trash.cmd` (trusted launcher @ `〔本机用户目录〕\.minimax\bin\mavis-trash.cmd`)
 > 可恢复性：**所有删除件可从 Windows Recycle Bin 恢复**
 
 ---

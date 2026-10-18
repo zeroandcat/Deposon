@@ -11,7 +11,7 @@ from datetime import datetime
 from collections import defaultdict
 
 CUTOFF = datetime(2026, 9, 23, 12, 0, 0).timestamp()
-ROOTS = [r'D:\私人资料\deposon-repo', r'D:\私人资料\deposon-sub']
+ROOTS = [r'_repo_mirror', r'_repo_mirror']
 SKIP = {'__pycache__', '.git', 'node_modules', '.trae'}
 VALID_ESC = set('ntr\\"\'abfv01234567xuUN')
 
@@ -29,7 +29,7 @@ for root in ROOTS:
 pys.sort(reverse=True)
 print(f'=== 新件 .py 共 {len(pys)} 件 ===')
 
-def rel(p): return p.replace(r'D:\私人资料' + os.sep, '')
+def rel(p): return p.replace(r'〔本地资料区〕' + os.sep, '')
 
 syntax_err, bom, no_guard, odd_esc, abs_out, keylike = [], [], [], [], [], []
 for sz, p in pys:

@@ -276,7 +276,7 @@
 
 | 项 | 值 |
 | :-:|:--|
-| **路径** | `D:\私人资料\deposon-repo\results\_af1_attribution_verdict_2026_10_17.md` |
+| **路径** | `_repo_mirror\results\_af1_attribution_verdict_2026_10_17.md` |
 | **落前实测** | `Test-Path` ＝ **`False`**；`glob`（`results/*af1*`）＝ **0 命中** ⇒ 无既有件被覆盖 |
 | **落盘方式** | Python `io.open(path, 'w', encoding='utf-8', newline='\n')` 直写（**无 BOM · 纯 LF**） |
 | **字节级自报** | 见本棒落盘后**亲测回读**所得之报回（**SHA-12／bytes／BOM ＝ 0／CRLF ＝ 0／U+FFFD ＝ 0**） |

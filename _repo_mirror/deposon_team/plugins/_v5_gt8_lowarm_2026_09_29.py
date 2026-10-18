@@ -63,7 +63,7 @@ import json
 import os
 import sys
 
-REPO = r"D:/私人资料/deposon-repo"
+REPO = r"_repo_mirror"
 HERE = REPO
 RESULTS_REL = "results"
 DATE_TAG = "2026_09_29"

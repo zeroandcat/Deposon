@@ -17,7 +17,7 @@
 
 授权射程之辨（照录派工）：
 
-- 目标：归档区白名单副本 `D:\私人资料\_non_upload_local_archive\whitelist_backup_2026_10_17\`（699 件 / 38,301,580 B）。
+- 目标：归档区白名单副本 `〔本地归档区〕\whitelist_backup_2026_10_17\`（699 件 / 38,301,580 B）。
 - **仅留** `.tmp/whitelist_backup_2026_10_17/` 副本为生效备份面（⛔0 动）——本次未动，逐节 6 复测为证。
 - 归档区之「0 写」之其余面与「0 上传」维持不变；「读取不违纪」（PI 2026-10-13 射程纠正）。
 - ⛔0 网络（本棒未发起任何网络请求）；⛔0 宣告①毕。
@@ -28,7 +28,7 @@
 
 | 项 | 目标面（待清除） | 备份面（生效·⛔0 动） |
 |---|---|---|
-| 路径 | `D:\私人资料\_non_upload_local_archive\whitelist_backup_2026_10_17` | `D:\私人资料\deposon-repo\.tmp\whitelist_backup_2026_10_17` |
+| 路径 | `〔本地归档区〕\whitelist_backup_2026_10_17` | `_repo_mirror\.tmp\whitelist_backup_2026_10_17` |
 | 存在 | True | True |
 | 件数 | 699 | 699 |
 | 目录数 | 2 | 2 |
@@ -63,7 +63,7 @@
 | 新增 `$I` | `$IMHA15T.txt`（206 B） |
 | 新增 `$R` | `$RMHA15T.txt` |
 | `$I` 路径起始偏移 | **28** |
-| `$I` 解码原路径 | `D:\私人资料\_non_upload_local_archive\whitelist_backup_2026_10_17\docwriter_v46_card_raw.txt` |
+| `$I` 解码原路径 | `〔本地归档区〕\whitelist_backup_2026_10_17\docwriter_v46_card_raw.txt` |
 | `$I` 原尺寸字段 | 26（= 样本 26 B） |
 | `$R` 载荷 SHA-12 复验 | `e31064337198` = 期望值 → **全等** |
 | 验道裁定 | **CHANNEL_VERIFIED** |
@@ -72,12 +72,12 @@
 
 - [PASS] op_rc_zero — rc=0
 - [PASS] not_aborted — aborted=False
-- [PASS] source_removed — D:\私人资料\_non_upload_local_archive\whitelist_backup_2026_10_17\docwriter_v46_card_raw.txt
+- [PASS] source_removed — 〔本地归档区〕\whitelist_backup_2026_10_17\docwriter_v46_card_raw.txt
 - [PASS] one_new_I_record — ['$IMHA15T.txt']
 - [PASS] one_new_R_record — ['$RMHA15T.txt']
 - [PASS] I_R_stem_paired — $IMHA15T.txt <-> $RMHA15T.txt (key=MHA15T.txt)
 - [PASS] I_path_offset_is_28 — 28
-- [PASS] I_decoded_path_matches_source — decoded='D:\\私人资料\\_non_upload_local_archive\\whitelist_backup_2026_10_17\\docwriter_v46_card_raw.txt'
+- [PASS] I_decoded_path_matches_source — decoded='〔本地资料区〕\\_non_upload_local_archive\\whitelist_backup_2026_10_17\\docwriter_v46_card_raw.txt'
 - [PASS] I_orig_size_matches — 26 vs 26
 - [PASS] R_payload_sha12_matches_inventory — e31064337198 vs e31064337198
 
@@ -803,8 +803,8 @@
 
 | 目录 | rc | 已消失 | `$I` | `$R` | `$I` 长度 | 偏移 | 解码原路径 | 判定 |
 |---|---|---|---|---|---|---|---|---|
-| `D:\私人资料\_non_upload_local_archive\whitelist_backup_2026_10_17\_pre_mod` | 0 | True | `$I1W5CWI` | `$R1W5CWI` | 170 | 28 | `D:\私人资料\_non_upload_local_archive\whitelist_backup_2026_10_17\_pre_mod` | **通过** |
-| `D:\私人资料\_non_upload_local_archive\whitelist_backup_2026_10_17` | 0 | True | `$IDY946X` | `$RDY946X` | 152 | 28 | `D:\私人资料\_non_upload_local_archive\whitelist_backup_2026_10_17` | **通过** |
+| `〔本地归档区〕\whitelist_backup_2026_10_17\_pre_mod` | 0 | True | `$I1W5CWI` | `$R1W5CWI` | 170 | 28 | `〔本地归档区〕\whitelist_backup_2026_10_17\_pre_mod` | **通过** |
+| `〔本地归档区〕\whitelist_backup_2026_10_17` | 0 | True | `$IDY946X` | `$RDY946X` | 152 | 28 | `〔本地归档区〕\whitelist_backup_2026_10_17` | **通过** |
 
 **关于偏移之实测更正（照录）**：派工给定「偏移 28（文件）/ 26（目录）」。实测本机之目录 `$I` 记录长度 170 B（`_pre_mod`）/ 152 B（根目录），其字节布局为 `02 00 00 00 00 00 00 00`（版本=2）｜`00×8`（原尺寸=0）｜8 B 删除 FILETIME｜4 B 路径字符数｜路径自 **偏移 28** 起。即**文件与目录皆为偏移 28**；偏移 26 之所以「亦可解出同一串」，仅因字节 26–27 恰为 `00 00` 所致的**假性同解**，非规范字段边界。故目录记录亦判 28，不判 26。
 

@@ -418,7 +418,7 @@
 | `_v4_pi_cot_v2_verdict_v2_signoff_2026_09_26.md`（结构锚） | **只读**核验（§0 SHA-12 + §0.2 结构沿用） | ✓ 未触动 |
 | `_v4_pi_cot_v2_verdict.md`（v1 锚） | **只读**核验（v1 数字比对） | ✓ 未触动 |
 | 33 件既有资产（18 frozen + 9 网格 + 9 v2 addenda + 1 v3 d4 addendum） | **只读**核验（仅引用 SHA-12 锚点） | ✓ 未触动 |
-| 主目录（`D:/私人资料/deposon-repo/`） | **未触动**（本件路径仅在 `results/`） | ✓ 未触动 |
+| 主目录（`_repo_mirror/`） | **未触动**（本件路径仅在 `results/`） | ✓ 未触动 |
 
 ### §6.2 唯一可写件（self-attestation）
 

@@ -26,7 +26,7 @@ PI 就「G-2 成因之定可能须逐字节比对归档实体（超出 G-1 例�
 
 | **#** | **动作** | **边界** |
 | :-: | :-- | :-- |
-| **1** | **只读访问该 G-1 实体**：`D:\私人资料\_non_upload_local_archive\results\_remote_version_freeze_2026_09_26\P_B_DISTORTION_BOUND_V0_SPEC.md`（7,126 B·`bb7ca9838150`） | 读字节／`Get-Item`／`Get-FileHash`／`Get-Content` |
+| **1** | **只读访问该 G-1 实体**：`〔本地归档区〕\results\_remote_version_freeze_2026_09_26\P_B_DISTORTION_BOUND_V0_SPEC.md`（7,126 B·`bb7ca9838150`） | 读字节／`Get-Item`／`Get-FileHash`／`Get-Content` |
 | **2** | 以之作 **G-2 成因核**（5 B 残差）之**逐字节比对** | 目的**唯一**＝G-2 |
 
 ### §2-2 🔴 仍禁（全效之项逐字重申）

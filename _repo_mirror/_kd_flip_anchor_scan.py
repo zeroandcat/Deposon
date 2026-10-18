@@ -6,7 +6,7 @@ import hashlib
 import os
 import sys
 
-ROOT = r"D:\私人资料\deposon-repo"
+ROOT = r"_repo_mirror"
 
 ANCHORS = [
     "10e40a51c9c1",  # T-2/T-3 撤终态与消解径 生效落账件

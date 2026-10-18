@@ -27,14 +27,14 @@
 |---|---|
 | 本会话可用工具中**是否存在 skill 加载入口** | ✅ **存在** —— `Skill` 工具（*Loads the complete SKILL.md instructions for an available local or plugin skill*） |
 | 失败返回形态 | `Local skill not found: <名>`（与首件 §1.1 逐字同形） |
-| 成功返回形态 | `# Skill: <名>` ＋ `Location: files:///D:/Users/Administrator/.minimax/skills/<目录名>/SKILL.md` ＋ SKILL.md 全文 |
+| 成功返回形态 | `# Skill: <名>` ＋ `Location: files:///〔本机用户目录〕/.minimax/skills/<目录名>/SKILL.md` ＋ SKILL.md 全文 |
 
 > **0 以文件直读冒充调用面**：所有「成功/失败」判定**一律以 `Skill` 工具真实返回为唯一依据**；磁盘读取**仅**用于（a）分半名单计算、（b）SHA-12/字节基线、（c）命中面指纹比对。
 
 ### §1.2 未测集与分半（本棒自算 · 可复算）
 
 **规则**：
-1. 取 `D:\Users\Administrator\.minimax\skills\` 下**全部目录**，按目录名 **Ordinal 升序**（`StringComparer.Ordinal`，字节序，跨机可复现）排列 ⇒ 本棒实测 **223** 个目录，**223/223 含 `SKILL.md`**（0 缺）。
+1. 取 `〔本机用户目录〕\.minimax\skills\` 下**全部目录**，按目录名 **Ordinal 升序**（`StringComparer.Ordinal`，字节序，跨机可复现）排列 ⇒ 本棒实测 **223** 个目录，**223/223 含 `SKILL.md`**（0 缺）。
 2. 减去首件 `112346df64fb` **已测 40 枚**（臂 1 的 22 枚 `name`≠目录名项 ＋ 臂 2 的 5 枚多重面项 ＋ 臂 3 的 3 枚 ＋ 臂 4 的 10 枚）⇒ 本棒实测**已测 40 枚全部在盘**（`MEASURED_NOT_ON_DISK=0`）。
 3. 得**未测 183 枚**；分半用前 **⌈183/2⌉ = 92** ⇒ **甲半 ＝ 第 1–92 位**（并联另棒）；**本棒（乙半）＝ 第 93–183 位（91 枚）**。
 
@@ -62,9 +62,9 @@
 
 | 面 | 路径 | 本棒实测 |
 |---|---|---|
-| **用户面** | `D:\Users\Administrator\.minimax\skills\` | **223** 目录 / 223 `SKILL.md` |
-| **PC 面**（plugin-cache） | `D:\Users\Administrator\.minimax\v2\plugin-cache\official\` | **28** 棵 `sha256-tree-v1-*` 树 / **172** skill 条目 / 172 唯一名（skills 位于 `<树>\skills\<名>\`） |
-| **BI 面** | `D:\Users\Administrator\.minimax\.builtin-skills\` | **20** 目录 |
+| **用户面** | `〔本机用户目录〕\.minimax\skills\` | **223** 目录 / 223 `SKILL.md` |
+| **PC 面**（plugin-cache） | `〔本机用户目录〕\.minimax\v2\plugin-cache\official\` | **28** 棵 `sha256-tree-v1-*` 树 / **172** skill 条目 / 172 唯一名（skills 位于 `<树>\skills\<名>\`） |
+| **BI 面** | `〔本机用户目录〕\.minimax\.builtin-skills\` | **20** 目录 |
 
 > PC 面「28 树 / 172 skill」与首件/普查件所载**逐数吻合**（本棒独立复测所得，非转述）。
 > 另注：普查件所载 PC 面树哈希样例形如 `611965fcb620…`，本棒实测该树短名形如 `sha256-tree-v1-611965fcb62`，**同一锚的两种写法**。
@@ -96,7 +96,7 @@
 
 **形态说明**：本棒 91 枚 `name` == 目录名（§1.3），故**每枚单形态（目录名裸名）**；`name` 值形态列在本棒**无适用项**。
 **时刻**：全部为本会话内 2026-09-30 串行执行（分钟级连续，无跨时刻复测）。
-**Location 形态**：全部为 `files:///D:/Users/Administrator/.minimax/skills/<目录名>/SKILL.md`（D 盘实体路径；`C:\Users\Administrator\.minimax` 为指向 `D:\Users\Administrator\.minimax` 的 Junction）。
+**Location 形态**：全部为 `files:///〔本机用户目录〕/.minimax/skills/<目录名>/SKILL.md`（D 盘实体路径；`〔本机用户目录〕\.minimax` 为指向 `〔本机用户目录〕\.minimax` 的 Junction）。
 
 | # | 全局序 | 请求名（目录名·逐字） | frontmatter `name` | 结果 | 失败原文 | 命中面（首行签名／字节与哪面吻合） | 时刻 |
 |---|---|---|---|---|---|---|---|
@@ -230,7 +230,7 @@
 
 | 判据 | 结果 |
 |---|---|
-| ① `Location` 路径面 | 91/91 均为 `D:/Users/Administrator/.minimax/skills/<名>/SKILL.md`（用户面） |
+| ① `Location` 路径面 | 91/91 均为 `〔本机用户目录〕/.minimax/skills/<名>/SKILL.md`（用户面） |
 | ② frontmatter 首行签名（`name` == 目录名） | 91/91 一致；**0 枚 `name` ≠ 目录名**；**0 枚 frontmatter 解析失败** |
 | ③ SHA-12 ＋ 字节复算 | 91/91 与盘上终态逐项吻合（复算口径见 §1.4） |
 | **PC 面存在同名副本者** | **2 枚**：`scientific-brainstorming`(#150)、`statistical-analysis`(#166) |
@@ -478,7 +478,7 @@
 本产出件的**终态 SHA-12 / 字节数 / 行数**在**回执**中给出，而非内嵌于本件：文件一旦写入自身哈希即改变内容，哈希随即失效（自引用不可解）。**复算命令**（任何人可复跑）：
 
 ```powershell
-$p='D:\私人资料\deposon-repo\results\_skill_call_surface_probe_supplement_b_2026_09_30.md'
+$p='_repo_mirror\results\_skill_call_surface_probe_supplement_b_2026_09_30.md'
 $b=[System.IO.File]::ReadAllBytes($p)
 $h=([System.Security.Cryptography.SHA256]::Create().ComputeHash($b)|%{$_.ToString('x2')}) -join ''
 "SHA12=" + $h.Substring(0,12).ToUpper()

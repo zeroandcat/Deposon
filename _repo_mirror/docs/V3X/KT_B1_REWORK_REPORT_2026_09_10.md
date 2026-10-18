@@ -21,7 +21,7 @@
 |---|---|---|---|---|
 | 1 | `verifier/audit/conservation.py` | **语法错误**（line 391 `{` never closed） | data 子代理交付时 `_mini_dataset()` 的 FORM_A 闭合括号数不足（3 个 `}` 应为 4 个），且混入尾随单引号残渣 | 补齐闭合括号 `]}}}},` |
 | 2 | `verifier/audit/conservation.py` | **v19 真件自检误报 FAIL**（18 条误报） | `_check_record` 把 `pv is None`（值为 None）当作"字段不存在"；v19 有 18 条合法 `predicted=None` 记录，自检时原件有该字段 → 误判为"被删" | 改为 `has_pred_field` 标志位，区分"键不存在"与"值为 None" |
-| 3 | `C:\tmp\...\kt_b1\audit_full.py` | **75 攻击 seed 伪造独立性** | 5 cells 全用 harness 默认 `seed=42`，75 攻击实为 25 独立+50 复读，违背"5 次独立重复实验（每次不同随机种子）"定义 | 每 cell 用 `seed=42+cell_idx`（42..46）；同时 import 从 /tmp 冻结旧栈改为主仓返工栈 |
+| 3 | `〔本机路径〕\tmp\...\kt_b1\audit_full.py` | **75 攻击 seed 伪造独立性** | 5 cells 全用 harness 默认 `seed=42`，75 攻击实为 25 独立+50 复读，违背"5 次独立重复实验（每次不同随机种子）"定义 | 每 cell 用 `seed=42+cell_idx`（42..46）；同时 import 从 /tmp 冻结旧栈改为主仓返工栈 |
 
 **验收证据**：
 - conservation.py `--test_edge_cases`：16/16 PASS，零异常，v19 真件 1592 条自检 PASS（layer1_dev=2.22e-16）
@@ -189,7 +189,7 @@ conservation.py 的 `tra_decomposition` 是从 `pred` 值合成的守恒验和�
 python verifier/audit/conservation.py --test_edge_cases
 
 # 2. 75 攻击（5 cells × 3 类 × 5，独立 seed）
-python C:\tmp\review_20260909T140401\kt_b1\audit_full.py
+python 〔本机路径〕\tmp\review_20260909T140401\kt_b1\audit_full.py
 
 # 3. 600 攻击主实验
 python .mavis/scripts/kt_b1/harness.py  # mini 自检

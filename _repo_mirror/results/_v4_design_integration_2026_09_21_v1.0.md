@@ -4,14 +4,14 @@
 **Version:** v1.0
 **Date:** 2026-09-21
 **Drafted by:** `doc-writer` (Mavis 8-agent team, deposon workspace). Human principal investigator retains final approval and is the sole accountable author. AI is not an author.
-**Scope:** This document merges, by description only, every recipient-side reply received against `D:\私人资料\deposon-repo\results\_v4_distillation_invitation_2026_09_20_v1.0.md` (SHA-12 `3D9F73519F6C`, 411 lines) and its companion prompt pack `D:\私人资料\deposon-repo\results\_v4_distillation_prompt_pack_2026_09_20_v1.0.md` (SHA-12 `E5C37E90255B`, 384 lines). No recipient reply is ranked, scored, selected, or preferred. No framework keywords appear in this document; where a quoted passage on disk uses them, the passage is flagged as 引文 with the path, sha, line range.
+**Scope:** This document merges, by description only, every recipient-side reply received against `_repo_mirror\results\_v4_distillation_invitation_2026_09_20_v1.0.md` (SHA-12 `3D9F73519F6C`, 411 lines) and its companion prompt pack `_repo_mirror\results\_v4_distillation_prompt_pack_2026_09_20_v1.0.md` (SHA-12 `E5C37E90255B`, 384 lines). No recipient reply is ranked, scored, selected, or preferred. No framework keywords appear in this document; where a quoted passage on disk uses them, the passage is flagged as 引文 with the path, sha, line range.
 **三类陈述显式分标**：本文中 `on-disk fact` 标路径 + SHA-12 + 行号；`re-fit hypothesis` 显式声明该假设依赖既有 artifact 未作为该用途构建；`pure speculation` 显式声明磁盘无对应 artifact。
 
 ---
 
 ## §0 输入清单与锚
 
-本节记录 16 个被本稿引用、被本稿读毕的文件，分两类目录：`D:\私人资料\deposon-repo\results\`（PI 主仓库回函集，下称 `results/`）与 `C:\Users\Administrator\.minimax\v2\assets\2026\09\21\`（附件侧目录，下称 `assets/`）。每行给出 SHA-12（实算，十六进制大写）、字节数（实算）、行数（实算，使用 `ReadAllLines`；与 `Get-Content | Measure-Object -Line` 双口径对照，不一致时以 `ReadAllLines` 为准并在本行加注）。"已知锚"列采用 PI 派工单第 2 节给出的字节 / 行数；"本轮自测"列是本会话内重新计算结果。
+本节记录 16 个被本稿引用、被本稿读毕的文件，分两类目录：`_repo_mirror\results\`（PI 主仓库回函集，下称 `results/`）与 `〔本机用户目录〕\.minimax\v2\assets\2026\09\21\`（附件侧目录，下称 `assets/`）。每行给出 SHA-12（实算，十六进制大写）、字节数（实算）、行数（实算，使用 `ReadAllLines`；与 `Get-Content | Measure-Object -Line` 双口径对照，不一致时以 `ReadAllLines` 为准并在本行加注）。"已知锚"列采用 PI 派工单第 2 节给出的字节 / 行数；"本轮自测"列是本会话内重新计算结果。
 
 ### §0.1 邀请侧与种子文件（results/）
 
@@ -1030,7 +1030,7 @@
 
 ## §8 老实交代
 
-- 本任务 0 LLM / 0 API / 0 其他文件改动：本稿是新写一个文件，未触动 §0.1–§0.3 列出的任何 16 个输入文件之外的资产；`D:\私人资料\deposon-repo\` 工作区下其他任何文件均未读取 / 写入 / 修改 / 删除。
+- 本任务 0 LLM / 0 API / 0 其他文件改动：本稿是新写一个文件，未触动 §0.1–§0.3 列出的任何 16 个输入文件之外的资产；`_repo_mirror\` 工作区下其他任何文件均未读取 / 写入 / 修改 / 删除。
 - 全部 16 个输入文件的字节数 / SHA-12 / 行数均由本会话内 `[System.IO.File]::ReadAllBytes` + `[System.Security.Cryptography.SHA256]` + `[System.IO.File]::ReadAllLines` 实算；与派工单第 2 节已知锚的差异见 §0.5。
 - 全部 line 字段由本会话内 `[System.IO.File]::ReadAllLines(path, [System.Text.Encoding]::UTF8)[line-1]` 实读确认；引用格式 `path:SHA-12:line`。
 - §3 中"无参与方点名"的检索：本稿对全部 40 条种子逐条点名核验，未发现完全无点名的种子（见 §3.8）。

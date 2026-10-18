@@ -2,7 +2,7 @@
 """_v5_wa_s4 — 终验：交付件 SHA + 修复件自证 + 冻结链 0 触动（只读）"""
 import hashlib, os
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_repo_mirror')
 def sha12(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12]
 
 print('=== 交付件 / 新增件 ===')

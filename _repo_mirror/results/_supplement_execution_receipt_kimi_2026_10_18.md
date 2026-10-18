@@ -53,7 +53,7 @@
 | 13 | `tmp_movedout_2026_10_09/uncertain_release_2026_09/_v4_tmp_cleanup_2026_09_28.md` | 5,122 | `…\_remote_delete_face_pullback_2026_10_18_kimi_supplement14\tmp_movedout_2026_10_09\uncertain_release_2026_09\_v4_tmp_cleanup_2026_09_28.md` |
 | 14 | `docs/V3X/D3_ONLINE_MIDTERM_TEMPLATE.md` | 4,397 | `…\_remote_delete_face_pullback_2026_10_18_kimi_supplement14\docs\V3X\D3_ONLINE_MIDTERM_TEMPLATE.md` |
 
-落点根：`D:\私人资料\_non_upload_local_archive\_remote_delete_face_pullback_2026_10_18_kimi_supplement14\`（独立子目录 · 0 覆写既有归档）
+落点根：`〔本地归档区〕\_remote_delete_face_pullback_2026_10_18_kimi_supplement14\`（独立子目录 · 0 覆写既有归档）
 
 ## R-S4 逐件删除证据（293 件全表）
 
@@ -397,7 +397,7 @@ V20_PATH = str(Path(__file__).resolve().parent.parent / 'results' / 'deposon_v20
 V21_PATH = str(Path(__file__).resolve().parent.parent / 'results' / 'deposon_v21_gtformal.json')
 ```
 
-- 验证：`py_compile` 通过；全文件绝对路径正则（`D:/`｜`C:/`｜机主目录字面）**0 命中**；`V20_PATH`／`V21_PATH` 全文件仅定义行、0 他处引用（类型保持 `str`，运行语义不变；本地原件同步更新为此版）
+- 验证：`py_compile` 通过；全文件绝对路径正则（`〔本机路径〕/`｜`〔本机路径〕/`｜机主目录字面）**0 命中**；`V20_PATH`／`V21_PATH` 全文件仅定义行、0 他处引用（类型保持 `str`，运行语义不变；本地原件同步更新为此版）
 - 故 PI 括注之警「#16 直覆将绝对路径推入上传面」之**实体已消解**（覆后版不含绝对路径）——⛔ 0 宣称免责，仅登记实体面
 
 ## 乙-3 组B 6 件 0 覆盖之确认

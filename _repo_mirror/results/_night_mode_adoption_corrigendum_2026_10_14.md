@@ -167,7 +167,7 @@
 
 | **项** | **值／口径** |
 | :-- | :-- |
-| **路径** | `D:\私人资料\deposon-repo\results\_night_mode_adoption_corrigendum_2026_10_14.md` |
+| **路径** | `_repo_mirror\results\_night_mode_adoption_corrigendum_2026_10_14.md` |
 | **落盘前占用检查** | 路径存在性实测 ＝ **False**；精确 glob `results/_night_mode_adoption_corrigendum*` ＝ **0 命中** ⇒ **0 占用、0 加 `_r1`**（宽 glob `results/_night_mode_adoption*` 命中 **1** 件 ＝ 原追认件，非本件名） |
 | **原追认件 0 触动之证** | 本件落盘**前后**两次直算 ＝ SHA-12 **`d632879256c7`**／**52,722 B** 一致；mtime **2026-10-14 01:20:11** 未变 |
 | **编码** | UTF-8 **无 BOM**（首 3 字节 `EF BB BF` 未命中）｜Python `io.open(..., encoding='utf-8', newline='\n', errors='strict')` **直写** ＋ **回读校验**（⛔ **0** 经 PowerShell 管道中转正文） |

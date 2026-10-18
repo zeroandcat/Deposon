@@ -27,7 +27,7 @@ SHA-12 口径 = `hashlib.sha256(字节).hexdigest()[:12]`（小写）。
 | `results/_v4_seeds_prereg_supplement_2026_09_23.md`（预登记） | — | `113cbe555643` | 53,633 | 与 `065e57820c36` L136 登记一致 |
 | `results/_v4_rerun_executor_2026_09_23.py`（执行棒） | 「先核后引」 | **`cb47672e3062`** | 67,571 | **见 §2 重要发现** |
 
-> **定位说明**：上述四根均在**仓外** `D:/私人资料/_non_upload_local_archive/results/`（不在 `deposon-repo/results/`）。
+> **定位说明**：上述四根均在**仓外** `〔本地归档区〕/results/`（不在 `deposon-repo/results/`）。
 > 按盘上实测路径引用；沿「仓外只读」纪律执行。
 
 ### §1.1 预登记字面（只读引用 · `113cbe555643`）

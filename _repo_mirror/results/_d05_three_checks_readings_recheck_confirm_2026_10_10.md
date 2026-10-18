@@ -231,7 +231,7 @@
 - **复核对象**：`840fbf08caf4` §3／§4／§4.2／§5 ＋ `586c435d1f15`
 - **读数锚**：`585714f9660c`（v3 面 `main_reading`）｜`6a670e629dca`（S4 冻结留出集）｜`8a81d90c69ba`（executor）
 - **前件（本棒系列）**：`892e5dfe3ed1`（在册 S4 读数之独立可复现性 · D-05 §2 差异陈述之证伪）
-- **复现命令**：`C:\Python314\python.exe .tmp/_d05_three_checks_recheck_2026_10_10.py` → `.tmp/_d05_caliber_2026_10_10.py` → `.tmp/_d05_s4only_2026_10_10.py`
+- **复现命令**：`〔本机路径〕\Python314\python.exe .tmp/_d05_three_checks_recheck_2026_10_10.py` → `.tmp/_d05_caliber_2026_10_10.py` → `.tmp/_d05_s4only_2026_10_10.py`
 
 ---
 

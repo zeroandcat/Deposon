@@ -32,15 +32,15 @@ import numpy as np
 from datetime import datetime, timezone, timedelta
 
 # ============== Config ==============
-KEY_FILE = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
-CORPUS_DIR = r'D:\私人资料\deposon-repo\corpus\v20'
-PNG_DIR = r'D:\私人资料\deposon-repo\figures\v3x\corpus_pngs'
-GSM8K_FILE = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_gsm8k_details.json'
-STQ_FILE = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_strategyqa_details.json'
-EMB_TXT_REF = r'D:\私人资料\deposon-repo\results\deposon_volcengine_22caption_embedding_2026_09_10.json'
+KEY_FILE = r'〔本机用户目录〕\Desktop\AI\LLM API.txt'
+CORPUS_DIR = r'_repo_mirror\corpus\v20'
+PNG_DIR = r'_repo_mirror\figures\v3x\corpus_pngs'
+GSM8K_FILE = r'_repo_mirror\results\deposon_benchmark_v1_4_gsm8k_details.json'
+STQ_FILE = r'_repo_mirror\results\deposon_benchmark_v1_4_strategyqa_details.json'
+EMB_TXT_REF = r'_repo_mirror\results\deposon_volcengine_22caption_embedding_2026_09_10.json'
 
-OUTPUT_JSON = r'D:\私人资料\deposon-repo\results\deposon_dpath_cross_modal_2026_09_10.json'
-OUTPUT_LOG = r'D:\私人资料\deposon-repo\results\deposon_dpath_cross_modal_2026_09_10.log'
+OUTPUT_JSON = r'_repo_mirror\results\deposon_dpath_cross_modal_2026_09_10.json'
+OUTPUT_LOG = r'_repo_mirror\results\deposon_dpath_cross_modal_2026_09_10.log'
 
 BASE_URL = 'https://ark.cn-beijing.volces.com/api/coding/v3'
 MODEL_EMB = 'doubao-embedding-vision-251215'
@@ -633,14 +633,14 @@ def main():
     # 14) Compute and log frozen files SHA-12
     log('FROZEN_SHA_CHECK (5 anchors, 4 SPEC V0.1, v19, v21, corpus/v20/index.json):')
     frozen_files = [
-        r'D:\私人资料\deposon-repo\verifier\handoff\KT_ABC1_anchors_sha256_12.json',
-        r'D:\私人资料\deposon-repo\docs\V3X\KT_A1_SPEC_V0.1.md',
-        r'D:\私人资料\deposon-repo\docs\V3X\KT_B1_SPEC_V0.1.md',
-        r'D:\私人资料\deposon-repo\docs\V3X\KT_C1_SPEC_V0.1.md',
-        r'D:\私人资料\deposon-repo\docs\V3X\KT_D0_SPEC_V0.1.md',
-        r'D:\私人资料\deposon-repo\results\deposon_v19_benchmark_fixes.json',
-        r'D:\私人资料\deposon-repo\results\deposon_v21_gtformal.json',
-        r'D:\私人资料\deposon-repo\corpus\v20\index.json',
+        r'_repo_mirror\verifier\handoff\KT_ABC1_anchors_sha256_12.json',
+        r'_repo_mirror\docs\V3X\KT_A1_SPEC_V0.1.md',
+        r'_repo_mirror\docs\V3X\KT_B1_SPEC_V0.1.md',
+        r'_repo_mirror\docs\V3X\KT_C1_SPEC_V0.1.md',
+        r'_repo_mirror\docs\V3X\KT_D0_SPEC_V0.1.md',
+        r'_repo_mirror\results\deposon_v19_benchmark_fixes.json',
+        r'_repo_mirror\results\deposon_v21_gtformal.json',
+        r'_repo_mirror\corpus\v20\index.json',
     ]
     for fp in frozen_files:
         try:

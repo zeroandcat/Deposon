@@ -5,7 +5,7 @@
 | **件名** | `results/_stage3_r2_cleanup_register_2026_10_18.md` |
 | **件性质** | 执行登记件（判据冻结件指纹 ＋ 两区前后账 ＋ 四型清单 ＋ 转移映射 ＋ 保留面 ＋ 停手候裁 ＋ 账目校正 ＋ 字节级自报）· **非判定件** ⇒ ⛔ 0 落五终判 · ⛔ 0 宣告段毕/①毕 · ⛔ 0 代 PI 裁 |
 | **权源** | `results/_stage3_1_bulk_reorg_completion_register_2026_10_12.md` §1/§2（`7439157b7be4`）＋ `results/_stage_sequence_ruling_effect_2026_10_17.md` §3-2（`b582bde59d6d`，与派工给定指纹一致） |
-| **区域** | 仅 `deposon-repo` ＋ `deposon-sub`｜⛔ 0 触 `D:\私人资料\_non_upload_local_archive`｜⛔ 0 触 `D:\私人资料\GLM` |
+| **区域** | 仅 `deposon-repo` ＋ `deposon-sub`｜⛔ 0 触 `〔本地归档区〕`｜⛔ 0 触 `〔本地资料区〕\GLM` |
 | **落前占位实测** | `Test-Path` ＝ `False`；`results\*stage3_r2*` glob ＝ **0** |
 
 ---
@@ -174,7 +174,7 @@
 | 通道 | Windows 受信 launcher 之 `rm -- <字面目标>`（本会话内 `Remove-Item` ＝ 永久删 ⇒ ⛔ 0 用）|
 | 小样本验道 | 1 件（`.tmp/_m5_k5_net.err`）先验：离原位 ✔ ＋ `$I`/`$R` 成对 ✔ ＋ `$I` 原路径解码（偏移 **28**，UTF-16LE）✔ ⇒ 方批量 |
 | 批量验道 | 清走 88 件 → **88/88** 命中；自清 7 件 → **7/7** 命中；样本 1 件 → **1/1** 命中；**合计 96/96** |
-| 回收站位置 | **`D:\$Recycle.Bin\<SID>\`**（非 `C:` —— 本棒样本在 **D:** 卷，首轮查 `C:` 曾误判「验道未过」，已改查正确卷并复验通过）|
+| 回收站位置 | **`〔回收站〕\<SID>\`**（非 `C:` —— 本棒样本在 **D:** 卷，首轮查 `C:` 曾误判「验道未过」，已改查正确卷并复验通过）|
 | `$I` 条目总数 | 104（含本棒 96 ＋ 他棒既有 8）· 缺 `$R` 者 **0** |
 | ⛔ | 0 永久删 · 0 覆盖 · 0 重命名既有件 · 单件最大 450,751 B ≪ 站容 |
 
@@ -233,7 +233,7 @@
 | 36 | `docs/V3X/D7_POST_CLEANUP_PLAN_2026_09_18.json` | `sub/docs/V3X/D7_POST_CLEANUP_PLAN_2026_09_18.json` | `0b8a1a357aaee4139a07cd3dc89b2698ade82fc253caba3a4db0a711c065029a` | 20,271 | MATCH |
 | 37 | `docs/V3X/D7_POST_CLEANUP_REPORT_2026_09_16.json` | `sub/docs/V3X/D7_POST_CLEANUP_REPORT_2026_09_16.json` | `40955bf2abc5c1118205f47b28f5e64b0529bdf87c620b1496fd16b2332021fa` | 1,248 | MATCH |
 | 38 | `docs/V3X/D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` | `sub/docs/V3X/D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` | `51869e3184f4e39eabcb377404cab86303269ca22d93f0788f22258a2c6205e8` | 10,692 | MATCH |
-| 39 | `docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | `sub/docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | `935cb6ee356652430bdd3841c1e5bd6a496b14b499e0b44af78f1cae4b8973f6` | 8,037 | MATCH |
+| 39 | `docs/V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | `sub/docs/V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | `935cb6ee356652430bdd3841c1e5bd6a496b14b499e0b44af78f1cae4b8973f6` | 8,037 | MATCH |
 | 40 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `sub/docs/V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `ac8997b077317641b8be60dc3de510d636c8722eafcbb3a196e6bffe8b0cdf03` | 22,442 | MATCH |
 | 41 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | `sub/docs/V3X/DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | `240a7ae4bdfbb3d18680abcd69bfc10b01919177703c06ad1116491ec537f1cf` | 17,803 | MATCH |
 | 42 | `docs/V3X/DPATH_CROSS_MODAL_2026_09_10.md` | `sub/docs/V3X/DPATH_CROSS_MODAL_2026_09_10.md` | `e4ee3999f7cea1addd1489b2e832b738bdedb6efa55af23acc4270624d0b3def` | 26,460 | MATCH |
@@ -471,6 +471,6 @@
 
 ## §10 纪律自证
 
-⛔ 0 落五终判 · ⛔ 0 宣告段毕/①毕 · ⛔ 0 代 PI 裁 · ⛔ 0 回改任何既有件一字 · ⛔ 0 永久删 · ⛔ 0 覆盖 · ⛔ 0 重命名既有件 · ⛔ 0 触 `D:\私人资料\_non_upload_local_archive` · ⛔ 0 触 `D:\私人资料\GLM` · ⛔ 0 联网 · ⛔ 0 读 key · ⛔ 0 联网文献调用 · 本棒既有件触动面 ＝ **清走 89（可恢复）＋ 转移 166（0 覆盖 · 0 断链 · 25 回退）＋ 自清 7** ｜ 新增件 ＝ 冻结件 1 ＋ 本登记件 1 ＋ 本棒脚本/日志（`.tmp/_r2_tool_*`） |
+⛔ 0 落五终判 · ⛔ 0 宣告段毕/①毕 · ⛔ 0 代 PI 裁 · ⛔ 0 回改任何既有件一字 · ⛔ 0 永久删 · ⛔ 0 覆盖 · ⛔ 0 重命名既有件 · ⛔ 0 触 `〔本地归档区〕` · ⛔ 0 触 `〔本地资料区〕\GLM` · ⛔ 0 联网 · ⛔ 0 读 key · ⛔ 0 联网文献调用 · 本棒既有件触动面 ＝ **清走 89（可恢复）＋ 转移 166（0 覆盖 · 0 断链 · 25 回退）＋ 自清 7** ｜ 新增件 ＝ 冻结件 1 ＋ 本登记件 1 ＋ 本棒脚本/日志（`.tmp/_r2_tool_*`） |
 
 *件止。③段-R2 夜间整理棒 · 2026-10-18 · **清理/转移登记** —— 清走 **96**（判据 89 ＋ 自清 7 · 可恢复通道 · 验道 96/96）｜转移 166 → **净 141**（MATCH 141/FAIL 0 · 回退 25 · 残余功能断链 0）｜两区 **4,423/1,189 → 4,280/1,276**（比 **3.720 → 3.354**）｜🔴 ≤1.50 **不可达**（缺口 774 · 根因＝受保护面占 repo 增量 93%）｜⛔ 0 落五终判 · 0 宣告段毕/①毕 · 0 代 PI 裁 · 0 联网 · 0 触归档区*

@@ -3,7 +3,7 @@
 import hashlib, os, re
 from datetime import datetime
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo'); RES = REPO / 'results'
+REPO = Path(r'_repo_mirror'); RES = REPO / 'results'
 def sha12(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12]
 def T(p): return Path(p).read_text(encoding='utf-8', errors='ignore')
 
@@ -40,7 +40,7 @@ print(f'  待修 8 件 SHA-12: {targets}')
 # 扫全仓文本找这些 SHA
 found = {}
 CUT = datetime(2026,9,1).timestamp()
-for root in (r'D:\私人资料\deposon-repo', r'D:\私人资料\deposon-sub'):
+for root in (r'_repo_mirror', r'_repo_mirror'):
     for dp, dns, fns in os.walk(root):
         dns[:] = [d for d in dns if d not in {'__pycache__','.git','.trae'}]
         for fn in fns:
@@ -53,7 +53,7 @@ for root in (r'D:\私人资料\deposon-repo', r'D:\私人资料\deposon-sub'):
             except Exception: continue
             for s, name in targets.items():
                 if s in t and os.path.basename(q) != name:
-                    found.setdefault(s, []).append(q.replace(r'D:\私人资料'+os.sep,''))
+                    found.setdefault(s, []).append(q.replace(r'〔本地资料区〕'+os.sep,''))
 for s, name in targets.items():
     hits = found.get(s, [])
     print(f'  {s} ({name}) 被引 {len(hits)} 处: {hits[:5]}')

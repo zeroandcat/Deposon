@@ -4,7 +4,7 @@ _ofc_s2 — 项 A（.tmp 281 件引用面核查）+ 项 E（两版索引比对�
 """
 import hashlib, json, os, re
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_repo_mirror')
 def sha12b(b): return hashlib.sha256(b).hexdigest()[:12]
 
 print('='*104); print('项 A · .tmp 281 件「被冻结/登记/判定面按路径引用」核查'); print('='*104)

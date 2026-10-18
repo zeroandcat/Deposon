@@ -3,7 +3,7 @@
 import hashlib, os
 from pathlib import Path
 
-ROOT = Path(r'D:\私人资料\deposon-repo')
+ROOT = Path(r'_repo_mirror')
 sha12 = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12].upper()
 
 def find_anywhere(name):
@@ -114,7 +114,7 @@ if not pk.exists():
     print(f'  _p_k_blind_test_runner: ' + (str(pk_hits) if pk_hits else 'MISSING'))
 else:
     s = pk.read_text(encoding='utf-8', errors='ignore')
-    print(f'  _p_k_blind_test_runner: {sha12(pk)}, repo 外绝对路径 {"STILL-PRESENT" if "C:\\\\Users" in s or "C:/Users" in s else "clean"}')
+    print(f'  _p_k_blind_test_runner: {sha12(pk)}, repo 外绝对路径 {"STILL-PRESENT" if "〔本机路径〕\\\\Users" in s or "〔本机路径〕/Users" in s else "clean"}')
 
 print()
 print('_v3_review_r1_inventory DONE')

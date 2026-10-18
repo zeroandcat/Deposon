@@ -2,7 +2,7 @@
 """_v4_wide_s3b_uuidctx — 判定 _l14v3_aggregated_10cells.json 的 UUID 是否真 key（只读）"""
 import json, os, re
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_repo_mirror')
 p = REPO / '.tmp' / '_l14v3_aggregated_10cells.json'
 print(f'件: {p}  {p.stat().st_size:,}B')
 txt = p.read_text(encoding='utf-8', errors='ignore')

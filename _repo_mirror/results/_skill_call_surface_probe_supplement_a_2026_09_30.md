@@ -27,14 +27,14 @@
 |---|---|
 | 本会话可用工具中**是否存在 skill 加载入口** | ✅ **存在** —— `Skill` 工具（*Loads the complete SKILL.md instructions for an available local or plugin skill*） |
 | 失败返回形态 | `Local skill not found: <名>`（与首件 §1.1、644e §2.2 逐字同形） |
-| 成功返回形态 | `# Skill: <名>` ＋ `Location: files:///D:/Users/Administrator/.minimax/skills/<目录名>/SKILL.md` ＋ SKILL.md 全文 |
+| 成功返回形态 | `# Skill: <名>` ＋ `Location: files:///〔本机用户目录〕/.minimax/skills/<目录名>/SKILL.md` ＋ SKILL.md 全文 |
 
 > **0 以文件直读冒充调用面**：所有「成功/失败」判定**一律以 `Skill` 工具真实返回为唯一依据**；磁盘读取**仅**用于（a）分半名单计算、（b）SHA-12/字节基线、（c）命中面指纹比对。
 
 ### §1.2 未测集与分半（本棒自算 · 与派工单口径对账）
 
 **规则**（可复算）：
-1. 取 `D:\Users\Administrator\.minimax\skills\` 下**全部目录**，按 `Name` **字母序升序**排列 ⇒ 本棒实测 **223** 个目录（与 `e96d99ff9e75` 附录 A 的 223 项**逐数吻合**）。
+1. 取 `〔本机用户目录〕\.minimax\skills\` 下**全部目录**，按 `Name` **字母序升序**排列 ⇒ 本棒实测 **223** 个目录（与 `e96d99ff9e75` 附录 A 的 223 项**逐数吻合**）。
 2. 减去首件 `112346df64fb` **已测 40 枚**（臂 1 的 22 枚 `name`≠目录名项 ＋ 臂 2 的 5 枚多重面项 ＋ 臂 3 的 3 枚 ＋ 臂 4 的 10 枚）。
 3. 得**未测 183 枚**；分半用前 **⌈183/2⌉ = 92** ⇒ **本棒（甲半）＝ 第 1–92 位**；**乙半 ＝ 第 93–183 位（91 枚）**。
 
@@ -197,7 +197,7 @@
 
 | 命中面 | 枚数 | 占比 | 判据 |
 |---|---|---|---|
-| **用户面** | **92** | 100% | `Location: files:///D:/Users/Administrator/.minimax/skills/<目录名>/SKILL.md` |
+| **用户面** | **92** | 100% | `Location: files:///〔本机用户目录〕/.minimax/skills/<目录名>/SKILL.md` |
 | PC / plugin-cache 面 | **0** | 0% | 仅 `hypothesis-generation`(#71) 存在同名遮蔽，已消歧排除 |
 | 加载失败面 | **0** | 0% | — |
 

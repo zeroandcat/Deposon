@@ -3,8 +3,8 @@
 and any other clean source dirs. Hash + structural fingerprint. Read-only."""
 import os, re, hashlib
 
-PAPER = r'd:\私人资料\deposon-repo\paper'
-WORK = r'c:\Users\Administrator\.trae-cn\work\6a9a7e1c7578e46bf7c7f60c'
+PAPER = r'〔本机路径〕\私人资料\deposon-repo\paper'
+WORK = r'〔本机用户目录〕\.trae-cn\work\6a9a7e1c7578e46bf7c7f60c'
 
 def sha(b): return hashlib.sha256(b).hexdigest()
 

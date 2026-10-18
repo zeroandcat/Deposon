@@ -27,11 +27,11 @@
 
 ### §1.1 358 件已移出 (Mavis 22:55 23:00 执行, 沿 7 铁律 0 触动)
 
-Mavis 已将 KIMI 标记的"排除项"沿 6 类移出至 `D:\私人资料\_non_upload_local_archive\`:
+Mavis 已将 KIMI 标记的"排除项"沿 6 类移出至 `〔本地归档区〕\`:
 
 | 类别 | 件数 (Mavis 移动) | 路径示例 |
 |---|---|---|
-| 1. 垃圾/缓存 (log/tmp/bak/cache/err/flag/aux/out/probe/sanity/__pycache__/_worker_temp) | 7 dir types (含子文件) | `D:\私人资料\deposon-repo\results\log\` 等 |
+| 1. 垃圾/缓存 (log/tmp/bak/cache/err/flag/aux/out/probe/sanity/__pycache__/_worker_temp) | 7 dir types (含子文件) | `_repo_mirror\results\log\` 等 |
 | 2. PNG (74 files) | 74 | 论文 fig1/fig2/.../fig5 全部 PNG |
 | 3. .trae/build + source + snapshots | 61 (含嵌套子文件) | `.trae\build\`, `.trae\source\`, `.trae\snapshots\` |
 | 4. paper/ (红线, 完整论文) | 41 (含 arxiv_cn_pkg/figures 等) | 完整论文 PDF/TeX/md/bib 全套 |
@@ -44,7 +44,7 @@ Mavis 已将 KIMI 标记的"排除项"沿 6 类移出至 `D:\私人资料\_non_u
 
 ### §1.2 verifier/ 已恢复 (Mavis 22:55 23:00 执行, 沿决策 3 本地回拉)
 
-Mavis 已将 `D:\私人资料\_archive_deposon_2026_09_17\verifier\` 恢复至 `D:\私人资料\deposon-repo\verifier\`. 102 文件恢复, 3 frozen verifier SHA-12 全对:
+Mavis 已将 `〔本地资料区〕\_archive_deposon_2026_09_17\verifier\` 恢复至 `_repo_mirror\verifier\`. 102 文件恢复, 3 frozen verifier SHA-12 全对:
 
 - `verifier/audit/conservation.py` (22,105 B, SHA-12=`4bdec2683f06`) ✓
 - `verifier/handoff/KT_ABC1_anchors_sha256_12.json` (6,680 B, SHA-12=`03c6c01f3697`) ✓
@@ -54,16 +54,16 @@ Mavis 已将 `D:\私人资料\_archive_deposon_2026_09_17\verifier\` 恢复至 `
 
 ### §1.3 3 源 archive 整合 (Mavis 22:55 23:00 执行, 沿 user 22:55 拍板)
 
-Mavis 已将 3 个 archive 源目录整合到唯一本地存档 `D:\私人资料\_non_upload_local_archive\`:
+Mavis 已将 3 个 archive 源目录整合到唯一本地存档 `〔本地归档区〕\`:
 
 - 源 1: `_archive_deposon_2026_09_17_excluded_358` (260 files / 45 dirs) - GONE
 - 源 2: `_archive_deposon_2026_09_17` (387 files / 79 dirs 含 verifier/) - GONE (verifier 已迁回 repo)
 - 源 3: `_mavis_external` (530 files / 36 dirs) - GONE
-- **统一本地存档**: `D:\私人资料\_non_upload_local_archive\` (1,176 files / 144 dirs / 287.55 MB)
+- **统一本地存档**: `〔本地归档区〕\` (1,176 files / 144 dirs / 287.55 MB)
 
 **老实交代**: `robocopy <src> <dst> /E /MOVE` 串行 3 源, 移动后源空 → 自动删源 dir. 3 源 dir 全部 GONE. 整合差异 (1,176 vs 1,177) 因 robocopy /MOVE 去重同名子文件.
 
-**KIMI 必查**: 3 源 archive 整合后, 若 KIMI 需 verifier/ 等已合并文件, 沿 `D:\私人资料\_non_upload_local_archive\verifier\` 读. 3 源合并后无 verifier/ 在 archive (因 verifier 已迁回 repo).
+**KIMI 必查**: 3 源 archive 整合后, 若 KIMI 需 verifier/ 等已合并文件, 沿 `〔本地归档区〕\verifier\` 读. 3 源合并后无 verifier/ 在 archive (因 verifier 已迁回 repo).
 
 ---
 
@@ -71,7 +71,7 @@ Mavis 已将 3 个 archive 源目录整合到唯一本地存档 `D:\私人资料
 
 ### §2.1 推 442 件 (14 changed + 428 新增)
 
-**文件源 (沿 §3 路径清单)**: `D:\私人资料\deposon-repo\_mirror_pushable.json` (沿 KIMI 已落 22:02 CST)
+**文件源 (沿 §3 路径清单)**: `_repo_mirror\_mirror_pushable.json` (沿 KIMI 已落 22:02 CST)
 
 **新增 14 件 changed** (在 repo 896 文件内, KIMI 推):
 ```
@@ -107,7 +107,7 @@ run_v20_photonics.py
 
 **文件源 (只读远端)**: KIMI 凝子-agent 沿 git read API 拉 `verifier/audit/` + `verifier/handoff/` + `verifier/runs/` + `verifier/v1-v35/` + `verifier/kill_lines/` + `verifier/README.md`
 
-**写入位置**: `D:\私人资料\deposon-repo\verifier\` (本地副本, 远端不动)
+**写入位置**: `_repo_mirror\verifier\` (本地副本, 远端不动)
 
 **不动远端**: 远端 verifier/ 99 件 SHA-12 保持原值, KIMI 拉本地只增加 repo 一份, 不覆盖远端
 
@@ -132,7 +132,7 @@ run_v20_photonics.py
 
 KIMI 推完 0 触动此 5 件 (远端 SHA-12 保持原值, 本地有更新版本不动远端)
 
-**KIMI 必查**: 本地 paper/ 已移出至 `D:\私人资料\_non_upload_local_archive\paper\`, 远端 paper/ 5 件 SHA-12 沿 §2.5 冻结. KIMI 不推本地 paper/ 内容 (已不在 repo), 也不动远端 paper/ 5 件 (沿决策 1 冻结).
+**KIMI 必查**: 本地 paper/ 已移出至 `〔本地归档区〕\paper\`, 远端 paper/ 5 件 SHA-12 沿 §2.5 冻结. KIMI 不推本地 paper/ 内容 (已不在 repo), 也不动远端 paper/ 5 件 (沿决策 1 冻结).
 
 ---
 
@@ -149,9 +149,9 @@ KIMI 推完 0 触动此 5 件 (远端 SHA-12 保持原值, 本地有更新版本
 
 | 路径变化 | 调整前 (v1) | 调整后 (v2) |
 |---|---|---|
-| 358 件排除项 | 在本地 `D:\私人资料\deposon-repo\` 各类目录 | 在统一本地存档 `D:\私人资料\_non_upload_local_archive\`, 本地 repo 0 件 |
-| verifier/ 99 件 | 在 archive `D:\私人资料\_archive_deposon_2026_09_17\verifier\` | 已在本地 repo `D:\私人资料\deposon-repo\verifier\` (102 文件, Mavis 22:55-23:00 恢复) |
-| 3 源 archive 整合 | 3 个 dir (`_archive_deposon_2026_09_17_excluded_358` + `_archive_deposon_2026_09_17` + `_mavis_external`) | 1 个统一本地存档 `D:\私人资料\_non_upload_local_archive\` (1,176 files / 144 dirs) |
+| 358 件排除项 | 在本地 `_repo_mirror\` 各类目录 | 在统一本地存档 `〔本地归档区〕\`, 本地 repo 0 件 |
+| verifier/ 99 件 | 在 archive `〔本地资料区〕\_archive_deposon_2026_09_17\verifier\` | 已在本地 repo `_repo_mirror\verifier\` (102 文件, Mavis 22:55-23:00 恢复) |
+| 3 源 archive 整合 | 3 个 dir (`_archive_deposon_2026_09_17_excluded_358` + `_archive_deposon_2026_09_17` + `_mavis_external`) | 1 个统一本地存档 `〔本地归档区〕\` (1,176 files / 144 dirs) |
 | Repo 文件数 | 935 (v1) | 896 (v2, 移出 358 + 沿 verifier 恢复 102 - 已知 v1 含部分 .trae/audit 移出) |
 | 本地存档总数 | 1,177 (v1) | 1,176 (v2, 3 源整合去重) |
 
@@ -160,7 +160,7 @@ KIMI 推完 0 触动此 5 件 (远端 SHA-12 保持原值, 本地有更新版本
 1. **分批推送**, 每批 ≤50 件 (批 1 = 14 changed, 批 2-N = 428 local_only 按目录切分)
 2. 每批走 **git-data API** (blob→tree→commit→ref PATCH, **非 force**)
 3. 每批推后 `GET git/trees/<commit>?recursive=1` 做 **git-SHA1 全量比对** (contents API 对 >1MB 文件返回空, 必须用 tree 比对)
-4. 每批写 **manifest 镜像**入 `D:\私人资料\deposon-repo\results\_kimi_push_v3_manifest_*.json`
+4. 每批写 **manifest 镜像**入 `_repo_mirror\results\_kimi_push_v3_manifest_*.json`
 5. 推送前对候选文件做 **密钥扫描**; 正则必须泛化, 绝不写入真实密钥片段
 6. **frozen 工件绝不触碰**; 任何重跑审计在 /tmp 副本执行
 7. **API key 永不落盘、永不进 prompt**
@@ -185,12 +185,12 @@ KIMI 推完 0 触动此 5 件 (远端 SHA-12 保持原值, 本地有更新版本
 
 | 件 | 路径 | 用途 |
 |---|---|---|
-| 沿 7 步方案推完 manifest | `D:\私人资料\deposon-repo\results\_kimi_push_v3_manifest_<commit>.json` | 每批 manifest 镜像 |
+| 沿 7 步方案推完 manifest | `_repo_mirror\results\_kimi_push_v3_manifest_<commit>.json` | 每批 manifest 镜像 |
 | 沿 7 步方案推完 commit 链 | `<commit_hash>` | bb1f085f → 5dd8221b → ee0b82fc → 292ba94d → **新 commit v3 final** |
-| verifier 99 件本地副本 | `D:\私人资料\deposon-repo\verifier\` (102 文件, 含 3 frozen + v1-v35 check.py + runs/...) | 沿决策 3 本地回拉 (已沿 §1.2 恢复) |
+| verifier 99 件本地副本 | `_repo_mirror\verifier\` (102 文件, 含 3 frozen + v1-v35 check.py + runs/...) | 沿决策 3 本地回拉 (已沿 §1.2 恢复) |
 | v0+v1 verify 复跑 | `_verify_15frozen_v1.py + _verify_pg_v0_v1.py` | 16/16 + 5/5 PASS 复验 (Mavis 已验, KIMI 推完再验 1 次) |
 | 0 触动最终验 | 全 repo verify (沿 7 铁律) | 18 frozen + 5 制品 + schema v1 + 4 plugin + verifier + 9 铁律 |
-| 358 件路径查 | `D:\私人资料\_non_upload_local_archive\paper\` + `\.trae\build\` + `\.trae\audit\` + `\.trae\audit\compile_evidence\` + `strategyqa_train.json` 等 | 沿 §1.1 6 类口径 (KIMI 不动, 但需要时查 archive) |
+| 358 件路径查 | `〔本地归档区〕\paper\` + `\.trae\build\` + `\.trae\audit\` + `\.trae\audit\compile_evidence\` + `strategyqa_train.json` 等 | 沿 §1.1 6 类口径 (KIMI 不动, 但需要时查 archive) |
 
 ---
 

@@ -32,7 +32,7 @@
 
 | 项 | 值 |
 |---|---|
-| 路径 | `C:\Users\Administrator\Desktop\AI\LLM API.txt`（**workspace 外，PI 授权只读**） |
+| 路径 | `〔本机用户目录〕\Desktop\AI\LLM API.txt`（**workspace 外，PI 授权只读**） |
 | 大小 | 947 B |
 | mtime (local) | `2026-09-23T15:00:05` |
 | mtime (UTC) | `2026-09-23T07:00:05+00:00` |

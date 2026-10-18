@@ -1,6 +1,6 @@
 # paper V1 双审报告（异源 4 模型交叉）
 
-- 待审稿：`D:\私人资料\deposon-repo\results\_coze_paper_v1_draft_2026_09_17.md`
+- 待审稿：`_repo_mirror\results\_coze_paper_v1_draft_2026_09_17.md`
 - 稿 SHA-12：`c08e7abf5ee3`
 - 审稿配置：内容审 A × 2（GLM-5.1 / Kimi-K3）+ 技术审 B × 2（DeepSeek-v4-pro / Grok-4.6）
 - 异源声明：4 个审稿模型均非起草方，且非 OpenAI/Anthropic/Google 系

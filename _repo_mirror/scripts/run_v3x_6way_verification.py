@@ -41,7 +41,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', line_bufferin
 sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', line_buffering=True)
 
 # ---------------- 0. Load API key (GB18030) ----------------
-KEY_FILE = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
+KEY_FILE = r'〔本机用户目录〕\Desktop\AI\LLM API.txt'
 with io.open(KEY_FILE, 'r', encoding='gb18030') as f:
     key_text = f.read()
 # Per previous worker sanity report: the SECOND ark key is the verified 3/3 PASS
@@ -64,9 +64,9 @@ print(f"[INIT] proxy cleared: HTTP_PROXY/HTTPS_PROXY etc all popped")
 print(f"[INIT] 7 铁律 honored (no model switch / no proxy / no 5-anchor touch)")
 
 # ---------------- 1. Constants ----------------
-CORPUS_DIR = r'D:\私人资料\deposon-repo\corpus\v20'
-GSM8K_PATH = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_gsm8k_details.json'
-STRATEGYQA_PATH = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_strategyqa_details.json'
+CORPUS_DIR = r'_repo_mirror\corpus\v20'
+GSM8K_PATH = r'_repo_mirror\results\deposon_benchmark_v1_4_gsm8k_details.json'
+STRATEGYQA_PATH = r'_repo_mirror\results\deposon_benchmark_v1_4_strategyqa_details.json'
 EMBED_ENDPOINT = 'https://ark.cn-beijing.volces.com/api/coding/v3/embeddings'
 CHAT_ENDPOINT = 'https://ark.cn-beijing.volces.com/api/coding/v3/chat/completions'
 EMBED_MODEL = 'doubao-embedding-vision-251215'
@@ -355,7 +355,7 @@ stage2_result = {
     'gt_labels': gt_labels_22,
     'gt_class_names': class_names_22,
 }
-STAGE2_JSON = r'D:\私人资料\deposon-repo\results\deposon_v3x_6way_stage2_2026_09_10.json'
+STAGE2_JSON = r'_repo_mirror\results\deposon_v3x_6way_stage2_2026_09_10.json'
 with open(STAGE2_JSON, 'w', encoding='utf-8') as f:
     json.dump(stage2_result, f, ensure_ascii=False, indent=2)
 print(f"\n[OK] Stage 2 result saved: {STAGE2_JSON} ({os.path.getsize(STAGE2_JSON)} bytes)")
@@ -554,7 +554,7 @@ stage3_result = {
         ]
     }
 }
-STAGE3_JSON = r'D:\私人资料\deposon-repo\results\deposon_v3x_6way_stage3_2026_09_10.json'
+STAGE3_JSON = r'_repo_mirror\results\deposon_v3x_6way_stage3_2026_09_10.json'
 with open(STAGE3_JSON, 'w', encoding='utf-8') as f:
     json.dump(stage3_result, f, ensure_ascii=False, indent=2)
 print(f"\n[OK] Stage 3 result saved: {STAGE3_JSON} ({os.path.getsize(STAGE3_JSON)} bytes)")
@@ -596,7 +596,7 @@ final_summary = {
         'verdict_C': verdict_3,
     }
 }
-FINAL_JSON = r'D:\私人资料\deposon-repo\results\deposon_v3x_6way_summary_2026_09_10.json'
+FINAL_JSON = r'_repo_mirror\results\deposon_v3x_6way_summary_2026_09_10.json'
 with open(FINAL_JSON, 'w', encoding='utf-8') as f:
     json.dump(final_summary, f, ensure_ascii=False, indent=2)
 print(f"\n[OK] Final summary saved: {FINAL_JSON}")

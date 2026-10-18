@@ -79,7 +79,7 @@ R2 续作棒自称落盘 43,843 B 于基名——基名在 R3 落盘前（13:46 
 
 | 项 | 值 |
 |---|---|
-| 路径 | `D:\私人资料\deposon-repo\results\_erratum_refonly_draft_alias_found_2026_10_17.md` |
+| 路径 | `_repo_mirror\results\_erratum_refonly_draft_alias_found_2026_10_17.md` |
 | bytes | 待自核填入 |
 | SHA-12 | 待自核填入 |
 | BOM | 待自核填入 |

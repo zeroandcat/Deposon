@@ -21,7 +21,7 @@ import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.metrics import adjusted_rand_score
 
-ROOT = r"D:\私人资料\deposon-repo"
+ROOT = r"_repo_mirror"
 RESULTS = os.path.join(ROOT, "results")
 
 # ============================================================

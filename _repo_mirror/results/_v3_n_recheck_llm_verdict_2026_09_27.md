@@ -176,7 +176,7 @@
 | 并发轰炸 | **无** |
 | 端点 | `ark.cn-beijing.volces.com/api/coding/v3`（chat，`glm-latest`）与 `.../embeddings`（`doubao-embedding-vision-251215`） |
 | tun 代理 | **未启用**——Volcengine Ark 既非 teamorouter 亦非 openrouter，铁律不适用（#19/#21 为 0 调用，不涉及） |
-| key 读取 | runtime `os.environ['ARK_API_KEY']`（env 优先，key 文件 `C:/Users/Administrator/Desktop/AI/新建文本文档.txt` **不存在**，未回落） |
+| key 读取 | runtime `os.environ['ARK_API_KEY']`（env 优先，key 文件 `〔本机用户目录〕/Desktop/AI/新建文本文档.txt` **不存在**，未回落） |
 | key 明文自扫 | 6 件产出（3 数据 JSON + 3 脚本）全量扫 `完整 key` / `key 前 12 位` / `ark-` 三种模式 → **全部 clean** |
 | 成本 | 12 次 chat 的 `usage` 随首跑崩溃丢失，**落盘件无法计算成本**；不估算不编造 |
 

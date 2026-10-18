@@ -19,7 +19,7 @@
 
 ## §0 委托原则(KIMI 必读)
 
-1. **KIMI 自己的 key**: Mavis 不读 `C:\Users\Administrator\Desktop\AI\LLM API.txt`,KIMI 自己处理(沿 Moonshot AI Platform)
+1. **KIMI 自己的 key**: Mavis 不读 `〔本机用户目录〕\Desktop\AI\LLM API.txt`,KIMI 自己处理(沿 Moonshot AI Platform)
 2. **0 触动 18 frozen**: KIMI 上传时**严禁**修改 `verifier/handoff/KT_ABC1_anchors_sha256_12.json` (`03c6c01f3697`) + 4 SPEC V0.1 + P-F V0.1 upgrade + v19/v21/corpus_v20 + P-F V0/P-F placeholder/P-F research + 4 plugin spec(除 skill_d 沿 user 12:01 1A 拍板合法改动 `f4c68d146141` → `3e369a1f6171`)
 3. **D7 (2026-09-18) 终极判死完成后**: 沿 V3X 1 周判死承诺兑现报告(沿 `V3X_1WEEK_KILL_REPORT_2026_09_18.md`)
 4. **github 仓库结构**(由 KIMI 协助设计): 见 §3

@@ -224,7 +224,7 @@ PI 裁「B+A」双路已**双路跑毕**；**两路皆 0 出可直接采之值**
 | `.tmp/_t2_t3_lit_search.py` | B 路第一轮检索（Crossref 5 式 ＋ arXiv 4 式） | `.tmp/_t2_t3_lit_search_out.json`、`.tmp/_lit_log.txt` |
 | `.tmp/_t2_t3_lit_search2.py` | B 路第二轮数值定向检索（Crossref 6 式 ＋ arXiv 4 式） | `.tmp/_t2_t3_lit_search2_out.json` |
 
-- **复算命令**（在 `D:\私人资料\deposon-repo` 下）：
+- **复算命令**（在 `_repo_mirror` 下）：
   `py -3 .tmp\_t2_t3_prex_a_route2.py`／`py -3 .tmp\_t2_t3_lit_search.py`
 - **随机性口径**：观测律与机制面用 seeds **42／123／456**（沿 `KT_A1_SPEC` §5.3 A3 种子复现）；`R4_random` 规则用 seed **20261015**。
 - **实测指纹**：`tools/exp_harness.py` ＝ `275e480ba4d9`（10,090 B）；`tools/distortion_calculator.py` ＝ `410a12482eef`（40,611 B）。
@@ -238,7 +238,7 @@ PI 裁「B+A」双路已**双路跑毕**；**两路皆 0 出可直接采之值**
 3. 本件 ⛔ **0 回填**给值单 `21abb5173b87` 之 §4 给值栏（**仍全空候 PI**）。
 4. 本件全篇标「**候 PI 核准**」；⛔ **0 径行采认**、⛔ 0 代 PI 给值／择／确认。
 5. 本件 ⛔ 0 宣告①毕、⛔ 0 宣告 `R-8` 已闭、⛔ 0 销记任何计数。
-6. 本件 ⛔ 0 打印／0 落盘／0 转述任何 LLM 凭证之值（仅报其**长度**）；⛔ 0 读 `.env`；⛔ 0 触 `D:\私人资料\_non_upload_local_archive`；⛔ 0 上传／0 远端写。
+6. 本件 ⛔ 0 打印／0 落盘／0 转述任何 LLM 凭证之值（仅报其**长度**）；⛔ 0 读 `.env`；⛔ 0 触 `〔本地归档区〕`；⛔ 0 上传／0 远端写。
 7. 判定措辞沿五终判（本棒之产出为 **KD（前置未成就）** 之诊断面，非终判宣告）。
 
 ---

@@ -271,7 +271,7 @@
 
 | 项 | 值 |
 | :-:|:--|
-| **路径** | `D:\私人资料\deposon-repo\results\_poststrip_recalc_2026_10_17.md` |
+| **路径** | `_repo_mirror\results\_poststrip_recalc_2026_10_17.md` |
 | **落前实测** | `Test-Path` ＝ **`False`**；递归同名 glob（`*poststrip*`，全仓递归）＝ **0 命中** ⇒ **无既有件被覆盖** |
 | **落盘方式** | 暂存件 `.tmp\psr_stage.md` → Python `io.open(path, 'w', encoding='utf-8', newline='\n')` 直写（**无 BOM · 纯 LF**） |
 

@@ -3,8 +3,8 @@ import hashlib, io, os, sys, time
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-REPO = r'D:\私人资料\deposon-repo'
-GLM = r'D:\私人资料\GLM'
+REPO = r'_repo_mirror'
+GLM = r'〔本地资料区〕\GLM'
 
 def fp(p):
     b = io.open(p, 'rb').read()

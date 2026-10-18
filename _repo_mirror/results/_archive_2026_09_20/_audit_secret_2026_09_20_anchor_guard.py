@@ -13,7 +13,7 @@ import re
 import sys
 from pathlib import Path
 
-WORKSPACE = Path(r"D:\私人资料\deposon-repo")
+WORKSPACE = Path(r"_repo_mirror")
 
 # 5 regex 模式 (沿派工 brief Step 2)
 PATTERNS = [

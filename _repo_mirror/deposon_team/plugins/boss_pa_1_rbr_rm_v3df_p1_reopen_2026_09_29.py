@@ -88,7 +88,7 @@ except Exception:
 # 路径常量（全部为只读输入；输出为新名件）
 # ============================================================================
 
-REPO_ROOT = r"D:/私人资料/deposon-repo"
+REPO_ROOT = r"_repo_mirror"
 V20_BASELINES = os.path.join(REPO_ROOT, "results", "deposon_v20_baselines.json")
 SRC_RESULT = os.path.join(REPO_ROOT, "results", "boss_pa_1_rbr_rm_result_2026_09_15.json")
 PREREG = os.path.join(REPO_ROOT, "results", "_v5_v3_deg_fix_prereg_2026_09_29.md")

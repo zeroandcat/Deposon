@@ -119,7 +119,7 @@
 | 4 | `_coze_〔IM〕_v3_2026_09_18.md` | 7,466 | `229D76E1B86F` | `deposon-sub\results\_coze_〔IM〕_v3_2026_09_18.md` | mavis-trash (Recycle Bin) |
 | 5 | `_coze_〔IM〕_v3_d7format_2026_09_18.md` | 8,715 | `905544775AEE` | `deposon-sub\results\_coze_〔IM〕_v3_d7format_2026_09_18.md` | mavis-trash (Recycle Bin) |
 | 6 | `_coze_〔IM〕_v3_final_2026_09_18.md` | 11,657 | `DEEE45F45C5D` | `deposon-sub\results\_coze_〔IM〕_v3_final_2026_09_18.md` | mavis-trash (Recycle Bin) |
-| 7 | `_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` | 9,891 | `F4D5B755736A` | `deposon-sub\results\_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` | mavis-trash (Recycle Bin) |
+| 7 | `_d7_external_advisor_〔IM〕_publish_v1_20260918.md` | 9,891 | `F4D5B755736A` | `deposon-sub\results\_d7_external_advisor_〔IM〕_publish_v1_20260918.md` | mavis-trash (Recycle Bin) |
 | 8 | `_agent_trio_redesign_draft_2026_09_23.md` | 10,026 | `E4320F20CAD4` | `deposon-sub\results\_agent_trio_redesign_draft_2026_09_23.md` | Move-Item -Force |
 | 9 | `_glm_response_v2_template_2026_09_18.md` | 44,191 | `972401E056F6` | `deposon-sub\results\_glm_response_v2_template_2026_09_18.md` | mavis-trash (Recycle Bin) |
 | 10 | `_mavis_skill_inventory_2026_09_18.md` | 99,702 | `90BA7F7A7FBE` | `deposon-sub\results\_mavis_skill_inventory_2026_09_18.md` | mavis-trash (Recycle Bin) |

@@ -15,7 +15,7 @@
 
 ### §0.1 对话源逐源清单（**全部实测解析成功 · 0 失败**）
 
-根 ＝ `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\`
+根 ＝ `〔本机用户目录〕\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\`
 
 | # | 源 | 字节 | 覆盖区间（ts 实测） | 条目 | 角色分布 | 解析 |
 |---:|---|---:|---|---:|---|---|

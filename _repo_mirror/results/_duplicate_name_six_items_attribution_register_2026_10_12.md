@@ -1,6 +1,6 @@
 # 项 D · 撞名族（**实存 6 件**）之**归属登记件**（批 3 · 面 D）
 
-> 📌 **状态栏（贯穿本件）**：🟢 **登记面**（PI 已裁「甲」）｜⛔ **0 更名**／**0 移动**／**0 合并**／**0 删除**｜⛔ **0 回改**任何既有件一字（草案件 SHA-12 `2153c41a8cff` 0 回改）｜⛔ **0 触** `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录）｜⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜⛔ 0 改终判词／阈值／门柱｜⛔ 0 赋任一 `k_v3s_4_4_*` 布尔
+> 📌 **状态栏（贯穿本件）**：🟢 **登记面**（PI 已裁「甲」）｜⛔ **0 更名**／**0 移动**／**0 合并**／**0 删除**｜⛔ **0 回改**任何既有件一字（草案件 SHA-12 `2153c41a8cff` 0 回改）｜⛔ **0 触** `〔本地归档区〕`（0 读 0 写 0 列目录）｜⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜⛔ 0 改终判词／阈值／门柱｜⛔ 0 赋任一 `k_v3s_4_4_*` 布尔
 
 ---
 
@@ -27,19 +27,19 @@
 
 | 序 | 绝对路径 | SHA-12 | bytes | mtime | 所属分区 | **归属**（各归其分区／其宿主链） |
 | --: | :-- | :-- | --: | :-- | :-- | :-- |
-| ① | `D:\私人资料\deposon-repo\deposon_team\plugins\_p_d_b3_merkle_22caption_runner_v0_4_2026_10_09.py` | `7c095c54fb99` | 21,826 | 2026-10-09 13:38:37 | `deposon_team/plugins/` | **P-D v0.4 之执行 runner（基线件）** —— 归 plugins 分区，宿主链＝P-D v0.4 |
-| ② | `D:\私人资料\deposon-repo\deposon_team\plugins\_p_d_b3_merkle_22caption_runner_selfverify_fix_2026_10_10.py` | `041525fd05a2` | 31,457 | 2026-10-10 10:50:15 | `deposon_team/plugins/` | **无 v0.4／日期串之简名 fix 件** —— 归 plugins 分区，宿主链＝selfverify fix |
-| ③ | `D:\私人资料\deposon-repo\deposon_team\plugins\_p_d_b3_merkle_22caption_runner_2026_10_09_selfverify_fix_2026_10_10.py` | `341b6726ac4e` | 33,994 | 2026-10-10 11:23:01 | `deposon_team/plugins/` | **完整名 fix 件** —— 归 plugins 分区，宿主链＝selfverify fix |
-| ④ | `D:\私人资料\deposon-repo\deposon_team\plugins\_p_d_b3_merkle_22caption_runner_2026_10_09_selfverify_rename_2026_10_10.py` | `cd43c41716f0` | 35,321 | 2026-10-10 11:23:01 | `deposon_team/plugins/` | **改名后继件** —— 归 plugins 分区，宿主链＝③ 之改名后继 |
-| ⑤ | `D:\私人资料\deposon-repo\deposon_team\plugins\_p_d_b3_merkle_22caption_runner_v0_4_2026_09_29.py` | `de16bc002198` | 20,322 | 2026-09-29 13:43:09 | `deposon_team/plugins/` | **v0.4 之 09-29 兄弟件** —— 归 plugins 分区，宿主链＝P-D v0.4 |
-| ⑥ | `D:\私人资料\deposon-repo\corpus\v20_caption_surface\_p_d_b3_merkle_22caption_runner_2026_09_16.py` | `d2cd7acb29a1` | 18,596 | 2026-09-16 18:54:48 | `corpus/v20_caption_surface/` | **caption surface 之 09-16 件** —— 归 **corpus 面**（非 plugins 面），宿主链＝v20 caption surface |
+| ① | `_repo_mirror\deposon_team\plugins\_p_d_b3_merkle_22caption_runner_v0_4_2026_10_09.py` | `7c095c54fb99` | 21,826 | 2026-10-09 13:38:37 | `deposon_team/plugins/` | **P-D v0.4 之执行 runner（基线件）** —— 归 plugins 分区，宿主链＝P-D v0.4 |
+| ② | `_repo_mirror\deposon_team\plugins\_p_d_b3_merkle_22caption_runner_selfverify_fix_2026_10_10.py` | `041525fd05a2` | 31,457 | 2026-10-10 10:50:15 | `deposon_team/plugins/` | **无 v0.4／日期串之简名 fix 件** —— 归 plugins 分区，宿主链＝selfverify fix |
+| ③ | `_repo_mirror\deposon_team\plugins\_p_d_b3_merkle_22caption_runner_2026_10_09_selfverify_fix_2026_10_10.py` | `341b6726ac4e` | 33,994 | 2026-10-10 11:23:01 | `deposon_team/plugins/` | **完整名 fix 件** —— 归 plugins 分区，宿主链＝selfverify fix |
+| ④ | `_repo_mirror\deposon_team\plugins\_p_d_b3_merkle_22caption_runner_2026_10_09_selfverify_rename_2026_10_10.py` | `cd43c41716f0` | 35,321 | 2026-10-10 11:23:01 | `deposon_team/plugins/` | **改名后继件** —— 归 plugins 分区，宿主链＝③ 之改名后继 |
+| ⑤ | `_repo_mirror\deposon_team\plugins\_p_d_b3_merkle_22caption_runner_v0_4_2026_09_29.py` | `de16bc002198` | 20,322 | 2026-09-29 13:43:09 | `deposon_team/plugins/` | **v0.4 之 09-29 兄弟件** —— 归 plugins 分区，宿主链＝P-D v0.4 |
+| ⑥ | `_repo_mirror\corpus\v20_caption_surface\_p_d_b3_merkle_22caption_runner_2026_09_16.py` | `d2cd7acb29a1` | 18,596 | 2026-09-16 18:54:48 | `corpus/v20_caption_surface/` | **caption surface 之 09-16 件** —— 归 **corpus 面**（非 plugins 面），宿主链＝v20 caption surface |
 
 ### §2-1 撞名对之**两件并列**（唯一严格同名对·跨区）
 
 | 并列 | 绝对路径 | SHA-12 | bytes | 所属分区 |
 | :-- | :-- | :-- | --: | :-- |
-| **repo 侧** | `D:\私人资料\deposon-repo\corpus\v20_caption_surface\_p_d_b3_merkle_22caption_runner_2026_09_16.py` | `d2cd7acb29a1` | 18,596 | `corpus/v20_caption_surface/` |
-| **sub 侧** | `D:\私人资料\deposon-sub\deposon_team\plugins\_p_d_b3_merkle_22caption_runner_2026_09_16.py` | `d2cd7acb29a1` | 18,596 | `deposon_team/plugins/` |
+| **repo 侧** | `_repo_mirror\corpus\v20_caption_surface\_p_d_b3_merkle_22caption_runner_2026_09_16.py` | `d2cd7acb29a1` | 18,596 | `corpus/v20_caption_surface/` |
+| **sub 侧** | `_repo_mirror\deposon_team\plugins\_p_d_b3_merkle_22caption_runner_2026_09_16.py` | `d2cd7acb29a1` | 18,596 | `deposon_team/plugins/` |
 
 📌 **同名且同内容**（SHA-12 逐位相同、bytes 相同）；📌 但**两区之所属分区不同**（repo 侧位 corpus 面 ／ sub 侧位 plugins 面）——📌 **此点草案 §1-3 未载，系本棒实测补记**。
 

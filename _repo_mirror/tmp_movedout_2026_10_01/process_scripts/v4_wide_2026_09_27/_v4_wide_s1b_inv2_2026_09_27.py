@@ -5,7 +5,7 @@ from datetime import datetime
 from collections import defaultdict
 
 CUTOFF = datetime(2026, 9, 23, 12, 0, 0).timestamp()
-ROOTS = [r'D:\私人资料\deposon-repo', r'D:\私人资料\deposon-sub']
+ROOTS = [r'_repo_mirror', r'_repo_mirror']
 SKIP = {'__pycache__', '.git', 'node_modules', '.trae'}
 
 rows = []
@@ -20,7 +20,7 @@ for root in ROOTS:
                 rows.append((st.st_mtime, st.st_size, p))
 rows.sort()
 
-def rel(p): return p.replace(r'D:\私人资料' + os.sep, '')
+def rel(p): return p.replace(r'〔本地资料区〕' + os.sep, '')
 
 # 按 (repo, 二级目录) 分组
 g = defaultdict(list)

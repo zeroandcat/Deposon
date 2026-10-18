@@ -119,7 +119,7 @@ deposon-v3x-1week-kill/                   # github 仓库名(沿 user 拍板)
 
 | 文件/目录 | 理由 |
 |---|---|
-| `C:\Users\Administrator\Desktop\AI\*.txt` | key 文件(7 铁律第 4 条)|
+| `〔本机用户目录〕\Desktop\AI\*.txt` | key 文件(7 铁律第 4 条)|
 | `.minimax/agents/verifier/`, `.minimax/agents/mavis/`, `.minimax/agents/.builtin/`, `.minimax/agents/scripts/` | 7 铁律第 7 条 |
 | `results/_worker_temp/` | verify 脚本例外目录 |
 | `results/.tmp/` | verify 脚本例外目录 |

@@ -3,7 +3,7 @@
 import io, os, json, hashlib
 from collections import Counter
 
-REPO = r"D:\私人资料\deposon-repo"
+REPO = r"_repo_mirror"
 P = os.path.join(REPO, ".tmp", "cleanup511_manifest_2026_10_17.json")
 m = json.load(io.open(P, encoding="utf-8"))
 held, clean = m["held"], m["clean"]

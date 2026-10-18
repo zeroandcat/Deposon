@@ -4,7 +4,7 @@
 >
 > 本棒产出**另立两件**，一字未回改任何既有件。**本件⛔ 非** spec L22 所指之 `verifier/handoff/P_B_V0_anchors_sha256_12.json`（该件本棒实测 `Test-Path=False`）⇒ **S-1 之③「5 锚落位件补齐」之闭候 PI 裁其读法**（见 §7 KD-4）。
 >
-> **棒别**：GE02-ANCHOR-LANDING-BUILD（①段 · PI 第四批卡裁答之执行 · worker 产出执行棒）｜**署名**：`worker`｜**件日**：2026-10-16｜**主仓**：`D:\私人资料\deposon-repo`
+> **棒别**：GE02-ANCHOR-LANDING-BUILD（①段 · PI 第四批卡裁答之执行 · worker 产出执行棒）｜**署名**：`worker`｜**件日**：2026-10-16｜**主仓**：`_repo_mirror`
 
 ---
 
@@ -76,7 +76,7 @@
 
 ## §5 自检轨实跑留痕（**`T1–T9` · ε 固定 0.1 · 退出码 0 · 9/9**）
 
-- **命令**：`python tools/distortion_calculator.py --self-test`｜**cwd**：`D:\私人资料\deposon-repo`｜**Python**：3.14.7
+- **命令**：`python tools/distortion_calculator.py --self-test`｜**cwd**：`_repo_mirror`｜**Python**：3.14.7
 - **退出码**：**`0`**｜**`all_pass=True`**｜**小计：9/9 通过**
 - **网络 calls**：**0**｜**LLM calls**：**0**｜**calculator 写盘**：**0**（唯一输出面 ＝ stdout）
 - **期望值面**：`7551c47d3ece` §2-2 逐字——`D2_example_c1_equals_20`／`D2_example_c2_equals_10`，由 `G_L＝2, G_B＝0 ⇒ G_L/(c·ε)＝2/ε`；`c＝1` 得 20 ⟺ **ε＝0.1**；`c＝2` 得 10 ⟺ **ε＝0.1** ⇒ **期望值仅在 ε=0.1 时成立**（KC-1 丙案：自检轨 ε 固定 0.1）。
@@ -150,7 +150,7 @@
 | 2 | **纯 LF（0 CR · 0 TAB）** | JSON 件 `CR=0` `TAB=0` ✅ |
 | 3 | **尾换行 `\n`** | JSON 件 `endswith"}\n"` ✅ |
 | 4 | **JSON `ensure_ascii=False` ＋ `indent=2`** | ✅（中文直书 ＋ 2 空格缩进） |
-| 5 | **Python `io.open` 直写 · Windows raw 路径** | ✅（`r"D:\私人资料\deposon-repo"`） |
+| 5 | **Python `io.open` 直写 · Windows raw 路径** | ✅（`r"_repo_mirror"`） |
 | 6 | **落盘前 `Test-Path=False` ＋ glob 0 命中** | ✅ 两件皆然 |
 | 7 | **⛔ 0 回改任何既有件一字** | ✅ v1 `4b020eb04605` / v2 `f06313373fc6` / v3 `0c269b9558da` / calculator `410a12482eef` / llm_client `1722500da4aa` / spec `423c84de20d5` / gt.json `497b9c2d6746` / kill_line `9e09214cf088` / v3 锁记件 `deea2ccb2643` —— **落盘后复算全部与落盘前逐位一致** |
 | 8 | **⛔ 0 网络 · ⛔ 0 LLM calls** | ✅ 自检轨纯本地（0/0） |

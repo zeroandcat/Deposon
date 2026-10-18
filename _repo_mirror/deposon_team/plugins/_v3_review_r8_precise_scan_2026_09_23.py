@@ -10,7 +10,7 @@ _v3_review_r8_precise_scan — 精扫器（tokenize 级，修正 r4 raw-string �
 """
 import io, os, re, tokenize, hashlib
 
-REPO = r'D:\私人资料\deposon-repo'
+REPO = r'_repo_mirror'
 PLUG = os.path.join(REPO, 'deposon_team', 'plugins')
 V3X = os.path.join(REPO, 'docs', 'V3X')
 

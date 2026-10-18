@@ -20,7 +20,7 @@
 | `results/_wrapup_cleanup_inventory_register_2026_09_29.md`（22,556 B） | 清点面与「0 清理由」体例；四目录清点表体例（件数／字节／快照时点）。 |
 | `results/_archive_cleanup_non_upload_2026_09_28.md` | 归档区可清类判据 **`A_pyc_derived`**（字节码派生物可清，0 引用）——本棒 `.pyc` 处置的**直接先例**（其 §2.2 已就同类面清走 66 件）。 |
 | `results/_v4_maindir_cleanup_manifest_v2_2026_09_26.md` | 仓根件「派工单明示**留**」之登记体例（⇒ 0 清）。 |
-| `README_V4_2026_09_29.md:31` | **每日收工新例行**：① 跑日志止血（`powershell -NoProfile -ExecutionPolicy Bypass -File 'C:\Users\Administrator\AppData\Roaming\MiniMax\log-purge.ps1'`，直跑被执行策略拦）② 文件夹两方向转移＋垃圾清。 |
+| `README_V4_2026_09_29.md:31` | **每日收工新例行**：① 跑日志止血（`powershell -NoProfile -ExecutionPolicy Bypass -File '〔本机用户目录〕\AppData\Roaming\MiniMax\log-purge.ps1'`，直跑被执行策略拦）② 文件夹两方向转移＋垃圾清。 |
 
 **口径拿不准者 ⇒ 记「未定」入册、0 实执**（见 §5《建议清单》）。
 
@@ -34,9 +34,9 @@
 
 | # | 区 | 清理前 件数 | 清理前 字节 | 清理后 件数 | 清理后 字节 | 差额 |
 |---|---|---:|---:|---:|---:|---:|
-| ① | `D:\私人资料\deposon-repo` | **39,173** | **1,074,938,316** | **39,170** | **1,074,749,178** | −3 件／−189,138 B |
-| ② | `D:\私人资料\deposon-sub` | **485** | **34,683,318** | **485** | **34,683,318** | **0** |
-| ③ | `D:\私人资料\_non_upload_local_archive` | **1,582** | **341,594,184** | **1,582** | **341,594,184** | **0** |
+| ① | `_repo_mirror` | **39,173** | **1,074,938,316** | **39,170** | **1,074,749,178** | −3 件／−189,138 B |
+| ② | `_repo_mirror` | **485** | **34,683,318** | **485** | **34,683,318** | **0** |
+| ③ | `〔本地归档区〕` | **1,582** | **341,594,184** | **1,582** | **341,594,184** | **0** |
 | | **合计** | **41,240** | **1,451,215,818** | **41,237** | **1,451,026,680** | −3 件／−189,138 B |
 
 **目录数**（清理前后均 0 变动）：① 19,400｜② 34｜③ 163。
@@ -228,8 +228,8 @@ exit=0
 
 **脚本定位**：`log-purge.ps1` 三区全树 **0 命中**；经全仓文本检索定位至**既有真路径**（README_V4:31 与 bg 棒实录双重印证）：
 
-- **路径**：`C:\Users\Administrator\AppData\Roaming\MiniMax\log-purge.ps1`（980 B，mtime 2026-09-28 23:09:08）
-- **调用式**（沿 README_V4:31 既有例）：`powershell -NoProfile -ExecutionPolicy Bypass -File 'C:\Users\Administrator\AppData\Roaming\MiniMax\log-purge.ps1'`（直跑被执行策略拦，已有前棒拦截实录佐证）
+- **路径**：`〔本机用户目录〕\AppData\Roaming\MiniMax\log-purge.ps1`（980 B，mtime 2026-09-28 23:09:08）
+- **调用式**（沿 README_V4:31 既有例）：`powershell -NoProfile -ExecutionPolicy Bypass -File '〔本机用户目录〕\AppData\Roaming\MiniMax\log-purge.ps1'`（直跑被执行策略拦，已有前棒拦截实录佐证）
 - **脚本策略**（只读核验）：非当日 `*.log` 全清 ＋ 当日 `>100MB` 截断为 0 ＋ 保留当日 `api/chat/remoteControl` 小文件
 
 **执行回执**
@@ -240,7 +240,7 @@ DONE 2026-09-30T17:45:33
 EXITCODE|0
 ```
 
-**效果实测（日志目录 `C:\Users\Administrator\AppData\Roaming\MiniMax\logs`）**
+**效果实测（日志目录 `〔本机用户目录〕\AppData\Roaming\MiniMax\logs`）**
 
 | 项 | 执行前 | 执行后 | 差额 |
 |---|---:|---:|---:|

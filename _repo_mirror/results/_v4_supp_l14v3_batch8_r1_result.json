@@ -147,7 +147,7 @@
       "key_index_1based": 15,
       "method": "runtime memory read",
       "redacted_in_products": true,
-      "source": "C:/Users/Administrator/Desktop/AI/LLM API.txt"
+      "source": "〔本机用户目录〕/Desktop/AI/LLM API.txt"
     },
     "max_tokens": 2000,
     "model_id_inconsistency_honest_disclosure": "V3 字面锚 GLM_2 = glm-5.3-flash；现行 teamo 端点 GLM_2 = GLM_1 复用 = glm-5.3（沿 mapping §1.2 + ask_748d9242 Q2 拍板）；teacher_label='GLM_2' + model_id_shared_with='GLM_1' 字段标识 GLM_2 教师身份；model_id_sent 仍为 glm-5.3（同 GLM_1）；result 内字段须明示 teacher 而非 model_id_sent 区分——避免误读为模型差异；沿 user memory 2026-09-08「V3 端点名 vs 公开产品名不一致时直接问」——worker 不直接问 PI，记录为待 PI 复核项",

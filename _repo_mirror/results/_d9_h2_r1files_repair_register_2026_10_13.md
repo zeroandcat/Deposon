@@ -54,7 +54,7 @@
 
 ## §B 修法与理由（最小行级 · 同 P-1 式）
 
-- **修法**：将**唯一病灶行 L141** 之 `RESULTS` 改为**既有 D9 常量 `REPO_RESULTS`**（＝ `D:\私人资料\deposon-repo\results`），**⛔ 0 新造字面**。
+- **修法**：将**唯一病灶行 L141** 之 `RESULTS` 改为**既有 D9 常量 `REPO_RESULTS`**（＝ `_repo_mirror\results`），**⛔ 0 新造字面**。
 - **为何改调用点而不改 `RESULTS` 定义行（L37）**：① 改定义行虽省 1 行，但会**连带改写 L38 `REPO = RESULTS.parent` 之实际指向**（＝ 由 `deposon-sub` 变为 `deposon-repo`）——`REPO` 为该件**既有语义常量**，本棒⛔ 0 静默变更其指向；② 改调用点则 **L37／L38 逐字不动**；③ `REPO_RESULTS` 定义于 **L39**，**在 L141 之前**，⛔ 0 先后序问题；④ 与 D9 补修登记 §A-1（P-1 改 `RESULTS` 读取调用点、不改定义行）**同一口径**（PI 裁「同 P-1 式」）。
 - **为何 `REPO_RESULTS` 确为此 21 件之正确现址**：逐件 `pathlib` 实测（§C）——sub 侧 **0/21 存在**、repo 侧 **21/21 存在**。
 
@@ -106,7 +106,7 @@
 
 | 项 | 改前（实测·落笔前） | 改后（实测） |
 |---|---|---|
-| 路径 | `D:\私人资料\deposon-sub\results\_s5doubleprime_five_lines_runner_2026_10_11.py` | 同 |
+| 路径 | `_repo_mirror\results\_s5doubleprime_five_lines_runner_2026_10_11.py` | 同 |
 | SHA-12 | `57f5a4c5d5cd`（与复核件／补修登记**在册值逐位吻合**，**不符即停手**之检验通过） | **`2d8cf387b478`** |
 | bytes | **31,227** | **31,232**（**Δ ＋5** ＝ `REPO_RESULTS` 比 `RESULTS` 多 5 字符） |
 | SHA-256 | `57f5a4c5d5cd2b90cee5b89dc81fd0a462b3d556952f575ae915e1550037b12e` | `2d8cf387b47896fb547ab31b8e2ccdf1429971cf2ed2c9d37d92550d58a39f04` |
@@ -163,7 +163,7 @@
 - ⛔ **0 回改任何 markdown 既有件一字**——含 D9 补修登记 `cddb7a196473`、独立复核件 `732cfae29bbc`、执行登记 `0ea7852c4511`。
 - ⛔ **0 编辑 H1／H3／H4／H5**；**唯一编辑对象 ＝ H2 之 1 行**（L141，逐行留痕，逆替换字节级实证 0 溢出）。
 - ⛔ **0 覆写**除 H2 之行级编辑外任何文件；⛔ **0 新建／0 移动／0 重命名／0 删除**除本件外任何件。
-- ⛔ **0 触** `D:\私人资料\_non_upload_local_archive`（**0 读 0 写 0 列目录**）；临时脚本仅落 `%TEMP%`，**未入仓**。
+- ⛔ **0 触** `〔本地归档区〕`（**0 读 0 写 0 列目录**）；临时脚本仅落 `%TEMP%`，**未入仓**。
 - ⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT；⛔ **0 改终判词／阈值／门柱／判死线**（`len(files) != 21` 之类门柱**未触碰**；L390 期望值 `(expect 179 / 21)` **一字未动**）；⛔ 0 赋 `k_v3s_4_4_*` 布尔；⛔ **0 执行任何 runner**；⛔ **0 宣告①毕**。
 - ⛔ 0 写他棒产物名域（`_p4_inplace_resolution*`／既有 `_d9_*`／`_p4_*`／`_three_exception_pullback*`／`letters/`／`_bob_*`／`_remote_baseline*`／`_archive_2026-10-12`）。
 

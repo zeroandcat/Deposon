@@ -11,8 +11,8 @@ _v4_wide_s7_fix — 对「未被任何新件引用」的目标件执行原地修
 import hashlib, os, re, sys
 from pathlib import Path
 
-REPO = Path(r'D:\私人资料\deposon-repo'); RES = REPO / 'results'; TMP = REPO / '.tmp'
-SUB = Path(r'D:\私人资料\deposon-sub')
+REPO = Path(r'_repo_mirror'); RES = REPO / 'results'; TMP = REPO / '.tmp'
+SUB = Path(r'_repo_mirror')
 
 def sha12(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12]
 def readb(p): return Path(p).read_bytes()
@@ -98,7 +98,7 @@ print()
 print('=' * 104)
 print('F4 · KEYPATH_ABS 件（未被引用者）：硬编码仓外 key 路径 → 环境变量可覆盖')
 print('=' * 104)
-KEYVARS = ['C:/Users/Administrator/Desktop/AI/LLM API.txt']
+KEYVARS = ['〔本机用户目录〕/Desktop/AI/LLM API.txt']
 TARGETS = [
  RES / '_v4_supp_l14v3_batch10_r5_executor.py', RES / '_v4_supp_l14v3_batch2_r5_executor.py',
  RES / '_v4_supp_l14v3_batch2_r6_executor.py', RES / '_v4_supp_l14v3_batch3_r1_executor.py',

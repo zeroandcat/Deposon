@@ -4,7 +4,7 @@
 - **日期**：2026-10-12
 - **编制**：**治源执行棒**（B-4 · 分支会话 `mvs_2bc3c22b614d4245a50b000df7564207`｜署名如实 · **0 冒充 PI／parent／protocol-keeper／verdict-keeper／verifier／doc-writer**）
 - **任务口径**：B-4 缺陷之**病根消除** —— 依 PI 裁改生成脚本之 §3.1 合计栏为**程序化累加**，并重出回执 v2。
-- **纪律**：⛔ 0 回改任何既有件（**唯一例外＝生成脚本本身，经 PI 明示授权**，且逐行留痕于 §2）｜⛔ 0 覆写｜⛔ 0 删除｜0 网络 · 0 skill · 0 LLM · 0 实验｜R4：0 读 key、0 读 `.env`、key 永不明文｜⛔ 0 触 `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录）。
+- **纪律**：⛔ 0 回改任何既有件（**唯一例外＝生成脚本本身，经 PI 明示授权**，且逐行留痕于 §2）｜⛔ 0 覆写｜⛔ 0 删除｜0 网络 · 0 skill · 0 LLM · 0 实验｜R4：0 读 key、0 读 `.env`、key 永不明文｜⛔ 0 触 `〔本地归档区〕`（0 读 0 写 0 列目录）。
 
 ---
 
@@ -21,7 +21,7 @@
 
 | 项 | 实测 |
 |---|---|
-| 检索范围 | `D:\私人资料\deposon-repo\.tmp\` ＋ `results\_archive_2026-10-12\exec_artifacts\`（**两处**均检索） |
+| 检索范围 | `_repo_mirror\.tmp\` ＋ `results\_archive_2026-10-12\exec_artifacts\`（**两处**均检索） |
 | 命中 | **1 件**：`.tmp/_build_receipt_supplement_6.py` |
 | `results\_archive_2026-10-12\exec_artifacts\` 内 | **0 命中**（同名或同功能脚本皆无） |
 | 改前 SHA-12 | **`bbc6b3e20b92`** |

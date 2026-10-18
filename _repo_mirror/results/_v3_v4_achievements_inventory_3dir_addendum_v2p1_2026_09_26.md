@@ -22,7 +22,7 @@
 
 ### §1.2 根因（KIMI 回函 §3.2 强制停手 + PI 拍板）
 
-- 该件**唯一副本**位于 **`D:\私人资料\_non_upload_local_archive\results\_v4_supp_l6_s38v2_rootcause_verdict.md`**（实测 `973103878D6F` · 24,847 B）
+- 该件**唯一副本**位于 **`〔本地归档区〕\results\_v4_supp_l6_s38v2_rootcause_verdict.md`**（实测 `973103878D6F` · 24,847 B）
 - 上传清单 v3 §2.2 #30 / 补账件 v2 §8.1 #30 字面引用此件为 MAIN 内正式成果件——但 MAIN 内**实测不存在**
 - KIMI 沿 v3 委托信 §3.2「KIMI 若发现本目录任何子件出现在 §2 上传清单——立即停手并报告」字面执行停手（沿 `letters/_v4_commission_upload_executor_reply_v3_2026_09_24.md` §3.1 第 1 条）
 - PI 拍板 = **delist**（自上传清单剔除，不移出禁传区；禁传区子件本就严禁上传，移出禁传区无意义）
@@ -166,7 +166,7 @@
 2. **本件所有事实均 parent 实测**：
    - v2 件哈希实测 = `FF2154CE182D` · 16,894 B；v1 件哈希实测 = `ADFA7DD03F76` · 13,012 B（hashlib.sha256 前 12 字符大写；实测见 PowerShell `Get-FileHash` 一次过核）
    - 勘误链 v18 哈希实测 = `CA8B95DDAA70` · 225,731 B（沿 §2.1 字面）
-   - Tag-A #30 唯一副本位置实测 = `D:\私人资料\_non_upload_local_archive\results\_v4_supp_l6_s38v2_rootcause_verdict.md` · `973103878D6F` · 24,847 B（PowerShell `Get-ChildItem -Recurse` 实测）
+   - Tag-A #30 唯一副本位置实测 = `〔本地归档区〕\results\_v4_supp_l6_s38v2_rootcause_verdict.md` · `973103878D6F` · 24,847 B（PowerShell `Get-ChildItem -Recurse` 实测）
 3. **三拍板原文逐字保留**——`ask_9aa5f0c1433db0ff2d7f77c9` taga30=delist / e4ver=v18 / v2drift=errata_v2 三则字面录入不擅自改写
 4. **§1 Tag-A #30 剔除 + §2 E-4 版本更新 + §3 v2 信漂移 errata** 三件事一一对应 KIMI 回函 §3.1 第 1 条（§3.2 强制停手）/ 第 2 条（§2.5 强制停手）/ 第 3 条（留痕）——本件依字面处置不擅自重构 KIMI 停手根因
 5. **§4 处置后上传清单新口径 = Tag-A 29 + Tag-B 10 + E 表 4 = 43 件**——沿 §1.3 + §2.3 字面，无件数变动以外的件名变动
@@ -192,7 +192,7 @@
 | 委托信 v3（不覆盖，本件 §3 引用对象） | `letters/_v4_commission_upload_executor_2026_09_24_v3.md` | 25,091 | `C20D4F58F5C8` |
 | 委托信 v2（不覆盖，停用；本件 §3.3 字面登记） | `letters/_v4_commission_upload_executor_2026_09_24_v2.md` | 16,894 | `FF2154CE182D` |
 | 委托信 v1（不覆盖，留档） | `letters/_v4_commission_upload_executor_2026_09_24.md` | 13,012 | `ADFA7DD03F76` |
-| Tag-A #30 唯一副本（禁传区，delist 后非上传件） | `D:/私人资料/_non_upload_local_archive/results/_v4_supp_l6_s38v2_rootcause_verdict.md` | 24,847 | `973103878D6F` |
+| Tag-A #30 唯一副本（禁传区，delist 后非上传件） | `〔本地归档区〕/results/_v4_supp_l6_s38v2_rootcause_verdict.md` | 24,847 | `973103878D6F` |
 
 **核验方式**：本件出具时由 doc-writer 直接调用 `Get-FileHash -Algorithm SHA256` 实算；非「看着合理就写」。本补账件 v2.1 自身之 SHA-12 + 字节 不内填——若写在本件内，则本件字节随该字段变动而变，构成自指循环依赖；由下游 verifier 落盘后独立测得（参 §X.9）。
 

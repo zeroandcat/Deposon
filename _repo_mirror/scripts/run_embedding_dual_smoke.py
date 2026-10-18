@@ -18,7 +18,7 @@ import urllib.error
 import datetime
 
 # ---------------- 0. 加载 keys (GB18030) ----------------
-key_file = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
+key_file = r'〔本机用户目录〕\Desktop\AI\LLM API.txt'
 content = open(key_file, 'r', encoding='gb18030').read()
 
 # Ark key (火山方舟 coding-plan, 第 2 个 ark-)
@@ -103,9 +103,9 @@ def query_teamorouter_embedding(text, model='text-embedding-3-large'):
 
 # ---------------- 2. 3 cells 文本 (V3X 22 受控概念图选 3 段) ----------------
 # 选自 GSM8K 1-3 + StrategyQA 1-3 (V3X 已有 22 受控概念图中, 选 3 段差异最大)
-with open(r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_gsm8k_details.json', 'r', encoding='utf-8') as f:
+with open(r'_repo_mirror\results\deposon_benchmark_v1_4_gsm8k_details.json', 'r', encoding='utf-8') as f:
     gsm8k_data = json.load(f)
-with open(r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_strategyqa_details.json', 'r', encoding='utf-8') as f:
+with open(r'_repo_mirror\results\deposon_benchmark_v1_4_strategyqa_details.json', 'r', encoding='utf-8') as f:
     strategyqa_data = json.load(f)
 
 TEST_TEXTS = [
@@ -298,7 +298,7 @@ output = {
     }
 }
 
-out_path = r'D:\私人资料\deposon-repo\results\deposon_embedding_dual_2026_09_10.json'
+out_path = r'_repo_mirror\results\deposon_embedding_dual_2026_09_10.json'
 with open(out_path, 'w', encoding='utf-8') as f:
     json.dump(output, f, ensure_ascii=False, indent=2)
 

@@ -92,15 +92,15 @@
 | # | 旧路径（清单口径） | 旧路径存在 | 新路径存在 | 判定 |
 |---|---|---|---|---|
 | 1 | `docs/V3X/D3_〔IM〕_MIDTERM_TEMPLATE.md` | **否** | `_september_workspace/docs/V3X/D3_ONLINE_MIDTERM_TEMPLATE.md` | ✅ |
-| 2 | `docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | **否** | `_september_workspace/docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` | ✅ |
-| 3 | `…/_archive_2026_09_20/LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md` | **否** | `_september_workspace/results/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | ✅ |
+| 2 | `docs/V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | **否** | `_september_workspace/docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md` | ✅ |
+| 3 | `…/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | **否** | `_september_workspace/results/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | ✅ |
 | 4 | `…/_archive_2026_09_20/_coze_〔IM〕_v3_d7format_2026_09_18.pdf` | **否** | `_september_workspace/results/_archive_2026_09_20/_coze_online_v3_d7format_2026_09_18.pdf` | ✅ |
 | 5 | `…/_archive_2026_09_20/_letter_to_coze_〔IM〕_v2_2026_09_18.md` | **否** | `_september_workspace/results/_archive_2026_09_20/_letter_to_coze_online_v2_2026_09_18.md` | ✅ |
 | 6 | `results/_coze_〔IM〕_v3_2026_09_18.md` | **否** | `_september_workspace/results/_coze_online_v3_2026_09_18.md` | ✅ |
 | 7 | `results/_coze_〔IM〕_v3_d7format_2026_09_18.md` | **否** | `_september_workspace/results/_coze_online_v3_d7format_2026_09_18.md` | ✅ |
 | 8 | `results/_coze_〔IM〕_v3_final_2026_09_18.md` | **否** | `_september_workspace/results/_coze_online_v3_final_2026_09_18.md` | ✅ |
 | 9 | `results/_coze_〔IM〕_v4_d7format_2026_09_26.pdf` | **否** | `_september_workspace/results/_coze_online_v4_d7format_2026_09_26.pdf` | ✅ |
-| 10 | `results/_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` | **否** | `_september_workspace/results/_d7_external_advisor_online_publish_v1_20260918.md` | ✅ |
+| 10 | `results/_d7_external_advisor_〔IM〕_publish_v1_20260918.md` | **否** | `_september_workspace/results/_d7_external_advisor_online_publish_v1_20260918.md` | ✅ |
 
 **10/10 成立。** 清单 §二批⑤ 路径列以 `results/` 为基准书写，实盘位于 `_september_workspace/results/`（与 B5 登记件表 1 书写口径一致），非改名失败。
 
@@ -194,7 +194,7 @@
 ## 5. 本地↔远端对照（防复发）
 
 ### 5.1 口径声明
-- 扫描面：本地 `D:\私人资料\deposon-repo`（主区）与 `D:\私人资料\deposon-sub`（副区）递归全量，**文本类扩展名白名单**（`.md/.json/.py/.tsv/.txt/.yaml/.yml/.csv/.html/.js/.tex/.bib`），**未启用额外忽略规则**（任务书所述「默认忽略规则」＝ PowerShell 默认隐藏/系统件过滤；本核验已用 `-Force` 展开隐藏件，故口径较宽）。
+- 扫描面：本地 `_repo_mirror`（主区）与 `_repo_mirror`（副区）递归全量，**文本类扩展名白名单**（`.md/.json/.py/.tsv/.txt/.yaml/.yml/.csv/.html/.js/.tex/.bib`），**未启用额外忽略规则**（任务书所述「默认忽略规则」＝ PowerShell 默认隐藏/系统件过滤；本核验已用 `-Force` 展开隐藏件，故口径较宽）。
 - 命中判据：文件全文**含「〔W老师〕」三字**（逐字节 Unicode 匹配），计**文件数**。
 - 对位规则：本地 `X` → 远端 `X`（同路径）／远端 `_september_workspace/X`（目录前缀归一）／改名映射表（§3.1）三路。
 
@@ -215,7 +215,7 @@
 
 其中 RENAME 类 2 件（＝本地仍持旧名、远端已改名，**重传即复发**）：
 - 本地 `docs/V3X/D3_〔IM〕_MIDTERM_TEMPLATE.md` → 远端 `_september_workspace/docs/V3X/D3_ONLINE_MIDTERM_TEMPLATE.md`
-- 本地 `docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` → 远端 `_september_workspace/docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md`
+- 本地 `docs/V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` → 远端 `_september_workspace/docs/V3X/D7_EXTERNAL_ADVISOR_ONLINE_PUSH_REQUIREMENTS_2026_09_18.md`
 
 ### 5.4 ③ 未判定 16 件全列
 

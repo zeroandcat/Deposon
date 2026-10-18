@@ -76,7 +76,7 @@
 
 派工项 ① 的「4 件 v4_supp hash manifest」＝ 09-24 R4 棒 §3.1 所列 4 件 hash 清单；**4 件均已于 09-28 移出公共面**（登记见 `results/_archive_manifest_non_upload_v3_2026_09_28.json` L4592 / L4597 / L5067 / L5072），现居本地非上传归档区。
 
-| # | 载体（相对 `D:\私人资料\_non_upload_local_archive\`） | 字节 | SHA-12 | stale entry 位置 | **entry 原值（照登）** |
+| # | 载体（相对 `〔本地归档区〕\`） | 字节 | SHA-12 | stale entry 位置 | **entry 原值（照登）** |
 |---|---|---|---|---|---|
 | 1 | `results\_v4_supp_l1_n28r_pre_hashes_2026_09_24.txt` | 26,833 | `3a98f823ce33` | L287（/304） | `results/_v4_v5_probe_test.log  sha12=b70e89448a3f  crc32=920dc342  bytes=1626` |
 | 2 | `results\_v4_supp_l1_n28r_post_hashes_2026_09_24.txt` | 26,833 | `5ab6a3bcc2a2` | L287（/304） | 同上（逐字一致） |
@@ -93,9 +93,9 @@
 
 | 检索 | 范围 | 结果 |
 |---|---|---|
-| 按字节全量递归 | `D:\私人资料\deposon-repo\`（工作区全树，1,542 件） | **0 件** size==786 |
-| 按字节全量递归 | `D:\私人资料\deposon-sub\`（只读，仓外） | **0 件** |
-| 按字节全量递归 | `D:\私人资料\_non_upload_local_archive\`（只读，仓外） | **0 件** |
+| 按字节全量递归 | `_repo_mirror\`（工作区全树，1,542 件） | **0 件** size==786 |
+| 按字节全量递归 | `_repo_mirror\`（只读，仓外） | **0 件** |
+| 按字节全量递归 | `〔本地归档区〕\`（只读，仓外） | **0 件** |
 | 按名 `*probe*` 清单 | 工作区（40 条上限） | 最近邻 163 B / 176 B / 257 B / 338 B / 352 B / 398 B / 462 B / 564 B / 604 B / 633 B / 718 B / 873 B / 1,036 B … **无 786 B** |
 
 **结论：786 B 源件在工作区与两处只读根内 0 命中**；与 09-24 棒结论一致（可能早期清理或从未落盘，探针直接从 env/配置读取）。**不编造来源、不反推成因**。
@@ -169,7 +169,7 @@
 | R6 | `.tmp\_r4_cleanup_worker_keyscan_results_2026_09_29.json` | 75 | `f3e8ae7a6db9` | 自扫结果（仅计数） |
 | **本件** | `results/_v4_r4_cleanup_execution_2026_09_29.md` | — | 落盘后复算 | 处置件（新名，0 回改历史件） |
 
-**移动登记（按派工格式「移出前后路径 / SHA-12 / 原因 / 引用面清单」）**：本棒 **0 件发生移动** —— 因 §1.1 停步 + §2 实测公开面 0 明文，**无「明文件」可移**。若 PI 后续仍裁「不论前提出、照原计划移出 3dir inventory」，则登记格式已在本件备好（前值：路径 `results/_v3_v4_achievements_inventory_3dir_2026_09_24.md` / 355,819 B / `df7e9cd39251`；后值：目标 `D:\私人资料\_non_upload_local_archive\results\_v3_v4_achievements_inventory_3dir_2026_09_24.md`；引用面清单：§1.1 所列 38 件）。
+**移动登记（按派工格式「移出前后路径 / SHA-12 / 原因 / 引用面清单」）**：本棒 **0 件发生移动** —— 因 §1.1 停步 + §2 实测公开面 0 明文，**无「明文件」可移**。若 PI 后续仍裁「不论前提出、照原计划移出 3dir inventory」，则登记格式已在本件备好（前值：路径 `results/_v3_v4_achievements_inventory_3dir_2026_09_24.md` / 355,819 B / `df7e9cd39251`；后值：目标 `〔本地归档区〕\results\_v3_v4_achievements_inventory_3dir_2026_09_24.md`；引用面清单：§1.1 所列 38 件）。
 
 ---
 

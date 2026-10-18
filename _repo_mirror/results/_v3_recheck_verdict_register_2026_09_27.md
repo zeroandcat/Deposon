@@ -326,7 +326,7 @@
 
 - 派工单指定 skill = **`scientific-research-workflows:scientific-writing`**（plugin `@scientific-research-workflows`）
 - **本 turn 工具面调用返回 `Local skill not found: scientific-research-workflows:scientific-writing` ⇒ 未加载到该 skill**
-  - **补充说明（不夸大）**：本 turn 另行加载的 `scientific-writing`（**local skill**，K-Dense Inc.，`D:/Users/Administrator/.minimax/skills/scientific-writing/SKILL.md`）**与派工单指定的 plugin skill 不是同一件**，其条款（IMRAD / 全段写作 / 图表 / 引用体例）**不适用于本件**（本件是**判定登记表**，不是手稿）⇒ **本表 0 引用其任何条款作纪律依据**
+  - **补充说明（不夸大）**：本 turn 另行加载的 `scientific-writing`（**local skill**，K-Dense Inc.，`〔本机用户目录〕/.minimax/skills/scientific-writing/SKILL.md`）**与派工单指定的 plugin skill 不是同一件**，其条款（IMRAD / 全段写作 / 图表 / 引用体例）**不适用于本件**（本件是**判定登记表**，不是手稿）⇒ **本表 0 引用其任何条款作纪律依据**
   - **补充说明 2（不夸大）**：08b rescript §10 与 JSV check §6.3 记载该 plugin skill **当时已加载**并给出 plugin-cache 路径与 `SKILL.md` 实测 SHA-12 `0a314eed103a`（13,044 B）；**本 turn 未复现该载入路径** ⇒ **0 编造 skill 指令、0 声称已加载、0 引用未读到的条款**
 - **fallback 纪律锚**（派工单指定）= ① `docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md`（v26 = `aed375c485fb`）**§22.34–§22.36 追加节字面**（性质三分声明 / §0 输入链先核后用 + 路径不统一如实登记 / SHA 自核与自指回环处置 / 边界声明「只登记不修」通则 / 老实交代七小节 / 文末产物核验 SHA 不自记 / 新末行 `*…*` 署名体例）；② **各 rescript 的改判档位节字面**（01 §5 / 04 §5 / 08 §4 / 08b §8 / 10 §4 / 12 §5 / 19 §4 / 21 §4 / 26 §4 / 26b §7 / 27 §4 / 28 §4 / 35 §2 + §4）
 - 本表结构**沿上述字面**编排：§0 输入链核验（先核后用 + 小写 SHA-12 + 落位差异如实登记 + 缺件事实）→ §1 主表逐行（原标注 / 新构造读数 / 双口径一致性 / 改判档位 / 处置含 PI 拍板出处 / 证据锚）→ §2 汇总（档位分布统计 + 不翻案总声明 + 待第三方 + v1.3 + γ 清单）→ §3 待 PI 终核节（生效确认位）→ §4 边界 + 老实交代 → 文末产物核验

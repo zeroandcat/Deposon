@@ -496,7 +496,7 @@
 | `docs/V3X/TEAM_EXPANSION_PROPOSAL_2026_09_11.md` | `5a501a1489ab` | 19,569 B | 2026-09-11 17:04 | 件内 0 命中副产物段（标题作用域抽取） |
 | `docs/V3X/VOLCENGINE_GLM_LATEST_30CELLS_V2_2026_09_10.md` | `64c31da160a9` | 3,292 B | 2026-09-10 20:20 | 件内 0 命中副产物段（标题作用域抽取） |
 | `docs/V3X/D7_ONE_PAGE_SUMMARY_2026_09_10_v3.md` | `796301aeb116` | 5,042 B | 2026-09-10 16:05 | 件内 0 命中副产物段（标题作用域抽取） |
-| `docs/V3X/WANG_TEACHER_PROGRESS_REPORT_2026_09_11.md` | `7bbb557c99d3` | 6,770 B | 2026-09-11 13:15 | 件内 0 命中副产物段（标题作用域抽取） |
+| `docs/V3X/EXTERNAL_ADVISOR_PROGRESS_REPORT_2026_09_11.md` | `7bbb557c99d3` | 6,770 B | 2026-09-11 13:15 | 件内 0 命中副产物段（标题作用域抽取） |
 | `paper/deposon_arxiv_en_pkg/README.md` | `7da70fbc5f34` | 1,504 B | 2026-09-08 16:50 | 件内 0 命中副产物段（标题作用域抽取） |
 | `paper/deposon_paper_final_en.md` | `8b75c03eab99` | 67,724 B | 2026-09-08 14:44 | 件内 0 命中副产物段（标题作用域抽取） |
 | `.trae/build/deposon_arxiv_en/README.md` | `8fee86325da5` | 1,500 B | 2026-09-09 14:14 | 件内 0 命中副产物段（标题作用域抽取） |
@@ -1353,7 +1353,7 @@
 | `V3X/V3X_1WEEK_KILL_REPORT_2026_09_18.md` | `4ffb21bb6bfa` | 8,526 B | 2026-09-16 11:03 | 件内 0 命中副产物段（标题作用域抽取） |
 | `V3X/P_D_B3_MERKLE_22_CAPTION_VERIFICATION_2026_09_16.md` | `7f1492fbe657` | 10,979 B | 2026-09-16 18:26 | 件内 0 命中副产物段（标题作用域抽取） |
 | `V3X/V42_V2_VERIFIER_PERFORMANCE_REPORT_2026_09_16.md` | `914053fc3e17` | 11,080 B | 2026-09-16 18:33 | 件内 0 命中副产物段（标题作用域抽取） |
-| `V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | `935cb6ee3566` | 8,037 B | 2026-09-16 11:08 | 件内 0 命中副产物段（标题作用域抽取） |
+| `V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | `935cb6ee3566` | 8,037 B | 2026-09-16 11:08 | 件内 0 命中副产物段（标题作用域抽取） |
 
 
 ---
@@ -2782,7 +2782,7 @@
 | 99 | H9 | C | `796301aeb116` | 5,042 B | 2026-09-10 16:05 | `docs/V3X/D7_ONE_PAGE_SUMMARY_2026_09_10_v3.md` | 0 |
 | 100 | H9 | C | `7997a650cce3` | 1,731 B | 2026-09-09 13:36 | `docs/V3X/REVIEWER_B_AUDIT_2026_09_09_mavis.md` | 1 |
 | 101 | H9 | C | `7b79ae4e947d` | 6,776 B | 2026-09-11 13:09 | `docs/V3X/R1_R4_TRAE_REPORT_2026_09_11.md` | 1 |
-| 102 | H9 | C | `7bbb557c99d3` | 6,770 B | 2026-09-11 13:15 | `docs/V3X/WANG_TEACHER_PROGRESS_REPORT_2026_09_11.md` | 0 |
+| 102 | H9 | C | `7bbb557c99d3` | 6,770 B | 2026-09-11 13:15 | `docs/V3X/EXTERNAL_ADVISOR_PROGRESS_REPORT_2026_09_11.md` | 0 |
 | 103 | H9 | C | `7da70fbc5f34` | 1,504 B | 2026-09-08 16:50 | `paper/deposon_arxiv_en_pkg/README.md` | 0 |
 | 104 | H9 | C | `8178e61e7c97` | 11,678 B | 2026-09-11 11:34 | `docs/V3X/V2_PHASE2_3_INTEGRATION_2026_09_11.md` | 2 |
 | 105 | H9 | C | `86cc56e3b4d7` | 12,083 B | 2026-09-11 17:01 | `docs/V3X/TEAM_RESTRUCTURING_PROPOSAL_2026_09_11.md` | 4 |
@@ -3056,7 +3056,7 @@
 | 373 | H12c | docs | `8ff1a7c5413f` | 21,756 B | 2026-09-15 15:15 | `V3X/D5_DECISIONS_LAND_REPORT_2026_09_15.md` | 6 |
 | 374 | H12c | docs | `900da300d11e` | 13,109 B | 2026-09-15 11:27 | `V3X/P_E_D1_D3_REPORT_2026_09_15.md` | 1 |
 | 375 | H12c | docs | `914053fc3e17` | 11,080 B | 2026-09-16 18:33 | `V3X/V42_V2_VERIFIER_PERFORMANCE_REPORT_2026_09_16.md` | 0 |
-| 376 | H12c | docs | `935cb6ee3566` | 8,037 B | 2026-09-16 11:08 | `V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 0 |
+| 376 | H12c | docs | `935cb6ee3566` | 8,037 B | 2026-09-16 11:08 | `V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 0 |
 | 377 | H12c | docs | `977fe1b48f75` | 19,751 B | 2026-09-15 11:31 | `V3X/P_A_D1_D3_REPORT_2026_09_15.md` | 5 |
 | 378 | H12c | docs | `9a6b08d03e0c` | 15,479 B | 2026-09-15 12:06 | `V3X/P_G_V01_REPORT_2026_09_15.md` | 1 |
 | 379 | H12c | docs | `c28f7f0b530f` | 11,079 B | 2026-09-15 13:36 | `V3X/BOSS_PE_3_RESERVOIR_VERIFY_REPORT_2026_09_15.md` | 1 |

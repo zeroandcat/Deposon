@@ -42,7 +42,7 @@ def log(msg):
     with open(LOG_FILE, 'a', encoding='utf-8') as f:
         f.write(line + '\n')
 
-DEPOSON_ROOT = Path(r'D:\私人资料\deposon-repo')
+DEPOSON_ROOT = Path(r'_repo_mirror')
 RESULTS_DIR = DEPOSON_ROOT / 'results'
 
 # 清理上次 log (Tee-Object flush bug workaround)
@@ -52,7 +52,7 @@ for old in DEPOSON_ROOT.glob('_p_l_v3_phase2_closedsource_runner_*.py.log'):
         except: pass
 
 # ---------- 输入资产 (只读) ----------
-KEY_FILE = Path(r'C:\Users\Administrator\Desktop\AI\LLM API.txt')
+KEY_FILE = Path(r'〔本机用户目录〕\Desktop\AI\LLM API.txt')
 BASELINE_JSON = RESULTS_DIR / 'deposon_volcengine_seed_code_30cells_2026_09_10.json'
 PHYS60_JSON = RESULTS_DIR / 'deposon_v3_physical_opt_60cells_2026_09_11.json'
 

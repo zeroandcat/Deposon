@@ -45,13 +45,13 @@
 
 **回查证据**：v1.0 族 3dir 件 `results/_v3_v4_achievements_inventory_3dir_2026_09_24.md` 第 5 行逐字：
 
-> Scope: **MAIN** (`D:/private-data/deposon-repo`) + **ARCHIVE** (`D:/private-data/_non_upload_local_archive`) + **SUB** (`D:/private-data/deposon-sub`)
+> Scope: **MAIN** (`〔本机路径〕/private-data/deposon-repo`) + **ARCHIVE** (`〔本机路径〕/private-data/_non_upload_local_archive`) + **SUB** (`〔本机路径〕/private-data/deposon-sub`)
 
 | 标签 | 绝对路径 | 本棒处置 |
 |:--|:--|:--|
-| MAIN | `D:\私人资料\deposon-repo` | ✅ 全量实测逐件 |
-| SUB | `D:\私人资料\deposon-sub` | ✅ 全量实测逐件 |
-| ARCHIVE | `D:\私人资料\_non_upload_local_archive` | ⛔ **本棒授权 0 读 0 写 0 列目录** ⇒ **未核得（禁触区）**，见 §9-N2 |
+| MAIN | `_repo_mirror` | ✅ 全量实测逐件 |
+| SUB | `_repo_mirror` | ✅ 全量实测逐件 |
+| ARCHIVE | `〔本地归档区〕` | ⛔ **本棒授权 0 读 0 写 0 列目录** ⇒ **未核得（禁触区）**，见 §9-N2 |
 
 **`Deposon_v1_2_0_交付包` 不属 3dir**：该目录在 v1.0 族 3dir 件之 Scope／三目录表中**0 出现**，且 §三-2 三项实证亦仅述 repo/sub 两区 ⇒ **本件不纳入**（列为范围外事实登记）。
 
@@ -109,7 +109,7 @@
 |:--|:--|:--|--:|:--|
 | MAIN·v1.0 基件 | `results/_v3_v4_achievements_inventory_2026_09_24.md` | `965db22e9130` | 194,083 | 2026-09-30 16:18:35 |
 | MAIN·v1.0 3dir 扩展件 | `results/_v3_v4_achievements_inventory_3dir_2026_09_24.md` | `df7e9cd39251` | 355,819 | 2026-09-29 12:12:36 |
-| ARCHIVE 面 | `D:\私人资料\_non_upload_local_archive` | **未核得（禁触区 · 本棒 0 读 0 写 0 列目录）** | **未核得** | **未核得** |
+| ARCHIVE 面 | `〔本地归档区〕` | **未核得（禁触区 · 本棒 0 读 0 写 0 列目录）** | **未核得** | **未核得** |
 | SUB·面 | `deposon-sub` 全量 | 见 §4.2 逐件表 | 见 §4.2 | 见 §4.2 |
 
 ⚠ **v1.0 两件之登记值与现测值不一致**（并存登记，0 校正，⛔ 0 断言根因）→ 见 §8 漂移面 **D-1／D-2**。
@@ -194,11 +194,11 @@
 
 | 区 | 路径 | 件数 | bytes | 末次 mtime |
 |:--|:--|--:|--:|:--|
-| REPO | `D:\私人资料\deposon-repo` | **1,704** | **54,847,017** | 2026-10-12 03:18:02 |
-| SUB | `D:\私人资料\deposon-sub` | **1,187** | **58,731,756** | 2026-10-12 01:54:54 |
+| REPO | `_repo_mirror` | **1,704** | **54,847,017** | 2026-10-12 03:18:02 |
+| SUB | `_repo_mirror` | **1,187** | **58,731,756** | 2026-10-12 01:54:54 |
 | **合计** | —— | **2,891** | **113,578,773** | —— |
 
-### §4.1 区 `D:\私人资料\deposon-repo`（1,704 件 ／ 54,847,017 bytes）
+### §4.1 区 `_repo_mirror`（1,704 件 ／ 54,847,017 bytes）
 
 **逐目录分布**
 
@@ -537,7 +537,7 @@
 | 220 | `docs/V3X/D7_POST_CLEANUP_PLAN_2026_09_18.json` | 20,271 | 2026-09-15 17:27:45 | `0b8a1a357aae` |
 | 221 | `docs/V3X/D7_POST_CLEANUP_REPORT_2026_09_16.json` | 1,248 | 2026-09-16 11:01:13 | `40955bf2abc5` |
 | 222 | `docs/V3X/D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` | 10,692 | 2026-09-16 11:09:18 | `51869e3184f4` |
-| 223 | `docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 8,037 | 2026-09-16 11:08:22 | `935cb6ee3566` |
+| 223 | `docs/V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 8,037 | 2026-09-16 11:08:22 | `935cb6ee3566` |
 | 224 | `docs/V3X/D_FIX2_METRIC_VERIFY_REPORT_2026_09_15.md` | 7,352 | 2026-09-15 14:07:47 | `0a63824f0805` |
 | 225 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | 22,442 | 2026-09-10 20:22:54 | `ac8997b07731` |
 | 226 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | 17,803 | 2026-09-10 18:16:43 | `240a7ae4bdfb` |
@@ -1579,7 +1579,7 @@
 | 1262 | `verifier/v8/check.py` | 3,210 | 2026-08-23 21:40:59 | `01b63b1a9c5f` |
 | 1263 | `verifier/v9/check.py` | 5,352 | 2026-08-23 23:46:50 | `5faad917d839` |
 
-### §4.2 区 `D:\私人资料\deposon-sub`（1,187 件 ／ 58,731,756 bytes）
+### §4.2 区 `_repo_mirror`（1,187 件 ／ 58,731,756 bytes）
 
 **逐目录分布**
 
@@ -1833,7 +1833,7 @@
 | 202 | `results/_archive_2026_09_20/LETTER_TO_TRAE_2026_09_11.md` | 22,776 | 2026-09-16 11:01:12 | `7a95307a3293` |
 | 203 | `results/_archive_2026_09_20/LETTER_TO_TRAE_FIX_SELFCHECK_2026_09_15.md` | 7,855 | 2026-09-15 15:31:39 | `c0d629df69d8` |
 | 204 | `results/_archive_2026_09_20/LETTER_TO_TRAE_REVIEW_2026_09_16.md` | 12,668 | 2026-09-15 13:47:02 | `1c0885d2b1fa` |
-| 205 | `results/_archive_2026_09_20/LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md` | 10,562 | 2026-09-18 12:19:45 | `7d4b5dd967e2` |
+| 205 | `results/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | 10,562 | 2026-09-18 12:19:45 | `7d4b5dd967e2` |
 | 206 | `results/_archive_2026_09_20/p_i_curvature_audit_probe_results_2026_09_16.json` | 2,637 | 2026-09-16 17:37:31 | `ae07f5551e87` |
 | 207 | `results/_archive_2026_09_20/review_content_A1_dsv4pro.md` | 20,082 | 2026-09-18 09:27:36 | `5198a7059c06` |
 | 208 | `results/_archive_2026_09_20/review_content_A1_glm51.md` | 7,617 | 2026-09-18 00:35:54 | `fd38a2a1ea05` |
@@ -1953,7 +1953,7 @@
 | 322 | `results/_d1_backfill_event_id_prefix_proposal_2026_10_01.md` | 14,074 | 2026-10-01 12:28:08 | `2636394df918` |
 | 323 | `results/_d1_backfill_readiness_pack_2026_10_01.md` | 26,462 | 2026-10-01 11:49:06 | `ed644fb07f88` |
 | 324 | `results/_d1_ruling_and_s3_transition_2026_10_01.md` | 28,370 | 2026-10-10 11:37:23 | `dc9cb0e02922` |
-| 325 | `results/_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` | 9,891 | 2026-09-17 14:39:46 | `f4d5b755736a` |
+| 325 | `results/_d7_external_advisor_〔IM〕_publish_v1_20260918.md` | 9,891 | 2026-09-17 14:39:46 | `f4d5b755736a` |
 | 326 | `results/_d8_closeout_protocol_recompute_2026_09_30.md` | 31,007 | 2026-09-30 22:57:20 | `57aba2cd26a6` |
 | 327 | `results/_d8_dup_overlap_disposal_2026_09_30.md` | 32,350 | 2026-09-30 14:14:24 | `de8691727842` |
 | 328 | `results/_day_close_register_2026_10_01.md` | 33,115 | 2026-10-01 16:55:26 | `6dbac1d1bcd6` |
@@ -3408,7 +3408,7 @@
 | **N-8** | 派工单 `.tmp` 面 560 件之说 | 🔴 **未核得（差异并列）** | 本棒实测 441 件、快照登记 441 件 ⇒ 三读并列（§5.3），⛔ 0 校正 |
 | **N-9** | 派工单 REPO 1,700 件之说 | 🔴 **未核得（差异并列）** | 三读并列（§5.2）⇒ ⛔ 0 校正 |
 
-📌 **诚实交代**：①本件所有 SHA-12／bytes／mtime **均由本棒实测**（`sha256` 逐件），**0 填估值／0 推断值**；②「未核得」共 **8 项**（N-1…N-8 为未核得／未决，N-9 并入 N-8 族之计数差登记）；③**本棒曾列 `D:\私人资料` 顶层目录以定位 `plan.md`** ⇒ **禁触区 `_non_upload_local_archive` 之目录名被枚举一次**，其**内容 0 读 0 列**——如实登记。
+📌 **诚实交代**：①本件所有 SHA-12／bytes／mtime **均由本棒实测**（`sha256` 逐件），**0 填估值／0 推断值**；②「未核得」共 **8 项**（N-1…N-8 为未核得／未决，N-9 并入 N-8 族之计数差登记）；③**本棒曾列 `〔本地资料区〕` 顶层目录以定位 `plan.md`** ⇒ **禁触区 `_non_upload_local_archive` 之目录名被枚举一次**，其**内容 0 读 0 列**——如实登记。
 
 ## §10 · ⛔ 本件 0 作之事项（边界自述）
 

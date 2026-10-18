@@ -9,7 +9,7 @@ for k in ('HTTP_PROXY', 'HTTPS_PROXY', 'http_proxy', 'https_proxy', 'ALL_PROXY',
 import urllib.request as ur
 ur.install_opener(ur.build_opener(ur.ProxyHandler({})))
 
-KEY_FILE = Path(r'C:/Users/Administrator/Desktop/AI/LLM API.txt')
+KEY_FILE = Path(r'〔本机用户目录〕/Desktop/AI/LLM API.txt')
 content_bytes = KEY_FILE.read_bytes()
 text = None
 for enc in ('utf-8','gbk','gb18030','utf-8-sig'):

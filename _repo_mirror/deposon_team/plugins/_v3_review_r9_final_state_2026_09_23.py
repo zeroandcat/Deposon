@@ -2,7 +2,7 @@
 """_v3_review_r9_final_state — 终态汇总：交付件 SHA-12 + frozen 终验（只读）"""
 import hashlib, os
 
-REPO = r'D:\私人资料\deposon-repo'
+REPO = r'_repo_mirror'
 def sha12(p):
     with open(p, 'rb') as f:
         return hashlib.sha256(f.read()).hexdigest()[:12]

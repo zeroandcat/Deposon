@@ -549,7 +549,7 @@ def main() -> Dict[str, Any]:
         "runtime": "python3 + numpy；0 LLM / 0 proxy / 0 gateway；词表扩词扫描为本地机械",
         "skill": {
             "requested": "scientific-research-workflows:experimental-design (plugin @scientific-research-workflows)",
-            "status": "Local skill not found — C:/Users/Administrator/.minimax/plugins 实测 0 项（空目录）",
+            "status": "Local skill not found — 〔本机用户目录〕/.minimax/plugins 实测 0 项（空目录）",
             "fallback": (
                 "纪律锚 fallback = prereg §2.3 S3 四条字面 + questionnaire_v1 §0 采集协议 + "
                 "verdict_v3 §2.3 K-V3-B 8 件字面"

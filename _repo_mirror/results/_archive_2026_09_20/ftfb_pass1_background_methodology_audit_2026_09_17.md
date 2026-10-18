@@ -70,6 +70,6 @@
 
 - 未触碰**任何**论文字节；本端 grep 与 line 抽读的口令与依赖已与编译验证 S4/D1–D6/C1–C3d 一一对齐，证据链可重放。
 - Pass 1 **无 FAIL**，无须进入 Pass 2 综合复审组；如外部 reviewer 后续发现本端未捕捉问题，按 user memory S4 第 1 条「汇报措辞」纪律，本端承认"未在本环境窗口检出"而非"未存在"。
-- 本报告路径：`D:\私人资料\deposon-repo\results\ftfb_pass1_background_methodology_audit_2026_09_17.md`，文件名 SHA-12 将在写入后由用户链下一段核验。
+- 本报告路径：`_repo_mirror\results\ftfb_pass1_background_methodology_audit_2026_09_17.md`，文件名 SHA-12 将在写入后由用户链下一段核验。
 
 — Worker 子审｜2026-09-17 22:35 CST 派工 → 单轮内闭合

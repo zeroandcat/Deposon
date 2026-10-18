@@ -15,7 +15,7 @@
 
 ## §1 锚版复算结果：0/3 可执行（硬崩，非数值差异）
 
-三件**原样执行**（`python <锚版 .bak>`，CWD = `D:/私人资料/deposon-repo`），报错逐字一致：
+三件**原样执行**（`python <锚版 .bak>`，CWD = `_repo_mirror`），报错逐字一致：
 
 | BOSS | 锚版 SHA-12 | 字节 | 崩溃行 | 报错 | 读数 |
 |---|---|---|---|---|---|
@@ -81,7 +81,7 @@ strategyqa 495 条的实测键集为 `id / is_correct / path / pred / trap_hit`�
 | **(a)** 面 2 通用基线复现性 3/3 ±5% | 锚版 3 件读数 | ❌ **BLOCKED** | 锚版资产 ✅ 就位（3/3 SHA-12 本棒复核通过），但 **0/3 可执行** ⇒ 3/3 复现性**无从比较**；漂移版 3/3 精确复现，但 implementation 为漂移版 ≠ 锚版，不满足腿 (a) 的锚版要求 |
 | **(b)** 面 3 非恒等 D_dec | v19 frozen 四字段抽取 | ✅ **READY_PRIOR** | 09-27 已落盘（`354ae9c14fe2`）；**不依赖本棒** |
 | **(c)** 面 3 序稳定（3 seed × 10k resamples） | 同腿 (b) | ✅ **READY_PRIOR** | 09-27 已落盘；**不依赖本棒** |
-| — | deposon 侧 D(M,T) | ❌ **结构性不可算** | 沿用 `6c80ff43bdd7` §4；本棒独立复核 `**/distortion_calculator.py` over `D:/私人资料` = **0 命中**，缺口**未解除**，**不因锚版回填而改变** |
+| — | deposon 侧 D(M,T) | ❌ **结构性不可算** | 沿用 `6c80ff43bdd7` §4；本棒独立复核 `**/distortion_calculator.py` over `〔本地资料区〕` = **0 命中**，缺口**未解除**，**不因锚版回填而改变** |
 
 **腿 (b)/(c) 输入面附带缺口（如实带过，0 掩盖）**：09-27 `field_availability_audit` 显示 `n_paths` / `n_filtered` 两字段在**全 10 个 condition 上 `key_hits` 均为 0**；strategyqa 的 `predicted` `key_hits` 亦全为 0（改用 `pred`）。本棒只读未重算、未改判。
 

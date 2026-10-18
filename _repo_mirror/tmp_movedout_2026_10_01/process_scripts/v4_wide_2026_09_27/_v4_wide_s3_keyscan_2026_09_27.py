@@ -7,7 +7,7 @@ import os, re
 from datetime import datetime
 
 CUTOFF = datetime(2026, 9, 23, 12, 0, 0).timestamp()
-ROOTS = [r'D:\私人资料\deposon-repo', r'D:\私人资料\deposon-sub']
+ROOTS = [r'_repo_mirror', r'_repo_mirror']
 SKIP = {'__pycache__', '.git', 'node_modules', '.trae'}
 PAT = [
     ("api_key_literal", re.compile(r"(?i)api[_-]?key\s*[:=]\s*['\"]?[A-Za-z0-9_\-]{16,}")),
@@ -45,7 +45,7 @@ for root in ROOTS:
                     m = rx.search(ln)
                     if m:
                         frag = m.group(0)[:14]
-                        hits.append((p.replace(r'D:\私人资料' + os.sep, ''), i, name, frag))
+                        hits.append((p.replace(r'〔本地资料区〕' + os.sep, ''), i, name, frag))
 
 print(f'=== 扫描新件 {files_scanned} 件（mtime >= 2026-09-23 12:00）===')
 print(f'=== 命中 {len(hits)} 处 ===')

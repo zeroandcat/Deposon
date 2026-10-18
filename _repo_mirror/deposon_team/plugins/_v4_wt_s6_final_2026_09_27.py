@@ -2,7 +2,7 @@
 """_v4_wt_s6_final — 终验：交付件 SHA-12 + 既有件 0 触动自证（只读）"""
 import hashlib, os
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_repo_mirror')
 def sha12(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12]
 
 DELIV = [

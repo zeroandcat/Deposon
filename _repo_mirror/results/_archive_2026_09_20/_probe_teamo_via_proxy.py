@@ -17,7 +17,7 @@ opener = urllib.request.build_opener(
 )
 urllib.request.install_opener(opener)
 
-KEY_FILE = Path(r'C:\Users\Administrator\Desktop\AI\LLM API.txt')
+KEY_FILE = Path(r'〔本机用户目录〕\Desktop\AI\LLM API.txt')
 content = KEY_FILE.read_bytes()
 for enc in ('utf-8','gbk','gb18030','utf-8-sig'):
     try: text = content.decode(enc); break

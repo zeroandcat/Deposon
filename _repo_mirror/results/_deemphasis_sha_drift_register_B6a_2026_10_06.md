@@ -8,9 +8,9 @@
 
 ## 替换统计（§2 口径）
 
-- 王老师×243→外部顾问；WeChat×126/wechat×7/微信×34→线上（叙述形，含 WeChatAPI/WeChat/邮件渠道对写）
-- 王子贺族×17：整串「王子贺 人大高瓴人工智能学院」×7（提案致段，机构连用整体消化）＋「王子贺老师」×8＋「王子贺」×2→外部合作导师〔匿名〕
-- 路径形×9（§3.6 动作 2 归口，可逆推）：WANG_TEACHER_PROGRESS_REPORT_2026_09_11.md×2→EXTERNAL_ADVISOR_…（仓外/未落盘件名引用）；letters/_v4_commission_wechat_report_coze×6→…online_…（letters/ 目标不在仓内，悬空可逆推）；D3_WECHAT_MIDTERM_TEMPLATE×1→D3_ONLINE_…（**批⑤ B-3 回写补充**：V3X_D6_PAPER_zh.md L211 无扩展名引用形，批⑤ .md 形串未覆盖）
+- 〔W老师〕×243→外部顾问；〔IM〕×126/〔IM〕×7/〔IM〕×34→线上（叙述形，含 〔IM〕API/〔IM〕/邮件渠道对写）
+- 〔当事人W〕族×17：整串「〔当事人W〕 〔高校R〕〔机构G〕人工智能学院」×7（提案致段，机构连用整体消化）＋「〔当事人W〕老师」×8＋「〔当事人W〕」×2→外部合作导师〔匿名〕
+- 路径形×9（§3.6 动作 2 归口，可逆推）：EXTERNAL_ADVISOR_PROGRESS_REPORT_2026_09_11.md×2→EXTERNAL_ADVISOR_…（仓外/未落盘件名引用）；letters/_v4_commission_〔IM〕_report_coze×6→…online_…（letters/ 目标不在仓内，悬空可逆推）；D3_〔IM〕_MIDTERM_TEMPLATE×1→D3_ONLINE_…（**批⑤ B-3 回写补充**：V3X_D6_PAPER_zh.md L211 无扩展名引用形，批⑤ .md 形串未覆盖）
 - 英文名形：Wang D7×1→external advisor D7（V3X_PROJECT_EVOLUTION_FOR_KIMI.md L102）
 - 合计 437 处；47 件替换后核心 token 残差全 0（逐件复验）
 

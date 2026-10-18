@@ -48,7 +48,7 @@ PI 于 2026-10-13 22:21 裁「**甲 候选③（补址）**」⇒ 执行补址�
 
 | **行** | **编号** | **未决（逐字）** | **所需最小决定（逐字）** |
 | :-: | :-- | :-- | :-- |
-| **121** | **`U‑3X‑1`** | 是否授权在 `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit\conservation.py` **新建**（＝P-4 候选 ③，0 覆写、无冲突），以使 H3 L62 解析为 True | **PI／parent 二择一**：**(a)** 解除本棒「`deposon-sub` 只读」限定并授权新建；**(b)** 改派具 sub 写权者执行 |
+| **121** | **`U‑3X‑1`** | 是否授权在 `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py` **新建**（＝P-4 候选 ③，0 覆写、无冲突），以使 H3 L62 解析为 True | **PI／parent 二择一**：**(a)** 解除本棒「`deposon-sub` 只读」限定并授权新建；**(b)** 改派具 sub 写权者执行 |
 | **122** | **`U‑3X‑2`** | P-4 回拉件之名段为 `…2026_10_12`（**前令落盘日**），而本令示例段为 `2026_10_13` ⇒ 是否需**另建** 10-13 段副本 | **本棒 0 重复建件**（同内容第二份 ＝ 冗余件）；**如 PI 需该命名，请明示**，本棒即补 |
 | **123** | **`U‑3X‑3`** | H3 **L61→L62** 行号订正（事实登记）是否随 P-4 终裁一并留痕 | 随 P-4 终裁之 PI 裁 |
 
@@ -60,10 +60,10 @@ PI 于 2026-10-13 22:21 裁「**甲 候选③（补址）**」⇒ 执行补址�
 
 | **#** | **候选址逐字** | **源件记之 `exists`** | **本棒实测（2026-10-13）** |
 | :-: | :-- | :-: | :-: |
-| ① | `D:\私人资料\deposon-repo\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | False | **ABSENT** |
-| ② | `D:\私人资料\deposon-repo\_archive_deposon_2026_09_17_backup\verifier\audit\conservation.py` | False | **ABSENT** |
-| **③** | **`D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit\conservation.py`** | False | 🟢 **在位**（22,105 B / `4bdec2683f06`） |
-| ④ | `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17_backup\verifier\audit\conservation.py` | False | **ABSENT** |
+| ① | `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | False | **ABSENT** |
+| ② | `_repo_mirror\_archive_deposon_2026_09_17_backup\verifier\audit\conservation.py` | False | **ABSENT** |
+| **③** | **`_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py`** | False | 🟢 **在位**（22,105 B / `4bdec2683f06`） |
+| ④ | `_repo_mirror\_archive_deposon_2026_09_17_backup\verifier\audit\conservation.py` | False | **ABSENT** |
 
 📌 **双源互证成立**：`dba255b2b734` §2-2 之**候选③** ＝ `62fff3dc6cca` §7 `U‑3X‑1` 之**授权新建址** ⇒ **同一实体、同一字面**（§1-4 明载 `U‑3X‑1` 括注「**＝P-4 候选 ③**」）。
 
@@ -86,7 +86,7 @@ PI 于 2026-10-13 22:21 裁「**甲 候选③（补址）**」⇒ 执行补址�
 
 ### §2-1 候选③址之确认（逐字）
 
-**授权目标** ＝ `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit\conservation.py`（§1-4 `U‑3X‑1` 逐字 ＝ §1-5 四候选表之 ③）。
+**授权目标** ＝ `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py`（§1-4 `U‑3X‑1` 逐字 ＝ §1-5 四候选表之 ③）。
 
 ### §2-2 落前查重（**⛔ 覆写防护**）
 
@@ -101,7 +101,7 @@ PI 于 2026-10-13 22:21 裁「**甲 候选③（补址）**」⇒ 执行补址�
 
 | **项** | **候选③址（在位实体）** | **回拉件（基准）** | **判定** |
 | :-- | :-- | :-- | :-: |
-| **路径** | `D:\私人资料\deposon-sub\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | `results\_p4_pulled_back_conservation.py_2026_10_12` | — |
+| **路径** | `_repo_mirror\_archive_deposon_2026_09_17\verifier\audit\conservation.py` | `results\_p4_pulled_back_conservation.py_2026_10_12` | — |
 | **`exists`** | **True** | **True** | — |
 | **bytes** | **22,105** | **22,105** | ✅ 一致 |
 | **SHA-12** | **`4bdec2683f06`** | **`4bdec2683f06`** | ✅ 一致 |
@@ -127,13 +127,13 @@ PI 于 2026-10-13 22:21 裁「**甲 候选③（补址）**」⇒ 执行补址�
 
 ### §2-5 H3 L62 静态解析（**⛔ 未执行 H3**）
 
-**H3** ＝ `D:\私人资料\deposon-sub\results\_v3_recheck_05_executor_2026_09_28.py`（SHA-12 **`65f8a7514f34`** · **38,733** B · **735** 行 · mtime `2026-10-12T23:53:11`）。
+**H3** ＝ `_repo_mirror\results\_v3_recheck_05_executor_2026_09_28.py`（SHA-12 **`65f8a7514f34`** · **38,733** B · **735** 行 · mtime `2026-10-12T23:53:11`）。
 
 本棒**独立实测**（全文逐行扫描）之定义行：
 
 ```
 L56  REPO = Path(__file__).resolve().parent.parent
-L57  REPO_ROOT = Path(r"D:\私人资料\deposon-repo")
+L57  REPO_ROOT = Path(r"_repo_mirror")
 L61  SRC_ANCHOR_MAIN = REPO_ROOT / "verifier" / "audit" / "conservation.py"
 L62  SRC_ANCHOR_FALLBACK = REPO / "_archive_deposon_2026_09_17" / "verifier" / "audit" / "conservation.py"
 L63  OUT_JSON = REPO_ROOT / "results" / "_v3_recheck_05_result_2026_09_28.json"
@@ -141,7 +141,7 @@ L63  OUT_JSON = REPO_ROOT / "results" / "_v3_recheck_05_result_2026_09_28.json"
 
 📌 全文 `SRC_ANCHOR_FALLBACK` **唯一定义处于 L62**（另一命中为 **L126** 之引用 `"exists": SRC_ANCHOR_FALLBACK.exists()`，⛔ 非定义）⇒ 与 `d2aeaeedf39c` §2-1 之实测**逐位吻合**。
 
-⇒ **静态解析**（⛔ **纯路径推导、未执行 H3**）：`REPO` ＝ H3 所在 `results\` 之**上级** ＝ **`D:\私人资料\deposon-sub`** ⇒ `SRC_ANCHOR_FALLBACK` 之解析值 ＝ **候选③址** ⇒ 该址 **`exists=True`** ⇒ 🟢 **H3 兜底锚解析为 True（本棒复核成立）**。
+⇒ **静态解析**（⛔ **纯路径推导、未执行 H3**）：`REPO` ＝ H3 所在 `results\` 之**上级** ＝ **`_repo_mirror`** ⇒ `SRC_ANCHOR_FALLBACK` 之解析值 ＝ **候选③址** ⇒ 该址 **`exists=True`** ⇒ 🟢 **H3 兜底锚解析为 True（本棒复核成立）**。
 
 📌 **⛔ 0 执行 H3**、⛔ 0 产出 H3 结果、⛔ 0 验证运行期行为、⛔ 0 赋 `k_v3s_4_4_*` 布尔。
 
@@ -217,7 +217,7 @@ L63  OUT_JSON = REPO_ROOT / "results" / "_v3_recheck_05_result_2026_09_28.json"
 | **0 覆写** | 候选③址落前 **True** ⇒ **走占用分支**：0 覆写、0 改写、0 删除（§2-2）；本件落前 **False** ⇒ 唯一新建为**新名新件**（§4-2 之 5） |
 | **0 回改既有件** | §4-2 之 1–4 四件指纹**前后一致**（本棒为**只读**动作） |
 | **0 编辑 `H3`** | 指纹与 `d2aeaeedf39c` §7-2 所载**完全一致** ⇒ **一字未动**（§3-2） |
-| **0 触归档区** | `D:\私人资料\_non_upload_local_archive` —— **0 读 0 写 0 列目录 0 统计**（本棒**无例外**）；本棒所用路径全集**无一**落于该区 |
+| **0 触归档区** | `〔本地归档区〕` —— **0 读 0 写 0 列目录 0 统计**（本棒**无例外**）；本棒所用路径全集**无一**落于该区 |
 | **其余禁项** | ⛔ **0 网络** ／ ⛔ 0 skill ／ ⛔ 0 LLM ／ ⛔ **0 读 `.env`** ／ ⛔ **0 经手 PAT** ／ ⛔ **0 上传／0 远端写** ／ ⛔ 0 回改终判词·阈值·门柱 ／ ⛔ **0 宣告 `P-3` 闭** ／ ⛔ **0 宣告①毕** |
 
 ---

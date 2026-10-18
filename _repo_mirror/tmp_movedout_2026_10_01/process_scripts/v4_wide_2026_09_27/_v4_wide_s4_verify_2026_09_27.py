@@ -2,8 +2,8 @@
 """_v4_wide_s4_verify — 核验子代理所报高severity断言（只读）"""
 import hashlib, json, os, re
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo'); RES = REPO / 'results'
-SUB = Path(r'D:\私人资料\deposon-sub')
+REPO = Path(r'_repo_mirror'); RES = REPO / 'results'
+SUB = Path(r'_repo_mirror')
 
 def T(p): return Path(p).read_text(encoding='utf-8', errors='ignore')
 def lines_around(txt, pat, ctx=4, limit=3):

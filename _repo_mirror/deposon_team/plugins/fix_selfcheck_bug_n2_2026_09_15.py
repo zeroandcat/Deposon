@@ -22,7 +22,7 @@ fix_selfcheck_bug_n2_2026_09_15.py — N2 修补: boss_pc_1/3 尾块 D_FIX2 阈�
 """
 import os
 
-BASE = r'D:\私人资料\deposon-repo'
+BASE = r'_repo_mirror'
 PLUG = os.path.join(BASE, 'deposon_team', 'plugins')
 N2_FILES = [
     'boss_pc_1_2d_ising_universality.py',

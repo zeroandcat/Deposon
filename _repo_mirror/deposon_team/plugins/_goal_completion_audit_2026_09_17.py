@@ -3,7 +3,7 @@
 with recorded SHA-12; verify erratum patch idempotency frozen-state; verify frozen 0-touch."""
 import hashlib, os, json
 
-BASE = r'D:\私人资料\deposon-repo'
+BASE = r'_repo_mirror'
 
 def sha12(p):
     with open(p, 'rb') as f:

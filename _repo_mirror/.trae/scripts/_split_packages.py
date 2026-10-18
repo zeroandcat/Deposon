@@ -47,7 +47,7 @@ def _rmtree_retry(path: Path, retries: int = 4) -> None:
                 raise
             time.sleep(0.5)
 
-REPO = Path(r"D:\私人资料\deposon-repo")
+REPO = Path(r"_repo_mirror")
 SRC = REPO / "paper" / "deposon_arxiv_2026"
 OUT_BASE = REPO / "paper"
 

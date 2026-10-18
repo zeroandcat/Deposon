@@ -3,21 +3,21 @@
 import hashlib, os, re
 from datetime import datetime
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_repo_mirror')
 B0 = datetime(2026,9,27,20,28,20).timestamp()
 EXCL = ('.evidence_backup_2026_09_28', '.evidence_backup_2026_09_30', '_movedout_scratch_2026_09_30')
 def norm(p): return p.replace('\\', '/').lower().lstrip('/')
 
-com = Path(r'D:\私人资料\deposon-repo\letters\TRAE_WALKTHROUGH_BUGFIX_AUDIT_REQUEST_2026_09_30.md').read_text(encoding='utf-8')
+com = Path(r'_repo_mirror\letters\TRAE_WALKTHROUGH_BUGFIX_AUDIT_REQUEST_2026_09_30.md').read_text(encoding='utf-8')
 # 抽附录表行路径（| n | `path` | bytes | mtime | sha |）
 rows = re.findall(r'\|\s*\d+\s*\|\s*`([^`]+)`\s*\|\s*(\d+)\s*\|', com)
-comm = {norm(r[0].replace('D:\\私人资料\\', '')): (int(r[1]), r[0]) for r in rows}
+comm = {norm(r[0].replace('〔本地资料区〕\\', '')): (int(r[1]), r[0]) for r in rows}
 print(f'  委托附录行抽取（规范化键）{len(comm)} 条')
 
 def sha12(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12]
 
 mine = {}
-for area, prefix in ((r'D:\私人资料\deposon-repo', 'deposon-repo/'), (r'D:\私人资料\deposon-sub', 'deposon-sub/'), (r'D:\私人资料\_non_upload_local_archive', '')):
+for area, prefix in ((r'_repo_mirror', 'deposon-repo/'), (r'_repo_mirror', 'deposon-sub/'), (r'〔本地归档区〕', '')):
     for dp, dns, fns in os.walk(area):
         dns[:] = [d for d in dns if d not in {'__pycache__','.git','.trae','.mavis'}]
         if any(x in dp for x in EXCL): continue
@@ -26,7 +26,7 @@ for area, prefix in ((r'D:\私人资料\deposon-repo', 'deposon-repo/'), (r'D:\�
             try: st = os.stat(q)
             except OSError: continue
             if st.st_mtime > B0:
-                key = norm(q.replace('D:\\私人资料\\', ''))
+                key = norm(q.replace('〔本地资料区〕\\', ''))
                 mine[key] = (st.st_size, q, st.st_mtime)
 
 only_mine = [k for k in mine if k not in comm]

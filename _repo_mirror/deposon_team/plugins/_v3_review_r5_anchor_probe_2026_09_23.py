@@ -2,8 +2,8 @@
 """_v3_review_r5_anchor_probe — 5 锚根件在盘/归档双副本核对（只读）"""
 import hashlib, os, json
 
-REPO = r'D:\私人资料\deposon-repo'
-ARCH = r'D:\私人资料\_archive_deposon_2026_09_17'
+REPO = r'_repo_mirror'
+ARCH = r'〔本地资料区〕\_archive_deposon_2026_09_17'
 REL = r'verifier\handoff\KT_ABC1_anchors_sha256_12.json'
 
 def sha12(p):
@@ -37,17 +37,17 @@ print('--- 真缺件在 archive 的存在性 ---')
 for f in ('results/deposon_v17_fusion_fix.json',
           'results/deposon_v18_api_supplements.json',
           'results/deposon_v20_baselines.json'):
-    for base, tag in ((REPO, 'repo'), (ARCH, 'archive'), (r'D:\私人资料\deposon-sub', 'sub')):
+    for base, tag in ((REPO, 'repo'), (ARCH, 'archive'), (r'_repo_mirror', 'sub')):
         p = os.path.join(base, f.replace('/', os.sep))
         print(f'  {tag:<8} {f:<48} {"YES sha12="+sha12(p) if os.path.exists(p) else "NO"}')
     print()
 
 print('--- 全盘 KT_ABC1* 副本 SHA-12（追 03c6c01f3697）---')
 CANDS = [
-    r'd:\私人资料\deposon-repo\verifier\handoff\KT_ABC1_anchors_sha256_12.json',
-    r'd:\私人资料\deposon-repo\verifier\handoff\KT_ABC1_anchors_sha256_12_V3X_P_A_PATCH_2026_09_15.json',
-    r'd:\私人资料\_non_upload_local_archive\verifier\handoff\KT_ABC1_anchors_sha256_12.json',
-    r'd:\私人资料\_non_upload_local_archive\verifier\handoff\KT_ABC1_anchors_sha256_12_V3X_P_A_PATCH_2026_09_15.json',
+    r'〔本机路径〕\私人资料\deposon-repo\verifier\handoff\KT_ABC1_anchors_sha256_12.json',
+    r'〔本机路径〕\私人资料\deposon-repo\verifier\handoff\KT_ABC1_anchors_sha256_12_V3X_P_A_PATCH_2026_09_15.json',
+    r'〔本机路径〕\私人资料\_non_upload_local_archive\verifier\handoff\KT_ABC1_anchors_sha256_12.json',
+    r'〔本机路径〕\私人资料\_non_upload_local_archive\verifier\handoff\KT_ABC1_anchors_sha256_12_V3X_P_A_PATCH_2026_09_15.json',
 ]
 for p in CANDS:
     if os.path.exists(p):

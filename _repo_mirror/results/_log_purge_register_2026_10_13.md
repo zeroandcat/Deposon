@@ -3,7 +3,7 @@
 - 件号：`_log_purge_register_2026_10_13`
 - 执行棒：日志清理执行棒（Worker）
 - 落盘时间：2026-10-13
-- 目标目录：`C:\Users\Administrator\AppData\Roaming\MiniMax\logs`
+- 目标目录：`〔本机用户目录〕\AppData\Roaming\MiniMax\logs`
 - 结论：**已删 0 件／失败 35 件**。可恢复通道拒删，未回退永久删除，故日志仓规模**未变**。
 
 ---
@@ -81,7 +81,7 @@
 
 ## 五、执行方式（`rm --` 字面）
 
-按硬约束以**一次顶层 `rm --`** 携带全部 35 个目标之**前斜杠字面绝对路径**（形如 `rm -- "C:/Users/.../main-10-08.log" …`）。⛔ 未用裸 `Remove-Item`｜⛔ 未传 PowerShell 变量｜⛔ 未用 `-Force`。
+按硬约束以**一次顶层 `rm --`** 携带全部 35 个目标之**前斜杠字面绝对路径**（形如 `rm -- "〔本机用户目录〕/main-10-08.log" …`）。⛔ 未用裸 `Remove-Item`｜⛔ 未传 PowerShell 变量｜⛔ 未用 `-Force`。
 
 命令实际落地为运行时受信任启动器 `mavis-trash`（可恢复回收站通道）。
 
@@ -91,16 +91,16 @@
 
 ```
 mavis-trash: refused to trash redirecting reparse point
-'C:/Users/Administrator/AppData/Roaming/MiniMax/logs/api-10-08.log'
-(resolved 'C:\Users\Administrator\AppData\Roaming\MiniMax\logs\api-10-08.log')
-(reparse path 'C:\Users\Administrator\AppData\Roaming\MiniMax')
-(link target 'D:\Users\Administrator\AppData\Roaming\MiniMax')
--> 'D:\Users\Administrator\AppData\Roaming\MiniMax\logs\api-10-08.log';
-run mavis-trash 'D:\Users\...\api-10-08.log' explicitly if you intend to
+'〔本机用户目录〕/AppData/Roaming/MiniMax/logs/api-10-08.log'
+(resolved '〔本机用户目录〕\AppData\Roaming\MiniMax\logs\api-10-08.log')
+(reparse path '〔本机用户目录〕\AppData\Roaming\MiniMax')
+(link target '〔本机用户目录〕\AppData\Roaming\MiniMax')
+-> '〔本机用户目录〕\AppData\Roaming\MiniMax\logs\api-10-08.log';
+run mavis-trash '〔本机用户目录〕\api-10-08.log' explicitly if you intend to
 delete the redirect target
 ```
 
-**根因（实测）**：`C:\Users\Administrator\AppData\Roaming\MiniMax` 系 reparse point（junction），属性实测 `Directory, ReparsePoint`，链接目标 `D:\Users\Administrator\AppData\Roaming\MiniMax`。故日志目录实际实体在 **D 盘**，`mavis-trash` 拒绝经由重定向点路径回收文件（防误删跨越 junction 的实体）。
+**根因（实测）**：`〔本机用户目录〕\AppData\Roaming\MiniMax` 系 reparse point（junction），属性实测 `Directory, ReparsePoint`，链接目标 `〔本机用户目录〕\AppData\Roaming\MiniMax`。故日志目录实际实体在 **D 盘**，`mavis-trash` 拒绝经由重定向点路径回收文件（防误删跨越 junction 的实体）。
 
 **处置**：依派工令「若 `mavis-trash` 报错或部分失败 ⇒ 即刻停止」，已即刻停止。
 ⛔ **未回退永久删除**｜⛔ **未改用他法**｜⛔ **未按报错提示改走 D 盘目标路径**（该路径不在派工授权字面内，属改用他法，须先候裁）。
@@ -127,12 +127,12 @@ delete the redirect target
 2. `truncate-main-0929.ps1`（⚠ 截断＝永久）**未执行、未改动**：实测仍在，bytes ＝ **433**，与删前一致。
 3. 全部 35 件待删卷**字节级未损**：逐件复核 bytes 与删前实测值**逐件相等**（例：`main-10-10.log` ＝ 7,410,242,463，两次实测一致）。
 4. 任何 `*-10-13.log` **未纳入命令**，零风险。
-5. 未写入归档区 `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录）。
+5. 未写入归档区 `〔本地归档区〕`（0 读 0 写 0 列目录）。
 6. 本棒 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT。
 
 ## 十、未决项（候裁）
 
-1. **处置路径待裁**：是否授权改以**真实实体路径** `D:\Users\Administrator\AppData\Roaming\MiniMax\logs\...`（前斜杠字面，一次顶层 `rm --`，同 35 件）重试。此为派工明令禁止之「改用他法」，故本棒**未擅自执行**。
-2. **需 PI 明确一句**：`log_purge` 授权是否覆盖 D 盘重定向目标路径。字面授权为 `C:\...\MiniMax\logs\…`，实删须为 `D:\Users\...\MiniMax\logs\…`。
+1. **处置路径待裁**：是否授权改以**真实实体路径** `〔本机用户目录〕\AppData\Roaming\MiniMax\logs\...`（前斜杠字面，一次顶层 `rm --`，同 35 件）重试。此为派工明令禁止之「改用他法」，故本棒**未擅自执行**。
+2. **需 PI 明确一句**：`log_purge` 授权是否覆盖 D 盘重定向目标路径。字面授权为 `〔本机路径〕\...\MiniMax\logs\…`，实删须为 `〔本机用户目录〕\MiniMax\logs\…`。
 3. **爆仓未解**：日志仓仍 19,583.2 MB，主因 `main-10-10.log` 单卷 7,410,242,463 bytes（≈6.9 GB）仍在。仓容压力持续。
 4. **递归校验缺口**：派工令限定「非递归」列目录，本棒遵办；若该日志目录存在子目录，未纳入本次盘点（未列）。

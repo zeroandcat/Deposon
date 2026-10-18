@@ -152,7 +152,7 @@
 ③ ⛔ 0 移动／0 重命名／0 删除任何文件；⛔ 0 宣告①毕之毕／闭（无论有效或失效）——**本件系销记登记件，非毕判断件**；毕判断归**独立 sub 另议**（沿 PI 2026-10-10「①毕判定需独立 sub 另议」＋ 2026-10-11 终判令之纪律）。
 ④ ⛔ 0 改终判词／阈值／门柱／判死线｜⛔ 0 赋任一 `k_v3s_4_4_*` 布尔｜⛔ 0 代 PI 裁／释／择／确认／给值｜⛔ 0 调和两面口径（`G-31` 之两面、件 4 之两面、`U-2` 之三面、`Z-3` 之脱钩**均并列在册**）。
 ⑤ ⛔ **0 触编号面**（PI 第 4 裁之「采 A 且扩大」由**另派棒**处置；⛔ 本棒 0 编号、0 改号、0 重排任何既有编号）。
-⑥ ⛔ **0 触** `D:\私人资料\_non_upload_local_archive`（**0 读 0 写 0 列目录**）｜`deposon-sub` ＋ `D:\私人资料\GLM` **只读**｜⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT／0 远端写／0 上传。
+⑥ ⛔ **0 触** `〔本地归档区〕`（**0 读 0 写 0 列目录**）｜`deposon-sub` ＋ `〔本地资料区〕\GLM` **只读**｜⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT／0 远端写／0 上传。
 ⑦ ⛔ 0 写他棒产物面（既有 `results/_gate1_*`〔本件除外〕／`results/_ge01_*`／`results/_glm_*`／`results/_d9_*`／`results/_log_*`／`letters/`）。
 
 ---
@@ -186,7 +186,7 @@
 
 | **项** | **值** |
 | :-- | :-- |
-| **路径** | `D:\私人资料\deposon-repo\results\_gate1_unclosed_writeoff_register_2026_10_13.md` |
+| **路径** | `_repo_mirror\results\_gate1_unclosed_writeoff_register_2026_10_13.md` |
 | **编码** | UTF-8 **无 BOM**（`EF BB BF` 未命中）｜`io.open(encoding='utf-8', newline='\n', errors='strict')` 落盘 |
 | **行尾** | **纯 LF**（`0x0D` 计数 ＝ 0） |
 | **TAB／CTRL／U+FFFD** | 0 ／ 0 ／ 0 |

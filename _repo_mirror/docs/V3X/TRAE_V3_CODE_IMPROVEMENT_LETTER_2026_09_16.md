@@ -57,7 +57,7 @@
 ## §4 不改项与记录(交 minimax/Mavis 自行处置)
 
 1. **skill_a/b/c/d 缺 SELF-CHECK** —— 属 16 frozen, 不可动, 仅报告(下次拍板窗口补)
-2. **`_p_k` 依赖 repo 外绝对路径** `C:\Users\...\kimi\tasks\...` —— 可复现性缺陷, 建议改为可配置 + 存在性检查; 本信不改(委外脚本逻辑)
+2. **`_p_k` 依赖 repo 外绝对路径** `〔本机用户目录〕\kimi\tasks\...` —— 可复现性缺陷, 建议改为可配置 + 存在性检查; 本信不改(委外脚本逻辑)
 3. **`_d7_*_09_18.py` 两个文件日期超前**(今天 09-16) —— D7 预备件, 记录
 4. **numpy 环境依赖未声明** —— 12 个 runner 强依赖 numpy 但无 requirements/README 声明; 建议补环境声明
 5. **早前轮次已修的 minimax 链**(extract_number 千分位 → minimax 22/30 非 21/30)仍属本走读范围, 见 `_fix_minimax_extract_2026_09_16.py`

@@ -9,9 +9,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import recycle_channel as rc
 
 SID = r"S-1-5-21-1515631758-409240343-2904948024-500"
-S2 = r"D:\私人资料\deposon-repo\tools\_archive_purge_2026_10_17\step2_sample_verify.json"
-S3 = r"D:\私人资料\deposon-repo\tools\_archive_purge_2026_10_17\step3_bulk_result.json"
-OUT = r"D:\私人资料\deposon-repo\tools\_archive_purge_2026_10_17\step4_bin_audit.json"
+S2 = r"_repo_mirror\tools\_archive_purge_2026_10_17\step2_sample_verify.json"
+S3 = r"_repo_mirror\tools\_archive_purge_2026_10_17\step3_bulk_result.json"
+OUT = r"_repo_mirror\tools\_archive_purge_2026_10_17\step4_bin_audit.json"
 
 
 def main():

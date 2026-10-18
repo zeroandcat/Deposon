@@ -14,7 +14,7 @@ P2-8: 聚合件表头 "5 件"→实际行数
 import hashlib, json, os
 from pathlib import Path
 
-ROOT = Path(r'D:\私人资料\deposon-repo')
+ROOT = Path(r'_repo_mirror')
 MARK = 'TRAE_FIXED_2026_09_18'
 log = []
 

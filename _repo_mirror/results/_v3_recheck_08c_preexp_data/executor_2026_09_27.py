@@ -246,7 +246,7 @@ def main() -> int:
 
     skill = {
         "requested": "scientific-research-workflows:experimental-design (plugin @scientific-research-workflows)",
-        "status": "Local skill not found —— C:/Users/Administrator/.minimax/plugins 实测 0 项（空目录）；"
+        "status": "Local skill not found —— 〔本机用户目录〕/.minimax/plugins 实测 0 项（空目录）；"
                   "本 turn 0 挂载任何 skill 加载工具；skills/ 下 0 命中 experimental-design",
         "fallback": "纪律锚 fallback = v1.3 prereg §1.1/§1.2/§1.3/§2.1 字面 + 08b executor 的 "
                     "powerlaw_r2 实现 + spec §3.1/§3.3/§4.1/§5 字面（0 自创条文）",

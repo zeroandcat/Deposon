@@ -79,10 +79,10 @@ import requests as _requests
 # ============================================================
 # 路径与常量
 # ============================================================
-ROOT = "D:/私人资料/deposon-repo"
+ROOT = "_repo_mirror"
 RESULTS_DIR = os.path.join(ROOT, "results")
 CAPTIONS_PATH = os.path.join(ROOT, "corpus", "v20_caption_surface", "strip_captions_22.json")
-KEY_SOURCE_PATH = "C:/Users/Administrator/Desktop/AI/LLM API.txt"
+KEY_SOURCE_PATH = "〔本机用户目录〕/Desktop/AI/LLM API.txt"
 
 # tun 代理（沿 user memory 2026-09-23 teamorouter/openrouter 必走 tun 防封号 + prereg §1.6.2）
 PROXY_HTTP = "http://127.0.0.1:1018"

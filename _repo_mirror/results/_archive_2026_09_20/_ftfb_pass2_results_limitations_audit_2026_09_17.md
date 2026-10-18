@@ -86,7 +86,7 @@
 
 ## 文件路径
 
-- 报告路径：`D:/私人资料/deposon-repo/results/_ftfb_pass2_results_limitations_audit_2026_09_17.md`
+- 报告路径：`_repo_mirror/results/_ftfb_pass2_results_limitations_audit_2026_09_17.md`
 - 报告字节数：报告最终定稿字节数（含本行）
 - 报告 SHA-12：在外层汇报消息中给出（避免自我引用悖论）
 

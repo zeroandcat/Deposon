@@ -29,7 +29,7 @@
 ### A-1 · P-1 · H4／H5 之 `os.listdir(RESULTS)` 域读取面（硬阻断）
 
 - **病灶事实**：`RESULTS` 仍 ＝ `deposon-sub\results`，而 `*addendum*.json` **实测 sub 侧 0 件／repo 侧 21 件** ⇒ `load_domain()` 返空 ⇒ `domain_gate` `len(files) != 21` ⇒ `sys.exit(2)`。
-- **修法**：将 3 处**域读取调用点**改指既有 D9 常量 `REPO_RESULTS`（＝ `D:\私人资料\deposon-repo\results`）。
+- **修法**：将 3 处**域读取调用点**改指既有 D9 常量 `REPO_RESULTS`（＝ `_repo_mirror\results`）。
 - **为何改调用点而不改 `RESULTS` 定义行**：① 全件 `RESULTS` 实测**仅 4 处**（定义 ＋ 3 读取），逐处皆**只读**，改定义行虽省 1 行但**改变常量语义**（牵动 `RESULTS` 之名）；② 改调用点则 `RESULTS` 定义行**一字不动**、`REPO_RESULTS`（L61／L74）在调用点之前定义，**无先后序问题**；③ 与执行登记 §2 已确立之「显式绝对路径常量」口径一致，⛔ 0 新造字面。
 
 **件 H4** `_s4_heldout_sampling_seedprime_extractor_2026_10_10.py`
@@ -53,7 +53,7 @@
 ### A-2 · P-2 · H3 之 `relative_to(REPO)` ×2（必抛 `ValueError`）
 
 - **病灶事实**：`REPO` ＝ `deposon-sub`（⛔ 未改），而 4 条输入常量已改指 `deposon-repo` ⇒ `relative_to` 抛错；**L117 位于模块顶层 ⇒ 导入即崩**。
-- **修法**：改**两处调用**之基准为 `REPO_ROOT.parent`（＝ `D:\私人资料`，两区之**共同祖先**）。
+- **修法**：改**两处调用**之基准为 `REPO_ROOT.parent`（＝ `〔本地资料区〕`，两区之**共同祖先**）。
 - **为何不改 `REPO` 定义行（L56）**：改 L56 虽省 1 行，但会**连带改写** `SRC_BOSS_PA1`（L60，依底本 §2.6 明示 0 改动）与 `SRC_ANCHOR_FALLBACK`（L62，P-4 待裁面）之**实际指向**——此二者为执行登记 §6 明载之登记项，⛔ 0 由本棒静默变更。改调用点则二者**逐字不动**。
 - **为何取 `REPO_ROOT.parent` 而非 `REPO_ROOT`**：`inputs` 四项中 `SRC_BOSS_PA1` 仍锚 `REPO`（sub 面），`REPO_ROOT` **非其祖先** ⇒ 取 `REPO_ROOT` 会使 L117 **由 3/4 错变为 4/4 错**；取共同祖先则 **4/4 ＋ OUT_JSON 5/5 全通过**（下方实测）。L735 之 `OUT_JSON` 属 repo 侧，取共同祖先亦通过，**两行取同一基准**以免口径分裂。
 
@@ -66,7 +66,7 @@
 
 **静态验证**（纯 `pathlib` 求值，⛔ 0 执行 runner）：
 
-| 项 | 基准 `REPO_ROOT.parent` ＝ `D:\私人资料` 之求值 |
+| 项 | 基准 `REPO_ROOT.parent` ＝ `〔本地资料区〕` 之求值 |
 |---|---|
 | `SRC_V3_PHYS` | `deposon-repo\results\deposon_v3_physical_opt_60cells_2026_09_11.json` |
 | `SRC_PE3` | `deposon-repo\results\deposon_boss_pe_3_reservoir_verify_9m60c_2026_09_15.json` |
@@ -87,7 +87,7 @@
 |---|---|---|
 | L314 | `    sys.path.insert(0, os.path.join(REPO, ".tmp"))` | `    sys.path.insert(0, os.path.join(os.path.dirname(REPO_RESULTS), ".tmp"))` |
 
-**静态验证**：目标 `D:\私人资料\deposon-repo\.tmp` 实测 **`isdir=True`**，`s4_regen_runner.py` **存在**（`sub\.tmp` 仍 `isdir=False`／文件不存在）。
+**静态验证**：目标 `_repo_mirror\.tmp` 实测 **`isdir=True`**，`s4_regen_runner.py` **存在**（`sub\.tmp` 仍 `isdir=False`／文件不存在）。
 ⛔ L315 之 `import` 行、⛔ L317 之 `.tmp/prep.py` **注释**——**一字未动**（注释非执行面）。
 
 ### A-4 · 逐件指纹（改前 → 改后）
@@ -178,7 +178,7 @@
 
 - ⛔ **0 回改任何 markdown 既有件一字**——含独立复核件 `732cfae29bbc`、执行登记 `0ea7852c4511`、底本 `c3167a531e0e`、v2 `d6ff7e9b4bd6`、勘误 `7395034a09aa`、回写映射 `ff0a25dc2720`、越界项 `0ec673877e14`。
 - ⛔ **0 编辑** H1／H2 及其余任何 `.py`；**唯一编辑对象 ＝ H3／H4／H5 之 9 行**（§A 逐行留痕，逐行差分实证 0 溢出）。
-- ⛔ **0 移动／0 重命名／0 删除**任何件；⛔ **0 触** `D:\私人资料\_non_upload_local_archive`（**0 读 0 写 0 列目录**）；临时脚本与快照仅落 `%TEMP%`，**未入仓**。
+- ⛔ **0 移动／0 重命名／0 删除**任何件；⛔ **0 触** `〔本地归档区〕`（**0 读 0 写 0 列目录**）；临时脚本与快照仅落 `%TEMP%`，**未入仓**。
 - ⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT；⛔ **0 改终判词／阈值／门柱／判死线**（`len(files) != 21`、`sys.exit(2)` 皆未触碰）；⛔ 0 赋 `k_v3s_4_4_*` 布尔；⛔ **0 执行任何 runner**；⛔ 0 宣告①毕。
 - ⛔ 0 写他棒产物名域（`_d9_independent_review*`／`_d9_rewrite_execution_register*`／`_g1_*`／`_g2_*`／`_n2_*`／`letters/`／`_bob_*`／`_remote_baseline*`／`_archive_2026-10-12`）。
 

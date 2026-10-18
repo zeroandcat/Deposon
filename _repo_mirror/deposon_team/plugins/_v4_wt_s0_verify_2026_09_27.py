@@ -5,7 +5,7 @@ _v4_wt_s0_verify — V4 走读委托 §E 指纹索引 + §C 清单盘面核验�
 """
 import hashlib, os, glob
 
-REPO = r'D:\私人资料\deposon-repo'
+REPO = r'_repo_mirror'
 
 def sha12(p):
     with open(p, 'rb') as f:

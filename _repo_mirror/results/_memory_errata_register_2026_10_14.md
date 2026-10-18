@@ -7,7 +7,7 @@
 | **起草方** | doc-writer（`agent-0032834a3e04` · 起草类 · 登记/机制文书） |
 | **PI 上游令** | PI 2026-10-14 22:4x 令「修订勘误全记忆，升级完善备忘录，健全机制防降智」 |
 | **事实来源** | 主代理亲办之全记忆审计结论（派工单逐字转录）＋ 已落实于两档记忆之 4 处 edit |
-| **审计面** | user memory `C:\Users\Administrator\.minimax\memory\user.md`（约 550 行 · 60+ 条）＋ agent memory `C:\Users\Administrator\.minimax\agents\mavis\memory\MEMORY.md`（2,271 行 · 197 KB · 100+ 条） |
+| **审计面** | user memory `〔本机用户目录〕\.minimax\memory\user.md`（约 550 行 · 60+ 条）＋ agent memory `〔本机用户目录〕\.minimax\agents\mavis\memory\MEMORY.md`（2,271 行 · 197 KB · 100+ 条） |
 | **夜间模式** | 本件系夜间「静默推进」令下之产出 —— **候 PI 核准 · ⛔ 0 径行采认**，复工时出卡复核 |
 | **配套件** | `results/_anti_degradation_mechanism_2026_10_14.md`（防降智机制件 · 草案 · 候 PI 核准） |
 
@@ -18,8 +18,8 @@
 ## §1 审计面与方法
 
 - **审计面二档**（主代理实测）：
-  1. user memory `C:\Users\Administrator\.minimax\memory\user.md` —— 约 550 行，60+ 条；
-  2. agent memory `C:\Users\Administrator\.minimax\agents\mavis\memory\MEMORY.md` —— 2,271 行 / 197 KB，100+ 条。
+  1. user memory `〔本机用户目录〕\.minimax\memory\user.md` —— 约 550 行，60+ 条；
+  2. agent memory `〔本机用户目录〕\.minimax\agents\mavis\memory\MEMORY.md` —— 2,271 行 / 197 KB，100+ 条。
 - **方法**（两段）：
   1. **标题面全量测绘** —— `^### ` 全枚举，得全条目清单（防遗漏）；
   2. **高风险面逐条回读** —— 名册 / 终判口径 / Token Plan / 夜间模式 / 纪律射程 / key 面，逐条实测回读，⛔ 0 凭印象。

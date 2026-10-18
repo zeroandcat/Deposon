@@ -2,7 +2,7 @@
 """_v4_wt_s4b_b4recompute — B4 逐字段重算 + 候选字段搜索（只读）"""
 import hashlib, json, statistics, itertools
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo'); RES = REPO / 'results'
+REPO = Path(r'_repo_mirror'); RES = REPO / 'results'
 
 PJ = json.loads((RES / '_p_j_convergence_basin_2026_09_16' / 'p_j_convergence_basin_results_2026_09_16.json').read_text(encoding='utf-8'))
 V3 = json.loads((RES / 'deposon_v3_physical_opt_60cells_2026_09_11.json').read_text(encoding='utf-8'))

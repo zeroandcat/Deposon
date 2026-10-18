@@ -1,7 +1,7 @@
 import re
 import os
 
-DIR = r'D:\私人资料\deposon-repo\.mavis\scripts\kt_b1'
+DIR = r'_repo_mirror\.mavis\scripts\kt_b1'
 for fn in ['boss_b1_sinkhorn_ot.py', 'boss_b2_kd.py', 'boss_b3_llmlingua.py']:
     fn = os.path.join(DIR, fn)
     with open(fn, 'r', encoding='utf-8') as f:

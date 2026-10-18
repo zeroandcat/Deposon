@@ -72,7 +72,7 @@
 | 远端 @ R2 终态 `f44996fbfd9f` | `dc9cb0e02922` | 28,370 |
 | **全盘搜 `66f900b7598b` 之实体** | **1 命中** | 28,352 |
 
-`66f900b7598b`(28,352 B) 之唯一实体：`D:\私人资料\_non_upload_local_archive\results\_remote_version_freeze_2026_10_12\_d1_ruling_and_s3_transition_2026_10_01.md.remote_2026_10_12`（10-12 远端版冻结件）。
+`66f900b7598b`(28,352 B) 之唯一实体：`〔本地归档区〕\results\_remote_version_freeze_2026_10_12\_d1_ruling_and_s3_transition_2026_10_01.md.remote_2026_10_12`（10-12 远端版冻结件）。
 
 ⇒ **远端 9 件所引之指纹，在其自身远端树中已无对应实体**（本地与远端树皆为 `dc9cb0e02922`）；本地 9 件所引与双区现态**相符**。
 
@@ -97,16 +97,16 @@
 
 | # | rel | 区 | 行数 L/R | +/− | 差异 |
 |--:|---|:-:|---|--:|---|
-| 8 | `results/_s4_heldout_sampling_seedprime_extractor_2026_10_10.py` | SUB | 440/439 | +5/−6 | `REPO_RESULTS = r"D:\私人资料\deposon-repo\results"` → `RESULTS` |
+| 8 | `results/_s4_heldout_sampling_seedprime_extractor_2026_10_10.py` | SUB | 440/439 | +5/−6 | `REPO_RESULTS = r"_repo_mirror\results"` → `RESULTS` |
 | 9 | `results/_s4_heldout_sampling_seedthird_extractor_2026_10_11.py` | SUB | 842/841 | +11/−12 | 同上（9 处引用改写） |
-| 10 | `results/_s4prime_readings_runner_2026_10_11.py` | SUB | 464/463 | +7/−8 | `REPO_RESULTS = pathlib.Path(r"D:\…")` → `RESULTS` |
+| 10 | `results/_s4prime_readings_runner_2026_10_11.py` | SUB | 464/463 | +7/−8 | `REPO_RESULTS = pathlib.Path(r"〔本机路径〕\…")` → `RESULTS` |
 | 11 | `results/_s5doubleprime_five_lines_runner_2026_10_11.py` | SUB | 592/591 | +5/−6 | 同上 ＋ `EXECUTOR` 归位 |
-| 13 | `results/_v3_recheck_05_executor_2026_09_28.py` | SUB | 735/734 | +6/−7 | `REPO_ROOT = Path(r"D:\私人资料\deposon-repo")` → `REPO`（含 `relative_to` 根） |
+| 13 | `results/_v3_recheck_05_executor_2026_09_28.py` | SUB | 735/734 | +6/−7 | `REPO_ROOT = Path(r"_repo_mirror")` → `REPO`（含 `relative_to` 根） |
 | 14 | `results/_v3_recheck_05_result_2026_09_28.json` | REPO | —（JSON·17 top keys 两面同） | 50 B | 4 处 `path` 剥 `deposon-repo/` `deposon-sub/` 前缀；一处 `exists: true→false` |
 
 **#14 之 `exists` 差之定性**：`conservation_py` 归档回退路径 `_archive_deposon_2026_09_17/verifier/audit/conservation.py`——实测 **REPO 区 ABSENT**、**SUB 区 EXISTS**。故 `exists` 之差系**根差异（`REPO_ROOT.parent` vs `REPO`）之派生结果**，非独立内容争议。
 
-**判读**：① 远端为 as-uploaded 之 R2 合规形态（相对路径）；② 远端**不含**本地所无之内容——其相对路径化恰为脱敏之体现；③ 提交面证据：commit `44d7b302f444`(2026-10-12T04:36:51Z) 与 R2 终态 `f44996fbfd9f`(04:36:59Z) 之题名均含「**abs-path correction** ＋ desensitiz…」——**R2 体例明载绝对路径纠正**。以本地覆盖 ＝ 将 `D:\私人资料\…` 复推入上传面 ＝ **逆转 R2 体例**。
+**判读**：① 远端为 as-uploaded 之 R2 合规形态（相对路径）；② 远端**不含**本地所无之内容——其相对路径化恰为脱敏之体现；③ 提交面证据：commit `44d7b302f444`(2026-10-12T04:36:51Z) 与 R2 终态 `f44996fbfd9f`(04:36:59Z) 之题名均含「**abs-path correction** ＋ desensitiz…」——**R2 体例明载绝对路径纠正**。以本地覆盖 ＝ 将 `〔本地资料区〕\…` 复推入上传面 ＝ **逆转 R2 体例**。
 ⇒ **推荐：不需覆盖**（远端版应存）。附带资产缺陷登记见 KD-26。
 
 ### 组 C ＝ #16 `tools/exp_harness.py` → **须 PI 逐件裁**
@@ -119,7 +119,7 @@
 
 **判读之互斥点**：
 - 判「**需覆盖**」之依据成立：远端为 **4 周前之镜像**，V0.3–V0.6 全块缺失（含 10-17 `K-C3` 键面遮蔽臂 `build_decision_observation`／`render_observation_text`／`MASKED_KEY_FIELDS`／`ExperimentHarness(mask_key_fields=…)`），本地为在册工作版（承 `_t5_anchor_drift_authorized_register_2026_10_15.md`、`_material_expansion_drift_authorized_register_2026_10_16.md`、`.tmp/harness_mask_kill_freeze_2026_10_17.json` 之登记面）。
-- 判「**不需覆盖**」之依据亦成立：本地版**自身仍含**机-specific 绝对路径（L108 `D:/私人资料/deposon-repo/results/deposon_v20_baselines.json`、L109 `…_v21_gtformal.json`），以本地直覆 ＝ 将绝对路径推入上传面，**与 R2「abs-path correction」面冲突**。
+- 判「**不需覆盖**」之依据亦成立：本地版**自身仍含**机-specific 绝对路径（L108 `_repo_mirror/results/deposon_v20_baselines.json`、L109 `…_v21_gtformal.json`），以本地直覆 ＝ 将绝对路径推入上传面，**与 R2「abs-path correction」面冲突**。
 - 故**两判据互斥、正解非「直覆」**——应为「以当前版为准 ＋ 先出脱敏版」，然该取舍（是否脱敏、覆盖抑或另推）**属 PI 裁量**。
 ⇒ **推荐：须 PI 逐件裁**。⛔ 本棒 0 代裁、0 代取舍。
 
@@ -134,7 +134,7 @@
 | **KD-23** | 引用路径规范（远端前缀缺失） | 登记件之 `rel` 记本地区相对路径，远端实存为 `_september_workspace/<rel>`；按字面 `rel` 直取 raw 得 **16/16 HTTP 404**。登记件之 16 组 remote sha1 本身准确（0 读数之失），**失者在路径表述之可执行性**。建议后续登记件一律双列「本地区 rel」与「远端 rel」。 |
 | **KD-24** | 同一性（CONFLICT／SAME_IDENTITY） | HEAD 树内：#5、#7 各有 **2 份副本且哈希相异**——canonical 副本载远端哈希（`e59531f0…`／`17ba92d2…`），`_september_workspace/results/_glm_evidence_unpacked_2026_10_13/_september_workspace/results/` 内副本载**本地**哈希（`826ea327…`／`d60daddd…`）⇒ **CONFLICT**（同名不同哈希，登记不覆盖）。#14 有 2 份副本、哈希**同为** `948ae3ec…` ⇒ **SAME_IDENTITY**（不重复计数）。其余 13 件 HEAD 树内单副本。 |
 | **KD-25** | 域级漂移（单件处置不足） | 组 A 之锚件引用漂移**非 16 件独有**：本地全盘有 **115 件**引用字面 `66f900b7598b`。故 9 件虽逐件证据面支持「需覆盖」，**正解宜域级处置**（统一回填 `dc9cb0e02922` 或另立新锚），单件覆盖仅为局部。处置取舍属 PI。 |
-| **KD-26** | 资产缺陷（跨区绝对路径依赖） | #8 #9 #10 #11 位于 **SUB 区**却硬编码指向 **REPO 区** `D:\私人资料\deposon-repo\results`——跨区绝对路径依赖；#16 两面**均**含 `D:/私人资料/deposon-repo/results/…`（L108/L109）。**缺陷层登记，⛔0 代修**（涉及运行语义，超本棒射程）。 |
+| **KD-26** | 资产缺陷（跨区绝对路径依赖） | #8 #9 #10 #11 位于 **SUB 区**却硬编码指向 **REPO 区** `_repo_mirror\results`——跨区绝对路径依赖；#16 两面**均**含 `_repo_mirror/results/…`（L108/L109）。**缺陷层登记，⛔0 代修**（涉及运行语义，超本棒射程）。 |
 | **KD-27** | 定性勘误（登记件前提） | 登记件将 16 件定性为「**第三方改动件**」（远端＝第三方之工作、0 覆盖）。实测时序与之**不合**：15/16 件之远端版为**较早之 as-uploaded 形态**（#8–#11 推于 10-12T03:19Z、#13 于 09-30），而本地版 mtime 更晚（10-12 23:53 → 10-14 14:07）；**惟 #16 例外**（远端为 09-20 镜像，远端更旧）。故「远端＝第三方改动」与「远端＝未随本地更新之旧镜像」二读并存。**定性之权属 PI，本棒 0 代裁**——仅登记，不翻案。 |
 
 ---

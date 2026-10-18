@@ -48,8 +48,8 @@
 
 | 目标根 | 沿用的既有惯例 | 撞名实测 |
 |---|---|---|
-| `D:\私人资料\_non_upload_local_archive\_movedout_scratch_2026_09_29\` | ① `deposon-sub/tmp_movedout_2026_09_28/`（09-28 移出棒先例，`moved-out + 日期` 命名）；② 归档区 `results/_remote_version_freeze_2026_09_26/`（`_name_YYYY_MM_DD` 形态）⇒ 取二者交集 `_movedout_scratch_2026_09_29` | **exists=False**（0 覆盖） |
-| `D:\私人资料\deposon-sub\tmp_movedout_2026_09_29\` | **完全对齐** 09-28 先例目录名 `tmp_movedout_2026_09_28` | **exists=False**（0 覆盖） |
+| `〔本地归档区〕\_movedout_scratch_2026_09_29\` | ① `deposon-sub/tmp_movedout_2026_09_28/`（09-28 移出棒先例，`moved-out + 日期` 命名）；② 归档区 `results/_remote_version_freeze_2026_09_26/`（`_name_YYYY_MM_DD` 形态）⇒ 取二者交集 `_movedout_scratch_2026_09_29` | **exists=False**（0 覆盖） |
+| `_repo_mirror\tmp_movedout_2026_09_29\` | **完全对齐** 09-28 先例目录名 `tmp_movedout_2026_09_28` | **exists=False**（0 覆盖） |
 
 > ⚠️ **每目录内 4 项目标名同名实测 ＝ 0 命中**（`.scratch_gamma_r1` / `.scratch_rj5` / `.scratch_t_verify` / `verif_doubt6_v_20260928` 在归档区全树命中数均为 **0**）⇒ 触发派工单「同名存在 ⇒ 停手列报」条件者 **0 件**。
 

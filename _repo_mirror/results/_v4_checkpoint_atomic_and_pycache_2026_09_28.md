@@ -243,19 +243,19 @@ def _atomic_write_json(obj, path, indent=None):
 
 ### §4.2 处置动作（mavis-trash 可恢复，0 永久删除）
 
-**清理通道**：`C:\Users\Administrator\.minimax\bin\mavis-trash.cmd`（runtime 信任启动器，沿慢处置 B §1.2 同款）。
+**清理通道**：`〔本机用户目录〕\.minimax\bin\mavis-trash.cmd`（runtime 信任启动器，沿慢处置 B §1.2 同款）。
 **处置粒度**：逐**目录**为单元（`.pyc` + 空目录一次清走），沿慢处置 B §3.2 先例。
 **回执（8 条逐字）**：
 
 ```
-mavis-trash: moved to trash: 'D:\私人资料\deposon-repo\.tmp\__pycache__'
-mavis-trash: moved to trash: 'D:\私人资料\deposon-repo\verifier\kill_lines\__pycache__'
-mavis-trash: moved to trash: 'D:\私人资料\deposon-repo\verifier\audit\__pycache__'
-mavis-trash: moved to trash: 'D:\私人资料\deposon-repo\results\__pycache__'
-mavis-trash: moved to trash: 'D:\私人资料\deposon-repo\results\_v3_recheck_08b_executor\__pycache__'
-mavis-trash: moved to trash: 'D:\私人资料\deposon-repo\results\_v3_s1_executor\__pycache__'
-mavis-trash: moved to trash: 'D:\私人资料\deposon-repo\results\_v3_s3_wordexpand_data\__pycache__'
-mavis-trash: moved to trash: 'D:\私人资料\deposon-repo\deposon_team\plugins\__pycache__'
+mavis-trash: moved to trash: '_repo_mirror\.tmp\__pycache__'
+mavis-trash: moved to trash: '_repo_mirror\verifier\kill_lines\__pycache__'
+mavis-trash: moved to trash: '_repo_mirror\verifier\audit\__pycache__'
+mavis-trash: moved to trash: '_repo_mirror\results\__pycache__'
+mavis-trash: moved to trash: '_repo_mirror\results\_v3_recheck_08b_executor\__pycache__'
+mavis-trash: moved to trash: '_repo_mirror\results\_v3_s1_executor\__pycache__'
+mavis-trash: moved to trash: '_repo_mirror\results\_v3_s3_wordexpand_data\__pycache__'
+mavis-trash: moved to trash: '_repo_mirror\deposon_team\plugins\__pycache__'
 ```
 
 另：验证沙箱 `.tmp/_cpatomic_scratch/` 同通道清走（`moved to trash`），0 永久删除。

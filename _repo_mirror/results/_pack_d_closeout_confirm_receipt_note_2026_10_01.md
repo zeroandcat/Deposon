@@ -70,7 +70,7 @@
 | 轮 | # | 探针 | 真值 |
 |---:|---:|---|---|
 | **1** | 1 | 相对精确名 `Test-Path results/_pack_d_closeout_confirm_receipt_note_2026_10_01.md` | **False** |
-| 1 | 2 | 绝对路径 `Test-Path D:\私人资料\deposon-repo\results\_pack_d_closeout_confirm_receipt_note_2026_10_01.md` | **False** |
+| 1 | 2 | 绝对路径 `Test-Path _repo_mirror\results\_pack_d_closeout_confirm_receipt_note_2026_10_01.md` | **False** |
 | 1 | 3 | `results/` 递归 `*confirm_receipt*` 命中数 | **0** |
 | 1 | 4 | `results/` 顶层 `*receipt*` 命中 | **`_batch3_receipt_kimi_2026_10_01.md`、`_upload_execution_receipt_kimi_2026_09_26.md`、`_upload_execution_receipt_kimi_2026_09_30.md`**（⚠ **均非同名**，他棒之独立件，仅记录以证探针已执行 ⇒ **不构成撞名**） |
 | **2** | 5 | 全仓递归文件名含 `confirm_receipt` | **0 命中** |
@@ -84,7 +84,7 @@
 
 ### §0.6 工具回执实测（**L3 · 系统侧只读 · 1/1 命中**）
 
-> 查询纪律：sqlite URI **`file:C:/Users/Administrator/.minimax/v2/sqlite/runtime-state.sqlite?mode=ro`**（**只读**），表 `questionnaire_requests`，`WHERE request_id LIKE '%754e869def6f370db70c6292%'`。⚠️ 该库位置沿盘上环境登记（L4：`sweep_scan_2026_10_01/qq_out.txt` L3329 载「会话/问卷/队列记录＝`…\v2\sqlite\runtime-state.sqlite`（`questionnaire_requests`／`local_runtime_queue_items` 等，**受控只读**）」）⇒ 本棒**只读**使用，⛔ 0 写、⛔ 0 复制入仓。查询窗 ＝ 15:56（GMT+8）· 晚于卡之 `answered_at`。
+> 查询纪律：sqlite URI **`file:〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite?mode=ro`**（**只读**），表 `questionnaire_requests`，`WHERE request_id LIKE '%754e869def6f370db70c6292%'`。⚠️ 该库位置沿盘上环境登记（L4：`sweep_scan_2026_10_01/qq_out.txt` L3329 载「会话/问卷/队列记录＝`…\v2\sqlite\runtime-state.sqlite`（`questionnaire_requests`／`local_runtime_queue_items` 等，**受控只读**）」）⇒ 本棒**只读**使用，⛔ 0 写、⛔ 0 复制入仓。查询窗 ＝ 15:56（GMT+8）· 晚于卡之 `answered_at`。
 
 **§0.6-1 回执逐字字段（L1）**
 

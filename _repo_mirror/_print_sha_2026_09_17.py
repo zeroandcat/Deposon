@@ -15,7 +15,7 @@ files = [
 ]
 print('%-10s %-14s %-10s %s' % ('Type', 'SHA-12', 'Size', 'Filename'))
 print('-' * 110)
-rd = Path('D:/私人资料/deposon-repo/results')
+rd = Path('_repo_mirror/results')
 for label, name in files:
     p = rd / name
     if p.exists():

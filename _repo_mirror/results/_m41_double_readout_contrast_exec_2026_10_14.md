@@ -117,7 +117,7 @@ M-41 之双读数对照实验**设计已成且机械面已实算**（具名伪�
 | **BL-2** | **`eps` 之值** | 失真倍数之 `eps` **须 PI 于 prereg 固定**（计算器文档串逐字）；本棒 ⛔ 0 代定 | **PI 给值**（本棒已绕开：只报 `D` 之误差率，0 涉 `eps`） |
 | **BL-3** | **非饱和基线** | `M2_Greedy` 于本批次 **32/32 全对** ⇒ 基线面读数恒 0、0 判别力 | 换用 `M3_Random` 或调低任务难度使基线落于 (0,1) 开集；**此属设计面调整，⛔ 0 棒自调**（候 PI 核准） |
 
-> 📌 **key 面处置**：本棒**未**读取 `tools/read_key.py`（其输出逐字打印 key 之 `prefix`／`suffix`，与 R4 相冲）；改以自立只读探针（`.tmp/m41_keyprobe.py`／`.tmp/m41_keysurvey.py`）**只报存在性与长度**。**key 之值、片段、前后缀 ⛔ 0 入本件、0 入日志、0 入 prompt**。另实测：`tools/read_key.py` 与 `tools/llm_client.py` 所载 key 文件路径 `C:\Users\Administrator\Desktop\AI\新建文本文档.txt` **不存在**（本棒 `os.path.isfile` 实测 `False`）⇒ 该二件之**文件回退通道已失效**，仅余 env 通道可用。
+> 📌 **key 面处置**：本棒**未**读取 `tools/read_key.py`（其输出逐字打印 key 之 `prefix`／`suffix`，与 R4 相冲）；改以自立只读探针（`.tmp/m41_keyprobe.py`／`.tmp/m41_keysurvey.py`）**只报存在性与长度**。**key 之值、片段、前后缀 ⛔ 0 入本件、0 入日志、0 入 prompt**。另实测：`tools/read_key.py` 与 `tools/llm_client.py` 所载 key 文件路径 `〔本机用户目录〕\Desktop\AI\新建文本文档.txt` **不存在**（本棒 `os.path.isfile` 实测 `False`）⇒ 该二件之**文件回退通道已失效**，仅余 env 通道可用。
 
 ---
 

@@ -28,7 +28,7 @@
  - P-G V0 spec `2f0765a1d39d`
 3. **不动 verifier/mavis/.builtin/scripts/ 目录**
 4. **修 8 个修复点** 在 `deposon_team/plugins/fix_*.py` 新建(用户可选用),或 在 `/tmp/fix_*.py` 临时目录新建(不落盘)→ 修后让 Mavis 复审
-5. **key 永不入 prompt / JSON / 落盘**: 不读 `C:\Users\Administrator\Desktop\AI\新建文本文档.txt`, 如必须读, 用 `Path().read_text()` runtime 读
+5. **key 永不入 prompt / JSON / 落盘**: 不读 `〔本机用户目录〕\Desktop\AI\新建文本文档.txt`, 如必须读, 用 `Path().read_text()` runtime 读
 6. **0 触动声明**: Trae 修复完后, 须 verify 18 frozen 文件 SHA-12 全 0 触动(沿 §7 验证表 + `_verify_15frozen.py` 双跑)
 7. **判定线预注册**: 沿 P-F V0.1 §5 纪律, 计算前锁定判定线, SELF-CHECK 断言块(任一失败不落盘)
 8. **D5 (09-16) 当前状态**: bg_44d89fa8 worker 后台跑批(540 LLM), 预计 ~1-2h 完成

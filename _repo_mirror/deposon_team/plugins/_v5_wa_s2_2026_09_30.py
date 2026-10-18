@@ -2,8 +2,8 @@
 """_v5_wa_s2 — §B.4 五条线索核验 + §C 审计面（只读）"""
 import hashlib, os, re
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo'); RES = REPO / 'results'
-ARCH = Path(r'D:\私人资料\_non_upload_local_archive')
+REPO = Path(r'_repo_mirror'); RES = REPO / 'results'
+ARCH = Path(r'〔本地归档区〕')
 def sha12(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12]
 def T(p): return Path(p).read_text(encoding='utf-8', errors='ignore')
 
@@ -65,12 +65,12 @@ commissioned = set()
 for base, n in ((REPO, 443), ):
     pass
 # 简化：取委托附录A/B/C 中的 basename 集合（从委托件文本抽）
-com = Path(r'D:\私人资料\deposon-repo\letters\TRAE_WALKTHROUGH_BUGFIX_AUDIT_REQUEST_2026_09_30.md').read_text(encoding='utf-8')
+com = Path(r'_repo_mirror\letters\TRAE_WALKTHROUGH_BUGFIX_AUDIT_REQUEST_2026_09_30.md').read_text(encoding='utf-8')
 names = set(re.findall(r'\|\s*\d+\s*\|\s*`([^`]+)`\s*\|', com))
 print(f'  委托附录表行抽取 basename {len(names)} 个')
 EXCL = ('.evidence_backup_2026_09_28', '.evidence_backup_2026_09_30', '_movedout_scratch_2026_09_30')
 miss = []
-for area in (r'D:\私人资料\deposon-repo', r'D:\私人资料\deposon-sub', r'D:\私人资料\_non_upload_local_archive'):
+for area in (r'_repo_mirror', r'_repo_mirror', r'〔本地归档区〕'):
     for dp, dns, fns in os.walk(area):
         dns[:] = [d for d in dns if d not in {'__pycache__','.git','.trae','.mavis'}]
         if any(x in dp for x in EXCL): continue
@@ -79,7 +79,7 @@ for area in (r'D:\私人资料\deposon-repo', r'D:\私人资料\deposon-sub', r'
             try: st = os.stat(q)
             except OSError: continue
             if st.st_mtime > B0 and fn not in names:
-                miss.append((q.replace(r'D:\私人资料'+os.sep,''), st.st_size, datetime.fromtimestamp(st.st_mtime).strftime('%m-%d %H:%M')))
+                miss.append((q.replace(r'〔本地资料区〕'+os.sep,''), st.st_size, datetime.fromtimestamp(st.st_mtime).strftime('%m-%d %H:%M')))
 print(f'  实测有而附录表行未含（按 basename 匹配）= {len(miss)} 件：')
 for m in miss[:30]:
     print(f'      {m}')

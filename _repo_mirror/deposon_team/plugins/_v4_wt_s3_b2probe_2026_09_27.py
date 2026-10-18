@@ -5,7 +5,7 @@ _v4_wt_s3_b2probe — B2 定因探测：v1 件 §0.2/§0.1 记值与盘上实测
 import hashlib, os, zlib
 from pathlib import Path
 
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_repo_mirror')
 
 def H(b): return hashlib.sha256(b).hexdigest()[:12]
 

@@ -4,7 +4,7 @@ import os, sys, io, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from recycle_exec import bin_dir_for, list_bin, decode_i
 
-REPO = r"D:\私人资料\deposon-repo"
+REPO = r"_repo_mirror"
 PROBE = r".tmp\h_mq20.py"
 abs_p = os.path.join(REPO, PROBE)
 bindir = bin_dir_for(abs_p)

@@ -10,7 +10,7 @@ from datetime import datetime, timezone, timedelta
 
 CST = timezone(timedelta(hours=8))
 
-RESULTS_DIR = Path(r'D:\私人资料\deposon-repo\results')
+RESULTS_DIR = Path(r'_repo_mirror\results')
 
 # locate the latest v3 artifacts
 artifacts = sorted([p for p in RESULTS_DIR.glob('_p_l_v3_phase2_or_embedding_v3_summary_*.json')], reverse=True)

@@ -81,7 +81,7 @@
 
 | # | 源路径 | 目标路径 | SHA-12 | 字节 |
 |---:|---|---|---|---:|
-| 1 | `D:\私人资料\deposon-repo\README_V1_LEGACY.md` | `D:\私人资料\deposon-sub\tmp_movedout_2026_10_01\legacy_caliber\README_V1_LEGACY.md` | `18e095c85427` | 3,756 |
+| 1 | `_repo_mirror\README_V1_LEGACY.md` | `_repo_mirror\tmp_movedout_2026_10_01\legacy_caliber\README_V1_LEGACY.md` | `18e095c85427` | 3,756 |
 | 2 | `…\deposon-repo\deposon_team\plugins\_v4_wide_s1b_inv2_2026_09_27.py` | `…\deposon-sub\tmp_movedout_2026_10_01\process_scripts\v4_wide_2026_09_27\_v4_wide_s1b_inv2_2026_09_27.py` | `af475f496a5e` | 1,546 |
 | 3 | `…\deposon-repo\deposon_team\plugins\_v4_wide_s3_keyscan_2026_09_27.py` | `…\tmp_movedout_2026_10_01\process_scripts\v4_wide_2026_09_27\_v4_wide_s3_keyscan_2026_09_27.py` | `a32af07111df` | 2,647 |
 | 4 | `…\deposon_team\plugins\_v4_wide_s3b_uuidctx_2026_09_27.py` | `…\v4_wide_2026_09_27\_v4_wide_s3b_uuidctx_2026_09_27.py` | `8fdec59aa96b` | 1,707 |
@@ -102,10 +102,10 @@
 
 | 目标件 | 拉回路径（复原后 SHA-12 应为 §2 同值） |
 |---|---|
-| `legacy_caliber\README_V1_LEGACY.md` | `D:\私人资料\deposon-sub\tmp_movedout_2026_10_01\legacy_caliber\` → `D:\私人资料\deposon-repo\` |
-| `v4_wide_2026_09_27\_v4_wide_s{1b_inv2,3,3b_uuidctx,3c_keydetail,4_verify,6_unrefscan,8_fix3}_2026_09_27.py`（7 件） | `D:\私人资料\deposon-sub\tmp_movedout_2026_10_01\process_scripts\v4_wide_2026_09_27\` → `D:\私人资料\deposon-repo\deposon_team\plugins\` |
-| `v4_wt_2026_09_27\_v4_wt_s5_verify_2026_09_27.py` | `…\process_scripts\v4_wt_2026_09_27\` → `D:\私人资料\deposon-repo\deposon_team\plugins\` |
-| `process_scripts\volcengine_补测_worker_A_2026_09_10.py` | `…\process_scripts\` → `D:\私人资料\deposon-repo\verifier\` |
+| `legacy_caliber\README_V1_LEGACY.md` | `_repo_mirror\tmp_movedout_2026_10_01\legacy_caliber\` → `_repo_mirror\` |
+| `v4_wide_2026_09_27\_v4_wide_s{1b_inv2,3,3b_uuidctx,3c_keydetail,4_verify,6_unrefscan,8_fix3}_2026_09_27.py`（7 件） | `_repo_mirror\tmp_movedout_2026_10_01\process_scripts\v4_wide_2026_09_27\` → `_repo_mirror\deposon_team\plugins\` |
+| `v4_wt_2026_09_27\_v4_wt_s5_verify_2026_09_27.py` | `…\process_scripts\v4_wt_2026_09_27\` → `_repo_mirror\deposon_team\plugins\` |
+| `process_scripts\volcengine_补测_worker_A_2026_09_10.py` | `…\process_scripts\` → `_repo_mirror\verifier\` |
 
 ---
 

@@ -138,7 +138,7 @@ python deposon_team/plugins/_v42_v2_runner_2026_09_16.py --confirm-inversion  # 
 ## 7. 三件套 hash
 
 - 本文件内容 hash: `25077d9e0f9c` —— 口径: sha256(本文件最终字节, 其中本字段 12hex 值以 "000000000000" 参与计算, 其余字段为最终值).hexdigest()[0:12], 任何人可按同口径复算核对。
-- 本文件路径 hash: `8014d82e2b97` —— 口径: sha256(绝对路径 "D:\私人资料\deposon-repo\docs\V3X\V42_V2_VERIFIER_PERFORMANCE_REPORT_2026_09_16.md" utf-8).hexdigest()[0:12]。
+- 本文件路径 hash: `8014d82e2b97` —— 口径: sha256(绝对路径 "_repo_mirror\docs\V3X\V42_V2_VERIFIER_PERFORMANCE_REPORT_2026_09_16.md" utf-8).hexdigest()[0:12]。
 - 锚 hash: `03c6c01f3697` —— sha256(verifier/handoff/KT_ABC1_anchors_sha256_12.json 字节).hexdigest()[0:12], 与基线 file_hashes 一致。
 
 ## 8. 合规声明

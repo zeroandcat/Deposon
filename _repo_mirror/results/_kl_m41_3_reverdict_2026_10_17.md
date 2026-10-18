@@ -402,7 +402,7 @@
 
 | 项 | 值 |
 | :-- | :-- |
-| **目标路径** | `D:\私人资料\deposon-repo\results\_kl_m41_3_reverdict_2026_10_17.md` |
+| **目标路径** | `_repo_mirror\results\_kl_m41_3_reverdict_2026_10_17.md` |
 | **`Test-Path`（落盘前实测）** | **`False`** |
 | **全仓递归同名扫描（glob `*kl_m41_3_reverdict*`）** | **0 命中** |
 | **`results/` 内既有 `kl_m41_3*` 件** | 3 件（＝ `_three_seed_exec_2026_10_16.md` ／ `_verdict_2026_10_17.md` ／ `_remeasure_2026_10_17.md`）⇒ **⛔ 0 覆写** |

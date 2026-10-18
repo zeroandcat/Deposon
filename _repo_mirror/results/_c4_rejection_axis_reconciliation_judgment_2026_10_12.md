@@ -3,7 +3,7 @@
 > **件性质**：**独立判断件**（PI 判「另议」定式所派之独立判断面：结论 ＋ 理由 ＋ 反方，**⛔ 非挂起**）—— 就存留项「组件④（`C` 之第四组件／否决段）在 PI 裁 `U-5` ＝「是」后**应如何收束**」出独立判断。⛔ **非判定件** · ⛔ **非终判件** · ⛔ **非五终判之任一** · ⛔ **0 代 PI 裁** · ⛔ **0 代 PI 释义** · ⛔ **0 代 PI 择定** · ⛔ **0 预拟任何新否决轴字面**。
 > **触发源**：PI 裁「另议」（`2c3f48e111cc` §3「另议棒之派定」）—— 其直接触发条件为 `08d3bfd82235` `RC-3` 之「即时另议」成就（PI 就 `U-5` 落裁「**甲（是）**」，卡 `ask_522094907ba40ae193cc1890` step `c1_ruling`）。
 > **上游件（0 触动 · 只读）**：`results/_c1_u5_ruling_register_2026_10_12.md`（`2c3f48e111cc`）｜`results/_u5_semantics_resolution_2026_10_12.md`（`8b5f1a495a99`）｜`results/_gate1_gap_three_items_disposition_2026_10_12.md`（`5cf848421c2b`）｜`results/_gate1_gap_residuals_adoption_register_2026_10_12.md`（`b84b9808fc71`）｜sub 区七件（见 §7）。
-> **版式**：UTF-8 无 BOM ｜ 纯 LF（CR ＝ 0）｜ ⛔ 0 网络 ｜ ⛔ 0 skill 加载 ｜ ⛔ 0 LLM ｜ ⛔ 0 读 `.env` ｜ ⛔ 0 经手 PAT ｜ ⛔ 0 触 `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录）｜ sub 区**只读**。
+> **版式**：UTF-8 无 BOM ｜ 纯 LF（CR ＝ 0）｜ ⛔ 0 网络 ｜ ⛔ 0 skill 加载 ｜ ⛔ 0 LLM ｜ ⛔ 0 读 `.env` ｜ ⛔ 0 经手 PAT ｜ ⛔ 0 触 `〔本地归档区〕`（0 读 0 写 0 列目录）｜ sub 区**只读**。
 
 ---
 
@@ -213,7 +213,7 @@
 
 ### §8-2 ⛔ 禁触与合规
 
-① ⛔ **0 写**他棒产物面（`_u5_*`／`_c1_*`／`_d9_*`／`_gate1_*`／`_itemH_*`／`_degradation_*`／`letters/`）｜② ⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`（**0 读 0 写 0 列目录**）｜③ **sub 区全程只读**｜④ ⛔ **0 改** `MD ≡ LS × TV` 定义式任一符号｜⑤ ⛔ **0 改** `C` 之五句任一字面（`X-2`）｜⑥ ⛔ **0 网络／0 skill／0 LLM／0 API key／0 读 `.env`／0 经手 PAT／0 远端写**｜⑦ ⛔ **0 跑实验／0 出读数／0 预写方向或数值**｜⑧ ⛔ **0 冒充** PI／parent／verifier／verdict-keeper／protocol-keeper／independent-sub｜⑨ **R4**：⛔ 0 读 key／凭证，⛔ 0 落盘任何凭据。
+① ⛔ **0 写**他棒产物面（`_u5_*`／`_c1_*`／`_d9_*`／`_gate1_*`／`_itemH_*`／`_degradation_*`／`letters/`）｜② ⛔ **0 触及** `〔本地归档区〕`（**0 读 0 写 0 列目录**）｜③ **sub 区全程只读**｜④ ⛔ **0 改** `MD ≡ LS × TV` 定义式任一符号｜⑤ ⛔ **0 改** `C` 之五句任一字面（`X-2`）｜⑥ ⛔ **0 网络／0 skill／0 LLM／0 API key／0 读 `.env`／0 经手 PAT／0 远端写**｜⑦ ⛔ **0 跑实验／0 出读数／0 预写方向或数值**｜⑧ ⛔ **0 冒充** PI／parent／verifier／verdict-keeper／protocol-keeper／independent-sub｜⑨ **R4**：⛔ 0 读 key／凭证，⛔ 0 落盘任何凭据。
 
 ### §8-3 未决项（如实登记）
 
@@ -233,7 +233,7 @@
 
 | 项 | 值 |
 |:--|:--|
-| **路径** | `D:\私人资料\deposon-repo\results\_c4_rejection_axis_reconciliation_judgment_2026_10_12.md` |
+| **路径** | `_repo_mirror\results\_c4_rejection_axis_reconciliation_judgment_2026_10_12.md` |
 | **落前检查** | `Test-Path` ＝ **False**；glob（`*c4_rejection*`／`*rejection_axis*`，全仓 `-Recurse -Force`）＝ **0 命中** ⇒ ⛔ 0 覆写任何既有件 |
 | **编码** | UTF-8 **无 BOM**（`io.open(encoding='utf-8', newline='\n', errors='strict')`） |
 | **行尾** | **纯 LF**（CR ＝ **0**）｜TAB ＝ **0**｜CTRL ＝ **0** |

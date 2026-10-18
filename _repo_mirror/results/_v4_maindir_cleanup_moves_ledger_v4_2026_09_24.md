@@ -77,7 +77,7 @@ PI 原文: **「授权扩容B路径,且盘点出来的无需上传的工具文�
 
 ## 3. A 类 (archive) 对账 (227 件 · 全部干净移动 · 0 同名冲突)
 
-> 目标: `D:/私人资料/_non_upload_local_archive/results/` (新建目录平铺, 与 v3 ledger 同模式)
+> 目标: `〔本地归档区〕/results/` (新建目录平铺, 与 v3 ledger 同模式)
 > 通道: PowerShell `Move-Item -Force` (atomic, content preserved)
 > 总 bytes (A 类): **6,560,431** (本棒 A 类小计, 实测 `Measure-Object Sum`)
 > 同名冲突: **0 件** (目标目录在 move 前实测 0 既有同名件)
@@ -162,7 +162,7 @@ PI 原文: **「授权扩容B路径,且盘点出来的无需上传的工具文�
 
 ## 4. B 类 (deposon-sub) 对账 (7 件 · 全部干净移动 · 0 同名冲突)
 
-> 目标: `D:/私人资料/deposon-sub/results/` (平铺, 与 v3 ledger 同模式)
+> 目标: `_repo_mirror/results/` (平铺, 与 v3 ledger 同模式)
 > 通道: PowerShell `Move-Item -Force`
 > 总 bytes (B 类): **342,520**
 > 同名冲突: **0 件**
@@ -183,8 +183,8 @@ PI 原文: **「授权扩容B路径,且盘点出来的无需上传的工具文�
 
 ## 5. 删除件对账 (20 件 · mavis-trash 回收站 · 可恢复)
 
-> 通道: `C:\Users\Administrator\.minimax\bin\mavis-trash.cmd` (Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile → 'SendToRecycleBin')
-> 工具: mavis-trash v0 (路径: `C:\Users\Administrator\AppData\Local\Programs\MiniMax Code\MiniMax Code.exe` + `mavis-trash.js`)
+> 通道: `〔本机用户目录〕\.minimax\bin\mavis-trash.cmd` (Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile → 'SendToRecycleBin')
+> 工具: mavis-trash v0 (路径: `〔本机用户目录〕\AppData\Local\Programs\MiniMax Code\MiniMax Code.exe` + `mavis-trash.js`)
 > 总删除: **20 件** (17 .pyc + 2 .tmp/ scratch + 1 棒 5 自建 csv)
 
 ### 5.1 `results/__pycache__/` (17 件 .pyc · Python 自动缓存)
@@ -257,9 +257,9 @@ PI 原文: **「授权扩容B路径,且盘点出来的无需上传的工具文�
 
 | 目录 | before (实测 2026-09-24 19:00, 棒 4 末态) | after (实测 2026-09-24 19:35, 棒 5 末态) | delta | 备注 |
 |---|---|---|---|---|
-| `D:/私人资料/deposon-repo` | **1295** | **1043** | **-252** | 移动 234 件出仓 -234; 棒 5 自建 csv +1 → -233; 棒 5 自建 csv 删除 -1 → -234; 删除 19 件 (17 .pyc + 2 .tmp/) → -253; 棒 5 自建 v4 ledger +1 → -252; `__pycache__/` 空目录保留 (0 文件) |
-| `D:/私人资料/_non_upload_local_archive` | 1264 (棒 4 after) | **1491** | **+227** | A 类 227 件全部入仓 ✓ |
-| `D:/私人资料/deposon-sub` | 434 (棒 4 after) | **441** | **+7** | B 类 7 件全部入仓 ✓ |
+| `_repo_mirror` | **1295** | **1043** | **-252** | 移动 234 件出仓 -234; 棒 5 自建 csv +1 → -233; 棒 5 自建 csv 删除 -1 → -234; 删除 19 件 (17 .pyc + 2 .tmp/) → -253; 棒 5 自建 v4 ledger +1 → -252; `__pycache__/` 空目录保留 (0 文件) |
+| `〔本地归档区〕` | 1264 (棒 4 after) | **1491** | **+227** | A 类 227 件全部入仓 ✓ |
+| `_repo_mirror` | 434 (棒 4 after) | **441** | **+7** | B 类 7 件全部入仓 ✓ |
 | Recycle Bin (Win) | 0 (棒 4 after) | (实测) | **+20** | 17 .pyc + 2 .tmp/ + 1 csv 走 mavis-trash 回收站 |
 
 > **核对 (末次实测 2026-09-24 19:35, 含本 v4 ledger)**:

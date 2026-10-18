@@ -199,7 +199,7 @@
 
 | 项 | 值 |
 |---|---|
-| 路径 | `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\artifacts\plan.md`（**仓外活文档**；PI 派工单逐项明文授权该文件，故本棒写入**仅限此一件**） |
+| 路径 | `〔本机用户目录〕\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\artifacts\plan.md`（**仓外活文档**；PI 派工单逐项明文授权该文件，故本棒写入**仅限此一件**） |
 | 校正前 | SHA-12 **`cd0a30e1f0da`** / **8,425 B** / 104 行 / 0 CRLF / 末尾有换行 |
 | 漂移行（照录原文） | **L17**「\| 假判悬案 \| 85% \| **悬案 1 根因定因（成文转写）**／悬案 2 certutil 机制路径（工具判死） \| `2f34ce11b3b4` \|」<br>**L38**「\| 6 \| 假判悬案 2 \| certutil 默认 SHA-1 机制路径（工具判死） \| 可选：授权查 activeDataDir 09-27 会话日志推到动机定因（待 PI） \| 待拍板 \|」 |
 
@@ -238,9 +238,9 @@ L38=[| 6 | 假判悬案 2 | certutil 默认 SHA-1 机制路径（工具判死）
 |---|---|
 | 先例根路径 | `results/.evidence_backup_2026_09_28/`（**仓内**；含 `runtime-state.sqlite` 474,656,768 B ＋ `tracking-2026-09-27.json` 9,722 B） |
 | **本轮根路径** | `results/.evidence_backup_2026_09_30/`（**新建，0 撞名**已实测） |
-| 源面① | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` ＝ **474,656,768 B**（与先例实测**同尺寸**）；侧车 `-wal` 5,018,192 B（**活写中**）、`-shm` 32,768 B |
-| 源面② | `C:\Users\Administrator\.minimax\background-tasks\` ＝ **19,251 目录**（先例记 19,038） |
-| 源面③ | `C:\Users\Administrator\.minimax\memory\tracking\` ＝ **24 个日 JSON / 124,423 B**（先例仅落了 `2026-09-27.json` 一件 ⇒ 本轮**全目录**备份，覆盖面**宽于**先例） |
+| 源面① | `〔本机用户目录〕\.minimax\v2\sqlite\runtime-state.sqlite` ＝ **474,656,768 B**（与先例实测**同尺寸**）；侧车 `-wal` 5,018,192 B（**活写中**）、`-shm` 32,768 B |
+| 源面② | `〔本机用户目录〕\.minimax\background-tasks\` ＝ **19,251 目录**（先例记 19,038） |
+| 源面③ | `〔本机用户目录〕\.minimax\memory\tracking\` ＝ **24 个日 JSON / 124,423 B**（先例仅落了 `2026-09-27.json` 一件 ⇒ 本轮**全目录**备份，覆盖面**宽于**先例） |
 | **源面写入** | ⛔ **0 写**（sqlite 以 `file:…?mode=ro` ＋ `PRAGMA query_only=1` 打开；目录仅 robocopy 读取）。**唯一写入面 ＝ 新备份目录。** |
 
 ### §6.2 备份产物清单（**读副本实测**，非读源）
@@ -270,7 +270,7 @@ L38=[| 6 | 假判悬案 2 | certutil 默认 SHA-1 机制路径（工具判死）
 2. **先例（09-28）一致性弱于本轮**：先例目录内**仅有** `runtime-state.sqlite`、**0 个 `-wal`／`-shm`** ⇒ 该先例**极可能是裸文件复制**，**可能缺失 WAL 已提交内容**（一致性问题）。本轮改用 backup API，**该风险已消除**。此为**对先例的如实标注**（0 回改先例一字）。
 3. **`background-tasks/` 与 `tracking/` 非原子快照**：源面**备份窗内仍在增长**（目录数 19,251 → **19,289**；`tracking/2026-09-30.json` mtime 17:03:53）。⇒ 副本为**滚动复制时点**的集合，**0 与源面存在「同一瞬间」对应关系**；如需窗后新增，须以**增量补跑**（`robocopy` 幂等，0 覆写既有件）另行授权。
 4. **0 网络 / 0 LLM / 0 API**：全程本机 `sqlite3` ＋ `robocopy` ＋ `hashlib`。
-5. **运行时自带备份面 0 触动**：`C:\Users\Administrator\.minimax\v2\sqlite\backups\`（runtime 自管，09-29 22:38）**本棒 0 读 0 写 0 列**（不属本轮授权面）。
+5. **运行时自带备份面 0 触动**：`〔本机用户目录〕\.minimax\v2\sqlite\backups\`（runtime 自管，09-29 22:38）**本棒 0 读 0 写 0 列**（不属本轮授权面）。
 
 ---
 

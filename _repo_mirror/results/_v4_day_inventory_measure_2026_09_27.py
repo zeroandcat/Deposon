@@ -17,9 +17,9 @@ import os
 import sys
 from datetime import datetime
 
-WS = r"D:\私人资料\deposon-repo"
-SIB_ARCHIVE = r"D:\私人资料\_non_upload_local_archive"   # 归档目录
-SIB_SUB = r"D:\私人资料\deposon-sub"                     # 副目录
+WS = r"_repo_mirror"
+SIB_ARCHIVE = r"〔本地归档区〕"   # 归档目录
+SIB_SUB = r"_repo_mirror"                     # 副目录
 TODAY = "2026-09-27"
 SCAN_DIRS = ("results", "letters", "docs")
 

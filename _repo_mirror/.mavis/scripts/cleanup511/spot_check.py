@@ -2,10 +2,10 @@
 """Payload integrity spot-check: for N sampled deleted files, prove the $R payload in the
 recycle bin still hashes to the pre-delete SHA-12 recorded in exec_list.json."""
 import os, io, json, sys, random, hashlib
-sys.path.insert(0, r"D:\私人资料\deposon-repo\.mavis\scripts\cleanup511")
+sys.path.insert(0, r"_repo_mirror\.mavis\scripts\cleanup511")
 from recycle_exec import bin_dir_for, list_bin
 
-REPO = r"D:\私人资料\deposon-repo"
+REPO = r"_repo_mirror"
 L = json.load(io.open(os.path.join(REPO, ".mavis", "scripts", "cleanup511", "exec_list.json"), encoding="utf-8"))
 b = bin_dir_for(os.path.join(REPO, "x"))
 ents = sorted(list_bin(b))

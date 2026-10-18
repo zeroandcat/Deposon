@@ -15,7 +15,7 @@ from pathlib import Path
 
 import numpy as np
 
-BASE = Path(r'D:\私人资料\deposon-repo')
+BASE = Path(r'_repo_mirror')
 OUT_DIR = BASE / 'results' / '_p_o_stranger_verification_2026_09_16'
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 

@@ -36,7 +36,7 @@
 
 ## §3 写面静态核（逐件 · 定位到行）
 
-🔴 **关键实测事实**：**5 件 runner 之写出目标，一律不落在 `deposon-sub`，而一律落在主仓 `D:\私人资料\deposon-repo\results`。**
+🔴 **关键实测事实**：**5 件 runner 之写出目标，一律不落在 `deposon-sub`，而一律落在主仓 `_repo_mirror\results`。**
 
 | 件 | 路径来源常量 | 写出点（行） | 实写目标（绝对路径） | **目标是否既有件** |
 |:-:|:--|:--|:--|:--|
@@ -101,14 +101,14 @@
 
 🔴 **本棒 0 件 runner 执行 ⇒「跑后 0 改动」不待证而自明**；为求**可审计**，仍于调查前后**双次全树快照**并作逐字节比对。
 
-**快照范围与方法**：路径 ＋ SHA-12 ＋ bytes ＋ mtime(ns) 全树遍历；`D:\私人资料\_non_upload_local_archive` **0 读 0 写 0 列目录**（遍历内置断言，越界即抛）。
+**快照范围与方法**：路径 ＋ SHA-12 ＋ bytes ＋ mtime(ns) 全树遍历；`〔本地归档区〕` **0 读 0 写 0 列目录**（遍历内置断言，越界即抛）。
 
 | 树 | 快照时点 | 文件数 | 快照件（`%TEMP%`） |
 |:--|:--|--:|:--|
-| `D:\私人资料\deposon-sub`（全树） | before `2026-10-13 00:25:21` | **1,189** | `d9_snap_before.json` |
-| `D:\私人资料\deposon-sub`（全树） | after | **1,189** | `d9_snap_after.json` |
-| `D:\私人资料\deposon-repo\results`（**实际写面**） | before | **733** | `d9_snap_before.json` |
-| `D:\私人资料\deposon-repo\results` | after | **733** | `d9_snap_after.json` |
+| `_repo_mirror`（全树） | before `2026-10-13 00:25:21` | **1,189** | `d9_snap_before.json` |
+| `_repo_mirror`（全树） | after | **1,189** | `d9_snap_after.json` |
+| `_repo_mirror\results`（**实际写面**） | before | **733** | `d9_snap_before.json` |
+| `_repo_mirror\results` | after | **733** | `d9_snap_after.json` |
 
 | 树 | **changed** | **deleted** | **added** |
 |:--|--:|--:|--:|

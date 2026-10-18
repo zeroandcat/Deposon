@@ -26,7 +26,7 @@
 
 ### §1-1 本裁字面之盘上可核性（**本棒实测 · 如实交代**）
 
-- **扫描面**：6 根 —— `deposon-repo`／`deposon-sub`／`Deposon_v1_2_0_交付包`／`GLM`／`_non_upload_local_archive`／运行时附件面 `C:\Users\Administrator\.minimax`；扩展名面 `.md`／`.json`／`.txt`／`.jsonl`。
+- **扫描面**：6 根 —— `deposon-repo`／`deposon-sub`／`Deposon_v1_2_0_交付包`／`GLM`／`_non_upload_local_archive`／运行时附件面 `〔本机用户目录〕\.minimax`；扩展名面 `.md`／`.json`／`.txt`／`.jsonl`。
 - **遍历完整性**：**57,039 件**扫描完毕，**遍历错误 ＝ 0**（`os.walk` 错误收集器实测为空，`assert` 通过）。逐根命中：
 
 | **根** | **扫描件数** | **本裁字面命中** |

@@ -34,7 +34,7 @@ import math
 import sys
 from pathlib import Path
 
-V19_PATH = Path('D:/私人资料/deposon-repo/results/deposon_v19_benchmark_fixes.json')
+V19_PATH = Path('_repo_mirror/results/deposon_v19_benchmark_fixes.json')
 
 # 分级阈值(工单#14): 残差 <1e-15 → PASS; <1e-12 → GRAY; >=1e-12 → FAIL
 PASS_THRESHOLD = 1e-15

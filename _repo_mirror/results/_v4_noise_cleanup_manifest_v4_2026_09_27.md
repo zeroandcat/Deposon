@@ -4,7 +4,7 @@
 > **性质**：新建独立审链登记件（沿 v2 / v3 惯例，**不覆盖**任何既有 manifest）；只读实测 + 1 次授权范围内的 `.tmp` 今日件可恢复删除
 > **口径锚（四件套台账）**：`results/_v4_day_inventory_2026_09_27.md`（40,487 B / SHA-12 `7662d5058a7d`）——本棒清后复验 **MATCH**（§F.1）
 > **惯例源（0 覆盖，均健在）**：`results/_v4_noise_cleanup_manifest_v3_2026_09_25.md`（24,491 B / `6f3f6fa3ab1d`）· `_v4_noise_cleanup_manifest_v2_2026_09_24.md`（9,683 B / `90253e8342da`）
-> **删除通道**：`rm -- <仓内相对路径>` → trusted launcher `C:\Users\Administrator\.minimax\bin\mavis-trash.cmd` → `mavis-trash.js` → `Microsoft.VisualBasic.FileIO.FileSystem::DeleteFile(..., SendToRecycleBin)`
+> **删除通道**：`rm -- <仓内相对路径>` → trusted launcher `〔本机用户目录〕\.minimax\bin\mavis-trash.cmd` → `mavis-trash.js` → `Microsoft.VisualBasic.FileIO.FileSystem::DeleteFile(..., SendToRecycleBin)`
 > **先验路由（派工单要求）**：单件试删 `.tmp/_e45_measure3.py` → stdout `moved to trash` + `rc=0` + `Test-Path = False` ⇒ **回收站可恢复删除**通道成立，方开批量；**未使用永久删除、未用绝对路径删除命令、未 inline 脚本删除**
 > **SHA-12 定义**：`hashlib.sha256(bytes).hexdigest()[:12]`（hexdigest 输出已小写；本件表格统一小写展示，与大写锚件比较时按 IGNORECASE）
 > **边界**：R5 frozen 只追加 / V1–V3 资产只读不动 / 派生 JSON 不合并 / 不覆盖既有件 / 0 擅调阈值 / key 永不明文无例外（runtime 读不入 prompt·JSON·log）/ 仓外目录只读 0 写入 / **非今日件 0 动**（沿四件套口径）

@@ -80,7 +80,7 @@
 - **PI 逐字裁**：「打包过（并立件形态·推断字面为草案）（推荐）」
 - **题面来源件**：`results/_batch_approval_merged_rollout_design_2026_10_14.md`（SHA-12 `5078ebf4ac4c` · 卷 8 `MQ-16` 之 `Q-14`）
 - **事实基座件**：`results/_d2_d6_erratum_and_annotation_register_2026_10_12.md`（SHA-12 `d9da4f54482e` · §1.2／§1.3／§3）
-- **被附注宿主**：`D:\私人资料\deposon-sub\results\_round56_review_effectivity_register_3_2026_10_10.md`（SHA-12 `84ed13256250` · §1 · L37/L39/L49/L50/L51）
+- **被附注宿主**：`_repo_mirror\results\_round56_review_effectivity_register_3_2026_10_10.md`（SHA-12 `84ed13256250` · §1 · L37/L39/L49/L50/L51）
 - **引用简写**：〔卡 `ask_d6c278886c1e71f50afac400` · v8 `58d1c527e228` · `Q-14`〕
 
 ---

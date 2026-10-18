@@ -30,8 +30,8 @@ import json
 import os
 import sys
 
-REPO = r"D:/私人资料/deposon-repo"
-EXT_CACHE = r"D:/私人资料/_non_upload_local_archive/results/gt2_attacker_cache"
+REPO = r"_repo_mirror"
+EXT_CACHE = r"〔本地归档区〕/results/gt2_attacker_cache"
 EXT_CACHE_ITEMS = ["algorithm_process.json", "biological_taxonomy.json",
                    "historical_causality.json", "physics_concepts.json"]
 OUT_PATH = os.path.join(REPO, "results", "_v5_item35_v2_matrix_result_2026_09_29.json")
@@ -654,7 +654,7 @@ def main() -> int:
                      "bytes": nbytes(os.path.join(EXT_CACHE, fn))}
                 for fn in EXT_CACHE_ITEMS}
     ext_readonly = {
-        "external_archive": "D:/私人资料/_non_upload_local_archive/",
+        "external_archive": "〔本地归档区〕/",
         "items_pre": ext_pre, "items_post": ext_post,
         "pre_post_identical": bool(
             {fn: (v["sha12"], v["bytes"]) for fn, v in ext_pre.items()} ==

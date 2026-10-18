@@ -10,7 +10,7 @@ Trae 2026-09-18 走读改进 #1: D05 数据抢救 (trash -> results 根副本)
 import hashlib, json, shutil
 from pathlib import Path
 
-ROOT = Path(r'D:\私人资料\deposon-repo')
+ROOT = Path(r'_repo_mirror')
 RESULTS = ROOT / 'results'
 TRASH = ROOT / '_d05_bg_21191cee_trash_2026_09_18' / 'results'
 

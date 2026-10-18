@@ -7,7 +7,7 @@ import hashlib, os, re, json
 from datetime import datetime
 from pathlib import Path
 
-REPO = Path(r'D:\私人资料\deposon-repo'); SUB = Path(r'D:\私人资料\deposon-sub')
+REPO = Path(r'_repo_mirror'); SUB = Path(r'_repo_mirror')
 BOUND = datetime(2026, 10, 1, 0, 0, 0).timestamp()
 def sha12b(b): return hashlib.sha256(b).hexdigest()[:12]
 
@@ -29,7 +29,7 @@ print(f'=== 边界复算 ===  repo={len(repo_f)}（委托 477/478）  sub={len(s
 rows = []
 for q, st in repo_f + sub_f:
     b = open(q, 'rb').read()
-    rel = q.replace('D:\\私人资料\\', '').replace('\\', '/')
+    rel = q.replace('〔本地资料区〕\\', '').replace('\\', '/')
     rows.append(dict(path=q, rel=rel, sha=sha12b(b), n=len(b),
         bom=b[:3] == b'\xef\xbb\xbf', cr=b.count(b'\r'), lf=b.count(b'\n'),
         ext=os.path.splitext(q)[1].lower(), mtime=datetime.fromtimestamp(st.st_mtime).strftime('%m-%d %H:%M'),

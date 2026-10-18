@@ -9,7 +9,7 @@
 
 ## §0 一句话结论
 
-转入文本（PI 于主会话粘贴）已**逐字登记**（§1-2）；`C5-b` 机械三要件**本棒初核**：**要件① 未满足**（`REPLY_FROM_COPILOT_AGENT_*.md` 与 `RECEIPT_*.txt` 于 `letters/` 与 `D:\私人资料\GLM` **两面实测 0 在盘**，15:44:50 CST）｜**要件② 形式上或可满足 · 逐格表之在载不可核**｜**要件③ 已给惟不可核**（本体不在盘 ⇒ 指纹 0 可核）⇒ **`C5-b` 现态之闭之机械判定本棒 ⛔ 0 落档**，候 `verdict-keeper`／PI 裁（§2-2、§3）。
+转入文本（PI 于主会话粘贴）已**逐字登记**（§1-2）；`C5-b` 机械三要件**本棒初核**：**要件① 未满足**（`REPLY_FROM_COPILOT_AGENT_*.md` 与 `RECEIPT_*.txt` 于 `letters/` 与 `〔本地资料区〕\GLM` **两面实测 0 在盘**，15:44:50 CST）｜**要件② 形式上或可满足 · 逐格表之在载不可核**｜**要件③ 已给惟不可核**（本体不在盘 ⇒ 指纹 0 可核）⇒ **`C5-b` 现态之闭之机械判定本棒 ⛔ 0 落档**，候 `verdict-keeper`／PI 裁（§2-2、§3）。
 
 ---
 
@@ -23,7 +23,7 @@
 | **转入时点** | **2026-10-17 ≈15:41 CST（UTC+8）**（**依派工单转录**；⛔ **0 断言卡面原文逐字** —— 我方**卡面 0 在盘**，承拆桩件 `c9e304e43274` §6 KD-S-1 之射程） |
 | **本棒实测时点** | **2026-10-17 15:44:50 CST**（epoch ms `1792223090594`） |
 | **转入文本之载体** | **本件 §1-2** —— 所据者 ＝ 派工单所附之**逐字照录**；⛔ **0 断言**其与主会话原文**逐字节一致**（转录链，我方无第二份载体可校） |
-| **本体状态** | 🔴 **回函本体 0 在盘** —— `REPLY_FROM_COPILOT_AGENT_T2_T3_THEORY_INPUTS_2026_10_17.md` 与 `RECEIPT_COPILOT_AGENT_T2_T3_2026_10_17.txt` 于 `letters/`、`D:\私人资料\GLM`、`results/` **三面实测 0 命中**（§2-2 要件①） |
+| **本体状态** | 🔴 **回函本体 0 在盘** —— `REPLY_FROM_COPILOT_AGENT_T2_T3_THEORY_INPUTS_2026_10_17.md` 与 `RECEIPT_COPILOT_AGENT_T2_T3_2026_10_17.txt` 于 `letters/`、`〔本地资料区〕\GLM`、`results/` **三面实测 0 命中**（§2-2 要件①） |
 
 ### §1-2 转入文本·**逐字照录**（0 改写）
 
@@ -46,7 +46,7 @@
 
 **权源逐字**（委托函 `letters\_commission_t2_t3_theory_inputs_copilot_agent_2026_10_17.md`｜**SHA-12 `385003e41ce2`／23,919 B／176 LF**（本棒实测）｜姊妹封 grok 版 `6922929bfda8`／23,906 B／176 LF）：
 
-- **§7.6（L147 逐字节选）**：「A reply counts as **received for our registry** when a reply artefact is present **either** in the repository's `letters/` **or** under `D:\私人资料\GLM` (our stable delivery surface; the other location may be swept at any time), **and** it carries the **per-cell delivery table for both `T-2` and `T-3`**, **and** the **out-of-file fingerprint receipt** (SHA-12 / bytes / line count) required by §5.2. Our `C5` item (G-D03 adjudication, receipt-in-place) is judged mechanically on that artefact's presence. The artefact must state **which addressee it answers** — grok or copilot agent — so the registry can attribute the receipt per face; **an unattributable receipt cannot be counted against `C5`.**」
+- **§7.6（L147 逐字节选）**：「A reply counts as **received for our registry** when a reply artefact is present **either** in the repository's `letters/` **or** under `〔本地资料区〕\GLM` (our stable delivery surface; the other location may be swept at any time), **and** it carries the **per-cell delivery table for both `T-2` and `T-3`**, **and** the **out-of-file fingerprint receipt** (SHA-12 / bytes / line count) required by §5.2. Our `C5` item (G-D03 adjudication, receipt-in-place) is judged mechanically on that artefact's presence. The artefact must state **which addressee it answers** — grok or copilot agent — so the registry can attribute the receipt per face; **an unattributable receipt cannot be counted against `C5`.**」
 - **§5.2（L121 逐字）**：「With the delivery, report the fingerprint of each delivered file as **path + SHA-12 + byte count + line count** (SHA-256, first 12 hex, lowercase; `hashlib.sha256`, not a language built-in `hash()`). Fingerprints are reported **with** the delivery, **outside the delivered files**.」
 - **§7.1（L142 逐字节选）**：「A structured written reply addressing `T-2` and `T-3` in that order, carrying a per-cell table across all 15 cells for each, and **ending each of the two items with a one-line verdict**: *derivable (with value/rule)* / *derivable-with-relaxation (name the relaxation)* / *underivable as stated (obstruction)*.」
 - **§5.3（L125 逐字节选）**：「Mark every cell you cannot supply, item by item, **with its reason**. A cell left `null` with a stated reason is a complete delivery for that cell and does not disqualify the rest.」
@@ -56,7 +56,7 @@
 
 | **id** | **判据（逐字）** | 拆桩件之当时实测 |
 | :-: | :-- | :-- |
-| **`K-C5B-1`** | 「**载体在位** —— 回执件在 `letters/` **或** `D:\私人资料\GLM`（**稳定交付面**）在位；且**归属面**须自陈所答受托方（grok／copilot agent）——**unattributable receipt ⛔ 0 计入**」 | 🔴 不满足（两面 **0 命中** grok／copilot 回执件） |
+| **`K-C5B-1`** | 「**载体在位** —— 回执件在 `letters/` **或** `〔本地资料区〕\GLM`（**稳定交付面**）在位；且**归属面**须自陈所答受托方（grok／copilot agent）——**unattributable receipt ⛔ 0 计入**」 | 🔴 不满足（两面 **0 命中** grok／copilot 回执件） |
 | **`K-C5B-2`** | 「**逐格交付表在载** —— 回执件载 `T-2`／`T-3` **各 15 格**（3 机制 × 5 任务族）之**逐格交付表**（§7.1：每项须以**一行终判词**收束：*derivable (with value/rule)*／*derivable-with-relaxation*／*underivable as stated (obstruction)*）」 | 🔴 不满足（无回执件） |
 | **`K-C5B-3`** | 「**函外指纹回执在载** —— 附 `path + SHA-12 + bytes + line count` 之指纹回执，且**在交付文件之外**（`hashlib.sha256`·⛔ **0** 用语言内建 `hash()`）」 | 🔴 不满足（无回执件） |
 
@@ -66,7 +66,7 @@
 
 | **id** | **初核结论** | **本棒实测依据**（2026-10-17 15:44:50 CST） |
 | :-: | :-- | :-- |
-| **`K-C5B-1`** | 🔴 **未满足**（载体面 0 在盘） | `os.path.exists` 精确名测试：`letters/`／`D:\私人资料\GLM`／`results/` **三面皆 False**（`REPLY_FROM_COPILOT_AGENT_T2_T3_THEORY_INPUTS_2026_10_17.md`、`RECEIPT_COPILOT_AGENT_T2_T3_2026_10_17.txt`）；关键词全树遍历：`letters/` 仅 **2 命中**（`REPLY_FROM_GEMINI4_GE01_THEORY_INPUTS_2026_10_15.md`＝`44311ade19de`／44,520 B／266 LF；本方委托函 `_commission_…_copilot_agent_…md`＝`385003e41ce2`）｜GLM 面全树 **16 件 · 0 命中**（遍历有效性已核：含拆桩件 §3-1 所引之 `鲍勃_PI双裁定登记_G-E02验收线_G-E01就绪判定_2026_10_12.md`）｜`results/` **0 命中** |
+| **`K-C5B-1`** | 🔴 **未满足**（载体面 0 在盘） | `os.path.exists` 精确名测试：`letters/`／`〔本地资料区〕\GLM`／`results/` **三面皆 False**（`REPLY_FROM_COPILOT_AGENT_T2_T3_THEORY_INPUTS_2026_10_17.md`、`RECEIPT_COPILOT_AGENT_T2_T3_2026_10_17.txt`）；关键词全树遍历：`letters/` 仅 **2 命中**（`REPLY_FROM_GEMINI4_GE01_THEORY_INPUTS_2026_10_15.md`＝`44311ade19de`／44,520 B／266 LF；本方委托函 `_commission_…_copilot_agent_…md`＝`385003e41ce2`）｜GLM 面全树 **16 件 · 0 命中**（遍历有效性已核：含拆桩件 §3-1 所引之 `鲍勃_PI双裁定登记_G-E02验收线_G-E01就绪判定_2026_10_12.md`）｜`results/` **0 命中** |
 | **`K-C5B-2`** | 🟡 **形式上或可满足 · 逐格表之在载不可核**（⛔ 0 代裁） | 转入文本载**逐项一行终判词**（「Both items are **underivable as stated**」——与 §7.1 之第三档 *underivable as stated (obstruction)* 同形）＋载 `T-2`／`T-3` **各自之阻断理由**（structural zero 之辨／`3/14·H` 之拒：单一采样器·**解冻**构造默认值·仅 4-choice `{1,0,0,0}`／Route 乙为**充分非 iff**：`H=2`、`γ=1/2`、`τ=1/2` 显 `4/3` 而 tight robust total `3/2`）＋载「30 cells」之计数（15＋15，与委托函 §0 之十五格口径相合）｜⚠ 转入文本**未见 30 格之逐格表本体**，惟**本体不在盘 ⇒ 本体是否载该表不可断言** ⇒ 本棒 ⛔ 0 判定「满足」 |
 | **`K-C5B-3`** | 🟡 **已给惟不可核**（本体不在盘 ⇒ 指纹 0 可核） | 转入文本载「Fingerprint receipt, **outside the reply file**: SHA-12 `597caf8ba5bc`, 30,459 bytes, 318 lines」＋「Also written to `RECEIPT_COPILOT_AGENT_T2_T3_2026_10_17.txt`」｜⚠ **本体与 RECEIPT 件 0 在盘 ⇒ `597caf8ba5bc` 之正确性、SHA-256 算法、字节/行数一致性皆不可核**；另 §5.2 之 **`path` 要素** —— 转入文本所载者为**文件名**（见首行）而非完整路径，满足度 ⛔ 0 代裁（待本体入盘后逐字回读） |
 
@@ -84,7 +84,7 @@
 
 | # | **U** | **须** | **关联** |
 | :-: | :-- | :-- | :-- |
-| **U-1** | **回函本体＋RECEIPT 件之传入** —— 请 PI 将 `REPLY_FROM_COPILOT_AGENT_T2_T3_THEORY_INPUTS_2026_10_17.md` 与 `RECEIPT_COPILOT_AGENT_T2_T3_2026_10_17.txt` 传入 `letters/` **或** `D:\私人资料\GLM`（稳定交付面）—— 此为**指纹可核**与**要件①可判**之前提 | **PI 传入** | §2-2 要件①③ |
+| **U-1** | **回函本体＋RECEIPT 件之传入** —— 请 PI 将 `REPLY_FROM_COPILOT_AGENT_T2_T3_THEORY_INPUTS_2026_10_17.md` 与 `RECEIPT_COPILOT_AGENT_T2_T3_2026_10_17.txt` 传入 `letters/` **或** `〔本地资料区〕\GLM`（稳定交付面）—— 此为**指纹可核**与**要件①可判**之前提 | **PI 传入** | §2-2 要件①③ |
 | **U-2** | **grok 面回执未至** —— 姊妹封 `6922929bfda8`（23,906 B／176 LF）之回执**两面 0 在盘** ⇒ copilot 面之到件**不构成**两方齐备 | **PI 传入**（候） | §4 KD-C5 |
 | **U-3** | **「一回执足否闭 `C5-b`」之射程问** —— 拆桩件 `K-C5B-1..3` 之判据**未载**「须两方受托方回执齐备」抑或「任一方回执即足」；本棒**⛔ 0 择**该射程 | **`verdict-keeper`／PI 裁** | §2-1（判死线逐字无载） |
 | **U-4** | **要件②之逐格表核验** —— 本体入盘后须逐字回读其**逐项一行终判词**（§7.1）＋**逐格表 15×2**（§5.1-4 之 per-cell 适用性声明）＋ **§5.3** 之逐项理由 | **后续棒（依 U-1 而发）** | §2-2 要件② |
@@ -109,7 +109,7 @@
 
 | 项 | 值 |
 | :-- | :-- |
-| 目标路径 | `D:\私人资料\deposon-repo\results\_copilot_agent_t2_t3_reply_register_2026_10_17.md` |
+| 目标路径 | `_repo_mirror\results\_copilot_agent_t2_t3_reply_register_2026_10_17.md` |
 | `Test-Path`（落盘前） | **False** |
 | glob `results/` 内 `_copilot_agent_t2_t3_reply_register*`（落盘前） | **0 命中** |
 | 处置 | **0 覆盖**，未需 `_r1` |
@@ -126,7 +126,7 @@
 
 | 项 | 值 |
 | :-- | :-- |
-| 绝对路径 | `D:\私人资料\deposon-repo\results\_copilot_agent_t2_t3_reply_register_2026_10_17.md` |
+| 绝对路径 | `_repo_mirror\results\_copilot_agent_t2_t3_reply_register_2026_10_17.md` |
 | SHA-12 | `69fd99975414` |
 | bytes | `16049` |
 | LF 行数 | `123` |

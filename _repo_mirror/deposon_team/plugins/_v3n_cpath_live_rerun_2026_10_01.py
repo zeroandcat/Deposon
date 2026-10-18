@@ -52,7 +52,7 @@ from datetime import datetime, timezone, timedelta
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-REPO = r"D:\私人资料\deposon-repo"
+REPO = r"_repo_mirror"
 BASELINE_30 = os.path.join(REPO, "results", "deposon_volcengine_glm_latest_30cells_v2_2026_09_10.json")
 CAPTION_EMB = os.path.join(REPO, "results", "deposon_volcengine_22caption_embedding_2026_09_10.json")
 CAPTION_TXT = os.path.join(REPO, "corpus", "v20", "strip_captions_22.json")

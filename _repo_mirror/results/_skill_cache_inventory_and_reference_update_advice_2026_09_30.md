@@ -42,7 +42,7 @@
 
 ---
 
-## §1 plugin-cache 现状（`C:\Users\Administrator\.minimax\v2\plugin-cache\`）
+## §1 plugin-cache 现状（`〔本机用户目录〕\.minimax\v2\plugin-cache\`）
 
 **根层实测**：`plugin-cache\` 下**仅 1 个子目录 `official\`**（无其他来源根）；`official\` 下 **28 棵** `sha256-tree-v1-*` 树，**合计 172 个 skill 子目录**（实测求和）。
 **树 mtime 区间**：`2026-09-01 16:17:03`（最早）→ `2026-09-24 09:21:17`（最新）。
@@ -82,10 +82,10 @@
 
 | 路径 | 实测 |
 |---|---|
-| `C:\Users\Administrator\.minimax\plugins\` | **空目录**（0 项）—— 沿既有件「首查 plugins 0 命中」口径，**今日仍成立** |
-| `C:\Users\Administrator\.minimax\skills\` | **223 个目录，223 个含 `SKILL.md`**（mtime 分布：09-03 × 26 · 09-11 × 1 · 09-17 × 1 · **09-18 × 195**） |
-| `C:\Users\Administrator\.minimax\skill-hub.json` | mtime `2026-09-18 11:46:00`；**实测 0 命中** 四个关键 skill 名、**0 命中** `plugin-cache` / `sha256-tree-v1` |
-| `C:\Users\Administrator\.minimax\.builtin-skills\` | **20 个目录，mtime 全为 `2026-09-29 22:38:32`**；**无** scientific-* / academic-* / peer-review / experimental-design / verification-before-completion |
+| `〔本机用户目录〕\.minimax\plugins\` | **空目录**（0 项）—— 沿既有件「首查 plugins 0 命中」口径，**今日仍成立** |
+| `〔本机用户目录〕\.minimax\skills\` | **223 个目录，223 个含 `SKILL.md`**（mtime 分布：09-03 × 26 · 09-11 × 1 · 09-17 × 1 · **09-18 × 195**） |
+| `〔本机用户目录〕\.minimax\skill-hub.json` | mtime `2026-09-18 11:46:00`；**实测 0 命中** 四个关键 skill 名、**0 命中** `plugin-cache` / `sha256-tree-v1` |
+| `〔本机用户目录〕\.minimax\.builtin-skills\` | **20 个目录，mtime 全为 `2026-09-29 22:38:32`**；**无** scientific-* / academic-* / peer-review / experimental-design / verification-before-completion |
 
 ---
 

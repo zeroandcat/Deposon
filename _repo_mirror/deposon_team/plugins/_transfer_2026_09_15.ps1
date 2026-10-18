@@ -2,8 +2,8 @@
 # 严守 7 铁律 0 触动 18 frozen + P-G V0 spec
 
 $ErrorActionPreference = 'Stop'
-$srcBase = 'D:\私人资料\deposon-repo'
-$dstBase = 'D:\私人资料\_mavis_external'
+$srcBase = '_repo_mirror'
+$dstBase = '〔本地资料区〕\_mavis_external'
 
 # 创建目标子目录
 $subdirs = @('installers', 'backups', 'logs', 'proposals', 'scripts', 'reports', 'cache', 'tmp')

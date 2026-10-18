@@ -184,7 +184,7 @@
 
 | 项 | 值 |
 | :--|:--|
-| 目标路径 | `D:\私人资料\deposon-repo\results\_u_axis_input_vs_kdb2_recheck_2026_10_17.md` |
+| 目标路径 | `_repo_mirror\results\_u_axis_input_vs_kdb2_recheck_2026_10_17.md` |
 | `Test-Path`（落盘前实测） | **False** |
 | 全仓递归**同名**扫描（`os.walk`／遍历错误 ＝ **0**） | **0 命中**（占用则加 `_r1`） |
 | 落盘方式 | Python `io.open(..., 'w', encoding='utf-8', newline='\n')` **直写** |

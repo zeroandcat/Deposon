@@ -4,10 +4,10 @@ r"""
 日志保留策略 v1.0 执行脚本（deposon · 2026-10-13）
 策略登记件：results/_log_retention_policy_register_2026_10_13.md
 
-面 A  D:\Users\Administrator\AppData\Roaming\MiniMax\logs  （真实实体路径，非 junction）
+面 A  〔本机用户目录〕\AppData\Roaming\MiniMax\logs  （真实实体路径，非 junction）
       软阈 6 GB -> 清理至 4 GB；硬阈 10 GB -> 立即清理至 4 GB
       滚动窗口：保留最近 2 个日历日（含今日）
-面 B  C:\Users\Administrator\.minimax\v2\observability\logs
+面 B  〔本机用户目录〕\.minimax\v2\observability\logs
       保留最近 24 小时；上限 1 GB
 
 用法
@@ -20,7 +20,7 @@ r"""
     0 清空回收站
     删除一律经子进程调用 mavis-trash.cmd（字面前斜杠绝对路径）=> 可恢复
     失败即停并如实报，0 回退永久删除
-    归档区 D:\私人资料\_non_upload_local_archive  0 读 0 写 0 列目录
+    归档区 〔本地归档区〕  0 读 0 写 0 列目录
 """
 import os
 import re
@@ -32,9 +32,9 @@ GB = 1024 ** 3
 MB = 1024 ** 2
 
 # ---- 策略参数（与登记件逐字一致） ----------------------------------------
-FACE_A_DIR = r"D:\Users\Administrator\AppData\Roaming\MiniMax\logs"
-FACE_B_DIR = r"C:\Users\Administrator\.minimax\v2\observability\logs"
-TRASH_LAUNCHER = r"C:\Users\Administrator\.minimax\bin\mavis-trash.cmd"
+FACE_A_DIR = r"〔本机用户目录〕\AppData\Roaming\MiniMax\logs"
+FACE_B_DIR = r"〔本机用户目录〕\.minimax\v2\observability\logs"
+TRASH_LAUNCHER = r"〔本机用户目录〕\.minimax\bin\mavis-trash.cmd"
 
 A_SOFT_GB = 6.0
 A_TARGET_GB = 4.0
@@ -104,8 +104,8 @@ def trash(paths):
     """经 mavis-trash.cmd 可恢复删除。返回 (成功 list, 失败 list)。
 
     mavis-trash 拒绝经重定向点（junction）路径回收，故此处先以
-    os.path.realpath 解析出真实实体路径（例：C:\\Users\\...\\.minimax
-    -> D:\\Users\\...\\.minimax），再以前斜杠字面路径下发。
+    os.path.realpath 解析出真实实体路径（例：〔本机用户目录〕\\.minimax
+    -> 〔本机用户目录〕\\.minimax），再以前斜杠字面路径下发。
     """
     ok, bad = [], []
     if not paths:

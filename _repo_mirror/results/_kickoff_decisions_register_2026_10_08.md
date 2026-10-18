@@ -3,7 +3,7 @@
 > **性质**：**PI 开工清卷卡实答落册册**（登记件）。本件**不是**预登记件、**不是**判定件、**不是**实验结果件、**不是**他棒正文代拟稿、**不是**对外上传件。
 > **派工**：Mavis（root session）·「deposon · **开工清卷卡 · PI 实答落册**」· 2026-10-08。
 > **问卷出处**：**开工清卷卡** `ask_8eb9cafebdcf0394137c178e`（**4 题**），PI 2026-10-08 **实答四项裁决**。
-> **⚠️ 回执复核面（诚实登记 · 0 假称已复核）**：派工单称「卡工具栏回执（本机 runtime 库 `questionnaire_requests` 表有 `answered` 记录，可复核）」。**本棒实测**：本机 `C:\Users\Administrator\.minimax\sqlite.db` **仅含 `agents` 一张表**，**0 见 `questionnaire_requests` 表**；`*questionnaire*` 文件名检索仅命中 V4 蒸馏问卷历史备份 2 件（`_backup_v4_questionnaire_v1.1_pre_D1_2026_09_22.md` / `…_pre_D2_2026_09_22.md`，与本卡无关）⇒ ⭐ **本册四答「逐字」＝ 派工单转录字面**，**0 独立复算问卷原件回执**。题面字面同此（0 原件对位）。
+> **⚠️ 回执复核面（诚实登记 · 0 假称已复核）**：派工单称「卡工具栏回执（本机 runtime 库 `questionnaire_requests` 表有 `answered` 记录，可复核）」。**本棒实测**：本机 `〔本机用户目录〕\.minimax\sqlite.db` **仅含 `agents` 一张表**，**0 见 `questionnaire_requests` 表**；`*questionnaire*` 文件名检索仅命中 V4 蒸馏问卷历史备份 2 件（`_backup_v4_questionnaire_v1.1_pre_D1_2026_09_22.md` / `…_pre_D2_2026_09_22.md`，与本卡无关）⇒ ⭐ **本册四答「逐字」＝ 派工单转录字面**，**0 独立复算问卷原件回执**。题面字面同此（0 原件对位）。
 > **出证方**：**protocol-keeper（`agent-3e0c193da529`，本棒实际执行者）**。**不冒充** PI / worker / doc-writer / evidence-auditor / verdict-keeper / verifier 等任一他棒。
 > **补登 ≠ 回改**：本件只做**落册**。**既有件 byte 0 触动**。
 > **本件 0 做**：0 跑实验、0 采集、0 立线、0 拟题面、0 代 PI 拍板、0 自升阶段/版本名、0 新设阈值、0 回改任何既有件、0 网络、0 删除、**R4 key 永不明文**（0 读 key、0 读 `.env`）。

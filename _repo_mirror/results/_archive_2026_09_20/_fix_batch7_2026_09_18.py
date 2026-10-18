@@ -7,7 +7,7 @@ P1-7: 根目录 91 个 .py 仅 1 个有 SELF-CHECK → 对仍在用的 runner �
 import hashlib, re
 from pathlib import Path
 
-ROOT = Path(r'D:\私人资料\deposon-repo')
+ROOT = Path(r'_repo_mirror')
 MARK = 'TRAE_SELFCHECK_2026_09_16_V3'
 sha_table = []
 

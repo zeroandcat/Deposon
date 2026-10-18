@@ -78,7 +78,7 @@
 
 | # | 源 | SHA-12（移前＝移后） | 字节 | 移前 mtime | 目标 | `src_gone` | `sha_match` | `size_match` |
 |---:|---|---|---:|---|---|:--:|:--:|:--:|
-| 1 | `D:\私人资料\deposon-repo\deposon_team\plugins\_v4_wide_s2_scan_2026_09_27.py` | `c2cc22b27047` | 4,000 | 2026-09-27 20:19:13 | `D:\私人资料\deposon-sub\tmp_movedout_2026_10_01\process_scripts\v4_wide_2026_09_27\_v4_wide_s2_scan_2026_09_27.py` | ✅ | ✅ | ✅ |
+| 1 | `_repo_mirror\deposon_team\plugins\_v4_wide_s2_scan_2026_09_27.py` | `c2cc22b27047` | 4,000 | 2026-09-27 20:19:13 | `_repo_mirror\tmp_movedout_2026_10_01\process_scripts\v4_wide_2026_09_27\_v4_wide_s2_scan_2026_09_27.py` | ✅ | ✅ | ✅ |
 
 **`bad=0`｜移动 1 件／4,000 B。**
 
@@ -90,7 +90,7 @@
 
 ### §2.2 拉回路径（可逆）
 
-`D:\私人资料\deposon-sub\tmp_movedout_2026_10_01\process_scripts\v4_wide_2026_09_27\` → `D:\私人资料\deposon-repo\deposon_team\plugins\`
+`_repo_mirror\tmp_movedout_2026_10_01\process_scripts\v4_wide_2026_09_27\` → `_repo_mirror\deposon_team\plugins\`
 （单文件反向移动即可；复原后 SHA-12 应为 `c2cc22b27047`／4,000 B）
 
 ### §2.3 落位后族内共位实测

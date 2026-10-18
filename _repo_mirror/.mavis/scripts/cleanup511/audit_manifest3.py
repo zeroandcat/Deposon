@@ -2,7 +2,7 @@
 """Audit 3: exact scope of the D-artifact fix + the out-of-.tmp carve-outs (rule 4/5)."""
 import io, os, json, hashlib
 
-REPO = r"D:\私人资料\deposon-repo"
+REPO = r"_repo_mirror"
 P = os.path.join(REPO, ".tmp", "cleanup511_manifest_2026_10_17.json")
 m = json.load(io.open(P, encoding="utf-8"))
 held, clean = m["held"], m["clean"]

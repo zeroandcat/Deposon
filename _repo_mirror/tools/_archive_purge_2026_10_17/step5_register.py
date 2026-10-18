@@ -8,8 +8,8 @@ import re
 import sys
 import datetime
 
-D = r"D:\私人资料\deposon-repo\tools\_archive_purge_2026_10_17"
-OUT = r"D:\私人资料\deposon-repo\results\_archive_whitelist_purge_exec_register_2026_10_17.md"
+D = r"_repo_mirror\tools\_archive_purge_2026_10_17"
+OUT = r"_repo_mirror\results\_archive_whitelist_purge_exec_register_2026_10_17.md"
 
 CARD = "ask_69efe394d3e5b6865e529026"
 OPT = "q1_5e3acedc_opt2"
@@ -67,7 +67,7 @@ def main():
     A("")
     A("授权射程之辨（照录派工）：")
     A("")
-    A("- 目标：归档区白名单副本 `D:\\私人资料\\_non_upload_local_archive\\whitelist_backup_2026_10_17\\`（%d 件 / %s B）。" % (t["n_files"], "{:,}".format(t["total_bytes"])))
+    A("- 目标：归档区白名单副本 `〔本地资料区〕\\_non_upload_local_archive\\whitelist_backup_2026_10_17\\`（%d 件 / %s B）。" % (t["n_files"], "{:,}".format(t["total_bytes"])))
     A("- **仅留** `.tmp/whitelist_backup_2026_10_17/` 副本为生效备份面（⛔0 动）——本次未动，逐节 6 复测为证。")
     A("- 归档区之「0 写」之其余面与「0 上传」维持不变；「读取不违纪」（PI 2026-10-13 射程纠正）。")
     A("- ⛔0 网络（本棒未发起任何网络请求）；⛔0 宣告①毕。")
@@ -79,7 +79,7 @@ def main():
     A("")
     A("| 项 | 目标面（待清除） | 备份面（生效·⛔0 动） |")
     A("|---|---|---|")
-    A("| 路径 | `D:\\私人资料\\_non_upload_local_archive\\whitelist_backup_2026_10_17` | `D:\\私人资料\\deposon-repo\\.tmp\\whitelist_backup_2026_10_17` |")
+    A("| 路径 | `〔本地资料区〕\\_non_upload_local_archive\\whitelist_backup_2026_10_17` | `_repo_mirror\\.tmp\\whitelist_backup_2026_10_17` |")
     A("| 存在 | %s | %s |" % (t["exists"], b["exists"]))
     A("| 件数 | %d | %d |" % (t["n_files"], b["n_files"]))
     A("| 目录数 | %d | %d |" % (t["n_dirs"], b["n_dirs"]))

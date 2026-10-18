@@ -7,8 +7,8 @@ import shutil
 import sys
 from pathlib import Path
 
-SRC_BASE = Path(r'D:\私人资料\deposon-repo')
-DST_BASE = Path(r'D:\私人资料\_mavis_external')
+SRC_BASE = Path(r'_repo_mirror')
+DST_BASE = Path(r'〔本地资料区〕\_mavis_external')
 
 # 创建目标子目录
 subdirs = ['installers', 'backups', 'logs', 'proposals', 'scripts', 'reports', 'cache', 'tmp']

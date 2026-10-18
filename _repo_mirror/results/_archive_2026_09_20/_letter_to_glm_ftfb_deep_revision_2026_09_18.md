@@ -241,7 +241,7 @@
 | Bérut（候选 R57） | A. Bérut, A. Arakelyan, A. Petrosyan, S. Ciliberto, R. Dillenschneider, E. Lutz；Nature 483(7388):**187–189** (2012)；DOI:10.1038/nature10872（简报页码 187–190 有误，以此为准） | https://doi.org/10.1038/nature10872 ；https://arxiv.org/pdf/2506.24021 |
 | R54 升级 | 规范著录：W.K. Clifford, "On the Space-Theory of Matter", Proc. Cambridge Philos. Soc. 2 (1864–1876, printed 1876):157–158；另收于 *Lectures and Essays* Vol. I (Macmillan, 1879) 与 *Mathematical Papers* (Macmillan, 1882), pp. 21–22；Wikisource 扫描即该刊页 | https://en.wikisource.org/wiki/Index:On_the_Space-Theory_of_Matter.djvu ；https://pubs.aip.org/aip/jmp/article-abstract/65/9/092501/3312881 |
 | Čapek 归因 | Karel Čapek 本人承认 robot 一词为其兄 Josef Čapek（1887–1945）所提议（Karel 曾致函 OED 更正词源） | https://blog.oup.com/2012/11/words-were-thankful-for/ |
-| §7 复算记录 | KIMI 第三方复算（2026-09-18 10:36–10:40 CST）：5 锚点 ALL_MATCH 5/5；关键数字逐项 CONSISTENT；两远端独有工件仅核对手账摘要字段，建议回拉 | 本地工件 `D:\私人资料\deposon-repo\results\_kimi_ftfb_s7_independent_recompute_2026_09_18.json`（SHA-256 前 12 位 `879db0217f04`） |
+| §7 复算记录 | KIMI 第三方复算（2026-09-18 10:36–10:40 CST）：5 锚点 ALL_MATCH 5/5；关键数字逐项 CONSISTENT；两远端独有工件仅核对手账摘要字段，建议回拉 | 本地工件 `_repo_mirror\results\_kimi_ftfb_s7_independent_recompute_2026_09_18.json`（SHA-256 前 12 位 `879db0217f04`） |
 
 未闭合项：R42 卷期页码（DOI 已闭合）。其余各项均闭合，禁止凭记忆补写任何标识符。
 

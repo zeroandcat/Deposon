@@ -4,7 +4,7 @@
 import os, json, re
 from datetime import datetime, timezone, timedelta
 
-log_path = r'D:\私人资料\deposon-repo\verifier\_run.log'
+log_path = r'_repo_mirror\verifier\_run.log'
 # Read as utf-8 first, fallback to utf-16
 try:
     with open(log_path, 'r', encoding='utf-8') as f:
@@ -153,7 +153,7 @@ output = {
     }
 }
 
-out_json = r'D:\私人资料\deposon-repo\results\deposon_volcengine_9model_30cells_2026_09_10.json'
+out_json = r'_repo_mirror\results\deposon_volcengine_9model_30cells_2026_09_10.json'
 with open(out_json, 'w', encoding='utf-8') as f:
     json.dump(output, f, ensure_ascii=False, indent=2)
 

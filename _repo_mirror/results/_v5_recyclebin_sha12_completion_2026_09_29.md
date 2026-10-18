@@ -30,8 +30,8 @@
 
 | 回收站根 | 递归文件数 | 顶层条目 | `$I` 元数据 | `$R` 内容件 | `$R` 目录件 | 其它 |
 |---|---|---|---|---|---|---|
-| `D:\$Recycle.Bin\S-1-5-21-1515631758-409240343-2904948024-500\` | **87** | 27 | 13 | 9 | 4 | 1（`desktop.ini`） |
-| `C:\$Recycle.Bin\S-1-5-21-1515631758-409240343-2904948024-500\` | **484** | 388 | 194 | 192 | 1 | 1（`desktop.ini`） |
+| `〔回收站〕\` | **87** | 27 | 13 | 9 | 4 | 1（`desktop.ini`） |
+| `〔回收站〕\` | **484** | 388 | 194 | 192 | 1 | 1（`desktop.ini`） |
 | **合计** | **571** | **415** | **207** | **201** | **5** | **2** |
 
 - **递归口径**：`os.walk` 全深度遍历（覆盖 `$R` 目录嵌套，如 `$R2AWLTS` 形如目录的删除件）⇒ 递归文件数 **571**（与派工单 root 先前实测的「D 约 87 / C 约 484」**逐位一致**）
@@ -165,10 +165,10 @@ Windows 回收站 `$I*` 文件布局（实测 version ＝ **2**，207/207 一致
 
 为确认「47 件当时确曾进入回收站」这一前提，本棒**只读**核对了删除通道实现（**0 执行任何删除**）：
 
-- `C:\Users\Administrator\.minimax\bin\mavis-trash.cmd` → `mavis-trash.js`
+- `〔本机用户目录〕\.minimax\bin\mavis-trash.cmd` → `mavis-trash.js`
 - `mavis-trash.js` 内 `trashFile()` 调用 PowerShell `SendToRecycleBin`（Microsoft.VisualBasic.FileIO.FileSystem）⇒ **确为 Windows 原生回收站通道**，**非自建影子目录**
 - 临时载荷 `mavis-trash-reparse-<pid>-<ts>-<rand>.json` 落 `os.tmpdir()` 并在 `finally` 中 `unlinkSync` 清理 ⇒ **0 影子副本面**（本棒实测 `%TEMP%` 无残留 `mavis-trash-reparse*`）
-- 实测 `C:\Users\Administrator\.minimax\trash` / `.trash` / `D:\.trash` 等候选影子根 **0 存在**
+- 实测 `〔本机用户目录〕\.minimax\trash` / `.trash` / `〔本机路径〕\.trash` 等候选影子根 **0 存在**
 
 ⇒ **源件 v3 §A「所有删除件可从 Windows Recycle Bin 恢复」在删除时点成立**；**当前不可及系时点差异（回收站此后被清空重积），非通道错误**。
 

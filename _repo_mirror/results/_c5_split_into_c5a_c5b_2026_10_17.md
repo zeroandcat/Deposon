@@ -28,7 +28,7 @@
 
 | 问 | 判定 | 依据 |
 |:-:|:--|:--|
-| **Q1 素材可得** | 🟡 **待 PI 传入** | `C5-b` 之闭所需素材 ＝ 受托方（grok／copilot agent）回执件；**载体面已开**（`letters/` **或** `D:\私人资料\GLM`＝稳定交付面，见 §4-4 逐字），**实体 0 在盘**（本棒实测两面 0 命中回执件）⇒ **待采集**（⛔ 0 以估计值/替身充之） |
+| **Q1 素材可得** | 🟡 **待 PI 传入** | `C5-b` 之闭所需素材 ＝ 受托方（grok／copilot agent）回执件；**载体面已开**（`letters/` **或** `〔本地资料区〕\GLM`＝稳定交付面，见 §4-4 逐字），**实体 0 在盘**（本棒实测两面 0 命中回执件）⇒ **待采集**（⛔ 0 以估计值/替身充之） |
 | **Q2 实验可设计** | 🟡 **可设计 · 本棒 ⛔ 0 涉实验** | `C5-b` 之闭**非实验**、为**在位件之机械三要件判定**（载体在位＋逐格交付表在载＋函外指纹回执在载）⇒ 判据可设计且可复现；本棒 ⛔ **0** 执行任何 runner／实验 |
 | **Q3 命题可证伪** | 🟢 **可证伪** | 命题「G-D03 母面之其余项已闭」可由回执件之**逐格交付表**证否：任一格无值**且**无理由 ⇒ `C5-b` **不闭**（承委托函 §5.3 逐字：「A cell left `null` with a stated reason is a **complete delivery** for that cell」——故证否面 ＝ **无理由之空缺**，⛔ 非「有理由之 `null`」） |
 
@@ -66,7 +66,7 @@
 
 ### §3-1 权源逐字（PI 2026-10-12 21:54 采认令 · 效力登记件 `2e7d804dad2a`）
 
-**载体**：`D:\私人资料\GLM\鲍勃_PI双裁定登记_G-E02验收线_G-E01就绪判定_2026_10_12.md`｜**实测 SHA-12 `2e7d804dad2a`／19,296 B／182 LF**（**本棒直算**；**GLM 面 ＝ 稳定面**）。
+**载体**：`〔本地资料区〕\GLM\鲍勃_PI双裁定登记_G-E02验收线_G-E01就绪判定_2026_10_12.md`｜**实测 SHA-12 `2e7d804dad2a`／19,296 B／182 LF**（**本棒直算**；**GLM 面 ＝ 稳定面**）。
 
 | 行 | **逐字** |
 | :-- | :-- |
@@ -158,7 +158,7 @@
 
 **权源 ＝ 委托函 §7.6 ＋ §5.2 逐字**（`6922929bfda8` **L147**／**L121**；姊妹封 `385003e41ce2` **L147** 同文；GLM 面草稿 `393d71e51fbf` **L144** 收窄为单面）：
 
-> L147 逐字：「Delivery channel: **hand the reply to the PI**, who will file it — we do not transmit on your behalf and you need not reach any endpoint yourself. A reply counts as **received for our registry** when a reply artefact is present **either** in the repository's `letters/` **or** under `D:\私人资料\GLM` (our stable delivery surface; the other location may be swept at any time), **and** it carries the **per-cell delivery table for both `T-2` and `T-3`**, **and** the **out-of-file fingerprint receipt** (SHA-12 / bytes / line count) required by §5.2. **Our `C5` item (G-D03 adjudication, receipt-in-place) is judged mechanically on that artefact's presence.** The artefact must state **which addressee it answers** — grok or copilot agent — so the registry can attribute the receipt per face; **an unattributable receipt cannot be counted against `C5`.**」
+> L147 逐字：「Delivery channel: **hand the reply to the PI**, who will file it — we do not transmit on your behalf and you need not reach any endpoint yourself. A reply counts as **received for our registry** when a reply artefact is present **either** in the repository's `letters/` **or** under `〔本地资料区〕\GLM` (our stable delivery surface; the other location may be swept at any time), **and** it carries the **per-cell delivery table for both `T-2` and `T-3`**, **and** the **out-of-file fingerprint receipt** (SHA-12 / bytes / line count) required by §5.2. **Our `C5` item (G-D03 adjudication, receipt-in-place) is judged mechanically on that artefact's presence.** The artefact must state **which addressee it answers** — grok or copilot agent — so the registry can attribute the receipt per face; **an unattributable receipt cannot be counted against `C5`.**」
 
 > §5.2 逐字（L121）：「With the delivery, report the fingerprint of each delivered file as **path + SHA-12 + byte count + line count** (SHA-256, first 12 hex, lowercase; `hashlib.sha256`, not a language built-in `hash()`). Fingerprints are reported **with** the delivery, **outside the delivered files**.」
 
@@ -166,7 +166,7 @@
 
 | **判死线 id** | **判据（机械 · 逐字源）** | **本棒实测** |
 | :-: | :-- | :-:|
-| **`K-C5B-1`** | **载体在位** —— 回执件在 `letters/` **或** `D:\私人资料\GLM`（**稳定交付面**）在位；且**归属面**须自陈所答受托方（grok／copilot agent）——**unattributable receipt ⛔ 0 计入** | 🔴 **不满足**（两面 **0 命中** grok／copilot 回执件；本棒以文件名＋`reply`／`unblock` 关键词遍历 REPO＋GLM 两面实测） |
+| **`K-C5B-1`** | **载体在位** —— 回执件在 `letters/` **或** `〔本地资料区〕\GLM`（**稳定交付面**）在位；且**归属面**须自陈所答受托方（grok／copilot agent）——**unattributable receipt ⛔ 0 计入** | 🔴 **不满足**（两面 **0 命中** grok／copilot 回执件；本棒以文件名＋`reply`／`unblock` 关键词遍历 REPO＋GLM 两面实测） |
 | **`K-C5B-2`** | **逐格交付表在载** —— 回执件载 `T-2`／`T-3` **各 15 格**（3 机制 × 5 任务族）之**逐格交付表**（§7.1：每项须以**一行终判词**收束：*derivable (with value/rule)*／*derivable-with-relaxation*／*underivable as stated (obstruction)*） | 🔴 **不满足**（无回执件） |
 | **`K-C5B-3`** | **函外指纹回执在载** —— 附 `path + SHA-12 + bytes + line count` 之指纹回执，且**在交付文件之外**（`hashlib.sha256`·⛔ **0** 用语言内建 `hash()`） | 🔴 **不满足**（无回执件） |
 
@@ -217,7 +217,7 @@
 
 | # | **U** | **须** | **关联** |
 | :-: | :-- | :-- | :-- |
-| **U-1** | **`C5-b` 之闭之机械判定** —— 待回执件经 PI 传入 `letters/` **或** `D:\私人资料\GLM`（稳定面）后，依 `K-C5B-1..3` 三要件实测判定 | **PI 传入** ＋ `verdict-keeper` 落档 | §4-4｜KD-S-7 |
+| **U-1** | **`C5-b` 之闭之机械判定** —— 待回执件经 PI 传入 `letters/` **或** `〔本地资料区〕\GLM`（稳定面）后，依 `K-C5B-1..3` 三要件实测判定 | **PI 传入** ＋ `verdict-keeper` 落档 | §4-4｜KD-S-7 |
 | **U-2** | **委托函之放行/传递** —— 函自载「release is the PI's」「dispatch only after PI approval」；本棒实测 0 命中放行登记 | **PI** | §4-3 |
 | **U-3** | **「余未决项」之枚举授权** —— `19099ecb3c46` **现已在盘**（KD-S-2），枚举面已开启，惟**本棒 0 代枚举** | **PI 令／另棒授权** ＋ 逐字回读 | KD-S-2｜KD-S-3 |
 | **U-4** | **10-17 卡面之复核** —— 卡号与时点戳 0 在盘（KD-S-1）；若 PI 后续补入卡面登记，本件之授权链字面可升级为**盘面逐字** | **PI 知悉／后续棒复核** | KD-S-1 |
@@ -235,7 +235,7 @@
 
 | 项 | 值 |
 | :-- | :-- |
-| 目标路径 | `D:\私人资料\deposon-repo\results\_c5_split_into_c5a_c5b_2026_10_17.md` |
+| 目标路径 | `_repo_mirror\results\_c5_split_into_c5a_c5b_2026_10_17.md` |
 | `Test-Path`（落盘前） | **False** |
 | glob `results/_c5_split_into_c5a_c5b*`（落盘前） | **0 命中** |
 | 处置 | **0 覆盖**，未需 `_r1` |
@@ -246,7 +246,7 @@
 
 | 项 | 值 |
 | :-- | :-- |
-| 绝对路径 | `D:\私人资料\deposon-repo\results\_c5_split_into_c5a_c5b_2026_10_17.md` |
+| 绝对路径 | `_repo_mirror\results\_c5_split_into_c5a_c5b_2026_10_17.md` |
 | SHA-12 | `c3ce2bb53af1` |
 | bytes | `28097` |
 | LF 行数 | `243` |

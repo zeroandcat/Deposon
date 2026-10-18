@@ -24,7 +24,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', line_bufferin
 sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', line_buffering=True)
 
 # ---------------- 0. 加载 key (GB18030) ----------------
-key_file = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
+key_file = r'〔本机用户目录〕\Desktop\AI\LLM API.txt'
 content = open(key_file, 'r', encoding='gb18030').read()
 m = re.search(r'sk-or-v1-[a-f0-9]{64}', content)
 if not m:
@@ -156,8 +156,8 @@ def extract_yes_no(text):
 
 
 # 加载 benchmark 数据
-gsm8k_path = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_gsm8k_details.json'
-strategyqa_path = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_strategyqa_details.json'
+gsm8k_path = r'_repo_mirror\results\deposon_benchmark_v1_4_gsm8k_details.json'
+strategyqa_path = r'_repo_mirror\results\deposon_benchmark_v1_4_strategyqa_details.json'
 
 with open(gsm8k_path, 'r', encoding='utf-8') as f:
     gsm8k_data = json.load(f)
@@ -390,7 +390,7 @@ output = {
     }
 }
 
-out_path = r'D:\私人资料\deposon-repo\results\deposon_v41_flash_60cells_v2_2026_09_10.json'
+out_path = r'_repo_mirror\results\deposon_v41_flash_60cells_v2_2026_09_10.json'
 with open(out_path, 'w', encoding='utf-8') as f:
     json.dump(output, f, ensure_ascii=False, indent=2)
 

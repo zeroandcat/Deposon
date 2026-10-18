@@ -3,7 +3,7 @@
 > **棒别**：**独立另议判断棒**（worker）—— 依 PI 判「另议」之定式出件（**结论＋理由＋反方**，非挂起）｜PI 裁源：卡 `ask_f9ad84170db83f48ba19b143` 之 `b2_b4`＝「暂不处置，候另议」
 > **0 回改声明**：本棒对**任何既有件未作任何写动作**（0 编辑／0 覆写／0 追加／0 格式化／0 移动／0 重命名／0 删除）；所给更正内容**仅供另立件承载**。
 > **0 宣告①毕**：⛔ 本件 0 宣告任何闭或开、0 宣告①毕、0 计数任何终判；本件即该「另议」之判断件本身。
-> **边界**：⛔ 0 移动／重命名／删除｜⛔ 0 触 `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录；检索根限 `deposon-repo`／`deposon-sub` 两根）｜⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜⛔ 0 改终判词／阈值／门柱｜⛔ 0 赋 `k_v3s_4_4_*` 布尔｜⛔ 0 写他棒产物面（`_gate1_five_zero_recheck*`／`_batch3_*`／`_trae_issues_batch2*`／`letters/`／`_bob_*`／`_remote_baseline*`／`_archive_*` 皆 0 写）。
+> **边界**：⛔ 0 移动／重命名／删除｜⛔ 0 触 `〔本地归档区〕`（0 读 0 写 0 列目录；检索根限 `deposon-repo`／`deposon-sub` 两根）｜⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜⛔ 0 改终判词／阈值／门柱｜⛔ 0 赋 `k_v3s_4_4_*` 布尔｜⛔ 0 写他棒产物面（`_gate1_five_zero_recheck*`／`_batch3_*`／`_trae_issues_batch2*`／`letters/`／`_bob_*`／`_remote_baseline*`／`_archive_*` 皆 0 写）。
 > **独立性**：本件之复算系**本棒自算**；⛔ 0 沿用批 2 之 299／297 读值，⛔ 0 沿用批 3 收尾登记之转述。凡与批 2 之结论一致者，§4 已列其最强反驳。
 > **引证纪律**：本件一切「逐字」引证皆置于**围栏代码块**内（块内字符＝源文件字符原样，无任何 markdown 转义）；表格单元内不承载逐字引文，以免转义字符混入引文。
 
@@ -23,7 +23,7 @@
 
 ### §1-1 宿主 §3.1 逐字回读（L82–L92 ＋ L169；围栏内为源文件字符原样）
 
-源：`D:\私人资料\deposon-repo\results\_questionnaire_cards_intake_register_supplement_6_receipt_2026_10_10.md`（`0984955b0370`）
+源：`_repo_mirror\results\_questionnaire_cards_intake_register_supplement_6_receipt_2026_10_10.md`（`0984955b0370`）
 
 ```markdown
 | 核验面 | 实检项数 | 失败 |

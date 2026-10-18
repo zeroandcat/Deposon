@@ -37,7 +37,7 @@ from datetime import datetime, timezone
 import requests
 
 # ---------------------------------------------------------------- 配置
-KEY_FILE = r"C:\Users\Administrator\Desktop\AI\LLM API.txt"
+KEY_FILE = r"〔本机用户目录〕\Desktop\AI\LLM API.txt"
 PROXY_HTTP = "http://127.0.0.1:1018"
 PROXY_SOCKS5 = "socks5://127.0.0.1:1018"
 
@@ -50,7 +50,7 @@ INTER_CALL_SLEEP_S = 2.0
 TIMEOUT_S = 30
 MAX_RESPONSE_CAPTURE = 600
 
-OUT_JSON = r"D:\私人资料\deposon-repo\results\_v5_track2_qwen_retry_2026_09_29.json"
+OUT_JSON = r"_repo_mirror\results\_v5_track2_qwen_retry_2026_09_29.json"
 
 # 明文泄露防护：任何输出/产物前统一过一遍
 SECRET_RX = re.compile(

@@ -11,7 +11,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-BASE = Path(r'D:\私人资料\deposon-repo')
+BASE = Path(r'_repo_mirror')
 OUT_DIR = BASE / 'results' / '_v3x_18frozen_remeasure_2026_09_16'
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 

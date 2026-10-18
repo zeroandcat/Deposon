@@ -72,7 +72,7 @@
 | 契约 | 损坏件（截断 `[{"cell_idx":0,` + BOM 件）→ 返回值仍 `[]` | **PASS**：`load_t15_records -> []` / `load_t15r2_records -> []` |
 | 告警 | stderr 横幅 + 关键提示 | **PASS**：2 次告警发出；含「已跑数据不可读」/「K-N11-N1_T1relax」/「T1.5 状态锚」三处关键提示 |
 | 日志 | `.tmp/_t15r2_checkpoint_warn.jsonl` | **PASS**：2 行落盘 |
-| 永不 raise | 日志路径指向不可写盘 `Z:/...` | **PASS**：返回 `None`，未抛异常 |
+| 永不 raise | 日志路径指向不可写盘 `〔本机路径〕/...` | **PASS**：返回 `None`，未抛异常 |
 | 负向对照 | 正常件 `[{"ok": true}]` | **PASS**：返回 `[{'ok': True}]`，**stderr 0 字节 = 0 假告警**（修复未引入新失败面） |
 | 既有件 0 触动 | 修复后重测 SHA | **PASS**：`4B5B720D5CDA` MATCH |
 

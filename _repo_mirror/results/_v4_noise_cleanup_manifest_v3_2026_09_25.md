@@ -4,7 +4,7 @@
 > 本棒为 PI 2026-09-25 00:46「今晚保守口径下先斩后奏，记得整理文件夹」点名的延续清理棒
 > 不覆盖 `results/_v4_noise_cleanup_manifest_v2_2026_09_24.md` (SHA-12=`90253e8342da` 锚格式)，新建独立 manifest 留痕
 > 不覆盖 `results/_v4_maindir_cleanup_manifest_2026_09_24.md` (SHA-12=`32cc61d394f2`)
-> 删除通道：`rm -- <path>` (trusted launcher @ `C:\Users\Administrator\.minimax\bin\mavis-trash.cmd`)
+> 删除通道：`rm -- <path>` (trusted launcher @ `〔本机用户目录〕\.minimax\bin\mavis-trash.cmd`)
 > 可恢复性：**所有删除件可从 Windows Recycle Bin 恢复**（mavis-trash 可恢复删除）
 
 ---
@@ -252,9 +252,9 @@ Test-Path .tmp/_grep_out.txt                                            = False
 
 | 目录 | 路径 | 存在 | 文件数 | 备注 |
 |---|---|---|---|---|
-| **主目录** | `D:/私人资料/deposon-repo` (递归) | True | **908** | after 清理；before=945 |
-| `_non_upload_local_archive` | `D:/私人资料/deposon-repo/_non_upload_local_archive` | **False** | 0 | 目录不存在 |
-| `deposon-sub` | `D:/私人资料/deposon-repo/deposon-sub` | **False** | 0 | 目录不存在 |
+| **主目录** | `_repo_mirror` (递归) | True | **908** | after 清理；before=945 |
+| `_non_upload_local_archive` | `_repo_mirror/_non_upload_local_archive` | **False** | 0 | 目录不存在 |
+| `deposon-sub` | `_repo_mirror/deposon-sub` | **False** | 0 | 目录不存在 |
 
 **派工单阈值判定**：主目录 908 < 1000 → **不需要再清中间件**（本棒清完已达 <1000）。
 

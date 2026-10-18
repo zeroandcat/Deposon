@@ -6,7 +6,7 @@ mistaken for a deletion candidate).
 """
 import io, os, json, hashlib
 
-REPO = r"D:\私人资料\deposon-repo"
+REPO = r"_repo_mirror"
 MAN  = os.path.join(REPO, ".tmp", "cleanup511_manifest_2026_10_17.json")
 OUT  = os.path.join(REPO, ".mavis", "scripts", "cleanup511", "exec_list.json")
 EMPTY_SHA = hashlib.sha256(b"").hexdigest()

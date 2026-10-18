@@ -22,7 +22,7 @@ from pathlib import Path
 
 import numpy as np
 
-BASE = Path(r'D:\私人资料\deposon-repo')
+BASE = Path(r'_repo_mirror')
 PHYS_JSON = BASE / 'results' / 'deposon_v3_physical_opt_60cells_2026_09_11.json'
 OUT_DIR = BASE / 'results' / '_p_i_curvature_audit_probe_2026_09_16'
 OUT_DIR.mkdir(parents=True, exist_ok=True)

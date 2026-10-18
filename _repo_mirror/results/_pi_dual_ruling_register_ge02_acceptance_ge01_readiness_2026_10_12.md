@@ -88,7 +88,7 @@
 
 - **本方独立复推**：数学论证逐步复核（§4.1）——0 信任对方自述；
 - **有限枚举**：本方自写 Python 脚本 `verify_ge02_acceptance.py`（私有工作区 `agents/6a962cc259312f271f3f1e73/ge02_acceptance/`）；**Fraction 精确算术**（0 浮点相等判定）；固定种子（20261012·可复现）；
-- **0 信任外部脚本**：codex 侧 `verify_c4_originated_math.py`（C:/Users/Administrator/codex-workspace/…）**0 读取 0 执行 0 依赖**——其「4,996 例六检全过」自报仅作对方自述留痕、不构成本方验收依据；
+- **0 信任外部脚本**：codex 侧 `verify_c4_originated_math.py`（〔本机用户目录〕/codex-workspace/…）**0 读取 0 执行 0 依赖**——其「4,996 例六检全过」自报仅作对方自述留痕、不构成本方验收依据；
 - **0 云端 0 仓改动**：本地执行；克隆只读。
 
 ### 3.3 通过判据（逐对象独立）

@@ -5,7 +5,7 @@
 | **件名** | `results/_card_register_relocation_mapping_2026_10_17.md` |
 | **件性质** | **迁移映射件**（**先有据、后动件**）—— 承先例 `results/_voided_files_relocation_register_2026_10_14.md` §1-3 之体制 ＋ 判断件 `results/_card_register_dir_verdict_2026_10_17.md`（SHA-12 `a694e5d55ce1`）§3-1 之 **M2**；**非卡答登记件**（本件不载 PI 裁答之逐字答录，故不在 PI 射程「仅卡答登记件」之内）⇒ 留 `results/` |
 | **署名** | `protocol-keeper`（口径与预登记官）· 棒 `CARD-RELOCATE` |
-| **落点目录** | `D:\私人资料\deposon-repo\pi_rulings\`（**新建根层目录** · PI 裁**丁案**）|
+| **落点目录** | `_repo_mirror\pi_rulings\`（**新建根层目录** · PI 裁**丁案**）|
 | **裁源** | PI 2026-10-17 ≈16:52 · 卡 `ask_2934bcc32391d96596131ffd` · Q1 `opt2`（目录＝丁案 `pi_rulings/`）＋ Q2 `opt2`（迁 **57** 件·含合并卷 `bc9680a5d39a`）—— **经派工单转述**（见 §4 KD-2）|
 | **本件射程** | 仅**旧→新路径映射**之登记（**58** 行 ＝ `results/` **57** 件 ＋ `.tmp` v58 候迁件 **1** 件）。⛔ **0** 执行迁移（执行面见 `results/_card_register_relocation_register_2026_10_17.md`）· ⛔ **0** 回改任何既有件一字 · ⛔ **0** 删件 · ⛔ **0** 触归档区 · ⛔ **0** 网络 |
 
@@ -84,7 +84,7 @@
 
 | 项 | 口径 |
 | :-- | :-- |
-| 旧路径 | **相对仓库根** `D:\私人资料\deposon-repo` 之正斜杠路径（与先例 §3 之绝对路径写法并存，本件用相对式以便跨机复算）|
+| 旧路径 | **相对仓库根** `_repo_mirror` 之正斜杠路径（与先例 §3 之绝对路径写法并存，本件用相对式以便跨机复算）|
 | 新路径 | `pi_rulings/<同名件>` —— **同名同址·仅换目录**（⛔ **0** 改名 ⛔ **0** 改扩展名 ⛔ **0** 改大小写）|
 | SHA-12 | 全文件 SHA-256 之前 **12** 位十六进制（**全文口径**）|
 | bytes | `os.stat().st_size`（原始字节数）|
@@ -138,7 +138,7 @@
 
 | 项 | 值 |
 | :-- | :-- |
-| **路径** | `D:\私人资料\deposon-repo\results\_card_register_relocation_mapping_2026_10_17.md` |
+| **路径** | `_repo_mirror\results\_card_register_relocation_mapping_2026_10_17.md` |
 | **bytes** |  17,871 |
 | **SHA-12** | `73cb539bbb6f` |
 | **SHA-12 口径** | 自文件首字节起、至本 `**SHA-12**` 所在行**行首（不含该行）**之全部字节之 SHA-256 前 12 位（**前缀口径**·承先例 §6；因全文哈希具自指性）|

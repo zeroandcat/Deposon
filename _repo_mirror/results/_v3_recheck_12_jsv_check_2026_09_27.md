@@ -134,7 +134,7 @@
    - 失败 4 类：DDG html（network failed）、Mojeek（403）、searx marcia.cc（域停放）、Semantic Scholar（429 ×2）
    - **0 teamorouter / 0 openrouter / 0 LLM API 调用 ⇒ 0 代理需求**（PI「teamorouter/openrouter 必走 tun」口径本次**不触发**）；0 key 出现、0 明文密钥
 3. **skill**：`@scientific-research-workflows` / `experimental-design`，**已加载、未 fallback** —— 首查 `.minimax\plugins`（空目录）与 `.minimax\skills`（223 项无此项）均 0 命中，经 **plugin-cache** 定位到
-   `C:\Users\Administrator\.minimax\v2\plugin-cache\official\sha256-tree-v1-611965fcb6…\skills\experimental-design\SKILL.md`（13,044 B），实测 **SHA-12 `0a314eed103a`**，与 #12 rescript 所记逐字一致。**0 编造 skill 指令**。适用面：区组 = 9 model、伪重复声明沿 #12 既有字面；本件 0 新增处理格 / 0 新阈值 / 0 新 seed。
+   `〔本机用户目录〕\.minimax\v2\plugin-cache\official\sha256-tree-v1-611965fcb6…\skills\experimental-design\SKILL.md`（13,044 B），实测 **SHA-12 `0a314eed103a`**，与 #12 rescript 所记逐字一致。**0 编造 skill 指令**。适用面：区组 = 9 model、伪重复声明沿 #12 既有字面；本件 0 新增处理格 / 0 新阈值 / 0 新 seed。
 4. **0 擅调阈值**：`PFEUTY_H_C_OVER_J=1.0` / `TOL_STRICT=0.05` / `TOL_LOOSE=0.15` / `D_FIX2_*` 全部沿既有字面，**本件一字未动**（本件根本未重跑判据，见 §2）。
 5. **不掩盖对自己不利的读数**：J-5 如实标出 **#12 的 1D 临界方程文献级引用本次仍未补上**；C1/C2 **仅得元数据、未得正文**。
 6. **主动剔除反证**：J-2 —— 2 次 DOI 查无被自己查出是大小写问题，**不计证据**。

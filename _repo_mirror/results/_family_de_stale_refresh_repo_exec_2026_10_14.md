@@ -1,7 +1,7 @@
 # ①段 W-1 · 族 D／E 陈旧引用「**REPO 面阶段二刷新 · 执行登记件**」（真陈旧 **18 处**）
 
 > **件性质**：**执行登记件** —— 载**已执行**之刷新动作与逐处前后对照｜⛔ **0 宣告①毕**｜⛔ **0 宣告任一项已闭**｜⛔ **0 代 PI 裁／释／择**｜⛔ **0 出五终判**（pass／af／kd／fail／give-up 皆 0）｜⛔ **0 径行采认**。
-> **本棒执行面**：**仅 `D:\私人资料\deposon-repo`（REPO 面）之 18 处引用刷新**（6 个物理实例）｜⛔ **0 触 `deposon-sub`（SUB 面）任何一字**｜⛔ **0 删除／移动／重命名任何件**｜⛔ **0 改计划外一字**。
+> **本棒执行面**：**仅 `_repo_mirror`（REPO 面）之 18 处引用刷新**（6 个物理实例）｜⛔ **0 触 `deposon-sub`（SUB 面）任何一字**｜⛔ **0 删除／移动／重命名任何件**｜⛔ **0 改计划外一字**。
 > **签名棒**：`worker`｜**日期**：2026-10-14｜**工作区**：`deposon-repo`（登记件落于 REPO 面）。
 > **SHA-12 口径**：`hashlib.sha256(全文字节).hexdigest()[:12]`（⛔ 0 用内建 `hash()`）；**本件自身指纹不自写入本件**（自指悖论），随回执回报。
 
@@ -143,7 +143,7 @@
 
 ### §4-1 逐件刷新前后指纹（SHA-12 ／ bytes · 本棒实测）
 
-| # | 件（`D:\私人资料\deposon-repo\` 之下） | 前 SHA-12 | 前 bytes | 后 SHA-12 | 后 bytes | Δbytes | Δ行数 | 处数 |
+| # | 件（`_repo_mirror\` 之下） | 前 SHA-12 | 前 bytes | 后 SHA-12 | 后 bytes | Δbytes | Δ行数 | 处数 |
 |:-:|:--|:-:|--:|:-:|--:|--:|--:|--:|
 | R1 | `results/_d1_backfill_intake_verdict_2026_10_01.md` | `a7e8f90d9db7` | 42,115 | `41f89124f28e` | 42,115 | **0** | **0** | 2 |
 | R2 | `…/_glm_evidence_unpacked_2026_10_13/_september_workspace/results/_kv3s_3_2_terminal_verdict_2026_10_01.md` | `b081d19be1b4` | 32,296 | `2fb718ddea27` | 32,296 | **0** | **0** | 5 |
@@ -192,7 +192,7 @@
 
 ### §4-5 SUB 面 0 触动之完整性实测（本棒实测）
 
-| 件（`D:\私人资料\deposon-sub\results\`） | 本棒实测 SHA-12 | SUB 执行件 §4-1 所载 | 一致 |
+| 件（`_repo_mirror\results\`） | 本棒实测 SHA-12 | SUB 执行件 §4-1 所载 | 一致 |
 |:--|:-:|:-:|:-:|
 | `_kd_19_ambiguous_tags_rejudge_rewrite_register_2026_10_10.md` | `63d1566d273e` | `63d1566d273e` | ✅ |
 | `_kd_heteronym_classification_disposition_2026_10_09.md` | `afb98c2bbc5b` | `afb98c2bbc5b` | ✅ |
@@ -210,8 +210,8 @@
 
 | 检索根 | 文件数 | 旧指纹命中 | 遍历错误 |
 | :-- | --: | :-: | :-: |
-| `C:\Users\Administrator\.minimax\workspace` | 1 | **0** | 0 |
-| `C:\Users\Administrator\.minimax\scratch` | 15 | **0** | 0 |
+| `〔本机用户目录〕\.minimax\workspace` | 1 | **0** | 0 |
+| `〔本机用户目录〕\.minimax\scratch` | 15 | **0** | 0 |
 
 ✅ **与对照面 §2-0／SUB 执行件 §4-5 之「运行时附件面 0 命中」一致**（本棒 `workspace` 实测 **1 件**、SUB 执行件实测 **0 件**，系时点差，⛔ 0 判任一方为误；⛔ 未扩至 `.minimax` 全域之会话日志面 —— 该面之命中非引用面，沿 SUB 执行件 §4-5 之口径不计入实体计数）。
 

@@ -23,7 +23,7 @@ fix_selfcheck_bug_n1_2026_09_15.py — N1 修补: boss_pg_1/2/3 尾块 _src_sc u
 """
 import os
 
-BASE = r'D:\私人资料\deposon-repo'
+BASE = r'_repo_mirror'
 PLUG = os.path.join(BASE, 'deposon_team', 'plugins')
 PG_FILES = [
     'boss_pg_1_riemannian_degenerate.py',

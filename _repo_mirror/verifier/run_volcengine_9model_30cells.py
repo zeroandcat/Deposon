@@ -17,7 +17,7 @@ import os, json, time, urllib.request, urllib.error, re, sys
 from datetime import datetime, timezone, timedelta
 
 # === 1. Read key from GB18030 file (never write to disk) ===
-KEY_FILE = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
+KEY_FILE = r'〔本机用户目录〕\Desktop\AI\LLM API.txt'
 content = open(KEY_FILE, 'r', encoding='gb18030').read()
 m = re.search(r'ark-[REDACTED][a-zA-Z0-9-]+', content)
 if not m:
@@ -127,8 +127,8 @@ def extract_yes_no(text):
     return None
 
 # === 5. Load 30 cells (15 GSM8K + 15 StrategyQA) ===
-gsm8k_data = json.load(open(r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_gsm8k_details.json', 'r', encoding='utf-8'))
-stq_data = json.load(open(r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_strategyqa_details.json', 'r', encoding='utf-8'))
+gsm8k_data = json.load(open(r'_repo_mirror\results\deposon_benchmark_v1_4_gsm8k_details.json', 'r', encoding='utf-8'))
+stq_data = json.load(open(r'_repo_mirror\results\deposon_benchmark_v1_4_strategyqa_details.json', 'r', encoding='utf-8'))
 
 gsm8k_cells = []
 for i in range(1, 16):
@@ -295,7 +295,7 @@ output = {
 }
 
 # === 9. Write JSON ===
-out_json = r'D:\私人资料\deposon-repo\results\deposon_volcengine_9model_30cells_2026_09_10.json'
+out_json = r'_repo_mirror\results\deposon_volcengine_9model_30cells_2026_09_10.json'
 parent_dir = os.path.dirname(out_json)
 if not os.path.isdir(parent_dir):
     raise SystemExit(f'FATAL: parent dir missing: {parent_dir}')

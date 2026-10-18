@@ -46,7 +46,7 @@
 | **②** | FTFB 是否随包 | **建议随包提供 PDF 本体**（`deposon-sub/results/_archive_2026_09_20/fiction_that_feeds_back.pdf` · `2d9edc8c7303` · 356,123 B · 23 页 · 本次复测同值）；**旁件 `.tex` / `_source.md` 建议 0 随包** | ① 受托方按 H3「所有事实引用须实读核验」⇒ 不给实体则 FTFB 引用面只能标「待 PI 补」，双主线「世界观/框架贡献面」成缺口；② 实体在盘、指纹可核，随包 0 增核验成本（356 KB）；③ **0 大纲风险**：`.tex`/`_source.md` 是 FTFB 件自身源文，随包易被误当结构模板（与 H4 冲突）。⚠️ 打包须从 **`deposon-sub/`**（工作区同级目录，不在主 repo 内）取；⛔ 0 以主目录同名 manifest 路径指代 PDF 本体（沿 E-37.3 定案） | 随包/不随包；若随 → 只给 PDF 抑或 PDF＋旁件；若不随 → 是否接受受托方在终稿标「FTFB 文献实体待 PI 补」 |
 | **③** | V1 脑图 G1 主锚件 | **`results/deposon_g1_mindmap_demo.json`** ＝ **`55428f6bd848`** · 3,041 B（本次全盘实测命中并实读）——**建议以本件作 G1 主锚，并随包提供（3 KB）** | ① 指纹全盘实测 ＝ 旧 v4 委托件所载 G1 锚 `55428F6BD848` **同指纹**；② 实读内含 `"answer_node": "GOAL_拓扑智能"`、`"source_image": "AI应当如何思考_脑图.png"`、`"task": "G1 真实脑图摄入与转译"`、n_nodes 45 / n_edges 49 / n_branches 9 ⇒ **G1 主题实锤**；③ 册 §7.4「未定位」之**根因已查明：件为 `.json` 而册中所称为「脑图 .md」** ⇒ **非锚件缺失，是定位口径错** | ① 采不采本件为 G1 主锚（建议采）；② 是否随包；③ ⚠️**脑图本体 PNG**（`AI应当如何思考_脑图.png`）**盘上未核得** ⇒ 若论文需原图，须 PI 另给（仍待 PI 补） |
 | **④** | 计数类现值 | **建议值 = 本次实测值 + 「口径显式标注」**（不设单一权威数）。本次实测：① **线索册 v0.4 编号条目 ＝ 196**（分组 1.x 8 / 2.x 95 / 3.x 57 / 4.x 29 / 8.x 7，**0 重号**；与册内自报 196 **相符**）② 三目录 ＝ **MAIN 1,424 / ARCHIVE 39,229（剔搬运面 1,497）/ SUB 466**（旧登记 986 / 1,669 / 467 已过时） | ① 旧值系 2026-09-26 19:50 登记时点，H10 明禁当现值；② 线索册条目数系论文最可能引用的计数，已独立逐行复算相符；③ 三目录复算方法逐条留痕可复现（§4）；④ ⚠️**ARCHIVE 现值与旧值差 23 倍，根因已查明 ＝ 2026-09-30 搬入 37,732 件 scratch/日志面**（`.log` 19,446 / `.txt` 18,380）⇒ **剔搬运面后才与旧值可比，且仍差 −172 未归因** | ① 计数类是否按 PI 2026-09-27 口径**归 V4 收尾整理统一校正**（本件 0 自行定义新口径、0 沿用旧值、0 代裁）；② 若论文要引三目录计数，以哪一档为准（全量/剔搬运面）并是否在论文中显式标注口径＋测量时点；③ 旧 v4 线所载**圈定面 571 / 清单面 342 / 覆盖面 16 / 拟上传 358** 本件**0 复算**（无逐字口径定义件）⇒ 口径须先由 PI/V4 收尾给定 |
-| **⑤** | 已发表件元数据终核 | **建议值 ＝ 盘上登记四项「全部相符」＋ 追加 6 项可核面**（其中 3 项盘上未载）——**已联网实读 arXiv 页面核毕**（`https://arxiv.org/abs/2609.09001`，2026-10-01） | 题名/编号/作者/日期/主分类**逐项对上**（核对清单见 §3.5）；另核得 cs.LG 次分类、23 页 5 图、DOI、CC BY 4.0、**仅 v1**；册 §1.1 所记陷阱读数「100% vs 7%/10%」亦与页面摘要字面相符 | ① 是否把 cs.LG 次分类/页数图数/DOI/许可写入终稿引用面；② ⚠️**单位字面**（Comments 栏「School of Chemistry and Life Resources, Renmin University of China」）涉可识别信息，**是否照录由 PI 按 H8 定**；③ ⚠️**术语风险**：实核面为 **arXiv 预印本 v1（0 同行评审发表记录）**，而信/册多处写「已发表」⇒ 建议终稿表述为「**arXiv 预印本**」而非「已发表/已录刊」（PI 须裁） |
+| **⑤** | 已发表件元数据终核 | **建议值 ＝ 盘上登记四项「全部相符」＋ 追加 6 项可核面**（其中 3 项盘上未载）——**已联网实读 arXiv 页面核毕**（`https://arxiv.org/abs/2609.09001`，2026-10-01） | 题名/编号/作者/日期/主分类**逐项对上**（核对清单见 §3.5）；另核得 cs.LG 次分类、23 页 5 图、DOI、CC BY 4.0、**仅 v1**；册 §1.1 所记陷阱读数「100% vs 7%/10%」亦与页面摘要字面相符 | ① 是否把 cs.LG 次分类/页数图数/DOI/许可写入终稿引用面；② ⚠️**单位字面**（Comments 栏「School of Chemistry and Life Resources, 〔高校R〕 University of China」）涉可识别信息，**是否照录由 PI 按 H8 定**；③ ⚠️**术语风险**：实核面为 **arXiv 预印本 v1（0 同行评审发表记录）**，而信/册多处写「已发表」⇒ 建议终稿表述为「**arXiv 预印本**」而非「已发表/已录刊」（PI 须裁） |
 
 ---
 
@@ -71,7 +71,7 @@
 ### 3.2 项② · FTFB 文献实体是否随包
 
 **盘上既有讨论（含依据，沿之整理）**：
-- 委托信 §1.3（`5ae6bf23a1b2` 第 57 行）：实体**在盘** —— `deposon-sub/results/_archive_2026_09_20/fiction_that_feeds_back.pdf`（**356,123 B** · `2d9edc8c7303` · **23 页**；⚠️ 12 页系旧回函版本误记，勿沿用）；同目录旁件 `.tex`（93,324 B · `d060f75dbe9f`）、`_source.md`（84,388 B · `543479649b3e`）；⚠️ **引用须带 `deposon-sub/` 前缀**（该目录为工作区 `D:\私人资料\` 下**同级目录**，不在主 repo 内）；主目录 `results/_archive_2026_09_20/` 下同名路径**仅两件 archive manifest、不含 PDF 本体**。该行并明写「**该实体是否随本委托包提供，以 PI 侧打包/放行为准**」。
+- 委托信 §1.3（`5ae6bf23a1b2` 第 57 行）：实体**在盘** —— `deposon-sub/results/_archive_2026_09_20/fiction_that_feeds_back.pdf`（**356,123 B** · `2d9edc8c7303` · **23 页**；⚠️ 12 页系旧回函版本误记，勿沿用）；同目录旁件 `.tex`（93,324 B · `d060f75dbe9f`）、`_source.md`（84,388 B · `543479649b3e`）；⚠️ **引用须带 `deposon-sub/` 前缀**（该目录为工作区 `〔本地资料区〕\` 下**同级目录**，不在主 repo 内）；主目录 `results/_archive_2026_09_20/` 下同名路径**仅两件 archive manifest、不含 PDF 本体**。该行并明写「**该实体是否随本委托包提供，以 PI 侧打包/放行为准**」。
 - 线索册 §7.2（`c7c418081026` 第 618–627 行）：同口径登记，并明写「**随包放行 ＝ 以 PI 侧打包/放行为准**（本册仅给可核落点，⛔ 0 代 PI 承诺随包）」；同节另写「**准则表述与文献实体现均可引用**（准则 0 依赖该 PDF 的限制已解除）」。
 - 册 §9 第 3 条、委托信 §9 第 4 条：同一口径复述（起草侧 0 承诺）。
 
@@ -97,8 +97,8 @@
 **第二步 · 定位过程与实据**：
 1. 册 §7.4 与委托信 §9.4 均登记：**G1 主锚件未定位**，旧 v4 委托件载 G1 锚 **`55428F6BD848`** 但「路径与本册实测面不符」⇒ 待 PI 补。
 2. 全盘按该指纹实测：命中 2 处，**同值** ——
-   - `D:\私人资料\deposon-repo\results\deposon_g1_mindmap_demo.json` ＝ `55428f6bd848…` · **3,041 B**
-   - `D:\私人资料\_non_upload_local_archive\results\deposon_g1_mindmap_demo.json` ＝ 同指纹同字节（归档区副本）
+   - `_repo_mirror\results\deposon_g1_mindmap_demo.json` ＝ `55428f6bd848…` · **3,041 B**
+   - `〔本地归档区〕\results\deposon_g1_mindmap_demo.json` ＝ 同指纹同字节（归档区副本）
 3. 盘上盘点件给出该指纹的历史路径登记：`results/deposon_g1_mindmap_demo.json`（`results/_v3_v4_achievements_inventory_2026_09_24.md:950`；三目录盘点件 `_v3_v4_achievements_inventory_3dir_2026_09_24.md:1294/2692` 记为 IN-EFFECT / Tag C）。
 4. **实读该件**（全文 81 行）内含：`"task": "G1 真实脑图摄入与转译"`、`"source_image": "AI应当如何思考_脑图.png"`、`"answer_node": "GOAL_拓扑智能"`、`n_nodes 45 / n_edges 49 / n_branches 9`、诱饵节点 `范式转移/仿生瓶颈` 与 `行动窗口/AI够强未自主` ⇒ **G1 主题实锤**（与 §1.2/册 §3.1 的 G1 表述逐字对得上）。
 5. **册 §7.4「未定位」之根因（本次查明）**：该件是 **`.json`**，而册 §7.4 所称的是「脑图 **.md**」，旧 v4 线载的路径 `corpus/v20/by_model/...` 亦与本件不符 ⇒ **不是锚件缺失，是定位口径错**。此项可从「待 PI 补」降级为「已定位」。
@@ -151,7 +151,7 @@
 
 **新增可核面（盘上未载，6 项）**：
 1. **Comments**：「23 pages, 5 figures」；
-2. **单位**（Comments 栏字面）：「School of Chemistry and Life Resources, Renmin University of China」⚠️ 涉可识别信息，**是否照录由 PI 按 H8 定**；
+2. **单位**（Comments 栏字面）：「School of Chemistry and Life Resources, 〔高校R〕 University of China」⚠️ 涉可识别信息，**是否照录由 PI 按 H8 定**；
 3. **DOI**：`https://doi.org/10.48550/arXiv.2609.09001`（arXiv-issued DOI via DataCite）；
 4. **许可**：CC BY 4.0；
 5. **版本**：**仅 v1**（**0 v2**）；
@@ -167,12 +167,12 @@
 
 ## §4 计数复算方法留痕（可复现）
 
-**环境**：Windows / PowerShell 5.1｜工作区 `D:\私人资料\deposon-repo`｜时点 2026-10-01（GMT+8）。
+**环境**：Windows / PowerShell 5.1｜工作区 `_repo_mirror`｜时点 2026-10-01（GMT+8）。
 
 **① 线索册编号条目数（得 196）**
 
 ```powershell
-$path='D:\私人资料\deposon-repo\letters\_dualtrack_paper_clue_book_v0.4_2026_10_01.md'
+$path='_repo_mirror\letters\_dualtrack_paper_clue_book_v0.4_2026_10_01.md'
 $lines=[System.IO.File]::ReadAllLines($path,[System.Text.Encoding]::UTF8)
 $e=@(); foreach($l in $lines){ if($l -match '^\|\s*(\d+)\.(\d+)\s*\|'){ $e += ($Matches[1]+'.'+$Matches[2]) } }
 $e.Count                      # → 196
@@ -187,18 +187,18 @@ function Cnt($root,$skip){
   $all = Get-ChildItem -LiteralPath $root -File -Recurse -Force -EA SilentlyContinue
   if($skip){ $all | Where-Object { $_.FullName -notmatch '[\\/]((\.trae)|(__pycache__)|(\.tmp))[\\/]' } } else { $all }
 }
-Cnt 'D:\私人资料\deposon-repo' $true              # → 1424  （MAIN，同旧口径）
-Cnt 'D:\私人资料\deposon-repo' $false             # → 1678  （MAIN，全量）
-Cnt 'D:\私人资料\_non_upload_local_archive' $false        # → 39229（ARCHIVE，全量）
-Cnt 'D:\私人资料\_non_upload_local_archive' $true         # → 39153（ARCHIVE，剔 .trae/__pycache__/.tmp）
-Cnt 'D:\私人资料\deposon-sub' $true               # → 466   （SUB，同旧口径）
-Cnt 'D:\私人资料\deposon-sub' $false              # → 485   （SUB，全量）
+Cnt '_repo_mirror' $true              # → 1424  （MAIN，同旧口径）
+Cnt '_repo_mirror' $false             # → 1678  （MAIN，全量）
+Cnt '〔本地归档区〕' $false        # → 39229（ARCHIVE，全量）
+Cnt '〔本地归档区〕' $true         # → 39153（ARCHIVE，剔 .trae/__pycache__/.tmp）
+Cnt '_repo_mirror' $true               # → 466   （SUB，同旧口径）
+Cnt '_repo_mirror' $false              # → 485   （SUB，全量）
 ```
 
 **③ ARCHIVE 剔搬运面口径（得 1,497）**
 
 ```powershell
-$arch='D:\私人资料\_non_upload_local_archive'
+$arch='〔本地归档区〕'
 $a = Get-ChildItem -LiteralPath $arch -File -Recurse -Force -EA SilentlyContinue
 $an = $a | Where-Object { $_.FullName -notmatch '_movedout_scratch_' }   # → 1497
 # 构成：results 696 / logs 131 / docs 130 / scripts 129 / verifier 99 / .trae 67 …
@@ -208,7 +208,7 @@ $a | ForEach-Object { $_.FullName.Substring($arch.Length+1) -split '\\' } | Grou
 **④ FTFB 实体复测（得 `2d9edc8c7303` / 356,123 B）**
 
 ```powershell
-$ft='D:\私人资料\deposon-sub\results\_archive_2026_09_20\fiction_that_feeds_back.pdf'
+$ft='_repo_mirror\results\_archive_2026_09_20\fiction_that_feeds_back.pdf'
 $h=(Get-FileHash $ft -Algorithm SHA256).Hash.ToLower(); (Get-Item $ft).Length
 # → 2d9edc8c7303 / 356123  （与登记同值，无漂移）
 ```
@@ -216,11 +216,11 @@ $h=(Get-FileHash $ft -Algorithm SHA256).Hash.ToLower(); (Get-Item $ft).Length
 **⑤ G1 锚件全盘按指纹定位（得 2 处同值命中）**
 
 ```powershell
-Get-ChildItem -Path 'D:\私人资料' -Recurse -File -Force |
+Get-ChildItem -Path '〔本地资料区〕' -Recurse -File -Force |
   ForEach-Object { $h=(Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower()
                    if($h.StartsWith('55428f6bd848')){ "HIT $h $($_.Length) $($_.FullName)" } }
-# → HIT 55428f6bd848… 3041 D:\私人资料\deposon-repo\results\deposon_g1_mindmap_demo.json
-# → HIT 55428f6bd848… 3041 D:\私人资料\_non_upload_local_archive\results\deposon_g1_mindmap_demo.json
+# → HIT 55428f6bd848… 3041 _repo_mirror\results\deposon_g1_mindmap_demo.json
+# → HIT 55428f6bd848… 3041 〔本地归档区〕\results\deposon_g1_mindmap_demo.json
 ```
 
 > ⚠️ **口径警告（沿用既有登记口径，本件 0 另立新口径）**：旧 1,669 为 2026-09-26 时点、**未含 09-30 搬运面**；现全量 39,229 **含** 37,732 件 `_movedout_scratch_*`（占 96.2%）⇒ 两数**不可直接相比**。旧口径**未对 ARCHIVE/SUB 明示剔除规则**（仅对 MAIN 明示），此本身即口径未闭合面。

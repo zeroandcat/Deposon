@@ -18,7 +18,7 @@ fix_risk2_canonical5.py — 风险 2: canonical 5 值占位 vs erratum 期望 �
 import json, hashlib
 from pathlib import Path
 
-BASE = Path(r'D:\私人资料\deposon-repo')
+BASE = Path(r'_repo_mirror')
 V01 = BASE / 'verifier' / 'handoff' / 'P_F_PREDECISION_2026_09_11_V0.1.json'
 SKILL_D = BASE / 'results' / 'skill_d_p_f_observer_result_2026_09_11.json'
 OUT = BASE / 'results' / 'deposon_risk2_canonical5_decision_2026_09_11.json'

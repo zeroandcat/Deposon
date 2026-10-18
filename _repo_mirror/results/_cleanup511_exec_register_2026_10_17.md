@@ -6,7 +6,7 @@
 | **授权出处** | PI 卡 `ask_9f7d29f61ac912895a4c3a70` **Q1** 逐字「授权执行（可清 511 件·可恢复通道）」 |
 | **体例沿用** | `results/_cleanup_exec_register_2026_10_15.md`（10-15 清理登记件） |
 | **执行棒** | worker（清理执行棒 · CLEANUP-EXEC-511） |
-| **回收站** | `D:\$Recycle.Bin\S-1-5-21-1515631758-409240343-2904948024-500` |
+| **回收站** | `〔回收站〕` |
 | **删除通道** | `shell32.SHFileOperationW(FO_DELETE)` ＋ `FOF_ALLOWUNDO`（可恢复） |
 | **永久删** | **0 件**（本棒全程 ⛔0 `rm`／`Remove-Item`／`unlink`／`rmtree`） |
 | **清理前 `$I` 条目** | 2（10-15 等前序清理之留存） |
@@ -480,8 +480,8 @@
 
 | 验道件 | bytes | SHA-12 | `$I` | `$R` | 离原位 | `$I` 原路径解码 | 偏移 | `$R` 内容校验 |
 | :-- | --: | :-- | :-- | :-- | :-- | :-- | --: | :-- |
-| `.tmp/r461_probe09.txt`（零字节） | 0 | `e3b0c44298fc` | `$IICNAQE.txt` | `$RICNAQE.txt` | 是 | `D:\私人资料\deposon-repo\.tmp\r461_probe09.txt` | **28** | 0 B ＝ 原值 |
-| `.tmp/h_mq20.py`（非空载荷） | 285 | `5f81afe2955c` | `$IRBKH1X.py` | `$RRBKH1X.py` | 是 | `D:\私人资料\deposon-repo\.tmp\h_mq20.py` | **28** | `$R` 实测 285 B ＝ 原值 |
+| `.tmp/r461_probe09.txt`（零字节） | 0 | `e3b0c44298fc` | `$IICNAQE.txt` | `$RICNAQE.txt` | 是 | `_repo_mirror\.tmp\r461_probe09.txt` | **28** | 0 B ＝ 原值 |
+| `.tmp/h_mq20.py`（非空载荷） | 285 | `5f81afe2955c` | `$IRBKH1X.py` | `$RRBKH1X.py` | 是 | `_repo_mirror\.tmp\h_mq20.py` | **28** | `$R` 实测 285 B ＝ 原值 |
 
 **验真结论**：通道成立 —— 两件皆「目标离原位 ＋ `$I`/`$R` 成对 ＋ `$I` 原路径解码正确」，
 **`$I` 路径实测偏移 ＝ 28，与派工单所述一致（文件型）**。

@@ -510,7 +510,7 @@ def main() -> Dict[str, Any]:
         "runtime": "python3 + numpy；0 LLM / 0 proxy / 0 gateway；全部为本地机械读数",
         "skill": {
             "requested": "scientific-research-workflows:experimental-design (plugin @scientific-research-workflows)",
-            "status": "Local skill not found — C:/Users/Administrator/.minimax/plugins 实测 0 项（空目录）",
+            "status": "Local skill not found — 〔本机用户目录〕/.minimax/plugins 实测 0 项（空目录）",
             "fallback": "纪律锚 = prereg §2.3 K-V3S-3-1..3-4 字面 + E-42.1 死因改判 + 母件 result §loader_drop_finding 字面",
             "disclosure": "未加载该 skill 的任何指令；0 引用、0 虚构其条文",
         },

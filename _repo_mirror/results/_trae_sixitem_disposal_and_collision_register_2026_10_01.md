@@ -1,13 +1,13 @@
 # Trae 六项处置 ＋ 并发撞名登记 · 落册件（Q4①）
 
 - **件名**：`results/_trae_sixitem_disposal_and_collision_register_2026_10_01.md`（**新名 · 无版本前缀**）
-- **路径**：`D:\私人资料\deposon-repo\results\_trae_sixitem_disposal_and_collision_register_2026_10_01.md`
+- **路径**：`_repo_mirror\results\_trae_sixitem_disposal_and_collision_register_2026_10_01.md`
 - **落盘时点**：2026-10-01 09:10 (+0800)
 - **出件**：**evidence-auditor**（`agent-11335500b168`，本棒实际出件者）｜**棒别**：Q4① 执行面 · Trae 六项处置件 ＋ 并发撞名登记棒（**处置/登记落册件 · 非判定件 · 非实验件 · 非预登记件**）
 - **派工**：parent 派工单（PI 2026-10-01 拍板「按默认档打包过」之 **Q4①**）· 落册件 `results/_confirm_round_2026_10_01_register.md`（`23a97e340fdf`）§2.2①／§3.4①
 - **本件性质**：**处置收口 ＋ 撞名登记落册件**。⛔ **0 代 PI 拍板／0 代答／0 代裁**；⛔ **0 回改任何既有件**（全部只读）；⛔ **0 涉实验/不跑实验**（审计 ≠ 翻案，标注 ≠ 篡改）。
 - **版式**：UTF-8 无 BOM · LF（CRLF ＝ 0）｜**纪律**：0 编造｜0 回改任何既有件｜R4（**0 读 key／0 读 `.env`／0 落盘**）｜0 网络｜0 对外｜SHA-12 ＝ `sha256(全文字节)[:12]` 小写 12 位
-- **落盘前撞名实测**：`Test-Path` 4 目录（`deposon-repo`／`deposon-sub`／`_non_upload_local_archive`／`Deposon_v1_2_0_交付包`）**均 False**；近名 glob（`*trae_sixitem*`／`*sixitem*disposal*`／`*collision*register*`／`*doubt6*disposal*`）4 目录递归 **0 命中**、全 `D:\私人资料` 递归 **0 命中** ⇒ **0 覆写任何既有件**（**2 轮实测**，见 §4.1）。
+- **落盘前撞名实测**：`Test-Path` 4 目录（`deposon-repo`／`deposon-sub`／`_non_upload_local_archive`／`Deposon_v1_2_0_交付包`）**均 False**；近名 glob（`*trae_sixitem*`／`*sixitem*disposal*`／`*collision*register*`／`*doubt6*disposal*`）4 目录递归 **0 命中**、全 `〔本地资料区〕` 递归 **0 命中** ⇒ **0 覆写任何既有件**（**2 轮实测**，见 §4.1）。
 - **产出**：**1 件即停**（本件为本棒唯一产物）
 
 ---
@@ -83,7 +83,7 @@
 | **SHA-256[:12]** | **`ffda214d1917`** | `ffda214d1917` | ✓ |
 | **字节** | **51,778 B** | 51,778 B | ✓ |
 | **mtime** | **2026-09-28 22:46:33** | （未给） | — |
-| **现址** | **仓外** `D:\私人资料\_non_upload_local_archive\_movedout_scratch_2026_09_29\verif_doubt6_v_20260928\_v5_trae_doubt6_verify_2026_09_28.md` | 「**留存于原路径** `results/…`」 | ⚠️ **原路径盘上 0 命中**（见 §2.2） |
+| **现址** | **仓外** `〔本地归档区〕\_movedout_scratch_2026_09_29\verif_doubt6_v_20260928\_v5_trae_doubt6_verify_2026_09_28.md` | 「**留存于原路径** `results/…`」 | ⚠️ **原路径盘上 0 命中**（见 §2.2） |
 
 **同哈希副本（SAME_IDENTITY · 不重复计数）**：归档区同目录 `_merged_canonical_snapshot_224910.md`，实测 `ffda214d1917`／**51,778 B**／mtime 2026-09-28 22:46:33 ⇒ 与上件**逐字节相同**（SAME_IDENTITY，**计 1 件**）。
 
@@ -147,7 +147,7 @@
 | 轮 | 检查面 | 结果 |
 |---:|---|---|
 | **1** | 4 目录（`deposon-repo`／`deposon-sub`／`_non_upload_local_archive`／`Deposon_v1_2_0_交付包`）精确同名 `Test-Path` ＋ `results/` 近名 glob | **4/4 False**；近名 **0 命中** |
-| **2** | 同 4 目录**递归**近名 glob ＋ **全 `D:\私人资料` 递归**近名 glob | 4 目录 **0 命中**；全盘 **0 命中** |
+| **2** | 同 4 目录**递归**近名 glob ＋ **全 `〔本地资料区〕` 递归**近名 glob | 4 目录 **0 命中**；全盘 **0 命中** |
 
 （近名正则：`trae_sixitem`｜`sixitem.*disposal`｜`collision.*register`｜`doubt6.*disposal`）
 ⇒ **0 覆写任何既有件**（新名唯一 · 沿 README §5-6「新名件落盘前 0 撞名实测 ≥2 轮」纪律）。

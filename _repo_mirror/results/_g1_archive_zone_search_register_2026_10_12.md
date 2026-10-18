@@ -1,8 +1,8 @@
-# G-1 定向检索登记：归档区 `D:\私人资料\_non_upload_local_archive` 命中 `bb7ca9838150`／7,126 B 之历史态实体
+# G-1 定向检索登记：归档区 `〔本地归档区〕` 命中 `bb7ca9838150`／7,126 B 之历史态实体
 
 > **棒别**：deposon ②段批3「G-1 定向检索棒」（依 PI 例外裁·限 G-1 目的）
 > **落盘日**：2026-10-12　**性质**：新件（**0 回改任何既有件一字**、0 移动/0 改名/0 删除、0 触他棒产物）
-> **检索根**：**仅** `D:\私人资料\_non_upload_local_archive`（PI 明示之「归档区」确指）—— ⛔ 0 跨区通配（未用 `D:\私人资料\*`／`..\*`）
+> **检索根**：**仅** `〔本地归档区〕`（PI 明示之「归档区」确指）—— ⛔ 0 跨区通配（未用 `〔本地资料区〕\*`／`..\*`）
 > **动作**：**列目录 ＋ 只读检索（0 写）** —— 仅用 `Get-ChildItem`／`Get-Item`／`Get-FileHash`／`Get-Content`／`Select-String`／`Test-Path`
 > **结论**：🔴 **命中** —— 历史态实体**已在该区在盘并逐位验真**，**G-1 可闭**
 
@@ -18,7 +18,7 @@
 
 | **#** | **stepId** | **PI 所选（逐字）** | **效力** |
 | :-: | :-- | :-- | :-- |
-| **①** | `zone_which` | 🔴 **「禁触区：`D:\私人资料\_non_upload_local_archive`」** | 「归档区」之确指 |
+| **①** | `zone_which` | 🔴 **「禁触区：`〔本地归档区〕`」** | 「归档区」之确指 |
 | **②** | `zone_exception` | 🔴 **「含列目录 ＋ 只读检索（0 写）」** | 例外范围（列目录解禁／写仍禁） |
 
 - 卡号 **`ask_20edd0e0b186cc77f6abed63`**｜提交时点 `1791816846903`｜登记面：`results/_archive_zone_exception_grant_register_2026_10_12.md`（**0 回改**其 §2／§4，本棒已先回读取边界）。
@@ -30,7 +30,7 @@
 
 | 项 | 实测值 | 取得方式 |
 |---|---|---|
-| 检索根 | `D:\私人资料\_non_upload_local_archive`（`Test-Path` ＝ **True**） | 只读 |
+| 检索根 | `〔本地归档区〕`（`Test-Path` ＝ **True**） | 只读 |
 | 顶层条目 | **34 项**（＝ **29 目录 ＋ 5 文件**：`ARCHIVE_INDEX.md`／`strategyqa_train.json`／`_probe_v19*.py` ×3） | `Get-ChildItem -Force`（顶层·列目录） |
 | **全递归规模** | **39,718 文件** ＋ **19,461 目录** | 单遍 `Get-ChildItem -Recurse -Force` |
 | 总体积 | **1,388,732,209 B**（≈ **1.29 GiB**） | 同上求和 |
@@ -72,7 +72,7 @@
 
 | 项 | 实测值 |
 |---|---|
-| **实体路径** | `D:\私人资料\_non_upload_local_archive\results\_remote_version_freeze_2026_09_26\P_B_DISTORTION_BOUND_V0_SPEC.md` |
+| **实体路径** | `〔本地归档区〕\results\_remote_version_freeze_2026_09_26\P_B_DISTORTION_BOUND_V0_SPEC.md` |
 | **SHA-256（全值）** | `bb7ca983815032f6bb7324d7465766307fd8faaacb4fadc948c26ca5831e29b5` |
 | **SHA-12** | **`bb7ca9838150`** |
 | **bytes** | **7,126**（**与 `bacbee9a158f` §1.1 所载 0 命中之目标值逐位相等**） |
@@ -95,7 +95,7 @@
 "sha256_12": "BB7CA9838150",
 "tree_match": true,
 "local_copy_exists": false,
-"frozen_to": "D:\私人资料\_non_upload_local_archive\results\_remote_version_freeze_2026_09_26\P_B_DISTORTION_BOUND_V0_SPEC.md",
+"frozen_to": "〔本地归档区〕\results\_remote_version_freeze_2026_09_26\P_B_DISTORTION_BOUND_V0_SPEC.md",
 "frozen_at": "2026-09-30T20:10:46"
 ```
 
@@ -135,8 +135,8 @@
 | **本棒在该区所施动作全集** | `Test-Path`（1 次）｜`Get-ChildItem -Force`（顶层 1 次 + 递归 2 次）｜`Get-Item`（命中件 2 次）｜`Get-FileHash -Algorithm SHA256`（**1 件**）｜`Get-Content`（命中件取样 8 行 ＋ 同目录 2 件 manifest 之 P_B 行）｜`Select-String`（同目录 2 件 manifest）—— **全部为读取类 cmdlet** |
 | **⛔ 0 使用之写类动作** | **0** `New-Item`／`Set-Content`／`Out-File`／`Add-Content`／`Copy-Item`／`Move-Item`／`Remove-Item`／`Rename-Item`／`New-Item -ItemType Directory`／`Set-ItemProperty`／`Clear-Content` |
 | **命中件读后复验（不变）** | 全部读取完成后重取：`Length` ＝ **7,126**（未变）｜`mtime` ＝ **2026-09-30 20:10:46**（未变） |
-| **本会话之唯一落盘位置** | `D:\私人资料\deposon-repo\results\_g1_archive_zone_search_register_2026_10_12.md`（**新件**）与 `D:\私人资料\deposon-repo\.tmp\_g1_archive_register_write.py`（**自建落盘脚本**）—— **二者皆在该区之外**（该区路径 `_non_upload_local_archive` **无任何写入目标**） |
-| **⛔ 0 上传／0 网络／0 跨区通配** | ✅ 全程无网络调用、无上传；检索根**仅**该区**绝对路径自身**（未作 `D:\私人资料\*`／`..\*` 之类通配） |
+| **本会话之唯一落盘位置** | `_repo_mirror\results\_g1_archive_zone_search_register_2026_10_12.md`（**新件**）与 `_repo_mirror\.tmp\_g1_archive_register_write.py`（**自建落盘脚本**）—— **二者皆在该区之外**（该区路径 `_non_upload_local_archive` **无任何写入目标**） |
+| **⛔ 0 上传／0 网络／0 跨区通配** | ✅ 全程无网络调用、无上传；检索根**仅**该区**绝对路径自身**（未作 `〔本地资料区〕\*`／`..\*` 之类通配） |
 | **⛔ 0 触他棒产物** | ✅ 未写 `results\_z1_*`／`results\_gate1_*`／`results\_archive_zone_exception_grant*`／`letters\*`／`results\_bob_*`／`results\_remote_baseline*`／`results\_archive_2026-10-12\` 内既有件；**⛔ 0 回改** `bacbee9a158f`／`37ea7f65a8d6`／`9391d1293f9b` 一字 |
 
 ---
@@ -145,7 +145,7 @@
 
 | 项 | 命令要点 |
 | :-- | :-- |
-| **M1** | `Test-Path -LiteralPath D:\私人资料\_non_upload_local_archive` → True |
+| **M1** | `Test-Path -LiteralPath 〔本地归档区〕` → True |
 | **M2** | `Get-ChildItem -LiteralPath <Z> -Force`（顶层） → 34 项（29 dirs ＋ 5 files） |
 | **M3** | `Get-ChildItem -LiteralPath <Z> -Recurse -Force`（单遍） → FILES=39718／DIRS=19461／TOTALBYTES=1388732209／33.2 s；同遍按 `Name -match`（式①）、`Length -eq 7126`、`Length -ge 6900 -and -le 7350` 分桶计数 |
 | **M4** | `Get-FileHash -LiteralPath <hit> -Algorithm SHA256` → 全值 → `.ToLower().Substring(0,12)` → `bb7ca9838150`；比对 `-eq 'bb7ca9838150'` → True |

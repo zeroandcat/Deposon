@@ -7,7 +7,7 @@
 | **登记件** | `results/_pi_card_answers_register_2026_10_15_v11.md` · SHA-12 `30408490F37E`（实测正身） |
 | **前序件** | `results/_cleanup_inventory_2026_10_15.md`（待清清单件 · 先于任何删除落盘） |
 | **执行棒** | worker（清理棒 · 派工项 B） |
-| **回收站** | `D:\$Recycle.Bin\S-1-5-21-1515631758-409240343-2904948024-500` |
+| **回收站** | `〔回收站〕` |
 | **清理前 `$I` 条目** | 6 |
 | **清理后 `$I` 条目** | 283（6 ＋ 待清 277，**成对齐全**） |
 
@@ -313,7 +313,7 @@
 
 ## §3 验真证据
 
-1. **双记录枚举**：`D:\$Recycle.Bin\<SID>\` 实测 `$I` 283 条 ／ `$R` 283 条，尾号一一对应，无孤 `$I`、无孤 `$R`。
+1. **双记录枚举**：`〔回收站〕\<SID>\` 实测 `$I` 283 条 ／ `$R` 283 条，尾号一一对应，无孤 `$I`、无孤 `$R`。
 2. **逐件解码比对**：每条 `$I` 记录按 Windows 10 版式解出 `version`／`fileSize`／原路径（偏移 0/8/28），与待清件之**字面绝对路径**（转小写）精确匹配。
 3. **尺寸互校**：277 件之 `$I.fileSize` 与清单件登记之 `bytes` **全部相符**（不符 0）。
 4. **原件消失互校**：277 件在盘上均已不存在（`exists_after=False`）。
@@ -328,7 +328,7 @@
 | 项 | 实测 |
 | :-- | :-- |
 | `Get-Command rm` | 解析为 **Alias**（即 `Remove-Item`）→ **永久删除** |
-| PATH 上另一 `rm` | `C:\Program Files\Git\usr\bin\rm.exe` → **永久删除** |
+| PATH 上另一 `rm` | `〔本机路径〕\Program Files\Git\usr\bin\rm.exe` → **永久删除** |
 
 二者**均非可恢复通道**，直接执行即违背「可恢复删除」与铁律「⛔ 0 走永久删除通道」。故改用 Windows 官方可恢复删除 API `SHFileOperationW`（`wFunc=FO_DELETE` ＋ `FOF_ALLOWUNDO` ＋ `FOF_NOCONFIRMATION` ＋ `FOF_SILENT`），并**先以 1 件小样本（`pk_v9card.py`，249 B）验道**，确认产生 `$I`＋`$R` 双记录后方批删。
 

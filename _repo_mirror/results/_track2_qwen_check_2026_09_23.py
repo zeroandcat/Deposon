@@ -29,7 +29,7 @@ import socket
 # ============================================================================
 # 路径常量
 # ============================================================================
-REPO_ROOT = r"D:/私人资料/deposon-repo"
+REPO_ROOT = r"_repo_mirror"
 RESULTS_DIR = os.path.join(REPO_ROOT, "results")
 
 # 既有 V5 多模型探针 endpoint (沿 _v4_v5_multimodel_probe.py L48-58)
@@ -40,7 +40,7 @@ QWEN_PLAN_MODEL = "qwen-turbo"
 PROXY_HTTP = "http://127.0.0.1:1018"
 
 # Key 源 (与 _v4_v5_multimodel_probe.py 一致, 仅读取, 不落盘)
-KEY_SOURCE = "C:/Users/Administrator/Desktop/AI/LLM API.txt"
+KEY_SOURCE = "〔本机用户目录〕/Desktop/AI/LLM API.txt"
 # 沿 2026-09-23 11:30 调整后, Qwen-plan 实际位于 line 17 (label at 16)
 QWEN_PLAN_KEY_LINE = 17  # 1-based, 与 _v4_v5_multimodel_probe.py 旧值 20 不同 (旧值错指 mimo)
 
@@ -290,7 +290,7 @@ def main():
             "model": QWEN_PLAN_MODEL,
             "proxy": PROXY_HTTP,
             "key_source_line_1based": QWEN_PLAN_KEY_LINE,
-            "key_source_note": "C:/Users/Administrator/Desktop/AI/LLM API.txt (workspace 外, runtime read, in-memory only)",
+            "key_source_note": "〔本机用户目录〕/Desktop/AI/LLM API.txt (workspace 外, runtime read, in-memory only)",
         },
         "qwen_plan_result": result_qwen,
         "qwen_401_conclusion": qwen_401_conclusion,

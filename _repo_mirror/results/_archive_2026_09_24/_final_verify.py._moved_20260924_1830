@@ -3,9 +3,9 @@ import hashlib
 import re
 
 # Compare all V4 frozen + v2 + L9 件 between L9 post-snapshot and L11 post-snapshot
-with open(r'D:/私人资料/deposon-repo/results/_v4_supp_l9_a2r_post_hashes_2026_09_24.txt', 'r', encoding='utf-8') as f:
+with open(r'_repo_mirror/results/_v4_supp_l9_a2r_post_hashes_2026_09_24.txt', 'r', encoding='utf-8') as f:
     l9_post = f.read()
-with open(r'D:/私人资料/deposon-repo/results/_v4_supp_l11_dct100_post_hashes_2026_09_24.txt', 'r', encoding='utf-8') as f:
+with open(r'_repo_mirror/results/_v4_supp_l11_dct100_post_hashes_2026_09_24.txt', 'r', encoding='utf-8') as f:
     l11_post = f.read()
 
 def parse_hashes(content):

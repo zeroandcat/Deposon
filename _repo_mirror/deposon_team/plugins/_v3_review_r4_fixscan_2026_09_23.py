@@ -6,7 +6,7 @@ _v3_review_r4_fixscan — V3 回审 §3「走读与修复」可修复面扫描�
 """
 import hashlib, os, re, io, sys
 
-REPO = r'D:\私人资料\deposon-repo'
+REPO = r'_repo_mirror'
 PLUG = os.path.join(REPO, 'deposon_team', 'plugins')
 
 # 18 frozen（来自 _v3x_frozen_schema_v1.json / _verify_15frozen.py），全小写
@@ -44,7 +44,7 @@ def scan_py(p):
     # repo 外绝对路径
     for m in re.finditer(r'''(?P<q>['"])(?P<p>[A-Za-z]:[\\/][^'"]{3,})(?P=q)''', txt):
         pth = m.group('p')
-        if not pth.lower().startswith(REPO.lower().replace('\\', '/').replace('d:/', 'd:').lower()) and \
+        if not pth.lower().startswith(REPO.lower().replace('\\', '/').replace('〔本机路径〕/', 'd:').lower()) and \
            'deposon-repo' not in pth:
             issues.append('ABS_PATH_OUT:' + pth[:60])
             break

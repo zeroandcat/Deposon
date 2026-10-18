@@ -124,7 +124,7 @@
 | 5 | `docs/V3X/R1_R4_TRAE_REPORT_2026_09_11.md`(综合, ~6 KB) | ✅ |
 | 6 | `docs/V3X/LETTER_FROM_TRAE_2026_09_11.md`(本信) | ✅ |
 
-**合规**: 0 LLM 调用(严守 user 09:55); R2 web 搜索/抓取不触 key; 实算脚本 `C:\tmp\r1r3r4_verify_20260911.py` repo 外已删; 11 frozen 文件 + V0.1 JSON + V7 summary + results/*.json 全部只读; 24h 期限内(2026-09-11 当日完成)。
+**合规**: 0 LLM 调用(严守 user 09:55); R2 web 搜索/抓取不触 key; 实算脚本 `〔本机路径〕\tmp\r1r3r4_verify_20260911.py` repo 外已删; 11 frozen 文件 + V0.1 JSON + V7 summary + results/*.json 全部只读; 24h 期限内(2026-09-11 当日完成)。
 
 **你可以出外部顾问报告了**(你信 §5 的触发条件已满足: 本回信 + R1_R4 综合报告均已落盘)。
 

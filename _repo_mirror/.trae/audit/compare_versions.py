@@ -5,7 +5,7 @@
 Checks the user's full requirement set. No files are modified."""
 import os, re, sys
 
-WORK = r'c:\Users\Administrator\.trae-cn\work\6a9a7e1c7578e46bf7c7f60c'
+WORK = r'〔本机用户目录〕\.trae-cn\work\6a9a7e1c7578e46bf7c7f60c'
 BS = chr(92)  # backslash
 
 FORBID_XELUA = ['fontspec', 'xecjk', 'ctex', 'luatextra', 'luacode',
@@ -126,7 +126,7 @@ def audit(texpath, label):
     # content rules
     R['has_yuanqihao'] = ('袁祺皓' in text) or ('Qihao' in text) or ('Yuanqihao' in text) or ('Qihao Yuan' in text)
     R['has_ruc_chem'] = ('中国〔高校R〕' in text and ('化学与生命资源' in text)) or ('〔高校R〕 University' in text)
-    R['mentions_wangzihe'] = '〔当事人W〕' in text
+    R['mentions_〔当事人W〕'] = '〔当事人W〕' in text
     R['mentions_kimi'] = ('KIMI' in text) or ('Kimi' in text) or ('Moonshot' in text)
     R['fund_numbers'] = re.findall(r'(?:Grant|基金|NSFC|国家自然科学基金)[^\n]{0,40}', text)
     # AI residue outside the AI section (rough): count mentions of common AI names in whole doc
@@ -158,7 +158,7 @@ def show(R):
     print('  footnotes        :', R['footnotes'])
     print('  quote begin/end  :', R['quote_begin'], R['quote_end'])
     print('  袁祺皓/〔高校R〕 chem    :', R['has_yuanqihao'], R['has_ruc_chem'])
-    print('  〔当事人W〕 present    :', R['mentions_wangzihe'], '| fund hits:', R['fund_numbers'])
+    print('  〔当事人W〕 present    :', R['mentions_〔当事人W〕'], '| fund hits:', R['fund_numbers'])
     print('  KIMI/Moonshot    :', R['mentions_kimi'], '| ai_name_hits:', R['ai_name_hits'])
     print('  title            :', R['title'])
     print('  author           :', R['author'])

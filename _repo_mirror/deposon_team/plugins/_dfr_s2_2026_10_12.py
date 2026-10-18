@@ -2,7 +2,7 @@
 """_dfr_s2 — D 族精确原文补抽（只读）"""
 import hashlib, os, re
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo'); SUB = Path(r'D:\私人资料\deposon-sub')
+REPO = Path(r'_repo_mirror'); SUB = Path(r'_repo_mirror')
 def sha12b(b): return hashlib.sha256(b).hexdigest()[:12]
 def find(fn):
     for root in (REPO, SUB):
@@ -58,7 +58,7 @@ for root in (REPO, SUB):
                 t = open(q, 'rb').read().decode('utf-8', 'ignore')
             except Exception: continue
             if '17168119eccc' in t:
-                print(f'  含 "17168119eccc": {q.replace("D:\\私人资料\\", "")}')
+                print(f'  含 "17168119eccc": {q.replace("〔本地资料区〕\\", "")}')
                 for i, ln in enumerate(t.splitlines()):
                     if '17168119eccc' in ln:
                         print(f'      L{i+1}: {ln.strip()[:180]}')

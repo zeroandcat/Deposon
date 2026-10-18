@@ -9,9 +9,9 @@ _v3_review_r7_fix_e15 — E-15 锚链复位（PI 授权「你直接修正」, 20
 """
 import hashlib, os, shutil, sys
 
-REPO = r'D:\私人资料\deposon-repo'
+REPO = r'_repo_mirror'
 PRIMARY = os.path.join(REPO, r'verifier\handoff\KT_ABC1_anchors_sha256_12.json')
-SOURCE = r'D:\私人资料\_non_upload_local_archive\verifier\handoff\KT_ABC1_anchors_sha256_12.json'
+SOURCE = r'〔本地归档区〕\verifier\handoff\KT_ABC1_anchors_sha256_12.json'
 BACKUP = os.path.join(REPO, r'verifier\handoff\KT_ABC1_anchors_sha256_12.root_session_11318B.bak_2026_09_23.json')
 EXPECT = '03c6c01f3697'
 

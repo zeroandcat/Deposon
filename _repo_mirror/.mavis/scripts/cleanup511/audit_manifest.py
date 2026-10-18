@@ -3,7 +3,7 @@
 import io, json, re
 from collections import Counter
 
-P = r"D:\私人资料\deposon-repo\.tmp\cleanup511_manifest_2026_10_17.json"
+P = r"_repo_mirror\.tmp\cleanup511_manifest_2026_10_17.json"
 m = json.load(io.open(P, encoding="utf-8"))
 
 held = m["held"]

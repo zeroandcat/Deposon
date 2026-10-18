@@ -86,7 +86,7 @@
 | `track` | 「calculator 自检轨（ε 固定 0.1 · KC-1 丙案）」 |
 | `command` | 「`python tools/distortion_calculator.py --self-test`」 |
 | `executed_at` | 「2026-10-16 19:56:28 CST」 |
-| `cwd` / `python_version` | 「`D:\私人资料\deposon-repo`」／「3.14.7」 |
+| `cwd` / `python_version` | 「`_repo_mirror`」／「3.14.7」 |
 | `network_calls` / `llm_calls` / `filesystem_writes_by_calculator` | **0** ／ **0** ／ **0** |
 | `exit_code` / `all_pass` / `t_pass_count` / `t_fail_count` | **0** ／ **`true`** ／ **9** ／ **0** |
 | `summary_line_verbatim` | 「小计: 9/9 通过; all_pass=True」 |

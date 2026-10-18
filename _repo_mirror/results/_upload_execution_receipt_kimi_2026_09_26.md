@@ -28,7 +28,7 @@
 - **停手条款**：全程 0 触发（无同址异内容碰撞；42 件落点碰撞实测全部同内容，按无动作计）✅
 - **commit 标注**：11 件尾换行 message 均含「recover trailing newline」；5+7 件实质覆盖均含「override with local/sub authoritative version + 留档路径」✅
 - **autocrlf**：未走工作区 checkout 路径（API 直传字节），行尾转换面不存在，等效 `autocrlf=false` ✅
-- **C:/temp/ 12 件**：未读未动未传 ✅
+- **〔本机路径〕/temp/ 12 件**：未读未动未传 ✅
 
 ## §3 老实交代
 

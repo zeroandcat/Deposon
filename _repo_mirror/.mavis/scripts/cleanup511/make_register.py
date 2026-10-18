@@ -3,10 +3,10 @@
 import os, io, json, time, hashlib
 from collections import Counter, defaultdict
 
-REPO = r"D:\私人资料\deposon-repo"
+REPO = r"_repo_mirror"
 WORK = os.path.join(REPO, ".mavis", "scripts", "cleanup511")
 REG  = os.path.join(REPO, "results", "_cleanup511_exec_register_2026_10_17.md")
-BIN  = r"D:\$Recycle.Bin\S-1-5-21-1515631758-409240343-2904948024-500"
+BIN  = r"〔回收站〕"
 
 L  = json.load(io.open(os.path.join(WORK, "exec_list.json"), encoding="utf-8"))
 R_ = json.load(io.open(os.path.join(WORK, "exec_report.json"), encoding="utf-8"))
@@ -99,8 +99,8 @@ A("10-15 登记件 `results/_cleanup_exec_register_2026_10_15.md:54` 钉有 `.tm
 A("同 stem 之 `_e_q_exec.txt` 随之被拦。**⛔0 强删拦下件**，改取本棒清单内真零字节件。\n")
 A("| 验道件 | bytes | SHA-12 | `$I` | `$R` | 离原位 | `$I` 原路径解码 | 偏移 | `$R` 内容校验 |")
 A("| :-- | --: | :-- | :-- | :-- | :-- | :-- | --: | :-- |")
-A("| `.tmp/r461_probe09.txt`（零字节） | 0 | `e3b0c44298fc` | `$IICNAQE.txt` | `$RICNAQE.txt` | 是 | `D:\\私人资料\\deposon-repo\\.tmp\\r461_probe09.txt` | **28** | 0 B ＝ 原值 |")
-A("| `.tmp/h_mq20.py`（非空载荷） | 285 | `5f81afe2955c` | `$IRBKH1X.py` | `$RRBKH1X.py` | 是 | `D:\\私人资料\\deposon-repo\\.tmp\\h_mq20.py` | **28** | `$R` 实测 285 B ＝ 原值 |")
+A("| `.tmp/r461_probe09.txt`（零字节） | 0 | `e3b0c44298fc` | `$IICNAQE.txt` | `$RICNAQE.txt` | 是 | `_repo_mirror\\.tmp\\r461_probe09.txt` | **28** | 0 B ＝ 原值 |")
+A("| `.tmp/h_mq20.py`（非空载荷） | 285 | `5f81afe2955c` | `$IRBKH1X.py` | `$RRBKH1X.py` | 是 | `_repo_mirror\\.tmp\\h_mq20.py` | **28** | `$R` 实测 285 B ＝ 原值 |")
 A("")
 A("**验真结论**：通道成立 —— 两件皆「目标离原位 ＋ `$I`/`$R` 成对 ＋ `$I` 原路径解码正确」，")
 A("**`$I` 路径实测偏移 ＝ 28，与派工单所述一致（文件型）**。")

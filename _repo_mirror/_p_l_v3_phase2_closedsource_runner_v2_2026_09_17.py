@@ -41,7 +41,7 @@ TS = datetime.now().strftime('%Y%m%d_%H%M%S')
 # Parse PRIMARY_BACKBONE arg
 PRIMARY_BACKBONE = sys.argv[1] if len(sys.argv) > 1 else 'gpt56sol'
 
-DEPOSON_ROOT = Path(r'D:\私人资料\deposon-repo')
+DEPOSON_ROOT = Path(r'_repo_mirror')
 RESULTS_DIR = DEPOSON_ROOT / 'results'
 LOG_FILE = DEPOSON_ROOT / f'_p_l_v3_phase2_closedsource_runner_v2_{TS}_{PRIMARY_BACKBONE}.log'
 _log_lines = []
@@ -119,7 +119,7 @@ if final_marker.exists() and not ('_force_rerun' in os.environ):
     sys.exit(0)
 
 # ---------- 1) keys ----------
-raw = Path(r'C:\Users\Administrator\Desktop\AI\LLM API.txt').read_bytes()
+raw = Path(r'〔本机用户目录〕\Desktop\AI\LLM API.txt').read_bytes()
 text = ''
 for enc in ('utf-8','gbk','gb18030','utf-8-sig'):
     try: text = raw.decode(enc); break

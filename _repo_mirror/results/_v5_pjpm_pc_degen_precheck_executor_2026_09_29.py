@@ -26,7 +26,7 @@ from datetime import datetime
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
-REPO = r"D:\私人资料\deposon-repo"
+REPO = r"_repo_mirror"
 RUN_DATE = "2026-09-29"
 PRODUCED_BY = (
     "Mavis 团队 worker（棒 1 · 收口棒；agent 署名如实，"

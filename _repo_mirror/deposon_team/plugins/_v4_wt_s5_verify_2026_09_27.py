@@ -3,7 +3,7 @@
 import hashlib, json, os, re
 from pathlib import Path
 
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_repo_mirror')
 RES = REPO / 'results'
 
 def sha12(p):

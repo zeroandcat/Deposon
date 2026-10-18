@@ -286,7 +286,7 @@
 |---:|---|---|
 | **L84** | `\| \`*_coze_paper_*_draft_*.md\` (2) + \`*_coze_online_v3_*.md\` (3) + \`_d7_wang_*\` (1) \| 6 \| 67,229 \|` | 替换 `_d7_wang_*` → `_d7_external_advisor_online_*` |
 
-**依据**：批⑤ 已将 `_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` → `_d7_external_advisor_online_publish_v1_20260918.md`（`6ec7e14bc8a7` §二批⑤ 第 10 项；`3f806e44a13f` §3.1 #10 实测旧路径 0 存在 ＋ 新路径存在）⇒ L84 所记 pattern **为改名前旧名**，属**台账滞后**。
+**依据**：批⑤ 已将 `_d7_external_advisor_〔IM〕_publish_v1_20260918.md` → `_d7_external_advisor_online_publish_v1_20260918.md`（`6ec7e14bc8a7` §二批⑤ 第 10 项；`3f806e44a13f` §3.1 #10 实测旧路径 0 存在 ＋ 新路径存在）⇒ L84 所记 pattern **为改名前旧名**，属**台账滞后**。
 
 > ⚠ **登记 K-3（计数语义）**：L84 为「子类 pattern 汇总」表，各 pattern 后括号内为**件数**。替换后 pattern 与实体名一致，**件数 1 保持不变**；**0 触动**同行其他 pattern 及其计数（`2`/`3`/`6`/`67,229`）。
 
@@ -300,7 +300,7 @@
 |---|---|
 | 全树 2,221 件文件名 `(?i)(wang\|〔IM〕)` | **0 件**（本 Turn 独立复现 `3f806e44a13f` §3.2 ✅） |
 | 远端 `letters/` 目录 | **2 件**（`_codex_theory_derivation_reply_2026_09_30.md`、`_v5_rj5_external_rederive_reply_codex_2026_09_29.md`），**0 件** wang/〔IM〕 命名 |
-| 清单 §四 2 所列悬空引用 4 类 | 本 Turn **本地 ＋ 远端双向实测均 0 件**：`WANG_TEACHER_PROGRESS_REPORT`=0、`D3_〔IM〕_MIDTERM_2026_09_09_actual`=0、`count_〔IM〕.py`=0、`count_online.py`=0 ⇒ **确为纯文本悬空引用，0 实体** |
+| 清单 §四 2 所列悬空引用 4 类 | 本 Turn **本地 ＋ 远端双向实测均 0 件**：`EXTERNAL_ADVISOR_PROGRESS_REPORT`=0、`D3_〔IM〕_MIDTERM_2026_09_09_actual`=0、`count_〔IM〕.py`=0、`count_online.py`=0 ⇒ **确为纯文本悬空引用，0 实体** |
 
 ### 7.2 处置
 

@@ -138,9 +138,9 @@ R13/R14 identifier-pending 与 novelty 二轮检索：论文已自行排期（md
 | 本报告 | `docs/FTFB_EXTERNAL_REVIEW_R2_2026_09_17/META_REVIEW_REPORT_2026_09_17.md` | 本文件 |
 | RB-1 完整评审（A–O） | `docs/FTFB_EXTERNAL_REVIEW_R2_2026_09_17/REVIEW_RB1.md` | sha256 `3594378e7d1d…8210907`（22,982 B） |
 | RB-2 完整评审（A–O） | `docs/FTFB_EXTERNAL_REVIEW_R2_2026_09_17/REVIEW_RB2.md` | sha256 `d8eafdd67119…462f72a`（27,839 B） |
-| 评审表（双盲同一份） | `C:\tmp\review_ftfb_2026_09_17\packet_RB{1,2}\REVIEW_FORM.md` | sha256 前 12 位 `34211db5b623`（字节一致） |
-| 原包 | `C:\Users\Administrator\Downloads\ftfb_external_review_v2_20260917.tar.gz` | 417,674 B，成员 7，路径穿越 NONE |
-| 解压件 5/5 vs 包内 manifest | `C:\tmp\review_ftfb_2026_09_17\ftfb_external_review_v2_20260917\` | ALL MATCH |
+| 评审表（双盲同一份） | `〔本机路径〕\tmp\review_ftfb_2026_09_17\packet_RB{1,2}\REVIEW_FORM.md` | sha256 前 12 位 `34211db5b623`（字节一致） |
+| 原包 | `〔本机用户目录〕\Downloads\ftfb_external_review_v2_20260917.tar.gz` | 417,674 B，成员 7，路径穿越 NONE |
+| 解压件 5/5 vs 包内 manifest | `〔本机路径〕\tmp\review_ftfb_2026_09_17\ftfb_external_review_v2_20260917\` | ALL MATCH |
 
 **最终建议（编辑部口径）**：Minor Revision。内容层可达 accept-track（双方 H=7）；T-1 排版阻断项必须在下一轮交付前闭合，并为其建立视觉层质量门，防止"全零绿但全页摘要"再次带病放行。
 

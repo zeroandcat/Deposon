@@ -45,7 +45,7 @@
 | 灰区 (8 件 .tmp/ chain-bound) | 8 | **8** | 0 | ✓ |
 | **总计** | **131** | **125** | -6 | A 类 -5 + C 类 0 + 灰区 0 = -5 (差异仅 A) |
 
-> 老实交代: 本棒严格按派工单 §A/C/G 列出的子类 pattern 在 `D:/私人资料/deposon-repo/results/` 与 `D:/私人资料/deposon-repo/.tmp/` 实测枚举; v1 ledger 的 131 数字含 A 类的算数偏差 5 件 (v1 子项累加 = 54 ≠ v1 总计 59); 本棒实测以 125 件为基线, 不擅自补件也不擅自减件。
+> 老实交代: 本棒严格按派工单 §A/C/G 列出的子类 pattern 在 `_repo_mirror/results/` 与 `_repo_mirror/.tmp/` 实测枚举; v1 ledger 的 131 数字含 A 类的算数偏差 5 件 (v1 子项累加 = 54 ≠ v1 总计 59); 本棒实测以 125 件为基线, 不擅自补件也不擅自减件。
 
 ---
 
@@ -68,66 +68,66 @@
 
 ## 3. A 类对账 (54 件 · 全数干净移动 · 0 同名冲突)
 
-> 目标: `D:/私人资料/_non_upload_local_archive/results/`
+> 目标: `〔本地归档区〕/results/`
 > 通道: PowerShell `Move-Item`, 全部 54 件实测一次性成功 (0 fail)
 > 总 bytes: 24,062,436 (与 v1 ledger §3.2 A 小计 bytes 一致)
 
 | # | 旧路径 (repo/results/) | 新路径 (_non_upload_local_archive/results/) | SHA-12 (实测 2026-09-24 18:24) | bytes | 类别 |
 |---|---|---|---|---|---|
-| A1 | `D:/私人资料/deposon-repo/results/_p_k_v3_glm_fpr_audit_report_2026-09-17t08-23-41z.md` | `D:/私人资料/_non_upload_local_archive/results/_p_k_v3_glm_fpr_audit_report_2026-09-17t08-23-41z.md` | 71D5C23D9F76 | 8558 | A |
-| A2 | `D:/私人资料/deposon-repo/results/_p_k_v3_glm_json_audit_2026-09-17t08-23-41z.json` | `D:/私人资料/_non_upload_local_archive/results/_p_k_v3_glm_json_audit_2026-09-17t08-23-41z.json` | F236E88F22CA | 6678 | A |
-| A3 | `D:/私人资料/deposon-repo/results/_p_k_v3_three_way_rerun_2026-09-17t08-23-41z.json` | `D:/私人资料/_non_upload_local_archive/results/_p_k_v3_three_way_rerun_2026-09-17t08-23-41z.json` | 05FF758AE921 | 12992 | A |
-| A4 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase1_report_20260917_132341.md` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase1_report_20260917_132341.md` | B41A17EDA169 | 11035 | A |
-| A5 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase2_beta_summary_20260917_142748.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase2_beta_summary_20260917_142748.json` | 86D4CB146241 | 2417 | A |
-| A6 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase2_closedsource_report_20260917_175544.md` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase2_closedsource_report_20260917_175544.md` | 02443DD300CE | 5909 | A |
-| A7 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase2_closedsource_summary_20260917_175544.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase2_closedsource_summary_20260917_175544.json` | A3EAFAF9BA03 | 3286 | A |
-| A8 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase2_doubao_v2_summary_20260917_170828.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase2_doubao_v2_summary_20260917_170828.json` | C366F4E30B6B | 4357 | A |
-| A9 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase2_doubao_v2_summary_20260917_172206.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase2_doubao_v2_summary_20260917_172206.json` | E3DCCDDAED87 | 14469 | A |
-| A10 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase2_or_embedding_v3_report_20260917_162614.md` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase2_or_embedding_v3_report_20260917_162614.md` | FA5DA7A307BD | 8102 | A |
-| A11 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase2_or_embedding_v3_summary_20260917_162614.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase2_or_embedding_v3_summary_20260917_162614.json` | 21C9F23699A8 | 8308 | A |
-| A12 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase2_report_20260917_142748.md` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase2_report_20260917_142748.md` | 58E15C07AF33 | 9056 | A |
-| A13 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase3_adendum_summary_20260917_132143.md` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase3_adendum_summary_20260917_132143.md` | 8C07AB5AA968 | 16612 | A |
-| A14 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133358.md` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133358.md` | 54859CF2217A | 6637 | A |
-| A15 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133512.md` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133512.md` | C350E420ECA6 | 6337 | A |
-| A16 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133705.md` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133705.md` | 772112CF5BD4 | 6434 | A |
-| A17 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133726.md` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133726.md` | D7F03FDE4067 | 6435 | A |
-| A18 | `D:/私人资料/deposon-repo/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133852.md` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133852.md` | D66388B6532D | 6616 | A |
-| A19 | `D:/私人资料/deposon-repo/results/_p_l_v3_real_collapse_mistral_l100_20260917_132341.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_real_collapse_mistral_l100_20260917_132341.json` | 4657B210782A | 43903 | A |
-| A20 | `D:/私人资料/deposon-repo/results/_p_l_v3_real_collapse_mistral_l30_20260917_132341.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_real_collapse_mistral_l30_20260917_132341.json` | F6AB84F27D9A | 16545 | A |
-| A21 | `D:/私人资料/deposon-repo/results/_p_l_v3_real_collapse_mistral_l45_20260917_132341.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_real_collapse_mistral_l45_20260917_132341.json` | DC37EE54781C | 20108 | A |
-| A22 | `D:/私人资料/deposon-repo/results/_p_l_v3_real_collapse_mistral_l60_20260917_132341.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_real_collapse_mistral_l60_20260917_132341.json` | E3FB4F775E22 | 1174 | A |
-| A23 | `D:/私人资料/deposon-repo/results/_p_l_v3_robustness_claude_sonnet5_l30_20260917_174011.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_robustness_claude_sonnet5_l30_20260917_174011.json` | 9D329721F67D | 30772 | A |
-| A24 | `D:/私人资料/deposon-repo/results/_p_l_v3_robustness_claude_sonnet5_l60_20260917_174011.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_robustness_claude_sonnet5_l60_20260917_174011.json` | 28E462C11692 | 1292 | A |
-| A25 | `D:/私人资料/deposon-repo/results/_p_l_v3_robustness_gemini_37flash_l30_20260917_175003.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_robustness_gemini_37flash_l30_20260917_175003.json` | 0F5C80A8A4AE | 30514 | A |
-| A26 | `D:/私人资料/deposon-repo/results/_p_l_v3_robustness_gemini_37flash_l60_20260917_175003.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_robustness_gemini_37flash_l60_20260917_175003.json` | E2590651F9C0 | 1288 | A |
-| A27 | `D:/私人资料/deposon-repo/results/_p_l_v3_robustness_glm53_l30_20260917_142011.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_robustness_glm53_l30_20260917_142011.json` | 2DEADD7BE100 | 18281 | A |
-| A28 | `D:/私人资料/deposon-repo/results/_p_l_v3_robustness_glm53_l60_20260917_142011.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_robustness_glm53_l60_20260917_142011.json` | 31556B58CAA1 | 1037 | A |
-| A29 | `D:/私人资料/deposon-repo/results/_p_l_v3_robustness_gpt56sol_l30_20260917_173159.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_robustness_gpt56sol_l30_20260917_173159.json` | 3865D7A61CA1 | 30347 | A |
-| A30 | `D:/私人资料/deposon-repo/results/_p_l_v3_robustness_gpt56sol_l60_20260917_173159.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_robustness_gpt56sol_l60_20260917_173159.json` | 8C79E9A289FB | 1266 | A |
-| A31 | `D:/私人资料/deposon-repo/results/_p_l_v3_robustness_mistral_l60_20260917_142748.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_robustness_mistral_l60_20260917_142748.json` | BA41A0D4B927 | 1071 | A |
-| A32 | `D:/私人资料/deposon-repo/results/_p_l_v3_robustness_qwen3_l30_20260917_140017.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_robustness_qwen3_l30_20260917_140017.json` | E9BAC1743A2A | 18595 | A |
-| A33 | `D:/私人资料/deposon-repo/results/_p_l_v3_robustness_qwen3_l60_20260917_140017.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_robustness_qwen3_l60_20260917_140017.json` | F79F1B00E5D3 | 1057 | A |
-| A34 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_doubao_l30_20260917_142748.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_doubao_l30_20260917_142748.json` | B9488E2B01AE | 11834 | A |
-| A35 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_doubao_l30_20260917_170828.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_doubao_l30_20260917_170828.json` | 198F8FE39F94 | 18468 | A |
-| A36 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_doubao-text-240715_l30_20260917_172206.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_doubao-text-240715_l30_20260917_172206.json` | 2D4827F9CDA2 | 18509 | A |
-| A37 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_doubao-vision-241215_l30_20260917_171614.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_doubao-vision-241215_l30_20260917_171614.json` | 2B91EB1DBBCF | 1669762 | A |
-| A38 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_doubao-vision-241215_l30_20260917_172206.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_doubao-vision-241215_l30_20260917_172206.json` | E836A04A04D8 | 1670172 | A |
-| A39 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_doubao-vision-250328_l30_20260917_171614.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_doubao-vision-250328_l30_20260917_171614.json` | 46C99397F01B | 1670501 | A |
-| A40 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_doubao-vision-250328_l30_20260917_172206.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_doubao-vision-250328_l30_20260917_172206.json` | 0432F25CF6C3 | 1669285 | A |
-| A41 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_doubao-vision-250615_l30_20260917_171614.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_doubao-vision-250615_l30_20260917_171614.json` | 6B8AF7D8BCA9 | 1670027 | A |
-| A42 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_doubao-vision-250615_l30_20260917_172206.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_doubao-vision-250615_l30_20260917_172206.json` | 710B7F291355 | 1671116 | A |
-| A43 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_doubao-vision-251215_l30_20260917_172206.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_doubao-vision-251215_l30_20260917_172206.json` | A00976C6F87B | 1670482 | A |
-| A44 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_glm53_l30_20260917_142748.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_glm53_l30_20260917_142748.json` | D91B0C5F642F | 11833 | A |
-| A45 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_mistral_l30_20260917_142748.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_mistral_l30_20260917_142748.json` | 33D0259073DC | 11835 | A |
-| A46 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_or_bge-large_l30_20260917_162614.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_or_bge-large_l30_20260917_162614.json` | AFF028E8506C | 1017974 | A |
-| A47 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_or_e5-multi_l30_20260917_162614.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_or_e5-multi_l30_20260917_162614.json` | 8676B519A031 | 1017684 | A |
-| A48 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_or_gte-large_l30_20260917_162614.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_or_gte-large_l30_20260917_162614.json` | 07561D4D23D1 | 1017381 | A |
-| A49 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_or_qwen3-emb-8b_l30_20260917_162614.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_or_qwen3-emb-8b_l30_20260917_162614.json` | A4BD70C02AAA | 3929893 | A |
-| A50 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_qwen3_l30_20260917_142748.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_qwen3_l30_20260917_142748.json` | 26F7493F1C95 | 11833 | A |
-| A51 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_qwen3-emb-4b_l30_20260917_170828.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_qwen3-emb-4b_l30_20260917_170828.json` | 1928ADA51527 | 2452705 | A |
-| A52 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_qwen3-emb-4b_l30_20260917_172206.json` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_qwen3-emb-4b_l30_20260917_172206.json` | BEBEE5346543 | 2452273 | A |
-| A53 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_170828.md` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_170828.md` | FA9CD7FFA3F2 | 17833 | A |
-| A54 | `D:/私人资料/deposon-repo/results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_172206.md` | `D:/私人资料/_non_upload_local_archive/results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_172206.md` | 2E3EC17259E2 | 19548 | A |
+| A1 | `_repo_mirror/results/_p_k_v3_glm_fpr_audit_report_2026-09-17t08-23-41z.md` | `〔本地归档区〕/results/_p_k_v3_glm_fpr_audit_report_2026-09-17t08-23-41z.md` | 71D5C23D9F76 | 8558 | A |
+| A2 | `_repo_mirror/results/_p_k_v3_glm_json_audit_2026-09-17t08-23-41z.json` | `〔本地归档区〕/results/_p_k_v3_glm_json_audit_2026-09-17t08-23-41z.json` | F236E88F22CA | 6678 | A |
+| A3 | `_repo_mirror/results/_p_k_v3_three_way_rerun_2026-09-17t08-23-41z.json` | `〔本地归档区〕/results/_p_k_v3_three_way_rerun_2026-09-17t08-23-41z.json` | 05FF758AE921 | 12992 | A |
+| A4 | `_repo_mirror/results/_p_l_v3_phase1_report_20260917_132341.md` | `〔本地归档区〕/results/_p_l_v3_phase1_report_20260917_132341.md` | B41A17EDA169 | 11035 | A |
+| A5 | `_repo_mirror/results/_p_l_v3_phase2_beta_summary_20260917_142748.json` | `〔本地归档区〕/results/_p_l_v3_phase2_beta_summary_20260917_142748.json` | 86D4CB146241 | 2417 | A |
+| A6 | `_repo_mirror/results/_p_l_v3_phase2_closedsource_report_20260917_175544.md` | `〔本地归档区〕/results/_p_l_v3_phase2_closedsource_report_20260917_175544.md` | 02443DD300CE | 5909 | A |
+| A7 | `_repo_mirror/results/_p_l_v3_phase2_closedsource_summary_20260917_175544.json` | `〔本地归档区〕/results/_p_l_v3_phase2_closedsource_summary_20260917_175544.json` | A3EAFAF9BA03 | 3286 | A |
+| A8 | `_repo_mirror/results/_p_l_v3_phase2_doubao_v2_summary_20260917_170828.json` | `〔本地归档区〕/results/_p_l_v3_phase2_doubao_v2_summary_20260917_170828.json` | C366F4E30B6B | 4357 | A |
+| A9 | `_repo_mirror/results/_p_l_v3_phase2_doubao_v2_summary_20260917_172206.json` | `〔本地归档区〕/results/_p_l_v3_phase2_doubao_v2_summary_20260917_172206.json` | E3DCCDDAED87 | 14469 | A |
+| A10 | `_repo_mirror/results/_p_l_v3_phase2_or_embedding_v3_report_20260917_162614.md` | `〔本地归档区〕/results/_p_l_v3_phase2_or_embedding_v3_report_20260917_162614.md` | FA5DA7A307BD | 8102 | A |
+| A11 | `_repo_mirror/results/_p_l_v3_phase2_or_embedding_v3_summary_20260917_162614.json` | `〔本地归档区〕/results/_p_l_v3_phase2_or_embedding_v3_summary_20260917_162614.json` | 21C9F23699A8 | 8308 | A |
+| A12 | `_repo_mirror/results/_p_l_v3_phase2_report_20260917_142748.md` | `〔本地归档区〕/results/_p_l_v3_phase2_report_20260917_142748.md` | 58E15C07AF33 | 9056 | A |
+| A13 | `_repo_mirror/results/_p_l_v3_phase3_adendum_summary_20260917_132143.md` | `〔本地归档区〕/results/_p_l_v3_phase3_adendum_summary_20260917_132143.md` | 8C07AB5AA968 | 16612 | A |
+| A14 | `_repo_mirror/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133358.md` | `〔本地归档区〕/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133358.md` | 54859CF2217A | 6637 | A |
+| A15 | `_repo_mirror/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133512.md` | `〔本地归档区〕/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133512.md` | C350E420ECA6 | 6337 | A |
+| A16 | `_repo_mirror/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133705.md` | `〔本地归档区〕/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133705.md` | 772112CF5BD4 | 6434 | A |
+| A17 | `_repo_mirror/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133726.md` | `〔本地归档区〕/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133726.md` | D7F03FDE4067 | 6435 | A |
+| A18 | `_repo_mirror/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133852.md` | `〔本地归档区〕/results/_p_l_v3_phase3_plus_adendum_7_report_20260917_133852.md` | D66388B6532D | 6616 | A |
+| A19 | `_repo_mirror/results/_p_l_v3_real_collapse_mistral_l100_20260917_132341.json` | `〔本地归档区〕/results/_p_l_v3_real_collapse_mistral_l100_20260917_132341.json` | 4657B210782A | 43903 | A |
+| A20 | `_repo_mirror/results/_p_l_v3_real_collapse_mistral_l30_20260917_132341.json` | `〔本地归档区〕/results/_p_l_v3_real_collapse_mistral_l30_20260917_132341.json` | F6AB84F27D9A | 16545 | A |
+| A21 | `_repo_mirror/results/_p_l_v3_real_collapse_mistral_l45_20260917_132341.json` | `〔本地归档区〕/results/_p_l_v3_real_collapse_mistral_l45_20260917_132341.json` | DC37EE54781C | 20108 | A |
+| A22 | `_repo_mirror/results/_p_l_v3_real_collapse_mistral_l60_20260917_132341.json` | `〔本地归档区〕/results/_p_l_v3_real_collapse_mistral_l60_20260917_132341.json` | E3FB4F775E22 | 1174 | A |
+| A23 | `_repo_mirror/results/_p_l_v3_robustness_claude_sonnet5_l30_20260917_174011.json` | `〔本地归档区〕/results/_p_l_v3_robustness_claude_sonnet5_l30_20260917_174011.json` | 9D329721F67D | 30772 | A |
+| A24 | `_repo_mirror/results/_p_l_v3_robustness_claude_sonnet5_l60_20260917_174011.json` | `〔本地归档区〕/results/_p_l_v3_robustness_claude_sonnet5_l60_20260917_174011.json` | 28E462C11692 | 1292 | A |
+| A25 | `_repo_mirror/results/_p_l_v3_robustness_gemini_37flash_l30_20260917_175003.json` | `〔本地归档区〕/results/_p_l_v3_robustness_gemini_37flash_l30_20260917_175003.json` | 0F5C80A8A4AE | 30514 | A |
+| A26 | `_repo_mirror/results/_p_l_v3_robustness_gemini_37flash_l60_20260917_175003.json` | `〔本地归档区〕/results/_p_l_v3_robustness_gemini_37flash_l60_20260917_175003.json` | E2590651F9C0 | 1288 | A |
+| A27 | `_repo_mirror/results/_p_l_v3_robustness_glm53_l30_20260917_142011.json` | `〔本地归档区〕/results/_p_l_v3_robustness_glm53_l30_20260917_142011.json` | 2DEADD7BE100 | 18281 | A |
+| A28 | `_repo_mirror/results/_p_l_v3_robustness_glm53_l60_20260917_142011.json` | `〔本地归档区〕/results/_p_l_v3_robustness_glm53_l60_20260917_142011.json` | 31556B58CAA1 | 1037 | A |
+| A29 | `_repo_mirror/results/_p_l_v3_robustness_gpt56sol_l30_20260917_173159.json` | `〔本地归档区〕/results/_p_l_v3_robustness_gpt56sol_l30_20260917_173159.json` | 3865D7A61CA1 | 30347 | A |
+| A30 | `_repo_mirror/results/_p_l_v3_robustness_gpt56sol_l60_20260917_173159.json` | `〔本地归档区〕/results/_p_l_v3_robustness_gpt56sol_l60_20260917_173159.json` | 8C79E9A289FB | 1266 | A |
+| A31 | `_repo_mirror/results/_p_l_v3_robustness_mistral_l60_20260917_142748.json` | `〔本地归档区〕/results/_p_l_v3_robustness_mistral_l60_20260917_142748.json` | BA41A0D4B927 | 1071 | A |
+| A32 | `_repo_mirror/results/_p_l_v3_robustness_qwen3_l30_20260917_140017.json` | `〔本地归档区〕/results/_p_l_v3_robustness_qwen3_l30_20260917_140017.json` | E9BAC1743A2A | 18595 | A |
+| A33 | `_repo_mirror/results/_p_l_v3_robustness_qwen3_l60_20260917_140017.json` | `〔本地归档区〕/results/_p_l_v3_robustness_qwen3_l60_20260917_140017.json` | F79F1B00E5D3 | 1057 | A |
+| A34 | `_repo_mirror/results/_p_l_v3_vector_embedding_doubao_l30_20260917_142748.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_doubao_l30_20260917_142748.json` | B9488E2B01AE | 11834 | A |
+| A35 | `_repo_mirror/results/_p_l_v3_vector_embedding_doubao_l30_20260917_170828.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_doubao_l30_20260917_170828.json` | 198F8FE39F94 | 18468 | A |
+| A36 | `_repo_mirror/results/_p_l_v3_vector_embedding_doubao-text-240715_l30_20260917_172206.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_doubao-text-240715_l30_20260917_172206.json` | 2D4827F9CDA2 | 18509 | A |
+| A37 | `_repo_mirror/results/_p_l_v3_vector_embedding_doubao-vision-241215_l30_20260917_171614.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_doubao-vision-241215_l30_20260917_171614.json` | 2B91EB1DBBCF | 1669762 | A |
+| A38 | `_repo_mirror/results/_p_l_v3_vector_embedding_doubao-vision-241215_l30_20260917_172206.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_doubao-vision-241215_l30_20260917_172206.json` | E836A04A04D8 | 1670172 | A |
+| A39 | `_repo_mirror/results/_p_l_v3_vector_embedding_doubao-vision-250328_l30_20260917_171614.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_doubao-vision-250328_l30_20260917_171614.json` | 46C99397F01B | 1670501 | A |
+| A40 | `_repo_mirror/results/_p_l_v3_vector_embedding_doubao-vision-250328_l30_20260917_172206.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_doubao-vision-250328_l30_20260917_172206.json` | 0432F25CF6C3 | 1669285 | A |
+| A41 | `_repo_mirror/results/_p_l_v3_vector_embedding_doubao-vision-250615_l30_20260917_171614.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_doubao-vision-250615_l30_20260917_171614.json` | 6B8AF7D8BCA9 | 1670027 | A |
+| A42 | `_repo_mirror/results/_p_l_v3_vector_embedding_doubao-vision-250615_l30_20260917_172206.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_doubao-vision-250615_l30_20260917_172206.json` | 710B7F291355 | 1671116 | A |
+| A43 | `_repo_mirror/results/_p_l_v3_vector_embedding_doubao-vision-251215_l30_20260917_172206.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_doubao-vision-251215_l30_20260917_172206.json` | A00976C6F87B | 1670482 | A |
+| A44 | `_repo_mirror/results/_p_l_v3_vector_embedding_glm53_l30_20260917_142748.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_glm53_l30_20260917_142748.json` | D91B0C5F642F | 11833 | A |
+| A45 | `_repo_mirror/results/_p_l_v3_vector_embedding_mistral_l30_20260917_142748.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_mistral_l30_20260917_142748.json` | 33D0259073DC | 11835 | A |
+| A46 | `_repo_mirror/results/_p_l_v3_vector_embedding_or_bge-large_l30_20260917_162614.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_or_bge-large_l30_20260917_162614.json` | AFF028E8506C | 1017974 | A |
+| A47 | `_repo_mirror/results/_p_l_v3_vector_embedding_or_e5-multi_l30_20260917_162614.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_or_e5-multi_l30_20260917_162614.json` | 8676B519A031 | 1017684 | A |
+| A48 | `_repo_mirror/results/_p_l_v3_vector_embedding_or_gte-large_l30_20260917_162614.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_or_gte-large_l30_20260917_162614.json` | 07561D4D23D1 | 1017381 | A |
+| A49 | `_repo_mirror/results/_p_l_v3_vector_embedding_or_qwen3-emb-8b_l30_20260917_162614.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_or_qwen3-emb-8b_l30_20260917_162614.json` | A4BD70C02AAA | 3929893 | A |
+| A50 | `_repo_mirror/results/_p_l_v3_vector_embedding_qwen3_l30_20260917_142748.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_qwen3_l30_20260917_142748.json` | 26F7493F1C95 | 11833 | A |
+| A51 | `_repo_mirror/results/_p_l_v3_vector_embedding_qwen3-emb-4b_l30_20260917_170828.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_qwen3-emb-4b_l30_20260917_170828.json` | 1928ADA51527 | 2452705 | A |
+| A52 | `_repo_mirror/results/_p_l_v3_vector_embedding_qwen3-emb-4b_l30_20260917_172206.json` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_qwen3-emb-4b_l30_20260917_172206.json` | BEBEE5346543 | 2452273 | A |
+| A53 | `_repo_mirror/results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_170828.md` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_170828.md` | FA9CD7FFA3F2 | 17833 | A |
+| A54 | `_repo_mirror/results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_172206.md` | `〔本地归档区〕/results/_p_l_v3_vector_embedding_v2_doubao_report_20260917_172206.md` | 2E3EC17259E2 | 19548 | A |
 
 > 注: 所有 54 件 A 类文件在 `_non_upload_local_archive/results/` 目标位置无同名冲突, 干净移动, 0 件时间后缀。
 
@@ -135,7 +135,7 @@
 
 ## 4. C 类对账 (63 件 · 1 件干净 + 62 件加时间后缀)
 
-> 目标: `D:/私人资料/deposon-sub/results/`
+> 目标: `_repo_mirror/results/`
 > 通道: PowerShell `Move-Item`
 > 总 bytes: 568,033 (与 v1 ledger §3.3 C 小计 bytes 一致)
 > **同名冲突实测**: 62/63 件源 SHA-12 = 目标 SHA-12 (仓外 canonical 已存在同名副本 = GHOST_REF_COPIED duplicates), 1 件 (`_adendum_H_*`) 仓外无同名副本干净移动
@@ -144,7 +144,7 @@
 
 | # | 旧路径 (repo/results/) | 新路径 (deposon-sub/results/) | SHA-12 (实测 2026-09-24 18:24) | bytes | 类别 |
 |---|---|---|---|---|---|
-| C1 | `D:/私人资料/deposon-repo/results/_adendum_H_pg_dhde_shrink_20260917_132049.json` | `D:/私人资料/deposon-sub/results/_adendum_H_pg_dhde_shrink_20260917_132049.json` | B9A0253BA6A0 | 4613 | C |
+| C1 | `_repo_mirror/results/_adendum_H_pg_dhde_shrink_20260917_132049.json` | `_repo_mirror/results/_adendum_H_pg_dhde_shrink_20260917_132049.json` | B9A0253BA6A0 | 4613 | C |
 
 ### 4.2 同名冲突 + 时间后缀移动 (62 件)
 
@@ -153,68 +153,68 @@
 
 | # | 旧路径 (repo/results/) | 新路径 (deposon-sub/results/ · 时间后缀) | SHA-12 (实测 2026-09-24 18:24) | bytes | 类别 |
 |---|---|---|---|---|---|
-| C2 | `D:/私人资料/deposon-repo/results/_adendum_a_degradation_precheck_20260917_132049.json` | `D:/私人资料/deposon-sub/results/_adendum_a_degradation_precheck_20260917_132049.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 38FABEB19691 | 4248 | C |
-| C3 | `D:/私人资料/deposon-repo/results/_adendum_b_pi_real_labels_v2_20260917_133726.json` | `D:/私人资料/deposon-sub/results/_adendum_b_pi_real_labels_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 3D344711CF8C | 2374 | C |
-| C4 | `D:/私人资料/deposon-repo/results/_adendum_b_pi_real_labels_v2_20260917_133852.json` | `D:/私人资料/deposon-sub/results/_adendum_b_pi_real_labels_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | C725E08E0A1C | 2374 | C |
-| C5 | `D:/私人资料/deposon-repo/results/_adendum_c_pm_attack_surface_v2_20260917_133726.json` | `D:/私人资料/deposon-sub/results/_adendum_c_pm_attack_surface_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 193BA7D66412 | 4123 | C |
-| C6 | `D:/私人资料/deposon-repo/results/_adendum_c_pm_attack_surface_v2_20260917_133852.json` | `D:/私人资料/deposon-sub/results/_adendum_c_pm_attack_surface_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 6EBA63788CA8 | 4122 | C |
-| C7 | `D:/私人资料/deposon-repo/results/_adendum_d_pc_r2_per_model_v2_20260917_133726.json` | `D:/私人资料/deposon-sub/results/_adendum_d_pc_r2_per_model_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 6FE706750823 | 4605 | C |
-| C8 | `D:/私人资料/deposon-repo/results/_adendum_d_pc_r2_per_model_v2_20260917_133852.json` | `D:/私人资料/deposon-sub/results/_adendum_d_pc_r2_per_model_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | D66792EEA40E | 4605 | C |
-| C9 | `D:/私人资料/deposon-repo/results/_adendum_e_pd_supplement_v2_20260917_133726.json` | `D:/私人资料/deposon-sub/results/_adendum_e_pd_supplement_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 2C4790FFB6E3 | 1353 | C |
-| C10 | `D:/私人资料/deposon-repo/results/_adendum_e_pd_supplement_v2_20260917_133852.json` | `D:/私人资料/deposon-sub/results/_adendum_e_pd_supplement_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 46D8DACB4721 | 1353 | C |
-| C11 | `D:/私人资料/deposon-repo/results/_adendum_f_pe_3modal_closure_llm_dispatch_20260917_132143.json` | `D:/私人资料/deposon-sub/results/_adendum_f_pe_3modal_closure_llm_dispatch_20260917_132143.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 879494ED8FB9 | 3646 | C |
-| C12 | `D:/私人资料/deposon-repo/results/_adendum_f_pe_3modal_v2_20260917_143033.json` | `D:/私人资料/deposon-sub/results/_adendum_f_pe_3modal_v2_20260917_143033.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | AFAB79249BE7 | 38622 | C |
-| C13 | `D:/私人资料/deposon-repo/results/_adendum_fgk_complete_20260917_143033.md` | `D:/私人资料/deposon-sub/results/_adendum_fgk_complete_20260917_143033.md._moved_20260924_1830.md` (仓外同名旧件 0 覆盖) | 958188C83CF0 | 14005 | C |
-| C14 | `D:/私人资料/deposon-repo/results/_adendum_g_pf_dfix2_timing_converge_llm_dispatch_20260917_132143.json` | `D:/私人资料/deposon-sub/results/_adendum_g_pf_dfix2_timing_converge_llm_dispatch_20260917_132143.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | D10462080832 | 2757 | C |
-| C15 | `D:/私人资料/deposon-repo/results/_adendum_g_pf_dfix2_v2_20260917_143033.json` | `D:/私人资料/deposon-sub/results/_adendum_g_pf_dfix2_v2_20260917_143033.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | BF8DB2AD255B | 95292 | C |
-| C16 | `D:/私人资料/deposon-repo/results/_adendum_i_po_captions_closure_20260917_132049.json` | `D:/私人资料/deposon-sub/results/_adendum_i_po_captions_closure_20260917_132049.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 18165008BEF6 | 4429 | C |
-| C17 | `D:/私人资料/deposon-repo/results/_adendum_j_warehouse_spearman_health_20260917_132049.json` | `D:/私人资料/deposon-sub/results/_adendum_j_warehouse_spearman_health_20260917_132049.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | DF661D62426A | 11337 | C |
-| C18 | `D:/私人资料/deposon-repo/results/_adendum_k_087_cluster_cross_backbone_llm_dispatch_20260917_132143.json` | `D:/私人资料/deposon-sub/results/_adendum_k_087_cluster_cross_backbone_llm_dispatch_20260917_132143.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | ACDF933F68E0 | 2911 | C |
-| C19 | `D:/私人资料/deposon-repo/results/_adendum_k_qwen3_087_cluster_v2_20260917_143033.json` | `D:/私人资料/deposon-sub/results/_adendum_k_qwen3_087_cluster_v2_20260917_143033.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 43477C8EA2D6 | 32481 | C |
-| C20 | `D:/私人资料/deposon-repo/results/_adendum_l_verifier_dual_impl_diff_20260917_132049.json` | `D:/私人资料/deposon-sub/results/_adendum_l_verifier_dual_impl_diff_20260917_132049.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 1532607DED80 | 2783 | C |
-| C21 | `D:/私人资料/deposon-repo/results/_adendum_m_pj_convergence_basin_v2_20260917_133726.json` | `D:/私人资料/deposon-sub/results/_adendum_m_pj_convergence_basin_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | EA7FFDA97E20 | 3694 | C |
-| C22 | `D:/私人资料/deposon-repo/results/_adendum_m_pj_convergence_basin_v2_20260917_133852.json` | `D:/私人资料/deposon-sub/results/_adendum_m_pj_convergence_basin_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 8AB01A1E42AE | 3686 | C |
-| C23 | `D:/私人资料/deposon-repo/results/_adendum_n_pn_coupling_v2_20260917_133726.json` | `D:/私人资料/deposon-sub/results/_adendum_n_pn_coupling_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 1B91CC25CA57 | 2012 | C |
-| C24 | `D:/私人资料/deposon-repo/results/_adendum_n_pn_coupling_v2_20260917_133852.json` | `D:/私人资料/deposon-sub/results/_adendum_n_pn_coupling_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | A32F3C8BA520 | 2011 | C |
-| C25 | `D:/私人资料/deposon-repo/results/_adendum_o_pk_v2_three_way_v2_20260917_133726.json` | `D:/私人资料/deposon-sub/results/_adendum_o_pk_v2_three_way_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 725FD7B961F8 | 1971 | C |
-| C26 | `D:/私人资料/deposon-repo/results/_adendum_o_pk_v2_three_way_v2_20260917_133852.json` | `D:/私人资料/deposon-sub/results/_adendum_o_pk_v2_three_way_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | A30FF093305D | 1970 | C |
-| C27 | `D:/私人资料/deposon-repo/results/_adendum_p_pc_two_phase_fail_h0_20260917_132049.json` | `D:/私人资料/deposon-sub/results/_adendum_p_pc_two_phase_fail_h0_20260917_132049.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 6B26DADDC92C | 2456 | C |
-| C28 | `D:/私人资料/deposon-repo/results/_adendum_q_deepseek_v4_pro_anchor_20260917_132049.json` | `D:/私人资料/deposon-sub/results/_adendum_q_deepseek_v4_pro_anchor_20260917_132049.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | AB5D9AE6E42A | 4003 | C |
-| C29 | `D:/私人资料/deposon-repo/results/_d05_backbone_robustness_beta_20260918_100853.json` | `D:/私人资料/deposon-sub/results/_d05_backbone_robustness_beta_20260918_100853.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 9B6F085D96DC | 1490 | C |
-| C30 | `D:/私人资料/deposon-repo/results/_d05_combined_report_20260918_100853.md` | `D:/私人资料/deposon-sub/results/_d05_combined_report_20260918_100853.md._moved_20260924_1830.md` (仓外同名旧件 0 覆盖) | C87EB8974268 | 10555 | C |
-| C31 | `D:/私人资料/deposon-repo/results/_d05_data_rescue_note_2026_09_18.md` | `D:/私人资料/deposon-sub/results/_d05_data_rescue_note_2026_09_18.md._moved_20260924_1830.md` (仓外同名旧件 0 覆盖) | 120295A19655 | 1181 | C |
-| C32 | `D:/私人资料/deposon-repo/results/_d05_i1i5_invariants_check_20260918_100853.json` | `D:/私人资料/deposon-sub/results/_d05_i1i5_invariants_check_20260918_100853.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | F12AF5435928 | 1920 | C |
-| C33 | `D:/私人资料/deposon-repo/results/_d05_main_run_results_20260918_100853.json` | `D:/私人资料/deposon-sub/results/_d05_main_run_results_20260918_100853.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 0A933D7C8D7A | 15243 | C |
-| C34 | `D:/私人资料/deposon-repo/results/_d05_main_run_results_nemotron_3.5_20260918_100853.json` | `D:/私人资料/deposon-sub/results/_d05_main_run_results_nemotron_3.5_20260918_100853.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 1B1B6AD67C39 | 15111 | C |
-| C35 | `D:/私人资料/deposon-repo/results/_d05_main_run_results_qwen3_failed_20260918_100853.json` | `D:/私人资料/deposon-sub/results/_d05_main_run_results_qwen3_failed_20260918_100853.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 427B18DA8114 | 18358 | C |
-| C36 | `D:/私人资料/deposon-repo/results/_d05_opt_5_directions_results_20260918_100853.json` | `D:/私人资料/deposon-sub/results/_d05_opt_5_directions_results_20260918_100853.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | E5979133195A | 5614 | C |
-| C37 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch1_77e2f952.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch1_77e2f952.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | B5F517A321A3 | 2534 | C |
-| C38 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch10_1b753116.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch10_1b753116.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 326ADCA520F1 | 5007 | C |
-| C39 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch11_7d6a7c8f.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch11_7d6a7c8f.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 383446F24707 | 2573 | C |
-| C40 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch12_a2853574.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch12_a2853574.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 6BE21F9586EC | 1246 | C |
-| C41 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch13_83f895f9.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch13_83f895f9.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 0694838F66A8 | 739 | C |
-| C42 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch14_e5952130.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch14_e5952130.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 64AA9D8A5C7D | 1055 | C |
-| C43 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch15_0e65fe2f.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch15_0e65fe2f.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | CFC345D10C7D | 385 | C |
-| C44 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch2_e18c17bb.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch2_e18c17bb.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | F14341B8A1A1 | 9260 | C |
-| C45 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch3_01ecf050.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch3_01ecf050.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | FD64909EA1D8 | 9656 | C |
-| C46 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch4_2f872d54.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch4_2f872d54.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | D35453F21049 | 9720 | C |
-| C47 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch5_34439e1e.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch5_34439e1e.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 2769B83F5B1D | 9511 | C |
-| C48 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch6_28055e59.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch6_28055e59.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | F3EB7A38AE7D | 10107 | C |
-| C49 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch7_0903df7e.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch7_0903df7e.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 7BDA1FECD7C4 | 9748 | C |
-| C50 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch8_7468a23b.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch8_7468a23b.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 5A38FC02978C | 9880 | C |
-| C51 | `D:/私人资料/deposon-repo/results/_kimi_push_v3_manifest_batch9_f7d9cf1d.json` | `D:/私人资料/deposon-sub/results/_kimi_push_v3_manifest_batch9_f7d9cf1d.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 968D7C6C43CA | 9745 | C |
-| C52 | `D:/私人资料/deposon-repo/results/_kimi_safe_batch_push_v1_2026_09_17.json` | `D:/私人资料/deposon-sub/results/_kimi_safe_batch_push_v1_2026_09_17.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 4A204FB0D682 | 7280 | C |
-| C53 | `D:/私人资料/deposon-repo/results/_kimi_safe_batch_push_v2_full_2026_09_17.json` | `D:/私人资料/deposon-sub/results/_kimi_safe_batch_push_v2_full_2026_09_17.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | ADF3A8017E26 | 47954 | C |
-| C54 | `D:/私人资料/deposon-repo/results/_kimi_safe_batch_push_v3_full_2026_09_17.json` | `D:/私人资料/deposon-sub/results/_kimi_safe_batch_push_v3_full_2026_09_17.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 058099C10CFB | 7954 | C |
-| C55 | `D:/私人资料/deposon-repo/results/_v2_setup.py` | `D:/私人资料/deposon-sub/results/_v2_setup.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | 73F2B8712A90 | 3483 | C |
-| C56 | `D:/私人资料/deposon-repo/results/_v2_show_summary.py` | `D:/私人资料/deposon-sub/results/_v2_show_summary.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | 0012B38CE438 | 1200 | C |
-| C57 | `D:/私人资料/deposon-repo/results/_v2_smoketest.py` | `D:/私人资料/deposon-sub/results/_v2_smoketest.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | 0B6C22C8F379 | 2040 | C |
-| C58 | `D:/私人资料/deposon-repo/results/_v2_stage1_60cells.py` | `D:/私人资料/deposon-sub/results/_v2_stage1_60cells.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | 8C7BD12C3A8C | 31556 | C |
-| C59 | `D:/私人资料/deposon-repo/results/_v2_stage2_f2_drift.py` | `D:/私人资料/deposon-sub/results/_v2_stage2_f2_drift.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | 7E9B2FC57D80 | 10798 | C |
-| C60 | `D:/私人资料/deposon-repo/results/_v2_stage3_f3_strip.py` | `D:/私人资料/deposon-sub/results/_v2_stage3_f3_strip.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | CE4362E325CA | 11803 | C |
-| C61 | `D:/私人资料/deposon-repo/results/_v2_stage4_f4_pdv2.py` | `D:/私人资料/deposon-sub/results/_v2_stage4_f4_pdv2.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | B84F5AAB6FAF | 10355 | C |
-| C62 | `D:/私人资料/deposon-repo/results/_v2_stage5_f5_dpath.py` | `D:/私人资料/deposon-sub/results/_v2_stage5_f5_dpath.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | E8871B829D89 | 6480 | C |
-| C63 | `D:/私人资料/deposon-repo/results/_v2_verify_outputs.py` | `D:/私人资料/deposon-sub/results/_v2_verify_outputs.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | EB0107DD79B5 | 2656 | C |
+| C2 | `_repo_mirror/results/_adendum_a_degradation_precheck_20260917_132049.json` | `_repo_mirror/results/_adendum_a_degradation_precheck_20260917_132049.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 38FABEB19691 | 4248 | C |
+| C3 | `_repo_mirror/results/_adendum_b_pi_real_labels_v2_20260917_133726.json` | `_repo_mirror/results/_adendum_b_pi_real_labels_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 3D344711CF8C | 2374 | C |
+| C4 | `_repo_mirror/results/_adendum_b_pi_real_labels_v2_20260917_133852.json` | `_repo_mirror/results/_adendum_b_pi_real_labels_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | C725E08E0A1C | 2374 | C |
+| C5 | `_repo_mirror/results/_adendum_c_pm_attack_surface_v2_20260917_133726.json` | `_repo_mirror/results/_adendum_c_pm_attack_surface_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 193BA7D66412 | 4123 | C |
+| C6 | `_repo_mirror/results/_adendum_c_pm_attack_surface_v2_20260917_133852.json` | `_repo_mirror/results/_adendum_c_pm_attack_surface_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 6EBA63788CA8 | 4122 | C |
+| C7 | `_repo_mirror/results/_adendum_d_pc_r2_per_model_v2_20260917_133726.json` | `_repo_mirror/results/_adendum_d_pc_r2_per_model_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 6FE706750823 | 4605 | C |
+| C8 | `_repo_mirror/results/_adendum_d_pc_r2_per_model_v2_20260917_133852.json` | `_repo_mirror/results/_adendum_d_pc_r2_per_model_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | D66792EEA40E | 4605 | C |
+| C9 | `_repo_mirror/results/_adendum_e_pd_supplement_v2_20260917_133726.json` | `_repo_mirror/results/_adendum_e_pd_supplement_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 2C4790FFB6E3 | 1353 | C |
+| C10 | `_repo_mirror/results/_adendum_e_pd_supplement_v2_20260917_133852.json` | `_repo_mirror/results/_adendum_e_pd_supplement_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 46D8DACB4721 | 1353 | C |
+| C11 | `_repo_mirror/results/_adendum_f_pe_3modal_closure_llm_dispatch_20260917_132143.json` | `_repo_mirror/results/_adendum_f_pe_3modal_closure_llm_dispatch_20260917_132143.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 879494ED8FB9 | 3646 | C |
+| C12 | `_repo_mirror/results/_adendum_f_pe_3modal_v2_20260917_143033.json` | `_repo_mirror/results/_adendum_f_pe_3modal_v2_20260917_143033.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | AFAB79249BE7 | 38622 | C |
+| C13 | `_repo_mirror/results/_adendum_fgk_complete_20260917_143033.md` | `_repo_mirror/results/_adendum_fgk_complete_20260917_143033.md._moved_20260924_1830.md` (仓外同名旧件 0 覆盖) | 958188C83CF0 | 14005 | C |
+| C14 | `_repo_mirror/results/_adendum_g_pf_dfix2_timing_converge_llm_dispatch_20260917_132143.json` | `_repo_mirror/results/_adendum_g_pf_dfix2_timing_converge_llm_dispatch_20260917_132143.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | D10462080832 | 2757 | C |
+| C15 | `_repo_mirror/results/_adendum_g_pf_dfix2_v2_20260917_143033.json` | `_repo_mirror/results/_adendum_g_pf_dfix2_v2_20260917_143033.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | BF8DB2AD255B | 95292 | C |
+| C16 | `_repo_mirror/results/_adendum_i_po_captions_closure_20260917_132049.json` | `_repo_mirror/results/_adendum_i_po_captions_closure_20260917_132049.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 18165008BEF6 | 4429 | C |
+| C17 | `_repo_mirror/results/_adendum_j_warehouse_spearman_health_20260917_132049.json` | `_repo_mirror/results/_adendum_j_warehouse_spearman_health_20260917_132049.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | DF661D62426A | 11337 | C |
+| C18 | `_repo_mirror/results/_adendum_k_087_cluster_cross_backbone_llm_dispatch_20260917_132143.json` | `_repo_mirror/results/_adendum_k_087_cluster_cross_backbone_llm_dispatch_20260917_132143.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | ACDF933F68E0 | 2911 | C |
+| C19 | `_repo_mirror/results/_adendum_k_qwen3_087_cluster_v2_20260917_143033.json` | `_repo_mirror/results/_adendum_k_qwen3_087_cluster_v2_20260917_143033.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 43477C8EA2D6 | 32481 | C |
+| C20 | `_repo_mirror/results/_adendum_l_verifier_dual_impl_diff_20260917_132049.json` | `_repo_mirror/results/_adendum_l_verifier_dual_impl_diff_20260917_132049.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 1532607DED80 | 2783 | C |
+| C21 | `_repo_mirror/results/_adendum_m_pj_convergence_basin_v2_20260917_133726.json` | `_repo_mirror/results/_adendum_m_pj_convergence_basin_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | EA7FFDA97E20 | 3694 | C |
+| C22 | `_repo_mirror/results/_adendum_m_pj_convergence_basin_v2_20260917_133852.json` | `_repo_mirror/results/_adendum_m_pj_convergence_basin_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 8AB01A1E42AE | 3686 | C |
+| C23 | `_repo_mirror/results/_adendum_n_pn_coupling_v2_20260917_133726.json` | `_repo_mirror/results/_adendum_n_pn_coupling_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 1B91CC25CA57 | 2012 | C |
+| C24 | `_repo_mirror/results/_adendum_n_pn_coupling_v2_20260917_133852.json` | `_repo_mirror/results/_adendum_n_pn_coupling_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | A32F3C8BA520 | 2011 | C |
+| C25 | `_repo_mirror/results/_adendum_o_pk_v2_three_way_v2_20260917_133726.json` | `_repo_mirror/results/_adendum_o_pk_v2_three_way_v2_20260917_133726.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 725FD7B961F8 | 1971 | C |
+| C26 | `_repo_mirror/results/_adendum_o_pk_v2_three_way_v2_20260917_133852.json` | `_repo_mirror/results/_adendum_o_pk_v2_three_way_v2_20260917_133852.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | A30FF093305D | 1970 | C |
+| C27 | `_repo_mirror/results/_adendum_p_pc_two_phase_fail_h0_20260917_132049.json` | `_repo_mirror/results/_adendum_p_pc_two_phase_fail_h0_20260917_132049.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 6B26DADDC92C | 2456 | C |
+| C28 | `_repo_mirror/results/_adendum_q_deepseek_v4_pro_anchor_20260917_132049.json` | `_repo_mirror/results/_adendum_q_deepseek_v4_pro_anchor_20260917_132049.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | AB5D9AE6E42A | 4003 | C |
+| C29 | `_repo_mirror/results/_d05_backbone_robustness_beta_20260918_100853.json` | `_repo_mirror/results/_d05_backbone_robustness_beta_20260918_100853.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 9B6F085D96DC | 1490 | C |
+| C30 | `_repo_mirror/results/_d05_combined_report_20260918_100853.md` | `_repo_mirror/results/_d05_combined_report_20260918_100853.md._moved_20260924_1830.md` (仓外同名旧件 0 覆盖) | C87EB8974268 | 10555 | C |
+| C31 | `_repo_mirror/results/_d05_data_rescue_note_2026_09_18.md` | `_repo_mirror/results/_d05_data_rescue_note_2026_09_18.md._moved_20260924_1830.md` (仓外同名旧件 0 覆盖) | 120295A19655 | 1181 | C |
+| C32 | `_repo_mirror/results/_d05_i1i5_invariants_check_20260918_100853.json` | `_repo_mirror/results/_d05_i1i5_invariants_check_20260918_100853.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | F12AF5435928 | 1920 | C |
+| C33 | `_repo_mirror/results/_d05_main_run_results_20260918_100853.json` | `_repo_mirror/results/_d05_main_run_results_20260918_100853.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 0A933D7C8D7A | 15243 | C |
+| C34 | `_repo_mirror/results/_d05_main_run_results_nemotron_3.5_20260918_100853.json` | `_repo_mirror/results/_d05_main_run_results_nemotron_3.5_20260918_100853.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 1B1B6AD67C39 | 15111 | C |
+| C35 | `_repo_mirror/results/_d05_main_run_results_qwen3_failed_20260918_100853.json` | `_repo_mirror/results/_d05_main_run_results_qwen3_failed_20260918_100853.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 427B18DA8114 | 18358 | C |
+| C36 | `_repo_mirror/results/_d05_opt_5_directions_results_20260918_100853.json` | `_repo_mirror/results/_d05_opt_5_directions_results_20260918_100853.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | E5979133195A | 5614 | C |
+| C37 | `_repo_mirror/results/_kimi_push_v3_manifest_batch1_77e2f952.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch1_77e2f952.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | B5F517A321A3 | 2534 | C |
+| C38 | `_repo_mirror/results/_kimi_push_v3_manifest_batch10_1b753116.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch10_1b753116.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 326ADCA520F1 | 5007 | C |
+| C39 | `_repo_mirror/results/_kimi_push_v3_manifest_batch11_7d6a7c8f.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch11_7d6a7c8f.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 383446F24707 | 2573 | C |
+| C40 | `_repo_mirror/results/_kimi_push_v3_manifest_batch12_a2853574.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch12_a2853574.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 6BE21F9586EC | 1246 | C |
+| C41 | `_repo_mirror/results/_kimi_push_v3_manifest_batch13_83f895f9.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch13_83f895f9.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 0694838F66A8 | 739 | C |
+| C42 | `_repo_mirror/results/_kimi_push_v3_manifest_batch14_e5952130.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch14_e5952130.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 64AA9D8A5C7D | 1055 | C |
+| C43 | `_repo_mirror/results/_kimi_push_v3_manifest_batch15_0e65fe2f.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch15_0e65fe2f.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | CFC345D10C7D | 385 | C |
+| C44 | `_repo_mirror/results/_kimi_push_v3_manifest_batch2_e18c17bb.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch2_e18c17bb.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | F14341B8A1A1 | 9260 | C |
+| C45 | `_repo_mirror/results/_kimi_push_v3_manifest_batch3_01ecf050.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch3_01ecf050.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | FD64909EA1D8 | 9656 | C |
+| C46 | `_repo_mirror/results/_kimi_push_v3_manifest_batch4_2f872d54.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch4_2f872d54.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | D35453F21049 | 9720 | C |
+| C47 | `_repo_mirror/results/_kimi_push_v3_manifest_batch5_34439e1e.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch5_34439e1e.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 2769B83F5B1D | 9511 | C |
+| C48 | `_repo_mirror/results/_kimi_push_v3_manifest_batch6_28055e59.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch6_28055e59.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | F3EB7A38AE7D | 10107 | C |
+| C49 | `_repo_mirror/results/_kimi_push_v3_manifest_batch7_0903df7e.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch7_0903df7e.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 7BDA1FECD7C4 | 9748 | C |
+| C50 | `_repo_mirror/results/_kimi_push_v3_manifest_batch8_7468a23b.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch8_7468a23b.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 5A38FC02978C | 9880 | C |
+| C51 | `_repo_mirror/results/_kimi_push_v3_manifest_batch9_f7d9cf1d.json` | `_repo_mirror/results/_kimi_push_v3_manifest_batch9_f7d9cf1d.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 968D7C6C43CA | 9745 | C |
+| C52 | `_repo_mirror/results/_kimi_safe_batch_push_v1_2026_09_17.json` | `_repo_mirror/results/_kimi_safe_batch_push_v1_2026_09_17.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 4A204FB0D682 | 7280 | C |
+| C53 | `_repo_mirror/results/_kimi_safe_batch_push_v2_full_2026_09_17.json` | `_repo_mirror/results/_kimi_safe_batch_push_v2_full_2026_09_17.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | ADF3A8017E26 | 47954 | C |
+| C54 | `_repo_mirror/results/_kimi_safe_batch_push_v3_full_2026_09_17.json` | `_repo_mirror/results/_kimi_safe_batch_push_v3_full_2026_09_17.json._moved_20260924_1830.json` (仓外同名旧件 0 覆盖) | 058099C10CFB | 7954 | C |
+| C55 | `_repo_mirror/results/_v2_setup.py` | `_repo_mirror/results/_v2_setup.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | 73F2B8712A90 | 3483 | C |
+| C56 | `_repo_mirror/results/_v2_show_summary.py` | `_repo_mirror/results/_v2_show_summary.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | 0012B38CE438 | 1200 | C |
+| C57 | `_repo_mirror/results/_v2_smoketest.py` | `_repo_mirror/results/_v2_smoketest.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | 0B6C22C8F379 | 2040 | C |
+| C58 | `_repo_mirror/results/_v2_stage1_60cells.py` | `_repo_mirror/results/_v2_stage1_60cells.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | 8C7BD12C3A8C | 31556 | C |
+| C59 | `_repo_mirror/results/_v2_stage2_f2_drift.py` | `_repo_mirror/results/_v2_stage2_f2_drift.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | 7E9B2FC57D80 | 10798 | C |
+| C60 | `_repo_mirror/results/_v2_stage3_f3_strip.py` | `_repo_mirror/results/_v2_stage3_f3_strip.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | CE4362E325CA | 11803 | C |
+| C61 | `_repo_mirror/results/_v2_stage4_f4_pdv2.py` | `_repo_mirror/results/_v2_stage4_f4_pdv2.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | B84F5AAB6FAF | 10355 | C |
+| C62 | `_repo_mirror/results/_v2_stage5_f5_dpath.py` | `_repo_mirror/results/_v2_stage5_f5_dpath.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | E8871B829D89 | 6480 | C |
+| C63 | `_repo_mirror/results/_v2_verify_outputs.py` | `_repo_mirror/results/_v2_verify_outputs.py._moved_20260924_1830.py` (仓外同名旧件 0 覆盖) | EB0107DD79B5 | 2656 | C |
 
 > 注: 62 件同名冲突件均经过 SHA 一致性实测 (源 SHA-12 = 仓外目标 SHA-12, = GHOST_REF_COPIED duplicates per `ghostref_reconciliation` & `ghostref_copy_log`); 仓外 canonical 件 0 触动; 时间后缀 `_moved_20260924_1830` 是单一批次号 (本棒所有移动用同一后缀便于清查)。
 
@@ -222,7 +222,7 @@
 
 ## 5. 灰区对账 (8 件 · 7 件干净 + 1 件时间后缀)
 
-> 目标: `D:/私人资料/deposon-repo/results/_archive_2026_09_24/`
+> 目标: `_repo_mirror/results/_archive_2026_09_24/`
 > 通道: PowerShell `Move-Item`
 > 总 bytes: 124,753 (与 v1 ledger §3.4 灰区小计 bytes 一致)
 > **同名冲突实测**: 1/8 件 (`.tmp/_final_verify.py` 2279 bytes SHA=DB4428293040 vs 仓内 `results/_archive_2026_09_24/_final_verify.py` 2307 bytes SHA=31A5D44497F1, 内容不同)
@@ -231,13 +231,13 @@
 
 | # | 旧路径 (repo/.tmp/) | 新路径 (repo/results/_archive_2026_09_24/) | SHA-12 (实测 2026-09-24 18:24) | bytes | 类别 |
 |---|---|---|---|---|---|
-| G1 | `D:/私人资料/deposon-repo/.tmp/_l11_run1.json` | `D:/私人资料/deposon-repo/results/_archive_2026_09_24/_l11_run1.json` | 20B0E13064F8 | 12143 | G |
-| G2 | `D:/私人资料/deposon-repo/.tmp/_l13_latency_test.py` | `D:/私人资料/deposon-repo/results/_archive_2026_09_24/_l13_latency_test.py` | DAE238354342 | 2954 | G |
-| G3 | `D:/私人资料/deposon-repo/.tmp/_l14_checkpoint.json` | `D:/私人资料/deposon-repo/results/_archive_2026_09_24/_l14_checkpoint.json` | 91B582672B49 | 10963 | G |
-| G4 | `D:/私人资料/deposon-repo/.tmp/_l14_records.json` | `D:/私人资料/deposon-repo/results/_archive_2026_09_24/_l14_records.json` | 8F6FCF027149 | 50957 | G |
-| G5 | `D:/私人资料/deposon-repo/.tmp/l14_runner_v2.py` | `D:/私人资料/deposon-repo/results/_archive_2026_09_24/l14_runner_v2.py` | ACF1CD6CCBD4 | 23056 | G |
-| G6 | `D:/私人资料/deposon-repo/.tmp/l14_small_batch.py` | `D:/私人资料/deposon-repo/results/_archive_2026_09_24/l14_small_batch.py` | 0659C947BEC1 | 21784 | G |
-| G7 | `D:/私人资料/deposon-repo/.tmp/latency_test.py` | `D:/私人资料/deposon-repo/results/_archive_2026_09_24/latency_test.py` | FD9FD98785E1 | 617 | G |
+| G1 | `_repo_mirror/.tmp/_l11_run1.json` | `_repo_mirror/results/_archive_2026_09_24/_l11_run1.json` | 20B0E13064F8 | 12143 | G |
+| G2 | `_repo_mirror/.tmp/_l13_latency_test.py` | `_repo_mirror/results/_archive_2026_09_24/_l13_latency_test.py` | DAE238354342 | 2954 | G |
+| G3 | `_repo_mirror/.tmp/_l14_checkpoint.json` | `_repo_mirror/results/_archive_2026_09_24/_l14_checkpoint.json` | 91B582672B49 | 10963 | G |
+| G4 | `_repo_mirror/.tmp/_l14_records.json` | `_repo_mirror/results/_archive_2026_09_24/_l14_records.json` | 8F6FCF027149 | 50957 | G |
+| G5 | `_repo_mirror/.tmp/l14_runner_v2.py` | `_repo_mirror/results/_archive_2026_09_24/l14_runner_v2.py` | ACF1CD6CCBD4 | 23056 | G |
+| G6 | `_repo_mirror/.tmp/l14_small_batch.py` | `_repo_mirror/results/_archive_2026_09_24/l14_small_batch.py` | 0659C947BEC1 | 21784 | G |
+| G7 | `_repo_mirror/.tmp/latency_test.py` | `_repo_mirror/results/_archive_2026_09_24/latency_test.py` | FD9FD98785E1 | 617 | G |
 
 > 注: G1-G7 的 SHA-12 实测与 v1 ledger §3.4 完全一致 (ACF1CD6CCBD4 / 0659C947BEC1 / 8F6FCF027149 / 91B582672B49 / 20B0E13064F8 / DAE238354342 / FD9FD98785E1)。
 
@@ -245,7 +245,7 @@
 
 | # | 旧路径 (repo/.tmp/) | 新路径 (repo/results/_archive_2026_09_24/ · 时间后缀) | SHA-12 (实测 2026-09-24 18:24) | bytes | 类别 |
 |---|---|---|---|---|---|
-| G8 | `D:/私人资料/deposon-repo/.tmp/_final_verify.py` | `D:/私人资料/deposon-repo/results/_archive_2026_09_24/_final_verify.py._moved_20260924_1830` (仓内同名旧件 0 覆盖) | DB4428293040 | 2279 | G |
+| G8 | `_repo_mirror/.tmp/_final_verify.py` | `_repo_mirror/results/_archive_2026_09_24/_final_verify.py._moved_20260924_1830` (仓内同名旧件 0 覆盖) | DB4428293040 | 2279 | G |
 
 > 注: 仓内 `_archive_2026_09_24/_final_verify.py` (2307 bytes, SHA-12=31A5D44497F1) 已存在, 内容与 `.tmp/_final_verify.py` (2279 bytes, SHA-12=DB4428293040) 不同 (实测比对), 按铁则加时间后缀避免覆盖。本棒保留仓内旧件完整 (2307 bytes 内容未触动)。
 
@@ -257,10 +257,10 @@
 
 | 目录 | before (实测 2026-09-24 18:20) | after (实测 2026-09-24 18:24) | delta | 备注 |
 |---|---|---|---|---|
-| `D:/私人资料/deposon-repo` | **1440** | **1324** | **-116** | 本棒新建 ledger v2 (本件) 落地 +1; 移动 125 件出仓 -125; 净 -124; 末次实测 -116 = 净差与 v2 ledger 落地时差 (after 计数 = 1324 已含本 v2 ledger) |
-| `D:/私人资料/_non_upload_local_archive` | 1176 | 1230 | +54 | A 类 54 件全部入仓 |
-| `D:/私人资料/deposon-sub` | 364 | 427 | +63 | C 类 63 件全部入仓 (1 件干净 + 62 件时间后缀) |
-| `D:/私人资料/deposon-repo/results/_archive_2026_09_24/` (灰区目标) | 6 | 14 | +8 | 灰区 8 件全部入仓 (7 件干净 + 1 件时间后缀) |
+| `_repo_mirror` | **1440** | **1324** | **-116** | 本棒新建 ledger v2 (本件) 落地 +1; 移动 125 件出仓 -125; 净 -124; 末次实测 -116 = 净差与 v2 ledger 落地时差 (after 计数 = 1324 已含本 v2 ledger) |
+| `〔本地归档区〕` | 1176 | 1230 | +54 | A 类 54 件全部入仓 |
+| `_repo_mirror` | 364 | 427 | +63 | C 类 63 件全部入仓 (1 件干净 + 62 件时间后缀) |
+| `_repo_mirror/results/_archive_2026_09_24/` (灰区目标) | 6 | 14 | +8 | 灰区 8 件全部入仓 (7 件干净 + 1 件时间后缀) |
 
 > **核对 (末次实测 2026-09-24 18:25)**: repo 实际 = 1324 (含本 v2 ledger); 1440 - 125 + 1 = 1316 (理论), 实测 1324 (差 +8); **差 +8 来源**: before-count 与末次 after-count 之间实测差 -116, 与理论 -124 差 +8; 推测 PowerShell `Get-ChildItem -Recurse -File` 在不同时间点扫描深度或子目录遍历差异 (例如 .tmp/ / __pycache__/ 内联文件 visibility / junction / hidden 标志差异); **老实交代: 未根因定位, 不强行解释, 接受实测数**; 三类 (A 54 + C 63 + 灰区 8) 源文件实测全部清空 (Test-Path False × 125) + 三类目标文件实测全部到位 (Test-Path True × 125 + 三目标目录 delta 与移动数一致 +54/+63/+8), 故**移动事实落地完整, 不影响对账真实性**。
 

@@ -49,7 +49,7 @@
 
 ### §1-4 阴性结论之**双通道**（KD-H6）
 
-- **检索根** ＝ `D:\私人资料\deposon-repo`，**0 排除任何目录**（`.tmp\`／`.mavis\`／`.trae\`／`.vscode\` 等运行时附件面**全在内**）。
+- **检索根** ＝ `_repo_mirror`，**0 排除任何目录**（`.tmp\`／`.mavis\`／`.trae\`／`.vscode\` 等运行时附件面**全在内**）。
 - **遍历器** `os.walk`，`onerror` 断言 **遍历错误 ＝ 0**（实测 **0**）；**遍历文件 1,961 件 · 读取成功 1,961 件**。
 - **通道一（文件名）** ＝ 目标四件名全仓比对 ｜ **通道二（内容正则）** ＝ **11 个签名字面**：`署名`／`作者`／`提交人`／`检作人`／`编制者`／`标题人`／`author`／`Author`／`AUTHOR`／`byline`／`Byline`。
 
@@ -197,7 +197,7 @@
 
 | 项 | 值 |
 | :-- | :-- |
-| **路径** | `D:\私人资料\deposon-repo\results\_kd_h5_h6_recheck_2026_10_14.md` |
+| **路径** | `_repo_mirror\results\_kd_h5_h6_recheck_2026_10_14.md` |
 | **落盘前占用检查** | `Test-Path` 目标名 ＝ **False**；`Test-Path` `_r1` 名 ＝ **False**；`results\kd_h5*` glob ＝ **0 命中**；`results\*kd_h5_h6*` glob ＝ **0 命中**；另核 `results\*recheck*` glob ＝ **51 命中全为他名**（0 占用本名）⇒ **0 占用、0 覆盖、0 加 `_r1`** |
 | **编码** | UTF-8 **无 BOM**（首 3 字节 `EF BB BF` 未命中）｜Python `io.open(..., encoding='utf-8', newline='\n', errors='strict')` **直写** ＋ **回读校验**（⛔ **0 经 PowerShell 管道中转正文**） |
 | **行尾** | **纯 LF**（`0x0D` 计数 ＝ **0** ⇒ CRLF ＝ **0**、CR ＝ **0**） |

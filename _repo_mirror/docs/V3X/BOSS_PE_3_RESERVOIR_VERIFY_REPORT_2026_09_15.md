@@ -210,7 +210,7 @@ verifier 输出: 14/15 frozen PASS, 1 FAIL。
 ### 10.3 〔W老师〕 〔IM〕 决策 (沿 P-E 选/弃挂点)
 
 - **建议挂点保留**: P-E (3 modality conservation) — BOSS-PE-3 PASS 确认 P-E 不是简化类比, 是独立科学问题
-- **回报形式**: 沿 `WANG_TEACHER_PROGRESS_REPORT_2026_09_11.md` 模板, 1 周 5-10 min 决策点
+- **回报形式**: 沿 `EXTERNAL_ADVISOR_PROGRESS_REPORT_2026_09_11.md` 模板, 1 周 5-10 min 决策点
 
 ---
 

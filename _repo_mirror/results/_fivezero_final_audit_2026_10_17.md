@@ -343,7 +343,7 @@
 
 | 项 | 值 |
 | :--|:--|
-| 目标路径 | `D:\私人资料\deposon-repo\results\_fivezero_final_audit_2026_10_17.md` |
+| 目标路径 | `_repo_mirror\results\_fivezero_final_audit_2026_10_17.md` |
 | `Test-Path`（落盘前实测） | **`False`** |
 | 全仓递归同名扫描（glob `*fivezero*`） | **0 命中** |
 | 落盘方式 | Python `io.open(..., 'w', encoding='utf-8', newline='\n')` **直写** |

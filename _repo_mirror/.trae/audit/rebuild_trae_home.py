@@ -16,11 +16,11 @@ import tarfile
 import time
 from pathlib import Path
 
-REPO = Path(r"D:\私人资料\deposon-repo")
+REPO = Path(r"_repo_mirror")
 # The shared paper/ tree is being rewritten by another assistant in real time
 # (deposon_arxiv_2026/ disappears between calls). The ONLY stable source of
 # truth is the verified gold extraction in the Trae temp workspace.
-GOLD = Path(r"c:\Users\Administrator\.trae-cn\work\6a9a7e1c7578e46bf7c7f60c\del28_edit")
+GOLD = Path(r"〔本机用户目录〕\.trae-cn\work\6a9a7e1c7578e46bf7c7f60c\del28_edit")
 TRAE = REPO / ".trae"
 # Stable source tree INSIDE Trae home (gold copied here, frozen ReadOnly) so
 # future rebuilds never depend on the volatile shared paper/ directory.
@@ -191,7 +191,7 @@ for name in ["_md_to_tex.py", "_split_packages.py", "_verify_tex.py", "_arxiv_re
     if src.is_file():
         shutil.copy(src, SCRIPTS / name)
         print(f"   copied {name} -> .trae/scripts/")
-work = Path(r"c:\Users\Administrator\.trae-cn\work\6a9a7e1c7578e46bf7c7f60c")
+work = Path(r"〔本机用户目录〕\.trae-cn\work\6a9a7e1c7578e46bf7c7f60c")
 for name in ["compare_versions.py", "inspect_current_tars.py", "identify_dedicated.py",
              "rebuild_trae_home.py"]:
     src = work / name

@@ -2,8 +2,8 @@
 import tarfile, os, stat, sys
 from pathlib import Path
 
-build = Path(r"C:\deposon_compile")
-deliv = Path(r"D:\私人资料\deposon-repo\.trae\deliverables")
+build = Path(r"〔本机路径〕\deposon_compile")
+deliv = Path(r"_repo_mirror\.trae\deliverables")
 
 # clean paper dirs only (keep miktex-config/data to preserve installed packages)
 for lang in ("en", "cn"):

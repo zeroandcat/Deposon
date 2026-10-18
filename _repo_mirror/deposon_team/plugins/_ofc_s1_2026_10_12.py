@@ -8,7 +8,7 @@ import hashlib, os, re, json
 from datetime import datetime
 from pathlib import Path
 
-REPO = Path(r'D:\私人资料\deposon-repo'); SUB = Path(r'D:\私人资料\deposon-sub')
+REPO = Path(r'_repo_mirror'); SUB = Path(r'_repo_mirror')
 BOUND = datetime(2026, 10, 1, 0, 0, 0).timestamp()
 def sha12b(b): return hashlib.sha256(b).hexdigest()[:12]
 
@@ -35,7 +35,7 @@ rows = []
 for q, st in repo_f + sub_f:
     b = open(q, 'rb').read()
     rows.append(dict(
-        path=q.replace('D:\\私人资料\\', ''), sha=sha12b(b), n=len(b),
+        path=q.replace('〔本地资料区〕\\', ''), sha=sha12b(b), n=len(b),
         bom=b[:3] == b'\xef\xbb\xbf', cr=b.count(b'\r'),
         ext=os.path.splitext(q)[1].lower(), mtime=datetime.fromtimestamp(st.st_mtime).strftime('%m-%d %H:%M'),
         ctime=datetime.fromtimestamp(st.st_ctime).strftime('%m-%d %H:%M'),
@@ -80,7 +80,7 @@ nbad = []
 for r in rows:
     if r['ext'] != '.py': continue
     try:
-        compile(open(r['path'].replace('deposon-repo/', 'D:/私人资料/deposon-repo/', 1).replace('deposon-sub/', 'D:/私人资料/deposon-sub/', 1) if not r['path'].startswith('D:') else r['path'], 'rb').read() if False else open(r['path'], 'rb').read(), r['path'], 'exec')
+        compile(open(r['path'].replace('deposon-repo/', '_repo_mirror/', 1).replace('deposon-sub/', '_repo_mirror/', 1) if not r['path'].startswith('D:') else r['path'], 'rb').read() if False else open(r['path'], 'rb').read(), r['path'], 'exec')
     except SyntaxError as e:
         nbad.append((r['path'], f'L{e.lineno}: {e.msg}'))
     except Exception as e:

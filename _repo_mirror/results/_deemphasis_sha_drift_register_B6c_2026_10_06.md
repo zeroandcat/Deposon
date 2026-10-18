@@ -7,27 +7,27 @@
 
 ## 替换统计（§2 口径）
 
-- 王老师×57→外部顾问；WeChat×63/wechat×21→线上（叙述形）
-- 王子贺×21→外部合作导师〔匿名〕（含 `docs/V3X_COLLAB_DIRECTIONS.md` L1 提案标题）
-- 代码检查串（§2 表内）：mentions_wangzihe×2→mentions_external_mentor（`compare_versions.py` 键名）
-- 路径形×44：_v4_commission_wechat_report_coze×44→online（可逆推）
-- 机构形（主树 2 件）：`THINKING_V3_GT_CONTRIB_2026.md`「单位：中国人民大学高瓴人工智能学院」→「匿名合作机构」、「人大 AI 之夏」→「匿名合作机构 AI 之夏」；`V3X_COLLAB_DIRECTIONS.md`「（人大高瓴，…）」→「（匿名合作机构，…）」
+- 〔W老师〕×57→外部顾问；〔IM〕×63/〔IM〕×21→线上（叙述形）
+- 〔当事人W〕×21→外部合作导师〔匿名〕（含 `docs/V3X_COLLAB_DIRECTIONS.md` L1 提案标题）
+- 代码检查串（§2 表内）：mentions_〔当事人W〕×2→mentions_external_mentor（`compare_versions.py` 键名）
+- 路径形×44：_v4_commission_〔IM〕_report_coze×44→online（可逆推）
+- 机构形（主树 2 件）：`THINKING_V3_GT_CONTRIB_2026.md`「单位：中国〔高校R〕〔机构G〕人工智能学院」→「匿名合作机构」、「〔高校R〕 AI 之夏」→「匿名合作机构 AI 之夏」；`V3X_COLLAB_DIRECTIONS.md`「（〔高校R〕〔机构G〕，…）」→「（匿名合作机构，…）」
 - 合计 209 处替换
 
 ## R1/存疑/表外保留项（不替换，报备 PI）
 
-- **判定链机器面**（`compare_versions.py`）：`'王子贺' in text` 检查串×1、`'中国人民大学' in text`＋`'化学与生命资源' in text`＋`'Renmin University' in text` 检查串、`has_ruc_chem` 键、L160 打印标签「袁祺皓/RUC chem」（含表外人名袁祺皓）——判定逻辑 0 触动
-- **LaTeX 文献引用面**：`School of Chemistry and Life Resources, Renmin University of China`×2（`compare_versions.py` L784/794、`_md_to_tex.py`）——已发表件（arXiv 2609.09001）Comments 栏单位字面
-- **存疑保留**：`_glm_five_items_suggestion_table_2026_10_01.md` Renmin×2（该件自标「是否照录由 PI 按 H8 定」）
-- **JSON 判定键×12**：`no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_WeChatAPI`（boss_pa_*/deposon_*/skill_* 等判定键，R1 读数面）
-- **表外变体**：`THINKING_V3_GT_CONTRIB_2026.md` L58-59 王老师履历行（清华 IIIS、导师唐平中、姚期智、准聘助理教授→副教授）——§2 表外信息，整段匿名化方案待 PI 拍板
-- **PDF 二进制**：`fiction_that_feeds_back.pdf` 内 RUC 字节命中——PDF 文本层无法经文本替换处理，待 PI 决定
-- **排除项**：`paper/deposon_paper_v1.md`（人民大学＝PI 自身单位行）——§2 排除 0 触动
+- **判定链机器面**（`compare_versions.py`）：`'〔当事人W〕' in text` 检查串×1、`'中国〔高校R〕' in text`＋`'化学与生命资源' in text`＋`'〔高校R〕 University' in text` 检查串、`has_ruc_chem` 键、L160 打印标签「袁祺皓/〔高校R〕 chem」（含表外人名袁祺皓）——判定逻辑 0 触动
+- **LaTeX 文献引用面**：`School of Chemistry and Life Resources, 〔高校R〕 University of China`×2（`compare_versions.py` L784/794、`_md_to_tex.py`）——已发表件（arXiv 2609.09001）Comments 栏单位字面
+- **存疑保留**：`_glm_five_items_suggestion_table_2026_10_01.md` 〔高校R〕×2（该件自标「是否照录由 PI 按 H8 定」）
+- **JSON 判定键×12**：`no_OpenRouter_TeamoRouter_V41Flash_GPT6_agent_plan_〔IM〕API`（boss_pa_*/deposon_*/skill_* 等判定键，R1 读数面）
+- **表外变体**：`THINKING_V3_GT_CONTRIB_2026.md` L58-59 〔W老师〕履历行（清华 IIIS、导师唐平中、姚期智、准聘助理教授→副教授）——§2 表外信息，整段匿名化方案待 PI 拍板
+- **PDF 二进制**：`fiction_that_feeds_back.pdf` 内 〔高校R〕 字节命中——PDF 文本层无法经文本替换处理，待 PI 决定
+- **排除项**：`paper/deposon_paper_v1.md`（〔高校R〕＝PI 自身单位行）——§2 排除 0 触动
 
 ## 全仓残差终算（附录 C 口径，B6c commit 前工作区实测）
 
-- 净化域（排除 6 个漂移登记件台账注记）：**王老师 0／微信 0／人大 0／高瓴 0**；王子贺 1（判定检查串）；wechat 12（判定键）；RUC 1（判定打印标签）；Renmin 6（LaTeX×2＋存疑×2＋检查串×2）；Gaoling 0（全仓 1 处在登记件注记）
-- 全仓（含登记件注记）：王老师 8／王子贺 11／微信 6／wechat 55／人大 4／高瓴 5／人民大学 3／RUC 2／Renmin 9／Gaoling 1
+- 净化域（排除 6 个漂移登记件台账注记）：**〔W老师〕 0／〔IM〕 0／〔高校R〕 0／〔机构G〕 0**；〔当事人W〕 1（判定检查串）；〔IM〕 12（判定键）；〔高校R〕 1（判定打印标签）；〔高校R〕 6（LaTeX×2＋存疑×2＋检查串×2）；〔机构G〕 0（全仓 1 处在登记件注记）
+- 全仓（含登记件注记）：〔W老师〕 8／〔当事人W〕 11／〔IM〕 6／〔IM〕 55／〔高校R〕 4／〔机构G〕 5／〔高校R〕 3／〔高校R〕 2／〔高校R〕 9／〔机构G〕 1
 - 与信载 §5.4「批⑥后残差＝排除项域」目标一致：剩余全部为排除项（paper/）、判定链保护面、存疑报备面、登记件台账注记，均已逐项列明供 PI 验收拍板
 
 ## 逐件 pre/post SHA-256

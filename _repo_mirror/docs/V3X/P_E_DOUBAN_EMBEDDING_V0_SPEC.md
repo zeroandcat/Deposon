@@ -54,7 +54,7 @@ V3.X 原 4 方向(P-A / P-B / P-C / P-D)中 P-D 已接近收尾(代码 PASS,仅 
 ### 本次 P-E 设计如何避开
 
 1. **攻击脚本无参直跑**: §6 三个攻击脚本全部"无参 + 临时副本自建"(`tempfile.TemporaryDirectory` 内自建工件 + 自攻击),与 V0.1.2 同款约定。**禁止**沿用 P-D V0.1.1 的 `--missing <path>` 类带参 CLI 模式。
-2. **真实仓库绝对零接触**: 攻击脚本 + 实现都不在真实仓库 `d:/私人资料/deposon-repo` 下运行,全部在 `〔本机用户目录〕/AppData/Local/Temp/deposon-e-audit-<ts>\` 副本内执行。**禁止** `python attacks/X.py` 沿仓库根直跑(会触碰冻结锚)。
+2. **真实仓库绝对零接触**: 攻击脚本 + 实现都不在真实仓库 `〔本机路径〕/私人资料/deposon-repo` 下运行,全部在 `〔本机用户目录〕/AppData/Local/Temp/deposon-e-audit-<ts>\` 副本内执行。**禁止** `python attacks/X.py` 沿仓库根直跑(会触碰冻结锚)。
 3. **不诱导锚删除**: §6 三个攻击脚本设计时**禁止**任何"接收路径 + 删除该路径"类 CLI 形态。若必须传路径,只能传"在 tmpdir 副本内自建的工件路径",且副本结束自动清理。
 4. **错误码 spec/implementation 一致**: §5 列出的 5 个错误码必须实现完整输出(包括 `E_KEY_LEAK`),不允许 spec 列了但实现不抛。
 5. **key 安全**沿用 P-D R5 思路: API 调用走 runtime `Path().read_text()`,源码无 key 字面量,无 `kimi/ark/sk-/AKIA/长 hex` 串。E5 边界扫描仿 P-D R5 静态审计。
@@ -62,7 +62,7 @@ V3.X 原 4 方向(P-A / P-B / P-C / P-D)中 P-D 已接近收尾(代码 PASS,仅 
 ### 禁止条款(实现 step 不得违反)
 
 - ❌ 沿用 P-D V0.1.1 命令模板字面(`python -m attacks.X` 或 `python attacks/X.py --missing <path>`)
-- ❌ 在真实仓库 `d:/私人资料/deposon-repo` 下运行任何攻击脚本
+- ❌ 在真实仓库 `〔本机路径〕/私人资料/deposon-repo` 下运行任何攻击脚本
 - ❌ 让 CLI 接收指向冻结锚(P-D §1 5 锚或 P-E §8 数据集)的路径并对其执行任何修改
 - ❌ 源码 / 提示词 / 检测规则 含 key 字面量或可被 grep 命中的密钥片段
 - ❌ spec §5 列出的错误码未在实现中输出

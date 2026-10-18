@@ -21,7 +21,7 @@
 1. **逐字回读优先**：凡转述他件内容者，**先 `read` 源件原文**，再落笔（⛔ 0 凭他件之转述立论）。
 2. **元数据逐件实测**：SHA-256 前 12 位／bytes／BOM／CR 计数均由本棒以 `hashlib`＋字节读取现算（⛔ 0 沿用他件自报指纹；引用他件值者**逐字标明出处**）。
 3. **阴性结论双通道**：① 仓内文本 census（正则子串计数）；② 跨 6 根之 JSON **递归键** census（大小写不敏感含 `ecr` 之键路径）。两通道均以 `os.walk` 遍历错误收集器实测，`assert` 通过。
-4. **检索根含运行时附件面**：6 根 ＝ `deposon-repo`／`deposon-sub`／`Deposon_v1_2_0_交付包`／`GLM`／`_non_upload_local_archive`／运行时附件面 `C:\Users\Administrator\.minimax`。
+4. **检索根含运行时附件面**：6 根 ＝ `deposon-repo`／`deposon-sub`／`Deposon_v1_2_0_交付包`／`GLM`／`_non_upload_local_archive`／运行时附件面 `〔本机用户目录〕\.minimax`。
 5. **纯读＋纯算之边界**：本棒仅对**在盘冻结 JSON** 作读取与算术复算（`json.load` ＋ `statistics.median` ＋ 逐图比值），**0 导入任何 experiment/runner 模块**、**0 执行任何 runner**、**0 发 LLM 调用**、**0 写任何既有件**。
 6. **联网面**：只读检索（arXiv API／OpenAlex API），**0 上传／0 远端写／0 读 `.env`／0 经手密钥**。
 
@@ -80,7 +80,7 @@
 | `Deposon_v1_2_0_交付包` | 5 | 0 | 0 | 阴性（`assert` 覆盖） |
 | `GLM` | 1 | 0 | 0 | 阴性（`assert` 覆盖） |
 | `_non_upload_local_archive` | 473 | **3** | **3** | ★ `_v4_exec_s25_result.json`／`_v4_exec_s28_result.json` 之 `/metrics/ecr_median_expected`、**`/metrics/ecr_observed`** 在盘 |
-| `C:\Users\Administrator\.minimax`（运行时附件面） | 1,607 | 67 | 2 | 含锚表之他副本 ＋ 一 `HANDOFF_MACHINE_READABLE.json` 之 `/headline_results/GT4_ECR` |
+| `〔本机用户目录〕\.minimax`（运行时附件面） | 1,607 | 67 | 2 | 含锚表之他副本 ＋ 一 `HANDOFF_MACHINE_READABLE.json` 之 `/headline_results/GT4_ECR` |
 
 ⚠️ **如实声明**：归档根内 **1 个目录**（`_v4_supp_l3_n20copy_backup`）实测 `PermissionError`（拒绝读取）⇒ 该目录内容**未经核**，⛔ **0 断言**其不含 ECR 相关件；两处不可读/未核面均列 §7 `KD-10`。
 

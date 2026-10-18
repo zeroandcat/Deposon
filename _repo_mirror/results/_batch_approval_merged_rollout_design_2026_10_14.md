@@ -487,8 +487,8 @@
 
 | **项** | **值／口径** |
 | :-- | :-- |
-| **路径** | `D:\私人资料\deposon-repo\results\_batch_approval_merged_rollout_design_2026_10_14.md` |
-| **落盘前占用检查** | `os.path.exists` 目标名 ＝ **False**；`_r1` 名 ＝ **False**；**通道 A** `glob`（`results\_batch_approval_merged_rollout_design_2026_10_14*`）＝ **0 命中**；**通道 B** `os.walk`（检索根 ＝ 仓根 `D:\私人资料\deposon-repo` ＋ **运行时附件面** `C:\Users\Administrator\.minimax\agents\agent-3e0c193da529`，前缀全匹配）＝ **0 命中**；`os.walk` **遍历错误 ＝ 0**（`onerror` 收集器实测空）⇒ **0 占用、0 覆盖、未需 `_r1`** |
+| **路径** | `_repo_mirror\results\_batch_approval_merged_rollout_design_2026_10_14.md` |
+| **落盘前占用检查** | `os.path.exists` 目标名 ＝ **False**；`_r1` 名 ＝ **False**；**通道 A** `glob`（`results\_batch_approval_merged_rollout_design_2026_10_14*`）＝ **0 命中**；**通道 B** `os.walk`（检索根 ＝ 仓根 `_repo_mirror` ＋ **运行时附件面** `〔本机用户目录〕\.minimax\agents\agent-3e0c193da529`，前缀全匹配）＝ **0 命中**；`os.walk` **遍历错误 ＝ 0**（`onerror` 收集器实测空）⇒ **0 占用、0 覆盖、未需 `_r1`** |
 | **落盘方式** | Python `io.open(path,'w',encoding='utf-8',newline='\n',errors='strict')` **直写** ＋ **回读校验**（⛔ **0 经 PowerShell 管道中转 UTF-8 正文**；含 Windows 路径之字面量**一律 raw 字符串** `r"..."`） |
 | **编码** | UTF-8 **无 BOM**（首 3 字节 `EF BB BF` 未命中） |
 | **行尾** | **纯 LF**（`0x0D` 计数 ＝ **0** ⇒ **CRLF ＝ 0、CR ＝ 0**） |

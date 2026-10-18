@@ -9,9 +9,9 @@ _v5_wa_s3_fix — B 档授权修复（F3 类·标注失实 → 只追加勘误�
 import hashlib
 from pathlib import Path
 
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_repo_mirror')
 TARGET = REPO / 'results' / '_plan_v3_pending_verify_2026_09_30.md'
-ARCH = Path(r'D:\私人资料\_non_upload_local_archive') / '_movedout_scratch_2026_09_29' / 'verif_doubt6_v_20260928' / '_v5_trae_doubt6_verify_2026_09_28.md'
+ARCH = Path(r'〔本地归档区〕') / '_movedout_scratch_2026_09_29' / 'verif_doubt6_v_20260928' / '_v5_trae_doubt6_verify_2026_09_28.md'
 
 def sha12b(b): return hashlib.sha256(b).hexdigest()[:12]
 
@@ -44,7 +44,7 @@ APPEND = """
 
 | 项 | 实测 |
 |---|---|
-| 路径 | `D:\\私人资料\\_non_upload_local_archive\\_movedout_scratch_2026_09_29\\verif_doubt6_v_20260928\\_v5_trae_doubt6_verify_2026_09_28.md`（另有同内容副本 `_merged_canonical_snapshot_224910.md`） |
+| 路径 | `〔本地资料区〕\\_non_upload_local_archive\\_movedout_scratch_2026_09_29\\verif_doubt6_v_20260928\\_v5_trae_doubt6_verify_2026_09_28.md`（另有同内容副本 `_merged_canonical_snapshot_224910.md`） |
 | SHA-12 | **`ffda214d1917`**（与本件附记-1 所记「混合体」值**逐字吻合**） |
 | 字节 | **51,778 B** |
 | mtime | 2026-09-28 22:46:33 |

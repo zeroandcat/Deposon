@@ -39,7 +39,7 @@ def log(msg):
     _log_lines.append(line)
 
 
-DEPOSON_ROOT = Path(r'D:\私人资料\deposon-repo')
+DEPOSON_ROOT = Path(r'_repo_mirror')
 RESULTS_DIR = DEPOSON_ROOT / 'results'
 
 # Proxy 1018 (correct port, per user 15:38)
@@ -53,7 +53,7 @@ urllib.request.install_opener(urllib.request.build_opener(
         'socks5': 'socks5://127.0.0.1:1018',
     })))
 
-KEY_FILE = Path(r'C:\Users\Administrator\Desktop\AI\LLM API.txt')
+KEY_FILE = Path(r'〔本机用户目录〕\Desktop\AI\LLM API.txt')
 
 # ---------- 1) load OR key (runtime only, no prompt, no JSON, no log writes) ----------
 log(f"=== P-L v3 Phase 2 OR embedding runner | TS={TS} ===")

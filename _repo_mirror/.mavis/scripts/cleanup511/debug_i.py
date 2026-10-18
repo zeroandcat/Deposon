@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """Debug: locate the $I record for one specific deleted file."""
 import os, io, sys
-sys.path.insert(0, r"D:\私人资料\deposon-repo\.mavis\scripts\cleanup511")
+sys.path.insert(0, r"_repo_mirror\.mavis\scripts\cleanup511")
 from recycle_exec import bin_dir_for, list_bin
 
-REPO = r"D:\私人资料\deposon-repo"
+REPO = r"_repo_mirror"
 b = bin_dir_for(os.path.join(REPO, "x"))
 target = os.path.join(REPO, ".tmp", "_t3probe_peek.py")
 print("target:", target)

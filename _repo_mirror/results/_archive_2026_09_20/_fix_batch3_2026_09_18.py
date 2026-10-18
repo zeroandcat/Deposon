@@ -8,7 +8,7 @@ P1-4: v36/v37 check.sh 失效引用加 archive-only 标注 (引用文件已随 3
 import hashlib, os
 from pathlib import Path
 
-ROOT = Path(r'D:\私人资料\deposon-repo')
+ROOT = Path(r'_repo_mirror')
 PKG = ROOT / 'results' / '_ftfb_external_review_v3_20260917_extracted' / 'ftfb_external_review_v3_20260917'
 
 def sha12(p):

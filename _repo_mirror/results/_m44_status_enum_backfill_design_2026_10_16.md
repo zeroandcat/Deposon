@@ -1,6 +1,6 @@
 # M-44-A-ENUM-BACKFILL ｜ ①段·「5 锚 JSON 之 status 合法枚举」**枚举复测面 ＋ 甲型 schema 回填设计面**（**候 PI 核准** · ⛔ 0 径行采认 · ⛔ 0 直接入锁 · ⛔ 0 改任何既有件一字）
 
-> 棒 ID：`M-44-A-ENUM-BACKFILL`｜夜间接力续棒（PI 令「静默续棒」）｜署名：**protocol-keeper**（口径/schema 设计专官）｜日期：2026-10-16｜工作区：`D:/私人资料/deposon-repo`
+> 棒 ID：`M-44-A-ENUM-BACKFILL`｜夜间接力续棒（PI 令「静默续棒」）｜署名：**protocol-keeper**（口径/schema 设计专官）｜日期：2026-10-16｜工作区：`_repo_mirror`
 >
 > **性质**：**枚举复测（测量面）＋ 纯设计件**。本件 ⛔ **0 改动**任何既有件一字（含 `verifier/handoff/` 下全部锚件）、⛔ **0 入锁**任何 schema、⛔ **0 采认**任何推断值、⛔ **0 代** PI 裁/释/择/给值、⛔ **0 网络**（本棒纯本地）。全部产出**标「候 PI 核准」**。
 >
@@ -53,8 +53,8 @@
 | :-- | :-- |
 | 遍历引擎 | **Python 3.14.7 `os.walk`**（⛔ **0 用** PowerShell `-Recurse`＋`SilentlyContinue`——后者静默吞错，不可作完整性依据） |
 | 遍历错误处理 | `onerror=` 回调**显式收集**；本棒实测**遍历错误 ＝ 0**（断言：回调未捕获任何 `OSError`） |
-| 根目录 | `D:/私人资料/deposon-repo`（**主仓**） |
-| 排除 | `.git`（本棒实测：**仓内 `.git` 目录不存在**，故该排除规则**无实效**——如实登记，见 §5 `KD-5`）；仓外归档区 `D:/私人资料/_non_upload_local_archive` 在根之外，**天然未扫**，⛔ 0 触归档区 |
+| 根目录 | `_repo_mirror`（**主仓**） |
+| 排除 | `.git`（本棒实测：**仓内 `.git` 目录不存在**，故该排除规则**无实效**——如实登记，见 §5 `KD-5`）；仓外归档区 `〔本地归档区〕` 在根之外，**天然未扫**，⛔ 0 触归档区 |
 | 目录数 | **123** |
 | 文件总数（全树） | **2,598** |
 | JSON 总件数 | **509** |
@@ -132,7 +132,7 @@
 | 38 | `pending` | 5 | status | 字符串 |
 | 39 | `triggered` | 5 | status, verdict | 字符串 |
 | 40 | `HTTP_200` | 4 | status | 字符串 |
-| 41 | `Local skill not found — C:/Users/Administrator/.minimax/plugins 实测 0 项（空目录）` | 4 | status | 字符串 |
+| 41 | `Local skill not found — 〔本机用户目录〕/.minimax/plugins 实测 0 项（空目录）` | 4 | status | 字符串 |
 | 42 | `PASS (>= 7/9 model significantly deviate from transverse Ising)` | 4 | verdict | 字符串 |
 | 43 | `unachieved` | 4 | state | 字符串 |
 | 44 | `⛔ 0 判档 (归 verdict-keeper)` | 4 | verdict | 字符串 |
@@ -152,7 +152,7 @@
 | 58 | `FAIL (N=1 < 10)` | 2 | verdict | 字符串 |
 | 59 | `GRAY (marginal deviation, expand graph family needed)` | 2 | verdict | 字符串 |
 | 60 | `KD` | 2 | verdict | 字符串 |
-| 61 | `Local skill not found —— C:/Users/Administrator/.minimax/plugins 实测 0 项（空目录）；本 turn 0 挂载任何 skill 加载工具；skills/ 下 0 命中 experimental-design` | 2 | status | 字符串 |
+| 61 | `Local skill not found —— 〔本机用户目录〕/.minimax/plugins 实测 0 项（空目录）；本 turn 0 挂载任何 skill 加载工具；skills/ 下 0 命中 experimental-design` | 2 | status | 字符串 |
 | 62 | `MATCH (未动)` | 2 | status | 字符串 |
 | 63 | `N/A` | 2 | verdict | 字符串 |
 | 64 | `OK` | 2 | status | 字符串 |

@@ -2,8 +2,8 @@
 
 # 1) 16 frozen verify (与 _verify_15frozen.py 同 16 锚)
 # 2026-09-17 update: archive fallback added
-REPO_BASE = r'D:\私人资料\deposon-repo'
-ARCHIVE_BASE = r'D:\私人资料\_archive_deposon_2026_09_17'
+REPO_BASE = r'_repo_mirror'
+ARCHIVE_BASE = r'〔本地资料区〕\_archive_deposon_2026_09_17'
 
 def resolve(rel_path):
     p = os.path.join(REPO_BASE, rel_path)

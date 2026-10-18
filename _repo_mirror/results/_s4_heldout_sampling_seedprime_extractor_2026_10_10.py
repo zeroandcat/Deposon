@@ -41,7 +41,7 @@ R0–R7（本文件之实现映射，逐条对应）：
   ⛔ 0 判档 / 0 代裁 / 0 宣告主案成立：只做「抽取＋登记」，判定与裁决归他棒。
   ⛔ 0 回改任何既有件：本脚本 0 编辑既有件。
   ⛔ 0 网络 / 0 skill / 0 LLM / 0 端点 / 0 key：纯本机只读计算。
-  ⛔ 0 触及 D:\\私人资料\\_non_upload_local_archive。
+  ⛔ 0 触及 〔本地资料区〕\\_non_upload_local_archive。
   ⛔ 0 贴 dataset 内部文本字段（reasoning_full / scene_verbatim /
      pi_answer_verbatim）：产出件只载 (file, idx, q_id, cell) 等标识面。
 """

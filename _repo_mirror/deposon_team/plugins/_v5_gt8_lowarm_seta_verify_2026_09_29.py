@@ -29,7 +29,7 @@ import json
 import os
 import sys
 
-REPO = r"D:/私人资料/deposon-repo"
+REPO = r"_repo_mirror"
 RESULTS_REL = "results"
 SET_A = f"{RESULTS_REL}/_v5_gt8_lowarm_result_2026_09_29.json"
 SET_B = f"{RESULTS_REL}/_v5_gt8_lowarm_resultb_2026_09_29.json"

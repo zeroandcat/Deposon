@@ -4,9 +4,9 @@
 > **件名**：`results/_d2_d6_erratum_and_annotation_register_2026_10_12.md`
 > **PI 本轮裁**：卡 `ask_107219cdf0559ef87444541f` 之 `d2d6` 项 ＝ **「两项均照拟（勘正件形式）」** —— D-2 照拟「补宿主附注」、D-6 照拟「另立勘正件改述」；本件即该裁之**承载体**。
 > **上游输入**：`results/_trae_issues_dfamily_corrections_register_2026_10_12.md`（SHA-12 `12da29eb102c` · 33,471 B · ⛔ 0 回改）之 **§1（D-2）／§2（D-6）**。本棒**先逐字回读该两节**（含其原文照录块、实测值表、来源行）方行作业，⛔ 0 凭转述臆测。
-> **盘面**：`D:\私人资料\deposon-repo`（可写 · **本件唯一落位面**）｜`D:\私人资料\deposon-sub`（**只读 · 0 写** · 两宿主、真值件与两份勘误件所在面）。
+> **盘面**：`_repo_mirror`（可写 · **本件唯一落位面**）｜`_repo_mirror`（**只读 · 0 写** · 两宿主、真值件与两份勘误件所在面）。
 > **实测纪律**：本件所有 SHA-12／bytes／mtime／stat 时点／原文照录，**均为本棒逐件实测**（`os.stat` ＋ `hashlib.sha256` 全文件摘要 ＋ 逐行 UTF-8 `errors='strict'` 严格解码 ＋ 盘上逐行回读）；凡本棒未复算者**逐处标注「未复算」**，⛔ 0 以转录充实测、⛔ 0 凭记忆落笔。
-> **硬边界**：⛔ 0 回改任何既有件一字（含 `12da29eb102c`、两宿主件、真值件、两份勘误件）｜0 移动／重命名／删除｜0 触 `D:\私人资料\_non_upload_local_archive`（**0 读 0 写 0 列目录**，检索根限 `deposon-repo`／`deposon-sub` 两根）｜0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜0 改终判词／阈值／门柱｜0 赋 `k_v3s_4_4_*` 布尔｜0 宣告①毕｜0 触他棒产物（`results/_d15d16_*`／`results/_tmp_archive_exec_artifacts_rewrite_map*`／`results/_trae_issues_dfamily_corrections*`（既有 · 不得改）／`results/_batch3_closure*`／`letters/`／`_bob_*`／`_remote_baseline*`）。
+> **硬边界**：⛔ 0 回改任何既有件一字（含 `12da29eb102c`、两宿主件、真值件、两份勘误件）｜0 移动／重命名／删除｜0 触 `〔本地归档区〕`（**0 读 0 写 0 列目录**，检索根限 `deposon-repo`／`deposon-sub` 两根）｜0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜0 改终判词／阈值／门柱｜0 赋 `k_v3s_4_4_*` 布尔｜0 宣告①毕｜0 触他棒产物（`results/_d15d16_*`／`results/_tmp_archive_exec_artifacts_rewrite_map*`／`results/_trae_issues_dfamily_corrections*`（既有 · 不得改）／`results/_batch3_closure*`／`letters/`／`_bob_*`／`_remote_baseline*`）。
 > **本件定位**：**另立勘正件**（新名）· **0 修订任何既有件** · **0 新增实体结论** —— 仅就 `12da29eb102c` §1／§2 已载之实测值作「**指位精确化**」（D-2）与「**改述另名化**」（D-6）两事。
 
 ---
@@ -27,7 +27,7 @@
 | 项 | 值 |
 |---|---|
 | **宿主件名** | `_round56_review_effectivity_register_3_2026_10_10.md` |
-| **绝对路径** | `D:\私人资料\deposon-sub\results\_round56_review_effectivity_register_3_2026_10_10.md` |
+| **绝对路径** | `_repo_mirror\results\_round56_review_effectivity_register_3_2026_10_10.md` |
 | **SHA-12** | `84ed13256250` |
 | **bytes** | **77,181 B** |
 | **mtime ／ ctime** | `2026-10-10 23:50:47.423` ／ `2026-10-10 23:50:47.423` |
@@ -130,7 +130,7 @@
 | 项 | 值 |
 |---|---|
 | **宿主件名** | `_s6doubleprime_terminal_verdicts_2026_10_11.md` |
-| **绝对路径** | `D:\私人资料\deposon-sub\results\_s6doubleprime_terminal_verdicts_2026_10_11.md` |
+| **绝对路径** | `_repo_mirror\results\_s6doubleprime_terminal_verdicts_2026_10_11.md` |
 | **SHA-12** | `bba3b889d849` |
 | **bytes** | **76,910 B** |
 | **mtime ／ ctime** | `2026-10-11 17:10:58.918` ／ `2026-10-11 17:10:58.884` |
@@ -143,7 +143,7 @@
 | 项 | 值 |
 |---|---|
 | **真值件名** | `_g5_rejudgment_face_prereg_2026_10_10.md` |
-| **绝对路径** | `D:\私人资料\deposon-sub\results\_g5_rejudgment_face_prereg_2026_10_10.md` |
+| **绝对路径** | `_repo_mirror\results\_g5_rejudgment_face_prereg_2026_10_10.md` |
 | **SHA-12** | **`04495ef4b343`**（与宿主 L171 所引指纹一致 ⇒ 指位无误，**唯时点失实**） |
 | **bytes** | **35,097 B** |
 | **`LastWriteTime`** | **`2026-10-10 16:04:10.636`** |
@@ -253,7 +253,7 @@
 |:-:|---|---|
 | 1 | ⛔ 0 回改任何既有件一字（含 `12da29eb102c`、两宿主件、真值件、两份勘误件、五实体） | 本棒全程**只读**；唯一写入件为本件（新名） |
 | 2 | ⛔ 0 移动／重命名／删除任何文件 | **0 次** |
-| 3 | ⛔ 0 触 `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录） | **0 次**；检索根限 `deposon-repo`／`deposon-sub` |
+| 3 | ⛔ 0 触 `〔本地归档区〕`（0 读 0 写 0 列目录） | **0 次**；检索根限 `deposon-repo`／`deposon-sub` |
 | 4 | ⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT | 本棒**仅**用本地只读文件工具＋本地 `hashlib`／`os.stat` |
 | 5 | ⛔ 0 改终判词／阈值／门柱 | 本件**未涉**任何终判面 |
 | 6 | ⛔ 0 赋 `k_v3s_4_4_*` 布尔 | 本件**未赋**任何布尔 |

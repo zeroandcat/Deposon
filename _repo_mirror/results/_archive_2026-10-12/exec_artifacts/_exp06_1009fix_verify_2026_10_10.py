@@ -12,7 +12,7 @@ from pathlib import Path
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-BASE = Path(r"D:\私人资料\deposon-repo")
+BASE = Path(r"_repo_mirror")
 PLUG = BASE / "deposon_team" / "plugins"
 SRC = PLUG / "_p_d_b3_merkle_22caption_runner_v0_4_2026_10_09.py"
 FIX = PLUG / "_p_d_b3_merkle_22caption_runner_2026_10_09_selfverify_fix_2026_10_10.py"

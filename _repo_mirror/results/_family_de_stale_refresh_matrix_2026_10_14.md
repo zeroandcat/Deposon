@@ -45,7 +45,7 @@
 ### §2-0 现况实测口径（双通道 · 计数自核）
 
 - **遍历**：`os.walk` 全域（REPO ＋ SUB `deposon-sub`）｜**遍历错误 ＝ 0**（`onerror` 断言，`walk_errors` 实测 **0**）｜读入文件 **2,642** 件｜**⛔ 0 以 `-Recurse`＋`SilentlyContinue` 作判据**。
-- **⚠ 已剔除 `.tmp` 全域**（本链已有因未剔致计数污染之例）—— 本棒口径为**全域剔除 `.tmp`**；**检索根含运行时附件面**（`C:\Users\Administrator\.minimax` 之 `workspace`／`scratch` 面：旧值 **0 命中**，本棒实测）。
+- **⚠ 已剔除 `.tmp` 全域**（本链已有因未剔致计数污染之例）—— 本棒口径为**全域剔除 `.tmp`**；**检索根含运行时附件面**（`〔本机用户目录〕\.minimax` 之 `workspace`／`scratch` 面：旧值 **0 命中**，本棒实测）。
 - **双通道交叉核（结论：全等 ✅）**：
 
 | **口径** | **通道 A**（Python `os.walk`＋`io.open` strict） | **通道 B**（ripgrep 独立复扫） | **一致性** |

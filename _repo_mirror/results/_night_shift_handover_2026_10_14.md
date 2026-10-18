@@ -299,7 +299,7 @@ PI 2026-10-12 逐字：「①毕是指全部实验收束，0侯PI裁/补，0非�
 
 | **项** | **值／口径** |
 | :-- | :-- |
-| **路径** | `D:\私人资料\deposon-repo\results\_night_shift_handover_2026_10_14.md` |
+| **路径** | `_repo_mirror\results\_night_shift_handover_2026_10_14.md` |
 | **落盘前占用检查** | `Test-Path` 目标名 ＝ **False**；`Test-Path` `_r1` 名 ＝ **False**；精确 glob `results\night_shift*` ＝ **0 命中**；`results\*handover*` ＝ 2 命中（**均为 2026-10-12 他名**：`…_pending_2026_10_12.md`／`…_project_initiation_2026_10_12.md`）⇒ **0 占用、0 覆盖、0 加 `_r1`** |
 | **编码** | UTF-8 **无 BOM**（首 3 字节 `EF BB BF` 未命中）｜Python `io.open(..., encoding='utf-8', newline='\n', errors='strict')` **直写** ＋ **回读校验**（⛔ **0 经 PowerShell 管道中转正文**） |
 | **行尾** | **纯 LF**（`0x0D` 计数 ＝ **0** ⇒ CRLF ＝ **0**、CR ＝ **0**） |

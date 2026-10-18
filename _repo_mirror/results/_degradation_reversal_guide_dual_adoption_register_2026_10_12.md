@@ -1,6 +1,6 @@
 # 「降智逆化指南」两版**并列采认登记件**（PI 采「甲」）
 
-> 📌 **状态栏**：🟢 **采认登记**（PI 卡 `ask_b84921aecb430b8477638a83` 之 `b3_guide` ＝ **甲**：两版并列采认 ＋ F4 锚挂起待批 2）｜本件＝**采认登记件**，⛔ **0 改指南实体一字**｜⛔ 0 回改任何既有件一字｜⛔ 0 移动／0 重命名／0 删除｜⛔ 0 触 `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录）｜⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜⛔ 0 改终判词／阈值／门柱｜⛔ 0 赋任一 `k_v3s_4_4_*` 布尔
+> 📌 **状态栏**：🟢 **采认登记**（PI 卡 `ask_b84921aecb430b8477638a83` 之 `b3_guide` ＝ **甲**：两版并列采认 ＋ F4 锚挂起待批 2）｜本件＝**采认登记件**，⛔ **0 改指南实体一字**｜⛔ 0 回改任何既有件一字｜⛔ 0 移动／0 重命名／0 删除｜⛔ 0 触 `〔本地归档区〕`（0 读 0 写 0 列目录）｜⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜⛔ 0 改终判词／阈值／门柱｜⛔ 0 赋任一 `k_v3s_4_4_*` 布尔
 >
 > 📌 **自指**：本件自身 SHA-12／bytes／BOM／CRLF **不可内含于自身文件**，故其实测值于落盘回报正文自报。
 
@@ -16,8 +16,8 @@ PI 就「降智逆化指南之采纳范围」采「**甲**」⇒ **KIMI 上传�
 
 | # | 版 | 绝对路径 | 件名 | SHA-12 | bytes | BOM | CR | mtime |
 |:-:|:--|:--|:--|:-:|--:|:-:|:-:|:--|
-| **A** | **KIMI 上传侧版** | `D:\私人资料\deposon-repo\results\_degradation_reversal_guide_kimi_2026_10_12.md` | `_degradation_reversal_guide_kimi_2026_10_12.md` | **`11f8422fc0f9`** | **7,408** | False | 0 | `2026-10-12 10:47:11` |
-| **B** | **Trae 审改侧版** | `D:\私人资料\deposon-repo\letters\_oct_full_coverage_reply_trae_code_2026_10_12.md` | `_oct_full_coverage_reply_trae_code_2026_10_12.md` | **`d11d75ba6236`** | **23,978** | False | 0 | `2026-10-12 12:31:43` |
+| **A** | **KIMI 上传侧版** | `_repo_mirror\results\_degradation_reversal_guide_kimi_2026_10_12.md` | `_degradation_reversal_guide_kimi_2026_10_12.md` | **`11f8422fc0f9`** | **7,408** | False | 0 | `2026-10-12 10:47:11` |
+| **B** | **Trae 审改侧版** | `_repo_mirror\letters\_oct_full_coverage_reply_trae_code_2026_10_12.md` | `_oct_full_coverage_reply_trae_code_2026_10_12.md` | **`d11d75ba6236`** | **23,978** | False | 0 | `2026-10-12 12:31:43` |
 
 📌 **B 版 ⛔ 无独立件** —— 实测全仓（`**/*reversal*`、`**/*降智*`、`glob results/**`）**仅 1 件命中**（＝A 版）；B 版实体**内嵌于 Trae 走读回函之 §3**（**L129–165**）⇒ 本登记件对 B 版之「采认」**＝对回函 §3 该段之采认**，非对回函他段之采认。
 
@@ -61,12 +61,12 @@ PI 就「降智逆化指南之采纳范围」采「**甲**」⇒ **KIMI 上传�
 
 | 字段 | 内容 |
 |:--|:--|
-| **宿主件** | `D:\私人资料\deposon-repo\results\_degradation_reversal_guide_kimi_2026_10_12.md`（**`11f8422fc0f9`**／7,408 B） |
+| **宿主件** | `_repo_mirror\results\_degradation_reversal_guide_kimi_2026_10_12.md`（**`11f8422fc0f9`**／7,408 B） |
 | **§位 ＋ 行号** | §1「问题定义」表 **F4 行 · L19** |
 | **原文照录** | 「\| **F4 空门运行** \| 防护门因触发条件结构性不可达而恒不启动，代理仍以「有门」自安 \| `_ci_detail_decoupling_degradation_baseline_2026_10_09.md` §1.2：`held-out n ≥ 50` 在 S4 面上界 37 ⇒ 空门实证（**`688fbbc3aa6b` 族**） \|」 |
 | **A 版所载锚值** | **`688fbbc3aa6b`**（**误植**） |
 | **误植锚实体** | `results/_closeout_bucket_refresh_2026_10_09.md`（＝**收尾桶件**，**非**所引 baseline） |
-| **正确锚值（B-8 勘正值）** | **`56b62ed5ab74`**／**20,973 B**／实体位 **`D:\私人资料\deposon-sub\results\_ci_detail_decoupling_degradation_baseline_2026_10_09.md`**（**sub 面**）｜本棒独立实测：SHA-12 `56b62ed5ab74`・20,973 B・mtime `2026-10-09 15:53:38` **✓ 复现** |
+| **正确锚值（B-8 勘正值）** | **`56b62ed5ab74`**／**20,973 B**／实体位 **`_repo_mirror\results\_ci_detail_decoupling_degradation_baseline_2026_10_09.md`**（**sub 面**）｜本棒独立实测：SHA-12 `56b62ed5ab74`・20,973 B・mtime `2026-10-09 15:53:38` **✓ 复现** |
 | **勘正落点（在册）** | `results/_trae_issues_batch2_corrections_register_2026_10_12.md`（**`592800923f3f`**）**§1 之 B-8 段**（**L102–L114**）｜其台账行（L263）载：**B-8 ＝ 🟢 已更正** |
 | **本件之登记效力** | 🟡 **挂起待批 2 之 B-8 勘正接入** —— 采认**不含** F4 锚值 |
 
@@ -81,14 +81,14 @@ PI 就「降智逆化指南之采纳范围」采「**甲**」⇒ **KIMI 上传�
 
 - 批 3 草案 `_trae_issues_batch3_six_items_draft_2026_10_12.md` **§1-5①** 载：正确锚件「实存 `results/` 面，SHA-12 ＝ `56b62ed5ab74`（20,973 B；repo ＋ sub 两区 SHA 全扫恰 1 命中）」。
 - 批 2 登记件 **B-8** 段（L109–L110）载：该 baseline 件「实体**在 sub 面**……**repo 面 glob 0 命中**」。
-- **本棒实测**：`D:\私人资料\deposon-repo\results\_ci_detail_decoupling_degradation_baseline_2026_10_09.md` **不存在**（读即 `FileNotFoundError`）；`D:\私人资料\deposon-sub\results\_ci_detail_decoupling_degradation_baseline_2026_10_09.md` **存在**，SHA-12 ＝ `56b62ed5ab74`／20,973 B。
+- **本棒实测**：`_repo_mirror\results\_ci_detail_decoupling_degradation_baseline_2026_10_09.md` **不存在**（读即 `FileNotFoundError`）；`_repo_mirror\results\_ci_detail_decoupling_degradation_baseline_2026_10_09.md` **存在**，SHA-12 ＝ `56b62ed5ab74`／20,973 B。
 - ⇒ **两件在册之面归属记载相左（repo 面 抑或 sub 面）**，本棒**⛔ 0 断言任一方为伪、⛔ 0 断言成因**，仅登记为**待澄清差异**（🔴 未闭；须 PI 知悉）。
 
 ---
 
 ## §4 0 回改声明（本件之动作面）
 
-① 本件**新立登记**，⛔ **0 回改**任何既有件一字（含 A 版、B 版回函、批 2／批 3 登记件、`_gate1_*`／`_d9_*`／`_itemH_*`／`letters/` 面）｜② ⛔ **0 移动／0 重命名／0 删除**任何文件｜③ ⛔ **0 触** `D:\私人资料\_non_upload_local_archive`（0 读 0 写 0 列目录）｜④ ⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜⑤ ⛔ 0 改终判词／阈值／门柱｜⑥ ⛔ **0 赋**任一 `k_v3s_4_4_*` 布尔｜⑦ ⛔ **0 合并**两版为单一文件（会破两版指纹与既有引用面）。
+① 本件**新立登记**，⛔ **0 回改**任何既有件一字（含 A 版、B 版回函、批 2／批 3 登记件、`_gate1_*`／`_d9_*`／`_itemH_*`／`letters/` 面）｜② ⛔ **0 移动／0 重命名／0 删除**任何文件｜③ ⛔ **0 触** `〔本地归档区〕`（0 读 0 写 0 列目录）｜④ ⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT｜⑤ ⛔ 0 改终判词／阈值／门柱｜⑥ ⛔ **0 赋**任一 `k_v3s_4_4_*` 布尔｜⑦ ⛔ **0 合并**两版为单一文件（会破两版指纹与既有引用面）。
 
 ### §4-1 「本件为采认登记，⛔ 0 改指南实体」
 

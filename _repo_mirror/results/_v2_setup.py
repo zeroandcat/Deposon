@@ -8,7 +8,7 @@ import socket
 print('=== V2 启动设置 ===')
 
 # 1. 读 key
-key_file = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
+key_file = r'〔本机用户目录〕\Desktop\AI\LLM API.txt'
 try:
     with open(key_file, 'r', encoding='gb18030') as f:
         content = f.read()
@@ -35,7 +35,7 @@ urllib.request.install_opener(opener)
 print('OK urllib 空代理 opener 安装')
 
 # 4. 校验 5 锚 SHA-12
-anchor_path = r'D:\私人资料\deposon-repo\verifier\handoff\KT_ABC1_anchors_sha256_12.json'
+anchor_path = r'_repo_mirror\verifier\handoff\KT_ABC1_anchors_sha256_12.json'
 try:
     with open(anchor_path, 'rb') as f:
         anchor_sha = hashlib.sha256(f.read()).hexdigest()[:12]

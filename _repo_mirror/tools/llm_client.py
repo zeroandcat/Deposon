@@ -30,7 +30,7 @@ from abc import ABC, abstractmethod
 from pathlib import Path
 
 # 7 条铁律: runtime 读 API key, 不入 prompt
-API_KEY_PATH = Path('C:/Users/Administrator/Desktop/AI/新建文本文档.txt')
+API_KEY_PATH = Path('〔本机用户目录〕/Desktop/AI/新建文本文档.txt')
 
 # 环境变量名(env 优先于文件读取)
 DOUBAO_ENV_KEY = 'ARK_API_KEY'

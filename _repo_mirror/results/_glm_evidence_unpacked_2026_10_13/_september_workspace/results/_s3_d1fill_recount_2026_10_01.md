@@ -196,7 +196,7 @@ b02ef31f1e4e  _v4_pi_cot_v3_dataset_addendum_d8_bhalf_2026_09_30.json      58,58
 b9026cbf5ca2  _v4_pi_cot_v3_dataset_addendum_s3_d1fill_2026_10_01.json     46,909 B
 ```
 
-**复现命令（工作区根 `D:\私人资料\deposon-repo`）**：
+**复现命令（工作区根 `_repo_mirror`）**：
 
 ```
 # 实现 1（Python 3.14.7 · json 标准库 · hashlib）

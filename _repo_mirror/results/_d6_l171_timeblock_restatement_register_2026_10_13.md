@@ -94,8 +94,8 @@
 - **PI 逐字裁**：「打包过（并立件形态·推断字面为草案）（推荐）」
 - **题面来源件**：`results/_batch_approval_merged_rollout_design_2026_10_14.md`（SHA-12 `5078ebf4ac4c` · 卷 8 `MQ-16` 之 `Q-15`）
 - **事实基座件**：`results/_d2_d6_erratum_and_annotation_register_2026_10_12.md`（SHA-12 `d9da4f54482e` · §2.1–§2.5）
-- **被改述宿主**：`D:\私人资料\deposon-sub\results\_s6doubleprime_terminal_verdicts_2026_10_11.md`（SHA-12 `bba3b889d849` · §4-3 · L171）
-- **真值件**：`D:\私人资料\deposon-sub\results\_g5_rejudgment_face_prereg_2026_10_10.md`（SHA-12 `04495ef4b343`）
+- **被改述宿主**：`_repo_mirror\results\_s6doubleprime_terminal_verdicts_2026_10_11.md`（SHA-12 `bba3b889d849` · §4-3 · L171）
+- **真值件**：`_repo_mirror\results\_g5_rejudgment_face_prereg_2026_10_10.md`（SHA-12 `04495ef4b343`）
 - **引用简写**：〔卡 `ask_d6c278886c1e71f50afac400` · v8 `58d1c527e228` · `Q-15`〕
 
 ---

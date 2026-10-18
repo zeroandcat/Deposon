@@ -726,7 +726,7 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 | 662 | `docs\V3X\D7_POST_CLEANUP_PLAN_2026_09_18.json` | 20271 | 2026-09-15 17:27:45 | `0b8a1a357aae` |
 | 663 | `docs\V3X\D7_POST_CLEANUP_REPORT_2026_09_16.json` | 1248 | 2026-09-16 11:01:13 | `40955bf2abc5` |
 | 664 | `docs\V3X\D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` | 10692 | 2026-09-16 11:09:18 | `51869e3184f4` |
-| 665 | `docs\V3X\D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 8037 | 2026-09-16 11:08:22 | `935cb6ee3566` |
+| 665 | `docs\V3X\D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 8037 | 2026-09-16 11:08:22 | `935cb6ee3566` |
 | 666 | `docs\V3X\DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | 22442 | 2026-09-10 20:22:54 | `ac8997b07731` |
 | 667 | `docs\V3X\DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | 17803 | 2026-09-10 18:16:43 | `240a7ae4bdfb` |
 | 668 | `docs\V3X\DPATH_CROSS_MODAL_2026_09_10.md` | 26460 | 2026-09-16 11:01:12 | `e4ee3999f7ce` |
@@ -1972,7 +1972,7 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 | 202 | `results\_archive_2026_09_20\LETTER_TO_TRAE_2026_09_11.md` | 22776 | 2026-09-16 11:01:12 | `7a95307a3293` |
 | 203 | `results\_archive_2026_09_20\LETTER_TO_TRAE_FIX_SELFCHECK_2026_09_15.md` | 7855 | 2026-09-15 15:31:39 | `c0d629df69d8` |
 | 204 | `results\_archive_2026_09_20\LETTER_TO_TRAE_REVIEW_2026_09_16.md` | 12668 | 2026-09-15 13:47:02 | `1c0885d2b1fa` |
-| 205 | `results\_archive_2026_09_20\LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md` | 10562 | 2026-09-18 12:19:45 | `7d4b5dd967e2` |
+| 205 | `results\_archive_2026_09_20\LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | 10562 | 2026-09-18 12:19:45 | `7d4b5dd967e2` |
 | 206 | `results\_archive_2026_09_20\p_i_curvature_audit_probe_results_2026_09_16.json` | 2637 | 2026-09-16 17:37:31 | `ae07f5551e87` |
 | 207 | `results\_archive_2026_09_20\review_content_A1_dsv4pro.md` | 20082 | 2026-09-18 09:27:36 | `5198a7059c06` |
 | 208 | `results\_archive_2026_09_20\review_content_A1_glm51.md` | 7617 | 2026-09-18 00:35:54 | `fd38a2a1ea05` |
@@ -2092,7 +2092,7 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 | 322 | `results\_d1_backfill_event_id_prefix_proposal_2026_10_01.md` | 14074 | 2026-10-01 12:28:08 | `2636394df918` |
 | 323 | `results\_d1_backfill_readiness_pack_2026_10_01.md` | 26462 | 2026-10-01 11:49:06 | `ed644fb07f88` |
 | 324 | `results\_d1_ruling_and_s3_transition_2026_10_01.md` | 28370 | 2026-10-10 11:37:23 | `dc9cb0e02922` |
-| 325 | `results\_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` | 9891 | 2026-09-17 14:39:46 | `f4d5b755736a` |
+| 325 | `results\_d7_external_advisor_〔IM〕_publish_v1_20260918.md` | 9891 | 2026-09-17 14:39:46 | `f4d5b755736a` |
 | 326 | `results\_d8_closeout_protocol_recompute_2026_09_30.md` | 31007 | 2026-09-30 22:57:20 | `57aba2cd26a6` |
 | 327 | `results\_d8_dup_overlap_disposal_2026_09_30.md` | 32350 | 2026-09-30 14:14:24 | `de8691727842` |
 | 328 | `results\_day_close_register_2026_10_01.md` | 33115 | 2026-10-01 16:55:26 | `6dbac1d1bcd6` |

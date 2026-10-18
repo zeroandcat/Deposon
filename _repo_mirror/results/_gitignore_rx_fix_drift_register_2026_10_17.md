@@ -28,7 +28,7 @@ git_add: 0
 | 事实 | 实测方式 | 读数 |
 |---|---|---|
 | 候选 rel 全部带 `.tmp/` 前缀 | `survey511.py` L50 `rel()` = `os.path.relpath(p, REPO)`；L27 `TMP = os.path.join(REPO, ".tmp")` | 733 件候选，rel 形如 `.tmp/<name>` |
-| sub 区无一条路径以 `.tmp/` 开头 | `os.walk(D:\私人资料\deposon-sub)` 逐条计数 | 1189 件，`.tmp/` 开头者 **0** |
+| sub 区无一条路径以 `.tmp/` 开头 | `os.walk(_repo_mirror)` 逐条计数 | 1189 件，`.tmp/` 开头者 **0** |
 | 故旧比较式结构性永不触发 | 三口径离线探针 | OLD(`c["rel"]` 直比)=**0**；strip 前缀式=**0**；basename 式=**1**（`.tmp/_final_verify.py`） |
 
 > 旧式 `if sub_rels and c["rel"].lower() in sub_rels:` 的两侧口径根本不同域：左侧带 `.tmp/` 暂存前缀（repo 相对），右侧为 sub 相对路径。1189×0 之交 ⇒ RX 面 1189 分之 1189 概率落空。
@@ -84,9 +84,9 @@ git_add: 0
 +++ survey511.py@5E9672A15D4E
 @@ -19,3 +19,4 @@
    R3 same-day 2026-10-17   : mtime calendar date
--  RX sub-zone collision    : same repo-relative path exists under D:\\私人资料\\deposon-sub
+-  RX sub-zone collision    : same repo-relative path exists under _repo_mirror
 +  RX sub-zone collision    : same repo-relative path (with the ".tmp/" staging
-+                             prefix stripped) exists under D:\\私人资料\\deposon-sub
++                             prefix stripped) exists under _repo_mirror
  """
 @@ -126,2 +127,3 @@
                      pass

@@ -63,7 +63,7 @@
 
 ### §2.2 复算实现与环境（第二实现 · 沿 ⑤ 双实现硬要件）
 
-- **实现**：`python 3.14`（`C:\Python314\python.exe`）· `json.loads` 严格解析 ＋ `hashlib.sha256`（**0 依赖 PowerShell `ConvertFrom-Json`**——前棒 `86af4c109519` 已载该实现整体失败之实录，本棒**0 重用失败实现**）。
+- **实现**：`python 3.14`（`〔本机路径〕\Python314\python.exe`）· `json.loads` 严格解析 ＋ `hashlib.sha256`（**0 依赖 PowerShell `ConvertFrom-Json`**——前棒 `86af4c109519` 已载该实现整体失败之实录，本棒**0 重用失败实现**）。
 - **全域口径（0 自创）**：沿 `86af4c109519` §2.1 已复现之口径（base `.events` ＋ 16 件 addendum `.supplements` ＝ M-1…M-5 事件面，M-5 重标元数据件 3 件 0 计入）。
 - **C-4 判据**：逐元素测 `"is_correction"` **键是否存在**（**0 测值、0 测 `null`、0 测真值**）⇒ 键不存在者入 C-4。
 

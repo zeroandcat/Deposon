@@ -19,7 +19,7 @@ import json, hashlib, math
 from pathlib import Path
 from datetime import datetime
 
-BASE = Path(r'D:\私人资料\deposon-repo')
+BASE = Path(r'_repo_mirror')
 SRC = BASE / 'results' / 'deposon_v3_physical_opt_60cells_2026_09_11.json'
 OUT = BASE / 'results' / 'deposon_risk1_02940_decision_2026_09_11.json'
 

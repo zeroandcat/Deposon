@@ -104,7 +104,7 @@
 | **X2** | `L(M1,T) = 3/14·H` 于 T2 终判／§5 汇总中**去限定**表述（回函 :145/:255） | ① 在册 **`S-4`**：T4 之观测律为**构造性退化**（无 shuffle）⇒「其 `L` 之任何 0 值均为**构造伪影**」（取值件 L200／§3-3 L131–133）；② 在册 **`S-5`**：`Π_fin`「最优」恒等于多数标签率 ⇒「预实验择优所得之值⛔ 0 采为 `L`」（取值件 L201／§3-4）；③ 在册 `S-1`：「⛔ **0 采任何 `L`／`U` 数值**」（取值件 L197） | 🔴 **冲突并存**：回函之 3/14 未携 T4 退化与 `Π_fin` 伪影二诊断；于 T3（7/29）／T4（1/12）不成立。⛔ 0 调和 |
 | **X3** | 3/14 之参数（η/g_couple/g_aether） | 给值单 **`:107`／`:120`**（默认值 ≠ 冻结值 · **须 PI 冻结**）；取值件 `C-P2`（`:104`）同 | 🔴 **冲突并存**：回函 0 携「未冻结·须 PI 冻结」限定 ⇒ 其值成立**以未冻结参数为条件** |
 | **X4** | §5 参考 4 之 **7 段行位区间**（回函 :263） | 实测：`DeposonMechanism.choose`＝`:61–94`（回函 `L62–89`）／`GreedyMechanism.choose`＝`:103–108`（回函 `L97–101`）／`RandomMechanism.choose`＝`:117–118`（回函 `L108–109`）／`GSM8KTask`＝`:136–158`（回函 `L136–157`）／`StrategyQATask`＝`:161–185`（回函 `L163–184`）／`TrapTask`＝`:188–207`（回函 `L190–206`）／`Matrix2x2Task`＝`:210–234`（回函 `L212–233`）⇒ **7/7 段**与盘上实体不符 | 🔴 **不符**（行位引用面；**成因不可核**——回函 0 述其所据副本，⛔ 0 推测） |
-| **X5** | §5 参考 6 引用**仓外绝对路径** `c:\Users\Administrator\codex-workspace\c4_values_reply_2026_10_10\_codex_c4_values_unblock_reply_2026_10_10.md`（回函 :265） | 实测：该仓外路径**实存**，且与仓内 `letters/_codex_c4_values_unblock_reply_2026_10_10.md` **SHA-12 同为 `a975c7990cd8`** ⇒ **SAME_IDENTITY**；亦见 §0 工具面所列 `_draft.md` 与 `_dispatch.md` 同哈希 `70fe266e87d6` ⇒ 亦 **SAME_IDENTITY** | 🟡 **引用可解析（非缺件）**＋**资产缺陷登记**：仓外绝对路径依赖 ⇒ 应改采仓内相对路径（防路径迁移致登记断链） |
+| **X5** | §5 参考 6 引用**仓外绝对路径** `〔本机用户目录〕\codex-workspace\c4_values_reply_2026_10_10\_codex_c4_values_unblock_reply_2026_10_10.md`（回函 :265） | 实测：该仓外路径**实存**，且与仓内 `letters/_codex_c4_values_unblock_reply_2026_10_10.md` **SHA-12 同为 `a975c7990cd8`** ⇒ **SAME_IDENTITY**；亦见 §0 工具面所列 `_draft.md` 与 `_dispatch.md` 同哈希 `70fe266e87d6` ⇒ 亦 **SAME_IDENTITY** | 🟡 **引用可解析（非缺件）**＋**资产缺陷登记**：仓外绝对路径依赖 ⇒ 应改采仓内相对路径（防路径迁移致登记断链） |
 | **X6** | Route-丙 之判：「跨协议量纲/域不匹配 ⇒ U-3／U-5 下不可解」；证书源述作「22-concept-graph game（`v20_gt`/`v21_gtformal`）」（回函 :141–143） | 在册 **与回函结论一致** ✅：`KD-C2`「`bd1caab42b4c` §3.4 之 ε-纳什／50 轮属 **P-A** 博弈策略迭代状态过程，≠ P-B 之分类采样/扩散 ⇒ **跨协议**」；`KD-C3`「`D`（被拒计数）与 ε-纳什支付增量**量纲不同** ⇒ 反解 `U` 之映射 0 在盘」；实测 `docs/V3X/P_A_EQUILIBRIUM_STABILIZATION_V0_SPEC.md:81` 逐字「ε-纳什：任一玩家单独改策略的支付增量 < **ε=0.01**」＋「最多迭代：50 轮」＝**盘上唯一在册之收敛证书实体**。附：`KD-X2` 另明禁「守卫 `ε`」与「P-A 收敛 `ε=0.01`」**混用** | ✅ **相符**（**结论 0 冲突**）／**缺注**：回函未将证书落到盘上实体 `bd1caab42b4c` §3.4 之 `ε=0.01`／50 轮 |
 | **X7** | 锚链面（回函 BL-4A 之条件前提：「If `exp_harness.py` is a frozen anchor…」） | ① `docs/V3X/KT_A1_SPEC_V0.1.md:43` 明列 `tools/exp_harness.py` 为 **5 冻结工件之一**；`:261` 锚表 `P_A_HARNESS` ＝ `9f383935c00c` ⇒ **前提在仓内成立** ✅；② 但实测现值 `275e480ba4d9` ⇒ **MISMATCH**，**已在册判 `DRIFT_AUTHORIZED`**（授权返工·二轨并存，`results/_kt_a1_anchor_drift_root_cause_2026_10_14.md`:42–43 **逐位一致** ＝ 本审计复算**0 新漂移**）；撤回条之宣告通道唯一＝PI 明示（在册 :45） | ✅ **相符**（前提成立）／**缺注**：回函 0 引在册锚登记与 `DRIFT_AUTHORIZED` 根因判 |
 | **X8** | （回函 0 引）spec `:22` 指定之锚落位 `verifier/handoff/P_B_V0_anchors_sha256_12.json` | 实测 **`exists=False`** ⇒ P-B 5 锚之**指纹面 0 在盘** | ⛔ **MISSING_TRUE**（如实登记·**⛔ 0 编造来源**；**非回函所致**——回函 0 引此件） |
@@ -167,9 +167,9 @@
 | 4 | `tools/exp_harness.py`（7 段区间） | :263 | ✅ 实存 `275e480ba4d9`／10,090 B | — | **FOUND_IN_REPO**（存在性 ✅／行位 ❌ 见 X4） |
 | 5 | `results/_m41_verdict_kd_effect_register_2026_10_15.md`（§§1–5·KD-1..5·BL-1..5） | :264 | ✅ 实存；`KD-1`:97／`KD-5`:101／`BL-2`:127／`BL-3..5`:128–130 逐项实测存在 | — | **FOUND_IN_REPO** ✅ |
 | 6 | `results/_external_commission_gemini4_ge01_theory_inputs_2026_10_15_draft.md` | :18 | ✅ 实存，**与 `_dispatch.md` 同哈希 `70fe266e87d6`** | — | **SAME_IDENTITY**（0 冲突） |
-| 7 | `c:\Users\Administrator\codex-workspace\c4_values_reply_2026_10_10\_codex_c4_values_unblock_reply_2026_10_10.md` | :265 | ✅ **同哈希孪生件** `letters/_codex_c4_values_unblock_reply_2026_10_10.md` ＝ `a975c7990cd8` | ✅ 实存（仓外） | **SAME_IDENTITY**（引用可解析·**仓外绝对路径依赖** ⇒ 资产缺陷登记） |
+| 7 | `〔本机用户目录〕\codex-workspace\c4_values_reply_2026_10_10\_codex_c4_values_unblock_reply_2026_10_10.md` | :265 | ✅ **同哈希孪生件** `letters/_codex_c4_values_unblock_reply_2026_10_10.md` ＝ `a975c7990cd8` | ✅ 实存（仓外） | **SAME_IDENTITY**（引用可解析·**仓外绝对路径依赖** ⇒ 资产缺陷登记） |
 | 8 | （回函 0 引）spec `:22` 之 `verifier/handoff/P_B_V0_anchors_sha256_12.json` | — | ❌ **`exists=False`** | ❌ 未查（仓外非本面） | **MISSING_TRUE**（如实登记·⛔ 0 编造） |
-| 9 | `c:\Users\Administrator\codex-workspace\`（回函 §0 所述之 prior C4 replies 目录） | :18 | — | ✅ 目录实存 | **FOUND_OUTSIDE**（目录面·内容面见 U5） |
+| 9 | `〔本机用户目录〕\codex-workspace\`（回函 §0 所述之 prior C4 replies 目录） | :18 | — | ✅ 目录实存 | **FOUND_OUTSIDE**（目录面·内容面见 U5） |
 | 10 | `docs/V3X/KT_A1_SPEC_V0.1.md`／`docs/V3X/P_A_EQUILIBRIUM_STABILIZATION_V0_SPEC.md`（本审计为 X6/X7 所引，**非回函所引**） | — | ✅ 两者均实存 | — | **FOUND_IN_REPO** ✅ |
 
 **五分支计数**：FOUND_IN_REPO ＝ 6（#1–#5·#10）／**SAME_IDENTITY ＝ 2**（#6·#7）／FOUND_OUTSIDE ＝ 1（#9）／**MISSING_TRUE ＝ 1**（#8）／**CONFLICT（同名不同哈希·登记不覆盖）＝ 0**。
@@ -201,7 +201,7 @@
 
 - 本棒**新增件 ＝ 1**：本件 `results/_gemini4_reply_verification_register_2026_10_15.md`（落盘前实测 `Test-Path=False`＋stem 全仓 0 命中）。
 - **既有件触动数 ＝ 0**：`letters/`·`docs/`·`tools/`·`results/` 全部**只读**；本审计未对任何既有件执行写入／移动／重命名／删除。
-- **frozen 面**：V1–V3 资产、frozen 锚件（`exp_harness.py`／`llm_client.py`／`distortion_calculator.py`／spec／prereg）**0 写入**；仓外目录（`c:/Users/Administrator/codex-workspace/`）**只读 0 写入**。
+- **frozen 面**：V1–V3 资产、frozen 锚件（`exp_harness.py`／`llm_client.py`／`distortion_calculator.py`／spec／prereg）**0 写入**；仓外目录（`〔本机用户目录〕/codex-workspace/`）**只读 0 写入**。
 - **0 网络**、**0 LLM 调用**、**0 读 `.env`／key**、**0 上传／0 远端写**、**0 宣告①毕**、**0 闭 `R-8`**。
 - 数值面全部以 `Fraction` 精确复算，**⛔ 0 浮点近似充精确值**。
 
@@ -212,7 +212,7 @@
 | # | 缺陷面 | 位 | 性质 | 处置 |
 | :-: | :-- | :-- | :-- | :-: |
 | A1 | **行位引用面缺陷**（回函 12 处行位中 **6 处**与盘上实体不符；实体主张本体均成立） | 回函 :91/:95/:159/:174–184/:263 | 引用层 | ⛔ 0 代改回函（外来件·PI 面）；**须 PI 注意**：可采其结论、⛔ 0 采其行位 |
-| A2 | **仓外绝对路径依赖** | 回函 :265（`c:\Users\Administrator\codex-workspace\...`） | 引用层 | 建议后续引用改采仓内相对路径（仓内已有同哈希孪生件） |
+| A2 | **仓外绝对路径依赖** | 回函 :265（`〔本机用户目录〕\codex-workspace\...`） | 引用层 | 建议后续引用改采仓内相对路径（仓内已有同哈希孪生件） |
 | A3 | **spec 指定之锚落位件缺件** | `verifier/handoff/P_B_V0_anchors_sha256_12.json`（`P_B spec`:22） | 资产面 | **MISSING_TRUE** 如实登记；⛔ 0 编造、⛔ 0 自造以填 |
 | A4 | **在册锚登记 vs 盘上实体 2 处 MISMATCH** | `KT_A1_SPEC_V0.1.md`:260–261 | 锚链面 | **在册已判 `DRIFT_AUTHORIZED`**（根因件 :42–43）⇒ 本件**0 重复报为新漂移**、**0 宣告撤回**（撤回通道唯一＝PI 明示） |
 | A5 | **仓内既有行位偏差（同族）** | 取值件 `_t2_t3_value_sourcing_2026_10_15.md`:133 记 T3 shuffle 为「:196」（实测 **:197**） | 引用层 | 本审计**登记**，⛔ **0 回改既有件**（历史留痕） |

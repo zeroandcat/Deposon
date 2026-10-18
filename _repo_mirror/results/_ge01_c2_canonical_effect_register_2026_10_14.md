@@ -140,7 +140,7 @@
 
 | 项 | 值 |
 |:--|:--|
-| 检索根（**6**，含**运行时附件面**与**归档区**） | `D:\私人资料\deposon-repo`｜`D:\私人资料\_non_upload_local_archive`｜`D:\私人资料\deposon-sub`｜`D:\私人资料\GLM`｜`D:\私人资料\Deposon_v1_2_0_交付包`｜`C:\Users\Administrator\.minimax\v2\assets` |
+| 检索根（**6**，含**运行时附件面**与**归档区**） | `_repo_mirror`｜`〔本地归档区〕`｜`_repo_mirror`｜`〔本地资料区〕\GLM`｜`〔本地资料区〕\Deposon_v1_2_0_交付包`｜`〔本机用户目录〕\.minimax\v2\assets` |
 | 遍历目录 ／ 遍历文件 | **19,662 ／ 43,381** |
 | 实际入扫描 | **43,377** |
 | >20 MB 跳过（仅登记，⛔ 0 内容扫描） | **4**（见 §5 KD-6） |
@@ -169,7 +169,7 @@
 | 11 | `results/_night_shift_handover_2026_10_14.md` | `c3d766464634`／48,375 | **L119、L243** | 仓内 `results/` |
 | 12 | `results/_r5_spec_pack_retrieval_register_2026_10_13.md` | `d7ef2c8e56bb`／24,845 | **L190** | 仓内 `results/` |
 | 13 | `results/_r2_build_manifest_2026_10_12.json`（**通道 B 独占捕获**·大写形构建留痕） | `303db70b37f6`／216,510 | **L559** | 仓内 `results/` |
-| 14 | `GLM/_deposon_dualtrack_paper_final_md_v9_2026_10_13.md` | `47ccbbba1c47`／155,876 | **L296** | `D:\私人资料\GLM` 对外论文面（⛔ 0 代改） |
+| 14 | `GLM/_deposon_dualtrack_paper_final_md_v9_2026_10_13.md` | `47ccbbba1c47`／155,876 | **L296** | `〔本地资料区〕\GLM` 对外论文面（⛔ 0 代改） |
 | 15 | `GLM/_deposon_dualtrack_paper_final_tex_v9_2026_10_13.tex` | `8fa073e35fe0`／179,926 | **L319** | 同上 |
 | 16 | `GLM/arXiv提交四件套/latex源包/body_v9_stripped.md` | `6b0612a355dc`／155,881 | **L296** | 同上 |
 | 17 | `GLM/arXiv提交四件套/latex源包/main.tex` | `8fa073e35fe0`／179,926 | **L319** | 同上（与件 15 同 SHA-12·同一实体两处落位） |

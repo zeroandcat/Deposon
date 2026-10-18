@@ -64,7 +64,7 @@
 | 轮 | # | 探针 | 真值 |
 |---:|---:|---|---|
 | **1** | 1 | 相对精确名 `Test-Path results/_pack_d_closeout_effectuation_note_2026_10_01.md` | **False** |
-| 1 | 2 | 绝对路径 `Test-Path D:\私人资料\deposon-repo\results\_pack_d_closeout_effectuation_note_2026_10_01.md` | **False** |
+| 1 | 2 | 绝对路径 `Test-Path _repo_mirror\results\_pack_d_closeout_effectuation_note_2026_10_01.md` | **False** |
 | 1 | 3 | `results/` 递归 `*effectuation*` 命中数 | **0** |
 | 1 | 4 | `results/` 顶层 `*closeout*note*` 命中 | **`_f2_closeout_note_2026_09_29.md`**（⚠ **非同名**，前序 `F-2` 卷之独立件，仅记录以证探针已执行 ⇒ **不构成撞名**） |
 | **2** | 5 | 全仓递归文件名含 `effectuation` | **0 命中** |

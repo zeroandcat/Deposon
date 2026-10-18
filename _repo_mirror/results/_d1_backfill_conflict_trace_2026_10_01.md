@@ -161,7 +161,7 @@ Select-String -Path <results|letters|docs>\* -Pattern '启动补采|推翻该处
 
 ### §5.4 检索 D：会话留痕面
 
-会话档 `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\`（`messages.jsonl` 1,032,610 B · mtime 2026-10-01 11:03:47）全文检索 `不补造|补采|G2|d1fill|缺位 8` → **18 命中行，逐行实读后确认：全部为 10-01 晨批派工／S3-TH 重裁棒上下文之转引，无一条系 2026-09-27 之 PI 原话留痕。**
+会话档 `〔本机用户目录〕\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\`（`messages.jsonl` 1,032,610 B · mtime 2026-10-01 11:03:47）全文检索 `不补造|补采|G2|d1fill|缺位 8` → **18 命中行，逐行实读后确认：全部为 10-01 晨批派工／S3-TH 重裁棒上下文之转引，无一条系 2026-09-27 之 PI 原话留痕。**
 ⇒ **会话留痕面 0 坐实任一说之 PI 原话**；本仓所给会话档时间窗（2026-09-01 起）**0 覆盖** 09-26／09-27 之 PI 拍板轮次。
 
 ---

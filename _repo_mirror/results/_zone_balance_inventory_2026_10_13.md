@@ -1,7 +1,7 @@
 # 📋 两区对标清单（`deposon-repo` ↔ `deposon-sub`）· 2026-10-13 · **⛔ 0 移件**
 
 > **件性质**：**对标清单件**（新立 · 登记体）。PI 裁（卡 `ask_bb48b73d2cbc4cd3f0010725` 之 `zone_balance`）＝「**甲：先出清单与方向，核实后再拉平**」⇒ 本件**仅出清单与方向**。
-> **0 移动／0 迁移／0 重命名／0 删除任何件**｜`deposon-sub` 全程**只读、0 写**｜🔴 归档区 `D:\私人资料\_non_upload_local_archive` **0 读 0 写 0 列目录**（本棒无例外）｜⛔ **0 回改**任何既有件一字。
+> **0 移动／0 迁移／0 重命名／0 删除任何件**｜`deposon-sub` 全程**只读、0 写**｜🔴 归档区 `〔本地归档区〕` **0 读 0 写 0 列目录**（本棒无例外）｜⛔ **0 回改**任何既有件一字。
 
 ---
 
@@ -20,9 +20,9 @@
 | 项 | 值 |
 |:--|:--|
 | 方法 | Python 3.14.7（Windows）· `os.walk` 全树递归（两区各一次）· 逐件 `os.stat` 取 bytes/mtime · 分块 `sha256` 取前 12 位（SHA-12） |
-| 检索根 | `D:\私人资料\deposon-repo` ／ `D:\私人资料\deposon-sub`（**仅此二区**） |
+| 检索根 | `_repo_mirror` ／ `_repo_mirror`（**仅此二区**） |
 | 排除 | **0 排除** —— 隐藏目录 `.tmp`／`.mavis`／`.trae`／`.vscode` 全量计入 |
-| 🔴 禁触区 | `D:\私人资料\_non_upload_local_archive` —— **0 读 0 写 0 列目录** |
+| 🔴 禁触区 | `〔本地归档区〕` —— **0 读 0 写 0 列目录** |
 | 编码纪律 | 件体 UTF-8 无 BOM · 纯 LF；读两区正文仅作引用面统计，⛔ 0 改原件 |
 | 时点 | 2026-10-13（本棒实测 · ⛔ 0 沿用他件自报指纹） |
 
@@ -698,7 +698,7 @@
 | 658 | `docs/V3X/D7_POST_CLEANUP_PLAN_2026_09_18.json` | 20,271 | `0b8a1a357aae` | 2026-09-15 17:27:45 |
 | 659 | `docs/V3X/D7_POST_CLEANUP_REPORT_2026_09_16.json` | 1,248 | `40955bf2abc5` | 2026-09-16 11:01:13 |
 | 660 | `docs/V3X/D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` | 10,692 | `51869e3184f4` | 2026-09-16 11:09:18 |
-| 661 | `docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 8,037 | `935cb6ee3566` | 2026-09-16 11:08:22 |
+| 661 | `docs/V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 8,037 | `935cb6ee3566` | 2026-09-16 11:08:22 |
 | 662 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | 22,442 | `ac8997b07731` | 2026-09-10 20:22:54 |
 | 663 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | 17,803 | `240a7ae4bdfb` | 2026-09-10 18:16:43 |
 | 664 | `docs/V3X/DPATH_CROSS_MODAL_2026_09_10.md` | 26,460 | `e4ee3999f7ce` | 2026-09-16 11:01:12 |
@@ -2025,7 +2025,7 @@
 | 153 | `results/_archive_2026_09_20/LETTER_TO_TRAE_2026_09_11.md` | 22,776 | `7a95307a3293` | 2026-09-16 11:01:12 |
 | 154 | `results/_archive_2026_09_20/LETTER_TO_TRAE_FIX_SELFCHECK_2026_09_15.md` | 7,855 | `c0d629df69d8` | 2026-09-15 15:31:39 |
 | 155 | `results/_archive_2026_09_20/LETTER_TO_TRAE_REVIEW_2026_09_16.md` | 12,668 | `1c0885d2b1fa` | 2026-09-15 13:47:02 |
-| 156 | `results/_archive_2026_09_20/LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md` | 10,562 | `7d4b5dd967e2` | 2026-09-18 12:19:45 |
+| 156 | `results/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | 10,562 | `7d4b5dd967e2` | 2026-09-18 12:19:45 |
 | 157 | `results/_archive_2026_09_20/REVIEWER_B_TMP_RERUN_2026_09_15.md` | 21,645 | `8cd736ba9f91` | 2026-09-15 14:24:07 |
 | 158 | `results/_archive_2026_09_20/SHA256_MANIFEST.txt` | 552 | `416dda94cb63` | 2026-09-17 22:06:32 |
 | 159 | `results/_archive_2026_09_20/TRAE_CODE_FIX_LIST_2026_09_18.md` | 9,343 | `ace3c6b390cb` | 2026-09-18 13:49:19 |
@@ -2197,7 +2197,7 @@
 | 325 | `results/_d1_backfill_event_id_prefix_proposal_2026_10_01.md` | 14,074 | `2636394df918` | 2026-10-01 12:28:08 |
 | 326 | `results/_d1_backfill_readiness_pack_2026_10_01.md` | 26,462 | `ed644fb07f88` | 2026-10-01 11:49:06 |
 | 327 | `results/_d1_ruling_and_s3_transition_2026_10_01.md` | 28,370 | `dc9cb0e02922` | 2026-10-10 11:37:23 |
-| 328 | `results/_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` | 9,891 | `f4d5b755736a` | 2026-09-17 14:39:46 |
+| 328 | `results/_d7_external_advisor_〔IM〕_publish_v1_20260918.md` | 9,891 | `f4d5b755736a` | 2026-09-17 14:39:46 |
 | 329 | `results/_d8_closeout_protocol_recompute_2026_09_30.md` | 31,007 | `57aba2cd26a6` | 2026-09-30 22:57:20 |
 | 330 | `results/_d8_dup_overlap_disposal_2026_09_30.md` | 32,350 | `de8691727842` | 2026-09-30 14:14:24 |
 | 331 | `results/_day_close_register_2026_10_01.md` | 33,115 | `6dbac1d1bcd6` | 2026-10-01 16:55:26 |
@@ -3803,7 +3803,7 @@
 | 658 | `docs/V3X/D7_POST_CLEANUP_PLAN_2026_09_18.json` | 20,271 | `0b8a1a357aae` | 2026-09-15 17:27:45 | **应留 repo** | `A3` |
 | 659 | `docs/V3X/D7_POST_CLEANUP_REPORT_2026_09_16.json` | 1,248 | `40955bf2abc5` | 2026-09-16 11:01:13 | **应留 repo** | `A3` |
 | 660 | `docs/V3X/D7_PRE_V3_POLISH_AND_TEAM_IMPROVEMENT_2026_09_16.md` | 10,692 | `51869e3184f4` | 2026-09-16 11:09:18 | **应留 repo** | `A3` |
-| 661 | `docs/V3X/D7_WANG_TEACHER_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 8,037 | `935cb6ee3566` | 2026-09-16 11:08:22 | **应留 repo** | `A3` |
+| 661 | `docs/V3X/D7_EXTERNAL_ADVISOR_〔IM〕_PUSH_REQUIREMENTS_2026_09_18.md` | 8,037 | `935cb6ee3566` | 2026-09-16 11:08:22 | **应留 repo** | `A3` |
 | 662 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | 22,442 | `ac8997b07731` | 2026-09-10 20:22:54 | **应留 repo** | `A3` |
 | 663 | `docs/V3X/DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | 17,803 | `240a7ae4bdfb` | 2026-09-10 18:16:43 | **应留 repo** | `A3` |
 | 664 | `docs/V3X/DPATH_CROSS_MODAL_2026_09_10.md` | 26,460 | `e4ee3999f7ce` | 2026-09-16 11:01:12 | **应留 repo** | `A3` |
@@ -5090,7 +5090,7 @@
 | 153 | `results/_archive_2026_09_20/LETTER_TO_TRAE_2026_09_11.md` | 22,776 | `7a95307a3293` | 2026-09-16 11:01:12 | **应留 sub** | `B1` |
 | 154 | `results/_archive_2026_09_20/LETTER_TO_TRAE_FIX_SELFCHECK_2026_09_15.md` | 7,855 | `c0d629df69d8` | 2026-09-15 15:31:39 | **应留 sub** | `B1` |
 | 155 | `results/_archive_2026_09_20/LETTER_TO_TRAE_REVIEW_2026_09_16.md` | 12,668 | `1c0885d2b1fa` | 2026-09-15 13:47:02 | **应留 sub** | `B1` |
-| 156 | `results/_archive_2026_09_20/LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md` | 10,562 | `7d4b5dd967e2` | 2026-09-18 12:19:45 | **应留 sub** | `B1` |
+| 156 | `results/_archive_2026_09_20/LETTER_TO_EXTERNAL_ADVISOR_2026_09_18_FINAL.md` | 10,562 | `7d4b5dd967e2` | 2026-09-18 12:19:45 | **应留 sub** | `B1` |
 | 157 | `results/_archive_2026_09_20/REVIEWER_B_TMP_RERUN_2026_09_15.md` | 21,645 | `8cd736ba9f91` | 2026-09-15 14:24:07 | **应留 sub** | `B1` |
 | 158 | `results/_archive_2026_09_20/SHA256_MANIFEST.txt` | 552 | `416dda94cb63` | 2026-09-17 22:06:32 | **应留 sub** | `B1` |
 | 159 | `results/_archive_2026_09_20/TRAE_CODE_FIX_LIST_2026_09_18.md` | 9,343 | `ace3c6b390cb` | 2026-09-18 13:49:19 | **应留 sub** | `B1` |
@@ -5262,7 +5262,7 @@
 | 325 | `results/_d1_backfill_event_id_prefix_proposal_2026_10_01.md` | 14,074 | `2636394df918` | 2026-10-01 12:28:08 | **应留 sub** | `B1` |
 | 326 | `results/_d1_backfill_readiness_pack_2026_10_01.md` | 26,462 | `ed644fb07f88` | 2026-10-01 11:49:06 | **应留 sub** | `B1` |
 | 327 | `results/_d1_ruling_and_s3_transition_2026_10_01.md` | 28,370 | `dc9cb0e02922` | 2026-10-10 11:37:23 | **应留 sub** | `B1` |
-| 328 | `results/_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` | 9,891 | `f4d5b755736a` | 2026-09-17 14:39:46 | **应留 sub** | `B1` |
+| 328 | `results/_d7_external_advisor_〔IM〕_publish_v1_20260918.md` | 9,891 | `f4d5b755736a` | 2026-09-17 14:39:46 | **应留 sub** | `B1` |
 | 329 | `results/_d8_closeout_protocol_recompute_2026_09_30.md` | 31,007 | `57aba2cd26a6` | 2026-09-30 22:57:20 | **应留 sub** | `B1` |
 | 330 | `results/_d8_dup_overlap_disposal_2026_09_30.md` | 32,350 | `de8691727842` | 2026-09-30 14:14:24 | **应留 sub** | `B1` |
 | 331 | `results/_day_close_register_2026_10_01.md` | 33,115 | `6dbac1d1bcd6` | 2026-10-01 16:55:26 | **应留 sub** | `B1` |
@@ -6170,7 +6170,7 @@
 ③ ⛔ **先核引用并出映射** —— 凡拟迁移之件，须**先出「旧路径→新路径」映射件**并核全两区引用面；**被引件迁移前必先出映射**，⛔ 0 先移后补。
 ④ ⛔ **sub 只读性未解除前 0 动 sub 区** —— `deposon-sub` 全程只读、0 写；档 B 之任何动作须 PI 先行解除。
 ⑤ ⛔ **0 触及他棒产物面** —— 未写 `_log_purge*`／`_temp_cleanup*`／`_repo_noise*`／`_d9_*`／`_gate1_*`／`letters/`。
-⑥ 🔴 **归档区 0 触** —— `D:\私人资料\_non_upload_local_archive` 0 读 0 写 0 列目录（本棒**无例外**）。
+⑥ 🔴 **归档区 0 触** —— `〔本地归档区〕` 0 读 0 写 0 列目录（本棒**无例外**）。
 ⑦ ⛔ **0 代裁** —— 未代 PI 定拉平口径、未定正本归属、未判 `.tmp` 可弃、未宣告任何段之毕。
 ⑧ ⛔ 0 网络／0 skill／0 LLM／0 读 `.env`／0 经手 PAT。
 

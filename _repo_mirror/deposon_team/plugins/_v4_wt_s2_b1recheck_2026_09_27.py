@@ -11,7 +11,7 @@ from __future__ import annotations
 import hashlib, importlib.util, json, os, sys
 from pathlib import Path
 
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_repo_mirror')
 RES = REPO / 'results'
 BASE = RES / '_v4_pi_cot_v3_ruleset_v3_executor.py'
 R1 = RES / '_v4_pi_cot_v3_ruleset_v3_executor_r1_2026_09_27.py'

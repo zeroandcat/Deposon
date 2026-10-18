@@ -12,11 +12,11 @@ import os, json, time, re, sys
 import urllib.request, urllib.error
 import traceback
 
-KEY_FILE = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
-GSM8K_FILE = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_gsm8k_details.json'
-STQ_FILE = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_strategyqa_details.json'
-OUTPUT_JSON = r'D:\私人资料\deposon-repo\results\deposon_volcengine_worker_b_2026_09_10.json'
-OUTPUT_LOG = r'D:\私人资料\deposon-repo\results\deposon_volcengine_worker_b_2026_09_10.log'
+KEY_FILE = r'〔本机用户目录〕\Desktop\AI\LLM API.txt'
+GSM8K_FILE = r'_repo_mirror\results\deposon_benchmark_v1_4_gsm8k_details.json'
+STQ_FILE = r'_repo_mirror\results\deposon_benchmark_v1_4_strategyqa_details.json'
+OUTPUT_JSON = r'_repo_mirror\results\deposon_volcengine_worker_b_2026_09_10.json'
+OUTPUT_LOG = r'_repo_mirror\results\deposon_volcengine_worker_b_2026_09_10.log'
 BASE_URL = 'https://ark.cn-beijing.volces.com/api/coding/v3'
 MODELS = ['doubao-seed-2.1-turbo', 'deepseek-v4-flash']
 SANITY_PROMPT = 'What is 1+1?'

@@ -11,7 +11,7 @@ import os
 import hashlib
 
 # === 阶段 1: 22 caption SVD 2D 验证 ===
-with open(r'D:\私人资料\deposon-repo\results\deposon_volcengine_22caption_embedding_2026_09_10.json', 'r', encoding='utf-8') as f:
+with open(r'_repo_mirror\results\deposon_volcengine_22caption_embedding_2026_09_10.json', 'r', encoding='utf-8') as f:
     cap = json.load(f)
 svd2 = cap['svd2_coords']
 
@@ -46,7 +46,7 @@ print('  => 沿用 200 OK 证据,doubao-seed-2.0-lite / glm-5.3 仍可调,不重
 print()
 
 # === 阶段 1: V1 SPEC 验证 ===
-v1_path = r'D:\私人资料\deposon-repo\docs\V3X\EMBEDDING_VISION_STRATEGY_V1_GAMETHEORY.md'
+v1_path = r'_repo_mirror\docs\V3X\EMBEDDING_VISION_STRATEGY_V1_GAMETHEORY.md'
 with open(v1_path, 'rb') as f:
     v1_sha = hashlib.sha256(f.read()).hexdigest()[:12]
 print('=== 阶段 1: V1 SPEC 验证 ===')
@@ -58,7 +58,7 @@ print('  V1 可作为实施依据: {}'.format(v1_match))
 print()
 
 # === 阶段 1: 5 锚 JSON SHA 验证 ===
-anchor_path = r'D:\私人资料\deposon-repo\verifier\handoff\KT_ABC1_anchors_sha256_12.json'
+anchor_path = r'_repo_mirror\verifier\handoff\KT_ABC1_anchors_sha256_12.json'
 with open(anchor_path, 'rb') as f:
     anchor_sha = hashlib.sha256(f.read()).hexdigest()[:12]
 print('=== 阶段 1: 5 锚 SHA 验证(未动)===')

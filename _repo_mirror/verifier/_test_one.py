@@ -3,7 +3,7 @@
 """Quick test: just read key + 1 sanity call to verify env works"""
 import os, json, time, urllib.request, urllib.error, re
 
-KEY_FILE = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
+KEY_FILE = r'〔本机用户目录〕\Desktop\AI\LLM API.txt'
 content = open(KEY_FILE, 'r', encoding='gb18030').read()
 m = re.search(r'ark-[REDACTED][a-zA-Z0-9-]+', content)
 if not m:

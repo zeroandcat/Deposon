@@ -8,7 +8,7 @@ from datetime import datetime
 from pathlib import Path
 
 B0 = datetime(2026, 9, 27, 20, 28, 20).timestamp()
-AREAS = [r'D:\私人资料\deposon-repo', r'D:\私人资料\deposon-sub', r'D:\私人资料\_non_upload_local_archive']
+AREAS = [r'_repo_mirror', r'_repo_mirror', r'〔本地归档区〕']
 SKIP = {'__pycache__', '.git', '.trae', '.mavis'}
 VALID_ESC = set('ntr\\"\'abfv01234567xuUN')
 
@@ -51,7 +51,7 @@ print(f'  .py 共 {len(pys)} 件（委托记 181；差异 = 边界亚秒 + 快�
 bad = {'syntax': [], 'bom': [], 'esc': [], 'bare': [], 'key': [], 'absp': []}
 KEYPAT = re.compile(r'(?<![A-Za-z])sk-[A-Za-z0-9_\-]{16,}|sk-teamo-[A-Za-z0-9]{8,}|(?<![A-Za-z])tp-[A-Za-z0-9]{16,}|Bearer\s+[A-Za-z0-9_\-\.]{30,}')
 for mt, sz, q in sorted(pys):
-    rel = q.replace(r'D:\私人资料' + os.sep, '')
+    rel = q.replace(r'〔本地资料区〕' + os.sep, '')
     raw = open(q, 'rb').read()
     try:
         compile(raw, q, 'exec')
@@ -74,7 +74,7 @@ for mt, sz, q in sorted(pys):
     if re.search(r'except\s*:\s*(pass|continue)\b', t): bad['bare'].append(rel)
     m = KEYPAT.search(t)
     if m: bad['key'].append((rel, m.group(0)[:10]))
-    m = re.search(r'["\']C:/Users/Administrator/Desktop/AI/LLM API\.txt["\']', t)
+    m = re.search(r'["\']〔本机用户目录〕/Desktop/AI/LLM API\.txt["\']', t)
     if m: bad['absp'].append(rel)
 
 for k, v in bad.items():
@@ -92,7 +92,7 @@ for q in nonpy:
     except Exception: continue
     m = KEYPAT.search(t)
     if m:
-        keyhits.append((q.replace(r'D:\私人资料'+os.sep,''), m.group(0)[:10]))
+        keyhits.append((q.replace(r'〔本地资料区〕'+os.sep,''), m.group(0)[:10]))
 print(f'  命中 {len(keyhits)}')
 for h in keyhits[:20]: print(f'      {h}')
 print()

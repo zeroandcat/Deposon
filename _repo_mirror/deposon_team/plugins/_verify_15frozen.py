@@ -8,8 +8,8 @@
 #   - conservation.py(Q2 PATCH_5ANCHOR_RECONCILE 提及 V0=4bdec2683f06)不在 16 frozen
 #     锚列表中(原脚本即如此),继续作为 Q2 metadata,非 verify 字段
 
-REPO_BASE = r'D:\私人资料\deposon-repo'
-ARCHIVE_BASE = r'D:\私人资料\_archive_deposon_2026_09_17'
+REPO_BASE = r'_repo_mirror'
+ARCHIVE_BASE = r'〔本地资料区〕\_archive_deposon_2026_09_17'
 
 def resolve(rel_path):
     """Look for file in repo, fallback to archive if not found (post 2026-09-17 trim)."""

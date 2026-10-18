@@ -80,7 +80,7 @@
 | **策略登记** | `results/_log_retention_policy_register_2026_10_13.md`（本件） | —— |
 | **执行脚本** | `results/_log_retention_purge_2026_10_13.py` | 面 A＋面 B 清理；**默认 dry-run**，`--apply` 方执行；逐件走 `mavis-trash`；输出可核回执 |
 
-**脚本纪律**：⛔ 0 截断／0 `SetLength`／0 `Remove-Item`／0 裸 `rm`｜⛔ 0 删硬保护件｜删除走 **子进程调用 `mavis-trash`**（字面前斜杠路径）｜**失败即停并如实报**，⛔ 0 回退永久删｜归档区 `D:\私人资料\_non_upload_local_archive` **0 读 0 写 0 列目录**。
+**脚本纪律**：⛔ 0 截断／0 `SetLength`／0 `Remove-Item`／0 裸 `rm`｜⛔ 0 删硬保护件｜删除走 **子进程调用 `mavis-trash`**（字面前斜杠路径）｜**失败即停并如实报**，⛔ 0 回退永久删｜归档区 `〔本地归档区〕` **0 读 0 写 0 列目录**。
 
 ---
 

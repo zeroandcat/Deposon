@@ -127,7 +127,7 @@
 
 | 件 | 路径 | 字数 |
 |---|---|---|
-| paper V1 草稿 | `D:/私人资料/deposon-repo/results/_coze_paper_v1_draft_2026_09_17.md` (待落) | ≤ 8 页 (章节总和) |
+| paper V1 草稿 | `_repo_mirror/results/_coze_paper_v1_draft_2026_09_17.md` (待落) | ≤ 8 页 (章节总和) |
 | paper V1 摘要 (中文) | 沿 paper V1 首段 | ≤ 300 字 |
 | paper V1 英文摘要 (Coze 沿 paper V1 起草) | 同上 | ≤ 250 words |
 | paper V1 综合 MD | 同上 | ≤ 8 页 |
@@ -155,16 +155,16 @@
 
 | 文件 | SHA-12 | 用途 |
 |---|---|---|
-| `D:/私人资料/deposon-repo/results/_trae_5audit_aggregated_2026_09_17.md` | 待算 (~11,465 B) | 5 audit 综合 (1 句话) |
-| `D:/私人资料/deposon-repo/docs/V3X/TRAE_CODE_IMPROVEMENT_LETTER_2026_09_17.md` | `53a90b9efbb9` | 改进说明信 (Trae code 直接落) |
-| `D:/私人资料/deposon-repo/results/_trae_d7_v1_audit_20260917_190000.md` | `e240ca712be6` | §1.1 D7 文稿 V1.1 双审 |
-| `D:/私人资料/deposon-repo/results/_trae_kimi_push_v3_audit_20260917_193000.md` | `8ece24be6b8a` | §1.2 KIMI push 第 3 批副审 |
-| `D:/私人资料/deposon-repo/results/_trae_corpus_5_audit_20260917_193000.md` | `f2a655cd5e54` | §1.4 5 制品 audit |
-| `D:/私人资料/deposon-repo/results/_trae_anchor_18_audit_20260917_193000.md` | `4af67e6cbe71` | §1.5 18 frozen 巡逻 |
-| `D:/私人资料/deposon-repo/results/_trae_paper_8ch_双审_20260917_200000.md` | `bec666969ffc` | §1.3 派遣论文初稿需求双审 |
-| `D:/私人资料/deposon-repo/results/_v3x_d0_5_aggregation_2026_09_17.md` | `ddf0d1aa96d2` | 聚合文档 (Mavis 18:30 派) |
-| `D:/私人资料/deposon-repo/deposon_team/_designs/V3X_PATCH_5ANCHOR_RECONCILE_2026_09_16.md` | 待算 | PATCH Q2 reconcile |
-| `D:/私人资料/deposon-repo/deposon_team/_designs/V3X_PATCH_5ANCHOR_RECONCILE_V2_2026_09_17.md` | `c41c1d6aa794` | PATCH V2 reconcile |
+| `_repo_mirror/results/_trae_5audit_aggregated_2026_09_17.md` | 待算 (~11,465 B) | 5 audit 综合 (1 句话) |
+| `_repo_mirror/docs/V3X/TRAE_CODE_IMPROVEMENT_LETTER_2026_09_17.md` | `53a90b9efbb9` | 改进说明信 (Trae code 直接落) |
+| `_repo_mirror/results/_trae_d7_v1_audit_20260917_190000.md` | `e240ca712be6` | §1.1 D7 文稿 V1.1 双审 |
+| `_repo_mirror/results/_trae_kimi_push_v3_audit_20260917_193000.md` | `8ece24be6b8a` | §1.2 KIMI push 第 3 批副审 |
+| `_repo_mirror/results/_trae_corpus_5_audit_20260917_193000.md` | `f2a655cd5e54` | §1.4 5 制品 audit |
+| `_repo_mirror/results/_trae_anchor_18_audit_20260917_193000.md` | `4af67e6cbe71` | §1.5 18 frozen 巡逻 |
+| `_repo_mirror/results/_trae_paper_8ch_双审_20260917_200000.md` | `bec666969ffc` | §1.3 派遣论文初稿需求双审 |
+| `_repo_mirror/results/_v3x_d0_5_aggregation_2026_09_17.md` | `ddf0d1aa96d2` | 聚合文档 (Mavis 18:30 派) |
+| `_repo_mirror/deposon_team/_designs/V3X_PATCH_5ANCHOR_RECONCILE_2026_09_16.md` | 待算 | PATCH Q2 reconcile |
+| `_repo_mirror/deposon_team/_designs/V3X_PATCH_5ANCHOR_RECONCILE_V2_2026_09_17.md` | `c41c1d6aa794` | PATCH V2 reconcile |
 
 ---
 
@@ -199,8 +199,8 @@
 
 ## §12 委托交付 (Coze 完成后)
 
-- `D:/私人资料/deposon-repo/results/_coze_paper_v1_draft_2026_09_17.md` (≤ 8 页)
-- `D:/私人资料/deposon-repo/results/_coze_paper_v1_summary_2026_09_17.md` (≤ 300 字中文 + ≤ 250 词英文)
+- `_repo_mirror/results/_coze_paper_v1_draft_2026_09_17.md` (≤ 8 页)
+- `_repo_mirror/results/_coze_paper_v1_summary_2026_09_17.md` (≤ 300 字中文 + ≤ 250 词英文)
 - 严守 7 铁律 0 触动 + 9 铁律 key runtime 读
 
 ---

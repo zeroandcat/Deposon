@@ -16,7 +16,7 @@ S-40 按**预登记字面**复算。
 本件行为边界
 ------------
 - **0 回改既有件**：源执行棒 `_v4_rerun_executor_2026_09_23.py`、升格件、预登记、
-  语义复核件、勘误建议件**全部只读**（跨仓外 `D:/私人资料/_non_upload_local_archive/`）。
+  语义复核件、勘误建议件**全部只读**（跨仓外 `〔本地归档区〕/`）。
 - **0 触预登记字面**：`TH_TAU_CV = 0.50` 与 K-S40-1/2/3 三条判死线**一字不动**。
   本件修的是**实现**（failed 公式里多出来的非预登记子句 ＋ 命名方向），
   **不是判死线**（沿「判死线先于实验」）。
@@ -55,7 +55,7 @@ from typing import Any, Dict, List, Tuple
 # ============================================================
 # 路径（绝对，不依赖 cwd）
 # ============================================================
-REPO_ROOT = Path("D:/私人资料/deposon-repo")
+REPO_ROOT = Path("_repo_mirror")
 SURFACE_DIR = REPO_ROOT / "corpus" / "v20_caption_surface"
 RESULTS_DIR = REPO_ROOT / "results"
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -64,7 +64,7 @@ CAPTIONS_PATH = SURFACE_DIR / "strip_captions_22.json"
 
 # 源执行棒（**只读**，本件 0 回改）
 SRC_EXECUTOR = Path(
-    "D:/私人资料/_non_upload_local_archive/results/_v4_rerun_executor_2026_09_23.py"
+    "〔本地归档区〕/results/_v4_rerun_executor_2026_09_23.py"
 )
 
 # ============================================================

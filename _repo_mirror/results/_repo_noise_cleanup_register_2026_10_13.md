@@ -1,8 +1,8 @@
 # repo 噪声清理登记件（`__pycache__`／`.pyc` ／ `.tmp`）
 
 - 日期：2026-10-13｜棒：repo 噪声清理棒
-- 范围：`D:\私人资料\deposon-repo`（可写）；`D:\私人资料\deposon-sub`（只读，0 写）
-- 归档区 `D:\私人资料\_non_upload_local_archive`：0 读 0 写 0 列目录
+- 范围：`_repo_mirror`（可写）；`_repo_mirror`（只读，0 写）
+- 归档区 `〔本地归档区〕`：0 读 0 写 0 列目录
 - 0 网络／0 skill／0 LLM／0 读 `.env`／0 触碰他棒产物
 
 ## 0. PI 裁（逐字）
@@ -15,8 +15,8 @@
 
 - 删除通道：顶层 `rm -- "<前斜杠字面绝对路径>"`，**逐件显式列名**（分 4 批、共 107 件）；0 通配符、0 `-Force`、0 裸 `Remove-Item`。
 - 实际路由：每次均返回 `mavis-trash: moved to trash: ...` ⇒ 进 Windows 回收站。
-- **可恢复性实测**：枚举 `D:\$Recycle.Bin` 的 `$I` 元数据，本棒移出 **114** 件（4 `.pyc` ＋ 107 `.py` ＋ 3 空 `__pycache__` 目录），逐件比对原路径 **114/114 命中、缺失 0** ⇒ **0 永久删**。
-- 同日回收站另有 3 件属他项目会话（`D:\BaiduNetdiskDownload\1-Amazon运营SKILL\...\R02\_loc_r02.py`、`_score_r02.py`、`_score_r02_result.json`），**非本棒所删**，仅作枚举时区分。
+- **可恢复性实测**：枚举 `〔回收站〕` 的 `$I` 元数据，本棒移出 **114** 件（4 `.pyc` ＋ 107 `.py` ＋ 3 空 `__pycache__` 目录），逐件比对原路径 **114/114 命中、缺失 0** ⇒ **0 永久删**。
+- 同日回收站另有 3 件属他项目会话（`〔本机路径〕\BaiduNetdiskDownload\1-Amazon运营SKILL\...\R02\_loc_r02.py`、`_score_r02.py`、`_score_r02_result.json`），**非本棒所删**，仅作枚举时区分。
 - 0 回改任何既有件（含判定「留」者）。
 
 ## 2. §A `__pycache__`／`.pyc`
@@ -47,7 +47,7 @@
 | `deposon_team\\plugins\\__pycache__` | 已移出 | 删(原为空目录) |
 | `results\\__pycache__` | 1 | 留(含 PI 保留件) |
 | `verifier\\audit\\__pycache__` | 已移出 | 删(原为空目录) |
-| `deposon-sub\D:\\私人资料\\deposon-sub\\tmp_movedout_2026_09_29\\_v5_loadcorpus_switch_2026_09_29\\__pycache__` | 0 | 留(只读区) |
+| `deposon-sub\_repo_mirror\\tmp_movedout_2026_09_29\\_v5_loadcorpus_switch_2026_09_29\\__pycache__` | 0 | 留(只读区) |
 
 **§A 实删：`.pyc` 4 件 ＋ 空 `__pycache__` 目录 3 个。**
 保留 1 件（PI 例外，登记在案）；归档区豁免 8 件；只读区 0 删。

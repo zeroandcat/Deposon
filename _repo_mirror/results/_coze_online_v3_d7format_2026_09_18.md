@@ -1,6 +1,6 @@
 # Coze 线上 文稿（D7 格式版）· deposon V3 终稿 R5 · 2026-09-18
 
-> **委托来源**: `D:/私人资料/deposon-repo/results/_letter_to_coze_online_v2_2026_09_18.md`（Mavis root，task `LETTER-TO-COZE-ONLINE-V2-2026-09-18`）
+> **委托来源**: `_repo_mirror/results/_letter_to_coze_online_v2_2026_09_18.md`（Mavis root，task `LETTER-TO-COZE-ONLINE-V2-2026-09-18`）
 > **格式与口径基准**: `./coze/deposon-project/reports/DEPOSON_V3X_D7_REPORT_2026_09_11_v2.pdf`（用户 21:07 拍板"格式与口径依循该文件"）
 > **依据**: 查理 V3 终稿全文 R5（SHA-12 `42e4310f9483`）+ 内参转呈说明（SHA-12 `7a4933372ef5`）
 > **口径拍板链**: 博弈论学者口径（21:00）→ 不照搬 minimax 大纲（21:02）→ 不卡字数（21:03）→ 依循 D7 报告格式（21:07）

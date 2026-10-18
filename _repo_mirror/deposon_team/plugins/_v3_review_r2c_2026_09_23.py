@@ -3,8 +3,8 @@
 import hashlib, re
 from pathlib import Path
 
-REPO = Path(r'D:\私人资料\deposon-repo')
-SUB = Path(r'D:\私人资料\deposon-sub')
+REPO = Path(r'_repo_mirror')
+SUB = Path(r'_repo_mirror')
 sha12 = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()[:12].upper()
 
 PLUG = SUB / 'deposon_team' / 'plugins'
@@ -67,7 +67,7 @@ for s_ in ['skill_a_p_a_60cells.py', 'skill_b_p_c_alpha_beta.py', 'skill_c_p_e_3
 for base in [REPO, SUB]:
     for cand in list(base.rglob('_p_k_blind_test_runner_2026_09_16.py')):
         s = cand.read_text(encoding='utf-8', errors='ignore')
-        print(f'  _p_k_blind_test_runner: [{base.name}] sha12={sha12(cand)} repo外绝对路径={"YES" if "C:\\\\Users" in s else "no"}')
+        print(f'  _p_k_blind_test_runner: [{base.name}] sha12={sha12(cand)} repo外绝对路径={"YES" if "〔本机路径〕\\\\Users" in s else "no"}')
 
 print()
 print('=== D. 报告幽灵引用抽样: 19 报告引用的 results/*.json 在 repo 是否存在 ===')
