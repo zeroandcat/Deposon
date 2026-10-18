@@ -84,7 +84,7 @@
 | 19 | `results/_s3_missing_field_backfill_rule_effective_2026_10_01.md` | `59fb90c22a7d` | 45,366 | S3 规则本体（R-1…R-8；**§7 签核栏空栏** ＝ 未闭面 N-2 之字面源） |
 | 20 | `results/_r3_r4_interpretation_case_2026_10_01.md` | `cff94f9d940e` | 64,843 | R-3 甲／R-4 乙之释义案字面（前卷已采） |
 | 21 | `results/_s3_c4_recount_2026_10_01.md` | `86af4c109519` | 32,025 | 序⑥ 算式与 B3／B4 分支机制（`n` ＝ 0 之出处） |
-| 22 | `results/_d1_ruling_and_s3_transition_2026_10_01.md` | `66f900b7598b` | 28,352 | D1 处置落册 ＋ S3 六线转态（前卷 d1 之落地） |
+| 22 | `results/_d1_ruling_and_s3_transition_2026_10_01.md` | `dc9cb0e02922` | 28,370 | D1 处置落册 ＋ S3 六线转态（前卷 d1 之落地） |
 | 23 | `results/_d1_backfill_readiness_pack_2026_10_01.md` | `ed644fb07f88` | 26,462 | 补采就绪件（B3–B7 前置裁面之出处） |
 | 24 | `results/_confirm_b9_tension_annex_2026_10_01.md` | `f28724a99a0c` | 19,454 | **批 9 册「双记择一」张力面**之承载件（§5⑥） |
 | 25 | `results/_naming_ruling_note_2026_09_29.md` | `57024f2cd30a` | 7,843 | 命名裁（去版本前缀 · §1.2②）——改名落地之依据 |
