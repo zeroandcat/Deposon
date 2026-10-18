@@ -1,0 +1,237 @@
+{
+  "file": "v19_edges.csv",
+  "rows": 49,
+  "columns": 18,
+  "column_list": [
+    "degree_hit",
+    "degree_rank",
+    "edge_u",
+    "edge_v",
+    "field_guided_hit",
+    "field_guided_rank",
+    "field_mean_hit",
+    "field_mean_rank",
+    "hybrid_norm@0.5_hit",
+    "hybrid_norm@0.5_rank",
+    "hybrid_norm@2.0_hit",
+    "hybrid_norm@2.0_rank",
+    "llm_prior_hit",
+    "llm_prior_rank",
+    "on_named_path",
+    "placeholder_target",
+    "random_hit",
+    "random_rank"
+  ],
+  "overall_score": 94.78,
+  "grade": "A",
+  "dimensions": {
+    "missing_values": {
+      "score": 100.0,
+      "issues": []
+    },
+    "duplicates": {
+      "score": 100.0,
+      "issues": []
+    },
+    "type_consistency": {
+      "score": 100.0,
+      "issues": []
+    },
+    "value_range": {
+      "score": 83.33,
+      "issues": [
+        {
+          "column": "degree_hit",
+          "outlier_count": 6,
+          "outlier_pct": 12.24,
+          "range": {
+            "min": 0.0,
+            "max": 1.0
+          },
+          "iqr_bounds": {
+            "lower": 0.0,
+            "upper": 0.0
+          },
+          "suggestion": "6 个值超出 IQR 范围 [0, 0]，建议检查是否为录入错误或截断处理"
+        },
+        {
+          "column": "degree_rank",
+          "outlier_count": 6,
+          "outlier_pct": 12.24,
+          "range": {
+            "min": 0.0,
+            "max": 10.0
+          },
+          "iqr_bounds": {
+            "lower": 7.5,
+            "upper": 11.5
+          },
+          "suggestion": "6 个值超出 IQR 范围 [7.5, 11.5]，建议检查是否为录入错误或截断处理"
+        },
+        {
+          "column": "llm_prior_hit",
+          "outlier_count": 12,
+          "outlier_pct": 24.49,
+          "range": {
+            "min": 0.0,
+            "max": 1.0
+          },
+          "iqr_bounds": {
+            "lower": 0.0,
+            "upper": 0.0
+          },
+          "suggestion": "12 个值超出 IQR 范围 [0, 0]，建议检查是否为录入错误或截断处理"
+        }
+      ]
+    },
+    "format_compliance": {
+      "score": 100.0,
+      "issues": []
+    },
+    "uniqueness": {
+      "score": 100.0,
+      "issues": [],
+      "note": "未检测到 ID 类列，跳过唯一性检查"
+    },
+    "whitespace": {
+      "score": 100.0,
+      "issues": []
+    },
+    "constant_columns": {
+      "score": 100.0,
+      "issues": []
+    },
+    "distribution_skew": {
+      "score": 100.0,
+      "issues": [
+        {
+          "column": "degree_hit",
+          "skewness": 2.3769,
+          "direction": "轻度右偏",
+          "suggestion": "偏度 = 2.38，分布略有偏斜，如做回归分析可考虑变换"
+        },
+        {
+          "column": "degree_rank",
+          "skewness": -2.2793,
+          "direction": "轻度左偏",
+          "suggestion": "偏度 = -2.28，分布略有偏斜，如做回归分析可考虑变换"
+        },
+        {
+          "column": "llm_prior_hit",
+          "skewness": 1.2242,
+          "direction": "轻度右偏",
+          "suggestion": "偏度 = 1.22，分布略有偏斜，如做回归分析可考虑变换"
+        }
+      ]
+    },
+    "column_naming": {
+      "score": 78.95,
+      "issues": [
+        {
+          "column": "hybrid_norm@0.5_hit",
+          "problems": [
+            "含特殊字符"
+          ],
+          "suggestion": "列名「hybrid_norm@0.5_hit」含特殊字符，建议重命名为 snake_case 格式"
+        },
+        {
+          "column": "hybrid_norm@0.5_rank",
+          "problems": [
+            "含特殊字符"
+          ],
+          "suggestion": "列名「hybrid_norm@0.5_rank」含特殊字符，建议重命名为 snake_case 格式"
+        },
+        {
+          "column": "hybrid_norm@2.0_hit",
+          "problems": [
+            "含特殊字符"
+          ],
+          "suggestion": "列名「hybrid_norm@2.0_hit」含特殊字符，建议重命名为 snake_case 格式"
+        },
+        {
+          "column": "hybrid_norm@2.0_rank",
+          "problems": [
+            "含特殊字符"
+          ],
+          "suggestion": "列名「hybrid_norm@2.0_rank」含特殊字符，建议重命名为 snake_case 格式"
+        }
+      ]
+    },
+    "cardinality": {
+      "score": 50.0,
+      "issues": [
+        {
+          "column": "degree_hit",
+          "unique_values": 2,
+          "total_values": 49,
+          "suggestion": "数值列「degree_hit」仅有 2 个唯一值，可能应标记为分类变量"
+        },
+        {
+          "column": "field_guided_hit",
+          "unique_values": 2,
+          "total_values": 49,
+          "suggestion": "数值列「field_guided_hit」仅有 2 个唯一值，可能应标记为分类变量"
+        },
+        {
+          "column": "field_mean_hit",
+          "unique_values": 2,
+          "total_values": 49,
+          "suggestion": "数值列「field_mean_hit」仅有 2 个唯一值，可能应标记为分类变量"
+        },
+        {
+          "column": "hybrid_norm@0.5_hit",
+          "unique_values": 2,
+          "total_values": 49,
+          "suggestion": "数值列「hybrid_norm@0.5_hit」仅有 2 个唯一值，可能应标记为分类变量"
+        },
+        {
+          "column": "hybrid_norm@2.0_hit",
+          "unique_values": 2,
+          "total_values": 49,
+          "suggestion": "数值列「hybrid_norm@2.0_hit」仅有 2 个唯一值，可能应标记为分类变量"
+        },
+        {
+          "column": "llm_prior_hit",
+          "unique_values": 2,
+          "total_values": 49,
+          "suggestion": "数值列「llm_prior_hit」仅有 2 个唯一值，可能应标记为分类变量"
+        },
+        {
+          "column": "on_named_path",
+          "unique_values": 2,
+          "total_values": 49,
+          "suggestion": "数值列「on_named_path」仅有 2 个唯一值，可能应标记为分类变量"
+        },
+        {
+          "column": "placeholder_target",
+          "unique_values": 2,
+          "total_values": 49,
+          "suggestion": "数值列「placeholder_target」仅有 2 个唯一值，可能应标记为分类变量"
+        },
+        {
+          "column": "random_hit",
+          "unique_values": 2,
+          "total_values": 49,
+          "suggestion": "数值列「random_hit」仅有 2 个唯一值，可能应标记为分类变量"
+        }
+      ]
+    },
+    "cross_column": {
+      "score": 100.0,
+      "issues": [],
+      "note": "未检测到可校验的列对组合，跳过跨列检查"
+    }
+  },
+  "top_suggestions": [
+    "6 个值超出 IQR 范围 [0, 0]，建议检查是否为录入错误或截断处理",
+    "6 个值超出 IQR 范围 [7.5, 11.5]，建议检查是否为录入错误或截断处理",
+    "12 个值超出 IQR 范围 [0, 0]，建议检查是否为录入错误或截断处理",
+    "偏度 = 2.38，分布略有偏斜，如做回归分析可考虑变换",
+    "偏度 = -2.28，分布略有偏斜，如做回归分析可考虑变换",
+    "偏度 = 1.22，分布略有偏斜，如做回归分析可考虑变换",
+    "列名「hybrid_norm@0.5_hit」含特殊字符，建议重命名为 snake_case 格式",
+    "列名「hybrid_norm@0.5_rank」含特殊字符，建议重命名为 snake_case 格式",
+    "列名「hybrid_norm@2.0_hit」含特殊字符，建议重命名为 snake_case 格式",
+    "列名「hybrid_norm@2.0_rank」含特殊字符，建议重命名为 snake_case 格式"
+  ]
+}

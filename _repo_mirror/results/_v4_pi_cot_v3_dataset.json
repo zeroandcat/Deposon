@@ -1,0 +1,247 @@
+{
+  "schema": "v4_pi_cot_v3_dataset/1",
+  "version": "v1.2",
+  "created": "2026-09-27T12:08:00+08:00",
+  "created_by": "Mavis 团队 worker (执行类·数据修订, 2026-09-27, 棒 A 执行棒)",
+  "revision_history": "v1 (v1.1, 7B01CD835A41, 2026-09-24T15:55) + 9 件 addendum (2026_09_24 基础件 + d2/d2b/d2c/d2d/d2e/d3a/d3b/d3c 09-26 八件) + d4 系件 (2026-09-27, G1 续采跨日第 3 天补位) -> v1.2 (本件, dataset 升级件, 沿 v3 prereg §8 字面 + Q1-Q4 拍板生效)",
+  "prereg_anchor_v3": {
+    "path": "results/_v4_pi_cot_v3_prereg.md",
+    "sha12_briefing": "F0A58FD651FD",
+    "sha12_actual_post_activation": "B7547329AF2E",
+    "sha12_used_as_anchor": "B7547329AF2E",
+    "anchor_discrepancy_note": "派工单 briefing 锚定 F0A58FD651FD（与本棒 session 启动时实测一致）；parent Mavis (doc-writer agent-0032834a3e04) 在 v3 prereg.md 末尾追加 §10 生效登记（PI 2026-09-27 Q1-Q4 拍板登记，§10.1-§10.6），mtime 2026-09-27 12:02:44 → 实测 SHA 变为 B7547329AF2E。§10 追加未触动 §0-§9 既有任何字面内容（已逐节核验）。详见 d4 addendum honesty_note §SHA 漂移登记段。"
+  },
+  "prereg_anchor_v2": {
+    "path": "results/_v4_pi_cot_v2_prereg.md",
+    "sha12": "CC25C5149CE1",
+    "v2_prereg_ref_field": "v2 prereg 字面冻结（沿 v3 prereg §6 字面），本件不覆盖"
+  },
+  "v2_verdict_anchor": {
+    "path": "results/_v4_pi_cot_v2_verdict_v2.md",
+    "sha12": "5D79E67A4E9D",
+    "anchor_note": "v2 verdict §1.1 N=72 字面 + §3.3 后续触发条件 5 项 + §4.1 构造补强方向字面；v3 dataset 立案沿 v2 verdict §1.1 字面；D1 缺位 8 件 Q3 = 维持不补造"
+  },
+  "collection_log_anchor": {
+    "path": "results/_v4_pi_cot_v2_collection_log.md",
+    "sha12": "167AD91F198E",
+    "anchor_note": "采集口径字面（v2 batch 1 + batch 2 字面）"
+  },
+  "source_files_anchors": {
+    "dataset_v1_1": {
+      "path": "results/_v4_pi_cot_v2_dataset.json",
+      "sha12_pre": "7B01CD835A41",
+      "sha12_post": "7B01CD835A41",
+      "touch_policy": "0 触动（本件落盘前后 SHA-12 复验不变）"
+    },
+    "addendum_d1_post_hoc_2026_09_24": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+      "sha12_pre": "172093A23E4B",
+      "sha12_post": "172093A23E4B",
+      "touch_policy": "0 触动",
+      "supplement_count": 3,
+      "supplement_note": "3 条 D1 critical_reflection_supplement（event_ids 17/21/27 字面补强，非新事件）"
+    },
+    "addendum_d2_2026_09_26": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json",
+      "sha12_pre": "439721007AAF",
+      "sha12_post": "439721007AAF",
+      "touch_policy": "0 触动",
+      "supplement_count": 4,
+      "supplement_note": "R1b/R2b/R3b/R4b 反转配对后半跨日续采（≥1 天间隔）"
+    },
+    "addendum_d2b_2026_09_26": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d2b_2026_09_26.json",
+      "sha12_pre": "41D6C28CA87C",
+      "sha12_post": "41D6C28CA87C",
+      "touch_policy": "0 触动",
+      "supplement_count": 4,
+      "supplement_note": "R5b/R6b 反转配对后半 + Q38/Q39 独立补充判定"
+    },
+    "addendum_d2c_2026_09_26": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json",
+      "sha12_pre": "99C58906F792",
+      "sha12_post": "99C58906F792",
+      "touch_policy": "0 触动",
+      "supplement_count": 4,
+      "supplement_note": "Q40/Q43 独立补充 + Q41[Q42] R7 同日配对 (b-half 不跨日)"
+    },
+    "addendum_d2d_2026_09_26": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+      "sha12_pre": "C6D092F77932",
+      "sha12_post": "C6D092F77932",
+      "touch_policy": "0 触动",
+      "supplement_count": 4,
+      "supplement_note": "Q44 开放回答 ambiguous_mapping + Q45/Q46/Q47 字面 A/B 选项"
+    },
+    "addendum_d2e_2026_09_26": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json",
+      "sha12_pre": "26F110A6E571",
+      "sha12_post": "26F110A6E571",
+      "touch_policy": "0 触动",
+      "supplement_count": 4,
+      "supplement_note": "Q48 复合 AC + Q49 [B 转派 worker] + Q50 [C 全部重立] + case1 pi_disposition=accept (接受 6B92BBFF7180 为新基准)"
+    },
+    "addendum_d3a_2026_09_26": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json",
+      "sha12_pre": "6E104E2DB038",
+      "sha12_post": "6E104E2DB038",
+      "touch_policy": "0 触动",
+      "supplement_count": 4,
+      "supplement_note": "D3 第 1 波三读稳定性探针 (Q1/Q2/Q4/Q5)"
+    },
+    "addendum_d3b_2026_09_26": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+      "sha12_pre": "D96B747BFC6C",
+      "sha12_post": "D96B747BFC6C",
+      "touch_policy": "0 触动",
+      "supplement_count": 4,
+      "supplement_note": "D3 第 2 波三读稳定性探针 (Q6/Q8/Q9/Q10)"
+    },
+    "addendum_d3c_2026_09_26": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json",
+      "sha12_pre": "401BD614CDF7",
+      "sha12_post": "401BD614CDF7",
+      "touch_policy": "0 触动",
+      "supplement_count": 4,
+      "supplement_note": "D3 第 3 波三读稳定性探针·终波 (Q11/Q12/Q16/Q17)"
+    },
+    "addendum_d4_2026_09_27": {
+      "path": "results/_v4_pi_cot_v3_dataset_addendum_d4_2026_09_27.json",
+      "sha12_pre": "PENDING_BIRTH",
+      "sha12_post": "B18FF4177289",
+      "fingerprint_self_hash_after_birth": "B18FF4177289",
+      "touch_policy": "0 触动 (dataset v1.1 + v3 prereg + v2 verdict + 9 件既有 addendum 共 12 锚 SHA-12 复验不变)",
+      "supplement_count": 5,
+      "supplement_note": "G1 续采 D4 第 1 波（跨日第 3 天补位）：3 条派工单 briefing 字面 + 2 条 user_profile 既有准则/拍板字面（既有 PI 判定语料编码，非 PI 实时答题；判定层 0 LLM 硬闸未触发）"
+    }
+  },
+  "accounting_balance_conservation": {
+    "v2_baseline_N": 72,
+    "v2_baseline_source": "v2 verdict §1.1 字面：N=72 含 8 件 D1 缺位如实声明",
+    "post_v2_added": 8,
+    "post_v2_added_source": "D3 wave2 (4 件) + D3 wave3 (4 件)，由 d3a/d3b/d3c honesty_note 字面（D3 三读稳定性探针 12 件 - D3 wave1 4 件已计入 v2 baseline = 8 件 post-v2）",
+    "d4_added_this_p棒": 5,
+    "d4_source": "results/_v4_pi_cot_v3_dataset_addendum_d4_2026_09_27.json 字面",
+    "total_v1p2_events": 85,
+    "accounting_formula": "72 (v2 baseline) + 8 (D3 wave2/3 post-v2) + 5 (D4 this棒) = 85 events",
+    "d1_missing_8_policy": "D1 缺位 8 件维持不补造（PI 2026-09-27 Q3 拍板字面；v2 verdict §3.3 G2 处置 = 不触发）",
+    "v3_formal_experiment_substrate": "85 events 全集为 v3 正式实验唯一可跑子集（沿 v3 prereg §10.3 字面）"
+  },
+  "cross_day_tally_TH_v2_3": {
+    "th_target_days": "≥3 天 (v2 prereg §5 TH-v2-3 字面 = v3 prereg §4.3 TH-v3-3 沿用)",
+    "D1_2026_09_24": {
+      "event_count": 48,
+      "source": "v1.1 dataset 37 events + addendum_2026_09_24 critical_reflection_supplement (3 件 event_ids 17/21/27 字面补强) + 11 reasoning_full 补填（v1 → v1.1 升级，11 条 reasoning_full 字面补充；事件数不变 37 + 11 = 48 沿 d3c honesty_note 字面）",
+      "note": "本棒 worker 不覆核 D1 内 48 件逐条；沿 d3c honesty_note 字面采信"
+    },
+    "D2_2026_09_26": {
+      "event_count": 20,
+      "source_breakdown": {
+        "R1b_R2b_R3b_R4b": 4,
+        "R5b_R6b": 2,
+        "R7a_R7b_same_day": 2,
+        "Q38_Q39": 2,
+        "Q40_Q41_Q42_Q43": 4,
+        "Q44_Q45_Q46_Q47": 4,
+        "Q48_Q49_Q50_case1": 4
+      },
+      "note": "R1b-R7b 七对反转配对 b-half 已全部闭合（跨日 ≥1 天间隔，满足 TH-v2-2 纠正/反转事件 ≥5 阈值 + 7 ≥ 5 ✓）"
+    },
+    "D3_2026_09_26": {
+      "event_count": 12,
+      "source_breakdown": {
+        "D3_wave1_third_read_probe": 4,
+        "D3_wave2_third_read_probe": 4,
+        "D3_wave3_third_read_probe_final": 4
+      },
+      "note": "Q1/Q2/Q4-Q6/Q8-Q12/Q16/Q17 三读稳定性探针 12 件（read_index=3，read_drift / read_flip 字面登记，非反转配对件）"
+    },
+    "D4_2026_09_27": {
+      "event_count": 5,
+      "source_breakdown": {
+        "D4_Q1_G1_directive": 1,
+        "D4_Q2_G2_directive": 1,
+        "D4_Q3_v3_chain_directive": 1,
+        "D4_Q4_v3_sword_v4_official": 1,
+        "D4_Q5_honesty_root_cause": 1
+      },
+      "source_basis": "派工单 briefing 字面 (3 条) + user_profile 既有 memory 条目字面 (2 条)；既有 PI 判定语料编码，非 PI 实时答题"
+    },
+    "total_events": 85,
+    "cross_day_distinct_calendar_days": 3,
+    "cross_day_days_listed": ["2026-09-24 (D1)", "2026-09-26 (D2+D3 同日合并)", "2026-09-27 (D4)"],
+    "single_day_D1_ratio_pre_D4": "48/80 = 60.0% (压线达 60% 阈值，刚达，无安全余量)",
+    "single_day_D1_ratio_post_D4": "48/85 = 56.5% (D4 5 件入库后 D1 单日 ≤60% 阈值已解除安全余量 ~5 个百分点)",
+    "TH_v2_3_status_pre_D4": "跨日 2 天 < 3 天 (未达标); D1 单日 60.0% 压线 (无安全余量)",
+    "TH_v2_3_status_post_D4": "跨日 3 天 ✓ 字面达标 (D1 09-24 + D2/D3 09-26 + D4 09-27); D1 单日 56.5% ≤ 60% ✓ 安全余量",
+    "TH_v2_3_compliance_after_D4": "PASS 字面达标 (跨日 ≥3 天 ✓ + 单日 ≤60% ✓)"
+  },
+  "N_count_conservation": {
+    "th_v2_1_target": "N_min = 50 (v2 prereg §5 TH-v2-1 字面 = v3 prereg §4.3 TH-v3-1 沿用)",
+    "N_v1p2_actual": 85,
+    "th_v2_1_compliance": "PASS 字面达标 (85 ≥ 50 ✓)"
+  },
+  "v2_verdict_substrate_alignment": {
+    "v2_verdict_N_72_baseline": "D1(48) + D2(20) + D3_wave1(4) = 72 (沿 v2 verdict §1.1 字面)",
+    "v3_v1p2_N_85": "v2 baseline 72 + post-v2 D3 wave2/3 added 8 + D4 added 5 = 85",
+    "Q3_directive_compliance": "D1 缺位 8 件维持不补造 (72 件口径 + 主轴主集 8 件 D1 缺位 + post-v2 D3 + D4 = 85, 实际 D1 主集 40 件 on-disk + 8 件缺位 = 48 件口径不变)",
+    "Q4_directive_compliance": "dataset v1.2 沿 §8 字面 (_v4_pi_cot_v3_dataset.json) + ruleset_v3 + result_v3 + verdict_v3 四件链立即串行 (本棒 = ① dataset v1.2 落盘核验 + 移交下一棒 ruleset_v3)"
+  },
+  "touch_policy_summary": {
+    "no_v1_1_modification": "0 触动 (SHA-12 复验 7B01CD835A41 = 7B01CD835A41 ✓)",
+    "no_9_addendum_modification": "0 触动 (10 件 addendum SHA-12 复验全部不变 ✓)",
+    "no_v2_verdict_modification": "0 触动 (SHA-12 复验 5D79E67A4E9D = 5D79E67A4E9D ✓)",
+    "no_v2_prereg_modification": "0 触动 (v2 prereg 字面冻结，不覆盖)",
+    "no_v3_prereg_content_modification": "0 触动 (v3 prereg §0-§9 既有任何字面未改; §10 由 parent Mavis (doc-writer agent-0032834a3e04) 合法追加，与本棒 worker 无关)",
+    "no_derived_json_merge": "0 派生 JSON 合并 (本件为 v3 dataset 升级件, 与 v2 dataset.json 派生关系 = 沿 v2 字面引用, 不合并事件数组)",
+    "no_threshold_tampering": "0 擅调 (TH-v2-1/2/3/4/5/5b/6/7/8 + 词表 §2.2 口径 + K-V2-* 全部沿 v2 prereg 字面不动; v3 prereg §4.3 TH-v3-1..20 沿 v3 prereg 字面冻结不动)"
+  },
+  "constraints_compliance": {
+    "key_never_in_prompt_or_json": true,
+    "key_never_on_disk": true,
+    "no_18_frozen_touch": true,
+    "no_9_grid_touch": true,
+    "no_pg_v0_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_builtin_script_touch": true,
+    "no_dataset_modification": true,
+    "no_merge_into_dataset_v1_1": true,
+    "no_threshold_tampering": true,
+    "no_llm_judgment_layer": true,
+    "no_pi_realtime_answering_window_required": true,
+    "rationale": "V4 铁律沿用口径 (R4 key 永不明文沿用无例外; V1-V3 只读不动; 派生 JSON 不合并; 0 LLM 判定层; key runtime 读不入 prompt/JSON/log)"
+  },
+  "non_portrait_declaration": "v3 dataset 沿用 v2 dataset 非画像声明：数据用于提取可迁移判据结构规则集（判据优先序/权衡模式/分界标准/准则应用法/反例检验法/委托裁决法），不做 PI 行为预测或个人模型；推理全文隐私面仅入本地件（v2 prereg §7 字面）；v3 prereg §6 沿用此声明",
+  "format_choice_disclosure": "形态选择：dataset v1.2 文件名 = _v4_pi_cot_v3_dataset.json（沿 v3 prereg §8 字面）；非 task 保守形态 _v4_pi_cot_v3_dataset_v1p2.json；理由=prereg §8 字面已明示命名，落盘沿字面更符合「沿预登记字面」纪律。本件不覆盖 v1.1 (_v4_pi_cot_v2_dataset.json)；本件不合并 v1.1 events 数组到本件 events 数组；本件仅引用 v1.1 events via sha12 anchor + supplement_count 记账（沿 v2 verdict §6 派生 JSON 不合并字面）。",
+  "metadata": {
+    "algorithm": "SHA-256 前 12 位",
+    "author": "Mavis 团队 worker",
+    "date": "2026-09-27",
+    "encoding": "UTF-8 (no BOM)",
+    "line_ending": "LF",
+    "track": "Track 1 (0 LLM / 0 proxy / 0 gateway)",
+    "type": "v3_dataset_upgrade_v1p2",
+    "version": "v1.2",
+    "predecessor_files_count": 12,
+    "predecessor_files_listed": [
+      "results/_v4_pi_cot_v2_dataset.json (7B01CD835A41)",
+      "results/_v4_pi_cot_v3_prereg.md (B7547329AF2E)",
+      "results/_v4_pi_cot_v2_verdict_v2.md (5D79E67A4E9D)",
+      "results/_v4_pi_cot_v2_collection_log.md (167AD91F198E)",
+      "results/_v4_pi_cot_v2_dataset_addendum_2026_09_24.json (172093A23E4B)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json (439721007AAF)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d2b_2026_09_26.json (41D6C28CA87C)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json (99C58906F792)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json (C6D092F77932)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json (26F110A6E571)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json (6E104E2DB038)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json (D96B747BFC6C)",
+      "results/_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json (401BD614CDF7)",
+      "results/_v4_pi_cot_v3_dataset_addendum_d4_2026_09_27.json (B18FF4177289)"
+    ],
+    "pi_source": "PI 2026-09-27 派工单 briefing 字面 (Q1-Q4 拍板生效) + parent Mavis v3 prereg §10 生效登记 (2026-09-27) + v2 verdict §1.1/§3.3/§4.1/§4.2 字面"
+  },
+  "next_link_in_chain": "_v4_pi_cot_v3_ruleset.json (v3 规则集件; 沿 v3 prereg §8 字面; 落盘核验后下一件)",
+  "fingerprint_self_hash_after_birth": "A3F5A2E8623A",
+  "honesty_note_final": "本棒 worker = 棒 A（dataset v1.2 执行棒），本件为四件链首件。已：(a) 步骤 1 SHA-12 实测核验输入链 13 件（v1.1 + v3 prereg + v2 verdict + collection_log + 9 addenda + 1 d4 系件 = 13 件锚字面记录）；(b) 步骤 2 G1 续采 D4 第 1 波 5 件入库（既有 PI 判定语料编码，非 LLM 代答，判定层 0 LLM 硬闸未触发）；(c) 步骤 3 dataset v1.2 落盘 = 本件。未触：v1.1 / v2 prereg / v3 prereg (§0-§9) / v2 verdict / 9 件 addendum / collection_log 任何既有件（SHA-12 复验全部不变）。本件唯一允许的内容性扩展 = v3 prereg §10（由 parent Mavis doc-writer 合法追加，本棒未参与）。0 LLM / 0 key 落盘 / 0 派生 JSON 合并 / 0 擅调阈值 / 0 既有件触动。succeeded ≠ 跑完 = 本件 SHA-12 核验实测后宣告。诚实交代：(i) 派工 briefing 锚定 v3 prereg SHA F0A58FD651FD 与实测 B7547329AF2E 不一致（详见 d4 addendum honesty_note §SHA 漂移登记段；本棒不擅自重派此问题，留 parent Mavis + PI 后续判定）；(ii) D4 5 条判定值均来自 PI 既有文字材料字面编码（非 PI 实时答题；非 LLM 代答）；判据类型 J1-J6 由 worker 按 D2/D3 既有惯例标注，本棒不裁断反转轴——反转轴判读留规则集学习阶段处理；(iii) v1.1 events 数组不合并入本件 events 数组（沿 v2 verdict §6 派生 JSON 不合并字面）；本件仅引用 v1.1 via sha12 anchor + supplement_count 记账。"
+}
