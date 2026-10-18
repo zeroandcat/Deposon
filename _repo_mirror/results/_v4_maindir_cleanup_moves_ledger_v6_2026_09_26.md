@@ -5,7 +5,7 @@
 >   - PI 2026-09-26 18:24 原文「整理文件夹包括清噪声、删垃圾与中间文件、归档无需上传文件与非核心文件、更新清单与委托」—— 一棒已清噪声 (mavis-trash 28 件), 本棒补归档两件套（**授权明确**, 一棒保守未动的 A/B 类本棒执行）
 >   - 派工单 §3 「A/B 类归档两件套」+ §4 「主目录实测 <1000」 + §4 保护名单
 > **不动既有 ledger**: v1 (`SHA-12=4025E871726B`, 18,829 B) + v2 (`64C4EF850025`, 47,909 B) + v3 (`8F5136E176B8`, 31,689 B) + v4 (37,047 B) + v5 (`272E8C752406`, 46,058 B)
-> **本棒执行明细**: 51 件 B 类候选 (44 件 results/ + 7 件 root) → `D:/私人资料/deposon-sub/` (含 `deposon-sub/results/`); 处理策略:
+> **本棒执行明细**: 51 件 B 类候选 (44 件 results/ + 7 件 root) → `_september_workspace` (含 `deposon-sub/results/`); 处理策略:
 >   - **25 件**: 目标目录已有 byte-identical 副本 (SHA-256 全等), 故**源 mavis-trash 回收站** (Recycle Bin 可恢复), 目标保留不动 (0 覆盖既有件)
 >   - **26 件**: 目标目录无副本, 故**源 → 目标 Move-Item -Force** (atomic move, content preserved)
 > **总移动 bytes**: 650,433 B (实测 src SHA256 verify + dst SHA256 verify 51/51 byte-identical)
@@ -20,7 +20,7 @@
 |---|---|
 | 派工单期望消化件数 | 51 件 B 类 (44 件 results/ + 7 件 root) |
 | **本棒实测处置件数** | **51 件** (25 件 trash-only + 26 件 Move-Item) |
-| **目标选择** | `D:/私人资料/deposon-sub/` (B 路径); trash → Recycle Bin (mavis-trash 可恢复) |
+| **目标选择** | `_september_workspace` (B 路径); trash → Recycle Bin (mavis-trash 可恢复) |
 | **同名冲突处置** | **0 件覆盖** (25 件 dest 已存在 = byte-identical 故不动 dest; 26 件 dest 缺席故 Move) |
 | **通道** | `Move-Item -Force` (atomic move, content preserved) + `mavis-trash.cmd` (Microsoft.VisualBasic.FileIO → Recycle Bin) |
 | **frozen 锚件 0 触动** | ✓ (6 件 SHA-12 前后对照一致) |
@@ -167,7 +167,7 @@
 
 ---
 
-## 4. A 类（无需上传） → `D:/私人资料/_non_upload_local_archive`
+## 4. A 类（无需上传） → `〔本地归档区〕`
 
 ### 4.1 派工单本棒执行明细
 
@@ -218,9 +218,9 @@
 
 | 目录 | before (实测 2026-09-26 19:00, 本棒启动前) | after (实测 2026-09-26 19:10, 本棒收口后) | delta | 备注 |
 |---|---|---|---|---|
-| `D:/私人资料/deposon-repo` | **1,035** (派工单 §3 报告 1,131 含本棒期间新增) | **986** | **-49** | 本棒删除 51 件源 + 本棒期间其他 worker 净新增 (含 `_v4_pi_cot_v2_verdict_v2.md` 等 ruleset_v2 系新件 2 件 + 棒 8 自创建 `_v6_w7_pre_move_state.json` 1 件, 已删除) |
-| `D:/私人资料/_non_upload_local_archive` | 1,669 | **1,669** | **0** | 本棒 0 件移入 (A 类 0 件移动 + B 类不在 A 路径) |
-| `D:/私人资料/deposon-sub` | 441 | **467** | **+26** | 本棒 Move-Item 26 件新建副本 (其余 25 件已存在副本 byte-identical, 故 sub 净增量 = 26) |
+| `_september_workspace` | **1,035** (派工单 §3 报告 1,131 含本棒期间新增) | **986** | **-49** | 本棒删除 51 件源 + 本棒期间其他 worker 净新增 (含 `_v4_pi_cot_v2_verdict_v2.md` 等 ruleset_v2 系新件 2 件 + 棒 8 自创建 `_v6_w7_pre_move_state.json` 1 件, 已删除) |
+| `〔本地归档区〕` | 1,669 | **1,669** | **0** | 本棒 0 件移入 (A 类 0 件移动 + B 类不在 A 路径) |
+| `_september_workspace` | 441 | **467** | **+26** | 本棒 Move-Item 26 件新建副本 (其余 25 件已存在副本 byte-identical, 故 sub 净增量 = 26) |
 
 > **核对 (末次实测 2026-09-26 19:10)**:
 > - repo 实际 = 986 = 1,035 - 51 (本棒 trashes/moves) + 2 (本棒期间其他 worker 新增 ruleset_v2 verdict + result_v2 / ruleset_v2 / 1.pyc 已存在但 _v6_w7_pre_move_state.json 已 trashed) → 净 -49 (实测; 派工单估值 1,131→<1000 = -131, 本棒超额完成)

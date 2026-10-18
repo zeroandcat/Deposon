@@ -25,8 +25,8 @@ import json
 import os
 import sys
 
-REPO = r"D:/私人资料/deposon-repo"
-EXT_ROOT = r"D:/私人资料/_non_upload_local_archive"
+REPO = r"_september_workspace"
+EXT_ROOT = r"〔本地归档区〕"
 EXT_BOSS_DIR = os.path.join(EXT_ROOT, "scripts", "scripts", "kt_b1")
 BOSS_DRIFT = {"B1_Sinkhorn_OT": "boss_b1_sinkhorn_ot.py",
               "B2_KD": "boss_b2_kd.py",
@@ -512,7 +512,7 @@ def main() -> int:
         },
         "input_chain": input_chain,
         "external_readonly": {
-            "external_archive": "D:/私人资料/_non_upload_local_archive/",
+            "external_archive": "〔本地归档区〕",
             "items": boss_files,
             "copied_into_repo": 0, "wrote_external": False,
             "declaration": "只读取用授权：0 复制入仓 / 0 写入 / 0 移出 / 0 删除 / 0 改 ACL",

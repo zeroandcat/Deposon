@@ -4,7 +4,7 @@
 - **本件**：`results/_s4_seedprime_seq_t1_only_supplement_2026_10_11.md`（**新名新建 · 0 覆写**）｜**同批 JSON**：`results/_s4_seedprime_seq_t1_only_supplement_items_2026_10_11.json`（**新名新建 · 0 覆写**）
 - **命名合规**：`_主题_日期` 三段式；首段 `_s4_seedprime_` ＝ 步骤标识非阶段号 ⇒ 合 PI 2026-09-29 命名裁（`57024f2cd30a` §1.2②）＋ 10-01 补记；⛔ 0 `_v5_`／`_v4_`／`_v3_`
 - **出件**：**worker**（分支会话 `mvs_ca3a2353bc8c4dccaa01f97c9ed274b2`｜**署名如实** · ⛔ 0 冒充 PI／parent／verifier／verdict-keeper／protocol-keeper／evidence-auditor／doc-writer）
-- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（**0 读 key／0 读 `.env`**）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 endpoint**｜⛔ **0 触及 `D:\私人资料\_non_upload_local_archive`**（0 读、0 写、0 列目录）
+- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（**0 读 key／0 读 `.env`**）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 endpoint**｜⛔ **0 触及 `〔本地归档区〕`**（0 读、0 写、0 列目录）
 - **日期**：**2026-10-11**（落盘时点）
 
 > 📌 **状态栏（贯穿全件）**：🟢 **补层子步已产出（26／26 覆盖 ＝ 8 件在册复算核验 ＋ 18 件本棒补出）** ＋ 🔴 **仅入缺口消解（`G-1`／`G-2`／`G-4`）· ⛔ 0 入判定链 · ⛔ 0 供判定 · ⛔ 0 支 `J-1` · ⛔ 0 据以闭 `K-RJ-5`** ＋ 🔴 **物理分离（`K-RJ-6`）· ⛔ 0 并入主读数面 · ⛔ 0 供下游直接引用（`V-CLAUSE-1.4` 未解）** ＋ ⛔ **0 判档 · 0 宣告 `K-RJ-5` 闭／开 · 0 宣告 `S4′` 可开跑**
@@ -179,7 +179,7 @@
 | ⛔ **0 并入主读数面**（`K-RJ-6`） | ⛔ 0 并入任何既有 README／主读数面／汇总 JSON |
 | ⛔ **0 跑 `S4′` 读数面** | ⛔ 0 调 `compute_readings`／`build_tree`／`predict_tree`／`bootstrap_ci_v3`；⛔ 0 import `.tmp/prep.py` |
 | ⛔ **0 临时残留** | 本棒唯一新增之执行脚本 ＝ `.tmp/_s4_seedprime_seq_t1_supplement_2026_10_11.py`（**工作脚本 · 随件登记**）；产出 2 件为新件，无其他残留 |
-| ⛔ **0 触及禁区** | `D:\私人资料\_non_upload_local_archive` **0 读、0 写、0 列目录** |
+| ⛔ **0 触及禁区** | `〔本地归档区〕` **0 读、0 写、0 列目录** |
 
 ---
 

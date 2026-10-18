@@ -27,7 +27,7 @@ import re
 import shutil
 from pathlib import Path
 
-REPO = Path(r"D:\私人资料\deposon-repo")
+REPO = Path(r"_september_workspace")
 CN_MD = REPO / "paper" / "deposon_paper_final_cn.md"
 EN_MD = REPO / "paper" / "deposon_paper_final_en.md"
 PKG = REPO / "paper" / "deposon_arxiv_2026"

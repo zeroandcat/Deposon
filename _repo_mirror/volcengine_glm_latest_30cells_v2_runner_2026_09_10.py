@@ -11,9 +11,9 @@ deposon V3.X 挂点预筛 - 火山方舟 coding-plan 'glm-latest' 别名 30 cell
 import os, json, time, re, sys
 import urllib.request, urllib.error
 
-KEY_FILE = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
-GSM8K_FILE = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_gsm8k_details.json'
-STRATEGYQA_FILE = r'D:\私人资料\deposon-repo\results\deposon_benchmark_v1_4_strategyqa_details.json'
+KEY_FILE = r'〔本机用户目录〕/Desktop/AI/LLM API.txt'
+GSM8K_FILE = r'_september_workspace/results/deposon_benchmark_v1_4_gsm8k_details.json'
+STRATEGYQA_FILE = r'_september_workspace/results/deposon_benchmark_v1_4_strategyqa_details.json'
 BASE_URL = 'https://ark.cn-beijing.volces.com/api/coding/v3'
 TARGET_MODEL = 'glm-latest'
 SANITY_PROMPT = 'What is 1+1?'
@@ -21,9 +21,9 @@ SANITY_MAX_TOKENS = 1024
 CELL_MAX_TOKENS = 2048
 PROXY_KEYS = ['HTTP_PROXY', 'HTTPS_PROXY', 'http_proxy', 'https_proxy', 'ALL_PROXY', 'all_proxy']
 
-OUTPUT_5 = r'D:\私人资料\deposon-repo\results\deposon_volcengine_glm_latest_5cells_v2_2026_09_10.json'
-OUTPUT_30 = r'D:\私人资料\deposon-repo\results\deposon_volcengine_glm_latest_30cells_v2_2026_09_10.json'
-DOC_30 = r'D:\私人资料\deposon-repo\docs\V3X\VOLCENGINE_GLM_LATEST_30CELLS_V2_2026_09_10.md'
+OUTPUT_5 = r'_september_workspace/results/deposon_volcengine_glm_latest_5cells_v2_2026_09_10.json'
+OUTPUT_30 = r'_september_workspace/results/deposon_volcengine_glm_latest_30cells_v2_2026_09_10.json'
+DOC_30 = r'_september_workspace/docs/V3X/VOLCENGINE_GLM_LATEST_30CELLS_V2_2026_09_10.md'
 
 # ============== 1) Read key (GB18030) ==============
 enc = None
@@ -431,7 +431,7 @@ deposon V3.X 挂点预筛 - 复审 **火山方舟 Coding Plan** 下 `glm-latest`
 
 - **模型别名**: `{TARGET_MODEL}`(严格,未切 model)
 - **Endpoint**: `{BASE_URL}/chat/completions`
-- **Key 来源**: `C:\\Users\\Administrator\\Desktop\\AI\\LLM API.txt` GB18030 -> `os.environ['ARK_CODING_PLAN_KEY']`(**永不入 JSON**)
+- **Key 来源**: `〔本机用户目录〕/Desktop/AI/LLM API.txt` GB18030 -> `os.environ['ARK_CODING_PLAN_KEY']`(**永不入 JSON**)
 - **Proxy**: **不设**(火山国内)
 - **temperature**: 0.0(全 benchmark 严格)
 - **max_tokens**: sanity=1024, cell=2048

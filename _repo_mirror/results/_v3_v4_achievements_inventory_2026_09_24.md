@@ -2,7 +2,7 @@
 
 > by **evidence-auditor** (agent-11335500b168)  
 > Generated: 2026-09-24 17:10  
-> Workspace: `D:/private-data/deposon-repo`
+> Workspace: `〔本机路径〕/private-data/deposon-repo`
 
 ---
 
@@ -1797,10 +1797,10 @@ Listing omitted for brevity -- see section 2.
 
 ### 4.1 SHA-12 ground truth
 
-All SHA-12 values in this inventory are disk-tested via `Get-FileHash -Algorithm SHA256`, first 12 hex chars. No fabricated hashes; every value here traces to a real byte-for-byte file on disk at workspace `D:/private-data/deposon-repo`. Recomputation method:
+All SHA-12 values in this inventory are disk-tested via `Get-FileHash -Algorithm SHA256`, first 12 hex chars. No fabricated hashes; every value here traces to a real byte-for-byte file on disk at workspace `〔本机路径〕/private-data/deposon-repo`. Recomputation method:
 
 ```powershell
-$ws = 'D:/private-data/deposon-repo'
+$ws = '〔本机路径〕/private-data/deposon-repo'
 Get-ChildItem $ws -File -Recurse -Force |
   Where-Object { $_.Extension -notin @('.pyc','.log') -and $_.FullName -notmatch '\\(graphs|__pycache__|.tmp|.trae)\\' } |
   ForEach-Object { Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256 } |

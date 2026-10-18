@@ -5,7 +5,7 @@
 - **对象**：`results/_v4_pi_cot_v3_ruleset_v3_executor.py`（**`8a81d90c69ba`**）之 `nw_sim` —— **docstring L355–L369**（prereg 字面公式）与 **实现 L381–L418**（实际归一化）
 - **缺口出处**：`results/_u6_negative_delta_compatibility_2026_10_11.md`（**`1846e917119f`**）**§E-5／L90–L91** 如实登记；`results/_lim_aperiod_adoption_and_label_correction_2026_10_11.md`（**`f4b129e3312f`**）**§6 第 6 项**（「须 PI／protocol 择」）
 - **方法**：`importlib` **只读加载** executor ＋ **自撰独立 NW DP** 闭式复算（**双重独立**）｜**⛔ 0 改常量 · 0 monkey-patch · 0 调用 `main()` · 0 执行任何写盘入口**（`main()` 由 **L1396** `if __name__ == "__main__"` 守卫；模块级仅常量与 `Path(__file__)`，已实测无 import 期写盘）
-- **版本**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**0 网络 · 0 skill · 0 LLM · 0 API key · 0 读 `.env`**｜⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`
+- **版本**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**0 网络 · 0 skill · 0 LLM · 0 API key · 0 读 `.env`**｜⛔ **0 触及** `〔本地归档区〕`
 - **落前查重**：`Test-Path` ＝ **`False`** ＋ 全仓递归 glob `*prereg_vs_impl*` **0 命中** ⇒ **0 撞写**
 - **日期**：**2026-10-11**
 
@@ -174,7 +174,7 @@ docstring **L451**：`NLED-sim(a, b) = 1 - edit_distance(a, b) / max(len_a, len_
 
 ## §6 ⛔ 本件 0 作之事项
 
-① ⛔ **0 改 ／ 0 编辑 ／ 0 覆写 executor 或任何既有件一字**（含 `1846e917119f` ／ `f4b129e3312f` ／ `839fb5452578` ／ `2900948bca6d` ／ `8de23f7d7384` ／ `9de3c08e3863`）｜② ⛔ **0 monkey-patch** 其任一常量 ／ 函数、**0 调用 `main()`**、**0 执行任何写盘入口**｜③ ⛔ **0 宣告其 docstring L362 ／ L364 之一致性为真**（L364 已证伪）｜④ ⛔ **0 宣告 `K-RJ-*` 任一条之终判词变更或闭 ／ 开**（含 `K-RJ-5` ／ `K-RJ-10`）｜⑤ ⛔ **0 赋任一 `k_v3s_4_4_*` 布尔**｜⑥ ⛔ **0 改任何阈值 ／ 门柱**（`TH_NW_SIM_MEAN ＝ 0.65` ／ `TH_NLED_SIM_MEAN ＝ 0.55` ／ `n_distinct ≤ 3`）｜⑦ ⛔ **0 宣告五段链①毕**｜⑧ ⛔ **0 重跑读数面**（五线面 ／ 触发面 ／ 共线性面皆 0 重跑）· **0 复核读数实体之对错**｜⑨ ⛔ **0 派生或合并任何 JSON**｜⑩ ⛔ **0 代 PI 给值 ／ 代裁 ／ 代择 ／ 代释**（§4 之处置**仅建议**）｜⑪ ⛔ **0 就 `U-*` ／ `R-*` ／ `KD-*` 之标签归属作裁**｜⑫ ⛔ **0 冒充 parent ／ PI ／ worker ／ verdict-keeper ／ doc-writer**｜⑬ ⛔ **0 新建第二个文件**（临时脚本 4 只落 `%TEMP%`，**用完已清理**）｜⑭ ⛔ **0 网络 · 0 skill · 0 LLM · 0 API key · 0 读 `.env`**｜⑮ ⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`
+① ⛔ **0 改 ／ 0 编辑 ／ 0 覆写 executor 或任何既有件一字**（含 `1846e917119f` ／ `f4b129e3312f` ／ `839fb5452578` ／ `2900948bca6d` ／ `8de23f7d7384` ／ `9de3c08e3863`）｜② ⛔ **0 monkey-patch** 其任一常量 ／ 函数、**0 调用 `main()`**、**0 执行任何写盘入口**｜③ ⛔ **0 宣告其 docstring L362 ／ L364 之一致性为真**（L364 已证伪）｜④ ⛔ **0 宣告 `K-RJ-*` 任一条之终判词变更或闭 ／ 开**（含 `K-RJ-5` ／ `K-RJ-10`）｜⑤ ⛔ **0 赋任一 `k_v3s_4_4_*` 布尔**｜⑥ ⛔ **0 改任何阈值 ／ 门柱**（`TH_NW_SIM_MEAN ＝ 0.65` ／ `TH_NLED_SIM_MEAN ＝ 0.55` ／ `n_distinct ≤ 3`）｜⑦ ⛔ **0 宣告五段链①毕**｜⑧ ⛔ **0 重跑读数面**（五线面 ／ 触发面 ／ 共线性面皆 0 重跑）· **0 复核读数实体之对错**｜⑨ ⛔ **0 派生或合并任何 JSON**｜⑩ ⛔ **0 代 PI 给值 ／ 代裁 ／ 代择 ／ 代释**（§4 之处置**仅建议**）｜⑪ ⛔ **0 就 `U-*` ／ `R-*` ／ `KD-*` 之标签归属作裁**｜⑫ ⛔ **0 冒充 parent ／ PI ／ worker ／ verdict-keeper ／ doc-writer**｜⑬ ⛔ **0 新建第二个文件**（临时脚本 4 只落 `%TEMP%`，**用完已清理**）｜⑭ ⛔ **0 网络 · 0 skill · 0 LLM · 0 API key · 0 读 `.env`**｜⑮ ⛔ **0 触及** `〔本地归档区〕`
 
 ---
 

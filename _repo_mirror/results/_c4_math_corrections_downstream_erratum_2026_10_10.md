@@ -19,7 +19,7 @@
 | S5 | ⛔ **0 判死软化** | 凡涉判死之实务结论（②-3「independent of T-4」），本件照录**须连带撤回**之结论，不作「但／然而」之对冲 |
 | S6 | 本件定位 | **引用面就正**：供下游（论文、委托、汇报、后续勘正）引用时以本件之校正表述为准 |
 | S7 | ⛔ **0 网络 / 0 skill / 0 LLM / 0 实验** | 全部为本地只读探测与本地 Markdown 撰写 |
-| S8 | ⛔ **0 触及** `D:\私人资料\_non_upload_local_archive` | 全程未访问该路径 |
+| S8 | ⛔ **0 触及** `〔本地归档区〕` | 全程未访问该路径 |
 | S9 | ⛔ **0 读 key / `.env`** | 无任何密钥或环境文件读取 |
 | S10 | 临时件 | 本棒**未产生任何临时脚本**（0 需清理项） |
 
@@ -55,7 +55,7 @@
 
 照录回函 L121：
 
-> 1. **Aggregate range.** The prior reply says each normalized term lies in `[0,1]` and therefore `D` lies in `[0,1]` ([2026-09-30 reply, SHA-12 `7558eb1a5e34`](D:/私人资料/deposon-repo/letters/_codex_theory_derivation_reply_2026_09_30.md:668), line 668). That conclusion ignores the sum. With nonnegative payoff bounded by the normalizer, a fixed `H`-term sum lies in `[0,H]`; two rejected binary decisions give `D=2`. An upper bound on payoff alone, without a lower bound, also does not guarantee each normalized difference is at most 1.
+> 1. **Aggregate range.** The prior reply says each normalized term lies in `[0,1]` and therefore `D` lies in `[0,1]` ([2026-09-30 reply, SHA-12 `7558eb1a5e34`](_september_workspace/letters/_codex_theory_derivation_reply_2026_09_30.md:668), line 668). That conclusion ignores the sum. With nonnegative payoff bounded by the normalizer, a fixed `H`-term sum lies in `[0,H]`; two rejected binary decisions give `D=2`. An upper bound on payoff alone, without a lower bound, also does not guarantee each normalized difference is at most 1.
 
 **校正要点（中文提要）**：`D` 之聚合域为 **`[0,H]`**（非 `[0,1]`）；两次拒绝即 `D=2`；且**仅付上界而无下界 ⇏ 单项 ≤1**。
 
@@ -63,13 +63,13 @@
 
 照录回函 L123–L129（含显示式）：
 
-> 2. **Normalizer cancellation.** The prior reply claims `max_u` cancels exactly even with the `epsilon` guard ([same reply, SHA-12 `7558eb1a5e34`](D:/私人资料/deposon-repo/letters/_codex_theory_derivation_reply_2026_09_30.md:681), lines 681–700). Write `c = max_u > 0`, `G_L` and `G_B` for the expected unnormalized sums of absolute payoff differences on the LLM and Bayesian sides, and `epsilon > 0` for the guard in normalized-distortion units. The spec's multiplier is exactly:
+> 2. **Normalizer cancellation.** The prior reply claims `max_u` cancels exactly even with the `epsilon` guard ([same reply, SHA-12 `7558eb1a5e34`](_september_workspace/letters/_codex_theory_derivation_reply_2026_09_30.md:681), lines 681–700). Write `c = max_u > 0`, `G_L` and `G_B` for the expected unnormalized sums of absolute payoff differences on the LLM and Bayesian sides, and `epsilon > 0` for the guard in normalized-distortion units. The spec's multiplier is exactly:
 >
 >    ```text
 >    (G_L/c) / max(G_B/c, epsilon) = G_L / max(G_B, c*epsilon).
 >    ```
 >
->    Cancellation holds on the unguarded branch, where `G_B >= c*epsilon`. If `G_B=0`, the ratio is `G_L/(c*epsilon)` and the normalizer remains. For example, `G_L=2`, `G_B=0`, `epsilon=0.1` gives ratios 20 at `c=1` and 10 at `c=2`. A common rescaling of payoff and its normalizer preserves normalized `D`; that separate invariance does not prove unconditional cancellation from the guarded ratio. The first values commission repeats the erroneous cancellation claim ([first commission, SHA-12 `a397621085d6`](D:/私人资料/deposon-repo/letters/_commission_c4_values_EN_2026_10_10.md:170), line 170). The governing algebra is the spec's lines 61–68, not that transcription. This proposal sets `c=1` but does not supply `epsilon` or decide a verdict.
+>    Cancellation holds on the unguarded branch, where `G_B >= c*epsilon`. If `G_B=0`, the ratio is `G_L/(c*epsilon)` and the normalizer remains. For example, `G_L=2`, `G_B=0`, `epsilon=0.1` gives ratios 20 at `c=1` and 10 at `c=2`. A common rescaling of payoff and its normalizer preserves normalized `D`; that separate invariance does not prove unconditional cancellation from the guarded ratio. The first values commission repeats the erroneous cancellation claim ([first commission, SHA-12 `a397621085d6`](_september_workspace/letters/_commission_c4_values_EN_2026_10_10.md:170), line 170). The governing algebra is the spec's lines 61–68, not that transcription. This proposal sets `c=1` but does not supply `epsilon` or decide a verdict.
 
 **校正要点（中文提要）**：`(G_L/c)/max(G_B/c, ε) = G_L/max(G_B, c·ε)`；**消去仅在无护栏支 `G_B ≥ c·ε` 成立**；`G_B=0` 时归一化子留存；例 `G_L=2, G_B=0, ε=0.1` ⇒ `c=1` 得 **20**、`c=2` 得 **10**。
 
@@ -77,7 +77,7 @@
 
 照录回函 L131：
 
-> 3. **Identifiability.** The earlier assertion that a non-identifiable mechanism forces positive `L` is too strong ([2026-09-30 reply, SHA-12 `7558eb1a5e34`](D:/私人资料/deposon-repo/letters/_codex_theory_derivation_reply_2026_09_30.md:423), lines 423–435). Consider two indistinguishable hidden mechanism states with `K={1}` in both. A constant choice of action 1 has zero regret despite zero information about which mechanism state occurred. This also refutes that reply's unconditional two-bit identification threshold ([same reply, SHA-12 `7558eb1a5e34`](D:/私人资料/deposon-repo/letters/_codex_theory_derivation_reply_2026_09_30.md:392), lines 392–398). The conditional common-action criterion above is the appropriate finite decision criterion; full mechanism identification is unnecessary.
+> 3. **Identifiability.** The earlier assertion that a non-identifiable mechanism forces positive `L` is too strong ([2026-09-30 reply, SHA-12 `7558eb1a5e34`](_september_workspace/letters/_codex_theory_derivation_reply_2026_09_30.md:423), lines 423–435). Consider two indistinguishable hidden mechanism states with `K={1}` in both. A constant choice of action 1 has zero regret despite zero information about which mechanism state occurred. This also refutes that reply's unconditional two-bit identification threshold ([same reply, SHA-12 `7558eb1a5e34`](_september_workspace/letters/_codex_theory_derivation_reply_2026_09_30.md:392), lines 392–398). The conditional common-action criterion above is the appropriate finite decision criterion; full mechanism identification is unnecessary.
 
 **校正要点（中文提要）**：**非辨识 ⇏ 必有 `L>0`**（同键双态 `K={1}` 恒选动作 1 ⇒ 零后悔，`L=0`）；**无条件两位阈值（`log₂4`）已被该反例推翻**；适用者为**条件式共同动作判据**，非全机制辨识。
 

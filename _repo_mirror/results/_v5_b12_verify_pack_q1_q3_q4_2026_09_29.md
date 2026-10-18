@@ -32,7 +32,7 @@
 
 | 项 | 值 |
 |---|---|
-| 路径 | `D:\私人资料\deposon-sub\results\_archive_2026_09_20\_d05_sanity_3backbone_20260918_100110.json`（**仓外，只读**） |
+| 路径 | `_september_workspace/results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json`（**仓外，只读**） |
 | **盘上实测** | **2,292 B** ｜ **`0a1e91d6f772`** ｜ mtime **2026-09-24 19:21:31** |
 | 在盘 | ✅ EXISTS |
 
@@ -201,7 +201,7 @@ PAT = rb'(sk-[A-Za-z0-9]{8,}|tp-[A-Za-z0-9]{8,}|ark-[A-Za-z0-9]{8,}|API_KEY\s*[=
 
 ### 2.2 4 件现态实测（仓外载体，只读）
 
-载体根：`D:\私人资料\_non_upload_local_archive\results\`
+载体根：`〔本地归档区〕/results/`
 
 | # | 载体 | 登记 SHA-12 | **盘上实测** | 字节 | 在盘 | 判定 |
 |:-:|---|---|---|---:|:-:|---|

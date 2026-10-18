@@ -18,9 +18,9 @@ BOSS-P-A1: Repeated Best Response / Regret Matching
   - 输出 verdict: BOSS-A1 ≤ 1.3x -> 拍平 -> 主张降级
 
 输入:
-  D:/私人资料/deposon-repo/results/deposon_v20_baselines.json
-  D:/私人资料/deposon-repo/results/deposon_v3_physical_opt_60cells_2026_09_11.json
-  D:/私人资料/deposon-repo/verifier/handoff/KT_ABC1_anchors_sha256_12.json
+  _september_workspace/results/deposon_v20_baselines.json
+  _september_workspace/results/deposon_v3_physical_opt_60cells_2026_09_11.json
+  _september_workspace/verifier/handoff/KT_ABC1_anchors_sha256_12.json
 
 输出:
   stdout: 每图 RBR/RM/Bayesian 迭代 + 倍数 + verdict
@@ -47,7 +47,7 @@ from typing import Optional
 # ============================================================================
 # 路径常量
 # ============================================================================
-REPO_ROOT = r"D:/私人资料/deposon-repo"
+REPO_ROOT = r"_september_workspace"
 V20_BASELINES = os.path.join(REPO_ROOT, "results", "deposon_v20_baselines.json")
 V3_PHYS = os.path.join(REPO_ROOT, "results", "deposon_v3_physical_opt_60cells_2026_09_11.json")
 ANCHOR_JSON = os.path.join(REPO_ROOT, "verifier", "handoff", "KT_ABC1_anchors_sha256_12.json")
@@ -395,7 +395,7 @@ assert _os_pa.path.basename(__file__) == 'boss_pa_1_rbr_rm.py', '文件名漂移
 with open(__file__, 'r', encoding='utf-8') as _f_pa:
     _src_pa = _f_pa.read()
 assert 'TRAE_SELFCHECK_2026_09_16_PA' in _src_pa
-_p_out_pa = _os_pa.path.join(r'D:/私人资料/deposon-repo', 'results', 'boss_pa_1_rbr_rm_result_2026_09_15.json')
+_p_out_pa = _os_pa.path.join(r'_september_workspace', 'results', 'boss_pa_1_rbr_rm_result_2026_09_15.json')
 if _os_pa.path.exists(_p_out_pa):
     import json as _json_pa
     _json_pa.loads(open(_p_out_pa, 'r', encoding='utf-8').read())

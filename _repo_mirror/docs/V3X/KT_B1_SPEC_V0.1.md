@@ -483,7 +483,7 @@ D7 末, KT-B1 判死 PASS/FAIL 后, 无论是否撞 BOSS, 必须把"实测记录
 | 铁律 | KT-B1 V0.1 兑现 | 引用 |
 |---|---|---|
 | ✅ **双审** | reviewer-a 静态审本 SPEC + reviewer-b 在 `/tmp/deposon_kt_b1_audit_<timestamp>/` 副本独立重跑 50 次攻击 + 3 个 BOSS baseline | §7 复现协议 |
-| ✅ **API key 不入 prompt** | 本 SPEC 零 LLM API 调用(守恒审计 + BOSS baseline 全是纯数学 / 传统 ML); 不读 `C:\Users\Administrator\Desktop\AI\新建文本文档.txt` | §2.4 检测器(纯数学审计) + §4 BOSS baseline(无 LLM) |
+| ✅ **API key 不入 prompt** | 本 SPEC 零 LLM API 调用(守恒审计 + BOSS baseline 全是纯数学 / 传统 ML); 不读 `〔本机用户目录〕/Desktop/AI/新建文本文档.txt` | §2.4 检测器(纯数学审计) + §4 BOSS baseline(无 LLM) |
 | ✅ **术语红线** | 用"账平 / 守恒审计 / 失真上界 / 攻击成功率 / 检测器召回率 / Sinkhorn OT / KD / LLMLingua"等工程/数学术语, 不用"散射层魔法"等营销词 | §2 + §3 + §4 |
 | ✅ **数字溯源** | 全部数字从 frozen 锚 JSON 字段路径引(v3 提案附录 B + P-B V0 spec + 本 SPEC §6 5 锚真实 SHA-256 + 附录 B 数字溯源表) | §6 + 附录 B + §1.3 |
 | ✅ **verifier 纪律** | §7 复现协议用 /tmp 副本; 不碰 HANDOFF_MACHINE_READABLE.json / results/*.json / verifier/vN/ | §7 + D0_FREEZE_PREP §6 |

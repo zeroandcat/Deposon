@@ -62,7 +62,7 @@
 
 ### 2.1 ★ 卡答之库原件只读核录（**`mode=ro` · 0 写库 · 0 沿用转述**）
 
-**核录源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` · 表 `questionnaire_requests` · `request_id` ＝ `ask_cbf2d8209078b86543b4ef08`，以 `sqlite3.connect("file:…?mode=ro", uri=True)` **只读**实测（**1 行命中**）。⛔ **0 网络 · 0 写库 · 0 改库 · 0 建表 · 0 提交 · 0 checkpoint**；取列仅 `request_json`／`reply_payload` 二列（⛔ 0 取任何凭据列）。
+**核录源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` · 表 `questionnaire_requests` · `request_id` ＝ `ask_cbf2d8209078b86543b4ef08`，以 `sqlite3.connect("file:…?mode=ro", uri=True)` **只读**实测（**1 行命中**）。⛔ **0 网络 · 0 写库 · 0 改库 · 0 建表 · 0 提交 · 0 checkpoint**；取列仅 `request_json`／`reply_payload` 二列（⛔ 0 取任何凭据列）。
 
 | 项 | **本棒实测值（库原件）** |
 |:--|:--|

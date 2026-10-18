@@ -79,7 +79,7 @@
 | 探针 | 方法 | 真值 |
 |---:|---|---|
 | 1 | `Test-Path results/_limb_reading_verdict_kv3s33_2026_10_01.md`（相对精确名） | **False** |
-| 2 | `Test-Path` 绝对路径 `D:\私人资料\deposon-repo\results\_limb_reading_verdict_kv3s33_2026_10_01.md` | **False** |
+| 2 | `Test-Path` 绝对路径 `_september_workspace/results/_limb_reading_verdict_kv3s33_2026_10_01.md` | **False** |
 | 3 | `results/*limb*` 命中数 | **0** |
 | 4 | `results/*kv3s*` 命中数 | **2**（`_s3_kv3s_3_full_recompute_2026_10_01.md`／`_s3_kv3s_3_verdict_2026_10_01.md` —— **均非同名**） |
 | 5 | 全仓递归 文件名含 `limb` | **0 命中** |

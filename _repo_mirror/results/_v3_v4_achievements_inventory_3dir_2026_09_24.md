@@ -2,7 +2,7 @@
 
 > by **evidence-auditor** (agent-11335500b168)  
 > Generated: 2026-09-24 18:35  
-> Scope: **MAIN** (`D:/private-data/deposon-repo`) + **ARCHIVE** (`D:/private-data/_non_upload_local_archive`) + **SUB** (`D:/private-data/deposon-sub`)
+> Scope: **MAIN** (`〔本机路径〕/private-data/deposon-repo`) + **ARCHIVE** (`〔本机路径〕/private-data/_non_upload_local_archive`) + **SUB** (`〔本机路径〕/private-data/deposon-sub`)
 > Predecessor: `results/_v3_v4_achievements_inventory_2026_09_24.md` (SHA-12 `29A853444D42`) -- this turn extends coverage to two additional directories and reflects the 2026-09-24 cleanup moves; the predecessor file is **untouched** (R5 + non-overwrite rule).
 
 ---
@@ -255,7 +255,7 @@ Total: 2672 items across all 3 directories (roll-up shown; per-item enumeration 
 
 ## 4. Per-directory detail (substantive achievements)
 
-### 4.1 MAIN (`D:/private-data/deposon-repo`) -- 1324 files
+### 4.1 MAIN (`〔本机路径〕/private-data/deposon-repo`) -- 1324 files
 
 Substantive items: 1283 (transient .pyc/.log: 41)
 
@@ -1962,7 +1962,7 @@ Substantive items: 1283 (transient .pyc/.log: 41)
 |---|---|---|---|---|---|
 | `volcengine_glm_latest_30cells_v2_runner_2026_09_10.py` | `26FF34BFCC79` | 20745 | IN-EFFECT | C | 2026/09/18 13:48:17 |
 
-### 4.2 ARCHIVE (`D:/private-data/_non_upload_local_archive`) -- 1230 files
+### 4.2 ARCHIVE (`〔本机路径〕/private-data/_non_upload_local_archive`) -- 1230 files
 
 Substantive items: 993 (transient .pyc/.log: 237)
 
@@ -3079,7 +3079,7 @@ Substantive items: 993 (transient .pyc/.log: 237)
 | `verify_archive_backup/_verify_15frozen.py` | `C196AA7709EF` | 3883 | ARCHIVED | C | 2026/09/15 15:09:03 |
 | `verify_archive_backup/_verify_pg_v0.py` | `E004327FFB74` | 4172 | ARCHIVED | C | 2026/09/15 15:08:32 |
 
-### 4.3 SUB (`D:/private-data/deposon-sub`) -- 427 files
+### 4.3 SUB (`〔本机路径〕/private-data/deposon-sub`) -- 427 files
 
 Substantive items: 427 (transient .pyc/.log: 0)
 
@@ -3639,7 +3639,7 @@ Substantive items: 427 (transient .pyc/.log: 0)
 All SHA-12 values in this inventory are disk-tested via `Get-FileHash -Algorithm SHA256` (PowerShell), first 12 hex chars. Recomputation method:
 
 ```powershell
-$dirs = @('D:/private-data/deposon-repo','D:/private-data/_non_upload_local_archive','D:/private-data/deposon-sub')
+$dirs = @('〔本机路径〕/private-data/deposon-repo','〔本机路径〕/private-data/_non_upload_local_archive','〔本机路径〕/private-data/deposon-sub')
 foreach ($d in $dirs) {
   [System.IO.Directory]::EnumerateFiles($d, '*', [System.IO.SearchOption]::AllDirectories) |
     ForEach-Object {
@@ -3655,7 +3655,7 @@ Re-scan with proper UTF-8 + word-boundary regex:
 
 ```powershell
 $pattern = '(?<![A-Za-z0-9])(sk-[A-Za-z0-9]{20,}|sk_[a-zA-Z0-9_]{20,}|tp-[A-Za-z0-9]{20,}|ark-[A-Za-z0-9]{20,})(?![A-Za-z0-9])'
-$dirs = @('D:/private-data/deposon-repo','D:/private-data/_non_upload_local_archive','D:/private-data/deposon-sub')
+$dirs = @('〔本机路径〕/private-data/deposon-repo','〔本机路径〕/private-data/_non_upload_local_archive','〔本机路径〕/private-data/deposon-sub')
 $hits = 0
 foreach ($d in $dirs) {
   foreach ($f in [System.IO.Directory]::EnumerateFiles($d, '*', [System.IO.SearchOption]::AllDirectories)) {

@@ -12,7 +12,7 @@
 
 | 项 | 规定 |
 |---|---|
-| **本地扫描面** | `D:\私人资料\deposon-repo`（主区）＋ `D:\私人资料\deposon-sub`（副区），递归全量 ＋ `-Force`（含隐藏件）；**文本类扩展名白名单** `.md/.json/.py/.tsv/.txt/.yaml/.yml/.csv/.html/.js/.tex/.bib`（沿 `3f806e44a13f` §5.1 口径） |
+| **本地扫描面** | `_september_workspace`（主区）＋ `_september_workspace`（副区），递归全量 ＋ `-Force`（含隐藏件）；**文本类扩展名白名单** `.md/.json/.py/.tsv/.txt/.yaml/.yml/.csv/.html/.js/.tex/.bib`（沿 `3f806e44a13f` §5.1 口径） |
 | **远端扫描面** | commit `72c5839` tarball 解包树，**2,221 文件 / 164 目录**（与 T2 §1.1 逐项相同 ✅） |
 | **计数单位** | 内容面＝**文件数**（每文件计 1）；替换面＝**出现次数**；文件名面＝**实体件数** |
 | **对位规则** | 本地 `X` → 远端 `X`（同路径）／远端 `_september_workspace/X`（前缀归一）／**批⑤ 改名映射表**（§1.2）三路 |
@@ -226,9 +226,9 @@
 
 | # | 件 | 泄漏内容 | 实测 |
 |---:|---|---|---|
-| L-1 | `_september_workspace/_mirror_manifest.json` | **本机绝对路径** `"source": "D:/私人资料/deposon-repo"` | 实读 ✅ |
-| L-2 | `_september_workspace/_movedout_manifest_2026_09_21.json` | 本机绝对路径 ＋ **agent scratch 路径** `C:\Users\Administrator\.minimax\agents\mavis\scratch\…` | 实读 ✅ |
-| L-3 | 同上 ＋ `_archive_manifest_deposon_sub_2026_09_23.json` | 本机绝对路径 `D:\\私人资料\\deposon-sub` | 实读 ✅ |
+| L-1 | `_september_workspace/_mirror_manifest.json` | **本机绝对路径** `"source": "_september_workspace"` | 实读 ✅ |
+| L-2 | `_september_workspace/_movedout_manifest_2026_09_21.json` | 本机绝对路径 ＋ **agent scratch 路径** `〔本机用户目录〕/.minimax/agents/mavis/scratch/…` | 实读 ✅ |
+| L-3 | 同上 ＋ `_archive_manifest_deposon_sub_2026_09_23.json` | 本机绝对路径 `_september_workspace` | 实读 ✅ |
 
 > ⛔ **本件 0 判定其严重性、0 建议删除**（「淡化/匿名化非删除」沿既有裁面）；⛔ **0 代裁**。**作为上传面观察登记**，是否处置 ⛔ **候 PI**。
 > ⚠ **0 混淆两域**：L-1…L-3 属「本机路径泄漏」，**非** §7.1「目标字面回流」；两者**处置口径不同**。

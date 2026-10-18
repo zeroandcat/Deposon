@@ -71,7 +71,6 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, os.pardir))
 RESULTS = os.path.abspath(os.path.join(HERE))
-REPO_RESULTS = r"D:\私人资料\deposon-repo\results"
 
 SEED_BASE = 42            # 门 B 自审用（现集之种子）
 SEED_PRIME = 1830975565   # 门 B′ 复算核用（第二集之种子）
@@ -80,25 +79,25 @@ LAMBDA_ID = "fd4ec7559342"  # `seed″` 之登记标识字面（6904852f8ceb §2
 RATIO = 0.30
 
 OUT_ITEMS_JSON = os.path.join(
-    REPO_RESULTS, "_s4_heldout_sampling_seedthird_items_2026_10_11.json"
+    RESULTS, "_s4_heldout_sampling_seedthird_items_2026_10_11.json"
 )
 OUT_REGISTER_MD = os.path.join(
-    REPO_RESULTS, "_s4_heldout_sampling_seedthird_items_register_2026_10_11.md"
+    RESULTS, "_s4_heldout_sampling_seedthird_items_register_2026_10_11.md"
 )
 CURRENT_ITEMS_JSON = os.path.join(
-    REPO_RESULTS, "_s4_heldout_sampling_seed42_items_2026_10_09.json"
+    RESULTS, "_s4_heldout_sampling_seed42_items_2026_10_09.json"
 )
 PRIME_ITEMS_JSON = os.path.join(
-    REPO_RESULTS, "_s4_heldout_sampling_seedprime_items_2026_10_10.json"
+    RESULTS, "_s4_heldout_sampling_seedprime_items_2026_10_10.json"
 )
 DISP_ITEMS_JSON = os.path.join(
-    REPO_RESULTS, "_s4_v31_displacement_items_2026_10_10.json"
+    RESULTS, "_s4_v31_displacement_items_2026_10_10.json"
 )
 GOLD_ITEMS_JSON = os.path.join(
-    REPO_RESULTS, "_s4_v31_regen_gold_items_2026_10_10.json"
+    RESULTS, "_s4_v31_regen_gold_items_2026_10_10.json"
 )
 PRIME_T1_SUPP_JSON = os.path.join(
-    REPO_RESULTS, "_s4_seedprime_seq_t1_only_supplement_items_2026_10_11.json"
+    RESULTS, "_s4_seedprime_seq_t1_only_supplement_items_2026_10_11.json"
 )
 
 # 裁定 fb1b696de1d6 §5.1 之输入域登记（21 件 · 字节序）——用于门 A 逐件全等校验。
@@ -158,13 +157,13 @@ def write_text(path, text):
 # ------------------------------------------------------- R0 · 域读取（只读）
 def load_domain():
     files = sorted(
-        [f for f in os.listdir(REPO_RESULTS) if f.endswith(".json") and "addendum" in f],
+        [f for f in os.listdir(RESULTS) if f.endswith(".json") and "addendum" in f],
         key=lambda x: x.encode("utf-8"),  # R1 · 显式字节序（⛔ 0 collation）
     )
     per_file = {}
     total_rows = 0
     for name in files:
-        data = read_json(os.path.join(REPO_RESULTS, name))
+        data = read_json(os.path.join(RESULTS, name))
         sup = data.get("supplements", [])
         if not isinstance(sup, list):
             raise SystemExit("ABORT: supplements not a list in %s" % name)
@@ -183,7 +182,7 @@ def domain_gate(files, per_file):
         sys.exit(2)
     rows = 0
     for name in files:
-        p = os.path.join(REPO_RESULTS, name)
+        p = os.path.join(RESULTS, name)
         s12 = sha12_of(p)
         b = os.path.getsize(p)
         c = len(per_file[name])
@@ -311,7 +310,7 @@ def movable_layer(third_items, per_file):
     （依 e7fcbc290a7e §3-1「当且仅当」条件；反例见 e7fcbc290a7e §7 之 B-8：
       d3c#1 含「后面」而序列未变 —— 同层已有共有词触发）。
     """
-    sys.path.insert(0, os.path.join(os.path.dirname(REPO_RESULTS), ".tmp"))
+    sys.path.insert(0, os.path.join(REPO, ".tmp"))
     import s4_regen_runner as R  # 只读复用；其 import 期 0 写盘
 
     # KEYWORDS_T1：逐字取自 .tmp/prep.py L8–L9（⛔ 0 import prep.py：其 import 期即跑 S4′ 读数面）

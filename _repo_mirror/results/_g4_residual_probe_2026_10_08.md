@@ -13,9 +13,9 @@
 
 | 面 | 路径 | 读法 | 状态 |
 |---|---|---|---|
-| 载体① 主库 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` | Python `sqlite3` 以 `file:…?mode=ro` URI 打开 ＋ `PRAGMA query_only=1` | 只读，0 写 |
+| 载体① 主库 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` | Python `sqlite3` 以 `file:…?mode=ro` URI 打开 ＋ `PRAGMA query_only=1` | 只读，0 写 |
 | 载体① 附属 | 同目录 `runtime-state.sqlite-wal`、`-shm` | `Get-ChildItem`／`Get-Item` 元数据 | 只读，0 写 |
-| 载体② | `C:\Users\Administrator\AppData\Roaming\MiniMax\observability-outbox.jsonl` | `os.stat` ＋ 只读文本读 ＋ JSON **结构解析**（字段路径枚举） | 只读，0 写 |
+| 载体② | `〔本机用户目录〕/AppData/Roaming/MiniMax/observability-outbox.jsonl` | `os.stat` ＋ 只读文本读 ＋ JSON **结构解析**（字段路径枚举） | 只读，0 写 |
 | 锚件 | 前件 `_g4_runtime_state_trace_2026_10_01.md` | 读 ＋ `Get-FileHash` | 只读，0 写 |
 
 ### §0.1 R4 遵守声明
@@ -57,7 +57,7 @@
 
 | 项 | 实测值 |
 |---|---|
-| 路径 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` |
+| 路径 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` |
 | 字节 | 474,656,768（与前件 §7‑4 所记**同值**） |
 | mtime | 探前 2026-10-08 16:08:41 → 探后 2026-10-08 16:16:35（**活写入面**） |
 | `-wal` | 5,018,192 B，mtime 16:08:43 → 16:16:35 |
@@ -138,8 +138,8 @@
 
 | 项 | 实测值 |
 |---|---|
-| 路径 | `C:\Users\Administrator\AppData\Roaming\MiniMax\observability-outbox.jsonl` |
-| 副本数 | **1**（`…\AppData\Roaming\minimax\…` 小写路径经实测**为同一文件**——Windows 路径大小写不敏感；`%APPDATA%` ＝ `C:\Users\Administrator\AppData\Roaming`） |
+| 路径 | `〔本机用户目录〕/AppData/Roaming/MiniMax/observability-outbox.jsonl` |
+| 副本数 | **1**（`…\AppData\Roaming\minimax\…` 小写路径经实测**为同一文件**——Windows 路径大小写不敏感；`%APPDATA%` ＝ `〔本机用户目录〕/AppData/Roaming`） |
 | 字节／行 | 6,335 B（15:58:25）→ **6,824 B ／ 26 行**（16:12:37）——**探查期间仍在写入** |
 | 三时点体积 | 派工单记 3,113 B ／ 前件 §7‑4 记 8,402 B·34 行（10-01）／ 本棒 6,824 B·26 行 ⇒ **三个时点三个值** |
 

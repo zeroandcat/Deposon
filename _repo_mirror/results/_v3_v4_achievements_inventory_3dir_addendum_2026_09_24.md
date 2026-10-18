@@ -16,8 +16,8 @@
 | Directory | 终态件总数 | 盘点时点（2026-09-24 18:35） | 差额 | 备注 |
 |---|--:|--:|--:|---|
 | **MAIN** | **799** | 1,324（§1.1 快照） | **-525** | 沿 ledger v5 §0「主目录终数 799 < 1000 ✓ 达成」字面 |
-| **ARCHIVE**（`D:/私人资料/_non_upload_local_archive/`） | **1,669** | 1,230 | **+439** | 接收 6 棒清理之移动件 + 既有冻结快照件 |
-| **SUB**（`D:/私人资料/deposon-sub/`） | **441** | 427 | **+14** | B 路径扩容件 + 灰区 + 历史 B-class |
+| **ARCHIVE**（`〔本地归档区〕`） | **1,669** | 1,230 | **+439** | 接收 6 棒清理之移动件 + 既有冻结快照件 |
+| **SUB**（`_september_workspace`） | **441** | 427 | **+14** | B 路径扩容件 + 灰区 + 历史 B-class |
 | **TOTAL** | **2,909** | **2,981** | **-72** | 沿 §2 差额对账口径 |
 
 - **终态实测口径**：parent 实测（`Get-ChildItem -File -Recurse -Force`，跳过 `.trae` / `__pycache__` / `.tmp` 子目录件不计入 MAIN 799），2026-09-24 19:50 GMT+8 时点；非「看着合理就写」
@@ -87,8 +87,8 @@
 
 | 棒 | 件数 | 类拆分 | 目标目录 | 新路径前缀 | ledger 来源 |
 |:-:|--:|---|---|---|---|
-| **v2（棒 3）** | **125** | A 54 + C 63 + 灰区 8 | `_non_upload_local_archive/results/` | `D:/私人资料/_non_upload_local_archive/results/` | `64C4EF850025` §3/§4/§6 |
-| **v3（棒 4）** | **41** | A 34 → archive；B 7 → sub | archive + `deposon-sub/results/` | archive 前缀 / `D:/私人资料/deposon-sub/results/` | `8F5136E176B8` §A/§B |
+| **v2（棒 3）** | **125** | A 54 + C 63 + 灰区 8 | `_non_upload_local_archive/results/` | `〔本地归档区〕/results/` | `64C4EF850025` §3/§4/§6 |
+| **v3（棒 4）** | **41** | A 34 → archive；B 7 → sub | archive + `deposon-sub/results/` | archive 前缀 / `_september_workspace/results/` | `8F5136E176B8` §A/§B |
 | **v4（棒 5）** | **234** | 227 archive + 7 sub | archive + sub | 同 v3 | `9BD8932FA214` §A/§B |
 | **v5（棒 6）** | **178** | 177 顶层 + 1 子目录 | `_non_upload_local_archive/results/` | archive 前缀 | `272E8C752406` §A |
 | **合计** | **578** | — | — | — | — |
@@ -124,7 +124,7 @@
 | # | 件 | 路径 | redact 前 SHA-12 | redact 后 SHA-12 |
 |:-:|---|---|---|---|
 | ① | 盘点件 §5.6 段 4 处 key 明文 | `results/_v3_v4_achievements_inventory_3dir_2026_09_24.md` | `2FADEA9F6259` | **`3E4E90FB48E1`** |
-| ② | `_d05_sanity_3backbone` JSON 行 39 + 54 | `D:/私人资料/deposon-sub/results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json` | `5D583C612D07` | `E6173BC63DF5` |
+| ② | `_d05_sanity_3backbone` JSON 行 39 + 54 | `_september_workspace/results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json` | `5D583C612D07` | `E6173BC63DF5` |
 | ③ | 行 24 ark- key 漏扫补 redact | 同上 | `E6173BC63DF5` | **`0A1E91D6F772`** |
 
 ### §4.3 5 个 key 指纹 CLOSED 终态（沿派工 `ask_d38952e0` ③ 字面 + §20.4 truncated 归口）
@@ -255,7 +255,7 @@
 | R4 紧急处置清单 | `results/_v4_r4_key_purge_manifest_2026_09_24.md` | 13,884 | `5BF4D9AD2877` |
 | R4 落地处置清单 | `results/_v4_r4_purge_actions_2026_09_24.md` | 33,117 | `8BBFE831E7C3` |
 | R4 redact 后盘点件 | `results/_v3_v4_achievements_inventory_3dir_2026_09_24.md` | 355,687 | `3E4E90FB48E1`（同 §2.2 盘点件 + R4 处置后新 SHA） |
-| R4 redact 后 JSON sanity | `D:/私人资料/deposon-sub/results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json` | 2,292 | `0A1E91D6F772` |
+| R4 redact 后 JSON sanity | `_september_workspace/results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json` | 2,292 | `0A1E91D6F772` |
 
 **核验方式**：本件出具时由 doc-writer 直接调用 `Get-FileHash -Algorithm SHA256` 实算（落盘后由 doc-writer handoff 报值）+ PowerShell `Get-ChildItem -File -Recurse -Force` 实测终态件总数；非「看着合理就写」。本补账件自身之 SHA-12 + 字节 不内填——若写在本件内，则本件字节随该字段变动而变，构成自指循环依赖；由下游 verifier 落盘后独立测得（参 §X.10）。
 

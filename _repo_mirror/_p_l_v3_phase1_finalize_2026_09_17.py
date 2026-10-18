@@ -13,7 +13,7 @@ from datetime import datetime, timezone, timedelta
 import numpy as np
 from scipy.stats import linregress
 
-DEPOSON_ROOT = Path(r'D:\私人资料\deposon-repo')
+DEPOSON_ROOT = Path(r'_september_workspace')
 RESULTS_DIR = DEPOSON_ROOT / 'results'
 
 TS = '20260917_132341'

@@ -11,9 +11,9 @@
 
 V3 的实验数据与 runner **已不在** `deposon-repo` 内。`docs/V3X/` 的 19 份报告正文仍按 `results/xxx.json`、`deposon_team/plugins/xxx.py` 的相对路径引用它们——按报告字面路径在本仓查找会得到「文件不存在」，容易被误读为「结果缺件 = 结论无据」。
 
-**实测**：本件出具时（2026-09-23），`deposon-repo` 全树对 19 报告引用的 34 个 `results/*.json` 做存在性核验——**10 件不在本仓、但在 `D:\私人资料\deposon-sub\` 内**；3 件两仓均无（真缺件，见 §4）。
+**实测**：本件出具时（2026-09-23），`deposon-repo` 全树对 19 报告引用的 34 个 `results/*.json` 做存在性核验——**10 件不在本仓、但在 `_september_workspace` 内**；3 件两仓均无（真缺件，见 §4）。
 
-**迁移依据**：`D:\私人资料\deposon-sub\_movedout_manifest_2026_09_21.json`（291,551 B，SHA-12 `D1EE21F3F6AE`，含 UTF-8 BOM）——363 条记录，字段 `src / dst / sha12 / size / archived_at`，`archived_at` 全为 `2026-09-21T18:01:05.991541`，**无移出原因字段**。363 条 `dst` 全部在磁盘存在（MISSING=0）。
+**迁移依据**：`_september_workspace/_movedout_manifest_2026_09_21.json`（291,551 B，SHA-12 `D1EE21F3F6AE`，含 UTF-8 BOM）——363 条记录，字段 `src / dst / sha12 / size / archived_at`，`archived_at` 全为 `2026-09-21T18:01:05.991541`，**无移出原因字段**。363 条 `dst` 全部在磁盘存在（MISSING=0）。
 
 ---
 
@@ -62,7 +62,7 @@ V3 的实验数据与 runner **已不在** `deposon-repo` 内。`docs/V3X/` 的 
 
 ## §4 真缺件（repo / archive / deposon-sub 三处均无，需 PI 裁定处置）
 
-以下 3 件在 `deposon-repo`、`D:\私人资料\_archive_deposon_2026_09_17\`、`D:\私人资料\deposon-sub\` **三处实测均不存在**，且不在 09-21 manifest 内：
+以下 3 件在 `deposon-repo`、`〔本地资料区〕/_archive_deposon_2026_09_17/`、`_september_workspace` **三处实测均不存在**，且不在 09-21 manifest 内：
 
 | 文件 | 被引用处 | 三处实测 | 处置建议 |
 |---|---|---|---|
@@ -94,7 +94,7 @@ V3 的实验数据与 runner **已不在** `deposon-repo` 内。`docs/V3X/` 的 
 | E-12 | 状态矛盾 | `V3X_1WEEK_KILL_REPORT` 正文 vs L178 尾注 | 正文已填 4 路径 verdict，尾注仍称「verdict 占位待 D7 当日填」 |
 | E-13 | 字节数 | `boss_pa_1_rbr_rm_result_2026_09_15.json` | 一处记 8,674 B，实为 8,753 B（SHA `C7C59E0D2F6C` 与实算一致） |
 | E-14 | 编码 | `deposon-sub/_movedout_manifest_2026_09_21.json` | 首 3 字节 `EF BB BF`，含 UTF-8 BOM（同批归档的数据件均无 BOM） |
-| E-15 | **锚链断裂（最高优先）** | `verifier/handoff/KT_ABC1_anchors_sha256_12.json` | frozen 期望 SHA-12 `03c6c01f3697`（6,680 B）；但**冻结主路径在盘件为另一件**（11,318 B，`6e9cd8cd8e07`，`metadata/anchors/boss_baselines` 结构、2026-09-09「Mavis (root session)」）；**冻结 fallback 路径**（`_archive_deposon_2026_09_17/verifier/handoff/`）**无此件**；目标件仅存于未声明的 `D:\私人资料\_non_upload_local_archive\verifier\handoff\`。→ `_verify_15frozen.py` 2026-09-23 实测 **15/16 PASS, 1 FAIL（唯一 FAIL 即本项）**，0-touch 声明 = FAIL。**【已处置 2026-09-23，PI 授权「直接修正」→ 详见 §7】** |
+| E-15 | **锚链断裂（最高优先）** | `verifier/handoff/KT_ABC1_anchors_sha256_12.json` | frozen 期望 SHA-12 `03c6c01f3697`（6,680 B）；但**冻结主路径在盘件为另一件**（11,318 B，`6e9cd8cd8e07`，`metadata/anchors/boss_baselines` 结构、2026-09-09「Mavis (root session)」）；**冻结 fallback 路径**（`_archive_deposon_2026_09_17/verifier/handoff/`）**无此件**；目标件仅存于未声明的 `〔本地归档区〕/verifier/handoff/`。→ `_verify_15frozen.py` 2026-09-23 实测 **15/16 PASS, 1 FAIL（唯一 FAIL 即本项）**，0-touch 声明 = FAIL。**【已处置 2026-09-23，PI 授权「直接修正」→ 详见 §7】** |
 | E-16 | SHA 位数 | `V3X_1WEEK_KILL_REPORT` L110 vs 盘上实值 | 报告写 `da517c1153c`（11 hex）；`KT_ABC1_anchors_sha256_12_V3X_P_A_PATCH_2026_09_15.json` 实算 `da517c115f3c`（12 hex，5,049 B，与 `D5` L136 / `TRAE_3RISK` L45 一致） |
 | E-17 | 错字（**PI 已裁定不修**） | `letters/_v4_distillation_invitation_2026_09_20_v1.0.md` L218 | "behated"（"behaved" / 种子「被测」的转写残迹，三处）；PI 已于 2026-09-22 裁定「不再修邀请函」（`results/_v4_pi_decision_questionnaire_2026_09_21_v1.1.md` L679）；该件属 V4 `_v4_*` 链，本走读 0 触动——仅登记结案 |
 | E-18 | 缺 SELF-CHECK 尾块（frozen） | `skill_a/b/c/d_*.py`（4 件） | 09-16 改进信 §4 不改项**至今悬挂**；frozen-18 内不可代修——仅登记。对照：9 个 `boss_*.py` 的 SELF-CHECK 已于 09-16 全部补齐（`TRAE_SELFCHECK_2026_09_16` 标记逐件在盘） |
@@ -146,7 +146,7 @@ V3 的实验数据与 runner **已不在** `deposon-repo` 内。`docs/V3X/` 的 
 
 **执行件**：`deposon_team/plugins/_v3_review_r8_precise_scan_2026_09_23.py`（实跑 exit 0）。
 
-**r4→r8 仪器修正**：r4 走读扫描器的 ODD_ESCAPE 判定**全部为 raw-string 假阳性**（如 `Path(r'D:\私人资料\...')` 是合法 Python）。沿本项目「测量仪器自身即误差源」惯例——**修仪器不修文本**：新增 r8 精扫器（tokenize STRING token 级、raw 前缀跳过、合法转义集白名单），r4 原件按历史证据保全不改。
+**r4→r8 仪器修正**：r4 走读扫描器的 ODD_ESCAPE 判定**全部为 raw-string 假阳性**（如 `Path(r'〔本地资料区〕/...')` 是合法 Python）。沿本项目「测量仪器自身即误差源」惯例——**修仪器不修文本**：新增 r8 精扫器（tokenize STRING token 级、raw 前缀跳过、合法转义集白名单），r4 原件按历史证据保全不改。
 
 **r8 判定（可修面残余缺陷）**：
 
@@ -162,7 +162,7 @@ V3 的实验数据与 runner **已不在** `deposon-repo` 内。`docs/V3X/` 的 
 
 ## §9 复判修订（2026-09-23 续，PI 授权「立即复判并出勘误修订」）
 
-**触发**：PI 提示仓外两目录（`D:\私人资料\deposon-sub\` / `D:\私人资料\_non_upload_local_archive\`）存有实验产物；勘察实锤 **§4 三件「真缺件」实存于 `deposon-sub\results\`**，SHA-12 逐一 MATCH 登记值（`C7C59E0D2F6C` 8,753 B / `5C76137D6430` 7,530 B / `D21912A05D79` 1,017 B）→ **§4「真缺件」判定作废**，改判「幽灵引用」（实件在 repo 外目录，报告引 `results/` 相对路径）。
+**触发**：PI 提示仓外两目录（`_september_workspace` / `〔本地归档区〕`）存有实验产物；勘察实锤 **§4 三件「真缺件」实存于 `deposon-sub\results\`**，SHA-12 逐一 MATCH 登记值（`C7C59E0D2F6C` 8,753 B / `5C76137D6430` 7,530 B / `D21912A05D79` 1,017 B）→ **§4「真缺件」判定作废**，改判「幽灵引用」（实件在 repo 外目录，报告引 `results/` 相对路径）。
 
 **处置（PI 问卷 `ask_3c79ce9a704bfd0a2c9c6660`）**：
 - Q1=B：12 件 `boss_*2026_09_15.json` 复制回 `results/`（原件不动），**12/12 HASH-SAME、0 碰撞**。
@@ -1052,7 +1052,7 @@ L9 §0.5 过渡声明 3 件执行结果：
 | # | 件 | 路径（落地位置） | redact 前 SHA-12 | redact 前字节 | redact 后 SHA-12 | redact 后字节 | 字节差 |
 |:-:|---|---|---|---|---|---|---|
 | **①** | 盘点件 §5.6 段 4 处 key 明文 redact | `results/_v3_v4_achievements_inventory_3dir_2026_09_24.md` | `2FADEA9F6259` | 355,369 | `3E4E90FB48E1` | 355,687 | +318 |
-| **②** | `_d05_sanity_3backbone` JSON 行 39 + 54 redact | `D:/私人资料/deposon-sub/results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json` | `5D583C612D07` | 2,289 | `E6173BC63DF5` | 2,273 | -16 |
+| **②** | `_d05_sanity_3backbone` JSON 行 39 + 54 redact | `_september_workspace/results/_archive_2026_09_20/_d05_sanity_3backbone_20260918_100110.json` | `5D583C612D07` | 2,289 | `E6173BC63DF5` | 2,273 | -16 |
 | **③** | 行 24 ark- key 漏扫补 redact（派工单边界外补执行） | 同上 | `E6173BC63DF5` | 2,273 | `0A1E91D6F772` | 2,292 | +19 |
 
 **E-31.1.2 落地清单 v1 → v2（追加式）**：
@@ -1152,8 +1152,8 @@ L9 §0.5 过渡声明 3 件执行结果：
 
 - **三目录终态（实测口径）**：
   - **MAIN** = **799** 件（沿 ledger v5 §0「主目录终数 799 < 1000 ✓ 达成」）
-  - **ARCHIVE** = **1,669** 件（`D:/私人资料/_non_upload_local_archive/`）
-  - **SUB** = **441** 件（`D:/私人资料/deposon-sub/`）
+  - **ARCHIVE** = **1,669** 件（`〔本地归档区〕`）
+  - **SUB** = **441** 件（`_september_workspace`）
 - **盘点件 vs 终态差额对账**：盘点件 §1.1 18:35 快照 = MAIN 1,324 + ARCHIVE 1,230 + SUB 427 = 2,981 → 终态 2,909 = -72 件差额（按 ledger v1–v5 移动 + 删除合计 665 件对账，**实际 -72 ≠ 665**——差额 593 件主要来自盘点时点未计之 `.trae` / `.tmp` / `__pycache__` 等子目录件，本棒不擅自代算，按 ledger v5 §0 主目录终数 799 字面登记）
 - **引用追溯原则**：本项目对账原则 = **不动旧路径 / 不重建引用 / 引用经 ledger 旧→新对账表追溯**（沿 ledger v1–v5 各 §A/§C/§G 对账表 + PI 拍板 B 路径 ledger 追溯模式 — `ask_721b8b46601f0b96a6989a0f` 2026-09-24 18:19 + `ask_6ee335d6f1a3ed88a6a412c7` 2026-09-24 18:47）
 - **本行不动 §20.5 字面**：本勘误节仅追加登记 5 棒布局变更事实，不擅自补 ledger 任何条目；后续引用链 / 委托信 / 论文终稿 / 上传清单均以「**新路径 + ledger v1–v5 追溯**」双字段引用
@@ -1248,7 +1248,7 @@ PI 拍板（`ask_9484b696` ratify_all 题）原文按逐字语义记：
 
 **事实流**：
 - L14 verdict 件自报 SHA-12（链 record）：`764F24A21AC8`
-- 盘实测 SHA-12：`8EEF73BF9856`（位于 `D:\私人资料\_non_upload_local_archive\results\_v4_supp_l14_n11full_verdict.md`，经 cleanup 6 棒移仓，盘实测核实）
+- 盘实测 SHA-12：`8EEF73BF9856`（位于 `〔本地归档区〕/results/_v4_supp_l14_n11full_verdict.md`，经 cleanup 6 棒移仓，盘实测核实）
 - 差值：链 record 与盘实测不符（cleanup 6 棒迁仓后事实变化，沿 v14 §20.5 清理六棒布局变更字面）
 
 **拍板语义**（沿 `ask_9484b696` erratum_note 题）：
@@ -1299,8 +1299,8 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 | # | 疑点 | 事实 | 处置建议 |
 |:-:|---|---|---|
-| **1** | **batch1_r6 result SHA 链记录 vs 盘实算漂移双记** | 链 record 自报 SHA-12 `A4F851154551` vs 盘实算 `6B92BBFF7180`（实测 `D:\私人资料\deposon-repo\results\_v4_supp_l14v3_batch1_r6_result.json` SHA-12）；差值双记（链 record 与盘实测不符） | **入链待 evidence-auditor 核**：核 chain manifest 引用源 + 链 record 重对账；本棒仅登记事实，不擅自重算链 record |
-| **2** | **噪声清理 v3 棒误报 archive/sub 目录不存在** | 噪声清理 v3 棒（`results/_v4_noise_cleanup_manifest_v3_2026_09_25.md`）报告 archive / sub 目录不存在（实际沿 v14 §20.5 清理六棒布局，archive = `D:\私人资料\_non_upload_local_archive\` 共 1,669 件 / sub = `D:\私人资料\deposon-sub\` 共 441 件，均在盘）；棒判定 = 误报 | **入链待 evidence-auditor 核**：核 v3 棒 lookup 路径 + 噪声清理棒基线引用；本棒仅登记误报事实，不擅自回改 v3 棒产物 |
+| **1** | **batch1_r6 result SHA 链记录 vs 盘实算漂移双记** | 链 record 自报 SHA-12 `A4F851154551` vs 盘实算 `6B92BBFF7180`（实测 `_september_workspace/results/_v4_supp_l14v3_batch1_r6_result.json` SHA-12）；差值双记（链 record 与盘实测不符） | **入链待 evidence-auditor 核**：核 chain manifest 引用源 + 链 record 重对账；本棒仅登记事实，不擅自重算链 record |
+| **2** | **噪声清理 v3 棒误报 archive/sub 目录不存在** | 噪声清理 v3 棒（`results/_v4_noise_cleanup_manifest_v3_2026_09_25.md`）报告 archive / sub 目录不存在（实际沿 v14 §20.5 清理六棒布局，archive = `〔本地归档区〕` 共 1,669 件 / sub = `_september_workspace` 共 441 件，均在盘）；棒判定 = 误报 | **入链待 evidence-auditor 核**：核 v3 棒 lookup 路径 + 噪声清理棒基线引用；本棒仅登记误报事实，不擅自回改 v3 棒产物 |
 | **3** | **T1 verdict / result 锚标错** | 链 record 标 `D6CB03A4657E` 为「T1 verdict 锚」，但盘实测 `D6CB03A4657E` 实为 `results/_v4_supp_t1_result.json` SHA-12（非 verdict）；T1 verdict 正确锚 = `F1B5E49F3058`（`results/_v4_supp_t1_verdict.md`） | **入链待 evidence-auditor 核**：核链 record verdict/result 字段填写 + chain manifest 引用锚；本棒仅登记事实混淆，**不擅自重算 verdict/result 内容** |
 
 **E-32.6 边界**：
@@ -1331,7 +1331,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 **E-32.2 SHA 漂移注记 1 件**：
 | 路径 | 链 record SHA-12 | 盘实测 SHA-12 |
 |---|---|---|
-| `_v4_supp_l14_n11full_verdict.md`（cleanup 后迁仓至 `D:\私人资料\_non_upload_local_archive\results\`） | `764F24A21AC8` | `8EEF73BF9856` |
+| `_v4_supp_l14_n11full_verdict.md`（cleanup 后迁仓至 `〔本地归档区〕/results/`） | `764F24A21AC8` | `8EEF73BF9856` |
 
 **E-32.4 拍板汇引用的预登记件**：
 | 路径 | 盘 SHA-12 |
@@ -1438,22 +1438,22 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 | 目录 | v3 棒路径 | v3 棒存在 | v3 棒文件数 |
 |---|---|:-:|:-:|
-| `_non_upload_local_archive` | `D:/私人资料/deposon-repo/_non_upload_local_archive` | **False** | 0 |
-| `deposon-sub` | `D:/私人资料/deposon-repo/deposon-sub` | **False** | 0 |
+| `_non_upload_local_archive` | `_september_workspace/_non_upload_local_archive` | **False** | 0 |
+| `deposon-sub` | `_september_workspace/deposon-sub` | **False** | 0 |
 
 **实测字面值**（`Test-Path` + `Get-ChildItem -Recurse -File`）：
 
 | 路径 | Test-Path | 文件数（递归） |
 |---|:-:|:-:|
-| `D:/私人资料/deposon-repo/_non_upload_local_archive` | False | 0 |
-| `D:/私人资料/deposon-repo/deposon-sub` | False | 0 |
-| `D:/私人资料/_non_upload_local_archive` | **True** | **1,669** |
-| `D:/私人资料/deposon-sub` | **True** | **441** |
+| `_september_workspace/_non_upload_local_archive` | False | 0 |
+| `_september_workspace/deposon-sub` | False | 0 |
+| `〔本地归档区〕` | **True** | **1,669** |
+| `_september_workspace` | **True** | **441** |
 
 **定案（evidence-auditor 实测 2026-09-26，源 `68F66904C0C8` §A row 3 + §B.3）**：
-- 两目录在 `D:/私人资料/deposon-repo/`（workspace 子路径）下**不存在**（与 v3 棒一致）；但在 `D:/私人资料/`（workspace **父级路径**）下**存在**，分别 **1,669 件 / 441 件**
+- 两目录在 `_september_workspace`（workspace 子路径）下**不存在**（与 v3 棒一致）；但在 `〔本地资料区〕`（workspace **父级路径**）下**存在**，分别 **1,669 件 / 441 件**
 - 用户预期「1230+ / 441+」 → 实测 **1,669 / 441**（1669 ≥ 1230 ✓；441 = 441 ✓，与用户预期同源演变一致）
-- **根因**：**相对路径基准错**——清理 v3 棒以 workspace 根 `D:/私人资料/deposon-repo` 为基准解析相对路径 `_non_upload_local_archive` / `deposon-sub`，但 archive/sub 实为 workspace **兄弟目录**（父级 `D:/私人资料/`）；v3 棒 lookup 路径时未跨出 workspace 边界外探 + 未识别仓外父级路径存在性
+- **根因**：**相对路径基准错**——清理 v3 棒以 workspace 根 `_september_workspace` 为基准解析相对路径 `_non_upload_local_archive` / `deposon-sub`，但 archive/sub 实为 workspace **兄弟目录**（父级 `〔本地资料区〕`）；v3 棒 lookup 路径时未跨出 workspace 边界外探 + 未识别仓外父级路径存在性
 - **v3 棒处置**：v3 棒产物为历史事实（已落盘 `6F3F6FA3AB1D` / 24,491 B），按 R5 frozen 不擅改 + 不回改 v3 棒产物；本勘误仅补「相对路径基准错」根因标注 + 不调已登记数字
 - **E-32.6 #2 已登记的 1,669 + 441 字面值维持**（与 v3 棒产物 `6F3F6FA3AB1D` 24,491 B 字面一致；E-32.6 §21.6 入链字面 + 实测复算均一致）
 
@@ -1991,7 +1991,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 | # | 停手类型 | 件 | 表载 vs 实测 | 处置拍板 |
 |:-:|---|---|---|---|
-| 1 | **§3.2 强制停手**（禁传区子件出现于上传清单） | `results/_v4_supp_l6_s38v2_rootcause_verdict.md`（Tag-A #30，`973103878D6F` · 24,847 B） | 表载：MAIN 内正式成果件（v3 §2.2 #30 字面 + 补账件 v2 §8.1 #30 字面）<br>实测：MAIN 内不存在；唯一副本位于 `D:\私人资料\_non_upload_local_archive\results\`（禁传区子件） | **delist**（PI 拍板 `ask_9aa5f0c1433db0ff2d7f77c9` taga30=delist；该件唯一副本已位于禁传区，本就严禁上传，移出禁传区无意义；delist 后 Tag-A 由 30 件 → 29 件） |
+| 1 | **§3.2 强制停手**（禁传区子件出现于上传清单） | `results/_v4_supp_l6_s38v2_rootcause_verdict.md`（Tag-A #30，`973103878D6F` · 24,847 B） | 表载：MAIN 内正式成果件（v3 §2.2 #30 字面 + 补账件 v2 §8.1 #30 字面）<br>实测：MAIN 内不存在；唯一副本位于 `〔本地归档区〕/results/`（禁传区子件） | **delist**（PI 拍板 `ask_9aa5f0c1433db0ff2d7f77c9` taga30=delist；该件唯一副本已位于禁传区，本就严禁上传，移出禁传区无意义；delist 后 Tag-A 由 30 件 → 29 件） |
 | 2 | **§2.5 强制停手**（表载与盘上 SHA/字节失配） | `docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md`（E-4） | 表载：v17 `2DD8039D47E4` · 198,204 B（v3 §2.4 字面 + 补账件 v2 §6.1 字面）<br>实测：v18 `CA8B95DDAA70` · 225,731 B | **以盘上 v18 现行版为准；v17 字面作废**（PI 拍板 `ask_9aa5f0c1433db0ff2d7f77c9` e4ver=v18；v18 = v17 + §22.10 E-35 6 子条 + §22.11 v18 SHA 自核 + §22.12 E-35 边界声明） |
 | 3 | **§3.3 留痕**（v2 信漂移 errata） | `letters/_v4_commission_upload_executor_2026_09_24_v2.md`（v2 件） | 表载：v3 §Z 字面挂 v2 条目 = `ADFA7DD03F76` · 13,012 B（实测为 v1 件 SHA-12 误挂 v2 条目）<br>实测：盘上 v2 件 = `FF2154CE182D` · 16,894 B | **以 v3 为准、v2 停用；errata 事实入档**（PI 拍板 `ask_9aa5f0c1433db0ff2d7f77c9` v2drift=errata_v2） |
 
@@ -2121,7 +2121,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 | 件 | 路径 | SHA-12 | 字节 | 页数 |
 |---|---|---|--:|:-:|
-| **盘上 PDF 实件** | `D:/私人资料/deposon-sub/results/_archive_2026_09_20/fiction_that_feeds_back.pdf` | `2D9EDC8C7303` | **356,123** | **23** |
+| **盘上 PDF 实件** | `_september_workspace/results/_archive_2026_09_20/fiction_that_feeds_back.pdf` | `2D9EDC8C7303` | **356,123** | **23** |
 | 主目录同名路径 | `deposon-repo/results/_archive_2026_09_20/` | — | — | — |
 | ↑ 实际仅 2 件 manifest | `_archive_manifest_2026_09_18.json`（4,712 B）/ `_archive_manifest_2026_09_20.json`（35,682 B） | — | — | — |
 | ↑ 0 件 PDF | `fiction_that_feeds_back.pdf`（主目录） | **不存在** | — | — |
@@ -2149,7 +2149,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
   | 23 件覆盖前留档 | 主区 16 + 副区 7 → `_non_upload_local_archive\results\_remote_version_freeze_2026_09_26\` | KIMI 回执 §2「**留档前置**：23 件远端版本…… 23/23 SHA 对拍一致」字面 |
 
 - **autocrlf 等效 false**（沿 KIMI 回执 §2 字面）：未走工作区 checkout 路径（API 直传字节），行尾转换面不存在
-- **C:/temp/ 12 件未读未动未传**（沿 KIMI 回执 §2 字面）：留痕
+- **〔本机路径〕/temp/ 12 件未读未动未传**（沿 KIMI 回执 §2 字面）：留痕
 - **远端 HEAD**：`a57d7fe80d15`（执行前 `c9b82e1` → 执行后 42 个 commit 追加，全程 fast-forward，0 force）（沿 KIMI 回执 §4 字面）
 
 **不动依据**：COZE 通报事实入档 ≠ 既有件改写；本棒仅事实登记；PI 21:45 拍板原文 + `ask_508073ac` yes 字面录入；KIMI 回执 §1/§2/§3/§4 字面录入。
@@ -2169,7 +2169,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 | 件 | SHA-12 | 字节 | E-37 子条字面源 |
 |---|---|--:|---|
 | `results/_upload_execution_receipt_kimi_2026_09_26.md`（KIMI 上传回执） | `B4AC31F917F3` | 4,191 | E-37.1 §1/§2 算术勘误 + E-37.4 415/42/13/23 字面源 |
-| `D:\私人资料\deposon-sub\results\_archive_2026_09_20\fiction_that_feeds_back.pdf`（FTFB 23 页） | `2D9EDC8C7303` | 356,123 | E-37.3 FTFB 路径修正字面源 |
+| `_september_workspace/results/_archive_2026_09_20/fiction_that_feeds_back.pdf`（FTFB 23 页） | `2D9EDC8C7303` | 356,123 | E-37.3 FTFB 路径修正字面源 |
 | `letters/_v4_commission_paper_final_glm_2026_09_24_v4.md`（v4 委托件，**E-37.3 引用失实对象**） | `D5337702CEC9` | 21,433 | E-37.3 L89 引用字面源 |
 | `letters/_v4_commission_〔IM〕_report_coze_2026_09_24_v4.md`（COZE v4 通报，**E-37.2 986 字面源**） | `802C705E1469` | 21,433 | E-37.2 19:50 986 字面源 |
 | `letters/_v4_commission_upload_executor_reply_v3_exec_2026_09_26.md`（v3 exec 回函，**派工单字面 4,471 B 实际挂此处**） | `631BB517F79D` | 4,471 | E-37.1 派工单字面差异对照 |
@@ -2214,7 +2214,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
   - **E-37.1**（KIMI 上传回执算术勘误）= **字面登记完成 + 勘误前后并列**（本棒仅字面登记 + 算术验证；KIMI 回执原件字面保留不动，KIMI 改字由 PI 另行处置）
   - **E-37.2**（主目录计数快照口径）= **三值并记 + accept_snapshot 拍板录入**（沿 PI 拍板 accept_snapshot 字面；下次大清理再压 <1000；12 件 19:50 后新增清单 / 8 件存量差额如实登记，PI 拍板已闭环）
   - **E-37.3**（FTFB 路径修正）= **盘上件实测 + 主目录 0 件 PDF 登记 + 后续引用补 `deposon-sub/` 前缀**（v4 委托件本体不动，引用面以下游 v20 字面为准；23 页沿 PI 拍板 + v4 委托件 L89 字面，本棒未独立验页数）
-  - **E-37.4**（今日拍板补录）= **4 子事实入档 + PI 拍板原文逐字保留**（letters 47 件剔除上传面 + 102 件补 commit + 415/42/13/23 通报事实入档 + autocrlf + C:/temp/）
+  - **E-37.4**（今日拍板补录）= **4 子事实入档 + PI 拍板原文逐字保留**（letters 47 件剔除上传面 + 102 件补 commit + 415/42/13/23 通报事实入档 + autocrlf + 〔本机路径〕/temp/）
   - **4 子条目全部状态明示，不擅自拍板**
 - **派工单字面与实测差异老实交代**：
   - 派工单写「`results/_upload_execution_receipt_kimi_2026_09_26.md`（4,471 B）」——本件实测 = **4,191 B**（差 280 B）；4,471 B 系 `letters/_v4_commission_upload_executor_reply_v3_exec_2026_09_26.md`（`631BB517F79D`，4,471 B）——派工单字面挂错路径或挂错字节，本棒按 §22.16.1 字面登记 + §22.17.2 字面列出 v3 exec 回函作对照源
@@ -2367,7 +2367,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 - **周报 §八前版锚登记**（沿派工单字面）：**225,731 B / SHA-12 `CA8B95DDAA70`**
   - **观测**：本数值 ≠ 当前 v15–v21 既读字段（如 v19=239,387 B / `849D76BE3A06`，v18=`5C7A5AB7AB59` 229,099 B，v17=222,478 B / `4E5D6AD0E0E9` 等）
   - **处置**（沿派工单字面）：不擅自反推周报所引前版的对应 v{x}；按字面登记，留待 PI 复核 / 派工单字面为准
-- **盘上未索引到周报原件的实测事实**（沿本棒老实交代）：派工单派发本棒 1 时未附周报原件；本棒对 `D:\私人资料\` 全树 glob / SHA 索引均未命中名为 `deposon_v3x_weekly_2026_09_26*` 的件——**周报原件 SHA 本体未在本棒独立核验**，仅按派工单字面登记上游 PI 表述，不代填 / 不编造周报路径
+- **盘上未索引到周报原件的实测事实**（沿本棒老实交代）：派工单派发本棒 1 时未附周报原件；本棒对 `〔本地资料区〕` 全树 glob / SHA 索引均未命中名为 `deposon_v3x_weekly_2026_09_26*` 的件——**周报原件 SHA 本体未在本棒独立核验**，仅按派工单字面登记上游 PI 表述，不代填 / 不编造周报路径
 
 **E-39.2 状态**：**字面登记完成**（沿派工单字面 + PI 附件表述按字面录入 + 周报原件未独立核验的事实如实交代）。
 
@@ -2455,7 +2455,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 - **succeeded ≠ 跑完**：本棒为 doc-writer 起草类，仅起草 §22.22 + §22.23 + §22.24 + 新末行；不代表「E-39.4 处置口径已扩散至全部下游引用 / 对外引用一律以盘上实测为准已全链落地 / 周报原件 SHA 本体已独立核验」——4 子条目全部状态注记沿下文
 - **「待 PI 复核 / 字面登记完成 / 处置落地 / 历史快照处理不动」状态注记**：
   - **E-39.1**（触发源 + 上游表述）= **字面登记完成**（沿 2026-09-26 doc-writer 棒 1 派工单字面 + PI 附件表述按字面录入）
-  - **E-39.2**（周报 §八 登记值）= **字面登记完成 + 周报原件未独立核验的事实如实交代**（派工单字面登记的 239,387 B / `849D76BE3A06` + 225,731 B / `CA8B95DDAA70` = 仅按派工单字面录入；`D:\私人资料\` 全树未命中周报原件名 = 不代填 / 不编造路径）
+  - **E-39.2**（周报 §八 登记值）= **字面登记完成 + 周报原件未独立核验的事实如实交代**（派工单字面登记的 239,387 B / `849D76BE3A06` + 225,731 B / `CA8B95DDAA70` = 仅按派工单字面录入；`〔本地资料区〕` 全树未命中周报原件名 = 不代填 / 不编造路径）
   - **E-39.3**（盘上实测值）= **盘上实测登记完成**（沿 §22.20 / §22.20.3 self-referential 自核口径 + 派工单「动手前先核后用」硬纪律实测 ✓）
   - **E-39.4**（差异性质 + 处置）= **字面登记 + 处置落地完成**（沿派工单字面 + 周报自身先例「引用面字节登记误差 / 只登记不修 / 本件数字一律以盘上实测为准」字面）
   - **4 子条目全部状态明示，不擅自拍板**
@@ -2498,7 +2498,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
   - `results/deposon_v17_fusion_fix.json`
   - `results/deposon_v18_api_supplements.json`
   - `results/deposon_v20_baselines.json`
-  - **实测**：`deposon-repo` / `D:\私人资料\_archive_deposon_2026_09_17\` / `D:\私人资料\deposon-sub\` 三处皆 NO（沿 §4 字面登记 + `_v3_review_r5_anchor_probe_2026_09_23.py` 复核）
+  - **实测**：`deposon-repo` / `〔本地资料区〕/_archive_deposon_2026_09_17/` / `_september_workspace` 三处皆 NO（沿 §4 字面登记 + `_v3_review_r5_anchor_probe_2026_09_23.py` 复核）
   - **Trae 立场**（沿 fix_addendum §5 字面）：「**无法修正不存在之物**」
 - **PI 裁决**（2026-09-27 问卷 ask_06d9754d01d894277a6baa90 Q3 字面）：
   - **废版标注**，**不再补件**
@@ -3424,7 +3424,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 | v26 末行（历史快照，一字不动） | `*出证 = Mavis 团队｜v26 续｜2026-09-27 by doc-writer \`agent-0032834a3e04\`｜勘误追加 E-43 ...*` | — | E-45 前文旧末行不动字面源 |
 
 > **写操作面**：**1 件写入**（本勘误件自身，纯追加）；上列 **29 件实测独立上游件（含走读回函 / 判决件 / 数据件 / 两件 r1 修复件）全部只读核验**——**不动 executor（含 batch 族 53 件 / t15 / t15r2 / cpath runner）/ 不动 prereg（add_T1 / add_T15r2 / add_L14V3）/ 不动 ruleset / result_v2 / coding_review / redesign / aggregate 四版 / upload 2 信 / addendum 族 / 委托信族 / 数据件 / 判决件 / 说明件 / 走读回函本体**
-> **`deposon-sub` 面只读说明**：表中 2 件位于仓外兄弟目录 `D:/私人资料/deposon-sub/`（`_tmp_v2_redesign.py` / `results/_test_conv_out.txt`，另 `_track2_qwen_check_2026_09_23.py` `3DDBA570C221` 于 §22.37.1 登记）——**只读核验，0 写入**（沿 9 铁律「不擅动 workspace 外」：本棒仅读取，未修改）
+> **`deposon-sub` 面只读说明**：表中 2 件位于仓外兄弟目录 `_september_workspace`（`_tmp_v2_redesign.py` / `results/_test_conv_out.txt`，另 `_track2_qwen_check_2026_09_23.py` `3DDBA570C221` 于 §22.37.1 登记）——**只读核验，0 写入**（沿 9 铁律「不擅动 workspace 外」：本棒仅读取，未修改）
 
 #### §22.38.3 v27 追加后 SHA 自核（**循环约束 self-referential**）
 
@@ -3720,7 +3720,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 **PI 拍板**：`ask_79fd9fad41e57ba8040361a8` **q2** = 「**R-4 登记作废**」（全推荐）——**原件不在盘，本棒沿派工单字面登记**。
 
-**被作废件（本棒实测复核 ✓）**：`D:/私人资料/deposon-sub/results/_test_conv_out.txt`（**仓外兄弟目录**，workspace 外）＝ **7,568 B / `6EFFE5EF7AE6`**｜mtime 2026-09-26 17:16:43（沿上游登记值）
+**被作废件（本棒实测复核 ✓）**：`_september_workspace/results/_test_conv_out.txt`（**仓外兄弟目录**，workspace 外）＝ **7,568 B / `6EFFE5EF7AE6`**｜mtime 2026-09-26 17:16:43（沿上游登记值）
 
 | 项 | 实测（本棒复核） | 判定 |
 |---|---|---|
@@ -3767,7 +3767,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 | 条目 | 旧行字面（本链 §22.37.1 表 2） | 实测（本棒复核 ✓） | 更正 |
 |---|---|---|---|
-| **R-20** | L3223 =「`---DONE---` 后又 `Write-Output 'DONE'` + **4 空行**」 | `D:/私人资料/deposon-sub/_check_conv_archive.ps1`（**仓外** · 2,326 B / `C89D46C47026` · 共 **50 行**）：**L44 `---DONE---`** → **L45-L49 = 5 个空行** → **L50 `Write-Output 'DONE'`** | **空行数 4 → 5**（冗余收尾结论不变；副区件 **0 改动**） |
+| **R-20** | L3223 =「`---DONE---` 后又 `Write-Output 'DONE'` + **4 空行**」 | `_september_workspace/_check_conv_archive.ps1`（**仓外** · 2,326 B / `C89D46C47026` · 共 **50 行**）：**L44 `---DONE---`** → **L45-L49 = 5 个空行** → **L50 `Write-Output 'DONE'`** | **空行数 4 → 5**（冗余收尾结论不变；副区件 **0 改动**） |
 | **R-21** | L3224 =「`rerun.py` 的 `SENSITIVE_PATTERNS` 实为 10 个」 | 盘上**不存在** `rerun.py`；实件 = **`results/_v4_track2_multimodel_rerun.py`**（**38,719 B / `5C0983EAAF11`**），**L138-L149** 逐条列 **10 个**模式（`api_key_literal` / `sk_literal` / `gpt_endpoint` / `claude_endpoint` / `ark_endpoint` / `Bearer_token` / `url_token_param` / `tp_token` / `sp_key` / `sk_teamo`） | **件名更正 = `_v4_track2_multimodel_rerun.py`**（10 ≠ 11 结论不变）；另：verdict 括注只点 `tp- / sp- / sk-teamo-` 三类，而 10 个中含 **3 个端点类**（`gpt_endpoint` / `claude_endpoint` / `ark_endpoint`）⇒ **计数口径须一并对齐**，本棒**0 代 PI 择定口径** |
 
 #### §22.43.4 E-47.4 三条新发现（**慢处置 A 首报 · 勘误链未载**）
@@ -4536,7 +4536,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 | 项 | 值 |
 |---|---|
-| **源（仓外原件 · 0 动）** | `D:\私人资料\_non_upload_local_archive\results\_v4_supp_l14_n11full_verdict.md` ＝ `8eef73bf9856` / **19,697 B**（本棒实测；与 `db0d6e56a497` §3.2 派工字面**逐字 MATCH**） |
+| **源（仓外原件 · 0 动）** | `〔本地归档区〕/results/_v4_supp_l14_n11full_verdict.md` ＝ `8eef73bf9856` / **19,697 B**（本棒实测；与 `db0d6e56a497` §3.2 派工字面**逐字 MATCH**） |
 | **落位（仓内 repo 新件）** | `results/_v4_supp_l14_n11full_verdict.md` ＝ `8eef73bf9856` / **19,697 B**（本棒落盘后实测） |
 | **逐字同源自证** | ✅ **SHA-256 全 64 位全等** ＝ `8eef73bf985671b5dcf677ade62bc95de0187efd0b0c5bebf45187a9e8d364ef`（源 ／ 落位**两件独立复算同值**） |
 | **复制前撞名核查** | ✅ **repo 内 0 撞名**（`Test-Path` 实测 ＝ False；**0 覆写任何既有件**） |
@@ -4582,7 +4582,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 | 3 | `results/_v5_confirm_b2_decisions_register_2026_09_29.md` | `63ded68919df` | 28,383 | 终值口径 ＋ 必带字样 ＋ 根因未证照录源 |
 | 4 | `letters/_v4_commission_inventory_anchor_note_2026_09_29.md` | `849f8eba5bf0` | 2,655 | 代际沿革「中间代际 0 跳过」纪律面 |
 | 5 | `.tmp/_run_frozen_0touch_verify_2026_09_27.py`（锚脚本） | `48246f41e7d3` | 2,309 | E-51.1 登记值 `29A853444D42` 出处（L18 ＋ L12 `.upper()`） |
-| 6 | `D:\私人资料\_non_upload_local_archive\results\_v4_supp_l14_n11full_verdict.md`（**仓外原件**） | `8eef73bf9856` | 19,697 | E-51.2 源（**0 动**） |
+| 6 | `〔本地归档区〕/results/_v4_supp_l14_n11full_verdict.md`（**仓外原件**） | `8eef73bf9856` | 19,697 | E-51.2 源（**0 动**） |
 | 7 | `results/_v4_supp_l14_n11full_verdict.md`（**仓内 repo 落位件 · 本棒新建**） | **`8eef73bf9856`** | **19,697** | E-51.2 落位（**逐字同源 ✓**） |
 | 8 | `.tmp/_v16_full_decoded.txt` | `fdfe315ff54a` | 174,424 | E-32.2 字面源（L1250 ／ L1254–1257 ／ L1334） |
 
@@ -4629,7 +4629,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 ---
 
-*出证 = Mavis 团队｜v33 续｜2026-09-29 by doc-writer `agent-0032834a3e04`｜勘误追加 E-51（**PI 确认批 12 两裁项执行面落地**：① **Q5「登记值差异入勘误链」**＝ FROZEN-3 `results/_v3_v4_achievements_inventory_2026_09_24.md` 锚脚本登记 `29A853444D42`/192,160 vs 本棒盘实测 **`2fb5987f544d`/192,292**（**差 132 B**）之事实登记，附**三代沿革**（①代 192,160 → 中间代 `d34c0b417268`/192,289 ＋129 B → 终值 192,292 ＋3 B）＋**必带字样**「登记值为修正前过期值（快照态），终值见确认批 2 补登件」＋**根因未证照录**（`63ded68919df` §2.3「字节级替换对至今未证」⇒ **0 立根因、0 跨件套用锚 2 面机制**）＋ **0 回改登记值、0 覆写盘上件、0 改锚脚本、0 批量改写①代登记件**（终值口径已由 `63ded68919df` §2.2 ＋ `849f8eba5bf0` §1 立线 ⇒ **0 重立口径、0 重复计数**）· ② **㊶「L14 verdict `8EEF73BF9856` 补入仓」**＝ 仓外原件 `D:\私人资料\_non_upload_local_archive\results\_v4_supp_l14_n11full_verdict.md`（`8eef73bf9856`/19,697 B）**逐字同源复制**至 `results/_v4_supp_l14_n11full_verdict.md`（落盘后实测**同 SHA-256 全 64 位全等**、**0 撞名**、**0 移出 0 删除 0 改仓外原件**、**0 归一化换行符**——源件末字节 ＝ 41 原样保留）＋ **自报值 `764F24A21AC8` vs 盘实测 `8eef73bf9856` 差异照录**（该差异**已由本链 E-32.2 §21.2 登记** ⇒ **0 重立、0 二次计数**；本条只新增「仓内 repo 面落位后同一 SHA 仓内仓外双点并存」读面）＋ **既有拍板语义逐字照录**（`ask_9484b696` erratum_note：引用沿自报值 `764F24A21AC8` ／ verdict 本体不动——盘实测 `8eef73bf9856` 系 cleanup 后迁仓文件之事实 SHA，沿 v14 §20.5，非「覆写 verdict 本体」）＋ **0 改 verdict 0 改锚件 0 动 L2 verdict 0 改 FROZEN 六件**· ＋ **0 修任何被指对象本体、0 翻案 0 改判定层、0 改任何 K-*／TH-* 字面、0 新设阈值、0 新建/合并派生 JSON、0 读 key、0 次 LLM/0 次 API/0 proxy/0 gateway、仓外 0 写**），源 = **PI 确认批 12 裁项两件**（问卷 `ask_58ea45aadddbefba952ffd51` 沿 `db0d6e56a497` L5 字面转录，**原件 0 命中于盘上 ⇒ 0 独立复算、0 编造、0 代填原话**）＋ `db0d6e56a497` 15,898 B ＋ `2fb5987f544d` 192,292 B ＋ `63ded68919df` 28,383 B ＋ `849f8eba5bf0` 2,655 B ＋ `48246f41e7d3` 2,309 B ＋ `8eef73bf9856` 19,697 B（仓外源 ＋ 仓内落位**各 1 件**）＋ `fdfe315ff54a` 174,424 B）*
+*出证 = Mavis 团队｜v33 续｜2026-09-29 by doc-writer `agent-0032834a3e04`｜勘误追加 E-51（**PI 确认批 12 两裁项执行面落地**：① **Q5「登记值差异入勘误链」**＝ FROZEN-3 `results/_v3_v4_achievements_inventory_2026_09_24.md` 锚脚本登记 `29A853444D42`/192,160 vs 本棒盘实测 **`2fb5987f544d`/192,292**（**差 132 B**）之事实登记，附**三代沿革**（①代 192,160 → 中间代 `d34c0b417268`/192,289 ＋129 B → 终值 192,292 ＋3 B）＋**必带字样**「登记值为修正前过期值（快照态），终值见确认批 2 补登件」＋**根因未证照录**（`63ded68919df` §2.3「字节级替换对至今未证」⇒ **0 立根因、0 跨件套用锚 2 面机制**）＋ **0 回改登记值、0 覆写盘上件、0 改锚脚本、0 批量改写①代登记件**（终值口径已由 `63ded68919df` §2.2 ＋ `849f8eba5bf0` §1 立线 ⇒ **0 重立口径、0 重复计数**）· ② **㊶「L14 verdict `8EEF73BF9856` 补入仓」**＝ 仓外原件 `〔本地归档区〕/results/_v4_supp_l14_n11full_verdict.md`（`8eef73bf9856`/19,697 B）**逐字同源复制**至 `results/_v4_supp_l14_n11full_verdict.md`（落盘后实测**同 SHA-256 全 64 位全等**、**0 撞名**、**0 移出 0 删除 0 改仓外原件**、**0 归一化换行符**——源件末字节 ＝ 41 原样保留）＋ **自报值 `764F24A21AC8` vs 盘实测 `8eef73bf9856` 差异照录**（该差异**已由本链 E-32.2 §21.2 登记** ⇒ **0 重立、0 二次计数**；本条只新增「仓内 repo 面落位后同一 SHA 仓内仓外双点并存」读面）＋ **既有拍板语义逐字照录**（`ask_9484b696` erratum_note：引用沿自报值 `764F24A21AC8` ／ verdict 本体不动——盘实测 `8eef73bf9856` 系 cleanup 后迁仓文件之事实 SHA，沿 v14 §20.5，非「覆写 verdict 本体」）＋ **0 改 verdict 0 改锚件 0 动 L2 verdict 0 改 FROZEN 六件**· ＋ **0 修任何被指对象本体、0 翻案 0 改判定层、0 改任何 K-*／TH-* 字面、0 新设阈值、0 新建/合并派生 JSON、0 读 key、0 次 LLM/0 次 API/0 proxy/0 gateway、仓外 0 写**），源 = **PI 确认批 12 裁项两件**（问卷 `ask_58ea45aadddbefba952ffd51` 沿 `db0d6e56a497` L5 字面转录，**原件 0 命中于盘上 ⇒ 0 独立复算、0 编造、0 代填原话**）＋ `db0d6e56a497` 15,898 B ＋ `2fb5987f544d` 192,292 B ＋ `63ded68919df` 28,383 B ＋ `849f8eba5bf0` 2,655 B ＋ `48246f41e7d3` 2,309 B ＋ `8eef73bf9856` 19,697 B（仓外源 ＋ 仓内落位**各 1 件**）＋ `fdfe315ff54a` 174,424 B）*
 
 ---
 
@@ -5004,7 +5004,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 （⚠️ 同行邻近字面：同件 **L379** 的派生件表只列 **4 件**（`_tmp_v1_recompute.py` / `_tmp_v2_redesign.py` / `_tmp_v2_compare.json` / `_tmp_degen.py`），**未列 `_tmp_verify.py`** ⇒ ⭐ **「5 件」名单以 L427 为准**，L379 为**同件内 4 件面**；**0 回改该件**、**0 代裁二者关系**。）
 
-**（2）本棒逐件实测（检索域 ＝ `D:\私人资料\deposon-repo` 全树 ＋ `D:\私人资料\deposon-sub` 全树 ＋ `D:\私人资料` 顶层）**
+**（2）本棒逐件实测（检索域 ＝ `_september_workspace` 全树 ＋ `_september_workspace` 全树 ＋ `〔本地资料区〕` 顶层）**
 
 | # | 件名 | **本棒落位** | 本棒实测 SHA-12 | 字节 | 台账 `cc498bc28525` 登记值 | 判定 |
 |:-:|---|---|---|---|---:|---|---|
@@ -5016,7 +5016,7 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 **（3）`deposon-repo` 根目录实测**
 
-⇒ ⭐ **repo 根 `_tmp_*` ＝ 0 命中**（本棒 `Get-ChildItem -Recurse -Filter "_tmp_*"` 于 `deposon-repo` 全树 ＋ 根目录列举**双路实测 0 件**）⇒ **5 件 0 件留在原题面所述位置**（`D:/私人资料/deposon-repo/` 根目录）。
+⇒ ⭐ **repo 根 `_tmp_*` ＝ 0 命中**（本棒 `Get-ChildItem -Recurse -Filter "_tmp_*"` 于 `deposon-repo` 全树 ＋ 根目录列举**双路实测 0 件**）⇒ **5 件 0 件留在原题面所述位置**（`_september_workspace` 根目录）。
 
 ### §22.64.2 E-56.2 「清理」的实际处置 ＝ **09-26 移出（非删除）** ＋ 现状核验（**登记「已处置」而非「本棒处置」**）
 
@@ -5047,9 +5047,9 @@ PI 拍板（`ask_249ba885` 三题）原文按逐字语义记：
 
 | 检索面 | 方法 | 结果 |
 |---|---|---|
-| ① `D:\私人资料\deposon-repo` 全树 | `Get-ChildItem -Recurse -Force -Filter "*v2_compare*"` ＋ 5 件名 `-Include` 逐名扫描 ＋ 内容检索 `_tmp_v2_compare` | **文件名 0 命中**；**内容命中 3 处**（全部在 `5fbec21e0ad2` L50 / L379 / L404 / L427 的**字面引用**面） |
-| ② `D:\私人资料\deposon-sub` 全树 | 同款递归 glob（`*v2_compare*` / 5 件名） | **0 命中** |
-| ③ `D:\私人资料` 全树 ＋ 顶层目录枚举 | 全树 `*v2_compare*` ＋ `*tmp*.json` / `*compare*.json` 枚举 | **0 命中**；`*tmp*.json` 命中 3 件（**均非**本件：`deposon-repo\.tmp_setA_run1.json` / `deposon-sub\results\_archive_2026_09_20\_teamorouter_smoke_tmp.json` / `_non_upload_local_archive\results\_v4_v5_t2_multimodel_compare.json`） |
+| ① `_september_workspace` 全树 | `Get-ChildItem -Recurse -Force -Filter "*v2_compare*"` ＋ 5 件名 `-Include` 逐名扫描 ＋ 内容检索 `_tmp_v2_compare` | **文件名 0 命中**；**内容命中 3 处**（全部在 `5fbec21e0ad2` L50 / L379 / L404 / L427 的**字面引用**面） |
+| ② `_september_workspace` 全树 | 同款递归 glob（`*v2_compare*` / 5 件名） | **0 命中** |
+| ③ `〔本地资料区〕` 全树 ＋ 顶层目录枚举 | 全树 `*v2_compare*` ＋ `*tmp*.json` / `*compare*.json` 枚举 | **0 命中**；`*tmp*.json` 命中 3 件（**均非**本件：`deposon-repo\.tmp_setA_run1.json` / `deposon-sub\results\_archive_2026_09_20\_teamorouter_smoke_tmp.json` / `_non_upload_local_archive\results\_v4_v5_t2_multimodel_compare.json`） |
 
 **（2）回收站面（**如实登记 0 命中**）**
 

@@ -164,6 +164,6 @@ GLM-N10 (d=1.314):
 **报告完成**: 7 铁律 0 触动, FPR 4.44% GRAY 如实披露, 沿 KIMI 7 方向老实入 paper §7.2 (限制节)
 
 **3 制品路径 + SHA-12**:
-- `D:\私人资料\deposon-repo\corpus\v20\by_model\GLM_1\three_way_glm_slot_blind_test_2026_09_16.json` SHA-12=`268ab1239a8a`
-- `D:\私人资料\deposon-repo\corpus\v20\by_model\GLM_2\glm_artifact_v_2026_09_16.json` SHA-12=`39732a92b5c9`
-- `D:\私人资料\deposon-repo\results\deposon_p_k_cross_subject_fingerprint_blind_test_2026_09_16.json` SHA-12=`576eaf8d7431`
+- `_september_workspace/corpus/v20/by_model/GLM_1/three_way_glm_slot_blind_test_2026_09_16.json` SHA-12=`268ab1239a8a`
+- `_september_workspace/corpus/v20/by_model/GLM_2/glm_artifact_v_2026_09_16.json` SHA-12=`39732a92b5c9`
+- `_september_workspace/results/deposon_p_k_cross_subject_fingerprint_blind_test_2026_09_16.json` SHA-12=`576eaf8d7431`

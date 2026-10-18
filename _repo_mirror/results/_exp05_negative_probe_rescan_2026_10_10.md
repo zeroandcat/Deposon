@@ -26,8 +26,8 @@
 
 | 项 | 内容 |
 |---|---|
-| **仓内扫描根** | `D:\私人资料\deposon-repo\`（递归 · `-Force` 含隐藏项） |
-| **归档区扫描根** | `D:\私人资料\_non_upload_local_archive\`（递归 · `-Force`）—— **只读 · 0 写入**（R5／归档区管理纪律） |
+| **仓内扫描根** | `_september_workspace`（递归 · `-Force` 含隐藏项） |
+| **归档区扫描根** | `〔本地归档区〕`（递归 · `-Force`）—— **只读 · 0 写入**（R5／归档区管理纪律） |
 | **仓内探测手段** | `Test-Path`（逐件）＋ 递归 `Get-ChildItem -File` 名称正则匹配（`distortion_calculator｜P_B_V0_anchors`） |
 | **归档区探测手段** | 递归 `Get-ChildItem -File` 名称正则匹配（`distortion_calculator｜P_B_V0_anchors｜^P_B`）＋ `verifier\handoff` 目录逐件列举 ＋ `tools\` 目录逐件列举 |
 | **⛔ 0 探测面（如实声明）** | ① 归档区**之外**的任何位置（他机／外接盘／云端／未同步远端）**本轮 0 探测**；② 归档区 `tmp`／`cache`／`installers` 内部**未逐件内容级比对**（仅文件名层扫描）；③ 文件名被改动过者**不可由名称扫描命中**（**改名件漏检风险如实登记**） |
@@ -72,7 +72,7 @@
 
 | 项 | 值 |
 |---|---|
-| **绝对路径（source）** | `D:\私人资料\_non_upload_local_archive\docs\V3X\EMBEDDING_VISION_V1_IMPL_2026_09_10.md` |
+| **绝对路径（source）** | `〔本地归档区〕/docs/V3X/EMBEDDING_VISION_V1_IMPL_2026_09_10.md` |
 | **仓内相对路径（建议 dest）** | `docs/V3X/EMBEDDING_VISION_V1_IMPL_2026_09_10.md`（**repo 相对路径规范** · 沿既有件体例） |
 | **bytes** | **20,392** |
 | **last-write** | 2026-09-17 23:00:18（目录时间戳口径） |
@@ -80,8 +80,8 @@
 
 **拉回路径（PI 核准后照此执行 · 本轮 ⛔ 0 执行拉回）**：
 ```
-source : D:\私人资料\_non_upload_local_archive\docs\V3X\EMBEDDING_VISION_V1_IMPL_2026_09_10.md
-dest   : D:\私人资料\deposon-repo\docs\V3X\EMBEDDING_VISION_V1_IMPL_2026_09_10.md
+source : 〔本地归档区〕/docs/V3X/EMBEDDING_VISION_V1_IMPL_2026_09_10.md
+dest   : _september_workspace/docs/V3X/EMBEDDING_VISION_V1_IMPL_2026_09_10.md
 方式   : 非破坏式复制（⛔ 0 覆盖现存件 · ⛔ 0 移动 · ⛔ 0 删除原件）
 归位判据: 副本与原件 SHA-256 复算 MATCH ⇒ 方可宣告归位成功
 回滚   : 删副本即可（原件始终不动）

@@ -4,7 +4,7 @@
 - **授权锚**：PI 2026-10-10「轮56 卡R5／卡R6」二卡卡答 ——
   - **卡R5**（`ask_a04bb2fbc92e69910998e31e`，库内 `title` 逐字：「**deposon 轮56 卡R5（串行·第 5 卡）· U 面落档与登记（四题）**」）；**卡答时点 ＝ 2026-10-10 18:32:13.120 +0800**（库内 `answered_at` ＝ `submittedAt` ＝ `1791628333120` 实测换算）；`status` ＝ `answered`；创建 18:31:06.710。
   - **卡R6**（`ask_f225786a7cb6006214e74363`，库内 `title` 逐字：「**deposon 轮56 卡R6（串行·第 6 卡）· give-up 边界＋P 型计数（四题）**」）；**卡答时点 ＝ 2026-10-10 18:35:45.849 +0800**（库内 `answered_at` ＝ `submittedAt` ＝ `1791628545849` 实测换算）；`status` ＝ `answered`；创建 18:33:48.860。
-- **卡答第一源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（表 `questionnaire_requests`；两卡 `request_id` 各 **1** 行命中），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。**本棒读得时点 ＝ 2026-10-10 18:46:09.440 +0800**；本件 §3 之题面、选项与答文**逐字取自该库**。⛔ **0 网络 · 0 写库 · 0 改库 · 0 建表 · 0 提交**。
+- **卡答第一源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`（表 `questionnaire_requests`；两卡 `request_id` 各 **1** 行命中），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。**本棒读得时点 ＝ 2026-10-10 18:46:09.440 +0800**；本件 §3 之题面、选项与答文**逐字取自该库**。⛔ **0 网络 · 0 写库 · 0 改库 · 0 建表 · 0 提交**。
 - **⚠ 读得时点 ≠ 卡答时点（诚实交代 · 0 混同）**：`answered_at` ＝ **效力发生时点**；本棒读库之时（18:46:09.440）＝ **证据取得时点**；二者**不可混同**（沿 `B27814792394` 与 `FAE5CC2AED9C` 之同族纪律）。⛔ **0 以活库 mtime 代表任一时点**。
 - **⚠ 转录一致性声明（如实 · 非漏报）**：派工单所载六答（`a03`＝`yi`／`a07`＝`yi`／`a08`＝`jia`／`a11`＝`jia`／`a09`＝`yi`／`a10`＝`yi`）经**本棒以库原件独立复核**，与库内 `reply_payload` 之 `answers` **逐项相符（0 分歧）**（§3.2 对照表）。本棒**未**依赖转述，一律以**库原件**为准。
 - **本件**：`results/_round56_terminal_boundary_effectivity_register_2026_10_10.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False` ＋ `results/*round56_terminal_boundary*` glob **0** 命中实测，§9.1）。
@@ -41,7 +41,7 @@ PI 于卡R5／卡R6 就**五终判之三项界分争域（`af`／`kd`／`give-up
 
 | 项 | 值 |
 |:--|:--|
-| 库路径 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` |
+| 库路径 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` |
 | 表 | `questionnaire_requests`（列：`request_id`／`session_id`／`agent_name`／`msg_id`／`request_json`／`status`／`created_at`／`answered_at`／`reply_payload`／`injected_at`／`dismissed_at`／`origin_channel_context_json`） |
 | 卡R5 命中 | **1** 行（`request_id` ＝ `ask_a04bb2fbc92e69910998e31e`） |
 | 卡R6 命中 | **1** 行（`request_id` ＝ `ask_f225786a7cb6006214e74363`） |
@@ -187,7 +187,7 @@ PI 于卡R5／卡R6 就**五终判之三项界分争域（`af`／`kd`／`give-up
 | **派生 JSON** | ⛔ **0 新建／0 合并**（仅**只读**查询运行时库之既有 `reply_payload`） |
 | **临时脚本** | 落 `%TEMP%`（非工作区）· 执行毕经 `rm --` **可恢复删除通道**清理 ⇒ 实测残留 **0**；⛔ **0 落盘于工作区** |
 | **运行时库** | **只读**（`mode=ro`）—— 0 写入／0 修改／0 建表／0 提交 |
-| **`D:\私人资料\_non_upload_local_archive`** | ⛔ **0 触及** |
+| **`〔本地归档区〕`** | ⛔ **0 触及** |
 | **阈值／门柱／`TH-*`／`K-*`／`N*`** | ⛔ **0 调** |
 
 ---

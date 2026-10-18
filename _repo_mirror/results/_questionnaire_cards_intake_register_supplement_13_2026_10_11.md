@@ -7,8 +7,8 @@
 - **件系**：本件系第十三批登记件 `results/_questionnaire_cards_intake_register_supplement_12_2026_10_10.md`（本棒当轮实测 SHA-12 `1ff6919967a7`）之**补续落册（第十四批）**；上承链（SHA-12 均为本棒当轮实测）→ 第一批 `d917180db36f`、第二批 `193386b9f23c`、第三批 `dc43e3cb7610`、第四批 `11681f0ad861`、第五批 `d6ff041a9df9`、第六批 `edb57308170d`、第七批 `95ba771fa760`、第七批 `0984955b0370`、第八批 `1fb8eac82781`、第八批 `a651f76a6547`、第九批 `29b30d845841`、第十批 `b6c0b4f29152`、第十一批 `6c18d336e018`、第十二批 `52c97d1c11e9`、第十三批 `1ff6919967a7`。⛔ 0 编辑／覆写／修改前十三批登记件；⛔ 0 重复转录其已收录之卡。
 - **本批口径**：**窗口续录批** —— 续录派工指定之**本轮 7 张目标卡**（补录卡·④字面／卡六／卡七／卡八／卡九／卡十／归置卡四）。合计 **7 卡／25 答**（**选项通道 22 答 ＋ Other 通道 3 答**）。
 - **编制**：**doc-writer**（文稿起草官 · 分支会话 `mvs_86cf4535920149d6be98e51a04673b60`｜署名如实 · **0 冒充 PI／parent／protocol-keeper／verdict-keeper／verifier／worker**）
-- **来源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`，表 `questionnaire_requests`。本棒以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交、0 checkpoint）。
-- **备核源**：会话消息面 `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\messages.jsonl` 之 `messages.jsonl`（只读检索，作二次交叉核对）。
+- **来源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`，表 `questionnaire_requests`。本棒以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交、0 checkpoint）。
+- **备核源**：会话消息面 `〔本机用户目录〕/.minimax/v2/sessions/2026/09/01/02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5/messages.jsonl` 之 `messages.jsonl`（只读检索，作二次交叉核对）。
   - ⚠ **会话目录反解纪律**：目录名 ＝ `session_` ＋ 会话 id `mvs_bbeb804b1a6a41109be740636eed1709` 之 URL-safe base64 无填充编码（该 id ＝ 本批 7 卡库内 `requester.sessionId`／表列 `session_id` 实测值，亦即 PI 出卡之所在会话）。本棒**先独立反解定位**（`base64.urlsafe_b64encode(b"mvs_bbeb804b1a6a41109be740636eed1709")` → 去填充 `=` → URL-safe）得 `bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5`，并**回验解码**得 `mvs_bbeb804b1a6a41109be740636eed1709`（逐位相符），⛔ **0 凭记忆直接引用路径**。
   - ⚠ **「本会话」之如实澄清**：本棒执行者为**子分支会话** `mvs_86cf4535920149d6be98e51a04673b60`；本件之备核源**据库内 `session_id` 实测**取 PI 出卡会话之目录（即上述 `02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5`），⛔ **0 冒充已核子会话目录**、⛔ **0 以子分支目录充作卡答原始记录**。
   - ⚠ **形近近邻陷阱（本棒实测仍在位 · 未误取）**：同层另存 `02-38-47-809-session_bXZzX2IiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5` —— **时间戳前缀完全相同**，仅 base64 段第 6 字符起一字之差（`…X2JiZW…` ↔ `…X2IiZW…`）。本棒**回验解码**该近邻 base64 段得 `mvs_b"eb804b1a6a41109be740636eed1709`（⛔ **非** PI 出卡会话 id `mvs_bbeb804b1a6a41109be740636eed1709`）⇒ 二者**可判别**。本棒实测该近邻目录**存在**，目录项计 **1** 项、****无**** `messages.jsonl`；本件之核对源**取自目标目录**（目标目录项计 **32** 项、****有**** `messages.jsonl`），⛔ **0 读取近邻目录之内容**。
@@ -1294,7 +1294,7 @@ F-4：四案空间已穷尽（CH-D已执行/CH-A 0新读数/CH-B·C素材0）—
 
 ### 2.2 交叉核对（独立第二源：会话消息面 `messages.jsonl`）
 
-读得时点 `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\messages.jsonl`：**3,316,611** bytes ／SHA-12 `8d8118406839` ／非空行 **521**。本件以各 `ask_…` requestId 检索，独立于运行时库**交叉核对**卡答（**0 判读 · 0 补写**）：
+读得时点 `〔本机用户目录〕/.minimax/v2/sessions/2026/09/01/02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5/messages.jsonl`：**3,316,611** bytes ／SHA-12 `8d8118406839` ／非空行 **521**。本件以各 `ask_…` requestId 检索，独立于运行时库**交叉核对**卡答（**0 判读 · 0 补写**）：
 
 | 卡 | `request_id` | 消息面原始答复行 | 消息面 `role` | `answers` 与库内 `reply_payload` | `submittedAt` |
 |---:|---|---:|---|:--:|:--:|
@@ -1451,7 +1451,7 @@ F-4：四案空间已穷尽（CH-D已执行/CH-A 0新读数/CH-B·C素材0）—
 | 会话消息面 | **只读**（仅 `messages.jsonl` 检索）—— 0 写入 |
 | 派生 JSON | ⛔ **0 新建／0 合并**任何派生物 JSON（中间导出为一次性文本/脚本产物，非交付件 · 已清理） |
 | 本件交付前之自身更正 | **2**（如实登记）—— 首版生成后经**只读**复核，发现并修正**两处非卡答字面**之瑕疵：① §3.3「前批自报值之逐件比对」一句之**可比对件数**误将「盘上落册件总数」当作「第十三批 §3.3 表所载件数」，且 §2.5 第 2 条之「卡面 0 落盘」原为固定断言、未由程序化实测得出（已改为：比对**自第十三批件正文解析自报值后逐件机械比对**；卡面 0 落盘改为**按实际未命中清单**呈现）；② §1 各节标题、§2 对账表、§2.4 各表之**派工别名前缀误植**（别称本身已含「卡」字，致呈为「卡卡六」等重复字面）。经修正生成器后**逐次重新落盘**。⚠ 二者**均不涉**任何卡答字面（§1 全部题面与答文系自库原件程序化照录，**未受影响**，落盘后逐字复核见交付回执）。**最终版落盘后仅作只读实测复核**（指纹／版式／字面比对），⛔ **0 二次改写**。📌 各次重新落盘均系**覆写本棒自身前版**（前版已先经可恢复删除通道 `rm --` 清除，落前撞名复测仍为 `Test-Path` ＝ **false**、同名 glob 命中 **0**）；⛔ **0 触及任何既有件**（前十三批落册件及各他棒产出件之指纹与内容**逐件比对未变**，见 §3.3）。 |
-| 归档禁区 | **未触及** —— ⛔ 0 访问／0 读取 `D:\私人资料\_non_upload_local_archive` |
+| 归档禁区 | **未触及** —— ⛔ 0 访问／0 读取 `〔本地归档区〕` |
 
 ### 3.2 落前撞名实测
 

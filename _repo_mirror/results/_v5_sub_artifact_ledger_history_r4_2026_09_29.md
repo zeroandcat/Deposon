@@ -30,11 +30,11 @@
 
 | 面 | 路径 | 本波纳入件（`.md`，递归） | 合计字节 | r1 / r3 记数 | 偏差处置 |
 |---|---|---:|---:|---|---|
-| C | `D:\私人资料\_non_upload_local_archive\`（递归 `.md`） | **249** | 4,060,068 B | r1 §1.1 记 249 | 0 偏差 |
-| A（09-29 面业务件） | `D:\私人资料\deposon-repo\results\`（仅 r2 §13-4 列名 8 件） | **8** | 210,529 B | r2 §13-4 列名 8 | 0 偏差（台账本体 0 纳入） |
-| `docs/` | `D:\私人资料\deposon-repo\docs\` | **131** | 2,117,230 B | r1 §1.4 记 131 | 0 偏差 |
-| `letters/` | `D:\私人资料\deposon-repo\letters\` | **69** | 1,473,596 B | r1 §1.4 记 68 | **实测 69，漂移 +1 ⇒ 归 ②** |
-| B（只读比对面） | `D:\私人资料\deposon-sub\` | 100（本件 0 登记） | 1,709,574 B | r3 §1.1 记 100 | 0 偏差 |
+| C | `〔本地归档区〕`（递归 `.md`） | **249** | 4,060,068 B | r1 §1.1 记 249 | 0 偏差 |
+| A（09-29 面业务件） | `_september_workspace/results/`（仅 r2 §13-4 列名 8 件） | **8** | 210,529 B | r2 §13-4 列名 8 | 0 偏差（台账本体 0 纳入） |
+| `docs/` | `_september_workspace/docs/` | **131** | 2,117,230 B | r1 §1.4 记 131 | 0 偏差 |
+| `letters/` | `_september_workspace/letters/` | **69** | 1,473,596 B | r1 §1.4 记 68 | **实测 69，漂移 +1 ⇒ 归 ②** |
+| B（只读比对面） | `_september_workspace` | 100（本件 0 登记） | 1,709,574 B | r3 §1.1 记 100 | 0 偏差 |
 
 > **`docs/` 计数漂移的实测结论**：派工单口径曾提「131 → 134」；本波 2026-09-29 递归实测 `docs/` **为 131**，**未见 134**。本件按实测 131 登记，**0 强行对齐任一口径**，差异整体归 ②。
 > **`letters/` 计数漂移的实测结论**：派工原口径 68 / r1 §1.4 记 68；本波实测 **69**，**+1**。归 ②。
@@ -395,7 +395,7 @@
 - `r4-H9-X66` | C | `docs/V3X/REPLY_TO_MAVIS_2026_09_11.md` | `b057e075b931` | L95–97 | ## 三、反馈项 3: RAG 失败分析 — 同意(含补充实锤与适用边界) 〔**同意 5 次证伪收口与根因 6**: 22 caption 是"22 个独立标签集", 与 GSM8K(数学)/StrategyQA(常识)跨域, 不构成知识库。5 次 RAG 全部 ≤ no-RAG baseline(26/30), 证据链完整。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H9-X67` | C | `docs/V3X/REVIEWER_B_AUDIT_2026_09_09_mavis.md` | `7997a650cce3` | L47–49 | ## 6. 已知边界(诚实声明) 〔- 简化版: 不复制 /tmp 副本(因未改 frozen data, 简化)〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H9-X68` | C | `docs/V3X/TEAM_RESTRUCTURING_PROPOSAL_2026_09_11.md` | `86cc56e3b4d7` | L37–39 | ### 2.2 关键边界 〔- `.builtin/` 现有 3 文件 0 触动: skill spec **不写** `explore/verifier/worker/agent.md`, 走 plugin 层嵌入但**不修改**现有 3 agent.md〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H9-X69` | C | `docs/V3X/TEAM_RESTRUCTURING_PROPOSAL_2026_09_11.md` | `86cc56e3b4d7` | L122–124 | ### 6.2 边界规则 〔- `verifier/` 严守 0 触动: 即使路径实施需 verifier 能力, 走 `.builtin/verifier/agent.md` 系统内置, **不引用** `C:\Users\Administrator\.minimax\agents\verifier\` 任何文件〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H9-X69` | C | `docs/V3X/TEAM_RESTRUCTURING_PROPOSAL_2026_09_11.md` | `86cc56e3b4d7` | L122–124 | ### 6.2 边界规则 〔- `verifier/` 严守 0 触动: 即使路径实施需 verifier 能力, 走 `.builtin/verifier/agent.md` 系统内置, **不引用** `〔本机用户目录〕/.minimax/agents/verifier/` 任何文件〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H9-X70` | C | `docs/V3X/V2_PHASE2_3_INTEGRATION_2026_09_11.md` | `8178e61e7c97` | L111–112 | **目标达成** (沿 Trae 修正目标: 2 PASS 锁定 + 2 GRAY 边界明确): 〔- **2 PASS 锁定**: P-C (STRONG_PASS) + P-D (PASS) ✅〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H9-X71` | C | `docs/V3X/V2_PHASE5_F5_2026_09_11.md` | `4098698f43de` | L66–67 | **P-B 守恒失败的根因**: image 通道 R 太高 (0.97) + cross A 太低 (0.28) 导致 〔T + R + A 总是 > 1。需要在守恒公式中**显式区分** R_image 的"模板冗余"和 R_text 的"信息冗余"。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H9-X72` | C | `docs/V3X/V3X_D7_ONE_PAGE_SUMMARY_2026_09_09_mavis.md` | `bb4cb579943c` | L20–22 | 3 PASS + 1 死 + 0 中止。**主线成立**(KT-A1/B1/D0), KT-C1 幂律死作为"两相结构存在但非线性回归不显著"归档。 〔- 主张精确化: deposon 散射层在 P-A/B/D 三个挂点上展现可观察差异化, P-C 标度律不显著〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -570,7 +570,7 @@
 - `r4-H10-X46` | C | `docs/V3X/VOLCENGINE_SEED_CODE_30CELLS_2026_09_10.md` | `3911394b86d5` | L181–183 | **option C**: 接受 80% 为 V3.X 真实能力上限,继续 B 路径(火山主线),StrategyQA 缺陷靠 Wang 顾问 + 1 周判死来吸收。 〔**option D**: 切到其他 Seed-Code 子模型 (e.g. `doubao-seed-code-preview-251028-2` 如有) — **违反 user 硬约束**("严格 doubao-seed-code-preview-251028"),需 user 明确解禁。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X47` | C | `docs/V3X/VOLCENGINE_SEED_CODE_30CELLS_2026_09_10.md` | `3911394b86d5` | L185–187 | ### 6.4 本次任务边界声明(7 禁止条款 100% 守) 〔- 未把 key 写入任何文件〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X48` | C | `results/_p_d_v03_verification_report_20260917_163757.md` | `67aafb57a8ed` | L164–166 | ## §F Blockers / Disclosures (老实披露) 〔1. **verifier/runs/2026-09-04_pd_v0.jsonl 缺失**: verifier/ 目录当前为空, 无法独立核验 anchor[0] == 既有 P-D V0.1 链 current_root. 沿 V0 spec R1 5 锚 manifest 根指纹 = 7d6d3d39fad8,…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H10-X49` | C | `results/_p_k_v3_glm_fpr_audit_report_2026-09-17t08-23-41z.md` | `71d5c23d9f76` | L164–167 | **报告完成**: 7 铁律 0 触动, FPR 4.44% GRAY 如实披露, 沿 KIMI 7 方向老实入 paper §7.2 (限制节) 〔- `D:\私人资料\deposon-repo\corpus\v20\by_model\GLM_1\three_way_glm_slot_blind_test_2026_09_16.json` SHA-12=`268ab1239a8a`〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H10-X49` | C | `results/_p_k_v3_glm_fpr_audit_report_2026-09-17t08-23-41z.md` | `71d5c23d9f76` | L164–167 | **报告完成**: 7 铁律 0 触动, FPR 4.44% GRAY 如实披露, 沿 KIMI 7 方向老实入 paper §7.2 (限制节) 〔- `_september_workspace/corpus/v20/by_model/GLM_1/three_way_glm_slot_blind_test_2026_09_16.json` SHA-12=`268ab1239a8a`〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X50` | C | `results/_p_l_v3_phase1_report_20260917_132341.md` | `b41a17eda169` | L13–14 | **单 backbone size scaling (30/45/100) R^2 = 0.7447 (FAIL, <0.9)**, **P3 Q = 0.1929 (FAIL, >0.15)**. 〔**Spearman vs baseline 30 cells overlap: L=30=0.3750 (worker C PASS), L=45=0.1667, L=100=0.1667 (均 << 0.95, 破同序成立)**.〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X51` | C | `results/_p_l_v3_phase1_report_20260917_132341.md` | `b41a17eda169` | L18–19 | **老实交代**: 〔- 60 档 (mean T_frac60=0.7111) 是 9 model aggregate (跨 backbone), 与单 backbone (30/45/100) 不可比, 仅作 reference.〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H10-X52` | C | `results/_p_l_v3_phase1_report_20260917_132341.md` | `b41a17eda169` | L180–182 | ## §8 综合 PASS/FAIL/GRAY 判死 〔| 命题 | 指标 | 阈值 | 实测 | verdict |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -790,7 +790,7 @@
 
 - `r4-H10-Y01` | C | `docs/V3X/LLM_CODINGPLAN_30CELLS_2026_09_10.md` | `9de7ffc9ccfb` | L194–198 | ## §8 下一步建议(给 user 决策) 〔| **本次 0/30 根因明确**: `deepseek-v3-2-251201` 对 coding-plan key 不可访问 | 父 agent 需在以下三条选一条,本 worker **不**自行决定: |〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 - `r4-H10-Y02` | C | `docs/V3X/TRANSFER_PLAN_UNNECESSARY_FILES_2026_09_15.md` | `06b742325cc0` | L162–164 | ### 4.1 默认建议计划 〔| 操作 | 候选 | 大小 | 风险 | 推荐度 |〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
-- `r4-H10-Y03` | C | `docs/V3X/TRANSFER_PLAN_UNNECESSARY_FILES_2026_09_15.md` | `06b742325cc0` | L175–179 | ### 4.2 转移目标建议 〔| 选项 A(推荐)| `D:\私人资料\_mavis_external\` | 用户工作区内的 minimax 独立空间,环境变量易配 |〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
+- `r4-H10-Y03` | C | `docs/V3X/TRANSFER_PLAN_UNNECESSARY_FILES_2026_09_15.md` | `06b742325cc0` | L175–179 | ### 4.2 转移目标建议 〔| 选项 A(推荐)| `〔本地资料区〕/_mavis_external/` | 用户工作区内的 minimax 独立空间,环境变量易配 |〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 - `r4-H10-Y04` | C | `docs/V3X/V2_PHASE2_F2_2026_09_11.md` | `0e50c7d49399` | L70–72 | ## 5. P-B 守恒审计建议 〔1. **不能用绝对差分** (||emb_i - emb_j||₂ < 1e-6) 作为 P-B 守恒判定〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 - `r4-H10-Y05` | C | `docs/V3X/VOLCENGINE_22CAPTION_EMBEDDING_2026_09_10.md` | `8464109947dd` | L123–125 | ## §5 下一步建议(基于 NOISE verdict) 〔**结论**:**V3X-RAG 路径(用 caption embedding 做 top-k 检索增强)在当前 caption 文本格式下不成立**。本次验证排除了"火山方舟 model 不行"这一假设,根因定位在 caption 文本本身。〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 - `r4-H10-Y06` | C | `docs/V3X/VOLCENGINE_9MODEL_30CELLS_2026_09_10.md` | `0d2a7fcc185f` | L209–210 | **下次任务建议**: 〔- 启动前并行预算: 9 model × 30 cells × 1024 tokens × 30s timeout × 3-concurrent = ~30 min〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
@@ -903,7 +903,7 @@
 - `r4-H11-X07` | A | `_v5_exec_f2_r3_register_2026_09_29.md` | `9d64ee1d6996` | L239–241 | ## §10 0 产物 · 诚实交代 〔1. **本 Turn 未跑全量 executor、0 新增读数、0 落派生 JSON**（§3.3）；唯产出 r3 executor **1 件**（改造后实现）+ 本登记件 **1 件**。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H11-X08` | A | `_v5_gamma_r1_v2_withdraw_2026_09_29.md` | `f4ef22a5f97c` | L1–3 | # V5 杂项处置棒 · γ-R1 v2 撤回登记 ＋ D7 R8b 落件核验（protocol-keeper · 2026-09-29） 〔- **件性质**：**登记件（撤回面 ＋ 采集落核面）** · 纯新建 · **既有件 0 删除、0 改写、0 覆盖、0 合并**〕 ｜ 件头元数据块（件性质 / 出证方 / 落盘时间 / skill 交代），非副产物条目 ｜ — ｜ ④
 - `r4-H11-X09` | A | `_v5_gamma_r1_v2_withdraw_2026_09_29.md` | `f4ef22a5f97c` | L14–16 | ## §0 撤回声明（一句话） 〔> **`results/_v4_gamma_r1_prereg_v2_stop_2026_09_28.md`（`9349e2fdb537`，γ-R1 v2 · `STOP-0` 检索预算扩容 12→24 源 / 20→40 次查询）自本登记件落盘之时起，状态由「待 PI 复核生效」转为「已撤回 · 未生效」。**〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H11-X10` | A | `_v5_gamma_r1_v2_withdraw_2026_09_29.md` | `f4ef22a5f97c` | L85–87 | ### §2.4 核验范围与诚实边界（**必须随结论一起读**） 〔- 本棒**主动扩展**了检索范围至工作区（`D:/私人资料/deposon-repo`）之外的**三个同级目录**，理由：若该件已被复制进交付包 / 衍生仓，C 撤回的事实前提即被推翻。**该扩展为只读枚举 + 只读文本检索，0 写入、0 移动、0 删除**。此项扩展在此**显式披露**，不静默扩大。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H11-X10` | A | `_v5_gamma_r1_v2_withdraw_2026_09_29.md` | `f4ef22a5f97c` | L85–87 | ### §2.4 核验范围与诚实边界（**必须随结论一起读**） 〔- 本棒**主动扩展**了检索范围至工作区（`_september_workspace`）之外的**三个同级目录**，理由：若该件已被复制进交付包 / 衍生仓，C 撤回的事实前提即被推翻。**该扩展为只读枚举 + 只读文本检索，0 写入、0 移动、0 删除**。此项扩展在此**显式披露**，不静默扩大。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H11-X11` | A | `_v5_gamma_r1_v2_withdraw_2026_09_29.md` | `f4ef22a5f97c` | L165–169 | ### §6.1 **撤回的是 v2 扩容，不是 γ-R1 本体**（**勿混淆**） 〔| γ-R1 **v2 扩容预登记件**（`9349e2fdb537`） | **撤回** | **已撤回 · 未生效** |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H11-X12` | A | `_v5_gamma_r1_v2_withdraw_2026_09_29.md` | `f4ef22a5f97c` | L180–182 | ### §6.3 构造面 / 真实面外推边界 〔本件属**登记面判定**（效力判定，非测量判定）；**外推边界 = 本机可检索范围内的上传事实**。**不可外推**至：PI 侧记忆 / 委托通道侧状态 / 任何未在本机留痕的外部动作。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H11-X13` | A | `_v5_track2_qwen_retry_2026_09_29.md` | `c890771728f3` | L96–100 | ### 2.4 防降级核对 〔| 请求 model | `qwen3.7-max` |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -1114,7 +1114,7 @@
 - `r4-H12b-X20` | docs | `V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `ac8997b07731` | L154–155 | #### §3.3.1 V4.1-Flash 30 cells v3 失败列表 〔- **R(纯反射,4 cells)**:〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X21` | docs | `V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `ac8997b07731` | L163–164 | #### §3.3.2 Doubao-seed-code 30 cells 失败列表 〔- **R(纯反射,1 cell)**:〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X22` | docs | `V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `ac8997b07731` | L170–171 | #### §3.3.3 GPT-6 TeamoRouter 30 cells 失败列表 〔- **R(纯反射,2 cells)**:〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H12b-X23` | docs | `V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `ac8997b07731` | L301–304 | ### §6.1 约束 5/7 部分违反的诚实记录 〔- `D:\私人资料\deposon-repo\results\_tra_v0_2026_09_10.py` (12,055 bytes,中间 Python 脚本)〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H12b-X23` | docs | `V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `ac8997b07731` | L301–304 | ### §6.1 约束 5/7 部分违反的诚实记录 〔- `_september_workspace/results/_tra_v0_2026_09_10.py` (12,055 bytes,中间 Python 脚本)〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X24` | docs | `V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` | `ac8997b07731` | L362–364 | ### §7.3 阻塞点(等 user 决定) 〔- **GLM-5.3 30 cells**:user 当前在等(GLM-latest 已 5/5 = 100% 接入成功),等数据后回到本任务加一行对比〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X25` | docs | `V3X/DEPOSON_EMBEDDING_6WAY_VERIFICATION_2026_09_10.md` | `240a7ae4bdfb` | L316–318 | ## §9 已知限制与诚实声明 〔1. **Stage 3 仅完成 10/30 cells** — gsm8k_7/10 在 doubao-seed-code 上 60s+ 死循环,导致 gsm8k_11-15 + strategyqa_1-15 未跑〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12b-X26` | docs | `V3X/KT_A1_SPEC_V0.1.md` | `78b71d404366` | L28–29 | **v3 提案 vs Mavis 内部 spec 冲突显式标注**(沿用 V0 草稿,V0.1 不再展开): 〔- 冲突 1: v3 提案 KT-A1 原文用 "g_a* 随 λ_gap 单调" 描述对外判死线, 但 Mavis P-A V0 spec 主指标是 "成本倍数"——本 SPEC V0.1 用"双跑"兼容, 在 §1.2 显式说"两套判死线都跑"。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -1285,7 +1285,7 @@
 - `r4-H12c-X37` | docs | `V3X/REVIEWER_A_STATIC_AUDIT_2026_09_15.md` | `575572872e9a` | L365–367 | ### 4.1 reviewer-a 静态审发现的关键冲突 〔1. **boss_pc_* 命名冲突** (GRAY):〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12c-X38` | docs | `V3X/REVIEWER_A_TRAE_FIX_AUDIT_2026_09_15.md` | `195373c094d6` | L61–65 | 16 frozen TOTAL: OK: 16 | FAIL: 0 〔SHA-12: 2f0765a1d39d   ← 与 §3.1 P-G V0 spec 表格声明一致〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12c-X39` | docs | `V3X/REVIEWER_A_TRAE_FIX_AUDIT_2026_09_15.md` | `195373c094d6` | L102–104 | ## §3 Reviewer-a 主动审查新增发现(超出委托信 8 项, 沿 user 11:28+13:39 "不能只局限 minimax 给的") 〔> **触发依据**: user 2026-09-16 "主动审查可能的其他代码问题, 不能只局限 minimax 给的, 以防错而不自知"——这是派 Trae 修 8 修复点时同步给 reviewer-a 的纪律。委托信 §0 写的"8 项主动审查"是 Mavis 已识别的, 不代表穷举。Reviewer-a 在静…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H12c-X40` | docs | `V3X/REVIEWER_A_TRAE_FIX_AUDIT_2026_09_15.md` | `195373c094d6` | L112–117 | **根因**: `footer()` 函数模板固化了"先 basename 断言 → body_asserts → open+read → marker 断言"顺序,而 boss_pg_1/2/3 需要在 body_asserts 中检验 〔$ python -c "import sys; sys.path.insert(0, 'D:/私人资料/deposon-repo/deposon_team/plugins'); import boss_pg_1_riemannian_degenerate"〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H12c-X40` | docs | `V3X/REVIEWER_A_TRAE_FIX_AUDIT_2026_09_15.md` | `195373c094d6` | L112–117 | **根因**: `footer()` 函数模板固化了"先 basename 断言 → body_asserts → open+read → marker 断言"顺序,而 boss_pg_1/2/3 需要在 body_asserts 中检验 〔$ python -c "import sys; sys.path.insert(0, '_september_workspace/deposon_team/plugins'); import boss_pg_1_riemannian_degenerate"〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12c-X41` | docs | `V3X/REVIEWER_A_TRAE_FIX_AUDIT_2026_09_15.md` | `195373c094d6` | L139–141 | ### §3.2 N2(严重) — boss_pc_1 + boss_pc_3 SELF-CHECK 数学一致性断言失败 〔**症状**: `assert D_FIX2_PASS_LT < D_FIX2_GRAY_GE <= D_FIX2_FAIL_GE` 在 `PASS_LT == GRAY_GE == 0.05` 时为 False(链式比较 `0.05 < 0.05` 短路挂)。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12c-X42` | docs | `V3X/REVIEWER_A_TRAE_N123_AUDIT_2026_09_15.md` | `33ee7266cf5b` | L1–3 | # Reviewer-A 静态审 Trae 修 3 类 SELF-CHECK 尾块缺陷审计报告 (2026-09-15) 〔> **任务**: REVIEWER-A-TRAE-N123-AUDIT-2026-09-15 (Mavis 委托, 沿 user 14:56 "Mavis 委托双审时一并")〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H12c-X43` | docs | `V3X/REVIEWER_A_TRAE_N123_AUDIT_2026_09_15.md` | `33ee7266cf5b` | L26–27 | ### §1.1 缺陷根因复述 〔上轮 `fix_boss_naming_2026_09_16.py` 的 footer 模板把 `body_asserts` 排在 `with open(...) _src_sc = ...` 之前, 而 boss_pg 的 body_asserts 含 `assert 'TODO' in _src_sc` → us…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
@@ -1377,7 +1377,7 @@
 
 ### §11.2 Y · 上报项（建议 / 移交 / 待裁定 / 需 PI 决定） — **2** 条
 
-- `r4-H12d-Y01` | docs | `V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md` | `6b2190b7a60a` | L63–65 | ## §4 真缺件（repo / archive / deposon-sub 三处均无，需 PI 裁定处置） 〔以下 3 件在 `deposon-repo`、`D:\私人资料\_archive_deposon_2026_09_17\`、`D:\私人资料\deposon-sub\` **三处实测均不存在**，且不在 09-21 manifest 内：〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
+- `r4-H12d-Y01` | docs | `V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md` | `6b2190b7a60a` | L63–65 | ## §4 真缺件（repo / archive / deposon-sub 三处均无，需 PI 裁定处置） 〔以下 3 件在 `deposon-repo`、`〔本地资料区〕/_archive_deposon_2026_09_17/`、`_september_workspace` **三处实测均不存在**，且不在 09-21 manifest 内：〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 - `r4-H12d-Y02` | docs | `V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md` | `6b2190b7a60a` | L122–125 | **授权链**：回审回函（`letters/_v4_distillation_reply_trae_code_v3_review_2026_09_23.md`，SHA-12 `9BB22099DB3B`）§3.4/§4 将 E-15 列为「 〔- 仓内 **13 个脚本**期望该路径 = `03c6c01f3697`：`boss_pa_1/2/3_*.py`、`skill_a/b/c/d_*.py`、`_pg_v01_compute.py`、`_verify_pg_v0.py`、`_verify_batch5_2026_09_18.py` + 6 个归档 …〕 ｜ 上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ PI 拍板（parent 转问卷） ｜ ③
 
 ### §11.3 Z · 未做项（未跑 / 未核 / 未修 / 未覆盖） — **0** 条
@@ -1651,7 +1651,7 @@
 - `r4-H13d-X01` | letters | `_v5_rj5_external_rederive_request_2026_09_28.md` | `cfd58ae66463` | L68–72 | **判据（三版迭代，两版主动作废，如实登记）**： 〔| v1 | `prod(σ^z)` 奇偶扇区 | `b_c/a = 1.5` | ❌ **作废**：`prod(σ^z)=(-1)^{N↓}` 与 `σ^x` **反对易 ⇒ 非守恒量**；偶数 L 时全上/全下同扇区 |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H13d-X02` | letters | `_v5_rj5_external_rederive_request_2026_09_28.md` | `cfd58ae66463` | L258–262 | ### §3.3 方程出处现状（**诚实说明**） 〔| ① 仓内 `#12` 执行器自实现 + 自校验 | **本仓自证**（残差 ≤ `2.220446049250313e-16`、闭式 vs 二分 ≤ `4.440892098500626e-16`） | **可复算** |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H13d-X03` | letters | `_v5_rj5_external_rederive_request_2026_09_28.md` | `cfd58ae66463` | L339–341 | ## §7 边界（严守） 〔- **既有件 0 触动**：本件为纯新建件；§5 全部 14 件**0 字节改动**，受托方亦请只读取用。〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
-- `r4-H13d-X04` | letters | `_v5_rj5_external_rederive_request_2026_09_28.md` | `cfd58ae66463` | L359–361 | ## §9 本件老实交代段（起草侧） 〔1. **skill 与 fallback（如实交代）**：本棒**实际加载**本机在册 skill `scientific-writing`（K-Dense Inc.，`D:/Users/Administrator/.minimax/skills/scientific-writing/SKILL.md`），取其与本…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
+- `r4-H13d-X04` | letters | `_v5_rj5_external_rederive_request_2026_09_28.md` | `cfd58ae66463` | L359–361 | ## §9 本件老实交代段（起草侧） 〔1. **skill 与 fallback（如实交代）**：本棒**实际加载**本机在册 skill `scientific-writing`（K-Dense Inc.，`〔本机路径〕/Users/Administrator/.minimax/skills/scientific-writing/SKILL.md`），取其与本…〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H13d-X05` | letters | `_v5_rj5_external_rederive_request_EN_2026_09_28.md` | `498215a9ec7d` | L69–71 | **Criterion (three iterations, two actively retired; honestly registered)**: 〔| Version | Criterion | Result | Ruling |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 - `r4-H13d-X06` | letters | `_v5_rj5_external_rederive_request_EN_2026_09_28.md` | `498215a9ec7d` | L259–261 | ### §3.3 Current status of the provenance of the equation (**honest statement**) 〔| Basis | Layer | Status |〕 ｜ 缺陷 / 局限 / 诚实交代面（默认规则：X 类 → ①） ｜ worker（执行棒） ｜ ①
 
@@ -1907,9 +1907,9 @@
 #### `r4-H10-Y03` ｜ C ｜ `docs/V3X/TRANSFER_PLAN_UNNECESSARY_FILES_2026_09_15.md` ｜ `06b742325cc0` ｜ L175
 
 > 原文：### 4.2 转移目标建议
-> 　L179：| 选项 A(推荐)| `D:\私人资料\_mavis_external\` | 用户工作区内的 minimax 独立空间,环境变量易配 |
-> 　L180：| 选项 B | `D:\_mavis_external\` | D 盘根,完全独立 |
-> 　L181：| 选项 C | `C:\Users\Administrator\AppData\Local\minimax\` | 用户家目录下的标准 minimax 位置 |
+> 　L179：| 选项 A(推荐)| `〔本地资料区〕/_mavis_external/` | 用户工作区内的 minimax 独立空间,环境变量易配 |
+> 　L180：| 选项 B | `〔本机路径〕/_mavis_external/` | D 盘根,完全独立 |
+> 　L181：| 选项 C | `〔本机用户目录〕/AppData/Local/minimax/` | 用户家目录下的标准 minimax 位置 |
 
 - **归线理由**：上报项 / 待裁定面（默认规则：Y 类 → ③） ｜ **承接方**：PI 拍板（parent 转问卷）
 
@@ -2452,7 +2452,7 @@
 #### `r4-H12d-Y01` ｜ docs ｜ `V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md` ｜ `6b2190b7a60a` ｜ L63
 
 > 原文：## §4 真缺件（repo / archive / deposon-sub 三处均无，需 PI 裁定处置）
-> 　L65：以下 3 件在 `deposon-repo`、`D:\私人资料\_archive_deposon_2026_09_17\`、`D:\私人资料\deposon-sub\` **三处实测均不存在**，且不在 09-21 manifest 内：
+> 　L65：以下 3 件在 `deposon-repo`、`〔本地资料区〕/_archive_deposon_2026_09_17/`、`_september_workspace` **三处实测均不存在**，且不在 09-21 manifest 内：
 > 　L67：| 文件 | 被引用处 | 三处实测 | 处置建议 |
 > 　L69：| `results/deposon_v17_fusion_fix.json` | 报告引用链 | repo× archive× sub× | 若为上游已被取代版本，建议在引用处标注「已废版」；若为必需输入，需补件 |
 

@@ -45,7 +45,7 @@ except ImportError:
     raise SystemExit("numpy required; install via 'pip install numpy' or use system Python.")
 
 # ---------- 路径常量 (绝对, 严守不动 scripts/) ----------
-REPO_ROOT = r"D:\私人资料\deposon-repo"
+REPO_ROOT = r"_september_workspace"
 V3_PHYS_JSON = os.path.join(REPO_ROOT, "results", "deposon_v3_physical_opt_60cells_2026_09_11.json")
 ANCHOR_JSON = os.path.join(REPO_ROOT, "verifier", "handoff", "KT_ABC1_anchors_sha256_12.json")
 PG_V0_SPEC = os.path.join(REPO_ROOT, "docs", "V3X", "P_G_NON_EUCLIDEAN_SCATTERING_V0_SPEC.md")

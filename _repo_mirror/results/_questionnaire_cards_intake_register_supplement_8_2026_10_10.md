@@ -7,8 +7,8 @@
 - **件系**：第八批登记件 `results/_questionnaire_cards_intake_register_supplement_7_2026_10_10.md`（SHA-12 `1fb8eac82781`）之**补续落册（第九批）**；上承第八批 `1fb8eac82781`（其账目补正件 `a651f76a6547`）、第七批 `95ba771fa760`（其回执 `0984955b0370`）、第六批 `edb57308170d`、第五批 `d6ff041a9df9`、第四批 `11681f0ad861`、第三批 `dc43e3cb7610`、第二批 `193386b9f23c`、第一批 `d917180db36f`。⛔ 0 编辑／覆写／修改前八批登记件；⛔ 0 重复转录其已收录之卡。
 - **本批口径**：**卡答落册 · 补续批** —— 续录派工指定之**轮53～轮54 两卡**（第八批落册读时点之后所建、⛔ 尚未落册者）。合计 **2 卡／8 答**（选项通道 6 答 ＋ Other 通道 2 答）。
 - **编制**：**doc-writer**（文稿起草官 · 分支会话 `mvs_cf54be9d09d54516bd6bad49e1aff82d`｜署名如实 · **0 冒充 PI／parent／protocol-keeper／verdict-keeper／verifier／worker**）
-- **来源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`，表 `questionnaire_requests`。本棒以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交、0 checkpoint）。
-- **备核源**：会话消息面 `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\` 之 `messages.jsonl`（只读检索，作二次交叉核对）。
+- **来源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`，表 `questionnaire_requests`。本棒以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交、0 checkpoint）。
+- **备核源**：会话消息面 `〔本机用户目录〕/.minimax/v2/sessions/2026/09/01/02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5/` 之 `messages.jsonl`（只读检索，作二次交叉核对）。
   - ⚠ **会话目录反解纪律**：目录名 ＝ `session_` ＋ 会话 id `mvs_bbeb804b1a6a41109be740636eed1709` 之 URL-safe base64 无填充编码。本棒**先独立反解定位**（`base64.urlsafe_b64encode(...)` → 去填充 `=` → URL-safe）得 `bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5`，⛔ **0 凭记忆直接引用路径**；实测该名于 `2026\09\01\` 层**唯一命中**，实际目录名含时间戳前缀 `02-38-47-809-`。
   - ⚠ **形近近邻陷阱（本棒实测仍在位 · 未误取）**：同层另存 `02-38-47-809-session_bXZzX2IiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5` —— **时间戳前缀完全相同**，仅 base64 段第 6 字符起一字之差（`…X2JiZW…` ↔ `…X2IiZW…`）。二者反解分别为：本棒目标 → `mvs_bbeb804b1a6a41109be740636eed1709`（✅ 与派工所载会话 id **逐位相符**）；近邻 → `mvs_b"eb804b1a6a41109be740636eed1709`（⛔ **非**本会话）。本棒之核对源**取自目标目录**，⛔ **0 读取近邻目录**。
 - **窗口口径**：本批应录＝派工指定之 **2 张目标卡**（轮53～轮54）——**本件非全表扫描之应录全集**，系**指定目标行**之逐字转录（沿「库读取限 `questionnaire_requests` 目标行」之派工纪律）。
@@ -493,7 +493,7 @@ C 段一之分母在重判面取何口径？（⚠ 口径问题·⛔ 非调 N* �
 | 会话消息面 | **只读**（仅 `messages.jsonl` 检索）—— 0 写入 |
 | 派生 JSON | ⛔ **0 新建／0 合并**任何派生物 JSON |
 | 本件交付前之自身更正 | **如实登记（非 0）**：本件首次生成后经**落盘实测复核**，发现 §2.5 之 WAL／状态项含一**因活库漂移而失效之 `pending` 断言**、并有一处交叉引用错指；该次生成件系**本棒自身之临时产物**，经 `rm --`（可恢复删除）清理后由生成器修正并**重新落盘**。**最终交付件之库内字面（§1 全部题面与答文）自始至终 0 处更动、0 人工改写**（逐字转录之保真性 0 受影响）；⛔ 本项 ⛔ **不冒充「0 次更正」** |
-| 归档禁区 | **未触及** —— ⛔ 0 访问／0 读取 `D:\私人资料\_non_upload_local_archive`（全仓检索时已显式跳过该路径） |
+| 归档禁区 | **未触及** —— ⛔ 0 访问／0 读取 `〔本地归档区〕`（全仓检索时已显式跳过该路径） |
 
 ### 3.2 落前撞名实测
 

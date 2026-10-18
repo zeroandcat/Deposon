@@ -4,7 +4,7 @@
 - **受核件**（SHA-12 与派工单同值，已逐件实测）：`results/_s4_heldout_sampling_seedthird_extractor_2026_10_11.py`（`068e1a7a1d04`）／`…_seedthird_items_2026_10_11.json`（`5777a07c608a`）／`…_seedthird_items_register_2026_10_11.md`（`784f042bf93d`）
 - **规格源**：`fb1b696de1d6` §5 伪码（0 改一字）｜**域表自该件 §5.1 表格独立解析**（未抄抽取器之 `DOMAIN_REGISTERED` 常量）
 - **出件**：**verifier**（第三集独立复核 · 分支会话 `mvs_2b17ea53b8184add8b968c149eb9d55e`｜**署名如实** · ⛔ 0 冒充 PI／parent／worker／protocol-keeper／verdict-keeper）
-- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：0 读 key／0 读 `.env`／0 落盘凭据｜**0 网络 ／ 0 skill ／ 0 LLM**｜⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`（0 读／0 写／0 列目录）｜**0 import 抽取器、0 执行抽取器、0 import `prep.py`／`s4_regen_runner`／executor**
+- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：0 读 key／0 读 `.env`／0 落盘凭据｜**0 网络 ／ 0 skill ／ 0 LLM**｜⛔ **0 触及** `〔本地归档区〕`（0 读／0 写／0 列目录）｜**0 import 抽取器、0 执行抽取器、0 import `prep.py`／`s4_regen_runner`／executor**
 
 > 📌 **状态栏**：🟢 **七项核验项全部跑毕 · MATCH 3,479 ／ MISMATCH 0** ＋ 🟡 **1 项未闭合**（RNG 置换层之第二实现未复现 · 属**我方实现边界**，非产物缺陷，见 §10）＋ ⛔ **0 判档 · 0 代裁 · 0 宣告 `K-RJ-5` 闭／开**
 

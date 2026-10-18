@@ -114,7 +114,7 @@ P_G_FROZEN_BENCHMARK       91db66afecc3  91db66afecc3   True
 **实测验证**(reviewer-a 自跑):
 
 ```bash
-$ python -c "import sys; sys.path.insert(0, 'D:/私人资料/deposon-repo/deposon_team/plugins'); import boss_pg_1_riemannian_degenerate"
+$ python -c "import sys; sys.path.insert(0, '_september_workspace/deposon_team/plugins'); import boss_pg_1_riemannian_degenerate"
 Traceback (most recent call last):
   File "boss_pg_1_riemannian_degenerate.py", line 120, in <module>
     assert 'TODO' in _src_sc, 'SCAFFOLDING 真实逻辑标记丢失(应待拍板后实现)'
@@ -145,7 +145,7 @@ NameError: name '_src_sc' is not defined
 **实测验证**(reviewer-a 自跑):
 
 ```bash
-$ python -c "import sys; sys.path.insert(0, 'D:/私人资料/deposon-repo/deposon_team/plugins'); import boss_pc_1_2d_ising_universality"
+$ python -c "import sys; sys.path.insert(0, '_september_workspace/deposon_team/plugins'); import boss_pc_1_2d_ising_universality"
 Traceback (most recent call last):
   File "boss_pc_1_2d_ising_universality.py", line 173, in <module>
     assert D_FIX2_PASS_LT < D_FIX2_GRAY_GE <= D_FIX2_FAIL_GE

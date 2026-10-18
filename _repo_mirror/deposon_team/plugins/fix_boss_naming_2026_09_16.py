@@ -25,7 +25,7 @@ fix_boss_naming_2026_09_16.py — 修复点 1/5/7: BOSS/Attack 命名空间回�
 import os
 import hashlib
 
-BASE = r'D:\私人资料\deposon-repo'
+BASE = r'_september_workspace'
 PLUG = os.path.join(BASE, 'deposon_team', 'plugins')
 
 # ---------- 预注册: 改名映射 ----------

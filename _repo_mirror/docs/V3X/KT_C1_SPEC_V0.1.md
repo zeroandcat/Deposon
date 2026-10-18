@@ -391,7 +391,7 @@ b 95% CI = bootstrap percentile (B=10000)
 | 铁律 | KT-C1 V0.1 兑现 | 引用 |
 |---|---|---|
 | ✅ **双审** | reviewer-a 静态审本 SPEC + reviewer-b 在 `/tmp/deposon_kt_c1_audit_<timestamp>/` 副本独立重跑主实验 + 双跑 + 3 个 BOSS baseline | §7 复现协议 |
-| ✅ **API key 不入 prompt** | 本 SPEC 零 LLM API 调用(v21 frozen 数据 + 纯统计回归 + BOSS baseline 纯物理/MC 模拟); 不读 `C:\Users\Administrator\Desktop\AI\新建文本文档.txt` | §2.1 数据集 + §4 BOSS 测法 |
+| ✅ **API key 不入 prompt** | 本 SPEC 零 LLM API 调用(v21 frozen 数据 + 纯统计回归 + BOSS baseline 纯物理/MC 模拟); 不读 `〔本机用户目录〕/Desktop/AI/新建文本文档.txt` | §2.1 数据集 + §4 BOSS 测法 |
 | ✅ **术语红线** | 用"幂律 / 标度律 / 95% bootstrap CI / log-log OLS / 2D Ising 普适类 / transverse field Ising / 双稳态 / ESN"等数学/物理/工程术语, 不用"散射层魔法"等营销词 | §1 + §3 + §4 |
 | ✅ **数字溯源** | 全部数字从 frozen 锚 JSON 字段路径引(v3 提案附录 B + 本 SPEC §6 5 锚真实 SHA-256); 主实验 SHA `7df20f7b3084` + 双跑 SHA `b7e3c3717d11` + BOSS 测法 SHA `d47722a1123a` / `ce2196c90cbc` / `506d85c37e11` 全部从 `KT_ABC1_anchors_sha256_12.json` §anchors/KT-C1 + §boss_baselines/KT-C1 引用 | §6 + §2.2 + §2.3 + §4.1-4.3 |
 | ✅ **verifier 纪律** | §7 复现协议用 /tmp 副本; 不碰 HANDOFF_MACHINE_READABLE.json / results/*.json / verifier/vN/ | §7 + D0_FREEZE_PREP §6 |

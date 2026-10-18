@@ -7,8 +7,8 @@
 - **件系**：第七批登记件 `results/_questionnaire_cards_intake_register_supplement_6_2026_10_10.md`（SHA-12 `95ba771fa760`）之**补续落册（第八批）**；上承第七批 `95ba771fa760`、第六批 `edb57308170d`、第五批 `d6ff041a9df9`、第四批 `11681f0ad861`、第三批 `dc43e3cb7610`、第二批 `193386b9f23c`、第一批 `d917180db36f`。⛔ 0 编辑／覆写／修改前七批登记件；⛔ 0 重复转录其已收录之卡。
 - **本批口径**：**卡答落册 · 补续批** —— 续录派工指定之**轮49～轮52 四卡**（第七批落册读时点之后所建、⛔ 尚未落册者）。合计 **4 卡／16 答**。
 - **编制**：**doc-writer**（文稿起草官 · 分支会话 `mvs_6f4c99f0aebc4da3a76ac9373e2c769e`｜署名如实 · **0 冒充 PI／parent／protocol-keeper／verdict-keeper／verifier／worker**）
-- **来源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`，表 `questionnaire_requests`。本轮以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交）。
-- **备核源**：会话消息面 `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5` 之 `messages.jsonl`（只读检索，作二次交叉核对）。
+- **来源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`，表 `questionnaire_requests`。本轮以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交）。
+- **备核源**：会话消息面 `〔本机用户目录〕/.minimax/v2/sessions/2026/09/01/02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5` 之 `messages.jsonl`（只读检索，作二次交叉核对）。
   - ⚠ **会话目录反解纪律**：目录名 ＝ `session_` ＋ 会话 id 之 URL-safe base64 无填充编码；该目录层存在**形近近邻陷阱**（`…X2IiZW…` 与 `…X2JiZW…` 仅差字符、并存同层）。本棒**先独立反解定位**（`[Convert]::ToBase64String` → 去填充 → URL-safe 替换）得 `bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5`，⛔ **0 凭记忆直接引用路径**；实际目录名含时间戳前缀 `02-38-47-809-`，实测命中。
 - **窗口口径**：本批应录＝派工指定之 **4 张目标卡**（轮49～轮52）——**本件非全表扫描之应录全集**，系**指定目标行**之逐字转录（沿「库读取限 `questionnaire_requests` 目标行」之派工纪律）。
   - ⚠ **活库声明**：运行时库为**活库**，本件之读得时点即收录截止时点；库中或含他卡（含新建未答卡）——⛔ **不属本件应录面**，⛔ 0 转录。
@@ -818,7 +818,7 @@ E-6b：层级称谓定名（代立草案：「终判档位层／读数取值层�
 | 运行时库 | **只读**（`mode=ro`）—— 0 写入、0 修改、0 建表、0 提交 |
 | 会话消息面 | **只读**（仅 `messages.jsonl` 检索）—— 0 写入 |
 | 本件交付前之自身更正 | **0 处** —— 本件由程序化生成、一次性落盘；⛔ 0 交付前就地更正；逐字转录之库内字面（§1 全部题面与答文）**0 处更动** |
-| 归档禁区 | **未触及** —— ⛔ 0 访问／0 读取 `D:\私人资料\_non_upload_local_archive` |
+| 归档禁区 | **未触及** —— ⛔ 0 访问／0 读取 `〔本地归档区〕` |
 
 ### 3.2 落前撞名实测
 

@@ -42,7 +42,7 @@
 
 | 项 | 值 |
 |:--|:--|
-| 库路径／表 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` ／ `questionnaire_requests` |
+| 库路径／表 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` ／ `questionnaire_requests` |
 | 接入方式 | `sqlite3.connect("file:...?mode=ro", uri=True)` —— **只读**（⛔ 0 写入／0 提交） |
 | **读得时点** | **2026-10-10 21:24（+0800）**（本棒只读取样）｜全库 **442** 行 |
 | **目标行** | `request_id` ＝ **`ask_9b6ea2b3cc58b6001dcad6f1`**（`status` ＝ `answered`；`created_at` ＝ **2026-10-10 21:17:28**；`answered_at` ／ `submittedAt` ＝ **2026-10-10 21:19:05.789 +0800**；`source` ＝ `user`） |
@@ -293,7 +293,7 @@
 - ⛔ **0 改**任何件之 `displacement_type` 之值；⛔ **0 增设第 5 类**；⛔ **0 改** `seq_v3`／`seq_v31`／`layer_first_pos_v31`／`new_hit_words` 任一既有字段。
 - **0 回改蓝本与前序件**：`582c5fb9970c`／`c296a7833a70`／`debd88fc150c`／`2bda07af86fc`／`f48601fee958` **各 0 字节改动**（仅只读与引证）—— 含 §7.1 之 R-8 效力位更新**亦为另记，⛔ 0 回改蓝本**。
 - **0 翻案**：⛔ **0 改**任何既有判定、⛔ **0 赋** `k_*` 布尔、⛔ **0 调** `TH-*`／`K-*` 任何字面。
-- **V1–V3 资产 0 触动**；**R5 frozen 0 追加**；⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`。
+- **V1–V3 资产 0 触动**；**R5 frozen 0 追加**；⛔ **0 触及** `〔本地归档区〕`。
 - **R4**：⛔ **0 读 key／0 读 `.env`／0 落盘凭据**；本件**不含任何 key 形态字面**。
 - **0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 跑 runner**。
 
@@ -324,7 +324,7 @@
 | **0 网络／0 skill／0 LLM／0 实验** | ✅ 未调用（仅本机只读解析 ＋ 本机哈希核算 ＋ 运行时库只读核录 ＋ 全仓文本检索） |
 | **命名合规** | ✅ §11.1（`_主题_日期` ＋ `_round56_` ＝ 轮次编号；**0 V-阶段前缀**） |
 | **署名如实** | ✅ doc-writer（`agent-0032834a3e04` · `mvs_1ab1bcaed7854eb59795a0b12d0e24f8`），⛔ 0 冒充他棒 |
-| **0 触及禁触目录** | ✅ ⛔ 0 触及 `D:\私人资料\_non_upload_local_archive` |
+| **0 触及禁触目录** | ✅ ⛔ 0 触及 `〔本地归档区〕` |
 
 ---
 

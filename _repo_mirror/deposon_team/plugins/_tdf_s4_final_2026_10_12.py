@@ -2,7 +2,7 @@
 """_tdf_s4_final — 终验：交付件 SHA + 追加件前缀自证 + 守护件（只读）"""
 import hashlib
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_september_workspace')
 def sha12b(b): return hashlib.sha256(b).hexdigest()[:12]
 
 print('=== 交付件 ===')

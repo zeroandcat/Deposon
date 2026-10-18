@@ -1,6 +1,6 @@
 # V3X 派工记录(2026-09-16)— KIMI 7 新方向增补
 
-> **触发**: user 2026-09-16 12:55 "阅读补充 C:\Users\Administrator\Documents\kimi\tasks\2026-08-31\05-20-23-c0a47add\V3X_KIMI_PROPOSED_DIRECTIONS_2026_09_16.md"
+> **触发**: user 2026-09-16 12:55 "阅读补充 〔本机用户目录〕/Documents/kimi/tasks/2026-08-31/05-20-23-c0a47add/V3X_KIMI_PROPOSED_DIRECTIONS_2026_09_16.md"
 > **作者**: Mavis
 > **日期**: 2026-09-16 12:55
 > **严守**: 7 铁律 0 触动 18 frozen + P-G V0 + P-G V0.1 + 4 plugin spec

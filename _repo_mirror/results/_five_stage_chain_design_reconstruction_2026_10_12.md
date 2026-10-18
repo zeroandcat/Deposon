@@ -14,7 +14,7 @@
 
 | **项** | **内容** |
 | --- | --- |
-| **PI 给出之路径** | `C:/Users/Administrator/.minimax/v2/sessions/2026/09/01/02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5/artifacts/plan.md` |
+| **PI 给出之路径** | `〔本机用户目录〕/.minimax/v2/sessions/2026/09/01/02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5/artifacts/plan.md` |
 | **base64 反解** | 目录名后缀 ＝ `bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5` ⇔ session_id **`mvs_bbeb804b1a6a41109be740636eed1709`** ＝ **本会话 ID** ✅ |
 | **⚠ 近邻规避** | 📌 该 `sessions/2026/09/01/` 下并存**仅差一字符**之近邻目录（`…session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5` 之 **大写 J** ⇔ 本会话 vs 另一近邻含 **小写 i**／形近字符之目录）⇒ 本回查**先反解 session_id 再寻址**，⛔ **0 由目录名目视判定** |
 | **件实体** | `plan.md` ＝ **10,072 B · 68 行**（mtime **2026-10-09 14:50:18**）｜同目录另有 `plan_v3_2026_09_30.md`（**41,512 B**·mtime 2026-09-30 17:25） |
@@ -102,7 +102,7 @@
 
 ## §7 ⛔ 本件 0 作之事项（逐字列明）
 
-① ⛔ **0 回改** `plan.md`／`plan_v3_2026_09_30.md`／任何既有件一字｜② ⛔ **0 擅自为②③④⑤任一段开棒**（④件计划产件之 MISSING 状态**如实登记**，⛔ **0 代为产出**、⛔ 0 代拟其内容）｜③ ⛔ **0 越段**（③④⑤ 候前段毕）｜④ ⛔ **0 断言**旧 `plan.md`（`17067c06d71e`）之内容或去向｜⑤ ⛔ **0 将 `plan_v3_2026_09_30.md` 与 `plan.md` 混同**｜⑥ ⛔ **0 由目录名目视寻址**（**先反解 session_id** 之纪律已守）｜⑦ ⛔ **0 经手远端写／PAT**（D7 纪律）｜⑧ ⛔ **0 赋任一 `k_v3s_4_4_*` 布尔**｜⑨ ⛔ **0 改任何阈值／门柱／判死线**｜⑩ ⛔ **0 宣告五段链②～⑤任一段之毕**｜⑪ ⛔ 0 网络／0 skill／0 LLM／0 API key／0 读 `.env`｜⑫ ⛔ 0 触及 `D:\私人资料\_non_upload_local_archive`
+① ⛔ **0 回改** `plan.md`／`plan_v3_2026_09_30.md`／任何既有件一字｜② ⛔ **0 擅自为②③④⑤任一段开棒**（④件计划产件之 MISSING 状态**如实登记**，⛔ **0 代为产出**、⛔ 0 代拟其内容）｜③ ⛔ **0 越段**（③④⑤ 候前段毕）｜④ ⛔ **0 断言**旧 `plan.md`（`17067c06d71e`）之内容或去向｜⑤ ⛔ **0 将 `plan_v3_2026_09_30.md` 与 `plan.md` 混同**｜⑥ ⛔ **0 由目录名目视寻址**（**先反解 session_id** 之纪律已守）｜⑦ ⛔ **0 经手远端写／PAT**（D7 纪律）｜⑧ ⛔ **0 赋任一 `k_v3s_4_4_*` 布尔**｜⑨ ⛔ **0 改任何阈值／门柱／判死线**｜⑩ ⛔ **0 宣告五段链②～⑤任一段之毕**｜⑪ ⛔ 0 网络／0 skill／0 LLM／0 API key／0 读 `.env`｜⑫ ⛔ 0 触及 `〔本地归档区〕`
 
 ---
 

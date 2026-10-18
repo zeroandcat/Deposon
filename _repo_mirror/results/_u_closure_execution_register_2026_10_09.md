@@ -30,7 +30,7 @@
 | 归因结论 | **回执面截断，非未跑**（回执止于「0% 启动中、M1–M8 待办」与实体在盘并存） |
 | 源件依据 | §1.2 U4 行 ＋ §2.4 实体清单（8 件 ＋ 迁移副本）＋ §3 候裁表 #4（字段面待裁 ⛔ 0 代裁） |
 | 本棒实测（仓内） | `results/_v3x_d0_5_aggregation_2026_09_17.md` **在盘**（12,010 B／`ddf0d1aa96d2`／09-17 13:08）——实载「worker C 已实测：Mistral Large 2512 (OpenRouter) × 30 cells → **Spearman = 0.375 << 0.95 PASS**」＋ §3 表 `cells_completed 30/30 SUCCESS`／`fit_status PASS`／`p-value 0.041164` |
-| 本棒实测（sub 面·仓外） | `D:\私人资料\deposon-sub\results\` **8 件齐备**：`_d05_main_run_results_…json` 15,243／`_d05_main_run_results_qwen3_failed_…json` 18,358／`_d05_main_run_results_nemotron_3.5_…json` 15,111／`_d05_opt_5_directions_results_…json` 5,614／`_d05_backbone_robustness_beta_…json` 1,490／`_d05_combined_report_….md` 10,555／`_d05_i1i5_invariants_check_…json` 1,920／`_D05_DATA_RESCUE_NOTE_2026_09_18.md` 1,181（`120295a19655`）——各件另有 `._moved_20260924_1830` 迁移副本 |
+| 本棒实测（sub 面·仓外） | `_september_workspace/results/` **8 件齐备**：`_d05_main_run_results_…json` 15,243／`_d05_main_run_results_qwen3_failed_…json` 18,358／`_d05_main_run_results_nemotron_3.5_…json` 15,111／`_d05_opt_5_directions_results_…json` 5,614／`_d05_backbone_robustness_beta_…json` 1,490／`_d05_combined_report_….md` 10,555／`_d05_i1i5_invariants_check_…json` 1,920／`_D05_DATA_RESCUE_NOTE_2026_09_18.md` 1,181（`120295a19655`）——各件另有 `._moved_20260924_1830` 迁移副本 |
 | **计数口径注（本棒核出）** | 源件列 8 件；按 `*_d05_*20260918_100853*` 过滤只得 7 件，第 8 件 `_D05_DATA_RESCUE_NOTE_2026_09_18.md` **不含时间戳**故被时间戳过滤排除 ⇒ **8 件口径经实测复核为真**，非漏计 |
 | 字段处置 | ⛔ **0 改判**：`bg_552544f7` 的 **status 字段原样保留**（不改为其他状态、不销号） |
 | 并列登记原则 | **实体在盘 ≠ 该棒自认完成** —— 事实面（已跑完并落盘）与字段面（status 原值）**两者并列**，0 互相覆盖 |
@@ -57,7 +57,7 @@
 | 判据（照录 d048a6de1dea §4.2-1） | 「**PI 已裁**：`…_receipt_disposition_register_2026_10_08.md` L114「**建议删并**」（`.tmp` 为工具临时面，非交付面；同面另两棵均非空，独此一棵为空）＋ `_closing_round_6_decisions_register_2026_10_08.md` Q3④「U7 **删并**」⇒ 本棒执行 U7 收口。实测 0 文件 0 子目录」 |
 | 回收站实证（照录 d048a6de1dea §4.3） | `name=[verif_doubt6] size=[0 字节] from=[…\deposon-repo\.tmp] when=[2026/10/8 18:20]`（11/11 逐件命中；终态枚举时刻 18:23:39） |
 | 隐性遗忘快扫闭环（照录 d048a6de1dea §6 N2） | 「`.tmp\verif_doubt6` 空树残留（**U7** 面）｜③ 垃圾清理｜PI 已裁（卷⑥ Q3④）｜**✅ 已闭**（本棒执行，§4.2-1）」 |
-| **本棒实测** | `D:\私人资料\deposon-repo\.tmp\verif_doubt6` **实测 ABSENT** ⇒ 与 d048a6de1dea 之执行记录**一致**（删并确已发生，非待执行） |
+| **本棒实测** | `_september_workspace/.tmp/verif_doubt6` **实测 ABSENT** ⇒ 与 d048a6de1dea 之执行记录**一致**（删并确已发生，非待执行） |
 | **⛔ 0 重执行** | 本棒**不再执行任何删并动作**（不重复删、不恢复、不补跑）⇒ 仅**登记「已闭」** |
 | 登记态 | ✅ **已闭**（执行面引用在册，沿 `d048a6de1dea`） |
 
@@ -95,7 +95,7 @@
 | `results/_dup_name_diff_content_scan_2026_10_08.json` | 1,302,889 | `a27d11f45c21` | 10-08 17:23 | **只读核验·0 回改** |
 | `results/_v3x_d0_5_aggregation_2026_09_17.md` | 12,010 | `ddf0d1aa96d2` | 09-17 13:08 | **只读核验·0 回改** |
 | `docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md` | 857,551 | `41f5f1689d09` | 09-29 19:42 | **只读核验·0 回改（锚件 0 触）** |
-| `D:\私人资料\deposon-sub\results\_D05_DATA_RESCUE_NOTE_2026_09_18.md` | 1,181 | `120295a19655` | — | **只读核验·0 回改** |
+| `_september_workspace/results/_D05_DATA_RESCUE_NOTE_2026_09_18.md` | 1,181 | `120295a19655` | — | **只读核验·0 回改** |
 
 - **本棒全部动作面**：①新建本件（`results/_u_closure_execution_register_2026_10_09.md`）②对上述既有件**只读**（Get-FileHash／Get-ChildItem／grep／read）③**0 删、0 移、0 改、0 重命名**任何既有件。
 - 撞名实测：落名前 `results/` 下 `*u_closure*` **0 命中**、`*_2026_10_09.md` **0 命中** ⇒ **0 覆写**（沿「重派须指定新名、0 覆写」纪律）。

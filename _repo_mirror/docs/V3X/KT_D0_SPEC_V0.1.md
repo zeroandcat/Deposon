@@ -230,7 +230,7 @@
 | 铁律 | KT-D0 V0.1 兑现 | 引用 |
 |---|---|---|
 | ✅ **双审** | P-D V0.1 主线有 pytest 6/6 + 攻击 3/3 内部验证; reviewer-b 独立重跑审计**未完成**(已知缺口, §12 U-D0-01)— Phase 1 必补 | §3.1 + §12 U-D0-01 |
-| ✅ **API key 不入 prompt** | 本 SPEC 零 LLM API 调用(账指纹协议 + EIS 复现都是纯数学/Merkle); 不读 `C:\Users\Administrator\Desktop\AI\新建文本文档.txt` | §0 + §3 |
+| ✅ **API key 不入 prompt** | 本 SPEC 零 LLM API 调用(账指纹协议 + EIS 复现都是纯数学/Merkle); 不读 `〔本机用户目录〕/Desktop/AI/新建文本文档.txt` | §0 + §3 |
 | ✅ **术语红线** | 用"账指纹 / 根指纹 / 5 锚 manifest / Merkle 树 / 结构指纹 / 裸 SHA-256 / EIS / 守恒残差"等数学/工程术语, 不用"魔法"等营销词 | §0 + §3 + §6 |
 | ✅ **数字溯源** | 全部数字从 frozen 出处引(P-D V0.1 报告 §4.1 + §4.3 + v3 提案附录 D + deposon-project/runs D2_results); 5 锚 SHA-256 真实值见 §6; 3 根指纹出处见 §2 + §3 | §4 数字溯源表 + §6 + §2 |
 | ✅ **verifier 纪律** | §7 复现协议用 /tmp 副本; 不碰 HANDOFF_MACHINE_READABLE.json / results/*.json / verifier/vN/; P-D V0.1 报告 §2.6 已规定 /tmp 副本 | §7 + P-D V0 报告 §2.6 |

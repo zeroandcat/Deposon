@@ -6,7 +6,7 @@
 - **落册日期**：2026-10-10（CST）
 - **件系**：第三批登记件 `results/_questionnaire_cards_intake_register_supplement_2_2026_10_10.md`（SHA-12 `dc43e3cb7610`）之**追补落册（第四批）**；上承第二批 `results/_questionnaire_cards_intake_register_supplement_2026_10_09.md`（SHA-12 `193386b9f23c`）、第一批 `results/_questionnaire_cards_intake_register_2026_10_09.md`（SHA-12 `d917180db36f`）。⛔ 0 编辑／覆写／修改前三批登记件；⛔ 0 重复转录其已收录之卡。
 - **编制**：**protocol-keeper**（口径与预登记官 · 分支会话 `mvs_b98831be92624db1af580ccc2e7f66d4`｜署名如实 · **0 冒充 PI／parent／verdict-keeper／verifier／worker**）
-- **来源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`，表 `questionnaire_requests`。本轮以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交）。
+- **来源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`，表 `questionnaire_requests`。本轮以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交）。
 - **窗口口径**：本批应录＝派工指定之 **5 张目标卡**（`ask_2dbc05cc3725c7002935ed01`／`ask_92fd9e0ed5a2d6a64e4be94b`／`ask_906e23019db97965b62a29fa`／`ask_d638adfe6dcf33b095e26c25`／`ask_b56649e37d180c79e1ec47e7`）——**本件非全表扫描之应录全集**，系**指定目标行**之逐字转录（沿「库读取限 `questionnaire_requests` 目标行」之派工纪律）。
   - ⚠ **活库声明**：运行时库为**活库**，本件之读得时点即收录截止时点；**其后再建之卡不属本件应录面**。
 - **转录纪律**：**逐字、0 省略、0 解释、0 判读**。题面（`request_json.steps` 之 id／header／question／options／selectionMode／required／allowOther／otherPlaceholder）与答文（`reply_payload` 全文，含 `selectedOther`／`otherText`／`source`）均按库中原文照录；本件**不含**任何分析、结论、裁断或建议。

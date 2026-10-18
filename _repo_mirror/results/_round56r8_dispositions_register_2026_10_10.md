@@ -2,7 +2,7 @@
 
 - **件性质**：**落实登记件（登记面 · 非判定面 · 非协议面）** —— 就 PI 2026-10-10「轮56 卡R8」（`ask_84f9515f46c57d1b340dc5c5`）**四答之全部**，登记其**答文逐字、各答之处置实况、未闭列册、词面并存提示与 0 回改面**。⛔ **0 判档**（0 出 `pass`／`af`／`kd`／`fail`／`give-up` 五终判之一）｜⛔ **0 代裁**（PI 已裁者照录；PI 未裁者如实列出口）｜⛔ **0 代闭**任一出口｜⛔ **0 新裁**（本件全部内容 ＝ 对库内卡答与在册件之**照录** ＋ 指纹实测 ＋ 状态登记，⛔ 非本件之判断）｜⛔ **0 复核在册件之实体**｜⛔ **0 跑任何实验／0 真重建**｜⛔ **0 调任何 `TH-*`／`K-*`／`N*` 阈值或门柱**。
 - **授权锚**：PI 2026-10-10「轮56 卡R8」卡 `ask_84f9515f46c57d1b340dc5c5`（库内 `title` 逐字：「**deposon 轮56 卡R8 · 本轮最后问答卡（四步并裁）**」）—— **卡答时点 ＝ 2026-10-10 18:48:43.096 +0800**（库内 `answered_at` ＝ `submittedAt` ＝ `1791629323096` 实测换算）。
-- **卡答第一源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（表 `questionnaire_requests`，`request_id` ＝ `ask_84f9515f46c57d1b340dc5c5`，**1** 行命中），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。**本棒读得时点 ＝ 2026-10-10 18:53:50 +0800**（取本棒 `stat` 之 WAL mtime 读得时点；主库 mtime ＝ 18:53:45.702 +0800）；本件 §2 之题面、选项与答文**逐字取自该库**。⛔ **0 网络 · 0 写库 · 0 改库 · 0 建表 · 0 提交 · 0 checkpoint**。
+- **卡答第一源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`（表 `questionnaire_requests`，`request_id` ＝ `ask_84f9515f46c57d1b340dc5c5`，**1** 行命中），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。**本棒读得时点 ＝ 2026-10-10 18:53:50 +0800**（取本棒 `stat` 之 WAL mtime 读得时点；主库 mtime ＝ 18:53:45.702 +0800）；本件 §2 之题面、选项与答文**逐字取自该库**。⛔ **0 网络 · 0 写库 · 0 改库 · 0 建表 · 0 提交 · 0 checkpoint**。
 - **⚠ 读得时点 ≠ 卡答时点（诚实交代 · 0 混同）**：`answered_at`（18:48:43.096）＝ **效力发生时点**；本棒读库之时（18:53:50）＝ **证据取得时点**；二者**不可混同**。⚠ 本棒读库之时**晚于**派工单所述之答时点（18:48:43.096）**之后**，故答文已在盘、得于 §2 实测（**二者时序无冲突**：卡答 18:48:43.096 → 本棒读库 18:53:50）。
 - **⚠ 转录一致性声明（如实 · 非漏报）**：派工单所载卡答四要点（① `af_pair` ＝ `jia` 甲·①计入＋②列证强制／② `a12` ＝ **Other「give-up是我明确放弃，否则挂账非终判」**／③ `b01` ＝ `jia` 甲·是·重算／④ `a09c` ＝ `jia` 甲·PI 径给·**字面未随答给出**）经**本棒以库原件独立复核**，与库内 `reply_payload` 之 `answers` **逐项相符**（§2.3 对照表）⇒ **0 分歧**，**四项警示（含 `a09c` 之 ⚠ 字面未给）亦经库原件证实**。本棒**未**依赖转述，一律以**库原件**为准。
 - **本件**：`results/_round56r8_dispositions_register_2026_10_10.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False` ＋ glob 双式 **0** 命中实测，§9.1）。
@@ -50,7 +50,7 @@ PI 已于「轮56 卡R8」卡就**四问**逐项落裁：**① `af_pair` ＝ `ji
 
 | 项 | 值 |
 |:--|:--|
-| 库路径 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` |
+| 库路径 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` |
 | 库文件大小（读得时点） | `474656768` bytes |
 | WAL 面注记（读得时点） | `runtime-state.sqlite-wal` ＝ `5018192` bytes；`runtime-state.sqlite-shm` ＝ `32768` bytes；⛔ 本棒**未触发** checkpoint、**0 写入** |
 | 表 | `questionnaire_requests`（目标行 `request_id` ＝ `ask_84f9515f46c57d1b340dc5c5`，**1** 行命中） |
@@ -257,7 +257,7 @@ PI 已于「轮56 卡R8」卡就**四问**逐项落裁：**① `af_pair` ＝ `ji
 | **V3／V4 语义纪律** | ✅ 本件所涉为 **V3 全线＝博弈论主线**之 U-2／U-3／U-5-B／af 实体定义／五终判口径诸面｜⛔ **0 将 `V3`／`V4` 当普通阶段序号混用**；⛔ **0 缩限 V4 蒸馏线**（本件 0 涉该线）；⛔ 0 涉 V4 之敏感素材面 |
 | **五终判口径** | ✅ ⛔ 本件**0 出** `pass`／`af`／`kd`／`fail`／`give-up` 五终判之一；本件之「落裁·处置登记」**不属五终判** |
 | **R4／版式／工具纪律** | ✅ 0 读 key／0 读 `.env`／0 落盘凭据｜UTF-8 无 BOM · LF｜⛔ **0 网络／0 skill／0 LLM／0 业务派生 JSON**｜临时脚本与输出**已以 `rm --` 清理** ⇒ 0 遗留 |
-| **`_non_upload_local_archive`** | ✅ ⛔ **0 触及** `D:\私人资料\_non_upload_local_archive` |
+| **`_non_upload_local_archive`** | ✅ ⛔ **0 触及** `〔本地归档区〕` |
 | **署名如实** | ✅ **doc-writer**（分支会话 `mvs_03fa33d24ded4bc48e7f1ea5c73b9ff5`）· ⛔ **0 冒充** PI／parent／protocol-keeper／worker／verifier／verdict-keeper／evidence-auditor |
 
 ---

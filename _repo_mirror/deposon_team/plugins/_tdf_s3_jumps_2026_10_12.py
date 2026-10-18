@@ -2,7 +2,7 @@
 """_tdf_s3_jumps — 项 7 三跳点独立复算（只读）"""
 import hashlib
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_september_workspace')
 b = (REPO / 'docs' / 'V3X' / 'TRAE_V3_ASSET_ERRATUM_2026_09_23.md').read_bytes()
 def psha(n): return hashlib.sha256(b[:n]).hexdigest()[:12]
 JUMPS = [(327975, '62eed1f4dfa0', 'v24 末态'), (360692, '8c8610ced9fa', 'v25'), (407284, 'aed375c485fb', 'v26')]

@@ -2,7 +2,7 @@
 """_tdf_s3b — 项 7 v24 跳点（去首行段法）复算（只读）"""
 import hashlib, re
 from pathlib import Path
-REPO = Path(r'D:\私人资料\deposon-repo')
+REPO = Path(r'_september_workspace')
 p = REPO / 'docs' / 'V3X' / 'TRAE_V3_ASSET_ERRATUM_2026_09_23.md'
 b = p.read_bytes()
 t = b.decode('utf-8')

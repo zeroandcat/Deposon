@@ -20,7 +20,7 @@
 | 0 触动禁动清单 | **全部健在** (11 类逐类核对) |
 | 链上保留(.tmp/ 内 chain-bound) | **8 件** (灰区) |
 | 任务预期 ~487 件 vs 实际 51 件 | **保守优先,不动 frozen 链** |
-| 删除通道 | `mavis-trash.cmd` (trusted launcher @ `C:\Users\Administrator\.minimax\bin\mavis-trash.cmd`) |
+| 删除通道 | `mavis-trash.cmd` (trusted launcher @ `〔本机用户目录〕/.minimax/bin/mavis-trash.cmd`) |
 | 可恢复性 | **所有删除件可从 Windows Recycle Bin 恢复** |
 
 ---
@@ -33,7 +33,7 @@
 
 | # | 路径 | bytes | SHA-12 | 处置 | 备注 |
 |---|---|---|---|---|---|
-| 1 | `=` | 0 | (前 0 字节,SHA-12 不适用) | mavis-trash | 根目录 0 字节异常残留文件名(`D:\私人资料\deposon-repo\=`),2026-09-24 14:31 创建,首棒 smoke test 已 trash |
+| 1 | `=` | 0 | (前 0 字节,SHA-12 不适用) | mavis-trash | 根目录 0 字节异常残留文件名(`_september_workspace/=`),2026-09-24 14:31 创建,首棒 smoke test 已 trash |
 
 ### B.2 根目录 `__pycache__/` 编译缓存(2 件)
 
@@ -253,7 +253,7 @@
 
 | 维度 | 值 |
 |---|---|
-| 通道 | 单条 / 批顶层 `mavis-trash.cmd -- <path>...` (trusted launcher @ `C:\Users\Administrator\.minimax\bin\mavis-trash.cmd`,内部走 `mavis-trash.js` → `Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile(..., 'SendToRecycleBin')`) |
+| 通道 | 单条 / 批顶层 `mavis-trash.cmd -- <path>...` (trusted launcher @ `〔本机用户目录〕/.minimax/bin/mavis-trash.cmd`,内部走 `mavis-trash.js` → `Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile(..., 'SendToRecycleBin')`) |
 | 不可用工具 | `mavis-trash` 直接调用(safety policy 拒绝);永久删除 `del` / `Remove-Item -Recurse -Force`(禁用) |
 | 输出信息 | 每件 `mavis-trash: moved to trash: '<path>'` |
 | 可恢复性 | **51/51 项可恢复**(Recycle Bin 标准 recover 路径) |
@@ -271,9 +271,9 @@
 
 | 目录 | before | after | delta |
 |---|---|---|---|
-| `D:/私人资料/deposon-repo` | **1486** | **1437** | -49 |
-| `D:/私人资料/_non_upload_local_archive` | 1176 | 1176 | 0 |
-| `D:/私人资料/deposon-sub` | 364 | 364 | 0 |
+| `_september_workspace` | **1486** | **1437** | -49 |
+| `〔本地归档区〕` | 1176 | 1176 | 0 |
+| `_september_workspace` | 364 | 364 | 0 |
 
 ### K.2 主目录最终计数
 

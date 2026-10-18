@@ -14,7 +14,7 @@
 |---|---|---|
 | 既有件 0 触动（被引件只登记） | ✓ 遵守 | `results/_v4_supp_t15r2_executor.py` = 84,884 B / `4B5B720D5CDA`（修复前后各测 1 次，同值 MATCH）；`_v4_supp_t15_executor.py` = `558E635F9BA6` MATCH；`_v4_supp_t15r2_result.json` = `C69AB0E3002E`；`_v4_supp_t15r2_verdict.md` = `8355724A26E3`；勘误链本体 `docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md` = 508,443 B / `CFD251E771A9` |
 | 核验类只读 + 可修面新名件修 | ✓ 遵守 | 唯一改动 = 新建 `results/_v4_supp_t15r2_executor_r1_2026_09_28.py`（新名）+ 本件；**0 处修改既有件字节** |
-| deposon-sub 副区件改动须先呈报不擅动 | ✓ 遵守 | 副区 `D:/私人资料/deposon-sub/`（workspace 外）本棒**只读 0 写**；R-4 / R-17 / R-20 三条全部只读核验，处置建议见 §4 待拍板 |
+| deposon-sub 副区件改动须先呈报不擅动 | ✓ 遵守 | 副区 `_september_workspace`（workspace 外）本棒**只读 0 写**；R-4 / R-17 / R-20 三条全部只读核验，处置建议见 §4 待拍板 |
 | key 永不明文 | ✓ 遵守 | 本棒 0 次 API 调用、0 次读 key 文件；产物内 0 处 key 字面 |
 | 0 编造 | ✓ 遵守 | 凡未能独立复现的条目，逐条标 `[未独立复现]`（见 R-19 两条）；勘误原文与实测不符处，如实标 `[勘误表述需更正]`（R-9 C4 / R-16 / R-20） |
 | 署名如实 | ✓ 遵守 | 末行 = Mavis 团队 worker 出件｜2026-09-28；**未沿用 Trae code / doc-writer 名头** |
@@ -130,7 +130,7 @@ L682:  no_proxy_compliance = (no_proxy_used_count == len(quadruples))    ← 恒
 
 ### §3.2 R-4 · 副区假 `.txt` —— 三项全复现 + 新增跨区重复发现
 
-**实测**（`D:/私人资料/deposon-sub/results/_test_conv_out.txt`，7,568 B / `6EFFE5EF7AE6`，mtime 2026-09-26 17:16:43）：
+**实测**（`_september_workspace/results/_test_conv_out.txt`，7,568 B / `6EFFE5EF7AE6`，mtime 2026-09-26 17:16:43）：
 
 | 现象 | 实测 |
 |---|---|
@@ -294,7 +294,7 @@ L682:  no_proxy_compliance = (no_proxy_used_count == len(quadruples))    ← 恒
 
 | 面 | 结构 | 重复词 |
 |---|---|---|
-| 副区 `D:/私人资料/deposon-sub/_tmp_v2_redesign.py`（13,762 B / `4CD07B3A7DEA`）`KW_V2` | **dict，增量式**：`KW_V1["KILL_LINE"] + (...)` 等 4 键 | **有**：KILL_LINE 中 `"立案"` ×2、`"完工"` ×2；RISK 中 `"假fail"` ×2、`"假pass"` ×2 |
+| 副区 `_september_workspace/_tmp_v2_redesign.py`（13,762 B / `4CD07B3A7DEA`）`KW_V2` | **dict，增量式**：`KW_V1["KILL_LINE"] + (...)` 等 4 键 | **有**：KILL_LINE 中 `"立案"` ×2、`"完工"` ×2；RISK 中 `"假fail"` ×2、`"假pass"` ×2 |
 | 主目录 `results/_v4_pi_cot_v2_ruleset_v2_executor.py`（52,465 B / `EB22F13D571C`）`KEYWORDS_V2` | **dict，独立全量表**：`(...)` 元组字面量 4 键 | 所检段落**未见重复**（`立案`/`完工` 各 1 次） |
 
 **关键更正**：两表**本就设计为不同物** —— 副区是「v1 词表 + v2 增量」的**草稿**，主目录是**落地的独立全量表**。故「内容不一致」不构成缺陷：主目录 COST 含 v1 基线词（成本/廉价/量化/投入/开销/费用/付费/花费/算力/消耗）与 `"没钱"`，副区走 `KW_V1[...]` 继承同一基线，属**预期差异**。
@@ -332,7 +332,7 @@ L682:  no_proxy_compliance = (no_proxy_used_count == len(quadruples))    ← 恒
 
 ### §3.14 R-20 · `.ps1` 末尾死输出 —— 确认，空行数勘误记 4 实为 5
 
-`D:/私人资料/deposon-sub/_check_conv_archive.ps1`（2,326 B / `C89D46C47026`，LF / 无 BOM，共 50 行）末尾逐行：
+`_september_workspace/_check_conv_archive.ps1`（2,326 B / `C89D46C47026`，LF / 无 BOM，共 50 行）末尾逐行：
 
 ```
 L44: Write-Output ('---DONE---')

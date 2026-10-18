@@ -54,7 +54,7 @@
 | — 仓内 + 仓外双面各存一份 | 1（C 面副本） |
 | **按哈希 0 命中** | **2**（`r4-H12d-Y01` / `r4-H12d-Y02`，**同属一件**，见 §1.3） |
 
-> **面根目录（沿 r4 §1.1 逐字）**：`C` ＝ `D:\私人资料\_non_upload_local_archive\`；`A` ＝ `D:\私人资料\deposon-repo\results\`（仅 r2 §13-4 列名 8 件）；`docs/` ＝ `D:\私人资料\deposon-repo\docs\`；`letters/` ＝ `D:\私人资料\deposon-repo\letters\`。
+> **面根目录（沿 r4 §1.1 逐字）**：`C` ＝ `〔本地归档区〕`；`A` ＝ `_september_workspace/results/`（仅 r2 §13-4 列名 8 件）；`docs/` ＝ `_september_workspace/docs/`；`letters/` ＝ `_september_workspace/letters/`。
 > ⚠️ **仓外只读声明**：本棒对 `_non_upload_local_archive/` **仅做只读 `sha256` 复算以完成「先核后引」，0 移动、0 改写、0 枚举落盘动作**（沿「不擅动 workspace 外」铁律的只读解释）。
 
 ### §1.3 ⚠️ 哈希漂移如实登记（`6b2190b7a60a` → `4864a9b8fa78`）
@@ -442,7 +442,7 @@
 | 子项 | 盘上字面（逐字转引摘要） |
 |---|---|
 | ① `H10-Y02` | 默认转移计划表：**🔴 必转** `.mavis/installers/`（**203.97 MB**，「转移后 minimax agent 工具可能失效」，**强烈推荐 68% 节省**）｜**🟡 可清理** `.mavis/cache/`（6 子目录 / 24.8 MB，「极低（可重新生成）」，**推荐**） |
-| ② `H10-Y03` | 转移目标三选：**A（推荐）** `D:\私人资料\_mavis_external\`（用户工作区内的独立空间，环境变量易配）｜**B** `D:\_mavis_external\`（D 盘根）｜**C** `C:\Users\Administrator\AppData\Local\minimax\` |
+| ② `H10-Y03` | 转移目标三选：**A（推荐）** `〔本地资料区〕/_mavis_external/`（用户工作区内的独立空间，环境变量易配）｜**B** `〔本机路径〕/_mavis_external/`（D 盘根）｜**C** `〔本机用户目录〕/AppData/Local/minimax/` |
 | ③ `H12a-Y02` | 「**P2 / DQ-2**：重跑 `run_v20_gt3b/c_fetch` 补齐 4 个 `fetch_failed` 评估者，**或在汇总 JSON 标注 `missing_evaluators`**」｜「P3 / DQ-1：`prior_named` 缺失语义文档化（S 族无先验属设计）」｜「P3 / DQ-3/4/5：列名规范化与 schema 注释，**低优先**」 |
 | ④ `H12a-Y04` | 「**P1**：`run_v20_gt3b_fetch.py` / `run_v20_gt3c_fetch.py` 错误路径接入 `_sanitize`（消除 key 经 HTTP 回显落盘的**理论通道**）」｜「P3：扫描配置中将 `verifier/*/check.py` 的 MD5 完整性校验与缓存文件名哈希加入**排除清单**，降低后续审计噪音」｜「**保持现状纪律**：key 仅从 env 读取、禁 mock、缓存只落响应文本——本轮复核全部成立」 |
 | ⑤ `H12b-Y02` | 「3 个 BOSS 脚本的字段名修复可保留（已正确）」｜「**需另起一个 worker 任务**处理 v19 frozen JSON 的 schema 统一 ＋ 数据填充：`(a)` gsm8k/strategyqa 字段名统一为 `pred` 并填 LLM 跑过的真实 float 值；`(b)` BOSS 脚本里 `float(p.get("pred", 0.0))` 改为 `parse_pred(p.get("pred", 0.0))` 处理 yes/no 字符串」 |

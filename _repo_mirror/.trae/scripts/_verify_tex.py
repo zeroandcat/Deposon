@@ -9,7 +9,7 @@ import sys
 import tarfile
 from pathlib import Path
 
-PAPER = Path(r"D:\私人资料\deposon-repo\paper")
+PAPER = Path(r"_september_workspace/paper")
 BS = chr(92)        # one literal backslash, for str ops (`in`, count, find)
 RB = BS + BS        # two backslashes in a regex pattern = one literal backslash
 

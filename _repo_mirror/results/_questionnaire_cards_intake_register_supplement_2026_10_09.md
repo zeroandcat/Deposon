@@ -5,7 +5,7 @@
 - **件名**：`results/_questionnaire_cards_intake_register_supplement_2026_10_09.md`
 - **落册日期**：2026-10-09（CST）
 - **件系**：第一批登记件 `results/_questionnaire_cards_intake_register_2026_10_09.md`（SHA-12 `d917180db36f`，读取时点 2026-10-09 18:08 前后）之**追补落册（第二批）**。⛔ 0 编辑／覆写／修改第一批登记件；⛔ 0 重复转录其已收录之卡（对账见 §2）。
-- **来源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`，表 `questionnaire_requests`。本轮以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交）。
+- **来源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`，表 `questionnaire_requests`。本轮以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交）。
 - **窗口口径（第一批截止 ＋ 本批起讫）**：
   - **第一批窗口**：`created_at >= 2026-10-08 00:00:00 +0800`（epoch ms `1791388800000`）；第一批读取时点（库 mtime `2026-10-09 18:08:26.683 +0800`）该窗口共 `34` 件，其中最后一件为 `ask_33471ffa5c68d4bbd8571e40`（`2026-10-09 17:24:20.757 +0800`）＝**第一批截止**。
   - **本批窗口**：`created_at >= 2026-10-09 17:00:00 +0800`（epoch ms `1791536400000`）——起于第一批截止之前（含重叠区，专用于对账），迄于**本件读得时点**实测末件 `ask_6db74cbbb4c70cf8c0c6cc1e`（`2026-10-09 21:23:34.280 +0800`）。
@@ -13,7 +13,7 @@
 - **转录纪律**：**逐字、0 省略、0 解释、0 判读**。题面（`request_json.steps` 之 id／header／question／options）与答文（`reply_payload` 全文，含 `selectedOther`／`otherText`）均按库中原文照录；本件**不含**任何分析、结论、裁断或建议。
 - **效力声明**：本件**仅转录**。⛔ **0 当「裁录」**；⛔ **0 代替任何既有登记件的裁录效力**。本件不产生、不替代、不撤销任何裁决；一切裁断效力仍以其原登记件／生效件为准。
 - **命名合规**：`_主题_日期` 体例；⛔ 0 带 V-阶段前缀（0 `_v3_`／`_v4_`／`_v5_`）。
-- **编制**：worker（受派棒）；**编制方式**：`C:\Python314\python.exe` 只读抽取 → 程序化逐字转录（⛔ 0 人工改写任何字面）。
+- **编制**：worker（受派棒）；**编制方式**：`〔本机路径〕/Python314/python.exe` 只读抽取 → 程序化逐字转录（⛔ 0 人工改写任何字面）。
 
 ## 0 · 本轮读取基准（provenance）
 

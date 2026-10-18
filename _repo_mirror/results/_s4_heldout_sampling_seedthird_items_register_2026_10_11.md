@@ -9,7 +9,7 @@
   2. **新集 JSON** `results/_s4_heldout_sampling_seedthird_items_2026_10_11.json`
   3. **本登记件** `results/_s4_heldout_sampling_seedthird_items_register_2026_10_11.md`
 - **出件**：**worker**（向-1 第三集抽取批 · 分支会话 `mvs_544437291b604723b1f8a991c7e717e4`｜**署名如实** · ⛔ 0 冒充 PI／parent／verifier／verdict-keeper／protocol-keeper／evidence-auditor／doc-writer）
-- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（0 读 key／0 读 `.env`／0 落盘凭据）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 跑 S4′ 读数面**｜⛔ **0 触及 `D:\私人资料\_non_upload_local_archive`**
+- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（0 读 key／0 读 `.env`／0 落盘凭据）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 跑 S4′ 读数面**｜⛔ **0 触及 `〔本地归档区〕`**
 - **命名合规**：`_主题_日期` 三段式；首段 `_s4_heldout_sampling_` ＝ 步骤标识非阶段号 ⇒ 合 PI 2026-09-29 命名裁（`57024f2cd30a` §1.2②）；⛔ `_v5_`／`_v4_`／`_v3_`
 
 > 📌 **状态栏**：🟢 **第三集已抽出（一次抽取 · 26 件 · `FP3` 已生成并登记）** ＋ 🟢 **自审双门通过**（seed42 逐件全等 ＋ seed′ 逐件全等）＋ 📌 **`FP3` 待 PI 面以另立登记承载**（⛔ 0 回改 `fd4ec7559342` 一字）＋ ⛔ **0 判档 · 0 宣告过门与否 · 0 宣告 `K-RJ-5` 闭／开 · 0 宣告新链可开跑**
@@ -228,7 +228,7 @@
 | ⛔ **0 回写派生面** | ✅ ⛔ 0 回写 `6f020c03e52c` 之 `in_heldout` 字段；新值**仅存于**本产出 2 件 |
 | **R4** | ✅ key 永不明文；0 读 key／0 读 `.env`／0 落盘凭据 |
 | **0 网络／0 skill／0 LLM** | ✅ 纯本机只读计算；⛔ 0 端点调用／0 LLM 代答 |
-| ⛔ **0 触及禁区** | ✅ `D:\私人资料\_non_upload_local_archive` **0 读、0 写、0 列目录** |
+| ⛔ **0 触及禁区** | ✅ `〔本地归档区〕` **0 读、0 写、0 列目录** |
 | 编码 | ✅ UTF-8 **无 BOM** · **LF（CRLF ＝ 0）** |
 
 
