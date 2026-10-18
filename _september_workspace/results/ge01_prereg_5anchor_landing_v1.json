@@ -1,0 +1,798 @@
+{
+  "schema_version": "ge01-prereg-5anchor-landing.v1",
+  "created": "2026-10-16",
+  "generator": "worker",
+  "anchor_status": "landing_recorded_pending_PI_approval",
+  "status_detail": "本件系 5 锚**落位记录件**（G-E02 验收结果 JSON），由 GE02-ANCHOR-LANDING-BUILD 棒于 2026-10-16 建造。产出标「**候 PI 核准**」——⚠ 本棒**⛔ 0 径行采认、⛔ 0 入锚面**：既非 spec L22 所指之 verifier/handoff/P_B_V0_anchors_sha256_12.json（该路径本棒实测 Test-Path=False，仍 0 在盘·沿 v3 KD-9/KD-19 之辨），亦⛔ 0 自认即被引指纹 f5da17e62b07 之继任者。5 锚之 field/value/status 面**逐字沿录** v3（results/_ge01_prereg_5anchor_v3.json · 0c269b9558da / 35911 B），本棒 0 改其一字；本棒新增之面仅 landing_measurement（含实测复算 ＋ 自检轨实跑留痕 ＋ 阴性三通道）与 supersession/landing_scope（见 kd 之 KD-1/KD-2）。授权面缺口见 kd 之 KD-3（卡 ask_b9ba5971d9c3d61e0e863375 之 PI 逐字答于盘上 0 登记件）。",
+  "algorithm": "hashlib.sha256(file bytes).hexdigest()[:12]  (stdlib hashlib; built-in hash() never used)",
+  "authorization": {
+    "pi_card": "ask_b9ba5971d9c3d61e0e863375",
+    "pi_answer_verbatim_q3_per_baton_order": "授权另派造件棒（worker）",
+    "baton_id": "GE02-ANCHOR-LANDING-BUILD",
+    "baton_role": "worker（产出执行棒）",
+    "gap_closed_if_approved": "V(ε) 复启路径 S-1 之缺口②「5 锚落位件补齐」（承 results/_killface_v1_design_draft_2026_10_16.md §6 K-D-9 / §3-1 S-1 之 ③）",
+    "registration_gap_honest_face": "⚠ 本卡之 PI 逐字答于盘上**0 登记件**：全仓检索该卡号仅命中 results/_root_session_history_memo_main_2026_10_14.md（7d1482b239c7）之 §18，该处载「第四批卡已呈候 PI」并列 Q3 之**问句**（「5 锚落位件造件授权（S-1 缺口二）」），**未见其答** ⇒ 本件所据之逐字答系**派工单元转述**，本棒 ⛔ 0 独立验明（沿 results/_killface_v1_effect_register_2026_10_16.md §7 之 K-D-3 同族口径）",
+    "related_register": "results/_pi_card_answers_register_2026_10_16_v29.md（bfcc14f8a4ce / 16960 B）§2-2 之 3 载该面仍开口",
+    "naming_caliber_ref": "results/_anchor_status_naming_note_2026_10_16.md（d042dd66e3c7）· N-1「新出件一律以 anchor_status 为主键」＋ N-4「status_detail 承载自由文本」",
+    "naming_caliber_scope_limit": "⚠ 该命名口径之裁**射程仅及键名与字段语义面**；⛔ 0 等同于甲型 schema 之入锁/生效（仍候 PI 复核）",
+    "effective_moment": "⛔ 未定 —— 生效时点 ＝ PI 核准回执之时点（⛔ 0 棒自签时点·⛔ 0 以落盘时点充生效时点）",
+    "effective_moment_ms": null
+  },
+  "supersession": {
+    "supersedes": null,
+    "policy": "全另立 —— ⛔ 0 回改任何既有件一字 · ⛔ 0 移动/重命名/删除 · 新旧并存",
+    "relation_to_v3": "本件⛔ 非 v3 之替代：v3（0c269b9558da / 35911 B）为 5 锚 field/value 面之正身且原文未动；本件为其**落位记录与实测复算面**",
+    "relation_to_spec_landing_path": "spec L22 逐字指定落位路径 verifier/handoff/P_B_V0_anchors_sha256_12.json；本棒实测该件 Test-Path=False ⇒ 本件⛔ 非该落位件之实现（沿 v3 KD-9 之辨）",
+    "old_file_touched": 0
+  },
+  "path_convention": {
+    "json_path_separator": "forward slash (/)",
+    "windows_variant_field": "path_windows (backslash) per anchor",
+    "rationale": "JSON 内统一正斜杠（与 spec/先例字面一致·跨平台）；另列 path_windows 供 Windows 侧直接取值"
+  },
+  "anchors": {
+    "P_B_ECR_BASELINE": {
+      "name": "P_B_ECR_BASELINE",
+      "path": "results/deposon_v20_gt.json",
+      "path_windows": "results\\deposon_v20_gt.json",
+      "sha256_12": "497b9c2d6746",
+      "bytes": 3803,
+      "role": "value_determining",
+      "role_note": "v2 本面 role 值 ＝ 'ecr_baseline'（锚族功能标识）；依 PI 2026-10-15 卡 ask_207b060a5273ab88912e451f §1-Q2 裁丁，本面 role 改为系结面标识 'value_determining'；锚族功能仍由 name／family／field／value 承载；旧件 v2 f06313373fc6 原样留痕",
+      "anchor_status": "anchored_under_PI_Q2_backfill; value independently recomputed bit-identical; binding face adjudicated by PI 2026-10-15 (裁丁 · ask_207b060a5273ab88912e451f §1-Q2); awaiting PI final close-out of the ECR anchor line",
+      "value": 1.3333333333333333,
+      "value_form": "float, IEEE-754 double, bit-identical to recomputation and frozen reading",
+      "field": "GT4_price_of_anarchy.verdict.median_poa",
+      "field_note": "field 为指向冻结读数之 JSON 指针；字面 'ecr_median' 为禁用字面且本棒未使用",
+      "family": "GT-4 distribution-level (甲族)",
+      "family_note": "GT-4 price-of-anarchy distribution-level median over frozen 20-graph reading; NOT the v4-track scalar account (乙族, see limitation_face.yi_family)",
+      "definition_anchor": {
+        "path": "docs/GT_FORMALIZATION_v1.md",
+        "path_windows": "docs\\GT_FORMALIZATION_v1.md",
+        "sha256_12": "aeefb8ef6972",
+        "bytes": 19100,
+        "line": 25,
+        "line_text_carrier_as_registered": "PoA(g) = field_mean named Hits@3 / max(自利臂 named Hits@3); 自利臂={random, degree}(llm_prior 族 S 不可得); median PoA > 1.2 ⇒ 协调价值; median=1.3333 ⇒ field_coordination_value_supported",
+        "line_text_on_disk_measured_this_run": "**PoA**（`run_v20_gt.py` run_gt4）：PoA(g) = field_mean named Hits@3 / max（自利臂 named Hits@3)，自利臂={random, degree}（llm_prior 族 S 不可得，如实退化）；median PoA > 1.2 ⇒ 协调价值，≤1.05 ⇒ 判死。结果：median=1.3333，判 field_coordination_value_supported（`deposon_v20_gt.json → GT4_price_of_anarchy.verdict`）。",
+        "line_text_note": "载体所载 line_text 为盘上 L25 之消元转写（semantically equivalent, 非逐字节引文）；盘上原文另见 line_text_on_disk_measured_this_run。差异登记于 kd KD-A，⛔ 0 回改载体",
+        "role": "definition"
+      },
+      "value_anchor": {
+        "path": "results/deposon_v20_gt.json",
+        "path_windows": "results\\deposon_v20_gt.json",
+        "sha256_12": "497b9c2d6746",
+        "bytes": 3803,
+        "json_pointer": "/GT4_price_of_anarchy/verdict/median_poa",
+        "sha256_12_binding": "本锚之 sha256_12/bytes 面所系实体 ＝ P-甲锚载体自身指定之 value_anchor（results/deposon_v20_gt.json）；本棒 0 自择实体、0 独立另定系结（若 PI 欲系于他实体，须另行裁面，见 kd KD-13）；PI 已于 2026-10-15 卡 ask_207b060a5273ab88912e451f §1-Q2 裁丁（维持系本实体并标 value_determining，另立三伴随 role 面）⇒ 本面之转录性质经裁决确认，择据补记见本锚 binding_adjudication（闭 KD-16 之择据缺环）"
+      },
+      "upstream_anchor": {
+        "path": "results/deposon_v20_corpus_eval.json",
+        "path_windows": "results\\deposon_v20_corpus_eval.json",
+        "sha256_12": "ca71aa6858e1",
+        "json_pointer": "/graph_level/named_hits3",
+        "role": "upstream"
+      },
+      "spec_registration": {
+        "role": "spec_registration",
+        "primary": {
+          "path": "docs/V3X/P_B_DISTORTION_BOUND_V0_SPEC.md",
+          "path_windows": "docs\\V3X\\P_B_DISTORTION_BOUND_V0_SPEC.md",
+          "sha256_12": "423c84de20d5",
+          "bytes": 15457,
+          "role": "spec_registration_primary",
+          "note": "P_B spec 本体（本族 spec）· 本棒直算复核 423c84de20d5／15,457 B 逐位相符"
+        },
+        "precedent_bound": {
+          "path": "docs/V3X/P_A_EQUILIBRIUM_STABILIZATION_V0_SPEC.md",
+          "path_windows": "docs\\V3X\\P_A_EQUILIBRIUM_STABILIZATION_V0_SPEC.md",
+          "sha256_12": "bd1caab42b4c",
+          "bytes": 10351,
+          "role": "spec_registration_precedent_bound",
+          "note": "P_A spec · 先例 03c6c01f3697 之 P_A_ECR_BASELINE 所系实体（即 v1 candidates_unadjudicated 之第二候选）· 本棒直算复核相符"
+        },
+        "primary_spec_object_face": {
+          "spec_anchor_table_ref": "spec §2 L24–L30 之锚表（'锚 ID ｜ 对象 ｜ 算法 ｜ 字段'）",
+          "P_B_ECR_BASELINE_object_cell_verbatim": "本文 §3 ECR=1.333 基线",
+          "P_B_ECR_BASELINE_field_cell_verbatim": "ecr_median=1.333",
+          "note": "此二格之逐字载于 spec §2 之表；⛔ 0 回改 spec（KD-15／KD-17）；'ecr_median' 为禁用字面且本棒未使用（沿 v2 field_note）"
+        },
+        "note": "依 PI 裁丁另立之 spec_registration 面（消解另议判断件 99b578a1be2c §3-甲-反1 之「外部按 spec §2 验锚 ⇒ 形式上被读作指纹不符 ⇒ 漂移」对账疑）；⛔ 非系结面 · ⛔ 非门判别面 · 其指纹变动不单独触发漂移门"
+      },
+      "binding_adjudication": {
+        "kd": "KD-13",
+        "pi_card": "ask_207b060a5273ab88912e451f",
+        "pi_answer_verbatim": "裁丁（推荐）",
+        "option_id": "q2_33b33471_opt1",
+        "register_path": "results/_pi_card_answers_register_2026_10_15_v13.md",
+        "register_sha256_12": "693181b9354b",
+        "register_section": "§1-Q2（含登记注记：选项全文义）",
+        "deliberation_path": "results/_kd13_ecr_anchor_binding_deliberation_2026_10_15.md",
+        "deliberation_sha256_12": "99b578a1be2c",
+        "deliberation_case": "丁（双系／指针系结，且以甲为主面）",
+        "effective_moment_ms": 1792039740320,
+        "v1_candidates_unadjudicated": [
+          "423c84de20d5",
+          "bd1caab42b4c"
+        ],
+        "chosen_entity_sha256_12": "497b9c2d6746",
+        "chosen_entity_is_in_v1_candidates": false,
+        "choice_rationale": "补记 KD-16 之择据缺环（另议判断件 99b578a1be2c §3-甲-反2）：本系结实体 ＝ results/deposon_v20_gt.json（497b9c2d6746／3,803 B），系转录自锚载体 c4f029f780d8 所载 value_anchor（v2 sha256_12_binding 面自陈之转录）—— 故其不在 v1 candidates_unadjudicated 二候选之内；PI 本次裁丁，即于四案（甲／乙／丙／丁）中择『主面系甲＋另立三伴随 role 面＋门判别面明定』⇒ 该实体之择依据即本次裁决，缺环由本面补记而闭",
+        "closure_note": "KD-16 之『择据缺环』经本次 PI 裁＋本面择据补记而闭；⛔ 0 回改 v1 之 candidates_unadjudicated 面（v1 4b020eb04605 原样留痕）",
+        "not_adopted": "本棒 ⛔ 未采乙（系于 spec 本体）· ⛔ 未采丙（系于全 22 原生口径）；二者之排除理由照录于另议判断件 99b578a1be2c §3-乙／§3-丙（⛔ 0 代 PI 重陈）"
+      },
+      "drift_gate_face": {
+        "gate_rule_verbatim": "任何 ≥ 1 锚漂移 → 全 V0 撤回。",
+        "gate_rule_locations": [
+          "docs/V3X/P_B_DISTORTION_BOUND_V0_SPEC.md L32",
+          "同件 L134（「5 锚漂移 ≥ 1 → 全 V0 撤回」）"
+        ],
+        "gate_rule_verified_this_run": "本棒直读 spec L32／L134 逐字复核相符（非转述）",
+        "discriminating_face": "value_determining",
+        "discriminating_face_path": "results/deposon_v20_gt.json",
+        "discriminating_face_sha256_12": "497b9c2d6746",
+        "discriminating_face_bytes": 3803,
+        "companion_faces_not_gating": [
+          "upstream（ca71aa6858e1）",
+          "definition（aeefb8ef6972 · L25）",
+          "spec_registration（423c84de20d5 · bd1caab42b4c）"
+        ],
+        "note": "依 PI 裁丁·Q2 明定：漂移门之判别面 ＝ value_determining；三伴随面之指纹变动 ⛔ 0 单独触发本门（惟仍照旧登记以备检出）；另议判断件 99b578a1be2c §3-丁-反2 之『哪一面门若不裁则责任面反致模糊』由本面之明裁消解",
+        "pi_adjudication": "PI 2026-10-15 12:49 卡 ask_207b060a5273ab88912e451f §1-Q2 逐字「裁丁（推荐）」（登记注记载『漂移门判别面＝value_determining』）"
+      },
+      "caliber": {
+        "denominator_arms": {
+          "value": [
+            "random",
+            "degree"
+          ],
+          "preregistered_full": [
+            "random",
+            "degree",
+            "llm_prior"
+          ],
+          "note": "llm_prior unavailable for family S; degenerate denominator (see disclosure KD-6)"
+        },
+        "graph_scope": {
+          "value": "frozen 20-graph reading, 17 finite values median",
+          "n_graphs": 20,
+          "n_finite": 17,
+          "n_infinite": 3,
+          "n_undefined": 0,
+          "note": "two graphs L_geography_world / L_project_management are absent from the frozen reading (see disclosure KD-2)"
+        },
+        "infinity_rule": {
+          "value": "infinity NOT in median; counted separately",
+          "n_inf": 3,
+          "inf_graph_ids": [
+            "S1",
+            "S2",
+            "S5"
+          ],
+          "note": "selfish arm named=0 while field_mean>0"
+        }
+      },
+      "limitation_face": {
+        "worst_case_no_adjacent_placement": "ECR is a distribution-level operationalization of PoA, NOT the same measure as classic worst-case bounds; 0 numeric juxtaposition with 4/3 or any classic worst-case bound (metric differs, numeric proximity is not evidence)",
+        "yi_family_not_anchored": "The v4-track scalar account (乙族) has the same numeric value but is a DIFFERENT entity (61 graphs x 338 tasks x 20 steps; 4/3 is a pre-registered threshold, not a distribution median). It is NOT separately anchored here and is registered in this limitation face only to prevent mis-identification",
+        "yi_family_refs": [
+          "_non_upload_local_archive/results/_v4_exec_s25_result.json (71f7fac128bc)",
+          "_non_upload_local_archive/results/_v4_exec_s28_result.json (05e3d4c61f53)"
+        ],
+        "naming": "ECR is a common abbreviation; 0 use the three letters alone as the anchor name without the definition pointer",
+        "adjacent_verdict_tension_not_reconciled": "H_A_dead.triggered=true and H_S6_anchor_reproduction.supported=false coexist with the GT-4 field_coordination_value_supported verdict; different measurement axes, NOT reconciled here; the anchor cites neither as sole criterion"
+      },
+      "deviation_disclosure": {
+        "KD-6": {
+          "title": "denominator degeneracy bias",
+          "bias_direction": "ECR systematically biased LARGE (toward PASS side)",
+          "self_measured": {
+            "degree_zero_upstream_22": 13,
+            "degree_zero_in_scope_20": 12,
+            "random_dominates_upstream_22": 17,
+            "random_dominates_in_scope_20": 16,
+            "llm_prior_present_upstream": false
+          },
+          "reference": "design §7 KD-6 / §6-2 R2"
+        },
+        "KD-5": {
+          "title": "median non-continuity / accidental non-boundary-crossing",
+          "note": "median does not move continuously with component change; the fact that adding the two graphs left the median unchanged is ACCIDENTAL and must NOT be extrapolated as robust; A0 must publish the full caliber spectrum",
+          "reference": "design §7 KD-5 / §6-2 R1"
+        },
+        "KD-2": {
+          "title": "20-graph caliber not reproducible from current on-disk upstream (point-in-time difference vs paper 20/22 statement)",
+          "self_measured": {
+            "upstream_n_graphs": 22,
+            "frozen_reading_n_graphs": 20,
+            "extra_graphs_in_upstream": [
+              "L_geography_world",
+              "L_project_management"
+            ],
+            "full22_recompute_finite_n": 19,
+            "full22_recompute_median": 1.3333333333333333,
+            "upstream_corpus_dir": "/mnt/agents/output/deposon-repo/corpus/v20"
+          },
+          "note": "registered, NOT back-edited; the anchor carries both upstream fingerprint and reading fingerprint so drift is detectable",
+          "reference": "design §7 KD-2"
+        }
+      },
+      "caliber_spectrum_note": "Per KD-5 the full caliber spectrum is: all-17-finite median = 1.3333333333333333; family-S-13-finite median = 1.4999999999999998. The anchor value is the all-17-finite median.",
+      "recompute_evidence": {
+        "method": "pure read + pure compute from frozen upstream and frozen formula; 0 runner executions",
+        "llm_calls": 0,
+        "pointer_value_read_this_run": 1.3333333333333333,
+        "pointer_value_equals_anchor_value": true,
+        "per_graph_bit_identical": "20/20",
+        "bit_identical_all": true,
+        "formula_ref": "run_v20_gt.py (9f6df7e94cdc) L142-L153 (run_gt4) + L67-L88 (gt4_verdict)"
+      },
+      "verbatim_source": {
+        "carrier_path": "verifier/handoff/P_A_V0_anchors_sha256_12.json",
+        "carrier_sha256_12": "c4f029f780d8",
+        "copied_verbatim": [
+          "caliber",
+          "limitation_face",
+          "deviation_disclosure",
+          "caliber_spectrum_note",
+          "family",
+          "family_note"
+        ]
+      },
+      "status_detail": "本棒（GE02-ANCHOR-LANDING-BUILD）落位记录：entity results/deposon_v20_gt.json 直算 SHA-12 497b9c2d6746 / 3,803 B，与 v3 登记值逐位相符（0 漂移）；另独立复读 JSON 指针 /GT4_price_of_anarchy/verdict/median_poa 得 1.3333333333333333，与登记 value 逐位相符（0 runner 执行 · 0 LLM calls）。⚠ 落位 ≠ 入锚：anchor_status 沿 v3 原值登记，本棒 0 改其态 0 闭其面（ECR 锚线之 PI final close-out 仍开口）。"
+    },
+    "P_B_KILL_LINE": {
+      "name": "P_B_KILL_LINE",
+      "path": "verifier/kill_lines/GT_kill_line_carrier_v1.md",
+      "path_windows": "verifier\\kill_lines\\GT_kill_line_carrier_v1.md",
+      "sha256_12": "9e09214cf088",
+      "bytes": 18905,
+      "role": "kill_line",
+      "anchor_status": "carrier_anchored_effective; field_adjudicated_by_PI (C-甲 · ask_207b060a5273ab88912e451f §1-Q1)",
+      "field": "kills=10 GT",
+      "field_status": "✅ 已裁定并回填 —— PI 2026-10-15 12:49 卡 ask_207b060a5273ab88912e451f §1-Q1 逐字「C-甲 kills=10 GT（推荐）」；沿 H-4（field ＝ 表征说明 · ⛔ 非被哈希对象）· 缺口 G-4 之 field 面已闭 · ⛔ 0 触本锚 sha256_12／bytes",
+      "field_note": "依 PI 裁「C-甲」采双路取值件 e5615b993000 §4／§5-1 之首选候选，其值与先例 03c6c01f3697 之 P_A_KILL_LINE.field 逐字同构（同对象「GT 判死裁定族」·同规模 10 成员·单流全文型 H-2）；本棒 0 自拟、⛔ 0 代 PI 裁（逐字依卡答登记件 v13 693181b9354b）；H-4：field 之变 ⛔ 0 触锚值 9e09214cf088／18,905 B（本棒直算复核相符）",
+      "carrier_state": "正式 · 已核准 · 已生效（PI 卡 Q1 逐字「全部按棒之倾向档打包核准（推荐）」）",
+      "draft_superseded_retained": {
+        "path": "verifier/kill_lines/GT_kill_line_carrier_v0.md",
+        "sha256_12": "0f65a42e7a34",
+        "state": "草案态 · 保留并列",
+        "rule": "草案态指纹 ⛔ 0 充当正式锚值；⛔ 0 回改/0 移动/0 重命名/0 删除"
+      },
+      "member_distribution": {
+        "pass": 4,
+        "fail": 1,
+        "kd": 5,
+        "af": 0,
+        "give-up": 0,
+        "hung": 0
+      },
+      "verbatim_source": {
+        "register_path": "results/_gt_kill_line_carrier_effect_register_2026_10_15.md",
+        "register_sha256_12": "e40f060fa3a3",
+        "register_sections": [
+          "§2",
+          "§3",
+          "§7 R-1"
+        ],
+        "pi_card_for_carrier_effect": "ask_a0046eb056a849d802da0377 §1-Q1"
+      },
+      "status_detail": "本棒落位记录：entity verifier/kill_lines/GT_kill_line_carrier_v1.md 直算 SHA-12 9e09214cf088 / 18,905 B，与 v3 登记值逐位相符（0 漂移）。其 field 面「kills=10 GT」系 PI 2026-10-15 卡 ask_207b060a5273ab88912e451f §1-Q1 逐字裁定值，本棒照录未动；v3 中本锚 0 value 键（值以 sha256_12 ＋ member_distribution 承载）⇒ 本件 value 置 null，非新拟。",
+      "value": null
+    },
+    "P_B_FROZEN_RUNS": {
+      "name": "P_B_FROZEN_RUNS",
+      "path": [
+        "results/deposon_v20_baselines.json",
+        "results/deposon_v19_benchmark_fixes.json",
+        "results/deposon_v21_gtformal.json",
+        "results/deposon_v18_api_supplements.json",
+        "results/deposon_v17_fusion_fix.json"
+      ],
+      "path_windows": [
+        "results\\deposon_v20_baselines.json",
+        "results\\deposon_v19_benchmark_fixes.json",
+        "results\\deposon_v21_gtformal.json",
+        "results\\deposon_v18_api_supplements.json",
+        "results\\deposon_v17_fusion_fix.json"
+      ],
+      "sha256_12": null,
+      "bytes": null,
+      "sha256_12_note": "⛔ 本锚采甲案（多成员）形态，无标量 sha256_12 面；各成员之 sha256_12 见 members[]（与先例 03c6c01f3697 之 P_A_FROZEN_RUNS 形态一致）",
+      "bytes_note": "⛔ 甲案无 bytes 标量面；各成员之 bytes 见 members[]",
+      "path_note": "⛔ 0 以松散表达式充路径（如 'v20 + v19 + ...'）；逐成员给独立 path 项，另列 path_windows",
+      "role": "frozen_runs",
+      "anchor_status": "anchored_under_PI_Q2_backfill_case_甲; carrier_form_adjudicated",
+      "value": [
+        "6edb2aec1660",
+        "910c4333eead",
+        "9d9ae5001c57",
+        "62c1a41e1db8",
+        "af51da229652"
+      ],
+      "value_form": "5 元数组（甲案）· 各元素为对应成员件 SHA-256 前 12 位",
+      "field": "runs=5 frozen",
+      "member_count": 5,
+      "members": [
+        {
+          "name": "deposon_v20_baselines.json",
+          "path": "results/deposon_v20_baselines.json",
+          "path_windows": "results\\deposon_v20_baselines.json",
+          "sha256_12": "6edb2aec1660",
+          "bytes": 16987
+        },
+        {
+          "name": "deposon_v19_benchmark_fixes.json",
+          "path": "results/deposon_v19_benchmark_fixes.json",
+          "path_windows": "results\\deposon_v19_benchmark_fixes.json",
+          "sha256_12": "910c4333eead",
+          "bytes": 409104
+        },
+        {
+          "name": "deposon_v21_gtformal.json",
+          "path": "results/deposon_v21_gtformal.json",
+          "path_windows": "results\\deposon_v21_gtformal.json",
+          "sha256_12": "9d9ae5001c57",
+          "bytes": 69204
+        },
+        {
+          "name": "deposon_v18_api_supplements.json",
+          "path": "results/deposon_v18_api_supplements.json",
+          "path_windows": "results\\deposon_v18_api_supplements.json",
+          "sha256_12": "62c1a41e1db8",
+          "bytes": 80624
+        },
+        {
+          "name": "deposon_v17_fusion_fix.json",
+          "path": "results/deposon_v17_fusion_fix.json",
+          "path_windows": "results\\deposon_v17_fusion_fix.json",
+          "sha256_12": "af51da229652",
+          "bytes": 106164
+        }
+      ],
+      "recompute_evidence": {
+        "measured_by": "hashlib.sha256(full bytes).hexdigest()[:12], direct compute this run",
+        "triple_agreement": "本棒直算 ＝ v1 members_measured ＝ KT-A1 先例 03c6c01f3697 之 P_A_FROZEN_RUNS 数组；5/5 逐位相符，0 例外"
+      },
+      "path_wording_discrepancy": "P_B spec L10 载 verifier/runs/；本棒实测 verifier/runs/ 内 0/5 命中 deposon_v* JSON（仅 .txt/.log/.jsonl/.md），5/5 在 results/ ⇒ SHA 为身份之记（沿 v1 KD-10，本棒复测确认）",
+      "status_detail": "本棒落位记录：5 成员逐成员直算 —— deposon_v20_baselines.json 6edb2aec1660/16,987｜deposon_v19_benchmark_fixes.json 910c4333eead/409,104｜deposon_v21_gtformal.json 9d9ae5001c57/69,204｜deposon_v18_api_supplements.json 62c1a41e1db8/80,624｜deposon_v17_fusion_fix.json af51da229652/106,164；5/5 与 v3 登记值逐位相符（0 例外）。甲案形态（无标量 sha256_12/bytes 面）沿 v3 逐字保留。"
+    },
+    "P_B_LLM_CLIENT": {
+      "name": "P_B_LLM_CLIENT",
+      "path": "tools/llm_client.py",
+      "path_windows": "tools\\llm_client.py",
+      "sha256_12": "1722500da4aa",
+      "bytes": 8118,
+      "role": "llm_client",
+      "anchor_status": "anchored_canonical_measured_under_PI_Q2_backfill",
+      "field": "Doubao + DeepSeek, runtime Path().read_text()",
+      "field_note": "表征说明（⛔ 非被哈希对象）· 逐字沿 KT-A1 先例 03c6c01f3697 之 P_A_LLM_CLIENT；本棒 0 复核其对文件内容之准确性（登记于 kd KD-B）",
+      "canonical_authority": {
+        "value_is": "实测值（in-disk truth）",
+        "errata_register_path": "results/_mq20_errata_register_2026_10_14.md",
+        "errata_register_sha256_12": "8bb4bbc28c16",
+        "errata_section": "§4 项12",
+        "errata_verbatim": "项12 两锚 canonical 值＝实测值 `1722500da4aa`（8,118 B）／`275e480ba4d9`（10,090 B），以勘误件落",
+        "pi_card": "ask_f1bdf8de1358da35139bc51f",
+        "pi_answer_register": "results/_pi_card_answers_register_2026_10_14_v3.md",
+        "superseded_registered_value": "055e874ea5c1",
+        "superseded_value_note": "登记面 OLD 值仍在活载体 03c6c01f3697 上载明；⛔ 0 改其一字 ⇒ 并列关系照旧在册",
+        "family_note": "MQ-20 项12 之 canonical 系 P_A_LLM_CLIENT 面；本 P_B 面所系实体与之为同一文件（tools/llm_client.py），故沿同一实测值（登记于 kd KD-14）"
+      },
+      "recompute_evidence": {
+        "measured_by": "hashlib.sha256(full bytes).hexdigest()[:12], direct compute this run",
+        "matches_errata_canonical": true,
+        "bytes_matches_errata": true
+      },
+      "status_detail": "本棒落位记录：entity tools/llm_client.py 直算 SHA-12 1722500da4aa / 8,118 B，与 v3 登记值逐位相符（0 漂移）。canonical 之沿用 MQ-20 项12 勘误面（8bb4bbc28c16）之依据照录 v3，未动。v3 中本锚 0 value 键（值以 sha256_12 ＋ canonical_authority 承载）⇒ 本件 value 置 null，非新拟。",
+      "value": null
+    },
+    "P_B_DISTORTION_CALC": {
+      "name": "P_B_DISTORTION_CALC",
+      "path": "tools/distortion_calculator.py",
+      "path_windows": "tools\\distortion_calculator.py",
+      "sha256_12": "410a12482eef",
+      "bytes": 40611,
+      "role": "distortion_calculator",
+      "anchor_status": "unfrozen_pending_PI",
+      "superseded_value": "absent",
+      "superseded_value_note": "首次实体化（⛔ 非漂移）· PI 明定；旧面为 absent（新立实体无先前登记值可继承）",
+      "version": "2026-09-11",
+      "version_note": "⛔ Q-2 卡未裁此子字段；此处逐字沿 P_B spec L30 之字面 version=2026-09-11，本棒 0 以文件内容复核（沿 v1 KD-11，见 unresolved 之 U-2）",
+      "pi_ruled_subfields": [
+        "status",
+        "superseded_value",
+        "path",
+        "sha256_12",
+        "bytes"
+      ],
+      "recompute_evidence": {
+        "measured_by": "hashlib.sha256(full bytes).hexdigest()[:12], direct compute this run",
+        "cross_check": "bit-exact vs S6 record in _ge01_calculator_rebuild_register_2026_10_14.md"
+      },
+      "status_detail": "本棒落位记录：entity tools/distortion_calculator.py 直算 SHA-12 410a12482eef / 40,611 B，与 v3 登记值逐位相符（0 漂移）；且本棒自检轨实跑（--self-test）内部 T8 之指纹面独立复算得同值（自证相符）。⚠ version 子字段仍沿 v3 之 U-2 开口（逐字沿 spec L30 之 version=2026-09-11，本棒 0 以文件内容复核、⛔ 0 闭该面）。",
+      "value": null,
+      "field": null
+    }
+  },
+  "landing_measurement": {
+    "measured_at": "2026-10-16 19:56:28 CST",
+    "method": "hashlib.sha256(file bytes).hexdigest()[:12]  (stdlib hashlib; built-in hash() never used)",
+    "source_of_truth": "results/_ge01_prereg_5anchor_v3.json (5 锚 field/value 面以现版 JSON 为准)",
+    "per_anchor": {
+      "P_B_ECR_BASELINE": {
+        "member_file_count": 1,
+        "entries": [
+          {
+            "path": "results/deposon_v20_gt.json",
+            "path_windows": "results\\deposon_v20_gt.json",
+            "sha256_12_measured_this_run": "497b9c2d6746",
+            "bytes_measured_this_run": 3803,
+            "sha256_12_registered_in_v3": "497b9c2d6746",
+            "bytes_registered_in_v3": 3803,
+            "comparison_basis": "v3 锚级登记值",
+            "mtime": "2026-08-28 17:43:00",
+            "matches_registered": true
+          }
+        ],
+        "all_members_match_registered": true
+      },
+      "P_B_KILL_LINE": {
+        "member_file_count": 1,
+        "entries": [
+          {
+            "path": "verifier/kill_lines/GT_kill_line_carrier_v1.md",
+            "path_windows": "verifier\\kill_lines\\GT_kill_line_carrier_v1.md",
+            "sha256_12_measured_this_run": "9e09214cf088",
+            "bytes_measured_this_run": 18905,
+            "sha256_12_registered_in_v3": "9e09214cf088",
+            "bytes_registered_in_v3": 18905,
+            "comparison_basis": "v3 锚级登记值",
+            "mtime": "2026-10-15 11:08:00",
+            "matches_registered": true
+          }
+        ],
+        "all_members_match_registered": true
+      },
+      "P_B_FROZEN_RUNS": {
+        "member_file_count": 5,
+        "entries": [
+          {
+            "path": "results/deposon_v20_baselines.json",
+            "path_windows": "results\\deposon_v20_baselines.json",
+            "sha256_12_measured_this_run": "6edb2aec1660",
+            "bytes_measured_this_run": 16987,
+            "sha256_12_registered_in_v3": "6edb2aec1660",
+            "bytes_registered_in_v3": 16987,
+            "comparison_basis": "v3 members[] 逐成员登记值（甲案·无标量面）",
+            "mtime": "2026-08-29 01:17:30",
+            "matches_registered": true
+          },
+          {
+            "path": "results/deposon_v19_benchmark_fixes.json",
+            "path_windows": "results\\deposon_v19_benchmark_fixes.json",
+            "sha256_12_measured_this_run": "910c4333eead",
+            "bytes_measured_this_run": 409104,
+            "sha256_12_registered_in_v3": "910c4333eead",
+            "bytes_registered_in_v3": 409104,
+            "comparison_basis": "v3 members[] 逐成员登记值（甲案·无标量面）",
+            "mtime": "2026-08-24 01:11:01",
+            "matches_registered": true
+          },
+          {
+            "path": "results/deposon_v21_gtformal.json",
+            "path_windows": "results\\deposon_v21_gtformal.json",
+            "sha256_12_measured_this_run": "9d9ae5001c57",
+            "bytes_measured_this_run": 69204,
+            "sha256_12_registered_in_v3": "9d9ae5001c57",
+            "bytes_registered_in_v3": 69204,
+            "comparison_basis": "v3 members[] 逐成员登记值（甲案·无标量面）",
+            "mtime": "2026-08-30 15:44:09",
+            "matches_registered": true
+          },
+          {
+            "path": "results/deposon_v18_api_supplements.json",
+            "path_windows": "results\\deposon_v18_api_supplements.json",
+            "sha256_12_measured_this_run": "62c1a41e1db8",
+            "bytes_measured_this_run": 80624,
+            "sha256_12_registered_in_v3": "62c1a41e1db8",
+            "bytes_registered_in_v3": 80624,
+            "comparison_basis": "v3 members[] 逐成员登记值（甲案·无标量面）",
+            "mtime": "2026-08-23 23:20:04",
+            "matches_registered": true
+          },
+          {
+            "path": "results/deposon_v17_fusion_fix.json",
+            "path_windows": "results\\deposon_v17_fusion_fix.json",
+            "sha256_12_measured_this_run": "af51da229652",
+            "bytes_measured_this_run": 106164,
+            "sha256_12_registered_in_v3": "af51da229652",
+            "bytes_registered_in_v3": 106164,
+            "comparison_basis": "v3 members[] 逐成员登记值（甲案·无标量面）",
+            "mtime": "2026-08-23 21:31:41",
+            "matches_registered": true
+          }
+        ],
+        "all_members_match_registered": true
+      },
+      "P_B_LLM_CLIENT": {
+        "member_file_count": 1,
+        "entries": [
+          {
+            "path": "tools/llm_client.py",
+            "path_windows": "tools\\llm_client.py",
+            "sha256_12_measured_this_run": "1722500da4aa",
+            "bytes_measured_this_run": 8118,
+            "sha256_12_registered_in_v3": "1722500da4aa",
+            "bytes_registered_in_v3": 8118,
+            "comparison_basis": "v3 锚级登记值",
+            "mtime": "2026-09-09 16:16:02",
+            "matches_registered": true
+          }
+        ],
+        "all_members_match_registered": true
+      },
+      "P_B_DISTORTION_CALC": {
+        "member_file_count": 1,
+        "entries": [
+          {
+            "path": "tools/distortion_calculator.py",
+            "path_windows": "tools\\distortion_calculator.py",
+            "sha256_12_measured_this_run": "410a12482eef",
+            "bytes_measured_this_run": 40611,
+            "sha256_12_registered_in_v3": "410a12482eef",
+            "bytes_registered_in_v3": 40611,
+            "comparison_basis": "v3 锚级登记值",
+            "mtime": "2026-10-14 16:00:55",
+            "matches_registered": true
+          }
+        ],
+        "all_members_match_registered": true
+      }
+    },
+    "aggregate": {
+      "anchor_count": 5,
+      "entity_file_count": 9,
+      "entities_matching_registered": 9,
+      "entities_mismatching": [],
+      "mismatch_count": 0,
+      "comparison_basis_note": "P_B_FROZEN_RUNS 采甲案（多成员）形态，v3 之锚级 sha256_12/bytes 为 null ⇒ 其 5 成员之比对基准取 v3 members[] 逐成员登记值；其余 4 锚取锚级登记值",
+      "verdict": "5 锚之 9 个实体文件（5 锚中 P_B_FROZEN_RUNS 为 5 成员甲案）之 SHA-12/bytes 本棒直算与 v3 登记值逐位相符，0 例外",
+      "ecr_pointer_independent_read": {
+        "json_pointer": "/GT4_price_of_anarchy/verdict/median_poa",
+        "value_read_this_run": 1.3333333333333333,
+        "equals_registered_anchor_value": true,
+        "runner_executions": 0,
+        "llm_calls": 0
+      }
+    },
+    "negative_channels": {
+      "object": "f5da17e62b07（G-E02 验收结果 JSON · 自检向量之被引指纹）",
+      "channel_1_filename": {
+        "pattern": "*f5da17e62b07*",
+        "hits": 0,
+        "note": "全仓递归按文件名检索 0 命中（PowerShell Get-ChildItem -Recurse -Filter 实测）"
+      },
+      "channel_2_sha256_12": {
+        "files_walked": 2663,
+        "traversal_errors": 0,
+        "traversal_error_sample": [],
+        "hits": [],
+        "hit_count": 0
+      },
+      "channel_3_citation_vs_entity_distinction": {
+        "citation_string_occurrences_file_count": 21,
+        "citation_files_sample": [
+          ".tmp/_dw_abs_scan.json",
+          ".tmp/_h_census_worker.json",
+          ".tmp/_write_eps_grid_design.py",
+          ".tmp/erratum_glm_wholepack_body.md",
+          ".tmp/ge02_build.py",
+          ".tmp/ge02_recompute.py"
+        ],
+        "note": "⚠ 字面 f5da17e62b07 于既有件中作为**被引指纹的转录**出现（results/ 内 14 件等）⇒ 然**以该指纹为自身 SHA-12 之实体件仍为 0**；本条之阴性结论仅及**实体面**（沿 v3 KD-18 之「登记面 vs 实测面须分列」同族口径）"
+      },
+      "triple_self_audit": {
+        "1_os_walk_traversal_error_assertion": "遍历错误数 = 0（onerror 回调已挂载并计数；errors 列表为空即遍历无失败）",
+        "2_pattern_non_structural_exclusivity": "三通道互斥：①文件名模式 ②内容逐字节 SHA-12 直算 ③字面转录 vs 实体之别；三通道分别独立取证，无一通道以他通道之结果充抵",
+        "3_point_in_time_freshness": "本测量之时点 = 2026-10-16 19:56:28 CST；全仓文件数 2663；各锚实体 mtime 见 per_anchor.entries[].mtime（皆早于本时点 ⇒ 未在本棒前后变动）"
+      },
+      "conclusion": "0 在盘（实体面）——「G-E02 验收结果 JSON」（指纹 f5da17e62b07）于全仓 0 存在",
+      "note": "本件（落位件）系**另立新建**，⛔ 0 自认即该指纹之继任者或等价物；若 PI 欲以本件充当该指纹之实体，须另行明裁并重算指纹"
+    }
+  },
+  "_live_source_freshness": {
+    "note": "⚠ 源件指纹之一（results/_root_session_history_memo_main_2026_10_14.md）于本棒两次独立测量之间即发生变化（首次直算 f0a5c8c61d15 / 47,890 B；再次直算 7d1482b239c7 / 50344 B）⇒ 该件为**活动追加件**（根会话备忘仍在写）。本件所载之该源件指纹**以末次直算为准**，且此指纹**具时点性、可能已再变**；本件所据之事实面（第四批卡之登记缺口）不随其变动而改变。",
+    "all_other_source_fingerprints": "余 7 件源件指纹于两次测量间一致（0 变动）"
+  },
+  "landing_self_test_vector": {
+    "track": "calculator 自检轨（ε 固定 0.1 · KC-1 丙案）",
+    "command": "python tools/distortion_calculator.py --self-test",
+    "executed_at": "2026-10-16 19:56:28 CST",
+    "cwd": "D:\\私人资料\\deposon-repo",
+    "python_version": "3.14.7",
+    "network_calls": 0,
+    "llm_calls": 0,
+    "filesystem_writes_by_calculator": 0,
+    "exit_code": 0,
+    "all_pass": true,
+    "t_pass_count": 9,
+    "t_fail_count": 0,
+    "summary_line_verbatim": "小计: 9/9 通过; all_pass=True",
+    "expected_value_face": {
+      "source": "results/_ge01_epsilon_sensitivity_grid_design_r1_2026_10_13.md（7551c47d3ece）§2-2 逐字",
+      "canonical_case_vector_ids": [
+        "D2_example_c1_equals_20",
+        "D2_example_c2_equals_10"
+      ],
+      "derivation_verbatim": "本棒测定：由 G_L＝2, G_B＝0 ⇒ G_L/(c·ε) ＝ 2/ε；c＝1 得 20 ⟺ ε＝0.1；c＝2 得 10 ⟺ ε＝0.1",
+      "kc1_note": "KC-1 丙案：自检轨 ε 固定 0.1（判死轨取 ε*）⇒ 期望值面仅在 ε=0.1 时成立"
+    },
+    "t_results_verbatim": [
+      "[PASS] T1   正典例向量 G_L=2,G_B=0,eps=0.1 -> c=1 得 20 / c=2 得 10",
+      "[PASS] T2   守卫两支路: 无守卫支路 c 精确消去 / 守卫支路 c 不消去",
+      "[PASS] T3   代数恒等式网格 D2_identity_grid_10k: G_L/max(G_B,c*eps) == (G_L/c)/max(G_B/c,eps)",
+      "[PASS] T4   D∈[0,H] 边界 + B10 基数不入 D",
+      "[PASS] T5   枚举面: A(15 非空键集) / C(3H/4, H=1..100) / D(三处更正代数)",
+      "[PASS] T6   聚合面: 权重和=1 raise / err 手算相符 / 0 以轨迹内决策数再加权",
+      "[PASS] T7   双轨一致率 S7: Fraction 轨 float(exact) vs 独立 float 实现",
+      "[PASS] T8   指纹面: hashlib.sha256 算定 / 0 内建散列调用 / BOM=False CR=0 TAB=0",
+      "[PASS] T9   判死面转引测试: kill_decision 三分支边界点输出逐字相符"
+    ],
+    "test_side_correction_trail_verbatim": [
+      "- [T1] 测试侧留痕: eps 以 Fraction(1,10) 给。若以 float 字面 0.1 给, assert_eps 精确化为 3602879701896397/36028797018963968, 倍数非 20 —— 修正依据 = 精确有理枚举本身 (0a031a9795a9 §6 L178), 非对方数值",
+      "- [T5] 测试侧留痕: C 对象 3H/4 于 H%4!=0 时非整数, 非可达之拒绝计数, 如实登记不计入失败 (修正依据 = 精确有理枚举本身, 0 依赖对方数值)",
+      "- [T6] 测试侧留痕: 首写用例取权重 (1/3, 1/3, 1/3), 而精确有理求和 1/3*3 == 1 ⇒ 守卫正确地未 raise, 系**用例侧**之误, 非守卫失效; 已改用精确和为 11/12 的 非单位权重组 (1/3, 1/3, 1/4) 复测。修正依据 = 精确有理枚举本身, 0 依赖对方数值",
+      "- [T7] 测试侧留痕: 双轨对照规则(容差有无及其值)盘上 0 候选 (KD-3/P3) => 本件仅报实测一致率与最大相对偏差, ⛔ 0 代定判据",
+      "=============================================================================="
+    ],
+    "stdout_sha256_12": "0d83b0db1269",
+    "stdout_bytes": 3115,
+    "stderr_empty": true,
+    "stdout_verbatim": "==============================================================================\r\ndistortion_calculator 自测报告 (T1-T9) | 锚 P_B_DISTORTION_CALC @ tools/distortion_calculator.py | version=2026-09-11\r\n==============================================================================\r\n[PASS] T1   正典例向量 G_L=2,G_B=0,eps=0.1 -> c=1 得 20 / c=2 得 10\r\n        c=1 得 20 (期望 20); c=2 得 10 (期望 10)\r\n[PASS] T2   守卫两支路: 无守卫支路 c 精确消去 / 守卫支路 c 不消去\r\n        无守卫支路 分母=5 c消去=True; 守卫支路 c=1 分母=1/10 倍数=20 / c=2 分母=1/5 倍数=10\r\n[PASS] T3   代数恒等式网格 D2_identity_grid_10k: G_L/max(G_B,c*eps) == (G_L/c)/max(G_B/c,eps)\r\n        网格点数=10000 (期望 10000)\r\n[PASS] T4   D∈[0,H] 边界 + B10 基数不入 D\r\n        端点样例(H=1/4/33 × n_rej=0/H)全过; 全拒 D=33\r\n[PASS] T5   枚举面: A(15 非空键集) / C(3H/4, H=1..100) / D(三处更正代数)\r\n        A 对象 非空键集=15(期望 15); C 对象 3H/4: 可达(H%4==0) 25 例 / 非整除 75 例; D 对象 三处更正代数(网格 + 例值 20/10) 全过\r\n[PASS] T6   聚合面: 权重和=1 raise / err 手算相符 / 0 以轨迹内决策数再加权\r\n        手算 D=2 实现 D=2; 异长轨迹(2,1)均匀权 D=1/2 (决策数加权将给 1/3)\r\n[PASS] T7   双轨一致率 S7: Fraction 轨 float(exact) vs 独立 float 实现\r\n        逐位相符 200/200 (一致率 1); 最大相对偏差 0\r\n[PASS] T8   指纹面: hashlib.sha256 算定 / 0 内建散列调用 / BOM=False CR=0 TAB=0\r\n        本件 sha256_12=410a12482eef bytes=40611; 内建散列调用出现 0 次; BOM=False CR=0 TAB=0 U+FFFD=0\r\n[PASS] T9   判死面转引测试: kill_decision 三分支边界点输出逐字相符\r\n        五例逐字相符: FAIL_H0 ×2 / PASS_H1 ×1 / GRAY ×2; 边界点(mean 1.5/1.8/2.0, ci_hi 1.8/2.0, hit 0.1/0.3)全用\r\n------------------------------------------------------------------------------\r\n小计: 9/9 通过; all_pass=True\r\n------------------------------------------------------------------------------\r\n测试侧修正留痕栏 (0a031a9795a9 §6 L178):\r\n  - [T1] 测试侧留痕: eps 以 Fraction(1,10) 给。若以 float 字面 0.1 给, assert_eps 精确化为 3602879701896397/36028797018963968, 倍数非 20 —— 修正依据 = 精确有理枚举本身 (0a031a9795a9 §6 L178), 非对方数值\r\n  - [T5] 测试侧留痕: C 对象 3H/4 于 H%4!=0 时非整数, 非可达之拒绝计数, 如实登记不计入失败 (修正依据 = 精确有理枚举本身, 0 依赖对方数值)\r\n  - [T6] 测试侧留痕: 首写用例取权重 (1/3, 1/3, 1/3), 而精确有理求和 1/3*3 == 1 ⇒ 守卫正确地未 raise, 系**用例侧**之误, 非守卫失效; 已改用精确和为 11/12 的 非单位权重组 (1/3, 1/3, 1/4) 复测。修正依据 = 精确有理枚举本身, 0 依赖对方数值\r\n  - [T7] 测试侧留痕: 双轨对照规则(容差有无及其值)盘上 0 候选 (KD-3/P3) => 本件仅报实测一致率与最大相对偏差, ⛔ 0 代定判据\r\n==============================================================================\r\n",
+    "calculator_entity_unchanged": "本棒⛔ 0 改 calculator 一字（410a12482eef / 40611 B · 只读调用）"
+  },
+  "unresolved": [
+    "U-1 [承 v3·仍开口] P_B_DISTORTION_CALC 之 version 子字段 —— 本棒照录 v3 之 U-2（逐字沿 spec L30 字面·0 以文件内容复核）；⛔ 0 闭",
+    "U-2 [本棒新增·承 V(ε) S-1] 5 锚落位件**是否入锚面** —— 本件候 PI 核准；⛔ 0 宣告入锚、⛔ 0 宣告 S-1 ③ 已成就",
+    "U-3 [本棒新增] spec L22 所指之 verifier/handoff/P_B_V0_anchors_sha256_12.json 仍 0 在盘（KD-9/KD-19 复测确认）；本件⛔ 非该落位件 ⇒ 若 PI 意在「补齐 spec 指定路径」，须另裁（另立该路径之件 或 明裁以本件代之）",
+    "U-4 [本棒新增] 被引指纹 f5da17e62b07 之实体件仍 0 在盘（阴性问题件 0 在盘之实体面）⇒ 是否即以本件充其继任者**候 PI 明裁**"
+  ],
+  "kd": [
+    "KD-1 [新字段·候 PI 核准] 本件新增顶层面 **landing_measurement** 与 **landing_self_test_vector** —— 二者不在 v3 之顶层键集内。落笔理由：派工明载「以 calculator 自检轨 ε=0.1 实跑自测 T1–T9 之结果照录」，而无既存键可承载之；⛔ 0 以新键充 v3 原键、⛔ 0 改 v3 一字。PI 若裁「另立他键名或另立他件」，照裁改。",
+    "KD-2 [新键名·已裁·沿录] status→anchor_status ＋ status_detail 之加键，系**已裁之命名口径**（results/_anchor_status_naming_note_2026_10_16.md N-1/N-4）之遵行，⛔ 非自创新键；但**沿用不外推**：该裁射程仅及键名与语义面，⛔ 0 等同 schema 入锁",
+    "KD-3 [授权面缺口·未成就·沿 K-D-3 同族] 卡 ask_b9ba5971d9c3d61e0e863375 之 PI 逐字答**于盘上 0 登记件**（全仓该卡号仅命中 results/_root_session_history_memo_main_2026_10_14.md 之 §18，且该处仅载卡已呈候 PI ＋ Q3 之问句，未见其答）⇒ 本件授权链之逐字答系派工单元转述，⛔ 0 独立验明；须 PI 核准后补入登记正身方可闭",
+    "KD-4 [落位面界分·如实登记] 本件**⛔ 非** spec L22 之 verifier/handoff/P_B_V0_anchors_sha256_12.json（该件 Test-Path=False·沿 KD-9/KD-19 复测）⇒ 本件之落位为「results/ 下之另立落位记录件」，**不**满足 spec L22 字面路径；S-1 之 ③「5 锚落位件补齐」之闭**候 PI 裁其读法**",
+    "KD-5 [阴性结论之分面·沿 KD-18 同族] 指纹 f5da17e62b07 之**实体面**全仓 0 命中（2,656 件遍历 · 0 遍历错误）；然该字面作为**被引指纹的转录**出现于 14 件既有件中 ⇒ 「0 在盘」**仅及实体面**，⛔ 0 扩为「全仓 0 次出现」",
+    "KD-6 [登记面·沿录未动] 5 锚之 field/status/limitation/deviation_disclosure 等面**逐字沿录 v3**，含 v3 自身在册之 KD-3/KD-9/KD-10/KD-11/KD-15/KD-17/KD-18/KD-22 诸面 ⛔ 0 闭、⛔ 0 改、⛔ 0 调和；登记不代修"
+  ],
+  "self_reference": "none —— 本件 ⛔ 0 载自身指纹（自指悖论）；锁之载体 ＝ 本件之 SHA-12，另立锁记件 results/_ge02_anchor_landing_build_register_2026_10_16.md 登记（沿 v3 之同一纪律）",
+  "scope_limits": [
+    "0 existing files altered (v1 4b020eb04605 / v2 f06313373fc6 / v3 0c269b9558da —— 全部 0 字节写入)",
+    "0 files moved / renamed / deleted",
+    "0 bytes written to tools/distortion_calculator.py (410a12482eef · 40611 B · 只读调用)",
+    "0 network calls",
+    "0 LLM calls (自检轨为纯本地计算 · calculator 铁律 1 自载)",
+    "0 .env read / 0 keys handled (R4: key 永不明文)",
+    "0 upload / 0 remote write",
+    "0 PI decisions made（⛔ 0 代 PI 裁）",
+    "0 PI-Z-close / 0 stage-毕 declared（⛔ 0 宣告①毕）",
+    "0 宣告入锚（⛔ 本棒产出候 PI 核准后入锚）",
+    "0 runner executions（ECR 值面系指针复读 ＋ 纯算术，⛔ 0 跑任何实验）"
+  ],
+  "spec_ref": {
+    "path": "docs/V3X/P_B_DISTORTION_BOUND_V0_SPEC.md",
+    "sha256_12": "423c84de20d5",
+    "bytes": 15457,
+    "anchor_table_ref": "spec §2 L20–L32（逐字回读：L22 落位路径 · L24–L30 锚表 · L32 撤回条款）",
+    "note": "沿 v3 之 spec_ref 面转录并以本棒直算复核指纹；spec 原文⛔ 0 回改"
+  },
+  "schema_note": {
+    "schema_lineage": "沿 results/_ge01_prereg_5anchor_v3.json（0c269b9558da）之锚面字段集逐字沿录；仅二处经已裁口径之加键（status→anchor_status、＋status_detail）与二处新立顶层面（landing_measurement、landing_self_test_vector · 见 KD-1）",
+    "anchor_key_sets_verbatim_from_v3": {
+      "P_B_ECR_BASELINE": [
+        "name",
+        "path",
+        "path_windows",
+        "sha256_12",
+        "bytes",
+        "role",
+        "role_note",
+        "status",
+        "value",
+        "value_form",
+        "field",
+        "field_note",
+        "family",
+        "family_note",
+        "definition_anchor",
+        "value_anchor",
+        "upstream_anchor",
+        "spec_registration",
+        "binding_adjudication",
+        "drift_gate_face",
+        "caliber",
+        "limitation_face",
+        "deviation_disclosure",
+        "caliber_spectrum_note",
+        "recompute_evidence",
+        "verbatim_source"
+      ],
+      "P_B_KILL_LINE": [
+        "name",
+        "path",
+        "path_windows",
+        "sha256_12",
+        "bytes",
+        "role",
+        "status",
+        "field",
+        "field_status",
+        "field_note",
+        "carrier_state",
+        "draft_superseded_retained",
+        "member_distribution",
+        "verbatim_source"
+      ],
+      "P_B_FROZEN_RUNS": [
+        "name",
+        "path",
+        "path_windows",
+        "sha256_12",
+        "bytes",
+        "sha256_12_note",
+        "bytes_note",
+        "path_note",
+        "role",
+        "status",
+        "value",
+        "value_form",
+        "field",
+        "member_count",
+        "members",
+        "recompute_evidence",
+        "path_wording_discrepancy"
+      ],
+      "P_B_LLM_CLIENT": [
+        "name",
+        "path",
+        "path_windows",
+        "sha256_12",
+        "bytes",
+        "role",
+        "status",
+        "field",
+        "field_note",
+        "canonical_authority",
+        "recompute_evidence"
+      ],
+      "P_B_DISTORTION_CALC": [
+        "name",
+        "path",
+        "path_windows",
+        "sha256_12",
+        "bytes",
+        "role",
+        "status",
+        "superseded_value",
+        "superseded_value_note",
+        "version",
+        "version_note",
+        "pi_ruled_subfields",
+        "recompute_evidence"
+      ]
+    },
+    "null_valued_keys_note": "v3 中 P_B_KILL_LINE / P_B_LLM_CLIENT / P_B_DISTORTION_CALC 0 value 键，P_B_DISTORTION_CALC 0 field 键 ⇒ 本件置 null 以保持字段集齐整，⛔ 0 新拟值、⛔ 0 由他锚代填",
+    "six_field_schema": "name／object／path／algorithm／value／field（先例体例 03c6c01f3697 逐字沿录）",
+    "note": "本面为沿录说明（⛔ 非被哈希对象）"
+  },
+  "landing_scope": {
+    "what_this_file_is": "5 锚之**落位记录与实测复算面** ＋ calculator 自检轨 T1–T9 之实跑留痕",
+    "what_this_file_is_not": [
+      "⛔ 非 spec L22 之 verifier/handoff/P_B_V0_anchors_sha256_12.json",
+      "⛔ 非 v3 之替代或修订（v3 原文未动）",
+      "⛔ 非被引指纹 f5da17e62b07 之继任者（⛔ 0 自认）",
+      "⛔ 非入锚面（候 PI 核准）"
+    ],
+    "authored_by": "worker"
+  }
+}
