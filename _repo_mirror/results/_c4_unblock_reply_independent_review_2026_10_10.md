@@ -18,7 +18,7 @@
 | B4 | ⛔ 0 跑项目 executor | 仅运行外部路径所附合成脚本 `verify_c4_originated_math.py`，及本棒自建合成脚本（系统临时目录） |
 | B5 | R4 · 0 网络 / 0 skill / 0 LLM 调用 | 无任何网络请求、无 skill 调用、无模型调用；全部为本地文件读取与本地 Python 运算 |
 | B6 | 临时件可恢复删除 | 本棒自建两脚本落 `$env:TEMP\verify_c4_indep_2026_10_10\`（仓外）；仓内 **0** 落任何临时件 |
-| B7 | ⛔ 0 触及 `〔本地归档区〕` | 全程未访问该路径 |
+| B7 | ⛔ 0 触及 `D:\私人资料\_non_upload_local_archive` | 全程未访问该路径 |
 | B8 | 命名合规 | 无 `_v5_` / 阶段号前缀；`_主题_日期` 式，遵 2026-09-29 命名裁 |
 
 ---
@@ -111,7 +111,7 @@
 
 ### §5.2 实跑（本地、只读、无项目 executor）
 
-- 环境：Python **3.14.7**（`〔本机路径〕/Python314/python.exe`）；工作目录＝外部路径 `c4_values_reply_2026_10_10`。
+- 环境：Python **3.14.7**（`C:\Python314\python.exe`）；工作目录＝外部路径 `c4_values_reply_2026_10_10`。
 - 结果：`Ran 6 tests in 3.819s` → **`OK`**（6/6 通过）。
 - 副作用核查：脚本仅 import `fractions` / `itertools` / `unittest`，无本地模块 import ⇒ **未生成 `__pycache__`**；未读写仓内任何文件。
 

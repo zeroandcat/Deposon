@@ -12,7 +12,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-BASE = Path(r'_september_workspace')
+BASE = Path(r'D:\私人资料\deposon-repo')
 
 # 严守 0 触动的 18 frozen
 FROZEN_18 = {

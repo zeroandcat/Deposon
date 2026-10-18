@@ -7,11 +7,11 @@
 > ② `letters/verify_c4_originated_math.py`（**`3042cf59448e`** / 4,115 B / 115 行 · UTF-8 无 BOM · LF）
 > **触发**：PI 2026-10-10 转来 codex 对我方**解封函**（`letters/_commission_c4_values_unblock_EN_2026_10_10.md`，`fde64a863b09`）之**回函**（实质交付：按授权原创 T-1/T-4 拟值等），令其逐字落仓并出接收登记。
 > **前例（体例锚）**：`results/_codex_c4_values_followup_reply_intake_register_2026_10_10.md`（`97a35f8ae94c` 之伴生登记）＋ `results/_codex_c4_values_reply_intake_register_2026_10_10.md`（`8e4972352291` 之伴生登记）。
-> **备核源**：`〔本机用户目录〕/codex-workspace/c4_values_reply_2026_10_10/`（回函 `_codex_c4_values_unblock_reply_2026_10_10.md` ＋ 所附验证脚本 `verify_c4_originated_math.py`）。
+> **备核源**：`C:\Users\Administrator\codex-workspace\c4_values_reply_2026_10_10\`（回函 `_codex_c4_values_unblock_reply_2026_10_10.md` ＋ 所附验证脚本 `verify_c4_originated_math.py`）。
 > **转录纪律**：⛔ 0 概括／0 改写／0 转述倾向；关键节标题与要点**逐字照录**；⛔ 0 调和字面、0 代解释、0 代裁。
 > **效力声明**：本件**仅作接收登记与出口面之陈列**——⛔ **0 采认**回函之任何原创拟值（`u*=1`／`max_u=1` 等）、0 表态、0 推荐、0 预判档位、0 采纳。回函**采认归 PI**。
 > **命名**：`_主题_日期` 体例，⛔ 0 `_v5_`／`_v4_`／`_v3_` 等 V-阶段前缀（沿 `57024f2cd30a` §1.2②）。
-> **R4**：⛔ 0 读 key／`.env`；⛔ 0 触及 `〔本地归档区〕`。
+> **R4**：⛔ 0 读 key／`.env`；⛔ 0 触及 `D:\私人资料\_non_upload_local_archive`。
 > **版式**：UTF-8 无 BOM · LF。
 
 ---
@@ -26,8 +26,8 @@
 
 | 项 | 回函（件①） | 验证脚本（件②） |
 |---|---|---|
-| **外部路径** | `〔本机用户目录〕/codex-workspace/c4_values_reply_2026_10_10/_codex_c4_values_unblock_reply_2026_10_10.md` | `〔本机用户目录〕/codex-workspace/c4_values_reply_2026_10_10/verify_c4_originated_math.py` |
-| **仓内路径** | `_september_workspace/letters/_codex_c4_values_unblock_reply_2026_10_10.md` | `_september_workspace/letters/verify_c4_originated_math.py` |
+| **外部路径** | `C:\Users\Administrator\codex-workspace\c4_values_reply_2026_10_10\_codex_c4_values_unblock_reply_2026_10_10.md` | `C:\Users\Administrator\codex-workspace\c4_values_reply_2026_10_10\verify_c4_originated_math.py` |
+| **仓内路径** | `D:\私人资料\deposon-repo\letters\_codex_c4_values_unblock_reply_2026_10_10.md` | `D:\私人资料\deposon-repo\letters\verify_c4_originated_math.py` |
 | **外部件 SHA-12** | **`a975c7990cd8`** | **`3042cf59448e`** |
 | **仓内件 SHA-12** | **`a975c7990cd8`** | **`3042cf59448e`** |
 | **外部件 bytes** | **21,486** | **4,115** |
@@ -86,7 +86,7 @@
 
 - **AI-use disclosure**（L1 逐字）：「AI assistance was used for local reading, independent mathematical review, and drafting. Local finite enumeration checks were run; no project experiment or external literature search was performed for this reply.」
 - **Model block**（L6–L9 逐字要点）：「Model actually used: Codex; this session identifies itself as based on GPT-6. Exact serving model/build identifier: unavailable to this assistant.」「Serving endpoint: unavailable to this assistant.」「Model string requested at the endpoint (request.model): unavailable to this assistant.」「Date: 2026-10-10, Asia/Shanghai; exact request time unavailable.」
-- **对解封函之读入**（L3）：「I read the full 83-line unblock commission at `_september_workspace/letters/_commission_c4_values_unblock_EN_2026_10_10.md`, SHA-12 `fde64a863b09`.」
+- **对解封函之读入**（L3）：「I read the full 83-line unblock commission at `D:\私人资料\deposon-repo\letters\_commission_c4_values_unblock_EN_2026_10_10.md`, SHA-12 `fde64a863b09`.」
 
 ### §2.2 授权立场（照录 L12 要点）
 
@@ -201,7 +201,7 @@ L = sum over t=1,...,H of
 
 ### §4.2 本地运行结果（本棒实测 · 环境与「六项检查」）
 
-- **运行环境**：`Python 3.14.7`（`〔本机路径〕/Python314/python.exe`）｜Windows NT 10.0.17763.0（AMD64）｜Culture `zh-CN`｜时区 `China Standard Time`｜`PYTHONHASHSEED` 未设（未影响结论——脚本用 `Fraction` 精确算术、结果与哈希序无关）。
+- **运行环境**：`Python 3.14.7`（`C:\Python314\python.exe`）｜Windows NT 10.0.17763.0（AMD64）｜Culture `zh-CN`｜时区 `China Standard Time`｜`PYTHONHASHSEED` 未设（未影响结论——脚本用 `Fraction` 精确算术、结果与哈希序无关）。
 - **运行方式**：`python letters/verify_c4_originated_math.py`（cwd ＝ 仓根；脚本自身 0 IO、0 写盘）。
 - **结果**：`Ran 6 tests … **OK**`，**EXITCODE=0**，耗时约 3.2 s ⇒ **六项 unittest 检查全部通过**：
   - `test_every_nonempty_key_has_exact_optimum_and_bound_one` … ok
@@ -241,7 +241,7 @@ L = sum over t=1,...,H of
 4. **命名偏离（件②）**：`verify_c4_originated_math.py` **保留外部原名**（依委派令，⛔ 0 改名），故未完全贴合 `_主题_日期` 新件命名体例——**如实登记**于 §1.3。
 5. **外部目录另两件（⛔ 0 本棒落仓）**：目录内另存首轮回函（13,378 B）与跟进回函（4,490 B）之副本，二者已在前两轮各自落仓；本棒仅复核其指纹一致，⛔ **0 重复落仓**。
 6. **本件 0 skill**：派工未指派 skill ⇒ **0 加载**；纪律锚＝派工字面 ＋ 盘上既有件体例（前两轮登记件）＋ FTFB 核心；⛔ **0 编造 skill 虚构指令**。
-7. **写入面**：**新增 3 件**（两件外部字节复制 ＋ 本登记件）；⛔ **0 编辑／0 覆写／0 追加／0 改名／0 移动／0 删除任何既有件**；7 锚之 SHA-12 于复制操作前后均经实测一致（§3）；⛔ **0 落 `.tmp` 临时件**（本棒脚本 0 生成临时文件 ⇒ 清理面为空；仓内既有 `__pycache__`／`.pyc` 属项目 executor 历史遗留，⛔ **0 触碰**）；⛔ **0 读 key／`.env`（R4）**；⛔ **0 网络／0 外发／0 LLM／0 跑项目 executor**；⛔ **0 触及 `〔本地归档区〕`**。
+7. **写入面**：**新增 3 件**（两件外部字节复制 ＋ 本登记件）；⛔ **0 编辑／0 覆写／0 追加／0 改名／0 移动／0 删除任何既有件**；7 锚之 SHA-12 于复制操作前后均经实测一致（§3）；⛔ **0 落 `.tmp` 临时件**（本棒脚本 0 生成临时文件 ⇒ 清理面为空；仓内既有 `__pycache__`／`.pyc` 属项目 executor 历史遗留，⛔ **0 触碰**）；⛔ **0 读 key／`.env`（R4）**；⛔ **0 网络／0 外发／0 LLM／0 跑项目 executor**；⛔ **0 触及 `D:\私人资料\_non_upload_local_archive`**。
 8. **本件自身不载指纹**：指纹**落盘后实测、随交付回执报出**（沿前两轮登记件体例）。
 
 ---

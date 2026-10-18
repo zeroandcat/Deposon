@@ -27,7 +27,7 @@
 
 | 面 | 路径／对象 | 本棒读法 | 状态 |
 |---|---|---|---|
-| 运行时安装产物 | `〔本机用户目录〕/AppData/Local/Programs/MiniMax Code\resources\app.asar` | `mmap` **只读**字节扫描 ＋ `Get-FileHash` ＋ `Get-Item` | **只读，0 写入** |
+| 运行时安装产物 | `C:\Users\Administrator\AppData\Local\Programs\MiniMax Code\resources\app.asar` | `mmap` **只读**字节扫描 ＋ `Get-FileHash` ＋ `Get-Item` | **只读，0 写入** |
 | 监听／进程面 | `Get-NetTCPConnection`／`Get-Process`／`Get-CimInstance` | 只读枚举 | 只读 |
 | 回环端点 | `http://127.0.0.1:<各监听端口>/minimax-desktop/api/v1/runtime/skills` | **1 轮** `Invoke-WebRequest`（仅 127.0.0.1／::1） | 只读（GET，无状态变更） |
 | 设计件／探件 | `results/_g4_controlled_reproduction_design_2026_10_09.md` 等 | 读 ＋ `Get-FileHash` | 只读，0 写 |
@@ -48,7 +48,7 @@
 
 | 项 | 前件②／设计件在册值（2026‑09‑29 版） | **本棒实测（2026‑10‑09）** | 判定 |
 |---|---|---|---|
-| `app.asar` 路径 | 在册安装产物 | `〔本机用户目录〕/AppData/Local/Programs/MiniMax Code\resources\app.asar` | 路径可得 |
+| `app.asar` 路径 | 在册安装产物 | `C:\Users\Administrator\AppData\Local\Programs\MiniMax Code\resources\app.asar` | 路径可得 |
 | 字节 | **426,404,876 B** | **395,844,226 B** | ⚠️ **不等**（−30,560,650 B） |
 | mtime | 2026‑09‑29 22:25:34 | **2026‑10‑04 20:46:02** | ⚠️ **已变更**（版本升级） |
 | SHA‑256 | 未在册 | `ce221e8d84c045c6cffd751ba834dcbd4b9a4805867d9748d639fcae4f36338d` | 本棒新增登记 |
@@ -161,7 +161,7 @@
 
 | 项 | 将改何物 | **改前态（2026‑10‑09 实测）** | 回退法 |
 |---|---|---|---|
-| **目标文件** | `〔本机用户目录〕/AppData/Local/Programs/MiniMax Code\resources\app.asar`（内嵌 JS chunk） | SHA‑256 `ce221e8d84c0…f36338d`／395,844,226 B／mtime 2026‑10‑04 20:46:02 | ① **改前先全量字节备份**为 `app.asar.g4cf.bak`（同目录）；② 回退＝用备份**整文件覆盖**；③ 备份存在期间⛔ 0 让应用自更新 |
+| **目标文件** | `C:\Users\Administrator\AppData\Local\Programs\MiniMax Code\resources\app.asar`（内嵌 JS chunk） | SHA‑256 `ce221e8d84c0…f36338d`／395,844,226 B／mtime 2026‑10‑04 20:46:02 | ① **改前先全量字节备份**为 `app.asar.g4cf.bak`（同目录）；② 回退＝用备份**整文件覆盖**；③ 备份存在期间⛔ 0 让应用自更新 |
 | **E1 打点** | `readRegistrySkillByName` 函数**入口**（新偏移 **100,209,391**）＋ `toNormalizedSkillSelectorSet`（**100,200,309**） | 原样（⛔ 0 改） | 同上（整文件回退） |
 | **E2 打点** | `createRuntimeSkillReads` 内 `resolveReadScope` 的 `return { canonicalName, compatibleNames }` 处（新偏移 **100,246,584** 起） | 原样（⛔ 0 改） | 同上 |
 | **E3 打点** | ⚠️ **落点须重定**：`LocalSkillTool.execute` 出口（**54,125,479** 起）为**二分支**（§2.3 M‑2），与 E3 原定义三态**不一致** ⇒ 须改落 `readRegistrySkillByName`／`readSkillByName` 内层判定处（**100,248,150**），或改记法 | 原样（⛔ 0 改） | 同上 |

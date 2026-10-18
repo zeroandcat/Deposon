@@ -299,7 +299,7 @@
 | **命名合规** | ✅ `_g5_rejudgment_c_applicability_recheck_2026_10_10.md` —— `_主题_日期`、0 阶段前缀、⛔ 0 `_v5_`／`_v4_`／`_v3_` |
 | **0 网络／0 skill／0 LLM** | ✅ 未调用（仅本地只读检索 ＋ 本机哈希核算） |
 | **临时脚本清理** | ✅ 本棒 **0 新建临时脚本**（无须清理）；`.tmp/` 之既有二脚本**保留原状**（⛔ 0 运行、0 删除） |
-| **0 触及非上传归档面** | ✅ ⛔ **0** 触及 `〔本地归档区〕` |
+| **0 触及非上传归档面** | ✅ ⛔ **0** 触及 `D:\私人资料\_non_upload_local_archive` |
 | **署名如实** | ✅ protocol-keeper（`agent-3e0c193da529` · 本分支会话）· ⛔ **0 冒充** PI／parent／worker／verifier／verdict-keeper／evidence-auditor／doc-writer |
 
 ---

@@ -15,10 +15,10 @@
 
 | 面 | 绝对路径 | 说明 |
 |---|---|---|
-| repo | `_september_workspace` | 主仓（工作区） |
-| sub | `_september_workspace` | sub 仓 |
-| archive | `〔本地归档区〕` | 归档区（含 **runtime 回执备份面**） |
-| delivery_pkg | `〔本地资料区〕/Deposon_v1_2_0_交付包` | 交付包（**源件未覆盖之第四面**，本棒按派单 U9 要求补扫） |
+| repo | `D:\私人资料\deposon-repo` | 主仓（工作区） |
+| sub | `D:\私人资料\deposon-sub` | sub 仓 |
+| archive | `D:\私人资料\_non_upload_local_archive` | 归档区（含 **runtime 回执备份面**） |
+| delivery_pkg | `D:\私人资料\Deposon_v1_2_0_交付包` | 交付包（**源件未覆盖之第四面**，本棒按派单 U9 要求补扫） |
 
 四面全遍历文件索引 = **41,513 件**（索引文件 `.tmp\receipt_disp_idx.txt`，41,514 行含 1 ROOT 行/面）。
 
@@ -29,7 +29,7 @@
 
 ### §1.3 回执目录实况
 
-`〔本机用户目录〕/.minimax/background-tasks/` 现存 **22,002** 个目录；本棒所涉 5 个 task_id（`bg_552544f7` / `bg_2d153d13` / `bg_c7a12456` / `bg_71d98eb6` / `bg_2805a36d`）**全部无对应目录** ⇒ 回执原文不可复取，与源件判定自洽（**「哈希扫描未命中≠实体不存在」不适用于此：此为目录级缺失实测**）。
+`C:\Users\Administrator\.minimax\background-tasks\` 现存 **22,002** 个目录；本棒所涉 5 个 task_id（`bg_552544f7` / `bg_2d153d13` / `bg_c7a12456` / `bg_71d98eb6` / `bg_2805a36d`）**全部无对应目录** ⇒ 回执原文不可复取，与源件判定自洽（**「哈希扫描未命中≠实体不存在」不适用于此：此为目录级缺失实测**）。
 
 ---
 
@@ -43,7 +43,7 @@
 | **U4** `bg_552544f7` 不自洽 | ①按名检 D+0.5/D05 全族；②读聚合面首段；③读 rescue 注记 | **已澄清：回执截断，非未跑**。盘上 D+0.5 面实体齐备：`results/_v3x_d0_5_aggregation_2026_09_17.md`（12,010 B／`ddf0d1aa96d2`／09-17 13:08）明载「4 个独立观察者对 P-L v2 根因完全收敛诊断」＋「worker C 已实测 Mistral Large 2512 × 30 cells → Spearman=0.375」；`deposon-sub/results/` 存 8 件 `_d05_*_20260918_100853` 实体（main_run_results 15,243 B／opt_5_directions 5,614 B／combined_report 10,555 B 等，各带 `._moved_20260924_1830` 迁移副本）。该棒 status=succeeded 与回执止于「0% 启动中」矛盾 ⇒ **真因是回执面截断（子棒自报 ≠ 全程记录）**，非未执行 | 出核查结论。**⛔ 不替其改判**（status 字段原样保留，不改写为其他状态） | §2.4 |
 | **U5** `bg_2805a36d` ParserError | **按原棒派单重跑「同名异内容统计」**：脚本文件（`.py`）实现，规避原棒 `-Command` 内 `$j` 变量被吞的 PowerShell 陷阱 | **重跑完成并落盘**。四面遍历 41,516 件；同名基名 286 组＝同名同内容 **193** ＋ 同名异内容 **93**（跨面 68）。剔运行时回执基名后业务面 3,922 件／284 组＝同内容 193 ＋ **异内容 91**（跨面 68）。异内容按扩展名：`.json` 30／`.py` 25／`.md` 21／`.txt` 3／`.gz` 2／`.pdf` 2／`.tex` 2／`.csv` 2／`.sh` 1／`.ps1` 1／`.bib` 1／`.sqlite` 1 | **产出 1 件新名件** `results/_dup_name_diff_content_scan_2026_10_08.json`（1,302,889 B／`a27d11f45c21`）。重跑脚本留痕于 `.tmp/`（工具临时件） | §2.5 |
 | **U6** E2 GLM_2 round1 | — | **不在本棒派单范围**（派单处置清单为 U1–U5、U7–U9 ＋ Q1–Q4／Q6，未列 U6） | 0 动作，如实标注 | §2.2 末注 |
-| **U7** 10 棵空树 | ①全域目录遍历测「空目录」与「maximal empty tree」；②A12 点名各目录逐一计件 | **A12 所列 10 棵空树已全部非空（后续棒已回填）**：`results/` 下 `_p_j_convergence_basin_2026_09_16`、`_v3x_18frozen_remeasure_2026_09_16`、`_p_i_real_labels_…`、`_p_m_attack_surface_cost_…`、`_p_m_real_separation_…`、`_p_n_curvature_potential_coupling_…`、`_p_o_stranger_verification_…`、`_p_l_p_c_finite_size_scaling_…`、`_p_l_real_data_collapse_…`、`_v3x_experiments_…`、`_v3x_p_k_verify_…` **各含 1 件**；另 6 棵 executor/preexp 树各含 3–5 件。全域（除 `.git`/`node_modules`/`__pycache__`）**现仅 1 棵空树**：`_september_workspace/.tmp/verif_doubt6` | 出全路径 ＋ **拟处置建议**（见 §2.6）。**⛔ 0 删除** | §2.6 |
+| **U7** 10 棵空树 | ①全域目录遍历测「空目录」与「maximal empty tree」；②A12 点名各目录逐一计件 | **A12 所列 10 棵空树已全部非空（后续棒已回填）**：`results/` 下 `_p_j_convergence_basin_2026_09_16`、`_v3x_18frozen_remeasure_2026_09_16`、`_p_i_real_labels_…`、`_p_m_attack_surface_cost_…`、`_p_m_real_separation_…`、`_p_n_curvature_potential_coupling_…`、`_p_o_stranger_verification_…`、`_p_l_p_c_finite_size_scaling_…`、`_p_l_real_data_collapse_…`、`_v3x_experiments_…`、`_v3x_p_k_verify_…` **各含 1 件**；另 6 棵 executor/preexp 树各含 3–5 件。全域（除 `.git`/`node_modules`/`__pycache__`）**现仅 1 棵空树**：`D:\私人资料\deposon-repo\.tmp\verif_doubt6` | 出全路径 ＋ **拟处置建议**（见 §2.6）。**⛔ 0 删除** | §2.6 |
 | **U8** 锚件登记落后 | ①锚件现态实测；②链内检索登记值 `FCCFCC869E7A`／257,362；③链内「版本演进链续」逐版取证 | **差异已由链内版本演进机制完全解释，非缺件、非篡改**。锚件 `docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md` 现态 **857,551 B／`41f5f1689d09`**（mtime 09-29 19:42）；`FCCFCC869E7A`／257,362 B 在链内 **L2288 登记为 v20 末态**（含字节与 SHA 双字段），v21 追加时**实测 prefix 核验 ✓**（L2272/L2314）。其后逐版累进 v21(275,754B)→v22(292,215B)→v23(307,384B)→v24(327,975B)→v25(360,692B)→v26(407,284B)→v27…→**v37**（818,979 B 为 v36 末态，v37 新增 E-59/E-60）⇒ **v20→v37 共 17 次追加，每次均有链内登记行** | 列勘误链补记面＝**已由链内机制覆盖，无须补记**。**⛔ 0 代判**（档位/销号 0 触；不判定 E-37→E-60 各条归属，不改链内任一字） | §2.7 |
 | **U9** 4 件 MISSING_TRUE 日志 | **含三面外面（四面）复核** ＋ 追加扫 archive 面 runtime 回执备份（18,306 份 `summary.txt` 内容检索） | **4 件全部确认真缺（⛔ 0 编造）**：`_volc_22cap_emb.log`（已由 D7 trash 解释）、`deposon_volcengine_worker_c_2026_09_10.log`、`*.run.log`（**glob 级 0 命中**：四面无任何 `*.run.log`）、`_v4_supp_l14v3_batch7_r5_run.log`——**四面 ＋ archive runtime 回执面全文检索（18,306 份 summary.txt 中提及 batch7_r5_run = 0）全部 0 命中** | 登记**真缺**（3 件无 trash 记录、1 件已由 trash 解释） | §2.8 |
 
@@ -106,7 +106,7 @@
 **现存唯一空树（全路径）**：
 
 ```
-_september_workspace/.tmp/verif_doubt6
+D:\私人资料\deposon-repo\.tmp\verif_doubt6
 ```
 
 | 树 | 现态 | 拟处置（**建议 · 未执行**） |
@@ -226,7 +226,7 @@ _september_workspace/.tmp/verif_doubt6
 
 | 项 | 值 |
 |---|---|
-| 路径 | `_september_workspace/results/_receipt_disposition_register_2026_10_08.md` |
+| 路径 | `D:\私人资料\deposon-repo\results\_receipt_disposition_register_2026_10_08.md` |
 | SHA-256[:12] | 见交付回报（**自指约定**：填入即改变文件哈希，故本字段不内填） |
 | 字节 | 见交付回报（同自指约定） |
 | 编码/行尾 | UTF-8 无 BOM ／ 纯 LF |

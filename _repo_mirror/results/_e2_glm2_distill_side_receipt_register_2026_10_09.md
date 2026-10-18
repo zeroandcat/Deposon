@@ -34,7 +34,7 @@
 
 | # | 检索式 | 范围 | 命中 | 判定 |
 |---|---|---|---|---|
-| R1 | 目录名前缀 `bg_bb13016d*` | `〔本机用户目录〕/.minimax/background-tasks/`（全量 **22,211** 个 `bg_*` 目录） | **0** | 回执目录不存在（与旧登记「lost · 目录不在 background-tasks」**一致**，非新证） |
+| R1 | 目录名前缀 `bg_bb13016d*` | `C:\Users\Administrator\.minimax\background-tasks\`（全量 **22,211** 个 `bg_*` 目录） | **0** | 回执目录不存在（与旧登记「lost · 目录不在 background-tasks」**一致**，非新证） |
 | R2 | 目录名前缀族 `bg_bb*` | 同上 | 96 | 族内无 `bg_bb13016d`（短 ID 为 8 位 hex 全前缀，形态须为 `bg_bb13016d-<uuid>`） |
 | R3 | 时间窗枚举（09-26 16:00–16:40） | 同上 | **112** 个目录 | 窗口内 112 件各有 `output.log` + `summary.txt`（字节数 5 B–70,397 B 不等），**无一件对应 GLM_2 蒸馏侧**；亦无短 ID 命中 |
 

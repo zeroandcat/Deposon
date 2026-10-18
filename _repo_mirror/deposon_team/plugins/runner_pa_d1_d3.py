@@ -9,12 +9,12 @@ Deposon V3X P-A 路径 D1-D3 主聚合脚本:
   - D1-D3 综合 verdict 与 5 锚 PASS/FAIL 中期评估
 
 输入:
-  _september_workspace/results/deposon_v2_phase1_60cells_2026_09_11.json
-  _september_workspace/results/deposon_v3_physical_opt_60cells_2026_09_11.json
-  _september_workspace/results/boss_pa_1_rbr_rm_result_2026_09_15.json
-  _september_workspace/results/boss_pa_2_potential_game_result_2026_09_15.json
-  _september_workspace/results/boss_pa_3_replicator_dynamics_result_2026_09_15.json
-  _september_workspace/verifier/handoff/KT_ABC1_anchors_sha256_12.json
+  D:/私人资料/deposon-repo/results/deposon_v2_phase1_60cells_2026_09_11.json
+  D:/私人资料/deposon-repo/results/deposon_v3_physical_opt_60cells_2026_09_11.json
+  D:/私人资料/deposon-repo/results/boss_pa_1_rbr_rm_result_2026_09_15.json
+  D:/私人资料/deposon-repo/results/boss_pa_2_potential_game_result_2026_09_15.json
+  D:/私人资料/deposon-repo/results/boss_pa_3_replicator_dynamics_result_2026_09_15.json
+  D:/私人资料/deposon-repo/verifier/handoff/KT_ABC1_anchors_sha256_12.json
 
 输出 (2 件):
   1. results/deposon_pa_d1_d3_2026_09_15.json (D1-D3 综合数据 + verdict)
@@ -39,7 +39,7 @@ import datetime
 # ============================================================================
 # 路径常量
 # ============================================================================
-REPO_ROOT = r"_september_workspace"
+REPO_ROOT = r"D:/私人资料/deposon-repo"
 PHASE1_JSON = os.path.join(REPO_ROOT, "results", "deposon_v2_phase1_60cells_2026_09_11.json")
 V3_PHYS_JSON = os.path.join(REPO_ROOT, "results", "deposon_v3_physical_opt_60cells_2026_09_11.json")
 BOSS1_JSON = os.path.join(REPO_ROOT, "results", "boss_pa_1_rbr_rm_result_2026_09_15.json")

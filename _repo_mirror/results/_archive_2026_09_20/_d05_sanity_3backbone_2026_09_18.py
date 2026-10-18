@@ -21,7 +21,7 @@ def log(msg):
 
 log(f"=== D+0.5 sanity probe | TS={TS} ===")
 
-KEY_FILE = Path(r'〔本机用户目录〕/Desktop/AI/LLM API.txt')
+KEY_FILE = Path(r'C:\Users\Administrator\Desktop\AI\LLM API.txt')
 content_bytes = KEY_FILE.read_bytes()
 content = ''
 for enc in ('utf-8','gbk','gb18030','utf-8-sig'):
@@ -96,7 +96,7 @@ for bb in BACKBONES:
                     'content':(r.get('content') or '')[:120],
                     'error':(r.get('error') or '')[:200] if not r['ok'] else None})
 
-DEPOSON_ROOT = Path(r'_september_workspace')
+DEPOSON_ROOT = Path(r'D:\私人资料\deposon-repo')
 RESULTS_DIR = DEPOSON_ROOT / 'results'
 OUT = RESULTS_DIR / f'_d05_sanity_3backbone_{TS}.json'
 out = {

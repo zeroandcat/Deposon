@@ -17,8 +17,8 @@
 
 | 项 | 值 |
 |---|---|
-| **外部路径** | `〔本机用户目录〕/codex-workspace/c4_values_reply_2026_10_10/_codex_c4_values_reply_2026_10_10.md` |
-| **仓内路径** | `_september_workspace/letters/_codex_c4_values_reply_2026_10_10.md` |
+| **外部路径** | `C:\Users\Administrator\codex-workspace\c4_values_reply_2026_10_10\_codex_c4_values_reply_2026_10_10.md` |
+| **仓内路径** | `D:\私人资料\deposon-repo\letters\_codex_c4_values_reply_2026_10_10.md` |
 | **外部件 SHA-12** | **`8e4972352291`** |
 | **仓内件 SHA-12** | **`8e4972352291`** |
 | **外部件 bytes** | **13,378** |

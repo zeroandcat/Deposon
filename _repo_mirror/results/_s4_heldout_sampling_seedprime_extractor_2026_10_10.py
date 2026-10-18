@@ -58,16 +58,17 @@ import numpy as np
 # ---------------------------------------------------------------- 配置（R0/R7）
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESULTS = os.path.abspath(os.path.join(HERE, os.pardir, "results"))
+REPO_RESULTS = r"D:\私人资料\deposon-repo\results"
 
 SEED_BASE = 42            # 门 B 自审用（现集之种子）
 SEED_PRIME = 1830975565   # R7 正式抽取用（PI 已裁「照采」，b53f40abb90b §2-1）
 RATIO = 0.30
 
 OUT_ITEMS_JSON = os.path.join(
-    RESULTS, "_s4_heldout_sampling_seedprime_items_2026_10_10.json"
+    REPO_RESULTS, "_s4_heldout_sampling_seedprime_items_2026_10_10.json"
 )
 CURRENT_ITEMS_JSON = os.path.join(
-    RESULTS, "_s4_heldout_sampling_seed42_items_2026_10_09.json"
+    REPO_RESULTS, "_s4_heldout_sampling_seed42_items_2026_10_09.json"
 )
 
 # 裁定 fb1b696de1d6 §5.1 之输入域登记（21 件 · 字节序）——用于门 A 逐件全等校验。
@@ -108,13 +109,13 @@ def sha12_of(path):
 def load_domain():
     """R0 · 读取 results/ 全域 *addendum*.json（只读）。"""
     files = sorted(
-        [f for f in os.listdir(RESULTS) if f.endswith(".json") and "addendum" in f],
+        [f for f in os.listdir(REPO_RESULTS) if f.endswith(".json") and "addendum" in f],
         key=lambda x: x.encode("utf-8"),  # R1 · 显式字节序（⛔ 0 collation）
     )
     per_file = {}
     total_rows = 0
     for name in files:
-        p = os.path.join(RESULTS, name)
+        p = os.path.join(REPO_RESULTS, name)
         with open(p, "r", encoding="utf-8") as f:
             data = json.load(f)
         sup = data.get("supplements", [])
@@ -136,7 +137,7 @@ def domain_gate(files, per_file):
         sys.exit(2)
     rows = 0
     for name in files:
-        p = os.path.join(RESULTS, name)
+        p = os.path.join(REPO_RESULTS, name)
         s12 = sha12_of(p)
         b = os.path.getsize(p)
         c = len(per_file[name])

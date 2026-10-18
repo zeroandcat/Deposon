@@ -350,7 +350,7 @@
 |---|---|
 | **主脚本** | `.tmp/_s4_heldout_items_exec.py`（**执行棒**；临时件 · **用毕由本棒路由清理**） |
 | **产出后处理脚本** | `.tmp/_s4_finalize.py`（**帧件对照 ＋ 指纹落面**；临时件 · 用毕清理） |
-| **复现命令** | `cd "_september_workspace"` → `python ".tmp/_s4_heldout_items_exec.py"` → `python ".tmp/_s4_finalize.py"` |
+| **复现命令** | `cd "D:/私人资料/deposon-repo"` → `python ".tmp/_s4_heldout_items_exec.py"` → `python ".tmp/_s4_finalize.py"` |
 | **产出** | `results/_s4_heldout_sampling_seed42_items_2026_10_09.json`（＋ 本登记件） |
 | **运行环境** | Python **3.14.7**（Windows）＋ numpy **2.5.3**；依赖仅 `json`／`zlib`／`hashlib`／`math`／`os`／`sys`／`numpy`；**0 网络** |
 | **可复现性** | ✅ **同输入域 ＋ 同规格 ⇒ 26 件逐条可复现**（双实现 0 分歧 ＋ 排序指纹 `acedff01d18c`） |

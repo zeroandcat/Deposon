@@ -65,7 +65,7 @@
 
 ### 2.1 文档 1: P_A_D1_D3_REPORT_2026_09_15.md
 
-**位置**: `_september_workspace/docs/V3X/P_A_D1_D3_REPORT_2026_09_15.md`
+**位置**: `D:/私人资料/deposon-repo/docs/V3X/P_A_D1_D3_REPORT_2026_09_15.md`
 **作者**: Mavis Worker (subagent of mvs_d7f73acd28ab4ac5ba175a2276d8089a)
 **任务 ID**: P-A-DEEPEN-D1-D7-2026-09-15
 
@@ -90,7 +90,7 @@
 
 ### 2.2 文档 2: P_C_D1_D3_REPORT_2026_09_15.md
 
-**位置**: `_september_workspace/docs/V3X/P_C_D1_D3_REPORT_2026_09_15.md`
+**位置**: `D:/私人资料/deposon-repo/docs/V3X/P_C_D1_D3_REPORT_2026_09_15.md`
 **作者**: Mavis Worker (subagent of mvs_bbeb804b1a6a41109be740636eed1709)
 **任务 ID**: P-C-VERIFY-D1-D7-2026-09-15
 
@@ -116,7 +116,7 @@
 
 ### 2.3 文档 3: P_E_D1_D3_REPORT_2026_09_15.md
 
-**位置**: `_september_workspace/docs/V3X/P_E_D1_D3_REPORT_2026_09_15.md`
+**位置**: `D:/私人资料/deposon-repo/docs/V3X/P_E_D1_D3_REPORT_2026_09_15.md`
 **作者**: Mavis Worker (subagent of mvs_bbeb804b1a6a41109be740636eed1709)
 **任务 ID**: P-E-PHYSICS-D1-D7-2026-09-15
 
@@ -142,7 +142,7 @@
 
 ### 2.4 文档 4: P_F_D1_FULL_REPORT_2026_09_15.md
 
-**位置**: `_september_workspace/docs/V3X/P_F_D1_FULL_REPORT_2026_09_15.md`
+**位置**: `D:/私人资料/deposon-repo/docs/V3X/P_F_D1_FULL_REPORT_2026_09_15.md`
 **作者**: Mavis Worker (subagent of mvs_bbeb804b1a6a41109be740636eed1709, session mvs_d1d6eded4cac4dc5819ddece5fdf6861)
 **任务 ID**: P-F-OBSERVER-D1-FULL-2026-09-15
 
@@ -171,7 +171,7 @@
 
 ### 2.5 文档 5a: P_G_NON_EUCLIDEAN_SCATTERING_V0_SPEC.md (P-G V0 spec)
 
-**位置**: `_september_workspace/docs/V3X/P_G_NON_EUCLIDEAN_SCATTERING_V0_SPEC.md`
+**位置**: `D:/私人资料/deposon-repo/docs/V3X/P_G_NON_EUCLIDEAN_SCATTERING_V0_SPEC.md`
 **作者**: Mavis (沿 P_F_SPEC V0 + P_F_V0_1_UPGRADE + user 2026-09-15 11:28)
 **触发**: user 2026-09-15 11:28 "arxiv 论文就是你之前包装的论文,deposon就像非欧几何不一定现实但有用,准备P-G spec"
 
@@ -198,7 +198,7 @@
 
 ### 2.6 文档 5b: P_G_V01_REPORT_2026_09_15.md (P-G V0.1 报告)
 
-**位置**: `_september_workspace/docs/V3X/P_G_V01_REPORT_2026_09_15.md`
+**位置**: `D:/私人资料/deposon-repo/docs/V3X/P_G_V01_REPORT_2026_09_15.md`
 **作者**: Mavis Worker (subagent of mvs_bbeb804b1a6a41109be740636eed1709)
 **任务 ID**: P-G-V01-HYPERBOLIC-TRANSPORT-2026-09-15
 
@@ -226,7 +226,7 @@
 
 ### 2.7 文档 6: D5_DECISIONS_LAND_REPORT_2026_09_15.md
 
-**位置**: `_september_workspace/docs/V3X/D5_DECISIONS_LAND_REPORT_2026_09_15.md`
+**位置**: `D:/私人资料/deposon-repo/docs/V3X/D5_DECISIONS_LAND_REPORT_2026_09_15.md`
 **作者**: Mavis Worker (subagent of mvs_bbeb804b1a6a41109be740636eed1709, session mvs_548cbfc2ddf14b8c9e7dc54499361a79)
 **任务 ID**: D5-DECISIONS-LAND-ALL-2026-09-15
 
@@ -253,7 +253,7 @@
 
 ### 2.8 文档 7: D_FIX2_METRIC_VERIFY_REPORT_2026_09_15.md
 
-**位置**: `_september_workspace/docs/V3X/D_FIX2_METRIC_VERIFY_REPORT_2026_09_15.md`
+**位置**: `D:/私人资料/deposon-repo/docs/V3X/D_FIX2_METRIC_VERIFY_REPORT_2026_09_15.md`
 **作者**: Mavis Worker (subagent of mvs_bbeb804b1a6a41109be740636eed1709, session mvs_0b8237ae75aa407484eae3e61e998dbb)
 **任务 ID**: D_FIX2-METRIC-VERIFY-9M60C-2026-09-15
 
@@ -281,7 +281,7 @@
 
 ### 2.9 文档 8: LETTER_TO_TRAE_REVIEW_2026_09_16.md
 
-**位置**: `_september_workspace/docs/V3X/LETTER_TO_TRAE_REVIEW_2026_09_16.md`
+**位置**: `D:/私人资料/deposon-repo/docs/V3X/LETTER_TO_TRAE_REVIEW_2026_09_16.md`
 **作者**: Mavis (任务 ID DEPSON-TRAE-REVIEW-2026-09-16,沿 user 2026-09-15 13:39 指令)
 **触发**: user 2026-09-15 13:39 "准备这周内全额收束...适时安排暂停进度并写信让trea审核与修复代码"
 

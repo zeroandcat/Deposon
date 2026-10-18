@@ -10,12 +10,12 @@
 
 | 区 | 绝对路径 | 件数 | bytes | 末次 mtime |
 |---|---|---|---|---|
-| $root | `_september_workspace` | **1699** | **54441729** | 2026-10-12 03:09:00 |
-| $root | `_september_workspace` | **1187** | **58731756** | 2026-10-12 01:54:54 |
+| $root | `D:\私人资料\deposon-repo` | **1699** | **54441729** | 2026-10-12 03:09:00 |
+| $root | `D:\私人资料\deposon-sub` | **1187** | **58731756** | 2026-10-12 01:54:54 |
 
 ## 2. 逐目录分布
 
-### `_september_workspace`
+### `D:\私人资料\deposon-repo`
 
 | 目录 | 件数 | bytes | 目录 mtime |
 |---|---|---|---|
@@ -37,7 +37,7 @@
 | *(根散件)* | 72 | 1020964 | — |
 | **小计** | **1699** | **54441729** | |
 
-### `_september_workspace`
+### `D:\私人资料\deposon-sub`
 
 | 目录 | 件数 | bytes | 目录 mtime |
 |---|---|---|---|
@@ -58,7 +58,7 @@
 
 SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序：区 → 相对路径（稳定序）。
 
-### 区 `_september_workspace`
+### 区 `D:\私人资料\deposon-repo`
 
 | # | 相对路径 | bytes | mtime | SHA-12 |
 |---|---|---|---|---|
@@ -1764,7 +1764,7 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 
 **区小计：1699 件**
 
-### 区 `_september_workspace`
+### 区 `D:\私人资料\deposon-sub`
 
 | # | 相对路径 | bytes | mtime | SHA-12 |
 |---|---|---|---|---|
@@ -2966,7 +2966,7 @@ SHA-256 前 12 位（SHA-12）＋ 字节数 ＋ mtime ＋ 相对路径。排序�
 2. **本件自身不在 §3 指纹表内**（自指不可解）：快照枚举时 deposon-repo 为 **1,699 件**（含登记件）；本件落盘后终态为 **1,700 件**。deposon-sub 恒为 **1,187 件**（本件不落 sub）。
 3. **转移件之旧路径已失效**：723 条「旧路径 → 新路径」映射见 _v4_closeout_bulk_reorganize_register_2026_10_12.md §5。凡按 deposon-repo/results/... 字面查找者，须先查该映射表。
 4. 两区互为同一上传分区（镜像/分工），计数时**勿重复计** 12 件 SAME_IDENTITY 双份（该 12 件两区同哈希并存，见登记件 §6）。
-5. deposon-repo/results 内 600 件被活执行体按绝对路径钉住（ROOT = Path('_september_workspace')），**勿搬动**，否则断链。
+5. deposon-repo/results 内 600 件被活执行体按绝对路径钉住（ROOT = Path('D:/私人资料/deposon-repo')），**勿搬动**，否则断链。
 
 ---
 

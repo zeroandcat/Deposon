@@ -41,7 +41,7 @@ for proxy_var in ["HTTP_PROXY", "HTTPS_PROXY", "http_proxy", "https_proxy",
                   "ALL_PROXY", "all_proxy", "NO_PROXY", "no_proxy"]:
     os.environ.pop(proxy_var, None)
 
-REPO_ROOT = r"_september_workspace"
+REPO_ROOT = r"D:\私人资料\deposon-repo"
 V3_PHYS_JSON = os.path.join(REPO_ROOT, "results", "deposon_v3_physical_opt_60cells_2026_09_11.json")
 ANCHOR_JSON = os.path.join(REPO_ROOT, "verifier", "handoff", "KT_ABC1_anchors_sha256_12.json")
 V21_FROZEN_JSON = os.path.join(REPO_ROOT, "results", "deposon_v21_gtformal.json")

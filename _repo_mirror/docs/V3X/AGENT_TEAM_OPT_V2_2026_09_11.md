@@ -124,7 +124,7 @@ V1 解决了"agent 说谎/自报不复算"的问题, 本次审计证明 **Mavis 
 
 ## §4 环境操作手册(Win/PowerShell/沙箱/web, successor+data 共用)
 
-1. **多行 Python**: 禁 PowerShell here-string 内联 → 写临时 .py 到 repo 外(如 `〔本机路径〕/tmp/`), `python -B <path>` 执行, 用后删
+1. **多行 Python**: 禁 PowerShell here-string 内联 → 写临时 .py 到 repo 外(如 `C:\tmp\`), `python -B <path>` 执行, 用后删
 2. **沙箱**: `-B` 防止 `__pycache__` 写入; 避免 `ast.unparse` 等隐式编译操作(改子串检查)
 3. **红色 PSSecurityException**: profile 快照无害噪音, 判定以**退出码 + 实际输出**为准
 4. **web 官方源**: 首轮不中 → 加 `site:` 域名过滤 + 纯英文术语 + 换同义词, **不换平台**; 官方文档用 WebFetch 直抓(docs.nvidia.com 等效果好)

@@ -54,7 +54,7 @@ for _stream in (sys.stdout, sys.stderr):
 # ============================================================
 # 常量与路径 (Exp2 独立 prefix, ⛔ 0 覆写 r1/r2 任一件)
 # ============================================================
-ROOT = Path("_september_workspace")
+ROOT = Path("D:/私人资料/deposon-repo")
 RESULTS_DIR = ROOT / "results"
 TMP_DIR = ROOT / ".tmp"
 
@@ -71,7 +71,7 @@ A_BASELINE_PATH = RESULTS_DIR / "_t1_exp2_answer_face_baseline_2026_10_09.json"
 # 汇总 -> 落 results/ (新名; ⛔ 0 合并派生 JSON)
 RESULT_PATH = RESULTS_DIR / "_t1_exp2_result_2026_10_09.json"
 
-KEY_SOURCE_PATH = Path("〔本机用户目录〕/Desktop/AI/LLM API.txt")
+KEY_SOURCE_PATH = Path("C:/Users/Administrator/Desktop/AI/LLM API.txt")
 CAPTIONS_PATH = ROOT / "corpus/v20_caption_surface/strip_captions_22.json"
 CAPTIONS_SHA12_EXPECTED = "6A2656878745"
 

@@ -6,8 +6,8 @@
 - **落册日期**：2026-10-10（CST）
 - **件系**：第五批登记件 `results/_questionnaire_cards_intake_register_supplement_4_2026_10_10.md`（SHA-12 `d6ff041a9df9`）之**追补落册（第六批）**；上承第四批 `11681f0ad861`、第三批 `dc43e3cb7610`、第二批 `193386b9f23c`、第一批 `d917180db36f`。⛔ 0 编辑／覆写／修改前五批登记件；⛔ 0 重复转录其已收录之卡。
 - **编制**：**doc-writer**（文稿起草官 · 分支会话 `mvs_b498c4eaba5242c8a39e7e24dd206ba0`｜署名如实 · **0 冒充 PI／parent／protocol-keeper／verdict-keeper／verifier／worker**）
-- **来源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`，表 `questionnaire_requests`。本轮以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交）。
-- **备核源**：本会话消息面 `〔本机用户目录〕/.minimax/v2/sessions/2026/09/01/02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5`之 `messages.jsonl`（只读检索，作二次交叉核对）。
+- **来源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`，表 `questionnaire_requests`。本轮以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交）。
+- **备核源**：本会话消息面 `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5`之 `messages.jsonl`（只读检索，作二次交叉核对）。
 - **窗口口径**：本批应录＝派工指定之 **6 张目标卡**（轮39～轮44）——**本件非全表扫描之应录全集**，系**指定目标行**之逐字转录（沿「库读取限 `questionnaire_requests` 目标行」之派工纪律）。
   - ⚠ **活库声明**：运行时库为**活库**，本件之读得时点即收录截止时点；**其后再建之卡不属本件应录面**。
 - **转录纪律**：**逐字、0 省略、0 解释、0 判读**。题面（`request_json.steps` 之 id／header／question／options／selectionMode／required／allowOther／otherPlaceholder）与答文（`reply_payload` 全文，含 `selectedOther`／`otherText`）均按库中原文照录；本件**不含**任何分析、结论、裁断或建议。

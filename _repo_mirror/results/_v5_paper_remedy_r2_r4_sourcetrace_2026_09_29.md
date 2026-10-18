@@ -21,10 +21,10 @@
 
 ## §1 检索范围与方法（供下游对账）
 
-**范围**：`_september_workspace`（主仓，本棒 0 写入）＋ sibling `_september_workspace`（**只读**）。检索面 = 全树 `*.md / *.json / *.py / *.tex`。
+**范围**：`D:\私人资料\deposon-repo`（主仓，本棒 0 写入）＋ sibling `D:\私人资料\deposon-sub`（**只读**）。检索面 = 全树 `*.md / *.json / *.py / *.tex`。
 
 **诚实交代 1 · 源件路径的两面**：
-- 编排件 / 台账所列 `results/_archive_2026_09_20/review_*.md` 与 `results/_glm_v3_双审报告_2026_09_18.md` 在**主仓内 0 命中**；实体在 sibling `_september_workspace/results/`（**同相对路径**）。
+- 编排件 / 台账所列 `results/_archive_2026_09_20/review_*.md` 与 `results/_glm_v3_双审报告_2026_09_18.md` 在**主仓内 0 命中**；实体在 sibling `D:\私人资料\deposon-sub\results\`（**同相对路径**）。
 - 本棒 6 件审稿 / 报告源件 SHA-12 **逐件复算全部 MATCH**：`0d36d7cd0589` / `09784ff172b3` / `5198a7059c06` / `26537967db82` / `8d00c6d4a242` / `fe80bad08eef`。
 
 **诚实交代 2 · mtime 不可作唯一定序键**：

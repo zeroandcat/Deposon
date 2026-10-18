@@ -170,7 +170,7 @@
 ## §8 复算指令（**他人可原样复跑** · 0 网络、0 读 key）
 
 ```powershell
-# 工作目录 = 仓根 _september_workspace
+# 工作目录 = 仓根 D:\私人资料\deposon-repo
 # ① 输入件指纹（应与 §0 表逐字一致 ⇒ 即 0 回改之证）
 python -X utf8 .tmp/u04_1_chain_verify.py     # 独立源重算全链 + 布尔实测 + 码本覆盖 + 恒等校验 + 分量读数
 python -X utf8 .tmp/u04_1_dual_verify.py      # byte_hash / semantic_hash 可复算性判定 + 出处溯源

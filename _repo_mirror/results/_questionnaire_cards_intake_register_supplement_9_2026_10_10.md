@@ -7,8 +7,8 @@
 - **件系**：第九批登记件 `results/_questionnaire_cards_intake_register_supplement_8_2026_10_10.md`（本棒当轮实测 SHA-12 `29b30d845841`）之**补续落册（第十批）**；上承第九批 `29b30d845841`、第八批 `1fb8eac82781`（其账目补正件 `a651f76a6547`）、第七批 `95ba771fa760`（其回执 `0984955b0370`）、第六批 `edb57308170d`、第五批 `d6ff041a9df9`、第四批 `11681f0ad861`、第三批 `dc43e3cb7610`、第二批 `193386b9f23c`、第一批 `d917180db36f`。⛔ 0 编辑／覆写／修改前九批登记件；⛔ 0 重复转录其已收录之卡。
 - **本批口径**：**卡答落册 · 补续批** —— 续录派工指定之**轮55・轮56D・卡A・卡B・卡C 五卡**（第九批落册读时点之后所建、⛔ 尚未落册者）。合计 **5 卡／19 答**（选项通道 10 答 ＋ Other 通道 9 答）。
 - **编制**：**doc-writer**（文稿起草官 · 分支会话 `mvs_1d9bc51308f14bbf8d5995a73a1f20b3`｜署名如实 · **0 冒充 PI／parent／protocol-keeper／verdict-keeper／verifier／worker**）
-- **来源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`，表 `questionnaire_requests`。本棒以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交、0 checkpoint）。
-- **备核源**：会话消息面 `〔本机用户目录〕/.minimax/v2/sessions/2026/09/01/02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5` 之 `messages.jsonl`（只读检索，作二次交叉核对）。
+- **来源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`，表 `questionnaire_requests`。本棒以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交、0 checkpoint）。
+- **备核源**：会话消息面 `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5` 之 `messages.jsonl`（只读检索，作二次交叉核对）。
   - ⚠ **会话目录反解纪律**：目录名 ＝ `session_` ＋ 会话 id `mvs_bbeb804b1a6a41109be740636eed1709` 之 URL-safe base64 无填充编码。本棒**先独立反解定位**（`base64.urlsafe_b64encode(...)` → 去填充 `=` → URL-safe）得 `bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5`，⛔ **0 凭记忆直接引用路径**；实测该名于 `2026\09\01\` 层**唯一命中**，实际目录名含时间戳前缀 `02-38-47-809-`。
   - ⚠ **形近近邻陷阱（本棒实测仍在位 · 未误取）**：同层另存 `02-38-47-809-session_bXZzX2IiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5` —— **时间戳前缀完全相同**，仅 base64 段第 6 字符起一字之差（`…X2JiZW…` ↔ `…X2IiZW…`）。二者反解分别为：本棒目标 → `mvs_bbeb804b1a6a41109be740636eed1709`（✅ 与派工所载会话 id **逐位相符**）；近邻 → `mvs_b"eb804b1a6a41109be740636eed1709`（⛔ **非**本会话）。本棒之核对源**取自目标目录**，⛔ **0 读取近邻目录**。
 - **窗口口径**：本批应录＝派工指定之 **5 张目标卡**（轮55・轮56D・卡A・卡B・卡C）——**本件非全表扫描之应录全集**，系**指定目标行**之逐字转录（沿「库读取限 `questionnaire_requests` 目标行」之派工纪律）。
@@ -940,7 +940,7 @@ AD-5 视角归属：标识层 6 组（现）或收窄至位移件层 1 组？（
 
 ### 2.2 交叉核对（独立第二源：会话消息面 `messages.jsonl`）
 
-读得时点 `〔本机用户目录〕/.minimax/v2/sessions/2026/09/01/02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5/messages.jsonl`：**2,753,587** bytes ／SHA-12 `bfe11c1a5a05`。本件以各 `ask_…` requestId 检索，独立于运行时库**交叉核对**卡答（**0 判读 · 0 补写**）：
+读得时点 `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\messages.jsonl`：**2,753,587** bytes ／SHA-12 `bfe11c1a5a05`。本件以各 `ask_…` requestId 检索，独立于运行时库**交叉核对**卡答（**0 判读 · 0 补写**）：
 
 | 卡 | 消息面命中 | 关键证据 | 与库内 `reply_payload` 之关系 |
 |---|---|---|---|
@@ -1037,7 +1037,7 @@ AD-5 视角归属：标识层 6 组（现）或收窄至位移件层 1 组？（
 | 会话消息面 | **只读**（仅 `messages.jsonl` 检索）—— 0 写入 |
 | 派生 JSON | ⛔ **0 新建／0 合并**任何派生物 JSON（中间导出为 `%TEMP%` 内一次性文本，已清理） |
 | 本件交付前之自身更正 | **0** —— 本件经生成器一次性落盘，落盘后仅作**只读**实测复核（指纹／版式／撞名），⛔ 0 二次改写 |
-| 归档禁区 | **未触及** —— ⛔ 0 访问／0 读取 `〔本地归档区〕` |
+| 归档禁区 | **未触及** —— ⛔ 0 访问／0 读取 `D:\私人资料\_non_upload_local_archive` |
 
 ### 3.2 落前撞名实测
 

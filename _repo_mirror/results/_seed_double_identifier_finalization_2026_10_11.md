@@ -8,7 +8,7 @@
 - **本件**：`results/_seed_double_identifier_finalization_2026_10_11.md`（**新名新建 · 0 覆写**；落前 `Test-Path` ＝ **`False`** ＋ 全仓 glob 查重见 §8-1）
 - **命名合规**：`_主题_日期` 三段式；首段 `_seed_double_identifier_finalization_` ＝ **主题标识非阶段号** ⇒ 合 PI 2026-09-29 命名裁；⛔ **0** `_v5_`／`_v4_`／`_v3_`
 - **出件**：**worker（执行棒 · 落定批）**（分支会话 `mvs_e304cec356004348aed41d534f30ebd1` · parent `mvs_bbeb804b1a6a41109be740636eed1709`｜**署名如实** · ⛔ **0 冒充** PI／parent／verifier／verdict-keeper／evidence-auditor／protocol-keeper）
-- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4（key 纪律）**：key 永不明文（本棒 **0 读 key／0 读 `.env`／0 落盘凭据**）｜ **0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 import ／ 0 派生 JSON 新建或合并** ｜ ⛔ **0 触及 `〔本地归档区〕`**
+- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4（key 纪律）**：key 永不明文（本棒 **0 读 key／0 读 `.env`／0 落盘凭据**）｜ **0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 import ／ 0 派生 JSON 新建或合并** ｜ ⛔ **0 触及 `D:\私人资料\_non_upload_local_archive`**
 - **日期**：2026-10-11
 - **构造面 vs 真实面（构造自由度申报）**：本件之条文面 ＝ **盘上可核之判准文本面**（`025212e91546`）＋ **盘上可核之公式与键序面**（`b53f40abb90b` §2-2／`fb1b696de1d6` §5.1）＋ **盘上可核之待填槽面**（`fd4ec7559342` §6-2）＋ **本棒自测之 21 件域指纹·锚件指纹·R1 键序·`P″` 之 SHA-256**；**外推边界 ＝ 构造域** ⇒ ⛔ **0 外推**至新第三集之任何实际读数（**该集尚未抽取**）、⛔ **0 外推**至旧 held-out 两面之读数结论、⛔ **0 预判**第三集之可动件数／过门与否、⛔ **0 外推**至任何**未登记之构造变更**、⛔ **0 外推**至 PI 之意图
 

@@ -206,8 +206,8 @@
 
 ## §X.6 文件路径 + 实测产物表（沿 skill §7 验证流程）
 
-- **本报告路径**：`_september_workspace/results/_ftfb_v3_pass2_audit_2026_09_18_corrected.md`
-- **原报告路径**：`_september_workspace/results/_ftfb_pass2_results_limitations_audit_2026_09_17.md`
+- **本报告路径**：`D:/私人资料/deposon-repo/results/_ftfb_v3_pass2_audit_2026_09_18_corrected.md`
+- **原报告路径**：`D:/私人资料/deposon-repo/results/_ftfb_pass2_results_limitations_audit_2026_09_17.md`
 - **原报告字节数**：**11,390 B**（实测，沿 Get-ChildItem）
 - **本端修订版 SHA-12**：见外层汇报消息最终实测（自指悖论：本行计入后再变，沿 skill §7 验证流程）
 - **本端修订版字节数**：26,601 B（沿 Get-ChildItem 实测）

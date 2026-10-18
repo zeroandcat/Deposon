@@ -5,14 +5,14 @@
   - **卡九**（`ask_4854a021d08ffa85737199e2`，库内 `title` 逐字：「*deposon 卡九：K-RJ-5 归宿・Q-2a 落裁・S4′ 五线面・G-10 处置*」）｜**卡答时点**：**2026-10-11 01:10:44.280 +0800**（`answered_at` ＝ `1791652244280` 实测换算；`submittedAt` 同值）；`status`＝`answered`；创建 **01:08:11.404**；`injected_at`＝**`1791652244333`**（01:10:44.333）。
   - **卡十**（`ask_34cf9cff98fb020bc0638309`，库内 `title` 逐字：「*deposon 卡十：K-RJ-5 归宿确认・S4′ 读数处置・G-10 三路径・后续出路*」）｜**卡答时点**：**2026-10-11 01:28:45.596 +0800**（`answered_at` ＝ `1791653325596`；`submittedAt` 同值）；`status`＝`answered`；创建 **01:24:40.660**；`injected_at`＝**`1791653325659`**（01:28:45.659）。
   - 二卡 `session_id` 同为 **`mvs_bbeb804b1a6a41109be740636eed1709`**；`agent_name`＝**`mavis`**；`msg_id`＝`NULL`；`dismissed_at`＝`NULL`；`origin_channel_context_json`＝`NULL`；`purpose`＝`goal`；`goalId`＝`tg_6h0vzhg7bimv2g8tso`；`mode`＝`questionnaire`；`schemaVersion`＝2。
-- **卡答第一源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`（表 `questionnaire_requests`）；二卡 `request_id` **各 1** 命中，以 `sqlite3.connect("file:…?mode=ro", uri=True)` **只读**实测。**本棒读取时点**：**2026-10-11 01:29:57–01:35:22 +0800**；本件**二卡题面与答文逐字取自该库**（`request_json`，`reply_payload`）。⛔ **0 网络 · 0 写库 · 0 改库 · 0 调表 · 0 提交 · 0 checkpoint**。
+- **卡答第一源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（表 `questionnaire_requests`）；二卡 `request_id` **各 1** 命中，以 `sqlite3.connect("file:…?mode=ro", uri=True)` **只读**实测。**本棒读取时点**：**2026-10-11 01:29:57–01:35:22 +0800**；本件**二卡题面与答文逐字取自该库**（`request_json`，`reply_payload`）。⛔ **0 网络 · 0 写库 · 0 改库 · 0 调表 · 0 提交 · 0 checkpoint**。
 - 📌 **⛔ 0 读取得时点 ⩾ 卡答时点**（实测 · 0 混同）：`answered_at`＝**01:10:44.280／01:28:45.596**；**证据取得时点**＝**01:29:57–01:35:22**；二者**不可混同**。⛔ **0 以库活 `mtime` 充当任何一时点**。
 - **Other 根查核（8 问逐项实测 · 属实）**：二卡 `reply_payload.answers` 共 **8** 条（卡九 **4** ＋ 卡十 **4**）；**3／8 `selectedOther` ＝ `true`**（卡九 `krj5_home`、卡十 `krj5_confirm`、卡十 `f3f4`）；**3／3 之 `selectedOptionIds` 皆为空数组 `[]`**（Other 答法 ⇔ 未择任何具名项）；**5／8 `selectedOther` ＝ `false`** 且 `selectedOptionIds` **各恰 1** 项；**3 条 Other 答之 `otherText` 皆非空**（逐字见 §2）；**5 条择定答之键集恰为** `['selectedOptionIds','selectedOther','stepId']` ⇒ **0 条含 `text`／`otherText`／`other`／`comment` 之类其他文字字段**（**键本身不存在**）⇒ **该 5 问 0 条其他文字**。📌 二卡 `allowOther` 皆＝`true`、`otherPlaceholder` 皆＝`Others...`、`selectionMode` 皆＝`single`、`required` 皆＝`true`。
 - **体例沿用**：前批 `results/_round56_review_effectivity_register_5_2026_10_11.md`（**`5deba7d27bb1`** · 67,613 B —— **本棒自测**，§1 表 #1）——以其落盘登记结构为**体例范本**（逐字照录 · 落**采认要点** · 载**效力位** · 另记**另议列** · 诚实边界 · 0 回改确认 · 撞名实测）；两件**并存、互不覆盖、0 回改**。
 - **本件**：`results/_round56_review_effectivity_register_6_2026_10_11.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False`，实测见 §4-1）。
 - **命名合规**：`_主题_日期`三段式；首段 `_round56_` 系**轮次编号非阶段号**、⛔ 非 `_v5_`／`_v4_`／`_v3_` 等 V-阶段前缀（沿 PI 2026-09-29 命名裁 `57024f2cd30a` §1.2② ＋ 10-01 补记「派工建议名亦须合规」）⇒ 合规。
 - **出件**：**doc-writer（文稿起草官）**（分支会话 `mvs_f94b5a76a0e64d5690ee104eb3fcc626`｜**署名如实** · ⛔ **0 冒充** PI／parent／worker／protocol-keeper／verdict-keeper／verifier／evidence-auditor）。
-- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（本棒 **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 派生 JSON 新建或合并**（仅本机只读检索 ＋ 本机哈希核算 ＋ 本机只读库查询）｜⛔ **0 触及** `〔本地归档区〕`。
+- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（本棒 **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 派生 JSON 新建或合并**（仅本机只读检索 ＋ 本机哈希核算 ＋ 本机只读库查询）｜⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`。
 
 ---
 
@@ -222,7 +222,7 @@ PI 已就本夜后后段续二卡**逐项择定**：**卡九** ＝ **Other「D�
 | 11 | `results/_g5_rejudgment_face_prereg_2026_10_10.md` | `04495ef4b343` | **只读** |
 | 12 | `results/_round56_direct_adoptions_register_2026_10_10.md` | `e3c56c5d0a97` | **只读** |
 
-⇒ ⛔ **0 编辑／0 覆写／0 删除／0 改名** 上述任一件；⛔ **0 派生 JSON 新建或合并**（`65a9b9be6327` 仅为只读引用）；⛔ **0 跑 executor／0 跑 `S4′`／0 预写任何读数**；⛔ **0 写运行时库／0 改运行时库**；⛔ **0 触及** `〔本地归档区〕`。**本棒唯一新增之落盘动作 ＝ 本件自身之新建**。
+⇒ ⛔ **0 编辑／0 覆写／0 删除／0 改名** 上述任一件；⛔ **0 派生 JSON 新建或合并**（`65a9b9be6327` 仅为只读引用）；⛔ **0 跑 executor／0 跑 `S4′`／0 预写任何读数**；⛔ **0 写运行时库／0 改运行时库**；⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`。**本棒唯一新增之落盘动作 ＝ 本件自身之新建**。
 
 ---
 

@@ -30,7 +30,7 @@
 ### §0.3 上传面备忘（重要·不因归档而变）
 
 - `letters/` 面**本就 0 上传**（carve，🚫 禁传）；本次归档**不改变上传面**，**KIMI 侧无需任何动作**（不需改委托、不需重发、不需追加说明）。
-- 归档区 `〔本地归档区〕` ＝ **🚫 禁传面**；本批 10 件**仅落该面**，未进任何可传目录。
+- 归档区 `D:\私人资料\_non_upload_local_archive\` ＝ **🚫 禁传面**；本批 10 件**仅落该面**，未进任何可传目录。
 - 现行留位件**全部保持 🚫 0 发送／0 推送／0 转递／0 外联**状态不变（⛔ 0 触动其状态行）。
 
 ---
@@ -119,7 +119,7 @@ c7c418081026a5987168d23849a211db79d86e4bf7e5224a421fe1f9b7063cec  99576  _dualtr
 
 | 项 | 值 |
 |---|---|
-| 目标根 | `〔本地归档区〕/letters_archive_2026_10_01/` |
+| 目标根 | `D:\私人资料\_non_upload_local_archive\letters_archive_2026_10_01\` |
 | 命名依据 | 派工建议名；沿归档区既有惯例（`_archive_2026_09_20`／`_remote_version_freeze_2026_09_26` 之「`_主题_日期`」体例）＋ PI 09-29 命名裁定（去阶段/版本前缀） |
 | 落位方式 | **同卷改址移动**（工作区与归档区同在 `D:` 卷 ⇒ 原子改名，**0 数据重写**、0 副本暂存、0 覆盖风险） |
 | 目录内布局 | **扁平 10 件 · 文件名一字不改**（⇒ 同族件之间的相互引用仍可解析；仅绝对路径前缀 `letters/` → `letters_archive_2026_10_01/`） |
@@ -253,7 +253,7 @@ c7c418081026a5987168d23849a211db79d86e4bf7e5224a421fe1f9b7063cec  99576  _dualtr
 | 9 | `deposon-repo\letters\_commission_kimi_upload_2026_10_01.md` | `…\letters_archive_2026_10_01\_commission_kimi_upload_2026_10_01.md` | `4a40d54af9d2` | 29,880 |
 | 10 | `deposon-repo\letters\_commission_glm_dualtrack_paper_addendum_2026_10_01.md` | `…\letters_archive_2026_10_01\_commission_glm_dualtrack_paper_addendum_2026_10_01.md` | `689f587f219c` | 35,892 |
 
-**落位根（全 10 件 dest 前缀）**：`〔本地归档区〕/letters_archive_2026_10_01/`
+**落位根（全 10 件 dest 前缀）**：`D:\私人资料\_non_upload_local_archive\letters_archive_2026_10_01\`
 
 ### §8.2 批量校验凭据（批次指纹）
 
@@ -272,8 +272,8 @@ c7c418081026a5987168d23849a211db79d86e4bf7e5224a421fe1f9b7063cec  99576  _dualtr
 **全批拉回（复原至原位）**
 
 ```powershell
-$src = '〔本地归档区〕/letters_archive_2026_10_01'
-$dst = '_september_workspace/letters'
+$src = 'D:\私人资料\_non_upload_local_archive\letters_archive_2026_10_01'
+$dst = 'D:\私人资料\deposon-repo\letters'
 Get-ChildItem -LiteralPath $src -File | ForEach-Object {
   $t = Join-Path $dst $_.Name
   if (Test-Path -LiteralPath $t) { Write-Output ("SKIP(同名已存在,0覆写): " + $_.Name) }
@@ -284,14 +284,14 @@ Get-ChildItem -LiteralPath $src -File | ForEach-Object {
 **单件拉回**（示例：拉回 C 族 v0.1）
 
 ```powershell
-Move-Item -LiteralPath '〔本地归档区〕/letters_archive_2026_10_01/_commission_kimi_upload_2026_10_01.md' `
-          -Destination '_september_workspace/letters/_commission_kimi_upload_2026_10_01.md'
+Move-Item -LiteralPath 'D:\私人资料\_non_upload_local_archive\letters_archive_2026_10_01\_commission_kimi_upload_2026_10_01.md' `
+          -Destination 'D:\私人资料\deposon-repo\letters\_commission_kimi_upload_2026_10_01.md'
 ```
 
 **拉回后校验**（逐件复算，应与 §2 基线全等）
 
 ```powershell
-Get-ChildItem -LiteralPath '_september_workspace/letters' -File |
+Get-ChildItem -LiteralPath 'D:\私人资料\deposon-repo\letters' -File |
   Where-Object { $_.Name -match '_commission_glm_dualtrack_paper_v0\.[1-4]|_dualtrack_paper_clue_book(_v0\.[2-4])?|_commission_kimi_upload_2026_10_01\.md|_commission_glm_dualtrack_paper_addendum_2026_10_01\.md' } |
   ForEach-Object { "{0}  {1}  {2}" -f (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLower(), $_.Length, $_.Name }
 ```
@@ -299,7 +299,7 @@ Get-ChildItem -LiteralPath '_september_workspace/letters' -File |
 **批次 digest 复算**（全批完整性一算）
 
 ```powershell
-$lines = Get-ChildItem -LiteralPath '〔本地归档区〕/letters_archive_2026_10_01' -File | Sort-Object Name |
+$lines = Get-ChildItem -LiteralPath 'D:\私人资料\_non_upload_local_archive\letters_archive_2026_10_01' -File | Sort-Object Name |
   ForEach-Object { $_.Name + '|' + (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLower() + '|' + $_.Length }
 $canon = ($lines -join "`n")
 $sha = [System.Security.Cryptography.SHA256]::Create()

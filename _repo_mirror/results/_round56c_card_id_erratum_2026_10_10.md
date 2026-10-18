@@ -68,7 +68,7 @@ PI 轮 56 卡C 之库内原件 `request_id` ＝ **`ask_4cce7bab04bc02647de1155c`
 
 ## §3 证据链（★ 本棒独立自运行时库只读核得 · `mode=ro`）
 
-**库**：`〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`｜**表**：`questionnaire_requests`｜**打开方式**：SQLite URI `file:…?mode=ro`（**只读连接**）｜⛔ **0 INSERT／0 UPDATE／0 DELETE／0 DDL／0 checkpoint 触发**。
+**库**：`C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`｜**表**：`questionnaire_requests`｜**打开方式**：SQLite URI `file:…?mode=ro`（**只读连接**）｜⛔ **0 INSERT／0 UPDATE／0 DELETE／0 DDL／0 checkpoint 触发**。
 
 | # | 探针 | 结果 |
 |:-:|:--|:--|
@@ -111,7 +111,7 @@ PI 轮 56 卡C 之库内原件 `request_id` ＝ **`ask_4cce7bab04bc02647de1155c`
 | # | 限制 | 如实登记 |
 |:-:|:--|:--|
 | 1 | **会话消息面未独立复核** | `b6c0b4f29152` L990 载短 id 于**消息面** L228／L256／L277 出现。该**会话消息存储在本仓之外**，**本棒 0 检索之**、⛔ **0 断言**其当前状态；本件引其处**一律标明出处为 `b6c0b4f29152` 之自报值**。 |
-| 2 | **检索面之界定** | 本件「全仓」＝ 本工作区（`_september_workspace`）之**文本内容检索**（ripgrep · literal · 含被忽略路径）。⛔ **0 扫描**二进制内容（如任何 `.sqlite`／`.db` 之内嵌串）；⛔ **0 扫描** `〔本地归档区〕`（派工单明令**不得触及**）。 |
+| 2 | **检索面之界定** | 本件「全仓」＝ 本工作区（`D:\私人资料\deposon-repo`）之**文本内容检索**（ripgrep · literal · 含被忽略路径）。⛔ **0 扫描**二进制内容（如任何 `.sqlite`／`.db` 之内嵌串）；⛔ **0 扫描** `D:\私人资料\_non_upload_local_archive`（派工单明令**不得触及**）。 |
 | 3 | **语义判定之让位** | 本件⛔ **0 判定**短 id 之出现是否构成某一判断件之「错误」—— 仅**登记字面差异**与**固化引用规则**；判定归 verdict-keeper。 |
 | 4 | **库面时点性** | §3 之读数系**本棒读时点**之快照；库为活动面（总行数已见 §3.2 之漂移）⇒ ⛔ 0 将本件读数当作**恒常不变**之断言。 |
 | 5 | **0 代裁** | 本件⛔ **0 判定** PI 是否须另出修订／勘误批文；⛔ **0 宣告**任一既有件失效；生效登记归后续登记批。 |
@@ -145,7 +145,7 @@ PI 轮 56 卡C 之库内原件 `request_id` ＝ **`ask_4cce7bab04bc02647de1155c`
 - ⛔ **0 网络**（0 web 检索／0 外部 API／0 〔IM〕／0 GitHub）｜⛔ **0 skill 调用**｜⛔ **0 LLM／0 API 调用**。
 - **R4**：⛔ 0 读 key／0 读 `.env`／0 落盘任何凭据。
 - **临时脚本**：核验脚本 `verify_cardc_id.py` 落于工作区 `.tmp/`，作业毕经**可恢复删除通道**（`rm --`）清理；⛔ 0 残留。
-- ⛔ **0 触及** `〔本地归档区〕`。
+- ⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`。
 - ⛔ **0 跑实验／0 产生新读数**（§3 之读数系**标识核验**之只读查询，⛔ 非实验读数）。
 
 ---

@@ -204,7 +204,7 @@
 | 1 | 0 LLM 调用 | ✅ **放宽** (user 11:28 拍板) | 仅 volcengine coding-plan: 1 sanity + 5 cells = 6 calls for `doubao-seed-2.0-lite` (FRESH); 0 调用 OpenRouter/TeamoRouter/V4.1-Flash/GPT-6/agent-plan/〔IM〕 API |
 | 2 | 0 proxy | ✅ 严守 | 0 HTTP_PROXY/HTTPS_PROXY 操作; 脚本启动时 `os.environ.pop(k, None)` for 6 个 proxy keys |
 | 3 | 仅 volcengine coding-plan | ✅ 严守 | 仅调 `https://ark.cn-beijing.volces.com/api/coding/v3/chat/completions` (volcengine 火山方舟 Coding Plan); 0 调其他 LLM 网关 |
-| 4 | key runtime 读 | ✅ 严守 | `Path(r'〔本机用户目录〕/Desktop/AI/LLM API.txt').read_text()` runtime 读; `key_truncated = api_key[:20]+'...'+api_key[-4:]` 仅用于显示, 完整 key 不入 prompt / JSON / 落盘 |
+| 4 | key runtime 读 | ✅ 严守 | `Path(r'C:\Users\Administrator\Desktop\AI\LLM API.txt').read_text()` runtime 读; `key_truncated = api_key[:20]+'...'+api_key[-4:]` 仅用于显示, 完整 key 不入 prompt / JSON / 落盘 |
 | 5 | 不动 16 frozen | ✅ 严守 | `_verify_15frozen.py` 验证 15 frozen + 1 newly landed = 16/16 PASS (0-touch declaration PASS) |
 | 6 | 不动 verifier/mavis/.builtin/scripts/ | ✅ 严守 | 4 BOSS 算法 INLINE 注册, 无 `.mavis/scripts/p_f/` 落盘; 无 `verifier/` 目录触动 |
 | 7 | 不创建临时文件 | ✅ 严守 | 唯一新增 = `.tmp/_pf_d1_full_2026_09_15.py` (verify 脚本例外) + `.tmp/_d1_full_run.log` (verify log 例外) + `results/deposon_pf_d1_full_9m5c_2026_09_15.json` + 本 MD |

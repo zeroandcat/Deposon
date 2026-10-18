@@ -7,9 +7,9 @@ Deposon V3X 路径 ①:深耕 P-A 均衡稳定化
 (沿 V2 阶段 1-3.5 9 model × 60 cells 守恒 540/540 baseline 验算)
 
 输入:
-  _september_workspace/results/deposon_v2_phase1_60cells_2026_09_11.json
-  _september_workspace/results/deposon_v3_physical_opt_60cells_2026_09_11.json
-  _september_workspace/verifier/handoff/KT_ABC1_anchors_sha256_12.json
+  D:\\私人资料\\deposon-repo\\results\\deposon_v2_phase1_60cells_2026_09_11.json
+  D:\\私人资料\\deposon-repo\\results\\deposon_v3_physical_opt_60cells_2026_09_11.json
+  D:\\私人资料\\deposon-repo\\verifier\\handoff\\KT_ABC1_anchors_sha256_12.json
 
 输出(两件):
   1. stdout 打印 60 cells + 9 model × 60 cells = 540 守恒明细
@@ -33,7 +33,7 @@ import sys
 import datetime
 
 # ---------- 路径常量(绝对,严守不动 scripts/) ----------
-REPO_ROOT = r"_september_workspace"
+REPO_ROOT = r"D:\私人资料\deposon-repo"
 PHASE1_JSON = os.path.join(REPO_ROOT, "results", "deposon_v2_phase1_60cells_2026_09_11.json")
 V3_PHYS_JSON = os.path.join(REPO_ROOT, "results", "deposon_v3_physical_opt_60cells_2026_09_11.json")
 ANCHOR_JSON = os.path.join(REPO_ROOT, "verifier", "handoff", "KT_ABC1_anchors_sha256_12.json")

@@ -6,7 +6,7 @@
   - `th3b` ＝ ✅ **甲「两项照拟案核准」** —— ①形式＝**沿 `T-1` 覆盖线增列对象**（最轻形式）＋②**采拟案要件 5–8**。
 - **状态标识**：**依 PI 令 · 核准生效（生效即锁）** —— 本件所登记之口径**自本件落盘之时起生效并即锁**，⛔ **0 事后重开**｜⛔ **0 事后调整**｜⛔ **0 现场改阈值／改数值判据**。
 - **源件**：**出口③ 之出处** ＝ `results/_e6_th_v3_19_residual_exits_judgment_2026_10_10.md`（`442d5ff4acdb`）**§4.5 覆盖线之要件拟案 8 项** ＋ **§4.2 射程张力** ＋ **§6.1 判断意见** ＋ **§7.1 出口③-1～③-3 最小问题式**；其两问原始出处 ＝ `results/_e6_th_v3_19_alignment_register_2026_10_10.md`（`622cebef2c9f`）**§4 出口③**。
-- **卡答第一源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`（表 `questionnaire_requests`），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测（§2）。**⛔ 0 网络、⛔ 0 代 PI 补写选项全文**。
+- **卡答第一源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（表 `questionnaire_requests`），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测（§2）。**⛔ 0 网络、⛔ 0 代 PI 补写选项全文**。
 - **本件**：`results/_round56_th3_coverage_line_effectivity_register_2026_10_10.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False` ＋ 同名 glob **0** 命中实测，§6.1）。
 - **命名合规**：`_主题_日期`；首段 `_round56_` ＝ **轮次编号**（**非**阶段前缀，⛔ 非 `_v3_`／`_v4_`／`_v5_`）；沿 PI 2026-09-29 命名裁 `57024f2cd30a` §1.2② ＋ 10-01 补记「派工建议名亦须合规」。
 - **出件**：**protocol-keeper（口径与预登记官）**（分支会话 `mvs_da1def51f6b54ffba7a5c1ab0d71ccca` · **署名如实** · ⛔ **0 冒充** PI／parent／doc-writer／worker／verdict-keeper／verifier／evidence-auditor）。
@@ -50,7 +50,7 @@
 
 | 项 | 值 |
 |:--|:--|
-| 库路径／表 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` ／ `questionnaire_requests` |
+| 库路径／表 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` ／ `questionnaire_requests` |
 | 目标行 | `request_id` ＝ `ask_2fefd936973d08dba26c872a`（命中 **1** 行，`status` ＝ `answered`） |
 | `session_id` | `mvs_bbeb804b1a6a41109be740636eed1709` |
 | 卡题 | 「deposon 轮56 卡R4（串行 4/4）· TH-v3-19 残留出口（已并 5→3 步）」 |
@@ -193,7 +193,7 @@
 - ✅ **运行时库**：**只读**（`sqlite3` ＋ `mode=ro`；0 写入／0 提交）；⛔ 0 载任何 key 字面。
 - ✅ **0 跑实验**：⛔ 0 跑 executor／0 跑 runner／0 重算任何读数；本棒**未产生任何临时脚本文件**（核验以只读管道内联执行，无落盘）。
 - ✅ **R4**：⛔ **0 读 key／0 读 `.env`／0 落盘凭据／0 调任何端点**。
-- ✅ **归档禁区**：⛔ **0 访问／0 读取** `〔本地归档区〕`。
+- ✅ **归档禁区**：⛔ **0 访问／0 读取** `D:\私人资料\_non_upload_local_archive`。
 - ✅ **0 网络 ／ 0 skill ／ 0 LLM**：未调用。
 
 ---

@@ -26,7 +26,7 @@
 
 ### §0.1 卡答原件实测（运行时库**只读**连接 · `mode=ro` · 0 写）
 
-> 库：`〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` · 表 `questionnaire_requests` · ⛔ **0 网络 · 0 端点调用 · 0 API key · 0 LLM 代答**（R4：0 读 key、0 读 `.env`、0 落盘凭据 · **key 永不明文**）。
+> 库：`C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` · 表 `questionnaire_requests` · ⛔ **0 网络 · 0 端点调用 · 0 API key · 0 LLM 代答**（R4：0 读 key、0 读 `.env`、0 落盘凭据 · **key 永不明文**）。
 
 **① 之「另议」出处 —— `ask_13e341cca46a973ec61c9f0f`**（建卡 2026-10-09 23:11:08.698 ＋08:00 ／ 答讫 23:11:54.974 ＋08:00 · `status=answered`）：
 

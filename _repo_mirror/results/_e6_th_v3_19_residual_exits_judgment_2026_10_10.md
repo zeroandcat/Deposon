@@ -48,7 +48,7 @@
 
 | 项 | 值 |
 |:--|:--|
-| 库路径／表 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` ／ `questionnaire_requests` |
+| 库路径／表 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` ／ `questionnaire_requests` |
 | 目标行 | `request_id` ＝ `ask_843b65b50a873462f8a56e80`（命中 **1** 行，`status` ＝ `answered`） |
 | `answered_at` | `1791625250668` → 换算 **2026-10-10 17:40:50.668 +0800**（与派工单所载**逐位相符**） |
 | 接入方式 | `sqlite3.connect("file:...?mode=ro", uri=True)` —— **只读**（0 写入／0 提交） |
@@ -348,7 +348,7 @@
 - ✅ **运行时库**：**只读**（`sqlite3` ＋ `mode=ro`；0 写入／0 提交）；⛔ 0 载任何 key 字面。
 - ✅ **0 跑实验**：⛔ 0 跑 executor／0 跑 runner／0 重算任何读数；临时核验脚本为 `.tmp` 内**非交付件**，已以 `rm --` 清理干净。
 - ✅ **R4**：⛔ **0 读 key／0 读 `.env`／0 落盘凭据／0 调任何端点**。
-- ✅ **归档禁区**：⛔ **0 访问／0 读取** `〔本地归档区〕`。
+- ✅ **归档禁区**：⛔ **0 访问／0 读取** `D:\私人资料\_non_upload_local_archive`。
 - ✅ **0 网络 ／ 0 skill ／ 0 LLM**：未调用。
 
 ---

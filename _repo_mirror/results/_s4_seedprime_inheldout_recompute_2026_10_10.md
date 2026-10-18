@@ -8,7 +8,7 @@
 - **产出**：**新建本件**（`results/_s4_seedprime_inheldout_recompute_2026_10_10.md`）｜ ⛔ **0 派生 JSON 新建／0 合并**（本棒所读 4 件 JSON **全部只读**）
 - **命名合规**：`_主题_日期`；**0 `_v5_`／`_v4_`／`_v3_` 等 V-阶段前缀**、文件名首段非阶段号 ⇒ 合 PI 2026-09-29 命名裁（`57024f2cd30a` §1.2②）＋ 10-01 补记
 - **出件**：**worker**（Mavis 团队 worker · 分支会话 `mvs_9a9441092c2249e7966901f1930c728d`｜**署名如实** · ⛔ **0 冒充** PI／parent／protocol-keeper／verifier／verdict-keeper／evidence-auditor／doc-writer）
-- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（⛔ **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 重生成 ／ 0 新观测入账**｜ ⛔ **0 触及** `〔本地归档区〕`
+- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（⛔ **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 重生成 ／ 0 新观测入账**｜ ⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`
 - **日期**：2026-10-10
 
 ---
@@ -192,7 +192,7 @@
 | **唯一写动作** | ✅ **新建本件**（`results/_s4_seedprime_inheldout_recompute_2026_10_10.md`） |
 | ⛔ **0 派生 JSON** | **0 新建／0 合并**任何派生 JSON；**0 回写** `6f020c03e52c` 之 `in_heldout` 字段（新值**仅存于本件**） |
 | ⛔ **临时脚本** | 本棒用 **1 个一次性临时脚本**（仓根 `_tmp_pk_seedprime_inheldout_2026_10_10.py`，**只读** JSON）＋ 1 个临时输出文件 `_tmp_pk_out.txt`；**二者已全部经可恢复删除通道（`rm --` / mavis-trash）清理**，落笔前实测 **0 残留**（§9-1） |
-| ⛔ **0 触及禁区** | `〔本地归档区〕` **0 读、0 写、0 列目录** |
+| ⛔ **0 触及禁区** | `D:\私人资料\_non_upload_local_archive` **0 读、0 写、0 列目录** |
 
 ---
 

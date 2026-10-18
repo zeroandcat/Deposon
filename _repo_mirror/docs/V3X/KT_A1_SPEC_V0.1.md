@@ -346,7 +346,7 @@ D7 一页摘要(对外): 只列对外判死线结果 + P-A 方向 PASS/FAIL/GRAY
 | 铁律 | KT-A1 V0.1 兑现 | 引用 |
 |---|---|---|
 | ✅ **双审** | reviewer-a 静态审本 SPEC + reviewer-b 在 `/tmp/deposon_kt_a1_audit_<timestamp>/` 副本独立重跑 | §7 复现协议 |
-| ✅ **API key 不入 prompt** | 不读 `〔本机用户目录〕/Desktop/AI/新建文本文档.txt`, runtime `Path().read_text()` 仅 D2 实现 LLM 客户端时读,不入 prompt | §2.1 + §5.2(温度敏感性)+ 锚 `P_A_LLM_CLIENT` SHA-256 `055e874ea5c1` |
+| ✅ **API key 不入 prompt** | 不读 `C:\Users\Administrator\Desktop\AI\新建文本文档.txt`, runtime `Path().read_text()` 仅 D2 实现 LLM 客户端时读,不入 prompt | §2.1 + §5.2(温度敏感性)+ 锚 `P_A_LLM_CLIENT` SHA-256 `055e874ea5c1` |
 | ✅ **术语红线** | 用"成本倍数 / ε-纳什 / 稳定化代价 / 势博弈 / 序统计量 / 谱瓶颈"等工程/数学术语, 不用"散射层魔法"等营销词 | §3 度量 + §4 BOSS 测法 + §5 抗攻击 |
 | ✅ **数字溯源** | 全部数字从 frozen 锚 JSON 字段路径引(v3 提案附录 B + P-A V0 spec §2 5 锚 + 本 SPEC §6 真实 SHA-256);本 SPEC 不写新数字 | §6 5 锚 + §3.1 对外判死线 + §3.2 内部判死线 |
 | ✅ **verifier 纪律** | §7 复现协议用 /tmp 副本; 不碰 HANDOFF_MACHINE_READABLE.json / results/*.json / verifier/vN/ | §7 + D0_FREEZE_PREP §6 |

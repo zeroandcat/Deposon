@@ -29,10 +29,10 @@ import urllib.error
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
-KEY_FILE = r'〔本机用户目录〕/Desktop/AI/LLM API.txt'
+KEY_FILE = r'C:\Users\Administrator\Desktop\AI\LLM API.txt'
 OR_BASE = 'https://openrouter.ai/api/v1'
 ARK_BASE = 'https://ark.cn-beijing.volces.com/api/coding/v3'
-DEPOSON_ROOT = Path(r'_september_workspace')
+DEPOSON_ROOT = Path(r'D:\私人资料\deposon-repo')
 CORPUS_DIR = DEPOSON_ROOT / 'corpus' / 'v20'
 GSM8K_FILE = DEPOSON_ROOT / 'results' / 'deposon_benchmark_v1_4_gsm8k_details.json'
 SQA_FILE = DEPOSON_ROOT / 'results' / 'deposon_benchmark_v1_4_strategyqa_details.json'

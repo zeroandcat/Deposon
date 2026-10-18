@@ -175,7 +175,7 @@
 ### 8.1 复现本棒两件
 
 ```powershell
-cd '_september_workspace'
+cd 'D:/私人资料/deposon-repo'
 python .tmp\_q3_l282_fix_build_2026_10_09.py       # 由原件重建 ①（落地后置断言自守）
 python .tmp\_q3_l282_fix_validate_2026_10_09.py   # 重出 §6 验证报告
 ```

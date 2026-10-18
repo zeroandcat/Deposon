@@ -269,7 +269,7 @@ def main() -> int:
 ### 8.3 7 条铁律兼容
 
 - ✅ **双审**: P-F V0 草稿待 D1 reviewer-a 静态审
-- ✅ **API key 不入 prompt**: D2 实现 step 才读 `〔本机用户目录〕/Desktop/AI/新建文本文档.txt`;V0 草稿期不读
+- ✅ **API key 不入 prompt**: D2 实现 step 才读 `C:\Users\Administrator\Desktop\AI\新建文本文档.txt`;V0 草稿期不读
 - ✅ **术语红线**: 用"指纹 / 透明 / TEE / 零知识 / CoT / 散射层 / 守恒" 等工程术语,**不**用"承诺装置" 等比喻
 - ✅ **数字溯源**: P-F 主张用 ">5pp accuracy-perf-cost" 通用表达,具体数字待 D2 实测
 - ✅ **verifier 纪律**: §10 复现协议用 /tmp 副本

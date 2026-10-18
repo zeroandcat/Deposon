@@ -1,5 +1,5 @@
 import json
-with open(r'_september_workspace/results/deposon_volcengine_worker_c_2026_09_10.json', 'r', encoding='utf-8') as f:
+with open(r'D:\私人资料\deposon-repo\results\deposon_volcengine_worker_c_2026_09_10.json', 'r', encoding='utf-8') as f:
     d = json.load(f)
 print('=== Worker C Final Summary ===')
 print('worker_id:', d['worker_id'])

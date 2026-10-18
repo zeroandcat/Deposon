@@ -6,7 +6,7 @@ _tdf_s1_2026_10_12.py — 项 1–12 验收判准机检（只读；归档区 0 �
 import hashlib, json, os, re
 from pathlib import Path
 
-REPO = Path(r'_september_workspace'); RES = REPO / 'results'
+REPO = Path(r'D:\私人资料\deposon-repo'); RES = REPO / 'results'
 def sha12b(b): return hashlib.sha256(b).hexdigest()[:12]
 def sha12(p): return sha12b(Path(p).read_bytes())
 def T(p): return Path(p).read_text(encoding='utf-8', errors='ignore')

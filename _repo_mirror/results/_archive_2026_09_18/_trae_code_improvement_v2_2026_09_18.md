@@ -6,7 +6,7 @@
 > **起草依据**: 7 输入资产已 SHA-12 + size 实算 (5/5 MATCH + 7/7 size 精确)
 > **起草目的**: V1 委托信 §1.1-§1.5 5 件 audit 已收口, 起草 V2 改进需求清单以备 D7 推送前最终对账
 > **沿用 skill (Mavis plugin-cache 实际加载)**:
-> - `scientific-research-workflows:peer-review` → `〔本机用户目录〕/.minimax/v2/plugin-cache/official/sha256-tree-v1-611965fcb6208a5dbeb28d594ad7ca0f8b1f8fd62fc33c189e56a50e49db19cb/skills/peer-review/SKILL.md` (skill 路径 ✅ 实存, SKILL.md ✅ 已读)
+> - `scientific-research-workflows:peer-review` → `C:\Users\Administrator\.minimax\v2\plugin-cache\official\sha256-tree-v1-611965fcb6208a5dbeb28d594ad7ca0f8b1f8fd62fc33c189e56a50e49db19cb\skills\peer-review\SKILL.md` (skill 路径 ✅ 实存, SKILL.md ✅ 已读)
 > - `superpowers:verification-before-completion` → 真实路径 `sha256-tree-v1-ade95665080e6912a4564249bd38b02cbea0666552b6c5169831cfe4286f5e1d` (用户 V1 信中 sha256=`273bbe859ab6...` 经本轮 `Get-ChildItem` 列举证实 **不存在该 sha256 目录**, 已老实落账 §4.2)
 > **严守**: 7 铁律 0 触动 (18 frozen + 5 P-G + 5 制品 + schema v1 + 4 plugin spec + verifier/mavis/.builtin/scripts/) + 9 铁律 key runtime 读不入 prompt/JSON/log
 
@@ -40,7 +40,7 @@
 | 3 | `P2 跨 backbone 强稳健` | `P2 PASS (β CI 3/3 重叠, 3 开源 + 3 闭源 backbone; doubao 10/30 INCOMPLETE + GPT-4o UNAVAILABLE; β 为 cell-level 代理斜率)` | `_p_l_v3_phase1_report_20260917_132341.md` §9.4 自披露 |
 
 **验收 (verification-before-completion Gate)**:
-1. IDENTIFY: `Select-String -Pattern '87\.0%|Adendum 13|强稳健' _september_workspace/docs/V3X/LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md`
+1. IDENTIFY: `Select-String -Pattern '87\.0%|Adendum 13|强稳健' D:\私人资料\deposon-repo\docs\V3X\LETTER_TO_WANG_TEACHER_2026_09_18_FINAL.md`
 2. RUN: 实跑命令
 3. READ: 0 命中即为修正完成
 4. VERIFY: 必改 3 处全 0 命中才声明 PASS
@@ -112,7 +112,7 @@
 - 16 anchor + 5 P-G + schema v1 自身 = 22/22 实算匹配
 - P-G 5 锚 = `sha256("P_G_V0_PLACEHOLDER_{id}_2026_09_15")[:12]` 种子占位, 0/5 文件真值 (设计声明, 非事故)
 - KT_ABC1 内 3 锚漂移 (llm_client.py/exp_harness.py/conservation.py 三件在 09-09 p0p1 修复中被改) + 5+9 boss 锚指向 `.mavis/scripts/` 已灭失目录
-- verifier/runs/2026-09-04_pd_v0.jsonl: 仓库内缺失, 归档区 `〔本地资料区〕/_archive_deposon_2026_09_17/` 实存 SHA-12=`5042869bdf85`, path_fallback 设计闭合
+- verifier/runs/2026-09-04_pd_v0.jsonl: 仓库内缺失, 归档区 `D:\私人资料\_archive_deposon_2026_09_17\` 实存 SHA-12=`5042869bdf85`, path_fallback 设计闭合
 - anchor[0]=7d6d3d39fad8 出自 by_model/KIMI 的 fingerprint_anchors, **≠** pd_v0.jsonl 文件哈希, 推导链待 P-D V0.3 SPEC 闭合 (GRAY)
 
 **V2 改进需求**:
@@ -176,18 +176,18 @@
 | `peer-review` | `611965fcb6208a5dbeb28d594ad7ca0f8b1f8fd62fc33c189e56a50e49db19cb` | `611965fcb6208a5dbeb28d594ad7ca0f8b1f8fd62fc33c189e56a50e49db19cb` | ✅ MATCH |
 | `verification-before-completion` | `273bbe859ab6eaca79beb84fba82a8a8e1e6964647995e0eae8dbbbe8dbe2dbb` (V1 信引用) | **`ade95665080e6912a4564249bd38b02cbea0666552b6c5169831cfe4286f5e1d`** (本轮 `Get-ChildItem` 实查) | ⚠️ V1 sha256 错, **V2 用实存 sha256** |
 
-**0 编造**: 不沿 V1 错路径, 不引 `〔本机用户目录〕/.trae-cn/...` IDE 缓存, 不引 Muratkankoylan 等用户拉取的 GitHub skill 仓库。
+**0 编造**: 不沿 V1 错路径, 不引 `C:\Users\Administrator\.trae-cn\...` IDE 缓存, 不引 Muratkankoylan 等用户拉取的 GitHub skill 仓库。
 
 ### §4.3 Trae code 5 件 audit 已交付 vs 委托信 §6 路径
 
 | 委托信 §6 路径 | 实落盘 | SHA-12 实算 |
 |---|---|---|
-| `_september_workspace/results/_trae_d7_v1_audit_20260917_190000.json` | ⚠️ **未落盘** (仅 MD 落) | (n/a) |
-| `_september_workspace/results/_trae_d7_v1_audit_20260917_190000.md` | ✅ 落 | `e240ca712be6` |
-| `_september_workspace/results/_trae_corpus_5_audit_20260917_193000.md` | ✅ 落 | `f2a655cd5e54` |
-| `_september_workspace/results/_trae_anchor_18_audit_20260917_193000.md` | ✅ 落 | `4af67e6cbe71` |
-| `_september_workspace/results/_trae_kimi_push_v3_audit_20260917_193000.md` | ✅ 落 | `8ece24be6b8a` |
-| `_september_workspace/results/_trae_paper_8ch_双审_20260917_200000.md` | ✅ 落 | `bec666969ffc` |
+| `D:/私人资料/deposon-repo/results/_trae_d7_v1_audit_20260917_190000.json` | ⚠️ **未落盘** (仅 MD 落) | (n/a) |
+| `D:/私人资料/deposon-repo/results/_trae_d7_v1_audit_20260917_190000.md` | ✅ 落 | `e240ca712be6` |
+| `D:/私人资料/deposon-repo/results/_trae_corpus_5_audit_20260917_193000.md` | ✅ 落 | `f2a655cd5e54` |
+| `D:/私人资料/deposon-repo/results/_trae_anchor_18_audit_20260917_193000.md` | ✅ 落 | `4af67e6cbe71` |
+| `D:/私人资料/deposon-repo/results/_trae_kimi_push_v3_audit_20260917_193000.md` | ✅ 落 | `8ece24be6b8a` |
+| `D:/私人资料/deposon-repo/results/_trae_paper_8ch_双审_20260917_200000.md` | ✅ 落 | `bec666969ffc` |
 
 **缺口**: 委托信 §6 列了 `_trae_d7_v1_audit_20260917_190000.json` (1 JSON) 但盘上未落 (仅 MD) — 沿 V2 改进需求补落或显式声明不落 JSON (沿 5 audit 综合 MD 已含同等信息)。
 
@@ -201,7 +201,7 @@
 > 沿本轮 8 制品 (bg_02d37078 + bg_160a8c86 + bg_2bf99d32) 验证 5 worker 进展 + P-K FAIL 落账
 
 **实查结果 (老实交代)**:
-- `bg_02d37078` / `bg_160a8c86` / `bg_2bf99d32` 在仓库 `_september_workspace` 内 **0 命中** (`Get-ChildItem -Recurse -Directory -Filter 'bg_*'` 仅返回历史 bg_ IDs: `bg_23aa1031` / `bg_f2fd0574` / `bg_3e071c03` / `bg_224d01a6` / `bg_f688bdba` / `bg_a93672e9` / `bg_a87339c8` / `bg_62ffa890` / `bg_6c848f0c` 9 个, **不含**用户 V2 提的 3 个)
+- `bg_02d37078` / `bg_160a8c86` / `bg_2bf99d32` 在仓库 `D:\私人资料\deposon-repo` 内 **0 命中** (`Get-ChildItem -Recurse -Directory -Filter 'bg_*'` 仅返回历史 bg_ IDs: `bg_23aa1031` / `bg_f2fd0574` / `bg_3e071c03` / `bg_224d01a6` / `bg_f688bdba` / `bg_a93672e9` / `bg_a87339c8` / `bg_62ffa890` / `bg_6c848f0c` 9 个, **不含**用户 V2 提的 3 个)
 - 推测: 3 bg_ IDs 系 V2 委托起草时另引素材, 未同步到 Mavis 接收路径; 或系示例性 ID 而非实际产物 ID
 
 **0 编造处置**: 不沿 3 bg_ IDs 编造 worker 进展; 改沿 9 bg_ IDs (aggregated §3 实算) 作为本轮 worker 进展落账源。
@@ -270,7 +270,7 @@
 
 | 路径 | 落盘 | SHA-12 | 时点 |
 |---|---|---|---|
-| `_september_workspace/results/_trae_code_improvement_v2_2026_09_18.md` | 本 V2 MD | (本轮算) | 12:07 CST |
+| `D:/私人资料/deposon-repo/results/_trae_code_improvement_v2_2026_09_18.md` | 本 V2 MD | (本轮算) | 12:07 CST |
 
 ### §7.2 V2 MD 内嵌 0 编造 / 0 假设声明
 
@@ -311,7 +311,7 @@
 | 路径 | Mavis plugin-cache 实际路径 (sha256-tree-v1-...) ✅ |
 
 **禁用路径**:
-- ❌ Trae IDE 缓存 `〔本机用户目录〕/.trae-cn/...`
+- ❌ Trae IDE 缓存 `C:\Users\Administrator\.trae-cn\...`
 - ❌ Muratkankoylan 等用户拉取的 GitHub skill 仓库
 - ❌ 7 铁律/9 铁律 任何触动
 

@@ -29,7 +29,7 @@ user 拍板 **B** = user 自己用 minimax agent 派工(绕开 Mavis 派工系�
 
 **名称**: `deposon-pa-deepen`
 
-**路径**: `〔本机用户目录〕/.minimax/agents/deposon-pa-deepen/README.md` (严守 7 铁律第 7 条不动)
+**路径**: `C:\Users\Administrator\.minimax\agents\deposon-pa-deepen\README.md` (严守 7 铁律第 7 条不动)
 
 **系统提示词**(供 user 复制到 minimax 派工 system prompt):
 ```
@@ -72,7 +72,7 @@ user 拍板 **B** = user 自己用 minimax agent 派工(绕开 Mavis 派工系�
 
 **名称**: `deposon-pc-verify`
 
-**路径**: `〔本机用户目录〕/.minimax/agents/deposon-pc-verify/README.md`
+**路径**: `C:\Users\Administrator\.minimax\agents\deposon-pc-verify\README.md`
 
 **系统提示词**:
 ```
@@ -114,7 +114,7 @@ user 拍板 **B** = user 自己用 minimax agent 派工(绕开 Mavis 派工系�
 
 **名称**: `deposon-physics-formula`
 
-**路径**: `〔本机用户目录〕/.minimax/agents/deposon-physics-formula/README.md`
+**路径**: `C:\Users\Administrator\.minimax\agents\deposon-physics-formula\README.md`
 
 **系统提示词**:
 ```
@@ -150,7 +150,7 @@ user 拍板 **B** = user 自己用 minimax agent 派工(绕开 Mavis 派工系�
 
 **名称**: `deposon-pf-observer`
 
-**路径**: `〔本机用户目录〕/.minimax/agents/deposon-pf-observer/README.md`
+**路径**: `C:\Users\Administrator\.minimax\agents\deposon-pf-observer\README.md`
 
 **系统提示词**:
 ```

@@ -348,7 +348,7 @@ b=1 占格 = 11 / 64（空格 53）｜b=1 行数 = 15
 | 项 | 内容 |
 |---|---|
 | **脚本路径** | `.tmp/_s4_heldout_seed42_probe_2026_10_09.py`（**临时件 · 用毕由本棒路由清理**；清理记录见交付回执） |
-| **复现命令** | `cd "_september_workspace"` → `python ".tmp/_s4_heldout_seed42_probe_2026_10_09.py"` |
+| **复现命令** | `cd "D:/私人资料/deposon-repo"` → `python ".tmp/_s4_heldout_seed42_probe_2026_10_09.py"` |
 | **产出** | `results/_s4_heldout_sampling_seed42_sets_2026_10_09.json` |
 | **运行环境** | Python **3.14.7**（Windows）；仅标准库（`json`／`zlib`／`hashlib`／`math`／`os`／`datetime`）；**0 第三方依赖 · 0 网络** |
 | **双实现**（N-5 硬要件） | ① 计数：`json.loads` × **手写容器栈词法扫描器**　② 分桶：`zlib.crc32` × **手写逐位 CRC-32（poly `0xEDB88320`）**　③ 取整：`math.floor(0.30·n)` × `(3n)//10`　⇒ **逐项 0 分歧** |

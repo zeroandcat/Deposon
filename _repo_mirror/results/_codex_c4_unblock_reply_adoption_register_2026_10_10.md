@@ -63,7 +63,7 @@
 |:--|:--|:--|
 | **回函仓内副本** | `letters/_codex_c4_values_unblock_reply_2026_10_10.md` | ✅ **在盘** · `a975c7990cd8` · 21,486 B · 143 行 |
 | **验证脚本 · 仓内副本** | `letters/verify_c4_originated_math.py` | ✅ **在盘** · `3042cf59448e` · 4,115 B |
-| **验证脚本 · 外部原件** | `〔本机用户目录〕/codex-workspace/c4_values_reply_2026_10_10/verify_c4_originated_math.py`（回函所载 venue） | ✅ **本棒实测存在** · **`3042cf59448e`** · 4,115 B ⇒ **与仓内副本 SHA-12 逐位相同（本棒仅比对哈希，未逐字节 diff）** |
+| **验证脚本 · 外部原件** | `C:/Users/Administrator/codex-workspace/c4_values_reply_2026_10_10/verify_c4_originated_math.py`（回函所载 venue） | ✅ **本棒实测存在** · **`3042cf59448e`** · 4,115 B ⇒ **与仓内副本 SHA-12 逐位相同（本棒仅比对哈希，未逐字节 diff）** |
 | **回函外部原件路径** | 回函自载其 venue ＝「this new reply, dated 2026-10-10」，**未在回函内自载本机外部路径** | ⚠ **0 臆造外部路径**；采认以**仓内副本**为准 |
 
 ---
@@ -123,7 +123,7 @@
 
 ## §5 ★ **授权锚之运行时库一手读得记录（如实 · 读得时点）**
 
-> **读得方式**：本棒**自运行时库只读读取**（`file:〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite?mode=ro` · **URI 只读模式** · `sqlite3.connect(DB, uri=True)`）；**读得时点 ＝ `2026-10-10T18:10:26.615068+08:00`**。
+> **读得方式**：本棒**自运行时库只读读取**（`file:C:/Users/Administrator/.minimax/v2/sqlite/runtime-state.sqlite?mode=ro` · **URI 只读模式** · `sqlite3.connect(DB, uri=True)`）；**读得时点 ＝ `2026-10-10T18:10:26.615068+08:00`**。
 
 | 项 | 读得值（逐字） |
 |:--|:--|

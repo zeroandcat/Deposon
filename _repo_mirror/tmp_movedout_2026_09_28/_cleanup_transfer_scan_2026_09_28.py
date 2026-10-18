@@ -17,7 +17,7 @@ import hashlib
 import pathlib
 import sys
 
-REPO = pathlib.Path(r"_september_workspace")
+REPO = pathlib.Path(r"D:/私人资料/deposon-repo")
 TMP = REPO / ".tmp"
 DAY = datetime.date(2026, 9, 28)
 EXCLUDE_RESULTS = {"_v4_noise_cleanup_manifest_v4_2026_09_27.md",

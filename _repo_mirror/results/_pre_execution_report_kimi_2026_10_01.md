@@ -17,7 +17,7 @@
 | HEAD commit message | `add letters/_v5_rj5_external_rederive_reply_codex_2026_09_29.md (PI-designated single letters item, 2026-10-01)` |
 | HEAD committer date | 2026-09-30T16:19:32Z（UTC）＝ 北京时间 10-01 00:19 |
 
-**差异归因（可解释前移，非他人/非 force）**：批 3 完成（HEAD `7b6b1c47c5cb`）后，PI 于 10-01 00:17 亲令追加上传 letters/ 单件 `rj5` 回信（`〔本机用户目录〕/codex-workspace/rj5_reply_2026_09_29/_v5_rj5_external_rederive_reply_codex_2026_09_29.md`，27,835 B），我以同一授权链 fast-forward 追加 commit `49873dc46164`，三方一致已验。委托书（doc-writer 20:36 撰稿）未纳入该件。
+**差异归因（可解释前移，非他人/非 force）**：批 3 完成（HEAD `7b6b1c47c5cb`）后，PI 于 10-01 00:17 亲令追加上传 letters/ 单件 `rj5` 回信（`C:/Users/Administrator/codex-workspace/rj5_reply_2026_09_29/_v5_rj5_external_rederive_reply_codex_2026_09_29.md`，27,835 B），我以同一授权链 fast-forward 追加 commit `49873dc46164`，三方一致已验。委托书（doc-writer 20:36 撰稿）未纳入该件。
 
 **按 §3.3 字面（「若 ≠ 7b6b1c47c5cb，明示并停手待裁」）：本项停手待裁。** 若 PI 认可以 `49873dc46164` 为新基线，余下 7 项均已实测就绪，放行即推。
 

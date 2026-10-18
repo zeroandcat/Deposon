@@ -16,7 +16,7 @@ from pathlib import Path
 
 import numpy as np
 
-BASE = Path(r'_september_workspace')
+BASE = Path(r'D:\私人资料\deposon-repo')
 PHYS_JSON = BASE / 'results' / 'deposon_v3_physical_opt_60cells_2026_09_11.json'
 OUT_DIR = BASE / 'results' / '_v3x_experiments_2026_09_16'
 OUT_DIR.mkdir(parents=True, exist_ok=True)

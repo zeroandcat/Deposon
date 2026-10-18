@@ -16,32 +16,32 @@
   },
   "input_chain": {
     "v3_phys_60cells": {
-      "path": "results/deposon_v3_physical_opt_60cells_2026_09_11.json",
+      "path": "deposon-repo/results/deposon_v3_physical_opt_60cells_2026_09_11.json",
       "sha12_observed": "c659695aa23c",
       "bytes": 17732,
       "exists": true
     },
     "boss_pe_3_9m60c": {
-      "path": "results/deposon_boss_pe_3_reservoir_verify_9m60c_2026_09_15.json",
+      "path": "deposon-repo/results/deposon_boss_pe_3_reservoir_verify_9m60c_2026_09_15.json",
       "sha12_observed": "4e4a17d43adf",
       "bytes": 13562,
       "exists": true
     },
     "boss_pa_1_result": {
-      "path": "results/boss_pa_1_rbr_rm_result_2026_09_15.json",
+      "path": "deposon-sub/results/boss_pa_1_rbr_rm_result_2026_09_15.json",
       "sha12_observed": "c7c59e0d2f6c",
       "bytes": 8753,
       "exists": true
     },
     "conservation_py_main_path": {
-      "path": "verifier/audit/conservation.py",
+      "path": "deposon-repo/verifier/audit/conservation.py",
       "sha12_observed": "4bdec2683f06",
       "bytes": 22105,
       "exists": true
     },
     "conservation_py_fallback_path": {
       "path": "_archive_deposon_2026_09_17/verifier/audit/conservation.py",
-      "exists": false,
+      "exists": true,
       "note": "K-V3R-0-F B 路径；本仓 0 命中 -> 冻结主路径可用故未启用（0 擅自重写主路径）"
     }
   },

@@ -437,7 +437,7 @@ KT-D0 = 引用 P-D V0.1 既有 PASS(9/9, 见 §4.1), 零新实验。
 
 ### A.4 外部源
 
-- `〔本机用户目录〕/.minimax/v2/assets/2026/09/09/10-53-54-532-asset_20260909-105354-532_957b0bd41a1a_a7a4cd76-_Coze_Drive_扣子_deposon-project_proposals_V3X_Collab_Prop.pdf`(272KB, v3 提案致〔W老师〕, 2026-09-04)
+- `C:\Users\Administrator\.minimax\v2\assets\2026\09\09\10-53-54-532-asset_20260909-105354-532_957b0bd41a1a_a7a4cd76-_Coze_Drive_扣子_deposon-project_proposals_V3X_Collab_Prop.pdf`(272KB, v3 提案致〔W老师〕, 2026-09-04)
 
 ---
 

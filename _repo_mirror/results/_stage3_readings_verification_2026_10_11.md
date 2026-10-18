@@ -12,7 +12,7 @@
 
 ⇒ 📌 **三件指纹与派工单所载逐位相符**；**UTF-8 无 BOM · LF（CRLF ＝ 0）** ✅。
 - **出件**：**verifier**（分支会话 `mvs_1cec17e5a13b473ca89a88e4c0d38631`｜**署名如实** · ⛔ **0 冒充** PI／parent／worker／protocol-keeper／verdict-keeper）
-- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：⛔ 0 读 key／0 读 `.env`／0 落盘凭据｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 API key**｜⛔ **0 触及 `〔本地归档区〕`**（0 读、0 写、0 列目录）
+- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：⛔ 0 读 key／0 读 `.env`／0 落盘凭据｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 API key**｜⛔ **0 触及 `D:\私人资料\_non_upload_local_archive`**（0 读、0 写、0 列目录）
 - **日期**：**2026-10-11**（落盘时点）
 - **构造面 vs 真实面**：本件之论据面 ＝ **第三构造域 `c34835ad59cf` 之 26 件 ＋ 第二构造域 `3c25e1a2ea94` 之 26 件（自审门比对基准）**；**外推边界 ＝ 上述两域之读数面** ⇒ ⛔ **0 外推**至第一集（`acedff01d18c`）之读数判读（其读数本棒仅作对照复算，⛔ 0 与他域比大小）、⛔ 0 外推至任何未登记之构造变更
 
@@ -295,13 +295,13 @@ $env:TEMP\s3_verify\probe6.py         # 三集 26/26 + 三指纹 + 各域 MD/LS/
 $env:TEMP\s3_verify\static_audit.py   # runner 静态 AST 审读（⛔ 0 import/0 执行）
 $env:TEMP\s3_verify\sens.py           # 保证/质量 层归属敏感性探针
 $env:TEMP\s3_verify\t1fix.py          # seq_t1_only 之 KEYWORDS_T1 复算
-python verify_indep.py '_september_workspace/results' "$env:TEMP\s3_verify\out.txt"
+python verify_indep.py 'D:\私人资料\deposon-repo\results' "$env:TEMP\s3_verify\out.txt"
 ```
 
-**运行环境**：Python **3.14.7**（`〔本机路径〕/Python314/python.exe`）＋ numpy **2.5.3**（与被复核 runner 之 `runtime` 声明逐位相符）。
+**运行环境**：Python **3.14.7**（`C:\Python314\python.exe`）＋ numpy **2.5.3**（与被复核 runner 之 `runtime` 声明逐位相符）。
 **被复核件之复现命令**（**本棒 ⛔ 0 执行**，仅照录其 §9 供第三方使用）：
 ```
-cd _september_workspace/results
+cd D:\私人资料\deposon-repo\results
 python _s4prime_readings_runner_2026_10_11.py
 ```
 

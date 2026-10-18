@@ -103,7 +103,7 @@
 
 ## §6 ★ **授权锚之运行时库一手读得记录（如实 · 读得时点）**
 
-> **读得方式**：本棒**自运行时库只读读取**（`file:〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite?mode=ro` · **URI 只读模式** · `sqlite3.connect(DB, uri=True)`）；**读得时点 ＝ `2026-10-10T18:10:26.615068+08:00`**。
+> **读得方式**：本棒**自运行时库只读读取**（`file:C:/Users/Administrator/.minimax/v2/sqlite/runtime-state.sqlite?mode=ro` · **URI 只读模式** · `sqlite3.connect(DB, uri=True)`）；**读得时点 ＝ `2026-10-10T18:10:26.615068+08:00`**。
 
 | 项 | 读得值（逐字） |
 |:--|:--|

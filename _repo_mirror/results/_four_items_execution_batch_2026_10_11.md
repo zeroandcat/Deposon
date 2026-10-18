@@ -4,7 +4,7 @@
 - ⛔ **0 判档**（0 出 `pass`／`af`／`kd`／`fail`／`give-up` 五终判之一 · 沿 PI 2026-10-10 五终判口径）｜⛔ **0 代裁／0 代择／0 代给字面／0 定时点**｜⛔ **0 宣告**任一出口之闭／开、⛔ **0 自判毕**｜⛔ **0 回改任何既有件一字**。
 - **授权锚**：PI 2026-10-11 确认卡 · **`ask_2941002025629fcbe43b586d`**（库内 `title` 逐字「deposon 归置卡：seed″ 三择＋菜单封闭・ε/LS 落・KJ-1 择」）· 库内 `status` ＝ **`answered`**。
   - **卡答时点 ＝ `answered_at` ＝ `submittedAt` ＝ `1791701588445`** → 实测换算 **2026-10-11T14:53:08.445+08:00**；卡创建 `created_at` ＝ `1791701513980` → **2026-10-11T14:51:53.980+08:00**。
-  - **卡答第一源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`（表 `questionnaire_requests`），以 `sqlite3.connect("file:…?mode=ro", uri=True)` **只读**实测（**1** 行命中）。
+  - **卡答第一源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（表 `questionnaire_requests`），以 `sqlite3.connect("file:…?mode=ro", uri=True)` **只读**实测（**1** 行命中）。
   - **本棒读得时点 ＝ 2026-10-11T15:0x +0800**（单次只读快照）｜⛔ **0 写库／0 改库／0 建表／0 提交**｜⛔ **0 网络**。
   - ⚠ **读得时点 ≠ 卡答时点（诚实交代 · 0 混同）**：前者 ＝ 证据取得时点，后者 ＝ 效力发生时点。
 - **本件**：`results/_four_items_execution_batch_2026_10_11.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False` ＋ 全仓 glob `*four_items*` 仅命中 10-09 之 `_ci_four_items_effectiveness_register_2026_10_09.md`（**非同名**）—— §7-1）。
@@ -225,7 +225,7 @@
 | 4 | **`TH-v3-15` 冻结字面载体** | ⛔ **0 触动一字** —— `ef5a40554960` L191 留原状 |
 | 5 | **本棒写动作** | **新增 2 件**（本件 ＋ `results/_thv3_15_parallel_seed_double_note_2026_10_11.md`）· **0 新建临时脚本于 `results/`**（只读探针置于 `.tmp/`，⛔ **0 遗留于 `results/`**）· ⛔ **0 派生 JSON 新建或合并** |
 | 6 | **运行时库** | ✅ **只读单次查询**（`mode=ro` · 表 `questionnaire_requests` · **1** 行命中）｜⛔ **0 写库／0 改库／0 建表／0 提交** |
-| 7 | **`〔本地归档区〕`** | ⛔ **0 触及** |
+| 7 | **`D:\私人资料\_non_upload_local_archive`** | ⛔ **0 触及** |
 | 8 | **临时探针清理** | `.tmp/_ro_probe*.py` 系本棒只读探针（**0 写入 `results/`、0 落任何读数/凭据**）—— 📌 **如实交代：0 删除**（保留供复核；其内容仅含只读查询语句与卡面元数据，**无 key／无凭据**） |
 
 ### 7-3 诚实限制（**failures & limitations · 0 掩饰**）

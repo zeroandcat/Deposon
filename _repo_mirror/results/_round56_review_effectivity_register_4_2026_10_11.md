@@ -6,14 +6,14 @@
   - **补录卡**（`ask_6551e0b543277f0e5e551c72`，`title` 逐字：「*deposon 补录卡：④ 之字面（D-2／D-3／「持平是否即否决」）*」）｜**卡答时点**：**2026-10-11 00:11:30.156 +0800**（`answered_at`；`submittedAt`＝`1791648690156`）；`status`＝`answered`；创建 **00:10:30.673**。
   - **卡五**（`ask_7203ef7fb5a3ca0857ba0f11`，`title` 逐字：「*deposon 卡五：触发件分母口径落裁*」）｜**卡答时点**：**2026-10-11 00:15:14.337 +0800**（`answered_at`；`submittedAt`＝`1791648914337`）；`status`＝`answered`；创建 **00:15:07.289**。
   - 三卡 `session_id` 同为 **`mvs_bbeb804b1a6a41109be740636eed1709`**；`agent_name`＝**`mavis`**；`msg_id`＝`NULL`；`dismissed_at`＝`NULL`；`origin_channel_context_json`＝`NULL`。
-- **卡答第一源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`（表 `questionnaire_requests`）；三卡 `request_id` **各 1** 命中，以 `sqlite3.connect("file:…?mode=ro", uri=True)` **只读**实测。**本棒读取时点**：**2026-10-11 00:19–00:26 +0800**；本件**三卡题面与答文逐字取自该库**（`request_json`，`reply_payload`）。⛔ **0 网络 · 0 写库 · 0 改库 · 0 调表 · 0 提交 · 0 checkpoint**。
+- **卡答第一源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（表 `questionnaire_requests`）；三卡 `request_id` **各 1** 命中，以 `sqlite3.connect("file:…?mode=ro", uri=True)` **只读**实测。**本棒读取时点**：**2026-10-11 00:19–00:26 +0800**；本件**三卡题面与答文逐字取自该库**（`request_json`，`reply_payload`）。⛔ **0 网络 · 0 写库 · 0 改库 · 0 调表 · 0 提交 · 0 checkpoint**。
 - 📌 **⛔ 0 读取得时点 ⩾ 卡答时点**（实测 · 0 混同）：`answered_at`＝**00:06:28.199／00:11:30.156／00:15:14.337**；**证据取得时点**＝**00:19–00:26**；二者**不可混同**。⛔ **0 以库活 `mtime` 充当任何一时点**。
 - **Other 根查核（6 问逐项实测 · 属实）**：三卡 `reply_payload.answers` 共 **6** 条（卡四 **4** ＋ 补录卡 **1** ＋ 卡五 **1**）；**6／6 `selectedOther` 逐项＝`false`**；**6／6 `selectedOptionIds` 均非空**（各恰 **1** 项）；**每条 answer 之键集恰为** `['stepId', 'selectedOptionIds', 'selectedOther']` ⇒ **0 条含 `text`／`otherText` 之类其他文字字段**（键本身不存在）⇒ **0 条其他文字**。⚠ 即：卡四 `two_minor` 所择之乙，其 description 逐字要求「**②现给字面（请于「其他」栏给）**」，而**其他栏实际未载任何字面** —— 此事实已入 §3.4 之登记链条（并为补录卡之所以发之直接缘由，⛔ 本件 0 推断 PI 之意图）。
 - **体例沿用**：前批 `results/_round56_review_effectivity_register_3_2026_10_10.md`（**`84ed13256250`** · 77,181 B —— **本棒自测**，§1 表 #12）——以其落盘登记结构为**体例范本**（逐字照录 · 落**采认要点** · 载**效力位** · 另记**另议列** · 诚实边界 · 0 回改确认 · 撞名实测）；两件**并存、互不覆盖、0 回改**。
 - **本件**：`results/_round56_review_effectivity_register_4_2026_10_11.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False` ＋ 全仓 glob `**/*register_4*` **0 命中**，实测见 §4-1）。
 - **命名合规**：`_主题_日期`三段式；首段 `_round56_` 系**轮次编号非阶段号**、⛔ 非 `_v5_`／`_v4_`／`_v3_` 等 V-阶段前缀（沿 PI 2026-09-29 命名裁 `57024f2cd30a` §1.2② ＋ 10-01 补记「派工建议名亦须合规」）⇒ 合规。
 - **出件**：**doc-writer（文稿起草官）**（分支会话 `mvs_3d7161fa511442dc832d1983c30a3b16`｜**署名如实** · ⛔ **0 冒充** PI／parent／worker／protocol-keeper／verdict-keeper／verifier／evidence-auditor）。
-- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（本棒 **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 派生 JSON 新建或合并**（仅本机只读检索 ＋ 本机哈希核算 ＋ 本机只读库查询）｜⛔ **0 触及** `〔本地归档区〕`。
+- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（本棒 **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 派生 JSON 新建或合并**（仅本机只读检索 ＋ 本机哈希核算 ＋ 本机只读库查询）｜⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`。
 
 ---
 
@@ -255,6 +255,6 @@ PI 已就本夜后段三卡**逐项择定**：**K-RJ-3 落裁＝乙·改**（⇒
 
 ## §6 边界声明
 
-⛔ **0 改 C 之任一字面**（`X-2`）｜⛔ **0 判档**（五终判归 verdict-keeper／PI）｜⛔ **0 回改任何既有件一字**｜⛔ **0 代裁／0 代择／0 代给字面**｜⛔ **0 宣告** `K-RJ-4`／`K-RJ-5`／`E-RJ③-③` 闭｜⛔ **0 判**否决亦 0 判不否决｜⛔ **0 调控**任何阈值／门柱｜⛔ **0 跑实验／0 预写读数／0 预判 `S4′` 是否开跑**｜⛔ **0 网络 ／ 0 skill ／ 0 LLM**｜⛔ **0 读 key ／ 0 读 `.env` ／ 0 落盘凭据**｜⛔ **0 派生 JSON 新建或合并**｜⛔ **0 触及** `〔本地归档区〕`。
+⛔ **0 改 C 之任一字面**（`X-2`）｜⛔ **0 判档**（五终判归 verdict-keeper／PI）｜⛔ **0 回改任何既有件一字**｜⛔ **0 代裁／0 代择／0 代给字面**｜⛔ **0 宣告** `K-RJ-4`／`K-RJ-5`／`E-RJ③-③` 闭｜⛔ **0 判**否决亦 0 判不否决｜⛔ **0 调控**任何阈值／门柱｜⛔ **0 跑实验／0 预写读数／0 预判 `S4′` 是否开跑**｜⛔ **0 网络 ／ 0 skill ／ 0 LLM**｜⛔ **0 读 key ／ 0 读 `.env` ／ 0 落盘凭据**｜⛔ **0 派生 JSON 新建或合并**｜⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`。
 
 > 📌 **登记 ≠ 判定**：本件所载之效力位、闭/挂账之状态迁移、代价之承受，**均为「选择、状态、处置诸事实之登记」**，⛔ **非**五段链之毕判定、⛔ **非**门之闭之宣告、⛔ **非**判读之可执行性之宣告。

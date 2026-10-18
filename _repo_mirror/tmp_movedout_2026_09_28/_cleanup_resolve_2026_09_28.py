@@ -13,9 +13,9 @@ import pathlib
 import re
 import sys
 
-REPO = pathlib.Path(r"_september_workspace")
+REPO = pathlib.Path(r"D:/私人资料/deposon-repo")
 TMP = REPO / ".tmp"
-EXT_ARCHIVE = pathlib.Path(r"〔本地归档区〕")
+EXT_ARCHIVE = pathlib.Path(r"D:/私人资料/_non_upload_local_archive")
 HEX12 = re.compile(r"\b([0-9A-Fa-f]{12})\b")
 
 CANDIDATES = [

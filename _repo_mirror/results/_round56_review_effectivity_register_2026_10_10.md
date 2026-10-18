@@ -7,7 +7,7 @@
   - **卡其三**（`ask_38e4a009b4b55c66ab44c797`，库内 `title` 逐字：「**deposon 复核生效批（其三／共四）：零消耗读法・P 型刷新・B14・分派棒**」）—— **卡答时点 ＝ 2026-10-10 21:21:23.955 +0800**（`1791638483955`）；`status` ＝ `answered`；创建 21:20:42.720。
   - **卡其四**（`ask_78a834e1e1216a32765f48d9`，库内 `title` 逐字：「**deposon 复核生效批（其四／共四）：收官二问（双键标注・登记小项）**」）—— **卡答时点 ＝ 2026-10-10 21:28:17.956 +0800**（`1791638897956`）；`status` ＝ `answered`；创建 21:27:59.894。
   - 四卡 `session_id` 同为 `mvs_bbeb804b1a6a41109be740636eed1709`；`agent_name` ＝ `mavis`；`msg_id`／`origin_channel_context_json` 均 `NULL`；`dismissed_at` 均 `NULL`。
-- **卡答第一源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`（表 `questionnaire_requests`；四卡 `request_id` **各 1** 行命中），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。**本棒读得时点 ＝ 2026-10-10 21:32～21:35 +0800**（四卡首次读得与逐 step 复核同一读得窗口内）；本件 §2 之题面、选项与答文**逐字取自该库**（`request_json` ＋ `reply_payload`）。⛔ **0 网络 · 0 写库 · 0 改库 · 0 建表 · 0 提交 · 0 checkpoint**。
+- **卡答第一源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（表 `questionnaire_requests`；四卡 `request_id` **各 1** 行命中），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。**本棒读得时点 ＝ 2026-10-10 21:32～21:35 +0800**（四卡首次读得与逐 step 复核同一读得窗口内）；本件 §2 之题面、选项与答文**逐字取自该库**（`request_json` ＋ `reply_payload`）。⛔ **0 网络 · 0 写库 · 0 改库 · 0 建表 · 0 提交 · 0 checkpoint**。
 - **⚠ 读得时点 ≠ 卡答时点（诚实交代 · 0 混同）**：`answered_at`（21:06:36.688／21:19:05.789／21:21:23.955／21:28:17.956）＝ **效力发生时点**；本棒读库之时 ＝ **证据取得时点**；二者**不可混同**（沿 `b27814792394`／`fae5cc2aed9c` 之同族纪律）。⛔ **0 以活库 mtime 代表任一时点**。
 - **⚠ Other 栏查核（14 问逐一实测 · 如实）**：四卡十四问之 `reply_payload.answers` 中，**`selectedOther` 逐项 ＝ `false`（14／14）**、`selectedOptionIds` **无一为空**、**`text` 逐项 ＝ `null`** ⇒ **0 条 Other 文字**。📌 **此为本棒逐问实测之结果，非推断**（沿 PI 2026-10-10「代立边界纠正」条：择／确认类**直接卡轮**，PI 皆择选项、⛔ 0 另给文字）。
 - **本件**：`results/_round56_review_effectivity_register_2026_10_10.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False` ＋ 全仓 glob `*review_effectivity*` 命中 **0** 实测，§8.1）。
@@ -68,7 +68,7 @@ PI 已于「复核生效批」四卡就**十四问**逐项落裁：**种子就�
 
 | 项 | 值 |
 |:--|:--|
-| 库路径 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` |
+| 库路径 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` |
 | 表 | `questionnaire_requests`（四卡各 **1** 行命中） |
 | 接入方式 | `sqlite3.connect("file:...?mode=ro", uri=True)` —— **只读**（0 写入／0 修改／0 建表／0 提交／0 checkpoint） |
 | 卡状态（四卡 `status` 逐字） | 全部 **`answered`** |
@@ -284,7 +284,7 @@ PI 已于「复核生效批」四卡就**十四问**逐项落裁：**种子就�
 | 8 | 🟡 **C4 链之学术判断归属** | 三处更正**是否成立于学术层面** ⛔ **0 由本件判断**（**归 PI／学术判断**）；本件仅登记**处置路径之落裁与落实件之存在** |
 | 9 | 🟡 **`P-0` 判面** | ⛔ **0 判** `P-0` 已过／不过（**归 PI／verdict-keeper 面**）；其核验件之事实入册见**补登件**，⛔ **本件不代判** |
 | 10 | 🟡 **R4 key 面** | ⛔ **0 读 key／0 读 `.env`／0 落盘凭据／0 调端点／0 网络／0 skill／0 LLM** |
-| 11 | 🟡 **检索面之界定** | 本件「全仓」 ＝ 本工作区（`_september_workspace`）之**文件内容指纹核算**；⛔ **0 扫描** `〔本地归档区〕`（**派工单明令不得触及**）；⛔ **0 扫描**任何二进制库内嵌串（**运行时库经 `mode=ro` 之 SQL 正规查询，非内容扫描**） |
+| 11 | 🟡 **检索面之界定** | 本件「全仓」 ＝ 本工作区（`D:\私人资料\deposon-repo`）之**文件内容指纹核算**；⛔ **0 扫描** `D:\私人资料\_non_upload_local_archive`（**派工单明令不得触及**）；⛔ **0 扫描**任何二进制库内嵌串（**运行时库经 `mode=ro` 之 SQL 正规查询，非内容扫描**） |
 
 ---
 
@@ -323,7 +323,7 @@ PI 已于「复核生效批」四卡就**十四问**逐项落裁：**种子就�
 | 本棒**唯一动作** | **另名新建本件 1 件 ＋ 同批另名新建姐妹件 1 件** |
 | 临时脚本 | `_tmp_cards.py`／`_tmp_steps.py`／`_tmp_stat.py`／`_tmp_fp.py`／`_tmp_ts.py`／`_tmp_titles.py`（工作区根）＋ `_tmp_cards.txt`／`_tmp_steps.txt`／`_tmp_stat.txt`／`_tmp_fp.txt`／`_tmp_ts.txt`／`_tmp_titles.txt`（同目录输出）—— 作业毕经 `rm --` **可恢复删除通道**清理；实测残留 **0** |
 | 库面 | **⛔ 0 写入／0 修改／0 建表／0 提交／0 checkpoint**（`mode=ro` 只读连接） |
-| 受禁面 | ⛔ **0 触及** `〔本地归档区〕` |
+| 受禁面 | ⛔ **0 触及** `D:\私人资料\_non_upload_local_archive` |
 
 ### 8.3 SHA-12 自核尾注
 

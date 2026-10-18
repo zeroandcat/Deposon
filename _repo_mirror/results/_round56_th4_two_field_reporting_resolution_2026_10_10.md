@@ -6,7 +6,7 @@
 - **采认链**：`th4` 答「**D**」＝ 枚举项 `ding`「**丁·另议**」＋ 附加「**且直接采认**」⇒ ①「另议」部分之产物 ＝ 独立判断棒所出 **`results/_e6_th_v3_19_residual_exits_judgment_2026_10_10.md`（`442d5ff4acdb`）§6.2**（已毕）；②「直接采认」＝ 该判断意见**径行采认生效**，⛔ 0 再回呈采认卡（沿 PI 标准令：另议毕项时直接采认 ＝ 对另议族之**预授权**）。
 - **⚠ 释读步骤（如实标注 · 0 掩饰）**：`otherText`「D且直接采认」为**自由文本之 Other**，**⛔ 未逐字对应任何单一枚举选项**（`ding` 之 label 为「丁·另议」）。本件**按派工单之释读**（＝ **丁·另议 ＋ 直采**）登记，**并如实标注此一释读步骤**；⚠ **若 PI 所指为其他读法，以 PI 之裁为准**，本件之相应登记随之失效（§7.1）。
 - **源件**：**出口④ 之出处** ＝ `results/_e6_th_v3_19_residual_exits_judgment_2026_10_10.md`（`442d5ff4acdb`）**§5.1 缺项事实之复测** ＋ **§5.2 利弊** ＋ **§5.3 与 `L-②` 五项实施出口之衔接** ＋ **§5.4 反方** ＋ **§6.2 判断意见** ＋ **§7.2 出口④-1／④-2 最小问题式**；其两问原始出处 ＝ `results/_e6_th_v3_19_alignment_register_2026_10_10.md`（`622cebef2c9f`）**§4 出口④**。
-- **卡答第一源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`（表 `questionnaire_requests`），`sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测（§2）。
+- **卡答第一源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（表 `questionnaire_requests`），`sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测（§2）。
 - **本件**：`results/_round56_th4_two_field_reporting_resolution_2026_10_10.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False` ＋ 同名 glob **0** 命中实测，§6.1）。
 - **命名合规**：`_主题_日期`；首段 `_round56_` ＝ **轮次编号**（**非**阶段前缀，⛔ 非 `_v3_`／`_v4_`／`_v5_`）。
 - **出件**：**protocol-keeper（口径与预登记官）**（分支会话 `mvs_da1def51f6b54ffba7a5c1ab0d71ccca` · **署名如实** · ⛔ **0 冒充** PI／parent／doc-writer／worker／verdict-keeper／verifier／evidence-auditor）。
@@ -48,7 +48,7 @@
 
 | 项 | 值 |
 |:--|:--|
-| 库路径／表 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` ／ `questionnaire_requests` |
+| 库路径／表 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` ／ `questionnaire_requests` |
 | 目标行 | `request_id` ＝ `ask_2fefd936973d08dba26c872a`（命中 **1** 行，`status` ＝ `answered`） |
 | 卡题 | 「deposon 轮56 卡R4（串行 4/4）· TH-v3-19 残留出口（已并 5→3 步）」 |
 | `created_at` | 2026-10-10 **18:27:48.490** +0800 |
@@ -183,7 +183,7 @@ stepId: th4 | selectedOptionIds: [] | selectedOther: true | otherText: "D且直�
 - ✅ **运行时库**：**只读**（`sqlite3` ＋ `mode=ro`；0 写入／0 提交）；⛔ 0 载任何 key 字面。
 - ✅ **0 跑实验**：⛔ 0 跑 executor／0 跑 runner；本棒**未产生任何临时脚本文件**（核验以只读管道内联执行，无落盘）。
 - ✅ **R4**：⛔ **0 读 key／0 读 `.env`／0 落盘凭据／0 调任何端点**。
-- ✅ **归档禁区**：⛔ **0 访问／0 读取** `〔本地归档区〕`。
+- ✅ **归档禁区**：⛔ **0 访问／0 读取** `D:\私人资料\_non_upload_local_archive`。
 - ✅ **0 网络 ／ 0 skill ／ 0 LLM**：未调用。
 
 ---

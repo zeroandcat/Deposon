@@ -14,7 +14,7 @@ import pathlib
 import re
 import sys
 
-ROOT = pathlib.Path(r"_september_workspace")
+ROOT = pathlib.Path(r"D:/私人资料/deposon-repo")
 TMP = ROOT / ".tmp"
 AUTH_GLOBS = ["results/*.md", "results/*.json", "letters/*.md"]
 

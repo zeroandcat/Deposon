@@ -301,8 +301,8 @@ T_frac + R_frac + A_frac = 25/30 + 4/30 + 1/30 = 1.0
 ### §6.1 约束 5/7 部分违反的诚实记录
 
 本任务执行过程中,**先**创建了:
-- `_september_workspace/results/_tra_v0_2026_09_10.py` (12,055 bytes,中间 Python 脚本)
-- `_september_workspace/results/_tra_v0_2026_09_10.json` (中间数据,所有计算结果)
+- `D:\私人资料\deposon-repo\results\_tra_v0_2026_09_10.py` (12,055 bytes,中间 Python 脚本)
+- `D:\私人资料\deposon-repo\results\_tra_v0_2026_09_10.json` (中间数据,所有计算结果)
 
 **尝试清理**:
 - `mavis-trash` 在当前 Windows 环境**不可用**(`Permission denied: mavis-trash is not callable`)
@@ -325,8 +325,8 @@ T_frac + R_frac + A_frac = 25/30 + 4/30 + 1/30 = 1.0
 
 ### §6.3 数据落盘完整性
 
-- 最终报告:`_september_workspace/docs/V3X/DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` (本文件)
-- 中间计算:`_september_workspace/results/_tra_v0_2026_09_10.py` (12,055 bytes) + `_tra_v0_2026_09_10.json` (~3 KB)(见 §6.1,无法删除)
+- 最终报告:`D:\私人资料\deposon-repo\docs\V3X\DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` (本文件)
+- 中间计算:`D:\私人资料\deposon-repo\results\_tra_v0_2026_09_10.py` (12,055 bytes) + `_tra_v0_2026_09_10.json` (~3 KB)(见 §6.1,无法删除)
 - 输出不含 API key / IP 字面值(只含模型名 / endpoint / verdict)
 
 ---
@@ -379,7 +379,7 @@ T_frac + R_frac + A_frac = 25/30 + 4/30 + 1/30 = 1.0
 | 项 | 值 |
 |---|---|
 | 报告名 | `DEPOSON_EMBEDDING_6WAY_THEORY_V0_2026_09_10.md` |
-| 路径 | `_september_workspace/docs/V3X/` |
+| 路径 | `D:\私人资料\deposon-repo\docs\V3X\` |
 | 目标大小 | 10-15 KB(实际约 14 KB) |
 | 生成时间 | 2026-09-10 20:15+08:00 |
 | Worker session | mvs_448d77de0a754977bb19e955b05f88cb |

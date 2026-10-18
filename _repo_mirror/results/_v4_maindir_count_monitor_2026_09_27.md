@@ -32,7 +32,7 @@
 
 | 口径 | 定义 | 实测命令 |
 |---|---|---|
-| **主目录** | `_september_workspace` 下递归所有文件，**排除 `.git/`** | `Get-ChildItem -Path $ws -Recurse -File \| Where-Object { $_.FullName -notmatch '[\\\/]\.git[\\\/]' }` |
+| **主目录** | `D:\私人资料\deposon-repo\` 下递归所有文件，**排除 `.git/`** | `Get-ChildItem -Path $ws -Recurse -File \| Where-Object { $_.FullName -notmatch '[\\\/]\.git[\\\/]' }` |
 | **通用口径** | 主目录基础上**进一步排除**：(a) `.tmp/` 子树；(c) `__pycache__/` 子树；(d) `.pyc` / `.log` / `.bak` / `.tmp` / `.swp` / `.part` 扩展名 | 在主目录查询上叠加 `Where-Object { $_.FullName -notmatch '[\\\/]\.tmp[\\\/]' -and ... -and $_.Extension -notmatch '^\.(pyc\|log\|bak\|tmp\|swp\|part)$' }` |
 | **含临时区口径** | = 主目录全量（即含 `.tmp/` + `__pycache__/` + `.pyc` + `.log` 等临时区文件） | 同主目录查询 |
 | **快照口径** | 2026-09-26 19:50 冻结时点登记值（986 / 930 / 1,004），**不重算** | 仅登记，PI 复核用 |
@@ -51,7 +51,7 @@
 ### C.1 实测命令（PowerShell 5.1 / 7+ 通用）
 
 ```powershell
-$ws = '_september_workspace'
+$ws = 'D:\私人资料\deposon-repo'
 
 # 主目录
 $maindir = Get-ChildItem -Path $ws -Recurse -File |

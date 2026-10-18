@@ -14,7 +14,7 @@
 ### §0.1 授权锚
 
 - **卡**：`ask_6455cd9f15bf7dc12ae673d9`（`created_at` 1791554784554 ／ `answered_at` 1791554989370）。
-- **当轮只读实测**：`runtime-state.sqlite`（`〔本机用户目录〕/.minimax/v2/sqlite/`）之 `questionnaire_requests`，**`mode=ro`、⛔ 0 写**：该卡 `status = answered`；四步 `selectedOther` **均为 `false`**（⛔ 无 Other 补文、⛔ 0 推演答文）。
+- **当轮只读实测**：`runtime-state.sqlite`（`C:/Users/Administrator/.minimax/v2/sqlite/`）之 `questionnaire_requests`，**`mode=ro`、⛔ 0 写**：该卡 `status = answered`；四步 `selectedOther` **均为 `false`**（⛔ 无 Other 补文、⛔ 0 推演答文）。
 - **只读证据落盘**（中间产物、仅 `.tmp/`）：`.tmp/_t1_exp2_pi_card_ask6455cd9f15bf7dc12ae673d9.json`。
 
 ### §0.2 PI 四答照录（本件生效所依）

@@ -3,7 +3,7 @@
 - **件性质**：**并列说明件（登记面 · ⛔ 0 判档 · ⛔ 0 代裁 · ⛔ 0 宣告生效 · ⛔ 0 改任何条文）** —— 依 `b53f40abb90b` §3 之**「另名并列件」体例**，承载 `TH-v3-15`（`seed = 42`）与新构造域种子登记之**并列关系**；并承载 `fa0001a6dd0a` §4-2「唯种子值变」**对 `seed″` 之再复核之作出登记**。
 - ⛔ **0 回改** `ef5a40554960`（`TH-v3-15` 冻结字面之载体 · L191）**任一字**｜⛔ **0 回改** `fb1b696de1d6` 任一字｜⛔ **0 回改** `04495ef4b343` 任一字｜⛔ **0 调**任何 `TH-*`／`K-*` 之阈值字面｜⛔ **0 宣告** `TH-v3-15` 失效。
 - **授权锚**：PI 2026-10-11 确认卡 **`ask_2941002025629fcbe43b586d`** · 库内 `status` ＝ `answered` · 卡答时点 ＝ `answered_at` ＝ `submittedAt` ＝ `1791701588445` → **2026-10-11T14:53:08.445+08:00** · `four_items` 之答逐字：**`selectedOptionIds` ＝ `["jia"]`**、`selectedOther` ＝ `false`、`otherText` ＝ `null`（`jia` label 逐字「**甲·四项照拟**」· `description` ＝ `null`）。
-- **卡答第一源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`（表 `questionnaire_requests`）· `sqlite3.connect("file:…?mode=ro", uri=True)` **只读**实测 ｜ ⛔ **0 写库／0 改库**。
+- **卡答第一源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（表 `questionnaire_requests`）· `sqlite3.connect("file:…?mode=ro", uri=True)` **只读**实测 ｜ ⛔ **0 写库／0 改库**。
 - **同批件**：`results/_four_items_execution_batch_2026_10_11.md`（四项并裁执行登记批）—— 本件为其 ③ 之**并列说明件**。
 - **本件**：`results/_thv3_15_parallel_seed_double_note_2026_10_11.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False` ＋ 全仓 glob `*thv3*`／`*seed_double*` **0** 命中实测）。
 - **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文｜**0 网络 ／ 0 skill ／ 0 LLM ／ 0 跑 executor ／ 0 派生 JSON**。
@@ -146,7 +146,7 @@
 | 3 | **上游件** | ⛔ **0 触动一字** —— `fa0001a6dd0a`／`b53f40abb90b`／`04495ef4b343`／`fb1b696de1d6` 全部留原状 |
 | 4 | **本棒写动作** | **新增 1 件**（本件）＋同批 1 件（`results/_four_items_execution_batch_2026_10_11.md`）· ⛔ **0 派生 JSON** |
 | 5 | **运行时库** | ✅ **只读单次查询**（`mode=ro`）｜⛔ 0 写库／0 改库 |
-| 6 | **`〔本地归档区〕`** | ⛔ **0 触及** |
+| 6 | **`D:\私人资料\_non_upload_local_archive`** | ⛔ **0 触及** |
 
 ### 8-3 诚实限制（**failures & limitations · 0 掩饰**）
 

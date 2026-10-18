@@ -80,7 +80,7 @@
 | 6 | `.tmp/_t1_qwen_temp_sweep_decomposition.txt` | `2D96061318D9` | `2d96061318d9` | 1,312／1,312 | **MATCH** |
 | 7 | `.tmp/_t1_qwen_temp_sweep_selfcert.json` | `91C2505DEEF3` | `91c2505deef3` | 3,866／3,866 | **MATCH** |
 | 8 | `_t1_qwen_temp_sweep_executor_2026_10_09.py` | `F0C845864603` | `f0c845864603` | 32,399／32,399 | **MATCH** |
-| 外 | `〔本地归档区〕/results/_v4_supp_l2_n11supp_verdict.md` | `E433A06E7FBF` | `e433a06e7bfb` | 15,671／15,671 | **MATCH（仓外核得）** |
+| 外 | `D:\私人资料\_non_upload_local_archive\results\_v4_supp_l2_n11supp_verdict.md` | `E433A06E7FBF` | `e433a06e7bfb` | 15,671／15,671 | **MATCH（仓外核得）** |
 
 ⇒ **8/8 MATCH ＋ 仓外 1/1 MATCH**。
 
@@ -115,7 +115,7 @@
 |---|---|---|---|
 | ① | `deposon_v20_baselines.json`（§8「0 查缺件实体」） | **在仓** `results/deposon_v20_baselines.json`（`6edb2aec1660`／16,987 B） | **FOUND_IN_REPO**；①件未编造、未代核，诚实挂账 |
 | ① | `_v3_recheck_prereg_v1_2026_09_27.md` | 在仓（`88052d7db895`） | **FOUND_IN_REPO**（登记值滞后，见 F-1） |
-| ② | `〔本地归档区〕/results/_v4_supp_l2_n11supp_verdict.md` | 仓内 0 命中／**仓外归档区核得** `e433a06e7bfb`／15,671 B | **GHOST_REF_OUTSIDE**（实件仓外）；②件如实登记＋给拉回路径，未造来源 |
+| ② | `D:\私人资料\_non_upload_local_archive\results\_v4_supp_l2_n11supp_verdict.md` | 仓内 0 命中／**仓外归档区核得** `e433a06e7bfb`／15,671 B | **GHOST_REF_OUTSIDE**（实件仓外）；②件如实登记＋给拉回路径，未造来源 |
 | ② | L14 verdict（`8EEF73BF9856`／19,697 B） | 仓内 `results/_v4_supp_l14_n11full_verdict.md` 实测 `8eef73bf9856`／19,697 B | **FOUND_IN_REPO**；②件已如实披露「≠ 锚件所载 `764F24A21AC8`／19,708 B（差 11 B）」之哈希漂移 |
 | ③ | `3fbf6b38a383`／`2fd8946cfe80`（§0 幽灵引用反查） | 均在仓且哈希逐位吻合 | **FOUND_IN_REPO ×2**；③件「0 幽灵引用」自证属实 |
 | 三件 | 所引判定/读数件是否同名不同哈希 | 无 CONFLICT | — |

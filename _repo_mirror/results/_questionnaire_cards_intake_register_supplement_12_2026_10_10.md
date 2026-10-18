@@ -7,8 +7,8 @@
 - **件系**：第十二批登记件 `results/_questionnaire_cards_intake_register_supplement_11_2026_10_10.md`（本棒当轮实测 SHA-12 `52c97d1c11e9`）之**补续落册（第十三批）**；上承第十二批 `52c97d1c11e9`、第十一批 `6c18d336e018`、第十批 `b6c0b4f29152`、第九批 `29b30d845841`（其账目补正件 `a651f76a6547`）、第八批 `1fb8eac82781`、第七批 `95ba771fa760`（其回执 `0984955b0370`）、第六批 `edb57308170d`、第五批 `d6ff041a9df9`、第四批 `11681f0ad861`、第三批 `dc43e3cb7610`、第二批 `193386b9f23c`、第一批 `d917180db36f`。⛔ 0 编辑／覆写／修改前十二批登记件；⛔ 0 重复转录其已收录之卡。
 - **本批口径**：**卡答落册 · 补续批** —— 续录派工指定之**本夜 8 张卡**（复核生效批其一至其四・归置卡其一・残留归置卡・归置卡其二・收官卡其三）。合计 **8 卡／29 答**（**选项通道 29 答 ＋ Other 通道 0 答**）。
 - **编制**：**doc-writer**（文稿起草官 · 分支会话 `mvs_0ee7b959143a47e0b035708fe8965960`｜署名如实 · **0 冒充 PI／parent／protocol-keeper／verdict-keeper／verifier／worker**）
-- **来源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`，表 `questionnaire_requests`。本棒以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交、0 checkpoint）。
-- **备核源**：会话消息面 `〔本机用户目录〕/.minimax/v2/sessions/2026/09/01/02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5/messages.jsonl` 之 `messages.jsonl`（只读检索，作二次交叉核对）。
+- **来源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`，表 `questionnaire_requests`。本棒以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读实测**（0 写入、0 修改、0 建表、0 提交、0 checkpoint）。
+- **备核源**：会话消息面 `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\messages.jsonl` 之 `messages.jsonl`（只读检索，作二次交叉核对）。
   - ⚠ **会话目录反解纪律**：目录名 ＝ `session_` ＋ 会话 id `mvs_bbeb804b1a6a41109be740636eed1709` 之 URL-safe base64 无填充编码（该 id ＝ 8 卡库内 `requester.sessionId`／表列 `session_id` 实测值，亦即 PI 本夜出卡之所在会话）。本棒**先独立反解定位**（`base64.urlsafe_b64encode(b"mvs_bbeb804b1a6a41109be740636eed1709")` → 去填充 `=` → URL-safe）得 `bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5`，并**回验解码**得 `mvs_bbeb804b1a6a41109be740636eed1709`（逐位相符），⛔ **0 凭记忆直接引用路径**。
   - ⚠ **「本会话」之如实澄清**：本棒执行者为**子分支会话** `mvs_0ee7b959143a47e0b035708fe8965960`；本件之备核源**据库内 `session_id` 实测**取 PI 出卡会话之目录（即上述 `02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5`），⛔ **0 冒充已核子会话目录**、⛔ **0 以子分支目录充作卡答原始记录**。
   - ⚠ **形近近邻陷阱（本棒实测仍在位 · 未误取）**：同层另存 `02-38-47-809-session_bXZzX2IiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5` —— **时间戳前缀完全相同**，仅 base64 段第 6 字符起一字之差（`…X2JiZW…` ↔ `…X2IiZW…`）。本棒**回验解码**该近邻 base64 段得 `mvs_b"eb804b1a6a41109be740636eed1709`（⛔ **非** PI 出卡会话 id `mvs_bbeb804b1a6a41109be740636eed1709`，且非合法会话 id 之形）⇒ 二者**可判别**。本棒实测该近邻目录**存在**，目录项计 **1** 项（`artifacts`）、**无** `messages.jsonl`；本件之核对源**取自目标目录**（目标目录项计 **32** 项、**有** `messages.jsonl`），⛔ **0 读取近邻目录之内容**。
@@ -1484,7 +1484,7 @@ R-B01-K「0 裸键引用」射程缝隙（历史键全仓 0 命中 ⇒ 双键同
 
 ### 2.2 交叉核对（独立第二源：会话消息面 `messages.jsonl`）
 
-读得时点 `〔本机用户目录〕/.minimax/v2/sessions/2026/09/01/02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5/messages.jsonl`：**2,437,665** bytes ／SHA-12 `224579fa42c4` ／行数 **271**。本件以各 `ask_…` requestId 检索，独立于运行时库**交叉核对**卡答（**0 判读 · 0 补写**）：
+读得时点 `C:\Users\Administrator\.minimax\v2\sessions\2026\09\01\02-38-47-809-session_bXZzX2JiZWI4MDRiMWE2YTQxMTA5YmU3NDA2MzZlZWQxNzA5\messages.jsonl`：**2,437,665** bytes ／SHA-12 `224579fa42c4` ／行数 **271**。本件以各 `ask_…` requestId 检索，独立于运行时库**交叉核对**卡答（**0 判读 · 0 补写**）：
 
 | 卡 | `request_id` | 消息面原始答复行 | 消息面 `role` | `answers` 与库内 `reply_payload` | `submittedAt` |
 |---:|---|---:|---|:--:|:--:|
@@ -1626,7 +1626,7 @@ R-B01-K「0 裸键引用」射程缝隙（历史键全仓 0 命中 ⇒ 双键同
 | 会话消息面 | **只读**（仅 `messages.jsonl` 检索）—— 0 写入 |
 | 派生 JSON | ⛔ **0 新建／0 合并**任何派生物 JSON（中间导出为一次性文本/JSON，非交付件 · 已清理） |
 | 本件交付前之自身更正 | **1**（如实登记）—— 首版生成后经**只读**复核，发现两处**非卡答字面**之瑕疵：①文件头注「本会话澄清」条因字符串拼接失误而致句尾残字；②**形近近邻陷阱**条所列近邻目录项，实为生成器中近邻目录名一处误植（误作目标目录名）所致之**目录列举错位**（连带使「近邻**无** `messages.jsonl`」之判断当时缺乏正确实测支撑）。经修正生成器后**一次性重新落盘**（近邻目录项实测 **1** 项、`artifacts`、**无** `messages.jsonl`，与第十二批所载一致）。**最终版落盘后仅作只读实测复核**（指纹／版式／字面比对），⛔ **0 二次改写**。⚠ 该瑕疵**不涉**任何卡答字面（§1 全部题面与答文系自库原件程序化照录，未受影响）。 |
-| 归档禁区 | **未触及** —— ⛔ 0 访问／0 读取 `〔本地归档区〕` |
+| 归档禁区 | **未触及** —— ⛔ 0 访问／0 读取 `D:\私人资料\_non_upload_local_archive` |
 
 ### 3.2 落前撞名实测
 

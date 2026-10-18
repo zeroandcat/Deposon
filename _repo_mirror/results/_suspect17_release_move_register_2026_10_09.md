@@ -135,7 +135,7 @@
 
 | 目标子目录 | 拉回路径（单批反向移动即可原位复原 · 0 覆盖） |
 |---|---|
-| `_september_workspace/tmp_movedout_2026_10_09/uncertain_release_2026_09/` | → `_september_workspace/letters/`（件 1–2）／`_september_workspace/results/`（件 3–14） |
+| `D:\私人资料\deposon-sub\tmp_movedout_2026_10_09\uncertain_release_2026_09\` | → `D:\私人资料\deposon-repo\letters\`（件 1–2）／`D:\私人资料\deposon-repo\results\`（件 3–14） |
 
 - **入库时点**：`2026-10-09 09:45:56`｜**入库量**：**14 件／226,545 B**
 - **落位惯例**：沿 `cd80b993f497` §2 之 sub 面 `tmp_movedout_<日期>/<主题>/` 形态（对齐 `tmp_movedout_2026_10_01/process_scripts/…` 先例）；**0 归入归档区**（判准④「归档区 🚫」，且归档面惯例为 `_movedout_scratch_<日期>` 之暂存/草稿件）。

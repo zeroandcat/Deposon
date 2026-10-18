@@ -3,7 +3,7 @@
 - **件性质**：**落实登记件（口径面 · 落盘 schema 面 · 非判定面）** —— 就 PI 2026-10-10「轮53」卡（`ask_9bb02f1b68a419c8855fef60`）**TH-v3-19② 之甲裁**，登记其**生效内容、射程、实施出口与 0 回改面**。⛔ **0 判档**（0 出 `pass`／`af`／`kd`／`fail`／`give-up` 五终判之一）｜⛔ **0 代裁**｜⛔ **0 代拟字段名**｜⛔ **0 改任何脚本**｜⛔ **0 改任何既有 JSON 字面**｜⛔ **0 调任何 `TH-*` 阈值**｜⛔ **0 跑 executor**。
 - **授权锚**：PI 2026-10-10「轮53」卡 `ask_9bb02f1b68a419c8855fef60` 之 **`th_v3_19_2`** 题答 —— **甲「改：判读面（5 项）计算 ＋ 全 12 项原始读数另置他字段」**。
 - **源件**：**出口②** 之出处 ＝ `results/_e6_th_v3_19_alignment_register_2026_10_10.md`（`622CEBEF2C9F`）**§4 出口表②行**（其依据段为该件 **§2.3** 之两面落盘机制差异 ＋ **§3** 之对齐声明）。
-- **卡答第一源**：运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`（表 `questionnaire_requests`），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。**读得时点 ＝ 2026-10-10 17:03:43.801 +0800**（库 mtime，同刻实测）。**库原件与派工单转录相符**（§2.2 对照表）⇒ **0 分歧**。
+- **卡答第一源**：运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`（表 `questionnaire_requests`），以 `sqlite3.connect("file:...?mode=ro", uri=True)` **只读**实测。**读得时点 ＝ 2026-10-10 17:03:43.801 +0800**（库 mtime，同刻实测）。**库原件与派工单转录相符**（§2.2 对照表）⇒ **0 分歧**。
 - **本件**：`results/_round53_th_v3_19_landfall_schema_effectivity_register_2026_10_10.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False` ＋ 全仓同名 glob **0** 命中实测，§6.1）。
 - **命名合规**：`_主题_日期`；首段 `_round53_` ＝ **轮次编号**（**非**阶段前缀，⛔ 非 `_v3_`／`_v4_`／`_v5_`）；沿 PI 2026-09-29 命名裁 `57024f2cd30a` §1.2② ＋ `b8b0c52296b2` §命名合规行之沿用。
 - **出件**：**doc-writer（文稿起草官）**（分支会话 `mvs_9468407f5d14454d86bcd1eb20a050a4` · **署名如实** · ⛔ **0 冒充** PI／parent／protocol-keeper／worker／verdict-keeper／verifier／evidence-auditor）。
@@ -40,7 +40,7 @@ PI 已裁**甲** ⇒ **未来同类落盘**之 `th_v3_19_compliance` **改按「
 
 | 项 | 值 |
 |:--|:--|
-| 库路径／表 | `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite` ／ `questionnaire_requests` |
+| 库路径／表 | `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite` ／ `questionnaire_requests` |
 | 目标行 | `request_id` ＝ `ask_9bb02f1b68a419c8855fef60`（命中 **1** 行） |
 | 库 mtime（读得时点，CST） | **2026-10-10 17:03:43.801760 +0800** |
 | `submittedAt`（CST 换算） | **2026-10-10 16:47:43.018 +0800** |
@@ -125,7 +125,7 @@ PI 已裁**甲** ⇒ **未来同类落盘**之 `th_v3_19_compliance` **改按「
 | **本棒写动作** | **新增 1 件**（本件）＋ `.tmp` 内临时核验脚本（**非交付件**，已以 `rm --` 清理干净） |
 | **0 派生 JSON** | ⛔ **0 新建／0 合并**任何派生物 JSON |
 | **运行时库** | **只读**（`mode=ro`） |
-| **归档禁区** | **未触及** —— ⛔ **0 访问／0 读取** `〔本地归档区〕` |
+| **归档禁区** | **未触及** —— ⛔ **0 访问／0 读取** `D:\私人资料\_non_upload_local_archive` |
 
 ### 5.2 ⚠ 诚实边界（**0 软化 · 缺口不掩饰**）
 

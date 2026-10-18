@@ -5,7 +5,7 @@
 | 项 | 内容 |
 |---|---|
 | **件名** | `_plan_v3_pending_verify_2026_09_30.md`（**新名新建** · 落盘前 2 轮 × 4 目录 `Test-Path` 均 `False` ＋ 全仓 `*plan_v3*` / `*pending_verify*` glob 均 0 命中） |
-| **落点** | `_september_workspace/results/`（与 `results/` 面同目录，服从仓内既有惯例） |
+| **落点** | `D:\私人资料\deposon-repo\results\`（与 `results/` 面同目录，服从仓内既有惯例） |
 | **输入锚** | `plan_v3_2026_09_30.md`（`4b1ec1dbf19f`）§八 17 条 ＋ §七／§九 参照 · **本棒只读，0 覆写** |
 | **本件性质** | **核实与处置登记册**。**不是**预登记件、**不是**判定件、**不是**授权件；⛔ **0 代 PI 拍板 / 0 代裁 / 0 代答**。凡「处置」列均为**册登记建议**，非既成裁决。 |
 | **0 触动** | 全程**只读**既有件 ＋ **唯一写入 ＝ 本件 1 件**（新名）。0 修改 0 覆写 0 删除 0 合并任何既有件。 |
@@ -453,7 +453,7 @@ R1 Test-Path [artifacts] = False    R2 Test-Path [artifacts] = False
 
 | 项 | 实测 |
 |---|---|
-| 路径 | `〔本地归档区〕/_movedout_scratch_2026_09_29/verif_doubt6_v_20260928/_v5_trae_doubt6_verify_2026_09_28.md`（另有同内容副本 `_merged_canonical_snapshot_224910.md`） |
+| 路径 | `D:\私人资料\_non_upload_local_archive\_movedout_scratch_2026_09_29\verif_doubt6_v_20260928\_v5_trae_doubt6_verify_2026_09_28.md`（另有同内容副本 `_merged_canonical_snapshot_224910.md`） |
 | SHA-12 | **`ffda214d1917`**（与本件附记-1 所记「混合体」值**逐字吻合**） |
 | 字节 | **51,778 B** |
 | mtime | 2026-09-28 22:46:33 |

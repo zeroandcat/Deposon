@@ -4,7 +4,7 @@
 > 授权来源：PI 2026-09-26 18:24 原文「整理文件夹包括清噪声、删垃圾与中间文件、归档无需上传文件与非核心文件、更新清单与委托」—— **本棒做前三件**（清单与委托由 doc-writer 下棒）
 > 沿用锚：`results/_v4_noise_cleanup_manifest_v3_2026_09_25.md` (SHA-12=`6F3F6FA3AB1D` 锚格式) + `results/_v4_maindir_cleanup_moves_ledger_v5_2026_09_24.md` (SHA-12=`272E8C752406` 分类/留痕格式)
 > 不覆盖既有件：本 manifest 为新建件；v1 manifest `results/_v4_maindir_cleanup_manifest_2026_09_24.md` (SHA-12=`32CC61D394F2`) + v3 noise manifest `results/_v4_noise_cleanup_manifest_v3_2026_09_25.md` (SHA-12=`6F3F6FA3AB1D`) + v5 ledger (SHA-12=`272E8C752406`) 均健在
-> 删除通道：`mavis-trash.cmd` (trusted launcher @ `〔本机用户目录〕/.minimax/bin/mavis-trash.cmd`, Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile → Recycle Bin)
+> 删除通道：`mavis-trash.cmd` (trusted launcher @ `C:\Users\Administrator\.minimax\bin\mavis-trash.cmd`, Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile → Recycle Bin)
 > 可恢复性：**所有删除件可从 Windows Recycle Bin 恢复** (mavis-trash 可恢复删除)
 > 0 永久删除 ✓ / 0 触动 frozen 锚 ✓ / 0 触动 派工单 §硬排除 ✓ / 派生 JSON 不合并 ✓ / 0 擅调阈值 ✓ / 0 覆盖既有件 ✓
 
@@ -198,9 +198,9 @@
 
 | 目录 | before (实测 2026-09-26 18:25) | after (实测 2026-09-26 18:30) | delta | 备注 |
 |---|---|---|---|---|
-| `_september_workspace` | **1153** | **1130** | **-23** | 本棒删除 28 件；棒 7 期间 (18:25-18:30 间) 其他 worker / 当前 worker 工具调用新增若干件 (manifest 落盘 + grep/read 临时件等)；**最终实测 after=1130** |
-| `〔本地归档区〕` | 1816 | **1816** | **0** | 无变化 ✓ (本棒未触 ARCH) |
-| `_september_workspace` | 471 | **471** | **0** | 无变化 ✓ (本棒未触 SUB) |
+| `D:/私人资料/deposon-repo` | **1153** | **1130** | **-23** | 本棒删除 28 件；棒 7 期间 (18:25-18:30 间) 其他 worker / 当前 worker 工具调用新增若干件 (manifest 落盘 + grep/read 临时件等)；**最终实测 after=1130** |
+| `D:/私人资料/_non_upload_local_archive` | 1816 | **1816** | **0** | 无变化 ✓ (本棒未触 ARCH) |
+| `D:/私人资料/deposon-sub` | 471 | **471** | **0** | 无变化 ✓ (本棒未触 SUB) |
 
 > **核对 (末次实测 2026-09-26 18:30, 含本 manifest)**:
 > - repo 实际 = 1130 = 1153 - 28 (deletes) + 5 (本棒 + 棒 7 其他 worker 净新增) → 净 -23 ✓
@@ -218,7 +218,7 @@
 
 **派工单 §本棒做前三件**（清理 + 归档无需上传 + 归档非核心），**本棒仅完成第 1 件（清理）**；第 2/3 件（归档）0 件移动，老实交代如下：
 
-#### E.1.1 归档无需上传 → `〔本地归档区〕` (0 件移动)
+#### E.1.1 归档无需上传 → `D:/私人资料/_non_upload_local_archive` (0 件移动)
 
 派工单 §2 列三类：
 1. **推理全文隐私面**：dataset 七件**留原地**——被 prereg 链引用不动，列 no-upload 清单
@@ -229,7 +229,7 @@
 
 **老实交代**：本棒对"归档无需上传"项 0 件移动 = 拍板缺位；待 PI 复审是否需要将任何 `.tmp/_l14v3_*` 早期版本（v1/v2/v3 / _n26_metrics v1 等）划入"无下游引用但属历史聚合派生"档。
 
-#### E.1.2 归档非核心 → `_september_workspace` (0 件移动)
+#### E.1.2 归档非核心 → `D:/私人资料/deposon-sub` (0 件移动)
 
 派工单 §3 列三类：
 1. **非链上历史中间件**：本棒扫到 ~20 件 Sep 17-23 era 草稿/审计/中间件（`_agent_trio_redesign_draft_2026_09_23.md` / `_coze_paper_v1_*_2026_09_17.md` / `_coze_〔IM〕_v3_*_2026_09_18.md` / `_d7_wang_teacher_〔IM〕_publish_v1_20260918.md` / `_deposon_v2scripts_*_20260918_*` / `_ftfb_v3_pass*_audit_2026_09_18_*` / `_glm_response_v2_template_2026_09_18.md` / `_kimi_ftfb_s7_independent_recompute_2026_09_18.json` / `_kimi_push_v3_manifest_verifier21_cc3c92d0.json` / `_mavis_skill_inventory_2026_09_18.md` / `_probe_url_update_log_2026_09_23.md` / `_track2_*_2026_09_23.*` 等）

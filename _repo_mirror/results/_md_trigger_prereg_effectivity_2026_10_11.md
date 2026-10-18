@@ -7,7 +7,7 @@
 - **本件**：`results/_md_trigger_prereg_effectivity_2026_10_11.md`（**新名新建 · 0 覆写**；落前 `Test-Path=False` ＋ 全仓递归 glob `*md_trigger*`／`*trigger_prereg*`／`*_md_*2026_10_11*`／`*prereg_effectivity*` **四路均 0 命中** · 实测见 §8-1）
 - **命名合规**：`_主题_日期` 三段式；首段 `_md_trigger_` ＝ **主题标识非阶段号** ⇒ 合 PI 2026-09-29 命名裁（`57024f2cd30a` §1.2②）＋ 10-01 补记；⛔ `_v5_`／`_v4_`／`_v3_`
 - **出件**：**protocol-keeper**（`agent-3e0c193da529` · 分支会话 `mvs_23c20da6c68346d9af5d91bffeaab85c`｜**署名如实** · ⛔ **0 冒充** PI／parent／worker／verifier／verdict-keeper／evidence-auditor／doc-writer）
-- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（本棒 **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络 ／ 0 skill ／ 0 LLM**｜⛔ **0 触及** `〔本地归档区〕`（0 读、0 写、0 列目录）
+- **版式**：UTF-8 **无 BOM** · **LF（CRLF ＝ 0）**｜**R4**：key 永不明文（本棒 **0 读 key／0 读 `.env`／0 落盘凭据**）｜**0 网络 ／ 0 skill ／ 0 LLM**｜⛔ **0 触及** `D:\私人资料\_non_upload_local_archive`（0 读、0 写、0 列目录）
 - **状态**：🔴 **本件所载 `MD` 生效字面已登记为生效即锁之冻结时点（冻后 0 改）** ＋ 📋 **取代关系已明写**（原乙案 `T1-only` 对照差之触发量职能由 `MD` 承继）＋ 📋 **如实限制三条已登记**（`ΔMD` 响应面临界／`ε` 口径漂移候另议／`LS` 语义候 PI 择）
 - **构造面 vs 真实面**：本件之登记面 ＝ **盘上已落册之构造域 26 件逐件读数**（`65a9b9be6327` 之 `per_item[]` · 26 件 × 12 字段）＋ **盘上可核之判死线条文面** ＋ **六层字母表声明面** ＋ **PI 卡面**（只读实测）｜**外推边界 ＝ 构造域（`3c25e1a2ea94` 之 26 件）** ⇒ ⛔ **0 外推**至旧 held-out 26 件面（`acedff01d18c`）、⛔ 0 外推至向-1 之新第三集（**0 抽取 · 0 预判其读数**）、⛔ 0 外推至任何**未登记之构造变更**、⛔ 0 外推至 v1.1 基础面
 
@@ -51,7 +51,7 @@
 
 | 项 | 实测 |
 |:--|:--|
-| **来源** | 运行时库 `〔本机用户目录〕/.minimax/v2/sqlite/runtime-state.sqlite`，表 `questionnaire_requests`，**以 `mode=ro` URI 只读**（0 写入、0 建表、0 提交、0 checkpoint）；`WHERE request_id = 'ask_6579c5966d40f924acc91eb2'` ⇒ **命中 1／1（精确命中）** |
+| **来源** | 运行时库 `C:\Users\Administrator\.minimax\v2\sqlite\runtime-state.sqlite`，表 `questionnaire_requests`，**以 `mode=ro` URI 只读**（0 写入、0 建表、0 提交、0 checkpoint）；`WHERE request_id = 'ask_6579c5966d40f924acc91eb2'` ⇒ **命中 1／1（精确命中）** |
 | **卡身份面** | `request_id` ＝ `ask_6579c5966d40f924acc91eb2`｜`session_id` ＝ `mvs_bbeb804b1a6a41109be740636eed1709`｜`title` ＝ 「**deposon 归置卡十二：F-3・F-4 收口（八问并裁）**」｜`status` ＝ **`answered`**｜`created_at` ＝ 2026-10-11 13:54:54.382 +0800｜`answered_at` ＝ **2026-10-11 13:55:48.650 +0800** |
 | **`f3_final` 之答（逐字 · 本件之授权锚）** | `stepId` ＝ **`f3_final`**｜`selectedOptionIds` ＝ **`["jia"]`**｜`selectedOther` ＝ `false` ⇒ 📌 **PI 择「甲·采 MD（层域加权判别余量差）」**（选项 label 逐字见 §1-3） |
 | **`eps_drift` 之答（同卡 · 并记）** | `stepId` ＝ `eps_drift`｜`selectedOptionIds` ＝ **`["bing"]`**｜`selectedOther` ＝ `false` ⇒ **丙·另议** ⇒ 📌 **`ε` 之口径漂移归候 PI 另议**（§7-2）⇒ ⛔ **本件 0 代定 `ε` 之值或口径** |
@@ -326,7 +326,7 @@
 | **唯一写动作** | ✅ **新建本件**（仓内唯一写） |
 | ⛔ **0 派生 JSON** | **0 新建／0 合并**任何派生 JSON；**0 回写**既有 JSON 之任何字段（沿 `K-RJ-11`） |
 | ⛔ **0 写运行时库** | 运行时库 **0 写入**（`mode=ro` URI 只读 · 0 建表／0 提交／0 checkpoint）；会话消息面 **只读** |
-| ⛔ **0 触禁区** | `〔本地归档区〕` **0 读、0 写、0 列目录** |
+| ⛔ **0 触禁区** | `D:\私人资料\_non_upload_local_archive` **0 读、0 写、0 列目录** |
 | ⛔ **0 网络／0 skill／0 LLM** | **0 网络请求、0 skill 调用、0 LLM 调用** |
 | ⛔ **R4** | key 永不明文；本棒 **0 读 key／0 读 `.env`／0 落盘凭据** |
 
