@@ -1,0 +1,776 @@
+{
+ "artifact": "_s5doubleprime_five_lines_readings_2026_10_11.json",
+ "date": "2026-10-11",
+ "kind": "summary_readings",
+ "step": "第三构造域 (seed″ · c34835ad59cf) · 五线面补跑 (worker 面) —— 沿第二域 S4' 五线面十步复现路径, 步 1-9 沿用 · 步 10 之 in_heldout 换第三 held-out; 授权 = PI 2026-10-11 闭链卡 R-2 = 乙·补跑后再闭",
+ "note": "汇总 JSON; 0 与逐件 JSON 合并 (沿 K-EX-10 同族); 0 判档; 0 并入否决轴/触发量 —— ⚠ 本件名之 `s5doubleprime` 沿闭链卡 R-2 口径 (『域内无 S5″(无五线面)』⇒ 补跑第三域五线面); ⚠ 与 `bba3b889d849` §4-1 以 `S5″` 指『S5′ 之对应件(随件声明面)』之用法**同形异指**, 如实登记, ⛔ 0 就编号归属作裁 (归 PI/verdict-keeper)",
+ "authority": {
+  "change_plan": {
+   "file": "results/_g5_rejudgment_construction_change_plan_2026_10_10.md",
+   "sha12": "fa0001a6dd0a"
+  },
+  "chd_declaration": {
+   "file": "results/_chd_construction_domain_declaration_draft_2026_10_10.md",
+   "sha12": "17cf0d59cd7b"
+  },
+  "new_heldout_items": {
+   "file": "results/_s4_heldout_sampling_seedthird_items_2026_10_11.json",
+   "sha12": "5777a07c608a"
+  },
+  "new_heldout_register": {
+   "file": "results/_s4_heldout_sampling_seedthird_items_register_2026_10_11.md",
+   "sha12": "784f042bf93d"
+  },
+  "in_heldout_recompute": {
+   "file": "results/_s4_seedprime_inheldout_recompute_2026_10_10.md",
+   "sha12": "cf3368e7d5a0"
+  },
+  "source_wave_mapping": {
+   "file": "results/_s4_source_wave_mapping_registration_2026_10_10.md",
+   "sha12": "26c8278e3552"
+  },
+  "kwtable_v31": {
+   "file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+   "sha12": "1b7bcbcce589"
+  },
+  "executor_readonly": {
+   "file": "results/_v4_pi_cot_v3_ruleset_v3_executor.py",
+   "sha12": "8a81d90c69ba"
+  },
+  "old_readings_anchor_readonly": {
+   "file": "results/_s4_v31_readings_execution_2026_10_10.md",
+   "sha12": "80d765f34163"
+  },
+  "old_domain_readings_readonly": {
+   "file": "results/_s4_face_five_lines_ci_readings_execution_2026_10_09.md",
+   "sha12": "73550514152d"
+  }
+ },
+ "runtime": {
+  "python": "3.14.7",
+  "numpy": "2.5.3",
+  "network": 0,
+  "endpoint_calls": 0,
+  "api_key": 0,
+  "skill": 0,
+  "llm": 0
+ },
+ "face_selfproof_grid13": {
+  "measured": {
+   "occupied_cells": 54,
+   "empty_cells": 74,
+   "sum_floor_0.30n": 26,
+   "cells_n_ge_4": 16,
+   "cells_n_le_3": 38,
+   "cells_n_eq_1": 16,
+   "n_min": 1,
+   "n_max": 16,
+   "n_sum": 179,
+   "b0_occupied_cells": 43,
+   "b1_occupied_cells": 11,
+   "b1_rows": 15,
+   "grid_total": 128,
+   "n_events": 179
+  },
+  "registered": {
+   "occupied_cells": 54,
+   "empty_cells": 74,
+   "sum_floor_0.30n": 26,
+   "cells_n_ge_4": 16,
+   "cells_n_le_3": 38,
+   "cells_n_eq_1": 16,
+   "n_min": 1,
+   "n_max": 16,
+   "n_sum": 179,
+   "b0_occupied_cells": 43,
+   "b1_occupied_cells": 11,
+   "b1_rows": 15,
+   "grid_total": 128,
+   "n_events": 179
+  },
+  "all_match": true
+ },
+ "pipeline_selfcert_old_domain": {
+  "purpose": "同代码路径于旧构造域(gold=V3/旧 held-out)重算, 与 73550514152d §3.7 在册值逐位比对; 系管道同源性自证, ⛔ 非新旧读数面之比较, ⛔ 0 并表 0 比大小",
+  "A": 0.32032967032967036,
+  "A_ci": [
+   0.18186813186813186,
+   0.44999999999999996
+  ],
+  "Ap": 0.14743589743589744,
+  "Ap_ci": [
+   0.038461538461538464,
+   0.28205128205128205
+  ],
+  "B_num_den": [
+   9,
+   21
+  ],
+  "C_num_den": [
+   3,
+   5
+  ],
+  "D_ci_lower": 0.18186813186813186
+ },
+ "heldout_fingerprint": {
+  "sha12_recomputed": "c34835ad59cf",
+  "full_sha256_recomputed": "c34835ad59cf75a75fcfbdbb61480c1ed7cb2cfc3b9a8dbac4c2f7c0d2c786b5",
+  "sha12_registered": "c34835ad59cf",
+  "match": true,
+  "n": 26
+ },
+ "model_side_declaration": {
+  "gold_kwtable": "V3.1 (= KEYWORDS_V3 ⊎ 15 词, 1b7bcbcce589 §4 逐字)",
+  "gold_kwtable_sha12": "1b7bcbcce589",
+  "model_tree": "V3",
+  "training_label_kwtable": "KEYWORDS_V3",
+  "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+  "K_EX_8": "feature == label == declared model kwtable == KEYWORDS_V3 -> consistent",
+  "mixed_object": false,
+  "mixed_object_note": "本面 gold 与 model 皆 V3.1 同词表口径下之纯 V3.1 面; 旧件之 mixed_object=true 系 V3.1 gold × V3 model 之混合构造, 本面 model 侧恒 KEYWORDS_V3 且训练面同, ⛔ 本件 0 就其可比性作任何断言"
+ },
+ "five_lines_new_domain": {
+  "A_nw_sim_mean": 0.36776556776556774,
+  "A_bootstrap_ci": [
+   0.24487179487179486,
+   0.4818681318681319
+  ],
+  "A_halfwidth": 0.11849816849816851,
+  "A_fullwidth": 0.23699633699633701,
+  "Ap_nled_sim_mean": 0.14743589743589744,
+  "Ap_bootstrap_ci": [
+   0.032051282051282055,
+   0.28205128205128205
+  ],
+  "Ap_halfwidth": 0.125,
+  "Ap_fullwidth": 0.25,
+  "B_num_den": [
+   11,
+   21
+  ],
+  "B_point": 0.5238095238095238,
+  "B_ci_construct1": [
+   0.2857142857142857,
+   0.7619047619047619
+  ],
+  "B_ci_construct2": [
+   0.3,
+   0.7368421052631579
+  ],
+  "B_degenerate_c2": 0,
+  "B_K2_one_sided_lower_c1": 0.2857142857142857,
+  "B_K2_one_sided_lower_c2": 0.3,
+  "C_num_den": [
+   1,
+   5
+  ],
+  "C_point": 0.2,
+  "C_ci_construct1": [
+   0.0,
+   0.6
+  ],
+  "C_ci_construct2": [
+   0.0,
+   0.6666666666666666
+  ],
+  "C_degenerate_c2": 6,
+  "C_K2_one_sided_upper_c1": 0.6,
+  "C_K2_one_sided_upper_c2": 0.6666666666666666,
+  "D_bootstrap_ci": [
+   0.24487179487179486,
+   0.4818681318681319
+  ],
+  "D_ci_lower": 0.24487179487179486,
+  "D_note": "D 之读数面与 A 完全重合 (executor L1164-L1166 · D 0 需另算)"
+ },
+ "face": {
+  "n_events": 179,
+  "n_held": 26,
+  "n_train": 153,
+  "tree_depth_observed": 6,
+  "empty_gold_seq_items": 7,
+  "n_divergent": 21,
+  "n_critical": 15,
+  "n_critical_and_divergent": 11,
+  "nw_changed_vs_v3_gold": 5,
+  "nled_changed_vs_v3_gold": 1
+ },
+ "per_item": [
+  {
+   "face_index": 26,
+   "key": [
+    "_s4_substrate_topup_addendum_2026_10_09.json",
+    14
+   ],
+   "q_id": "S4T-15",
+   "pred": "RISK",
+   "gold_seq_v31": [
+    "CRITERIA"
+   ],
+   "gold_seq_v3": [
+    "CRITERIA"
+   ],
+   "nw_v31": 0.5,
+   "nled_v31": 0.0,
+   "nw_v3": 0.5,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": false,
+   "corpus_len": 5
+  },
+  {
+   "face_index": 41,
+   "key": [
+    "_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json",
+    0
+   ],
+   "q_id": "Q40",
+   "pred": "RISK",
+   "gold_seq_v31": [
+    "DELEGATE",
+    "TIMING"
+   ],
+   "gold_seq_v3": [
+    "DELEGATE",
+    "TIMING"
+   ],
+   "nw_v31": 0.3,
+   "nled_v31": 0.0,
+   "nw_v3": 0.3,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": true,
+   "corpus_len": 11
+  },
+  {
+   "face_index": 45,
+   "key": [
+    "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+    0
+   ],
+   "q_id": "Q44",
+   "pred": "CRITERIA",
+   "gold_seq_v31": [
+    "DELEGATE"
+   ],
+   "gold_seq_v3": [
+    "DELEGATE"
+   ],
+   "nw_v31": 0.5,
+   "nled_v31": 0.0,
+   "nw_v3": 0.5,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": false,
+   "corpus_len": 12
+  },
+  {
+   "face_index": 47,
+   "key": [
+    "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+    2
+   ],
+   "q_id": "Q46",
+   "pred": "CRITERIA",
+   "gold_seq_v31": [
+    "DELEGATE",
+    "RISK"
+   ],
+   "gold_seq_v3": [
+    "DELEGATE",
+    "RISK"
+   ],
+   "nw_v31": 0.3,
+   "nled_v31": 0.0,
+   "nw_v3": 0.3,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": true,
+   "corpus_len": 38
+  },
+  {
+   "face_index": 48,
+   "key": [
+    "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+    3
+   ],
+   "q_id": "Q47",
+   "pred": "TIMING",
+   "gold_seq_v31": [
+    "TIMING"
+   ],
+   "gold_seq_v3": [
+    "TIMING"
+   ],
+   "nw_v31": 1.0,
+   "nled_v31": 1.0,
+   "nw_v3": 1.0,
+   "nled_v3": 1.0,
+   "divergent": false,
+   "critical": false,
+   "corpus_len": 2
+  },
+  {
+   "face_index": 50,
+   "key": [
+    "_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json",
+    1
+   ],
+   "q_id": "Q49",
+   "pred": "UNKNOWN",
+   "gold_seq_v31": [],
+   "gold_seq_v3": [],
+   "nw_v31": 0.0,
+   "nled_v31": 0.0,
+   "nw_v3": 0.0,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": true,
+   "corpus_len": 31
+  },
+  {
+   "face_index": 54,
+   "key": [
+    "_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json",
+    1
+   ],
+   "q_id": "Q2_third_read",
+   "pred": "TIMING",
+   "gold_seq_v31": [
+    "CRITERIA",
+    "RISK",
+    "COST",
+    "DELEGATE"
+   ],
+   "gold_seq_v3": [
+    "CRITERIA",
+    "RISK",
+    "COST",
+    "DELEGATE"
+   ],
+   "nw_v31": 0.16666666666666666,
+   "nled_v31": 0.0,
+   "nw_v3": 0.16666666666666666,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": true,
+   "corpus_len": 76
+  },
+  {
+   "face_index": 57,
+   "key": [
+    "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+    0
+   ],
+   "q_id": "Q6_third_read",
+   "pred": "CRITERIA",
+   "gold_seq_v31": [
+    "RISK",
+    "CRITERIA",
+    "KILL_LINE"
+   ],
+   "gold_seq_v3": [
+    "RISK",
+    "CRITERIA",
+    "KILL_LINE"
+   ],
+   "nw_v31": 0.42857142857142855,
+   "nled_v31": 0.33333333333333337,
+   "nw_v3": 0.42857142857142855,
+   "nled_v3": 0.33333333333333337,
+   "divergent": false,
+   "critical": true,
+   "corpus_len": 51
+  },
+  {
+   "face_index": 60,
+   "key": [
+    "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+    3
+   ],
+   "q_id": "Q10_third_read",
+   "pred": "CRITERIA",
+   "gold_seq_v31": [
+    "COST",
+    "KILL_LINE",
+    "RISK",
+    "TIMING"
+   ],
+   "gold_seq_v3": [
+    "COST",
+    "RISK",
+    "TIMING"
+   ],
+   "nw_v31": 0.16666666666666666,
+   "nled_v31": 0.0,
+   "nw_v3": 0.21428571428571427,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": true,
+   "corpus_len": 130
+  },
+  {
+   "face_index": 72,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d6_2026_09_28.json",
+    0
+   ],
+   "q_id": "DF6-1",
+   "pred": "UNKNOWN",
+   "gold_seq_v31": [],
+   "gold_seq_v3": [],
+   "nw_v31": 0.0,
+   "nled_v31": 0.0,
+   "nw_v3": 0.0,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": false,
+   "corpus_len": 0
+  },
+  {
+   "face_index": 85,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    6
+   ],
+   "q_id": "D8-07",
+   "pred": "UNKNOWN",
+   "gold_seq_v31": [],
+   "gold_seq_v3": [],
+   "nw_v31": 0.0,
+   "nled_v31": 0.0,
+   "nw_v3": 0.0,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": false,
+   "corpus_len": 6
+  },
+  {
+   "face_index": 95,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    16
+   ],
+   "q_id": "D8-17",
+   "pred": "RISK",
+   "gold_seq_v31": [
+    "RISK"
+   ],
+   "gold_seq_v3": [
+    "RISK"
+   ],
+   "nw_v31": 1.0,
+   "nled_v31": 1.0,
+   "nw_v3": 1.0,
+   "nled_v3": 1.0,
+   "divergent": false,
+   "critical": true,
+   "corpus_len": 13
+  },
+  {
+   "face_index": 99,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    20
+   ],
+   "q_id": "D8-21",
+   "pred": "UNKNOWN",
+   "gold_seq_v31": [
+    "RISK"
+   ],
+   "gold_seq_v3": [],
+   "nw_v31": 0.5,
+   "nled_v31": 0.0,
+   "nw_v3": 0.0,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": true,
+   "corpus_len": 29
+  },
+  {
+   "face_index": 102,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    23
+   ],
+   "q_id": "D8-24",
+   "pred": "CRITERIA",
+   "gold_seq_v31": [
+    "RISK"
+   ],
+   "gold_seq_v3": [
+    "RISK"
+   ],
+   "nw_v31": 0.5,
+   "nled_v31": 0.0,
+   "nw_v3": 0.5,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": true,
+   "corpus_len": 31
+  },
+  {
+   "face_index": 106,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    27
+   ],
+   "q_id": "D8-28",
+   "pred": "CRITERIA",
+   "gold_seq_v31": [
+    "RISK"
+   ],
+   "gold_seq_v3": [
+    "RISK"
+   ],
+   "nw_v31": 0.5,
+   "nled_v31": 0.0,
+   "nw_v3": 0.5,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": true,
+   "corpus_len": 6
+  },
+  {
+   "face_index": 108,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    29
+   ],
+   "q_id": "D8-30",
+   "pred": "CRITERIA",
+   "gold_seq_v31": [
+    "RISK"
+   ],
+   "gold_seq_v3": [
+    "RISK"
+   ],
+   "nw_v31": 0.5,
+   "nled_v31": 0.0,
+   "nw_v3": 0.5,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": true,
+   "corpus_len": 4
+  },
+  {
+   "face_index": 109,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    30
+   ],
+   "q_id": "D8-31",
+   "pred": "CRITERIA",
+   "gold_seq_v31": [
+    "CRITERIA"
+   ],
+   "gold_seq_v3": [
+    "CRITERIA"
+   ],
+   "nw_v31": 1.0,
+   "nled_v31": 1.0,
+   "nw_v3": 1.0,
+   "nled_v3": 1.0,
+   "divergent": false,
+   "critical": true,
+   "corpus_len": 4
+  },
+  {
+   "face_index": 113,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    34
+   ],
+   "q_id": "D8-35",
+   "pred": "UNKNOWN",
+   "gold_seq_v31": [],
+   "gold_seq_v3": [],
+   "nw_v31": 0.0,
+   "nled_v31": 0.0,
+   "nw_v3": 0.0,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": true,
+   "corpus_len": 27
+  },
+  {
+   "face_index": 118,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    39
+   ],
+   "q_id": "D8-40",
+   "pred": "DELEGATE",
+   "gold_seq_v31": [
+    "RISK",
+    "CRITERIA"
+   ],
+   "gold_seq_v3": [
+    "CRITERIA"
+   ],
+   "nw_v31": 0.3,
+   "nled_v31": 0.0,
+   "nw_v3": 0.5,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": false,
+   "corpus_len": 27
+  },
+  {
+   "face_index": 119,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    40
+   ],
+   "q_id": "D8-41",
+   "pred": "DELEGATE",
+   "gold_seq_v31": [
+    "CRITERIA"
+   ],
+   "gold_seq_v3": [
+    "CRITERIA"
+   ],
+   "nw_v31": 0.5,
+   "nled_v31": 0.0,
+   "nw_v3": 0.5,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": false,
+   "corpus_len": 24
+  },
+  {
+   "face_index": 141,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    62
+   ],
+   "q_id": "D8-63",
+   "pred": "UNKNOWN",
+   "gold_seq_v31": [
+    "CRITERIA"
+   ],
+   "gold_seq_v3": [],
+   "nw_v31": 0.5,
+   "nled_v31": 0.0,
+   "nw_v3": 0.0,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": false,
+   "corpus_len": 6
+  },
+  {
+   "face_index": 144,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    65
+   ],
+   "q_id": "D8-66",
+   "pred": "RISK",
+   "gold_seq_v31": [
+    "TIMING",
+    "RISK"
+   ],
+   "gold_seq_v3": [
+    "TIMING"
+   ],
+   "nw_v31": 0.6,
+   "nled_v31": 0.5,
+   "nw_v3": 0.5,
+   "nled_v3": 0.0,
+   "divergent": false,
+   "critical": true,
+   "corpus_len": 29
+  },
+  {
+   "face_index": 154,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    75
+   ],
+   "q_id": "D8-76",
+   "pred": "UNKNOWN",
+   "gold_seq_v31": [],
+   "gold_seq_v3": [],
+   "nw_v31": 0.0,
+   "nled_v31": 0.0,
+   "nw_v3": 0.0,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": false,
+   "corpus_len": 4
+  },
+  {
+   "face_index": 162,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    83
+   ],
+   "q_id": "SQ-04",
+   "pred": "DELEGATE",
+   "gold_seq_v31": [
+    "CRITERIA",
+    "RISK"
+   ],
+   "gold_seq_v3": [
+    "CRITERIA",
+    "RISK"
+   ],
+   "nw_v31": 0.3,
+   "nled_v31": 0.0,
+   "nw_v3": 0.3,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": true,
+   "corpus_len": 41
+  },
+  {
+   "face_index": 166,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    87
+   ],
+   "q_id": "SQ-08",
+   "pred": "UNKNOWN",
+   "gold_seq_v31": [],
+   "gold_seq_v3": [],
+   "nw_v31": 0.0,
+   "nled_v31": 0.0,
+   "nw_v3": 0.0,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": false,
+   "corpus_len": 0
+  },
+  {
+   "face_index": 178,
+   "key": [
+    "_v4_pi_cot_v3_dataset_addendum_s3_d7_2026_09_29.json",
+    0
+   ],
+   "q_id": "DF6-4",
+   "pred": "UNKNOWN",
+   "gold_seq_v31": [],
+   "gold_seq_v3": [],
+   "nw_v31": 0.0,
+   "nled_v31": 0.0,
+   "nw_v3": 0.0,
+   "nled_v3": 0.0,
+   "divergent": true,
+   "critical": false,
+   "corpus_len": 0
+  }
+ ],
+ "thresholds_untouched": {
+  "TH_NW_SIM_MEAN": 0.65,
+  "TH_NLED_SIM_MEAN": 0.55,
+  "TH_CRITICAL_COV": 1.0,
+  "TH_BLIND_OBEY": 0.1,
+  "TH_BOOT_CI_FLOOR": 0.4,
+  "note": "沿 8a81d90c69ba 原值, 仅作定位; ⛔ 0 判读 0 比阈值 0 赋任一 k_v3s_4_4_* 布尔"
+ },
+ "not_run": {
+  "veto_axis": "⛔ 0 开跑 (门控未闭)",
+  "trigger_volume": "⛔ 0 开跑 (同上)",
+  "verdict": "⛔ 0 判档 (归 verdict-keeper)"
+ }
+}
