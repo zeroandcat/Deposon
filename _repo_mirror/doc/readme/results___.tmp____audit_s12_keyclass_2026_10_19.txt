@@ -1,0 +1,18 @@
+### results/_f3_payment_vector_third_party_recalc_2026_10_19.md
+  L378 | 键名=API_KEY | 值长度=17 | 字符类=lower+UPPER+special | 占位符形态=False | 疑似真实凭据=True
+  L379 | 键名=API_KEY | 值长度=1 | 字符类=special | 占位符形态=False | 疑似真实凭据=False
+
+### results/_kd_cluster_verdict_pack_adjudication_2026_10_19.md
+  L734 | 键名=API_KEY | 值长度=17 | 字符类=lower+UPPER+special | 占位符形态=False | 疑似真实凭据=True
+
+### results/_v143_v144_adoption_effect_2026_10_19.md
+  L718 | 键名=API_KEY | 值长度=17 | 字符类=lower+UPPER+special | 占位符形态=False | 疑似真实凭据=True
+  L853 | 键名=API_KEY | 值长度=1 | 字符类=special | 占位符形态=False | 疑似真实凭据=False
+
+### 跨件字面重复性检验（同一值是否在多件多行出现）
+  值长度=17 | 出现处数=3 | _f3_payment_vector_third_party_recalc_2026:L378；_kd_cluster_verdict_pack_adjudication_2026:L734；_v143_v144_adoption_effect_2026_10_19.md:L718
+  值长度=1 | 出现处数=2 | _f3_payment_vector_third_party_recalc_2026:L379；_v143_v144_adoption_effect_2026_10_19.md:L853
+
+### 结论用事实
+  · 值之出现处数 > 1 且跨件逐字相同 ⇒ 系形态清单（举例用）之重复登记，非独立凭据之散落
+  · 每处值长度与占位符类别如上；⛔ 本输出 ⛔ 0 含任何凭据明文
