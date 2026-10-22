@@ -1,0 +1,8 @@
+# run record
+ts: 2026-08-30T14:40+00:00
+version: v42
+cmd: bash verifier/v42/check.sh
+result: PASS (exit=0)
+scope: rerun-audit/handoff/v3x-PD-fingerprint
+note: run1 FAIL (zip path bug) fixed in run2; wrong-path duplicate entry removed
+## v42 run2 — PASS（zip路径修复后）
