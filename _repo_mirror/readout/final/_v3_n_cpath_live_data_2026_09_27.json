@@ -1,0 +1,528 @@
+{
+  "task": "V3-N #32 CPATH 理论模拟实测 (补齐 Trae 回函 §1.2 #32「不明」实测面)",
+  "date": "2026-09-27",
+  "author": "Mavis 团队 worker",
+  "design_source": "docs/V3X/CPATH_SIMULATION_REPORT_2026_09_10.md §7.2 (5 步字面)",
+  "verdict_criteria_literal": {
+    "theoretical_margin_band": "0% ~ +26.7% (原报告 §5, 完美 oracle 边界)",
+    "no_rag_baseline": "22/30 = 73.3% (原报告 §3/§4.3)",
+    "new_thresholds_introduced": 0
+  },
+  "endpoints": {
+    "chat_base": "https://ark.cn-beijing.volces.com/api/coding/v3",
+    "chat_model": "glm-latest",
+    "embedding_endpoint": "https://ark.cn-beijing.volces.com/api/coding/v3/embeddings",
+    "embedding_model": "doubao-embedding-vision-251215",
+    "note": "逐字沿用 baseline 件; Volcengine Ark 非 teamorouter/openrouter → tun 代理不适用"
+  },
+  "extractor_declaration": {
+    "why_redeclared": "baseline 件只落盘抽取结果, 抽取器本体不可得; 为隔离 RAG 效应, no-RAG 与 with-RAG 用同一抽取器重判",
+    "gsm8k": "优先首个 **bold** 数字, 否则首个数字; 与 expected 比 |Δ| <= 1e-6*|exp|",
+    "strategyqa": "首个 \\b(yes|no)\\b (忽略大小写); 与 expected 字符串比"
+  },
+  "input_chain": {
+    "baseline_30cells": {
+      "path": "results/deposon_volcengine_glm_latest_30cells_v2_2026_09_10.json",
+      "exists": true,
+      "bytes": 32995
+    },
+    "caption_embedding_meta": {
+      "path": "results/deposon_volcengine_22caption_embedding_2026_09_10.json",
+      "exists": true,
+      "bytes": 4559
+    },
+    "caption_text_22": {
+      "path": "corpus/v20/strip_captions_22.json",
+      "exists": true,
+      "bytes": 12798
+    },
+    "corpus_index": {
+      "path": "corpus/v20/index.json",
+      "exists": true,
+      "bytes": 7335
+    }
+  },
+  "retrieval": [],
+  "no_rag_rescored": [
+    {
+      "id": 1,
+      "benchmark": "gsm8k",
+      "extracted": 18.0,
+      "expected": 18.0,
+      "is_correct": true,
+      "stored_is_correct": false,
+      "stored_ms": 4699.9
+    },
+    {
+      "id": 2,
+      "benchmark": "gsm8k",
+      "extracted": 5.0,
+      "expected": 5.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 3335.8
+    },
+    {
+      "id": 3,
+      "benchmark": "gsm8k",
+      "extracted": 40.0,
+      "expected": 40.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2044.1
+    },
+    {
+      "id": 4,
+      "benchmark": "gsm8k",
+      "extracted": 1430.0,
+      "expected": 1430.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 3697.3
+    },
+    {
+      "id": 5,
+      "benchmark": "gsm8k",
+      "extracted": 36.0,
+      "expected": 36.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2997.4
+    },
+    {
+      "id": 6,
+      "benchmark": "gsm8k",
+      "extracted": 8000.0,
+      "expected": 8000.0,
+      "is_correct": true,
+      "stored_is_correct": false,
+      "stored_ms": 1555.8
+    },
+    {
+      "id": 7,
+      "benchmark": "gsm8k",
+      "extracted": 36.0,
+      "expected": 36.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2861.3
+    },
+    {
+      "id": 8,
+      "benchmark": "gsm8k",
+      "extracted": 6.0,
+      "expected": 6.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2079.7
+    },
+    {
+      "id": 9,
+      "benchmark": "gsm8k",
+      "extracted": 40.0,
+      "expected": 40.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2866.2
+    },
+    {
+      "id": 10,
+      "benchmark": "gsm8k",
+      "extracted": 140.0,
+      "expected": 140.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 1767.7
+    },
+    {
+      "id": 11,
+      "benchmark": "gsm8k",
+      "extracted": 2125.0,
+      "expected": 2125.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2363.3
+    },
+    {
+      "id": 12,
+      "benchmark": "gsm8k",
+      "extracted": 32.0,
+      "expected": 32.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 2302.6
+    },
+    {
+      "id": 13,
+      "benchmark": "gsm8k",
+      "extracted": 50.0,
+      "expected": 50.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 3219.7
+    },
+    {
+      "id": 14,
+      "benchmark": "gsm8k",
+      "extracted": 122.0,
+      "expected": 122.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 1635.9
+    },
+    {
+      "id": 15,
+      "benchmark": "gsm8k",
+      "extracted": 34.0,
+      "expected": 34.0,
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 4129.3
+    },
+    {
+      "id": 1,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "Yes",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 4861.2
+    },
+    {
+      "id": 2,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 3030.3
+    },
+    {
+      "id": 3,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "Yes",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 7262.4
+    },
+    {
+      "id": 4,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 8565.6
+    },
+    {
+      "id": 5,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "Yes",
+      "is_correct": false,
+      "stored_is_correct": false,
+      "stored_ms": 10133.2
+    },
+    {
+      "id": 6,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 5239.0
+    },
+    {
+      "id": 7,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "No",
+      "is_correct": false,
+      "stored_is_correct": false,
+      "stored_ms": 5887.5
+    },
+    {
+      "id": 8,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 3731.2
+    },
+    {
+      "id": 9,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "Yes",
+      "is_correct": false,
+      "stored_is_correct": false,
+      "stored_ms": 22812.1
+    },
+    {
+      "id": 10,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "No",
+      "is_correct": false,
+      "stored_is_correct": false,
+      "stored_ms": 10971.8
+    },
+    {
+      "id": 11,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 4808.9
+    },
+    {
+      "id": 12,
+      "benchmark": "strategyqa",
+      "extracted": "No",
+      "expected": "No",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 5837.3
+    },
+    {
+      "id": 13,
+      "benchmark": "strategyqa",
+      "extracted": "Yes",
+      "expected": "Yes",
+      "is_correct": true,
+      "stored_is_correct": true,
+      "stored_ms": 16247.4
+    },
+    {
+      "id": 14,
+      "benchmark": "strategyqa",
+      "extracted": null,
+      "expected": "Yes",
+      "is_correct": false,
+      "stored_is_correct": false,
+      "stored_ms": 38944.4
+    },
+    {
+      "id": 15,
+      "benchmark": "strategyqa",
+      "extracted": null,
+      "expected": "Yes",
+      "is_correct": false,
+      "stored_is_correct": false,
+      "stored_ms": 90278.0
+    }
+  ],
+  "with_rag": [],
+  "llm_call_ledger": {
+    "total_calls": 1,
+    "embeddings_calls": 0,
+    "chat_calls": 0,
+    "min_interval_enforced_s": 2.5,
+    "serial": true,
+    "concurrent_burst": false,
+    "key_plaintext_in_outputs": false,
+    "key_source": "runtime env ARK_API_KEY (不落盘/不入 prompt/不入 JSON/不入 log)",
+    "per_call": [
+      {
+        "url_suffix": "coding/v3/embeddings",
+        "model": "doubao-embedding-vision-251215",
+        "http": 429,
+        "error_code": "AccountQuotaExceeded",
+        "reset_hint": "2026-09-30 23:59:59 +0800 CST (端点返回原文)",
+        "retried": false,
+        "ms": 265.2
+      }
+    ]
+  },
+  "outcome": {
+    "status": "BLOCKED_BY_ENDPOINT_QUOTA",
+    "completed_parts": [
+      "输入链核验",
+      "22 caption 原文复原",
+      "no-RAG 30 条同抽取器重判"
+    ],
+    "blocked_parts": [
+      "30 question + 22 caption embedding",
+      "top-3 检索",
+      "with-RAG 30 cells 实测",
+      "边际判定"
+    ],
+    "elapsed_s": 0.3
+  },
+  "caption_22_rebuilt": [
+    {
+      "id": "L_algorithm_process",
+      "family": "L",
+      "N": 38,
+      "n_named": 29,
+      "text_len": 328
+    },
+    {
+      "id": "L_biological_taxonomy",
+      "family": "L",
+      "N": 42,
+      "n_named": 22,
+      "text_len": 304
+    },
+    {
+      "id": "L_geography_world",
+      "family": "L",
+      "N": 45,
+      "n_named": 16,
+      "text_len": 305
+    },
+    {
+      "id": "L_historical_causality",
+      "family": "L",
+      "N": 36,
+      "n_named": 23,
+      "text_len": 367
+    },
+    {
+      "id": "L_physics_concepts",
+      "family": "L",
+      "N": 35,
+      "n_named": 31,
+      "text_len": 297
+    },
+    {
+      "id": "L_project_management",
+      "family": "L",
+      "N": 33,
+      "n_named": 36,
+      "text_len": 294
+    },
+    {
+      "id": "S1",
+      "family": "S",
+      "N": 20,
+      "n_named": 19,
+      "text_len": 163
+    },
+    {
+      "id": "S1_n35",
+      "family": "S",
+      "N": 35,
+      "n_named": 34,
+      "text_len": 252
+    },
+    {
+      "id": "S1_n45",
+      "family": "S",
+      "N": 45,
+      "n_named": 44,
+      "text_len": 302
+    },
+    {
+      "id": "S1_n60",
+      "family": "S",
+      "N": 60,
+      "n_named": 59,
+      "text_len": 369
+    },
+    {
+      "id": "S2",
+      "family": "S",
+      "N": 31,
+      "n_named": 14,
+      "text_len": 232
+    },
+    {
+      "id": "S2_n20",
+      "family": "S",
+      "N": 20,
+      "n_named": 9,
+      "text_len": 184
+    },
+    {
+      "id": "S2_n35",
+      "family": "S",
+      "N": 35,
+      "n_named": 16,
+      "text_len": 250
+    },
+    {
+      "id": "S2_n45",
+      "family": "S",
+      "N": 45,
+      "n_named": 21,
+      "text_len": 315
+    },
+    {
+      "id": "S2_n60",
+      "family": "S",
+      "N": 60,
+      "n_named": 29,
+      "text_len": 381
+    },
+    {
+      "id": "S3",
+      "family": "S",
+      "N": 30,
+      "n_named": 21,
+      "text_len": 228
+    },
+    {
+      "id": "S4",
+      "family": "S",
+      "N": 40,
+      "n_named": 58,
+      "text_len": 268
+    },
+    {
+      "id": "S5",
+      "family": "S",
+      "N": 45,
+      "n_named": 7,
+      "text_len": 280
+    },
+    {
+      "id": "S6",
+      "family": "S",
+      "N": 45,
+      "n_named": 17,
+      "text_len": 307
+    },
+    {
+      "id": "S6_n20",
+      "family": "S",
+      "N": 20,
+      "n_named": 17,
+      "text_len": 183
+    },
+    {
+      "id": "S6_n35",
+      "family": "S",
+      "N": 35,
+      "n_named": 17,
+      "text_len": 257
+    },
+    {
+      "id": "S6_n60",
+      "family": "S",
+      "N": 60,
+      "n_named": 17,
+      "text_len": 391
+    }
+  ],
+  "caption_construction_literal": "f\"Concept graph {graph_id} (family={family}, structure={structure}, N={N}, n_named={n_named}): \" + '; '.join(labels)",
+  "no_rag_summary": {
+    "rescored_pass": 24,
+    "rescored_rate": 0.8,
+    "gsm8k": "15/15",
+    "strategyqa": "9/15",
+    "stored_pass": 22,
+    "stored_rate": 0.7333,
+    "note": "stored 22/30 由不可得抽取器产生; 本脚本以声明抽取器重判得 24/30, 差额根因 = 抽取器口径差异(非 RAG 效应)"
+  },
+  "blocked": {
+    "stage": "embedding (step 2/§7.2.1+2.2)",
+    "error": "AccountQuotaExceeded (HTTP 429)",
+    "message": "AccountQuotaExceeded (月度配额耗尽, 2026-09-30 重置)",
+    "reset": "2026-09-30 23:59:59 +0800 CST (端点返回原文)",
+    "consequence": "cos sim -> top-3 检索与 with-RAG 实测**均无法执行**; 本条 CPATH 实测登记为**未决**(不编造边际数据)"
+  }
+}

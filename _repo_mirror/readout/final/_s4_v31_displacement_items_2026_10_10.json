@@ -1,0 +1,1068 @@
+{
+ "artifact": "_s4_v31_displacement_items_2026_10_10.json",
+ "date": "2026-10-10",
+ "kind": "per_item_displacement",
+ "step": "四（登记）· 面 II",
+ "note": "位移逐件 JSON；⛔ 与汇总 JSON 分离不合并（K-EX-10）",
+ "authority": {
+  "clearance": {
+   "file": "results/_s4_regen_golive_clearance_2026_10_10.md",
+   "sha12": "80d8905b9762"
+  },
+  "sequence": {
+   "file": "results/_s4_execution_sequence_review_2026_10_10.md",
+   "sha12": "0e1eb2fdd25e"
+  },
+  "kwtable": {
+   "file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+   "sha12": "1b7bcbcce589"
+  },
+  "killline": {
+   "file": "results/_s4_kex_killline_freeze_2026_10_10.md",
+   "sha12": "6269d0c6fd10"
+  },
+  "vclause": {
+   "file": "results/_s4_vclause_1_6_revision_2026_10_10.md",
+   "sha12": "017b3cf38ae3"
+  },
+  "plan": {
+   "file": "results/_s4_regen_execution_plan_2026_10_10.md",
+   "sha12": "70e22220350d"
+  },
+  "executor_readonly": {
+   "file": "results/_v4_pi_cot_v3_ruleset_v3_executor.py",
+   "sha12": "8a81d90c69ba"
+  },
+  "old_readings_anchor_readonly": {
+   "file": "results/_s4_face_five_lines_ci_readings_execution_2026_10_09.md",
+   "sha12": "73550514152d"
+  },
+  "heldout": {
+   "file": "results/_s4_heldout_sampling_seed42_items_2026_10_09.json",
+   "sha12": "6a670e629dca"
+  }
+ },
+ "clause": {
+  "file": "results/_s4_vclause_1_6_revision_2026_10_10.md",
+  "sha12": "017b3cf38ae3",
+  "id": "V-CLAUSE-1.6'",
+  "closed_type_set": [
+   "T1 新增层",
+   "T2 层序变化",
+   "T3 转非空",
+   "T4 维持空"
+  ],
+  "no_fifth_type": true
+ },
+ "face_ii_denominator": {
+  "scope": "S4 冻结面 179 行（21 件 addendum · R1 键序 · 逐行）",
+  "n_rows": 179,
+  "n_displaced_measured": 24,
+  "design_estimate": 19,
+  "delta": 5,
+  "type_counts": {
+   "T1": 7,
+   "T2": 0,
+   "T3": 17,
+   "T4": 0
+  },
+  "heldout_in": 9,
+  "heldout_out": 15
+ },
+ "model_side_declaration": {
+  "gold_kwtable": "V3.1",
+  "gold_kwtable_sha12": "1b7bcbcce589",
+  "model_tree": "V3",
+  "model_tree_source": "8a81d90c69ba",
+  "training_label_kwtable": "KEYWORDS_V3",
+  "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+  "mixed_object": true,
+  "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+  "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+ },
+ "items": [
+  {
+   "q_id": "S4Q-04",
+   "file": "_s4_open_questions_addendum_2026_10_09.json",
+   "src_idx": 3,
+   "in_heldout": true,
+   "seq_v3": [],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "CRITERIA",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "保证",
+     "layer": "CRITERIA",
+     "char_pos": 18
+    },
+    {
+     "word": "质量",
+     "layer": "CRITERIA",
+     "char_pos": 22
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 18
+   },
+   "corpus_verbatim": "是否实干，如果有重要素材应看未看，为保证实验质量必须加派",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "S4T-08",
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "src_idx": 7,
+   "in_heldout": true,
+   "seq_v3": [],
+   "seq_v31": [
+    "KILL_LINE"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "KILL_LINE",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "推翻",
+     "layer": "KILL_LINE",
+     "char_pos": 6
+    }
+   ],
+   "layer_first_pos_v31": {
+    "KILL_LINE": 6
+   },
+   "corpus_verbatim": "，PI有事后推翻权",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "S4T-11",
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "src_idx": 10,
+   "in_heldout": true,
+   "seq_v3": [],
+   "seq_v31": [
+    "RISK"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "RISK",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "记忆效应",
+     "layer": "RISK",
+     "char_pos": 2
+    }
+   ],
+   "layer_first_pos_v31": {
+    "RISK": 2
+   },
+   "corpus_verbatim": "，防记忆效应",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "S4T-12",
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "src_idx": 11,
+   "in_heldout": false,
+   "seq_v3": [],
+   "seq_v31": [
+    "RISK"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "RISK",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 4
+    }
+   ],
+   "layer_first_pos_v31": {
+    "RISK": 4
+   },
+   "corpus_verbatim": "，防隐性遗忘",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "S4T-13",
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "src_idx": 12,
+   "in_heldout": false,
+   "seq_v3": [],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "CRITERIA",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "保证",
+     "layer": "CRITERIA",
+     "char_pos": 1
+    },
+    {
+     "word": "质量",
+     "layer": "CRITERIA",
+     "char_pos": 5
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 1
+   },
+   "corpus_verbatim": "，保证作答质量",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "S4T-14",
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "src_idx": 13,
+   "in_heldout": false,
+   "seq_v3": [],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "CRITERIA",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "质量",
+     "layer": "CRITERIA",
+     "char_pos": 13
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 13
+   },
+   "corpus_verbatim": "B，此外设立适量开放题提升质量",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "Q10_third_read",
+   "file": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+   "src_idx": 3,
+   "in_heldout": false,
+   "seq_v3": [
+    "COST",
+    "RISK",
+    "TIMING"
+   ],
+   "seq_v31": [
+    "COST",
+    "KILL_LINE",
+    "RISK",
+    "TIMING"
+   ],
+   "primary_v3": "COST",
+   "primary_v31": "COST",
+   "displacement_type": "T1",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "推翻",
+     "layer": "KILL_LINE",
+     "char_pos": 52
+    }
+   ],
+   "layer_first_pos_v31": {
+    "KILL_LINE": 52,
+    "COST": 11,
+    "RISK": 69,
+    "TIMING": 126
+   },
+   "corpus_verbatim": "因为山就在那里，除非我资金实在有限，否则我将支持 || D1原读: 不如问权重意味着什么？预设权重本就可推翻，论文权重也可改，优先级权重则不可避免地陷入危机预防困境，即风险不稳定下预防优先级被排后，这是世界性的难题且可能伴随过敏反应请不必纠结，我倾向于先斩后奏",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-21",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 20,
+   "in_heldout": true,
+   "seq_v3": [],
+   "seq_v31": [
+    "RISK"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "RISK",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "回退",
+     "layer": "RISK",
+     "char_pos": 27
+    }
+   ],
+   "layer_first_pos_v31": {
+    "RISK": 27
+   },
+   "corpus_verbatim": "此外无需<=2~3，<=3即可，但因PI而异且要注意防回退",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-27",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 26,
+   "in_heldout": true,
+   "seq_v3": [],
+   "seq_v31": [
+    "RISK",
+    "CRITERIA"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "RISK",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "噪声",
+     "layer": "RISK",
+     "char_pos": 0
+    },
+    {
+     "word": "缺陷",
+     "layer": "RISK",
+     "char_pos": 20
+    },
+    {
+     "word": "复核",
+     "layer": "CRITERIA",
+     "char_pos": 30
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 30,
+    "RISK": 0
+   },
+   "corpus_verbatim": "噪声不应被引用而应转写，诚然探针可能构造缺陷影响结论，但那是复核的事了",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-34",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 33,
+   "in_heldout": false,
+   "seq_v3": [],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "CRITERIA",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "保证",
+     "layer": "CRITERIA",
+     "char_pos": 0
+    },
+    {
+     "word": "对齐",
+     "layer": "CRITERIA",
+     "char_pos": 28
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 0
+   },
+   "corpus_verbatim": "保证主线统一，也因此应点明主线，上周过于开放，一致成果没对齐主线",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-38",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 37,
+   "in_heldout": true,
+   "seq_v3": [],
+   "seq_v31": [
+    "KILL_LINE",
+    "TIMING"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "KILL_LINE",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "检验",
+     "layer": "KILL_LINE",
+     "char_pos": 3
+    },
+    {
+     "word": "后面",
+     "layer": "TIMING",
+     "char_pos": 10
+    }
+   ],
+   "layer_first_pos_v31": {
+    "KILL_LINE": 3,
+    "TIMING": 10
+   },
+   "corpus_verbatim": "LLM检验蒸馏成果是后面的事",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-40",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 39,
+   "in_heldout": true,
+   "seq_v3": [
+    "CRITERIA"
+   ],
+   "seq_v31": [
+    "RISK",
+    "CRITERIA"
+   ],
+   "primary_v3": "CRITERIA",
+   "primary_v31": "RISK",
+   "displacement_type": "T1",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 2
+    },
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 12
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 5,
+    "RISK": 2
+   },
+   "corpus_verbatim": "对抗遗忘，与死同行是对抗遗忘的过程，也是对抗机械的过程",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-47",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 46,
+   "in_heldout": false,
+   "seq_v3": [],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "CRITERIA",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "复核",
+     "layer": "CRITERIA",
+     "char_pos": 2
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 2
+   },
+   "corpus_verbatim": "便于复核",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-49",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 48,
+   "in_heldout": false,
+   "seq_v3": [
+    "TIMING",
+    "CRITERIA"
+   ],
+   "seq_v31": [
+    "TIMING",
+    "CRITERIA",
+    "RISK"
+   ],
+   "primary_v3": "TIMING",
+   "primary_v31": "TIMING",
+   "displacement_type": "T1",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "记忆效应",
+     "layer": "RISK",
+     "char_pos": 27
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 21,
+    "RISK": 27,
+    "TIMING": 13
+   },
+   "corpus_verbatim": "0复用是指不复用答案，否则跨日无意义，此外口径变化是防记忆效应的体现",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-52",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 51,
+   "in_heldout": true,
+   "seq_v3": [],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "CRITERIA",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "复核",
+     "layer": "CRITERIA",
+     "char_pos": 4
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 4
+   },
+   "corpus_verbatim": "先由PI复核，人是活的，PI是人",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-53",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 52,
+   "in_heldout": false,
+   "seq_v3": [],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "CRITERIA",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "复核",
+     "layer": "CRITERIA",
+     "char_pos": 13
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 13
+   },
+   "corpus_verbatim": "外发版C，保护隐私，兼顾可复核",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-55",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 54,
+   "in_heldout": false,
+   "seq_v3": [
+    "TIMING"
+   ],
+   "seq_v31": [
+    "TIMING",
+    "RISK"
+   ],
+   "primary_v3": "TIMING",
+   "primary_v31": "TIMING",
+   "displacement_type": "T1",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 19
+    }
+   ],
+   "layer_first_pos_v31": {
+    "RISK": 19,
+    "TIMING": 0
+   },
+   "corpus_verbatim": "全量推进，也因此可以把待拍板项提上来，遗忘了则更麻烦",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-57",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 56,
+   "in_heldout": false,
+   "seq_v3": [],
+   "seq_v31": [
+    "RISK"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "RISK",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 2
+    }
+   ],
+   "layer_first_pos_v31": {
+    "RISK": 2
+   },
+   "corpus_verbatim": "避免遗忘",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-62",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 61,
+   "in_heldout": false,
+   "seq_v3": [
+    "CRITERIA",
+    "TIMING"
+   ],
+   "seq_v31": [
+    "CRITERIA",
+    "RISK",
+    "TIMING"
+   ],
+   "primary_v3": "CRITERIA",
+   "primary_v31": "CRITERIA",
+   "displacement_type": "T1",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 11
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 4,
+    "RISK": 11,
+    "TIMING": 16
+   },
+   "corpus_verbatim": "既要事实求是，又要对抗遗忘，合适时机插入任务锚点是恰当的",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-63",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 62,
+   "in_heldout": false,
+   "seq_v3": [],
+   "seq_v31": [
+    "CRITERIA"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "CRITERIA",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "失实",
+     "layer": "CRITERIA",
+     "char_pos": 4
+    }
+   ],
+   "layer_first_pos_v31": {
+    "CRITERIA": 4
+   },
+   "corpus_verbatim": "否则蒸馏失实",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-64",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 63,
+   "in_heldout": false,
+   "seq_v3": [],
+   "seq_v31": [
+    "RISK"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "RISK",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "回退",
+     "layer": "RISK",
+     "char_pos": 1
+    }
+   ],
+   "layer_first_pos_v31": {
+    "RISK": 1
+   },
+   "corpus_verbatim": "防回退",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-66",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 65,
+   "in_heldout": true,
+   "seq_v3": [
+    "TIMING"
+   ],
+   "seq_v31": [
+    "TIMING",
+    "RISK"
+   ],
+   "primary_v3": "TIMING",
+   "primary_v31": "TIMING",
+   "displacement_type": "T1",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "遗忘",
+     "layer": "RISK",
+     "char_pos": 5
+    },
+    {
+     "word": "回退",
+     "layer": "RISK",
+     "char_pos": 13
+    }
+   ],
+   "layer_first_pos_v31": {
+    "RISK": 5,
+    "TIMING": 0
+   },
+   "corpus_verbatim": "全量推进防遗忘，但也注意防回退，不过本场景应不涉及进程对抗",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "D8-75",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 74,
+   "in_heldout": false,
+   "seq_v3": [],
+   "seq_v31": [
+    "TIMING"
+   ],
+   "primary_v3": "UNKNOWN",
+   "primary_v31": "TIMING",
+   "displacement_type": "T3",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "挂起",
+     "layer": "TIMING",
+     "char_pos": 0
+    }
+   ],
+   "layer_first_pos_v31": {
+    "TIMING": 0
+   },
+   "corpus_verbatim": "挂起项是时候解决了",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  },
+  {
+   "q_id": "SQ-07",
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "src_idx": 86,
+   "in_heldout": false,
+   "seq_v3": [
+    "TIMING"
+   ],
+   "seq_v31": [
+    "RISK",
+    "TIMING"
+   ],
+   "primary_v3": "TIMING",
+   "primary_v31": "RISK",
+   "displacement_type": "T1",
+   "version_attribution": "V3.1",
+   "no_overwrite_reason": "既有读数系 KEYWORDS_V3 下之读数，为在册锚（C-1 / R-1）；本件仅新件内登记，⛔ 0 覆写",
+   "new_hit_words": [
+    {
+     "word": "观察者效应",
+     "layer": "RISK",
+     "char_pos": 21
+    },
+    {
+     "word": "缺陷",
+     "layer": "RISK",
+     "char_pos": 44
+    }
+   ],
+   "layer_first_pos_v31": {
+    "RISK": 21,
+    "TIMING": 55
+   },
+   "corpus_verbatim": "出现了意外的fail，不过谈论收早收晚因为观察者效应而没有意义，往往是收晚了因为实验设计缺陷，但也会收早了因为后续实验自圆其说",
+   "declaration": {
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+   }
+  }
+ ],
+ "open_items": {
+  "X8_F_3": "处置腿未闭（另开重判面 vs 新旧并存并陈）；⛔ 0 代择、⛔ 0 硬编",
+  "U_12": "位移阈值数值盘上 0 载；⛔ 0 臆定",
+  "E_4": "面 I（26 件全量）与面 II（位移件）是否归一为单一分母 —— 未闭；本棒按核准字面分列两面",
+  "U_8": "19 之构成分解盘上未载；0 反推"
+ }
+}

@@ -1,0 +1,1061 @@
+{
+ "artifact": "_stage3_trigger_readings_items_2026_10_11.json",
+ "date": "2026-10-11",
+ "kind": "per_item_readings",
+ "step": "S4' 第三构造域 (seed'') 读数面实跑 (worker 面 · 卡 s4_run=甲·仅读数面)",
+ "note": "逐件读数 JSON; ⛔ 0 与任何汇总合并 (沿 K-RJ-11 / K-EX-10 同族); ⛔ 0 判档; ⛔ 0 赋任一 k_v3s_4_* 布尔; ⛔ 0 宣告 K-RJ-5 闭/开",
+ "authority": {
+  "pi_decision_card": {
+   "item": "s4_run",
+   "answer": "甲·授权开跑 (仅读数面)",
+   "date": "2026-10-11"
+  },
+  "md_definition": {
+   "file": "results/_md_trigger_prereg_effectivity_2026_10_11.md",
+   "sha12": "5d8cd0d1676f"
+  },
+  "stage3_trigger_recheck": {
+   "file": "results/_stage3_trigger_recheck_2026_10_11.md",
+   "sha12": "aef26b8cbe50"
+  },
+  "heldout_d3_register": {
+   "file": "results/_s4_heldout_sampling_seedthird_items_register_2026_10_11.md",
+   "sha12": "784f042bf93d"
+  },
+  "heldout_d3_items": {
+   "file": "_s4_heldout_sampling_seedthird_items_2026_10_11.json",
+   "sha12": "5777a07c608a"
+  },
+  "runner_five_lines_readonly": {
+   "file": "_s4prime_five_lines_runner_2026_10_11.py",
+   "sha12": "f784b2fc92f4"
+  },
+  "executor_readonly": {
+   "file": "_v4_pi_cot_v3_ruleset_v3_executor.py",
+   "sha12": "8a81d90c69ba"
+  },
+  "kwtable_v31": {
+   "file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+   "sha12": "1b7bcbcce589"
+  },
+  "krj5_judgement_scope": {
+   "file": "results/_s3prime_alert_disposition_judgment_2026_10_11.md",
+   "sha12": "e7fcbc290a7e"
+  }
+ },
+ "runtime": {
+  "python": "3.14.7",
+  "numpy": "2.5.3",
+  "network": 0,
+  "endpoint_calls": 0,
+  "api_key": 0,
+  "skill": 0,
+  "llm": 0,
+  "env_read": 0
+ },
+ "face_selfproof_grid13": {
+  "measured": {
+   "occupied_cells": 54,
+   "empty_cells": 74,
+   "sum_floor_0.30n": 26,
+   "cells_n_ge_4": 16,
+   "cells_n_le_3": 38,
+   "cells_n_eq_1": 16,
+   "n_min": 1,
+   "n_max": 16,
+   "n_sum": 179,
+   "b0_occupied_cells": 43,
+   "b1_occupied_cells": 11,
+   "b1_rows": 15,
+   "grid_total": 128,
+   "n_events": 179
+  },
+  "registered": {
+   "occupied_cells": 54,
+   "empty_cells": 74,
+   "sum_floor_0.30n": 26,
+   "cells_n_ge_4": 16,
+   "cells_n_le_3": 38,
+   "cells_n_eq_1": 16,
+   "n_min": 1,
+   "n_max": 16,
+   "n_sum": 179,
+   "b0_occupied_cells": 43,
+   "b1_occupied_cells": 11,
+   "b1_rows": 15,
+   "grid_total": 128,
+   "n_events": 179
+  },
+  "all_match": true
+ },
+ "selfcert_domain2": {
+  "purpose": "以同一实现于第二构造域重算, 与在册 65a9b9be6327 之 per_item[] 逐位比对; 系管道同源性自证, ⛔ 非新旧读数面之比较, ⛔ 0 并表 0 比大小",
+  "fingerprint": "3c25e1a2ea94",
+  "n_items": 26,
+  "fields_compared": 13,
+  "diffs": 0,
+  "result": "BIT_IDENTICAL"
+ },
+ "heldout_fingerprint": {
+  "sha12_recomputed": "c34835ad59cf",
+  "full_sha256_recomputed": "c34835ad59cf75a75fcfbdbb61480c1ed7cb2cfc3b9a8dbac4c2f7c0d2c786b5",
+  "sha12_registered": "c34835ad59cf",
+  "match": true,
+  "n": 26
+ },
+ "crosscheck_vs_5777a07c608a": {
+  "fields": [
+   "seq_v31",
+   "q_id"
+  ],
+  "n_items": 26,
+  "diffs": 0
+ },
+ "crosscheck_LS_vs_aef26b8cbe50": {
+  "discrete_bit_identical": true,
+  "continuous_reldiff_mean": 3.116797889990633e-15,
+  "continuous_reldiff_std": 9.898897209229498e-16,
+  "continuous_within_1e-12": true,
+  "zero7_qids_bit_identical": true,
+  "note": "在册件之 mean/std 系 14 位有效数字之显示值; 离散量 (n_distinct/min/max/取值域/频次) 逐位全等, 连续量相对差 < 1e-12"
+ },
+ "crosscheck_MD_vs_5d8cd0d1676f": {
+  "note": "在册 §2-4 之 MD 静态 n_distinct=8 (留一 7 · min 0.0 · max 16.0) 系域 3c25e1a2ea94; 本棒以自审门逐位复现之第二域逐件读数独立复算, 对勘之",
+  "mine": {
+   "n_distinct": 8,
+   "min": 0.0,
+   "max": 16.0,
+   "leave_one_out_min": 7
+  },
+  "registered": {
+   "n_distinct": 8,
+   "min": 0.0,
+   "max": 16.0,
+   "loo_min": 7,
+   "n_items": 26
+  },
+  "bit_identical": true
+ },
+ "model_side_declaration": {
+  "gold_kwtable": "KEYWORDS_V3.1 (= KEYWORDS_V3 (+) 15 词, 1b7bcbcce589 §4)",
+  "model_tree": "V3",
+  "training_label_kwtable": "KEYWORDS_V3",
+  "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+  "unknown_fallback": "predict_tree 叶子 = majority(labels); primary_judgment_type_v3 空序列 -> 'UNKNOWN' (ex L522-L529, L691-L694)",
+  "mixed_object": true,
+  "note": "gold 侧 V3.1 × model 侧 V3 之混合构造 (沿 e91e7f52c726 同族); ⛔ 本件 0 就其可比性作任何断言"
+ },
+ "domain3": {
+  "meta": {
+   "n_events": 179,
+   "n_held": 26,
+   "n_train": 153,
+   "tree_depth_observed": 6,
+   "model_side_kwtable": "KEYWORDS_V3",
+   "gold_kwtable": "KEYWORDS_V3.1 (= KEYWORDS_V3 (+) 15 词, 1b7bcbcce589 §4)"
+  },
+  "per_item": [
+   {
+    "face_index": 26,
+    "key": [
+     "_s4_substrate_topup_addendum_2026_10_09.json",
+     14
+    ],
+    "q_id": "S4T-15",
+    "pred": "RISK",
+    "gold_seq_v31": [
+     "CRITERIA"
+    ],
+    "gold_seq_v3": [
+     "CRITERIA"
+    ],
+    "nw_v31": 0.5,
+    "nled_v31": 0.0,
+    "nw_v3": 0.5,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": false,
+    "corpus_len": 5,
+    "ls_v31": 4,
+    "tv": 0.5,
+    "md": 2.0
+   },
+   {
+    "face_index": 41,
+    "key": [
+     "_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json",
+     0
+    ],
+    "q_id": "Q40",
+    "pred": "RISK",
+    "gold_seq_v31": [
+     "DELEGATE",
+     "TIMING"
+    ],
+    "gold_seq_v3": [
+     "DELEGATE",
+     "TIMING"
+    ],
+    "nw_v31": 0.3,
+    "nled_v31": 0.0,
+    "nw_v3": 0.3,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": true,
+    "corpus_len": 11,
+    "ls_v31": 48,
+    "tv": 0.3,
+    "md": 14.399999999999999
+   },
+   {
+    "face_index": 45,
+    "key": [
+     "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+     0
+    ],
+    "q_id": "Q44",
+    "pred": "CRITERIA",
+    "gold_seq_v31": [
+     "DELEGATE"
+    ],
+    "gold_seq_v3": [
+     "DELEGATE"
+    ],
+    "nw_v31": 0.5,
+    "nled_v31": 0.0,
+    "nw_v3": 0.5,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": false,
+    "corpus_len": 12,
+    "ls_v31": 32,
+    "tv": 0.5,
+    "md": 16.0
+   },
+   {
+    "face_index": 47,
+    "key": [
+     "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+     2
+    ],
+    "q_id": "Q46",
+    "pred": "CRITERIA",
+    "gold_seq_v31": [
+     "DELEGATE",
+     "RISK"
+    ],
+    "gold_seq_v3": [
+     "DELEGATE",
+     "RISK"
+    ],
+    "nw_v31": 0.3,
+    "nled_v31": 0.0,
+    "nw_v3": 0.3,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": true,
+    "corpus_len": 38,
+    "ls_v31": 40,
+    "tv": 0.3,
+    "md": 12.0
+   },
+   {
+    "face_index": 48,
+    "key": [
+     "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+     3
+    ],
+    "q_id": "Q47",
+    "pred": "TIMING",
+    "gold_seq_v31": [
+     "TIMING"
+    ],
+    "gold_seq_v3": [
+     "TIMING"
+    ],
+    "nw_v31": 1.0,
+    "nled_v31": 1.0,
+    "nw_v3": 1.0,
+    "nled_v3": 1.0,
+    "divergent": false,
+    "critical": false,
+    "corpus_len": 2,
+    "ls_v31": 16,
+    "tv": 0.0,
+    "md": 0.0
+   },
+   {
+    "face_index": 50,
+    "key": [
+     "_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json",
+     1
+    ],
+    "q_id": "Q49",
+    "pred": "UNKNOWN",
+    "gold_seq_v31": [],
+    "gold_seq_v3": [],
+    "nw_v31": 0.0,
+    "nled_v31": 0.0,
+    "nw_v3": 0.0,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": true,
+    "corpus_len": 31,
+    "ls_v31": 0,
+    "tv": 0.0,
+    "md": 0.0
+   },
+   {
+    "face_index": 54,
+    "key": [
+     "_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json",
+     1
+    ],
+    "q_id": "Q2_third_read",
+    "pred": "TIMING",
+    "gold_seq_v31": [
+     "CRITERIA",
+     "RISK",
+     "COST",
+     "DELEGATE"
+    ],
+    "gold_seq_v3": [
+     "CRITERIA",
+     "RISK",
+     "COST",
+     "DELEGATE"
+    ],
+    "nw_v31": 0.16666666666666666,
+    "nled_v31": 0.0,
+    "nw_v3": 0.16666666666666666,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": true,
+    "corpus_len": 76,
+    "ls_v31": 46,
+    "tv": 0.16666666666666666,
+    "md": 7.666666666666666
+   },
+   {
+    "face_index": 57,
+    "key": [
+     "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+     0
+    ],
+    "q_id": "Q6_third_read",
+    "pred": "CRITERIA",
+    "gold_seq_v31": [
+     "RISK",
+     "CRITERIA",
+     "KILL_LINE"
+    ],
+    "gold_seq_v3": [
+     "RISK",
+     "CRITERIA",
+     "KILL_LINE"
+    ],
+    "nw_v31": 0.42857142857142855,
+    "nled_v31": 0.33333333333333337,
+    "nw_v3": 0.42857142857142855,
+    "nled_v3": 0.33333333333333337,
+    "divergent": false,
+    "critical": true,
+    "corpus_len": 51,
+    "ls_v31": 13,
+    "tv": 0.09523809523809518,
+    "md": 1.2380952380952372
+   },
+   {
+    "face_index": 60,
+    "key": [
+     "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+     3
+    ],
+    "q_id": "Q10_third_read",
+    "pred": "CRITERIA",
+    "gold_seq_v31": [
+     "COST",
+     "KILL_LINE",
+     "RISK",
+     "TIMING"
+    ],
+    "gold_seq_v3": [
+     "COST",
+     "RISK",
+     "TIMING"
+    ],
+    "nw_v31": 0.16666666666666666,
+    "nled_v31": 0.0,
+    "nw_v3": 0.21428571428571427,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": true,
+    "corpus_len": 130,
+    "ls_v31": 27,
+    "tv": 0.16666666666666666,
+    "md": 4.5
+   },
+   {
+    "face_index": 72,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d6_2026_09_28.json",
+     0
+    ],
+    "q_id": "DF6-1",
+    "pred": "UNKNOWN",
+    "gold_seq_v31": [],
+    "gold_seq_v3": [],
+    "nw_v31": 0.0,
+    "nled_v31": 0.0,
+    "nw_v3": 0.0,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": false,
+    "corpus_len": 0,
+    "ls_v31": 0,
+    "tv": 0.0,
+    "md": 0.0
+   },
+   {
+    "face_index": 85,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     6
+    ],
+    "q_id": "D8-07",
+    "pred": "UNKNOWN",
+    "gold_seq_v31": [],
+    "gold_seq_v3": [],
+    "nw_v31": 0.0,
+    "nled_v31": 0.0,
+    "nw_v3": 0.0,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": false,
+    "corpus_len": 6,
+    "ls_v31": 0,
+    "tv": 0.0,
+    "md": 0.0
+   },
+   {
+    "face_index": 95,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     16
+    ],
+    "q_id": "D8-17",
+    "pred": "RISK",
+    "gold_seq_v31": [
+     "RISK"
+    ],
+    "gold_seq_v3": [
+     "RISK"
+    ],
+    "nw_v31": 1.0,
+    "nled_v31": 1.0,
+    "nw_v3": 1.0,
+    "nled_v3": 1.0,
+    "divergent": false,
+    "critical": true,
+    "corpus_len": 13,
+    "ls_v31": 8,
+    "tv": 0.0,
+    "md": 0.0
+   },
+   {
+    "face_index": 99,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     20
+    ],
+    "q_id": "D8-21",
+    "pred": "UNKNOWN",
+    "gold_seq_v31": [
+     "RISK"
+    ],
+    "gold_seq_v3": [],
+    "nw_v31": 0.5,
+    "nled_v31": 0.0,
+    "nw_v3": 0.0,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": true,
+    "corpus_len": 29,
+    "ls_v31": 8,
+    "tv": 0.5,
+    "md": 4.0
+   },
+   {
+    "face_index": 102,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     23
+    ],
+    "q_id": "D8-24",
+    "pred": "CRITERIA",
+    "gold_seq_v31": [
+     "RISK"
+    ],
+    "gold_seq_v3": [
+     "RISK"
+    ],
+    "nw_v31": 0.5,
+    "nled_v31": 0.0,
+    "nw_v3": 0.5,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": true,
+    "corpus_len": 31,
+    "ls_v31": 8,
+    "tv": 0.5,
+    "md": 4.0
+   },
+   {
+    "face_index": 106,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     27
+    ],
+    "q_id": "D8-28",
+    "pred": "CRITERIA",
+    "gold_seq_v31": [
+     "RISK"
+    ],
+    "gold_seq_v3": [
+     "RISK"
+    ],
+    "nw_v31": 0.5,
+    "nled_v31": 0.0,
+    "nw_v3": 0.5,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": true,
+    "corpus_len": 6,
+    "ls_v31": 8,
+    "tv": 0.5,
+    "md": 4.0
+   },
+   {
+    "face_index": 108,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     29
+    ],
+    "q_id": "D8-30",
+    "pred": "CRITERIA",
+    "gold_seq_v31": [
+     "RISK"
+    ],
+    "gold_seq_v3": [
+     "RISK"
+    ],
+    "nw_v31": 0.5,
+    "nled_v31": 0.0,
+    "nw_v3": 0.5,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": true,
+    "corpus_len": 4,
+    "ls_v31": 8,
+    "tv": 0.5,
+    "md": 4.0
+   },
+   {
+    "face_index": 109,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     30
+    ],
+    "q_id": "D8-31",
+    "pred": "CRITERIA",
+    "gold_seq_v31": [
+     "CRITERIA"
+    ],
+    "gold_seq_v3": [
+     "CRITERIA"
+    ],
+    "nw_v31": 1.0,
+    "nled_v31": 1.0,
+    "nw_v3": 1.0,
+    "nled_v3": 1.0,
+    "divergent": false,
+    "critical": true,
+    "corpus_len": 4,
+    "ls_v31": 4,
+    "tv": 0.0,
+    "md": 0.0
+   },
+   {
+    "face_index": 113,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     34
+    ],
+    "q_id": "D8-35",
+    "pred": "UNKNOWN",
+    "gold_seq_v31": [],
+    "gold_seq_v3": [],
+    "nw_v31": 0.0,
+    "nled_v31": 0.0,
+    "nw_v3": 0.0,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": true,
+    "corpus_len": 27,
+    "ls_v31": 0,
+    "tv": 0.0,
+    "md": 0.0
+   },
+   {
+    "face_index": 118,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     39
+    ],
+    "q_id": "D8-40",
+    "pred": "DELEGATE",
+    "gold_seq_v31": [
+     "RISK",
+     "CRITERIA"
+    ],
+    "gold_seq_v3": [
+     "CRITERIA"
+    ],
+    "nw_v31": 0.3,
+    "nled_v31": 0.0,
+    "nw_v3": 0.5,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": false,
+    "corpus_len": 27,
+    "ls_v31": 12,
+    "tv": 0.3,
+    "md": 3.5999999999999996
+   },
+   {
+    "face_index": 119,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     40
+    ],
+    "q_id": "D8-41",
+    "pred": "DELEGATE",
+    "gold_seq_v31": [
+     "CRITERIA"
+    ],
+    "gold_seq_v3": [
+     "CRITERIA"
+    ],
+    "nw_v31": 0.5,
+    "nled_v31": 0.0,
+    "nw_v3": 0.5,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": false,
+    "corpus_len": 24,
+    "ls_v31": 4,
+    "tv": 0.5,
+    "md": 2.0
+   },
+   {
+    "face_index": 141,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     62
+    ],
+    "q_id": "D8-63",
+    "pred": "UNKNOWN",
+    "gold_seq_v31": [
+     "CRITERIA"
+    ],
+    "gold_seq_v3": [],
+    "nw_v31": 0.5,
+    "nled_v31": 0.0,
+    "nw_v3": 0.0,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": false,
+    "corpus_len": 6,
+    "ls_v31": 4,
+    "tv": 0.5,
+    "md": 2.0
+   },
+   {
+    "face_index": 144,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     65
+    ],
+    "q_id": "D8-66",
+    "pred": "RISK",
+    "gold_seq_v31": [
+     "TIMING",
+     "RISK"
+    ],
+    "gold_seq_v3": [
+     "TIMING"
+    ],
+    "nw_v31": 0.6,
+    "nled_v31": 0.5,
+    "nw_v3": 0.5,
+    "nled_v3": 0.0,
+    "divergent": false,
+    "critical": true,
+    "corpus_len": 29,
+    "ls_v31": 24,
+    "tv": 0.09999999999999998,
+    "md": 2.3999999999999995
+   },
+   {
+    "face_index": 154,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     75
+    ],
+    "q_id": "D8-76",
+    "pred": "UNKNOWN",
+    "gold_seq_v31": [],
+    "gold_seq_v3": [],
+    "nw_v31": 0.0,
+    "nled_v31": 0.0,
+    "nw_v3": 0.0,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": false,
+    "corpus_len": 4,
+    "ls_v31": 0,
+    "tv": 0.0,
+    "md": 0.0
+   },
+   {
+    "face_index": 162,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     83
+    ],
+    "q_id": "SQ-04",
+    "pred": "DELEGATE",
+    "gold_seq_v31": [
+     "CRITERIA",
+     "RISK"
+    ],
+    "gold_seq_v3": [
+     "CRITERIA",
+     "RISK"
+    ],
+    "nw_v31": 0.3,
+    "nled_v31": 0.0,
+    "nw_v3": 0.3,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": true,
+    "corpus_len": 41,
+    "ls_v31": 12,
+    "tv": 0.3,
+    "md": 3.5999999999999996
+   },
+   {
+    "face_index": 166,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     87
+    ],
+    "q_id": "SQ-08",
+    "pred": "UNKNOWN",
+    "gold_seq_v31": [],
+    "gold_seq_v3": [],
+    "nw_v31": 0.0,
+    "nled_v31": 0.0,
+    "nw_v3": 0.0,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": false,
+    "corpus_len": 0,
+    "ls_v31": 0,
+    "tv": 0.0,
+    "md": 0.0
+   },
+   {
+    "face_index": 178,
+    "key": [
+     "_v4_pi_cot_v3_dataset_addendum_s3_d7_2026_09_29.json",
+     0
+    ],
+    "q_id": "DF6-4",
+    "pred": "UNKNOWN",
+    "gold_seq_v31": [],
+    "gold_seq_v3": [],
+    "nw_v31": 0.0,
+    "nled_v31": 0.0,
+    "nw_v3": 0.0,
+    "nled_v3": 0.0,
+    "divergent": true,
+    "critical": false,
+    "corpus_len": 0,
+    "ls_v31": 0,
+    "tv": 0.0,
+    "md": 0.0
+   }
+  ],
+  "md": {
+   "n": 26,
+   "n_distinct": 11,
+   "min": 0.0,
+   "max": 16.0,
+   "mean": 3.3617216117216113,
+   "std_population": 4.393045993095451,
+   "value_domain": [
+    0.0,
+    1.2380952380952372,
+    2.0,
+    2.3999999999999995,
+    3.5999999999999996,
+    4.0,
+    4.5,
+    7.666666666666666,
+    12.0,
+    14.399999999999999,
+    16.0
+   ],
+   "leave_one_out_n_distinct": [
+    10,
+    11
+   ],
+   "leave_one_out_min": 10,
+   "leave_one_out_max": 11,
+   "n_zero_items": 10,
+   "zero_item_q_ids": [
+    "Q47",
+    "Q49",
+    "DF6-1",
+    "D8-07",
+    "D8-17",
+    "D8-31",
+    "D8-35",
+    "D8-76",
+    "SQ-08",
+    "DF6-4"
+   ],
+   "zero_item_structural_ls0": [
+    "Q49",
+    "DF6-1",
+    "D8-07",
+    "D8-35",
+    "D8-76",
+    "SQ-08",
+    "DF6-4"
+   ]
+  },
+  "ls_layer": {
+   "n_distinct": 12,
+   "min": 0,
+   "max": 48,
+   "mean": 12.538461538461538,
+   "std_population": 14.355997859996114,
+   "value_domain": [
+    0,
+    4,
+    8,
+    12,
+    13,
+    16,
+    24,
+    27,
+    32,
+    40,
+    46,
+    48
+   ],
+   "frequency": {
+    "0": 7,
+    "4": 4,
+    "8": 5,
+    "12": 2,
+    "13": 1,
+    "16": 1,
+    "24": 1,
+    "27": 1,
+    "32": 1,
+    "40": 1,
+    "46": 1,
+    "48": 1
+   }
+  },
+  "tv_layer": {
+   "n_distinct": 6,
+   "min": 0.0,
+   "max": 0.5,
+   "mean": 0.22032967032967032,
+   "std_population": 0.2123541667939005,
+   "value_domain": [
+    0.0,
+    0.09523809523809518,
+    0.09999999999999998,
+    0.16666666666666666,
+    0.3,
+    0.5
+   ],
+   "frequency": {
+    "0.0": 10,
+    "0.09523809523809518": 1,
+    "0.09999999999999998": 1,
+    "0.16666666666666666": 2,
+    "0.3": 4,
+    "0.5": 8
+   }
+  },
+  "pred_model_side_field": {
+   "n_distinct": 5,
+   "value_domain": [
+    "CRITERIA",
+    "DELEGATE",
+    "RISK",
+    "TIMING",
+    "UNKNOWN"
+   ],
+   "frequency": {
+    "CRITERIA": 8,
+    "DELEGATE": 3,
+    "RISK": 4,
+    "TIMING": 2,
+    "UNKNOWN": 9
+   },
+   "n_empty_gold_seq": 7,
+   "n_divergent": 21
+  }
+ },
+ "domain2_reference": {
+  "note": "仅供对照 · ⛔ 0 混用 0 直接比大小 (fd4ec7559342 §5); 由自审门逐位复现之逐件读数派生",
+  "meta": {
+   "n_events": 179,
+   "n_held": 26,
+   "n_train": 153,
+   "tree_depth_observed": 6,
+   "model_side_kwtable": "KEYWORDS_V3",
+   "gold_kwtable": "KEYWORDS_V3.1 (= KEYWORDS_V3 (+) 15 词, 1b7bcbcce589 §4)"
+  },
+  "md": {
+   "n": 26,
+   "n_distinct": 8,
+   "min": 0.0,
+   "max": 16.0,
+   "mean": 2.9384615384615387,
+   "std_population": 3.7473146203521965,
+   "value_domain": [
+    0.0,
+    1.1999999999999997,
+    2.0,
+    2.3999999999999995,
+    3.5999999999999996,
+    4.0,
+    8.0,
+    16.0
+   ],
+   "leave_one_out_n_distinct": [
+    7,
+    8
+   ],
+   "leave_one_out_min": 7,
+   "leave_one_out_max": 8,
+   "n_zero_items": 9,
+   "zero_item_q_ids": [
+    "q17",
+    "Q45",
+    "Q1_third_read",
+    "D8-12",
+    "D8-59r",
+    "D8-67",
+    "D8-76",
+    "D8-80",
+    "DF1-4"
+   ],
+   "zero_item_structural_ls0": [
+    "q17",
+    "Q45",
+    "D8-59r",
+    "D8-67",
+    "D8-76",
+    "D8-80",
+    "DF1-4"
+   ]
+  },
+  "ls_layer": {
+   "n_distinct": 7,
+   "min": 0,
+   "max": 32,
+   "mean": 8.153846153846153,
+   "std_population": 8.03689716099014,
+   "value_domain": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    24,
+    32
+   ],
+   "frequency": {
+    "0": 7,
+    "4": 6,
+    "8": 4,
+    "12": 3,
+    "16": 4,
+    "24": 1,
+    "32": 1
+   }
+  },
+  "tv_layer": {
+   "n_distinct": 4,
+   "min": 0.0,
+   "max": 0.5,
+   "mean": 0.27307692307692305,
+   "std_population": 0.23461538461538461,
+   "value_domain": [
+    0.0,
+    0.09999999999999998,
+    0.3,
+    0.5
+   ],
+   "frequency": {
+    "0.0": 9,
+    "0.09999999999999998": 3,
+    "0.3": 1,
+    "0.5": 13
+   }
+  },
+  "pred_model_side_field": {
+   "n_distinct": 5,
+   "value_domain": [
+    "COST",
+    "CRITERIA",
+    "DELEGATE",
+    "RISK",
+    "UNKNOWN"
+   ],
+   "frequency": {
+    "COST": 6,
+    "CRITERIA": 1,
+    "DELEGATE": 4,
+    "RISK": 5,
+    "UNKNOWN": 10
+   },
+   "n_empty_gold_seq": 7,
+   "n_divergent": 21
+  }
+ },
+ "thresholds_untouched": {
+  "TH_NW_SIM_MEAN": 0.65,
+  "TH_NLED_SIM_MEAN": 0.55,
+  "TH_CRITICAL_COV": 1.0,
+  "TH_BLIND_OBEY": 0.1,
+  "TH_BOOT_CI_FLOOR": 0.4,
+  "note": "沿 8a81d90c69ba 原值, 仅作定位; ⛔ 0 判读 0 比阈值"
+ },
+ "not_run": {
+  "five_lines_A_Ap_B_C_D": "⛔ 0 出 (卡 s4_run 仅授权读数面)",
+  "CI_bootstrap": "⛔ 0 出 (同上)",
+  "KRJ5_verdict": "⛔ 0 宣告闭/开 (归 verdict-keeper / PI)",
+  "threshold_alert_judgement": "⛔ 0 判 (归 verdict-keeper)",
+  "any_upstream_edit": "⛔ 0 回改 (全部锚件 0 编辑 0 覆写)"
+ }
+}

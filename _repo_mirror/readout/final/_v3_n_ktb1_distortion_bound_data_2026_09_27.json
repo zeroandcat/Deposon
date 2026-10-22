@@ -1,0 +1,163 @@
+{
+  "task": "V3-N #21 KT-B1 BOSS-B1/B2/B3 失真上界真测 (补齐 Trae 回函 §1.2 #21「不明」)",
+  "date": "2026-09-27",
+  "author": "Mavis 团队 worker",
+  "started": "2026-09-27T14:17:05",
+  "method": "KT_B1_REWORK_2026_09_10 §六.2 字面: 从 v19 守恒残差反向估计 deposon 失真上界",
+  "input_chain": {
+    "v19": {
+      "path": "results/deposon_v19_benchmark_fixes.json",
+      "exists": true,
+      "bytes": 409104
+    },
+    "conservation_py": {
+      "path": "verifier/audit/conservation.py",
+      "exists": true,
+      "bytes": 22105
+    },
+    "kt_b1_spec": {
+      "path": "docs/V3X/KT_B1_SPEC_V0.1.md",
+      "exists": true,
+      "bytes": 35688
+    },
+    "kt_b1_rework": {
+      "path": "docs/V3X/KT_B1_REWORK_REPORT_2026_09_10.md",
+      "exists": true,
+      "bytes": 11478
+    },
+    "p_b_spec": {
+      "path": "docs/V3X/P_B_DISTORTION_BOUND_V0_SPEC.md",
+      "exists": true,
+      "bytes": 7126
+    }
+  },
+  "missing_assets_registered": [
+    {
+      "path": ".mavis/scripts/kt_b1/boss_b1_sinkhorn_ot.py",
+      "exists": false,
+      "anchor_sha12": "19325960b8be",
+      "why": "BOSS-B1 真实脚本本仓缺失"
+    },
+    {
+      "path": ".mavis/scripts/kt_b1/boss_b2_kd.py",
+      "exists": false,
+      "anchor_sha12": "1781ea2f742d",
+      "why": "BOSS-B2 真实脚本本仓缺失"
+    },
+    {
+      "path": ".mavis/scripts/kt_b1/boss_b3_llmlingua.py",
+      "exists": false,
+      "anchor_sha12": "c0b55e0385a4",
+      "why": "BOSS-B3 真实脚本本仓缺失"
+    },
+    {
+      "path": "tools/distortion_calculator.py",
+      "exists": false,
+      "anchor_sha12": "n/a",
+      "why": "P-B V0 §7 五锚之一 (D1 由 data 实现) 本仓缺失"
+    }
+  ],
+  "measured_deposon_distortion_bound": {
+    "value": 2.220446049250313e-16,
+    "hex": "0x1.0000000000000p-52",
+    "equals_ieee754_double_eps_2^-52": true,
+    "derivation": "conservation.check_conservation_graded(v19, v19).max_deviation = max(layer1_deviation, layer2_max_deviation)",
+    "n_records_checked": 1592,
+    "conservation_graded_verdict": "PASS",
+    "layer1_deviation": 2.220446049250313e-16,
+    "layer2_max_deviation": 0.0,
+    "stored_physics_audit": {
+      "t_plus_r_plus_a_max_deviation": 2.220446049250313e-16,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    "stored_vs_recomputed_match": true
+  },
+  "criteria_literal": {
+    "internal_kill_line": "失真上界 >= 0.95 (KT_B1_SPEC_V0.1 §1.1)",
+    "new_thresholds_introduced": 0
+  },
+  "boss_rejudgment": {
+    "B1_Sinkhorn_OT": {
+      "generic_bound_from_report": 0.0004,
+      "generic_bound_recomputable": false,
+      "deposon_placeholder": 0.5,
+      "deposon_measured": 2.220446049250313e-16,
+      "deposon_replaced": true,
+      "vs_internal_kill_line": {
+        "generic_below_0.95": true,
+        "deposon_below_0.95": true,
+        "deposon_verdict": "FAIL (失真上界 << 0.95)"
+      },
+      "verdict_under_identified_mapping": "GRAY_BOTH_ABOVE",
+      "verdict_mapping_A_both_vs_kill_line": "GRAY_BOTH_BELOW",
+      "verdict_mapping_B_both_vs_deposon": "GRAY_BOTH_ABOVE",
+      "original_verdict_in_report": "GRAY_BOTH_BELOW",
+      "flipped_vs_original": true
+    },
+    "B2_KD": {
+      "generic_bound_from_report": 0.0028,
+      "generic_bound_recomputable": false,
+      "deposon_placeholder": 0.5,
+      "deposon_measured": 2.220446049250313e-16,
+      "deposon_replaced": true,
+      "vs_internal_kill_line": {
+        "generic_below_0.95": true,
+        "deposon_below_0.95": true,
+        "deposon_verdict": "FAIL (失真上界 << 0.95)"
+      },
+      "verdict_under_identified_mapping": "GRAY_BOTH_ABOVE",
+      "verdict_mapping_A_both_vs_kill_line": "GRAY_BOTH_BELOW",
+      "verdict_mapping_B_both_vs_deposon": "GRAY_BOTH_ABOVE",
+      "original_verdict_in_report": "GRAY_BOTH_BELOW",
+      "flipped_vs_original": true
+    },
+    "B3_LLMLingua": {
+      "generic_bound_from_report": 0.4634,
+      "generic_bound_recomputable": false,
+      "deposon_placeholder": 0.05,
+      "deposon_measured": 2.220446049250313e-16,
+      "deposon_replaced": true,
+      "vs_internal_kill_line": {
+        "generic_below_0.95": true,
+        "deposon_below_0.95": true,
+        "deposon_verdict": "FAIL (失真上界 << 0.95)"
+      },
+      "verdict_under_identified_mapping": "GRAY_BOTH_ABOVE",
+      "verdict_mapping_A_both_vs_kill_line": "GRAY_BOTH_BELOW",
+      "verdict_mapping_B_both_vs_deposon": "GRAY_BOTH_ABOVE",
+      "original_verdict_in_report": "GRAY_BOTH_ABOVE",
+      "flipped_vs_original": false
+    }
+  },
+  "discriminating_power_audit": {
+    "measured_bound_is_ieee754_eps": true,
+    "structural_identity": "T=(1-eta)v, R=eta*g_couple*(1-v), A=1-T-R → T+R+A ≡ 1 为构造恒等; conservation.py 层2 由 pred 合成验和, 对 v19 无显式 T/R/A 字段者「合成恒守恒」(源件 L13 自述)",
+    "consequence": "残差 2.22e-16 = 2^-52 双精度舍入极限, 不含任何关于 deposon 相对Bayesian 基线信息失真的证据 → 该测法轴无鉴别力",
+    "verdict_on_evidence_quality": "占位 0.5 已被**实测值**替换(占位问题解除), 但 BOSS-B1/B2/B3 仍**未被真正受审**(测法轴问题未解除)",
+    "parallel_to_trae_item_5": "与 Trae 回函 §1.2 #5「540 cells 守恒 STRICT_CONSERVATION = 结构性恒等, 不构成实验证据」为同一根因"
+  },
+  "gray_label_semantics_identification": {
+    "method": "用原报告 §三 表 3 行的 (通用基线, deposon 占位, 原标签) 三元组做自识别",
+    "candidates": {
+      "A_both_vs_kill_line": {
+        "reproduces_original_labels": "2/3",
+        "identified": false
+      },
+      "B_both_vs_deposon": {
+        "reproduces_original_labels": "3/3",
+        "identified": true
+      }
+    },
+    "identified_mapping": "B_both_vs_deposon",
+    "unique": true,
+    "conclusion": "唯一读法 B 被识别: ABOVE/BELOW 指**通用基线值相对 deposon 值**的高低"
+  },
+  "outcome": {
+    "status": "COMPLETED_WITH_LIMITATION",
+    "placeholder_replaced": true,
+    "general_baseline_truly_audited": false,
+    "item_21_recommendation": "仍标「不明」, 但根因从「占位值未真测」收敛为「测法轴结构性恒等 → 真测也无法受审」"
+  },
+  "finished": "2026-09-27T14:17:05"
+}

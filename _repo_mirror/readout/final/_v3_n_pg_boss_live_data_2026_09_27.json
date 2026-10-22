@@ -1,0 +1,369 @@
+{
+  "task": "V3-N #19 P-G boss_pg 三项 SCAFFOLDING 实跑 (补齐 Trae 回函 §1.2 #19「不明」)",
+  "date": "2026-09-27",
+  "author": "Mavis 团队 worker",
+  "started": "2026-09-27T14:15:46",
+  "premise_correction": {
+    "dispatch_order_said": "540 次 LLM 调用 (9 model x 60 cell), 需 tun 代理 + key",
+    "source_spec_says": "P-G V0 spec §4.3 资源约束「0 LLM 调用 / 不设 proxy」; §5 铁律 1「0 LLM 调用」; 3 个 boss_pg_*.py iron rules 全部 '0 LLM calls' / 'no_proxy' / 'no_api_key_read'",
+    "what_540_actually_is": "9 model × 60 cells 的已实算 cell 数(源自 deposon_v3_physical_opt_60cells_2026_09_11.json), 非 LLM 调用次数",
+    "data_already_on_disk": true,
+    "real_gap": "540-cell 双曲 transport 数据已落盘; 缺的是 3 个 BOSS 的真实逻辑(SCAFFOLDING TODO)",
+    "conclusion": "本条实跑 LLM 调用数 = 0; 无需 tun 代理; 无需 key"
+  },
+  "input_chain": {
+    "pg_v01_540cells": {
+      "path": "results/deposon_pg_v01_9m60c_2026_09_15.json",
+      "exists": true,
+      "bytes": 11512
+    },
+    "v3_60cells_source": {
+      "path": "results/deposon_v3_physical_opt_60cells_2026_09_11.json",
+      "exists": true
+    },
+    "spec": {
+      "path": "docs/V3X/P_G_NON_EUCLIDEAN_SCATTERING_V0_SPEC.md",
+      "exists": true
+    },
+    "pre_reg_scripts": [
+      "deposon_team/plugins/boss_pg_1_riemannian_degenerate.py",
+      "deposon_team/plugins/boss_pg_2_hyperbolic_classification_collapse.py",
+      "deposon_team/plugins/boss_pg_3_geodesic_violation.py"
+    ]
+  },
+  "method_constants": {
+    "C_TRUE_HYPERBOLIC": 1.0,
+    "C_NEAR_EUCLIDEAN": 0.001,
+    "DEGENERACY_DELTA_THRESHOLD_PASS": 0.1,
+    "DEGENERACY_DELTA_THRESHOLD_GRAY": 0.01,
+    "COLLAPSE_STD_THRESHOLD_PASS": 0.2,
+    "COLLAPSE_STD_THRESHOLD_GRAY": 0.05,
+    "VIOLATION_THRESHOLD_PASS": 1e-06,
+    "VIOLATION_THRESHOLD_GRAY": 0.001,
+    "transport_velocity": [
+      0.08,
+      -0.02
+    ],
+    "canonical_model": "glm-5.3",
+    "max_norm_ball": 0.95,
+    "source": "逐字取自 boss_pg_*.py PRE-REGISTRATION 常数 + _pg_v01_compute.main() 已落盘值",
+    "new_thresholds_introduced": 0
+  },
+  "n_models": 9,
+  "n_total_cells": 540,
+  "llm_calls": 0,
+  "proxy": "none",
+  "key_read": false,
+  "BOSS_PG_1_riemannian_degenerate": {
+    "per_model": [
+      {
+        "model": "doubao-seed-2.0-lite",
+        "delta_c1_vs_c0001": 0.061852,
+        "x_c1": [
+          0.885219,
+          -0.012649
+        ],
+        "x_c0001": [
+          0.946634,
+          -0.019994
+        ]
+      },
+      {
+        "model": "glm-5.3",
+        "delta_c1_vs_c0001": 0.061458,
+        "x_c1": [
+          0.885484,
+          0.019441
+        ],
+        "x_c0001": [
+          0.946634,
+          0.013304
+        ]
+      },
+      {
+        "model": "deepseek-v4-flash",
+        "delta_c1_vs_c0001": 0.048652,
+        "x_c1": [
+          0.798094,
+          0.049791
+        ],
+        "x_c0001": [
+          0.846648,
+          0.046702
+        ]
+      },
+      {
+        "model": "doubao-seed-evolving",
+        "delta_c1_vs_c0001": 0.044787,
+        "x_c1": [
+          0.768542,
+          0.049324
+        ],
+        "x_c0001": [
+          0.813253,
+          0.046702
+        ]
+      },
+      {
+        "model": "minimax-m3",
+        "delta_c1_vs_c0001": 0.041346,
+        "x_c1": [
+          0.738741,
+          0.01659
+        ],
+        "x_c0001": [
+          0.779956,
+          0.013303
+        ]
+      },
+      {
+        "model": "glm-5.3-flash",
+        "delta_c1_vs_c0001": 0.041495,
+        "x_c1": [
+          0.738575,
+          0.243632
+        ],
+        "x_c0001": [
+          0.779957,
+          0.246695
+        ]
+      },
+      {
+        "model": "kimi-k2.7-code",
+        "delta_c1_vs_c0001": 0.034006,
+        "x_c1": [
+          0.679263,
+          0.080578
+        ],
+        "x_c0001": [
+          0.713264,
+          0.08
+        ]
+      },
+      {
+        "model": "doubao-seed-2.1-turbo",
+        "delta_c1_vs_c0001": 0.032315,
+        "x_c1": [
+          0.647976,
+          0.30873
+        ],
+        "x_c0001": [
+          0.679967,
+          0.313294
+        ]
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "delta_c1_vs_c0001": 0.027595,
+        "x_c1": [
+          0.586161,
+          0.374851
+        ],
+        "x_c0001": [
+          0.613273,
+          0.379993
+        ]
+      }
+    ],
+    "median_delta": 0.041495,
+    "min_delta": 0.027595,
+    "max_delta": 0.061852,
+    "verdict": "GRAY",
+    "rule": "median < 0.01 FAIL / [0.01,0.10) GRAY / >= 0.10 PASS",
+    "n_models": 9
+  },
+  "BOSS_PG_2_hyperbolic_classification_collapse": {
+    "pairwise_matrix": [
+      [
+        0.0,
+        0.267452,
+        0.737911,
+        0.857278,
+        0.92238,
+        1.693661,
+        1.244691,
+        2.001893,
+        2.276531
+      ],
+      [
+        0.267452,
+        0.0,
+        0.651881,
+        0.795545,
+        0.907544,
+        1.572609,
+        1.198096,
+        1.912711,
+        2.200309
+      ],
+      [
+        0.737911,
+        0.651881,
+        0.0,
+        0.154459,
+        0.32608,
+        0.959564,
+        0.55406,
+        1.267594,
+        1.549958
+      ],
+      [
+        0.857278,
+        0.795545,
+        0.154459,
+        0.0,
+        0.195116,
+        0.876339,
+        0.403224,
+        1.147455,
+        1.419264
+      ],
+      [
+        0.92238,
+        0.907544,
+        0.32608,
+        0.195116,
+        0.0,
+        0.951459,
+        0.342926,
+        1.153962,
+        1.398356
+      ],
+      [
+        1.693661,
+        1.572609,
+        0.959564,
+        0.876339,
+        0.951459,
+        0.0,
+        0.692421,
+        0.493725,
+        0.83962
+      ],
+      [
+        1.244691,
+        1.198096,
+        0.55406,
+        0.403224,
+        0.342926,
+        0.692421,
+        0.0,
+        0.821229,
+        1.055914
+      ],
+      [
+        2.001893,
+        1.912711,
+        1.267594,
+        1.147455,
+        1.153962,
+        0.493725,
+        0.821229,
+        0.0,
+        0.346285
+      ],
+      [
+        2.276531,
+        2.200309,
+        1.549958,
+        1.419264,
+        1.398356,
+        0.83962,
+        1.055914,
+        0.346285,
+        0.0
+      ]
+    ],
+    "n_pairwise": 36,
+    "std_pairwise_d_H": 0.553613,
+    "mean_pairwise_d_H": 1.005264,
+    "min_pairwise_d_H": 0.154459,
+    "max_pairwise_d_H": 2.276531,
+    "verdict": "PASS",
+    "rule": "std < 0.05 FAIL / [0.05,0.20) GRAY / >= 0.20 PASS",
+    "n_models": 9
+  },
+  "BOSS_PG_3_geodesic_violation": {
+    "per_model": [
+      {
+        "model": "doubao-seed-2.0-lite",
+        "max_rel_violation": 5.287510919711925e-16,
+        "w_norm": 1.39980549,
+        "n_steps": 20,
+        "n_points_on_path": 21
+      },
+      {
+        "model": "glm-5.3",
+        "max_rel_violation": 4.2245895913806963e-16,
+        "w_norm": 1.40160111,
+        "n_steps": 20,
+        "n_points_on_path": 21
+      },
+      {
+        "model": "deepseek-v4-flash",
+        "max_rel_violation": 3.1122243158865795e-16,
+        "w_norm": 1.09763002,
+        "n_steps": 20,
+        "n_points_on_path": 21
+      },
+      {
+        "model": "doubao-seed-evolving",
+        "max_rel_violation": 3.107948107441064e-16,
+        "w_norm": 1.02063023,
+        "n_steps": 20,
+        "n_points_on_path": 21
+      },
+      {
+        "model": "minimax-m3",
+        "max_rel_violation": 4.39118658174082e-16,
+        "w_norm": 0.94811192,
+        "n_steps": 20,
+        "n_points_on_path": 21
+      },
+      {
+        "model": "glm-5.3-flash",
+        "max_rel_violation": 3.5598594392383924e-16,
+        "w_norm": 1.03957571,
+        "n_steps": 20,
+        "n_points_on_path": 21
+      },
+      {
+        "model": "kimi-k2.7-code",
+        "max_rel_violation": 3.7914308737817337e-16,
+        "w_norm": 0.83664081,
+        "n_steps": 20,
+        "n_points_on_path": 21
+      },
+      {
+        "model": "doubao-seed-2.1-turbo",
+        "max_rel_violation": 2.588327127514198e-16,
+        "w_norm": 0.90302018,
+        "n_steps": 20,
+        "n_points_on_path": 21
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "max_rel_violation": 1.9882690563978252e-16,
+        "w_norm": 0.85905648,
+        "n_steps": 20,
+        "n_points_on_path": 21
+      }
+    ],
+    "median_violation": 3.5598594392383924e-16,
+    "min_violation": 1.9882690563978252e-16,
+    "max_violation": 5.287510919711925e-16,
+    "verdict": "PASS",
+    "rule": "median < 1e-6 PASS / [1e-6,1e-3) GRAY / >= 1e-3 FAIL",
+    "n_models": 9,
+    "metric_note": "violation = max_t | atanh(||Exp_0(t*w)||) - t*||w|| | / (t*||w||), w = Log_0(x0)+v; Exp_0 局部等距 → 双曲速度 dg/dt 恒定, 期望 ~1e-16"
+  },
+  "boss_verdicts": {
+    "BOSS_PG_1": "GRAY",
+    "BOSS_PG_2": "PASS",
+    "BOSS_PG_3": "PASS",
+    "n_PASS": 2,
+    "n_GRAY": 1,
+    "n_FAIL": 0
+  },
+  "finished": "2026-09-27T14:15:46"
+}

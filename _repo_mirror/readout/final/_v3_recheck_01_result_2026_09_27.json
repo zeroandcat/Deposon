@@ -1,0 +1,6680 @@
+{
+  "schema": "v3_recheck_result/01_boss_pa1_rbr_rm/1",
+  "prereg": {
+    "path": "results/_v3_recheck_prereg_v1_2026_09_27.md",
+    "sha12": "88052d7db895",
+    "kill_line": "K-V3R-1",
+    "threshold": "TH-V3R-1 (pa_h1 ≤ 1.3x / pa_h0 ≥ 2.0x / rbr,rm ≥ 2.0x, 沿 V3 字面)"
+  },
+  "executor": "results/_v3_recheck_01_executor_2026_09_27.py",
+  "date": "2026-09-27",
+  "seed": 20260927,
+  "runtime": "0 LLM; stdlib only (json/hashlib/random/math); no network; read-only inputs",
+  "skill": {
+    "plugin": "@scientific-research-workflows",
+    "skill": "experimental-design",
+    "sha12_of_SKILL_md": "0a314eed103a",
+    "applied": [
+      "区组 = 22 图（block）",
+      "全因子 4 起点 x 2 BR 模式（无别名）",
+      "伪重复声明（22 图 vs 12 基准图）",
+      "名义 N 显式标注",
+      "seed 预登记 + 落盘可复算"
+    ]
+  },
+  "inputs": [
+    {
+      "path": "results/boss_pa_1_rbr_rm_result_2026_09_15.json",
+      "sha12_measured": "c7c59e0d2f6c",
+      "role": "#1 源件（原结论所在）"
+    },
+    {
+      "path": "deposon_team/plugins/boss_pa_1_rbr_rm.py",
+      "sha12_measured": "5cc594147e00",
+      "role": "#1 源件（只读公式来源；本件 0 import / 0 触动）"
+    },
+    {
+      "path": "results/deposon_v20_baselines.json",
+      "sha12_measured": "6edb2aec1660",
+      "role": "22 受控概念图数据面"
+    }
+  ],
+  "v20_baselines_fallback_note": {
+    "prereg_claim": "v1 §1.2 辅助说明 / §1.2 #1 记「v20 baselines 真缺件（0EDB2AEC1660），沿 C2 路径用 stored 22 graphs seed=210021 reweight」",
+    "measured_on_disk": true,
+    "measured_sha12": "6edb2aec1660",
+    "on_disk_self_declared_sha12_in_source_json": "6edb2aec1660",
+    "match": true,
+    "disposition": "实测在盘且 SHA-12 与 #1 源件内记值一致（6edb2aec1660）=> **fallback 未触发**；本件直接用盘上真件，0 编造补数"
+  },
+  "legacy_reproduction": {
+    "n_graphs": 22,
+    "bit_exact_match_count": 22,
+    "bit_exact_mismatch_graphs": [],
+    "all_bit_exact": true,
+    "recomputed_rbr_multiplier_mean": 145.8182,
+    "on_disk_rbr_multiplier_mean": 145.8182,
+    "rbr_multiplier_mean_match": true,
+    "on_disk_verdict": "DIFFERENTIATED"
+  },
+  "legacy_per_graph": [
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 200,
+        "rbr_multiplier": 1.0,
+        "rm_multiplier": 0.03
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 200,
+        "rbr_multiplier": 1.0,
+        "rm_multiplier": 0.03
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 200,
+        "rbr_multiplier": 1.0,
+        "rm_multiplier": 0.03
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 200,
+        "rbr_multiplier": 1.0,
+        "rm_multiplier": 0.03
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 200,
+        "rbr_multiplier": 1.0,
+        "rm_multiplier": 0.03
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 200,
+        "rbr_multiplier": 1.0,
+        "rm_multiplier": 0.03
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "recomputed": {
+        "rbr_iter": 2,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 2.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 2,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 2.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 200,
+        "rbr_multiplier": 1.0,
+        "rm_multiplier": 0.03
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 200,
+        "rbr_multiplier": 1.0,
+        "rm_multiplier": 0.03
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "recomputed": {
+        "rbr_iter": 2,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 2.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 2,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 2.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "recomputed": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "on_disk": {
+        "rbr_iter": 200,
+        "rm_iter": 6,
+        "bayes_iter": 1,
+        "rbr_multiplier": 200.0,
+        "rm_multiplier": 6.0
+      },
+      "bit_exact_match": true
+    }
+  ],
+  "construct": {
+    "(a)_rm": "simulate_rm 收敛阈值 1e-3 -> 1e-9（主臂）；另附 1e-3 对照、1e-15 浮点极限探测、以及 §1.2 #1(a)「或」分支真迭代 t = n_iter",
+    "(a)_rm_tol": 1e-09,
+    "(b)_bayes": "真 best-response 迭代：收敛判据 = Nash gap = max_i max(0, u_i(BR_i) - u_i(s_i)) ≤ ε=1e-9；最大迭代 2000；全因子 4 起点 x 2 模式（simultaneous / alternating）",
+    "(b)_bayes_eps": 1e-09,
+    "(b)_bayes_max_iter": 2000,
+    "(c)_multiplier": "rbr_multiplier = rbr_iter / bayes_iter_true，rbr_iter 沿 V3 冻结值（§1.2 #1 未把 RBR 列为重构目标，故主判据不改 RBR；另附 RBR 真收敛敏感性臂）",
+    "bayes_iter_counting_convention": "自 1 起计（纳什条件至少需核验 1 次），沿 V3「解析解 1 步到位」语义；0 迭代不可能完成一次核验，故不设 0 值",
+    "upstream_rbr_note": "RBR 未被 §1.2 #1 列为重构目标 => 0 擅改；但 rbr_iter = 200 恒为simulate_rbr 的 n_iter 触顶值（未收敛），构成 cap 伪影，另设 cap 伪影门"
+  },
+  "design_layout": {
+    "blocks": 22,
+    "block_unit": "受控概念图",
+    "treatments": "4 起点 x 2 BR 模式 = 8 格",
+    "n_cells": 176,
+    "aliasing": "无（2 因子全因子，起点与模式不共线）",
+    "pseudoreplication_declaration": "22 图中 10 件为 S1/S2/S6 的 _n* 嵌套子采样；独立重复的真实层级 = 12 基准图。沿 skill experimental-design「伪重复」条：killed-line 仍按冻结的 22 图判，另报去嵌套 12 基准图口径（不参与判定）。"
+  },
+  "construct_degen_self_check": {
+    "gate": "K-V3R-0-A: n_distinct > 3 + std > 0 on every on-disk input field",
+    "input_fields": {
+      "v20_field_mean_named (盘上真实, 逐图)": {
+        "n": 22,
+        "n_distinct": 18,
+        "std": 0.14387844761985397,
+        "min": 0.043478260869565216,
+        "max": 0.47058823529411764,
+        "mean": 0.18086082437313453,
+        "distinct_values": [
+          0.043478,
+          0.050847,
+          0.055556,
+          0.068182,
+          0.068966,
+          0.088235,
+          0.095238,
+          0.096774,
+          0.103448,
+          0.12069,
+          0.125,
+          0.136364,
+          0.142857,
+          0.157895,
+          0.1875,
+          0.190476,
+          0.222222,
+          0.470588
+        ]
+      },
+      "v20_field_mean_filler (盘上真实, 逐图)": {
+        "n": 22,
+        "n_distinct": 10,
+        "std": 0.07982172619434252,
+        "min": 0.0,
+        "max": 0.34375,
+        "mean": 0.04529599484547997,
+        "distinct_values": [
+          0.0,
+          0.033333,
+          0.043478,
+          0.055556,
+          0.0625,
+          0.066667,
+          0.1,
+          0.133333,
+          0.157895,
+          0.34375
+        ]
+      },
+      "deposon_freq_派生 (盘上真实, 逐图)": {
+        "n": 22,
+        "n_distinct": 10,
+        "std": 0.2607844811626778,
+        "min": 0.11228070175438597,
+        "max": 1.0,
+        "mean": 0.8129428621578213,
+        "distinct_values": [
+          0.112281,
+          0.294118,
+          0.395833,
+          0.644172,
+          0.674157,
+          0.686567,
+          0.689655,
+          0.692308,
+          0.695652,
+          1.0
+        ]
+      },
+      "legacy_rm_iter_原构造 (对照, 应退化)": {
+        "n": 22,
+        "n_distinct": 1,
+        "std": 0.0,
+        "min": 6.0,
+        "max": 6.0,
+        "mean": 6.0,
+        "distinct_values": [
+          6.0
+        ]
+      },
+      "legacy_bayes_iter_原构造 (对照, 应退化)": {
+        "n": 22,
+        "n_distinct": 2,
+        "std": 76.75322697606707,
+        "min": 1.0,
+        "max": 200.0,
+        "mean": 37.18181818181818,
+        "distinct_values": [
+          1.0,
+          200.0
+        ]
+      }
+    },
+    "gate_per_field": {
+      "v20_field_mean_named (盘上真实, 逐图)": true,
+      "v20_field_mean_filler (盘上真实, 逐图)": true,
+      "deposon_freq_派生 (盘上真实, 逐图)": true
+    },
+    "degenerate_alarm_hit": false,
+    "gate_pass": true,
+    "cap_artifact_alarm_hit": true,
+    "cap_artifact_detail": {
+      "n_graphs_rbr_hit_cap_200": 20,
+      "note": "rbr_iter = 200 是 simulate_rbr 的 n_iter 触顶值（非真实迭代数）；主判据输入含此上限值，故 cap 伪影门触发。#1 的 cap-free 臂见 cap_free 字段。"
+    },
+    "output_field": {
+      "rbr_multiplier_new": {
+        "n": 176,
+        "n_distinct": 4,
+        "std": 99.39753767507408,
+        "min": 0.1,
+        "max": 200.0,
+        "mean": 109.26363636363637,
+        "distinct_values": [
+          0.1,
+          1.0,
+          2.0,
+          200.0
+        ]
+      },
+      "rbr_multiplier_new_cap_free": {
+        "n": 176,
+        "n_distinct": 6,
+        "std": 0.7244531594004469,
+        "min": 0.001,
+        "max": 2.0,
+        "mean": 0.8592727272727273,
+        "distinct_values": [
+          0.001,
+          0.1,
+          0.5,
+          1.0,
+          1.5,
+          2.0
+        ]
+      }
+    },
+    "contrast": {
+      "original_rbr_multiplier": {
+        "n": 22,
+        "n_distinct": 3,
+        "std": 88.47888107731818,
+        "min": 1.0,
+        "max": 200.0,
+        "mean": 145.8181818181818,
+        "distinct_values": [
+          1.0,
+          2.0,
+          200.0
+        ]
+      },
+      "original_rm_iter": {
+        "n": 22,
+        "n_distinct": 1,
+        "std": 0.0,
+        "min": 6.0,
+        "max": 6.0,
+        "mean": 6.0,
+        "distinct_values": [
+          6.0
+        ]
+      },
+      "original_bayes_iter": {
+        "n": 22,
+        "n_distinct": 2,
+        "std": 76.75322697606707,
+        "min": 1.0,
+        "max": 200.0,
+        "mean": 37.18181818181818,
+        "distinct_values": [
+          1.0,
+          200.0
+        ]
+      }
+    }
+  },
+  "rm_arms": {
+    "threshold_1e-9 (主臂, §1.2 #1(a) 字面)": {
+      "tol": 1e-09,
+      "mode": "threshold",
+      "rm_iter_per_graph": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "cap_artifact_alarm_hit": false,
+      "n_hit_cap": 0,
+      "stat": {
+        "n": 22,
+        "n_distinct": 1,
+        "std": 0.0,
+        "min": 6.0,
+        "max": 6.0,
+        "mean": 6.0,
+        "distinct_values": [
+          6.0
+        ]
+      }
+    },
+    "threshold_1e-3 (V3 既有字面对照)": {
+      "tol": 0.001,
+      "mode": "threshold",
+      "rm_iter_per_graph": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "cap_artifact_alarm_hit": false,
+      "n_hit_cap": 0,
+      "stat": {
+        "n": 22,
+        "n_distinct": 1,
+        "std": 0.0,
+        "min": 6.0,
+        "max": 6.0,
+        "mean": 6.0,
+        "distinct_values": [
+          6.0
+        ]
+      }
+    },
+    "threshold_1e-15 (浮点极限探测)": {
+      "tol": 1e-15,
+      "mode": "threshold",
+      "rm_iter_per_graph": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "cap_artifact_alarm_hit": false,
+      "n_hit_cap": 0,
+      "stat": {
+        "n": 22,
+        "n_distinct": 1,
+        "std": 0.0,
+        "min": 6.0,
+        "max": 6.0,
+        "mean": 6.0,
+        "distinct_values": [
+          6.0
+        ]
+      }
+    },
+    "true_iteration": {
+      "tol": null,
+      "mode": "true_iteration",
+      "rm_iter_per_graph": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "cap_artifact_alarm_hit": true,
+      "n_hit_cap": 22,
+      "stat": {
+        "n": 22,
+        "n_distinct": 1,
+        "std": 0.0,
+        "min": 200.0,
+        "max": 200.0,
+        "mean": 200.0,
+        "distinct_values": [
+          200.0
+        ]
+      }
+    }
+  },
+  "rm_arm_primary": "threshold_1e-9 (主臂, §1.2 #1(a) 字面)",
+  "rm_leg_finding": {
+    "question": "§1.2 #1(a)「RM 阈值 1e-3 -> 1e-9」能否解除 rm_iter ≡ 6 的构造性常量？",
+    "threshold_arms_tested": [
+      "threshold_1e-9 (主臂, §1.2 #1(a) 字面)",
+      "threshold_1e-3 (V3 既有字面对照)",
+      "threshold_1e-15 (浮点极限探测)",
+      "true_iteration"
+    ],
+    "tols_tested": [
+      0.001,
+      1e-09,
+      1e-15,
+      "n_iter(真迭代分支)"
+    ],
+    "all_threshold_arms_yield_rm_iter_eq_6": true,
+    "answer": "**不能**（实测）",
+    "root_cause": "simulate_rm 的 regret 写作 R[1-s] = max(0, avg[1-s] - avg[s])，而未玩过策略的累计支付恒为 0 -> avg[1-s] = 0；只要所玩策略平均支付 > 0，regret 恒等于**精确 0.0**（非「小于 1e-3」）。故 1e-3 / 1e-9 / 1e-15 三档阈值在 t=6 同点触发，rm_iter ≡ 6 是**精确零 regret 的结构后果**，不是阈值松紧问题；「或」分支真迭代 t=n_iter 则一律触 200 上限（cap 伪影，n_distinct=1）。",
+    "consequence": "§1.2 #1(a) 的两个分支都无法让 rm_iter 获得真分布；K-V3R-1 的判据字段是 rbr_multiplier（依赖 rm_iter 者为 rm_multiplier），故本条判定不受 (a) 失效影响，但 **rm_multiplier 在 (a) 全部 4 臂下仍为常量**（实测 n_distinct=1），如实登记为未解除的死面。"
+  },
+  "bayes_best_response_cells": [
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.05444646098003629
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.01633393829401089
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.01633393829401089
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.05444646098003629
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.05444646098003629
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.05444646098003629
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.05444646098003629
+    },
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.05444646098003629
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.13636363636363635
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.13636363636363635
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.11607142857142858
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.1875
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.1875
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.11607142857142858
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.1875
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.1875
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.1875
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.1875
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.3002717391304348
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.3002717391304348
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.0967741935483871
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.0967741935483871
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.07777777777777778
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.15555555555555556
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.15555555555555556
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.07777777777777778
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.07777777777777778
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.07777777777777778
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.07777777777777778
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.07777777777777778
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.15789473684210525
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.15789473684210525
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.08823529411764706
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.08823529411764706
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.06818181818181818
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.06818181818181818
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.053571428571428575
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.08035714285714285
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.08035714285714285
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.053571428571428575
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.08035714285714285
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.08035714285714285
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.08035714285714285
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.08035714285714285
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 2,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.06944444444444445
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.06944444444444445
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.05175983436853002
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.05175983436853002
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.06896551724137931
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.06896551724137931
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.19047619047619047
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.19047619047619047
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.12298850574712643
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.12298850574712643
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.19047619047619047
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.19047619047619047
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.47058823529411764
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.47058823529411764
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.47058823529411764
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.47058823529411764
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.47058823529411764
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.47058823529411764
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.47058823529411764
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 2000,
+      "hit_iter_cap": true,
+      "nash_gap_final": 0.47058823529411764
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "simultaneous",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        0,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        0
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "br_mode": "alternating",
+      "start": [
+        1,
+        1
+      ],
+      "bayes_iter_true": 1,
+      "hit_iter_cap": false,
+      "nash_gap_final": 0.0
+    }
+  ],
+  "bayes_iter_true_stat": {
+    "n": 176,
+    "n_distinct": 3,
+    "std": 961.5760016893066,
+    "min": 1.0,
+    "max": 2000.0,
+    "mean": 727.9545454545455,
+    "distinct_values": [
+      1.0,
+      2.0,
+      2000.0
+    ]
+  },
+  "bayes_iter_cap_alarm_hit": true,
+  "per_graph": [
+    {
+      "graph_id": "L_algorithm_process",
+      "base_graph": "L_algorithm_process",
+      "nominal_N": {
+        "N_named": 29,
+        "k_named": 3,
+        "frac_named": 0.10344827586206896,
+        "N_filler": 19,
+        "k_filler": 3,
+        "frac_filler": 0.15789473684210525,
+        "N_named_eq_N_filler": false
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 1.0,
+      "cells": [
+        {
+          "graph_id": "L_algorithm_process",
+          "base_graph": "L_algorithm_process",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.05444646098003629,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_algorithm_process",
+          "base_graph": "L_algorithm_process",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.01633393829401089,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_algorithm_process",
+          "base_graph": "L_algorithm_process",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.01633393829401089,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_algorithm_process",
+          "base_graph": "L_algorithm_process",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.05444646098003629,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_algorithm_process",
+          "base_graph": "L_algorithm_process",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.05444646098003629,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_algorithm_process",
+          "base_graph": "L_algorithm_process",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.05444646098003629,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_algorithm_process",
+          "base_graph": "L_algorithm_process",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.05444646098003629,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_algorithm_process",
+          "base_graph": "L_algorithm_process",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.05444646098003629,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        200
+      ]
+    },
+    {
+      "graph_id": "L_biological_taxonomy",
+      "base_graph": "L_biological_taxonomy",
+      "nominal_N": {
+        "N_named": 22,
+        "k_named": 3,
+        "frac_named": 0.13636363636363635,
+        "N_filler": 22,
+        "k_filler": 0,
+        "frac_filler": 0.0,
+        "N_named_eq_N_filler": true
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "L_biological_taxonomy",
+          "base_graph": "L_biological_taxonomy",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_biological_taxonomy",
+          "base_graph": "L_biological_taxonomy",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.13636363636363635,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_biological_taxonomy",
+          "base_graph": "L_biological_taxonomy",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.13636363636363635,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_biological_taxonomy",
+          "base_graph": "L_biological_taxonomy",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_biological_taxonomy",
+          "base_graph": "L_biological_taxonomy",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_biological_taxonomy",
+          "base_graph": "L_biological_taxonomy",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_biological_taxonomy",
+          "base_graph": "L_biological_taxonomy",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_biological_taxonomy",
+          "base_graph": "L_biological_taxonomy",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "L_geography_world",
+      "base_graph": "L_geography_world",
+      "nominal_N": {
+        "N_named": 16,
+        "k_named": 3,
+        "frac_named": 0.1875,
+        "N_filler": 16,
+        "k_filler": 0,
+        "frac_filler": 0.0,
+        "N_named_eq_N_filler": true
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 1.0,
+      "cells": [
+        {
+          "graph_id": "L_geography_world",
+          "base_graph": "L_geography_world",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.11607142857142858,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_geography_world",
+          "base_graph": "L_geography_world",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.1875,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_geography_world",
+          "base_graph": "L_geography_world",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.1875,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_geography_world",
+          "base_graph": "L_geography_world",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.11607142857142858,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_geography_world",
+          "base_graph": "L_geography_world",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.1875,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_geography_world",
+          "base_graph": "L_geography_world",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.1875,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_geography_world",
+          "base_graph": "L_geography_world",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.1875,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_geography_world",
+          "base_graph": "L_geography_world",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.1875,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        200
+      ]
+    },
+    {
+      "graph_id": "L_historical_causality",
+      "base_graph": "L_historical_causality",
+      "nominal_N": {
+        "N_named": 23,
+        "k_named": 1,
+        "frac_named": 0.043478260869565216,
+        "N_filler": 32,
+        "k_filler": 11,
+        "frac_filler": 0.34375,
+        "N_named_eq_N_filler": false
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "L_historical_causality",
+          "base_graph": "L_historical_causality",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.3002717391304348,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_historical_causality",
+          "base_graph": "L_historical_causality",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_historical_causality",
+          "base_graph": "L_historical_causality",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_historical_causality",
+          "base_graph": "L_historical_causality",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.3002717391304348,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_historical_causality",
+          "base_graph": "L_historical_causality",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_historical_causality",
+          "base_graph": "L_historical_causality",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_historical_causality",
+          "base_graph": "L_historical_causality",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_historical_causality",
+          "base_graph": "L_historical_causality",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "L_physics_concepts",
+      "base_graph": "L_physics_concepts",
+      "nominal_N": {
+        "N_named": 31,
+        "k_named": 3,
+        "frac_named": 0.0967741935483871,
+        "N_filler": 31,
+        "k_filler": 0,
+        "frac_filler": 0.0,
+        "N_named_eq_N_filler": true
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "L_physics_concepts",
+          "base_graph": "L_physics_concepts",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_physics_concepts",
+          "base_graph": "L_physics_concepts",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.0967741935483871,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_physics_concepts",
+          "base_graph": "L_physics_concepts",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.0967741935483871,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_physics_concepts",
+          "base_graph": "L_physics_concepts",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_physics_concepts",
+          "base_graph": "L_physics_concepts",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_physics_concepts",
+          "base_graph": "L_physics_concepts",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_physics_concepts",
+          "base_graph": "L_physics_concepts",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "L_physics_concepts",
+          "base_graph": "L_physics_concepts",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "L_project_management",
+      "base_graph": "L_project_management",
+      "nominal_N": {
+        "N_named": 36,
+        "k_named": 1,
+        "frac_named": 0.05555555555555555,
+        "N_filler": 15,
+        "k_filler": 2,
+        "frac_filler": 0.13333333333333333,
+        "N_named_eq_N_filler": false
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 1.0,
+      "cells": [
+        {
+          "graph_id": "L_project_management",
+          "base_graph": "L_project_management",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.07777777777777778,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_project_management",
+          "base_graph": "L_project_management",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.15555555555555556,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_project_management",
+          "base_graph": "L_project_management",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.15555555555555556,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_project_management",
+          "base_graph": "L_project_management",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.07777777777777778,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_project_management",
+          "base_graph": "L_project_management",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.07777777777777778,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_project_management",
+          "base_graph": "L_project_management",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.07777777777777778,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_project_management",
+          "base_graph": "L_project_management",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.07777777777777778,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "L_project_management",
+          "base_graph": "L_project_management",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.07777777777777778,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        200
+      ]
+    },
+    {
+      "graph_id": "S1",
+      "base_graph": "S1",
+      "nominal_N": {
+        "N_named": 19,
+        "k_named": 3,
+        "frac_named": 0.15789473684210525,
+        "N_filler": 19,
+        "k_filler": 0,
+        "frac_filler": 0.0,
+        "N_named_eq_N_filler": true
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "S1",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.15789473684210525,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S1",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.15789473684210525,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S1",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "S1_n35",
+      "base_graph": "S1",
+      "nominal_N": {
+        "N_named": 34,
+        "k_named": 3,
+        "frac_named": 0.08823529411764706,
+        "N_filler": 34,
+        "k_filler": 0,
+        "frac_filler": 0.0,
+        "N_named_eq_N_filler": true
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "S1_n35",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1_n35",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.08823529411764706,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S1_n35",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.08823529411764706,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S1_n35",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1_n35",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1_n35",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1_n35",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1_n35",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "S1_n45",
+      "base_graph": "S1",
+      "nominal_N": {
+        "N_named": 44,
+        "k_named": 3,
+        "frac_named": 0.06818181818181818,
+        "N_filler": 44,
+        "k_filler": 0,
+        "frac_filler": 0.0,
+        "N_named_eq_N_filler": true
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "S1_n45",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1_n45",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.06818181818181818,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S1_n45",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.06818181818181818,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S1_n45",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1_n45",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1_n45",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1_n45",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S1_n45",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "S1_n60",
+      "base_graph": "S1",
+      "nominal_N": {
+        "N_named": 59,
+        "k_named": 3,
+        "frac_named": 0.05084745762711865,
+        "N_filler": 59,
+        "k_filler": 0,
+        "frac_filler": 0.0,
+        "N_named_eq_N_filler": true
+      },
+      "rbr_iter_frozen": 2,
+      "rbr_hit_iter_cap": false,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 2.0,
+      "cells": [
+        {
+          "graph_id": "S1_n60",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 2.0
+        },
+        {
+          "graph_id": "S1_n60",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 1.0
+        },
+        {
+          "graph_id": "S1_n60",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 2.0
+        },
+        {
+          "graph_id": "S1_n60",
+          "base_graph": "S1",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 2,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 1.0
+        },
+        {
+          "graph_id": "S1_n60",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 2.0
+        },
+        {
+          "graph_id": "S1_n60",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 1.0
+        },
+        {
+          "graph_id": "S1_n60",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 2.0
+        },
+        {
+          "graph_id": "S1_n60",
+          "base_graph": "S1",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 2,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 1.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "graph_id": "S2",
+      "base_graph": "S2",
+      "nominal_N": {
+        "N_named": 14,
+        "k_named": 1,
+        "frac_named": 0.14285714285714285,
+        "N_filler": 16,
+        "k_filler": 1,
+        "frac_filler": 0.0625,
+        "N_named_eq_N_filler": false
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 1.0,
+      "cells": [
+        {
+          "graph_id": "S2",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.053571428571428575,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S2",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.08035714285714285,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S2",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.08035714285714285,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S2",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.053571428571428575,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S2",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.08035714285714285,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S2",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.08035714285714285,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S2",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.08035714285714285,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S2",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.08035714285714285,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        200
+      ]
+    },
+    {
+      "graph_id": "S2_n20",
+      "base_graph": "S2",
+      "nominal_N": {
+        "N_named": 9,
+        "k_named": 2,
+        "frac_named": 0.2222222222222222,
+        "N_filler": 10,
+        "k_filler": 1,
+        "frac_filler": 0.1,
+        "N_named_eq_N_filler": false
+      },
+      "rbr_iter_frozen": 2,
+      "rbr_hit_iter_cap": false,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 2.0,
+      "cells": [
+        {
+          "graph_id": "S2_n20",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 2.0
+        },
+        {
+          "graph_id": "S2_n20",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 1.0
+        },
+        {
+          "graph_id": "S2_n20",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 2.0
+        },
+        {
+          "graph_id": "S2_n20",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 2,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 1.0
+        },
+        {
+          "graph_id": "S2_n20",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 2.0
+        },
+        {
+          "graph_id": "S2_n20",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 1.0
+        },
+        {
+          "graph_id": "S2_n20",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 2.0
+        },
+        {
+          "graph_id": "S2_n20",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 2,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 2,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 1.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "graph_id": "S2_n35",
+      "base_graph": "S2",
+      "nominal_N": {
+        "N_named": 16,
+        "k_named": 1,
+        "frac_named": 0.125,
+        "N_filler": 18,
+        "k_filler": 1,
+        "frac_filler": 0.05555555555555555,
+        "N_named_eq_N_filler": false
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "S2_n35",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n35",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.06944444444444445,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S2_n35",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.06944444444444445,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S2_n35",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n35",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n35",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n35",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n35",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "S2_n45",
+      "base_graph": "S2",
+      "nominal_N": {
+        "N_named": 21,
+        "k_named": 2,
+        "frac_named": 0.09523809523809523,
+        "N_filler": 23,
+        "k_filler": 1,
+        "frac_filler": 0.043478260869565216,
+        "N_named_eq_N_filler": false
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "S2_n45",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n45",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.05175983436853002,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S2_n45",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.05175983436853002,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S2_n45",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n45",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n45",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n45",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n45",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "S2_n60",
+      "base_graph": "S2",
+      "nominal_N": {
+        "N_named": 29,
+        "k_named": 2,
+        "frac_named": 0.06896551724137931,
+        "N_filler": 30,
+        "k_filler": 1,
+        "frac_filler": 0.03333333333333333,
+        "N_named_eq_N_filler": false
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "S2_n60",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n60",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.06896551724137931,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S2_n60",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.06896551724137931,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S2_n60",
+          "base_graph": "S2",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n60",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n60",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n60",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S2_n60",
+          "base_graph": "S2",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "S3",
+      "base_graph": "S3",
+      "nominal_N": {
+        "N_named": 21,
+        "k_named": 4,
+        "frac_named": 0.19047619047619047,
+        "N_filler": 21,
+        "k_filler": 0,
+        "frac_filler": 0.0,
+        "N_named_eq_N_filler": true
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "S3",
+          "base_graph": "S3",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S3",
+          "base_graph": "S3",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.19047619047619047,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S3",
+          "base_graph": "S3",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.19047619047619047,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S3",
+          "base_graph": "S3",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S3",
+          "base_graph": "S3",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S3",
+          "base_graph": "S3",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S3",
+          "base_graph": "S3",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S3",
+          "base_graph": "S3",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "S4",
+      "base_graph": "S4",
+      "nominal_N": {
+        "N_named": 58,
+        "k_named": 7,
+        "frac_named": 0.1206896551724138,
+        "N_filler": 15,
+        "k_filler": 1,
+        "frac_filler": 0.06666666666666667,
+        "N_named_eq_N_filler": false
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "S4",
+          "base_graph": "S4",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S4",
+          "base_graph": "S4",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.12298850574712643,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S4",
+          "base_graph": "S4",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.12298850574712643,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S4",
+          "base_graph": "S4",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S4",
+          "base_graph": "S4",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S4",
+          "base_graph": "S4",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S4",
+          "base_graph": "S4",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S4",
+          "base_graph": "S4",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "S5",
+      "base_graph": "S5",
+      "nominal_N": {
+        "N_named": 7,
+        "k_named": 1,
+        "frac_named": 0.14285714285714285,
+        "N_filler": 7,
+        "k_filler": 0,
+        "frac_filler": 0.0,
+        "N_named_eq_N_filler": true
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "S5",
+          "base_graph": "S5",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S5",
+          "base_graph": "S5",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.19047619047619047,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S5",
+          "base_graph": "S5",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.19047619047619047,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S5",
+          "base_graph": "S5",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S5",
+          "base_graph": "S5",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S5",
+          "base_graph": "S5",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S5",
+          "base_graph": "S5",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S5",
+          "base_graph": "S5",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "S6",
+      "base_graph": "S6",
+      "nominal_N": {
+        "N_named": 17,
+        "k_named": 8,
+        "frac_named": 0.47058823529411764,
+        "N_filler": 17,
+        "k_filler": 0,
+        "frac_filler": 0.0,
+        "N_named_eq_N_filler": true
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "S6",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.47058823529411764,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S6",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.47058823529411764,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S6",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "S6_n20",
+      "base_graph": "S6",
+      "nominal_N": {
+        "N_named": 17,
+        "k_named": 8,
+        "frac_named": 0.47058823529411764,
+        "N_filler": 17,
+        "k_filler": 0,
+        "frac_filler": 0.0,
+        "N_named_eq_N_filler": true
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "S6_n20",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n20",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.47058823529411764,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S6_n20",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.47058823529411764,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S6_n20",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n20",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n20",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n20",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n20",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "S6_n35",
+      "base_graph": "S6",
+      "nominal_N": {
+        "N_named": 17,
+        "k_named": 8,
+        "frac_named": 0.47058823529411764,
+        "N_filler": 17,
+        "k_filler": 0,
+        "frac_filler": 0.0,
+        "N_named_eq_N_filler": true
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "S6_n35",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n35",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.47058823529411764,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S6_n35",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.47058823529411764,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S6_n35",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n35",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n35",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n35",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n35",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    },
+    {
+      "graph_id": "S6_n60",
+      "base_graph": "S6",
+      "nominal_N": {
+        "N_named": 17,
+        "k_named": 8,
+        "frac_named": 0.47058823529411764,
+        "N_filler": 17,
+        "k_filler": 0,
+        "frac_filler": 0.0,
+        "N_named_eq_N_filler": true
+      },
+      "rbr_iter_frozen": 200,
+      "rbr_hit_iter_cap": true,
+      "rm_iter_legacy": 6,
+      "rm_iter_new_1e-9": 6,
+      "rbr_multiplier_legacy": 200.0,
+      "cells": [
+        {
+          "graph_id": "S6_n60",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n60",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.47058823529411764,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S6_n60",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 2000,
+          "hit_iter_cap": true,
+          "nash_gap_final": 0.47058823529411764,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 0.1
+        },
+        {
+          "graph_id": "S6_n60",
+          "base_graph": "S6",
+          "br_mode": "simultaneous",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n60",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n60",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            0,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n60",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            0
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        },
+        {
+          "graph_id": "S6_n60",
+          "base_graph": "S6",
+          "br_mode": "alternating",
+          "start": [
+            1,
+            1
+          ],
+          "bayes_iter_true": 1,
+          "hit_iter_cap": false,
+          "nash_gap_final": 0.0,
+          "rbr_iter_frozen": 200,
+          "rm_iter_new": 6,
+          "rbr_multiplier_new": 200.0
+        }
+      ],
+      "rbr_iter_true_converged_values": [
+        1,
+        2
+      ]
+    }
+  ],
+  "nominal_n": {
+    "L_algorithm_process": {
+      "N_named": 29,
+      "k_named": 3,
+      "frac_named": 0.10344827586206896,
+      "N_filler": 19,
+      "k_filler": 3,
+      "frac_filler": 0.15789473684210525,
+      "N_named_eq_N_filler": false
+    },
+    "L_biological_taxonomy": {
+      "N_named": 22,
+      "k_named": 3,
+      "frac_named": 0.13636363636363635,
+      "N_filler": 22,
+      "k_filler": 0,
+      "frac_filler": 0.0,
+      "N_named_eq_N_filler": true
+    },
+    "L_geography_world": {
+      "N_named": 16,
+      "k_named": 3,
+      "frac_named": 0.1875,
+      "N_filler": 16,
+      "k_filler": 0,
+      "frac_filler": 0.0,
+      "N_named_eq_N_filler": true
+    },
+    "L_historical_causality": {
+      "N_named": 23,
+      "k_named": 1,
+      "frac_named": 0.043478260869565216,
+      "N_filler": 32,
+      "k_filler": 11,
+      "frac_filler": 0.34375,
+      "N_named_eq_N_filler": false
+    },
+    "L_physics_concepts": {
+      "N_named": 31,
+      "k_named": 3,
+      "frac_named": 0.0967741935483871,
+      "N_filler": 31,
+      "k_filler": 0,
+      "frac_filler": 0.0,
+      "N_named_eq_N_filler": true
+    },
+    "L_project_management": {
+      "N_named": 36,
+      "k_named": 1,
+      "frac_named": 0.05555555555555555,
+      "N_filler": 15,
+      "k_filler": 2,
+      "frac_filler": 0.13333333333333333,
+      "N_named_eq_N_filler": false
+    },
+    "S1": {
+      "N_named": 19,
+      "k_named": 3,
+      "frac_named": 0.15789473684210525,
+      "N_filler": 19,
+      "k_filler": 0,
+      "frac_filler": 0.0,
+      "N_named_eq_N_filler": true
+    },
+    "S1_n35": {
+      "N_named": 34,
+      "k_named": 3,
+      "frac_named": 0.08823529411764706,
+      "N_filler": 34,
+      "k_filler": 0,
+      "frac_filler": 0.0,
+      "N_named_eq_N_filler": true
+    },
+    "S1_n45": {
+      "N_named": 44,
+      "k_named": 3,
+      "frac_named": 0.06818181818181818,
+      "N_filler": 44,
+      "k_filler": 0,
+      "frac_filler": 0.0,
+      "N_named_eq_N_filler": true
+    },
+    "S1_n60": {
+      "N_named": 59,
+      "k_named": 3,
+      "frac_named": 0.05084745762711865,
+      "N_filler": 59,
+      "k_filler": 0,
+      "frac_filler": 0.0,
+      "N_named_eq_N_filler": true
+    },
+    "S2": {
+      "N_named": 14,
+      "k_named": 1,
+      "frac_named": 0.14285714285714285,
+      "N_filler": 16,
+      "k_filler": 1,
+      "frac_filler": 0.0625,
+      "N_named_eq_N_filler": false
+    },
+    "S2_n20": {
+      "N_named": 9,
+      "k_named": 2,
+      "frac_named": 0.2222222222222222,
+      "N_filler": 10,
+      "k_filler": 1,
+      "frac_filler": 0.1,
+      "N_named_eq_N_filler": false
+    },
+    "S2_n35": {
+      "N_named": 16,
+      "k_named": 1,
+      "frac_named": 0.125,
+      "N_filler": 18,
+      "k_filler": 1,
+      "frac_filler": 0.05555555555555555,
+      "N_named_eq_N_filler": false
+    },
+    "S2_n45": {
+      "N_named": 21,
+      "k_named": 2,
+      "frac_named": 0.09523809523809523,
+      "N_filler": 23,
+      "k_filler": 1,
+      "frac_filler": 0.043478260869565216,
+      "N_named_eq_N_filler": false
+    },
+    "S2_n60": {
+      "N_named": 29,
+      "k_named": 2,
+      "frac_named": 0.06896551724137931,
+      "N_filler": 30,
+      "k_filler": 1,
+      "frac_filler": 0.03333333333333333,
+      "N_named_eq_N_filler": false
+    },
+    "S3": {
+      "N_named": 21,
+      "k_named": 4,
+      "frac_named": 0.19047619047619047,
+      "N_filler": 21,
+      "k_filler": 0,
+      "frac_filler": 0.0,
+      "N_named_eq_N_filler": true
+    },
+    "S4": {
+      "N_named": 58,
+      "k_named": 7,
+      "frac_named": 0.1206896551724138,
+      "N_filler": 15,
+      "k_filler": 1,
+      "frac_filler": 0.06666666666666667,
+      "N_named_eq_N_filler": false
+    },
+    "S5": {
+      "N_named": 7,
+      "k_named": 1,
+      "frac_named": 0.14285714285714285,
+      "N_filler": 7,
+      "k_filler": 0,
+      "frac_filler": 0.0,
+      "N_named_eq_N_filler": true
+    },
+    "S6": {
+      "N_named": 17,
+      "k_named": 8,
+      "frac_named": 0.47058823529411764,
+      "N_filler": 17,
+      "k_filler": 0,
+      "frac_filler": 0.0,
+      "N_named_eq_N_filler": true
+    },
+    "S6_n20": {
+      "N_named": 17,
+      "k_named": 8,
+      "frac_named": 0.47058823529411764,
+      "N_filler": 17,
+      "k_filler": 0,
+      "frac_filler": 0.0,
+      "N_named_eq_N_filler": true
+    },
+    "S6_n35": {
+      "N_named": 17,
+      "k_named": 8,
+      "frac_named": 0.47058823529411764,
+      "N_filler": 17,
+      "k_filler": 0,
+      "frac_filler": 0.0,
+      "N_named_eq_N_filler": true
+    },
+    "S6_n60": {
+      "N_named": 17,
+      "k_named": 8,
+      "frac_named": 0.47058823529411764,
+      "N_filler": 17,
+      "k_filler": 0,
+      "frac_filler": 0.0,
+      "N_named_eq_N_filler": true
+    }
+  },
+  "nominal_n_summary": {
+    "N_named_range": [
+      7,
+      59
+    ],
+    "N_filler_range": [
+      7,
+      59
+    ],
+    "n_graphs_where_N_named_ne_N_filler": 9,
+    "cross_size_comparability": "异质：named 档与 filler 档分母在 9/22 图上不相等，且 N_named 跨 7–59；跨尺寸信息不可直接逐图比较，本件按名义 N 显式登记，未做重采样（0 新设权）"
+  },
+  "nesting_block_structure": {
+    "n_graphs_total": 22,
+    "n_base_graphs": 12,
+    "base_graphs": [
+      "L_algorithm_process",
+      "L_biological_taxonomy",
+      "L_geography_world",
+      "L_historical_causality",
+      "L_physics_concepts",
+      "L_project_management",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6"
+    ],
+    "n_nested_subsample_rows": 10,
+    "note": "22 图中 10 件为 S1/S2/S6 的 _n* 嵌套子采样；独立重复的真实层级 = 12 基准图。沿 skill experimental-design「伪重复」条：killed-line 仍按冻结的 22 图判，另报去嵌套 12 基准图口径（不参与判定）。",
+    "rows": [
+      {
+        "graph_id": "L_algorithm_process",
+        "base_graph": "L_algorithm_process",
+        "is_nested_subsample": false
+      },
+      {
+        "graph_id": "L_biological_taxonomy",
+        "base_graph": "L_biological_taxonomy",
+        "is_nested_subsample": false
+      },
+      {
+        "graph_id": "L_geography_world",
+        "base_graph": "L_geography_world",
+        "is_nested_subsample": false
+      },
+      {
+        "graph_id": "L_historical_causality",
+        "base_graph": "L_historical_causality",
+        "is_nested_subsample": false
+      },
+      {
+        "graph_id": "L_physics_concepts",
+        "base_graph": "L_physics_concepts",
+        "is_nested_subsample": false
+      },
+      {
+        "graph_id": "L_project_management",
+        "base_graph": "L_project_management",
+        "is_nested_subsample": false
+      },
+      {
+        "graph_id": "S1",
+        "base_graph": "S1",
+        "is_nested_subsample": false
+      },
+      {
+        "graph_id": "S1_n35",
+        "base_graph": "S1",
+        "is_nested_subsample": true
+      },
+      {
+        "graph_id": "S1_n45",
+        "base_graph": "S1",
+        "is_nested_subsample": true
+      },
+      {
+        "graph_id": "S1_n60",
+        "base_graph": "S1",
+        "is_nested_subsample": true
+      },
+      {
+        "graph_id": "S2",
+        "base_graph": "S2",
+        "is_nested_subsample": false
+      },
+      {
+        "graph_id": "S2_n20",
+        "base_graph": "S2",
+        "is_nested_subsample": true
+      },
+      {
+        "graph_id": "S2_n35",
+        "base_graph": "S2",
+        "is_nested_subsample": true
+      },
+      {
+        "graph_id": "S2_n45",
+        "base_graph": "S2",
+        "is_nested_subsample": true
+      },
+      {
+        "graph_id": "S2_n60",
+        "base_graph": "S2",
+        "is_nested_subsample": true
+      },
+      {
+        "graph_id": "S3",
+        "base_graph": "S3",
+        "is_nested_subsample": false
+      },
+      {
+        "graph_id": "S4",
+        "base_graph": "S4",
+        "is_nested_subsample": false
+      },
+      {
+        "graph_id": "S5",
+        "base_graph": "S5",
+        "is_nested_subsample": false
+      },
+      {
+        "graph_id": "S6",
+        "base_graph": "S6",
+        "is_nested_subsample": false
+      },
+      {
+        "graph_id": "S6_n20",
+        "base_graph": "S6",
+        "is_nested_subsample": true
+      },
+      {
+        "graph_id": "S6_n35",
+        "base_graph": "S6",
+        "is_nested_subsample": true
+      },
+      {
+        "graph_id": "S6_n60",
+        "base_graph": "S6",
+        "is_nested_subsample": true
+      }
+    ]
+  },
+  "sensitivity": {
+    "converged_only_cells": {
+      "definition": "剔除 bayes 真 BR 触 max_iter=2000（= 真·不收敛，协调博弈下simultaneous/alternating BR 均进入 2-周期）之格后的 rbr_multiplier",
+      "n_cells_kept": 112,
+      "n_cells_nonconvergent": 64,
+      "stat": {
+        "n": 112,
+        "n_distinct": 3,
+        "std": 69.46078764603928,
+        "min": 1.0,
+        "max": 200.0,
+        "mean": 171.64285714285714,
+        "distinct_values": [
+          1.0,
+          2.0,
+          200.0
+        ]
+      },
+      "kill_line_pass_converged_only": false,
+      "participates_in_kill_line": false
+    },
+    "cap_free_rbr_true_converged": {
+      "definition": "RBR 改用真纳什收敛判据（N_rbr_true_converged），rbr_iter_true ∈ 小整数；rbr_multiplier = rbr_iter_true / bayes_iter_true",
+      "stat": {
+        "n": 176,
+        "n_distinct": 6,
+        "std": 0.7244531594004469,
+        "min": 0.001,
+        "max": 2.0,
+        "mean": 0.8592727272727273,
+        "distinct_values": [
+          0.001,
+          0.1,
+          0.5,
+          1.0,
+          1.5,
+          2.0
+        ]
+      },
+      "kill_line_pass_cap_free": true,
+      "note": "此臂**不参与**冻结 kill-line 判定（RBR 非 §1.2 #1 重构目标）；仅作上限伪影影响量的如实登记"
+    },
+    "rm_tol_sensitivity": {
+      "threshold_1e-9 (主臂, §1.2 #1(a) 字面)": {
+        "n": 22,
+        "n_distinct": 1,
+        "std": 0.0,
+        "min": 6.0,
+        "max": 6.0,
+        "mean": 6.0,
+        "distinct_values": [
+          6.0
+        ]
+      },
+      "threshold_1e-3 (V3 既有字面对照)": {
+        "n": 22,
+        "n_distinct": 1,
+        "std": 0.0,
+        "min": 6.0,
+        "max": 6.0,
+        "mean": 6.0,
+        "distinct_values": [
+          6.0
+        ]
+      },
+      "threshold_1e-15 (浮点极限探测)": {
+        "n": 22,
+        "n_distinct": 1,
+        "std": 0.0,
+        "min": 6.0,
+        "max": 6.0,
+        "mean": 6.0,
+        "distinct_values": [
+          6.0
+        ]
+      },
+      "true_iteration": {
+        "n": 22,
+        "n_distinct": 1,
+        "std": 0.0,
+        "min": 200.0,
+        "max": 200.0,
+        "mean": 200.0,
+        "distinct_values": [
+          200.0
+        ]
+      }
+    },
+    "denested_12_base_graphs": {
+      "definition": "按 base_graph 聚合后的 12 基准图口径（去嵌套）",
+      "stat": {
+        "n": 12,
+        "n_distinct": 4,
+        "std": 62.89995649534176,
+        "min": 0.1,
+        "max": 150.025,
+        "mean": 104.47531250000002,
+        "distinct_values": [
+          0.1,
+          90.335,
+          112.89375,
+          150.025
+        ]
+      },
+      "participates_in_kill_line": false
+    }
+  },
+  "legacy_dual_track": {
+    "legacy_verdict": "DIFFERENTIATED（沿原 V3 字面：rbr_multiplier_mean = 145.8182；pa_h1_threshold ≤ 1.3x / pa_h0_threshold ≥ 2.0x）",
+    "legacy_verdict_recomputed": "DIFFERENTIATED",
+    "legacy_verdict_on_disk": "DIFFERENTIATED",
+    "legacy_verdict_reproduced": true,
+    "legacy_rbr_multiplier_stat": {
+      "n": 22,
+      "n_distinct": 3,
+      "std": 88.47888107731818,
+      "min": 1.0,
+      "max": 200.0,
+      "mean": 145.8181818181818,
+      "distinct_values": [
+        1.0,
+        2.0,
+        200.0
+      ]
+    },
+    "legacy_rm_iter_stat": {
+      "n": 22,
+      "n_distinct": 1,
+      "std": 0.0,
+      "min": 6.0,
+      "max": 6.0,
+      "mean": 6.0,
+      "distinct_values": [
+        6.0
+      ]
+    },
+    "legacy_bayes_iter_stat": {
+      "n": 22,
+      "n_distinct": 2,
+      "std": 76.75322697606707,
+      "min": 1.0,
+      "max": 200.0,
+      "mean": 37.18181818181818,
+      "distinct_values": [
+        1.0,
+        200.0
+      ]
+    },
+    "note": "原 rbr_multiplier_mean = 145.8182 立在 (a) rm_iter ≡ 6 常量 与 (b) bayes_iter ∈ {1,200} 二值 之上；两者皆为构造性读数，非实验鉴别力。"
+  },
+  "verdict": {
+    "new_verdict": "PASS",
+    "new_claim_verdict": "真判据成立：rbr_multiplier 分布非 trivial，rm_iter ≡ 6 / bayes_iter ∈ {1,200} 的构造性二值已解除",
+    "new_verdict_converged_only": "FAIL",
+    "new_verdict_cap_free": "PASS",
+    "knife_edge_readings_disagree": true,
+    "honest_conclusion": "**维持假成立**。三条实测支点：(1) §1.2 #1(a) 的 RM 阈值改法在 1e-3/1e-9/1e-15 三档实测均为 rm_iter ≡ 6（精确零 regret 的结构后果，非阈值问题），「或」分支真迭代则一律触 200 上限=> (a) 两分支均未解退化；(2) rbr_multiplier 的 145.8182 倍数立在 20/22 图的 rbr_iter ≡ 200（simulate_rbr 的 n_iter 触顶值 = 未收敛）之上；把 RBR 改用真纳什收敛判据后，真倍数上界仅 2.0×（恰在 pa_h0 = 2.0× 边界），145.8× 不能维持；(3) 真 best-response 在协调博弈下进入 2-周期、**真·不收敛**，剔除该 64 格后 K-V3R-1 = FAIL。",
+    "legacy_verdict": "DIFFERENTIATED（沿原 V3 字面：rbr_multiplier_mean = 145.8182；pa_h1_threshold ≤ 1.3x / pa_h0_threshold ≥ 2.0x）",
+    "一致性": "不一致（维持原标注 + 显式登记新构造 verdict；刀锋读数分歧，待 PI 复核指定口径）",
+    "kill_line_pass": true,
+    "kill_line_hit": false,
+    "kill_line_pass_converged_only": false,
+    "kill_line_hit_converged_only": true,
+    "kill_line_pass_cap_free": true,
+    "kill_line_hit_cap_free": false,
+    "改判档位": "**刀锋双读数分歧**：literal 读数 n_distinct=4（≥4）=> PASS；artifact-free（converged-only）读数 n_distinct=3（≤3）=> FAIL。按 §2.3 第 2 行动作：**维持原 V3 标注（不动）+ 显式登记双读数 verdict + γ**；**0 擅选口径**，待 PI 复核指定哪一读数为准",
+    "改判档位_if_pi_adopts_converged_only_arm": "§2.3 第 3 行（FAIL = 原标注维持）→ 0 改判动作",
+    "改判档位_if_pi_adopts_cap_free_arm": "§2.3 第 1 行（PASS + 一致）→ 改判成"
+  },
+  "iron_rules": {
+    "0_LLM": true,
+    "no_proxy": true,
+    "no_key_in_prompt_json_disk": true,
+    "read_only_inputs": true,
+    "derived_json_not_merged": true,
+    "v3_original_report_bytes_untouched": true,
+    "frozen_runner_not_imported_not_edited": true
+  }
+}

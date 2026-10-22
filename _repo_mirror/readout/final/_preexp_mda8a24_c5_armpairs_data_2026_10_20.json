@@ -1,0 +1,2025 @@
+{
+  "artifact": {
+    "name": "results/_preexp_mda8a24_c5_armpairs_data_2026_10_20.json",
+    "title": "甲-C5 之三对臂对之预实验择优 —— 读数数据件",
+    "produced_by": "worker（执行棒 · deposon）",
+    "face": "预实验择优之执行面（PI v166-Q1 之 Q1 裁「预实验择优」）",
+    "status": "读数件（0 判定 · 0 终判 · 0 闭 KD · 0 宣告段毕 · 0 代裁）",
+    "run_at_local": "2026-10-20 21:20:33.475",
+    "timezone": "UTC+8 (Asia/Shanghai)",
+    "observation_time": "2026-10-20 21:20:33.475",
+    "new_observations_count": 0,
+    "new_run_cells_count": 0,
+    "llm_calls": 0,
+    "network_requests": 0,
+    "key_reads": 0,
+    "existing_files_touched": 0,
+    "seed": 42,
+    "counting_face": "全 S 30 格（2 臂 x 15 格）@seed 42 · 甲-C5 之 H_CAND 跨档并集面"
+  },
+  "mandate_chain": [
+    "PI v163-Q1（2eae0446faf1）· 拟新候选构造（推荐）",
+    "PI v165-Q1（self-measured）· 四草案全采生效 · 生效即锁（K-NCC-1..10 判死线全锁）",
+    "PI v165-Q2（self-measured）· K-NCC-5 界分准（①之来源构造位移至 H_CAND 跨档并集 ＋ 对象域臂对变更之明裁）· 甲-C5 可施用",
+    "PI v166-Q1（self-measured）· 甲-C5 之臂对三选一 · 裁「预实验择优」· 三对各跑 · 择归 PI/verdict-keeper"
+  ],
+  "anchors_self_measured": [
+    {
+      "path": "results/_preexp_design_new_construct_mda8a24_2026_10_20.md",
+      "sha12": "356ef2e9db1c",
+      "bytes": 79800,
+      "mtime_local": "2026-10-20 20:21:26.530"
+    },
+    {
+      "path": ".tmp/freeze_criterion_rewire_r2_probe_2026_10_17.py",
+      "sha12": "cb91e876ae7f",
+      "bytes": 22764,
+      "mtime_local": "2026-10-17 23:52:14.020"
+    },
+    {
+      "path": ".tmp/freeze_criterion_rewire_r2_probe_out2_2026_10_17.txt",
+      "sha12": "9953747adec5",
+      "bytes": 17037,
+      "mtime_local": "2026-10-17 23:52:22.912"
+    },
+    {
+      "path": "results/_f3_payment_vector_reconstruction_data_2026_10_19.json",
+      "sha12": "7f80d5ae03bb",
+      "bytes": 210141,
+      "mtime_local": "2026-10-19 22:34:25.218"
+    },
+    {
+      "path": "results/_mda8_preexp_run_reading_2026_10_20.json",
+      "sha12": "56eb9db8bfd1",
+      "bytes": 145592,
+      "mtime_local": "2026-10-20 09:40:01.501"
+    },
+    {
+      "path": "results/_o1_transcription_face_erratum_2026_10_20.md",
+      "sha12": "941002361d54",
+      "bytes": 81406,
+      "mtime_local": "2026-10-20 19:47:02.429"
+    },
+    {
+      "path": "results/_preexp_mda8a24_c2c4_reading_2026_10_20.md",
+      "sha12": "d91a11e88b95",
+      "bytes": 44911,
+      "mtime_local": "2026-10-20 19:06:42.857"
+    },
+    {
+      "path": "tools/exp_harness.py",
+      "sha12": "ce64b9b97489",
+      "bytes": 45590,
+      "mtime_local": "2026-10-18 13:20:34.317"
+    },
+    {
+      "path": "tools/llm_client.py",
+      "sha12": "1722500da4aa",
+      "bytes": 8118,
+      "mtime_local": "2026-09-09 16:16:02.744"
+    },
+    {
+      "path": "pi_rulings/_pi_card_answers_register_2026_10_20_v165.md",
+      "sha12": "72c5b643613f",
+      "bytes": 3301,
+      "mtime_local": "2026-10-20 20:41:32.556"
+    },
+    {
+      "path": "pi_rulings/_pi_card_answers_register_2026_10_20_v166.md",
+      "sha12": "ea5c91e9f681",
+      "bytes": 3179,
+      "mtime_local": "2026-10-20 21:11:52.970"
+    }
+  ],
+  "design_draft_sha12_assertion": {
+    "expected_by_dispatch": "356ef2e9db1c",
+    "measured": "356ef2e9db1c",
+    "match": true
+  },
+  "material_face": {
+    "probe_code_literal_parse": {
+      "method": "ast.parse + ast.literal_eval（只读文本解析 · 0 import · 0 exec）",
+      "assign_line_H_CAND": 25,
+      "assign_line_U_CAND": 33,
+      "FAMS": [
+        "T1_GSM8K",
+        "T2_StrategyQA",
+        "T3_Trap",
+        "T4_2x2",
+        "T5_LowResource"
+      ],
+      "MECHS": [
+        "M1_Deposon_TRA",
+        "M2_Greedy",
+        "M3_Random"
+      ]
+    },
+    "H_CAND_per_tier": [
+      {
+        "tier_id": "H-C1",
+        "desc": "720面(已裁)",
+        "values": [
+          15,
+          15,
+          15,
+          15,
+          20
+        ],
+        "types": [
+          "int"
+        ],
+        "n_distinct_numeric": 2,
+        "n_distinct_byte": 2,
+        "value_set": [
+          15,
+          20
+        ]
+      },
+      {
+        "tier_id": "H-C2",
+        "desc": "H_face 全族(已入锁)",
+        "values": [
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "types": [
+          "int"
+        ],
+        "n_distinct_numeric": 1,
+        "n_distinct_byte": 1,
+        "value_set": [
+          15
+        ]
+      },
+      {
+        "tier_id": "H-C3",
+        "desc": "H_design 域",
+        "values": [
+          20,
+          20,
+          20,
+          10,
+          20
+        ],
+        "types": [
+          "int"
+        ],
+        "n_distinct_numeric": 2,
+        "n_distinct_byte": 2,
+        "value_set": [
+          10,
+          20
+        ]
+      },
+      {
+        "tier_id": "H-C4",
+        "desc": "H_glm_lock 域",
+        "values": [
+          34,
+          33,
+          33,
+          33,
+          33
+        ],
+        "types": [
+          "int"
+        ],
+        "n_distinct_numeric": 2,
+        "n_distinct_byte": 2,
+        "value_set": [
+          33,
+          34
+        ]
+      },
+      {
+        "tier_id": "H-C5",
+        "desc": "spec「≈33」(已判背离·备查)",
+        "values": [
+          33,
+          33,
+          33,
+          33,
+          33
+        ],
+        "types": [
+          "int"
+        ],
+        "n_distinct_numeric": 1,
+        "n_distinct_byte": 1,
+        "value_set": [
+          33
+        ]
+      },
+      {
+        "tier_id": "H-C6",
+        "desc": "run默认25/T5默认20(未冻结)",
+        "values": [
+          25,
+          25,
+          25,
+          25,
+          20
+        ],
+        "types": [
+          "int"
+        ],
+        "n_distinct_numeric": 2,
+        "n_distinct_byte": 2,
+        "value_set": [
+          20,
+          25
+        ]
+      }
+    ],
+    "H_CAND_all_tiers_union": [
+      10,
+      15,
+      20,
+      25,
+      33,
+      34
+    ],
+    "U_CAND_per_tier": [
+      {
+        "tier_id": "U-C1",
+        "values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "types": [
+          "float"
+        ],
+        "n_distinct_numeric": 1,
+        "n_distinct_byte": 1,
+        "value_set": [
+          1.0
+        ]
+      },
+      {
+        "tier_id": "U-C2",
+        "values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "types": [
+          "float"
+        ],
+        "n_distinct_numeric": 1,
+        "n_distinct_byte": 1,
+        "value_set": [
+          1.0
+        ]
+      },
+      {
+        "tier_id": "U-C3",
+        "values": [
+          1.0,
+          1.0,
+          1.0,
+          4.0,
+          9
+        ],
+        "types": [
+          "float",
+          "int"
+        ],
+        "n_distinct_numeric": 3,
+        "n_distinct_byte": 3,
+        "value_set": [
+          1.0,
+          4.0,
+          9
+        ]
+      },
+      {
+        "tier_id": "U-C4i",
+        "values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "types": [
+          "float"
+        ],
+        "n_distinct_numeric": 1,
+        "n_distinct_byte": 1,
+        "value_set": [
+          1.0
+        ]
+      },
+      {
+        "tier_id": "U-C4v",
+        "values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "types": [
+          "float"
+        ],
+        "n_distinct_numeric": 1,
+        "n_distinct_byte": 1,
+        "value_set": [
+          1.0
+        ]
+      }
+    ],
+    "f3_cells_15_count": 15,
+    "f3_cells_15_keys": [
+      "M1_Deposon_TRA|T1_GSM8K",
+      "M1_Deposon_TRA|T2_StrategyQA",
+      "M1_Deposon_TRA|T3_Trap",
+      "M1_Deposon_TRA|T4_2x2",
+      "M1_Deposon_TRA|T5_LowResource",
+      "M2_Greedy|T1_GSM8K",
+      "M2_Greedy|T2_StrategyQA",
+      "M2_Greedy|T3_Trap",
+      "M2_Greedy|T4_2x2",
+      "M2_Greedy|T5_LowResource",
+      "M3_Random|T1_GSM8K",
+      "M3_Random|T2_StrategyQA",
+      "M3_Random|T3_Trap",
+      "M3_Random|T4_2x2",
+      "M3_Random|T5_LowResource"
+    ],
+    "canonical_form_definition_quote": "x_g = (① 该面逐格注入值 · ② 该格之 |A| 多重集 · ③ 该格之支付向量（有序）· ④ 该格之 prompt 文本哈希集)；C4 判据面同效 = 四字段逐字段相等",
+    "equivalence_rule_quote": "A2-1 甲 · 数值相等（类型差异不携带判据信息）· ②③④ 逐字段相等（C4）",
+    "f234_in_register_quoted": {
+      "f2": {
+        "min": "2",
+        "max": "4",
+        "mean_exact": "242/75",
+        "std_ddof0_float": 0.9480740711803295
+      },
+      "f3_ordered": {
+        "min": "1/4",
+        "max": "403/80",
+        "mean_exact": "2487/1600",
+        "std_ddof0_float": 1.7992702513797088
+      },
+      "f4": {
+        "min": "15",
+        "max": "20",
+        "mean_exact": "16",
+        "std_ddof0_float": 2.0
+      },
+      "f3_unordered_note": "③ 无序读法之 n_distinct ＝ 4（照录 d91a11e88b95 §4-0）",
+      "source": "56eb9db8bfd1 §readout.per_field_self_evidence（照录 · 时点见该件）"
+    },
+    "f234_projection_recomputed": {
+      "f2": {
+        "n": 15,
+        "min": 2.0,
+        "max": 4.0,
+        "mean_exact": "242/75",
+        "mean_float": 3.2266666666666666,
+        "std_ddof0_float": 0.9480740711803295,
+        "std_ddof1_float": 0.9813498963405555,
+        "mean_exact_recomputed": "242/75"
+      },
+      "f3": {
+        "n": 15,
+        "min": 0.25,
+        "max": 5.0375,
+        "mean_exact": "2487/1600",
+        "mean_float": 1.554375,
+        "std_ddof0_float": 1.7992702513797085,
+        "std_ddof1_float": 1.8624216486395953,
+        "mean_exact_recomputed": "2487/1600"
+      },
+      "f4": {
+        "n": 15,
+        "min": 15.0,
+        "max": 20.0,
+        "mean_exact": "16",
+        "mean_float": 16.0,
+        "std_ddof0_float": 2.0,
+        "std_ddof1_float": 2.0701966780270626,
+        "mean_exact_recomputed": "16"
+      }
+    },
+    "f234_projection_crosscheck_vs_register": {
+      "f2_mean_exact_equal": true,
+      "f3_mean_exact_equal": true,
+      "f4_mean_exact_equal": true
+    },
+    "baseline_current_face_234_only_30cell": {
+      "D": 75,
+      "n_ind": 5,
+      "Delta": 25,
+      "class_sizes": [
+        6,
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    "baseline_crosscheck_vs_register_75_5_25": {
+      "self_computed": [
+        75,
+        5,
+        25
+      ],
+      "in_register": [
+        75,
+        5,
+        25
+      ],
+      "match": true,
+      "in_register_source": "d91a11e88b95 §4-0「现口径面（① 除外之合取）三件」"
+    }
+  },
+  "arm_pair_readings": [
+    {
+      "pair_id": "P1",
+      "pair_label": "H-C1 x H-C4",
+      "arm_A_tier": "H-C1",
+      "arm_B_tier": "H-C4",
+      "arm_A_values": [
+        15,
+        15,
+        15,
+        15,
+        20
+      ],
+      "arm_B_values": [
+        34,
+        33,
+        33,
+        33,
+        33
+      ],
+      "arm_A_value_set": [
+        15,
+        20
+      ],
+      "arm_B_value_set": [
+        33,
+        34
+      ],
+      "cross_tier_union": [
+        15,
+        20,
+        33,
+        34
+      ],
+      "f1_n_distinct_30cell_numeric": 4,
+      "f1_n_distinct_30cell_byte": 4,
+      "f1_value_set_30cell": [
+        15,
+        20,
+        33,
+        34
+      ],
+      "f1_n_distinct_armA_15cell": 2,
+      "f1_n_distinct_armB_15cell": 2,
+      "f1_stats_30cell": {
+        "n": 30,
+        "min": 15.0,
+        "max": 34.0,
+        "mean_exact": "123/5",
+        "mean_float": 24.6,
+        "std_ddof0_float": 8.720091742636656,
+        "std_ddof1_float": 8.869163938360664
+      },
+      "family_breakdown": [
+        {
+          "family": "T1_GSM8K",
+          "armA_H-C1": 15,
+          "armB_H-C4": 34,
+          "equal": false
+        },
+        {
+          "family": "T2_StrategyQA",
+          "armA_H-C1": 15,
+          "armB_H-C4": 33,
+          "equal": false
+        },
+        {
+          "family": "T3_Trap",
+          "armA_H-C1": 15,
+          "armB_H-C4": 33,
+          "equal": false
+        },
+        {
+          "family": "T4_2x2",
+          "armA_H-C1": 15,
+          "armB_H-C4": 33,
+          "equal": false
+        },
+        {
+          "family": "T5_LowResource",
+          "armA_H-C1": 20,
+          "armB_H-C4": 33,
+          "equal": false
+        }
+      ],
+      "f2_n_distinct_15cell": 4,
+      "f2_n_distinct_30cell": 4,
+      "f3_n_distinct_30cell_ordered": 5,
+      "f3_n_distinct_30cell_unordered": 5,
+      "f4_n_distinct_30cell": 5,
+      "conjunction_numeric": {
+        "D": 30,
+        "n_ind": 10,
+        "Delta": 20,
+        "class_count": 10,
+        "class_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "classes": [
+          {
+            "size": 3,
+            "members": [
+              "H-C1|M1_Deposon_TRA|T1_GSM8K",
+              "H-C1|M2_Greedy|T1_GSM8K",
+              "H-C1|M3_Random|T1_GSM8K"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C1|M1_Deposon_TRA|T2_StrategyQA",
+              "H-C1|M2_Greedy|T2_StrategyQA",
+              "H-C1|M3_Random|T2_StrategyQA"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C1|M1_Deposon_TRA|T3_Trap",
+              "H-C1|M2_Greedy|T3_Trap",
+              "H-C1|M3_Random|T3_Trap"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C1|M1_Deposon_TRA|T4_2x2",
+              "H-C1|M2_Greedy|T4_2x2",
+              "H-C1|M3_Random|T4_2x2"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C1|M1_Deposon_TRA|T5_LowResource",
+              "H-C1|M2_Greedy|T5_LowResource",
+              "H-C1|M3_Random|T5_LowResource"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T1_GSM8K",
+              "H-C4|M2_Greedy|T1_GSM8K",
+              "H-C4|M3_Random|T1_GSM8K"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T2_StrategyQA",
+              "H-C4|M2_Greedy|T2_StrategyQA",
+              "H-C4|M3_Random|T2_StrategyQA"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T3_Trap",
+              "H-C4|M2_Greedy|T3_Trap",
+              "H-C4|M3_Random|T3_Trap"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T4_2x2",
+              "H-C4|M2_Greedy|T4_2x2",
+              "H-C4|M3_Random|T4_2x2"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T5_LowResource",
+              "H-C4|M2_Greedy|T5_LowResource",
+              "H-C4|M3_Random|T5_LowResource"
+            ]
+          }
+        ]
+      },
+      "conjunction_byte": {
+        "D": 30,
+        "n_ind": 10,
+        "Delta": 20,
+        "class_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "two_reads_same_result": true,
+      "M_N4_independently_discriminative_field_count": 4,
+      "M_A5_delta_vs_current_face": {
+        "baseline_current_face": {
+          "D": 75,
+          "n_ind": 5,
+          "Delta": 25
+        },
+        "delta_D": -45,
+        "delta_n_ind": 5,
+        "delta_Delta": -5,
+        "sort_key_abs": [
+          5,
+          5
+        ],
+        "note": "假设面演算（若 ① 获准入合取）· 冻结之假设面 · 0 充 PI 之释已发生"
+      },
+      "cross_arm_same_mech_equivalent_pairs": 0,
+      "cells_30": [
+        {
+          "cell_key": "H-C1|M1_Deposon_TRA|T1_GSM8K",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T1_GSM8K",
+          "f1": 15
+        },
+        {
+          "cell_key": "H-C1|M2_Greedy|T1_GSM8K",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T1_GSM8K",
+          "f1": 15
+        },
+        {
+          "cell_key": "H-C1|M3_Random|T1_GSM8K",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T1_GSM8K",
+          "f1": 15
+        },
+        {
+          "cell_key": "H-C1|M1_Deposon_TRA|T2_StrategyQA",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T2_StrategyQA",
+          "f1": 15
+        },
+        {
+          "cell_key": "H-C1|M2_Greedy|T2_StrategyQA",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T2_StrategyQA",
+          "f1": 15
+        },
+        {
+          "cell_key": "H-C1|M3_Random|T2_StrategyQA",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T2_StrategyQA",
+          "f1": 15
+        },
+        {
+          "cell_key": "H-C1|M1_Deposon_TRA|T3_Trap",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T3_Trap",
+          "f1": 15
+        },
+        {
+          "cell_key": "H-C1|M2_Greedy|T3_Trap",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T3_Trap",
+          "f1": 15
+        },
+        {
+          "cell_key": "H-C1|M3_Random|T3_Trap",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T3_Trap",
+          "f1": 15
+        },
+        {
+          "cell_key": "H-C1|M1_Deposon_TRA|T4_2x2",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T4_2x2",
+          "f1": 15
+        },
+        {
+          "cell_key": "H-C1|M2_Greedy|T4_2x2",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T4_2x2",
+          "f1": 15
+        },
+        {
+          "cell_key": "H-C1|M3_Random|T4_2x2",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T4_2x2",
+          "f1": 15
+        },
+        {
+          "cell_key": "H-C1|M1_Deposon_TRA|T5_LowResource",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T5_LowResource",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C1|M2_Greedy|T5_LowResource",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T5_LowResource",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C1|M3_Random|T5_LowResource",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T5_LowResource",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T1_GSM8K",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T1_GSM8K",
+          "f1": 34
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T1_GSM8K",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T1_GSM8K",
+          "f1": 34
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T1_GSM8K",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T1_GSM8K",
+          "f1": 34
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T2_StrategyQA",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T2_StrategyQA",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T2_StrategyQA",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T2_StrategyQA",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T2_StrategyQA",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T2_StrategyQA",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T3_Trap",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T3_Trap",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T3_Trap",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T3_Trap",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T3_Trap",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T3_Trap",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T4_2x2",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T4_2x2",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T4_2x2",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T4_2x2",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T4_2x2",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T4_2x2",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T5_LowResource",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T5_LowResource",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T5_LowResource",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T5_LowResource",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T5_LowResource",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T5_LowResource",
+          "f1": 33
+        }
+      ]
+    },
+    {
+      "pair_id": "P2",
+      "pair_label": "H-C3 x H-C4",
+      "arm_A_tier": "H-C3",
+      "arm_B_tier": "H-C4",
+      "arm_A_values": [
+        20,
+        20,
+        20,
+        10,
+        20
+      ],
+      "arm_B_values": [
+        34,
+        33,
+        33,
+        33,
+        33
+      ],
+      "arm_A_value_set": [
+        10,
+        20
+      ],
+      "arm_B_value_set": [
+        33,
+        34
+      ],
+      "cross_tier_union": [
+        10,
+        20,
+        33,
+        34
+      ],
+      "f1_n_distinct_30cell_numeric": 4,
+      "f1_n_distinct_30cell_byte": 4,
+      "f1_value_set_30cell": [
+        10,
+        20,
+        33,
+        34
+      ],
+      "f1_n_distinct_armA_15cell": 2,
+      "f1_n_distinct_armB_15cell": 2,
+      "f1_stats_30cell": {
+        "n": 30,
+        "min": 10.0,
+        "max": 34.0,
+        "mean_exact": "128/5",
+        "mean_float": 25.6,
+        "std_ddof0_float": 8.114185110040317,
+        "std_ddof1_float": 8.252899177112623
+      },
+      "family_breakdown": [
+        {
+          "family": "T1_GSM8K",
+          "armA_H-C3": 20,
+          "armB_H-C4": 34,
+          "equal": false
+        },
+        {
+          "family": "T2_StrategyQA",
+          "armA_H-C3": 20,
+          "armB_H-C4": 33,
+          "equal": false
+        },
+        {
+          "family": "T3_Trap",
+          "armA_H-C3": 20,
+          "armB_H-C4": 33,
+          "equal": false
+        },
+        {
+          "family": "T4_2x2",
+          "armA_H-C3": 10,
+          "armB_H-C4": 33,
+          "equal": false
+        },
+        {
+          "family": "T5_LowResource",
+          "armA_H-C3": 20,
+          "armB_H-C4": 33,
+          "equal": false
+        }
+      ],
+      "f2_n_distinct_15cell": 4,
+      "f2_n_distinct_30cell": 4,
+      "f3_n_distinct_30cell_ordered": 5,
+      "f3_n_distinct_30cell_unordered": 5,
+      "f4_n_distinct_30cell": 5,
+      "conjunction_numeric": {
+        "D": 30,
+        "n_ind": 10,
+        "Delta": 20,
+        "class_count": 10,
+        "class_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "classes": [
+          {
+            "size": 3,
+            "members": [
+              "H-C3|M1_Deposon_TRA|T1_GSM8K",
+              "H-C3|M2_Greedy|T1_GSM8K",
+              "H-C3|M3_Random|T1_GSM8K"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C3|M1_Deposon_TRA|T2_StrategyQA",
+              "H-C3|M2_Greedy|T2_StrategyQA",
+              "H-C3|M3_Random|T2_StrategyQA"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C3|M1_Deposon_TRA|T3_Trap",
+              "H-C3|M2_Greedy|T3_Trap",
+              "H-C3|M3_Random|T3_Trap"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C3|M1_Deposon_TRA|T4_2x2",
+              "H-C3|M2_Greedy|T4_2x2",
+              "H-C3|M3_Random|T4_2x2"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C3|M1_Deposon_TRA|T5_LowResource",
+              "H-C3|M2_Greedy|T5_LowResource",
+              "H-C3|M3_Random|T5_LowResource"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T1_GSM8K",
+              "H-C4|M2_Greedy|T1_GSM8K",
+              "H-C4|M3_Random|T1_GSM8K"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T2_StrategyQA",
+              "H-C4|M2_Greedy|T2_StrategyQA",
+              "H-C4|M3_Random|T2_StrategyQA"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T3_Trap",
+              "H-C4|M2_Greedy|T3_Trap",
+              "H-C4|M3_Random|T3_Trap"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T4_2x2",
+              "H-C4|M2_Greedy|T4_2x2",
+              "H-C4|M3_Random|T4_2x2"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T5_LowResource",
+              "H-C4|M2_Greedy|T5_LowResource",
+              "H-C4|M3_Random|T5_LowResource"
+            ]
+          }
+        ]
+      },
+      "conjunction_byte": {
+        "D": 30,
+        "n_ind": 10,
+        "Delta": 20,
+        "class_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "two_reads_same_result": true,
+      "M_N4_independently_discriminative_field_count": 4,
+      "M_A5_delta_vs_current_face": {
+        "baseline_current_face": {
+          "D": 75,
+          "n_ind": 5,
+          "Delta": 25
+        },
+        "delta_D": -45,
+        "delta_n_ind": 5,
+        "delta_Delta": -5,
+        "sort_key_abs": [
+          5,
+          5
+        ],
+        "note": "假设面演算（若 ① 获准入合取）· 冻结之假设面 · 0 充 PI 之释已发生"
+      },
+      "cross_arm_same_mech_equivalent_pairs": 0,
+      "cells_30": [
+        {
+          "cell_key": "H-C3|M1_Deposon_TRA|T1_GSM8K",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T1_GSM8K",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C3|M2_Greedy|T1_GSM8K",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T1_GSM8K",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C3|M3_Random|T1_GSM8K",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T1_GSM8K",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C3|M1_Deposon_TRA|T2_StrategyQA",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T2_StrategyQA",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C3|M2_Greedy|T2_StrategyQA",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T2_StrategyQA",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C3|M3_Random|T2_StrategyQA",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T2_StrategyQA",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C3|M1_Deposon_TRA|T3_Trap",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T3_Trap",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C3|M2_Greedy|T3_Trap",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T3_Trap",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C3|M3_Random|T3_Trap",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T3_Trap",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C3|M1_Deposon_TRA|T4_2x2",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T4_2x2",
+          "f1": 10
+        },
+        {
+          "cell_key": "H-C3|M2_Greedy|T4_2x2",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T4_2x2",
+          "f1": 10
+        },
+        {
+          "cell_key": "H-C3|M3_Random|T4_2x2",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T4_2x2",
+          "f1": 10
+        },
+        {
+          "cell_key": "H-C3|M1_Deposon_TRA|T5_LowResource",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T5_LowResource",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C3|M2_Greedy|T5_LowResource",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T5_LowResource",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C3|M3_Random|T5_LowResource",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T5_LowResource",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T1_GSM8K",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T1_GSM8K",
+          "f1": 34
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T1_GSM8K",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T1_GSM8K",
+          "f1": 34
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T1_GSM8K",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T1_GSM8K",
+          "f1": 34
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T2_StrategyQA",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T2_StrategyQA",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T2_StrategyQA",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T2_StrategyQA",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T2_StrategyQA",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T2_StrategyQA",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T3_Trap",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T3_Trap",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T3_Trap",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T3_Trap",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T3_Trap",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T3_Trap",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T4_2x2",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T4_2x2",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T4_2x2",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T4_2x2",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T4_2x2",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T4_2x2",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T5_LowResource",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T5_LowResource",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T5_LowResource",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T5_LowResource",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T5_LowResource",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T5_LowResource",
+          "f1": 33
+        }
+      ]
+    },
+    {
+      "pair_id": "P3",
+      "pair_label": "H-C6 x H-C4",
+      "arm_A_tier": "H-C6",
+      "arm_B_tier": "H-C4",
+      "arm_A_values": [
+        25,
+        25,
+        25,
+        25,
+        20
+      ],
+      "arm_B_values": [
+        34,
+        33,
+        33,
+        33,
+        33
+      ],
+      "arm_A_value_set": [
+        20,
+        25
+      ],
+      "arm_B_value_set": [
+        33,
+        34
+      ],
+      "cross_tier_union": [
+        20,
+        25,
+        33,
+        34
+      ],
+      "f1_n_distinct_30cell_numeric": 4,
+      "f1_n_distinct_30cell_byte": 4,
+      "f1_value_set_30cell": [
+        20,
+        25,
+        33,
+        34
+      ],
+      "f1_n_distinct_armA_15cell": 2,
+      "f1_n_distinct_armB_15cell": 2,
+      "f1_stats_30cell": {
+        "n": 30,
+        "min": 20.0,
+        "max": 34.0,
+        "mean_exact": "143/5",
+        "mean_float": 28.6,
+        "std_ddof0_float": 4.82078831727758,
+        "std_ddof1_float": 4.90320092494126
+      },
+      "family_breakdown": [
+        {
+          "family": "T1_GSM8K",
+          "armA_H-C6": 25,
+          "armB_H-C4": 34,
+          "equal": false
+        },
+        {
+          "family": "T2_StrategyQA",
+          "armA_H-C6": 25,
+          "armB_H-C4": 33,
+          "equal": false
+        },
+        {
+          "family": "T3_Trap",
+          "armA_H-C6": 25,
+          "armB_H-C4": 33,
+          "equal": false
+        },
+        {
+          "family": "T4_2x2",
+          "armA_H-C6": 25,
+          "armB_H-C4": 33,
+          "equal": false
+        },
+        {
+          "family": "T5_LowResource",
+          "armA_H-C6": 20,
+          "armB_H-C4": 33,
+          "equal": false
+        }
+      ],
+      "f2_n_distinct_15cell": 4,
+      "f2_n_distinct_30cell": 4,
+      "f3_n_distinct_30cell_ordered": 5,
+      "f3_n_distinct_30cell_unordered": 5,
+      "f4_n_distinct_30cell": 5,
+      "conjunction_numeric": {
+        "D": 30,
+        "n_ind": 10,
+        "Delta": 20,
+        "class_count": 10,
+        "class_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "classes": [
+          {
+            "size": 3,
+            "members": [
+              "H-C6|M1_Deposon_TRA|T1_GSM8K",
+              "H-C6|M2_Greedy|T1_GSM8K",
+              "H-C6|M3_Random|T1_GSM8K"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C6|M1_Deposon_TRA|T2_StrategyQA",
+              "H-C6|M2_Greedy|T2_StrategyQA",
+              "H-C6|M3_Random|T2_StrategyQA"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C6|M1_Deposon_TRA|T3_Trap",
+              "H-C6|M2_Greedy|T3_Trap",
+              "H-C6|M3_Random|T3_Trap"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C6|M1_Deposon_TRA|T4_2x2",
+              "H-C6|M2_Greedy|T4_2x2",
+              "H-C6|M3_Random|T4_2x2"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C6|M1_Deposon_TRA|T5_LowResource",
+              "H-C6|M2_Greedy|T5_LowResource",
+              "H-C6|M3_Random|T5_LowResource"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T1_GSM8K",
+              "H-C4|M2_Greedy|T1_GSM8K",
+              "H-C4|M3_Random|T1_GSM8K"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T2_StrategyQA",
+              "H-C4|M2_Greedy|T2_StrategyQA",
+              "H-C4|M3_Random|T2_StrategyQA"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T3_Trap",
+              "H-C4|M2_Greedy|T3_Trap",
+              "H-C4|M3_Random|T3_Trap"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T4_2x2",
+              "H-C4|M2_Greedy|T4_2x2",
+              "H-C4|M3_Random|T4_2x2"
+            ]
+          },
+          {
+            "size": 3,
+            "members": [
+              "H-C4|M1_Deposon_TRA|T5_LowResource",
+              "H-C4|M2_Greedy|T5_LowResource",
+              "H-C4|M3_Random|T5_LowResource"
+            ]
+          }
+        ]
+      },
+      "conjunction_byte": {
+        "D": 30,
+        "n_ind": 10,
+        "Delta": 20,
+        "class_sizes": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "two_reads_same_result": true,
+      "M_N4_independently_discriminative_field_count": 4,
+      "M_A5_delta_vs_current_face": {
+        "baseline_current_face": {
+          "D": 75,
+          "n_ind": 5,
+          "Delta": 25
+        },
+        "delta_D": -45,
+        "delta_n_ind": 5,
+        "delta_Delta": -5,
+        "sort_key_abs": [
+          5,
+          5
+        ],
+        "note": "假设面演算（若 ① 获准入合取）· 冻结之假设面 · 0 充 PI 之释已发生"
+      },
+      "cross_arm_same_mech_equivalent_pairs": 0,
+      "cells_30": [
+        {
+          "cell_key": "H-C6|M1_Deposon_TRA|T1_GSM8K",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T1_GSM8K",
+          "f1": 25
+        },
+        {
+          "cell_key": "H-C6|M2_Greedy|T1_GSM8K",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T1_GSM8K",
+          "f1": 25
+        },
+        {
+          "cell_key": "H-C6|M3_Random|T1_GSM8K",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T1_GSM8K",
+          "f1": 25
+        },
+        {
+          "cell_key": "H-C6|M1_Deposon_TRA|T2_StrategyQA",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T2_StrategyQA",
+          "f1": 25
+        },
+        {
+          "cell_key": "H-C6|M2_Greedy|T2_StrategyQA",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T2_StrategyQA",
+          "f1": 25
+        },
+        {
+          "cell_key": "H-C6|M3_Random|T2_StrategyQA",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T2_StrategyQA",
+          "f1": 25
+        },
+        {
+          "cell_key": "H-C6|M1_Deposon_TRA|T3_Trap",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T3_Trap",
+          "f1": 25
+        },
+        {
+          "cell_key": "H-C6|M2_Greedy|T3_Trap",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T3_Trap",
+          "f1": 25
+        },
+        {
+          "cell_key": "H-C6|M3_Random|T3_Trap",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T3_Trap",
+          "f1": 25
+        },
+        {
+          "cell_key": "H-C6|M1_Deposon_TRA|T4_2x2",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T4_2x2",
+          "f1": 25
+        },
+        {
+          "cell_key": "H-C6|M2_Greedy|T4_2x2",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T4_2x2",
+          "f1": 25
+        },
+        {
+          "cell_key": "H-C6|M3_Random|T4_2x2",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T4_2x2",
+          "f1": 25
+        },
+        {
+          "cell_key": "H-C6|M1_Deposon_TRA|T5_LowResource",
+          "arm": "A",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T5_LowResource",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C6|M2_Greedy|T5_LowResource",
+          "arm": "A",
+          "mechanism": "M2_Greedy",
+          "family": "T5_LowResource",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C6|M3_Random|T5_LowResource",
+          "arm": "A",
+          "mechanism": "M3_Random",
+          "family": "T5_LowResource",
+          "f1": 20
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T1_GSM8K",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T1_GSM8K",
+          "f1": 34
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T1_GSM8K",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T1_GSM8K",
+          "f1": 34
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T1_GSM8K",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T1_GSM8K",
+          "f1": 34
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T2_StrategyQA",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T2_StrategyQA",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T2_StrategyQA",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T2_StrategyQA",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T2_StrategyQA",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T2_StrategyQA",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T3_Trap",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T3_Trap",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T3_Trap",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T3_Trap",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T3_Trap",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T3_Trap",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T4_2x2",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T4_2x2",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T4_2x2",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T4_2x2",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T4_2x2",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T4_2x2",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M1_Deposon_TRA|T5_LowResource",
+          "arm": "B",
+          "mechanism": "M1_Deposon_TRA",
+          "family": "T5_LowResource",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M2_Greedy|T5_LowResource",
+          "arm": "B",
+          "mechanism": "M2_Greedy",
+          "family": "T5_LowResource",
+          "f1": 33
+        },
+        {
+          "cell_key": "H-C4|M3_Random|T5_LowResource",
+          "arm": "B",
+          "mechanism": "M3_Random",
+          "family": "T5_LowResource",
+          "f1": 33
+        }
+      ]
+    }
+  ],
+  "criterion_readout": {
+    "criterion_source": "356ef2e9db1c §5-1（一级 · 门槛/达标）＋ §5-2（二级 · 序/优 ＋ 其并列后之成本面）",
+    "discipline_quotes": [
+      "§5-2「排序键 ＝（|Δn_ind|, |ΔΔ|）之字典序」",
+      "§5-2「此为『影响面最小』之序 · 非『读数最大』之序（照录『达标 ⛔ 非『优』』）」",
+      "§5-2「若二级并列 ⇒ 取成本面最小者：(新跑格数 0 优于 >0, LLM 调用数 0 优于 >0, 须 PI 明写之条数, 须改码载之条数) 之字典序」",
+      "§5-2 判读规则 1「⛔ 0 以任一读数之大小充『优』—— 一级四条件 ＝ 达标；二/三级 ＝ 优」",
+      "§5-2 判读规则 2「⛔ 0 以『① 之 n_distinct 越大』充优（读数大小 ≠ 优）」",
+      "§5-2 判读规则 5「本规则只产出『可解集 ＋ 排序』；最终之择 ＝ PI／verdict-keeper」"
+    ],
+    "level1_table": [
+      {
+        "pair_id": "P1",
+        "pair_label": "H-C1 x H-C4",
+        "level1_cond1_f1_nd_ge4": {
+          "pass": true,
+          "value": 4
+        },
+        "level1_cond2_f234_nd_gt3": {
+          "pass": true,
+          "values": {
+            "f2": 4,
+            "f3_ordered": 5,
+            "f3_unordered": 5,
+            "f4": 5
+          }
+        },
+        "level1_cond3_MN4_ge2": {
+          "pass": true,
+          "value": 4
+        },
+        "level1_cond4_third_party_recalc": {
+          "pass": null,
+          "value": null,
+          "note": "本棒读数系生成者自算 ⇒ 第三方复算未派未成 ⇒ 条件④ 0 成就（沿 K-MDA8A2-5 / K-MDA8N-5 体例）"
+        },
+        "level1_all_first_three": true
+      },
+      {
+        "pair_id": "P2",
+        "pair_label": "H-C3 x H-C4",
+        "level1_cond1_f1_nd_ge4": {
+          "pass": true,
+          "value": 4
+        },
+        "level1_cond2_f234_nd_gt3": {
+          "pass": true,
+          "values": {
+            "f2": 4,
+            "f3_ordered": 5,
+            "f3_unordered": 5,
+            "f4": 5
+          }
+        },
+        "level1_cond3_MN4_ge2": {
+          "pass": true,
+          "value": 4
+        },
+        "level1_cond4_third_party_recalc": {
+          "pass": null,
+          "value": null,
+          "note": "本棒读数系生成者自算 ⇒ 第三方复算未派未成 ⇒ 条件④ 0 成就（沿 K-MDA8A2-5 / K-MDA8N-5 体例）"
+        },
+        "level1_all_first_three": true
+      },
+      {
+        "pair_id": "P3",
+        "pair_label": "H-C6 x H-C4",
+        "level1_cond1_f1_nd_ge4": {
+          "pass": true,
+          "value": 4
+        },
+        "level1_cond2_f234_nd_gt3": {
+          "pass": true,
+          "values": {
+            "f2": 4,
+            "f3_ordered": 5,
+            "f3_unordered": 5,
+            "f4": 5
+          }
+        },
+        "level1_cond3_MN4_ge2": {
+          "pass": true,
+          "value": 4
+        },
+        "level1_cond4_third_party_recalc": {
+          "pass": null,
+          "value": null,
+          "note": "本棒读数系生成者自算 ⇒ 第三方复算未派未成 ⇒ 条件④ 0 成就（沿 K-MDA8A2-5 / K-MDA8N-5 体例）"
+        },
+        "level1_all_first_three": true
+      }
+    ],
+    "level1_quasi_solvable_set_first_three": [
+      "P1",
+      "P2",
+      "P3"
+    ],
+    "level1_note": "本棒只出「准可解集」（条件①②③全过者）；条件④（第三方可复算）本棒 0 成就 ⇒ 终定待第三方复算 ＋ PI／verdict-keeper",
+    "level2_sort_key": {
+      "P1": [
+        5,
+        5
+      ],
+      "P2": [
+        5,
+        5
+      ],
+      "P3": [
+        5,
+        5
+      ]
+    },
+    "level2_distinct_keys": [
+      [
+        5,
+        5
+      ]
+    ],
+    "level2_tie": true,
+    "level3_cost_key": {
+      "P1": {
+        "new_run_cells": 0,
+        "llm_calls": 0,
+        "pi_explicit_writings_pending": 1,
+        "pi_explicit_writings_pending_basis": "v166-Q1 §3.1「臂对之择之面＝预实验之果呈后 PI 之裁」⇒ 择定 1 条待 PI 明写（K-NCC-5 界分与对象域明裁已在册 v165-Q2）",
+        "code_carrier_modifications": 0
+      },
+      "P2": {
+        "new_run_cells": 0,
+        "llm_calls": 0,
+        "pi_explicit_writings_pending": 1,
+        "pi_explicit_writings_pending_basis": "v166-Q1 §3.1「臂对之择之面＝预实验之果呈后 PI 之裁」⇒ 择定 1 条待 PI 明写（K-NCC-5 界分与对象域明裁已在册 v165-Q2）",
+        "code_carrier_modifications": 0
+      },
+      "P3": {
+        "new_run_cells": 0,
+        "llm_calls": 0,
+        "pi_explicit_writings_pending": 1,
+        "pi_explicit_writings_pending_basis": "v166-Q1 §3.1「臂对之择之面＝预实验之果呈后 PI 之裁」⇒ 择定 1 条待 PI 明写（K-NCC-5 界分与对象域明裁已在册 v165-Q2）",
+        "code_carrier_modifications": 0
+      }
+    },
+    "level3_cost_tuple": {
+      "P1": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "P2": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "P3": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "level3_distinct_keys": [
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "level3_tie": true,
+    "homogeneity": {
+      "f1_n_distinct_identical": true,
+      "conjunction_identical": true,
+      "level2_key_identical": true,
+      "level3_cost_key_identical": true,
+      "all_three_levels_non_discriminating": true
+    },
+    "verdict_owner": "PI / verdict-keeper（本棒 0 代裁 · 0 落五终判）"
+  },
+  "kill_line_checks": [
+    {
+      "id": "K-NCC-1",
+      "name": "口径与候选集冻结门（FTFB 时序）",
+      "status": "过",
+      "basis": "生效草案 356ef2e9db1c 之生效（PI v165-Q1 · 2026-10-20 20:40:29 之卡）先于本棒读数（2026-10-20 21:20:33.475）；候选集 ＝ 甲-C5/C6/C7 闭集 已在测量前冻结；三对臂对之具名 已在草案 §3-1 冻结；臂对之「择」经 PI v166-Q1（2026-10-20 21:10:39）明裁为「预实验择优 · 择归 PI」⇒ 时序成立且非棒径自拟"
+    },
+    {
+      "id": "K-NCC-2",
+      "name": "素材面完备与可得门",
+      "status": "过",
+      "basis": "逐对之显式可得性声明：① 之逐格值 ＝ 码载真载体 cb91e876ae7f 之 H_CAND 字面量（在盘 · ast 文本解析）；②③④ 之逐格值 ＝ F3 7f80d5ae03bb 之 cells_15（在盘）⇒ 三对皆「在盘可复算」· 0 需新采集 · 0 须新跑 · 0 LLM"
+    },
+    {
+      "id": "K-NCC-3",
+      "name": "退化门自证门（逐字段）",
+      "status": "过",
+      "basis": "三对逐字段：① ＝ 4（>3）· ② ＝ 4 · ③ ＝ 5（有序）／4（无序）· ④ ＝ 5 ⇒ 无字段 ≤3 ⇒ 退化警报 0 触发；min-max／std 见数据件 f234_projection_recomputed 与各对 f1_stats_30cell"
+    },
+    {
+      "id": "K-NCC-4",
+      "name": "两读并出门（① 之读法）",
+      "status": "过（两读同果）",
+      "basis": "① 之两读法（数值相等／逐字节）并出：码载面 H_CAND 全 int ⇒ 两读之 n_distinct 皆 4、合取三件皆同 ⇒ 登记「同果·不影响本面读数」；⛔ 0 由棒径定唯一法定形（登记两读之同果事实，不代裁法定形）"
+    },
+    {
+      "id": "K-NCC-5",
+      "name": "来源构造口径位移界分门（本件特有）",
+      "status": "过（已在册）",
+      "basis": "PI v165-Q2 裁「准＋臂对今裁」＝「①之来源构造位移至码载面 H_CAND 跨档并集之口径界分 ＋ 对象域臂对变更之明裁」已给 ⇒ 甲-C5 可施用；本棒 0 由棒径界分 0 充「位移自明」"
+    },
+    {
+      "id": "K-NCC-6",
+      "name": "合取判别力与塌缩检测门",
+      "status": "过",
+      "basis": "三对逐对同报 D／n_ind／Δ（30／10／20）＋ 塌缩检测 M-N4 独立可判字段数 ＝ 4（≠1 ⇒ 无「塌缩为单条件」之读数）；M-A5 差值逐条声明为「冻结之假设面演算」（若 ① 获准入合取）· 0 充 PI 之释已发生"
+    },
+    {
+      "id": "K-NCC-7",
+      "name": "来源锚定与零新观测门",
+      "status": "过",
+      "basis": "当场自测七件锚（cb91e876ae7f／9953747adec5／7f80d5ae03bb／56eb9db8bfd1／ce64b9b97489／1722500da4aa／356ef2e9db1c）；本面之新观测数 ＝ 0（新跑格数 ＝ 0）· 0 动 tools/ 任一字节 · 0 读 key／.env"
+    },
+    {
+      "id": "K-NCC-8",
+      "name": "构造面自证门（素材清点 ≠ 判据读数）",
+      "status": "过",
+      "basis": "逐对复现集运算前提：在盘字面（H_CAND 逐档取值集合）→ 跨档并集 → n_distinct（逐步见数据件 arm_pair_readings.cross_tier_union 与 f1_n_distinct_*）；载体指纹当场自测；并显式声明：草案 §1-1 之素材面结构清点 ＝ ⛔非判据读数（历史项），本棒以逐对演算充判据读数，不以清点充之"
+    },
+    {
+      "id": "K-NCC-9",
+      "name": "事后调整之禁（FTFB）",
+      "status": "过",
+      "basis": "本棒 0 改判死线之任一字面／阈值 · 0 改候选集 · 0 改计数面 · 0 改读法 · 0 事后择定臂对（三对皆跑 · 择归 PI）· 0 事后调任一数门"
+    },
+    {
+      "id": "K-NCC-10",
+      "name": "处置语归属与不代裁门",
+      "status": "过",
+      "basis": "本棒只出读数（可解集＋排序＋逐条过否）· 0 落五终判 · 0 闭任何 KD · 0 宣告任何段毕 · 0 改 K-MDA8A2-4／K-ETAC-10 之字面 · 0 复核他件判定之实体 · 0 代裁三对之择"
+    }
+  ],
+  "discipline_selfreport": {
+    "new_runs": 0,
+    "new_observations": 0,
+    "llm_calls": 0,
+    "network_requests": 0,
+    "key_reads": 0,
+    "existing_files_touched": 0,
+    "tools_modified_bytes": 0,
+    "probe_code_imported": false,
+    "probe_code_executed": false,
+    "probe_code_parse_method": "ast.parse + ast.literal_eval（只读文本）",
+    "files_written_by_this_bar": [
+      "results/_preexp_mda8a24_c5_armpairs_data_2026_10_20.json（本件 · 交付件）",
+      "results/_preexp_mda8a24_c5_armpairs_reading_2026_10_20.md（姊妹读数件 · 交付件）",
+      ".tmp/_wk_c5_armpairs_inspect_2026_10_20.py（本棒所出之只读探查脚本 · 非交付件）",
+      ".tmp/_wk_c5_armpairs_calc_2026_10_20.py（本棒所出之演算脚本 · 非交付件）"
+    ],
+    "no_verdict": true,
+    "no_kd_closed": true,
+    "no_segment_closure": true,
+    "external_boundary": "构造面判定 · 外推边界 ＝ 构造域（30 格面 × 单 seed 42 × 甲-C5 三对臂对）· 0 外推至 seed 123/456 · 0 及于 M2/M3 · 0 及于 η 面 · 0 及于 sep 分母面",
+    "comparability_note": "本面为换域面（H 键面）⇒ 与在册 57／7／23 之可比性 ＝ 不可直比（M-N7 之声明；⛔ 0 强合两面读数）"
+  }
+}

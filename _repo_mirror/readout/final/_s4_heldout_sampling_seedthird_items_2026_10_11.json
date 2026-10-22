@@ -1,0 +1,1742 @@
+{
+ "artifact": "_s4_heldout_sampling_seedthird_items_2026_10_11.json",
+ "date": "2026-10-11",
+ "kind": "s4_heldout_third_set",
+ "spec_source": {
+  "ruling": {
+   "file": "results/_s4_heldout_sampling_caliber_ruling_2026_10_09.md",
+   "sha12": "fb1b696de1d6",
+   "section": "§5 伪码"
+  },
+  "prereqs": {
+   "file": "results/_g5_ccp_execution_prereqs_2026_10_10.md",
+   "sha12": "ab1a07ae2fd1",
+   "section": "§4-1 R0–R7"
+  },
+  "s0prime": {
+   "file": "results/_f4_direction1_domain_effectivity_2026_10_11.md",
+   "sha12": "fd4ec7559342",
+   "section": "K-RJ-8′／K-RJ-9′／§7"
+  },
+  "seed_double": {
+   "file": "results/_seed_double_identifier_finalization_2026_10_11.md",
+   "sha12": "6904852f8ceb",
+   "section": "§2-1／§2-3"
+  },
+  "status": "seed″ 已落定（6904852f8ceb）＋ S0′ 已生效（fd4ec7559342）⇒ 抽取解锁",
+  "params": {
+   "R0": "同一 S4 冻结面 179 行（21 件 *addendum*.json）",
+   "R1": "件名字节序（ordinal）升序 × 件内 #idx 升序",
+   "R2": "np.random.RandomState(seed″) 全局单流（legacy MT19937）",
+   "R3": "rng.shuffle(候选副本) 后取前 k；按集合认定",
+   "R4": "格序 b,s,o 升序；floor=0 之格 0 消耗（0 次 shuffle）",
+   "R5": "k = floor(0.30·n)，双轨 (3n)//10，0 round/ceil/max(1,·)",
+   "R6": "落面按 R1 键字节序升序；指纹 = sha256(R1 序 file#idx 以 | 连接)[:12]",
+   "R7": "seed″ = 3223484571（全域单一种子值，0 逐格派生）"
+  }
+ },
+ "runtime": {
+  "python": "3.14.7",
+  "numpy": "2.5.3",
+  "network": 0,
+  "endpoint_calls": 0,
+  "api_key": 0,
+  "skill_calls": 0,
+  "llm_calls": 0,
+  "note": "R4 key 永不明文 / 0 读 key / 0 读 .env"
+ },
+ "domain": {
+  "files": 21,
+  "event_rows": 179,
+  "r1_list_matches_current_set": true
+ },
+ "counts": {
+  "grid_total": 128,
+  "occupied_cells": 54,
+  "empty_cells": 74,
+  "contributing_cells": 16,
+  "sum_n_contributing": 111,
+  "sum_n_other": 68,
+  "sum_n_total": 179
+ },
+ "heldout_n": 26,
+ "heldout_items": [
+  {
+   "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+   "idx": 14,
+   "q_id": "S4T-15",
+   "cell": "0,6,3",
+   "b": 0,
+   "s": 6,
+   "o": 3,
+   "order_in_r1_key": 0
+  },
+  {
+   "file": "_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json",
+   "idx": 0,
+   "q_id": "Q40",
+   "cell": "0,0,1",
+   "b": 0,
+   "s": 0,
+   "o": 1,
+   "order_in_r1_key": 1
+  },
+  {
+   "file": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+   "idx": 0,
+   "q_id": "Q44",
+   "cell": "0,5,3",
+   "b": 0,
+   "s": 5,
+   "o": 3,
+   "order_in_r1_key": 2
+  },
+  {
+   "file": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+   "idx": 2,
+   "q_id": "Q46",
+   "cell": "0,5,3",
+   "b": 0,
+   "s": 5,
+   "o": 3,
+   "order_in_r1_key": 3
+  },
+  {
+   "file": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+   "idx": 3,
+   "q_id": "Q47",
+   "cell": "0,1,1",
+   "b": 0,
+   "s": 1,
+   "o": 1,
+   "order_in_r1_key": 4
+  },
+  {
+   "file": "_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json",
+   "idx": 1,
+   "q_id": "Q49",
+   "cell": "0,7,1",
+   "b": 0,
+   "s": 7,
+   "o": 1,
+   "order_in_r1_key": 5
+  },
+  {
+   "file": "_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json",
+   "idx": 1,
+   "q_id": null,
+   "cell": "0,0,1",
+   "b": 0,
+   "s": 0,
+   "o": 1,
+   "order_in_r1_key": 6
+  },
+  {
+   "file": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+   "idx": 0,
+   "q_id": null,
+   "cell": "0,0,3",
+   "b": 0,
+   "s": 0,
+   "o": 3,
+   "order_in_r1_key": 7
+  },
+  {
+   "file": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+   "idx": 3,
+   "q_id": null,
+   "cell": "0,0,3",
+   "b": 0,
+   "s": 0,
+   "o": 3,
+   "order_in_r1_key": 8
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d6_2026_09_28.json",
+   "idx": 0,
+   "q_id": "DF6-1",
+   "cell": "0,4,3",
+   "b": 0,
+   "s": 4,
+   "o": 3,
+   "order_in_r1_key": 9
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 6,
+   "q_id": "D8-07",
+   "cell": "0,1,3",
+   "b": 0,
+   "s": 1,
+   "o": 3,
+   "order_in_r1_key": 10
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 16,
+   "q_id": "D8-17",
+   "cell": "0,7,1",
+   "b": 0,
+   "s": 7,
+   "o": 1,
+   "order_in_r1_key": 11
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 20,
+   "q_id": "D8-21",
+   "cell": "0,0,3",
+   "b": 0,
+   "s": 0,
+   "o": 3,
+   "order_in_r1_key": 12
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 23,
+   "q_id": "D8-24",
+   "cell": "0,6,3",
+   "b": 0,
+   "s": 6,
+   "o": 3,
+   "order_in_r1_key": 13
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 27,
+   "q_id": "D8-28",
+   "cell": "0,0,1",
+   "b": 0,
+   "s": 0,
+   "o": 1,
+   "order_in_r1_key": 14
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 29,
+   "q_id": "D8-30",
+   "cell": "0,6,7",
+   "b": 0,
+   "s": 6,
+   "o": 7,
+   "order_in_r1_key": 15
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 30,
+   "q_id": "D8-31",
+   "cell": "0,5,7",
+   "b": 0,
+   "s": 5,
+   "o": 7,
+   "order_in_r1_key": 16
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 34,
+   "q_id": "D8-35",
+   "cell": "0,1,7",
+   "b": 0,
+   "s": 1,
+   "o": 7,
+   "order_in_r1_key": 17
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 39,
+   "q_id": "D8-40",
+   "cell": "0,4,3",
+   "b": 0,
+   "s": 4,
+   "o": 3,
+   "order_in_r1_key": 18
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 40,
+   "q_id": "D8-41",
+   "cell": "0,7,3",
+   "b": 0,
+   "s": 7,
+   "o": 3,
+   "order_in_r1_key": 19
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 62,
+   "q_id": "D8-63",
+   "cell": "0,3,3",
+   "b": 0,
+   "s": 3,
+   "o": 3,
+   "order_in_r1_key": 20
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 65,
+   "q_id": "D8-66",
+   "cell": "0,4,3",
+   "b": 0,
+   "s": 4,
+   "o": 3,
+   "order_in_r1_key": 21
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 75,
+   "q_id": "D8-76",
+   "cell": "0,2,3",
+   "b": 0,
+   "s": 2,
+   "o": 3,
+   "order_in_r1_key": 22
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 83,
+   "q_id": "SQ-04",
+   "cell": "0,7,0",
+   "b": 0,
+   "s": 7,
+   "o": 0,
+   "order_in_r1_key": 23
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+   "idx": 87,
+   "q_id": "SQ-08",
+   "cell": "0,2,0",
+   "b": 0,
+   "s": 2,
+   "o": 0,
+   "order_in_r1_key": 24
+  },
+  {
+   "file": "_v4_pi_cot_v3_dataset_addendum_s3_d7_2026_09_29.json",
+   "idx": 0,
+   "q_id": "DF6-4",
+   "cell": "0,0,1",
+   "b": 0,
+   "s": 0,
+   "o": 1,
+   "order_in_r1_key": 25
+  }
+ ],
+ "per_cell": [
+  {
+   "cell": "0,0,1",
+   "b": 0,
+   "s": 0,
+   "o": 1,
+   "n": 16,
+   "k": 4,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json",
+     "idx": 0,
+     "q_id": "Q40"
+    },
+    {
+     "file": "_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json",
+     "idx": 1,
+     "q_id": null
+    },
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 27,
+     "q_id": "D8-28"
+    },
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_s3_d7_2026_09_29.json",
+     "idx": 0,
+     "q_id": "DF6-4"
+    }
+   ]
+  },
+  {
+   "cell": "0,0,3",
+   "b": 0,
+   "s": 0,
+   "o": 3,
+   "n": 13,
+   "k": 3,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+     "idx": 0,
+     "q_id": null
+    },
+    {
+     "file": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+     "idx": 3,
+     "q_id": null
+    },
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 20,
+     "q_id": "D8-21"
+    }
+   ]
+  },
+  {
+   "cell": "0,1,1",
+   "b": 0,
+   "s": 1,
+   "o": 1,
+   "n": 4,
+   "k": 1,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+     "idx": 3,
+     "q_id": "Q47"
+    }
+   ]
+  },
+  {
+   "cell": "0,1,3",
+   "b": 0,
+   "s": 1,
+   "o": 3,
+   "n": 4,
+   "k": 1,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 6,
+     "q_id": "D8-07"
+    }
+   ]
+  },
+  {
+   "cell": "0,1,7",
+   "b": 0,
+   "s": 1,
+   "o": 7,
+   "n": 5,
+   "k": 1,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 34,
+     "q_id": "D8-35"
+    }
+   ]
+  },
+  {
+   "cell": "0,2,0",
+   "b": 0,
+   "s": 2,
+   "o": 0,
+   "n": 6,
+   "k": 1,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 87,
+     "q_id": "SQ-08"
+    }
+   ]
+  },
+  {
+   "cell": "0,2,3",
+   "b": 0,
+   "s": 2,
+   "o": 3,
+   "n": 6,
+   "k": 1,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 75,
+     "q_id": "D8-76"
+    }
+   ]
+  },
+  {
+   "cell": "0,3,3",
+   "b": 0,
+   "s": 3,
+   "o": 3,
+   "n": 6,
+   "k": 1,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 62,
+     "q_id": "D8-63"
+    }
+   ]
+  },
+  {
+   "cell": "0,4,3",
+   "b": 0,
+   "s": 4,
+   "o": 3,
+   "n": 10,
+   "k": 3,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d6_2026_09_28.json",
+     "idx": 0,
+     "q_id": "DF6-1"
+    },
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 39,
+     "q_id": "D8-40"
+    },
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 65,
+     "q_id": "D8-66"
+    }
+   ]
+  },
+  {
+   "cell": "0,5,3",
+   "b": 0,
+   "s": 5,
+   "o": 3,
+   "n": 7,
+   "k": 2,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+     "idx": 0,
+     "q_id": "Q44"
+    },
+    {
+     "file": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+     "idx": 2,
+     "q_id": "Q46"
+    }
+   ]
+  },
+  {
+   "cell": "0,5,7",
+   "b": 0,
+   "s": 5,
+   "o": 7,
+   "n": 4,
+   "k": 1,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 30,
+     "q_id": "D8-31"
+    }
+   ]
+  },
+  {
+   "cell": "0,6,3",
+   "b": 0,
+   "s": 6,
+   "o": 3,
+   "n": 9,
+   "k": 2,
+   "selected": [
+    {
+     "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+     "idx": 14,
+     "q_id": "S4T-15"
+    },
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 23,
+     "q_id": "D8-24"
+    }
+   ]
+  },
+  {
+   "cell": "0,6,7",
+   "b": 0,
+   "s": 6,
+   "o": 7,
+   "n": 4,
+   "k": 1,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 29,
+     "q_id": "D8-30"
+    }
+   ]
+  },
+  {
+   "cell": "0,7,0",
+   "b": 0,
+   "s": 7,
+   "o": 0,
+   "n": 4,
+   "k": 1,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 83,
+     "q_id": "SQ-04"
+    }
+   ]
+  },
+  {
+   "cell": "0,7,1",
+   "b": 0,
+   "s": 7,
+   "o": 1,
+   "n": 9,
+   "k": 2,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json",
+     "idx": 1,
+     "q_id": "Q49"
+    },
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 16,
+     "q_id": "D8-17"
+    }
+   ]
+  },
+  {
+   "cell": "0,7,3",
+   "b": 0,
+   "s": 7,
+   "o": 3,
+   "n": 4,
+   "k": 1,
+   "selected": [
+    {
+     "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+     "idx": 40,
+     "q_id": "D8-41"
+    }
+   ]
+  }
+ ],
+ "composition": {
+  "b1_items_in_heldout": 0,
+  "stratified_with_correction_holds": false,
+  "note": "规则内生：b=1 各占格 n<=2 ⇒ floor=0 ⇒ 换 seed″ 仍为 0 成立"
+ },
+ "self_audit": {
+  "note": "抽取前以 seed=42 复跑本实现与第一集逐件全等（门 B）；并以 seed′ 复跑与第二集逐件全等（门 B′）",
+  "gate_B_seed42": {
+   "seed": 42,
+   "reference": "6a670e629dca（第一集 seed42）",
+   "reference_sha12": "6a670e629dca",
+   "heldout_n": 26,
+   "items_match": true,
+   "cells_match": true,
+   "fingerprint_match": true,
+   "reference_fp_sha12": "acedff01d18c",
+   "recomputed_fp_sha12": "acedff01d18c",
+   "self_audit_pass": true
+  },
+  "gate_B_prime_seedprime": {
+   "seed": 1830975565,
+   "reference": "6cbb8ba01bfb（第二集 seed′）",
+   "reference_sha12": "6cbb8ba01bfb",
+   "heldout_n": 26,
+   "items_match": true,
+   "cells_match": true,
+   "fingerprint_match": true,
+   "reference_fp_sha12": "3c25e1a2ea94",
+   "recomputed_fp_sha12": "3c25e1a2ea94",
+   "self_audit_pass": true
+  }
+ },
+ "reproduction": {
+  "seed_third": 3223484571,
+  "lambda_identifier": "fd4ec7559342",
+  "ratio": 0.3,
+  "rng_family": "legacy MT19937 via np.random.RandomState",
+  "stream": "全局单流",
+  "cell_order": "b,s,o 升序",
+  "zero_consumption_cells": true,
+  "extraction_count": 1,
+  "no_resampling_with_other_seed": true,
+  "heldout_ordered_fingerprint": {
+   "concat": "_s4_substrate_topup_addendum_2026_10_09.json#14|_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json#0|_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json#0|_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json#2|_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json#3|_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json#1|_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json#1|_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json#0|_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json#3|_v4_pi_cot_v3_dataset_addendum_d6_2026_09_28.json#0|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#6|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#16|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#20|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#23|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#27|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#29|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#30|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#34|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#39|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#40|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#62|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#65|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#75|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#83|_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#87|_v4_pi_cot_v3_dataset_addendum_s3_d7_2026_09_29.json#0",
+   "sha256": "c34835ad59cf75a75fcfbdbb61480c1ed7cb2cfc3b9a8dbac4c2f7c0d2c786b5",
+   "sha12": "c34835ad59cf",
+   "fp3": "c34835ad59cf",
+   "note": "★ FP3 ＝ K-RJ-8′ 之锚值（fd4ec7559342 §3 之待填槽）；按 R1 键（件名字节序 × #idx 升序）排列之 26 件指纹（R6）"
+  }
+ },
+ "three_set_relations": {
+  "note": "三集互不可比（fd4ec7559342 §5 · PI 已明示承受）⇒ ⛔ 0 混用读数；此处仅载成员关系之机械计数",
+  "set1_seed42": {
+   "fp": "acedff01d18c",
+   "n": 26
+  },
+  "set2_seedprime": {
+   "fp": "3c25e1a2ea94",
+   "n": 26
+  },
+  "set3_seedthird": {
+   "fp": "c34835ad59cf",
+   "n": 26
+  },
+  "third_vs_first": {
+   "intersection": 6,
+   "only_a": 20,
+   "only_b": 20,
+   "symmetric_difference": 40,
+   "union": 46
+  },
+  "third_vs_second": {
+   "intersection": 7,
+   "only_a": 19,
+   "only_b": 19,
+   "symmetric_difference": 38,
+   "union": 45
+  },
+  "first_vs_second": {
+   "intersection": 8,
+   "only_a": 18,
+   "only_b": 18,
+   "symmetric_difference": 36,
+   "union": 44
+  }
+ },
+ "movable_items": {
+  "criterion": "★ seq_t1_only 与 seq_v31 之【逐位序列比对】；movable ⇔ 两序列 ≢（e7fcbc290a7e §3-1 之「当且仅当」条件）",
+  "forbidden_criterion": "⛔ 0 以「语料含 KEYWORDS_V31 − KEYWORDS_T1 之 9 词中任一」径判（B-8 反例：d3c#1 含「后面」而序列未变）",
+  "keywords_t1_source": ".tmp/prep.py L8–L9（逐字转录；⛔ 0 import prep.py）",
+  "keywords_v31_source": ".tmp/s4_regen_runner.py L54–L64（V31_NEW_WORDS ＋ KEYWORDS_V3）",
+  "keywords_v3_source": "executor 8a81d90c69ba L202（只读复用）",
+  "mechanism": "extract_sequence(reasoning_full, kwtable)（s4_regen_runner L67–L99）",
+  "v31_minus_t1": [
+   "后面",
+   "噪声",
+   "失实",
+   "对齐",
+   "挂起",
+   "检验",
+   "缺陷",
+   "观察者效应",
+   "记忆效应"
+  ],
+  "v31_minus_t1_n": 9,
+  "n_movable": 1,
+  "n_total": 26,
+  "n_corpus_contains_v31only_word": 1,
+  "criterion_divergence_items": [],
+  "control_check": {
+   "ran": true,
+   "n_items_recomputed": 26,
+   "all_bit_identical_to_registered": true,
+   "n_movable_prime_set": 0,
+   "registered_n_movable_prime_set": 0,
+   "match": true
+  },
+  "note": "⛔ 0 贴 reasoning_full / scene_verbatim / pi_answer_verbatim（fb1b696de1d6 §5.6）；本节只载序列层（层名）＋ 诊断计数；⛔ 0 据可动件数判档或宣告过门",
+  "items": [
+   {
+    "order_in_r1_key": 0,
+    "r1_key": "_s4_substrate_topup_addendum_2026_10_09.json#14",
+    "file": "_s4_substrate_topup_addendum_2026_10_09.json",
+    "src_idx": 14,
+    "global_idx": 26,
+    "q_id_heldout_json": "S4T-15",
+    "q_id_resolved": "S4T-15",
+    "cell": "0,6,3",
+    "corpus_len": 5,
+    "seq_t1_only": [
+     "CRITERIA"
+    ],
+    "seq_t1_only_primary": "CRITERIA",
+    "seq_v31": [
+     "CRITERIA"
+    ],
+    "seq_v31_primary": "CRITERIA",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "CRITERIA": 3
+    },
+    "layer_first_pos_v31": {
+     "CRITERIA": 3
+    }
+   },
+   {
+    "order_in_r1_key": 1,
+    "r1_key": "_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json#0",
+    "file": "_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json",
+    "src_idx": 0,
+    "global_idx": 41,
+    "q_id_heldout_json": "Q40",
+    "q_id_resolved": "Q40",
+    "cell": "0,0,1",
+    "corpus_len": 11,
+    "seq_t1_only": [
+     "DELEGATE",
+     "TIMING"
+    ],
+    "seq_t1_only_primary": "DELEGATE",
+    "seq_v31": [
+     "DELEGATE",
+     "TIMING"
+    ],
+    "seq_v31_primary": "DELEGATE",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "TIMING": 7,
+     "DELEGATE": 2
+    },
+    "layer_first_pos_v31": {
+     "TIMING": 7,
+     "DELEGATE": 2
+    }
+   },
+   {
+    "order_in_r1_key": 2,
+    "r1_key": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json#0",
+    "file": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+    "src_idx": 0,
+    "global_idx": 45,
+    "q_id_heldout_json": "Q44",
+    "q_id_resolved": "Q44",
+    "cell": "0,5,3",
+    "corpus_len": 12,
+    "seq_t1_only": [
+     "DELEGATE"
+    ],
+    "seq_t1_only_primary": "DELEGATE",
+    "seq_v31": [
+     "DELEGATE"
+    ],
+    "seq_v31_primary": "DELEGATE",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "DELEGATE": 0
+    },
+    "layer_first_pos_v31": {
+     "DELEGATE": 0
+    }
+   },
+   {
+    "order_in_r1_key": 3,
+    "r1_key": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json#2",
+    "file": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+    "src_idx": 2,
+    "global_idx": 47,
+    "q_id_heldout_json": "Q46",
+    "q_id_resolved": "Q46",
+    "cell": "0,5,3",
+    "corpus_len": 38,
+    "seq_t1_only": [
+     "DELEGATE",
+     "RISK"
+    ],
+    "seq_t1_only_primary": "DELEGATE",
+    "seq_v31": [
+     "DELEGATE",
+     "RISK"
+    ],
+    "seq_v31_primary": "DELEGATE",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "RISK": 16,
+     "DELEGATE": 8
+    },
+    "layer_first_pos_v31": {
+     "RISK": 16,
+     "DELEGATE": 8
+    }
+   },
+   {
+    "order_in_r1_key": 4,
+    "r1_key": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json#3",
+    "file": "_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json",
+    "src_idx": 3,
+    "global_idx": 48,
+    "q_id_heldout_json": "Q47",
+    "q_id_resolved": "Q47",
+    "cell": "0,1,1",
+    "corpus_len": 2,
+    "seq_t1_only": [
+     "TIMING"
+    ],
+    "seq_t1_only_primary": "TIMING",
+    "seq_v31": [
+     "TIMING"
+    ],
+    "seq_v31_primary": "TIMING",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "TIMING": 0
+    },
+    "layer_first_pos_v31": {
+     "TIMING": 0
+    }
+   },
+   {
+    "order_in_r1_key": 5,
+    "r1_key": "_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json#1",
+    "file": "_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json",
+    "src_idx": 1,
+    "global_idx": 50,
+    "q_id_heldout_json": "Q49",
+    "q_id_resolved": "Q49",
+    "cell": "0,7,1",
+    "corpus_len": 31,
+    "seq_t1_only": [],
+    "seq_t1_only_primary": "UNKNOWN",
+    "seq_v31": [],
+    "seq_v31_primary": "UNKNOWN",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {},
+    "layer_first_pos_v31": {}
+   },
+   {
+    "order_in_r1_key": 6,
+    "r1_key": "_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json#1",
+    "file": "_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json",
+    "src_idx": 1,
+    "global_idx": 54,
+    "q_id_heldout_json": null,
+    "q_id_resolved": "Q2_third_read",
+    "cell": "0,0,1",
+    "corpus_len": 76,
+    "seq_t1_only": [
+     "CRITERIA",
+     "RISK",
+     "COST",
+     "DELEGATE"
+    ],
+    "seq_t1_only_primary": "CRITERIA",
+    "seq_v31": [
+     "CRITERIA",
+     "RISK",
+     "COST",
+     "DELEGATE"
+    ],
+    "seq_v31_primary": "CRITERIA",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "COST": 18,
+     "CRITERIA": 0,
+     "RISK": 1,
+     "DELEGATE": 62
+    },
+    "layer_first_pos_v31": {
+     "COST": 18,
+     "CRITERIA": 0,
+     "RISK": 1,
+     "DELEGATE": 62
+    }
+   },
+   {
+    "order_in_r1_key": 7,
+    "r1_key": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json#0",
+    "file": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+    "src_idx": 0,
+    "global_idx": 57,
+    "q_id_heldout_json": null,
+    "q_id_resolved": "Q6_third_read",
+    "cell": "0,0,3",
+    "corpus_len": 51,
+    "seq_t1_only": [
+     "RISK",
+     "CRITERIA",
+     "KILL_LINE"
+    ],
+    "seq_t1_only_primary": "RISK",
+    "seq_v31": [
+     "RISK",
+     "CRITERIA",
+     "KILL_LINE"
+    ],
+    "seq_v31_primary": "RISK",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "KILL_LINE": 42,
+     "CRITERIA": 24,
+     "RISK": 13
+    },
+    "layer_first_pos_v31": {
+     "KILL_LINE": 42,
+     "CRITERIA": 24,
+     "RISK": 13
+    }
+   },
+   {
+    "order_in_r1_key": 8,
+    "r1_key": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json#3",
+    "file": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json",
+    "src_idx": 3,
+    "global_idx": 60,
+    "q_id_heldout_json": null,
+    "q_id_resolved": "Q10_third_read",
+    "cell": "0,0,3",
+    "corpus_len": 130,
+    "seq_t1_only": [
+     "COST",
+     "KILL_LINE",
+     "RISK",
+     "TIMING"
+    ],
+    "seq_t1_only_primary": "COST",
+    "seq_v31": [
+     "COST",
+     "KILL_LINE",
+     "RISK",
+     "TIMING"
+    ],
+    "seq_v31_primary": "COST",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "KILL_LINE": 52,
+     "COST": 11,
+     "RISK": 69,
+     "TIMING": 126
+    },
+    "layer_first_pos_v31": {
+     "KILL_LINE": 52,
+     "COST": 11,
+     "RISK": 69,
+     "TIMING": 126
+    }
+   },
+   {
+    "order_in_r1_key": 9,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d6_2026_09_28.json#0",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d6_2026_09_28.json",
+    "src_idx": 0,
+    "global_idx": 72,
+    "q_id_heldout_json": "DF6-1",
+    "q_id_resolved": "DF6-1",
+    "cell": "0,4,3",
+    "corpus_len": 0,
+    "seq_t1_only": [],
+    "seq_t1_only_primary": "UNKNOWN",
+    "seq_v31": [],
+    "seq_v31_primary": "UNKNOWN",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {},
+    "layer_first_pos_v31": {}
+   },
+   {
+    "order_in_r1_key": 10,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#6",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 6,
+    "global_idx": 85,
+    "q_id_heldout_json": "D8-07",
+    "q_id_resolved": "D8-07",
+    "cell": "0,1,3",
+    "corpus_len": 6,
+    "seq_t1_only": [],
+    "seq_t1_only_primary": "UNKNOWN",
+    "seq_v31": [],
+    "seq_v31_primary": "UNKNOWN",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {},
+    "layer_first_pos_v31": {}
+   },
+   {
+    "order_in_r1_key": 11,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#16",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 16,
+    "global_idx": 95,
+    "q_id_heldout_json": "D8-17",
+    "q_id_resolved": "D8-17",
+    "cell": "0,7,1",
+    "corpus_len": 13,
+    "seq_t1_only": [
+     "RISK"
+    ],
+    "seq_t1_only_primary": "RISK",
+    "seq_v31": [
+     "RISK"
+    ],
+    "seq_v31_primary": "RISK",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "RISK": 4
+    },
+    "layer_first_pos_v31": {
+     "RISK": 4
+    }
+   },
+   {
+    "order_in_r1_key": 12,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#20",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 20,
+    "global_idx": 99,
+    "q_id_heldout_json": "D8-21",
+    "q_id_resolved": "D8-21",
+    "cell": "0,0,3",
+    "corpus_len": 29,
+    "seq_t1_only": [
+     "RISK"
+    ],
+    "seq_t1_only_primary": "RISK",
+    "seq_v31": [
+     "RISK"
+    ],
+    "seq_v31_primary": "RISK",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "RISK": 27
+    },
+    "layer_first_pos_v31": {
+     "RISK": 27
+    }
+   },
+   {
+    "order_in_r1_key": 13,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#23",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 23,
+    "global_idx": 102,
+    "q_id_heldout_json": "D8-24",
+    "q_id_resolved": "D8-24",
+    "cell": "0,6,3",
+    "corpus_len": 31,
+    "seq_t1_only": [
+     "RISK"
+    ],
+    "seq_t1_only_primary": "RISK",
+    "seq_v31": [
+     "RISK"
+    ],
+    "seq_v31_primary": "RISK",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "RISK": 7
+    },
+    "layer_first_pos_v31": {
+     "RISK": 7
+    }
+   },
+   {
+    "order_in_r1_key": 14,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#27",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 27,
+    "global_idx": 106,
+    "q_id_heldout_json": "D8-28",
+    "q_id_resolved": "D8-28",
+    "cell": "0,0,1",
+    "corpus_len": 6,
+    "seq_t1_only": [
+     "RISK"
+    ],
+    "seq_t1_only_primary": "RISK",
+    "seq_v31": [
+     "RISK"
+    ],
+    "seq_v31_primary": "RISK",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "RISK": 4
+    },
+    "layer_first_pos_v31": {
+     "RISK": 4
+    }
+   },
+   {
+    "order_in_r1_key": 15,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#29",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 29,
+    "global_idx": 108,
+    "q_id_heldout_json": "D8-30",
+    "q_id_resolved": "D8-30",
+    "cell": "0,6,7",
+    "corpus_len": 4,
+    "seq_t1_only": [
+     "RISK"
+    ],
+    "seq_t1_only_primary": "RISK",
+    "seq_v31": [
+     "RISK"
+    ],
+    "seq_v31_primary": "RISK",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "RISK": 0
+    },
+    "layer_first_pos_v31": {
+     "RISK": 0
+    }
+   },
+   {
+    "order_in_r1_key": 16,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#30",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 30,
+    "global_idx": 109,
+    "q_id_heldout_json": "D8-31",
+    "q_id_resolved": "D8-31",
+    "cell": "0,5,7",
+    "corpus_len": 4,
+    "seq_t1_only": [
+     "CRITERIA"
+    ],
+    "seq_t1_only_primary": "CRITERIA",
+    "seq_v31": [
+     "CRITERIA"
+    ],
+    "seq_v31_primary": "CRITERIA",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "CRITERIA": 2
+    },
+    "layer_first_pos_v31": {
+     "CRITERIA": 2
+    }
+   },
+   {
+    "order_in_r1_key": 17,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#34",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 34,
+    "global_idx": 113,
+    "q_id_heldout_json": "D8-35",
+    "q_id_resolved": "D8-35",
+    "cell": "0,1,7",
+    "corpus_len": 27,
+    "seq_t1_only": [],
+    "seq_t1_only_primary": "UNKNOWN",
+    "seq_v31": [],
+    "seq_v31_primary": "UNKNOWN",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {},
+    "layer_first_pos_v31": {}
+   },
+   {
+    "order_in_r1_key": 18,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#39",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 39,
+    "global_idx": 118,
+    "q_id_heldout_json": "D8-40",
+    "q_id_resolved": "D8-40",
+    "cell": "0,4,3",
+    "corpus_len": 27,
+    "seq_t1_only": [
+     "RISK",
+     "CRITERIA"
+    ],
+    "seq_t1_only_primary": "RISK",
+    "seq_v31": [
+     "RISK",
+     "CRITERIA"
+    ],
+    "seq_v31_primary": "RISK",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "CRITERIA": 5,
+     "RISK": 2
+    },
+    "layer_first_pos_v31": {
+     "CRITERIA": 5,
+     "RISK": 2
+    }
+   },
+   {
+    "order_in_r1_key": 19,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#40",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 40,
+    "global_idx": 119,
+    "q_id_heldout_json": "D8-41",
+    "q_id_resolved": "D8-41",
+    "cell": "0,7,3",
+    "corpus_len": 24,
+    "seq_t1_only": [
+     "CRITERIA"
+    ],
+    "seq_t1_only_primary": "CRITERIA",
+    "seq_v31": [
+     "CRITERIA"
+    ],
+    "seq_v31_primary": "CRITERIA",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "CRITERIA": 0
+    },
+    "layer_first_pos_v31": {
+     "CRITERIA": 0
+    }
+   },
+   {
+    "order_in_r1_key": 20,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#62",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 62,
+    "global_idx": 141,
+    "q_id_heldout_json": "D8-63",
+    "q_id_resolved": "D8-63",
+    "cell": "0,3,3",
+    "corpus_len": 6,
+    "seq_t1_only": [],
+    "seq_t1_only_primary": "UNKNOWN",
+    "seq_v31": [
+     "CRITERIA"
+    ],
+    "seq_v31_primary": "CRITERIA",
+    "seq_t1_only_eq_seq_v31": false,
+    "movable": true,
+    "n_v31_only_words_in_corpus": 1,
+    "v31_only_words_present": [
+     "失实"
+    ],
+    "layer_first_pos_t1": {},
+    "layer_first_pos_v31": {
+     "CRITERIA": 4
+    }
+   },
+   {
+    "order_in_r1_key": 21,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#65",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 65,
+    "global_idx": 144,
+    "q_id_heldout_json": "D8-66",
+    "q_id_resolved": "D8-66",
+    "cell": "0,4,3",
+    "corpus_len": 29,
+    "seq_t1_only": [
+     "TIMING",
+     "RISK"
+    ],
+    "seq_t1_only_primary": "TIMING",
+    "seq_v31": [
+     "TIMING",
+     "RISK"
+    ],
+    "seq_v31_primary": "TIMING",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "RISK": 5,
+     "TIMING": 0
+    },
+    "layer_first_pos_v31": {
+     "RISK": 5,
+     "TIMING": 0
+    }
+   },
+   {
+    "order_in_r1_key": 22,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#75",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 75,
+    "global_idx": 154,
+    "q_id_heldout_json": "D8-76",
+    "q_id_resolved": "D8-76",
+    "cell": "0,2,3",
+    "corpus_len": 4,
+    "seq_t1_only": [],
+    "seq_t1_only_primary": "UNKNOWN",
+    "seq_v31": [],
+    "seq_v31_primary": "UNKNOWN",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {},
+    "layer_first_pos_v31": {}
+   },
+   {
+    "order_in_r1_key": 23,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#83",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 83,
+    "global_idx": 162,
+    "q_id_heldout_json": "SQ-04",
+    "q_id_resolved": "SQ-04",
+    "cell": "0,7,0",
+    "corpus_len": 41,
+    "seq_t1_only": [
+     "CRITERIA",
+     "RISK"
+    ],
+    "seq_t1_only_primary": "CRITERIA",
+    "seq_v31": [
+     "CRITERIA",
+     "RISK"
+    ],
+    "seq_v31_primary": "CRITERIA",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {
+     "CRITERIA": 12,
+     "RISK": 17
+    },
+    "layer_first_pos_v31": {
+     "CRITERIA": 12,
+     "RISK": 17
+    }
+   },
+   {
+    "order_in_r1_key": 24,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#87",
+    "file": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json",
+    "src_idx": 87,
+    "global_idx": 166,
+    "q_id_heldout_json": "SQ-08",
+    "q_id_resolved": "SQ-08",
+    "cell": "0,2,0",
+    "corpus_len": 0,
+    "seq_t1_only": [],
+    "seq_t1_only_primary": "UNKNOWN",
+    "seq_v31": [],
+    "seq_v31_primary": "UNKNOWN",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {},
+    "layer_first_pos_v31": {}
+   },
+   {
+    "order_in_r1_key": 25,
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_s3_d7_2026_09_29.json#0",
+    "file": "_v4_pi_cot_v3_dataset_addendum_s3_d7_2026_09_29.json",
+    "src_idx": 0,
+    "global_idx": 178,
+    "q_id_heldout_json": "DF6-4",
+    "q_id_resolved": "DF6-4",
+    "cell": "0,0,1",
+    "corpus_len": 0,
+    "seq_t1_only": [],
+    "seq_t1_only_primary": "UNKNOWN",
+    "seq_v31": [],
+    "seq_v31_primary": "UNKNOWN",
+    "seq_t1_only_eq_seq_v31": true,
+    "movable": false,
+    "n_v31_only_words_in_corpus": 0,
+    "v31_only_words_present": [],
+    "layer_first_pos_t1": {},
+    "layer_first_pos_v31": {}
+   }
+  ]
+ },
+ "in_heldout_recompute": {
+  "spec": "results/_s4_source_wave_mapping_registration_2026_10_10.md（26c8278e3552）§4 步 10",
+  "denominator_face": "面 II 位移面 24 件（results/_s4_v31_displacement_items_2026_10_10.json · 6f020c03e52c）",
+  "criterion": "面 II 24 件之 R1 键（file ＋ src_idx）是否属第三集 26 条之一",
+  "counts": {
+   "registered_in": 9,
+   "registered_out": 15,
+   "new_in": 5,
+   "new_out": 19,
+   "denominator": 24
+  },
+  "control_first_set": {
+   "registered_in": 9,
+   "registered_out": 15,
+   "new_in": 9,
+   "new_out": 15,
+   "denominator": 24
+  },
+  "control_second_set": {
+   "registered_in": 9,
+   "registered_out": 15,
+   "new_in": 4,
+   "new_out": 20,
+   "denominator": 24
+  },
+  "migration": {
+   "in_to_out": [
+    "_s4_open_questions_addendum_2026_10_09.json#3",
+    "_s4_substrate_topup_addendum_2026_10_09.json#10",
+    "_s4_substrate_topup_addendum_2026_10_09.json#7",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#26",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#37",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#51"
+   ],
+   "out_to_in": [
+    "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json#3",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#62"
+   ],
+   "stable_in": [
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#20",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#39",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#65"
+   ],
+   "stable_out": [
+    "_s4_substrate_topup_addendum_2026_10_09.json#11",
+    "_s4_substrate_topup_addendum_2026_10_09.json#12",
+    "_s4_substrate_topup_addendum_2026_10_09.json#13",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#33",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#46",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#48",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#52",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#54",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#56",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#61",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#63",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#74",
+    "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#86"
+   ],
+   "identity_check": "9 - 6 + 2 = 5"
+  },
+  "note": "⛔ 0 回写 6f020c03e52c 之 in_heldout 字段（新值仅存于本产出）；⛔ 0 判档 / 0 代裁 / 0 改 K-RJ-9′ 条文（fd4ec7559342 §4 之重述义务归 PI）",
+  "items": [
+   {
+    "q_id": "S4Q-04",
+    "r1_key": "_s4_open_questions_addendum_2026_10_09.json#3",
+    "dtype": "T3",
+    "registered_in_heldout": true,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "S4T-08",
+    "r1_key": "_s4_substrate_topup_addendum_2026_10_09.json#7",
+    "dtype": "T3",
+    "registered_in_heldout": true,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "S4T-11",
+    "r1_key": "_s4_substrate_topup_addendum_2026_10_09.json#10",
+    "dtype": "T3",
+    "registered_in_heldout": true,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "S4T-12",
+    "r1_key": "_s4_substrate_topup_addendum_2026_10_09.json#11",
+    "dtype": "T3",
+    "registered_in_heldout": false,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "S4T-13",
+    "r1_key": "_s4_substrate_topup_addendum_2026_10_09.json#12",
+    "dtype": "T3",
+    "registered_in_heldout": false,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "S4T-14",
+    "r1_key": "_s4_substrate_topup_addendum_2026_10_09.json#13",
+    "dtype": "T3",
+    "registered_in_heldout": false,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "Q10_third_read",
+    "r1_key": "_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json#3",
+    "dtype": "T1",
+    "registered_in_heldout": false,
+    "in_third": true,
+    "cell_if_in_third": "0,0,3"
+   },
+   {
+    "q_id": "D8-21",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#20",
+    "dtype": "T3",
+    "registered_in_heldout": true,
+    "in_third": true,
+    "cell_if_in_third": "0,0,3"
+   },
+   {
+    "q_id": "D8-27",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#26",
+    "dtype": "T3",
+    "registered_in_heldout": true,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "D8-34",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#33",
+    "dtype": "T3",
+    "registered_in_heldout": false,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "D8-38",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#37",
+    "dtype": "T3",
+    "registered_in_heldout": true,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "D8-40",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#39",
+    "dtype": "T1",
+    "registered_in_heldout": true,
+    "in_third": true,
+    "cell_if_in_third": "0,4,3"
+   },
+   {
+    "q_id": "D8-47",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#46",
+    "dtype": "T3",
+    "registered_in_heldout": false,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "D8-49",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#48",
+    "dtype": "T1",
+    "registered_in_heldout": false,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "D8-52",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#51",
+    "dtype": "T3",
+    "registered_in_heldout": true,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "D8-53",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#52",
+    "dtype": "T3",
+    "registered_in_heldout": false,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "D8-55",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#54",
+    "dtype": "T1",
+    "registered_in_heldout": false,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "D8-57",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#56",
+    "dtype": "T3",
+    "registered_in_heldout": false,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "D8-62",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#61",
+    "dtype": "T1",
+    "registered_in_heldout": false,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "D8-63",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#62",
+    "dtype": "T3",
+    "registered_in_heldout": false,
+    "in_third": true,
+    "cell_if_in_third": "0,3,3"
+   },
+   {
+    "q_id": "D8-64",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#63",
+    "dtype": "T3",
+    "registered_in_heldout": false,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "D8-66",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#65",
+    "dtype": "T1",
+    "registered_in_heldout": true,
+    "in_third": true,
+    "cell_if_in_third": "0,4,3"
+   },
+   {
+    "q_id": "D8-75",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#74",
+    "dtype": "T3",
+    "registered_in_heldout": false,
+    "in_third": false,
+    "cell_if_in_third": null
+   },
+   {
+    "q_id": "SQ-07",
+    "r1_key": "_v4_pi_cot_v3_dataset_addendum_d8_sq_2026_09_30.json#86",
+    "dtype": "T1",
+    "registered_in_heldout": false,
+    "in_third": false,
+    "cell_if_in_third": null
+   }
+  ]
+ }
+}

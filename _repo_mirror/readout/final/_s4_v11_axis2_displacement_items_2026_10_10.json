@@ -1,0 +1,161 @@
+{
+  "artifact": "s4_v11_axis2_displacement_items",
+  "date": "2026-10-10",
+  "kind": "轴二实跑逐件结果 (E-4 · 面 II 面域扩张)",
+  "step": "E-4 轴二 · v1.1 基础面 4 件位移之逐件提取",
+  "authority": {
+    "pi_ruling": "PI 2026-10-10 轮48 卡 ask_dd5c8f754430f4383520716d 之 E-4 题答「甲『按倾向丁（分轴：维持分列＋轴二另立·先实跑）』」",
+    "card_face_on_disk": false,
+    "card_face_note": "卡面原文未落盘于本仓；全仓检索该卡号命中 1 = 同批 W-2 落实件之自身转录引用，非卡面原件 ⇒ 本件所照录者为派工单所载之转录 (⛔ 0 网络、0 读运行时库、0 代 PI 补写)",
+    "judgment_doc": "results/_s4_w2_e4_separate_judgment_2026_10_10.md (a51bd6530075) §3.3/§3.4/§4.4/§5.3 之 AD-3 与出口 E-4b",
+    "clause": "results/_s4_vclause_1_6_revision_2026_10_10.md (017b3cf38ae3) §3.1/§3.2/§4.1",
+    "face2_register": "results/_s4_v31_displacement_register_face2_2026_10_10.md (b6ce4a79116e) §3.2 面域敏感性表",
+    "sibling_same_card": "results/_s4_w2_disposition_registration_2026_10_10.md (566c2f0ad7e8) §5 之 AD-3 转录在册"
+  },
+  "mechanism": {
+    "executor_sha12": "8a81d90c69ba",
+    "excerpt": "L478-L519 (extract_judgment_sequence_v3)",
+    "delta_vs_executor": "唯一差异 = 词表入参 (KEYWORDS_V3 ⊎ 15 词 = KEYWORDS_V3.1)；控制流逐字复制，⛔ 0 改机制",
+    "keyword_table_v3_1_sha12": "1b7bcbcce589",
+    "v3_1_new_words": {
+      "CRITERIA": ["复核", "质量", "保证", "对齐", "失实"],
+      "RISK": ["回退", "遗忘", "记忆效应", "噪声", "缺陷", "观察者效应"],
+      "KILL_LINE": ["推翻", "检验"],
+      "TIMING": ["挂起", "后面"],
+      "COST": [],
+      "DELEGATE": []
+    },
+    "phrase_patterns": "PHRASE_PATTERNS_V3 5 条逐字沿用 (L299-L325)，0 增 0 改"
+  },
+  "face_construction": {
+    "v1_1_base_face": "results/_v4_pi_cot_v2_dataset.json (7b01cd835a41) 之 events 数组 (逐字沿 executor L832-L833 之 DATASET_V2_V11)",
+    "n_rows": 37,
+    "counting_unit": "件 (行)；并集口径另以唯一文本层核",
+    "held_out_membership": "0 (v1.1 基础面不在 S4 冻结面 179 行内 ⇒ 4 件皆不进入 A/A'/B/C/D 任一读数线)"
+  },
+  "axis2_items": [
+    {
+      "q_id": "q10",
+      "file": "_v4_pi_cot_v2_dataset.json",
+      "event_id": 10,
+      "seq_v3": ["RISK", "TIMING"],
+      "seq_v31": ["KILL_LINE", "RISK", "TIMING"],
+      "displacement_type": "T1",
+      "type_reason": "V3 序列为 V3.1 之真子序列（按序）；层集合不等 ⇒ 非 T2。新层 KILL_LINE 首现于 18，早于 V3 既有层之最早位置",
+      "version_attribution": "V3.1",
+      "in_heldout": false,
+      "enters_any_reading_line": false,
+      "new_hit_words": [{"word": "推翻", "layer": "KILL_LINE", "char_pos": 18}],
+      "corpus_verbatim": "不如问权重意味着什么？预设权重本就可推翻，论文权重也可改，优先级权重则不可避免地陷入危机预防困境，即风险不稳定下预防优先级被排后，这是世界性的难题且可能伴随过敏反应请不必纠结，我倾向于先斩后奏"
+    },
+    {
+      "q_id": "q13",
+      "file": "_v4_pi_cot_v2_dataset.json",
+      "event_id": 13,
+      "seq_v3": ["TIMING"],
+      "seq_v31": ["TIMING", "KILL_LINE"],
+      "displacement_type": "T1",
+      "type_reason": "V3 序列为 V3.1 之真子序列（按序）；层集合不等 ⇒ 非 T2",
+      "version_attribution": "V3.1",
+      "in_heldout": false,
+      "enters_any_reading_line": false,
+      "new_hit_words": [{"word": "推翻", "layer": "KILL_LINE", "char_pos": 29}],
+      "corpus_verbatim": "依旧两步走，路由key广撒，官方key深调，注意后一步可以推翻前一步结论"
+    },
+    {
+      "q_id": "q14",
+      "file": "_v4_pi_cot_v2_dataset.json",
+      "event_id": 14,
+      "seq_v3": ["RISK", "CRITERIA"],
+      "seq_v31": ["RISK", "KILL_LINE", "CRITERIA"],
+      "displacement_type": "T1",
+      "type_reason": "V3 序列为 V3.1 之真子序列（按序）；层集合不等 ⇒ 非 T2",
+      "version_attribution": "V3.1",
+      "in_heldout": false,
+      "enters_any_reading_line": false,
+      "new_hit_words": [{"word": "检验", "layer": "KILL_LINE", "char_pos": 27}],
+      "corpus_verbatim": "不可能冲突，除非词不达意。这在古学今用中很常见，实践是检验真理的唯一标准"
+    },
+    {
+      "q_id": "q21",
+      "file": "_v4_pi_cot_v2_dataset.json",
+      "event_id": 21,
+      "seq_v3": ["CRITERIA"],
+      "seq_v31": ["CRITERIA", "KILL_LINE"],
+      "displacement_type": "T1",
+      "type_reason": "V3 序列为 V3.1 之真子序列（按序）；层集合不等 ⇒ 非 T2",
+      "version_attribution": "V3.1",
+      "in_heldout": false,
+      "enters_any_reading_line": false,
+      "new_hit_words": [{"word": "推翻", "layer": "KILL_LINE", "char_pos": 53}],
+      "corpus_verbatim": "事实上deposon历届铁律都是我的口径，自然已我的新口径为准。如果外推到世界场景，则属于旧秩序要被新形态推翻了"
+    }
+  ],
+  "axis2_summary": {
+    "n_items": 4,
+    "type_counts": {"T1": 4, "T2": 0, "T3": 0, "T4": 0, "OUT_OF_VOCAB": 0},
+    "all_four_triggered_by": "KILL_LINE 层（推翻 ×3 ＝ q10/q13/q21；检验 ×1 ＝ q14）",
+    "new_word_hits_total": 4,
+    "n_hit_but_unchanged": 0,
+    "hit_but_unchanged_note": "v1.1 面内 0 件「命中新词而序列不变」（对照：S4 冻结面有 D8-58r 1 件）⇒ 本面 命中件数 ＝ 位移件数 ＝ 4"
+  },
+  "union_check": {
+    "registered_by_face2_s3_2": {"s4_face_rows": 24, "s4_face_unique_texts": 24, "s4_plus_v11_union": 28, "executor_plus_v11": 5},
+    "measured_by_this_run": {
+      "s4_face_rows": 179,
+      "s4_face_displaced_rows": 24,
+      "s4_face_unique_texts_raw": 132,
+      "s4_face_unique_texts_excl_empty": 131,
+      "v11_face_rows": 37,
+      "v11_face_displaced": 4,
+      "v11_face_unique_texts": 37,
+      "text_overlap_between_faces": 0,
+      "union_unique_texts_excl_empty": 168,
+      "union_displaced_texts": 28,
+      "identity_24_plus_4": true
+    },
+    "denominator_reconciliation": "面 II §3.2 之 131 与 168 系『非空唯一文本』口径；本人原始含空串计数为 132 与 169，差额 1 恰为『空串（两个双引号之零长度文本）』本身（179 行中 39 行语料为空）⇒ 与在册值可对账，⛔ 0 径改面 II",
+    "executor_face_crosscheck": "load_all_events_v3 之 72 条唯一非空文本（面 II §3.2 载 72 ✅）、其中位移 5 件 ✅（Q10_third_read ＋ 本 4 件）"
+  },
+  "regression_evidence": {
+    "vs_face2_json_24": {"keys_identical": true, "field_mismatches": 0, "note": "(q_id, file, src_idx, seq_v3, seq_v31, displacement_type) 六项逐件相符"},
+    "vs_face1_json_26": {"n_heldout": 26, "displaced": 9, "unchanged": 17, "field_mismatches": 0, "empty_corpus_qids": ["DF1-6", "DF6-1", "Q39"]},
+    "kwtable_independent_corroboration": "词表定稿件 1b7bcbcce589 §4.1/§4.2 之『池外支持』逐字来源例：推翻＝q10/q13/q21，检验＝q14 ⇒ 与本实跑所得 4 件之 q_id 逐项相符（protocol-keeper 侧独立佐证）"
+  },
+  "open_items": [
+    {"id": "E-4b-axis2", "status": "候 PI 裁", "question": "v1.1 基础面之 4 件位移是否并入面 II（24 → 28）", "this_artifact_provides": "逐件 q_id／序列／类型 ＋ 并集 28 之构成核（24＋4）", "not_done": "⛔ 0 代裁、⛔ 0 并入 b6ce4a79116e、⛔ 0 改其 24 件表"},
+    {"id": "AD-3", "status": "实跑已供给，⛔ 0 自闭", "question": "v1.1 之 4 件位移之 q_id／序列盘上未载", "this_artifact_provides": "4 件逐件身份（q10/q13/q14/q21 ＋ V3→V3.1 序列 ＋ 类型 ＝ T1）", "closure": "候 PI 确认闭；本件 0 宣告 AD-3 已闭"},
+    {"id": "AD-5-new", "status": "待核（本棒新登记）", "question": "q21 之 q_id 在两面各出现一次：v1.1（event_id 21，有语料，本件之轴二件）vs S4 冻结面 _v4_pi_cot_v2_dataset_addendum_2026_09_24.json idx 1（语料 0 字）", "impact": "若下游以 q_id 单键引用位移事实，q21 将产生二义；面 II 之 24 件无此问题（该 S4 行语料为空、序列 []→[]、不属位移件）", "not_done": "⛔ 0 径改任何既有件、⛔ 0 代定命名规范"}
+  ],
+  "model_side_declaration": {
+    "applies_to": "本件 4 行之模型侧口径（逐字沿 b6ce4a79116e §6 与 1b7bcbcce589 定稿）",
+    "gold_kwtable": "V3.1",
+    "gold_kwtable_sha12": "1b7bcbcce589",
+    "model_tree": "V3",
+    "model_tree_source": "8a81d90c69ba",
+    "training_label_kwtable": "KEYWORDS_V3",
+    "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+    "mixed_object": true,
+    "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+    "scope_caveat": "本 4 件在 held-out 外 ⇒ 0 进入 A/A'/B/C/D 任一读数线 ⇒ 本声明于其仅为口径一致性之沿用，不涉任何读数值"
+  },
+  "discipline": {
+    "zero_backwrite": true,
+    "zero_verdict": true,
+    "zero_substitute_ruling": true,
+    "zero_prewritten_numbers": "本件全部数值 ＝ 本棒实跑实测值；⛔ 0 预写、0 反推、0 臆造",
+    "zero_network": true,
+    "zero_skill": true,
+    "zero_llm": true,
+    "zero_key_read": true,
+    "scratch_scripts": [
+      ".tmp/e4_axis2_v11_displacement_run_2026_10_10.py",
+      ".tmp/e4_axis2_denominator_recheck_2026_10_10.py",
+      ".tmp/e4_axis2_crosscheck_2026_10_10.py",
+      ".tmp/e4_axis2_final_validation_2026_10_10.py",
+      ".tmp/e4_axis2_hit_unchanged_probe_2026_10_10.py"
+    ],
+    "scratch_note": "脚本全部只读（import / read_text / json.loads / Get-FileHash），⛔ 0 写既有件；临时输出 .tmp/e4_axis2_run_out.json、.tmp/e4_axis2_validation_out.json"
+  },
+  "fingerprint_self_note": "本件不内嵌自身 SHA-12（自指悖论）⇒ 落盘后实测值见本棒回执自报"
+}

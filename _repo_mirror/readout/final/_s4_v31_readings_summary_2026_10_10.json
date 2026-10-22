@@ -1,0 +1,184 @@
+{
+ "artifact": "_s4_v31_readings_summary_2026_10_10.json",
+ "date": "2026-10-10",
+ "kind": "summary_readings",
+ "step": "三（读数）",
+ "note": "汇总 JSON；⛔ 与逐件 JSON（_s4_v31_regen_gold_items_2026_10_10.json / _s4_v31_displacement_items_2026_10_10.json）分离不合并（K-EX-10）",
+ "authority": {
+  "clearance": {
+   "file": "results/_s4_regen_golive_clearance_2026_10_10.md",
+   "sha12": "80d8905b9762"
+  },
+  "sequence": {
+   "file": "results/_s4_execution_sequence_review_2026_10_10.md",
+   "sha12": "0e1eb2fdd25e"
+  },
+  "kwtable": {
+   "file": "results/_s4_v31_keyword_table_final_2026_10_10.md",
+   "sha12": "1b7bcbcce589"
+  },
+  "killline": {
+   "file": "results/_s4_kex_killline_freeze_2026_10_10.md",
+   "sha12": "6269d0c6fd10"
+  },
+  "vclause": {
+   "file": "results/_s4_vclause_1_6_revision_2026_10_10.md",
+   "sha12": "017b3cf38ae3"
+  },
+  "plan": {
+   "file": "results/_s4_regen_execution_plan_2026_10_10.md",
+   "sha12": "70e22220350d"
+  },
+  "executor_readonly": {
+   "file": "results/_v4_pi_cot_v3_ruleset_v3_executor.py",
+   "sha12": "8a81d90c69ba"
+  },
+  "old_readings_anchor_readonly": {
+   "file": "results/_s4_face_five_lines_ci_readings_execution_2026_10_09.md",
+   "sha12": "73550514152d"
+  },
+  "heldout": {
+   "file": "results/_s4_heldout_sampling_seed42_items_2026_10_09.json",
+   "sha12": "6a670e629dca"
+  }
+ },
+ "face": {
+  "n_events": 179,
+  "n_held": 26,
+  "n_train": 153,
+  "tree_depth": 6
+ },
+ "heldout_fingerprint": {
+  "sha12": "acedff01d18c",
+  "recomputed": "acedff01d18c",
+  "match": true
+ },
+ "model_side_declaration": {
+  "gold_kwtable": "V3.1",
+  "gold_kwtable_sha12": "1b7bcbcce589",
+  "model_tree": "V3",
+  "model_tree_source": "8a81d90c69ba",
+  "training_label_kwtable": "KEYWORDS_V3",
+  "n_keywords_hit_feature_kwtable": "KEYWORDS_V3",
+  "mixed_object": true,
+  "discount_clause": "差值含 gold 覆盖扩大之机械效应，0 可归因于学习能力变化",
+  "discount_observed_direction": "A 线上升，与方案件 70e22220350d §2.2 预判方向相反；构成 = 空 gold 0.0 基线被非空 gold 0.3/0.5 替代（7 件，+3.1）叠加序列增长之 gap 罚分（2 件，-0.4），净 +2.7/26 = +0.103846153846153846"
+ },
+ "single_variable_check": {
+  "pred_identical_across_gold_versions": true,
+  "tree_depth_identical": true,
+  "label_distribution_identical": true,
+  "K_EX_8_feature_vs_label_vs_declared": "all KEYWORDS_V3 -> consistent"
+ },
+ "new_readings_gold_v31_model_v3": {
+  "A_nw_sim_mean": 0.42417582417582417,
+  "A_bootstrap_ci": [
+   0.3153846153846154,
+   0.528021978021978
+  ],
+  "A_halfwidth": 0.10631868131868133,
+  "A_fullwidth": 0.21263736263736266,
+  "Ap_nled_sim_mean": 0.14743589743589744,
+  "Ap_bootstrap_ci": [
+   0.038461538461538464,
+   0.28205128205128205
+  ],
+  "Ap_halfwidth": 0.12179487179487179,
+  "B_num_den": [
+   9,
+   21
+  ],
+  "B_point": 0.42857142857142855,
+  "B_ci_construct1": [
+   0.23809523809523808,
+   0.6190476190476191
+  ],
+  "B_ci_construct2": [
+   0.22727272727272727,
+   0.65
+  ],
+  "B_K2_one_sided_lower": 0.23809523809523808,
+  "C_num_den": [
+   3,
+   5
+  ],
+  "C_point": 0.6,
+  "C_ci_construct1": [
+   0.2,
+   1.0
+  ],
+  "C_ci_construct2": [
+   0.0,
+   1.0
+  ],
+  "C_K2_one_sided_upper": 1.0,
+  "D_bootstrap_ci": [
+   0.3153846153846154,
+   0.528021978021978
+  ],
+  "D_ci_lower": 0.3153846153846154,
+  "D_note": "D 与 A 同为 NW-sim 主口径 bootstrap，读数面重合（executor L1164-L1166）"
+ },
+ "t1_only_contrast_separate_face": {
+  "A_nw_sim_mean": 0.4010989010989011,
+  "A_bootstrap_ci": [
+   0.27802197802197803,
+   0.5164835164835165
+  ],
+  "Ap_nled_sim_mean": 0.14743589743589744,
+  "B_num_den": [
+   9,
+   21
+  ],
+  "C_num_den": [
+   3,
+   5
+  ],
+  "D_ci_lower": 0.27802197802197803,
+  "T2_marginal_on_A": 0.02307692307692305,
+  "separation": "⛔ 与主读数面物理分离；0 混入主表；0 供下游直接引用"
+ },
+ "v3_baseline_reproduction_selftest": {
+  "purpose": "同程序复算 gold=V3/model=V3 与 73550514152d 在册值逐位比对（0 覆写、0 并表、0 比大小）",
+  "A_nw_sim_mean": 0.32032967032967036,
+  "A_bootstrap_ci": [
+   0.18186813186813186,
+   0.44999999999999996
+  ],
+  "Ap_nled_sim_mean": 0.14743589743589744,
+  "B_num_den": [
+   9,
+   21
+  ],
+  "C_num_den": [
+   3,
+   5
+  ],
+  "bit_identical": true
+ },
+ "old_readings_anchor_verbatim_no_table_merge": {
+  "file": "results/_s4_face_five_lines_ci_readings_execution_2026_10_09.md",
+  "sha12_recomputed": "73550514152d",
+  "A": 0.32032967032967036,
+  "Ap": 0.14743589743589744,
+  "B": "9/21",
+  "C": "3/5",
+  "D_ci_lower": 0.18186813186813186,
+  "note": "逐字转录；⛔ 0 并入本 JSON 任何 CI 表、0 直接比大小、0 视为已废"
+ },
+ "thresholds_untouched": {
+  "TH_NW_SIM_MEAN": 0.65,
+  "TH_NLED_SIM_MEAN": 0.55,
+  "TH_CRITICAL_COV": 1.0,
+  "TH_BLIND_OBEY": 0.1,
+  "TH_BOOT_CI_FLOOR": 0.4,
+  "note": "沿 8a81d90c69ba 原值，仅作定位；0 判读、0 赋布尔"
+ },
+ "open_items": {
+  "F_3_X8_disposition": "未闭；0 代择（本棒并列两读数面，0 择一，0 结案）",
+  "U_12_displacement_threshold": "数值盘上 0 载；0 臆定；0 以阈值未达为由结案",
+  "U_11_authority_transcription": "PI 轮 41/42/43 卡面原文盘上 0 命中；承继登记",
+  "W_1_old_readings_internal_inconsistency": "73550514152d §3.6 D8-52 批判反思栏=是，同程序复算=否，且与该件自身汇总 B=9/21 矛盾（逐行点数为 10）；0 径改既有件，交 verifier"
+ },
+ "verdict_status": "0 判档；0 赋任一 k_v3s_4_4_* 布尔；0 自验；0 自判毕；0 结案（步骤五不属本棒）"
+}
