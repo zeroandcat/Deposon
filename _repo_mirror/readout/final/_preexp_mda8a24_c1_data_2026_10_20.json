@@ -1,0 +1,846 @@
+{
+ "piece": {
+  "name": "results/_preexp_mda8a24_c1_data_2026_10_20.json",
+  "path": "〔本地绝对路径·脱敏略:�〕�人资料\\deposon-repo\\results\\_preexp_mda8a24_c1_data_2026_10_20.json",
+  "nature": "预实验择优 · 题甲 · 甲-C1（现口径 · 基准臂）之 C1 基准复算数据件",
+  "author": "worker（执行棒 · 预实验择优之题甲 C1 基准臂）",
+  "mandate": "PI v160-Q4「全采生效（荐）」= 预实验择优设计草案 4dc9aaced5f7 之生效复核 · 本棒据其 §3-1-2 之甲-C1 构造面执行 C1 之基准复算",
+  "scope": "⛔ 仅甲-C1（现口径 · 基准臂）· 甲-C2／C3／C4 之面未授权 ⇒ 0 跑 · 0 预断其果 · 0 增删候选",
+  "discipline": "0 新跑格 · 0 LLM 调用 · 0 联网 · 0 读 key · 0 动 tools/ · 0 写既有件 · 0 回改 · 0 新立 KD-* · 0 闭 KD · 0 落五终判 · 0 宣告段毕 · 0 代 PI 裁／释／择 · 读数不出判定（清路之裁归 PI／verdict-keeper）",
+  "data_stamp": "2026-10-20 18:52:16"
+ },
+ "source_anchors_self_measured": [
+  {
+   "path": "results/_preexp_design_kmda8a24_degen_2026_10_20.md",
+   "sha12_self_measured": "4dc9aaced5f7",
+   "bytes": 87243,
+   "mtime_local": "2026-10-20 17:57:30.457",
+   "role": "生效草案（题甲之构造面／择优判据／判死线 K-PREXP-MDA8A2-1..-8 之正源）"
+  },
+  {
+   "path": "pi_rulings/_pi_card_answers_register_2026_10_20_v160.md",
+   "sha12_self_measured": "1c9a640b91aa",
+   "bytes": 3598,
+   "mtime_local": "2026-10-20 18:23:05.164",
+   "role": "PI v160 登记件（Q4「全采生效」= 生效宣告之源）"
+  },
+  {
+   "path": "results/_f3_payment_vector_reconstruction_data_2026_10_19.json",
+   "sha12_self_measured": "7f80d5ae03bb",
+   "bytes": 210141,
+   "mtime_local": "2026-10-19 22:34:25.218",
+   "role": "复算载体（cells_15 逐格 ②③④ 值 ＋ readout_three 之三件·照录层）"
+  },
+  {
+   "path": "results/_mda8_preexp_run_reading_2026_10_20.json",
+   "sha12_self_measured": "56eb9db8bfd1",
+   "bytes": 145592,
+   "mtime_local": "2026-10-20 09:40:01.501",
+   "role": "MDA-8 肢二读数件（O1 形式具化 30 格之 ① 值 · 在册读数之对照层）"
+  },
+  {
+   "path": "_field_sources/ritt_remeasure_measurement_2026_10_17.json",
+   "sha12_self_measured": "29bb4c4a8bca",
+   "bytes": 325531,
+   "mtime_local": "2026-10-17 20:08:38.301",
+   "role": "readout_three 之终极载体（照录层所载路径 · 本棒当场自测其指纹）"
+  },
+  {
+   "path": "tools/exp_harness.py",
+   "sha12_self_measured": "ce64b9b97489",
+   "bytes": 45590,
+   "mtime_local": "2026-10-18 13:20:34.317",
+   "role": "码载锚（只读 · ⛔ 0 动其字节）"
+  },
+  {
+   "path": "tools/llm_client.py",
+   "sha12_self_measured": "1722500da4aa",
+   "bytes": 8118,
+   "mtime_local": "2026-09-09 16:16:02.744",
+   "role": "LLM 客户端锚（只读）"
+  }
+ ],
+ "ftfb_ordering_check": {
+  "rule": "K-PREXP-MDA8A2-1: 草案生效落盘时点 ⧺ 依本件跑之读数取得时点 之序可检（盘面 mtime ＋ SHA-12）",
+  "draft_landed_at": "2026-10-20 17:57:30.457",
+  "pi_effective_declared_at": "2026-10-20 18:23:05.164（PI v160-Q4 登记件落盘时点）",
+  "reading_acquired_from": "2026-10-20 18:35:31 UTC+8（本棒起手之令源自测时点）",
+  "reading_computed_window": "2026-10-20 18:35–18:52:16 UTC+8",
+  "order": "草案落盘（17:57:30）< 生效宣告（18:23:05）< 读数取得（18:35:31 起）",
+  "order_checkable": true,
+  "candidate_set_frozen_before_measurement": true,
+  "candidate_set": [
+   "甲-C1",
+   "甲-C2",
+   "甲-C3",
+   "甲-C4"
+  ],
+  "candidate_set_measured_this_baton": [
+   "甲-C1"
+  ],
+  "candidate_set_added_or_removed": 0
+ },
+ "new_observations": {
+  "count": 0,
+  "unit": "逐格逐决策",
+  "statement": "本面之全部读数系于在册载体之纯复算（0 新跑格 · 0 LLM · 0 联网 · 0 读 key · 0 动 tools/）",
+  "recompute_subject": "worker（本棒执行棒）之复算 ＋ 载体指纹当场自测",
+  "third_party_recompute_status": "M-A3 face A 之三件（57/7/23）已有第三方复算在册（d716cd3f1240 §5-2 · 2026-10-19 22:50 逐位同 · 照录层）；本棒新算出之 face B 三件（75/5/25）与 M-A4 之计数尚无第三方复算在册 ⇒ 登记为待复算之缺证面",
+  "independent_recompute_count": 1
+ },
+ "M_A1": {
+  "counting_face": "full S 30 cells (2 arms U-C1/U-C3 x 15 cells), seed 42, face A max_u 5-value vector (C1 numeric-equality reading)",
+  "reading_numeric_equality": {
+   "rule": "value equality (type difference carries no criterion information) - A2-1 甲",
+   "value_set_30cell": [
+    1.0,
+    4.0,
+    9.0
+   ],
+   "value_set_labels": [
+    "1",
+    "4.0",
+    "9"
+   ],
+   "n_distinct": 3,
+   "gate_le3_triggered": true
+  },
+  "reading_byte_level": {
+   "rule": "byte/type-level (1 != 1.0) - C2 reading, reported ONLY for K-PREXP-MDA8A2-4 two-read parallel output; C2 face NOT measured (unauthorized)",
+   "value_set_30cell_type_tagged": [
+    [
+     "int",
+     "1"
+    ],
+    [
+     "float",
+     "1.0"
+    ],
+    [
+     "float",
+     "4.0"
+    ],
+    [
+     "int",
+     "9"
+    ]
+   ],
+   "value_set_30cell_labels": [
+    "1 (int)",
+    "1.0 (float)",
+    "4.0 (float)",
+    "9 (int)"
+   ],
+   "n_distinct": 4,
+   "gate_le3_triggered": false
+  },
+  "two_reads_same_result": false
+ },
+ "M_A2": {
+  "f2": {
+   "name": "② |A| multiset of that cell",
+   "canonical_form": "sorted multiset (ascending)",
+   "n_distinct_15cell_raw_canon": 4,
+   "n_distinct_30cell_raw_canon": 4,
+   "n_distinct_30cell_projection_mean_n_options": 3,
+   "projection_definition": "π2 = arithmetic mean (exact rational) of per-decision n_options of that cell (照录 layer: 肢二 readout.per_field_self_evidence.f2.projection_pi2)",
+   "projection_stats_30cell": {
+    "n": 30,
+    "min": 2.0,
+    "max": 4.0,
+    "mean_float": 3.2266666666666666,
+    "std_ddof0_float": 0.9480740711803295,
+    "std_ddof1_float": 0.9642816395948697
+   },
+   "projection_mean_exact_30cell": "242/75",
+   "gate_gt3": true
+  },
+  "f3": {
+   "name": "③ payment vector of that cell",
+   "canonical_form": "ordered (C4 equivalence judged on ordered vector) - also unordered variant computed",
+   "n_distinct_15cell_ordered_raw_canon": 5,
+   "n_distinct_30cell_ordered_raw_canon": 5,
+   "n_distinct_30cell_unordered_raw_canon": 4,
+   "n_distinct_30cell_ordered_projection": 4,
+   "projection_definition": "π3 = arithmetic mean (exact rational) of all payment values of that cell (照录 layer: 肢二 readout.per_field_self_evidence.f3.projection_pi3)",
+   "projection_stats_30cell": {
+    "n": 30,
+    "min": 0.25,
+    "max": 5.0375,
+    "mean_float": 1.5543749999999998,
+    "std_ddof0_float": 1.7992702513797085,
+    "std_ddof1_float": 1.830029235916832
+   },
+   "projection_mean_exact_30cell": "2487/1600",
+   "gate_gt3_ordered": true,
+   "gate_gt3_unordered": true
+  },
+  "f4": {
+   "name": "④ prompt text hash set of that cell",
+   "canonical_form": "sorted tuple of distinct prompt digest12",
+   "n_distinct_15cell_raw_canon": 5,
+   "n_distinct_30cell_raw_canon": 5,
+   "n_distinct_30cell_projection_count": 2,
+   "projection_definition": "π4 = count of distinct prompt digests of that cell (integer) (照录 layer: 肢二 readout.per_field_self_evidence.f4.projection_pi4)",
+   "projection_stats_30cell": {
+    "n": 30,
+    "min": 15.0,
+    "max": 20.0,
+    "mean_float": 16.0,
+    "std_ddof0_float": 2.0,
+    "std_ddof1_float": 2.034190510862431
+   },
+   "projection_mean_exact_30cell": "16",
+   "gate_gt3": true
+  }
+ },
+ "M_A3": {
+  "counting_face_S": "full S 30 cells (2 arms x 15 cells) @ seed 42 (A2-2 读乙 already adjudicated)",
+  "equivalence_rule": "C4: per-field equality on the canonical form <f1,f2,f3_ordered,f4>; f1 under C1 numeric-equality reading",
+  "face_A_f1_admitted": {
+   "name": "释触发态 arm face (丙档 hypothesis: ① admitted to conjunction) - M-A3's face",
+   "fields_in_conjunction": [
+    "f1_value",
+    "f2_canon",
+    "f3_ordered_canon",
+    "f4_canon"
+   ],
+   "three": {
+    "class_count": 7,
+    "D": 57,
+    "n_ind": 7,
+    "Delta": 23,
+    "class_sizes": [
+     6,
+     6,
+     6,
+     3,
+     3,
+     3,
+     3
+    ]
+   },
+   "classes": [
+    {
+     "size": 6,
+     "members": [
+      "U-C1|M1_Deposon_TRA|T1_GSM8K",
+      "U-C3|M1_Deposon_TRA|T1_GSM8K",
+      "U-C1|M2_Greedy|T1_GSM8K",
+      "U-C3|M2_Greedy|T1_GSM8K",
+      "U-C1|M3_Random|T1_GSM8K",
+      "U-C3|M3_Random|T1_GSM8K"
+     ]
+    },
+    {
+     "size": 6,
+     "members": [
+      "U-C1|M1_Deposon_TRA|T2_StrategyQA",
+      "U-C3|M1_Deposon_TRA|T2_StrategyQA",
+      "U-C1|M2_Greedy|T2_StrategyQA",
+      "U-C3|M2_Greedy|T2_StrategyQA",
+      "U-C1|M3_Random|T2_StrategyQA",
+      "U-C3|M3_Random|T2_StrategyQA"
+     ]
+    },
+    {
+     "size": 6,
+     "members": [
+      "U-C1|M1_Deposon_TRA|T3_Trap",
+      "U-C3|M1_Deposon_TRA|T3_Trap",
+      "U-C1|M2_Greedy|T3_Trap",
+      "U-C3|M2_Greedy|T3_Trap",
+      "U-C1|M3_Random|T3_Trap",
+      "U-C3|M3_Random|T3_Trap"
+     ]
+    },
+    {
+     "size": 3,
+     "members": [
+      "U-C1|M1_Deposon_TRA|T4_2x2",
+      "U-C1|M2_Greedy|T4_2x2",
+      "U-C1|M3_Random|T4_2x2"
+     ]
+    },
+    {
+     "size": 3,
+     "members": [
+      "U-C3|M1_Deposon_TRA|T4_2x2",
+      "U-C3|M2_Greedy|T4_2x2",
+      "U-C3|M3_Random|T4_2x2"
+     ]
+    },
+    {
+     "size": 3,
+     "members": [
+      "U-C1|M1_Deposon_TRA|T5_LowResource",
+      "U-C1|M2_Greedy|T5_LowResource",
+      "U-C1|M3_Random|T5_LowResource"
+     ]
+    },
+    {
+     "size": 3,
+     "members": [
+      "U-C3|M1_Deposon_TRA|T5_LowResource",
+      "U-C3|M2_Greedy|T5_LowResource",
+      "U-C3|M3_Random|T5_LowResource"
+     ]
+    }
+   ]
+  },
+  "face_B_f1_barred": {
+   "name": "现口径 arm face (K-MDA8A2-4 gate enforced: ① barred from conjunction) - M-A5 baseline face",
+   "fields_in_conjunction": [
+    "f2_canon",
+    "f3_ordered_canon",
+    "f4_canon"
+   ],
+   "three": {
+    "class_count": 5,
+    "D": 75,
+    "n_ind": 5,
+    "Delta": 25,
+    "class_sizes": [
+     6,
+     6,
+     6,
+     6,
+     6
+    ]
+   },
+   "classes": [
+    {
+     "size": 6,
+     "members": [
+      "U-C1|M1_Deposon_TRA|T1_GSM8K",
+      "U-C3|M1_Deposon_TRA|T1_GSM8K",
+      "U-C1|M2_Greedy|T1_GSM8K",
+      "U-C3|M2_Greedy|T1_GSM8K",
+      "U-C1|M3_Random|T1_GSM8K",
+      "U-C3|M3_Random|T1_GSM8K"
+     ]
+    },
+    {
+     "size": 6,
+     "members": [
+      "U-C1|M1_Deposon_TRA|T2_StrategyQA",
+      "U-C3|M1_Deposon_TRA|T2_StrategyQA",
+      "U-C1|M2_Greedy|T2_StrategyQA",
+      "U-C3|M2_Greedy|T2_StrategyQA",
+      "U-C1|M3_Random|T2_StrategyQA",
+      "U-C3|M3_Random|T2_StrategyQA"
+     ]
+    },
+    {
+     "size": 6,
+     "members": [
+      "U-C1|M1_Deposon_TRA|T3_Trap",
+      "U-C3|M1_Deposon_TRA|T3_Trap",
+      "U-C1|M2_Greedy|T3_Trap",
+      "U-C3|M2_Greedy|T3_Trap",
+      "U-C1|M3_Random|T3_Trap",
+      "U-C3|M3_Random|T3_Trap"
+     ]
+    },
+    {
+     "size": 6,
+     "members": [
+      "U-C1|M1_Deposon_TRA|T4_2x2",
+      "U-C3|M1_Deposon_TRA|T4_2x2",
+      "U-C1|M2_Greedy|T4_2x2",
+      "U-C3|M2_Greedy|T4_2x2",
+      "U-C1|M3_Random|T4_2x2",
+      "U-C3|M3_Random|T4_2x2"
+     ]
+    },
+    {
+     "size": 6,
+     "members": [
+      "U-C1|M1_Deposon_TRA|T5_LowResource",
+      "U-C3|M1_Deposon_TRA|T5_LowResource",
+      "U-C1|M2_Greedy|T5_LowResource",
+      "U-C3|M2_Greedy|T5_LowResource",
+      "U-C1|M3_Random|T5_LowResource",
+      "U-C3|M3_Random|T5_LowResource"
+     ]
+    }
+   ]
+  },
+  "crossarm_duplicate_pairs_read_jia": {
+   "definition": "读甲: cross-arm same-mechanism pairs (U-C1|M|F) vs (U-C3|M|F)",
+   "count": 9,
+   "registry_cross_check": "照录 42af8a6e0703: 读甲 D=9 (9 对)"
+  },
+  "cross_check_vs_readout_three": {
+   "carrier": "results/_f3_payment_vector_reconstruction_data_2026_10_19.json -> readout_three (照录层)",
+   "registered_D": 57,
+   "registered_n_ind": 7,
+   "registered_Delta": 23,
+   "recomputed_face_A_D": 57,
+   "recomputed_face_A_n_ind": 7,
+   "recomputed_face_A_Delta": 23,
+   "match": true
+  }
+ },
+ "M_A4": {
+  "definition": "M-A4: count of fields that are non-恒同 (non-constant) on the conjunction's equivalence-class partition",
+  "reading_basis": "42af8a6e0703 §3-3: the collapse case (判据之分辨面 由 4 缩为 1) is attributed to ②③④ being 恒同 => a field counts as 独立可判 iff it is not 恒同 on the partition",
+  "face_A_f1_admitted": {
+   "f1_value": {
+    "distinct_values_on_partition": 3,
+    "value_set_size": 3,
+    "constant_within_every_class": true,
+    "non_hengtong_i.e._non_constant": true
+   },
+   "f2_canon": {
+    "distinct_values_on_partition": 4,
+    "value_set_size": 4,
+    "constant_within_every_class": true,
+    "non_hengtong_i.e._non_constant": true
+   },
+   "f3_ordered_canon": {
+    "distinct_values_on_partition": 5,
+    "value_set_size": 5,
+    "constant_within_every_class": true,
+    "non_hengtong_i.e._non_constant": true
+   },
+   "f4_canon": {
+    "distinct_values_on_partition": 5,
+    "value_set_size": 5,
+    "constant_within_every_class": true,
+    "non_hengtong_i.e._non_constant": true
+   },
+   "independent_discriminating_field_count": 4
+  },
+  "face_B_f1_barred_conjunction_fields_only": {
+   "f2_canon": {
+    "distinct_values_on_partition": 4,
+    "value_set_size": 4,
+    "constant_within_every_class": true,
+    "non_hengtong_i.e._non_constant": true
+   },
+   "f3_ordered_canon": {
+    "distinct_values_on_partition": 5,
+    "value_set_size": 5,
+    "constant_within_every_class": true,
+    "non_hengtong_i.e._non_constant": true
+   },
+   "f4_canon": {
+    "distinct_values_on_partition": 5,
+    "value_set_size": 5,
+    "constant_within_every_class": true,
+    "non_hengtong_i.e._non_constant": true
+   },
+   "independent_discriminating_field_count": 3
+  },
+  "face_B_f1_barred_f1_also_evaluated": {
+   "f1_value": {
+    "distinct_values_on_partition": 3,
+    "value_set_size": 3,
+    "constant_within_every_class": false,
+    "non_hengtong_i.e._non_constant": true
+   },
+   "f2_canon": {
+    "distinct_values_on_partition": 4,
+    "value_set_size": 4,
+    "constant_within_every_class": true,
+    "non_hengtong_i.e._non_constant": true
+   },
+   "f3_ordered_canon": {
+    "distinct_values_on_partition": 5,
+    "value_set_size": 5,
+    "constant_within_every_class": true,
+    "non_hengtong_i.e._non_constant": true
+   },
+   "f4_canon": {
+    "distinct_values_on_partition": 5,
+    "value_set_size": 5,
+    "constant_within_every_class": true,
+    "non_hengtong_i.e._non_constant": true
+   },
+   "independent_discriminating_field_count": 4
+  },
+  "secondary_metric_redundancy_reading": {
+   "note": "NOT the design's M-A4. Reported as a secondary reading so that PI can see whether the gate outcome would differ. Counts fields that ADD information to the conjunction (removing f strictly refines the partition).",
+   "face_A_f1_admitted": {
+    "f1_value": {
+     "classes_without_f": 5,
+     "classes_with_all_fields": 7,
+     "removing_f_coarsens_partition": true,
+     "f_adds_discrimination": true
+    },
+    "f2_canon": {
+     "classes_without_f": 7,
+     "classes_with_all_fields": 7,
+     "removing_f_coarsens_partition": false,
+     "f_adds_discrimination": false
+    },
+    "f3_ordered_canon": {
+     "classes_without_f": 7,
+     "classes_with_all_fields": 7,
+     "removing_f_coarsens_partition": false,
+     "f_adds_discrimination": false
+    },
+    "f4_canon": {
+     "classes_without_f": 7,
+     "classes_with_all_fields": 7,
+     "removing_f_coarsens_partition": false,
+     "f_adds_discrimination": false
+    },
+    "fields_adding_discrimination_count": 1
+   },
+   "face_B_f1_barred": {
+    "f2_canon": {
+     "classes_without_f": 5,
+     "classes_with_all_fields": 5,
+     "removing_f_coarsens_partition": false,
+     "f_adds_discrimination": false
+    },
+    "f3_ordered_canon": {
+     "classes_without_f": 5,
+     "classes_with_all_fields": 5,
+     "removing_f_coarsens_partition": false,
+     "f_adds_discrimination": false
+    },
+    "f4_canon": {
+     "classes_without_f": 5,
+     "classes_with_all_fields": 5,
+     "removing_f_coarsens_partition": false,
+     "f_adds_discrimination": false
+    },
+    "fields_adding_discrimination_count": 0
+   }
+  },
+  "collapse_check": {
+   "warning_source": "42af8a6e0703 §3-3: 若 X6 裁为「数值相等」且字段②③④ 因「同族同格」而恒同 ⇒ 四字段合取退化为单条件判据（只剩字段①）⇒ 判据之分辨面由 4 缩为 1",
+   "premise_f2_f3_f4_hengtong_globally": false,
+   "premise_check_evidence": "②③④ are 恒同 WITHIN a family (across the 3 mechanisms and both arms) but NOT across families: on the 7-class face-A partition ② takes 4 distinct values, ③(ordered) 5, ④ 5 => the 恒同 premise of the warning does NOT hold",
+   "collapse_occurred": false,
+   "primary_count_faceA": 4,
+   "primary_count_faceB_conjunction_only": 3,
+   "secondary_redundancy_count_faceA": 1
+  }
+ },
+ "M_A5": {
+  "status": "假设面演算 (frozen hypothetical-surface computation) - NOT PI's release having occurred",
+  "declaration": "All Δ values below are a conditional computation of 'IF ① is admitted to the conjunction'. They do NOT assert that PI has released the trigger state, nor that PI has adjudicated anything.",
+  "arm_release_hypothetical": {
+   "name": "释触发态 arm (丙档 hypothesis)",
+   "three": {
+    "class_count": 7,
+    "D": 57,
+    "n_ind": 7,
+    "Delta": 23,
+    "class_sizes": [
+     6,
+     6,
+     6,
+     3,
+     3,
+     3,
+     3
+    ]
+   }
+  },
+  "arm_current_caliber": {
+   "name": "现口径 arm (K-MDA8A2-4 gate enforced: ① barred from conjunction)",
+   "three": {
+    "class_count": 5,
+    "D": 75,
+    "n_ind": 5,
+    "Delta": 25,
+    "class_sizes": [
+     6,
+     6,
+     6,
+     6,
+     6
+    ]
+   }
+  },
+  "delta_release_minus_current": {
+   "delta_D": -18,
+   "delta_n_ind": 2,
+   "delta_Delta": -2,
+   "abs_delta_n_ind": 2,
+   "abs_delta_Delta": 2
+  },
+  "caliber_ambiguity_two_reads": {
+   "note": "草案 §3-1-3 M-A5 says '释触发态 … 之下 之读数 与 现口径面 之同三项读数 之差'. Two readings of '现口径面' are possible and the draft does NOT fix this in so many words. Both are reported, NOT merged.",
+   "read_1_now": {
+    "reading": "现口径面 = M-A3's own face (four-field conjunction, ① present, 数值相等) = readout_three's face",
+    "delta_D": 0,
+    "delta_n_ind": 0,
+    "delta_Delta": 0,
+    "implication": "影响面 of 释触发态 is 0 on the reading plane; its whole effect would be on the gating plane (不明 -> 可施用)"
+   },
+   "read_2_now": {
+    "reading": "现口径面 = face where K-MDA8A2-4's gate is enforced (① barred from conjunction), 释触发态 arm = ① admitted",
+    "delta_D": -18,
+    "delta_n_ind": 2,
+    "delta_Delta": -2,
+    "implication": "影响面 = admitting ① splits the 5 family classes into 7 classes"
+   },
+   "which_is_primary": "read_2_now",
+   "why_primary": "M-A5's wording '若 ① 获准入合取' presupposes that ① is NOT in the conjunction under the baseline; otherwise the hypothetical has no content and Δ is identically zero.",
+   "discipline": "⛔ 0 强合 · ⛔ 0 代裁 the choice of reading (归 PI)"
+  }
+ },
+ "C1_level1_gate": {
+  "candidate": "甲-C1 (现口径 · 基准臂)",
+  "candidate_spec": {
+   "f1_reading": "numeric equality",
+   "source_construction": "面甲 max_u 5-value vector (U-C1=[1,1,1,1,1] / U-C3=[1.0,1.0,1.0,4.0,9])",
+   "counting_face": "full S 30 cells",
+   "material_availability": "在盘纯复算 (0 新跑)"
+  },
+  "level1_conditions": {
+   "cond1_f1_n_distinct_ge4": {
+    "requirement": "① n_distinct ≥ 4 (数值相等 reading, C1)",
+    "value": 3,
+    "pass": false
+   },
+   "cond2_f234_n_distinct_gt3": {
+    "requirement": "②③④ n_distinct all > 3",
+    "values": {
+     "f2": 4,
+     "f3_ordered": 5,
+     "f3_unordered": 4,
+     "f4": 5
+    },
+    "pass": true
+   },
+   "cond3_independent_fields_ge2": {
+    "requirement": "M-A4 独立可判字段数 ≥ 2 (⛔ 0 以 1 充之)",
+    "value_primary_faceA": 4,
+    "value_alt_faceB_conjunction_only": 3,
+    "value_secondary_redundancy_reading_faceA": 1,
+    "pass": true,
+    "ambiguity_note": "口径歧义（主读「非恒同」vs 次读「冗余/新增信息」）在此条件上不改变 C1 之过否：一级合取已因 cond1 而否 ⇒ 不影响可解集之归属"
+   },
+   "cond4_recomputable": {
+    "requirement": "该候选之读数可复算（第三方可复算 · ⛔ 0 以生成者自验充之）",
+    "carrier_fingerprints_self_measured": true,
+    "third_party_recompute_on_register_for_M_A3_three": "d716cd3f1240 §5-2 (2026-10-19 22:50, 逐位同) - 照录层",
+    "third_party_recompute_for_this_bars_new_computation": null,
+    "pass": true,
+    "gap": "本棒新算出之 face_B 三件 (75/5/25) 尚无第三方复算在册 ⇒ 登记为待复算之缺证面（归 §11 #11 派工时定）"
+   }
+  },
+  "level1_conjunction_result": false,
+  "level1_failed_conditions": [
+   "cond1_f1_n_distinct_ge4"
+  ],
+  "in_solvable_set": false,
+  "level2_applicable": false,
+  "level2_note": "§5-1 纪律 2: 二级之比较只在一级可解集之内进行；C1 不入可解集 ⇒ 二级/三级排序对 C1 不适用"
+ },
+ "two_path_discrimination": {
+  "paths": {
+   "release_trigger_state": "释触发态支（PI 一字之释／改裁 · 非实验）—— 本棒之作用 ＝ 量化其影响面（M-A5 假设面演算）",
+   "change_construction": "改构造支（甲-C2／C3／C4 · 须新跑 · 本棒未授权 ⇒ 0 跑）"
+  },
+  "c1_baseline_reading": "现口径面之基准读数（① = 3 ⇒ 门触发态在；②③④ 皆 > 3；M-A3 三件；M-A4 之数）",
+  "discrimination_verdict": "本棒（C1 基准臂 · 0 新跑授权）之读数不足以区分两径",
+  "why": {
+   "1": "改构造支之可解性取决于其 ① 之 n_distinct 之实测，而该实测须新跑（甲-C2 之面）⇒ 未授权 ⇒ 0 跑 ⇒ 0 读数",
+   "2": "⛔ 0 以在册之乙档照录（① ＝ 4）充本棒之实测（草案 §5-1 纪律 3 明禁「0 以『乙档 ① ＝ 4』充结果之预告」）",
+   "3": "释触发态支之影响面虽已由 M-A5 之假设面演算给出，但其与改构造支之读数不同质（演算 vs 实测）⇒ §5-1 纪律 2 明禁直接相减充比较"
+  },
+  "named_gap": "须甲-C2 之新跑面授权（PI 明裁）方能得两径之并列比较面",
+  "how_to_resolve": "PI 明裁授权甲-C2（逐字节）之新跑面 ⇒ 得 ① 之两读法之实测对照 ⇒ 一级门槛于可解集内施用 ⇒ 二级之影响面比较方有对象"
+ },
+ "evidence_gaps_named": [
+  {
+   "id": "GAP-C1-1",
+   "title": "两径之区分力面：改构造支之可解性不可在盘判",
+   "status": "🔴 不明（挂账 · 辨明径已具名）",
+   "missing_evidence": "甲-C2（逐字节）之 ① 之 n_distinct 之实测读数（须新跑）",
+   "resolution_path": "PI 明裁授权甲-C2 之新跑面（§11 候裁项 #3）⇒ 本棒 0 自拟授权 · 0 越 C1 之界",
+   "owner": "PI"
+  },
+  {
+   "id": "GAP-C1-2",
+   "title": "M-A5 之「现口径面」释义歧义（Δ 之二读）",
+   "status": "🔴 不明（口径未立 · 两读并出 · ⛔ 0 强合）",
+   "missing_evidence": "PI 就 M-A5 之「现口径面」之释义之一语（读 1：与 M-A3 同面 ⇒ Δ ＝ 0/0/0；读 2：① 被门排除之面 ⇒ Δ ＝ −18/+2/−2）",
+   "resolution_path": "PI 一语界分 ⇒ 本棒即按其裁回填（本棒 0 代裁）",
+   "owner": "PI"
+  },
+  {
+   "id": "GAP-C1-3",
+   "title": "第三方复算面：本棒新增演算之复算主体未定",
+   "status": "🔴 不明（⛔ 0 以生成者自验充可复算）",
+   "missing_evidence": "第三方复算出件（面 B 三件 75/5/25 ＋ M-A4 之计数）",
+   "resolution_path": "§11 候裁项 #11「两题之复算主体（第三方）· 归派工时定」⇒ 派工后复算",
+   "owner": "PI（派工时定）"
+  },
+  {
+   "id": "GAP-C1-4",
+   "title": "M-A4 之操作化口径歧义（主读「非恒同」vs 次读「新增判别力」）",
+   "status": "🔴 不明（两读并出 · ⛔ 0 强合）",
+   "missing_evidence": "PI 就「独立可判字段数」之操作化之一语（主读 ＝ 字段在划分上非恒同 ⇒ face A ＝ 4；次读 ＝ 移除之则划分变粗 ⇒ face A ＝ 1）",
+   "resolution_path": "PI 一语界分 ⇒ 对 C1 不影响（C1 一级已因条件①而否），对甲-C2 及以后之候选则具决定性 ⇒ 宜于授权新跑前定之",
+   "owner": "PI"
+  }
+ ],
+ "root_cause_classification_candidates": {
+  "note": "归类主体 ＝ PI／verdict-keeper（D-6）· 本棒 0 代裁 · ⛔ 0 落五终判",
+  "items": [
+   {
+    "reading": "C1 一级门槛条件①（① 之 n_distinct ＝ 3 ⇒ 退化警报成立）",
+    "candidate_class": "不明",
+    "why_not_true_refutation": "① 之 n_distinct ＝ 3 系已裁口径面之算术必然后果（面甲 ＋ 按族复制 ＋ 数值相等 ＋ 全 S 30 格 ⇒ {1, 4.0, 9}）· 照录 9c75b5c16676 §2-2 ⇒ 命题未被触及",
+    "why_not_false_refutation": "工具与构造面皆未失灵（载体指纹当场自测吻合 · 逐格值全在盘 · 复算与在册 57/7/23 逐位吻合）",
+    "missing_evidence": "PI 就「释触发态 vs 改构造」之清路之裁（归 PI 一字 · ⛔ 0 由棒径自清）"
+   },
+   {
+    "reading": "M-A5 之 Δ 之二读歧义（GAP-C1-2）",
+    "candidate_class": "不明",
+    "why_not_true_refutation": "非命题被证否之面",
+    "why_not_false_refutation": "非读数不可用之面",
+    "missing_evidence": "PI 就「现口径面」之释义之一语"
+   },
+   {
+    "reading": "第三方复算面（GAP-C1-3）",
+    "candidate_class": "不明",
+    "why_not_true_refutation": "非命题被证否之面",
+    "why_not_false_refutation": "非工具失灵之面",
+    "missing_evidence": "第三方复算出件"
+   }
+  ]
+ },
+ "cross_checks": {
+  "M_A3_face_A_vs_readout_three": {
+   "registered": "D=57 / n_ind=7 / Δ=23（照录层 · readout_three）",
+   "recomputed": "D=57 / n_ind=7 / Δ=23",
+   "match": true
+  },
+  "M_A2_f2_vs_limb2_registered": {
+   "registered": "mean_exact 242/75 · std_ddof0 0.9480740711803295",
+   "recomputed": "mean_exact 242/75 · std_ddof0 0.9480740711803295",
+   "match": true
+  },
+  "M_A2_f3_vs_limb2_registered": {
+   "registered": "min 1/4 · max 403/80 · mean_exact 2487/1600 · std_ddof0 1.7992702513797088",
+   "recomputed": "min 1/4 · max 403/80 · mean_exact 2487/1600 · std_ddof0 1.7992702513797085",
+   "match": "值同（末位浮点差 1 ULP：求和次序所致 · 不影响任何门槛判定）"
+  },
+  "M_A2_f4_vs_limb2_registered": {
+   "registered": "min 15 · max 20 · mean 16 · std_ddof0 2.0",
+   "recomputed": "min 15 · max 20 · mean 16 · std_ddof0 2.0",
+   "match": true
+  },
+  "crossarm_pairs_vs_42af8a6e0703": {
+   "registered": "读甲 D=9（9 对）",
+   "recomputed": "9 对（U-C1 与 U-C3 于 T1/T2/T3 三族 × 3 机制 ＝ 9）",
+   "match": true
+  },
+  "M_A1_numeric_vs_9c75b5c16676": {
+   "registered": "① 之 n_distinct ＝ 3（取值集合 {1, 4.0, 9}）",
+   "recomputed": "3（取值集合 {1, 4.0, 9}）",
+   "match": true
+  },
+  "f1_type_information_on_disk": {
+   "observation": "O1 形式具化之逐格 ① 值在盘且于 JSON 源码中保留 int/float 字面之别：\"f1_value\": 1 × 15 · 1.0 × 9 · 4.0 × 3 · 9 × 3（合 30）",
+   "implication": "① 之逐字节读法（甲-C2 之 ① 之 n_distinct）于本盘面为可复算（0 新跑）",
+   "discipline": "⛔ 0 以此充甲-C2 之实测读数（甲-C2 之面未授权）· ⛔ 0 越 C1 之界",
+   "observation_only": "如实观察 · 非判定 · 供 PI 裁 §11 候裁项 #3 之成本估计时参考（草案 §3-1-2 之甲-C2 行载「🔴 须新跑（类型信息不在盘）」）"
+  }
+ },
+ "kill_line_check_K_PREXP_MDA8A2_1_to_8": {
+  "K-PREXP-MDA8A2-1": {
+   "name": "口径与候选集冻结门（FTFB 时序）",
+   "result": "未触发（闸成）",
+   "evidence": "草案落盘 2026-10-20 17:57:30.457（SHA-12 4dc9aaced5f7）< PI v160-Q4 生效宣告落盘 18:23:05.164（SHA-12 1c9a640b91aa）< 本棒读数取得 18:35:31 起（盘面 mtime ＋ SHA-12 可检）· 候选集 ＝ 甲-C1…C4 之闭集已于测量前冻结 · 本棒 0 增删",
+   "action_taken": "⛔ 0 以读数反推改口径 · ⛔ 0 增删候选"
+  },
+  "K-PREXP-MDA8A2-2": {
+   "name": "素材面完备与可得门",
+   "result": "未触发（闸成 · 甲-C1 之素材面在盘可复算）",
+   "evidence": "甲-C1 之逐格值可得性之显式声明：在盘纯复算（① 之 30 格逐格值 ＝ O1 形式具化；②③④ 之 15 格逐格值 ＝ cells_15，按臂不变性复制至 30 格）· 规模档 ＝ 全 S 30 格 × 单 seed 42 × 0 新跑 · LLM 之入否 ＝ 0 · 0 须新跑 ⇒ 0 须 PI 另裁",
+   "action_taken": "⛔ 0 以「新跑」为默认之解 · ⛔ 0 越 C1 之界（甲-C2 及以后 0 跑）"
+  },
+  "K-PREXP-MDA8A2-3": {
+   "name": "退化门自证门（逐字段）",
+   "result": "触发（就 ① 之数值相等读法）· ②③④ 未触发",
+   "evidence": "① 之 n_distinct ＝ 3 ≤ 3 ⇒ 退化警报成立（取值集合 {1, 4.0, 9}）· ② ＝ 4 · ③ 无序 ＝ 4／有序 ＝ 5 · ④ ＝ 5（皆 > 3）",
+   "disposition_text_of_gate": "触发 ⇒ 该候选判「不明」＋停手报回 PI（⛔ 0 带病开跑 · ⛔ 0 以「门过」充「判别力有」）· 📌 判读主体 ＝ PI",
+   "action_taken": "⛔ 0 落处置语（归 PI／verdict-keeper）· ⛔ 0 充「门过」· ⛔ 0 自行开跑",
+   "note": "本棒止于读数并报回 ⇒ 与该门之「停手报回 PI」之处置相容"
+  },
+  "K-PREXP-MDA8A2-4": {
+   "name": "两读并出门（① 之读法）",
+   "result": "未触发（两读并出已成）· 但两读异果 ⇒ 已报回 PI",
+   "evidence": "读法甲（数值相等）：取值集合 {1, 4.0, 9} · n_distinct ＝ 3 · 计数面 全 S 30 格 ｜ 读法乙（逐字节）：取值集合 {1(int), 1.0(float), 4.0(float), 9(int)} · n_distinct ＝ 4 · 计数面 全 S 30 格 · 基准臂（甲-C1 · 数值相等）之读数已在册 ⇒ 该臂 0 新跑（本棒复算与在册 3 逐位吻合）",
+   "scope_limit": "读法乙之 M-A2／M-A3／M-A4／M-A5 之面属甲-C2（改构造支）⇒ ⛔ 0 越界 ⇒ 本棒 0 产出甲-C2 之三件",
+   "action_taken": "⛔ 0 强合两读 · ⛔ 0 由棒径定唯一法定形（口径之裁归 PI）"
+  },
+  "K-PREXP-MDA8A2-5": {
+   "name": "合取判别力与塌缩检测门",
+   "result": "未触发（三件并出 ＋ 塌缩检测已成）· 附条件：face B 三件之第三方复算待派",
+   "evidence": "三件同报：face A（M-A3 之面 · ① 准入）D=57 / n_ind=7 / Δ=23（与在册 readout_three 逐位吻合）｜ face B（① 被门排除）D=75 / n_ind=5 / Δ=25（本棒新算）｜ 塌缩检测：独立可判字段数 ＝ 4（face A·主读）／3（face B·合取内三字段）／1（face A·次读「新增判别力」）∈ {1,2,3,4} · 塌缩未发生（②③④ 于全 S 30 格面 0 恒同：② ＝ 4 值 · ③ ＝ 5 值 · ④ ＝ 5 值 · 仅于族内恒同）",
+   "action_taken": "⛔ 0 以「PASS」充「判别力足」· ⛔ 0 以生成者自验充第三方复算（face B 三件之复算待派）"
+  },
+  "K-PREXP-MDA8A2-6": {
+   "name": "「释触发态」对照臂之假设面声明门",
+   "result": "未触发（逐条声明已成）",
+   "evidence": "M-A5 之 ΔD／Δn_ind／ΔΔ 逐条声明为冻结之「假设面演算」（「若 ① 获准入合取」之条件演算）· ⛔ 0 充 PI 之释已发生 · ⛔ 0 充 PI 之裁已定",
+   "action_taken": "⛔ 0 处分 PI 之释之内容（归 PI）· ⛔ 0 以两支读数直接相减充比较"
+  },
+  "K-PREXP-MDA8A2-7": {
+   "name": "来源锚定与零新观测门",
+   "result": "未触发（当场自测逐位吻合）",
+   "evidence": "载体指纹当场自测：7f80d5ae03bb（210,141 B）· 56eb9db8bfd1（145,592 B）· 终极载体 ritt_remeasure_measurement_2026_10_17.json ＝ 29bb4c4a8bca（325,531 B）｜ 码载锚 ce64b9b97489（45,590 B）· llm_client 锚 1722500da4aa（8,118 B）｜ 本面之新观测数 ＝ 0",
+   "action_taken": "⛔ 0 以他件之转述充复算结果 · ⛔ 0 动 tools/ 任一字节 · ⛔ 0 读 key · ⛔ 0 联网"
+  },
+  "K-PREXP-MDA8A2-8": {
+   "name": "事后调整之禁（FTFB）",
+   "result": "未触发（本棒 0 调任一项）",
+   "evidence": "本棒 0 改判死线 · 0 改候选集 · 0 改计数面 · 0 改读法 · 0 改读出格式 · 0 改择优判据 · 0 事后补算一格 · 0 以读数不合预期为改判死线之理由",
+   "action_taken": "⛔ 0 原地改写 · ⛔ 0 事后调整"
+  }
+ },
+ "gates_summary": {
+  "total": 8,
+  "triggered": [
+   "K-PREXP-MDA8A2-3"
+  ],
+  "not_triggered": [
+   "K-PREXP-MDA8A2-1",
+   "K-PREXP-MDA8A2-2",
+   "K-PREXP-MDA8A2-4",
+   "K-PREXP-MDA8A2-5",
+   "K-PREXP-MDA8A2-6",
+   "K-PREXP-MDA8A2-7",
+   "K-PREXP-MDA8A2-8"
+  ],
+  "arm_reading_invalidated": false,
+  "note": "⛔ 0 落处置语（判「不明」＋停手报回 PI 之归属 ＝ PI／verdict-keeper）"
+ },
+ "scope_and_limits": [
+  "本件之全部读数级断言仅及 MDA-8 肢二之 30 格面（S ＝ 2 臂 U-C1／U-C3 × 15 格）× 单 seed 42 × 候选构造面（甲-C1）",
+  "⛔ 0 由之逐字段外推 · ⛔ 0 充一般性证明 · ⛔ 0 及于 seed 123／456 · ⛔ 0 及于 M2／M3 单独之面 · ⛔ 0 及于 H／max_u／键面三面 · ⛔ 0 及于 LLM 臂 · ⛔ 0 及于 η 面之任何读数 · ⛔ 0 及于 T4-N05",
+  "⛔ 0 及于甲-C2／C3／C4 之面（未授权）· ⛔ 0 增删候选",
+  "⛔ 0 落五终判 · ⛔ 0 闭任何 KD · ⛔ 0 宣告段毕 · ⛔ 0 代 PI 裁／释／择／给值 · ⛔ 0 预断任何未跑面之结果"
+ ],
+ "discipline_self_attestation": {
+  "new_runs": 0,
+  "llm_calls": 0,
+  "network_requests": 0,
+  "key_reads": 0,
+  "tools_bytes_touched": 0,
+  "existing_files_written": 0,
+  "existing_files_modified": 0,
+  "new_KD_ids": 0,
+  "KD_closed": 0,
+  "five_term_judgments": 0,
+  "segment_completion_declared": 0,
+  "pi_adjudications_made": 0,
+  "candidates_added_or_removed": 0,
+  "files_created": [
+   "results/_preexp_mda8a24_c1_data_2026_10_20.json",
+   "results/_preexp_mda8a24_c1_reading_2026_10_20.md"
+  ]
+ }
+}

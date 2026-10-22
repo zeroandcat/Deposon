@@ -1,0 +1,1226 @@
+{
+  "artifact": "_pi_card_payload_extraction_2026_10_20.json",
+  "artifact_role": "载荷之机读面 —— 补登件（doc-writer）起草之直用素材",
+  "producer": "evidence-auditor (agent-11335500b168)",
+  "produced_at_utc8": "2026-10-20 19:02:30.924 +0800",
+  "mandate": "PI 2026-10-20 v160-Q1（卡 ask_46219fe3dd5e422031f809e9·stepId q1_0e8a5389）裁「补登（荐）」；补登之先＝提取其载荷",
+  "discipline": {
+    "read_only": true,
+    "archive_area_touched": false,
+    "glm_touched": false,
+    "env_or_key_read": false,
+    "existing_files_modified": 0,
+    "kd_closed": 0,
+    "verdict_issued": 0,
+    "pi_decision_substituted": 0,
+    "source_db_access_mode": "sqlite mode=ro (uri=True), 0 write / 0 create / 0 modify"
+  },
+  "sources": {
+    "full_scan_report": {
+      "path": "〔本地绝对路径·脱敏略:�〕�人资料\\deposon-repo\\results\\_kd_h5_background_tasks_full_scan_2026_10_20.md",
+      "sha12_selfmeasured": "165ac1c8f063",
+      "bytes": 70187
+    },
+    "full_scan_data": {
+      "path": "〔本地绝对路径·脱敏略:�〕�人资料\\deposon-repo\\results\\_kd_h5_background_tasks_full_scan_data_2026_10_20.json",
+      "sha12_selfmeasured": "c84936df607a",
+      "bytes": 569582
+    },
+    "v160_register": {
+      "path": "〔本地绝对路径·脱敏略:�〕�人资料\\deposon-repo\\pi_rulings\\_pi_card_answers_register_2026_10_20_v160.md",
+      "sha12_selfmeasured": "1c9a640b91aa",
+      "bytes": 3598
+    },
+    "runtime_card_db": {
+      "path": "〔本地绝对路径·脱敏略:runtime-state.sqlite〕",
+      "mode": "ro",
+      "bytes_observed": 531144704,
+      "rows_observed": 685
+    },
+    "runtime_card_db_backup_2026_10_17": {
+      "path": "〔本地绝对路径·脱敏略:runtime-state-before-v2-migration-1792218681767-2af29759-5593-4981-a145-ab020da5acb8.sqlite〕",
+      "mode": "ro",
+      "bytes_observed": 474656768
+    }
+  },
+  "cards": {
+    "ask_1936c3a747b2c720a2c71b12": {
+      "request_id": "ask_1936c3a747b2c720a2c71b12",
+      "payload_class": "TRUE_MISSING_NO_CARD_RECORD",
+      "detection_positions": {
+        "domain": "〔本地绝对路径·脱敏略:background-tasks〕",
+        "total_hit_lines": 30,
+        "historical_hit_lines": 2,
+        "today_echo_hit_lines": 28,
+        "historical_dirs": [
+          "bg_022e9510-941f-491e-881f-a159301d0c32"
+        ],
+        "historical_hits": [
+          {
+            "dir": "bg_022e9510-941f-491e-881f-a159301d0c32",
+            "file": "output.log",
+            "line_no": 41,
+            "file_bytes": 6416,
+            "file_sha12": "55844e39f00e",
+            "file_mtime": "2026-10-09 14:48:21",
+            "dir_mtime": "2026-10-09 14:48:21",
+            "line_chars": 496,
+            "line_ufffd": 0,
+            "line_text": "🔴 1 **CI 半宽上限＋形态**（硬阻断，PI）｜🔴 2 **bootstrap 口径 `TH-*` ID 归属**——C-1 定义作 `v2-7/v3-16/v3-17`，而预登记载 **TH-v2-7/v3-16 ＝ 排列 n=1000·α=0.05、TH-v2-8/v3-17 ＝ bootstrap n=1000·CI 95%**（口径定义≠阈值调整，0 择一 0 改数；verifier/PI）｜🔴 3 `held-out ≥50` 与 `TH-v2-1/v3-1`(N_min=50) 是否同物（盘上 0 定义件）｜🔴 4 **171 主读 vs 冻结面 167 落差**（重冻面）｜🔴 5 **提取器复算＋交叉核并报**（PI 附注所命）｜⏸ 6 清障卡 `ask_1936c3a747b2c720a2c71b12` **原件盘上 0 落册**（grep 实测 0 命中，§1 照录系派工单转录字面，以运行时库原件为准）｜⏸ 7 `167` 归位之下游对齐｜⏸ 8 `is_corr_pair=1` 轴 64 格全空｜⏸ 9 PI 括注「10-01 80 余题量口径」释义。"
+          },
+          {
+            "dir": "bg_022e9510-941f-491e-881f-a159301d0c32",
+            "file": "summary.txt",
+            "line_no": 41,
+            "file_bytes": 6416,
+            "file_sha12": "55844e39f00e",
+            "file_mtime": "2026-10-09 14:48:21",
+            "dir_mtime": "2026-10-09 14:48:21",
+            "line_chars": 496,
+            "line_ufffd": 0,
+            "line_text": "🔴 1 **CI 半宽上限＋形态**（硬阻断，PI）｜🔴 2 **bootstrap 口径 `TH-*` ID 归属**——C-1 定义作 `v2-7/v3-16/v3-17`，而预登记载 **TH-v2-7/v3-16 ＝ 排列 n=1000·α=0.05、TH-v2-8/v3-17 ＝ bootstrap n=1000·CI 95%**（口径定义≠阈值调整，0 择一 0 改数；verifier/PI）｜🔴 3 `held-out ≥50` 与 `TH-v2-1/v3-1`(N_min=50) 是否同物（盘上 0 定义件）｜🔴 4 **171 主读 vs 冻结面 167 落差**（重冻面）｜🔴 5 **提取器复算＋交叉核并报**（PI 附注所命）｜⏸ 6 清障卡 `ask_1936c3a747b2c720a2c71b12` **原件盘上 0 落册**（grep 实测 0 命中，§1 照录系派工单转录字面，以运行时库原件为准）｜⏸ 7 `167` 归位之下游对齐｜⏸ 8 `is_corr_pair=1` 轴 64 格全空｜⏸ 9 PI 括注「10-01 80 余题量口径」释义。"
+          }
+        ]
+      },
+      "runtime_db": {
+        "present_in_live_db": false,
+        "present_in_backup_db_2026_10_17": false
+      },
+      "payload": null,
+      "completeness": {
+        "question_payload": "ABSENT",
+        "answer_payload": "ABSENT",
+        "submittedAt": "ABSENT",
+        "damage_surface": "n/a（无记录）",
+        "verdict_wording": "真缺件：三面皆无其卡记录 ⇒ 如实登记，0 虚构来源"
+      },
+      "one_char_neardup": {
+        "near_id": "ask_1936c3a747b2c740a2c71b12",
+        "diff_position_1based": 18,
+        "near_char": "7",
+        "target_char": "7",
+        "near_status": "answered",
+        "near_created_at_iso8": "2026-10-09 14:35:33.854 +0800",
+        "near_answered_at_iso8": "2026-10-09 14:38:02.411 +0800",
+        "near_registered_at": "results\\_questionnaire_cards_intake_register_2026_10_09.md",
+        "identity_claimed": false,
+        "note": "形近而异卡；本棒 0 主张同一性；0 以其载荷代本枚"
+      }
+    },
+    "ask_47f06bf3e3c9615d36a29b50": {
+      "request_id": "ask_47f06bf3e3c9615d36a29b50",
+      "payload_class": "TRUE_MISSING_NO_CARD_RECORD",
+      "detection_positions": {
+        "domain": "〔本地绝对路径·脱敏略:background-tasks〕",
+        "total_hit_lines": 22,
+        "historical_hit_lines": 2,
+        "today_echo_hit_lines": 20,
+        "historical_dirs": [
+          "bg_22ac8c58-5b7c-402f-948a-c33706fbebf9"
+        ],
+        "historical_hits": [
+          {
+            "dir": "bg_22ac8c58-5b7c-402f-948a-c33706fbebf9",
+            "file": "output.log",
+            "line_no": 10,
+            "file_bytes": 461,
+            "file_sha12": "5defa3cb5c67",
+            "file_mtime": "2026-10-09 14:04:28",
+            "dir_mtime": "2026-10-09 14:04:28",
+            "line_chars": 39,
+            "line_ufffd": 0,
+            "line_text": "错拼 ask_47f06bf3e3c9615d36a29b50 命中 = 1\r"
+          },
+          {
+            "dir": "bg_22ac8c58-5b7c-402f-948a-c33706fbebf9",
+            "file": "summary.txt",
+            "line_no": 10,
+            "file_bytes": 461,
+            "file_sha12": "5defa3cb5c67",
+            "file_mtime": "2026-10-09 14:04:28",
+            "dir_mtime": "2026-10-09 14:04:28",
+            "line_chars": 39,
+            "line_ufffd": 0,
+            "line_text": "错拼 ask_47f06bf3e3c9615d36a29b50 命中 = 1\r"
+          }
+        ]
+      },
+      "runtime_db": {
+        "present_in_live_db": false,
+        "present_in_backup_db_2026_10_17": false
+      },
+      "payload": null,
+      "completeness": {
+        "question_payload": "ABSENT",
+        "answer_payload": "ABSENT",
+        "submittedAt": "ABSENT",
+        "damage_surface": "n/a（无记录）",
+        "verdict_wording": "真缺件：三面皆无其卡记录 ⇒ 如实登记，0 虚构来源"
+      },
+      "one_char_neardup": {
+        "near_id": "ask_47f06bf3e3c1615d36a29b50",
+        "diff_position_1based": 18,
+        "near_char": "1",
+        "target_char": "1",
+        "near_status": "answered",
+        "near_created_at_iso8": "2026-10-09 12:03:50.887 +0800",
+        "near_answered_at_iso8": "2026-10-09 12:18:32.960 +0800",
+        "near_registered_at": "results\\_questionnaire_cards_intake_register_2026_10_09.md",
+        "identity_claimed": false,
+        "note": "形近而异卡；本棒 0 主张同一性；0 以其载荷代本枚"
+      }
+    },
+    "ask_6c3546fc6570473dbd2083a4": {
+      "request_id": "ask_6c3546fc6570473dbd2083a4",
+      "payload_class": "PRESENT_SUPERSEDED_NEVER_ANSWERED",
+      "detection_positions": {
+        "domain": "〔本地绝对路径·脱敏略:background-tasks〕",
+        "total_hit_lines": 145,
+        "historical_hit_lines": 33,
+        "today_echo_hit_lines": 112,
+        "historical_dirs": [
+          "bg_0a1a2582-c46e-43b0-afc7-e31303f46c00",
+          "bg_0b500769-0c97-4d3c-8162-6d28daff4148",
+          "bg_36321990-b664-418f-a5d7-acde891b46e4",
+          "bg_4381b9c1-eed9-443e-8f69-b035eea84f12",
+          "bg_52bba2ea-0d9d-4da8-b91c-f1590fe8c312",
+          "bg_67216dff-e91a-4fc8-ae93-9b7353dae43a",
+          "bg_722b06e5-f7ff-42d4-97ea-61bf6e4e1466",
+          "bg_8105b6fa-0df4-469e-9413-f9dc5ffca9eb",
+          "bg_88511acd-5c92-4697-bdc0-119a43dc7c00",
+          "bg_8c559f39-2a50-4cd4-a93a-6525efaf5fa1",
+          "bg_9749f08e-9033-4453-a1af-1eee7dffe0a2",
+          "bg_b621fa67-68d0-4ced-97c5-5744b51dc4be",
+          "bg_f82ddd38-c4c5-4962-a1ab-93a62e0267e3",
+          "bg_fe046620-8129-44fa-8683-784f60748f93",
+          "bg_fe74e786-9ea0-4fa3-a74b-3565a2649ad7"
+        ],
+        "historical_hits": [
+          {
+            "dir": "bg_0a1a2582-c46e-43b0-afc7-e31303f46c00",
+            "file": "output.log",
+            "line_no": 3,
+            "file_bytes": 301,
+            "file_sha12": "75b19a39dde3",
+            "file_mtime": "2026-10-10 18:11:55",
+            "dir_mtime": "2026-10-10 18:11:55",
+            "line_chars": 62,
+            "line_ufffd": 0,
+            "line_text": "('ask_6c3546fc6570473dbd2083a4', 'superseded', 1791626601214)\r"
+          },
+          {
+            "dir": "bg_0a1a2582-c46e-43b0-afc7-e31303f46c00",
+            "file": "summary.txt",
+            "line_no": 3,
+            "file_bytes": 301,
+            "file_sha12": "75b19a39dde3",
+            "file_mtime": "2026-10-10 18:11:55",
+            "dir_mtime": "2026-10-10 18:11:55",
+            "line_chars": 62,
+            "line_ufffd": 0,
+            "line_text": "('ask_6c3546fc6570473dbd2083a4', 'superseded', 1791626601214)\r"
+          },
+          {
+            "dir": "bg_0b500769-0c97-4d3c-8162-6d28daff4148",
+            "file": "output.log",
+            "line_no": 4,
+            "file_bytes": 125422,
+            "file_sha12": "561817292ca7",
+            "file_mtime": "2026-10-10 18:09:04",
+            "dir_mtime": "2026-10-10 18:09:04",
+            "line_chars": 162,
+            "line_ufffd": 0,
+            "line_text": "ask_6c3546fc6570473dbd2083a4 | sess=mvs_bbeb804b1a6a41109be740636eed1709 | agent=mavis | status=superseded | created=2026-10-10 18:03:21.214+0800 | answered=None\r"
+          },
+          {
+            "dir": "bg_0b500769-0c97-4d3c-8162-6d28daff4148",
+            "file": "output.log",
+            "line_no": 406,
+            "file_bytes": 125422,
+            "file_sha12": "561817292ca7",
+            "file_mtime": "2026-10-10 18:09:04",
+            "dir_mtime": "2026-10-10 18:09:04",
+            "line_chars": 97,
+            "line_ufffd": 0,
+            "line_text": "ask_6c3546fc6570473dbd2083a4 | superseded | created=2026-10-10 18:03:21.214+0800 | answered=None\r"
+          },
+          {
+            "dir": "bg_0b500769-0c97-4d3c-8162-6d28daff4148",
+            "file": "summary.txt",
+            "line_no": 4,
+            "file_bytes": 22513,
+            "file_sha12": "b3637c60106c",
+            "file_mtime": "2026-10-10 18:09:04",
+            "dir_mtime": "2026-10-10 18:09:04",
+            "line_chars": 162,
+            "line_ufffd": 0,
+            "line_text": "ask_6c3546fc6570473dbd2083a4 | sess=mvs_bbeb804b1a6a41109be740636eed1709 | agent=mavis | status=superseded | created=2026-10-10 18:03:21.214+0800 | answered=None\r"
+          },
+          {
+            "dir": "bg_36321990-b664-418f-a5d7-acde891b46e4",
+            "file": "output.log",
+            "line_no": 433,
+            "file_bytes": 38276,
+            "file_sha12": "760a3e07df30",
+            "file_mtime": "2026-10-10 18:59:28",
+            "dir_mtime": "2026-10-10 18:59:29",
+            "line_chars": 75,
+            "line_ufffd": 0,
+            "line_text": "    ('ask_6c3546fc6570473dbd2083a4', 1791626601214, 'superseded', 2044, 0)\r"
+          },
+          {
+            "dir": "bg_36321990-b664-418f-a5d7-acde891b46e4",
+            "file": "summary.txt",
+            "line_no": 227,
+            "file_bytes": 22559,
+            "file_sha12": "f76e88d52de5",
+            "file_mtime": "2026-10-10 18:59:29",
+            "dir_mtime": "2026-10-10 18:59:29",
+            "line_chars": 75,
+            "line_ufffd": 0,
+            "line_text": "    ('ask_6c3546fc6570473dbd2083a4', 1791626601214, 'superseded', 2044, 0)\r"
+          },
+          {
+            "dir": "bg_4381b9c1-eed9-443e-8f69-b035eea84f12",
+            "file": "output.log",
+            "line_no": 13,
+            "file_bytes": 1449,
+            "file_sha12": "e5cec7105e06",
+            "file_mtime": "2026-10-10 20:16:46",
+            "dir_mtime": "2026-10-10 20:16:46",
+            "line_chars": 81,
+            "line_ufffd": 0,
+            "line_text": "ask_6c3546fc6570473dbd2083a4 | superseded | 2026-10-10 18:03:21.214 +0800 | NULL\r"
+          },
+          {
+            "dir": "bg_4381b9c1-eed9-443e-8f69-b035eea84f12",
+            "file": "summary.txt",
+            "line_no": 13,
+            "file_bytes": 1449,
+            "file_sha12": "e5cec7105e06",
+            "file_mtime": "2026-10-10 20:16:46",
+            "dir_mtime": "2026-10-10 20:16:46",
+            "line_chars": 81,
+            "line_ufffd": 0,
+            "line_text": "ask_6c3546fc6570473dbd2083a4 | superseded | 2026-10-10 18:03:21.214 +0800 | NULL\r"
+          },
+          {
+            "dir": "bg_52bba2ea-0d9d-4da8-b91c-f1590fe8c312",
+            "file": "output.log",
+            "line_no": 3,
+            "file_bytes": 362,
+            "file_sha12": "830472203bd5",
+            "file_mtime": "2026-10-10 18:05:43",
+            "dir_mtime": "2026-10-10 18:05:43",
+            "line_chars": 62,
+            "line_ufffd": 0,
+            "line_text": "('ask_6c3546fc6570473dbd2083a4', 'superseded', 1791626601214)\r"
+          },
+          {
+            "dir": "bg_52bba2ea-0d9d-4da8-b91c-f1590fe8c312",
+            "file": "summary.txt",
+            "line_no": 3,
+            "file_bytes": 362,
+            "file_sha12": "830472203bd5",
+            "file_mtime": "2026-10-10 18:05:43",
+            "dir_mtime": "2026-10-10 18:05:43",
+            "line_chars": 62,
+            "line_ufffd": 0,
+            "line_text": "('ask_6c3546fc6570473dbd2083a4', 'superseded', 1791626601214)\r"
+          },
+          {
+            "dir": "bg_67216dff-e91a-4fc8-ae93-9b7353dae43a",
+            "file": "output.log",
+            "line_no": 28,
+            "file_bytes": 5377,
+            "file_sha12": "c2946c1a36ba",
+            "file_mtime": "2026-10-10 18:09:31",
+            "dir_mtime": "2026-10-10 18:09:31",
+            "line_chars": 104,
+            "line_ufffd": 0,
+            "line_text": "### ask_6c3546fc6570473dbd2083a4 | status=superseded created=2026-10-10 18:03:21.214+0800 answered=None\r"
+          },
+          {
+            "dir": "bg_67216dff-e91a-4fc8-ae93-9b7353dae43a",
+            "file": "summary.txt",
+            "line_no": 28,
+            "file_bytes": 5377,
+            "file_sha12": "c2946c1a36ba",
+            "file_mtime": "2026-10-10 18:09:31",
+            "dir_mtime": "2026-10-10 18:09:31",
+            "line_chars": 104,
+            "line_ufffd": 0,
+            "line_text": "### ask_6c3546fc6570473dbd2083a4 | status=superseded created=2026-10-10 18:03:21.214+0800 answered=None\r"
+          },
+          {
+            "dir": "bg_722b06e5-f7ff-42d4-97ea-61bf6e4e1466",
+            "file": "output.log",
+            "line_no": 7,
+            "file_bytes": 1530,
+            "file_sha12": "62bd03bd64ad",
+            "file_mtime": "2026-10-10 18:54:38",
+            "dir_mtime": "2026-10-10 18:54:38",
+            "line_chars": 81,
+            "line_ufffd": 0,
+            "line_text": "ask_6c3546fc6570473dbd2083a4 | superseded | 1791626601214 | deposon 轮56 卡C · 残项组\r"
+          },
+          {
+            "dir": "bg_722b06e5-f7ff-42d4-97ea-61bf6e4e1466",
+            "file": "summary.txt",
+            "line_no": 7,
+            "file_bytes": 1530,
+            "file_sha12": "62bd03bd64ad",
+            "file_mtime": "2026-10-10 18:54:38",
+            "dir_mtime": "2026-10-10 18:54:38",
+            "line_chars": 81,
+            "line_ufffd": 0,
+            "line_text": "ask_6c3546fc6570473dbd2083a4 | superseded | 1791626601214 | deposon 轮56 卡C · 残项组\r"
+          },
+          {
+            "dir": "bg_8105b6fa-0df4-469e-9413-f9dc5ffca9eb",
+            "file": "output.log",
+            "line_no": 2,
+            "file_bytes": 685,
+            "file_sha12": "190d92754e0a",
+            "file_mtime": "2026-10-10 19:02:05",
+            "dir_mtime": "2026-10-10 19:02:05",
+            "line_chars": 91,
+            "line_ufffd": 0,
+            "line_text": "ask_6c3546fc6570473dbd2083a4 superseded has_x4= False ['d23', 'shortname', 'typeb', 'ad5']\r"
+          },
+          {
+            "dir": "bg_8105b6fa-0df4-469e-9413-f9dc5ffca9eb",
+            "file": "output.log",
+            "line_no": 6,
+            "file_bytes": 685,
+            "file_sha12": "190d92754e0a",
+            "file_mtime": "2026-10-10 19:02:05",
+            "dir_mtime": "2026-10-10 19:02:05",
+            "line_chars": 102,
+            "line_ufffd": 0,
+            "line_text": "STEPCARD ask_6c3546fc6570473dbd2083a4 superseded ['shortname', 'typeb', 'd23', 'ad5'] answered= False\r"
+          },
+          {
+            "dir": "bg_8105b6fa-0df4-469e-9413-f9dc5ffca9eb",
+            "file": "summary.txt",
+            "line_no": 2,
+            "file_bytes": 685,
+            "file_sha12": "190d92754e0a",
+            "file_mtime": "2026-10-10 19:02:05",
+            "dir_mtime": "2026-10-10 19:02:05",
+            "line_chars": 91,
+            "line_ufffd": 0,
+            "line_text": "ask_6c3546fc6570473dbd2083a4 superseded has_x4= False ['d23', 'shortname', 'typeb', 'ad5']\r"
+          },
+          {
+            "dir": "bg_8105b6fa-0df4-469e-9413-f9dc5ffca9eb",
+            "file": "summary.txt",
+            "line_no": 6,
+            "file_bytes": 685,
+            "file_sha12": "190d92754e0a",
+            "file_mtime": "2026-10-10 19:02:05",
+            "dir_mtime": "2026-10-10 19:02:05",
+            "line_chars": 102,
+            "line_ufffd": 0,
+            "line_text": "STEPCARD ask_6c3546fc6570473dbd2083a4 superseded ['shortname', 'typeb', 'd23', 'ad5'] answered= False\r"
+          },
+          {
+            "dir": "bg_88511acd-5c92-4697-bdc0-119a43dc7c00",
+            "file": "output.log",
+            "line_no": 755,
+            "file_bytes": 70206,
+            "file_sha12": "2e10e4c6a958",
+            "file_mtime": "2026-10-11 16:17:22",
+            "dir_mtime": "2026-10-11 16:17:22",
+            "line_chars": 107,
+            "line_ufffd": 0,
+            "line_text": "  ask_6c3546fc6570473dbd2083a4  status=superseded  created=2026-10-10T18:03:21.214000+08:00  answered=None\r"
+          },
+          {
+            "dir": "bg_88511acd-5c92-4697-bdc0-119a43dc7c00",
+            "file": "summary.txt",
+            "line_no": 353,
+            "file_bytes": 22548,
+            "file_sha12": "efb5ed394b18",
+            "file_mtime": "2026-10-11 16:17:22",
+            "dir_mtime": "2026-10-11 16:17:22",
+            "line_chars": 107,
+            "line_ufffd": 0,
+            "line_text": "  ask_6c3546fc6570473dbd2083a4  status=superseded  created=2026-10-10T18:03:21.214000+08:00  answered=None\r"
+          },
+          {
+            "dir": "bg_8c559f39-2a50-4cd4-a93a-6525efaf5fa1",
+            "file": "output.log",
+            "line_no": 11,
+            "file_bytes": 1321,
+            "file_sha12": "ce69e87de592",
+            "file_mtime": "2026-10-11 00:21:25",
+            "dir_mtime": "2026-10-11 00:21:25",
+            "line_chars": 107,
+            "line_ufffd": 0,
+            "line_text": "  ask_6c3546fc6570473dbd2083a4  status='superseded'  created=2026-10-10 18:03:21.214  deposon 轮56 卡C · 残项组\r"
+          },
+          {
+            "dir": "bg_8c559f39-2a50-4cd4-a93a-6525efaf5fa1",
+            "file": "summary.txt",
+            "line_no": 11,
+            "file_bytes": 1321,
+            "file_sha12": "ce69e87de592",
+            "file_mtime": "2026-10-11 00:21:25",
+            "dir_mtime": "2026-10-11 00:21:25",
+            "line_chars": 107,
+            "line_ufffd": 0,
+            "line_text": "  ask_6c3546fc6570473dbd2083a4  status='superseded'  created=2026-10-10 18:03:21.214  deposon 轮56 卡C · 残项组\r"
+          },
+          {
+            "dir": "bg_9749f08e-9033-4453-a1af-1eee7dffe0a2",
+            "file": "output.log",
+            "line_no": 8,
+            "file_bytes": 1431,
+            "file_sha12": "7e9cb744efe0",
+            "file_mtime": "2026-10-10 18:48:59",
+            "dir_mtime": "2026-10-10 18:48:59",
+            "line_chars": 1061,
+            "line_ufffd": 0,
+            "line_text": "ROWS_AFTER_R54 = [[\"ask_13c6f24eb02ba5b8de3e21af\", \"answered\", 1791624400837, 1791624806780], [\"ask_843b65b50a873462f8a56e80\", \"answered\", 1791625116526, 1791625250668], [\"ask_6f62aae92e1407312f1eda12\", \"superseded\", 1791626570118, null], [\"ask_8ecc53a22f25038ecfe5ad56\", \"superseded\", 1791626585977, null], [\"ask_6c3546fc6570473dbd2083a4\", \"superseded\", 1791626601214, null], [\"ask_b6ee60a41e353ab362c286b2\", \"answered\", 1791626617303, 1791626678497], [\"ask_de2ff1c91d73bd010efd01ae\", \"answered\", 1791627142066, 1791627352070], [\"ask_6dc865e30266f319ca3b93ee\", \"answered\", 1791627490833, 1791627694778], [\"ask_4cce7bab04bc02647de1155c\", \"answered\", 1791627858701, 1791627959277], [\"ask_2fefd936973d08dba26c872a\", \"answered\", 1791628068490, 1791628097916], [\"ask_a04bb2fbc92e69910998e31e\", \"answered\", 1791628266710, 1791628333120], [\"ask_f225786a7cb6006214e74363\", \"answered\", 1791628428860, 1791628545849], [\"ask_821893d6d66d5419db7e8823\", \"answered\", 1791628807739, 1791628852638], [\"ask_84f9515f46c57d1b340dc5c5\", \"answered\", 1791629152119, 1791629323096]]\r"
+          },
+          {
+            "dir": "bg_9749f08e-9033-4453-a1af-1eee7dffe0a2",
+            "file": "summary.txt",
+            "line_no": 8,
+            "file_bytes": 1431,
+            "file_sha12": "7e9cb744efe0",
+            "file_mtime": "2026-10-10 18:48:59",
+            "dir_mtime": "2026-10-10 18:48:59",
+            "line_chars": 1061,
+            "line_ufffd": 0,
+            "line_text": "ROWS_AFTER_R54 = [[\"ask_13c6f24eb02ba5b8de3e21af\", \"answered\", 1791624400837, 1791624806780], [\"ask_843b65b50a873462f8a56e80\", \"answered\", 1791625116526, 1791625250668], [\"ask_6f62aae92e1407312f1eda12\", \"superseded\", 1791626570118, null], [\"ask_8ecc53a22f25038ecfe5ad56\", \"superseded\", 1791626585977, null], [\"ask_6c3546fc6570473dbd2083a4\", \"superseded\", 1791626601214, null], [\"ask_b6ee60a41e353ab362c286b2\", \"answered\", 1791626617303, 1791626678497], [\"ask_de2ff1c91d73bd010efd01ae\", \"answered\", 1791627142066, 1791627352070], [\"ask_6dc865e30266f319ca3b93ee\", \"answered\", 1791627490833, 1791627694778], [\"ask_4cce7bab04bc02647de1155c\", \"answered\", 1791627858701, 1791627959277], [\"ask_2fefd936973d08dba26c872a\", \"answered\", 1791628068490, 1791628097916], [\"ask_a04bb2fbc92e69910998e31e\", \"answered\", 1791628266710, 1791628333120], [\"ask_f225786a7cb6006214e74363\", \"answered\", 1791628428860, 1791628545849], [\"ask_821893d6d66d5419db7e8823\", \"answered\", 1791628807739, 1791628852638], [\"ask_84f9515f46c57d1b340dc5c5\", \"answered\", 1791629152119, 1791629323096]]\r"
+          },
+          {
+            "dir": "bg_b621fa67-68d0-4ced-97c5-5744b51dc4be",
+            "file": "output.log",
+            "line_no": 1,
+            "file_bytes": 481,
+            "file_sha12": "f150c5e28c7d",
+            "file_mtime": "2026-10-10 19:02:47",
+            "dir_mtime": "2026-10-10 19:02:47",
+            "line_chars": 143,
+            "line_ufffd": 0,
+            "line_text": "ask_6c3546fc6570473dbd2083a4 | superseded | created 2026-10-10 18:03:21.214 +0800 | answered None | steps ['d23', 'shortname', 'typeb', 'ad5']\r"
+          },
+          {
+            "dir": "bg_b621fa67-68d0-4ced-97c5-5744b51dc4be",
+            "file": "summary.txt",
+            "line_no": 1,
+            "file_bytes": 481,
+            "file_sha12": "f150c5e28c7d",
+            "file_mtime": "2026-10-10 19:02:47",
+            "dir_mtime": "2026-10-10 19:02:47",
+            "line_chars": 143,
+            "line_ufffd": 0,
+            "line_text": "ask_6c3546fc6570473dbd2083a4 | superseded | created 2026-10-10 18:03:21.214 +0800 | answered None | steps ['d23', 'shortname', 'typeb', 'ad5']\r"
+          },
+          {
+            "dir": "bg_f82ddd38-c4c5-4962-a1ab-93a62e0267e3",
+            "file": "output.log",
+            "line_no": 19,
+            "file_bytes": 2849,
+            "file_sha12": "e840d02693a1",
+            "file_mtime": "2026-10-10 23:51:46",
+            "dir_mtime": "2026-10-10 23:51:46",
+            "line_chars": 366,
+            "line_ufffd": 0,
+            "line_text": "SUPERSEDED [['ask_05992739fd9e46f8e8acd23d', 'superseded', 1790232724260, None], ['ask_906e23019db97965b62a29fa', 'superseded', 1791564089033, 1791564163848], ['ask_6f62aae92e1407312f1eda12', 'superseded', 1791626570118, None], ['ask_8ecc53a22f25038ecfe5ad56', 'superseded', 1791626585977, None], ['ask_6c3546fc6570473dbd2083a4', 'superseded', 1791626601214, None]]\r"
+          },
+          {
+            "dir": "bg_f82ddd38-c4c5-4962-a1ab-93a62e0267e3",
+            "file": "summary.txt",
+            "line_no": 19,
+            "file_bytes": 2849,
+            "file_sha12": "e840d02693a1",
+            "file_mtime": "2026-10-10 23:51:46",
+            "dir_mtime": "2026-10-10 23:51:46",
+            "line_chars": 366,
+            "line_ufffd": 0,
+            "line_text": "SUPERSEDED [['ask_05992739fd9e46f8e8acd23d', 'superseded', 1790232724260, None], ['ask_906e23019db97965b62a29fa', 'superseded', 1791564089033, 1791564163848], ['ask_6f62aae92e1407312f1eda12', 'superseded', 1791626570118, None], ['ask_8ecc53a22f25038ecfe5ad56', 'superseded', 1791626585977, None], ['ask_6c3546fc6570473dbd2083a4', 'superseded', 1791626601214, None]]\r"
+          },
+          {
+            "dir": "bg_fe046620-8129-44fa-8683-784f60748f93",
+            "file": "output.log",
+            "line_no": 10,
+            "file_bytes": 6970,
+            "file_sha12": "daec35feca3e",
+            "file_mtime": "2026-10-10 18:58:26",
+            "dir_mtime": "2026-10-10 18:58:26",
+            "line_chars": 49,
+            "line_ufffd": 0,
+            "line_text": "--- ask_6c3546fc6570473dbd2083a4 superseded None\r"
+          },
+          {
+            "dir": "bg_fe046620-8129-44fa-8683-784f60748f93",
+            "file": "output.log",
+            "line_no": 11,
+            "file_bytes": 6970,
+            "file_sha12": "daec35feca3e",
+            "file_mtime": "2026-10-10 18:58:26",
+            "dir_mtime": "2026-10-10 18:58:26",
+            "line_chars": 660,
+            "line_ufffd": 130,
+            "line_text": "{\"schemaVersion\": 2, \"id\": \"ask_6c3546fc6570473dbd2083a4\", \"mode\": \"questionnaire\", \"presentation\": {\"replaceComposer\": true, \"showProgress\": true, \"allowBackNavigation\": true}, \"steps\": [{\"id\": \"d23\", \"question\": \"C ����������ȱ�ڣ�D-2 �����������δ���壯D-3����/����Ч��δ���壩���Ƿ��� PI �������������Դ���غ˼� ��6 ���ڢۣ�\", \"selectionMode\": \"single\", \"options\": [{\"id\": \"jia\", \"label\": \"�ס��루�������棩\", \"description\": \"�� PI ���������棨��������Ƿ������\"}, {\"id\": \"yi\", \"label\": \"�ҡ��ݲ��\", \"description\": \"ȱ��ά���ڲᣬ���\"}, {\"id\": \"bing\", \"label\": \"��������\", \"description\": \"�� PI ����\"}], \"allowOther\": true, \"otherPlaceholder\": \"Others...\", \"required\": true, \"header\r"
+          },
+          {
+            "dir": "bg_fe74e786-9ea0-4fa3-a74b-3565a2649ad7",
+            "file": "output.log",
+            "line_no": 34,
+            "file_bytes": 6751,
+            "file_sha12": "e6c3738aa423",
+            "file_mtime": "2026-10-10 18:49:18",
+            "dir_mtime": "2026-10-10 18:49:18",
+            "line_chars": 126,
+            "line_ufffd": 0,
+            "line_text": "ask_6c3546fc6570473dbd2083a4 | superseded | created: 1791626601214 | answered: None | title: deposon 轮56 卡C · 残项组 | nsteps: 4\r"
+          },
+          {
+            "dir": "bg_fe74e786-9ea0-4fa3-a74b-3565a2649ad7",
+            "file": "summary.txt",
+            "line_no": 34,
+            "file_bytes": 6751,
+            "file_sha12": "e6c3738aa423",
+            "file_mtime": "2026-10-10 18:49:18",
+            "dir_mtime": "2026-10-10 18:49:18",
+            "line_chars": 126,
+            "line_ufffd": 0,
+            "line_text": "ask_6c3546fc6570473dbd2083a4 | superseded | created: 1791626601214 | answered: None | title: deposon 轮56 卡C · 残项组 | nsteps: 4\r"
+          }
+        ]
+      },
+      "runtime_db": {
+        "present_in_live_db": true,
+        "present_in_backup_db_2026_10_17": true
+      },
+      "payload": {
+        "request_id": "ask_6c3546fc6570473dbd2083a4",
+        "session_id": "mvs_bbeb804b1a6a41109be740636eed1709",
+        "agent_name": "mavis",
+        "msg_id": null,
+        "status": "superseded",
+        "created_at_ms": 1791626601214,
+        "answered_at_ms": null,
+        "injected_at_ms": null,
+        "dismissed_at_ms": null,
+        "origin_channel_context_json": null,
+        "request_json": "{\"schemaVersion\":2,\"id\":\"ask_6c3546fc6570473dbd2083a4\",\"mode\":\"questionnaire\",\"presentation\":{\"replaceComposer\":true,\"showProgress\":true,\"allowBackNavigation\":true},\"steps\":[{\"id\":\"d23\",\"question\":\"C 第三段字面缺口（D-2 否决触发条件未定义／D-3『升/降』效力未定义）：是否须 PI 另给字面填补？（源：重核件 §6 出口③）\",\"selectionMode\":\"single\",\"options\":[{\"id\":\"jia\",\"label\":\"甲·须（另给字面）\",\"description\":\"候 PI 后续给字面（本项仅问是否须给）\"},{\"id\":\"yi\",\"label\":\"乙·暂不填补\",\"description\":\"缺口维持在册，不填补\"},{\"id\":\"bing\",\"label\":\"丙·另议\",\"description\":\"候 PI 另定\"}],\"allowOther\":true,\"otherPlaceholder\":\"Others...\",\"required\":true,\"header\":\"E-RJ-③-③ D-2/D-3\"},{\"id\":\"shortname\",\"question\":\"层间关系语「先取值、后落档」是否核准为 R-2a 之中文简称？（其规范内容已随 E-6a 生效；本项仅涉简称；源：轮52 件2 §4 出口 6-1）\",\"selectionMode\":\"single\",\"options\":[{\"id\":\"jia\",\"label\":\"甲·核准（另名补记）\",\"description\":\"另名补记件登记；0 新增实体规定\"},{\"id\":\"yi\",\"label\":\"乙·不核准\",\"description\":\"维持未核准状态\"},{\"id\":\"bing\",\"label\":\"丙·另议\",\"description\":\"候 PI 另定\"}],\"allowOther\":true,\"otherPlaceholder\":\"Others...\",\"required\":true,\"header\":\"「先取值、后落档」简称\"},{\"id\":\"typeb\",\"question\":\"TYPE-b：登记写法可选字段之增列（T1 子型标注·如 T1-F）＋ 3 件前插补标——核准否？（源：轮52 件1 §6-3）\",\"selectionMode\":\"single\",\"options\":[{\"id\":\"jia\",\"label\":\"甲·核准（增列可选字段）\",\"description\":\"另立登记写法可选字段（如 T1-F）＋3 件前插补标\"},{\"id\":\"yi\",\"label\":\"乙·不增列\",\"description\":\"维持 T1 单一写法\"},{\"id\":\"bing\",\"label\":\"丙·另议\",\"description\":\"候 PI 另定\"}],\"allowOther\":true,\"otherPlaceholder\":\"Others...\",\"required\":true,\"header\":\"TYPE-b 子型标注\"},{\"id\":\"ad5\",\"question\":\"AD-5 视角归属：标识层 6 组（现）或收窄至位移件层 1 组？（源：轮52 件1 §6-5）\",\"selectionMode\":\"single\",\"options\":[{\"id\":\"jia\",\"label\":\"甲·维持标识层 6 组\",\"description\":\"维持现扩展范围（跨面 3 组＋面内 3 组）\"},{\"id\":\"yi\",\"label\":\"乙·收窄至位移件层\",\"description\":\"收窄至位移件层（1 组）\"},{\"id\":\"bing\",\"label\":\"丙·另议\",\"description\":\"候 PI 另定\"}],\"allowOther\":true,\"otherPlaceholder\":\"Others...\",\"required\":true,\"header\":\"AD-5 视角归属\"}],\"status\":\"pending\",\"createdAt\":1791626601214,\"requester\":{\"sessionId\":\"mvs_bbeb804b1a6a41109be740636eed1709\",\"agentName\":\"mavis\",\"runId\":\"turn_task_delivery_61b5a81c8dc64bd9b8271f6ecb7b274a\",\"toolCallId\":\"call_05_9f1VlfTNJskWUHoXpbPW2713\"},\"title\":\"deposon 轮56 卡C · 残项组\"}",
+        "reply_payload": null,
+        "submittedAt_ms": null,
+        "mode": "questionnaire",
+        "schemaVersion": 2,
+        "title": "deposon 轮56 卡C · 残项组",
+        "n_steps": 4,
+        "step_ids": [
+          "d23",
+          "shortname",
+          "typeb",
+          "ad5"
+        ],
+        "step_headers": [
+          "E-RJ-③-③ D-2/D-3",
+          "「先取值、后落档」简称",
+          "TYPE-b 子型标注",
+          "AD-5 视角归属"
+        ],
+        "step_question_lengths": [
+          67,
+          74,
+          64,
+          48
+        ],
+        "requester": {
+          "sessionId": "mvs_bbeb804b1a6a41109be740636eed1709",
+          "agentName": "mavis",
+          "runId": "turn_task_delivery_61b5a81c8dc64bd9b8271f6ecb7b274a",
+          "toolCallId": "call_05_9f1VlfTNJskWUHoXpbPW2713"
+        },
+        "request_json_createdAt_ms": 1791626601214,
+        "request_json_status_snapshot": "pending"
+      },
+      "timestamp_recompute": {
+        "method_A_utc_plus8": "2026-10-10 18:03:21.214 +0800",
+        "method_B_fixed_offset": "2026-10-10 18:03:21.214 +0800",
+        "methods_agree": true,
+        "answered_at_A": null,
+        "answered_at_B": null,
+        "answered_at_methods_agree": null,
+        "cross_check": "面甲载体件之字面时戳与库时戳逐条吻合"
+      },
+      "completeness": {
+        "question_payload": "COMPLETE_VERBATIM_FROM_DB",
+        "answer_payload": "ABSENT (never answered)",
+        "submittedAt": "ABSENT (never answered)",
+        "request_json_bytes_utf8": 2798,
+        "request_json_chars": 2044,
+        "request_json_U+FFFD_count": 0,
+        "damage_surface_in_bg_transcript": {
+          "file": "background-tasks\\bg_fe046620-8129-44fa-8683-784f60748f93\\output.log",
+          "file_sha12": "daec35feca3e",
+          "cause": "GBK console encode failure (UnicodeEncodeError) + print(s[:600]) truncation",
+          "note": "转储件之损坏 ≠ 库之损坏；库原文 U+FFFD=0"
+        },
+        "successor_same_family": "仅登记同族关系之存在；0 以继任卡之答文顶替"
+      }
+    },
+    "ask_8ecc53a22f25038ecfe5ad56": {
+      "request_id": "ask_8ecc53a22f25038ecfe5ad56",
+      "payload_class": "PRESENT_SUPERSEDED_NEVER_ANSWERED",
+      "detection_positions": {
+        "domain": "〔本地绝对路径·脱敏略:background-tasks〕",
+        "total_hit_lines": 131,
+        "historical_hit_lines": 31,
+        "today_echo_hit_lines": 100,
+        "historical_dirs": [
+          "bg_0a1a2582-c46e-43b0-afc7-e31303f46c00",
+          "bg_0b500769-0c97-4d3c-8162-6d28daff4148",
+          "bg_36321990-b664-418f-a5d7-acde891b46e4",
+          "bg_4381b9c1-eed9-443e-8f69-b035eea84f12",
+          "bg_52bba2ea-0d9d-4da8-b91c-f1590fe8c312",
+          "bg_67216dff-e91a-4fc8-ae93-9b7353dae43a",
+          "bg_722b06e5-f7ff-42d4-97ea-61bf6e4e1466",
+          "bg_8105b6fa-0df4-469e-9413-f9dc5ffca9eb",
+          "bg_88511acd-5c92-4697-bdc0-119a43dc7c00",
+          "bg_8c559f39-2a50-4cd4-a93a-6525efaf5fa1",
+          "bg_9749f08e-9033-4453-a1af-1eee7dffe0a2",
+          "bg_f82ddd38-c4c5-4962-a1ab-93a62e0267e3",
+          "bg_fe046620-8129-44fa-8683-784f60748f93",
+          "bg_fe74e786-9ea0-4fa3-a74b-3565a2649ad7"
+        ],
+        "historical_hits": [
+          {
+            "dir": "bg_0a1a2582-c46e-43b0-afc7-e31303f46c00",
+            "file": "output.log",
+            "line_no": 4,
+            "file_bytes": 301,
+            "file_sha12": "75b19a39dde3",
+            "file_mtime": "2026-10-10 18:11:55",
+            "dir_mtime": "2026-10-10 18:11:55",
+            "line_chars": 62,
+            "line_ufffd": 0,
+            "line_text": "('ask_8ecc53a22f25038ecfe5ad56', 'superseded', 1791626585977)\r"
+          },
+          {
+            "dir": "bg_0a1a2582-c46e-43b0-afc7-e31303f46c00",
+            "file": "summary.txt",
+            "line_no": 4,
+            "file_bytes": 301,
+            "file_sha12": "75b19a39dde3",
+            "file_mtime": "2026-10-10 18:11:55",
+            "dir_mtime": "2026-10-10 18:11:55",
+            "line_chars": 62,
+            "line_ufffd": 0,
+            "line_text": "('ask_8ecc53a22f25038ecfe5ad56', 'superseded', 1791626585977)\r"
+          },
+          {
+            "dir": "bg_0b500769-0c97-4d3c-8162-6d28daff4148",
+            "file": "output.log",
+            "line_no": 5,
+            "file_bytes": 125422,
+            "file_sha12": "561817292ca7",
+            "file_mtime": "2026-10-10 18:09:04",
+            "dir_mtime": "2026-10-10 18:09:04",
+            "line_chars": 162,
+            "line_ufffd": 0,
+            "line_text": "ask_8ecc53a22f25038ecfe5ad56 | sess=mvs_bbeb804b1a6a41109be740636eed1709 | agent=mavis | status=superseded | created=2026-10-10 18:03:05.977+0800 | answered=None\r"
+          },
+          {
+            "dir": "bg_0b500769-0c97-4d3c-8162-6d28daff4148",
+            "file": "output.log",
+            "line_no": 407,
+            "file_bytes": 125422,
+            "file_sha12": "561817292ca7",
+            "file_mtime": "2026-10-10 18:09:04",
+            "dir_mtime": "2026-10-10 18:09:04",
+            "line_chars": 97,
+            "line_ufffd": 0,
+            "line_text": "ask_8ecc53a22f25038ecfe5ad56 | superseded | created=2026-10-10 18:03:05.977+0800 | answered=None\r"
+          },
+          {
+            "dir": "bg_0b500769-0c97-4d3c-8162-6d28daff4148",
+            "file": "summary.txt",
+            "line_no": 5,
+            "file_bytes": 22513,
+            "file_sha12": "b3637c60106c",
+            "file_mtime": "2026-10-10 18:09:04",
+            "dir_mtime": "2026-10-10 18:09:04",
+            "line_chars": 162,
+            "line_ufffd": 0,
+            "line_text": "ask_8ecc53a22f25038ecfe5ad56 | sess=mvs_bbeb804b1a6a41109be740636eed1709 | agent=mavis | status=superseded | created=2026-10-10 18:03:05.977+0800 | answered=None\r"
+          },
+          {
+            "dir": "bg_36321990-b664-418f-a5d7-acde891b46e4",
+            "file": "output.log",
+            "line_no": 432,
+            "file_bytes": 38276,
+            "file_sha12": "760a3e07df30",
+            "file_mtime": "2026-10-10 18:59:28",
+            "dir_mtime": "2026-10-10 18:59:29",
+            "line_chars": 75,
+            "line_ufffd": 0,
+            "line_text": "    ('ask_8ecc53a22f25038ecfe5ad56', 1791626585977, 'superseded', 2134, 0)\r"
+          },
+          {
+            "dir": "bg_36321990-b664-418f-a5d7-acde891b46e4",
+            "file": "summary.txt",
+            "line_no": 226,
+            "file_bytes": 22559,
+            "file_sha12": "f76e88d52de5",
+            "file_mtime": "2026-10-10 18:59:29",
+            "dir_mtime": "2026-10-10 18:59:29",
+            "line_chars": 75,
+            "line_ufffd": 0,
+            "line_text": "    ('ask_8ecc53a22f25038ecfe5ad56', 1791626585977, 'superseded', 2134, 0)\r"
+          },
+          {
+            "dir": "bg_4381b9c1-eed9-443e-8f69-b035eea84f12",
+            "file": "output.log",
+            "line_no": 12,
+            "file_bytes": 1449,
+            "file_sha12": "e5cec7105e06",
+            "file_mtime": "2026-10-10 20:16:46",
+            "dir_mtime": "2026-10-10 20:16:46",
+            "line_chars": 81,
+            "line_ufffd": 0,
+            "line_text": "ask_8ecc53a22f25038ecfe5ad56 | superseded | 2026-10-10 18:03:05.977 +0800 | NULL\r"
+          },
+          {
+            "dir": "bg_4381b9c1-eed9-443e-8f69-b035eea84f12",
+            "file": "summary.txt",
+            "line_no": 12,
+            "file_bytes": 1449,
+            "file_sha12": "e5cec7105e06",
+            "file_mtime": "2026-10-10 20:16:46",
+            "dir_mtime": "2026-10-10 20:16:46",
+            "line_chars": 81,
+            "line_ufffd": 0,
+            "line_text": "ask_8ecc53a22f25038ecfe5ad56 | superseded | 2026-10-10 18:03:05.977 +0800 | NULL\r"
+          },
+          {
+            "dir": "bg_52bba2ea-0d9d-4da8-b91c-f1590fe8c312",
+            "file": "output.log",
+            "line_no": 4,
+            "file_bytes": 362,
+            "file_sha12": "830472203bd5",
+            "file_mtime": "2026-10-10 18:05:43",
+            "dir_mtime": "2026-10-10 18:05:43",
+            "line_chars": 62,
+            "line_ufffd": 0,
+            "line_text": "('ask_8ecc53a22f25038ecfe5ad56', 'superseded', 1791626585977)\r"
+          },
+          {
+            "dir": "bg_52bba2ea-0d9d-4da8-b91c-f1590fe8c312",
+            "file": "summary.txt",
+            "line_no": 4,
+            "file_bytes": 362,
+            "file_sha12": "830472203bd5",
+            "file_mtime": "2026-10-10 18:05:43",
+            "dir_mtime": "2026-10-10 18:05:43",
+            "line_chars": 62,
+            "line_ufffd": 0,
+            "line_text": "('ask_8ecc53a22f25038ecfe5ad56', 'superseded', 1791626585977)\r"
+          },
+          {
+            "dir": "bg_67216dff-e91a-4fc8-ae93-9b7353dae43a",
+            "file": "output.log",
+            "line_no": 16,
+            "file_bytes": 5377,
+            "file_sha12": "c2946c1a36ba",
+            "file_mtime": "2026-10-10 18:09:31",
+            "dir_mtime": "2026-10-10 18:09:31",
+            "line_chars": 104,
+            "line_ufffd": 0,
+            "line_text": "### ask_8ecc53a22f25038ecfe5ad56 | status=superseded created=2026-10-10 18:03:05.977+0800 answered=None\r"
+          },
+          {
+            "dir": "bg_67216dff-e91a-4fc8-ae93-9b7353dae43a",
+            "file": "summary.txt",
+            "line_no": 16,
+            "file_bytes": 5377,
+            "file_sha12": "c2946c1a36ba",
+            "file_mtime": "2026-10-10 18:09:31",
+            "dir_mtime": "2026-10-10 18:09:31",
+            "line_chars": 104,
+            "line_ufffd": 0,
+            "line_text": "### ask_8ecc53a22f25038ecfe5ad56 | status=superseded created=2026-10-10 18:03:05.977+0800 answered=None\r"
+          },
+          {
+            "dir": "bg_722b06e5-f7ff-42d4-97ea-61bf6e4e1466",
+            "file": "output.log",
+            "line_no": 6,
+            "file_bytes": 1530,
+            "file_sha12": "62bd03bd64ad",
+            "file_mtime": "2026-10-10 18:54:38",
+            "dir_mtime": "2026-10-10 18:54:38",
+            "line_chars": 86,
+            "line_ufffd": 0,
+            "line_text": "ask_8ecc53a22f25038ecfe5ad56 | superseded | 1791626585977 | deposon 轮56 卡B · G5 残项＋面域\r"
+          },
+          {
+            "dir": "bg_722b06e5-f7ff-42d4-97ea-61bf6e4e1466",
+            "file": "summary.txt",
+            "line_no": 6,
+            "file_bytes": 1530,
+            "file_sha12": "62bd03bd64ad",
+            "file_mtime": "2026-10-10 18:54:38",
+            "dir_mtime": "2026-10-10 18:54:38",
+            "line_chars": 86,
+            "line_ufffd": 0,
+            "line_text": "ask_8ecc53a22f25038ecfe5ad56 | superseded | 1791626585977 | deposon 轮56 卡B · G5 残项＋面域\r"
+          },
+          {
+            "dir": "bg_8105b6fa-0df4-469e-9413-f9dc5ffca9eb",
+            "file": "output.log",
+            "line_no": 3,
+            "file_bytes": 685,
+            "file_sha12": "190d92754e0a",
+            "file_mtime": "2026-10-10 19:02:05",
+            "dir_mtime": "2026-10-10 19:02:05",
+            "line_chars": 100,
+            "line_ufffd": 0,
+            "line_text": "ask_8ecc53a22f25038ecfe5ad56 superseded has_x4= True ['krj34_close', 'krj9_conflict', 'trj3', 'x4']\r"
+          },
+          {
+            "dir": "bg_8105b6fa-0df4-469e-9413-f9dc5ffca9eb",
+            "file": "output.log",
+            "line_no": 5,
+            "file_bytes": 685,
+            "file_sha12": "190d92754e0a",
+            "file_mtime": "2026-10-10 19:02:05",
+            "dir_mtime": "2026-10-10 19:02:05",
+            "line_chars": 72,
+            "line_ufffd": 0,
+            "line_text": "STEPCARD ask_8ecc53a22f25038ecfe5ad56 superseded ['x4'] answered= False\r"
+          },
+          {
+            "dir": "bg_8105b6fa-0df4-469e-9413-f9dc5ffca9eb",
+            "file": "summary.txt",
+            "line_no": 3,
+            "file_bytes": 685,
+            "file_sha12": "190d92754e0a",
+            "file_mtime": "2026-10-10 19:02:05",
+            "dir_mtime": "2026-10-10 19:02:05",
+            "line_chars": 100,
+            "line_ufffd": 0,
+            "line_text": "ask_8ecc53a22f25038ecfe5ad56 superseded has_x4= True ['krj34_close', 'krj9_conflict', 'trj3', 'x4']\r"
+          },
+          {
+            "dir": "bg_8105b6fa-0df4-469e-9413-f9dc5ffca9eb",
+            "file": "summary.txt",
+            "line_no": 5,
+            "file_bytes": 685,
+            "file_sha12": "190d92754e0a",
+            "file_mtime": "2026-10-10 19:02:05",
+            "dir_mtime": "2026-10-10 19:02:05",
+            "line_chars": 72,
+            "line_ufffd": 0,
+            "line_text": "STEPCARD ask_8ecc53a22f25038ecfe5ad56 superseded ['x4'] answered= False\r"
+          },
+          {
+            "dir": "bg_88511acd-5c92-4697-bdc0-119a43dc7c00",
+            "file": "output.log",
+            "line_no": 754,
+            "file_bytes": 70206,
+            "file_sha12": "2e10e4c6a958",
+            "file_mtime": "2026-10-11 16:17:22",
+            "dir_mtime": "2026-10-11 16:17:22",
+            "line_chars": 107,
+            "line_ufffd": 0,
+            "line_text": "  ask_8ecc53a22f25038ecfe5ad56  status=superseded  created=2026-10-10T18:03:05.977000+08:00  answered=None\r"
+          },
+          {
+            "dir": "bg_88511acd-5c92-4697-bdc0-119a43dc7c00",
+            "file": "summary.txt",
+            "line_no": 352,
+            "file_bytes": 22548,
+            "file_sha12": "efb5ed394b18",
+            "file_mtime": "2026-10-11 16:17:22",
+            "dir_mtime": "2026-10-11 16:17:22",
+            "line_chars": 107,
+            "line_ufffd": 0,
+            "line_text": "  ask_8ecc53a22f25038ecfe5ad56  status=superseded  created=2026-10-10T18:03:05.977000+08:00  answered=None\r"
+          },
+          {
+            "dir": "bg_8c559f39-2a50-4cd4-a93a-6525efaf5fa1",
+            "file": "output.log",
+            "line_no": 10,
+            "file_bytes": 1321,
+            "file_sha12": "ce69e87de592",
+            "file_mtime": "2026-10-11 00:21:25",
+            "dir_mtime": "2026-10-11 00:21:25",
+            "line_chars": 112,
+            "line_ufffd": 0,
+            "line_text": "  ask_8ecc53a22f25038ecfe5ad56  status='superseded'  created=2026-10-10 18:03:05.977  deposon 轮56 卡B · G5 残项＋面域\r"
+          },
+          {
+            "dir": "bg_8c559f39-2a50-4cd4-a93a-6525efaf5fa1",
+            "file": "summary.txt",
+            "line_no": 10,
+            "file_bytes": 1321,
+            "file_sha12": "ce69e87de592",
+            "file_mtime": "2026-10-11 00:21:25",
+            "dir_mtime": "2026-10-11 00:21:25",
+            "line_chars": 112,
+            "line_ufffd": 0,
+            "line_text": "  ask_8ecc53a22f25038ecfe5ad56  status='superseded'  created=2026-10-10 18:03:05.977  deposon 轮56 卡B · G5 残项＋面域\r"
+          },
+          {
+            "dir": "bg_9749f08e-9033-4453-a1af-1eee7dffe0a2",
+            "file": "output.log",
+            "line_no": 8,
+            "file_bytes": 1431,
+            "file_sha12": "7e9cb744efe0",
+            "file_mtime": "2026-10-10 18:48:59",
+            "dir_mtime": "2026-10-10 18:48:59",
+            "line_chars": 1061,
+            "line_ufffd": 0,
+            "line_text": "ROWS_AFTER_R54 = [[\"ask_13c6f24eb02ba5b8de3e21af\", \"answered\", 1791624400837, 1791624806780], [\"ask_843b65b50a873462f8a56e80\", \"answered\", 1791625116526, 1791625250668], [\"ask_6f62aae92e1407312f1eda12\", \"superseded\", 1791626570118, null], [\"ask_8ecc53a22f25038ecfe5ad56\", \"superseded\", 1791626585977, null], [\"ask_6c3546fc6570473dbd2083a4\", \"superseded\", 1791626601214, null], [\"ask_b6ee60a41e353ab362c286b2\", \"answered\", 1791626617303, 1791626678497], [\"ask_de2ff1c91d73bd010efd01ae\", \"answered\", 1791627142066, 1791627352070], [\"ask_6dc865e30266f319ca3b93ee\", \"answered\", 1791627490833, 1791627694778], [\"ask_4cce7bab04bc02647de1155c\", \"answered\", 1791627858701, 1791627959277], [\"ask_2fefd936973d08dba26c872a\", \"answered\", 1791628068490, 1791628097916], [\"ask_a04bb2fbc92e69910998e31e\", \"answered\", 1791628266710, 1791628333120], [\"ask_f225786a7cb6006214e74363\", \"answered\", 1791628428860, 1791628545849], [\"ask_821893d6d66d5419db7e8823\", \"answered\", 1791628807739, 1791628852638], [\"ask_84f9515f46c57d1b340dc5c5\", \"answered\", 1791629152119, 1791629323096]]\r"
+          },
+          {
+            "dir": "bg_9749f08e-9033-4453-a1af-1eee7dffe0a2",
+            "file": "summary.txt",
+            "line_no": 8,
+            "file_bytes": 1431,
+            "file_sha12": "7e9cb744efe0",
+            "file_mtime": "2026-10-10 18:48:59",
+            "dir_mtime": "2026-10-10 18:48:59",
+            "line_chars": 1061,
+            "line_ufffd": 0,
+            "line_text": "ROWS_AFTER_R54 = [[\"ask_13c6f24eb02ba5b8de3e21af\", \"answered\", 1791624400837, 1791624806780], [\"ask_843b65b50a873462f8a56e80\", \"answered\", 1791625116526, 1791625250668], [\"ask_6f62aae92e1407312f1eda12\", \"superseded\", 1791626570118, null], [\"ask_8ecc53a22f25038ecfe5ad56\", \"superseded\", 1791626585977, null], [\"ask_6c3546fc6570473dbd2083a4\", \"superseded\", 1791626601214, null], [\"ask_b6ee60a41e353ab362c286b2\", \"answered\", 1791626617303, 1791626678497], [\"ask_de2ff1c91d73bd010efd01ae\", \"answered\", 1791627142066, 1791627352070], [\"ask_6dc865e30266f319ca3b93ee\", \"answered\", 1791627490833, 1791627694778], [\"ask_4cce7bab04bc02647de1155c\", \"answered\", 1791627858701, 1791627959277], [\"ask_2fefd936973d08dba26c872a\", \"answered\", 1791628068490, 1791628097916], [\"ask_a04bb2fbc92e69910998e31e\", \"answered\", 1791628266710, 1791628333120], [\"ask_f225786a7cb6006214e74363\", \"answered\", 1791628428860, 1791628545849], [\"ask_821893d6d66d5419db7e8823\", \"answered\", 1791628807739, 1791628852638], [\"ask_84f9515f46c57d1b340dc5c5\", \"answered\", 1791629152119, 1791629323096]]\r"
+          },
+          {
+            "dir": "bg_f82ddd38-c4c5-4962-a1ab-93a62e0267e3",
+            "file": "output.log",
+            "line_no": 19,
+            "file_bytes": 2849,
+            "file_sha12": "e840d02693a1",
+            "file_mtime": "2026-10-10 23:51:46",
+            "dir_mtime": "2026-10-10 23:51:46",
+            "line_chars": 366,
+            "line_ufffd": 0,
+            "line_text": "SUPERSEDED [['ask_05992739fd9e46f8e8acd23d', 'superseded', 1790232724260, None], ['ask_906e23019db97965b62a29fa', 'superseded', 1791564089033, 1791564163848], ['ask_6f62aae92e1407312f1eda12', 'superseded', 1791626570118, None], ['ask_8ecc53a22f25038ecfe5ad56', 'superseded', 1791626585977, None], ['ask_6c3546fc6570473dbd2083a4', 'superseded', 1791626601214, None]]\r"
+          },
+          {
+            "dir": "bg_f82ddd38-c4c5-4962-a1ab-93a62e0267e3",
+            "file": "summary.txt",
+            "line_no": 19,
+            "file_bytes": 2849,
+            "file_sha12": "e840d02693a1",
+            "file_mtime": "2026-10-10 23:51:46",
+            "dir_mtime": "2026-10-10 23:51:46",
+            "line_chars": 366,
+            "line_ufffd": 0,
+            "line_text": "SUPERSEDED [['ask_05992739fd9e46f8e8acd23d', 'superseded', 1790232724260, None], ['ask_906e23019db97965b62a29fa', 'superseded', 1791564089033, 1791564163848], ['ask_6f62aae92e1407312f1eda12', 'superseded', 1791626570118, None], ['ask_8ecc53a22f25038ecfe5ad56', 'superseded', 1791626585977, None], ['ask_6c3546fc6570473dbd2083a4', 'superseded', 1791626601214, None]]\r"
+          },
+          {
+            "dir": "bg_fe046620-8129-44fa-8683-784f60748f93",
+            "file": "output.log",
+            "line_no": 13,
+            "file_bytes": 6970,
+            "file_sha12": "daec35feca3e",
+            "file_mtime": "2026-10-10 18:58:26",
+            "dir_mtime": "2026-10-10 18:58:26",
+            "line_chars": 49,
+            "line_ufffd": 0,
+            "line_text": "--- ask_8ecc53a22f25038ecfe5ad56 superseded None\r"
+          },
+          {
+            "dir": "bg_fe046620-8129-44fa-8683-784f60748f93",
+            "file": "output.log",
+            "line_no": 14,
+            "file_bytes": 6970,
+            "file_sha12": "daec35feca3e",
+            "file_mtime": "2026-10-10 18:58:26",
+            "dir_mtime": "2026-10-10 18:58:26",
+            "line_chars": 655,
+            "line_ufffd": 112,
+            "line_text": "{\"schemaVersion\": 2, \"id\": \"ask_8ecc53a22f25038ecfe5ad56\", \"mode\": \"questionnaire\", \"presentation\": {\"replaceComposer\": true, \"showProgress\": true, \"allowBackNavigation\": true}, \"steps\": [{\"id\": \"krj34_close\", \"question\": \"K-RJ-3��K-RJ-4 ֮��ʽ�������棨������ʱ�㣩��PI ��ʾ���棯���������̼���Ч�����飿��Դ���жϼ����� �ݣ�\", \"selectionMode\": \"single\", \"options\": [{\"id\": \"jia\", \"label\": \"�ס�PI ��ʾ����\", \"description\": \"�����Ǽ���Ч\"}, {\"id\": \"yi\", \"label\": \"�ҡ����������̼���Ч\", \"description\": \"�Ǽ��ƣ��������̼���\"}, {\"id\": \"bing\", \"label\": \"��������\", \"description\": \"�� PI ����\"}], \"allowOther\": true, \"otherPlaceholder\": \"Others...\", \"required\": true, \"header\": \"E-CRJ\r"
+          },
+          {
+            "dir": "bg_fe74e786-9ea0-4fa3-a74b-3565a2649ad7",
+            "file": "output.log",
+            "line_no": 33,
+            "file_bytes": 6751,
+            "file_sha12": "e6c3738aa423",
+            "file_mtime": "2026-10-10 18:49:18",
+            "dir_mtime": "2026-10-10 18:49:18",
+            "line_chars": 131,
+            "line_ufffd": 0,
+            "line_text": "ask_8ecc53a22f25038ecfe5ad56 | superseded | created: 1791626585977 | answered: None | title: deposon 轮56 卡B · G5 残项＋面域 | nsteps: 4\r"
+          },
+          {
+            "dir": "bg_fe74e786-9ea0-4fa3-a74b-3565a2649ad7",
+            "file": "summary.txt",
+            "line_no": 33,
+            "file_bytes": 6751,
+            "file_sha12": "e6c3738aa423",
+            "file_mtime": "2026-10-10 18:49:18",
+            "dir_mtime": "2026-10-10 18:49:18",
+            "line_chars": 131,
+            "line_ufffd": 0,
+            "line_text": "ask_8ecc53a22f25038ecfe5ad56 | superseded | created: 1791626585977 | answered: None | title: deposon 轮56 卡B · G5 残项＋面域 | nsteps: 4\r"
+          }
+        ]
+      },
+      "runtime_db": {
+        "present_in_live_db": true,
+        "present_in_backup_db_2026_10_17": true
+      },
+      "payload": {
+        "request_id": "ask_8ecc53a22f25038ecfe5ad56",
+        "session_id": "mvs_bbeb804b1a6a41109be740636eed1709",
+        "agent_name": "mavis",
+        "msg_id": null,
+        "status": "superseded",
+        "created_at_ms": 1791626585977,
+        "answered_at_ms": null,
+        "injected_at_ms": null,
+        "dismissed_at_ms": null,
+        "origin_channel_context_json": null,
+        "request_json": "{\"schemaVersion\":2,\"id\":\"ask_8ecc53a22f25038ecfe5ad56\",\"mode\":\"questionnaire\",\"presentation\":{\"replaceComposer\":true,\"showProgress\":true,\"allowBackNavigation\":true},\"steps\":[{\"id\":\"krj34_close\",\"question\":\"K-RJ-3／K-RJ-4 之正式闭项宣告（归属与时点）：PI 明示宣告／依链序落盘即生效／另议？（源：判断件出口 ⑤）\",\"selectionMode\":\"single\",\"options\":[{\"id\":\"jia\",\"label\":\"甲·PI 明示宣告\",\"description\":\"另件登记生效\"},{\"id\":\"yi\",\"label\":\"乙·依链序落盘即生效\",\"description\":\"登记制：链序落盘即闭\"},{\"id\":\"bing\",\"label\":\"丙·另议\",\"description\":\"候 PI 另定\"}],\"allowOther\":true,\"otherPlaceholder\":\"Others...\",\"required\":true,\"header\":\"E-CRJ-⑤ 闭项宣告归属\"},{\"id\":\"krj9_conflict\",\"question\":\"②＝甲（全语料面·含 held-out 外 15 件）与 K-RJ-9（⛔ 0 纳入 held-out 外 15 件）之字面并存——如何归置？（源：轮54 登记件 afc67818bb85 §3 笔记）\",\"selectionMode\":\"single\",\"options\":[{\"id\":\"jia\",\"label\":\"甲·收窄至 K-RJ-9 限域\",\"description\":\"段一分母改取限域内（上限 9），与 ②乙 同向\"},{\"id\":\"yi\",\"label\":\"乙·维持 ②＝甲\",\"description\":\"保留全语料面（24 件）；与 K-RJ-9 之关系另行注明\"},{\"id\":\"bing\",\"label\":\"丙·另议\",\"description\":\"候 PI 另定\"}],\"allowOther\":true,\"otherPlaceholder\":\"Others...\",\"required\":true,\"header\":\"K-RJ-9↔②甲 并存\"},{\"id\":\"trj3\",\"question\":\"TRJ-W1（「边际来自 2 件」实为 3 件·含 D8-27 反向 −0.2）之存废与核验：如何裁？（源：判断件 §9 TRJ-3／§10.1）\",\"selectionMode\":\"single\",\"options\":[{\"id\":\"jia\",\"label\":\"甲·派 verifier 独立核验\",\"description\":\"后另出勘正/补记件（0 回改原句）\"},{\"id\":\"yi\",\"label\":\"乙·维持登记即足\",\"description\":\"VK 判断件已登记即足；免另行核验\"},{\"id\":\"bing\",\"label\":\"丙·另议\",\"description\":\"候 PI 另定\"}],\"allowOther\":true,\"otherPlaceholder\":\"Others...\",\"required\":true,\"header\":\"TRJ-3 W1 存废\"},{\"id\":\"x4\",\"question\":\"C 定义句『双轴合取』与所列三条件／后果句『三步全过』之内部不一致（D-1）：是否按『三条件合取』解释即可？（源：seg3 判断件出口 X-4）\",\"selectionMode\":\"single\",\"options\":[{\"id\":\"yi\",\"label\":\"乙·否（须另给字面）\",\"description\":\"不接受：须另给澄清字面\"},{\"id\":\"jia\",\"label\":\"甲·是（三条件合取即可）\",\"description\":\"接受按三条件合取解释\"},{\"id\":\"bing\",\"label\":\"丙·另议\",\"description\":\"候 PI 另定\"}],\"allowOther\":true,\"otherPlaceholder\":\"Others...\",\"required\":true,\"header\":\"X-4 双轴合取澄清\"}],\"status\":\"pending\",\"createdAt\":1791626585977,\"requester\":{\"sessionId\":\"mvs_bbeb804b1a6a41109be740636eed1709\",\"agentName\":\"mavis\",\"runId\":\"turn_task_delivery_61b5a81c8dc64bd9b8271f6ecb7b274a\",\"toolCallId\":\"call_04_fSC9SUq5uAbDhM9b3yKP1320\"},\"title\":\"deposon 轮56 卡B · G5 残项＋面域\"}",
+        "reply_payload": null,
+        "submittedAt_ms": null,
+        "mode": "questionnaire",
+        "schemaVersion": 2,
+        "title": "deposon 轮56 卡B · G5 残项＋面域",
+        "n_steps": 4,
+        "step_ids": [
+          "krj34_close",
+          "krj9_conflict",
+          "trj3",
+          "x4"
+        ],
+        "step_headers": [
+          "E-CRJ-⑤ 闭项宣告归属",
+          "K-RJ-9↔②甲 并存",
+          "TRJ-3 W1 存废",
+          "X-4 双轴合取澄清"
+        ],
+        "step_question_lengths": [
+          60,
+          101,
+          73,
+          72
+        ],
+        "requester": {
+          "sessionId": "mvs_bbeb804b1a6a41109be740636eed1709",
+          "agentName": "mavis",
+          "runId": "turn_task_delivery_61b5a81c8dc64bd9b8271f6ecb7b274a",
+          "toolCallId": "call_04_fSC9SUq5uAbDhM9b3yKP1320"
+        },
+        "request_json_createdAt_ms": 1791626585977,
+        "request_json_status_snapshot": "pending"
+      },
+      "timestamp_recompute": {
+        "method_A_utc_plus8": "2026-10-10 18:03:05.977 +0800",
+        "method_B_fixed_offset": "2026-10-10 18:03:05.977 +0800",
+        "methods_agree": true,
+        "answered_at_A": null,
+        "answered_at_B": null,
+        "answered_at_methods_agree": null,
+        "cross_check": "面甲载体件之字面时戳与库时戳逐条吻合"
+      },
+      "completeness": {
+        "question_payload": "COMPLETE_VERBATIM_FROM_DB",
+        "answer_payload": "ABSENT (never answered)",
+        "submittedAt": "ABSENT (never answered)",
+        "request_json_bytes_utf8": 2932,
+        "request_json_chars": 2134,
+        "request_json_U+FFFD_count": 0,
+        "damage_surface_in_bg_transcript": {
+          "file": "background-tasks\\bg_fe046620-8129-44fa-8683-784f60748f93\\output.log",
+          "file_sha12": "daec35feca3e",
+          "cause": "GBK console encode failure (UnicodeEncodeError) + print(s[:600]) truncation",
+          "note": "转储件之损坏 ≠ 库之损坏；库原文 U+FFFD=0"
+        },
+        "successor_same_family": "仅登记同族关系之存在；0 以继任卡之答文顶替"
+      }
+    }
+  },
+  "encoding_provenance": {
+    "this_json_U+FFFD_count_expected": 242,
+    "source": "面甲之 background-tasks 载体件 bg_fe046620… 之【逐字节照录】之历史损坏行（卡3 L11 U+FFFD=130 ＋ 卡4 L14 U+FFFD=112）",
+    "meaning": "此 242 个 U+FFFD 系【转录面之损坏】之忠实留存，⛔0 为迁就洁净而替换或删改；",
+    "authoritative_payload_surface": "各卡之 request_json（卡问全文）取自运行时卡库，实测 U+FFFD=0（洁净）",
+    "answer_payload_surface": "reply_payload ＝ null（从未作答）⇒ 无损坏面亦无答文面"
+  },
+  "neardup_one_char_reference": {
+    "ask_1936c3a747b2c740a2c71b12": {
+      "near_id": "ask_1936c3a747b2c740a2c71b12",
+      "status": "answered",
+      "session_id": "mvs_bbeb804b1a6a41109be740636eed1709",
+      "created_at_ms": 1791527733854,
+      "created_at_iso8_methodA": "2026-10-09 14:35:33.854 +0800",
+      "created_at_iso8_methodB": "2026-10-09 14:35:33.854 +0800",
+      "answered_at_ms": 1791527882411,
+      "answered_at_iso8_methodA": "2026-10-09 14:38:02.411 +0800",
+      "answered_at_iso8_methodB": "2026-10-09 14:38:02.411 +0800",
+      "title": "清障卡 · S4 链四项未闭（先清障再续棒）",
+      "step_ids": [
+        "q1_c801ed9a",
+        "q2_af823a5b",
+        "q3_60968571",
+        "q4_9f787ce9"
+      ],
+      "step_headers": [
+        "① 立线 · 三档勾选",
+        "② 修订稿复核 · K-4-2／167／P-S4-1",
+        "③ is_corr_pair 口径",
+        "④ 单日占比分母择域"
+      ],
+      "reply_payload": "{\"schemaVersion\":2,\"requestId\":\"ask_1936c3a747b2c740a2c71b12\",\"answers\":[{\"stepId\":\"q1_c801ed9a\",\"selectedOptionIds\":[\"q1_c801ed9a_opt1\"],\"selectedOther\":false},{\"stepId\":\"q2_af823a5b\",\"selectedOptionIds\":[\"q2_af823a5b_opt2\"],\"selectedOther\":false},{\"stepId\":\"q3_60968571\",\"selectedOptionIds\":[\"q3_60968571_opt3\"],\"selectedOther\":false},{\"stepId\":\"q4_9f787ce9\",\"selectedOptionIds\":[],\"selectedOther\":true,\"otherText\":\"A，实事求是，并考虑提取器缺陷导致误判\"}],\"submittedAt\":1791527882411}",
+      "registered_at": "results\\_questionnaire_cards_intake_register_2026_10_09.md",
+      "role": "口径参照面 —— ⛔0 代认与标的 id 为同一卡；⛔0 以其载荷代标的载荷"
+    },
+    "ask_47f06bf3e3c1615d36a29b50": {
+      "near_id": "ask_47f06bf3e3c1615d36a29b50",
+      "status": "answered",
+      "session_id": "mvs_bbeb804b1a6a41109be740636eed1709",
+      "created_at_ms": 1791518630887,
+      "created_at_iso8_methodA": "2026-10-09 12:03:50.887 +0800",
+      "created_at_iso8_methodB": "2026-10-09 12:03:50.887 +0800",
+      "answered_at_ms": 1791519512960,
+      "answered_at_iso8_methodA": "2026-10-09 12:18:32.960 +0800",
+      "answered_at_iso8_methodB": "2026-10-09 12:18:32.960 +0800",
+      "title": "S4 补样实时作答 · 卷 3/6（J3 准则×3）＋ is_corr_pair 轴候裁",
+      "step_ids": [
+        "q1_24f5085a",
+        "q2_46b1e312",
+        "q3_a8f12474",
+        "q4_03fccd0c"
+      ],
+      "step_headers": [
+        "S4T-07 · J3 准则",
+        "S4T-08 · J3 准则",
+        "S4T-09 · J3 准则",
+        "候裁 · is_corr_pair 轴"
+      ],
+      "reply_payload": "{\"schemaVersion\":2,\"requestId\":\"ask_47f06bf3e3c1615d36a29b50\",\"answers\":[{\"stepId\":\"q1_24f5085a\",\"selectedOptionIds\":[],\"selectedOther\":true,\"otherText\":\"A，不误导\"},{\"stepId\":\"q2_46b1e312\",\"selectedOptionIds\":[],\"selectedOther\":true,\"otherText\":\"B，PI有事后推翻权\"},{\"stepId\":\"q3_a8f12474\",\"selectedOptionIds\":[],\"selectedOther\":true,\"otherText\":\"B，不误导\"},{\"stepId\":\"q4_03fccd0c\",\"selectedOptionIds\":[],\"selectedOther\":true,\"otherText\":\"B，不间隔，尽量今天至少推完①\"}],\"submittedAt\":1791519512960}",
+      "registered_at": "results\\_questionnaire_cards_intake_register_2026_10_09.md",
+      "role": "口径参照面 —— ⛔0 代认与标的 id 为同一卡；⛔0 以其载荷代标的载荷"
+    }
+  },
+  "contradictions_registered": {
+    "P-1": "「检出有载」≠「载荷可取」——…c720…/…c9615… 二枚字面串在盘上有转述载体，但运行时卡库（活库+2026-10-17备份库）0 命中其 id 之记录",
+    "P-2": "一字符近邻卡之在册事实（c740 / c1615）——形近而异卡，本棒未主张同一性",
+    "P-3": "卡3/卡4 状态为 superseded 且 answered_at=NULL、reply_payload=NULL ⇒ 已建卡·从未作答"
+  },
+  "asset_defects_registered": {
+    "D-1": "扫描器每(目录·件)只记首个命中行 ⇒ 逐 id 行位清单漏报（既有资产·只登记不代修）",
+    "D-2": "GBK 控制台编码致载荷转储件中文损坏(U+FFFD)（同源缺陷已致一卡转储彻底失败）",
+    "D-3": "转储脚本 print(s[:600]) 硬截断 ⇒ 转储件 JSON 不可解析",
+    "D-4": "卡号一字符转录漂移致「真·未登记」之半数分类受污",
+    "D-5": "仓外绝对路径依赖 —— 二转述源不在仓内（全仓哈希反查 0 命中），仓外 0 触故不可越界核验"
+  },
+  "limitations": [
+    "仓外目录（归档区／〔本地绝对路径·脱敏略:�〕�人资料\\GLM）0 触 ⇒ 「0 命中」仅及仓内+盘上两面",
+    "未开卷 sessions\\mvs_* 与 v2\\sessions 之件内容（仅作 id 级检索；2026-10-09…10-11 日期桶实测为空）",
+    "未核 runtime-state.sqlite 之其他备份件（若有）",
+    "不主张任何在册判定之真伪；0 闭 KD；0 落五终判；0 代 PI 裁；0 代拟补登件"
+  ]
+}
