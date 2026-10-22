@@ -1,0 +1,103 @@
+{
+  "date": "2026-09-16T11:00:06.081901",
+  "task": "D7 5 锚 9 model × 60 cells 终极实算",
+  "verify_5_anchor_json": "PASS: 5 anchors JSON SHA-12 = 03c6c01f3697",
+  "verify_5_anchor_recompute": "PASS: 5 锚 trust_anchor concat SHA-12 = 79f8dfa2c296",
+  "verify_p_g_v0_spec": "PASS: P-G V0 spec SHA-12 = 2f0765a1d39d",
+  "verify_p_g_v01_5_anchors": [
+    "P_G_HYPERBOLIC_TRANSPORT: V0 占位符 230b5caee415 PASS (230b5caee415); V0.1 真值 9c3c50005103",
+    "P_G_CURVATURE_BOUND: V0 占位符 dcbcf2b8d45f PASS (dcbcf2b8d45f); V0.1 真值 8ff586b2722e",
+    "P_G_LLM_CLIENT: V0 占位符 2c1f572aa2bf PASS (2c1f572aa2bf); V0.1 真值 0130d179059e",
+    "P_G_HARNESS: V0 占位符 8b90c53f1e01 PASS (8b90c53f1e01); V0.1 真值 27419597798b",
+    "P_G_FROZEN_BENCHMARK: V0 占位符 91db66afecc3 PASS (91db66afecc3); V0.1 真值 9205c1168e59"
+  ],
+  "p_a_frozen_runs_expected": [
+    "6edb2aec1660",
+    "910c4333eead",
+    "9d9ae5001c57",
+    "62c1a41e1db8",
+    "af51da229652"
+  ],
+  "d7_results": {
+    "P-A_cross_modal_dpath": [
+      [
+        "doubao-seed-2.0-lite",
+        "PASS"
+      ],
+      [
+        "glm-5.3",
+        "PASS"
+      ],
+      [
+        "deepseek-v4-flash",
+        "PASS"
+      ],
+      [
+        "doubao-seed-evolving",
+        "PASS"
+      ],
+      [
+        "minimax-m3",
+        "PASS"
+      ],
+      [
+        "glm-5.3-flash",
+        "PASS"
+      ],
+      [
+        "kimi-k2.7-code",
+        "PASS"
+      ],
+      [
+        "doubao-seed-2.1-turbo",
+        "PASS"
+      ],
+      [
+        "deepseek-v4-pro",
+        "GRAY"
+      ]
+    ],
+    "P-C_two_phase": "FAIL_H0 (幂律死)",
+    "P-E_3modal": [
+      [
+        "doubao-seed-2.0-lite",
+        "PASS"
+      ],
+      [
+        "glm-5.3",
+        "PASS"
+      ],
+      [
+        "deepseek-v4-flash",
+        "PASS"
+      ],
+      [
+        "doubao-seed-evolving",
+        "PASS"
+      ],
+      [
+        "minimax-m3",
+        "PASS"
+      ],
+      [
+        "glm-5.3-flash",
+        "PASS"
+      ],
+      [
+        "kimi-k2.7-code",
+        "GRAY"
+      ],
+      [
+        "doubao-seed-2.1-turbo",
+        "GRAY"
+      ],
+      [
+        "deepseek-v4-pro",
+        "FAIL"
+      ]
+    ],
+    "P-F_D_fix2_strict": "8+1+0 (PARTIAL_PASS, A channel timing 敏感)",
+    "P-F_D_fix2_loose": "8+1+0 (PARTIAL_PASS)",
+    "P-G_V0.1_dH_dE": "≈ 5x (range 4.4-8.0)"
+  }
+}

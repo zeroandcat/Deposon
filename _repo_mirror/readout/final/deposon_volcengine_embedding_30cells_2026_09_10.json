@@ -1,0 +1,1089 @@
+{
+  "timestamp": "2026-09-10T23:08:53+08:00",
+  "gateway": "火山方舟 Coding Plan",
+  "base_url": "https://ark.cn-beijing.volces.com/api/coding/v3",
+  "auth": "ark-[REDACTED]... (key loaded from env at runtime; literal key never written to disk)",
+  "user_constraint_note": "user 22:55 测火山方舟 embedding(对照 OpenRouter 5 model 30 cells 参考测试); 4 text-embedding 不支持 coding plan(UnsupportedModel),只测 4 vision embedding",
+  "max_tokens": "N/A (embedding only)",
+  "timeout_s": 30,
+  "models": [
+    {
+      "model": "doubao-embedding-vision-241215",
+      "dimension": 2048,
+      "avg_latency_ms": 164.1,
+      "median_latency_ms": 182.5,
+      "p95_latency_ms": 205.2,
+      "min_latency_ms": 104.7,
+      "max_latency_ms": 205.2,
+      "total_latency_s": 4.93,
+      "cost_usd": 0.0,
+      "cost_per_call_usd": 0.0,
+      "passed_30cells": 30,
+      "failed_30cells": 0,
+      "errors": [],
+      "cells_results": [
+        {
+          "id": "GSM8K_1",
+          "ok": true,
+          "ms": 205.2,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_2",
+          "ok": true,
+          "ms": 205.2,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_3",
+          "ok": true,
+          "ms": 205.2,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_4",
+          "ok": true,
+          "ms": 205.2,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_5",
+          "ok": true,
+          "ms": 205.2,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_6",
+          "ok": true,
+          "ms": 205.2,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_7",
+          "ok": true,
+          "ms": 205.2,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_8",
+          "ok": true,
+          "ms": 205.2,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_9",
+          "ok": true,
+          "ms": 205.2,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_10",
+          "ok": true,
+          "ms": 205.2,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_11",
+          "ok": true,
+          "ms": 182.5,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_12",
+          "ok": true,
+          "ms": 182.5,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_13",
+          "ok": true,
+          "ms": 182.5,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_14",
+          "ok": true,
+          "ms": 182.5,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_15",
+          "ok": true,
+          "ms": 182.5,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_1",
+          "ok": true,
+          "ms": 182.5,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_2",
+          "ok": true,
+          "ms": 182.5,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_3",
+          "ok": true,
+          "ms": 182.5,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_4",
+          "ok": true,
+          "ms": 182.5,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_5",
+          "ok": true,
+          "ms": 182.5,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_6",
+          "ok": true,
+          "ms": 104.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_7",
+          "ok": true,
+          "ms": 104.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_8",
+          "ok": true,
+          "ms": 104.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_9",
+          "ok": true,
+          "ms": 104.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_10",
+          "ok": true,
+          "ms": 104.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_11",
+          "ok": true,
+          "ms": 104.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_12",
+          "ok": true,
+          "ms": 104.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_13",
+          "ok": true,
+          "ms": 104.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_14",
+          "ok": true,
+          "ms": 104.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_15",
+          "ok": true,
+          "ms": 104.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "doubao-embedding-vision-250328",
+      "dimension": 2048,
+      "avg_latency_ms": 107.3,
+      "median_latency_ms": 118.7,
+      "p95_latency_ms": 118.7,
+      "min_latency_ms": 96.0,
+      "max_latency_ms": 118.7,
+      "total_latency_s": 33.27,
+      "cost_usd": 0.0,
+      "cost_per_call_usd": 0.0,
+      "passed_30cells": 20,
+      "failed_30cells": 10,
+      "errors": [
+        {
+          "cell_id": "StrategyQA_6",
+          "err": "The read operation timed out"
+        },
+        {
+          "cell_id": "StrategyQA_7",
+          "err": "The read operation timed out"
+        },
+        {
+          "cell_id": "StrategyQA_8",
+          "err": "The read operation timed out"
+        },
+        {
+          "cell_id": "StrategyQA_9",
+          "err": "The read operation timed out"
+        },
+        {
+          "cell_id": "StrategyQA_10",
+          "err": "The read operation timed out"
+        },
+        {
+          "cell_id": "StrategyQA_11",
+          "err": "The read operation timed out"
+        },
+        {
+          "cell_id": "StrategyQA_12",
+          "err": "The read operation timed out"
+        },
+        {
+          "cell_id": "StrategyQA_13",
+          "err": "The read operation timed out"
+        },
+        {
+          "cell_id": "StrategyQA_14",
+          "err": "The read operation timed out"
+        },
+        {
+          "cell_id": "StrategyQA_15",
+          "err": "The read operation timed out"
+        }
+      ],
+      "cells_results": [
+        {
+          "id": "GSM8K_1",
+          "ok": true,
+          "ms": 118.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_2",
+          "ok": true,
+          "ms": 118.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_3",
+          "ok": true,
+          "ms": 118.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_4",
+          "ok": true,
+          "ms": 118.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_5",
+          "ok": true,
+          "ms": 118.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_6",
+          "ok": true,
+          "ms": 118.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_7",
+          "ok": true,
+          "ms": 118.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_8",
+          "ok": true,
+          "ms": 118.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_9",
+          "ok": true,
+          "ms": 118.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_10",
+          "ok": true,
+          "ms": 118.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_11",
+          "ok": true,
+          "ms": 96.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_12",
+          "ok": true,
+          "ms": 96.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_13",
+          "ok": true,
+          "ms": 96.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_14",
+          "ok": true,
+          "ms": 96.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_15",
+          "ok": true,
+          "ms": 96.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_1",
+          "ok": true,
+          "ms": 96.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_2",
+          "ok": true,
+          "ms": 96.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_3",
+          "ok": true,
+          "ms": 96.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_4",
+          "ok": true,
+          "ms": 96.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_5",
+          "ok": true,
+          "ms": 96.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_6",
+          "ok": false,
+          "ms": 3112.3,
+          "dim": 0,
+          "status": -1,
+          "error": "The read operation timed out"
+        },
+        {
+          "id": "StrategyQA_7",
+          "ok": false,
+          "ms": 3112.3,
+          "dim": 0,
+          "status": -1,
+          "error": "The read operation timed out"
+        },
+        {
+          "id": "StrategyQA_8",
+          "ok": false,
+          "ms": 3112.3,
+          "dim": 0,
+          "status": -1,
+          "error": "The read operation timed out"
+        },
+        {
+          "id": "StrategyQA_9",
+          "ok": false,
+          "ms": 3112.3,
+          "dim": 0,
+          "status": -1,
+          "error": "The read operation timed out"
+        },
+        {
+          "id": "StrategyQA_10",
+          "ok": false,
+          "ms": 3112.3,
+          "dim": 0,
+          "status": -1,
+          "error": "The read operation timed out"
+        },
+        {
+          "id": "StrategyQA_11",
+          "ok": false,
+          "ms": 3112.3,
+          "dim": 0,
+          "status": -1,
+          "error": "The read operation timed out"
+        },
+        {
+          "id": "StrategyQA_12",
+          "ok": false,
+          "ms": 3112.3,
+          "dim": 0,
+          "status": -1,
+          "error": "The read operation timed out"
+        },
+        {
+          "id": "StrategyQA_13",
+          "ok": false,
+          "ms": 3112.3,
+          "dim": 0,
+          "status": -1,
+          "error": "The read operation timed out"
+        },
+        {
+          "id": "StrategyQA_14",
+          "ok": false,
+          "ms": 3112.3,
+          "dim": 0,
+          "status": -1,
+          "error": "The read operation timed out"
+        },
+        {
+          "id": "StrategyQA_15",
+          "ok": false,
+          "ms": 3112.3,
+          "dim": 0,
+          "status": -1,
+          "error": "The read operation timed out"
+        }
+      ]
+    },
+    {
+      "model": "doubao-embedding-vision-250615",
+      "dimension": 2048,
+      "avg_latency_ms": 132.8,
+      "median_latency_ms": 69.8,
+      "p95_latency_ms": 269.7,
+      "min_latency_ms": 59.0,
+      "max_latency_ms": 269.7,
+      "total_latency_s": 3.99,
+      "cost_usd": 0.0,
+      "cost_per_call_usd": 0.0,
+      "passed_30cells": 30,
+      "failed_30cells": 0,
+      "errors": [],
+      "cells_results": [
+        {
+          "id": "GSM8K_1",
+          "ok": true,
+          "ms": 69.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_2",
+          "ok": true,
+          "ms": 69.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_3",
+          "ok": true,
+          "ms": 69.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_4",
+          "ok": true,
+          "ms": 69.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_5",
+          "ok": true,
+          "ms": 69.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_6",
+          "ok": true,
+          "ms": 69.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_7",
+          "ok": true,
+          "ms": 69.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_8",
+          "ok": true,
+          "ms": 69.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_9",
+          "ok": true,
+          "ms": 69.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_10",
+          "ok": true,
+          "ms": 69.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_11",
+          "ok": true,
+          "ms": 59.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_12",
+          "ok": true,
+          "ms": 59.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_13",
+          "ok": true,
+          "ms": 59.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_14",
+          "ok": true,
+          "ms": 59.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_15",
+          "ok": true,
+          "ms": 59.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_1",
+          "ok": true,
+          "ms": 59.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_2",
+          "ok": true,
+          "ms": 59.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_3",
+          "ok": true,
+          "ms": 59.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_4",
+          "ok": true,
+          "ms": 59.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_5",
+          "ok": true,
+          "ms": 59.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_6",
+          "ok": true,
+          "ms": 269.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_7",
+          "ok": true,
+          "ms": 269.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_8",
+          "ok": true,
+          "ms": 269.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_9",
+          "ok": true,
+          "ms": 269.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_10",
+          "ok": true,
+          "ms": 269.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_11",
+          "ok": true,
+          "ms": 269.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_12",
+          "ok": true,
+          "ms": 269.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_13",
+          "ok": true,
+          "ms": 269.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_14",
+          "ok": true,
+          "ms": 269.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_15",
+          "ok": true,
+          "ms": 269.7,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "doubao-embedding-vision-251215",
+      "dimension": 2048,
+      "avg_latency_ms": 44.2,
+      "median_latency_ms": 40.8,
+      "p95_latency_ms": 52.9,
+      "min_latency_ms": 39.0,
+      "max_latency_ms": 52.9,
+      "total_latency_s": 1.33,
+      "cost_usd": 0.0,
+      "cost_per_call_usd": 0.0,
+      "passed_30cells": 30,
+      "failed_30cells": 0,
+      "errors": [],
+      "cells_results": [
+        {
+          "id": "GSM8K_1",
+          "ok": true,
+          "ms": 52.9,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_2",
+          "ok": true,
+          "ms": 52.9,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_3",
+          "ok": true,
+          "ms": 52.9,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_4",
+          "ok": true,
+          "ms": 52.9,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_5",
+          "ok": true,
+          "ms": 52.9,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_6",
+          "ok": true,
+          "ms": 52.9,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_7",
+          "ok": true,
+          "ms": 52.9,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_8",
+          "ok": true,
+          "ms": 52.9,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_9",
+          "ok": true,
+          "ms": 52.9,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_10",
+          "ok": true,
+          "ms": 52.9,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_11",
+          "ok": true,
+          "ms": 39.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_12",
+          "ok": true,
+          "ms": 39.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_13",
+          "ok": true,
+          "ms": 39.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_14",
+          "ok": true,
+          "ms": 39.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "GSM8K_15",
+          "ok": true,
+          "ms": 39.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_1",
+          "ok": true,
+          "ms": 39.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_2",
+          "ok": true,
+          "ms": 39.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_3",
+          "ok": true,
+          "ms": 39.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_4",
+          "ok": true,
+          "ms": 39.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_5",
+          "ok": true,
+          "ms": 39.0,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_6",
+          "ok": true,
+          "ms": 40.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_7",
+          "ok": true,
+          "ms": 40.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_8",
+          "ok": true,
+          "ms": 40.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_9",
+          "ok": true,
+          "ms": 40.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_10",
+          "ok": true,
+          "ms": 40.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_11",
+          "ok": true,
+          "ms": 40.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_12",
+          "ok": true,
+          "ms": 40.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_13",
+          "ok": true,
+          "ms": 40.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_14",
+          "ok": true,
+          "ms": 40.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        },
+        {
+          "id": "StrategyQA_15",
+          "ok": true,
+          "ms": 40.8,
+          "dim": 2048,
+          "status": 200,
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "best_model": "doubao-embedding-vision-251215",
+  "summary": {
+    "total_models_tested": 4,
+    "total_calls": 120,
+    "total_passed": 110,
+    "total_failed": 10,
+    "wall_elapsed_s": 43.52,
+    "best_model": "doubao-embedding-vision-251215"
+  }
+}

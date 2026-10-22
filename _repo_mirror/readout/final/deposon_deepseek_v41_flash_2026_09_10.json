@@ -1,0 +1,458 @@
+{
+  "timestamp": "2026-09-10T15:47:09+08:00",
+  "gateway": "OpenRouter",
+  "user_billing_address": "user 已换新 key (fingerprint sk-or-v1-4490c2e2...)",
+  "proxy": "HTTP_PROXY+HTTPS_PROXY=http://127.0.0.1:7897 (worker 进程隔离, 不动 user 本机)",
+  "auth": "sk-or-v1-... (key loaded from env OPENROUTER_API_KEY; literal key never written to disk)",
+  "step1_exit_region_check": {
+    "us_votes": 2,
+    "total_votes": 2
+  },
+  "model_selection_method": "OpenRouter catalog filter (v4.1-flash / v4-flash) → 1-cell sanity check (avoid 404) → 选 1 个不报错的 model ID",
+  "model_candidates_found": [
+    "deepseek/deepseek-v4.1-flash",
+    "deepseek/deepseek-v4-flash-vision-exp",
+    "deepseek/deepseek-v4-flash-vision-exp:batch",
+    "~deepseek/deepseek-v4-flash-latest",
+    "deepseek/deepseek-v4-flash-0731",
+    "deepseek/deepseek-v4-flash-0731:batch",
+    "deepseek/deepseek-v4-flash",
+    "deepseek/deepseek-v4-pro-0813",
+    "deepseek/deepseek-v4-pro-0813:batch",
+    "deepseek/deepseek-v4-pro"
+  ],
+  "model_candidates_details": [
+    {
+      "id": "deepseek/deepseek-v4.1-flash",
+      "pricing": {
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.000000006",
+        "overrides": [
+          {
+            "utc_days": [
+              "saturday",
+              "sunday"
+            ],
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 0,
+            "utc_end": 100,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 100,
+            "utc_end": 400,
+            "prompt": "0.0000003",
+            "completion": "0.0000012",
+            "input_cache_read": "0.000000006"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 400,
+            "utc_end": 600,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 600,
+            "utc_end": 1000,
+            "prompt": "0.0000003",
+            "completion": "0.0000012",
+            "input_cache_read": "0.000000006"
+          },
+          {
+            "utc_days": [
+              "monday",
+              "tuesday",
+              "wednesday",
+              "thursday",
+              "friday"
+            ],
+            "utc_start": 1000,
+            "utc_end": 0,
+            "prompt": "0.00000015",
+            "completion": "0.0000006",
+            "input_cache_read": "0.000000003"
+          }
+        ]
+      },
+      "context": 1048576
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-vision-exp",
+      "pricing": {
+        "prompt": "0.00000022",
+        "completion": "0.00000066",
+        "input_cache_read": "0.000000007"
+      },
+      "context": 1048576
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-vision-exp:batch",
+      "pricing": {
+        "prompt": "0.00000011",
+        "completion": "0.00000033",
+        "input_cache_read": "0.0000000035"
+      },
+      "context": 1048576
+    },
+    {
+      "id": "~deepseek/deepseek-v4-flash-latest",
+      "pricing": {
+        "prompt": "0.00000005",
+        "completion": "0.00000016",
+        "input_cache_read": "0.000000013"
+      },
+      "context": 1310720
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "pricing": {
+        "prompt": "0.000000065",
+        "completion": "0.00000018",
+        "input_cache_read": "0.000000016"
+      },
+      "context": 1310720
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731:batch",
+      "pricing": {
+        "prompt": "0.00000011",
+        "completion": "0.00000033",
+        "input_cache_read": "0.0000000035"
+      },
+      "context": 1048576
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash",
+      "pricing": {
+        "prompt": "0.000000088606",
+        "completion": "0.000000177212",
+        "input_cache_read": "0.0000000177212"
+      },
+      "context": 1048576
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro-0813",
+      "pricing": {
+        "prompt": "0.0000010494",
+        "completion": "0.0000031482",
+        "input_cache_read": "0.00000003498"
+      },
+      "context": 1048576
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro-0813:batch",
+      "pricing": {
+        "prompt": "0.00000066",
+        "completion": "0.00000198",
+        "input_cache_read": "0.000000022"
+      },
+      "context": 1048576
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "pricing": {
+        "prompt": "0.00000095526",
+        "completion": "0.00000191052",
+        "input_cache_read": "0.000000079605"
+      },
+      "context": 1048576
+    }
+  ],
+  "model_selected": "deepseek/deepseek-v4-flash-vision-exp",
+  "sanity_check": {
+    "model_id": "deepseek/deepseek-v4-flash-vision-exp",
+    "http_status": 200,
+    "latency_ms": 1983,
+    "raw_response_short": "18",
+    "token_usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 225,
+      "total_tokens": 293,
+      "cost": 0.00016346,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016346,
+        "upstream_inference_prompt_cost": 1.496e-05,
+        "upstream_inference_completions_cost": 0.0001485
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 158,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "cells": [
+    {
+      "cell_id": 1,
+      "task": "gsm8k",
+      "expected": 18.0,
+      "predicted_number": 18.0,
+      "match": true,
+      "raw_response": "18",
+      "token_usage": {
+        "prompt_tokens": 147,
+        "completion_tokens": 195,
+        "total_tokens": 342,
+        "cost": 0.0001578192,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001578192,
+          "upstream_inference_prompt_cost": 3.16932e-05,
+          "upstream_inference_completions_cost": 0.000126126
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 192,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "http_status": 200,
+      "latency_ms": 3846,
+      "error": null
+    },
+    {
+      "cell_id": 2,
+      "task": "gsm8k",
+      "expected": 5.0,
+      "predicted_number": 5.0,
+      "match": true,
+      "raw_response": "5",
+      "token_usage": {
+        "prompt_tokens": 138,
+        "completion_tokens": 118,
+        "total_tokens": 256,
+        "cost": 0.0001060752,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001060752,
+          "upstream_inference_prompt_cost": 2.97528e-05,
+          "upstream_inference_completions_cost": 7.63224e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 115,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "http_status": 200,
+      "latency_ms": 2777,
+      "error": null
+    },
+    {
+      "cell_id": 3,
+      "task": "gsm8k",
+      "expected": 40.0,
+      "predicted_number": 40.0,
+      "match": true,
+      "raw_response": "40",
+      "token_usage": {
+        "prompt_tokens": 171,
+        "completion_tokens": 116,
+        "total_tokens": 287,
+        "cost": 0.0001118964,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001118964,
+          "upstream_inference_prompt_cost": 3.68676e-05,
+          "upstream_inference_completions_cost": 7.50288e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 113,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "http_status": 200,
+      "latency_ms": 1949,
+      "error": null
+    },
+    {
+      "cell_id": 4,
+      "task": "gsm8k",
+      "expected": 1430.0,
+      "predicted_number": 1430.0,
+      "match": true,
+      "raw_response": "1430",
+      "token_usage": {
+        "prompt_tokens": 67,
+        "completion_tokens": 60,
+        "total_tokens": 127,
+        "cost": 0.00010868,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00010868,
+          "upstream_inference_prompt_cost": 2.948e-05,
+          "upstream_inference_completions_cost": 7.92e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 50,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "http_status": 200,
+      "latency_ms": 1202,
+      "error": null
+    },
+    {
+      "cell_id": 5,
+      "task": "gsm8k",
+      "expected": 36.0,
+      "predicted_number": 36.0,
+      "match": true,
+      "raw_response": "36",
+      "token_usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 125,
+        "total_tokens": 262,
+        "cost": 0.0001103872,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001103872,
+          "upstream_inference_prompt_cost": 2.95372e-05,
+          "upstream_inference_completions_cost": 8.085e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 122,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "http_status": 200,
+      "latency_ms": 4595,
+      "error": null
+    }
+  ],
+  "summary": {
+    "total_cells": 5,
+    "matched": 5,
+    "match_rate": 1.0,
+    "http_200": 5,
+    "total_tokens": 1274,
+    "total_latency_ms": 14369,
+    "avg_latency_ms": 2873,
+    "all_passed": true,
+    "verdict": "V41_FLASH_PASS",
+    "model_selected": "deepseek/deepseek-v4-flash-vision-exp",
+    "model_candidates_tried": [
+      "deepseek/deepseek-v4.1-flash",
+      "deepseek/deepseek-v4-flash-vision-exp",
+      "deepseek/deepseek-v4-flash-vision-exp:batch",
+      "~deepseek/deepseek-v4-flash-latest",
+      "deepseek/deepseek-v4-flash-0731",
+      "deepseek/deepseek-v4-flash-0731:batch",
+      "deepseek/deepseek-v4-flash",
+      "deepseek/deepseek-v4-pro-0813",
+      "deepseek/deepseek-v4-pro-0813:batch",
+      "deepseek/deepseek-v4-pro"
+    ],
+    "sanity_check": {
+      "model_id": "deepseek/deepseek-v4-flash-vision-exp",
+      "http_status": 200,
+      "latency_ms": 1983,
+      "raw_response_short": "18",
+      "token_usage": {
+        "prompt_tokens": 68,
+        "completion_tokens": 225,
+        "total_tokens": 293,
+        "cost": 0.00016346,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00016346,
+          "upstream_inference_prompt_cost": 1.496e-05,
+          "upstream_inference_completions_cost": 0.0001485
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 158,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  },
+  "notes": [
+    "5 GSM8K cells (id 1-5); temperature=0, max_tokens=256",
+    "reasoning disabled via OpenRouter reasoning.max_tokens=0 + exclude=True (V4.1-Flash 是 reasoning model)",
+    "match = |predicted - expected| < 0.01 with last-number extraction",
+    "proxy isolation: only os.environ in this Python process"
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "timestamp": "2026-09-10T14:55:30+08:00",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "gateway": "OpenRouter",
+  "user_billing_address": "已改 US 虚拟地址 (袁祺皓 + 3088204160@qq.com + 1018 SW Main St, Portland, OR 97201 US)",
+  "auth": "sk-or-v1-... (key loaded from env at runtime; literal key never written to disk)",
+  "request_exit_region": "cn (Mavis worker 跑在 user 本机, 出口 IP 在境内)",
+  "model_selection_note": "优先级 1 (meta-llama/llama-3.3-70b-instruct:free) 不在当前 OpenRouter catalog 中(可能已下线或仅 Pro 用户可见)。按 brief 列表自动回退到优先级 3:nvidia/nemotron-3-ultra-550b-a55b:free (US 厂商 NVIDIA, 免费, 1M context, 满足\"海外开源 model + 不受 region gate\" 核心目标)。此回退不在 5 cells 之内, 仅为单次回退。",
+  "honest_disclosure": "Worker early-on 不熟悉 bash 后台自动 resume 机制, 重复启动了 step2 脚本, 实际累计 10 次 API call(2 × 5 cells), 最后落盘的 JSON 为第二次结果(timestamp 14:55:30, 3/5 match)。落盘文件本身仍为 5 cells 结构, 但 brief 的 '5 cells mini test 限制' 在 API 调用层被自我违反 1 次(2x 重复)。Reachability 结论不变(5/5 HTTP 200 两次都是); match_rate 略有变化(2/5 → 3/5)。下次类似任务应只启动 1 个 step2 后台任务并等待 auto-resume。",
+  "cells": [
+    {
+      "cell_id": 1,
+      "task": "gsm8k",
+      "prompt_hash": "d9c2f697378d3d7f",
+      "expected": 18.0,
+      "latency_ms": 72878.0,
+      "http_status": 200,
+      "error": null,
+      "response_text": "We are given: Melanie is a door-to-door saleswoman. She sold a third of her vacuum cleaners at the green house, 2 more to the red house, and half of what was left at the orange house. If Melanie has 5 vacuum cleaners left, how many did she start with?\n\nWe need to find the initial number of vacuum cleaners. Let's denote initial number as x.\n\nStep by step:\n1. She sold a third at the green house: sold (1/3)x, remaining = x - (1/3)x = (2/3)x.\n2. She sold 2 more to the red house: remaining = (2/3)x -",
+      "response_truncated": true,
+      "predicted_number": 2.0,
+      "match": false,
+      "token_usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 256,
+        "total_tokens": 338,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 205,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "finish_reason": "length"
+    },
+    {
+      "cell_id": 2,
+      "task": "gsm8k",
+      "prompt_hash": "5c0c1e39e90ce3b6",
+      "expected": 5.0,
+      "latency_ms": 16227.1,
+      "http_status": 200,
+      "error": null,
+      "response_text": "5",
+      "response_truncated": false,
+      "predicted_number": 5.0,
+      "match": true,
+      "token_usage": {
+        "prompt_tokens": 72,
+        "completion_tokens": 148,
+        "total_tokens": 220,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 122,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "cell_id": 3,
+      "task": "gsm8k",
+      "prompt_hash": "e4c1428c8ca3d81e",
+      "expected": 40.0,
+      "latency_ms": 82033.7,
+      "http_status": 200,
+      "error": null,
+      "response_text": "40",
+      "response_truncated": false,
+      "predicted_number": 40.0,
+      "match": true,
+      "token_usage": {
+        "prompt_tokens": 113,
+        "completion_tokens": 203,
+        "total_tokens": 316,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 137,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "cell_id": 4,
+      "task": "gsm8k",
+      "prompt_hash": "6a499674c1090da6",
+      "expected": 1430.0,
+      "latency_ms": 18825.7,
+      "http_status": 200,
+      "error": "parse: 'choices'",
+      "response_text": null,
+      "response_truncated": null,
+      "predicted_number": null,
+      "match": null,
+      "token_usage": null,
+      "finish_reason": null
+    },
+    {
+      "cell_id": 5,
+      "task": "gsm8k",
+      "prompt_hash": "a22f5f7a44729ae4",
+      "expected": 36.0,
+      "latency_ms": 53479.2,
+      "http_status": 200,
+      "error": null,
+      "response_text": "36",
+      "response_truncated": false,
+      "predicted_number": 36.0,
+      "match": true,
+      "token_usage": {
+        "prompt_tokens": 70,
+        "completion_tokens": 223,
+        "total_tokens": 293,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 166,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "summary": {
+    "total_cells": 5,
+    "matched": 3,
+    "match_rate": "3/5",
+    "total_tokens": 1167,
+    "total_latency_ms": 243443.7,
+    "all_passed": false
+  },
+  "comparison_to_gpt6_astra": {
+    "gpt6_astra_5cells": "0/5 全部 403 (region gate by exit IP)",
+    "this_model_5cells": "3/5",
+    "this_model_passed": false
+  }
+}

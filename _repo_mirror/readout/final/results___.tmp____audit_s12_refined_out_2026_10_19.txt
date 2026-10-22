@@ -1,0 +1,86 @@
+====================================================================================================
+[A] 精炼 key 形态扫描（四重判据）· 观测时点 2026-10-19 23:55:24
+  判据：候选 ⇔ (值长 ≥ 12) ∧ (字符类 ≥ 3) ∧ (非尖括号/引号包裹) ∧ (非跨件逐字重复)
+  自命中排除：扫描器/采样器/落盘器/本体暂存之源码文件（7 关键字）
+  断点（§11 基线）= 2026-10-19 19:36:05
+  朴素命中（形态字面）总数 = 36 ｜ 其中扫描器自身源件命中 = 26
+  精炼后「真实凭据候选」 = 0  ⇒ CLEAN ✅
+  ── 逐条分类（不含明文）──
+    results/_f3_payment_vector_third_party_recalc_2026_10_19.md      L378   形态=API_KEY=               值长=17  FORM_LIST   lower+UPPER+special/files=4
+    results/_f3_payment_vector_third_party_recalc_2026_10_19.md      L379   形态=API_KEY=               值长=1   FORM_LIST   special/files=3
+    results/_kd_cluster_verdict_pack_adjudication_2026_10_19.md      L734   形态=API_KEY=               值长=17  FORM_LIST   lower+UPPER+special/files=4
+    results/_root_session_history_memo_2026_10_14.md                 L1987  形态=sk-                    值长=7   FORM_LIST   lower+special/files=1
+    results/_root_session_history_memo_2026_10_14.md                 L1987  形态=API_KEY=               值长=17  FORM_LIST   lower+UPPER+special/files=4
+    results/_root_session_history_memo_2026_10_14.md                 L1992  形态=sk-                    值长=7   FORM_LIST   lower+special/files=1
+    results/_root_session_history_memo_2026_10_14.md                 L1992  形态=API_KEY=               值长=1   FORM_LIST   special/files=3
+    results/_root_session_history_memo_2026_10_14.md                 L1993  形态=API_KEY=               值长=1   FORM_LIST   special/files=3
+    results/_v143_v144_adoption_effect_2026_10_19.md                 L718   形态=API_KEY=               值长=17  FORM_LIST   lower+UPPER+special/files=4
+    results/_v143_v144_adoption_effect_2026_10_19.md                 L853   形态=API_KEY=               值长=1   FORM_LIST   special/files=3
+    results/.tmp/_audit_s12_keyclass_2026_10_19.py                   L29    形态=API_KEY=               值长=1   SELF_SRC    
+    results/.tmp/_audit_s12_keyclass_2026_10_19.py                   L30    形态=API_KEY=               值长=2   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_2026_10_19.py                    L81    形态=API_KEY=               值长=2   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_2026_10_19.py                    L87    形态=sk-                    值长=7   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_out_2026_10_19.txt               L42    形态=API_KEY=               值长=1   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_out_2026_10_19.txt               L42    形态=API_KEY=               值长=9   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_out_2026_10_19.txt               L43    形态=API_KEY=               值长=1   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_out_2026_10_19.txt               L43    形态=API_KEY=               值长=8   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_out_2026_10_19.txt               L44    形态=API_KEY=               值长=1   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_out_2026_10_19.txt               L44    形态=API_KEY=               值长=9   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_out_2026_10_19.txt               L45    形态=API_KEY=               值长=1   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_out_2026_10_19.txt               L45    形态=API_KEY=               值长=9   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_out_2026_10_19.txt               L46    形态=API_KEY=               值长=1   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_out_2026_10_19.txt               L46    形态=API_KEY=               值长=8   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_out_2026_10_19.txt               L47    形态=API_KEY=               值长=1   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_out_2026_10_19.txt               L47    形态=API_KEY=               值长=9   SELF_SRC    
+    results/.tmp/_audit_s12_keyscan_out_2026_10_19.txt               L48    形态=sk-                    值长=7   SELF_SRC    
+    results/.tmp/_audit_s12_refined_2026_10_19.py                    L29    形态=sk-                    值长=7   SELF_SRC    
+    results/.tmp/_audit_s12_refined_2026_10_19.py                    L30    形态=API_KEY=               值长=2   SELF_SRC    
+    results/.tmp/_audit_s12_refined_2026_10_19.py                    L84    形态=API_KEY=               值长=2   SELF_SRC    
+    results/.tmp/_audit_s12_refined_2026_10_19.py                    L134   形态=API_KEY=               值长=2   SELF_SRC    
+    results/.tmp/_s12_body_2026_10_19.md                             L232   形态=sk-                    值长=7   SELF_SRC    
+    results/.tmp/_s12_body_2026_10_19.md                             L232   形态=API_KEY=               值长=17  SELF_SRC    
+    results/.tmp/_s12_body_2026_10_19.md                             L237   形态=sk-                    值长=7   SELF_SRC    
+    results/.tmp/_s12_body_2026_10_19.md                             L237   形态=API_KEY=               值长=1   SELF_SRC    
+    results/.tmp/_s12_body_2026_10_19.md                             L238   形态=API_KEY=               值长=1   SELF_SRC    
+  ── 值之跨件逐字重复（判据④·两遍判定）──
+    值长=17 ｜ 出现于 4 件 ⇒ 形态举例之重复登记（真实凭据极不可能跨作者逐字同形）
+    值长=1 ｜ 出现于 3 件 ⇒ 形态举例之重复登记（真实凭据极不可能跨作者逐字同形）
+  ── 本件（备忘录）追加区之专项（字节切片 · 仪器修正 v3）──
+    追加区命中：形态=sk-                    片段长=7（**形态名之列举面**·本节自身之描述文本）
+    追加区命中：形态=sk-                    片段长=7（**形态名之列举面**·本节自身之描述文本）
+    追加区命中：形态=API_KEY=               片段长=25（**形态名之列举面**·本节自身之描述文本）
+    追加区命中：形态=API_KEY=               片段长=9（**形态名之列举面**·本节自身之描述文本）
+    追加区命中：形态=API_KEY=               片段长=9（**形态名之列举面**·本节自身之描述文本）
+    追加区朴素命中 = 5 ｜ 真实凭据候选 = 0
+
+====================================================================================================
+[B] 既有件 0 触动复证（窗内全件二次复算 · 与 §12-4-1 之首次实测对照）
+  复证：MATCH = 35 ｜ MISMATCH = 0  ⇒ 既有件触动数 = 0
+
+====================================================================================================
+[C] 本件落盘态独立复测（第二遍 · 与落盘器异路径）
+  SHA-12      = 08D08C013BC3
+  bytes       = 255330
+  LF          = 2043
+  CR / CRLF   = 0 / 0
+  BOM         = False
+  U+FFFD      = 0
+  末字节      = 0xa
+  前 215,131 B 之 SHA-256 = fa5145d90fe4ef86373b4577f53467f5dd4d7c7d18ddc7b8d58104e0e093cab6
+  ⇒ 前缀与落笔前基线（fa5145d90fe4…）一致：True
+  节号序列（末 6 节标题）：
+    ## §0-锚·卷首指纹锚（本节结构性植入 · append-only 链 · 2026-10-19 19:1x · 子棒版视角）
+    ## §0A·全史必首读（子代理版修史件 v0.7 凝为 · 2026-10-19 夜 · evidence-auditor 子代理 · 独立判读）
+    ## §0 摘要（先给判）
+    ## §1 方法与取证
+    ## §2 按主题／里程碑之结构化总结（T1–T18）
+    ## §3 纪律演变与 PI 纠正（对抗遗忘之核心面）
+    ## §4 产出件总账（本棒逐件实测 · ⛔ 0 沿用他件自报值）
+    ## §5 遗留／KD
+    ## §6 落盘自核（本件自身）
+    ## §7 补录·今日链之产出总账与双版互核（2026-10-17 19:00 → 10-18 13:30 · 子棒版视角 · append-only 追加）
+    ## §8 补录·午后链之产出总账（2026-10-18 13:30 → 17:55 · 子棒版视角 · append-only 追加）
+    ## §9 补录·夜链之产出总账（2026-10-18 17:55 → 2026-10-18 22:04:28 · 子棒版视角 · append-only 追加
+    ## §10 补录·对话面与文件面双账（2026-10-18 22:04:28 → 2026-10-19 16:1x · 子棒版视角 · **独立判读** · 
+    ## §11·补录·晚链之产出总账与修史落地（2026-10-19 16:28 → 19:17 · 子棒版视角 · **独立判读** · append-only
+    ## §12·补录·夜链之产出总账与六卡二十四裁（2026-10-19 19:36 → 23:43 · 子棒版视角 · **独立判读** · append-on

@@ -1,0 +1,122 @@
+{
+  "timestamp": "2026-09-10T15:47:09+08:00",
+  "model": "openai/gpt-6-astra",
+  "gateway": "OpenRouter",
+  "user_billing_address": "user 已换新 key (fingerprint sk-or-v1-4490c2e2..., 2026-09-10 15:42)",
+  "proxy": "HTTP_PROXY+HTTPS_PROXY=http://127.0.0.1:7897 (worker 进程隔离, 不动 user 本机)",
+  "vpn_status": "active via 老猫加速器 proxy 7897",
+  "request_exit_region": "US (verified via ipapi.co + ip-api.com, 2/2 votes US)",
+  "auth": "sk-or-v1-... (key loaded from env OPENROUTER_API_KEY; literal key never written to disk; key fingerprint=sk-or-v1-4490c2e2)",
+  "step1_exit_region_check": {
+    "us_votes": 2,
+    "total_votes": 2,
+    "details": {
+      "ipapi_co": {
+        "http": 200,
+        "country": "US"
+      },
+      "ip_api_com": {
+        "http": 200,
+        "country": "US"
+      }
+    }
+  },
+  "step2_catalog_check": {
+    "http_status": 200,
+    "total_models": 436,
+    "gpt6_astra_found": true,
+    "gpt6_variants": [
+      "openai/gpt-6-astra",
+      "openai/gpt-6-astra:batch",
+      "openai/gpt-6-astra-pro",
+      "openai/gpt-6-astra-pro:batch"
+    ]
+  },
+  "cells": [
+    {
+      "cell_id": 1,
+      "task": "gsm8k",
+      "expected": 18.0,
+      "predicted_number": null,
+      "match": false,
+      "raw_response": null,
+      "token_usage": null,
+      "http_status": 403,
+      "latency_ms": 497,
+      "error": "{\"error\":{\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\",\"code\":403,\"metadata\":{\"provider_name\":null,\"previous_errors\":[{\"code\":403,\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\"},{\"code\":403,\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\"}]}},\"user_id\":\"user_3J7P6ghveKjYjvgV8u3JEyBq4Dm\"}"
+    },
+    {
+      "cell_id": 2,
+      "task": "gsm8k",
+      "expected": 5.0,
+      "predicted_number": null,
+      "match": false,
+      "raw_response": null,
+      "token_usage": null,
+      "http_status": 403,
+      "latency_ms": 431,
+      "error": "{\"error\":{\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\",\"code\":403,\"metadata\":{\"provider_name\":null,\"previous_errors\":[{\"code\":403,\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\"},{\"code\":403,\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\"}]}},\"user_id\":\"user_3J7P6ghveKjYjvgV8u3JEyBq4Dm\"}"
+    },
+    {
+      "cell_id": 3,
+      "task": "gsm8k",
+      "expected": 40.0,
+      "predicted_number": null,
+      "match": false,
+      "raw_response": null,
+      "token_usage": null,
+      "http_status": 403,
+      "latency_ms": 424,
+      "error": "{\"error\":{\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\",\"code\":403,\"metadata\":{\"provider_name\":null,\"previous_errors\":[{\"code\":403,\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\"},{\"code\":403,\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\"}]}},\"user_id\":\"user_3J7P6ghveKjYjvgV8u3JEyBq4Dm\"}"
+    },
+    {
+      "cell_id": 4,
+      "task": "gsm8k",
+      "expected": 1430.0,
+      "predicted_number": null,
+      "match": false,
+      "raw_response": null,
+      "token_usage": null,
+      "http_status": 403,
+      "latency_ms": 463,
+      "error": "{\"error\":{\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\",\"code\":403,\"metadata\":{\"provider_name\":null,\"previous_errors\":[{\"code\":403,\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\"},{\"code\":403,\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\"}]}},\"user_id\":\"user_3J7P6ghveKjYjvgV8u3JEyBq4Dm\"}"
+    },
+    {
+      "cell_id": 5,
+      "task": "gsm8k",
+      "expected": 36.0,
+      "predicted_number": null,
+      "match": false,
+      "raw_response": null,
+      "token_usage": null,
+      "http_status": 403,
+      "latency_ms": 438,
+      "error": "{\"error\":{\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\",\"code\":403,\"metadata\":{\"provider_name\":null,\"previous_errors\":[{\"code\":403,\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\"},{\"code\":403,\"message\":\"The request is prohibited due to a violation of provider Terms Of Service.\"}]}},\"user_id\":\"user_3J7P6ghveKjYjvgV8u3JEyBq4Dm\"}"
+    }
+  ],
+  "summary": {
+    "total_cells": 5,
+    "matched": 0,
+    "match_rate": 0.0,
+    "http_200": 0,
+    "total_tokens": 0,
+    "total_latency_ms": 2253,
+    "avg_latency_ms": 450,
+    "all_passed": false,
+    "all_403_tos": true,
+    "verdict": "GPT6_PROXY_V2_FAIL_TOS_OR_REGION"
+  },
+  "comparison": {
+    "no_proxy_gpt6_5cells": "0/5 全部 403 (region gate by exit IP, 出口 CN)",
+    "vpn_attempt_gpt6_5cells": "0/5 BLOCKED (VPN 未生效, 出口 CN Shanghai)",
+    "proxy_v1_old_key_gpt6_5cells": "0/5 (region gate ✓ via proxy 7897, but layer 2 TOS gate 拒)",
+    "proxy_v2_new_key_gpt6_5cells": "0/5 (http200=0/5, verdict=GPT6_PROXY_V2_FAIL_TOS_OR_REGION)"
+  },
+  "notes": [
+    "smoke test only: verifies OpenRouter + GPT-6-Astra reachability via new key + proxy 7897",
+    "5 GSM8K cells (id 1-5); temperature=0, max_tokens=256",
+    "match = |predicted - expected| < 0.01 with last-number extraction",
+    "proxy isolation: only os.environ in this Python process; user system proxy NOT modified",
+    "user_id field in error response omitted from this JSON to avoid leak"
+  ]
+}

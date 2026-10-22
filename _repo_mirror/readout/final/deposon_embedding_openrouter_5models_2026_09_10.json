@@ -1,0 +1,403 @@
+{
+  "timestamp": "2026-09-10T16:55:37+08:00",
+  "gateway": "OpenRouter",
+  "user_billing_address": "user 已换新 key (前 12 位 sk-or-v1-4490c2e2)",
+  "auth": "sk-or-v1-... (key loaded from env; literal key never written to disk)",
+  "models_tested": [
+    "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+    "nvidia/nemotron-3-embed-1b:free",
+    "liquid/lfm-2.5-embedding-350m:free",
+    "voyageai/voyage-4",
+    "thenlper/gte-base"
+  ],
+  "sanity_check": {
+    "model": "nvidia/nemotron-3-embed-1b:free",
+    "input": "What is 2+2?",
+    "http_status": 200,
+    "dimension": 2048,
+    "latency_ms": 1628.1,
+    "pass": true
+  },
+  "catalog_inventory": {
+    "nvidia/llama-nemotron-embed-vl-1b-v2:free": false,
+    "nvidia/nemotron-3-embed-1b:free": false,
+    "liquid/lfm-2.5-embedding-350m:free": false,
+    "voyageai/voyage-4": false,
+    "thenlper/gte-base": false
+  },
+  "cells": [
+    {
+      "cell_id": 1,
+      "task": "gsm8k",
+      "text_len": 200,
+      "text_head": "Melanie sold vacuum cleaners. She started with 18 vacuum cleaners. She sold 1/3 ...",
+      "results": [
+        {
+          "http_status": 200,
+          "latency_ms": 1523.8,
+          "dimension": 2048,
+          "usage": {
+            "prompt_tokens": 52,
+            "total_tokens": 52,
+            "cost": 0,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "private/openrouter/nvidia/llama-nemotron-embed-vl-1b-v2",
+          "err": null,
+          "model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+          "cost_usd": 0.0
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1139.3,
+          "dimension": 2048,
+          "usage": {
+            "prompt_tokens": 55,
+            "total_tokens": 55,
+            "cost": 0,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "private/openrouter/nvidia/nemotron-3-embed-1b",
+          "err": null,
+          "model": "nvidia/nemotron-3-embed-1b:free",
+          "cost_usd": 0.0
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1201.1,
+          "dimension": 1024,
+          "usage": {
+            "prompt_tokens": 54,
+            "total_tokens": 54,
+            "cost": 0,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "openrouter:LiquidAI/LFM2.5-Embedding-350M:free",
+          "err": null,
+          "model": "liquid/lfm-2.5-embedding-350m:free",
+          "cost_usd": 0.0
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1088.9,
+          "dimension": 1024,
+          "usage": {
+            "prompt_tokens": 51,
+            "total_tokens": 51,
+            "cost": 3.06e-06,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 3.06e-06,
+              "upstream_inference_prompt_cost": 3.06e-06,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "voyage-4",
+          "err": null,
+          "model": "voyageai/voyage-4",
+          "cost_usd": 0.0
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1977.3,
+          "dimension": 768,
+          "usage": {
+            "prompt_tokens": 50,
+            "total_tokens": 50,
+            "cost": 2.5e-07,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 2.5e-07,
+              "upstream_inference_prompt_cost": 2.5e-07,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "thenlper/gte-base",
+          "err": null,
+          "model": "thenlper/gte-base",
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "cell_id": 2,
+      "task": "gsm8k",
+      "text_len": 118,
+      "text_head": "A farmer has 5 apples. He picks 7 more from the orchard and gives 3 to his neigh...",
+      "results": [
+        {
+          "http_status": 200,
+          "latency_ms": 1431.3,
+          "dimension": 2048,
+          "usage": {
+            "prompt_tokens": 35,
+            "total_tokens": 35,
+            "cost": 0,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "private/openrouter/nvidia/llama-nemotron-embed-vl-1b-v2",
+          "err": null,
+          "model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+          "cost_usd": 0.0
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1216.4,
+          "dimension": 2048,
+          "usage": {
+            "prompt_tokens": 34,
+            "total_tokens": 34,
+            "cost": 0,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "private/openrouter/nvidia/nemotron-3-embed-1b",
+          "err": null,
+          "model": "nvidia/nemotron-3-embed-1b:free",
+          "cost_usd": 0.0
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 2653.7,
+          "dimension": 1024,
+          "usage": {
+            "prompt_tokens": 33,
+            "total_tokens": 33,
+            "cost": 0,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "openrouter:LiquidAI/LFM2.5-Embedding-350M:free",
+          "err": null,
+          "model": "liquid/lfm-2.5-embedding-350m:free",
+          "cost_usd": 0.0
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 993.4,
+          "dimension": 1024,
+          "usage": {
+            "prompt_tokens": 32,
+            "total_tokens": 32,
+            "cost": 1.92e-06,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 1.92e-06,
+              "upstream_inference_prompt_cost": 1.92e-06,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "voyage-4",
+          "err": null,
+          "model": "voyageai/voyage-4",
+          "cost_usd": 0.0
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1985.3,
+          "dimension": 768,
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 30,
+            "cost": 1.5e-07,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 1.5e-07,
+              "upstream_inference_prompt_cost": 1.5e-07,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "thenlper/gte-base",
+          "err": null,
+          "model": "thenlper/gte-base",
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "cell_id": 3,
+      "task": "strategyqa",
+      "text_len": 84,
+      "text_head": "Is the sky blue on a clear day? Explain your reasoning using atmospheric scatter...",
+      "results": [
+        {
+          "http_status": 200,
+          "latency_ms": 1454.4,
+          "dimension": 2048,
+          "usage": {
+            "prompt_tokens": 19,
+            "total_tokens": 19,
+            "cost": 0,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "private/openrouter/nvidia/llama-nemotron-embed-vl-1b-v2",
+          "err": null,
+          "model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+          "cost_usd": 0.0
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1188.3,
+          "dimension": 2048,
+          "usage": {
+            "prompt_tokens": 18,
+            "total_tokens": 18,
+            "cost": 0,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "private/openrouter/nvidia/nemotron-3-embed-1b",
+          "err": null,
+          "model": "nvidia/nemotron-3-embed-1b:free",
+          "cost_usd": 0.0
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1711.4,
+          "dimension": 1024,
+          "usage": {
+            "prompt_tokens": 17,
+            "total_tokens": 17,
+            "cost": 0,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "openrouter:LiquidAI/LFM2.5-Embedding-350M:free",
+          "err": null,
+          "model": "liquid/lfm-2.5-embedding-350m:free",
+          "cost_usd": 0.0
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1732.0,
+          "dimension": 1024,
+          "usage": {
+            "prompt_tokens": 16,
+            "total_tokens": 16,
+            "cost": 9.6e-07,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 9.6e-07,
+              "upstream_inference_prompt_cost": 9.6e-07,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "voyage-4",
+          "err": null,
+          "model": "voyageai/voyage-4",
+          "cost_usd": 0.0
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1193.9,
+          "dimension": 768,
+          "usage": {
+            "prompt_tokens": 18,
+            "total_tokens": 18,
+            "cost": 9e-08,
+            "is_byok": false,
+            "cost_details": {
+              "upstream_inference_cost": 9e-08,
+              "upstream_inference_prompt_cost": 9e-08,
+              "upstream_inference_completions_cost": 0
+            }
+          },
+          "model_returned": "thenlper/gte-base",
+          "err": null,
+          "model": "thenlper/gte-base",
+          "cost_usd": 0.0
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_calls": 15,
+    "all_passed": true,
+    "by_model": {
+      "nvidia/llama-nemotron-embed-vl-1b-v2:free": {
+        "calls": 3,
+        "passed": 3,
+        "cost": 0.0,
+        "avg_latency_ms": 1469.8,
+        "dimension": 2048
+      },
+      "nvidia/nemotron-3-embed-1b:free": {
+        "calls": 3,
+        "passed": 3,
+        "cost": 0.0,
+        "avg_latency_ms": 1181.3,
+        "dimension": 2048
+      },
+      "liquid/lfm-2.5-embedding-350m:free": {
+        "calls": 3,
+        "passed": 3,
+        "cost": 0.0,
+        "avg_latency_ms": 1855.4,
+        "dimension": 1024
+      },
+      "voyageai/voyage-4": {
+        "calls": 3,
+        "passed": 3,
+        "cost": 0.0,
+        "avg_latency_ms": 1271.4,
+        "dimension": 1024
+      },
+      "thenlper/gte-base": {
+        "calls": 3,
+        "passed": 3,
+        "cost": 0.0,
+        "avg_latency_ms": 1718.8,
+        "dimension": 768
+      }
+    }
+  },
+  "constraints_observed": [
+    "key loaded from LLM API.txt via GB18030, kept in os.environ only, never written to disk",
+    "no proxy set (HTTP_PROXY/HTTPS_PROXY/ALL_PROXY explicitly popped)",
+    "5 models exactly (no Google Gemini Embedding, no extras)",
+    "15 calls total (1 sanity + 5x3 grid)",
+    "anchor JSON untouched (no write to verifier/handoff/KT_ABC1_anchors_sha256_12.json)",
+    "SPEC V0.1 frozen versions untouched"
+  ]
+}
