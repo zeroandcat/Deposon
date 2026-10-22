@@ -1,0 +1,449 @@
+{
+  "task": "t1_exp2_a_answer_face_baseline",
+  "generated_local": "2026-10-09T22:22:00.765018+08:00",
+  "note": "A 段基线 (0 新调用, 自既有 r2 180 ok 抽取); PI 决议④认可之轴探针读数面; ⛔ 本读数 0 构成判定, 仅设计基线",
+  "source_records": {
+    "path": "〔本地绝对路径·脱敏略:�〕�人资料\\deposon-repo\\.tmp\\_t1_qwen_temp_sweep_r2_records.json",
+    "sha12": "BB511E7B0BAF",
+    "records_total": 182,
+    "records_ok": 180
+  },
+  "extraction_rule": "full_reply_text 之尾非空行, 逐字 = 答案; ⛔ 0 语义解析 0 LLM 改写 0 归一化",
+  "restore_check_K_EXP2_A2": {
+    "tail_equals_content_count": 180,
+    "records_ok": 180,
+    "restore_rate": 1.0,
+    "rule_caliber_holds": true
+  },
+  "answer_uniqueness": {
+    "uniq_answers": 22
+  },
+  "dissimilarity_definitions": {
+    "primary_exact": "精确相异 (0/1)",
+    "secondary_edit": "1 - difflib.SequenceMatcher.ratio() (空侧 ⇒ None, 不可构造)",
+    "effect_direction": "正 = 温度带来更多答案翻转 (⛔ 非「更相似」之反向表述)"
+  },
+  "pairing_definitions": {
+    "within_temp": "同组 (dim/caption/teacher) 内 C(R,2)",
+    "cross_temp_reask_matched": "跨温同 reask_idx (与 r2 判定件 §4.2 可比)",
+    "cross_temp_allcross": "跨温全交叉 (除 reask-matched 外)",
+    "stratification": "⛔ 0 跨 caption 汇总外推 (K-EXP2-A6); 本面按组计算后再汇总"
+  },
+  "analysis": {
+    "counts": {
+      "records_ok": 180,
+      "n_groups": 20
+    },
+    "n_pairs": {
+      "within_exact": 180,
+      "cross_exact": 540,
+      "within_edit": 180,
+      "cross_edit": 540
+    },
+    "means": {
+      "within_exact": 0.422222,
+      "cross_exact": 0.427778,
+      "within_edit": 0.337831,
+      "cross_edit": 0.333157
+    },
+    "delta": {
+      "exact": 0.005556,
+      "edit": -0.004674
+    },
+    "per_group": [
+      {
+        "dim": "L14",
+        "caption_id": "L_geography_world",
+        "teacher": "GLM_1",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.0,
+        "cross_exact_mean": 0.0,
+        "delta_exact": 0.0,
+        "within_edit_mean": 0.0,
+        "cross_edit_mean": 0.0,
+        "delta_edit": 0.0
+      },
+      {
+        "dim": "L14",
+        "caption_id": "L_geography_world",
+        "teacher": "GLM_2",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.0,
+        "cross_exact_mean": 0.0,
+        "delta_exact": 0.0,
+        "within_edit_mean": 0.0,
+        "cross_edit_mean": 0.0,
+        "delta_edit": 0.0
+      },
+      {
+        "dim": "L14",
+        "caption_id": "L_geography_world",
+        "teacher": "coze",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.222222,
+        "cross_exact_mean": 0.222222,
+        "delta_exact": 0.0,
+        "within_edit_mean": 0.222222,
+        "cross_edit_mean": 0.222222,
+        "delta_edit": 0.0
+      },
+      {
+        "dim": "L14",
+        "caption_id": "L_geography_world",
+        "teacher": "kimi",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.222222,
+        "cross_exact_mean": 0.222222,
+        "delta_exact": 0.0,
+        "within_edit_mean": 0.222222,
+        "cross_edit_mean": 0.222222,
+        "delta_edit": 0.0
+      },
+      {
+        "dim": "L14",
+        "caption_id": "L_geography_world",
+        "teacher": "minimax",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.222222,
+        "cross_exact_mean": 0.222222,
+        "delta_exact": 0.0,
+        "within_edit_mean": 0.222222,
+        "cross_edit_mean": 0.222222,
+        "delta_edit": 0.0
+      },
+      {
+        "dim": "L14",
+        "caption_id": "L_historical_causality",
+        "teacher": "GLM_1",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.888889,
+        "cross_exact_mean": 0.814815,
+        "delta_exact": -0.074074,
+        "within_edit_mean": 0.796825,
+        "cross_edit_mean": 0.783069,
+        "delta_edit": -0.013757
+      },
+      {
+        "dim": "L14",
+        "caption_id": "L_historical_causality",
+        "teacher": "GLM_2",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.777778,
+        "cross_exact_mean": 0.851852,
+        "delta_exact": 0.074074,
+        "within_edit_mean": 0.711111,
+        "cross_edit_mean": 0.819753,
+        "delta_edit": 0.108642
+      },
+      {
+        "dim": "L14",
+        "caption_id": "L_historical_causality",
+        "teacher": "coze",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.777778,
+        "cross_exact_mean": 0.814815,
+        "delta_exact": 0.037037,
+        "within_edit_mean": 0.777778,
+        "cross_edit_mean": 0.758025,
+        "delta_edit": -0.019753
+      },
+      {
+        "dim": "L14",
+        "caption_id": "L_historical_causality",
+        "teacher": "kimi",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.777778,
+        "cross_exact_mean": 0.666667,
+        "delta_exact": -0.111111,
+        "within_edit_mean": 0.730159,
+        "cross_edit_mean": 0.584656,
+        "delta_edit": -0.145503
+      },
+      {
+        "dim": "L14",
+        "caption_id": "L_historical_causality",
+        "teacher": "minimax",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.888889,
+        "cross_exact_mean": 0.888889,
+        "delta_exact": 0.0,
+        "within_edit_mean": 0.814815,
+        "cross_edit_mean": 0.779375,
+        "delta_edit": -0.035439
+      },
+      {
+        "dim": "L2",
+        "caption_id": "L_biological_taxonomy",
+        "teacher": "GLM_1",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.777778,
+        "cross_exact_mean": 0.703704,
+        "delta_exact": -0.074074,
+        "within_edit_mean": 0.555556,
+        "cross_edit_mean": 0.481481,
+        "delta_edit": -0.074074
+      },
+      {
+        "dim": "L2",
+        "caption_id": "L_biological_taxonomy",
+        "teacher": "GLM_2",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.777778,
+        "cross_exact_mean": 0.592593,
+        "delta_exact": -0.185185,
+        "within_edit_mean": 0.407407,
+        "cross_edit_mean": 0.345679,
+        "delta_edit": -0.061728
+      },
+      {
+        "dim": "L2",
+        "caption_id": "L_biological_taxonomy",
+        "teacher": "coze",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.222222,
+        "cross_exact_mean": 0.666667,
+        "delta_exact": 0.444444,
+        "within_edit_mean": 0.074074,
+        "cross_edit_mean": 0.222222,
+        "delta_edit": 0.148148
+      },
+      {
+        "dim": "L2",
+        "caption_id": "L_biological_taxonomy",
+        "teacher": "kimi",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.777778,
+        "cross_exact_mean": 0.62963,
+        "delta_exact": -0.148148,
+        "within_edit_mean": 0.407407,
+        "cross_edit_mean": 0.358025,
+        "delta_edit": -0.049383
+      },
+      {
+        "dim": "L2",
+        "caption_id": "L_biological_taxonomy",
+        "teacher": "minimax",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.444444,
+        "cross_exact_mean": 0.592593,
+        "delta_exact": 0.148148,
+        "within_edit_mean": 0.148148,
+        "cross_edit_mean": 0.197531,
+        "delta_edit": 0.049383
+      },
+      {
+        "dim": "L2",
+        "caption_id": "S5",
+        "teacher": "GLM_1",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.0,
+        "cross_exact_mean": 0.0,
+        "delta_exact": 0.0,
+        "within_edit_mean": 0.0,
+        "cross_edit_mean": 0.0,
+        "delta_edit": 0.0
+      },
+      {
+        "dim": "L2",
+        "caption_id": "S5",
+        "teacher": "GLM_2",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.0,
+        "cross_exact_mean": 0.0,
+        "delta_exact": 0.0,
+        "within_edit_mean": 0.0,
+        "cross_edit_mean": 0.0,
+        "delta_edit": 0.0
+      },
+      {
+        "dim": "L2",
+        "caption_id": "S5",
+        "teacher": "coze",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.222222,
+        "cross_exact_mean": 0.222222,
+        "delta_exact": 0.0,
+        "within_edit_mean": 0.222222,
+        "cross_edit_mean": 0.222222,
+        "delta_edit": 0.0
+      },
+      {
+        "dim": "L2",
+        "caption_id": "S5",
+        "teacher": "kimi",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.222222,
+        "cross_exact_mean": 0.222222,
+        "delta_exact": 0.0,
+        "within_edit_mean": 0.222222,
+        "cross_edit_mean": 0.222222,
+        "delta_edit": 0.0
+      },
+      {
+        "dim": "L2",
+        "caption_id": "S5",
+        "teacher": "minimax",
+        "n_ok": 9,
+        "temps_present": [
+          0.0,
+          0.3,
+          0.5
+        ],
+        "n_within_pairs": 9,
+        "n_cross_pairs": 27,
+        "within_exact_mean": 0.222222,
+        "cross_exact_mean": 0.222222,
+        "delta_exact": 0.0,
+        "within_edit_mean": 0.222222,
+        "cross_edit_mean": 0.222222,
+        "delta_edit": 0.0
+      }
+    ],
+    "permutation": {
+      "n_groups_used": 20,
+      "observed_mean_delta_exact": 0.005556,
+      "null_mean": 0.005616,
+      "null_ci95_2p5": -0.042593,
+      "null_ci95_97p5": 0.064815,
+      "p_one_sided_greater": 0.4744,
+      "note": "组内置换: 以组之 Δ 为单元, 自举组内 Δ 值构成 0 分布; CI 之读法归 verdict-keeper 面 (本棒 0 判读)"
+    }
+  },
+  "key_shape_self_scan": {
+    "hits": [],
+    "status": "clean"
+  }
+}
