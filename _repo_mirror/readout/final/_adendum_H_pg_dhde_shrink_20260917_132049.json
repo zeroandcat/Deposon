@@ -1,0 +1,141 @@
+{
+  "date": "2026-09-17T13:20:50.868159+08:00",
+  "task": "Adendum Phase 3 - 6 项 0 LLM 批处理",
+  "agent_role": "worker",
+  "parent_session": "mvs_bbeb804b1a6a41109be740636eed1709",
+  "iron_7_compliance_overall": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "adendum_result": {
+    "adendum": "H. P-G dH_dE ≈ 5× 收窄 (本地统计重算)",
+    "source_proposal": "Coze §6.5",
+    "elapsed_seconds": 0.01988816261291504,
+    "method": "0 LLM numpy 统计重算 P-G V0.1 9m60c 的 ratio_H_over_E, 9 model 当前分布 + trimmed (去头尾 1)",
+    "data_source": {
+      "pg_v01_path": "results\\deposon_pg_v01_9m60c_2026_09_15.json",
+      "pg_v01_sha12": "ab75889ee738",
+      "n_models": 9
+    },
+    "per_model_detail": [
+      {
+        "model": "doubao-seed-2.0-lite",
+        "ratio_H_over_E": 8.0316,
+        "T60": 52,
+        "R60": 8,
+        "A60": 0,
+        "T_frac60": 0.8667
+      },
+      {
+        "model": "glm-5.3",
+        "ratio_H_over_E": 0.0,
+        "T60": 52,
+        "R60": 6,
+        "A60": 2,
+        "T_frac60": 0.8667
+      },
+      {
+        "model": "deepseek-v4-flash",
+        "ratio_H_over_E": 6.183,
+        "T60": 46,
+        "R60": 10,
+        "A60": 4,
+        "T_frac60": 0.7667
+      },
+      {
+        "model": "doubao-seed-evolving",
+        "ratio_H_over_E": 5.785,
+        "T60": 44,
+        "R60": 12,
+        "A60": 4,
+        "T_frac60": 0.7333
+      },
+      {
+        "model": "minimax-m3",
+        "ratio_H_over_E": 5.4442,
+        "T60": 42,
+        "R60": 16,
+        "A60": 2,
+        "T_frac60": 0.7
+      },
+      {
+        "model": "glm-5.3-flash",
+        "ratio_H_over_E": 5.483,
+        "T60": 42,
+        "R60": 2,
+        "A60": 16,
+        "T_frac60": 0.7
+      },
+      {
+        "model": "kimi-k2.7-code",
+        "ratio_H_over_E": 4.9356,
+        "T60": 38,
+        "R60": 16,
+        "A60": 6,
+        "T_frac60": 0.6333
+      },
+      {
+        "model": "doubao-seed-2.1-turbo",
+        "ratio_H_over_E": 4.765,
+        "T60": 36,
+        "R60": 4,
+        "A60": 20,
+        "T_frac60": 0.6
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "ratio_H_over_E": 4.4396,
+        "T60": 32,
+        "R60": 4,
+        "A60": 24,
+        "T_frac60": 0.5333
+      }
+    ],
+    "statistics": {
+      "all_9_models": {
+        "median": 5.4442,
+        "q1": 4.765,
+        "q3": 5.785,
+        "iqr": 1.0200000000000005,
+        "mean": 5.007444444444444,
+        "std": 2.027857022743802,
+        "min": 0.0,
+        "max": 8.0316,
+        "full_range": 8.0316
+      },
+      "trimmed_7_models_drop_head_tail_1": {
+        "median": 5.4442,
+        "q1": 4.8503,
+        "q3": 5.634,
+        "range": 1.7433999999999994
+      },
+      "note": "glm-5.3 ratio=0.0 因 A60=2 (canonical boundary, d_E≈0); doubao-seed-2.0-lite ratio=8.03 因 A60=0 (canonical boundary, d_E≈0); 两者均在 canonical 边界, 剔除后稳健区间 4.4-8.0 实际是 7 model 子集"
+    },
+    "cross_backbone_robustness_status": {
+      "is_robust_to_9_backbones": false,
+      "observed_std": 2.027857022743802,
+      "expected_for_robust": "std < 1.0 (CV < 0.2)"
+    },
+    "additional_backbones_needed": "Coze 推荐 2 backbone (Nemotron 5 + Qwen3); Trae 推荐 2 backbone (Llama 3.4 / Mistral + DeepSeek V4); KIMI/Coze 共同推荐 Qwen3 (火山方舟)。建议在 Adendum F 完成 (P-E 3 modal 复测) 后, 同批用 Qwen3 火山方舟 coding-plan 跑 30 cells, 重算 ratio_H_over_E, 看是否落入 [median ± IQR/2] 区间",
+    "verdict": "GRAY",
+    "verdict_reason": "9 model ratio_H_over_E: median=5.444, IQR=1.020, std=2.028; 剔除 canonical 边界 (glm-5.3/doubao-seed-2.0-lite) 后 7 model: median=5.444, range=1.743; 当前样本量不足以判定 5x 收窄到物理常数 (需 ≥3 backbone × 多次 run 验证); 诚实地标注 GRAY, 待 Adendum F 完成后同批补 Qwen3 / Nemotron 5 backbone 验证",
+    "iron_7_compliance": {
+      "no_llm": true,
+      "no_proxy": true,
+      "no_gateway": true,
+      "no_key_in_prompt_json_disk": true,
+      "no_18_frozen_touch": true,
+      "no_p_g_v0_touch": true,
+      "no_p_g_v01_touch": true,
+      "no_plugin_spec_touch": true,
+      "no_verifier_mavis_builtin_scripts_touch": true
+    }
+  }
+}
