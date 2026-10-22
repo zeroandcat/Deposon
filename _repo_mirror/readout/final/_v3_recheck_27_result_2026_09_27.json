@@ -1,0 +1,1493 @@
+{
+  "schema": "v3_recheck_result/27_p_l_p_c_finite_size_scaling/1",
+  "prereg": {
+    "path": "results/_v3_recheck_prereg_v1_2026_09_27.md",
+    "sha12": "88052d7db895",
+    "prereg_v1p1_sha12": "bcc3cee23e82",
+    "kill_line": "K-V3R-27",
+    "threshold": "TH-V3R-27（ν, η grid；N 数列沿 §1.2 #27(a) 字面，§2.4 标占位 -> 取字面最小构造）"
+  },
+  "executor": "results/_v3_recheck_27_executor_2026_09_27.py",
+  "date": "2026-09-27",
+  "seed": 20260927,
+  "runtime": "0 LLM; numpy + hashlib + json only; no network; read-only inputs",
+  "caliber_isolation_note": "本条 η = 异常指数（标度轴）；#10 P-C exp_3_3 的 η = Langevin 温度抖动。同名不同义，0 互替、0 跨条比较。",
+  "inputs": [
+    {
+      "path": "results/_p_l_p_c_finite_size_scaling_2026_09_16/p_l_p_c_finite_size_scaling_results_2026_09_16.json",
+      "sha12_measured": "664e7cc05aec",
+      "prereg_recorded_sha12": "00DF93A112F7",
+      "prereg_sha_match": false,
+      "bytes": 9076,
+      "prereg_recorded_bytes": 9076
+    },
+    {
+      "path": "results/deposon_v3_physical_opt_60cells_2026_09_11.json",
+      "sha12_measured": "c659695aa23c",
+      "prereg_v1p1_recorded_sha12": "c659695aa23c",
+      "prereg_sha_match": true,
+      "bytes": 17732,
+      "prereg_recorded_bytes": 17732
+    }
+  ],
+  "construct": {
+    "(a)_cross_N": "N ∈ [20, 40, 60, 80, 120] cells（§1.2 #27(a) 字面）：逐 (N, model) 从该 model 自己的 60-cell 标签总体有放回重采样 N cells，k ~ Binomial(N, T60/60)（精确边缘分布），得 |Δt| = |T_frac - T_c| 与 log D_fix2 的成对点；逐 N 各算 collapse R²",
+    "(b)_nu_bootstrap": "连续 ν 估计量：log D = c0 + c1·log|Δt| + c2·log N  =>  ν̂ = c1 / c2（collapse 变量 |Δt|·N^(1/ν) 的 log N 系数 = c1/ν）；bootstrap 95% percentile CI，n=1000",
+    "collapse_form": "u = |Δt|·N^(1/ν)·(1 + η·ln N)；log D_fix2 对 log u 做一元 OLS，R² 即 collapse R²",
+    "log_floor": -10.0,
+    "log_floor_source": "deposon_pc_d1_d3_2026_09_15.json §R2_b_CI_log_log_fit 记录字面（log_x/log_y 中地板值 -10.0 出现 2 次）",
+    "N_list": [
+      20,
+      40,
+      60,
+      80,
+      120
+    ],
+    "n_draws": 400,
+    "T_C_baseline": 0.8667,
+    "nu_axes": {
+      "legacy_shape": [
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        2.5
+      ],
+      "extended_incl_zero_and_negative": [
+        -2.0,
+        -1.0,
+        -0.5,
+        0.0,
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        4.0,
+        5.0
+      ]
+    },
+    "eta_axis": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ]
+  },
+  "construct_degen_self_check": {
+    "gate": "K-V3R-0-A: n_distinct > 3 + std > 0 on every on-disk input field",
+    "input_fields": {
+      "60cells_T_frac60 (盘上真实, 逐 model)": {
+        "n": 9,
+        "n_finite": 9,
+        "n_distinct": 7,
+        "std": 0.10659488672794401,
+        "min": 0.5333,
+        "max": 0.8667,
+        "mean": 0.711111111111111
+      },
+      "60cells_T60 (盘上真实, 逐 model)": {
+        "n": 9,
+        "n_finite": 9,
+        "n_distinct": 7,
+        "std": 6.394442031083626,
+        "min": 32.0,
+        "max": 52.0,
+        "mean": 42.666666666666664
+      },
+      "60cells_R60 (盘上真实, 逐 model)": {
+        "n": 9,
+        "n_finite": 9,
+        "n_distinct": 7,
+        "std": 4.898979485566356,
+        "min": 2.0,
+        "max": 16.0,
+        "mean": 8.666666666666666
+      },
+      "60cells_A60 (盘上真实, 逐 model)": {
+        "n": 9,
+        "n_finite": 9,
+        "n_distinct": 7,
+        "std": 8.379870059984357,
+        "min": 0.0,
+        "max": 24.0,
+        "mean": 8.666666666666666
+      },
+      "60cells_D_fix2_cosine (盘上真实, 逐 model)": {
+        "n": 9,
+        "n_finite": 9,
+        "n_distinct": 8,
+        "std": 0.060067088007730106,
+        "min": 0.0,
+        "max": 0.1775,
+        "mean": 0.038677777777777776
+      },
+      "60cells_cos_sim (盘上真实, 逐 model)": {
+        "n": 9,
+        "n_finite": 9,
+        "n_distinct": 8,
+        "std": 0.06006708800773012,
+        "min": 0.8225,
+        "max": 1.0,
+        "mean": 0.9613222222222222
+      },
+      "60cells_T30 (盘上真实, 逐 model)": {
+        "n": 9,
+        "n_finite": 9,
+        "n_distinct": 7,
+        "std": 3.197221015541813,
+        "min": 16.0,
+        "max": 26.0,
+        "mean": 21.333333333333332
+      },
+      "P_T_true_fraction (T60/60, 派生自盘上计数)": {
+        "n": 9,
+        "n_finite": 9,
+        "n_distinct": 7,
+        "std": 0.10657403385139379,
+        "min": 0.5333333333333333,
+        "max": 0.8666666666666667,
+        "mean": 0.7111111111111111
+      },
+      "log_D_fix2 (含 log 地板, 逐 model)": {
+        "n": 9,
+        "n_finite": 9,
+        "n_distinct": 8,
+        "std": 2.9259438994878493,
+        "min": -10.0,
+        "max": -1.7287846700666667,
+        "mean": -5.825132946372808
+      }
+    },
+    "gate_per_field": {
+      "60cells_T_frac60 (盘上真实, 逐 model)": true,
+      "60cells_T60 (盘上真实, 逐 model)": true,
+      "60cells_R60 (盘上真实, 逐 model)": true,
+      "60cells_A60 (盘上真实, 逐 model)": true,
+      "60cells_D_fix2_cosine (盘上真实, 逐 model)": true,
+      "60cells_cos_sim (盘上真实, 逐 model)": true,
+      "60cells_T30 (盘上真实, 逐 model)": true,
+      "P_T_true_fraction (T60/60, 派生自盘上计数)": true,
+      "log_D_fix2 (含 log 地板, 逐 model)": true
+    },
+    "degenerate_alarm_hit": false,
+    "gate_pass": true,
+    "degenerate_levers_preregistered": [
+      {
+        "lever": "N = 80 / 120 > 盘上 60 cells",
+        "why": "只能从固定 60-cell 总体有放回重采样 -> 「系统尺寸」是名义的，不是独立系统",
+        "pre_registered_disposition": "登记为外推边界；均匀使用同一重采样机制，不把 N=80/120 读成真实扩图族实验结果"
+      },
+      {
+        "lever": "N = 60 是否用 as-run 精确总体（而非重采样）",
+        "why": "两种机制在 N=60 处不等价（无放回 vs 有放回），会改变该档读数",
+        "pre_registered_disposition": "主口径统一用有放回（机制一致）；as-run 精确总体作敏感性腿单列"
+      },
+      {
+        "lever": "ν 轴若只取正值 -> (b) 腿「CI 上界 <= 0」不可达",
+        "why": "as-run ν 轴全为正（0.5..2.5），无法表达 ν <= 0 的结构性恒等分支",
+        "pre_registered_disposition": "连续 ν 估计量 ν̂ = c1/c2 允许任意实数（含 0/负）；另附含 0/负值的扩展 ν 轴网格"
+      },
+      {
+        "lever": "log 地板 -10.0（2 个 model 的 D_fix2 与 2 个 model 的 Δt 恰为 0）",
+        "why": "地板点位于拟合角落，对 R² 与斜率有支配性影响",
+        "pre_registered_disposition": "主口径沿既有地板字面；另附「去地板」敏感性腿（仅取 D>0 且 Δt>0 的点）"
+      }
+    ],
+    "output_field": {
+      "T_frac_draw_mean_per_NM": {
+        "n": 45,
+        "n_finite": 45,
+        "n_distinct": 45,
+        "std": 0.10572634659165532,
+        "min": 0.5270625,
+        "max": 0.8707499999999999,
+        "mean": 0.7109930555555556
+      },
+      "T_frac_draw_std_per_NM": {
+        "n": 45,
+        "n_finite": 45,
+        "n_distinct": 45,
+        "std": 0.021487679865772144,
+        "min": 0.031467134530420084,
+        "max": 0.11365786103477402,
+        "mean": 0.062219981271500774
+      },
+      "nu_hat": 8.891592710695232,
+      "nu_ci95": [
+        7.5657212700298775,
+        10.805394104214129
+      ],
+      "max_R2_new": 0.23094565891573315
+    },
+    "size_face_independence": {
+      "T30_times2_equals_T60_all9": true,
+      "reading": "30-cell 面与 60-cell 面互为精确半化 -> 盘上无独立跨尺寸信息，跨 N 只能靠重采样（构造面外推边界）"
+    }
+  },
+  "asrun_structural_audit": {
+    "asrun_grid_nu": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "asrun_grid_eta": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "asrun_grid_matrix": [
+      [
+        0.294743,
+        0.241315,
+        0.197572,
+        0.161758,
+        0.132437
+      ],
+      [
+        0.311118,
+        0.254722,
+        0.208548,
+        0.170745,
+        0.139794
+      ],
+      [
+        0.327492,
+        0.268128,
+        0.219525,
+        0.179732,
+        0.147152
+      ],
+      [
+        0.311118,
+        0.254722,
+        0.208548,
+        0.170745,
+        0.139794
+      ],
+      [
+        0.294743,
+        0.241315,
+        0.197572,
+        0.161758,
+        0.132437
+      ]
+    ],
+    "max_R2_field": 0.327492,
+    "max_R2_recomputed": 0.327492,
+    "max_R2_field_match_hit": true,
+    "best_params_field": [
+      1.5,
+      0.1
+    ],
+    "argmax_index": [
+      2,
+      0
+    ],
+    "argmax_params": [
+      1.5,
+      0.1
+    ],
+    "argmax_on_grid_edge_hit": true,
+    "argmax_eta_edge_note": "argmax 落在 η 轴最小档（η=0.1）= 网格边界，无内点最优",
+    "rank1_separability": {
+      "singular_values": [
+        1.1156688975351443,
+        1.0441650431638658e-06,
+        7.908659357955174e-07,
+        4.1442706640466705e-17,
+        3.9028539243168284e-23
+      ],
+      "sigma2_over_sigma1": 9.359094310782952e-07,
+      "rank1_max_abs_resid": 4.6084337049223656e-07,
+      "multiplicatively_separable_hit": true,
+      "reading": "R²(ν,η) = f(η)·g(ν)（秩 1，残差 <= 1e-6 = 6 位小数舍入量级）=> 网格无交叉项信息，argmax = 两轴各自 argmax 的乘积，该「扫描」在结构上不可能是数据坍缩最优的证据（hidden fitting 的机械证明）"
+    },
+    "nu_periodicity": {
+      "nu_0.5_equals_nu_2.5_hit": true,
+      "nu_1.0_equals_nu_2.0_hit": true,
+      "nu_axis_period": 2.0
+    },
+    "N_axis_present_hit": false,
+    "N_axis_note": "as-run 件内 0 个系统尺寸字段（keys 递归扫 N/n_cells/cells/system_size/L/size）=> 所谓「有限尺寸标度」在盘上没有任何尺寸参与"
+  },
+  "cross_N_surface": [
+    {
+      "N": 20,
+      "model": "doubao-seed-2.0-lite",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.8664999999999999,
+      "T_frac_draw_std": 0.0737580504080741,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 20,
+      "model": "glm-5.3",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.8638749999999998,
+      "T_frac_draw_std": 0.07681949215531172,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 20,
+      "model": "deepseek-v4-flash",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.7652500000000001,
+      "T_frac_draw_std": 0.09535427363259605,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 20,
+      "model": "doubao-seed-evolving",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.734875,
+      "T_frac_draw_std": 0.09514454464129828,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 20,
+      "model": "minimax-m3",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.6925,
+      "T_frac_draw_std": 0.10443299287102711,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 20,
+      "model": "glm-5.3-flash",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.702625,
+      "T_frac_draw_std": 0.10457944049859895,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 20,
+      "model": "kimi-k2.7-code",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.625625,
+      "T_frac_draw_std": 0.10337847636234536,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 20,
+      "model": "doubao-seed-2.1-turbo",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.6,
+      "T_frac_draw_std": 0.10553435459602717,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 20,
+      "model": "deepseek-v4-pro",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.546375,
+      "T_frac_draw_std": 0.11365786103477402,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 40,
+      "model": "doubao-seed-2.0-lite",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.8658750000000001,
+      "T_frac_draw_std": 0.05435286905950779,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 40,
+      "model": "glm-5.3",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.8622500000000001,
+      "T_frac_draw_std": 0.055789223869847845,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 40,
+      "model": "deepseek-v4-flash",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.7663125,
+      "T_frac_draw_std": 0.070275101164993,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 40,
+      "model": "doubao-seed-evolving",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.7356874999999999,
+      "T_frac_draw_std": 0.06910021594575519,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 40,
+      "model": "minimax-m3",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.69875,
+      "T_frac_draw_std": 0.06931585316505885,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 40,
+      "model": "glm-5.3-flash",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.698125,
+      "T_frac_draw_std": 0.07061946880995353,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 40,
+      "model": "kimi-k2.7-code",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.636375,
+      "T_frac_draw_std": 0.07366722049188498,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 40,
+      "model": "doubao-seed-2.1-turbo",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.6035625,
+      "T_frac_draw_std": 0.0770437933499513,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 40,
+      "model": "deepseek-v4-pro",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.5270625,
+      "T_frac_draw_std": 0.08037293446023978,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 60,
+      "model": "doubao-seed-2.0-lite",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.8707499999999999,
+      "T_frac_draw_std": 0.04325305063101201,
+      "n_draws_floored": 61
+    },
+    {
+      "N": 60,
+      "model": "glm-5.3",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.8626249999999999,
+      "T_frac_draw_std": 0.04410748786896744,
+      "n_draws_floored": 60
+    },
+    {
+      "N": 60,
+      "model": "deepseek-v4-flash",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.770375,
+      "T_frac_draw_std": 0.05262021619850852,
+      "n_draws_floored": 15
+    },
+    {
+      "N": 60,
+      "model": "doubao-seed-evolving",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.7332916666666667,
+      "T_frac_draw_std": 0.05945935528203746,
+      "n_draws_floored": 1
+    },
+    {
+      "N": 60,
+      "model": "minimax-m3",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.6992083333333333,
+      "T_frac_draw_std": 0.05874909869284995,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 60,
+      "model": "glm-5.3-flash",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.6947916666666668,
+      "T_frac_draw_std": 0.05991856452719808,
+      "n_draws_floored": 1
+    },
+    {
+      "N": 60,
+      "model": "kimi-k2.7-code",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.6280833333333333,
+      "T_frac_draw_std": 0.06055478465360473,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 60,
+      "model": "doubao-seed-2.1-turbo",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.6065416666666666,
+      "T_frac_draw_std": 0.061154276106508774,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 60,
+      "model": "deepseek-v4-pro",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.5411666666666666,
+      "T_frac_draw_std": 0.06584725591177745,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 80,
+      "model": "doubao-seed-2.0-lite",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.8669687500000001,
+      "T_frac_draw_std": 0.0383542161755067,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 80,
+      "model": "glm-5.3",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.8650625,
+      "T_frac_draw_std": 0.03672740589464494,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 80,
+      "model": "deepseek-v4-flash",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.7607499999999999,
+      "T_frac_draw_std": 0.04708768416475799,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 80,
+      "model": "doubao-seed-evolving",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.73609375,
+      "T_frac_draw_std": 0.050528215740687894,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 80,
+      "model": "minimax-m3",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.70071875,
+      "T_frac_draw_std": 0.0527215470508738,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 80,
+      "model": "glm-5.3-flash",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.69915625,
+      "T_frac_draw_std": 0.049895114599903465,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 80,
+      "model": "kimi-k2.7-code",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.6295,
+      "T_frac_draw_std": 0.05244848663212315,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 80,
+      "model": "doubao-seed-2.1-turbo",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.59884375,
+      "T_frac_draw_std": 0.0543770743138825,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 80,
+      "model": "deepseek-v4-pro",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.5366562500000001,
+      "T_frac_draw_std": 0.05761936489529801,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 120,
+      "model": "doubao-seed-2.0-lite",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.8676041666666667,
+      "T_frac_draw_std": 0.0315676563444823,
+      "n_draws_floored": 40
+    },
+    {
+      "N": 120,
+      "model": "glm-5.3",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.8660000000000001,
+      "T_frac_draw_std": 0.031467134530420084,
+      "n_draws_floored": 46
+    },
+    {
+      "N": 120,
+      "model": "deepseek-v4-flash",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.7663541666666666,
+      "T_frac_draw_std": 0.0387621788657019,
+      "n_draws_floored": 2
+    },
+    {
+      "N": 120,
+      "model": "doubao-seed-evolving",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.7320416666666667,
+      "T_frac_draw_std": 0.040299206464478515,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 120,
+      "model": "minimax-m3",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.7023958333333333,
+      "T_frac_draw_std": 0.04318471610258786,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 120,
+      "model": "glm-5.3-flash",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.7029166666666667,
+      "T_frac_draw_std": 0.042563269898404706,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 120,
+      "model": "kimi-k2.7-code",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.6329375,
+      "T_frac_draw_std": 0.043541362638491996,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 120,
+      "model": "doubao-seed-2.1-turbo",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.5990208333333333,
+      "T_frac_draw_std": 0.04383816018259029,
+      "n_draws_floored": 0
+    },
+    {
+      "N": 120,
+      "model": "deepseek-v4-pro",
+      "n_draws": 400,
+      "T_frac_draw_mean": 0.5332083333333333,
+      "T_frac_draw_std": 0.046056106332988636,
+      "n_draws_floored": 0
+    }
+  ],
+  "nu_estimate": {
+    "point_nu_hat": 8.891592710695232,
+    "c1": 1.080475091725664,
+    "c2": 0.12151648494043335,
+    "c2_zero_hit": false,
+    "bootstrap": {
+      "n_boot": 1000,
+      "n_valid": 1000,
+      "ci95_lo": 7.5657212700298775,
+      "ci95_hi": 10.805394104214129,
+      "median": 8.85918830029433,
+      "std": 0.8195640665695478,
+      "ci_defined_hit": true,
+      "n_nan_or_inf": 0
+    },
+    "mechanism_caveat": "该 CI 是**总体内重采样 CI**：盘上 60-cell 是一次普查（无上位总体），故 CI 只覆盖重采样机制内的波动，不覆盖「是否存在物理标度」的不确定性。label_only_control 腿实测：各档数据分布不变、仅改名义 N 标签，ν̂ 即从 8.8916 摆到 -467.4999 => ν̂ 由采样比设计决定。腿 (a)/(b) 的未命中因此**不携带物理权重**，治理腿是 (c)。"
+  },
+  "label_only_control": {
+    "construct": "5 个 N 档全部按 N=60 cells 抽取（数据面与主口径的 N=60 档同分布），仅把名义标签改成 20/40/60/80/120",
+    "nu_hat": -467.4999225814136,
+    "c1": 0.7545533800956937,
+    "c2": -0.0016140181926218194,
+    "c2_degenerate_hit": false,
+    "reading": "本腿把「ν̂ 由数据决定」与「ν̂ 由名义 N 标签（= 采样比 N/60）决定」分开：各档数据分布不变、仅改名义标签，ν̂ 即从主口径的 8.8916 摆到 -467.4999（符号翻转，量级差约 53 倍），c2 从 0.121516 变成 -1.61e-03。=> ν̂ 由名义 N 标签（采样比）决定，不由数据决定。结合 Var(T_frac_draw) ∝ 1/N 的机制（见 sampling_fraction 表：T_frac 抽样 std 随 N 增大由 0.0970（N=20）收到 0.0401（N=120）），主口径 ν̂ 的 N 依赖来自**重采样设计**（采样比），不是 60-cell 总体本身的物理有限尺寸标度。"
+  },
+  "sampling_fraction": {
+    "N": [
+      20,
+      40,
+      60,
+      80,
+      120
+    ],
+    "N_over_60": [
+      0.3333333333333333,
+      0.6666666666666666,
+      1.0,
+      1.3333333333333333,
+      2.0
+    ],
+    "T_frac_draw_std_mean_per_N": [
+      0.09696216513333919,
+      0.06894852003524359,
+      0.05618489887471826,
+      0.04886212327418649,
+      0.04014219904001625
+    ],
+    "note": "采样比 N/60 > 1（N=80/120）时为有放回抽样，经验 T_frac 的集中度按 1/√(N/60) 收紧 -> 该收紧是设计产物"
+  },
+  "collapse_grid_new": {
+    "grid": {
+      "nu=0.5|eta=0.1": {
+        "nu": 0.5,
+        "eta": 0.1,
+        "R2": 0.1297701226331287,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086814,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.19168625962030572,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555272,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=0.5|eta=0.2": {
+        "nu": 0.5,
+        "eta": 0.2,
+        "R2": 0.12733778289661168,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.19168625962030572,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043908,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=0.5|eta=0.3": {
+        "nu": 0.5,
+        "eta": 0.3,
+        "R2": 0.12579119595495425,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086814,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.25154491475552754,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=0.5|eta=0.4": {
+        "nu": 0.5,
+        "eta": 0.4,
+        "R2": 0.12472029476379087,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086792,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.3027393486668635,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.19168625962030572,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=0.5|eta=0.5": {
+        "nu": 0.5,
+        "eta": 0.5,
+        "R2": 0.12393459132586304,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.19168625962030572,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=1|eta=0.1": {
+        "nu": 1.0,
+        "eta": 0.1,
+        "R2": 0.19801287905606968,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086814,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043908,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=1|eta=0.2": {
+        "nu": 1.0,
+        "eta": 0.2,
+        "R2": 0.19519786782011717,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086792,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.19168625962030572,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555274,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=1|eta=0.3": {
+        "nu": 1.0,
+        "eta": 0.3,
+        "R2": 0.19336406114698546,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.3027393486668635,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=1|eta=0.4": {
+        "nu": 1.0,
+        "eta": 0.4,
+        "R2": 0.1920745196911603,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086814,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=1|eta=0.5": {
+        "nu": 1.0,
+        "eta": 0.5,
+        "R2": 0.19111820333609275,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086792,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.19168625962030572,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=1.5|eta=0.1": {
+        "nu": 1.5,
+        "eta": 0.1,
+        "R2": 0.218855254587622,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555272,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=1.5|eta=0.2": {
+        "nu": 1.5,
+        "eta": 0.2,
+        "R2": 0.21657809706144449,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086814,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.3027393486668635,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555272,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=1.5|eta=0.3": {
+        "nu": 1.5,
+        "eta": 0.3,
+        "R2": 0.21505988024336486,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.19168625962030583,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=1.5|eta=0.4": {
+        "nu": 1.5,
+        "eta": 0.4,
+        "R2": 0.21397656215264782,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.3027393486668635,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=1.5|eta=0.5": {
+        "nu": 1.5,
+        "eta": 0.5,
+        "R2": 0.21316505425479115,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.3027393486668635,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=2|eta=0.1": {
+        "nu": 2.0,
+        "eta": 0.1,
+        "R2": 0.22703722153432504,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.19168625962030572,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=2|eta=0.2": {
+        "nu": 2.0,
+        "eta": 0.2,
+        "R2": 0.22521446714487714,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=2|eta=0.3": {
+        "nu": 2.0,
+        "eta": 0.3,
+        "R2": 0.22397354294832394,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.3027393486668635,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555272,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=2|eta=0.4": {
+        "nu": 2.0,
+        "eta": 0.4,
+        "R2": 0.22307662530004546,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.3027393486668635,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=2|eta=0.5": {
+        "nu": 2.0,
+        "eta": 0.5,
+        "R2": 0.2223988529380998,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=2.5|eta=0.1": {
+        "nu": 2.5,
+        "eta": 0.1,
+        "R2": 0.23094565891573315,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086814,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.3027393486668635,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=2.5|eta=0.2": {
+        "nu": 2.5,
+        "eta": 0.2,
+        "R2": 0.22945071224907443,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086792,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=2.5|eta=0.3": {
+        "nu": 2.5,
+        "eta": 0.3,
+        "R2": 0.22841278692143996,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086814,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=2.5|eta=0.4": {
+        "nu": 2.5,
+        "eta": 0.4,
+        "R2": 0.22765372130892403,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.3027393486668635,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      },
+      "nu=2.5|eta=0.5": {
+        "nu": 2.5,
+        "eta": 0.5,
+        "R2": 0.22707559509060382,
+        "R2_defined": true,
+        "R2_per_N": {
+          "N=20": {
+            "r2": 0.21983609688086803,
+            "n_points": 3600
+          },
+          "N=40": {
+            "r2": 0.30273934866686336,
+            "n_points": 3600
+          },
+          "N=60": {
+            "r2": 0.1916862596203056,
+            "n_points": 3600
+          },
+          "N=80": {
+            "r2": 0.3488010599043909,
+            "n_points": 3600
+          },
+          "N=120": {
+            "r2": 0.2515449147555273,
+            "n_points": 3600
+          }
+        }
+      }
+    },
+    "max_R2": 0.23094565891573315,
+    "best_nu": 2.5,
+    "best_eta": 0.1,
+    "extended_axis_max_R2": 0.2529636375513087,
+    "extended_axis_best": [
+      -2.0,
+      0.1
+    ]
+  },
+  "sensitivity": {
+    "asrun_exact_population_N60_R2_at_nu1.5_eta0.1": 0.31714461312592857,
+    "log_floor_free_leg": {
+      "excluded_models_D_fix2_zero": [
+        "glm-5.3",
+        "minimax-m3"
+      ],
+      "n_points_kept": 14000,
+      "R2_at_best_legacy_params": 0.31823855419784775
+    }
+  },
+  "legacy_dual_track": {
+    "source": "results/_p_l_p_c_finite_size_scaling_2026_09_16/p_l_p_c_finite_size_scaling_results_2026_09_16.json §all_results（只读，未写）",
+    "asrun_max_R2": 0.327492,
+    "asrun_best_params": [
+      1.5,
+      0.1
+    ],
+    "asrun_final_dang_verdict": "PARTIAL_FAIL_H0",
+    "kill_line_leg_c_legacy_hit": true,
+    "kill_line_legacy": "FAIL",
+    "legacy_verdict": "FAIL（维持假证伪）：as-run max_R2 = 0.327492 < 0.9（K-V3R-27 (c) 字面）；同件 final_dang_verdict 字面「PARTIAL_FAIL_H0」；且网格无 N 轴（秩 1 可分离）"
+  },
+  "verdict": {
+    "new_verdict": "FAIL",
+    "governing_leg": "(c) max_R2 仍 < 0.9 -> FAIL（维持假证伪）",
+    "leg_a_ci_cross_zero_hit": false,
+    "leg_b_ci_upper_le_zero_hit": false,
+    "leg_c_max_R2_lt_0.9_hit": true,
+    "legacy_verdict": "FAIL（维持假证伪）：as-run max_R2 = 0.327492 < 0.9（K-V3R-27 (c) 字面）；同件 final_dang_verdict 字面「PARTIAL_FAIL_H0」；且网格无 N 轴（秩 1 可分离）",
+    "legacy_kill_line_verdict": "FAIL",
+    "一致性": "一致（改判成立）",
+    "kill_line_pass": false,
+    "kill_line_hit": true,
+    "改判档位": "§2.3 第 3 行（FAIL = 原标注维持）→ 0 改判动作",
+    "gamma": [
+      "γ₁ = as-run 网格 R²(ν,η) 秩 1 可分离（σ₂/σ₁ = 9.36e-07，秩 1 残差 4.61e-07）=> argmax 是两轴 argmax 的乘积，「扫描」在结构上不可能是坍缩最优证据",
+      "γ₂ = as-run 件内 0 个系统尺寸字段（有限尺寸标度在盘上无尺寸参与）；argmax 落在 η 轴最小档（网格边界，无内点最优）",
+      "γ③ = N = 80/120 只能由 60-cell 总体有放回重采样得到，「系统尺寸」为名义值（构造面外推边界，不可外推为真实扩图族结果）",
+      "γ④ = ν̂ 由名义 N 标签（采样比 N/60）决定而非数据（label_only_control 腿：数据分布不变、仅改标签，ν̂ 由 8.8916 摆到 -467.4999）；腿 (a) 未命中（CI 不跨零）不构成「存在真实标度指数」的证据，亦不得引为 H1 侧支持"
+    ]
+  },
+  "iron_rules": {
+    "0_LLM": true,
+    "no_proxy": true,
+    "no_key_in_prompt_json_disk": true,
+    "read_only_inputs": true,
+    "derived_json_not_merged": true,
+    "v3_original_report_bytes_untouched": true
+  }
+}

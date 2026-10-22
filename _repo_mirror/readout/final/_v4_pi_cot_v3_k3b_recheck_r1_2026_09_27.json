@@ -1,0 +1,797 @@
+{
+  "schema": "v4_pi_cot_v3_k3b_recheck_r1/1",
+  "task": "F1 executor 装载缺陷修复后 K-V3-B / K-V3-C 重跑复核 + F4 alt_reading 口径反推",
+  "formal_judgment": false,
+  "exploratory": true,
+  "purpose": "修复后复核 (非新实验跑): 0 改阈值 / 0 改判定方向 / 0 覆盖 result_v3",
+  "generated_utc": "2026-09-27T17:40:00+08:00",
+  "anchor_sha_verification": {
+    "executor_base": {
+      "path": "results/_v4_pi_cot_v3_ruleset_v3_executor.py",
+      "sha12_actual": "8A81D90C69BA",
+      "bytes": 58794
+    },
+    "executor_r1": {
+      "path": "results/_v4_pi_cot_v3_ruleset_v3_executor_r1_2026_09_27.py",
+      "sha12_actual": "EE8671A28C2F",
+      "bytes": 62115
+    },
+    "result_v3": {
+      "path": "results/_v4_pi_cot_v3_result_v3.json",
+      "sha12_actual": "585714F9660C",
+      "bytes": 27203
+    },
+    "addendum_d1": {
+      "path": "results/_v4_pi_cot_v2_dataset_addendum_2026_09_24.json",
+      "sha12_actual": "172093A23E4B"
+    },
+    "addendum_d4": {
+      "path": "results/_v4_pi_cot_v3_dataset_addendum_d4_2026_09_27.json",
+      "sha12_actual": "CBF60A630C9F"
+    },
+    "errata": {
+      "path": "docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md",
+      "sha12_actual": "AED375C485FB",
+      "bytes": 407284
+    }
+  },
+  "f1_fix": {
+    "defect": "load_addendum_event_v3() 排他 if 链把 D1_supp critical_reflection_supplement 拼接嵌套在首项 (reasoning_full 非空) 内部; 补充件若无 reasoning_full/disposition_text/other_text → 补充文本无拼接入口, 静默落空串 (沿 E-42.1 §22.31.1)",
+    "fix_method": "拼接入口提为「base 已定后全分支统一后置追加」; 0 改词表 / 0 改阈值 / 0 改特征 / 0 改判定公式 / 0 改 seed (structural fix, 沿 skill SKILL.md:155 字面)",
+    "base_file": "results/_v4_pi_cot_v3_ruleset_v3_executor.py",
+    "base_sha12": "8A81D90C69BA",
+    "base_bytes": 58794,
+    "base_bytes_unchanged_after_rerun": true,
+    "r1_file": "results/_v4_pi_cot_v3_ruleset_v3_executor_r1_2026_09_27.py",
+    "r1_sha12": "EE8671A28C2F",
+    "r1_bytes": 62115,
+    "equivalence": "原已拼接路径 (base 非空) 输出逐字不变 = base + ' ' + supplement",
+    "not_fixed_registered": [
+      "母件 d1_original_read 拼接同构嵌套于首项内部 (E-42.1 未登记该项) → 本件只修 critical_reflection_supplement, d1_original_read 保持母件字面",
+      "v2 executor results/_v4_pi_cot_v2_ruleset_v2_executor.py (EB22F13D571C) 第 503-518 行同构缺陷 → 只登记不修 (v2 系历史冻结件)"
+    ],
+    "affected_events_direct_evidence": {
+      "source_wave": "D1_supp",
+      "n_events": 3,
+      "before": [
+        {
+          "event_id": 17,
+          "q_id": "q17",
+          "reasoning_full_len": 0,
+          "has_critical_reflection": false
+        },
+        {
+          "event_id": 21,
+          "q_id": "q21",
+          "reasoning_full_len": 0,
+          "has_critical_reflection": false
+        },
+        {
+          "event_id": 27,
+          "q_id": "q27",
+          "reasoning_full_len": 0,
+          "has_critical_reflection": false
+        }
+      ],
+      "after": [
+        {
+          "event_id": 17,
+          "q_id": "q17",
+          "reasoning_full_len": 2,
+          "has_critical_reflection": true
+        },
+        {
+          "event_id": 21,
+          "q_id": "q21",
+          "reasoning_full_len": 40,
+          "has_critical_reflection": false
+        },
+        {
+          "event_id": 27,
+          "q_id": "q27",
+          "reasoning_full_len": 62,
+          "has_critical_reflection": true
+        }
+      ]
+    }
+  },
+  "reproduction_selfcheck": {
+    "purpose": "母件跑出的 main/alt 数字与盘上 result_v3.json 逐字比对 (证明本 runner 与棒 C 出件 runner 同口径, 且母件未被动过)",
+    "checks": {
+      "main_held_out_idx_identical": true,
+      "main_nw_sim_mean_identical": true,
+      "main_nled_sim_mean_identical": true,
+      "main_n_divergent_identical": true,
+      "main_n_crit_among_div_identical": true,
+      "main_div_crit_cov_identical": true,
+      "main_n_blind_identical": true,
+      "main_blind_rate_identical": true,
+      "main_bootstrap_ci_identical": true,
+      "main_perm_p_identical": true,
+      "alt_held_out_count_identical": true,
+      "alt_nw_sim_mean_identical": true,
+      "alt_nled_sim_mean_identical": true,
+      "alt_div_crit_cov_identical": true,
+      "alt_blind_rate_identical": true,
+      "alt_bootstrap_ci_identical": true,
+      "alt_n_divergent_identical": true,
+      "alt_n_crit_among_div_identical": true
+    },
+    "all_identical": true
+  },
+  "k_v3_b_c_recheck": {
+    "main_reading_before": {
+      "n_held": 23,
+      "nw_sim_mean": 0.453416149068323,
+      "nled_sim_mean": 0.2753623188405797,
+      "n_divergent": 14,
+      "n_critical_among_divergent": 6,
+      "div_critical_coverage": 0.42857142857142855,
+      "n_agree": 9,
+      "n_blind_obey": 2,
+      "blind_obey_rate": 0.2222222222222222,
+      "bootstrap_ci": [
+        0.3217391304347826,
+        0.5869565217391304
+      ],
+      "perm_p": 0.015984015984015984,
+      "tree_depth_observed": 6,
+      "rules_n_flat": 20
+    },
+    "main_reading_after": {
+      "n_held": 23,
+      "nw_sim_mean": 0.45776397515527956,
+      "nled_sim_mean": 0.21014492753623187,
+      "n_divergent": 15,
+      "n_critical_among_divergent": 9,
+      "div_critical_coverage": 0.6,
+      "n_agree": 8,
+      "n_blind_obey": 2,
+      "blind_obey_rate": 0.25,
+      "bootstrap_ci": [
+        0.3559006211180123,
+        0.5633540372670807
+      ],
+      "perm_p": 0.1878121878121878,
+      "tree_depth_observed": 6,
+      "rules_n_flat": 19
+    },
+    "main_kill_lines_before": [
+      {
+        "id": "K-V3-A",
+        "observed": 0.4534,
+        "threshold": 0.65,
+        "hit": true,
+        "pass": false
+      },
+      {
+        "id": "K-V3-A'",
+        "observed": 0.2754,
+        "threshold": 0.55,
+        "hit": true,
+        "pass": false
+      },
+      {
+        "id": "K-V3-B",
+        "observed": 0.4286,
+        "threshold": 1.0,
+        "hit": true,
+        "pass": false
+      },
+      {
+        "id": "K-V3-C",
+        "observed": 0.2222,
+        "threshold": 0.1,
+        "hit": true,
+        "pass": false
+      },
+      {
+        "id": "K-V3-D",
+        "observed": [
+          0.3217,
+          0.587
+        ],
+        "threshold": 0.4,
+        "hit": true,
+        "pass": false
+      },
+      {
+        "id": "K-V3-E",
+        "observed": null,
+        "threshold": null,
+        "hit": false,
+        "pass": true
+      }
+    ],
+    "main_kill_lines_after": [
+      {
+        "id": "K-V3-A",
+        "observed": 0.4578,
+        "threshold": 0.65,
+        "hit": true,
+        "pass": false
+      },
+      {
+        "id": "K-V3-A'",
+        "observed": 0.2101,
+        "threshold": 0.55,
+        "hit": true,
+        "pass": false
+      },
+      {
+        "id": "K-V3-B",
+        "observed": 0.6,
+        "threshold": 1.0,
+        "hit": true,
+        "pass": false
+      },
+      {
+        "id": "K-V3-C",
+        "observed": 0.25,
+        "threshold": 0.1,
+        "hit": true,
+        "pass": false
+      },
+      {
+        "id": "K-V3-D",
+        "observed": [
+          0.3559,
+          0.5634
+        ],
+        "threshold": 0.4,
+        "hit": true,
+        "pass": false
+      },
+      {
+        "id": "K-V3-E",
+        "observed": null,
+        "threshold": null,
+        "hit": false,
+        "pass": true
+      }
+    ],
+    "alt_reading_before": {
+      "n_held": 18,
+      "nw_sim_mean": 0.5126984126984128,
+      "nled_sim_mean": 0.2962962962962963,
+      "n_divergent": 11,
+      "n_critical_among_divergent": 4,
+      "div_critical_coverage": 0.36363636363636365,
+      "n_agree": 7,
+      "n_blind_obey": 2,
+      "blind_obey_rate": 0.2857142857142857,
+      "bootstrap_ci": [
+        0.3722222222222222,
+        0.6611111111111111
+      ],
+      "perm_p": 0.03496503496503497,
+      "tree_depth_observed": 6,
+      "rules_n_flat": 20
+    },
+    "alt_reading_after": {
+      "n_held": 18,
+      "nw_sim_mean": 0.5015873015873016,
+      "nled_sim_mean": 0.1851851851851852,
+      "n_divergent": 13,
+      "n_critical_among_divergent": 8,
+      "div_critical_coverage": 0.6153846153846154,
+      "n_agree": 5,
+      "n_blind_obey": 2,
+      "blind_obey_rate": 0.4,
+      "bootstrap_ci": [
+        0.39444444444444443,
+        0.6166666666666667
+      ],
+      "perm_p": 0.4915084915084915,
+      "tree_depth_observed": 6,
+      "rules_n_flat": 19
+    },
+    "k_v3_b": {
+      "threshold": 1.0,
+      "rule": "分歧批判理由覆盖率 < 1.00 → FAIL (hit=True 即触发)",
+      "before": 0.42857142857142855,
+      "after": 0.6,
+      "delta": 0.17142857142857143,
+      "errata_sensitivity_predicted": 0.6,
+      "matches_errata_sensitivity": true,
+      "hit_before": true,
+      "hit_after": true,
+      "verdict_direction_changed": false,
+      "n_divergent_before": 14,
+      "n_divergent_after": 15,
+      "n_critical_among_divergent_before": 6,
+      "n_critical_among_divergent_after": 9
+    },
+    "k_v3_c": {
+      "threshold": 0.1,
+      "rule": "盲从率 > 0.10 → FAIL (hit=True 即触发)",
+      "before": 0.2222222222222222,
+      "after": 0.25,
+      "delta": 0.02777777777777779,
+      "hit_before": true,
+      "hit_after": true,
+      "verdict_direction_changed": false,
+      "n_agree_before": 9,
+      "n_agree_after": 8,
+      "n_blind_obey_before": 2,
+      "n_blind_obey_after": 2
+    },
+    "other_kill_lines_unchanged_check": {
+      "k_v3_a_hit_before_after": [
+        true,
+        true
+      ],
+      "k_v3_a_prime_hit_before_after": [
+        true,
+        true
+      ],
+      "k_v3_d_hit_before_after": [
+        true,
+        true
+      ],
+      "k_v3_e_hit_before_after": [
+        false,
+        false
+      ],
+      "any_hit_before_after": [
+        true,
+        true
+      ]
+    },
+    "held_out_split_identical_base_vs_r1": true,
+    "no_critical_word_divergence_idx_status": {
+      "idx_list": [
+        12,
+        28,
+        37,
+        39,
+        47,
+        50,
+        72,
+        74
+      ],
+      "before": [
+        {
+          "held_idx": 12,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "CRITERIA",
+          "actual": [
+            "TIMING"
+          ],
+          "nw_sim": 0.5,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 28,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "CRITERIA",
+          "actual": [
+            "RISK"
+          ],
+          "nw_sim": 0.5,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 37,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "UNKNOWN",
+          "actual": [],
+          "nw_sim": 0.0,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 39,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "UNKNOWN",
+          "actual": [],
+          "nw_sim": 0.0,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 47,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "UNKNOWN",
+          "actual": [],
+          "nw_sim": 0.0,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 50,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "UNKNOWN",
+          "actual": [],
+          "nw_sim": 0.0,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 72,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "CRITERIA",
+          "actual": [
+            "TIMING",
+            "KILL_LINE"
+          ],
+          "nw_sim": 0.3,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 74,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "CRITERIA",
+          "actual": [
+            "TIMING"
+          ],
+          "nw_sim": 0.5,
+          "nled_sim": 0.0
+        }
+      ],
+      "after": [
+        {
+          "held_idx": 12,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "CRITERIA",
+          "actual": [
+            "TIMING"
+          ],
+          "nw_sim": 0.5,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 28,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "CRITERIA",
+          "actual": [
+            "RISK"
+          ],
+          "nw_sim": 0.5,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 37,
+          "divergent": true,
+          "has_critical_reflection": true,
+          "pred": "RISK",
+          "actual": [
+            "CRITERIA"
+          ],
+          "nw_sim": 0.5,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 39,
+          "divergent": true,
+          "has_critical_reflection": true,
+          "pred": "KILL_LINE",
+          "actual": [
+            "DELEGATE",
+            "CRITERIA"
+          ],
+          "nw_sim": 0.3,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 47,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "UNKNOWN",
+          "actual": [],
+          "nw_sim": 0.0,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 50,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "UNKNOWN",
+          "actual": [],
+          "nw_sim": 0.0,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 72,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "CRITERIA",
+          "actual": [
+            "TIMING",
+            "KILL_LINE"
+          ],
+          "nw_sim": 0.3,
+          "nled_sim": 0.0
+        },
+        {
+          "held_idx": 74,
+          "divergent": true,
+          "has_critical_reflection": false,
+          "pred": "DELEGATE",
+          "actual": [
+            "TIMING"
+          ],
+          "nw_sim": 0.5,
+          "nled_sim": 0.0
+        }
+      ],
+      "n_still_no_critical_after": 6
+    },
+    "feature_degradation_before": {
+      "judge_type_J1": 2,
+      "judge_type_J2": 2,
+      "judge_type_J3": 2,
+      "judge_type_J4": 2,
+      "judge_type_J6": 2,
+      "scene_bucket_8": 8,
+      "opt_bucket_8": 8,
+      "is_corr_pair": 2,
+      "rf_len_bucket": 4,
+      "judge_type_J5": 1,
+      "rf_pos_density": 46,
+      "n_keywords_hit": 11
+    },
+    "feature_degradation_after": {
+      "judge_type_J1": 2,
+      "judge_type_J2": 2,
+      "judge_type_J3": 2,
+      "judge_type_J4": 2,
+      "judge_type_J6": 2,
+      "scene_bucket_8": 8,
+      "opt_bucket_8": 8,
+      "is_corr_pair": 2,
+      "rf_len_bucket": 4,
+      "judge_type_J5": 1,
+      "rf_pos_density": 47,
+      "n_keywords_hit": 11
+    }
+  },
+  "f4_alt_reading_definition": {
+    "question": "result_v3 §alt_reading_corr_excluded (11 divergence / 4 critical / cov 0.3636 / n=18) 的确切构造是什么? (E-42.4 沿 verifier 呈文: 7 种自然读法均未复现)",
+    "definition": "alt_reading = 同一 substrate (77 件) + 同一 seed=42 划分, 取主读法 held_out 23 件中**非 correction 事件**子集 (18 件) 作为新 held 集, 然后**整条 metrics 管线重跑** (决策树在剩余 59 件上重新训练, 再对 18 件算 NW-sim / NLED-sim / divergent / critical / bootstrap) —— 不是把主读法 23 条 per_event 抽掉 5 条后重算。",
+    "code_path": [
+      ".tmp/_run_final.py:122-123  held_idx = stratified_holdout_split_v3(events, 0.30, RandomState(42))  (主读法 23 件)",
+      ".tmp/_run_final.py:142      held_idx_nocorr = [i for i in held_idx if not is_correction_event_v3(events[i])]",
+      ".tmp/_run_final.py:143      alt_metrics = compute_metrics_v3(events, held_idx_nocorr)",
+      "results/_v4_pi_cot_v3_ruleset_v3_executor.py:1121-1123  训练面 = 全部事件 minus 新 held → 树在 59 件上重训 (这是 7 种自然读法复现失败的主因)",
+      "results/_v4_pi_cot_v3_ruleset_v3_executor.py:716-729  is_correction_event_v3 判据 = is_correction 为 *_pair_pending/R_pair 字符串 或 read_flip=True 或 event_type=='pi_disposition'",
+      ".tmp/_run_final.py:257-267  落盘字段 (只取 7 个 metric 字段, 不落 per_event)"
+    ],
+    "reproduction_steps": "python .tmp/_run_recheck_r1.py → 看 reproduction_selfcheck.all_identical == true (母件复现 result_v3 主/替读法全部 17 项逐字相同)",
+    "target_signature": {
+      "held_out_count": 18,
+      "nw_sim_mean": 0.5126984126984128,
+      "nled_sim_mean": 0.2962962962962963,
+      "div_critical_coverage": 0.36363636363636365,
+      "blind_obey_rate": 0.2857142857142857,
+      "bootstrap_ci": [
+        0.3722222222222222,
+        0.6611111111111111
+      ],
+      "n_divergent": 11,
+      "n_critical_among_divergent": 4
+    },
+    "candidate_probe": [
+      {
+        "candidate": "P0_实际代码路径_剔correction后重跑全链_含重训",
+        "how": ".tmp/_run_final.py L142-143 字面: held_idx_nocorr + compute_metrics_v3(events, held_idx_nocorr)",
+        "result": {
+          "n_held": 18,
+          "nw_sim_mean": 0.5126984126984128,
+          "nled_sim_mean": 0.2962962962962963,
+          "n_divergent": 11,
+          "n_critical_among_divergent": 4,
+          "div_critical_coverage": 0.36363636363636365,
+          "blind_obey_rate": 0.2857142857142857,
+          "bootstrap_ci": [
+            0.3722222222222222,
+            0.6611111111111111
+          ]
+        },
+        "held_idx_identical_to_p0": true,
+        "reproduces_result_v3_alt_reading": true
+      },
+      {
+        "candidate": "P1_主读法per_event直接剔correction后重算_不重训",
+        "how": "自然读法 1: 只抽掉 5 条 correction 的 per_event, 不重训树",
+        "result": {
+          "n_held": 18,
+          "nw_sim_mean": 0.5293650793650795,
+          "nled_sim_mean": 0.32407407407407407,
+          "n_divergent": 10,
+          "n_critical_among_divergent": 3,
+          "div_critical_coverage": 0.3,
+          "blind_obey_rate": 0.25,
+          "bootstrap_ci": [
+            0.3904761904761905,
+            0.6722222222222223
+          ]
+        },
+        "held_idx_identical_to_p0": true,
+        "reproduces_result_v3_alt_reading": false
+      },
+      {
+        "candidate": "P2_先剔correction再重划+重训",
+        "how": "自然读法 2: substrate 层剔 correction 后 0.30 分层重划 + 重训",
+        "result": {
+          "n_held": 18,
+          "nw_sim_mean": 0.5148148148148147,
+          "nled_sim_mean": 0.25,
+          "n_divergent": 12,
+          "n_critical_among_divergent": 10,
+          "div_critical_coverage": 0.8333333333333334,
+          "blind_obey_rate": 0.0,
+          "bootstrap_ci": [
+            0.39444444444444443,
+            0.6388888888888888
+          ]
+        },
+        "held_idx_identical_to_p0": false,
+        "reproduces_result_v3_alt_reading": false
+      },
+      {
+        "candidate": "P3_correction判据收窄为R_pair",
+        "how": "自然读法 3: correction 判据只认 is_correction=='R_pair' (漏 read_flip / pi_disposition)",
+        "result": {
+          "n_held": 18,
+          "nw_sim_mean": 0.5126984126984128,
+          "nled_sim_mean": 0.2962962962962963,
+          "n_divergent": 11,
+          "n_critical_among_divergent": 4,
+          "div_critical_coverage": 0.36363636363636365,
+          "blind_obey_rate": 0.2857142857142857,
+          "bootstrap_ci": [
+            0.3722222222222222,
+            0.6611111111111111
+          ]
+        },
+        "held_idx_identical_to_p0": true,
+        "reproduces_result_v3_alt_reading": true
+      },
+      {
+        "candidate": "P4_剔correction但沿用主读法树_不重训",
+        "how": "自然读法 4: 换 held 集但不重训, 沿主读法那棵树",
+        "result": {
+          "n_held": 18,
+          "nw_sim_mean": 0.5293650793650795,
+          "nled_sim_mean": 0.32407407407407407,
+          "n_divergent": 10,
+          "n_critical_among_divergent": 3,
+          "div_critical_coverage": 0.3,
+          "blind_obey_rate": 0.25,
+          "bootstrap_ci": [
+            0.3904761904761905,
+            0.6722222222222223
+          ]
+        },
+        "held_idx_identical_to_p0": true,
+        "reproduces_result_v3_alt_reading": false
+      },
+      {
+        "candidate": "P5_held改为全部非correction事件",
+        "how": "自然读法 5: held = 全部非 correction 事件 (非仅主读法 held 子集)",
+        "result": {
+          "n_held": 61,
+          "nw_sim_mean": 0.43871975019516,
+          "nled_sim_mean": 0.17349726775956284,
+          "n_divergent": 45,
+          "n_critical_among_divergent": 27,
+          "div_critical_coverage": 0.6,
+          "blind_obey_rate": 0.125,
+          "bootstrap_ci": [
+            0.3729898516783763,
+            0.5084309133489462
+          ]
+        },
+        "held_idx_identical_to_p0": false,
+        "reproduces_result_v3_alt_reading": false
+      },
+      {
+        "candidate": "P6_换seed重划后剔correction",
+        "how": "自然读法 6: seed+1 重划后再剔 correction",
+        "result": {
+          "n_held": 18,
+          "nw_sim_mean": 0.5333333333333334,
+          "nled_sim_mean": 0.19444444444444445,
+          "n_divergent": 13,
+          "n_critical_among_divergent": 9,
+          "div_critical_coverage": 0.6923076923076923,
+          "blind_obey_rate": 0.2,
+          "bootstrap_ci": [
+            0.43333333333333335,
+            0.6277777777777778
+          ]
+        },
+        "held_idx_identical_to_p0": false,
+        "reproduces_result_v3_alt_reading": false
+      },
+      {
+        "candidate": "P7_树训练剔correction但held保留主读法23件",
+        "how": "自然读法 7: 训练面剔 correction, held 仍用主读法 23 件",
+        "result": {
+          "n_held": 23,
+          "nw_sim_mean": 0.453416149068323,
+          "nled_sim_mean": 0.2753623188405797,
+          "n_divergent": 14,
+          "n_critical_among_divergent": 6,
+          "div_critical_coverage": 0.42857142857142855,
+          "blind_obey_rate": 0.2222222222222222,
+          "bootstrap_ci": [
+            0.3217391304347826,
+            0.5869565217391304
+          ]
+        },
+        "held_idx_identical_to_p0": false,
+        "reproduces_result_v3_alt_reading": false
+      }
+    ],
+    "n_candidates_tested": 8,
+    "n_candidates_matching": 2,
+    "matching_candidates": [
+      "P0_实际代码路径_剔correction后重跑全链_含重训",
+      "P3_correction判据收窄为R_pair"
+    ],
+    "n_candidates_matching_distinct_construction": 1,
+    "matching_candidates_distinct_construction": [
+      "P0_实际代码路径_剔correction后重跑全链_含重训"
+    ],
+    "degenerate_equivalent_matchers": [
+      "P3_correction判据收窄为R_pair"
+    ],
+    "degeneracy_note": "P3 (correction 判据收窄为 is_correction=='R_pair') 数字亦复现, 但其 held 集与 P0 逐件相同 → 说明主读法 23 件 held 内的 5 件 correction 全部为 R_pair/*_pair_pending 型, held 集内无 read_flip / pi_disposition 型 → P3 系 P0 的**同义改写**(退化等效), 非独立读法; 故「复现读法」的独立构造数 = 1 (即 P0)",
+    "verdict": "可反推 (非不可反推): 唯一**独立**复现构造 = P0 (剔 correction 后整链重跑含重训); P3 为其同义改写; 其余 6 种自然读法均不复现",
+    "caveat": "本棒独立复现; verifier 呈文「7 种读法复现失败」之原文读法清单本棒未见 (呈文本身不落盘), 故本棒以自建 8 候选台复核, 读法集合与 verifier 的 7 种不保证逐条对应"
+  },
+  "constraint": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "key_in_no_prompt_no_json_no_log": true,
+    "no_v1_v2_v3_frozen_touch": true,
+    "no_existing_file_overwritten": true,
+    "no_derived_json_merge": true,
+    "no_threshold_tampering": true,
+    "seed": 42,
+    "th_nw_sim_mean": 0.65,
+    "th_nled_sim_mean": 0.55,
+    "th_critical_cov": 1.0,
+    "th_blind_obey": 0.1,
+    "th_boot_ci_floor": 0.4,
+    "explicit_boolean_naming": true,
+    "s_40_discipline_followed": true
+  },
+  "touch_policy_summary": {
+    "executor_base_0_byte_change": true,
+    "executor_base_sha12_unchanged": true,
+    "result_v3_0_byte_change": true,
+    "addendum_d4_0_byte_change": true,
+    "errata_0_byte_change": true,
+    "new_files_only": [
+      "results/_v4_pi_cot_v3_ruleset_v3_executor_r1_2026_09_27.py",
+      "results/_v4_pi_cot_v3_k3b_recheck_r1_2026_09_27.json",
+      "results/_v4_pi_cot_v3_alt_reading_definition_2026_09_27.md",
+      "results/_v4_pi_cot_v3_dataset_addendum_d4_relabel_2026_09_27.json"
+    ]
+  },
+  "honesty_note": "本件 = F1 修复后重跑复核 (formal_judgment=false, exploratory=true): 不产生新判定, 只复核既有 K-V3-B/C 读数在修复后是否变化及变化方向. 已: (a) 母件 8a81d90c69ba / 58,794 B 实测 0 触动; (b) r1 = 母件字节同源副本 + 唯一一处装载层修复; (c) 母件复现自校验 17 项 (main 10 + alt 7) 与盘上 result_v3.json 逐字相同 → 本 runner 与棒 C 同口径; (d) r1 跑出 K-V3-B/C 修后读数 + held 集与母件完全一致 (仅文本装载不同); (e) F4 口径反推 8 候选台, 唯一复现读法 P0 已定位到 .tmp/_run_final.py:142-143 逐行. 未触: result_v3.json / d4 addendum / 18 件 frozen 链 / 勘误链 / v2 executor / ruleset_v3.json 任何既有件. 0 LLM / 0 key 落盘 / 0 派生 JSON 合并 / 0 擅调阈值 / 0 覆盖既有件. 老实交代: (i) E-42.1 登记的敏感性 0.4286→0.6000 为沿派工单/verifier 呈文字面, 本棒为首次独立复现, 复核结果见 k_v3_b.matches_errata_sensitivity 字段; (ii) d1_original_read 同构缺陷**未修** (E-42.1 未登记该项), 若后续拍板要修须重跑并另立新名件, 不可与本件数字混用; (iii) v2 executor 同构缺陷只登记不修 (v2 系历史冻结件); (iv) F4 的 8 候选台为本棒自建, verifier 呈文原 7 种读法的具体清单本棒未见 (呈文不落盘), 两者不保证逐条对应; (v) 本件 alt_reading_after 为 r1 (修复后) 口径, 与 result_v3 的母件 alt_reading 不可直接混算. succeeded ≠ 跑完 = 以盘上 SHA-12 落盘核验为准.",
+  "fingerprint_self_hash_post_birth": "A9387D39D7E4",
+  "metadata": {
+    "author": "Mavis 团队 worker",
+    "date": "2026-09-27",
+    "encoding": "UTF-8 (no BOM)",
+    "line_ending": "LF",
+    "track": "Track 1 (0 LLM / 0 proxy / 0 gateway)",
+    "type": "v3_k3b_recheck_r1",
+    "agent": "worker (执行类)",
+    "skill": "scientific-research-workflows:experimental-design (@scientific-research-workflows)",
+    "plugin": "@scientific-research-workflows",
+    "runner": ".tmp/_run_recheck_r1.py",
+    "authored_by_branch_session": "mvs_9b81aec9bc834fe188f6b3850301bd8f"
+  }
+}

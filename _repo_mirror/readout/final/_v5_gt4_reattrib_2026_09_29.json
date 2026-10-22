@@ -1,0 +1,92 @@
+{
+ "case": "gt（GT-4 腿）",
+ "class": "类 II · 潜伏带 (1.05, 1.2]",
+ "prereg_rule_ids": [
+  "K-V5R3-GT4-1",
+  "K-V5R3-GT4-2",
+  "K-V5R3-GT4-3",
+  "K-V5R3-GT4-4",
+  "K-V5R3-GT4-5",
+  "K-V5R3-GT4-6",
+  "K-V5R3-0-E",
+  "K-V5R3-0-F"
+ ],
+ "surface": "0 补跑 · 仅机械并报（立线件 §6.4）",
+ "anchor": {
+  "path": "results/deposon_v20_gt.json",
+  "sha12": "497b9c2d6746"
+ },
+ "GT4": {
+  "original_verdict_literal": "field_coordination_value_supported",
+  "v2_parallel_verdict": null,
+  "parallel_report": {
+   "原判": "field_coordination_value_supported",
+   "v2 并列判": "同原判（0 新判 · GT4-6）"
+  },
+  "mandatory_concurrent_report_K_V5R3_GT4_4": {
+   "median_poa": 1.3333333333333333,
+   "n_poa_inf": 3,
+   "n_poa_undefined": 0,
+   "n_finite_in_median": 17,
+   "note": "0 只报 median 单值 = 登记无效"
+  },
+  "median_recomputed": 1.3333333333333333,
+  "median_as_run": 1.3333333333333333,
+  "median_bit_identical": true,
+  "band_test": "1.05 < median_poa ≤ 1.2",
+  "band_entered": false,
+  "attribution": null,
+  "selfish_arm_degradation_bias": {
+   "selfish_arms": [
+    "random",
+    "degree"
+   ],
+   "selfish_arms_preregistered": [
+    "random",
+    "degree",
+    "llm_prior"
+   ],
+   "direction": "自利集退化 ⇒ 分母只可能更小 ⇒ PoA 系统性偏大 ⇒ **偏 PASS 侧**",
+   "interaction_with_v2": "K-V5R3-GT4-2：若带内触发 ②判 FAIL，须同时披露该已知反向偏置，否则构成**误导性 FAIL**；FAIL 根因强制标 ③ 混合，两项方向相反、不可相互抵销",
+   "as_run_note": "as-run median 1.3333 > 1.2 落在带外 PASS 侧，未触发带归属；该偏置仍随本判强制披露"
+  },
+  "median_discontinuity": "K-V5R3-GT4-4：median 对成分变动不连续 ⇒ 图集/自利集任一变动都可能跨过 1.2 边界",
+  "anti_degeneration_gate": {
+   "construct": "gt（GT-4）· poa_per_graph_finite（17 有限值）",
+   "n_values": 17,
+   "n_distinct": 9,
+   "std": 0.6470588235294118,
+   "gate_n_distinct_gt_3": true,
+   "gate_std_gt_0": true,
+   "gate_pass": true,
+   "verdict": "PASS",
+   "kd_reason": null
+  },
+  "thresholds_used": {
+   "pass_threshold": 1.2,
+   "dead_threshold": 1.05
+  },
+  "new_thresholds_added": 0
+ },
+ "GT1": {
+  "original_verdict_literal": "supports_potential_game_framework",
+  "v2_parallel_verdict": null,
+  "parallel_report": {
+   "原判": "supports_potential_game_framework",
+   "v2 并列判": "同原判 PASS"
+  },
+  "probe": {
+   "dirichlet_mean_rate": 0.1,
+   "meanfield_rate": 0.4,
+   "margin": 0.2,
+   "margin_test": "0.1 < 0.4 − 0.2 = 0.2",
+   "margin_holds": true,
+   "n_runs_below_meanfield": 20,
+   "min_losers": 15,
+   "losers_holds": true
+  },
+  "v2_line_added": "0（K-V5R3-GT4-5：双条件皆满足、0 未定义带 ⇒ 无缺口可补）"
+ },
+ "two_legs_not_substitutable": "GT-1 与 GT-4 两腿 0 互替、0 合并为单一总判（立线件 §9 外推禁令 ③）",
+ "scope_ceiling": "GT-4：17 个有限 PoA（3 个 ∞ 排除）× 自利集 {random, degree}（退化）；0 外推含 llm_prior 的完整自利集"
+}

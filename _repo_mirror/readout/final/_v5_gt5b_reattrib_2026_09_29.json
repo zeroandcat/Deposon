@@ -1,0 +1,214 @@
+{
+ "case": "gt5b",
+ "class": "类 II · 潜伏带（frac<0.8 ∧ #below0.5≤2）· as-run 结构性不可达",
+ "prereg_rule_ids": [
+  "K-V5R3-GT5B-1",
+  "K-V5R3-GT5B-2",
+  "K-V5R3-GT5B-3",
+  "K-V5R3-GT5B-4",
+  "K-V5R3-0-D",
+  "K-V5R3-0-E",
+  "K-V5R3-0-G"
+ ],
+ "surface": "0 补跑 · 仅防退化门 + 并列判核对（立线件 §6.4）",
+ "anchor": {
+  "path": "results/deposon_v20_gt5b.json",
+  "sha12": "2907006dbe48"
+ },
+ "original_verdict_literal": "supports_narrowed_monotonicity",
+ "v2_parallel_verdict": null,
+ "parallel_report": {
+  "原判": "supports_narrowed_monotonicity",
+  "v2 并列判": "同原判（0 新判 · GT5B-4）"
+ },
+ "band_probe": {
+  "band_literal": "frac_full_mono < 0.8 且 #(mono<0.5) ≤ 2",
+  "frac_graphs_full_monotonicity": 1.0,
+  "n_graphs_below_50pct": 0,
+  "band_entered": false,
+  "structural_unreachability": "frac = 1.0 是 frac 的数学上界（22/22 全满）⇒ 补数据不可能把 as-run 推出带 ⇒ K-V5R3-GT5B-1 的 ①（扩测量面）在本案对 as-run **不适用**，①只能服务于「未来换图集」的新读数，0 回溯修 as-run",
+  "why_2_is_only_option": "带归属 = ②最不利方向（claim 判 FAIL，H_GT5b_dead 侧）；本案 v2 无新判产生，仅封口"
+ },
+ "anti_degeneration_gates": {
+  "meanfield_min_step_delta_graph_level": {
+   "construct": "gt5b · meanfield_min_step_delta 逐图（22 值）",
+   "n_values": 22,
+   "n_distinct": 22,
+   "std": 0.0011882088935189629,
+   "gate_n_distinct_gt_3": true,
+   "gate_std_gt_0": true,
+   "gate_pass": true,
+   "verdict": "PASS",
+   "kd_reason": null
+  },
+  "meanfield_min_step_delta_all_tasks": {
+   "construct": "gt5b · meanfield_min_step_delta 逐任务汇总（全部 22 图）",
+   "n_values": 216,
+   "n_distinct": 148,
+   "std": 0.010871236069666852,
+   "gate_n_distinct_gt_3": true,
+   "gate_std_gt_0": true,
+   "gate_pass": true,
+   "verdict": "PASS",
+   "kd_reason": null
+  },
+  "meanfield_monotone_rate": {
+   "construct": "gt5b · meanfield_monotone_rate 逐图（22 值）",
+   "n_values": 22,
+   "n_distinct": 1,
+   "std": 0.0,
+   "gate_n_distinct_gt_3": false,
+   "gate_std_gt_0": false,
+   "gate_pass": false,
+   "verdict": "KD",
+   "kd_reason": "K-V5R3-0-B ③ 防退化门不达（n_distinct≤3 或 std=0）"
+  },
+  "S4_sentinel_单独门": {
+   "construct": "gt5b · S4 逐步 delta 序列（哨兵）",
+   "n_values": 10,
+   "n_distinct": 5,
+   "std": 7.05427937563294e-05,
+   "gate_n_distinct_gt_3": true,
+   "gate_std_gt_0": true,
+   "gate_pass": true,
+   "verdict": "PASS",
+   "kd_reason": null,
+   "graph_level_min_step_delta": 0.0,
+   "graph_level_monotone_rate": 1.0,
+   "zero_task_count": 4,
+   "denominator_handling": "门达标 ⇒ S4 **不落 KD**、不剔除、不加权，分母保持 22（沿既有字面）；若门不达 ⇒ S4 落 KD 且分母仍按既有字面处理（0 静默剔除以保 22/22）"
+  },
+  "gamma_V5R3_3": "meanfield_monotone_rate 二值退化（n_distinct=1）⇒ 0 以该字段单独判档；判别力落在 min_step_delta （n_distinct=22）与 GT-5 的 endpoint_gap",
+  "gamma_V5R3_11": "S4 meanfield_min_step_delta=0.0 而 monotone_rate=1.0（哨兵在案，非本件新设）"
+ },
+ "four_prohibitions_gt5b": {
+  "① 0 改写 GT_RECONSTRUCTION.md §2 的 3/4 反转披露": "本棒 0 以写模式打开该文件（实测 SHA-12 见锚件审计）",
+  "② 0 使 GT-5 B 腿 FAIL 回填进 gt5b": "gt5b 主张为 mean-field only（不涉及 dirichlet 臂），其 as-run PASS **不因 GT-5 B 腿 FAIL 而动摇**（两者量的对象不同，非互替）",
+  "③ 0 以 22/22 覆盖 GT-5 的 4 图 B 腿失败": "窄面 PASS **不升格**为宽面 PASS；GT-5/GT-5b 两判并列同报",
+  "④ 0 反向以 GT-5 的 B 腿 FAIL 否定 gt5b 的 mean-field 单调性 PASS": "同上，非互替",
+  "two_verdicts_reported_side_by_side": {
+   "GT-5": {
+    "原判": "inconclusive_preregistered_undefined_band",
+    "v2 并列判": "FAIL（B 腿）／A 腿 PASS · claim 级 FAIL"
+   },
+   "GT-5b": {
+    "原判": "supports_narrowed_monotonicity",
+    "v2 并列判": "同原判 PASS"
+   }
+  }
+ },
+ "conclusion_ceiling": "仅覆盖 mean-field 臂、22 图 × ≤10 tasks、sample_seed=505500；0 外推 dirichlet 臂、0 升格为宽面 PASS",
+ "new_thresholds_added": 0,
+ "per_graph_readout": {
+  "L_algorithm_process": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 1.0559798613307692e-07,
+   "n_tasks": 10
+  },
+  "L_biological_taxonomy": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0030879750074115364,
+   "n_tasks": 10
+  },
+  "L_geography_world": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.00027373235166550103,
+   "n_tasks": 10
+  },
+  "L_historical_causality": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 3.471395482179673e-08,
+   "n_tasks": 10
+  },
+  "L_physics_concepts": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.00016204175365253093,
+   "n_tasks": 10
+  },
+  "L_project_management": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 1.0418124651856431e-07,
+   "n_tasks": 10
+  },
+  "S1": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0011933100385879136,
+   "n_tasks": 10
+  },
+  "S1_n35": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0019401796105555924,
+   "n_tasks": 10
+  },
+  "S1_n45": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0023621801729016845,
+   "n_tasks": 10
+  },
+  "S1_n60": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0029690588394846174,
+   "n_tasks": 10
+  },
+  "S2": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0016090039848224436,
+   "n_tasks": 10
+  },
+  "S2_n20": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0015054715446818356,
+   "n_tasks": 9
+  },
+  "S2_n35": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.003925221817933089,
+   "n_tasks": 10
+  },
+  "S2_n45": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.000882703213432201,
+   "n_tasks": 10
+  },
+  "S2_n60": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0002486078070336184,
+   "n_tasks": 10
+  },
+  "S3": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.00015129588181261866,
+   "n_tasks": 10
+  },
+  "S4": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0,
+   "n_tasks": 10
+  },
+  "S5": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.0001822634660832989,
+   "n_tasks": 7
+  },
+  "S6": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 3.5032924934341736e-06,
+   "n_tasks": 10
+  },
+  "S6_n20": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 2.030341950454151e-05,
+   "n_tasks": 10
+  },
+  "S6_n35": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 0.00010262569606678262,
+   "n_tasks": 10
+  },
+  "S6_n60": {
+   "meanfield_monotone_rate": 1.0,
+   "meanfield_min_step_delta": 2.3922771967832546e-06,
+   "n_tasks": 10
+  }
+ }
+}

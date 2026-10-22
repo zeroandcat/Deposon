@@ -1,0 +1,370 @@
+{
+  "schema": "v3_recheck_result/08_boss_pc_3_a3_clipping/1",
+  "prereg": {
+    "path": "results/_v3_recheck_prereg_v1_2026_09_27.md",
+    "sha12": "88052d7db895",
+    "kill_line": "K-V3R-8",
+    "threshold": "TH-V3R-8 (clip_r2_min sweep 0.3/0.5/0.7; n_full=[10,20,50,100,200,500,1000]; n_clipped=[20,50,100,200,500]) + spec §5 A3 语义"
+  },
+  "executor": "results/_v3_recheck_08_executor_2026_09_27.py",
+  "date": "2026-09-27",
+  "seed": 20260927,
+  "runtime": "0 LLM; numpy + hashlib + json only; no network; read-only inputs",
+  "inputs": [
+    {
+      "path": "results/boss_pc_3_a3_clipping_2026_09_15.json",
+      "sha12_measured": "d74d6b39d1b0"
+    },
+    {
+      "path": "results/deposon_v3_physical_opt_60cells_2026_09_11.json",
+      "sha12_measured": "c659695aa23c"
+    }
+  ],
+  "construct": {
+    "A3_semantics": "沿 spec §5：去掉 N=10 与 N=1000 两端，看幂律拟合 R² 是否仍 > clip_r2_min",
+    "r2_formula": "沿 spec §3.3 + §4.1：log10(P) = beta*log10(N) + log10(A)，OLS R² = 1 - SS_res/SS_tot",
+    "clip_r2_min_grid": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "n_full": [
+      10,
+      20,
+      50,
+      100,
+      200,
+      500,
+      1000
+    ],
+    "n_clipped": [
+      20,
+      50,
+      100,
+      200,
+      500
+    ],
+    "trials_seeds": [
+      42,
+      137,
+      256
+    ],
+    "bootstrap": {
+      "n": 1000,
+      "seed": 42
+    }
+  },
+  "construct_degen_self_check": {
+    "gate": "K-V3R-0-A: 素材面须有 n_distinct > 3 + std > 0 的真 N 档分布",
+    "material_probe": {
+      "declared_data_source": "deposon_v3_physical_opt_60cells_2026_09_11.json",
+      "declared_data_source_has_N_ladder_field": false,
+      "N_semantics_in_spec": "spec §3.1 N = 图族规模（图张数）；P(N) = 跨该 N 档的命中率/失真率",
+      "real_N_levels_with_P_observation": [],
+      "N_levels_needed_by_TH_V3R_8": [
+        10,
+        20,
+        50,
+        100,
+        200,
+        500,
+        1000
+      ],
+      "N_levels_coverable": [],
+      "n_distinct_real_N_levels": 0,
+      "cell_count_levels_available_in_declared_source": [
+        30,
+        60,
+        540
+      ],
+      "n_distinct_cell_count_levels": 3,
+      "cell_counts_not_substitutable_for_N": true,
+      "cell_count_substitution_rejected_because": "cell 计数（30/60/540）语义为分类 cell 数，非 spec §3.1 图族规模；顶替即等于擅调 TH-V3R-8 阈值（违 K-V3R-0-B）",
+      "per_model_counts_available": [
+        "T30",
+        "R30",
+        "A30",
+        "T60",
+        "R60",
+        "A60"
+      ],
+      "max_cells_available": 540,
+      "missing_artifacts_probe": [
+        {
+          "path": "results/v3x_pc_v0",
+          "exists": false
+        },
+        {
+          "path": "docs/V3X/P_C_V0_RESULTS_2026_09_09_mavis.md",
+          "exists": false
+        },
+        {
+          "path": "results/v3x_pc_v0/attack_pc_a3_clipping.py",
+          "exists": false
+        },
+        {
+          "path": "deposon_team/plugins/attack_pc_a3_clipping.py",
+          "exists": false
+        },
+        {
+          "path": "attack_pc_a3_clipping.py",
+          "exists": false
+        },
+        {
+          "path": "tools/scaling_probe.py",
+          "exists": false
+        }
+      ],
+      "checked_and_rejected_alternatives": [
+        {
+          "path": "results/deposon_benchmark_v1_4_gsm8k_details.json",
+          "reason": "含 N 键 {10,20,50,100}，但非 P-C 两相结构命中率/失真率序列，且缺 200/500/1000 三档"
+        },
+        {
+          "path": "results/deposon_gsm8k_stratified.json §per_question_steps",
+          "reason": "N 键 {10,20,50,100} 为步数分布，非 P(N) 幂律观测序列，缺 3 档"
+        }
+      ]
+    },
+    "degenerate_alarm_hit": true,
+    "gate_pass": false,
+    "disposition": "§3.2「任意不达 = 退化警报，改构造或判「不明」，不许带病开跑」-> 已触发，判「不明」"
+  },
+  "construction_self_test": {
+    "label": "SYNTHETIC_CONSTRUCTION_SELF_TEST（构造自检夹具，非观测数据，不参与判定证据）",
+    "synthetic_p_form": "P(N) = 2.0 * N^(-0.45) + 0.02，乘性高斯噪声 sigma=0.05（seeded）",
+    "matrix": [
+      {
+        "trial_seed": 42,
+        "n_full": [
+          10,
+          20,
+          50,
+          100,
+          200,
+          500,
+          1000
+        ],
+        "n_clipped_used": [
+          20,
+          50,
+          100,
+          200,
+          500
+        ],
+        "r2_full": 0.9927791707840298,
+        "r2_clipped": 0.9899436414654673,
+        "r2_delta_full_minus_clipped": 0.0028355293185624575,
+        "delta_is_zero": false,
+        "verdict_clip_r2_min_0.3": "PASS",
+        "verdict_clip_r2_min_0.5": "PASS",
+        "verdict_clip_r2_min_0.7": "PASS"
+      },
+      {
+        "trial_seed": 137,
+        "n_full": [
+          10,
+          20,
+          50,
+          100,
+          200,
+          500,
+          1000
+        ],
+        "n_clipped_used": [
+          20,
+          50,
+          100,
+          200,
+          500
+        ],
+        "r2_full": 0.9983491298958508,
+        "r2_clipped": 0.9994576055143476,
+        "r2_delta_full_minus_clipped": -0.001108475618496807,
+        "delta_is_zero": false,
+        "verdict_clip_r2_min_0.3": "PASS",
+        "verdict_clip_r2_min_0.5": "PASS",
+        "verdict_clip_r2_min_0.7": "PASS"
+      },
+      {
+        "trial_seed": 256,
+        "n_full": [
+          10,
+          20,
+          50,
+          100,
+          200,
+          500,
+          1000
+        ],
+        "n_clipped_used": [
+          20,
+          50,
+          100,
+          200,
+          500
+        ],
+        "r2_full": 0.9895870455586644,
+        "r2_clipped": 0.9868002255994981,
+        "r2_delta_full_minus_clipped": 0.002786819959166298,
+        "delta_is_zero": false,
+        "verdict_clip_r2_min_0.3": "PASS",
+        "verdict_clip_r2_min_0.5": "PASS",
+        "verdict_clip_r2_min_0.7": "PASS"
+      }
+    ],
+    "no_op_emulation_of_v3_defect": [
+      {
+        "trial_seed": 42,
+        "n_full": [
+          10,
+          20,
+          50,
+          100,
+          200,
+          500,
+          1000
+        ],
+        "n_clipped_used": [
+          10,
+          20,
+          50,
+          100,
+          200,
+          500,
+          1000
+        ],
+        "r2_full": 0.9927791707840298,
+        "r2_clipped": 0.9927791707840298,
+        "r2_delta_full_minus_clipped": 0.0,
+        "delta_is_zero": true,
+        "verdict_clip_r2_min_0.3": "PASS",
+        "verdict_clip_r2_min_0.5": "PASS",
+        "verdict_clip_r2_min_0.7": "PASS"
+      },
+      {
+        "trial_seed": 137,
+        "n_full": [
+          10,
+          20,
+          50,
+          100,
+          200,
+          500,
+          1000
+        ],
+        "n_clipped_used": [
+          10,
+          20,
+          50,
+          100,
+          200,
+          500,
+          1000
+        ],
+        "r2_full": 0.9983491298958508,
+        "r2_clipped": 0.9983491298958508,
+        "r2_delta_full_minus_clipped": 0.0,
+        "delta_is_zero": true,
+        "verdict_clip_r2_min_0.3": "PASS",
+        "verdict_clip_r2_min_0.5": "PASS",
+        "verdict_clip_r2_min_0.7": "PASS"
+      },
+      {
+        "trial_seed": 256,
+        "n_full": [
+          10,
+          20,
+          50,
+          100,
+          200,
+          500,
+          1000
+        ],
+        "n_clipped_used": [
+          10,
+          20,
+          50,
+          100,
+          200,
+          500,
+          1000
+        ],
+        "r2_full": 0.9895870455586644,
+        "r2_clipped": 0.9895870455586644,
+        "r2_delta_full_minus_clipped": 0.0,
+        "delta_is_zero": true,
+        "verdict_clip_r2_min_0.3": "PASS",
+        "verdict_clip_r2_min_0.5": "PASS",
+        "verdict_clip_r2_min_0.7": "PASS"
+      }
+    ],
+    "no_op_emulation_reproduces_zero_delta": true,
+    "bootstrap": {
+      "n": 1000,
+      "seed": 42,
+      "delta_mean": -0.003512086846875089,
+      "delta_std": 0.003278062099701881,
+      "delta_ci95": [
+        -0.011705965160729779,
+        0.0007053760137049031
+      ],
+      "fraction_of_resamples_with_delta_zero": 0.0,
+      "label": "SYNTHETIC_SELF_TEST"
+    },
+    "executor_non_degenerate": true
+  },
+  "legacy_dual_track": {
+    "legacy_verdict": "FAIL（worst_clipped_r2 = 0.3362 < clip_r2_min = 0.7；3/3 trial 的 r2_delta_full_minus_clipped == 0.0）",
+    "legacy_verdict_field": "FAIL",
+    "legacy_worst_clipped_r2": 0.3362,
+    "legacy_clip_r2_min": 0.7,
+    "legacy_n_full": [
+      10,
+      20,
+      50,
+      100,
+      200,
+      500,
+      1000
+    ],
+    "legacy_n_clipped": [
+      20,
+      50,
+      100,
+      200,
+      500
+    ],
+    "legacy_r2_clipped_trials": [
+      0.6197,
+      0.3362,
+      0.5444
+    ],
+    "legacy_delta_trials": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "legacy_delta_all_zero": true,
+    "provenance_gap": "原 JSON 自报 data_source = deposon_v3_physical_opt_60cells_2026_09_11.json，该件不含任何 N 阶梯字段；原 r2_full_N7 / r2_clipped_N5 数值（[0.6197, 0.3362, 0.5444]）无法从自报源复算；原始执行器 deposon_team/plugins/attack_pc_a3_clipping.py 在盘上不存在。"
+  },
+  "verdict": {
+    "new_verdict": "不明（K-V3R-0-A 退化警报：真实 N 档 n_distinct=0 <= 3，素材面不足，不许带病开跑）",
+    "kill_line_decidable": false,
+    "kill_line_pass": false,
+    "kill_line_hit": true,
+    "legacy_verdict": "FAIL（worst_clipped_r2 = 0.3362 < clip_r2_min = 0.7；3/3 trial 的 r2_delta_full_minus_clipped == 0.0）",
+    "一致性": "不一致（维持原标注 + 显式登记新构造 verdict）",
+    "gamma": "素材面不足：真实 P(N) 7 档序列与原始 A3 执行器双缺件，K-V3R-8 判死线不可判（既非 PASS 亦非 FAIL）",
+    "改判档位": "§2.3 第 4 行（不明）→ 维持原 V3 标注不动 + 显式登记 γ + 归「V4 收尾整理」待拍板桶"
+  },
+  "iron_rules": {
+    "0_LLM": true,
+    "no_proxy": true,
+    "no_key_in_prompt_json_disk": true,
+    "read_only_inputs": true,
+    "derived_json_not_merged": true,
+    "synthetic_self_test_labeled_not_evidence": true,
+    "v3_original_report_bytes_untouched": true
+  }
+}

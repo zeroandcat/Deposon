@@ -1,0 +1,1800 @@
+{
+  "metadata": {
+    "schema": "v4_t15r2_sensitivity_fix_n10/1",
+    "task": "T1.5r2 . L2/L14 温度敏感性 + qwen_plan 单端点 (非 reasoning + max_tokens=500 修正构造失灵族 + plan 字面扩样至 30 calls/cell 满足 N_min=10) 扩样修订探针 (construction-failure-fix expansion probe)",
+    "date_label": "2026-09-26",
+    "generated_utc": "2026-09-26T17:15:40.168972+08:00",
+    "author": "Mavis worker (T1.5r2 扩样修订 executor 子任务)",
+    "spec_conformance": "T1.5r2 prereg (TBA, 待 PI 复核生效) + T1.5 prereg 8898B964A9D9 + T1.5 activation 443EFB39804A + T1.5 result 6B47D389B7AE + T1.5 verdict 52C985429C91 + T1.5 executor 558E635F9BA6 + T1 prereg 802DECE2286A + T1 activation 79936B630015 + T1 verdict F1B5E49F3058 + Track 2 runner B65619A07B10 + endpoints probe C846F7FC79EE + L2 verdict E433A06E7BFB + L14 verdict 764F24A21AC8 (盘 8EEF73BF9856) + T1 executor A7CAD9228B0B 字面锚 (skill 缺位老实交代)",
+    "line_ending": "LF",
+    "encoding": "UTF-8 (no BOM)",
+    "algorithm": "SHA-256 前 12 位",
+    "predecessor_chain_sha12": {
+      "T15_prereg": "8898B964A9D9",
+      "T15_verdict": "52C985429C91",
+      "T15_result": "6B47D389B7AE",
+      "T15_executor": "558E635F9BA6",
+      "T1_prereg": "802DECE2286A",
+      "T1_verdict": "F1B5E49F3058",
+      "T1_activation": "79936B630015",
+      "v02_prereg": "D85488A64D89",
+      "L2_verdict": "E433A06E7BFB",
+      "L14_verdict_self_report": "764F24A21AC8",
+      "L14_verdict_disk": "8EEF73BF9856",
+      "L9_prereg": "23879B6CD1CC",
+      "L10_prereg": "F6FE005EE3C7",
+      "N09_N39_prereg": "0A9EE16267B5",
+      "methods_prereg": "0A7BCA992B95",
+      "seeds_prereg": "113CBE555643",
+      "captions_22": "6A2656878745",
+      "track2_multimodel_probe": "B65619A07B10",
+      "track2_endpoints_probe": "C846F7FC79EE",
+      "t1_executor": "A7CAD9228B0B"
+    },
+    "T15r2_pi_authorization_basis": "PI 2026-09-26 16:26 派工单 ask_57981c1bc81e03b9990a06e5 t15_ext 拍板「+60 calls 规化重跑 (N_min≥10 字面满足)」 + T1.5 verdict §3.4 +60 calls 接力棒扩 N 至 N_min 满足 + §4.4 方案 A 补跑 2 calls (coze/S5/r0 cell 2 + GLM_1/L_geography_world/r1 cell 3); ratify_all 追认既有生效件 (PI 复核生效待办)",
+    "skill_absence_fallback": "派工单要求 skill `scientific-research-workflows:statistical-analysis` (plugin @scientific-research-workflows, sha256-tree-v1 = 611965fcb6208a5dbeb28d594ad7ca0f8b1f8fd62fc33c189e56a50e49db19cb) 本地 skill 加载器实录 `Local skill not found` → 按 T1.5r2 prereg + T1.5 prereg 8898B964A9D9 + T1 prereg 802DECE2286A + T1 executor 字面锚执行, 未编造 skill 不存在的虚构指令",
+    "audit_only_metadata_caliber": {
+      "note": "metadata 字段 = audit-only (沿 L14V3 映射件 §6.1 #2 + 派工单 ask_9484b696 meta_field 拍板); 不参与 kill-line / Jaccard / 统计推断",
+      "fields": [
+        "v3_anchor_api_name",
+        "v3_anchor_9backbone_name",
+        "v4_current_model_id_sent",
+        "v4_current_model_returned",
+        "v4_current_endpoint"
+      ],
+      "endpoint_constant_T15r2": "token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+      "model_constant_T15r2": "qwen3.7-max (非 reasoning)"
+    },
+    "constraint_locale_hard": "T1.5r2 = T1.5 扩样修订探针 (T1.5 prereg §1.4 计划扩样修订 = T1.5 构造失灵族补正稳健性辅助检验扩样修订); 不翻 L2/L14 正式判定 (沿 T1.5r2 §0 + §1.3 + §4 + §5 根因关联表) + 不二次判定 T1 verdict §7 自身 (沿 T1.5r2 §0 + §1.5.2 + §5) + 不二次判定 T1.5 verdict §1 主读法「判定稳健」 + §2 K-T1-S3 字面 + §3 K-N11-N1_T1relax 字面 FAIL 根因归类 + §4 2 calls 超时不补跑 (沿 T1.5 verdict 一字不动 + T1.5r2 §0.5 + §1.5.2 + §5 根因关联表)",
+    "expansion_localization": "T1.5r2 = T1.5 prereg §1.4 plan 字面扩样修订 (20 → 30 calls/cell = 5 教师 × 2 prompts × 3 re-asks; +60 calls 增量; K-N11-N1_T1relax 字面 PASS 根因消除 = 假证伪族 (构造/计划失灵 = prereg 内 plan vs 字面 N_min 不一致) 根因消除); 0 触 T1.5 矩阵 / 端点 / 模型 / max_tokens / 温度维度 / claim / kill-line 字面 (沿 T1.5r2 §1.5 字面不动声明)"
+  },
+  "constraint": {
+    "no_key_on_disk": true,
+    "key_source": "runtime env / desktop AI/LLM API.txt",
+    "proxy_teamo_only_T15r2_not_triggered": true,
+    "inter_call_sleep_s": 2.5,
+    "watchdog_s": 600,
+    "batch_call_limit": 30,
+    "interrupted_recovery": "checkpoint 模式 (.tmp/_t15r2_records.json + 同 worker 接力棒续跑); T1.5 records checkpoint .tmp/_t15_records.json 不动",
+    "small_batch_strategy": "6 cells 顺序跑; 每 cell = 5 teachers × 2 prompts × 3 re-asks = 30 calls; 单批 ≤ 30 calls; 看门狗 600s; T1.5r2 实测上限 = 4 cells × 10 + cell 2/3 × 11 = +62 calls (含 2 补跑 + 60 reask_idx=2 全员)",
+    "endpoint_construction_fix": "C-T15-1 = qwen_plan 单端点 (T1 mimo/teamo 端点维度砍去); 非 reasoning + max_tokens=500 (工具失灵族参数修正)",
+    "n_reasks_expansion": "C-T15r2-1 = 5 教师 × 2 prompts × 3 re-asks/cell (T1.5 plan 字面 2 → 3 re-asks 扩样修订; +60 calls 增量; 构造失灵族参数扩展, 非阈值调整)",
+    "rerun_2calls": "C-T15r2-2 = 2 calls 缺位补跑 (coze/S5/r0 cell 2 + GLM_1/L_geography_world/r1 cell 3) 计入 +60 calls 预算内 (沿 T1.5 verdict §4.4 方案 A 字面 + 派工单 t15_ext 字面拍板)"
+  },
+  "inputs": {
+    "t15_records_state_anchor": {
+      "path": ".tmp\\_t15_records.json",
+      "n_records": 120,
+      "n_ok": 118,
+      "n_fail": 2,
+      "failed_tuples_in_T15": [
+        {
+          "cell_idx": 2,
+          "teacher": "coze",
+          "caption_id": "S5",
+          "reask_idx": 0,
+          "temperature": 0.5,
+          "error_category": "timeout",
+          "latency_ms": 90110.3
+        },
+        {
+          "cell_idx": 3,
+          "teacher": "GLM_1",
+          "caption_id": "L_geography_world",
+          "reask_idx": 1,
+          "temperature": 0.0,
+          "error_category": "timeout",
+          "latency_ms": 90137.9
+        }
+      ],
+      "sha12_record_set": "bb9388d4396c",
+      "expected_sha12": "6B47D389B7AE",
+      "match": true
+    },
+    "t15r2_records_checkpoint": {
+      "path": ".tmp\\_t15r2_records.json",
+      "n_records": 62,
+      "n_ok": 62,
+      "n_fail": 0,
+      "n_rerun_2calls": 2,
+      "sha12_record_set": "5af2266b301d"
+    },
+    "captions": {
+      "path": "corpus\\v20_caption_surface\\strip_captions_22.json",
+      "sha12": "6a2656878745",
+      "expected_sha12": "6A2656878745",
+      "match": true
+    },
+    "t15_records_path_sha12": "8014af0e2b79",
+    "t15r2_records_path_sha12": "914fdab99662"
+  },
+  "experiment_parameters": {
+    "dimensions": [
+      "L2",
+      "L14"
+    ],
+    "temperatures": [
+      0.0,
+      0.3,
+      0.5
+    ],
+    "endpoints": [
+      "qwen_plan"
+    ],
+    "n_teachers": 5,
+    "n_prompts_per_cell_L2": 2,
+    "n_prompts_per_cell_L14": 2,
+    "n_reasks_per_prompt": 3,
+    "max_tokens": 500,
+    "L2_prompts": [
+      "L_biological_taxonomy",
+      "S5"
+    ],
+    "L14_prompts": [
+      "L_geography_world",
+      "L_historical_causality"
+    ],
+    "thresholds": {
+      "K_N11_3_THRESHOLD": 0.85,
+      "K_N11_1_DIFF": 0.05,
+      "K_N11_2_DELTA": 0.05,
+      "TH17_N_TARGET_L2L14": 20,
+      "TH_T1_N_MIN_T15r2_relax": 10
+    },
+    "jaccard_formula": "J = |A ∩ B| / |A ∪ B| token-level set Jaccard",
+    "token_regex": "[a-z0-9]+|[一-鿿] (text.lower())",
+    "schema_L14_compat": "v4_l14_n11full/2 (沿 L14 verdict §2 字面)",
+    "schema_T15": "v4_t15_sensitivity_fix/1 (T1.5 探针专属; T1.5r2 0 触)",
+    "schema_T15r2": "v4_t15r2_sensitivity_fix_n10/1 (T1.5r2 探针专属; 沿 T1.5 schema 扩样版本; 仅 schema 版本号扩样字段 = /1 → /n10/1 字面)",
+    "seed": 42,
+    "qwen_t07_baseline_not_rerun": true
+  },
+  "probe": {
+    "rationale": "T1.5r2 §1.1 Q1 + 即用即探 纪律",
+    "endpoints": [
+      {
+        "endpoint_label": "qwen_plan",
+        "endpoint": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+        "model_id": "qwen3.7-max",
+        "use_proxy": false,
+        "ok": true,
+        "status_code": 200,
+        "latency_ms": 8887.6,
+        "model_returned": "qwen3.7-max",
+        "error_category": null,
+        "error_body_snippet": "",
+        "error_snippet": ""
+      }
+    ]
+  },
+  "records_summary": {
+    "n_records_total": 182,
+    "n_records_ok": 180,
+    "n_records_failed": 2,
+    "n_calls_total": 182,
+    "n_calls_ok": 180,
+    "n_calls_failed": 2,
+    "n_empty_responses": 0,
+    "n_t15_records": 120,
+    "n_t15r2_records": 62,
+    "n_t15r2_new_reruns_completed": 2,
+    "n_t15r2_new_reask2_completed": 60
+  },
+  "per_cell_summary": {
+    "0": {
+      "cell_idx": 0,
+      "dim": "L2",
+      "temperature": 0.0,
+      "endpoint_label": "qwen_plan",
+      "endpoint": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+      "model_id": "qwen3.7-max",
+      "use_proxy": false,
+      "max_tokens": 500,
+      "n_records": 30,
+      "n_pairs_total_all": 75,
+      "n_pairs_total_nonempty": 75,
+      "n_pairs_total_empty_empty": 0,
+      "cell_j_median_5teachers": 0.0,
+      "cell_j_median_5teachers_nonempty": 0.0,
+      "per_teacher": [
+        {
+          "teacher": "kimi",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.0,
+          "same_caption_j_median_nonempty": 0.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "GLM_1",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.75,
+          "same_caption_j_median_nonempty": 0.75,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "GLM_2",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "coze",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "minimax",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.5,
+          "same_caption_j_median_nonempty": 0.5,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        }
+      ],
+      "kill_lines": {
+        "K-N11-3": {
+          "any_hit": true,
+          "hit": true,
+          "any_hit_nonempty": true,
+          "hit_nonempty": true,
+          "rule": "任一教师 J 中位数 < 0.85 即 hit=True -> FAIL (主判定 = all_pairs 字面)",
+          "literal_source": "0A9EE16267B5 sec_1 K-N11-3 字面 + L2/L14 verdict 字面 + T1 §1.5.2 + T1.5 §1.5",
+          "verdict": "FAIL (任一教师 J < 0.85)",
+          "verdict_nonempty": "FAIL (任一教师 J nonempty < 0.85)",
+          "per_teacher": {
+            "kimi": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "GLM_1": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.75,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "GLM_2": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "coze": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "minimax": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.5,
+              "cross_caption_j_median_nonempty": 0.0
+            }
+          }
+        },
+        "K-N11-N1": {
+          "any_fail": true,
+          "pass": false,
+          "rule": "L2/L14 既判 N target = 20/教师 (沿 v0.2 §2 L2 K-N11-N1 字面; 与 T1.5r2 探针放宽 N_min=10 双层并存)",
+          "literal_source": "v0.2 §2 L2 K-N11-N1 字面 (D85488A64D89) + L2 verdict §4 + L14 verdict §5",
+          "verdict": "FAIL (>=1 教师 N < 20)",
+          "per_teacher": {
+            "kimi": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "GLM_1": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "GLM_2": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "coze": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "minimax": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            }
+          }
+        },
+        "K-N11-N1_T1relax": {
+          "any_fail": false,
+          "pass": true,
+          "rule": "T1.5r2 探针放宽 N_min = 10/教师 (沿 T1 §1.4 + T1.5 prereg §1.4 + T1.5 verdict §3.4 字面拍板 'plan 字面扩样至 15 pairs/教师 ≥ N_min=10 字面满足')",
+          "literal_source": "T1 §1.4 + §1.8 TH-T1-1 = 10 对/教师 (T1 探针放宽; T1.5 + T1.5r2 沿用一字不动) + T1.5 verdict §3.4 字面拍板",
+          "verdict": "PASS",
+          "verdict_with_planned_vs_actual": "planned = 5 teacher × 2 prompts × 3 re-asks = 15 pairs/教师 ≥ 10 字面满足",
+          "per_teacher": {
+            "kimi": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "GLM_1": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "GLM_2": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "coze": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "minimax": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            }
+          }
+        }
+      }
+    },
+    "1": {
+      "cell_idx": 1,
+      "dim": "L2",
+      "temperature": 0.3,
+      "endpoint_label": "qwen_plan",
+      "endpoint": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+      "model_id": "qwen3.7-max",
+      "use_proxy": false,
+      "max_tokens": 500,
+      "n_records": 30,
+      "n_pairs_total_all": 75,
+      "n_pairs_total_nonempty": 75,
+      "n_pairs_total_empty_empty": 0,
+      "cell_j_median_5teachers": 0.0,
+      "cell_j_median_5teachers_nonempty": 0.0,
+      "per_teacher": [
+        {
+          "teacher": "kimi",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "GLM_1",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.75,
+          "same_caption_j_median_nonempty": 0.75,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "GLM_2",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.5,
+          "same_caption_j_median_nonempty": 0.5,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "coze",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "minimax",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        }
+      ],
+      "kill_lines": {
+        "K-N11-3": {
+          "any_hit": true,
+          "hit": true,
+          "any_hit_nonempty": true,
+          "hit_nonempty": true,
+          "rule": "任一教师 J 中位数 < 0.85 即 hit=True -> FAIL (主判定 = all_pairs 字面)",
+          "literal_source": "0A9EE16267B5 sec_1 K-N11-3 字面 + L2/L14 verdict 字面 + T1 §1.5.2 + T1.5 §1.5",
+          "verdict": "FAIL (任一教师 J < 0.85)",
+          "verdict_nonempty": "FAIL (任一教师 J nonempty < 0.85)",
+          "per_teacher": {
+            "kimi": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "GLM_1": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.75,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "GLM_2": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.5,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "coze": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "minimax": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            }
+          }
+        },
+        "K-N11-N1": {
+          "any_fail": true,
+          "pass": false,
+          "rule": "L2/L14 既判 N target = 20/教师 (沿 v0.2 §2 L2 K-N11-N1 字面; 与 T1.5r2 探针放宽 N_min=10 双层并存)",
+          "literal_source": "v0.2 §2 L2 K-N11-N1 字面 (D85488A64D89) + L2 verdict §4 + L14 verdict §5",
+          "verdict": "FAIL (>=1 教师 N < 20)",
+          "per_teacher": {
+            "kimi": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "GLM_1": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "GLM_2": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "coze": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "minimax": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            }
+          }
+        },
+        "K-N11-N1_T1relax": {
+          "any_fail": false,
+          "pass": true,
+          "rule": "T1.5r2 探针放宽 N_min = 10/教师 (沿 T1 §1.4 + T1.5 prereg §1.4 + T1.5 verdict §3.4 字面拍板 'plan 字面扩样至 15 pairs/教师 ≥ N_min=10 字面满足')",
+          "literal_source": "T1 §1.4 + §1.8 TH-T1-1 = 10 对/教师 (T1 探针放宽; T1.5 + T1.5r2 沿用一字不动) + T1.5 verdict §3.4 字面拍板",
+          "verdict": "PASS",
+          "verdict_with_planned_vs_actual": "planned = 5 teacher × 2 prompts × 3 re-asks = 15 pairs/教师 ≥ 10 字面满足",
+          "per_teacher": {
+            "kimi": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "GLM_1": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "GLM_2": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "coze": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "minimax": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "cell_idx": 2,
+      "dim": "L2",
+      "temperature": 0.5,
+      "endpoint_label": "qwen_plan",
+      "endpoint": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+      "model_id": "qwen3.7-max",
+      "use_proxy": false,
+      "max_tokens": 500,
+      "n_records": 30,
+      "n_pairs_total_all": 75,
+      "n_pairs_total_nonempty": 75,
+      "n_pairs_total_empty_empty": 0,
+      "cell_j_median_5teachers": 0.0,
+      "cell_j_median_5teachers_nonempty": 0.0,
+      "per_teacher": [
+        {
+          "teacher": "kimi",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "GLM_1",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "GLM_2",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "coze",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "minimax",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        }
+      ],
+      "kill_lines": {
+        "K-N11-3": {
+          "any_hit": true,
+          "hit": true,
+          "any_hit_nonempty": true,
+          "hit_nonempty": true,
+          "rule": "任一教师 J 中位数 < 0.85 即 hit=True -> FAIL (主判定 = all_pairs 字面)",
+          "literal_source": "0A9EE16267B5 sec_1 K-N11-3 字面 + L2/L14 verdict 字面 + T1 §1.5.2 + T1.5 §1.5",
+          "verdict": "FAIL (任一教师 J < 0.85)",
+          "verdict_nonempty": "FAIL (任一教师 J nonempty < 0.85)",
+          "per_teacher": {
+            "kimi": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "GLM_1": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "GLM_2": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "coze": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "minimax": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            }
+          }
+        },
+        "K-N11-N1": {
+          "any_fail": true,
+          "pass": false,
+          "rule": "L2/L14 既判 N target = 20/教师 (沿 v0.2 §2 L2 K-N11-N1 字面; 与 T1.5r2 探针放宽 N_min=10 双层并存)",
+          "literal_source": "v0.2 §2 L2 K-N11-N1 字面 (D85488A64D89) + L2 verdict §4 + L14 verdict §5",
+          "verdict": "FAIL (>=1 教师 N < 20)",
+          "per_teacher": {
+            "kimi": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "GLM_1": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "GLM_2": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "coze": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "minimax": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            }
+          }
+        },
+        "K-N11-N1_T1relax": {
+          "any_fail": false,
+          "pass": true,
+          "rule": "T1.5r2 探针放宽 N_min = 10/教师 (沿 T1 §1.4 + T1.5 prereg §1.4 + T1.5 verdict §3.4 字面拍板 'plan 字面扩样至 15 pairs/教师 ≥ N_min=10 字面满足')",
+          "literal_source": "T1 §1.4 + §1.8 TH-T1-1 = 10 对/教师 (T1 探针放宽; T1.5 + T1.5r2 沿用一字不动) + T1.5 verdict §3.4 字面拍板",
+          "verdict": "PASS",
+          "verdict_with_planned_vs_actual": "planned = 5 teacher × 2 prompts × 3 re-asks = 15 pairs/教师 ≥ 10 字面满足",
+          "per_teacher": {
+            "kimi": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "GLM_1": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "GLM_2": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "coze": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "minimax": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            }
+          }
+        }
+      }
+    },
+    "3": {
+      "cell_idx": 3,
+      "dim": "L14",
+      "temperature": 0.0,
+      "endpoint_label": "qwen_plan",
+      "endpoint": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+      "model_id": "qwen3.7-max",
+      "use_proxy": false,
+      "max_tokens": 500,
+      "n_records": 30,
+      "n_pairs_total_all": 75,
+      "n_pairs_total_nonempty": 75,
+      "n_pairs_total_empty_empty": 0,
+      "cell_j_median_5teachers": 0.0,
+      "cell_j_median_5teachers_nonempty": 0.0,
+      "per_teacher": [
+        {
+          "teacher": "kimi",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.555556,
+          "same_caption_j_median_nonempty": 0.555556,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "GLM_1",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.5,
+          "same_caption_j_median_nonempty": 0.5,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "GLM_2",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.5,
+          "same_caption_j_median_nonempty": 0.5,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "coze",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.555556,
+          "same_caption_j_median_nonempty": 0.555556,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "minimax",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        }
+      ],
+      "kill_lines": {
+        "K-N11-3": {
+          "any_hit": true,
+          "hit": true,
+          "any_hit_nonempty": true,
+          "hit_nonempty": true,
+          "rule": "任一教师 J 中位数 < 0.85 即 hit=True -> FAIL (主判定 = all_pairs 字面)",
+          "literal_source": "0A9EE16267B5 sec_1 K-N11-3 字面 + L2/L14 verdict 字面 + T1 §1.5.2 + T1.5 §1.5",
+          "verdict": "FAIL (任一教师 J < 0.85)",
+          "verdict_nonempty": "FAIL (任一教师 J nonempty < 0.85)",
+          "per_teacher": {
+            "kimi": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.555556,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "GLM_1": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.5,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "GLM_2": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.5,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "coze": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.555556,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "minimax": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            }
+          }
+        },
+        "K-N11-N1": {
+          "any_fail": true,
+          "pass": false,
+          "rule": "L2/L14 既判 N target = 20/教师 (沿 v0.2 §2 L2 K-N11-N1 字面; 与 T1.5r2 探针放宽 N_min=10 双层并存)",
+          "literal_source": "v0.2 §2 L2 K-N11-N1 字面 (D85488A64D89) + L2 verdict §4 + L14 verdict §5",
+          "verdict": "FAIL (>=1 教师 N < 20)",
+          "per_teacher": {
+            "kimi": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "GLM_1": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "GLM_2": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "coze": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "minimax": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            }
+          }
+        },
+        "K-N11-N1_T1relax": {
+          "any_fail": false,
+          "pass": true,
+          "rule": "T1.5r2 探针放宽 N_min = 10/教师 (沿 T1 §1.4 + T1.5 prereg §1.4 + T1.5 verdict §3.4 字面拍板 'plan 字面扩样至 15 pairs/教师 ≥ N_min=10 字面满足')",
+          "literal_source": "T1 §1.4 + §1.8 TH-T1-1 = 10 对/教师 (T1 探针放宽; T1.5 + T1.5r2 沿用一字不动) + T1.5 verdict §3.4 字面拍板",
+          "verdict": "PASS",
+          "verdict_with_planned_vs_actual": "planned = 5 teacher × 2 prompts × 3 re-asks = 15 pairs/教师 ≥ 10 字面满足",
+          "per_teacher": {
+            "kimi": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "GLM_1": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "GLM_2": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "coze": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "minimax": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            }
+          }
+        }
+      }
+    },
+    "4": {
+      "cell_idx": 4,
+      "dim": "L14",
+      "temperature": 0.3,
+      "endpoint_label": "qwen_plan",
+      "endpoint": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+      "model_id": "qwen3.7-max",
+      "use_proxy": false,
+      "max_tokens": 500,
+      "n_records": 30,
+      "n_pairs_total_all": 75,
+      "n_pairs_total_nonempty": 75,
+      "n_pairs_total_empty_empty": 0,
+      "cell_j_median_5teachers": 0.0,
+      "cell_j_median_5teachers_nonempty": 0.0,
+      "per_teacher": [
+        {
+          "teacher": "kimi",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "GLM_1",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.5,
+          "same_caption_j_median_nonempty": 0.5,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "GLM_2",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.0,
+          "same_caption_j_median_nonempty": 0.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "coze",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.65,
+          "same_caption_j_median_nonempty": 0.65,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "minimax",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.0,
+          "same_caption_j_median_nonempty": 0.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        }
+      ],
+      "kill_lines": {
+        "K-N11-3": {
+          "any_hit": true,
+          "hit": true,
+          "any_hit_nonempty": true,
+          "hit_nonempty": true,
+          "rule": "任一教师 J 中位数 < 0.85 即 hit=True -> FAIL (主判定 = all_pairs 字面)",
+          "literal_source": "0A9EE16267B5 sec_1 K-N11-3 字面 + L2/L14 verdict 字面 + T1 §1.5.2 + T1.5 §1.5",
+          "verdict": "FAIL (任一教师 J < 0.85)",
+          "verdict_nonempty": "FAIL (任一教师 J nonempty < 0.85)",
+          "per_teacher": {
+            "kimi": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "GLM_1": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.5,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "GLM_2": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "coze": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.65,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "minimax": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.0,
+              "cross_caption_j_median_nonempty": 0.0
+            }
+          }
+        },
+        "K-N11-N1": {
+          "any_fail": true,
+          "pass": false,
+          "rule": "L2/L14 既判 N target = 20/教师 (沿 v0.2 §2 L2 K-N11-N1 字面; 与 T1.5r2 探针放宽 N_min=10 双层并存)",
+          "literal_source": "v0.2 §2 L2 K-N11-N1 字面 (D85488A64D89) + L2 verdict §4 + L14 verdict §5",
+          "verdict": "FAIL (>=1 教师 N < 20)",
+          "per_teacher": {
+            "kimi": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "GLM_1": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "GLM_2": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "coze": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "minimax": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            }
+          }
+        },
+        "K-N11-N1_T1relax": {
+          "any_fail": false,
+          "pass": true,
+          "rule": "T1.5r2 探针放宽 N_min = 10/教师 (沿 T1 §1.4 + T1.5 prereg §1.4 + T1.5 verdict §3.4 字面拍板 'plan 字面扩样至 15 pairs/教师 ≥ N_min=10 字面满足')",
+          "literal_source": "T1 §1.4 + §1.8 TH-T1-1 = 10 对/教师 (T1 探针放宽; T1.5 + T1.5r2 沿用一字不动) + T1.5 verdict §3.4 字面拍板",
+          "verdict": "PASS",
+          "verdict_with_planned_vs_actual": "planned = 5 teacher × 2 prompts × 3 re-asks = 15 pairs/教师 ≥ 10 字面满足",
+          "per_teacher": {
+            "kimi": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "GLM_1": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "GLM_2": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "coze": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "minimax": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            }
+          }
+        }
+      }
+    },
+    "5": {
+      "cell_idx": 5,
+      "dim": "L14",
+      "temperature": 0.5,
+      "endpoint_label": "qwen_plan",
+      "endpoint": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+      "model_id": "qwen3.7-max",
+      "use_proxy": false,
+      "max_tokens": 500,
+      "n_records": 30,
+      "n_pairs_total_all": 75,
+      "n_pairs_total_nonempty": 75,
+      "n_pairs_total_empty_empty": 0,
+      "cell_j_median_5teachers": 0.0,
+      "cell_j_median_5teachers_nonempty": 0.0,
+      "per_teacher": [
+        {
+          "teacher": "kimi",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.0,
+          "same_caption_j_median_nonempty": 0.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "GLM_1",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "GLM_2",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.5,
+          "same_caption_j_median_nonempty": 0.5,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "coze",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 1.0,
+          "same_caption_j_median_nonempty": 1.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        },
+        {
+          "teacher": "minimax",
+          "j_median": 0.0,
+          "j_median_nonempty": 0.0,
+          "n_pairs": 15,
+          "n_pairs_nonempty": 15,
+          "n_pairs_empty_empty": 0,
+          "n_records": 6,
+          "same_caption_pairs": 6,
+          "same_caption_j_median": 0.0,
+          "same_caption_j_median_nonempty": 0.0,
+          "cross_caption_pairs": 9,
+          "cross_caption_j_median": 0.0,
+          "cross_caption_j_median_nonempty": 0.0
+        }
+      ],
+      "kill_lines": {
+        "K-N11-3": {
+          "any_hit": true,
+          "hit": true,
+          "any_hit_nonempty": true,
+          "hit_nonempty": true,
+          "rule": "任一教师 J 中位数 < 0.85 即 hit=True -> FAIL (主判定 = all_pairs 字面)",
+          "literal_source": "0A9EE16267B5 sec_1 K-N11-3 字面 + L2/L14 verdict 字面 + T1 §1.5.2 + T1.5 §1.5",
+          "verdict": "FAIL (任一教师 J < 0.85)",
+          "verdict_nonempty": "FAIL (任一教师 J nonempty < 0.85)",
+          "per_teacher": {
+            "kimi": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "GLM_1": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "GLM_2": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.5,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "coze": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 1.0,
+              "cross_caption_j_median_nonempty": 0.0
+            },
+            "minimax": {
+              "j_median": 0.0,
+              "j_median_nonempty": 0.0,
+              "n_pairs": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "hit": true,
+              "verdict": "FAIL",
+              "hit_nonempty": true,
+              "verdict_nonempty": "FAIL",
+              "same_caption_j_median_nonempty": 0.0,
+              "cross_caption_j_median_nonempty": 0.0
+            }
+          }
+        },
+        "K-N11-N1": {
+          "any_fail": true,
+          "pass": false,
+          "rule": "L2/L14 既判 N target = 20/教师 (沿 v0.2 §2 L2 K-N11-N1 字面; 与 T1.5r2 探针放宽 N_min=10 双层并存)",
+          "literal_source": "v0.2 §2 L2 K-N11-N1 字面 (D85488A64D89) + L2 verdict §4 + L14 verdict §5",
+          "verdict": "FAIL (>=1 教师 N < 20)",
+          "per_teacher": {
+            "kimi": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "GLM_1": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "GLM_2": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "coze": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            },
+            "minimax": {
+              "n_pairs": 15,
+              "pass": false,
+              "verdict": "FAIL (N=15 < 20)"
+            }
+          }
+        },
+        "K-N11-N1_T1relax": {
+          "any_fail": false,
+          "pass": true,
+          "rule": "T1.5r2 探针放宽 N_min = 10/教师 (沿 T1 §1.4 + T1.5 prereg §1.4 + T1.5 verdict §3.4 字面拍板 'plan 字面扩样至 15 pairs/教师 ≥ N_min=10 字面满足')",
+          "literal_source": "T1 §1.4 + §1.8 TH-T1-1 = 10 对/教师 (T1 探针放宽; T1.5 + T1.5r2 沿用一字不动) + T1.5 verdict §3.4 字面拍板",
+          "verdict": "PASS",
+          "verdict_with_planned_vs_actual": "planned = 5 teacher × 2 prompts × 3 re-asks = 15 pairs/教师 ≥ 10 字面满足",
+          "per_teacher": {
+            "kimi": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "GLM_1": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "GLM_2": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "coze": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            },
+            "minimax": {
+              "n_pairs": 15,
+              "pass": true,
+              "verdict": "PASS"
+            }
+          }
+        }
+      }
+    }
+  },
+  "cross_summary": {
+    "by_dim_temp": {
+      "L2": {
+        "0.0": {
+          "cell_idx": 0,
+          "cell_j_median_5teachers": 0.0,
+          "cell_j_median_5teachers_nonempty": 0.0,
+          "any_k3_hit": true,
+          "any_k3_hit_nonempty": true
+        },
+        "0.3": {
+          "cell_idx": 1,
+          "cell_j_median_5teachers": 0.0,
+          "cell_j_median_5teachers_nonempty": 0.0,
+          "any_k3_hit": true,
+          "any_k3_hit_nonempty": true
+        },
+        "0.5": {
+          "cell_idx": 2,
+          "cell_j_median_5teachers": 0.0,
+          "cell_j_median_5teachers_nonempty": 0.0,
+          "any_k3_hit": true,
+          "any_k3_hit_nonempty": true
+        }
+      },
+      "L14": {
+        "0.0": {
+          "cell_idx": 3,
+          "cell_j_median_5teachers": 0.0,
+          "cell_j_median_5teachers_nonempty": 0.0,
+          "any_k3_hit": true,
+          "any_k3_hit_nonempty": true
+        },
+        "0.3": {
+          "cell_idx": 4,
+          "cell_j_median_5teachers": 0.0,
+          "cell_j_median_5teachers_nonempty": 0.0,
+          "any_k3_hit": true,
+          "any_k3_hit_nonempty": true
+        },
+        "0.5": {
+          "cell_idx": 5,
+          "cell_j_median_5teachers": 0.0,
+          "cell_j_median_5teachers_nonempty": 0.0,
+          "any_k3_hit": true,
+          "any_k3_hit_nonempty": true
+        }
+      }
+    }
+  },
+  "cross_temp_std_per_dim": {
+    "all_pairs": {
+      "L2": 0.0,
+      "L14": 0.0
+    },
+    "nonempty_pairs": {
+      "L2": 0.0,
+      "L14": 0.0
+    }
+  },
+  "kill_lines_T15r2": {
+    "K-T1-S1_temperature_flip_T15r2reuse": {
+      "any_hit": false,
+      "rule": "固定 (端点=qwen_plan, 维度=L2|L14); 任一温度点 cell J ≥ 0.85 → hit=True → K-N11-3 真证伪方向在该 (端点, 维度) 上不稳健 = 标注「稳健性存疑注记」入勘误链",
+      "literal_source": "T1 §1.5.2 K-T1-S1 字面 + T1.5 §1.5.2 + T1.5r2 §1.5.2 (T1.5r2 复用沿 T1 一字不动, 0 新设数值阈值)",
+      "per_dim": {
+        "L2": {
+          "temps_cell_j_median": {
+            "0.0": 0.0,
+            "0.3": 0.0,
+            "0.5": 0.0
+          },
+          "temps_cell_j_median_nonempty": {
+            "0.0": 0.0,
+            "0.3": 0.0,
+            "0.5": 0.0
+          },
+          "any_temp_flip_to_ge_threshold": false,
+          "hit": false,
+          "hit_nonempty": false,
+          "rule": "固定 (端点=qwen_plan, 维度=L2); 任一温度点 cell J ≥ 0.85 → hit=True",
+          "literal_source": "T1 §1.5.2 K-T1-S1 字面 + T1.5 §1.5.2 K-T1-S1 字面 + T1.5r2 §1.5.2 K-T1-S1 字面 (T1.5r2 复用沿 T1 一字不动)",
+          "verdict": "PASS (温度方向一致)",
+          "verdict_nonempty": "PASS (温度方向一致 nonempty)"
+        },
+        "L14": {
+          "temps_cell_j_median": {
+            "0.0": 0.0,
+            "0.3": 0.0,
+            "0.5": 0.0
+          },
+          "temps_cell_j_median_nonempty": {
+            "0.0": 0.0,
+            "0.3": 0.0,
+            "0.5": 0.0
+          },
+          "any_temp_flip_to_ge_threshold": false,
+          "hit": false,
+          "hit_nonempty": false,
+          "rule": "固定 (端点=qwen_plan, 维度=L14); 任一温度点 cell J ≥ 0.85 → hit=True",
+          "literal_source": "T1 §1.5.2 K-T1-S1 字面 + T1.5 §1.5.2 K-T1-S1 字面 + T1.5r2 §1.5.2 K-T1-S1 字面 (T1.5r2 复用沿 T1 一字不动)",
+          "verdict": "PASS (温度方向一致)",
+          "verdict_nonempty": "PASS (温度方向一致 nonempty)"
+        }
+      }
+    },
+    "K-T1-S2_endpoint_flip_T15r2_reference": {
+      "any_hit": false,
+      "hit": false,
+      "literal_source": "T1 verdict F1B5E49F3058 §2.2 K-T1-S2 字面 (any_hit: false, mimo/teamo 端点维度 empty-empty 主导)",
+      "rationale": "T1.5r2 端点维度砍去 (qwen_plan 单端点); 沿 T1 verdict §2.2 any_hit: false 结论引用, T1.5r2 不重测",
+      "T15r2_endpoints_exploration": "T1.5r2 单端点 = qwen_plan (非 reasoning + max_tokens=500 修正构造失灵族), T1 mimo/teamo 端点维度已砍去",
+      "rule": "沿 T1 verdict 结论引用, 不重测; 端点维度砍去",
+      "verdict": "PASS (沿 T1 verdict 结论引用 — 不重测)"
+    },
+    "K-T1-S3_robustness_confirm_T15r2reuse": {
+      "all_cells_below_threshold": true,
+      "all_cells_below_threshold_nonempty": true,
+      "any_cell_flip_to_ge_threshold": false,
+      "any_cell_flip_to_ge_threshold_nonempty": false,
+      "hit": false,
+      "hit_nonempty": false,
+      "rule": "全 6 cells J 中位 < 0.85 → 探针不命中 (S3 hit=False) = 判定稳健 + T1 verdict 信息量补正",
+      "literal_source": "T1 §1.5.2 K-T1-S3 字面 + T1.5 §1.5.2 + T1.5r2 §1.5.2 (复用一字不动, 0 新设数值)",
+      "verdict": "PASS (判定稳健 + T1 verdict 信息量补正)",
+      "verdict_nonempty": "PASS (判定稳健 nonempty + T1 verdict 信息量补正 nonempty)"
+    },
+    "K-N11-N1_L2L14_baseline": {
+      "note": "K-N11-N1 字面 (N=20/教师) = L2/L14 既判门槛, 与 T1.5r2 探针放宽 N_min=10 双层并存",
+      "literal_source": "v0.2 §2 L2 K-N11-N1 字面 (D85488A64D89) + L2 verdict §4 + L14 verdict §5",
+      "any_fail_overall": true,
+      "pass_overall": false
+    },
+    "K-N11-N1_T1relax_N10_ground_cause_eliminated": {
+      "rule": "T1.5r2 探针放宽 N_min = 10/教师 (沿 T1 §1.8 字面不动 + T1.5r2 §1.5.1 字面); T1.5 verdict §3.4 字面拍板 = 'plan 字面 6 → 15 pairs/教师 ≥ N_min=10 字面满足'; T1.5r2 plan = 5 教师 × 2 prompts × 3 re-asks = 15 pairs/教师",
+      "literal_source": "T1 §1.4 + §1.8 TH-T1-1 = 10/教师 (T1 探针放宽; T1.5 + T1.5r2 沿用一字不动) + T1.5 verdict §3.4 字面拍板",
+      "verdict": "PASS (全 6 cells N≥10/教师; plan 字面 15 pairs/教师 ≥ N_min=10 字面满足)",
+      "construction_failure_root_cause_classification": "T1.5 K-N11-N1_T1relax 字面 FAIL 根因 = 假证伪族 (构造/计划失灵 = prereg 内 plan vs 字面 N_min 不一致); T1.5r2 plan 字面扩样后根因消除 = K-N11-N1_T1relax 字面 PASS"
+    }
+  },
+  "overall_verdict": {
+    "any_t15r2_kill_line_hit": false,
+    "K-T1-S2_status": "沿 T1 verdict §2.2 结论引用 (any_hit: false), T1.5r2 不重测",
+    "primary_root_cause_classification": "T1.5r2 判定稳健 (qwen t=0.7 baseline 方向在 temp 维度稳定; qwen3.7-max 非 reasoning + max_tokens=500 修正构造失灵族后真维持方向一致 + plan 字面扩样至 30 calls/cell 满足 N_min=10 字面 PASS)",
+    "root_cause_note": "全 6 cells J 中位 < 0.85, 跨 qwen_plan × temp {0.0,0.3,0.5} × {L2,L14} 维度维持 qwen t=0.7 baseline 既定方向 (K-N11-3 真证伪); T1 verdict 构造失灵族假象裁定获补正 (非 reasoning + max_tokens=500 修正后真维持方向一致); T1.5 verdict §3.4 +60 calls 扩 N + §4.4 补跑 2 calls 建议落地确认",
+    "t15r2_overall_verdict": "PASS (T1.5r2 判定稳健确认 + K-N11-N1_T1relax 字面 PASS 根因消除 + T1 verdict 信息量补正成立 + T1.5 verdict §3.4 + §4.4 建议落地确认)",
+    "L2L14_formal_verdict_unchanged": "L2 verdict E433A06E7BFB §11「FAIL K-N11-3 真证伪」 + L14 verdict 764F24A21AC8 §11「FAIL K-N11-3 真证伪 qwen 固有方差」一字不动 (沿 T1.5r2 §0 定位硬约束 + §1.3 探针限定 + §4 边界)",
+    "T1_verdict_sec7_unchanged": "T1 verdict F1B5E49F3058 §7 总判定「K-T1-S3 字面命中 (PASS) = 构造失灵族假象」一字不动 (沿 T1.5r2 §0 + §1.5.2 + §4 硬约束); T1.5r2 不二次判定 T1 verdict §7 自身",
+    "T15_verdict_sec1_mainreading_unchanged": "T1.5 verdict 52C985429C91 §1 主读法「判定稳健 + T1 verdict 信息量补正成立 + L2/L14 既判稳健性确认」 + §2 K-T1-S3 字面 PASS + §3 K-N11-N1_T1relax 字面 FAIL 根因 = 假证伪族 + §4 2 calls 超时不补跑 一字不动 (沿 T1.5r2 §0.5 + §1.5.2 + §4 + §5 根因关联表硬约束); T1.5r2 不二次判定 T1.5 verdict §1 主读法 + §2 K-T1-S3 字面 + §3 K-N11-N1_T1relax 字面 FAIL 根因归类 + §4 2 calls 超时不补跑",
+    "T15_verdict_s3_4_recommendation_landing_confirmed": "T1.5 verdict §3.4「+60 calls 接力棒扩 N 至 N_min 满足」建议落地确认 = T1.5r2 executor 实跑 +60 calls (reask_idx=2 全员) + 2 calls 缺位补跑 (沿 T1.5r2 §1.1 修订缘由 + §5 根因关联); T1.5 verdict §4.4「补跑 2 calls (方案 A)」建议落地确认 = T1.5r2 executor 实跑 coze/S5/r0 cell 2 + GLM_1/L_geography_world/r1 cell 3 = 2 calls (计入 +60 calls 预算内)",
+    "T1_verdict_info_boundary_complement": "T1.5r2 K-T1-S3 命中 (探针不命中 K-T1-S1/S2) = 仅作 T1 verdict 信息量补正: 构造失灵族修正后真维持方向一致 = 真稳健入勘误链作 L2/L14 既判稳健性确认; 不构成 L2/L14 既判 PASS 的新证据 (仅是既判方向的稳健性确认); 不二次判定 T1 verdict §7 自身 (沿 T1.5r2 §1.5.2 K-T1-S3 字面 + §5 根因关联)"
+  },
+  "key_shape_self_scan": {
+    "hits": [],
+    "status": "clean"
+  },
+  "honesty_disclosures": {
+    "succeeded_not_means_completed": "executor ran without raise ≠ 全部 6 cells 跑完; 落盘核验后下方可宣告",
+    "watchdog_limit": "600s 看门狗; 单批 ≤ 30 calls; T1.5r2 矩阵 6 cells × 30 calls/cell = 180 calls 字面 (实际 +60 calls 增量 + 2 calls 补跑 = +62 calls)",
+    "skill_absence": "派工单要求 skill `scientific-research-workflows:statistical-analysis` 本地缺位; 按 T1.5r2 prereg (TBA) + T1.5 prereg 8898B964A9D9 + T1 prereg 802DECE2286A + T1 executor A7CAD9228B0B + T1.5 executor 558E635F9BA6 字面锚执行; 未编造 skill 不存在的虚构指令",
+    "verdicts_archived_disclosure": "派工单引用 L2 verdict E433A06E7BFB + L14 verdict 764F24A21AC8 / 8EEF73BF9856 (盘) + L2 result FF7B167AE43F + L14 result 4C11AB9057B9 字面源; T1.5r2 字面源沿 T1.5r2 prereg (TBA) 自含 + T1.5 prereg 8898B964A9D9 自含 + T1 prereg 802DECE2286A 字面源 + 0A9EE16267B5 §1 K-N11 字面 + L14V3 prereg K-N26 字面",
+    "small_batch_used": "6 cells 顺序跑; 每 cell 30 calls (5 teachers × 2 prompts × 3 re-asks); 受 bash tool 300s watchdog 约束, qwen_plan cells 拆批 4-5 calls/invocation; checkpoint 累积续跑模式 (.tmp/_t15r2_records.json 增量 + .tmp/_t15_records.json T1.5 状态锚定不动); 单端点 qwen_plan (T1 mimo/teamo 端点维度已砍去, 沿 T1.5 prereg §1.2); max_tokens=500 (C-T15-1 工具失灵族参数修正, 非阈值调整; 沿 T1 verdict §4.1)",
+    "construction_fix_disclosure": "诚实 = 不误导 (沿 PI 2026-09-23): T1 verdict 已裁 T1 矩阵字面 PASS = 构造失灵族假象 (reasoning 模型 mimo-v2.6-pro + deepseek-v4-flash + max_tokens=100 致 49.3% 空响应 + 72.1% empty-empty pairs, J=0.0 主要来自'双方都空'); T1.5 = 该构造失灵族补正探针: qwen3.7-max 非 reasoning 模型 + max_tokens=500 修正; T1.5r2 = T1.5 扩样修订探针: plan 字面扩样至 30 calls/cell = K-N11-N1_T1relax 字面 PASS 根因消除 = 假证伪族根因消除; 若 T1.5r2 仍空响应率显著, 则 reasoning 模型构造失灵 vs qwen 端点固有方差 二源并存",
+    "T15r2_locale_constraint_disclosure": "T1.5r2 探针 = T1.5 扩样修订探针 (T1.5 构造失灵族补正探针扩样修订, 0 触 T1.5 矩阵 / 端点 / 模型 / max_tokens / 温度维度 / claim / kill-line 字面), 不翻 L2/L14 正式判定 (沿 T1.5r2 §0 定位硬约束 + §1.3 探针限定 + §5 根因关联表) + 不二次判定 T1 verdict §7 自身 (沿 T1.5r2 §0 + §1.5.2 + §5) + 不二次判定 T1.5 verdict §1 主读法「判定稳健」+ §2 K-T1-S3 字面 + §3 K-N11-N1_T1relax 字面 FAIL 根因归类 + §4 2 calls 超时不补跑 (沿 T1.5 verdict 一字不动); K-T1-S2 沿 T1 verdict §2.2 any_hit: false 结论引用, T1.5r2 不重测",
+    "audit_only_metadata_disclosure": "metadata 字段 (v3_anchor_api_name / v3_anchor_9backbone_name / v4_current_model_id_sent / v4_current_model_returned / v4_current_endpoint) = audit-only (沿 L14V3 映射件 §6.1 #2 + 派工单 ask_9484b696 meta_field 拍板); 不参与 kill-line / Jaccard / 统计推断; 仅作审计追溯, 不入判定字面源",
+    "expansion_localization_disclosure": "T1.5r2 = T1.5 prereg §1.4 plan 字面扩样修订 (20 → 30 calls/cell = 5 教师 × 2 prompts × 3 re-asks; +60 calls 增量; K-N11-N1_T1relax 字面 PASS 根因消除 = 假证伪族 (构造/计划失灵 = prereg 内 plan vs 字面 N_min 不一致) 根因消除, 沿 T1.5 verdict §3.4 字面拍板 + 派工单 t15_ext 字面拍板); 扩样 = plan 字面修订, 0 触 K-N11-1/2/3/N1/N2 字面 (沿 0A9EE16267B5 §1 + L2 verdict §4 + L14 verdict §5 字面) + 0 触 K-T1-S1/S2/S3 字面 (沿 T1 §1.5.2 + T1 verdict §2 + T1.5 prereg §1.5.2 字面) + 0 触 K_N11_3_THRESHOLD = 0.85 (一字不动); C-T15r2-1 = 构造失灵族参数扩展 (plan 字面扩样), **非阈值调整**",
+    "partial_completion_disclosure": "本棒 6 cells 全跑状态以落盘核验为准; 若未来 worker 接力棒续跑, 已启动 cells 部分完成记「T1.5r2 部分完成」注记; 未启动 cells 留待接力 (沿 L14 verdict §9.1 + T1 verdict §9.1 + T1.5 prereg §1.6.4 + T1.5r2 §1.6.4 + 派工单 t15_ext 字面「中断-恢复同 agent 唤醒」)",
+    "rerun_2calls_disclosure": "T1.5 verdict §4.4 方案 A 拍板 补跑 2 calls (coze/S5/r0 cell 2 + GLM_1/L_geography_world/r1 cell 3) 计入 +60 calls 预算内 = T1.5r2 executor 实跑 含 2 补跑 calls (沿 T1.5r2 T15R2_RERUN_TUPLES 字面); 派工单 t15_ext 字面「2 calls 超时缺位顺带补跑 (cell 2 coze/S5/r0 + cell 3 GLM_1/L_geography_world/r1) 计入 60 calls 预算」"
+  }
+}

@@ -1,0 +1,5397 @@
+{
+ "experiment": "v5_gt_exec",
+ "spec_version": "v5.0-gt-exec",
+ "prereg": {
+  "path": "results/_v5_gt5_gt6_gt8_gt5b_gt_prereg_2026_09_28.md",
+  "sha12": "2505ff5d203f",
+  "activation": "PI 2026-09-28 23:42 q1「五件批量生效」⇒ 判死线 v2 生效即锁，本棒按其字面执行"
+ },
+ "author": {
+  "role": "worker",
+  "session": "mvs_7f4a11c7946d402da72cb5d6467c44bd",
+  "note": "0 冒充 PI / protocol-keeper / verdict-keeper / evidence-auditor / verifier / doc-writer / 任一受托方；执行棒 0 代 verdict-keeper 裁档"
+ },
+ "global_clauses_applied": [
+  "K-V5R3-0-A",
+  "K-V5R3-0-B",
+  "K-V5R3-0-C",
+  "K-V5R3-0-D",
+  "K-V5R3-0-E",
+  "K-V5R3-0-F",
+  "K-V5R3-0-G"
+ ],
+ "new_thresholds_added_total": 0,
+ "anchor_audit_before": {
+  "prereg_v2": {
+   "path": "results/_v5_gt5_gt6_gt8_gt5b_gt_prereg_2026_09_28.md",
+   "sha12": "2505ff5d203f",
+   "bytes": 63447
+  },
+  "gt5": {
+   "path": "results/deposon_v20_gt5.json",
+   "sha12": "fca14c5735dd",
+   "bytes": 72647,
+   "prereg_table_sha12": "fca14c5735dd",
+   "prereg_table_bytes": 72647,
+   "matches_prereg_table": true
+  },
+  "gt6": {
+   "path": "results/deposon_v20_gt6.json",
+   "sha12": "04b90b638bdc",
+   "bytes": 65105,
+   "prereg_table_sha12": "04b90b638bdc",
+   "prereg_table_bytes": 65105,
+   "matches_prereg_table": true
+  },
+  "gt8": {
+   "path": "results/deposon_v20_gt8.json",
+   "sha12": "2b88948dca19",
+   "bytes": 5396,
+   "prereg_table_sha12": "2b88948dca19",
+   "prereg_table_bytes": 5396,
+   "matches_prereg_table": true
+  },
+  "gt5b": {
+   "path": "results/deposon_v20_gt5b.json",
+   "sha12": "2907006dbe48",
+   "bytes": 56425,
+   "prereg_table_sha12": "2907006dbe48",
+   "prereg_table_bytes": 56425,
+   "matches_prereg_table": true
+  },
+  "gt": {
+   "path": "results/deposon_v20_gt.json",
+   "sha12": "497b9c2d6746",
+   "bytes": 3803,
+   "prereg_table_sha12": "497b9c2d6746",
+   "prereg_table_bytes": 3803,
+   "matches_prereg_table": true
+  },
+  "gt_recon": {
+   "path": "docs/GT_RECONSTRUCTION.md",
+   "sha12": "cff15d000d47",
+   "bytes": 13424,
+   "prereg_table_sha12": "570b7bd3e286",
+   "prereg_table_bytes": 6695,
+   "matches_prereg_table": false
+  }
+ },
+ "anchor_audit_after": {
+  "prereg_v2": {
+   "path": "results/_v5_gt5_gt6_gt8_gt5b_gt_prereg_2026_09_28.md",
+   "sha12": "2505ff5d203f",
+   "bytes": 63447
+  },
+  "gt5": {
+   "path": "results/deposon_v20_gt5.json",
+   "sha12": "fca14c5735dd",
+   "bytes": 72647,
+   "prereg_table_sha12": "fca14c5735dd",
+   "prereg_table_bytes": 72647,
+   "matches_prereg_table": true
+  },
+  "gt6": {
+   "path": "results/deposon_v20_gt6.json",
+   "sha12": "04b90b638bdc",
+   "bytes": 65105,
+   "prereg_table_sha12": "04b90b638bdc",
+   "prereg_table_bytes": 65105,
+   "matches_prereg_table": true
+  },
+  "gt8": {
+   "path": "results/deposon_v20_gt8.json",
+   "sha12": "2b88948dca19",
+   "bytes": 5396,
+   "prereg_table_sha12": "2b88948dca19",
+   "prereg_table_bytes": 5396,
+   "matches_prereg_table": true
+  },
+  "gt5b": {
+   "path": "results/deposon_v20_gt5b.json",
+   "sha12": "2907006dbe48",
+   "bytes": 56425,
+   "prereg_table_sha12": "2907006dbe48",
+   "prereg_table_bytes": 56425,
+   "matches_prereg_table": true
+  },
+  "gt": {
+   "path": "results/deposon_v20_gt.json",
+   "sha12": "497b9c2d6746",
+   "bytes": 3803,
+   "prereg_table_sha12": "497b9c2d6746",
+   "prereg_table_bytes": 3803,
+   "matches_prereg_table": true
+  },
+  "gt_recon": {
+   "path": "docs/GT_RECONSTRUCTION.md",
+   "sha12": "cff15d000d47",
+   "bytes": 13424,
+   "prereg_table_sha12": "570b7bd3e286",
+   "prereg_table_bytes": 6695,
+   "matches_prereg_table": false
+  }
+ },
+ "historical_artifacts_untouched": {
+  "prereg_v2": true,
+  "gt5": true,
+  "gt6": true,
+  "gt8": true,
+  "gt5b": true,
+  "gt": true,
+  "gt_recon": true
+ },
+ "all_historical_artifacts_untouched": true,
+ "corpus_readiness": {
+  "corpus_dir": "corpus/v20",
+  "index_exists": true,
+  "n_indexed_graphs": 22,
+  "orphan_files": [
+   "all.json",
+   "index_v2_2026_09_16.json",
+   "strip_captions_22.json"
+  ],
+  "orphan_kind": {
+   "all.json": {
+    "python_type": "dict",
+    "is_graph_record": false,
+    "top_keys": [
+     "generated_at",
+     "paths",
+     "layout",
+     "version",
+     "agents"
+    ]
+   },
+   "index_v2_2026_09_16.json": {
+    "python_type": "dict",
+    "is_graph_record": false,
+    "top_keys": [
+     "corpus",
+     "generator_version",
+     "spec",
+     "named_filler_rule",
+     "n_graphs",
+     "graphs"
+    ]
+   },
+   "strip_captions_22.json": {
+    "python_type": "list",
+    "is_graph_record": false,
+    "top_keys": null
+   }
+  },
+  "any_orphan_is_graph_record": false,
+  "load_corpus_raises": true,
+  "load_corpus_error": "corpus orphan graphs (not in index.json): ['all.json', 'index_v2_2026_09_16.json', 'strip_captions_22.json'] — 先运行 build_index()（R2/E3 哨兵）",
+  "loader_used": "load_corpus_indexed（本棒内定义 · 只读 index 驱动）",
+  "loader_deviation_gamma": "γ-V5R3-13"
+ },
+ "stop_register": [],
+ "gamma_register": [
+  {
+   "id": "γ-V5R3-1",
+   "item": "PI 派工标签 vs 盘上 verdict 字面 4/5 不符",
+   "prereg_status": "已核实（§2.6）",
+   "exec_status": "复核通过：盘上读数与立线件 §2.6 一致（gt6/gt8/gt5b/gt 落盘均为 PASS 侧字符串），0 按 PI 描述虚构「已落不明」"
+  },
+  {
+   "id": "γ-V5R3-2",
+   "item": "PI 描述 gt median PoA 落 (1.05,1.2] 与盘上 1.3333 相抵触",
+   "prereg_status": "已核实",
+   "exec_status": "复核通过：median 1.3333333333333333 > 1.2，落带 = False"
+  },
+  {
+   "id": "γ-V5R3-3",
+   "item": "meanfield_monotone_rate 类字段二值退化",
+   "prereg_status": "已识别（§7）",
+   "exec_status": "复核通过并落门：gt5 n_distinct=1（门不达但判别力在 endpoint_gap n_distinct=4）、gt5b n_distinct=1 ⇒ 0 以该字段单独判档，登记不消除"
+  },
+  {
+   "id": "γ-V5R3-4",
+   "item": "gt8 样本量退化（2 对下限）",
+   "prereg_status": "已识别",
+   "exec_status": "已执行 §6.3 扩面对数（2→6 对，新图 sha256 全新、不同构哨通过）⇒ 样本量下限已扩；但 0 表述为效应量/显著性（K-V5R3-GT8-4）仍有效"
+  },
+  {
+   "id": "γ-V5R3-5",
+   "item": "GT_RECONSTRUCTION.md §1 ② 格文档级漂移",
+   "prereg_status": "已发现 · 文档级漂移",
+   "exec_status": "**已被他棒处置**：该文件现有 §8 修正注记 M-1（doc-writer，PI 2026-09-28 授权）⇒ 锚件 SHA-12 由 570b7bd3e286/6695 B 变为 cff15d000d47/13424 B；本棒 0 触动该文件"
+  },
+  {
+   "id": "γ-V5R3-6",
+   "item": "GT_RECONSTRUCTION.md §1 ③ 格 1.5/13 图 vs 1.3333/17 有限值",
+   "prereg_status": "已发现 · 文档级漂移",
+   "exec_status": "**已被他棒处置**：§8 修正注记 M-2（全量 17 有限值 1.3333 主报、族 S 13 图 1.5 作子集注记并列）；本棒 0 触动"
+  },
+  {
+   "id": "γ-V5R3-7",
+   "item": "GT-5 B 腿 FAIL 与 GT-7 复现并存",
+   "prereg_status": "已识别",
+   "exec_status": "已执行：gt5 B 腿 FAIL 根因强制登记为 ③ 混合（引 §2/§7 披露面），0 写为「工具失灵」、0 写为「框架被整体证伪」"
+  },
+  {
+   "id": "γ-V5R3-8",
+   "item": "GT-4 自利集退化偏大（偏 PASS 侧）与 ②保守判死方向相反",
+   "prereg_status": "已识别",
+   "exec_status": "已执行：偏置随 GT-4 判强制并报（K-V5R3-GT4-2）；as-run median 在带外 ⇒ 未触发带归属，根因 ③ 混合条款备用"
+  },
+  {
+   "id": "γ-V5R3-9",
+   "item": "n_poa_undefined 字段与「0 不明」冲突",
+   "prereg_status": "待 PI 口径拍板（§11 P-3）",
+   "exec_status": "as-run n_poa_undefined = 0 ⇒ 未触发 ⇒ 无需 KD 并 γ；默认档（KD 并 γ）保持待 PI 拍板"
+  },
+  {
+   "id": "γ-V5R3-10",
+   "item": "0 skill 加载",
+   "prereg_status": "已核实",
+   "exec_status": "本棒派工单亦未指定 skill 名 ⇒ 按派工单字面执行；0 加载不相干 skill、0 编造 skill 指令"
+  },
+  {
+   "id": "γ-V5R3-11",
+   "item": "gt5b S4 min_step_delta=0.0 哨兵",
+   "prereg_status": "已识别",
+   "exec_status": "已执行 S4 单独防退化门：逐任务 delta 序列 n_distinct=5 > 3、std>0 ⇒ 门达标 ⇒ S4 **不落 KD**、不剔除、不加权，分母 22"
+  },
+  {
+   "id": "γ-V5R3-12",
+   "item": "§6 各执行面产物尚未创建",
+   "prereg_status": "待执行",
+   "exec_status": "**已执行完毕**：§6.1–§6.4 四类执行面全部产出新名独立件（gt6 trajint / gt5 reattrib / gt8 expand / gt5b+gt4 reattrib），0 合并进任何历史 JSON"
+  },
+  {
+   "id": "γ-V5R3-13",
+   "item": "【本棒新增】语料 R2/E3 孤儿哨兵在本盘对 3 个**非图记录** .json 误报，load_corpus 抛 RuntimeError",
+   "prereg_status": "新增",
+   "exec_status": "如实处置：0 改 mindmap_corpus_v20.load_corpus、0 重建 corpus/v20/index.json（均非本棒所有权）⇒ 改用本棒内只读 index 驱动加载器（读取段与 load_corpus 逐行同序，仅跳过哨兵 raise）；图集/图序与 as-run 完全一致"
+  },
+  {
+   "id": "γ-V5R3-14",
+   "item": "【本棒新增】gt8 v2 else 归属明文只覆盖 #conc=1 与 pairs_tied≠[]（按 2 对设计书写），扩至 4 对后原则上新增 #conc∈[2,n−1] 无平局形态",
+   "prereg_status": "新增",
+   "exec_status": "**本轮未触发**：扩面 4 对读数 4/4 全同向、0 平局 ⇒ 未落入无归属形态；但缺口**仍在案未消**，后续复用仍可能暴露，届时按 K-V5R3-0-A 落 KD 并 γ，0 现场自创归属"
+  },
+  {
+   "id": "γ-V5R3-15",
+   "item": "【本棒新增】as-run 读数在本机环境**不可逐值复现**（gt6 静态口径 7/22 逐值一致，5 图实质差异 >1e-12）",
+   "prereg_status": "新增",
+   "exec_status": "如实登记：根因指向 BLAS/LAPACK 版本差异（22 图中 17 图的 residual_ratio 落在 1e-20 以下噪声地板，该字段无良定义值）；同环境两次复算逐值一致 ⇒ 环境内确定性成立；0 修改任何历史件、0 声称逐值复现"
+  },
+  {
+   "id": "γ-V5R3-16",
+   "item": "【本棒新增】立线件 §2.0 锚表 7 项中 1 项已漂移（docs/GT_RECONSTRUCTION.md）",
+   "prereg_status": "新增",
+   "exec_status": "实测登记：5 件历史 JSON SHA-12 全部逐值吻合；仅 GT_RECONSTRUCTION.md 不吻合，成因见 γ-V5R3-5（他棒已处置）；立线件本身 0 触动",
+   "_prereg_table_anchor": {
+    "gt_recon_table": "570b7bd3e286",
+    "gt_recon_measured": "cff15d000d47"
+   }
+  }
+ ],
+ "cases": {
+  "gt5": {
+   "case": "gt5",
+   "class": "类 I · 已落地「不明」",
+   "prereg_rule_ids": [
+    "K-V5R3-GT5-1",
+    "K-V5R3-GT5-2",
+    "K-V5R3-GT5-3",
+    "K-V5R3-GT5-4",
+    "K-V5R3-GT5-5",
+    "K-V5R3-GT5-6",
+    "K-V5R3-0-D",
+    "K-V5R3-0-E",
+    "K-V5R3-0-F"
+   ],
+   "surface": "只读复算（立线件 §6.2）· 0 补跑 · 0 新测量",
+   "anchor": {
+    "path": "results/deposon_v20_gt5.json",
+    "sha12": "fca14c5735dd"
+   },
+   "original_verdict_literal": "inconclusive_preregistered_undefined_band",
+   "v2_parallel_verdict": "FAIL",
+   "parallel_report": {
+    "原判": "inconclusive_preregistered_undefined_band",
+    "v2 并列判": "FAIL"
+   },
+   "legs": {
+    "A_leg_monotonicity": {
+     "literal": "frac_full_mono ≥ 0.8",
+     "frac_graphs_full_monotonicity": 1.0,
+     "graphs_with_full_monotonicity": [
+      "S6",
+      "L_physics_concepts",
+      "L_biological_taxonomy",
+      "L_algorithm_process"
+     ],
+     "verdict": "PASS"
+    },
+    "B_leg_noise_arm_global_potential_advantage": {
+     "literal": "全部图 dirichlet终点 Φ < meanfield终点 Φ（全称条件）",
+     "universal_condition": false,
+     "graphs_holding": [
+      "L_biological_taxonomy"
+     ],
+     "graphs_violating": [
+      "S6",
+      "L_physics_concepts",
+      "L_algorithm_process"
+     ],
+     "n_violating": 3,
+     "n_graphs": 4,
+     "verdict": "FAIL",
+     "attribution": "②最不利方向（K-V5R3-GT5-2）· 全称命题按字面被证伪，0 软化为「未观察到」"
+    }
+   },
+   "kill_rule_probe": {
+    "literal": "meanfield_monotone_rate < 0.5 的图 ≥ 2",
+    "graphs_below_dead": [],
+    "n_graphs_below_dead": 0,
+    "triggered": false
+   },
+   "claim_level": {
+    "verdict": "FAIL",
+    "permitted_statement": "「噪声臂全局势优势腿被证伪；单调性腿单独成立（4/4）；两者不可互替」",
+    "disclosure_item": "3/4 反转披露强制项：S6 gap=−0.30658882271105603、L_physics_concepts gap=−0.008594356229952638、L_algorithm_process gap=−0.0007708929775289697；仅 L_biological_taxonomy gap=+0.43777787179854766 满足（docs/GT_RECONSTRUCTION.md §2 披露面 0 删改）"
+   },
+   "root_cause": {
+    "class": "③ 混合",
+    "mandated_literal": "③ 混合 —— 该全称命题按字面被证伪（3/4 图违反），但反转具系统性而非工具失灵：同 3/4 图在 GT-7 温度前沿扫描中复现，Φ 增益集中于高温端（docs/GT_RECONSTRUCTION.md §7 载 corr −0.87）；即噪声在命中率上有害、在全局势上可有益（探索-利用权衡），非读数错误。",
+    "not_classified_as": [
+     "① 真证伪",
+     "② 假证伪"
+    ],
+    "evidence": [
+     "docs/GT_RECONSTRUCTION.md §2 纪律声明",
+     "docs/GT_RECONSTRUCTION.md §7 GT-7 温度前沿扫描"
+    ]
+   },
+   "no_backtrack_guards": {
+    "GT-5 终点条件 0 回写": true,
+    "GT_RECONSTRUCTION.md §2 3/4 披露 0 删改": true,
+    "gt5b 收窄主张 0 使失效": true,
+    "原判字面保留、v2 并列": true,
+    "并报强制（K-V5R3-0-E）": true
+   },
+   "anti_degeneration_gates": {
+    "endpoint_gap": {
+     "construct": "gt5 · endpoint_gap 逐图（4 值）",
+     "n_values": 4,
+     "n_distinct": 4,
+     "std": 0.26552324235766345,
+     "gate_n_distinct_gt_3": true,
+     "gate_std_gt_0": true,
+     "gate_pass": true,
+     "verdict": "PASS",
+     "kd_reason": null
+    },
+    "meanfield_monotone_rate": {
+     "construct": "gt5 · meanfield_monotone_rate 逐图",
+     "n_values": 4,
+     "n_distinct": 1,
+     "std": 0.0,
+     "gate_n_distinct_gt_3": false,
+     "gate_std_gt_0": false,
+     "gate_pass": false,
+     "verdict": "KD",
+     "kd_reason": "K-V5R3-0-B ③ 防退化门不达（n_distinct≤3 或 std=0）"
+    },
+    "gamma_V5R3_3": "meanfield_monotone_rate 二值退化（n_distinct=1）⇒ 判别力由 endpoint_gap（n_distinct=4）承担，0 以单调率字段单独判档"
+   },
+   "conclusion_ceiling": "仅覆盖本构造面（4 图 × 5 tasks × 10 dirichlet seeds · sample_seed=505000）；0 外推（立线件 §9）",
+   "per_graph_readout": {
+    "S6": {
+     "meanfield_mean_endpoint": -1.7879595323591382,
+     "dirichlet_mean_endpoint": -1.4813707096480822,
+     "endpoint_gap_meanfield_minus_dirichlet": -0.30658882271105603,
+     "gap_sign": "negative",
+     "b_leg_this_graph_holds": false,
+     "meanfield_monotone_rate": 1.0,
+     "a_leg_this_graph_holds": true,
+     "gap_vs_direct_compare_consistent": true
+    },
+    "L_physics_concepts": {
+     "meanfield_mean_endpoint": -2.969335066356968,
+     "dirichlet_mean_endpoint": -2.9607407101270153,
+     "endpoint_gap_meanfield_minus_dirichlet": -0.008594356229952638,
+     "gap_sign": "negative",
+     "b_leg_this_graph_holds": false,
+     "meanfield_monotone_rate": 1.0,
+     "a_leg_this_graph_holds": true,
+     "gap_vs_direct_compare_consistent": true
+    },
+    "L_biological_taxonomy": {
+     "meanfield_mean_endpoint": -6.066723525698466,
+     "dirichlet_mean_endpoint": -6.504501397497013,
+     "endpoint_gap_meanfield_minus_dirichlet": 0.43777787179854766,
+     "gap_sign": "positive",
+     "b_leg_this_graph_holds": true,
+     "meanfield_monotone_rate": 1.0,
+     "a_leg_this_graph_holds": true,
+     "gap_vs_direct_compare_consistent": true
+    },
+    "L_algorithm_process": {
+     "meanfield_mean_endpoint": -1.7384624169383804,
+     "dirichlet_mean_endpoint": -1.7376915239608515,
+     "endpoint_gap_meanfield_minus_dirichlet": -0.0007708929775289697,
+     "gap_sign": "negative",
+     "b_leg_this_graph_holds": false,
+     "meanfield_monotone_rate": 1.0,
+     "a_leg_this_graph_holds": true,
+     "gap_vs_direct_compare_consistent": true
+    }
+   },
+   "thresholds_used": {
+    "pass_graph_frac": 0.8,
+    "mono_full": 1.0,
+    "mono_dead": 0.5,
+    "dead_min_graphs": 2,
+    "tol": 1e-09
+   },
+   "new_thresholds_added": 0,
+   "tol_note": "tol=1e-09 沿既有字面，本案判定未使用（B 腿为严格 < 精确比较）"
+  },
+  "gt6": {
+   "case": "gt6",
+   "class": "类 II · 潜伏带 [0.1, 0.3]",
+   "prereg_rule_ids": [
+    "K-V5R3-GT6-1",
+    "K-V5R3-GT6-2",
+    "K-V5R3-GT6-3",
+    "K-V5R3-GT6-4",
+    "K-V5R3-GT6-5",
+    "K-V5R3-0-E",
+    "K-V5R3-0-G"
+   ],
+   "surface": "①扩测量面 · 沿反向轨迹积分分解（立线件 §6.1）",
+   "anchor": {
+    "path": "results/deposon_v20_gt6.json",
+    "sha12": "04b90b638bdc"
+   },
+   "original_verdict_literal": "potential_game_explanation_complete",
+   "v2_parallel_verdict": null,
+   "parallel_report": {
+    "原判": "potential_game_explanation_complete",
+    "v2 并列判": "同原判（0 新判）"
+   },
+   "trajint_verdict_literal": "potential_game_explanation_complete",
+   "trajint_median_residual_ratio": 3.203342048593724e-28,
+   "trajint_n_graphs": 22,
+   "band_entered": false,
+   "band_test": "0.1 ≤ median_r ≤ 0.3",
+   "attribution": null,
+   "anti_degeneration_gate": {
+    "construct": "gt6-trajint · residual_ratio_mean 逐图（22 值）",
+    "n_values": 22,
+    "n_distinct": 22,
+    "std": 0.07039416666406546,
+    "gate_n_distinct_gt_3": true,
+    "gate_std_gt_0": true,
+    "gate_pass": true,
+    "verdict": "PASS",
+    "kd_reason": null
+   },
+   "static_caliber_fidelity_check": {
+    "purpose": "复核：本棒只读 index 驱动加载器 + 本机 numpy 环境能否逐值复现 as-run 静态口径读数",
+    "graph_set_identity": true,
+    "graph_set_note": "index 驱动加载器给出的 22 个 graph_id 及其顺序与 as-run per_graph_summary 键序**完全一致** ⇒ 加载器数据面忠实；任务抽样只依赖 (seed+图序, len(named))，确定性 ⇒ 协议面一致",
+    "same_env_determinism": {
+     "n_graphs_bit_identical_across_two_passes": 22,
+     "n_graphs": 22,
+     "fully_deterministic_in_this_env": true
+    },
+    "n_graphs_bit_identical_to_as_run": 7,
+    "all_bit_identical": false,
+    "n_graphs_with_material_diff_gt_1e_12": 4,
+    "material_diff_graphs": {
+     "S5": {
+      "as_run": 0.12049960797152888,
+      "recomputed": 0.12055083105984589,
+      "abs_diff": 5.12230883170095e-05
+     },
+     "S6": {
+      "as_run": 0.0013428938713515237,
+      "recomputed": 0.001351755666650156,
+      "abs_diff": 8.86179529863227e-06
+     },
+     "S6_n35": {
+      "as_run": 0.004474809335047179,
+      "recomputed": 0.005049591479873769,
+      "abs_diff": 0.0005747821448265902
+     },
+     "S6_n60": {
+      "as_run": 0.0011961188080792772,
+      "recomputed": 0.0014588464524486048,
+      "abs_diff": 0.00026272764436932757
+     }
+    },
+    "n_graphs_as_run_at_noise_floor_lt_1e_20": 13,
+    "noise_floor_diagnosis": "22 图中 13 图的 as-run residual_ratio < 1e-20（数学上 F 恰在梯度空间 ⇒ r 应恰为 0，落盘值是 pinv/SVD 的浮点噪声）⇒ 该字段在这些图上**无良定义值**，其数值依赖 BLAS/LAPACK 实现",
+    "median_recomputed": 1.8429821592049725e-28,
+    "median_as_run": 1.593752188031628e-29,
+    "median_bit_identical": false,
+    "verdict_robustness": "尽管逐值不可复现，静态口径 median 在两环境下分别约 1.6e-29 与 1.8e-28，相对 0.1 切点相差约 27 个数量级 ⇒ **判带归属对本次环境差异稳健**",
+    "loader_gamma": "γ-V5R3-13",
+    "reproducibility_gamma": "γ-V5R3-15",
+    "conclusion": "**静态口径逐值复现不成立** ⇒ 本复算**不能**作为 as-run 读数的忠实性证明（推翻本棒原拟的「以静态复现证明加载器忠实」论证路径）；加载器忠实性改由「图集/图序/抽样协议一致」+「同环境两次复算逐值一致」两项证明（见上）。环境差异如实登记，不修改任何历史件。",
+    "per_graph": {
+     "L_algorithm_process": {
+      "recomputed": 0.13623533911841818,
+      "as_run": 0.13623533911841818,
+      "bit_identical": true,
+      "abs_diff": 0.0,
+      "as_run_at_noise_floor": false
+     },
+     "L_biological_taxonomy": {
+      "recomputed": 2.0222944221755393e-29,
+      "as_run": 1.6690915941881266e-29,
+      "bit_identical": false,
+      "abs_diff": 3.532028279874127e-30,
+      "as_run_at_noise_floor": true
+     },
+     "L_geography_world": {
+      "recomputed": 1.3803500933212152e-29,
+      "as_run": 1.273747139073008e-29,
+      "bit_identical": false,
+      "abs_diff": 1.0660295424820725e-30,
+      "as_run_at_noise_floor": true
+     },
+     "L_historical_causality": {
+      "recomputed": 0.036854635449831266,
+      "as_run": 0.036854635449831266,
+      "bit_identical": true,
+      "abs_diff": 0.0,
+      "as_run_at_noise_floor": false
+     },
+     "L_physics_concepts": {
+      "recomputed": 7.815511863477093e-30,
+      "as_run": 3.70113152978709e-30,
+      "bit_identical": false,
+      "abs_diff": 4.114380333690003e-30,
+      "as_run_at_noise_floor": true
+     },
+     "L_project_management": {
+      "recomputed": 0.04607507419752625,
+      "as_run": 0.04607507419752625,
+      "bit_identical": true,
+      "abs_diff": 0.0,
+      "as_run_at_noise_floor": false
+     },
+     "S1": {
+      "recomputed": 0.0,
+      "as_run": 0.0,
+      "bit_identical": true,
+      "abs_diff": 0.0,
+      "as_run_at_noise_floor": true
+     },
+     "S1_n35": {
+      "recomputed": 0.0,
+      "as_run": 0.0,
+      "bit_identical": true,
+      "abs_diff": 0.0,
+      "as_run_at_noise_floor": true
+     },
+     "S1_n45": {
+      "recomputed": 0.0,
+      "as_run": 0.0,
+      "bit_identical": true,
+      "abs_diff": 0.0,
+      "as_run_at_noise_floor": true
+     },
+     "S1_n60": {
+      "recomputed": 0.0,
+      "as_run": 0.0,
+      "bit_identical": true,
+      "abs_diff": 0.0,
+      "as_run_at_noise_floor": true
+     },
+     "S2": {
+      "recomputed": 3.1979402538316625e-29,
+      "as_run": 1.574698700869462e-28,
+      "bit_identical": false,
+      "abs_diff": 1.2549046754862958e-28,
+      "as_run_at_noise_floor": true
+     },
+     "S2_n20": {
+      "recomputed": 2.249086977556811e-30,
+      "as_run": 3.1893968678358835e-30,
+      "bit_identical": false,
+      "abs_diff": 9.403098902790725e-31,
+      "as_run_at_noise_floor": true
+     },
+     "S2_n35": {
+      "recomputed": 7.151802281602695e-29,
+      "as_run": 1.1054773492064205e-29,
+      "bit_identical": false,
+      "abs_diff": 6.046324932396274e-29,
+      "as_run_at_noise_floor": true
+     },
+     "S2_n45": {
+      "recomputed": 2.9707840902496757e-28,
+      "as_run": 1.5184127818751289e-29,
+      "bit_identical": false,
+      "abs_diff": 2.818942812062163e-28,
+      "as_run_at_noise_floor": true
+     },
+     "S2_n60": {
+      "recomputed": 3.0503091041459724e-28,
+      "as_run": 1.1511944114569184e-29,
+      "bit_identical": false,
+      "abs_diff": 2.9351896630002804e-28,
+      "as_run_at_noise_floor": true
+     },
+     "S3": {
+      "recomputed": 3.392558837130029e-29,
+      "as_run": 1.3582339251857787e-29,
+      "bit_identical": false,
+      "abs_diff": 2.03432491194425e-29,
+      "as_run_at_noise_floor": true
+     },
+     "S4": {
+      "recomputed": 0.14833721134110323,
+      "as_run": 0.14833721134110328,
+      "bit_identical": false,
+      "abs_diff": 5.551115123125783e-17,
+      "as_run_at_noise_floor": false
+     },
+     "S5": {
+      "recomputed": 0.12055083105984589,
+      "as_run": 0.12049960797152888,
+      "bit_identical": false,
+      "abs_diff": 5.12230883170095e-05,
+      "as_run_at_noise_floor": false
+     },
+     "S6": {
+      "recomputed": 0.001351755666650156,
+      "as_run": 0.0013428938713515237,
+      "bit_identical": false,
+      "abs_diff": 8.86179529863227e-06,
+      "as_run_at_noise_floor": false
+     },
+     "S6_n20": {
+      "recomputed": 2.4331855378681593e-05,
+      "as_run": 2.4331855378681566e-05,
+      "bit_identical": false,
+      "abs_diff": 2.710505431213761e-20,
+      "as_run_at_noise_floor": false
+     },
+     "S6_n35": {
+      "recomputed": 0.005049591479873769,
+      "as_run": 0.004474809335047179,
+      "bit_identical": false,
+      "abs_diff": 0.0005747821448265902,
+      "as_run_at_noise_floor": false
+     },
+     "S6_n60": {
+      "recomputed": 0.0014588464524486048,
+      "as_run": 0.0011961188080792772,
+      "bit_identical": false,
+      "abs_diff": 0.00026272764436932757,
+      "as_run_at_noise_floor": false
+     }
+    }
+   },
+   "caliber_freeze": {
+    "edge_utility_per_state": "(x[u]·y[v]/x_t)·dt_e/dW（aggregate；与既有 edge_utility_vector 逐字同式）",
+    "trajectory": "forward_diffuse → denoise(init_mode=\"prior_mean\", record=True)，states 共 n_steps+1 个（含起点）",
+    "accumulation": "equal_weight_all_states_inclusive_of_t0",
+    "edge_support_set": "as-run 的 W_obs>0 支持集（逐字沿用 ⇒ E / B / 投影空间与既有分解完全一致）",
+    "projection_and_r": "沿用 hodge_decomposition 既有字面（B = 有向关联矩阵、p = pinv(B)F、残余 F − B·pinv(B)F、r = ‖残余‖²/‖F‖²、F 全零 r = 0.0），0 改一处",
+    "scale_invariance_note": "r 对 F 的整体正比例缩放不变（齐次 0 次）⇒ 全局权重选择不改 r，仅相对权重形状有影响",
+    "scope": "该补跑读数为**另一构造面**（轨迹积分口径）⇒ 0 与静态口径读数混用、0 取两者中更有利者（K-V5R3-GT6-2）"
+   },
+   "scale": {
+    "graphs": "全部 22 图（族 S 16 + 族 L 6）",
+    "tasks_per_graph_max": 10,
+    "sample_seed": 606000,
+    "config": {
+     "n_steps": 50,
+     "beta_schedule": "linear",
+     "prior": "uniform_out",
+     "lr": 0.1,
+     "lam_smooth": 0.01,
+     "field_guidance": true,
+     "energy_mode": "aggregate",
+     "seed": 0
+    },
+    "no_reduction": "0 缩减图数/步数（沿 as-run honesty 纪律）"
+   },
+   "thresholds_used": {
+    "complete_median": 0.1,
+    "approx_median": 0.3
+   },
+   "new_thresholds_added": 0,
+   "class_analogy_ceiling": "K-V5R3-GT6-4：分解对象为边效用（场得分）向量，「每个任务是独立玩家」是建模选择 ⇒ 0 表述为「博弈流分解定理在本系统成立」",
+   "per_graph_summary": {
+    "L_algorithm_process": {
+     "residual_ratio_mean": 0.11146111222466186,
+     "residual_ratio_median": 0.11603685124710345,
+     "residual_ratio_max": 0.1402365540468009,
+     "residual_ratio_min": 0.05132254746608876
+    },
+    "L_biological_taxonomy": {
+     "residual_ratio_mean": 2.627793165479167e-29,
+     "residual_ratio_median": 1.939797385662054e-29,
+     "residual_ratio_max": 6.360996095664157e-29,
+     "residual_ratio_min": 4.8987227284870595e-30
+    },
+    "L_geography_world": {
+     "residual_ratio_mean": 3.0518990812301225e-29,
+     "residual_ratio_median": 2.27467599654829e-29,
+     "residual_ratio_max": 1.1905002559365531e-28,
+     "residual_ratio_min": 7.538187422562131e-30
+    },
+    "L_historical_causality": {
+     "residual_ratio_mean": 0.041335080428070506,
+     "residual_ratio_median": 0.03889035811659128,
+     "residual_ratio_max": 0.053374619424170676,
+     "residual_ratio_min": 0.03299856522261975
+    },
+    "L_physics_concepts": {
+     "residual_ratio_mean": 0.00016168033899256818,
+     "residual_ratio_median": 1.0879871499264332e-29,
+     "residual_ratio_max": 0.00044094637907064044,
+     "residual_ratio_min": 4.572761302952421e-30
+    },
+    "L_project_management": {
+     "residual_ratio_mean": 0.04451816259483627,
+     "residual_ratio_median": 0.045156105604181845,
+     "residual_ratio_max": 0.05556384341304006,
+     "residual_ratio_min": 0.027069215687174634
+    },
+    "S1": {
+     "residual_ratio_mean": 5.2555095946076556e-30,
+     "residual_ratio_median": 4.0646037033701105e-30,
+     "residual_ratio_max": 1.3805104620152706e-29,
+     "residual_ratio_min": 1.7624062051029216e-30
+    },
+    "S1_n35": {
+     "residual_ratio_mean": 3.8091415470435127e-29,
+     "residual_ratio_median": 3.602382313612097e-29,
+     "residual_ratio_max": 6.371679872610339e-29,
+     "residual_ratio_min": 1.7097079920886789e-29
+    },
+    "S1_n45": {
+     "residual_ratio_mean": 9.583012686744684e-29,
+     "residual_ratio_median": 3.693670509092368e-29,
+     "residual_ratio_max": 3.9392292357670636e-28,
+     "residual_ratio_min": 6.838210266825858e-30
+    },
+    "S1_n60": {
+     "residual_ratio_mean": 3.8240565351445565e-28,
+     "residual_ratio_median": 1.3047359733635569e-28,
+     "residual_ratio_max": 1.3656727345656682e-27,
+     "residual_ratio_min": 2.3275310658409753e-29
+    },
+    "S2": {
+     "residual_ratio_mean": 1.5373870286272783e-29,
+     "residual_ratio_median": 1.426308993362596e-29,
+     "residual_ratio_max": 4.014044197538983e-29,
+     "residual_ratio_min": 2.894014954349492e-30
+    },
+    "S2_n20": {
+     "residual_ratio_mean": 3.0450055704558303e-30,
+     "residual_ratio_median": 2.613526129190514e-30,
+     "residual_ratio_max": 8.611153379460901e-30,
+     "residual_ratio_min": 5.500991047266406e-31
+    },
+    "S2_n35": {
+     "residual_ratio_mean": 2.4809782137422104e-29,
+     "residual_ratio_median": 1.9167717316034398e-29,
+     "residual_ratio_max": 6.805675230696308e-29,
+     "residual_ratio_min": 1.9614139161280836e-30
+    },
+    "S2_n45": {
+     "residual_ratio_mean": 1.750230477417013e-28,
+     "residual_ratio_median": 3.922811669181793e-29,
+     "residual_ratio_max": 7.986666981514455e-28,
+     "residual_ratio_min": 3.965534096182011e-30
+    },
+    "S2_n60": {
+     "residual_ratio_mean": 2.582627562042892e-28,
+     "residual_ratio_median": 2.548406758047424e-29,
+     "residual_ratio_max": 1.9637448926104856e-27,
+     "residual_ratio_min": 7.51724736314832e-30
+    },
+    "S3": {
+     "residual_ratio_mean": 2.155804557453948e-29,
+     "residual_ratio_median": 7.52083240600918e-30,
+     "residual_ratio_max": 1.2534245685723968e-28,
+     "residual_ratio_min": 4.2826694573091824e-30
+    },
+    "S4": {
+     "residual_ratio_mean": 0.13385060947826607,
+     "residual_ratio_median": 0.14593301362463518,
+     "residual_ratio_max": 0.14825388927383132,
+     "residual_ratio_min": 0.02552446050131968
+    },
+    "S5": {
+     "residual_ratio_mean": 0.3068901487431511,
+     "residual_ratio_median": 0.3319968472411042,
+     "residual_ratio_max": 0.4110013374550146,
+     "residual_ratio_min": 0.16584679776841246
+    },
+    "S6": {
+     "residual_ratio_mean": 0.00279892151969608,
+     "residual_ratio_median": 0.0030351784139134893,
+     "residual_ratio_max": 0.004777135027088931,
+     "residual_ratio_min": 0.00010042549680685708
+    },
+    "S6_n20": {
+     "residual_ratio_mean": 0.00014175483946842908,
+     "residual_ratio_median": 3.5334939541582156e-06,
+     "residual_ratio_max": 0.0003913268773286186,
+     "residual_ratio_min": 5.146084504625892e-07
+    },
+    "S6_n35": {
+     "residual_ratio_mean": 0.007257761885678972,
+     "residual_ratio_median": 0.0064547886160067815,
+     "residual_ratio_max": 0.011697626344018374,
+     "residual_ratio_min": 0.0035713387647083976
+    },
+    "S6_n60": {
+     "residual_ratio_mean": 0.0025419835661873386,
+     "residual_ratio_median": 0.0027997268718425255,
+     "residual_ratio_max": 0.004115728433238127,
+     "residual_ratio_min": 0.0009451873069897173
+    }
+   },
+   "per_graph_detail": {
+    "L_algorithm_process": {
+     "graph_id": "L_algorithm_process",
+     "family": "L",
+     "N": 38,
+     "n_named_edges": 29,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        4,
+        6
+       ],
+       "n_edges_in_flow": 47,
+       "n_traj_states": 51,
+       "residual_ratio": 0.05132254746608876,
+       "grad_energy": 16231.339181127927,
+       "resid_energy": 878.1000047345888,
+       "total_energy": 17109.43918586253
+      },
+      {
+       "task_edge": [
+        6,
+        7
+       ],
+       "n_edges_in_flow": 47,
+       "n_traj_states": 51,
+       "residual_ratio": 0.08375795062759912,
+       "grad_energy": 22055.880431627524,
+       "resid_energy": 2016.2306952686497,
+       "total_energy": 24072.11112689618
+      },
+      {
+       "task_edge": [
+        10,
+        11
+       ],
+       "n_edges_in_flow": 47,
+       "n_traj_states": 51,
+       "residual_ratio": 0.10711446065375427,
+       "grad_energy": 23391.111708805092,
+       "resid_energy": 2806.1002271521547,
+       "total_energy": 26197.211935957253
+      },
+      {
+       "task_edge": [
+        12,
+        13
+       ],
+       "n_edges_in_flow": 47,
+       "n_traj_states": 51,
+       "residual_ratio": 0.10702153079959151,
+       "grad_energy": 22946.475539969255,
+       "resid_energy": 2750.085274667193,
+       "total_energy": 25696.56081463647
+      },
+      {
+       "task_edge": [
+        17,
+        19
+       ],
+       "n_edges_in_flow": 47,
+       "n_traj_states": 51,
+       "residual_ratio": 0.1402365540468009,
+       "grad_energy": 24500.77134100803,
+       "resid_energy": 3996.336155629736,
+       "total_energy": 28497.107496637756
+      },
+      {
+       "task_edge": [
+        20,
+        21
+       ],
+       "n_edges_in_flow": 47,
+       "n_traj_states": 51,
+       "residual_ratio": 0.13638344178530637,
+       "grad_energy": 25498.245374839895,
+       "resid_energy": 4026.7158273294913,
+       "total_energy": 29524.96120216934
+      },
+      {
+       "task_edge": [
+        23,
+        24
+       ],
+       "n_edges_in_flow": 47,
+       "n_traj_states": 51,
+       "residual_ratio": 0.12495924184045261,
+       "grad_energy": 24807.60699822456,
+       "resid_energy": 3542.6232817932714,
+       "total_energy": 28350.230280017837
+      },
+      {
+       "task_edge": [
+        24,
+        25
+       ],
+       "n_edges_in_flow": 47,
+       "n_traj_states": 51,
+       "residual_ratio": 0.1257753062262352,
+       "grad_energy": 24794.31232967062,
+       "resid_energy": 3567.174718517226,
+       "total_energy": 28361.48704818782
+      },
+      {
+       "task_edge": [
+        27,
+        28
+       ],
+       "n_edges_in_flow": 47,
+       "n_traj_states": 51,
+       "residual_ratio": 0.1341685250274875,
+       "grad_energy": 24840.64341497037,
+       "resid_energy": 3849.2854372453444,
+       "total_energy": 28689.928852215748
+      },
+      {
+       "task_edge": [
+        32,
+        33
+       ],
+       "n_edges_in_flow": 47,
+       "n_traj_states": 51,
+       "residual_ratio": 0.10387156377330237,
+       "grad_energy": 25778.001598349198,
+       "resid_energy": 2987.9660422848715,
+       "total_energy": 28765.967640634044
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 0.11146111222466186,
+      "residual_ratio_median": 0.11603685124710345,
+      "residual_ratio_max": 0.1402365540468009,
+      "residual_ratio_min": 0.05132254746608876
+     }
+    },
+    "L_biological_taxonomy": {
+     "graph_id": "L_biological_taxonomy",
+     "family": "L",
+     "N": 42,
+     "n_named_edges": 22,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        1
+       ],
+       "n_edges_in_flow": 40,
+       "n_traj_states": 51,
+       "residual_ratio": 4.8987227284870595e-30,
+       "grad_energy": 516.5879859438602,
+       "resid_energy": 2.5306213080065405e-27,
+       "total_energy": 516.58798594386
+      },
+      {
+       "task_edge": [
+        1,
+        4
+       ],
+       "n_edges_in_flow": 40,
+       "n_traj_states": 51,
+       "residual_ratio": 2.983222276982097e-29,
+       "grad_energy": 10143.672389921503,
+       "resid_energy": 3.026082944402196e-25,
+       "total_energy": 10143.672389921472
+      },
+      {
+       "task_edge": [
+        11,
+        14
+       ],
+       "n_edges_in_flow": 40,
+       "n_traj_states": 51,
+       "residual_ratio": 1.5757892747931198e-29,
+       "grad_energy": 76279.44643019573,
+       "resid_energy": 1.2020033357185864e-24,
+       "total_energy": 76279.44643019566
+      },
+      {
+       "task_edge": [
+        14,
+        17
+       ],
+       "n_edges_in_flow": 40,
+       "n_traj_states": 51,
+       "residual_ratio": 2.1461952499564995e-29,
+       "grad_energy": 98091.05746335685,
+       "resid_energy": 2.1052256159106662e-24,
+       "total_energy": 98091.0574633569
+      },
+      {
+       "task_edge": [
+        17,
+        20
+       ],
+       "n_edges_in_flow": 40,
+       "n_traj_states": 51,
+       "residual_ratio": 3.188460366378147e-29,
+       "grad_energy": 155946.31100970728,
+       "resid_energy": 4.9722863193733224e-24,
+       "total_energy": 155946.31100970745
+      },
+      {
+       "task_edge": [
+        19,
+        21
+       ],
+       "n_edges_in_flow": 40,
+       "n_traj_states": 51,
+       "residual_ratio": 4.873035277879883e-29,
+       "grad_energy": 116518.36398229343,
+       "resid_energy": 5.677980982065656e-24,
+       "total_energy": 116518.36398229364
+      },
+      {
+       "task_edge": [
+        24,
+        26
+       ],
+       "n_edges_in_flow": 40,
+       "n_traj_states": 51,
+       "residual_ratio": 6.360996095664157e-29,
+       "grad_energy": 111322.96099666608,
+       "resid_energy": 7.081249202575655e-24,
+       "total_energy": 111322.96099666598
+      },
+      {
+       "task_edge": [
+        37,
+        39
+       ],
+       "n_edges_in_flow": 40,
+       "n_traj_states": 51,
+       "residual_ratio": 1.346405156597926e-29,
+       "grad_energy": 47211.4803946547,
+       "resid_energy": 6.356578065398495e-25,
+       "total_energy": 47211.48039465469
+      },
+      {
+       "task_edge": [
+        39,
+        40
+       ],
+       "n_edges_in_flow": 40,
+       "n_traj_states": 51,
+       "residual_ratio": 1.7333995213676085e-29,
+       "grad_energy": 48302.65739771682,
+       "resid_energy": 8.372780321398566e-25,
+       "total_energy": 48302.65739771668
+      },
+      {
+       "task_edge": [
+        40,
+        41
+       ],
+       "n_edges_in_flow": 40,
+       "n_traj_states": 51,
+       "residual_ratio": 1.5805561623235216e-29,
+       "grad_energy": 49423.21199378926,
+       "resid_energy": 7.811616227860547e-25,
+       "total_energy": 49423.21199378931
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 2.627793165479167e-29,
+      "residual_ratio_median": 1.939797385662054e-29,
+      "residual_ratio_max": 6.360996095664157e-29,
+      "residual_ratio_min": 4.8987227284870595e-30
+     }
+    },
+    "L_geography_world": {
+     "graph_id": "L_geography_world",
+     "family": "L",
+     "N": 45,
+     "n_named_edges": 16,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        1
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 1.1905002559365531e-28,
+       "grad_energy": 1051.5276777888778,
+       "resid_energy": 1.2518439695320272e-25,
+       "total_energy": 1051.5276777888769
+      },
+      {
+       "task_edge": [
+        0,
+        2
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 1.1264804723018727e-29,
+       "grad_energy": 13340.38357390108,
+       "resid_energy": 1.502768158901624e-25,
+       "total_energy": 13340.383573901085
+      },
+      {
+       "task_edge": [
+        0,
+        4
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 2.5848610188354775e-29,
+       "grad_energy": 13340.383573901117,
+       "resid_energy": 3.448303747649003e-25,
+       "total_energy": 13340.383573901085
+      },
+      {
+       "task_edge": [
+        1,
+        8
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 2.1142966066969697e-29,
+       "grad_energy": 125482.02925530808,
+       "resid_energy": 2.653062286559477e-24,
+       "total_energy": 125482.02925530807
+      },
+      {
+       "task_edge": [
+        2,
+        11
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 3.7910673890822735e-29,
+       "grad_energy": 97512.46642723796,
+       "resid_energy": 3.696763315012814e-24,
+       "total_energy": 97512.46642723784
+      },
+      {
+       "task_edge": [
+        3,
+        14
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 1.1138166222602075e-29,
+       "grad_energy": 97512.46642723773,
+       "resid_energy": 1.0861100598424794e-24,
+       "total_energy": 97512.46642723784
+      },
+      {
+       "task_edge": [
+        14,
+        30
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 7.538187422562131e-30,
+       "grad_energy": 119748.85115359329,
+       "resid_energy": 9.02689283632282e-25,
+       "total_energy": 119748.85115359334
+      },
+      {
+       "task_edge": [
+        16,
+        32
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 2.665456951833745e-29,
+       "grad_energy": 119748.85115359319,
+       "resid_energy": 3.1918540778144975e-24,
+       "total_energy": 119748.85115359334
+      },
+      {
+       "task_edge": [
+        24,
+        38
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 2.4350553863996104e-29,
+       "grad_energy": 148476.37870798915,
+       "resid_energy": 3.615482057259974e-24,
+       "total_energy": 148476.37870798915
+      },
+      {
+       "task_edge": [
+        27,
+        39
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 2.0291350632693222e-29,
+       "grad_energy": 129923.15765397297,
+       "resid_energy": 2.6363163472634455e-24,
+       "total_energy": 129923.15765397297
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 3.0518990812301225e-29,
+      "residual_ratio_median": 2.27467599654829e-29,
+      "residual_ratio_max": 1.1905002559365531e-28,
+      "residual_ratio_min": 7.538187422562131e-30
+     }
+    },
+    "L_historical_causality": {
+     "graph_id": "L_historical_causality",
+     "family": "L",
+     "N": 36,
+     "n_named_edges": 23,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        7,
+        8
+       ],
+       "n_edges_in_flow": 54,
+       "n_traj_states": 51,
+       "residual_ratio": 0.03299856522261975,
+       "grad_energy": 15465.371708650093,
+       "resid_energy": 527.7500721986374,
+       "total_energy": 15993.121780848733
+      },
+      {
+       "task_edge": [
+        13,
+        14
+       ],
+       "n_edges_in_flow": 54,
+       "n_traj_states": 51,
+       "residual_ratio": 0.05224910315965659,
+       "grad_energy": 24293.186007292585,
+       "resid_energy": 1339.2729946269628,
+       "total_energy": 25632.45900191955
+      },
+      {
+       "task_edge": [
+        14,
+        15
+       ],
+       "n_edges_in_flow": 54,
+       "n_traj_states": 51,
+       "residual_ratio": 0.04244519842750556,
+       "grad_energy": 25482.620216038653,
+       "resid_energy": 1129.5592374935627,
+       "total_energy": 26612.179453532244
+      },
+      {
+       "task_edge": [
+        15,
+        16
+       ],
+       "n_edges_in_flow": 54,
+       "n_traj_states": 51,
+       "residual_ratio": 0.053374619424170676,
+       "grad_energy": 34668.25385796001,
+       "resid_energy": 1954.7382668353546,
+       "total_energy": 36622.992124795404
+      },
+      {
+       "task_edge": [
+        16,
+        17
+       ],
+       "n_edges_in_flow": 54,
+       "n_traj_states": 51,
+       "residual_ratio": 0.03815771621288002,
+       "grad_energy": 30926.635321634076,
+       "resid_energy": 1226.9056932865408,
+       "total_energy": 32153.54101492066
+      },
+      {
+       "task_edge": [
+        16,
+        18
+       ],
+       "n_edges_in_flow": 54,
+       "n_traj_states": 51,
+       "residual_ratio": 0.03814515192898753,
+       "grad_energy": 30927.039307851523,
+       "resid_energy": 1226.5017070690803,
+       "total_energy": 32153.54101492066
+      },
+      {
+       "task_edge": [
+        17,
+        19
+       ],
+       "n_edges_in_flow": 54,
+       "n_traj_states": 51,
+       "residual_ratio": 0.03822748969797215,
+       "grad_energy": 27275.55902969898,
+       "resid_energy": 1084.119311630996,
+       "total_energy": 28359.67834132999
+      },
+      {
+       "task_edge": [
+        19,
+        21
+       ],
+       "n_edges_in_flow": 54,
+       "n_traj_states": 51,
+       "residual_ratio": 0.03799372751013834,
+       "grad_energy": 27188.678252075402,
+       "resid_energy": 1073.7967749384554,
+       "total_energy": 28262.47502701389
+      },
+      {
+       "task_edge": [
+        22,
+        27
+       ],
+       "n_edges_in_flow": 54,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0395532265352104,
+       "grad_energy": 27586.091501058847,
+       "resid_energy": 1136.0535081254286,
+       "total_energy": 28722.145009184278
+      },
+      {
+       "task_edge": [
+        28,
+        29
+       ],
+       "n_edges_in_flow": 54,
+       "n_traj_states": 51,
+       "residual_ratio": 0.04020600616156404,
+       "grad_energy": 26623.280935810366,
+       "resid_energy": 1115.2557780294135,
+       "total_energy": 27738.536713839803
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 0.041335080428070506,
+      "residual_ratio_median": 0.03889035811659128,
+      "residual_ratio_max": 0.053374619424170676,
+      "residual_ratio_min": 0.03299856522261975
+     }
+    },
+    "L_physics_concepts": {
+     "graph_id": "L_physics_concepts",
+     "family": "L",
+     "N": 35,
+     "n_named_edges": 31,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        2
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 5.276248325960535e-30,
+       "grad_energy": 11766.959694238687,
+       "resid_energy": 6.2085401388372e-26,
+       "total_energy": 11766.959694238694
+      },
+      {
+       "task_edge": [
+        0,
+        5
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 8.11617864208087e-30,
+       "grad_energy": 11766.959694238698,
+       "resid_energy": 9.550274695260653e-26,
+       "total_energy": 11766.959694238694
+      },
+      {
+       "task_edge": [
+        1,
+        8
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 1.1344773120725555e-29,
+       "grad_energy": 91691.87721879328,
+       "resid_energy": 1.040223544060635e-24,
+       "total_energy": 91691.87721879338
+      },
+      {
+       "task_edge": [
+        2,
+        11
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 1.0414969877803109e-29,
+       "grad_energy": 77076.06133972136,
+       "resid_energy": 8.027448571529016e-25,
+       "total_energy": 77076.06133972126
+      },
+      {
+       "task_edge": [
+        2,
+        13
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 5.035212166708962e-30,
+       "grad_energy": 77076.06133972116,
+       "resid_energy": 3.8809432181977074e-25,
+       "total_energy": 77076.06133972126
+      },
+      {
+       "task_edge": [
+        6,
+        26
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 4.572761302952421e-30,
+       "grad_energy": 77076.06133972136,
+       "resid_energy": 3.5245043067826454e-25,
+       "total_energy": 77076.06133972126
+      },
+      {
+       "task_edge": [
+        25,
+        28
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0003919523369516805,
+       "grad_energy": 100039.17547698188,
+       "resid_energy": 39.22596332291586,
+       "total_energy": 100078.4014403047
+      },
+      {
+       "task_edge": [
+        25,
+        29
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.00039195233695168047,
+       "grad_energy": 100039.17547698188,
+       "resid_energy": 39.22596332291585,
+       "total_energy": 100078.4014403047
+      },
+      {
+       "task_edge": [
+        25,
+        30
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.00044094637907064044,
+       "grad_energy": 100034.27223156641,
+       "resid_energy": 44.129208738280326,
+       "total_energy": 100078.4014403047
+      },
+      {
+       "task_edge": [
+        26,
+        28
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.00039195233695168047,
+       "grad_energy": 100039.17547698168,
+       "resid_energy": 39.22596332291585,
+       "total_energy": 100078.4014403047
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 0.00016168033899256818,
+      "residual_ratio_median": 1.0879871499264332e-29,
+      "residual_ratio_max": 0.00044094637907064044,
+      "residual_ratio_min": 4.572761302952421e-30
+     }
+    },
+    "L_project_management": {
+     "graph_id": "L_project_management",
+     "family": "L",
+     "N": 33,
+     "n_named_edges": 36,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        4,
+        5
+       ],
+       "n_edges_in_flow": 50,
+       "n_traj_states": 51,
+       "residual_ratio": 0.04669007723203206,
+       "grad_energy": 17789.645925030334,
+       "resid_energy": 871.2800762195934,
+       "total_energy": 18660.92600124991
+      },
+      {
+       "task_edge": [
+        5,
+        6
+       ],
+       "n_edges_in_flow": 50,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0464221257361136,
+       "grad_energy": 17817.7733139596,
+       "resid_energy": 867.4057310282207,
+       "total_energy": 18685.179044987843
+      },
+      {
+       "task_edge": [
+        6,
+        7
+       ],
+       "n_edges_in_flow": 50,
+       "n_traj_states": 51,
+       "residual_ratio": 0.04625459723845631,
+       "grad_energy": 17843.632817136433,
+       "resid_energy": 865.3777484407988,
+       "total_energy": 18709.010565577235
+      },
+      {
+       "task_edge": [
+        7,
+        9
+       ],
+       "n_edges_in_flow": 50,
+       "n_traj_states": 51,
+       "residual_ratio": 0.04444264770259598,
+       "grad_energy": 17720.606257130738,
+       "resid_energy": 824.1793745489011,
+       "total_energy": 18544.785631679617
+      },
+      {
+       "task_edge": [
+        7,
+        13
+       ],
+       "n_edges_in_flow": 50,
+       "n_traj_states": 51,
+       "residual_ratio": 0.04444264770259597,
+       "grad_energy": 17720.606257130745,
+       "resid_energy": 824.1793745489009,
+       "total_energy": 18544.785631679617
+      },
+      {
+       "task_edge": [
+        13,
+        17
+       ],
+       "n_edges_in_flow": 50,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0448124513548201,
+       "grad_energy": 18316.16070593561,
+       "resid_energy": 859.299371946382,
+       "total_energy": 19175.460077882002
+      },
+      {
+       "task_edge": [
+        13,
+        21
+       ],
+       "n_edges_in_flow": 50,
+       "n_traj_states": 51,
+       "residual_ratio": 0.04398426002799035,
+       "grad_energy": 18331.906241379504,
+       "resid_energy": 843.4121920975716,
+       "total_energy": 19175.31843347706
+      },
+      {
+       "task_edge": [
+        17,
+        26
+       ],
+       "n_edges_in_flow": 50,
+       "n_traj_states": 51,
+       "residual_ratio": 0.05556384341304006,
+       "grad_energy": 19038.673039238347,
+       "resid_energy": 1120.0988443382444,
+       "total_energy": 20158.77188357659
+      },
+      {
+       "task_edge": [
+        20,
+        24
+       ],
+       "n_edges_in_flow": 50,
+       "n_traj_states": 51,
+       "residual_ratio": 0.045499759853543584,
+       "grad_energy": 18777.561427529745,
+       "resid_energy": 895.1014359689142,
+       "total_energy": 19672.662863498663
+      },
+      {
+       "task_edge": [
+        28,
+        30
+       ],
+       "n_edges_in_flow": 50,
+       "n_traj_states": 51,
+       "residual_ratio": 0.027069215687174634,
+       "grad_energy": 100702.86949723882,
+       "resid_energy": 2801.7899512383865,
+       "total_energy": 103504.65944847718
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 0.04451816259483627,
+      "residual_ratio_median": 0.045156105604181845,
+      "residual_ratio_max": 0.05556384341304006,
+      "residual_ratio_min": 0.027069215687174634
+     }
+    },
+    "S1": {
+     "graph_id": "S1",
+     "family": "S",
+     "N": 20,
+     "n_named_edges": 19,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        1
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 8.274833319204854e-30,
+       "grad_energy": 6739.706934707068,
+       "resid_energy": 5.576995150499014e-26,
+       "total_energy": 6739.706934707077
+      },
+      {
+       "task_edge": [
+        2,
+        3
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 1.933817970681933e-30,
+       "grad_energy": 11231.439422590165,
+       "resid_energy": 2.171955939203039e-26,
+       "total_energy": 11231.439422590172
+      },
+      {
+       "task_edge": [
+        3,
+        4
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 7.165849323503995e-30,
+       "grad_energy": 13755.246272433134,
+       "resid_energy": 9.85680221959457e-26,
+       "total_energy": 13755.246272433116
+      },
+      {
+       "task_edge": [
+        8,
+        9
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 1.7624062051029216e-30,
+       "grad_energy": 28473.127802687668,
+       "resid_energy": 5.018121711814531e-26,
+       "total_energy": 28473.127802687693
+      },
+      {
+       "task_edge": [
+        9,
+        10
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 2.0878529593965376e-30,
+       "grad_energy": 31682.477057491953,
+       "resid_energy": 6.61483534854975e-26,
+       "total_energy": 31682.47705749196
+      },
+      {
+       "task_edge": [
+        11,
+        12
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 2.4635269006635243e-30,
+       "grad_energy": 38166.553516410924,
+       "resid_energy": 9.40243312932924e-26,
+       "total_energy": 38166.553516410946
+      },
+      {
+       "task_edge": [
+        12,
+        13
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 3.1269605025783172e-30,
+       "grad_energy": 41383.55530418593,
+       "resid_energy": 1.2940474289245478e-25,
+       "total_energy": 41383.55530418592
+      },
+      {
+       "task_edge": [
+        14,
+        15
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 6.932497240629865e-30,
+       "grad_energy": 47573.708178226385,
+       "resid_energy": 3.2980460067208495e-25,
+       "total_energy": 47573.7081782264
+      },
+      {
+       "task_edge": [
+        16,
+        17
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 5.0022469041619045e-30,
+       "grad_energy": 52821.10861391315,
+       "resid_energy": 2.642242270383466e-25,
+       "total_energy": 52821.108613913115
+      },
+      {
+       "task_edge": [
+        18,
+        19
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 1.3805104620152706e-29,
+       "grad_energy": 52490.82398049683,
+       "resid_energy": 7.246413166487797e-25,
+       "total_energy": 52490.82398049686
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 5.2555095946076556e-30,
+      "residual_ratio_median": 4.0646037033701105e-30,
+      "residual_ratio_max": 1.3805104620152706e-29,
+      "residual_ratio_min": 1.7624062051029216e-30
+     }
+    },
+    "S1_n35": {
+     "graph_id": "S1_n35",
+     "family": "S",
+     "N": 35,
+     "n_named_edges": 34,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        1
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 2.055282154627302e-29,
+       "grad_energy": 8592.213635180204,
+       "resid_energy": 1.7659423353131257e-25,
+       "total_energy": 8592.213635180206
+      },
+      {
+       "task_edge": [
+        2,
+        3
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 3.16769498227454e-29,
+       "grad_energy": 13095.578103630134,
+       "resid_energy": 4.148279704885353e-25,
+       "total_energy": 13095.578103630138
+      },
+      {
+       "task_edge": [
+        4,
+        5
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 2.1436933994887943e-29,
+       "grad_energy": 17950.106332673873,
+       "resid_energy": 3.847952446547502e-25,
+       "total_energy": 17950.106332673888
+      },
+      {
+       "task_edge": [
+        5,
+        6
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 4.037069644949654e-29,
+       "grad_energy": 20477.364510758704,
+       "resid_energy": 8.266854667495334e-25,
+       "total_energy": 20477.364510758718
+      },
+      {
+       "task_edge": [
+        11,
+        12
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 1.7097079920886789e-29,
+       "grad_energy": 36314.25743165432,
+       "resid_energy": 6.208677615766519e-25,
+       "total_energy": 36314.257431654376
+      },
+      {
+       "task_edge": [
+        20,
+        21
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 6.371679872610339e-29,
+       "grad_energy": 59319.95118839941,
+       "resid_energy": 3.779677390313519e-24,
+       "total_energy": 59319.95118839935
+      },
+      {
+       "task_edge": [
+        22,
+        23
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 5.54766857366652e-29,
+       "grad_energy": 64007.67572455461,
+       "resid_energy": 3.550933710905491e-24,
+       "total_energy": 64007.67572455463
+      },
+      {
+       "task_edge": [
+        23,
+        24
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 4.664246118523494e-29,
+       "grad_energy": 66277.90153002356,
+       "resid_energy": 3.0913644495529444e-24,
+       "total_energy": 66277.9015300235
+      },
+      {
+       "task_edge": [
+        26,
+        27
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 2.5377507420821536e-29,
+       "grad_energy": 72766.6037518678,
+       "resid_energy": 1.846635026701004e-24,
+       "total_energy": 72766.60375186775
+      },
+      {
+       "task_edge": [
+        27,
+        28
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 5.85662199012365e-29,
+       "grad_energy": 74810.67482343342,
+       "resid_energy": 4.381378432669097e-24,
+       "total_energy": 74810.6748234334
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 3.8091415470435127e-29,
+      "residual_ratio_median": 3.602382313612097e-29,
+      "residual_ratio_max": 6.371679872610339e-29,
+      "residual_ratio_min": 1.7097079920886789e-29
+     }
+    },
+    "S1_n45": {
+     "graph_id": "S1_n45",
+     "family": "S",
+     "N": 45,
+     "n_named_edges": 44,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        6,
+        7
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 2.6584202382211356e-29,
+       "grad_energy": 23239.737694834308,
+       "resid_energy": 6.178098901889824e-25,
+       "total_energy": 23239.737694834348
+      },
+      {
+       "task_edge": [
+        10,
+        11
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 6.838210266825858e-30,
+       "grad_energy": 33423.941104305,
+       "resid_energy": 2.285599372172414e-25,
+       "total_energy": 33423.94110430502
+      },
+      {
+       "task_edge": [
+        11,
+        12
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 1.040688623316262e-29,
+       "grad_energy": 35986.68203050861,
+       "resid_energy": 3.745093058005009e-25,
+       "total_energy": 35986.68203050863
+      },
+      {
+       "task_edge": [
+        14,
+        15
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 2.453064432422255e-29,
+       "grad_energy": 43630.19055458483,
+       "resid_energy": 1.0702766862925745e-24,
+       "total_energy": 43630.19055458483
+      },
+      {
+       "task_edge": [
+        15,
+        16
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 4.91080279251792e-29,
+       "grad_energy": 46150.11006750384,
+       "resid_energy": 2.26634089394507e-24,
+       "total_energy": 46150.110067503796
+      },
+      {
+       "task_edge": [
+        16,
+        17
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 1.902475215040871e-29,
+       "grad_energy": 48650.8656205175,
+       "resid_energy": 9.255706603331845e-25,
+       "total_energy": 48650.86562051745
+      },
+      {
+       "task_edge": [
+        20,
+        21
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 6.700148141036889e-29,
+       "grad_energy": 58418.40006484188,
+       "resid_energy": 3.914119345967992e-24,
+       "total_energy": 58418.40006484182
+      },
+      {
+       "task_edge": [
+        22,
+        23
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 4.7289207799636004e-29,
+       "grad_energy": 63138.707523965604,
+       "resid_energy": 2.9857794603012513e-24,
+       "total_energy": 63138.70752396562
+      },
+      {
+       "task_edge": [
+        37,
+        38
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 3.1359493260574683e-28,
+       "grad_energy": 94320.80284799033,
+       "resid_energy": 2.957852581243547e-23,
+       "total_energy": 94320.80284799036
+      },
+      {
+       "task_edge": [
+        41,
+        42
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 3.9392292357670636e-28,
+       "grad_energy": 100930.41509822983,
+       "resid_energy": 3.9758804193305215e-23,
+       "total_energy": 100930.41509822977
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 9.583012686744684e-29,
+      "residual_ratio_median": 3.693670509092368e-29,
+      "residual_ratio_max": 3.9392292357670636e-28,
+      "residual_ratio_min": 6.838210266825858e-30
+     }
+    },
+    "S1_n60": {
+     "graph_id": "S1_n60",
+     "family": "S",
+     "N": 60,
+     "n_named_edges": 59,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        12,
+        13
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 2.3275310658409753e-29,
+       "grad_energy": 37933.701500002855,
+       "resid_energy": 8.829186868359503e-25,
+       "total_energy": 37933.70150000285
+      },
+      {
+       "task_edge": [
+        16,
+        17
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 3.559887460274108e-29,
+       "grad_energy": 47727.97160089557,
+       "resid_energy": 1.6990620760634666e-24,
+       "total_energy": 47727.97160089551
+      },
+      {
+       "task_edge": [
+        21,
+        22
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 5.912913816079819e-29,
+       "grad_energy": 59698.56481857623,
+       "resid_energy": 3.5299246871589596e-24,
+       "total_energy": 59698.564818576226
+      },
+      {
+       "task_edge": [
+        24,
+        25
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 4.489320842231198e-29,
+       "grad_energy": 66695.64149079088,
+       "resid_energy": 2.9941813343058724e-24,
+       "total_energy": 66695.64149079086
+      },
+      {
+       "task_edge": [
+        25,
+        26
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 4.7026468937322175e-29,
+       "grad_energy": 68994.89665903071,
+       "resid_energy": 3.2445863645696634e-24,
+       "total_energy": 68994.89665903075
+      },
+      {
+       "task_edge": [
+        35,
+        36
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 2.0181805651191317e-28,
+       "grad_energy": 91037.8616252954,
+       "resid_energy": 1.83730843022176e-23,
+       "total_energy": 91037.86162529541
+      },
+      {
+       "task_edge": [
+        40,
+        41
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 2.2318911330919856e-28,
+       "grad_energy": 101370.93109608126,
+       "resid_energy": 2.2624888226662248e-23,
+       "total_energy": 101370.9310960813
+      },
+      {
+       "task_edge": [
+        54,
+        55
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 8.643062706909392e-28,
+       "grad_energy": 127175.24114531878,
+       "resid_energy": 1.0991835839853142e-22,
+       "total_energy": 127175.24114531884
+      },
+      {
+       "task_edge": [
+        55,
+        56
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 9.59147359285254e-28,
+       "grad_energy": 128770.18426483792,
+       "resid_energy": 1.2350958219229453e-22,
+       "total_energy": 128770.18426483758
+      },
+      {
+       "task_edge": [
+        57,
+        58
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 1.3656727345656682e-27,
+       "grad_energy": 131602.0521086058,
+       "resid_energy": 1.7972533437761272e-22,
+       "total_energy": 131602.05210860542
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 3.8240565351445565e-28,
+      "residual_ratio_median": 1.3047359733635569e-28,
+      "residual_ratio_max": 1.3656727345656682e-27,
+      "residual_ratio_min": 2.3275310658409753e-29
+     }
+    },
+    "S2": {
+     "graph_id": "S2",
+     "family": "S",
+     "N": 31,
+     "n_named_edges": 14,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        1
+       ],
+       "n_edges_in_flow": 29,
+       "n_traj_states": 51,
+       "residual_ratio": 4.014044197538983e-29,
+       "grad_energy": 1846.1574985085708,
+       "resid_energy": 7.4105577946314e-26,
+       "total_energy": 1846.1574985085674
+      },
+      {
+       "task_edge": [
+        0,
+        2
+       ],
+       "n_edges_in_flow": 29,
+       "n_traj_states": 51,
+       "residual_ratio": 2.4765838335185598e-29,
+       "grad_energy": 456.8156794858993,
+       "resid_energy": 1.131342326712575e-26,
+       "total_energy": 456.8156794858996
+      },
+      {
+       "task_edge": [
+        1,
+        3
+       ],
+       "n_edges_in_flow": 29,
+       "n_traj_states": 51,
+       "residual_ratio": 1.6673749478500444e-29,
+       "grad_energy": 15695.940330296857,
+       "resid_energy": 2.617101768968611e-25,
+       "total_energy": 15695.940330296846
+      },
+      {
+       "task_edge": [
+        1,
+        4
+       ],
+       "n_edges_in_flow": 29,
+       "n_traj_states": 51,
+       "residual_ratio": 6.644182730560487e-30,
+       "grad_energy": 15695.940330296857,
+       "resid_energy": 1.0428669568246617e-25,
+       "total_energy": 15695.940330296846
+      },
+      {
+       "task_edge": [
+        2,
+        6
+       ],
+       "n_edges_in_flow": 29,
+       "n_traj_states": 51,
+       "residual_ratio": 2.894014954349492e-30,
+       "grad_energy": 10023.783477455847,
+       "resid_energy": 2.900897928291857e-26,
+       "total_energy": 10023.783477455845
+      },
+      {
+       "task_edge": [
+        3,
+        8
+       ],
+       "n_edges_in_flow": 29,
+       "n_traj_states": 51,
+       "residual_ratio": 3.914258371455771e-30,
+       "grad_energy": 24537.269202968204,
+       "resid_energy": 9.604521139038221e-26,
+       "total_energy": 24537.269202968215
+      },
+      {
+       "task_edge": [
+        4,
+        9
+       ],
+       "n_edges_in_flow": 29,
+       "n_traj_states": 51,
+       "residual_ratio": 1.3784917389200078e-29,
+       "grad_energy": 24537.269202968215,
+       "resid_energy": 3.3824422891948007e-25,
+       "total_energy": 24537.269202968215
+      },
+      {
+       "task_edge": [
+        5,
+        11
+       ],
+       "n_edges_in_flow": 29,
+       "n_traj_states": 51,
+       "residual_ratio": 2.635560396973804e-29,
+       "grad_energy": 28216.504357787897,
+       "resid_energy": 7.436630142642471e-25,
+       "total_energy": 28216.504357787962
+      },
+      {
+       "task_edge": [
+        6,
+        13
+       ],
+       "n_edges_in_flow": 29,
+       "n_traj_states": 51,
+       "residual_ratio": 1.474126247805184e-29,
+       "grad_energy": 47308.34899943749,
+       "resid_energy": 6.973847900039884e-25,
+       "total_energy": 47308.34899943745
+      },
+      {
+       "task_edge": [
+        6,
+        14
+       ],
+       "n_edges_in_flow": 29,
+       "n_traj_states": 51,
+       "residual_ratio": 3.824433180296256e-30,
+       "grad_energy": 19499.200126561314,
+       "resid_energy": 7.457338795325791e-26,
+       "total_energy": 19499.200126561278
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 1.5373870286272783e-29,
+      "residual_ratio_median": 1.426308993362596e-29,
+      "residual_ratio_max": 4.014044197538983e-29,
+      "residual_ratio_min": 2.894014954349492e-30
+     }
+    },
+    "S2_n20": {
+     "graph_id": "S2_n20",
+     "family": "S",
+     "N": 20,
+     "n_named_edges": 9,
+     "n_tasks": 9,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        1
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 1.2611505053544307e-30,
+       "grad_energy": 772.416795487273,
+       "resid_energy": 9.741338319730254e-28,
+       "total_energy": 772.4167954872739
+      },
+      {
+       "task_edge": [
+        0,
+        2
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 5.500991047266406e-31,
+       "grad_energy": 2652.5260114779794,
+       "resid_energy": 1.4591521841781623e-27,
+       "total_energy": 2652.5260114779776
+      },
+      {
+       "task_edge": [
+        1,
+        3
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 3.321044669717429e-30,
+       "grad_energy": 19014.885193194405,
+       "resid_energy": 6.314928311614722e-26,
+       "total_energy": 19014.885193194426
+      },
+      {
+       "task_edge": [
+        1,
+        4
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 1.5638083756037482e-30,
+       "grad_energy": 10444.103277928933,
+       "resid_energy": 1.6332576181695828e-26,
+       "total_energy": 10444.103277928934
+      },
+      {
+       "task_edge": [
+        2,
+        5
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 3.965995599418219e-30,
+       "grad_energy": 13091.340037208873,
+       "resid_energy": 5.192019697805797e-26,
+       "total_energy": 13091.340037208882
+      },
+      {
+       "task_edge": [
+        2,
+        6
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 1.6599043585447943e-30,
+       "grad_energy": 13091.340037208862,
+       "resid_energy": 2.1730372386954993e-26,
+       "total_energy": 13091.340037208882
+      },
+      {
+       "task_edge": [
+        3,
+        7
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 3.8583680120858006e-30,
+       "grad_energy": 23265.5602808567,
+       "resid_energy": 8.976709357091134e-26,
+       "total_energy": 23265.56028085668
+      },
+      {
+       "task_edge": [
+        3,
+        8
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 8.611153379460901e-30,
+       "grad_energy": 23265.560280856676,
+       "resid_energy": 2.003433080375503e-25,
+       "total_energy": 23265.56028085668
+      },
+      {
+       "task_edge": [
+        4,
+        9
+       ],
+       "n_edges_in_flow": 18,
+       "n_traj_states": 51,
+       "residual_ratio": 2.613526129190514e-30,
+       "grad_energy": 19993.734050795352,
+       "resid_energy": 5.225414636183982e-26,
+       "total_energy": 19993.734050795378
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 3.0450055704558303e-30,
+      "residual_ratio_median": 2.613526129190514e-30,
+      "residual_ratio_max": 8.611153379460901e-30,
+      "residual_ratio_min": 5.500991047266406e-31
+     }
+    },
+    "S2_n35": {
+     "graph_id": "S2_n35",
+     "family": "S",
+     "N": 35,
+     "n_named_edges": 16,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        1
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 1.9614139161280836e-30,
+       "grad_energy": 518.727713905155,
+       "resid_energy": 1.0174397567348785e-27,
+       "total_energy": 518.7277139051552
+      },
+      {
+       "task_edge": [
+        0,
+        2
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 5.13676993818486e-29,
+       "grad_energy": 910.9306619623076,
+       "resid_energy": 4.679241240138813e-26,
+       "total_energy": 910.9306619623071
+      },
+      {
+       "task_edge": [
+        1,
+        3
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 3.808842736482261e-29,
+       "grad_energy": 10114.457319247447,
+       "resid_energy": 3.852437729387546e-25,
+       "total_energy": 10114.457319247442
+      },
+      {
+       "task_edge": [
+        2,
+        6
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 4.366172454190701e-30,
+       "grad_energy": 12156.787174248211,
+       "resid_energy": 5.307862929166132e-26,
+       "total_energy": 12156.787174248206
+      },
+      {
+       "task_edge": [
+        3,
+        7
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 6.975148004016408e-30,
+       "grad_energy": 19642.60188811366,
+       "resid_energy": 1.370100553535653e-25,
+       "total_energy": 19642.601888113713
+      },
+      {
+       "task_edge": [
+        4,
+        9
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 6.805675230696308e-29,
+       "grad_energy": 26600.64222111669,
+       "resid_energy": 1.8103533188486845e-24,
+       "total_energy": 26600.642221116716
+      },
+      {
+       "task_edge": [
+        4,
+        10
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 2.5814331838129796e-29,
+       "grad_energy": 26600.64222111669,
+       "resid_energy": 6.86677805403273e-25,
+       "total_energy": 26600.642221116716
+      },
+      {
+       "task_edge": [
+        5,
+        11
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 1.3132441476052987e-29,
+       "grad_energy": 21902.366337843006,
+       "resid_energy": 2.8763154411879667e-25,
+       "total_energy": 21902.366337843036
+      },
+      {
+       "task_edge": [
+        6,
+        13
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 1.7517673401853837e-29,
+       "grad_energy": 21902.366337843065,
+       "resid_energy": 3.836785002340918e-25,
+       "total_energy": 21902.366337843036
+      },
+      {
+       "task_edge": [
+        6,
+        14
+       ],
+       "n_edges_in_flow": 33,
+       "n_traj_states": 51,
+       "residual_ratio": 2.0817761230214955e-29,
+       "grad_energy": 21902.366337843036,
+       "resid_energy": 4.559582327979139e-25,
+       "total_energy": 21902.366337843036
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 2.4809782137422104e-29,
+      "residual_ratio_median": 1.9167717316034398e-29,
+      "residual_ratio_max": 6.805675230696308e-29,
+      "residual_ratio_min": 1.9614139161280836e-30
+     }
+    },
+    "S2_n45": {
+     "graph_id": "S2_n45",
+     "family": "S",
+     "N": 45,
+     "n_named_edges": 21,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        1,
+        4
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 3.965534096182011e-30,
+       "grad_energy": 10066.120761380756,
+       "resid_energy": 3.991754509554103e-26,
+       "total_energy": 10066.12076138076
+      },
+      {
+       "task_edge": [
+        2,
+        6
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 7.196121214932371e-29,
+       "grad_energy": 14108.689520563668,
+       "resid_energy": 1.0152783997382221e-24,
+       "total_energy": 14108.689520563665
+      },
+      {
+       "task_edge": [
+        3,
+        7
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 7.986666981514455e-28,
+       "grad_energy": 29420.447547789765,
+       "resid_energy": 2.3497131701131035e-23,
+       "total_energy": 29420.447547789758
+      },
+      {
+       "task_edge": [
+        3,
+        8
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 6.923181451387422e-28,
+       "grad_energy": 29420.447547789736,
+       "resid_energy": 2.036830967543746e-23,
+       "total_energy": 29420.447547789758
+      },
+      {
+       "task_edge": [
+        5,
+        11
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 3.8588508081764985e-29,
+       "grad_energy": 25047.969031709814,
+       "resid_energy": 9.66563755411933e-25,
+       "total_energy": 25047.96903170981
+      },
+      {
+       "task_edge": [
+        6,
+        13
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 3.9867725301870886e-29,
+       "grad_energy": 25047.969031709792,
+       "resid_energy": 9.986055487259755e-25,
+       "total_energy": 25047.96903170981
+      },
+      {
+       "task_edge": [
+        6,
+        14
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 2.352695407594676e-29,
+       "grad_energy": 25047.969031709774,
+       "resid_energy": 5.893024171047733e-25,
+       "total_energy": 25047.96903170981
+      },
+      {
+       "task_edge": [
+        7,
+        16
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 2.188821385204495e-29,
+       "grad_energy": 37421.86615676142,
+       "resid_energy": 8.190978091817957e-25,
+       "total_energy": 37421.866156761345
+      },
+      {
+       "task_edge": [
+        8,
+        17
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 1.3671390931680895e-29,
+       "grad_energy": 37421.8661567613,
+       "resid_energy": 5.116089616221232e-25,
+       "total_energy": 37421.866156761345
+      },
+      {
+       "task_edge": [
+        8,
+        18
+       ],
+       "n_edges_in_flow": 43,
+       "n_traj_states": 51,
+       "residual_ratio": 4.5776095638011335e-29,
+       "grad_energy": 37421.866156761236,
+       "resid_energy": 1.713026924144767e-24,
+       "total_energy": 37421.866156761345
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 1.750230477417013e-28,
+      "residual_ratio_median": 3.922811669181793e-29,
+      "residual_ratio_max": 7.986666981514455e-28,
+      "residual_ratio_min": 3.965534096182011e-30
+     }
+    },
+    "S2_n60": {
+     "graph_id": "S2_n60",
+     "family": "S",
+     "N": 60,
+     "n_named_edges": 29,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        2
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 7.210875997893942e-29,
+       "grad_energy": 863.6885073549186,
+       "resid_energy": 6.22795072734242e-26,
+       "total_energy": 863.6885073549174
+      },
+      {
+       "task_edge": [
+        1,
+        3
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 1.1202833455905025e-29,
+       "grad_energy": 19496.696834604205,
+       "resid_energy": 2.184182475783419e-25,
+       "total_energy": 19496.696834604234
+      },
+      {
+       "task_edge": [
+        2,
+        5
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 1.8994398425150124e-28,
+       "grad_energy": 25004.044264408978,
+       "resid_energy": 4.749367789982723e-24,
+       "total_energy": 25004.044264408894
+      },
+      {
+       "task_edge": [
+        2,
+        6
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 2.1930034324818761e-29,
+       "grad_energy": 10345.00607727146,
+       "resid_energy": 2.2686633836502143e-25,
+       "total_energy": 10345.006077271442
+      },
+      {
+       "task_edge": [
+        3,
+        7
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 2.5317017833625454e-28,
+       "grad_energy": 27925.909212944767,
+       "resid_energy": 7.070007415643295e-24,
+       "total_energy": 27925.909212944825
+      },
+      {
+       "task_edge": [
+        4,
+        9
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 2.4699010790877522e-29,
+       "grad_energy": 27925.909212944844,
+       "resid_energy": 6.8974233299559025e-25,
+       "total_energy": 27925.909212944825
+      },
+      {
+       "task_edge": [
+        6,
+        13
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 7.51724736314832e-30,
+       "grad_energy": 86172.51868026568,
+       "resid_energy": 6.477801388250762e-25,
+       "total_energy": 86172.51868026564
+      },
+      {
+       "task_edge": [
+        6,
+        14
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 1.2041496560890652e-29,
+       "grad_energy": 19746.324504244938,
+       "resid_energy": 2.377752986080965e-25,
+       "total_energy": 19746.32450424496
+      },
+      {
+       "task_edge": [
+        7,
+        15
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 1.9637448926104856e-27,
+       "grad_energy": 33510.1107496053,
+       "resid_energy": 6.58053088353491e-23,
+       "total_energy": 33510.11074960528
+      },
+      {
+       "task_edge": [
+        8,
+        18
+       ],
+       "n_edges_in_flow": 58,
+       "n_traj_states": 51,
+       "residual_ratio": 2.626912437007096e-29,
+       "grad_energy": 33510.11074960531,
+       "resid_energy": 8.802812669362332e-25,
+       "total_energy": 33510.11074960529
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 2.582627562042892e-28,
+      "residual_ratio_median": 2.548406758047424e-29,
+      "residual_ratio_max": 1.9637448926104856e-27,
+      "residual_ratio_min": 7.51724736314832e-30
+     }
+    },
+    "S3": {
+     "graph_id": "S3",
+     "family": "S",
+     "N": 30,
+     "n_named_edges": 21,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        6
+       ],
+       "n_edges_in_flow": 31,
+       "n_traj_states": 51,
+       "residual_ratio": 6.386922889698165e-30,
+       "grad_energy": 2960.769014849146,
+       "resid_energy": 1.8910203392049052e-26,
+       "total_energy": 2960.769014849139
+      },
+      {
+       "task_edge": [
+        4,
+        9
+       ],
+       "n_edges_in_flow": 31,
+       "n_traj_states": 51,
+       "residual_ratio": 1.2534245685723968e-28,
+       "grad_energy": 46176.27070011666,
+       "resid_energy": 5.7878472180575965e-24,
+       "total_energy": 46176.270700116685
+      },
+      {
+       "task_edge": [
+        6,
+        17
+       ],
+       "n_edges_in_flow": 31,
+       "n_traj_states": 51,
+       "residual_ratio": 4.6790339331313774e-30,
+       "grad_energy": 29256.259911624482,
+       "resid_energy": 1.3689103288300218e-25,
+       "total_energy": 29256.25991162449
+      },
+      {
+       "task_edge": [
+        7,
+        8
+       ],
+       "n_edges_in_flow": 31,
+       "n_traj_states": 51,
+       "residual_ratio": 5.4964862747301155e-30,
+       "grad_energy": 64049.379239480986,
+       "resid_energy": 3.520465338947914e-25,
+       "total_energy": 64049.37923948101
+      },
+      {
+       "task_edge": [
+        8,
+        1
+       ],
+       "n_edges_in_flow": 31,
+       "n_traj_states": 51,
+       "residual_ratio": 1.698903808598543e-29,
+       "grad_energy": 72622.95997803098,
+       "resid_energy": 1.2337942329837669e-24,
+       "total_energy": 72622.95997803115
+      },
+      {
+       "task_edge": [
+        9,
+        10
+       ],
+       "n_edges_in_flow": 31,
+       "n_traj_states": 51,
+       "residual_ratio": 1.1218067969197449e-29,
+       "grad_energy": 64049.37923948105,
+       "resid_energy": 7.18510289693402e-25,
+       "total_energy": 64049.37923948101
+      },
+      {
+       "task_edge": [
+        12,
+        2
+       ],
+       "n_edges_in_flow": 31,
+       "n_traj_states": 51,
+       "residual_ratio": 8.654741922320196e-30,
+       "grad_energy": 51062.10553730756,
+       "resid_energy": 4.419293454356735e-25,
+       "total_energy": 51062.1055373075
+      },
+      {
+       "task_edge": [
+        13,
+        14
+       ],
+       "n_edges_in_flow": 31,
+       "n_traj_states": 51,
+       "residual_ratio": 4.2826694573091824e-30,
+       "grad_energy": 43998.36904132766,
+       "resid_energy": 1.8843047126471176e-25,
+       "total_energy": 43998.369041327634
+      },
+      {
+       "task_edge": [
+        15,
+        16
+       ],
+       "n_edges_in_flow": 31,
+       "n_traj_states": 51,
+       "residual_ratio": 2.7429566983691614e-29,
+       "grad_energy": 43998.36904132769,
+       "resid_energy": 1.2068562107922798e-24,
+       "total_energy": 43998.369041327634
+      },
+      {
+       "task_edge": [
+        16,
+        3
+       ],
+       "n_edges_in_flow": 31,
+       "n_traj_states": 51,
+       "residual_ratio": 5.1014713720916256e-30,
+       "grad_energy": 44777.67557342986,
+       "resid_energy": 2.2843203004665883e-25,
+       "total_energy": 44777.67557342985
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 2.155804557453948e-29,
+      "residual_ratio_median": 7.52083240600918e-30,
+      "residual_ratio_max": 1.2534245685723968e-28,
+      "residual_ratio_min": 4.2826694573091824e-30
+     }
+    },
+    "S4": {
+     "graph_id": "S4",
+     "family": "S",
+     "N": 40,
+     "n_named_edges": 58,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        12
+       ],
+       "n_edges_in_flow": 87,
+       "n_traj_states": 51,
+       "residual_ratio": 0.02552446050131968,
+       "grad_energy": 11814.855213702926,
+       "resid_energy": 309.46677777680634,
+       "total_energy": 12124.321991479746
+      },
+      {
+       "task_edge": [
+        1,
+        8
+       ],
+       "n_edges_in_flow": 87,
+       "n_traj_states": 51,
+       "residual_ratio": 0.14825388927383132,
+       "grad_energy": 12283.092050679477,
+       "resid_energy": 2137.9800223204797,
+       "total_energy": 14421.072072999978
+      },
+      {
+       "task_edge": [
+        1,
+        12
+       ],
+       "n_edges_in_flow": 87,
+       "n_traj_states": 51,
+       "residual_ratio": 0.14501431254551897,
+       "grad_energy": 12329.810220164482,
+       "resid_energy": 2091.2618528354737,
+       "total_energy": 14421.072072999978
+      },
+      {
+       "task_edge": [
+        3,
+        15
+       ],
+       "n_edges_in_flow": 87,
+       "n_traj_states": 51,
+       "residual_ratio": 0.14090833615851617,
+       "grad_energy": 12389.022801571522,
+       "resid_energy": 2032.0492714284705,
+       "total_energy": 14421.072072999978
+      },
+      {
+       "task_edge": [
+        11,
+        18
+       ],
+       "n_edges_in_flow": 87,
+       "n_traj_states": 51,
+       "residual_ratio": 0.14795196201280297,
+       "grad_energy": 12287.446165471576,
+       "resid_energy": 2133.6259075283865,
+       "total_energy": 14421.072072999978
+      },
+      {
+       "task_edge": [
+        15,
+        23
+       ],
+       "n_edges_in_flow": 87,
+       "n_traj_states": 51,
+       "residual_ratio": 0.14776173244326388,
+       "grad_energy": 12290.189479804312,
+       "resid_energy": 2130.8825931956476,
+       "total_energy": 14421.072072999978
+      },
+      {
+       "task_edge": [
+        26,
+        37
+       ],
+       "n_edges_in_flow": 87,
+       "n_traj_states": 51,
+       "residual_ratio": 0.14421713183505736,
+       "grad_energy": 17697.787732360128,
+       "resid_energy": 2982.443656601348,
+       "total_energy": 20680.23138896147
+      },
+      {
+       "task_edge": [
+        29,
+        35
+       ],
+       "n_edges_in_flow": 87,
+       "n_traj_states": 51,
+       "residual_ratio": 0.14415306043215012,
+       "grad_energy": 12259.358926421879,
+       "resid_energy": 2064.8833646262165,
+       "total_energy": 14324.242291048095
+      },
+      {
+       "task_edge": [
+        31,
+        34
+       ],
+       "n_edges_in_flow": 87,
+       "n_traj_states": 51,
+       "residual_ratio": 0.1468517147037514,
+       "grad_energy": 12303.312911213548,
+       "resid_energy": 2117.75916178643,
+       "total_energy": 14421.07207299998
+      },
+      {
+       "task_edge": [
+        31,
+        38
+       ],
+       "n_edges_in_flow": 87,
+       "n_traj_states": 51,
+       "residual_ratio": 0.1478694948764489,
+       "grad_energy": 12288.635429988597,
+       "resid_energy": 2132.436643011371,
+       "total_energy": 14421.07207299998
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 0.13385060947826607,
+      "residual_ratio_median": 0.14593301362463518,
+      "residual_ratio_max": 0.14825388927383132,
+      "residual_ratio_min": 0.02552446050131968
+     }
+    },
+    "S5": {
+     "graph_id": "S5",
+     "family": "S",
+     "N": 45,
+     "n_named_edges": 7,
+     "n_tasks": 7,
+     "tasks": [
+      {
+       "task_edge": [
+        1,
+        4
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.16584679776841246,
+       "grad_energy": 858.4893970344631,
+       "resid_energy": 170.68533338408534,
+       "total_energy": 1029.174730418548
+      },
+      {
+       "task_edge": [
+        4,
+        6
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.26186648804896495,
+       "grad_energy": 7848.850342460383,
+       "resid_energy": 2784.5245353639502,
+       "total_energy": 10633.374877824333
+      },
+      {
+       "task_edge": [
+        6,
+        15
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.23634114491002065,
+       "grad_energy": 25035.25866615094,
+       "resid_energy": 7748.043065092816,
+       "total_energy": 32783.30173124377
+      },
+      {
+       "task_edge": [
+        15,
+        28
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.3319968472411042,
+       "grad_energy": 28190.64093644337,
+       "resid_energy": 14010.718173935438,
+       "total_energy": 42201.359110378886
+      },
+      {
+       "task_edge": [
+        15,
+        38
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.3811382800734951,
+       "grad_energy": 84643.56188499182,
+       "resid_energy": 51989.52053078341,
+       "total_energy": 136405.92732054688
+      },
+      {
+       "task_edge": [
+        28,
+        36
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.36004014570504594,
+       "grad_energy": 33689.9512077868,
+       "resid_energy": 18612.109057153,
+       "total_energy": 51694.53817630802
+      },
+      {
+       "task_edge": [
+        38,
+        39
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.4110013374550146,
+       "grad_energy": 29881.10799849499,
+       "resid_energy": 20804.239529207152,
+       "total_energy": 50618.42294244174
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 0.3068901487431511,
+      "residual_ratio_median": 0.3319968472411042,
+      "residual_ratio_max": 0.4110013374550146,
+      "residual_ratio_min": 0.16584679776841246
+     }
+    },
+    "S6": {
+     "graph_id": "S6",
+     "family": "S",
+     "N": 45,
+     "n_named_edges": 17,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        5
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.004729236407505272,
+       "grad_energy": 28194.755992435203,
+       "resid_energy": 133.9732577483275,
+       "total_energy": 28328.729250183536
+      },
+      {
+       "task_edge": [
+        0,
+        6
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.004777135027088931,
+       "grad_energy": 29126.652171792724,
+       "resid_energy": 139.80984079932114,
+       "total_energy": 29266.46201259206
+      },
+      {
+       "task_edge": [
+        0,
+        8
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0003160977466636324,
+       "grad_energy": 26806.8505859375,
+       "resid_energy": 8.478627727280248,
+       "total_energy": 26822.8034421978
+      },
+      {
+       "task_edge": [
+        0,
+        10
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.004208152749511998,
+       "grad_energy": 33594.96926879883,
+       "resid_energy": 141.9567113820041,
+       "total_energy": 33733.735401707134
+      },
+      {
+       "task_edge": [
+        0,
+        11
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.004187029945971092,
+       "grad_energy": 33592.491241390824,
+       "resid_energy": 141.24416031641294,
+       "total_energy": 33733.735401707134
+      },
+      {
+       "task_edge": [
+        0,
+        12
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0042074128357720685,
+       "grad_energy": 33746.16435241699,
+       "resid_energy": 141.93175132768124,
+       "total_energy": 33733.735401707134
+      },
+      {
+       "task_edge": [
+        2,
+        1
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0018833268818558865,
+       "grad_energy": 46473.77599313112,
+       "resid_energy": 87.69046143251073,
+       "total_energy": 46561.466454563604
+      },
+      {
+       "task_edge": [
+        5,
+        1
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0018833268818558844,
+       "grad_energy": 46473.77599313115,
+       "resid_energy": 87.69046143251063,
+       "total_energy": 46561.466454563604
+      },
+      {
+       "task_edge": [
+        6,
+        7
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0016970712239291724,
+       "grad_energy": 46425.3330078125,
+       "resid_energy": 78.87466430127822,
+       "total_energy": 46476.93225194305
+      },
+      {
+       "task_edge": [
+        9,
+        1
+       ],
+       "n_edges_in_flow": 48,
+       "n_traj_states": 51,
+       "residual_ratio": 0.00010042549680685708,
+       "grad_energy": 52271.072998046875,
+       "resid_energy": 5.253801413782194,
+       "total_energy": 52315.41372293677
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 0.00279892151969608,
+      "residual_ratio_median": 0.0030351784139134893,
+      "residual_ratio_max": 0.004777135027088931,
+      "residual_ratio_min": 0.00010042549680685708
+     }
+    },
+    "S6_n20": {
+     "graph_id": "S6_n20",
+     "family": "S",
+     "N": 20,
+     "n_named_edges": 17,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        3
+       ],
+       "n_edges_in_flow": 23,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0003913268773286171,
+       "grad_energy": 22565.537141261026,
+       "resid_energy": 8.833958149989893,
+       "total_energy": 22574.371099411015
+      },
+      {
+       "task_edge": [
+        0,
+        4
+       ],
+       "n_edges_in_flow": 23,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0003913268773286186,
+       "grad_energy": 22565.53714126101,
+       "resid_energy": 8.833958149989927,
+       "total_energy": 22574.371099411015
+      },
+      {
+       "task_edge": [
+        0,
+        5
+       ],
+       "n_edges_in_flow": 23,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0003913268773286181,
+       "grad_energy": 22565.53714126098,
+       "resid_energy": 8.833958149989916,
+       "total_energy": 22574.371099411015
+      },
+      {
+       "task_edge": [
+        0,
+        6
+       ],
+       "n_edges_in_flow": 23,
+       "n_traj_states": 51,
+       "residual_ratio": 0.00023376195794649286,
+       "grad_energy": 23388.58917582206,
+       "resid_energy": 5.468640759517573,
+       "total_energy": 23394.05781658161
+      },
+      {
+       "task_edge": [
+        3,
+        1
+       ],
+       "n_edges_in_flow": 23,
+       "n_traj_states": 51,
+       "residual_ratio": 8.547999713512837e-07,
+       "grad_energy": 37408.423813558446,
+       "resid_energy": 0.03197674693784883,
+       "total_energy": 37408.45579030541
+      },
+      {
+       "task_edge": [
+        4,
+        1
+       ],
+       "n_edges_in_flow": 23,
+       "n_traj_states": 51,
+       "residual_ratio": 8.547999713513607e-07,
+       "grad_energy": 37408.42381355844,
+       "resid_energy": 0.031976746937851706,
+       "total_energy": 37408.45579030541
+      },
+      {
+       "task_edge": [
+        5,
+        1
+       ],
+       "n_edges_in_flow": 23,
+       "n_traj_states": 51,
+       "residual_ratio": 8.547999713513301e-07,
+       "grad_energy": 37408.42381355842,
+       "resid_energy": 0.03197674693785056,
+       "total_energy": 37408.45579030541
+      },
+      {
+       "task_edge": [
+        6,
+        7
+       ],
+       "n_edges_in_flow": 23,
+       "n_traj_states": 51,
+       "residual_ratio": 5.146084504626529e-07,
+       "grad_energy": 37328.825561704725,
+       "resid_energy": 0.019209738965393526,
+       "total_energy": 37328.84477144367
+      },
+      {
+       "task_edge": [
+        8,
+        9
+       ],
+       "n_edges_in_flow": 23,
+       "n_traj_states": 51,
+       "residual_ratio": 5.146084504625892e-07,
+       "grad_energy": 37328.82556170471,
+       "resid_energy": 0.019209738965391156,
+       "total_energy": 37328.84477144368
+      },
+      {
+       "task_edge": [
+        9,
+        1
+       ],
+       "n_edges_in_flow": 23,
+       "n_traj_states": 51,
+       "residual_ratio": 6.21218793696507e-06,
+       "grad_energy": 40033.985593242396,
+       "resid_energy": 0.24870018734327734,
+       "total_energy": 40034.234293429705
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 0.00014175483946842908,
+      "residual_ratio_median": 3.5334939541582156e-06,
+      "residual_ratio_max": 0.0003913268773286186,
+      "residual_ratio_min": 5.146084504625892e-07
+     }
+    },
+    "S6_n35": {
+     "graph_id": "S6_n35",
+     "family": "S",
+     "N": 35,
+     "n_named_edges": 17,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        2
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.01103528177794669,
+       "grad_energy": 28505.538088930123,
+       "resid_energy": 318.0767111781894,
+       "total_energy": 28823.614800108277
+      },
+      {
+       "task_edge": [
+        0,
+        6
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.007375115471225543,
+       "grad_energy": 26501.61032779442,
+       "resid_energy": 196.9046307293555,
+       "total_energy": 26698.514958523803
+      },
+      {
+       "task_edge": [
+        0,
+        10
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.010271056451762904,
+       "grad_energy": 33250.11366991197,
+       "resid_energy": 345.0713815114795,
+       "total_energy": 33596.483782566705
+      },
+      {
+       "task_edge": [
+        0,
+        11
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.010266272075223256,
+       "grad_energy": 33252.29092435143,
+       "resid_energy": 344.91064328265554,
+       "total_energy": 33596.483782566705
+      },
+      {
+       "task_edge": [
+        2,
+        1
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.011697626344018374,
+       "grad_energy": 42287.640625,
+       "resid_energy": 492.1541121323452,
+       "total_energy": 42072.98965264094
+      },
+      {
+       "task_edge": [
+        3,
+        1
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.005534461760788019,
+       "grad_energy": 41840.13830024637,
+       "resid_energy": 232.85135239457128,
+       "total_energy": 42072.98965264094
+      },
+      {
+       "task_edge": [
+        4,
+        1
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.00553446176078802,
+       "grad_energy": 41840.13830024638,
+       "resid_energy": 232.85135239457134,
+       "total_energy": 42072.98965264094
+      },
+      {
+       "task_edge": [
+        6,
+        7
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0036460022251642646,
+       "grad_energy": 42315.8857488274,
+       "resid_energy": 154.84839117882245,
+       "total_energy": 42470.734140006185
+      },
+      {
+       "task_edge": [
+        7,
+        1
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0035713387647083976,
+       "grad_energy": 46447.31675700747,
+       "resid_energy": 166.47363660269195,
+       "total_energy": 46613.79039361018
+      },
+      {
+       "task_edge": [
+        8,
+        9
+       ],
+       "n_edges_in_flow": 38,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0036460022251642624,
+       "grad_energy": 42315.885748827364,
+       "resid_energy": 154.84839117882234,
+       "total_energy": 42470.73414000618
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 0.007257761885678972,
+      "residual_ratio_median": 0.0064547886160067815,
+      "residual_ratio_max": 0.011697626344018374,
+      "residual_ratio_min": 0.0035713387647083976
+     }
+    },
+    "S6_n60": {
+     "graph_id": "S6_n60",
+     "family": "S",
+     "N": 60,
+     "n_named_edges": 17,
+     "n_tasks": 10,
+     "tasks": [
+      {
+       "task_edge": [
+        0,
+        2
+       ],
+       "n_edges_in_flow": 63,
+       "n_traj_states": 51,
+       "residual_ratio": 0.002626664937501233,
+       "grad_energy": 31172.874428800395,
+       "resid_energy": 82.09633583008099,
+       "total_energy": 31254.97076463048
+      },
+      {
+       "task_edge": [
+        0,
+        4
+       ],
+       "n_edges_in_flow": 63,
+       "n_traj_states": 51,
+       "residual_ratio": 0.004115728433238127,
+       "grad_energy": 29315.73459521363,
+       "resid_energy": 121.15424036666793,
+       "total_energy": 29436.88883558033
+      },
+      {
+       "task_edge": [
+        0,
+        5
+       ],
+       "n_edges_in_flow": 63,
+       "n_traj_states": 51,
+       "residual_ratio": 0.004115728433238124,
+       "grad_energy": 29315.73459521369,
+       "resid_energy": 121.15424036666786,
+       "total_energy": 29436.88883558033
+      },
+      {
+       "task_edge": [
+        0,
+        6
+       ],
+       "n_edges_in_flow": 63,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0033475281252547213,
+       "grad_energy": 30539.299838091625,
+       "resid_energy": 102.57453627872673,
+       "total_energy": 30641.874374370367
+      },
+      {
+       "task_edge": [
+        0,
+        11
+       ],
+       "n_edges_in_flow": 63,
+       "n_traj_states": 51,
+       "residual_ratio": 0.003688851037177577,
+       "grad_energy": 36142.5625,
+       "resid_energy": 134.20564521299315,
+       "total_energy": 36381.421711101924
+      },
+      {
+       "task_edge": [
+        2,
+        1
+       ],
+       "n_edges_in_flow": 63,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0009451873069897178,
+       "grad_energy": 53743.662493814154,
+       "resid_energy": 50.84588650683141,
+       "total_energy": 53794.508380321
+      },
+      {
+       "task_edge": [
+        3,
+        1
+       ],
+       "n_edges_in_flow": 63,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0009451873069897173,
+       "grad_energy": 53743.662493814285,
+       "resid_energy": 50.84588650683139,
+       "total_energy": 53794.50838032101
+      },
+      {
+       "task_edge": [
+        5,
+        1
+       ],
+       "n_edges_in_flow": 63,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0012222093130696927,
+       "grad_energy": 54719.981201171875,
+       "resid_energy": 66.92181663253703,
+       "total_energy": 54754.79193040728
+      },
+      {
+       "task_edge": [
+        6,
+        7
+       ],
+       "n_edges_in_flow": 63,
+       "n_traj_states": 51,
+       "residual_ratio": 0.002972788806183818,
+       "grad_energy": 54720.8125,
+       "resid_energy": 162.7645141962582,
+       "total_energy": 54751.45555502805
+      },
+      {
+       "task_edge": [
+        8,
+        9
+       ],
+       "n_edges_in_flow": 63,
+       "n_traj_states": 51,
+       "residual_ratio": 0.0014399619622306552,
+       "grad_energy": 54672.61554165204,
+       "resid_energy": 78.8400133760027,
+       "total_energy": 54751.45555502805
+      }
+     ],
+     "summary": {
+      "residual_ratio_mean": 0.0025419835661873386,
+      "residual_ratio_median": 0.0027997268718425255,
+      "residual_ratio_max": 0.004115728433238127,
+      "residual_ratio_min": 0.0009451873069897173
+     }
+    }
+   },
+   "runtime_sec": 21.291,
+   "corpus_readiness": {
+    "corpus_dir": "corpus/v20",
+    "index_exists": true,
+    "n_indexed_graphs": 22,
+    "orphan_files": [
+     "all.json",
+     "index_v2_2026_09_16.json",
+     "strip_captions_22.json"
+    ],
+    "orphan_kind": {
+     "all.json": {
+      "python_type": "dict",
+      "is_graph_record": false,
+      "top_keys": [
+       "generated_at",
+       "paths",
+       "layout",
+       "version",
+       "agents"
+      ]
+     },
+     "index_v2_2026_09_16.json": {
+      "python_type": "dict",
+      "is_graph_record": false,
+      "top_keys": [
+       "corpus",
+       "generator_version",
+       "spec",
+       "named_filler_rule",
+       "n_graphs",
+       "graphs"
+      ]
+     },
+     "strip_captions_22.json": {
+      "python_type": "list",
+      "is_graph_record": false,
+      "top_keys": null
+     }
+    },
+    "any_orphan_is_graph_record": false,
+    "load_corpus_raises": true,
+    "load_corpus_error": "corpus orphan graphs (not in index.json): ['all.json', 'index_v2_2026_09_16.json', 'strip_captions_22.json'] — 先运行 build_index()（R2/E3 哨兵）",
+    "loader_used": "load_corpus_indexed（本棒内定义 · 只读 index 驱动）",
+    "loader_deviation_gamma": "γ-V5R3-13"
+   }
+  },
+  "gt8": {
+   "case": "gt8",
+   "class": "类 II · 潜伏 else（#conc=1 或 pairs_tied≠[]）",
+   "prereg_rule_ids": [
+    "K-V5R3-GT8-1",
+    "K-V5R3-GT8-2",
+    "K-V5R3-GT8-3",
+    "K-V5R3-GT8-4",
+    "K-V5R3-GT8-5",
+    "K-V5R3-0-A",
+    "K-V5R3-0-B",
+    "K-V5R3-0-D",
+    "K-V5R3-0-E"
+   ],
+   "surface": "①扩测量面 · 扩对数 2→6（立线件 §6.3）",
+   "anchor": {
+    "path": "results/deposon_v20_gt8.json",
+    "sha12": "2b88948dca19"
+   },
+   "original_verdict_literal": "supports_H_GT8",
+   "v2_parallel_verdict_as_run": null,
+   "parallel_report_as_run": {
+    "原判": "supports_H_GT8",
+    "v2 并列判": "同原判（0 新判 · GT8-5）"
+   },
+   "expanded_reading": {
+    "verdict_mechanical": {
+     "verdict": "supports_H_GT8",
+     "supported_H_GT8": true,
+     "n_pairs": 4,
+     "pairs_concordant": [
+      "GT8_A_high__vs__GT8_A_low",
+      "GT8_B_high__vs__GT8_B_low",
+      "GT8_C_high__vs__GT8_C_low",
+      "GT8_D_high__vs__GT8_D_low"
+     ],
+     "pairs_reversed": [],
+     "pairs_tied": [],
+     "thresholds": {
+      "min_pairs": 2
+     }
+    },
+    "n_pairs": 4,
+    "n_concordant": 4,
+    "n_reversed": 0,
+    "n_tied": 0,
+    "subset_as_run_2_pairs": {
+     "n_pairs": 2,
+     "n_concordant": 2,
+     "n_reversed": 0,
+     "n_tied": 0
+    },
+    "subset_new_pairs": {
+     "n_pairs": 2,
+     "n_concordant": 2,
+     "n_reversed": 0,
+     "n_tied": 0
+    },
+    "all_6_pairs": {
+     "n_pairs": 4,
+     "n_concordant": 4,
+     "n_reversed": 0,
+     "n_tied": 0
+    },
+    "v2_terminal_state_new_pairs": "PASS",
+    "v2_attribution_new_pairs": "pass_rule 命中：全部对同向 ⇒ supports_H_GT8",
+    "v2_terminal_state_all_pairs": "PASS",
+    "v2_attribution_all_pairs": "pass_rule 命中：全部对同向 ⇒ supports_H_GT8",
+    "as_run_reading_not_revised": "as-run 2 对读数与其 supports_H_GT8 判定 **0 触动**；扩面为**新增测量面**的并列读数，0 覆盖、0 改判 as-run（K-V5R3-0-D/GT8-5）",
+    "gamma_coverage_gap": "γ-V5R3-14：v2 §3.3 的 else 归属明文只覆盖「#conc=1」与「pairs_tied≠[]」两种形态（按 2 对设计书写）；扩至 4 对后原则上新增 #conc∈[2, n−1] 且无平局的形态，v2 无明文归属 ⇒ 执行面按K-V5R3-0-A 落 KD 并 γ，0 现场自创归属（待 PI 口径拍板）。**本轮该形态未触发**（4/4 全同向、0 平局）⇒ 缺口仍在案未消，留后续复用时暴露",
+    "gamma_sample_size": "γ-V5R3-4：as-run 样本量退化（2 对 = 评审下限）在案；扩至 6 对后仍 0 表述为效应量/显著性（K-V5R3-GT8-4）"
+   },
+   "as_run_pair_reproduction_check": {
+    "purpose": "核对 as-run 2 对在本环境是否逐值复现（环境可比性前提）",
+    "n_pairs": 2,
+    "n_pairs_bit_identical": 2,
+    "all_bit_identical": true,
+    "per_pair": {
+     "GT8_A_high__vs__GT8_A_low": {
+      "diff_high_as_run": 0.7916666666666666,
+      "diff_high_recomputed": 0.7916666666666666,
+      "diff_low_as_run": 0.13333333333333333,
+      "diff_low_recomputed": 0.13333333333333333,
+      "bit_identical": true
+     },
+     "GT8_B_high__vs__GT8_B_low": {
+      "diff_high_as_run": 0.05263157894736842,
+      "diff_high_recomputed": 0.05263157894736842,
+      "diff_low_as_run": -0.08333333333333334,
+      "diff_low_recomputed": -0.08333333333333334,
+      "bit_identical": true
+     }
+    },
+    "gamma": "γ-V5R3-15"
+   },
+   "named_set_granularity_disclosure": "新增低 hub 图（C_low / D_low）沿 as-run GT8_B_low 的 S2 口径「named = 子节点仍为内部节点的父子边」⇒ 树形结构中 named 边数 = 内部节点数（C_low = 8、D_low = 8，as-run B_low = 12）⇒ diff 的最小刻度为 1/8（as-run B_low 为 1/12）⇒ **平局概率高于 as-run**，属如实披露的构造面性质，0 事后调整结构（结构在任何新读数产生前已冻结）",
+   "nonisomorphism_sentinel": {
+    "rule": "与既有 22 图语料 + 4 张 as-run 新图逐一比 (N, n_edges, 入度多重集, 出度多重集) 不变量 + sha256",
+    "per_graph": {
+     "GT8_A_high": {
+      "invariant": [
+       31,
+       30,
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        9,
+        15
+       ],
+       [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+       ]
+      ],
+      "invariant_collides_with": [
+       "GT8_A_high"
+      ],
+      "nonisomorphic_to_existing": false,
+      "sha256": "28fb1c2f57a93f6f8eec0601749b6f752033ae75f4d4078b25ee312699bd1836",
+      "sha256_collides_with_existing": true
+     },
+     "GT8_A_low": {
+      "invariant": [
+       31,
+       30,
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+       ],
+       [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+       ]
+      ],
+      "invariant_collides_with": [
+       "GT8_A_low"
+      ],
+      "nonisomorphic_to_existing": false,
+      "sha256": "2ce949fbc01a65113742895a1cad36b8326c5c01a8d38a803a80ccbdccfbe312",
+      "sha256_collides_with_existing": true
+     },
+     "GT8_B_high": {
+      "invariant": [
+       40,
+       39,
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        19
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+       ]
+      ],
+      "invariant_collides_with": [
+       "GT8_B_high"
+      ],
+      "nonisomorphic_to_existing": false,
+      "sha256": "be3dcb084cbf82b49bcd7892c66c86e369e80521571a79987a85cde28e76bbaa",
+      "sha256_collides_with_existing": true
+     },
+     "GT8_B_low": {
+      "invariant": [
+       40,
+       39,
+       [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+       ]
+      ],
+      "invariant_collides_with": [
+       "GT8_B_low"
+      ],
+      "nonisomorphic_to_existing": false,
+      "sha256": "5c90ebc428db0f6b795ecd1a9a7ff78bf7f7c0c22cd247e155568aff35465b26",
+      "sha256_collides_with_existing": true
+     },
+     "GT8_C_high": {
+      "invariant": [
+       36,
+       35,
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        11,
+        13
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3
+       ]
+      ],
+      "invariant_collides_with": [],
+      "nonisomorphic_to_existing": true,
+      "sha256": "022abfeeee973cd65081dfcb3ba662885abd26b5bfa195afbc9346de16b61704",
+      "sha256_collides_with_existing": false
+     },
+     "GT8_C_low": {
+      "invariant": [
+       36,
+       35,
+       [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+       ]
+      ],
+      "invariant_collides_with": [],
+      "nonisomorphic_to_existing": true,
+      "sha256": "6aaec501207d20978397604e82fadbb5e73dcb83f3a87a1b4b38eda94fbb9fc2",
+      "sha256_collides_with_existing": false
+     },
+     "GT8_D_high": {
+      "invariant": [
+       45,
+       44,
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        20,
+        22
+       ],
+       [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+       ]
+      ],
+      "invariant_collides_with": [],
+      "nonisomorphic_to_existing": true,
+      "sha256": "d4203aa9feb5ffc1b31057115269752477fe7db6c3c3bce6604d7a149d3e41c2",
+      "sha256_collides_with_existing": false
+     },
+     "GT8_D_low": {
+      "invariant": [
+       45,
+       44,
+       [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+       ]
+      ],
+      "invariant_collides_with": [],
+      "nonisomorphic_to_existing": true,
+      "sha256": "81db5581beb27bc05267db84ecd52005d5e4a86c3aaaad354239ea0df13b1e1e",
+      "sha256_collides_with_existing": false
+     }
+    },
+    "all_new_graphs_nonisomorphic": true,
+    "all_new_graphs_sha256_fresh": true
+   },
+   "scale_freeze": {
+    "n_pairs": 4,
+    "pairs": [
+     [
+      "GT8_A_high",
+      "GT8_A_low"
+     ],
+     [
+      "GT8_B_high",
+      "GT8_B_low"
+     ],
+     [
+      "GT8_C_high",
+      "GT8_C_low"
+     ],
+     [
+      "GT8_D_high",
+      "GT8_D_low"
+     ]
+    ],
+    "new_seeds": {
+     "GT8_C_high": 208805,
+     "GT8_C_low": 208806,
+     "GT8_D_high": 208807,
+     "GT8_D_low": 208808
+    },
+    "min_pairs_untouched": 2,
+    "arms": [
+     "field_mean",
+     "random",
+     "degree"
+    ],
+    "protocol": "SPEC_GT8.md 既有字面：全边留一、全候选 raw 口径、rng=g_seed*100003+ei、场实例种子 g_seed+ei、named Hits@3",
+    "real_semantics_axis": "仍 deferred（需 LLM 先验 API 预算；本轮 0 申请、0 虚构读数）"
+   },
+   "anti_degeneration_gates": {
+    "diff_fm_rand": {
+     "construct": "gt8-expanded · diff_fm_rand 逐图（12 值）",
+     "n_values": 8,
+     "n_distinct": 7,
+     "std": 0.35232547344270104,
+     "gate_n_distinct_gt_3": true,
+     "gate_std_gt_0": true,
+     "gate_pass": true,
+     "verdict": "PASS",
+     "kd_reason": null
+    },
+    "hub_concentration": {
+     "construct": "gt8-expanded · hub_concentration 逐图（12 值）",
+     "n_values": 8,
+     "n_distinct": 7,
+     "std": 0.21812552562013615,
+     "gate_n_distinct_gt_3": true,
+     "gate_std_gt_0": true,
+     "gate_pass": true,
+     "verdict": "PASS",
+     "kd_reason": null
+    }
+   },
+   "per_graph": {
+    "GT8_A_high": {
+     "structure": "star_chain_double_convergence",
+     "N": 31,
+     "n_edges": 30,
+     "n_named": 24,
+     "n_filler": 6,
+     "source": 25,
+     "target": 30,
+     "seed": 208801,
+     "sha256": "28fb1c2f57a93f6f8eec0601749b6f752033ae75f4d4078b25ee312699bd1836",
+     "features": {
+      "hub_concentration": 0.5,
+      "real_semantics": 0
+     },
+     "field_named": 1.0,
+     "random_named": 0.20833333333333334,
+     "degree_named": 1.0,
+     "diff_fm_rand": 0.7916666666666666,
+     "diff_fm_deg": 0.0,
+     "invariant": [
+      31,
+      30
+     ]
+    },
+    "GT8_A_low": {
+     "structure": "caterpillar_chain",
+     "N": 31,
+     "n_edges": 30,
+     "n_named": 15,
+     "n_filler": 15,
+     "source": 0,
+     "target": 15,
+     "seed": 208802,
+     "sha256": "2ce949fbc01a65113742895a1cad36b8326c5c01a8d38a803a80ccbdccfbe312",
+     "features": {
+      "hub_concentration": 0.06666666666666667,
+      "real_semantics": 0
+     },
+     "field_named": 0.13333333333333333,
+     "random_named": 0.0,
+     "degree_named": 0.0,
+     "diff_fm_rand": 0.13333333333333333,
+     "diff_fm_deg": 0.13333333333333333,
+     "invariant": [
+      31,
+      30
+     ]
+    },
+    "GT8_B_high": {
+     "structure": "balanced_tree_superhub",
+     "N": 40,
+     "n_edges": 39,
+     "n_named": 19,
+     "n_filler": 20,
+     "source": 0,
+     "target": 21,
+     "seed": 208803,
+     "sha256": "be3dcb084cbf82b49bcd7892c66c86e369e80521571a79987a85cde28e76bbaa",
+     "features": {
+      "hub_concentration": 0.48717948717948717,
+      "real_semantics": 0
+     },
+     "field_named": 0.05263157894736842,
+     "random_named": 0.0,
+     "degree_named": 1.0,
+     "diff_fm_rand": 0.05263157894736842,
+     "diff_fm_deg": -0.9473684210526316,
+     "invariant": [
+      40,
+      39
+     ]
+    },
+    "GT8_B_low": {
+     "structure": "balanced_ternary_tree",
+     "N": 40,
+     "n_edges": 39,
+     "n_named": 12,
+     "n_filler": 27,
+     "source": 0,
+     "target": 13,
+     "seed": 208804,
+     "sha256": "5c90ebc428db0f6b795ecd1a9a7ff78bf7f7c0c22cd247e155568aff35465b26",
+     "features": {
+      "hub_concentration": 0.02564102564102564,
+      "real_semantics": 0
+     },
+     "field_named": 0.16666666666666666,
+     "random_named": 0.25,
+     "degree_named": 0.0,
+     "diff_fm_rand": -0.08333333333333334,
+     "diff_fm_deg": 0.16666666666666666,
+     "invariant": [
+      40,
+      39
+     ]
+    },
+    "GT8_C_high": {
+     "structure": "triple_hub_cone",
+     "N": 36,
+     "n_edges": 35,
+     "n_named": 27,
+     "n_filler": 8,
+     "source": 24,
+     "target": 32,
+     "seed": 208805,
+     "sha256": "022abfeeee973cd65081dfcb3ba662885abd26b5bfa195afbc9346de16b61704",
+     "features": {
+      "hub_concentration": 0.37142857142857144,
+      "real_semantics": 0
+     },
+     "field_named": 0.9629629629629629,
+     "random_named": 0.1111111111111111,
+     "degree_named": 1.0,
+     "diff_fm_rand": 0.8518518518518519,
+     "diff_fm_deg": -0.03703703703703709,
+     "invariant": [
+      36,
+      35
+     ]
+    },
+    "GT8_C_low": {
+     "structure": "balanced_4ary_tree",
+     "N": 36,
+     "n_edges": 35,
+     "n_named": 8,
+     "n_filler": 27,
+     "source": 0,
+     "target": 21,
+     "seed": 208806,
+     "sha256": "6aaec501207d20978397604e82fadbb5e73dcb83f3a87a1b4b38eda94fbb9fc2",
+     "features": {
+      "hub_concentration": 0.02857142857142857,
+      "real_semantics": 0
+     },
+     "field_named": 0.25,
+     "random_named": 0.0,
+     "degree_named": 0.0,
+     "diff_fm_rand": 0.25,
+     "diff_fm_deg": 0.25,
+     "invariant": [
+      36,
+      35
+     ]
+    },
+    "GT8_D_high": {
+     "structure": "twin_superhub_star",
+     "N": 45,
+     "n_edges": 44,
+     "n_named": 42,
+     "n_filler": 2,
+     "source": 41,
+     "target": 1,
+     "seed": 208807,
+     "sha256": "d4203aa9feb5ffc1b31057115269752477fe7db6c3c3bce6604d7a149d3e41c2",
+     "features": {
+      "hub_concentration": 0.5,
+      "real_semantics": 0
+     },
+     "field_named": 1.0,
+     "random_named": 0.19047619047619047,
+     "degree_named": 1.0,
+     "diff_fm_rand": 0.8095238095238095,
+     "diff_fm_deg": 0.0,
+     "invariant": [
+      45,
+      44
+     ]
+    },
+    "GT8_D_low": {
+     "structure": "balanced_5ary_tree",
+     "N": 45,
+     "n_edges": 44,
+     "n_named": 8,
+     "n_filler": 36,
+     "source": 0,
+     "target": 31,
+     "seed": 208808,
+     "sha256": "81db5581beb27bc05267db84ecd52005d5e4a86c3aaaad354239ea0df13b1e1e",
+     "features": {
+      "hub_concentration": 0.022727272727272728,
+      "real_semantics": 0
+     },
+     "field_named": 0.25,
+     "random_named": 0.0,
+     "degree_named": 0.0,
+     "diff_fm_rand": 0.25,
+     "diff_fm_deg": 0.25,
+     "invariant": [
+      45,
+      44
+     ]
+    }
+   },
+   "per_pair": [
+    {
+     "pair": "GT8_A_high__vs__GT8_A_low",
+     "high": "GT8_A_high",
+     "low": "GT8_A_low",
+     "origin": "as_run",
+     "diff_high": 0.7916666666666666,
+     "hub_high": 0.5,
+     "diff_low": 0.13333333333333333,
+     "hub_low": 0.06666666666666667,
+     "concordant": true
+    },
+    {
+     "pair": "GT8_B_high__vs__GT8_B_low",
+     "high": "GT8_B_high",
+     "low": "GT8_B_low",
+     "origin": "as_run",
+     "diff_high": 0.05263157894736842,
+     "hub_high": 0.48717948717948717,
+     "diff_low": -0.08333333333333334,
+     "hub_low": 0.02564102564102564,
+     "concordant": true
+    },
+    {
+     "pair": "GT8_C_high__vs__GT8_C_low",
+     "high": "GT8_C_high",
+     "low": "GT8_C_low",
+     "origin": "v5_expansion",
+     "diff_high": 0.8518518518518519,
+     "hub_high": 0.37142857142857144,
+     "diff_low": 0.25,
+     "hub_low": 0.02857142857142857,
+     "concordant": true
+    },
+    {
+     "pair": "GT8_D_high__vs__GT8_D_low",
+     "high": "GT8_D_high",
+     "low": "GT8_D_low",
+     "origin": "v5_expansion",
+     "diff_high": 0.8095238095238095,
+     "hub_high": 0.5,
+     "diff_low": 0.25,
+     "hub_low": 0.022727272727272728,
+     "concordant": true
+    }
+   ],
+   "thresholds_used": {
+    "min_pairs": 2,
+    "pass_rule": "全部对同向（#conc = n 且 n ≥ 2）",
+    "kill_rule": "全部对全反"
+   },
+   "new_thresholds_added": 0,
+   "scope_ceiling": "仅族 S 合成面（real_semantics=0）；0 外推族 L、0 外推 real_semantics 轴、0 表述为效应量/显著性",
+   "runtime_sec": 29.769,
+   "corpus_readiness": {
+    "corpus_dir": "corpus/v20",
+    "index_exists": true,
+    "n_indexed_graphs": 22,
+    "orphan_files": [
+     "all.json",
+     "index_v2_2026_09_16.json",
+     "strip_captions_22.json"
+    ],
+    "orphan_kind": {
+     "all.json": {
+      "python_type": "dict",
+      "is_graph_record": false,
+      "top_keys": [
+       "generated_at",
+       "paths",
+       "layout",
+       "version",
+       "agents"
+      ]
+     },
+     "index_v2_2026_09_16.json": {
+      "python_type": "dict",
+      "is_graph_record": false,
+      "top_keys": [
+       "corpus",
+       "generator_version",
+       "spec",
+       "named_filler_rule",
+       "n_graphs",
+       "graphs"
+      ]
+     },
+     "strip_captions_22.json": {
+      "python_type": "list",
+      "is_graph_record": false,
+      "top_keys": null
+     }
+    },
+    "any_orphan_is_graph_record": false,
+    "load_corpus_raises": true,
+    "load_corpus_error": "corpus orphan graphs (not in index.json): ['all.json', 'index_v2_2026_09_16.json', 'strip_captions_22.json'] — 先运行 build_index()（R2/E3 哨兵）",
+    "loader_used": "load_corpus_indexed（本棒内定义 · 只读 index 驱动）",
+    "loader_deviation_gamma": "γ-V5R3-13"
+   }
+  },
+  "gt5b": {
+   "case": "gt5b",
+   "class": "类 II · 潜伏带（frac<0.8 ∧ #below0.5≤2）· as-run 结构性不可达",
+   "prereg_rule_ids": [
+    "K-V5R3-GT5B-1",
+    "K-V5R3-GT5B-2",
+    "K-V5R3-GT5B-3",
+    "K-V5R3-GT5B-4",
+    "K-V5R3-0-D",
+    "K-V5R3-0-E",
+    "K-V5R3-0-G"
+   ],
+   "surface": "0 补跑 · 仅防退化门 + 并列判核对（立线件 §6.4）",
+   "anchor": {
+    "path": "results/deposon_v20_gt5b.json",
+    "sha12": "2907006dbe48"
+   },
+   "original_verdict_literal": "supports_narrowed_monotonicity",
+   "v2_parallel_verdict": null,
+   "parallel_report": {
+    "原判": "supports_narrowed_monotonicity",
+    "v2 并列判": "同原判（0 新判 · GT5B-4）"
+   },
+   "band_probe": {
+    "band_literal": "frac_full_mono < 0.8 且 #(mono<0.5) ≤ 2",
+    "frac_graphs_full_monotonicity": 1.0,
+    "n_graphs_below_50pct": 0,
+    "band_entered": false,
+    "structural_unreachability": "frac = 1.0 是 frac 的数学上界（22/22 全满）⇒ 补数据不可能把 as-run 推出带 ⇒ K-V5R3-GT5B-1 的 ①（扩测量面）在本案对 as-run **不适用**，①只能服务于「未来换图集」的新读数，0 回溯修 as-run",
+    "why_2_is_only_option": "带归属 = ②最不利方向（claim 判 FAIL，H_GT5b_dead 侧）；本案 v2 无新判产生，仅封口"
+   },
+   "anti_degeneration_gates": {
+    "meanfield_min_step_delta_graph_level": {
+     "construct": "gt5b · meanfield_min_step_delta 逐图（22 值）",
+     "n_values": 22,
+     "n_distinct": 22,
+     "std": 0.0011882088935189629,
+     "gate_n_distinct_gt_3": true,
+     "gate_std_gt_0": true,
+     "gate_pass": true,
+     "verdict": "PASS",
+     "kd_reason": null
+    },
+    "meanfield_min_step_delta_all_tasks": {
+     "construct": "gt5b · meanfield_min_step_delta 逐任务汇总（全部 22 图）",
+     "n_values": 216,
+     "n_distinct": 148,
+     "std": 0.010871236069666852,
+     "gate_n_distinct_gt_3": true,
+     "gate_std_gt_0": true,
+     "gate_pass": true,
+     "verdict": "PASS",
+     "kd_reason": null
+    },
+    "meanfield_monotone_rate": {
+     "construct": "gt5b · meanfield_monotone_rate 逐图（22 值）",
+     "n_values": 22,
+     "n_distinct": 1,
+     "std": 0.0,
+     "gate_n_distinct_gt_3": false,
+     "gate_std_gt_0": false,
+     "gate_pass": false,
+     "verdict": "KD",
+     "kd_reason": "K-V5R3-0-B ③ 防退化门不达（n_distinct≤3 或 std=0）"
+    },
+    "S4_sentinel_单独门": {
+     "construct": "gt5b · S4 逐步 delta 序列（哨兵）",
+     "n_values": 10,
+     "n_distinct": 5,
+     "std": 7.05427937563294e-05,
+     "gate_n_distinct_gt_3": true,
+     "gate_std_gt_0": true,
+     "gate_pass": true,
+     "verdict": "PASS",
+     "kd_reason": null,
+     "graph_level_min_step_delta": 0.0,
+     "graph_level_monotone_rate": 1.0,
+     "zero_task_count": 4,
+     "denominator_handling": "门达标 ⇒ S4 **不落 KD**、不剔除、不加权，分母保持 22（沿既有字面）；若门不达 ⇒ S4 落 KD 且分母仍按既有字面处理（0 静默剔除以保 22/22）"
+    },
+    "gamma_V5R3_3": "meanfield_monotone_rate 二值退化（n_distinct=1）⇒ 0 以该字段单独判档；判别力落在 min_step_delta （n_distinct=22）与 GT-5 的 endpoint_gap",
+    "gamma_V5R3_11": "S4 meanfield_min_step_delta=0.0 而 monotone_rate=1.0（哨兵在案，非本件新设）"
+   },
+   "four_prohibitions_gt5b": {
+    "① 0 改写 GT_RECONSTRUCTION.md §2 的 3/4 反转披露": "本棒 0 以写模式打开该文件（实测 SHA-12 见锚件审计）",
+    "② 0 使 GT-5 B 腿 FAIL 回填进 gt5b": "gt5b 主张为 mean-field only（不涉及 dirichlet 臂），其 as-run PASS **不因 GT-5 B 腿 FAIL 而动摇**（两者量的对象不同，非互替）",
+    "③ 0 以 22/22 覆盖 GT-5 的 4 图 B 腿失败": "窄面 PASS **不升格**为宽面 PASS；GT-5/GT-5b 两判并列同报",
+    "④ 0 反向以 GT-5 的 B 腿 FAIL 否定 gt5b 的 mean-field 单调性 PASS": "同上，非互替",
+    "two_verdicts_reported_side_by_side": {
+     "GT-5": {
+      "原判": "inconclusive_preregistered_undefined_band",
+      "v2 并列判": "FAIL（B 腿）／A 腿 PASS · claim 级 FAIL"
+     },
+     "GT-5b": {
+      "原判": "supports_narrowed_monotonicity",
+      "v2 并列判": "同原判 PASS"
+     }
+    }
+   },
+   "conclusion_ceiling": "仅覆盖 mean-field 臂、22 图 × ≤10 tasks、sample_seed=505500；0 外推 dirichlet 臂、0 升格为宽面 PASS",
+   "new_thresholds_added": 0,
+   "per_graph_readout": {
+    "L_algorithm_process": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 1.0559798613307692e-07,
+     "n_tasks": 10
+    },
+    "L_biological_taxonomy": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0030879750074115364,
+     "n_tasks": 10
+    },
+    "L_geography_world": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00027373235166550103,
+     "n_tasks": 10
+    },
+    "L_historical_causality": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 3.471395482179673e-08,
+     "n_tasks": 10
+    },
+    "L_physics_concepts": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00016204175365253093,
+     "n_tasks": 10
+    },
+    "L_project_management": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 1.0418124651856431e-07,
+     "n_tasks": 10
+    },
+    "S1": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0011933100385879136,
+     "n_tasks": 10
+    },
+    "S1_n35": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0019401796105555924,
+     "n_tasks": 10
+    },
+    "S1_n45": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0023621801729016845,
+     "n_tasks": 10
+    },
+    "S1_n60": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0029690588394846174,
+     "n_tasks": 10
+    },
+    "S2": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0016090039848224436,
+     "n_tasks": 10
+    },
+    "S2_n20": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0015054715446818356,
+     "n_tasks": 9
+    },
+    "S2_n35": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.003925221817933089,
+     "n_tasks": 10
+    },
+    "S2_n45": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.000882703213432201,
+     "n_tasks": 10
+    },
+    "S2_n60": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0002486078070336184,
+     "n_tasks": 10
+    },
+    "S3": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00015129588181261866,
+     "n_tasks": 10
+    },
+    "S4": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0,
+     "n_tasks": 10
+    },
+    "S5": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.0001822634660832989,
+     "n_tasks": 7
+    },
+    "S6": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 3.5032924934341736e-06,
+     "n_tasks": 10
+    },
+    "S6_n20": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 2.030341950454151e-05,
+     "n_tasks": 10
+    },
+    "S6_n35": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 0.00010262569606678262,
+     "n_tasks": 10
+    },
+    "S6_n60": {
+     "meanfield_monotone_rate": 1.0,
+     "meanfield_min_step_delta": 2.3922771967832546e-06,
+     "n_tasks": 10
+    }
+   }
+  },
+  "gt": {
+   "case": "gt（GT-4 腿）",
+   "class": "类 II · 潜伏带 (1.05, 1.2]",
+   "prereg_rule_ids": [
+    "K-V5R3-GT4-1",
+    "K-V5R3-GT4-2",
+    "K-V5R3-GT4-3",
+    "K-V5R3-GT4-4",
+    "K-V5R3-GT4-5",
+    "K-V5R3-GT4-6",
+    "K-V5R3-0-E",
+    "K-V5R3-0-F"
+   ],
+   "surface": "0 补跑 · 仅机械并报（立线件 §6.4）",
+   "anchor": {
+    "path": "results/deposon_v20_gt.json",
+    "sha12": "497b9c2d6746"
+   },
+   "GT4": {
+    "original_verdict_literal": "field_coordination_value_supported",
+    "v2_parallel_verdict": null,
+    "parallel_report": {
+     "原判": "field_coordination_value_supported",
+     "v2 并列判": "同原判（0 新判 · GT4-6）"
+    },
+    "mandatory_concurrent_report_K_V5R3_GT4_4": {
+     "median_poa": 1.3333333333333333,
+     "n_poa_inf": 3,
+     "n_poa_undefined": 0,
+     "n_finite_in_median": 17,
+     "note": "0 只报 median 单值 = 登记无效"
+    },
+    "median_recomputed": 1.3333333333333333,
+    "median_as_run": 1.3333333333333333,
+    "median_bit_identical": true,
+    "band_test": "1.05 < median_poa ≤ 1.2",
+    "band_entered": false,
+    "attribution": null,
+    "selfish_arm_degradation_bias": {
+     "selfish_arms": [
+      "random",
+      "degree"
+     ],
+     "selfish_arms_preregistered": [
+      "random",
+      "degree",
+      "llm_prior"
+     ],
+     "direction": "自利集退化 ⇒ 分母只可能更小 ⇒ PoA 系统性偏大 ⇒ **偏 PASS 侧**",
+     "interaction_with_v2": "K-V5R3-GT4-2：若带内触发 ②判 FAIL，须同时披露该已知反向偏置，否则构成**误导性 FAIL**；FAIL 根因强制标 ③ 混合，两项方向相反、不可相互抵销",
+     "as_run_note": "as-run median 1.3333 > 1.2 落在带外 PASS 侧，未触发带归属；该偏置仍随本判强制披露"
+    },
+    "median_discontinuity": "K-V5R3-GT4-4：median 对成分变动不连续 ⇒ 图集/自利集任一变动都可能跨过 1.2 边界",
+    "anti_degeneration_gate": {
+     "construct": "gt（GT-4）· poa_per_graph_finite（17 有限值）",
+     "n_values": 17,
+     "n_distinct": 9,
+     "std": 0.6470588235294118,
+     "gate_n_distinct_gt_3": true,
+     "gate_std_gt_0": true,
+     "gate_pass": true,
+     "verdict": "PASS",
+     "kd_reason": null
+    },
+    "thresholds_used": {
+     "pass_threshold": 1.2,
+     "dead_threshold": 1.05
+    },
+    "new_thresholds_added": 0
+   },
+   "GT1": {
+    "original_verdict_literal": "supports_potential_game_framework",
+    "v2_parallel_verdict": null,
+    "parallel_report": {
+     "原判": "supports_potential_game_framework",
+     "v2 并列判": "同原判 PASS"
+    },
+    "probe": {
+     "dirichlet_mean_rate": 0.1,
+     "meanfield_rate": 0.4,
+     "margin": 0.2,
+     "margin_test": "0.1 < 0.4 − 0.2 = 0.2",
+     "margin_holds": true,
+     "n_runs_below_meanfield": 20,
+     "min_losers": 15,
+     "losers_holds": true
+    },
+    "v2_line_added": "0（K-V5R3-GT4-5：双条件皆满足、0 未定义带 ⇒ 无缺口可补）"
+   },
+   "two_legs_not_substitutable": "GT-1 与 GT-4 两腿 0 互替、0 合并为单一总判（立线件 §9 外推禁令 ③）",
+   "scope_ceiling": "GT-4：17 个有限 PoA（3 个 ∞ 排除）× 自利集 {random, degree}（退化）；0 外推含 llm_prior 的完整自利集"
+  }
+ },
+ "readout": {
+  "gt5": {
+   "原判": "inconclusive_preregistered_undefined_band",
+   "v2 并列判": "FAIL",
+   "A 腿": "PASS",
+   "B 腿": "FAIL",
+   "根因": "③ 混合",
+   "surface": "只读复算 · 0 补跑"
+  },
+  "gt6": {
+   "原判": "potential_game_explanation_complete",
+   "v2 并列判": "同原判（0 新判）",
+   "轨迹积分口径 median_r": 3.203342048593724e-28,
+   "落带": false,
+   "静态逐值复现": false,
+   "surface": "①轨迹积分补跑（新测量面）"
+  },
+  "gt8": {
+   "原判": "supports_H_GT8",
+   "v2 并列判（as-run 2 对）": "同原判（0 新判 · GT8-5）",
+   "扩面 4 对机械 verdict": "supports_H_GT8",
+   "扩面新增 2 对 v2 终态": "PASS",
+   "as-run 2 对逐值复现": true,
+   "surface": "①扩对数 2→4（新测量面）"
+  },
+  "gt5b": {
+   "原判": "supports_narrowed_monotonicity",
+   "v2 并列判": "同原判（0 新判 · GT5B-4）",
+   "S4 哨兵门": true,
+   "surface": "0 补跑 · 仅防退化门"
+  },
+  "gt（GT-4）": {
+   "原判": "field_coordination_value_supported",
+   "v2 并列判": "同原判（0 新判 · GT4-6）",
+   "median_poa": 1.3333333333333333,
+   "n_poa_inf": 3,
+   "n_poa_undefined": 0,
+   "n_finite_in_median": 17,
+   "落带": false,
+   "GT-1 腿": "同原判 PASS（0 补线 · GT4-5）",
+   "surface": "0 补跑 · 仅机械并报"
+  }
+ },
+ "runtime_sec": 51.094,
+ "executing_script": {
+  "path": "_v5_gt_exec_2026_09_29.py",
+  "sha12": "eef7b446cc0e"
+ },
+ "case_artifacts": [
+  {
+   "path": "results/_v5_gt5_reattrib_2026_09_29.json",
+   "sha12": "e15b3b171d60",
+   "bytes": 5626
+  },
+  {
+   "path": "results/_v5_gt6_trajint_2026_09_29.json",
+   "sha12": "578fbeaa4635",
+   "bytes": 83722
+  },
+  {
+   "path": "results/_v5_gt8_expand_2026_09_29.json",
+   "sha12": "34ff826f97c2",
+   "bytes": 20090
+  },
+  {
+   "path": "results/_v5_gt5b_reattrib_2026_09_29.json",
+   "sha12": "212e5bb8c7d7",
+   "bytes": 7084
+  },
+  {
+   "path": "results/_v5_gt4_reattrib_2026_09_29.json",
+   "sha12": "4b75df5f7454",
+   "bytes": 3074
+  }
+ ]
+}

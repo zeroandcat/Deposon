@@ -1,0 +1,2452 @@
+{
+  "fingerprint_self_hash_after_birth": "d5986d44d929",
+  "metadata": {
+    "algorithm": "SHA-256 前 12 位",
+    "encoding": "UTF-8 (no BOM)",
+    "freeze_day": "V5_D5",
+    "frozen_hyperparams": {
+      "TH-V5-6_ref": "results/_v4_v5_strengthen_prereg_2026_09_23.md §A.6",
+      "V_VOCAB": 50
+    },
+    "line_ending": "LF",
+    "operator": "vocab_truncate",
+    "rationale": "C2 算子强度梯度档 V=50 派生（V4 frozen 已有 V=200 = 5D7423C58EEB；V=50 为 V5 新档，不覆盖 V4 V=200 件）",
+    "track": "Track 1 (0 LLM / 0 proxy / 0 gateway)",
+    "v_vocab": 50
+  },
+  "teachers": [
+    {
+      "byte_identical_runs": true,
+      "n_in": 44,
+      "n_out": 44,
+      "n_proxy_equals_teacher": 0,
+      "n_strings_total": 264,
+      "path": "corpus/v20/by_model/kimi/index_v2_2026_09_16.json",
+      "pct_proxy_equals_teacher": 0.0,
+      "proxy_artifacts": [
+        {
+          "N": 38,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 48,
+          "n_filler": 19,
+          "n_named": 29,
+          "seed": 659756083,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 33
+        },
+        {
+          "N": 42,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 41,
+          "n_filler": 19,
+          "n_named": 22,
+          "seed": 358371113,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 21
+        },
+        {
+          "N": 45,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 44,
+          "n_filler": 28,
+          "n_named": 16,
+          "seed": 628157860,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 38
+        },
+        {
+          "N": 36,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 55,
+          "n_filler": 32,
+          "n_named": 23,
+          "seed": 1634062263,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 35
+        },
+        {
+          "N": 35,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 39,
+          "n_filler": 8,
+          "n_named": 31,
+          "seed": 778421107,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 9
+        },
+        {
+          "N": 33,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 51,
+          "n_filler": 15,
+          "n_named": 36,
+          "seed": 1054997943,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 32
+        },
+        {
+          "N": 20,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 19,
+          "n_filler": 0,
+          "n_named": 19,
+          "seed": 200101,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 19
+        },
+        {
+          "N": 35,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 34,
+          "n_filler": 0,
+          "n_named": 34,
+          "seed": 200136,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 34
+        },
+        {
+          "N": 45,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 44,
+          "n_filler": 0,
+          "n_named": 44,
+          "seed": 200146,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 44
+        },
+        {
+          "N": 60,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 59,
+          "n_filler": 0,
+          "n_named": 59,
+          "seed": 200161,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 59
+        },
+        {
+          "N": 31,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 30,
+          "n_filler": 16,
+          "n_named": 14,
+          "seed": 200102,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 30
+        },
+        {
+          "N": 20,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 19,
+          "n_filler": 10,
+          "n_named": 9,
+          "seed": 200122,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 19
+        },
+        {
+          "N": 35,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 34,
+          "n_filler": 18,
+          "n_named": 16,
+          "seed": 200137,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 34
+        },
+        {
+          "N": 45,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 44,
+          "n_filler": 23,
+          "n_named": 21,
+          "seed": 200147,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 44
+        },
+        {
+          "N": 60,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 59,
+          "n_filler": 30,
+          "n_named": 29,
+          "seed": 200162,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 59
+        },
+        {
+          "N": 30,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 32,
+          "n_filler": 11,
+          "n_named": 21,
+          "seed": 200103,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 1
+        },
+        {
+          "N": 40,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 88,
+          "n_filler": 30,
+          "n_named": 58,
+          "seed": 200104,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 33
+        },
+        {
+          "N": 45,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 49,
+          "n_filler": 42,
+          "n_named": 7,
+          "seed": 200105,
+          "sha256": "<UNK>",
+          "source": 1,
+          "structure": "<UNK>",
+          "target": 36
+        },
+        {
+          "N": 45,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 49,
+          "n_filler": 32,
+          "n_named": 17,
+          "seed": 200106,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 1
+        },
+        {
+          "N": 20,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 24,
+          "n_filler": 7,
+          "n_named": 17,
+          "seed": 200126,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 1
+        },
+        {
+          "N": 35,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 39,
+          "n_filler": 22,
+          "n_named": 17,
+          "seed": 200141,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 1
+        },
+        {
+          "N": 60,
+          "family": "<UNK>",
+          "file": "<UNK>",
+          "graph_id": "<UNK>",
+          "n_edges": 64,
+          "n_filler": 47,
+          "n_named": 17,
+          "seed": 200166,
+          "sha256": "<UNK>",
+          "source": 0,
+          "structure": "<UNK>",
+          "target": 1
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 38,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 42,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 45,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 36,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 35,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 33,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 20,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 35,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 45,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 60,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 31,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 20,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 35,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 45,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 60,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 30,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 40,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 45,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 45,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 20,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 35,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        },
+        {
+          "byte_hash": "<UNK>",
+          "caption_id": "<UNK>",
+          "dual_24bit": "<UNK>",
+          "family": "<UNK>",
+          "n_labels": 60,
+          "semantic_hash": "<UNK>",
+          "structure": "<UNK>",
+          "text": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>"
+        }
+      ],
+      "proxy_artifacts_sha12": "f86b425da9a8",
+      "sha256_12": "EFE05AD775DE",
+      "teacher": "kimi",
+      "v_vocab": 50
+    },
+    {
+      "byte_identical_runs": true,
+      "n_in": 71,
+      "n_out": 71,
+      "n_proxy_equals_teacher": 0,
+      "n_strings_total": 191,
+      "path": "corpus/v20/by_model/GLM_1/three_way_glm_slot_blind_test_2026_09_16.json",
+      "pct_proxy_equals_teacher": 0.0,
+      "proxy_artifacts": [
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 3.7369195482087108,
+          "is_json": 0.0,
+          "n_bytes": 17053,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 3.6346550393271224,
+          "is_json": 0.0,
+          "n_bytes": 7711,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 3.8771825934459443,
+          "is_json": 0.0,
+          "n_bytes": 7333,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 3.6287065388212985,
+          "is_json": 0.0,
+          "n_bytes": 17013,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 3.6160688443651288,
+          "is_json": 0.0,
+          "n_bytes": 3533,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 2.989547218908395,
+          "is_json": 0.0,
+          "n_bytes": 1666,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 3.101229824474653,
+          "is_json": 0.0,
+          "n_bytes": 4437,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 3.062367255191816,
+          "is_json": 0.0,
+          "n_bytes": 8796,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 2.985461928413095,
+          "is_json": 0.0,
+          "n_bytes": 11641,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 1.3136729647200367,
+          "is_json": 1.0,
+          "n_bytes": 11785,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 1.883229680827938,
+          "is_json": 1.0,
+          "n_bytes": 2612,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 2.515733525606732,
+          "is_json": 1.0,
+          "n_bytes": 2033,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 2.536908347981021,
+          "is_json": 1.0,
+          "n_bytes": 2289,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 2.7808693604206676,
+          "is_json": 1.0,
+          "n_bytes": 1200,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 2.6659219908466536,
+          "is_json": 1.0,
+          "n_bytes": 1274,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 4.237677053265701,
+          "is_json": 0.0,
+          "n_bytes": 1102,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 3.8021571053243925,
+          "is_json": 0.0,
+          "n_bytes": 5035,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 4.501999209010987,
+          "is_json": 0.0,
+          "n_bytes": 652,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 4.160400130491372,
+          "is_json": 0.0,
+          "n_bytes": 933,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 4.274164595879265,
+          "is_json": 0.0,
+          "n_bytes": 658,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 4.146316704042778,
+          "is_json": 0.0,
+          "n_bytes": 1720,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 4.327768348567064,
+          "is_json": 0.0,
+          "n_bytes": 1002,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "d": 3.9104688331558326,
+          "is_json": 0.0,
+          "n_bytes": 3324,
+          "pred": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.30761147144304246,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 1.2960105649014737,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.7226265263051511,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.5210976368798976,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.4554878313853124,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 1.226856937888954,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.5887365931569203,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.7102665467171853,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.29679433428761903,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.500358423166359,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.30587553793090116,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.48562511136233627,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.625454598114838,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.6250733546039449,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.6828930601879757,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.8058889185402645,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.8261311451101234,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.6354755680309794,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.6759525936307443,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.6319914481574931,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.22987214825840935,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.3816592976068509,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 1.083666497681777,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.6929140679157538,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 1.1200923792124642,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "byte_sha12": "<UNK>",
+          "d": 0.6185646427138372,
+          "pred": "<UNK>",
+          "rel_path": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 4.015463001572583,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.829563573418797,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.760960668760662,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.8059961342886774,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.4271486183689253,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.536088932725081,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.318447967108693,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.524218756950318,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.1463995597360435,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.3548356164028132,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.5708052279687275,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.095386549171114,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.2858235378716305,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.036635972990873,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 4.164437957996472,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 4.337652701295222,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 4.538944165358375,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 4.023824136531611,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 4.010812281554227,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 3.946178698150031,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 4.060047603128682,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": null,
+          "d": 4.306100705464544,
+          "n_bytes": null,
+          "pred": "<UNK>"
+        }
+      ],
+      "proxy_artifacts_sha12": "cd1134d9acd0",
+      "sha256_12": "268AB1239A8A",
+      "teacher": "GLM_1",
+      "v_vocab": 50
+    },
+    {
+      "byte_identical_runs": true,
+      "n_in": 23,
+      "n_out": 23,
+      "n_proxy_equals_teacher": 25,
+      "n_strings_total": 169,
+      "path": "corpus/v20/by_model/GLM_2/glm_artifact_v_2026_09_16.json",
+      "pct_proxy_equals_teacher": 0.14792899408284024,
+      "proxy_artifacts": [
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 17053,
+          "origin": "<UNK>",
+          "provenance": "GLM 撰写的第二作综述独立双审报告(2026-09-15 会话), 交付于群共享区并经 send_file 发群留痕",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 7711,
+          "origin": "<UNK>",
+          "provenance": "GLM 撰写的英文重写版独立复核报告(2026-09-15), 发群留痕",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 7333,
+          "origin": "<UNK>",
+          "provenance": "GLM 撰写的收口修复版独立复核报告(2026-09-16), 发群留痕",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 17013,
+          "origin": "<UNK>",
+          "provenance": "GLM 撰写的 FTFB 全稿独立复核报告(2026-09-16 17:39), 发群留痕",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 3533,
+          "origin": "<UNK>",
+          "provenance": "GLM 撰写的 FTFB 复核扫描脚本(2026-09-16 17:28, 红线/池闭合/主张句机械扫描)",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 1666,
+          "origin": "<UNK>",
+          "provenance": "GLM 撰写的第二作双审核查脚本(2026-09-15)",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 4437,
+          "origin": "<UNK>",
+          "provenance": "GLM 撰写的引用池闭合核验脚本(2026-09-15)",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 8796,
+          "origin": "<UNK>",
+          "provenance": "GLM 撰写的 deposon PD2 第三方独立复现验证器(2026-09-01)",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "GLM-N09",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 11641,
+          "origin": "<UNK>",
+          "provenance": "GLM 撰写的 PD2 复现 runner(2026-09-01), GLM-N10 的直接生成代码",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "GLM-N10",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 11785,
+          "origin": "<UNK>",
+          "provenance": "GLM-N09 复现 runner 的结果 JSON(GLM 代码直接输出, 2026-09-01)",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 2612,
+          "origin": "<UNK>",
+          "provenance": "GLM 构造的重跑 diff 汇总 JSON(2026-09-01 重跑审计)",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 2033,
+          "origin": "<UNK>",
+          "provenance": "GLM 构造的引用核验题录 JSON(2026-09-15 双审, arXiv 一手页面对照)",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 2289,
+          "origin": "<UNK>",
+          "provenance": "GLM 构造的引用核验题录 JSON(2026-09-15 双审)",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 1200,
+          "origin": "<UNK>",
+          "provenance": "GLM 构造的题录核验 JSON(2026-09-15 英文重写版复核)",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 1274,
+          "origin": "<UNK>",
+          "provenance": "GLM 构造的题录核验 JSON(2026-09-15 英文重写版复核)",
+          "slice_rule": null,
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 1102,
+          "origin": "<UNK>",
+          "provenance": "母本为 GLM 撰写报告(鲍勃_第二作综述独立双审报告_2026-09-15.md), 确定性切片",
+          "slice_rule": "<UNK>",
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 5035,
+          "origin": "<UNK>",
+          "provenance": "母本为 GLM 撰写报告(鲍勃_第二作综述独立双审报告_2026-09-15.md), 确定性切片",
+          "slice_rule": "<UNK>",
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 652,
+          "origin": "<UNK>",
+          "provenance": "母本为 GLM 撰写报告(鲍勃_第二作综述英文重写版独立复核报告_2026-09-15.md), 确定性切片",
+          "slice_rule": "<UNK>",
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 933,
+          "origin": "<UNK>",
+          "provenance": "母本为 GLM 撰写报告(鲍勃_第二作综述英文重写版独立复核报告_2026-09-15.md), 确定性切片",
+          "slice_rule": "<UNK>",
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 658,
+          "origin": "<UNK>",
+          "provenance": "母本为 GLM 撰写报告(鲍勃_第二作收口修复版独立复核报告_2026-09-16.md), 确定性切片",
+          "slice_rule": "<UNK>",
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 1720,
+          "origin": "<UNK>",
+          "provenance": "母本为 GLM 撰写报告(鲍勃_第二作收口修复版独立复核报告_2026-09-16.md), 确定性切片",
+          "slice_rule": "<UNK>",
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 1002,
+          "origin": "<UNK>",
+          "provenance": "母本为 GLM 撰写报告(鲍勃_FTFB全稿独立复核报告_2026-09-16.md), 确定性切片",
+          "slice_rule": "<UNK>",
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        },
+        {
+          "artifact_id": "<UNK>",
+          "byte_sha12": "<UNK>",
+          "n_bytes": 3324,
+          "origin": "<UNK>",
+          "provenance": "母本为 GLM 撰写报告(鲍勃_FTFB全稿独立复核报告_2026-09-16.md), 确定性切片",
+          "slice_rule": "<UNK>",
+          "source_path": "<UNK>",
+          "struct_signature": "<UNK>",
+          "token_lines_dropped": 0,
+          "triple_hash": "<UNK>"
+        }
+      ],
+      "proxy_artifacts_sha12": "458f6b1df04b",
+      "sha256_12": "39732A92B5C9",
+      "teacher": "GLM_2",
+      "v_vocab": 50
+    },
+    {
+      "byte_identical_runs": true,
+      "n_in": 29,
+      "n_out": 29,
+      "n_proxy_equals_teacher": 0,
+      "n_strings_total": 203,
+      "path": "corpus/v20/by_model/coze/coze_artifact_v_2026_09_16.json",
+      "pct_proxy_equals_teacher": 0.0,
+      "proxy_artifacts": [
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 5237,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 688,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 918,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 1033,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 1487,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 1079,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 1441,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 980,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 952,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 26820,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 33012,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 29714,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 35179,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 28997,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 22138,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 3756,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 7119,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 104601,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 4581,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 19171,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 12435,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 4168,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 3792,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 4638,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 11296,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 30142,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 19100,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 4682,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        },
+        {
+          "anchor_sha12": "<UNK>",
+          "artifact_id": "<UNK>",
+          "content_sha12": "<UNK>",
+          "n_bytes": 27,
+          "origin": "<UNK>",
+          "path_sha12": "<UNK>",
+          "rel_path": "<UNK>",
+          "source_path": "<UNK>"
+        }
+      ],
+      "proxy_artifacts_sha12": "bbc8f82ff0c8",
+      "sha256_12": "FEE04170AA73",
+      "teacher": "coze",
+      "v_vocab": 50
+    },
+    {
+      "byte_identical_runs": true,
+      "n_in": 30,
+      "n_out": 30,
+      "n_proxy_equals_teacher": 1,
+      "n_strings_total": 165,
+      "path": "corpus/v20/by_model/minimax/artifact_v_2026_09_16.json",
+      "pct_proxy_equals_teacher": 0.006060606060606061,
+      "proxy_artifacts": [
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": null,
+          "is_correct": false,
+          "latency_ms": 30536.8,
+          "llm_output": "",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "7faf4e640c3c",
+            "content": "d175bdb980d7",
+            "path": "2c1f148d0a81"
+          },
+          "usage": {}
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 5.0,
+          "is_correct": true,
+          "latency_ms": 5790.9,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "fcbea69b1403",
+            "content": "a1795444d76a",
+            "path": "2ab1ebf32697"
+          },
+          "usage": {
+            "completion_tokens": 45,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 232,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 277
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 40.0,
+          "is_correct": true,
+          "latency_ms": 3410.9,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "cafc662a1ed1",
+            "content": "691eb78bc5b1",
+            "path": "88b2e7ea3d24"
+          },
+          "usage": {
+            "completion_tokens": 55,
+            "completion_tokens_details": {
+              "reasoning_tokens": 54
+            },
+            "prompt_tokens": 262,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 317
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 1430.0,
+          "is_correct": true,
+          "latency_ms": 3225.8,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "80f42ab0e733",
+            "content": "bfc4f8ff134a",
+            "path": "bb1fbab5ef5f"
+          },
+          "usage": {
+            "completion_tokens": 120,
+            "completion_tokens_details": {
+              "reasoning_tokens": 116
+            },
+            "prompt_tokens": 240,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 360
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 36.0,
+          "is_correct": true,
+          "latency_ms": 3752.1,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "a5cb7a9d09c2",
+            "content": "1bf530f37092",
+            "path": "fb3620d3b02a"
+          },
+          "usage": {
+            "completion_tokens": 76,
+            "completion_tokens_details": {
+              "reasoning_tokens": 75
+            },
+            "prompt_tokens": 231,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 307
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 8000.0,
+          "is_correct": true,
+          "latency_ms": 1830.9,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "0c2f80b44cce",
+            "content": "5c560cd4153b",
+            "path": "af5287ddf20e"
+          },
+          "usage": {
+            "completion_tokens": 42,
+            "completion_tokens_details": {
+              "reasoning_tokens": 40
+            },
+            "prompt_tokens": 216,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 258
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 36.0,
+          "is_correct": true,
+          "latency_ms": 4175.5,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "fe3650ea8bc9",
+            "content": "97739627eaa6",
+            "path": "f70f9d22ae9a"
+          },
+          "usage": {
+            "completion_tokens": 60,
+            "completion_tokens_details": {
+              "reasoning_tokens": 59
+            },
+            "prompt_tokens": 258,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 318
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 6.0,
+          "is_correct": true,
+          "latency_ms": 3662.4,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "800726f08014",
+            "content": "0e3e8e63d21d",
+            "path": "ed4181c7875d"
+          },
+          "usage": {
+            "completion_tokens": 146,
+            "completion_tokens_details": {
+              "reasoning_tokens": 145
+            },
+            "prompt_tokens": 261,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 407
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 40.0,
+          "is_correct": true,
+          "latency_ms": 9546.3,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "7548890881a4",
+            "content": "624b87efb27f",
+            "path": "0b628a1b7d06"
+          },
+          "usage": {
+            "completion_tokens": 79,
+            "completion_tokens_details": {
+              "reasoning_tokens": 78
+            },
+            "prompt_tokens": 229,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 308
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 140.0,
+          "is_correct": true,
+          "latency_ms": 2877.7,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "09b3b1a13587",
+            "content": "2976598671e1",
+            "path": "a4c78a43c054"
+          },
+          "usage": {
+            "completion_tokens": 26,
+            "completion_tokens_details": {
+              "reasoning_tokens": 25
+            },
+            "prompt_tokens": 229,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 255
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 2125.0,
+          "is_correct": true,
+          "latency_ms": 3077.4,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "233d73108175",
+            "content": "da865f4e4077",
+            "path": "c926235cc6b7"
+          },
+          "usage": {
+            "completion_tokens": 80,
+            "completion_tokens_details": {
+              "reasoning_tokens": 78
+            },
+            "prompt_tokens": 261,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 341
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 17.0,
+          "is_correct": false,
+          "latency_ms": 7426.4,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "4f29c90da441",
+            "content": "4a50751e2cd6",
+            "path": "3882552929c0"
+          },
+          "usage": {
+            "completion_tokens": 454,
+            "completion_tokens_details": {
+              "reasoning_tokens": 453
+            },
+            "prompt_tokens": 252,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 706
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 50.0,
+          "is_correct": true,
+          "latency_ms": 2394.2,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "95f074658bb6",
+            "content": "17f589c76d8b",
+            "path": "1c4681800882"
+          },
+          "usage": {
+            "completion_tokens": 145,
+            "completion_tokens_details": {
+              "reasoning_tokens": 144
+            },
+            "prompt_tokens": 240,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 385
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 122.0,
+          "is_correct": true,
+          "latency_ms": 3093.8,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "9a4b09c33600",
+            "content": "3d5fe020055e",
+            "path": "ceec4f00598a"
+          },
+          "usage": {
+            "completion_tokens": 81,
+            "completion_tokens_details": {
+              "reasoning_tokens": 80
+            },
+            "prompt_tokens": 221,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 302
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": 34.0,
+          "is_correct": true,
+          "latency_ms": 3068.7,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "8673aa168b05",
+            "content": "21da5c95c146",
+            "path": "db0f2ab411e0"
+          },
+          "usage": {
+            "completion_tokens": 129,
+            "completion_tokens_details": {
+              "reasoning_tokens": 125
+            },
+            "prompt_tokens": 248,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 377
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": true,
+          "latency_ms": 11047.8,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "0d08c61cd1df",
+            "content": "4c0671cb28a8",
+            "path": "3376cee095d9"
+          },
+          "usage": {
+            "completion_tokens": 178,
+            "completion_tokens_details": {
+              "reasoning_tokens": 177
+            },
+            "prompt_tokens": 199,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 377
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": true,
+          "latency_ms": 4275.2,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "2e7dc1f09e4e",
+            "content": "d0c9399342cc",
+            "path": "e87f57caea2e"
+          },
+          "usage": {
+            "completion_tokens": 67,
+            "completion_tokens_details": {
+              "reasoning_tokens": 66
+            },
+            "prompt_tokens": 197,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 264
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": true,
+          "latency_ms": 2780.2,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "d6e0fac21c8a",
+            "content": "84d514edf2a2",
+            "path": "0bf2a34d8609"
+          },
+          "usage": {
+            "completion_tokens": 109,
+            "completion_tokens_details": {
+              "reasoning_tokens": 108
+            },
+            "prompt_tokens": 201,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 310
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": true,
+          "latency_ms": 2005.2,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "887f1c63f504",
+            "content": "3d9ecb696a70",
+            "path": "f04db96eabb1"
+          },
+          "usage": {
+            "completion_tokens": 34,
+            "completion_tokens_details": {
+              "reasoning_tokens": 33
+            },
+            "prompt_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 229
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": false,
+          "latency_ms": 5654.4,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "bc748e9e5403",
+            "content": "2508557fe577",
+            "path": "777a529128f3"
+          },
+          "usage": {
+            "completion_tokens": 316,
+            "completion_tokens_details": {
+              "reasoning_tokens": 315
+            },
+            "prompt_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 511
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": true,
+          "latency_ms": 1818.5,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "9fce1a9c1601",
+            "content": "68f3d7543086",
+            "path": "9c3a3ea0826d"
+          },
+          "usage": {
+            "completion_tokens": 87,
+            "completion_tokens_details": {
+              "reasoning_tokens": 86
+            },
+            "prompt_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 282
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": false,
+          "latency_ms": 3825.6,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "ec9746c036a4",
+            "content": "a7e9e32769a4",
+            "path": "14cdf67936c3"
+          },
+          "usage": {
+            "completion_tokens": 52,
+            "completion_tokens_details": {
+              "reasoning_tokens": 51
+            },
+            "prompt_tokens": 196,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 248
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": true,
+          "latency_ms": 5828.4,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "cb2a79a41cd9",
+            "content": "2b449732ed99",
+            "path": "2063046b0932"
+          },
+          "usage": {
+            "completion_tokens": 227,
+            "completion_tokens_details": {
+              "reasoning_tokens": 226
+            },
+            "prompt_tokens": 196,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 423
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": false,
+          "latency_ms": 4713.8,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "c376d8235ec4",
+            "content": "b5ad07d8fa79",
+            "path": "517b5d3dc633"
+          },
+          "usage": {
+            "completion_tokens": 352,
+            "completion_tokens_details": {
+              "reasoning_tokens": 351
+            },
+            "prompt_tokens": 201,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 553
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": false,
+          "latency_ms": 3068.9,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "e7c1509d19e2",
+            "content": "174ece3cf8b8",
+            "path": "87a1756cd5dc"
+          },
+          "usage": {
+            "completion_tokens": 167,
+            "completion_tokens_details": {
+              "reasoning_tokens": 166
+            },
+            "prompt_tokens": 197,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 364
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": true,
+          "latency_ms": 1393.4,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "21f564105f5b",
+            "content": "817e2760d19f",
+            "path": "500376e12152"
+          },
+          "usage": {
+            "completion_tokens": 102,
+            "completion_tokens_details": {
+              "reasoning_tokens": 101
+            },
+            "prompt_tokens": 198,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 300
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": true,
+          "latency_ms": 5592.0,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "089b79e9ffb3",
+            "content": "388a4295c457",
+            "path": "8b22460e8b31"
+          },
+          "usage": {
+            "completion_tokens": 92,
+            "completion_tokens_details": {
+              "reasoning_tokens": 91
+            },
+            "prompt_tokens": 192,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 284
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": false,
+          "latency_ms": 7322.3,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "bb858d8d6e8a",
+            "content": "482dc1c94db5",
+            "path": "cdb18ba643fe"
+          },
+          "usage": {
+            "completion_tokens": 628,
+            "completion_tokens_details": {
+              "reasoning_tokens": 627
+            },
+            "prompt_tokens": 196,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 824
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": false,
+          "latency_ms": 3241.5,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "4d0e0fd2acf0",
+            "content": "bf2e8ec70350",
+            "path": "b06757d37144"
+          },
+          "usage": {
+            "completion_tokens": 103,
+            "completion_tokens_details": {
+              "reasoning_tokens": 102
+            },
+            "prompt_tokens": 199,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 302
+          }
+        },
+        {
+          "artifact_id": "<UNK>",
+          "extracted_answer": "<UNK>",
+          "is_correct": true,
+          "latency_ms": 7969.5,
+          "llm_output": "<UNK>",
+          "question": "<UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK> <UNK>",
+          "source_cell": "<UNK>",
+          "task": "<UNK>",
+          "three_hashes": {
+            "anchor": "f6d24554bee5",
+            "content": "33eaa61ee036",
+            "path": "45d210d798ac"
+          },
+          "usage": {
+            "completion_tokens": 168,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 202,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 370
+          }
+        }
+      ],
+      "proxy_artifacts_sha12": "c3e14bf0d316",
+      "sha256_12": "9E1CCBDCEACC",
+      "teacher": "minimax",
+      "v_vocab": 50
+    }
+  ]
+}

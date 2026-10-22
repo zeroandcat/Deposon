@@ -1,0 +1,922 @@
+{
+  "schema": "v3_recheck_result/28_p_m_attack_surface_cost/1",
+  "prereg": {
+    "path": "results/_v3_recheck_prereg_v1_2026_09_27.md",
+    "sha12": "88052d7db895",
+    "kill_line": "K-V3R-28",
+    "threshold": "TH-V3R-28 (attack_budget 档 1/2/3/4/8/16/32/64/80 + 算子 1-bit/2-bit/contig; safety_budget_lower_bound = 80)"
+  },
+  "executor": "results/_v3_recheck_28_executor_2026_09_27.py",
+  "date": "2026-09-27",
+  "seed": 20260927,
+  "runtime": "0 LLM; hashlib + json + random only; no network; read-only inputs; 篡改仅在内存副本",
+  "inputs": [
+    {
+      "path": "results/_p_m_attack_surface_cost_2026_09_16/p_m_attack_surface_cost_results_2026_09_16.json",
+      "sha12_measured": "fbcb60cf5102"
+    },
+    {
+      "path": "results/deposon_v42_v2_miss_rate_curve_2026_09_16.json",
+      "sha12_measured": "0a8ed127d6de"
+    }
+  ],
+  "construct": {
+    "definition": "detection_rate(operator, budget) = detected / (TRIALS x 8 files)",
+    "operators": [
+      "one_bit_flip",
+      "two_bit_flip",
+      "contig_flip"
+    ],
+    "budgets": [
+      1,
+      2,
+      3,
+      4,
+      8,
+      16,
+      32,
+      64,
+      80
+    ],
+    "trials_per_cell": 50,
+    "budget_semantics": "budget = 每文件翻转位点数（sites）；沿原 P-M 字面 unit_perturbation_count = attack_budget x 8 files（8 = 受保护文件数）",
+    "contig_run_bits": 8,
+    "detector_primary": "v42_v2 L1 内容寻址合约：sha12(tampered) != manifest sha12 -> 检出（verifier 拒绝）",
+    "detector_secondary": "逐字节汉明距离 > 0（最小非平凡阈值，0 可调参数）",
+    "ground_truth": "v42_v2 baseline manifest 8 件真 SHA-12（+ 5 锚件 03c6c01f3697 内含其中）"
+  },
+  "construct_degen_self_check": {
+    "gate": "K-V3R-0-A: n_distinct > 3 + std > 0 on every on-disk input field",
+    "input_fields": {
+      "v42v2_manifest_sha12 (8 件真值, 逐文件)": {
+        "n": 8,
+        "n_distinct": 8,
+        "std_of_lead2hex": 72.2266398221598,
+        "min": "03c6c01f3697",
+        "max": "e5a299f69a22",
+        "distinct_values": [
+          "03c6c01f3697",
+          "3e369a1f6171",
+          "8423ffe266af",
+          "910c4333eead",
+          "9d9ae5001c57",
+          "b1463bb24403",
+          "e19e76c5da7e",
+          "e5a299f69a22"
+        ]
+      },
+      "protected_file_sizes_bytes (逐文件)": {
+        "n": 8,
+        "n_distinct": 8,
+        "std": 130850.37369811941,
+        "min": 6680,
+        "max": 409104,
+        "mean": 66867.75,
+        "distinct_values": [
+          6680,
+          7335,
+          8699,
+          8915,
+          9078,
+          15927,
+          69204,
+          409104
+        ]
+      },
+      "budget_ladder (TH-V3R-28 冻结)": {
+        "n": 9,
+        "n_distinct": 9,
+        "std": 27.82884195298907,
+        "min": 1,
+        "max": 80,
+        "mean": 23.333333333333332,
+        "distinct_values": [
+          1,
+          2,
+          3,
+          4,
+          8,
+          16,
+          32,
+          64,
+          80
+        ]
+      },
+      "P-M_原 detection_rate (10 档, 对照, 应退化)": {
+        "n": 10,
+        "n_distinct": 1,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "distinct_values": [
+          0.0
+        ]
+      }
+    },
+    "gate_per_field": {
+      "v42v2_manifest_sha12 (8 件真值, 逐文件)": true,
+      "protected_file_sizes_bytes (逐文件)": true,
+      "budget_ladder (TH-V3R-28 冻结)": true
+    },
+    "degenerate_alarm_hit": false,
+    "gate_pass": true,
+    "identifier_fields_exempt": {
+      "5_anchor_json_sha12 (标识符, 非分布字段)": "03c6c01f3697",
+      "note": "标识符字段 n_distinct=1 属设计预期（单值锚 ID），K-V3R-0-A 门槛按 §1.2 辅助说明只对「真分布」输入字段生效；此处如实登记并豁免，豁免理由入表。",
+      "anchor_measured_sha12": "03c6c01f3697",
+      "anchor_matches_p_m_recorded": true
+    },
+    "manifest_vs_measured_all_match": true,
+    "output_field": {
+      "detection_rate_new": {
+        "n": 27,
+        "n_distinct": 1,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "distinct_values": [
+          1.0
+        ]
+      }
+    },
+    "output_ceiling_series": true,
+    "output_ceiling_note": "新构造 detection_rate 呈天花板序列（全部 1.0）时 n_distinct=1/std=0，这是检测器饱和而非判据退化；判据非退化性由上方 input_fields 承担。与原 10 档 == 0.0 的对照见 legacy_dual_track。",
+    "contrast": {
+      "original_P-M_detection_rate": {
+        "n": 10,
+        "n_distinct": 1,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "distinct_values": [
+          0.0
+        ]
+      }
+    }
+  },
+  "matrix": [
+    {
+      "operator": "one_bit_flip",
+      "attack_budget": 1,
+      "bits_per_file": 1,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "one_bit_flip",
+      "attack_budget": 2,
+      "bits_per_file": 2,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "one_bit_flip",
+      "attack_budget": 3,
+      "bits_per_file": 3,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "one_bit_flip",
+      "attack_budget": 4,
+      "bits_per_file": 4,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "one_bit_flip",
+      "attack_budget": 8,
+      "bits_per_file": 8,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "one_bit_flip",
+      "attack_budget": 16,
+      "bits_per_file": 16,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "one_bit_flip",
+      "attack_budget": 32,
+      "bits_per_file": 32,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "one_bit_flip",
+      "attack_budget": 64,
+      "bits_per_file": 64,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "one_bit_flip",
+      "attack_budget": 80,
+      "bits_per_file": 80,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "two_bit_flip",
+      "attack_budget": 1,
+      "bits_per_file": 2,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "two_bit_flip",
+      "attack_budget": 2,
+      "bits_per_file": 4,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "two_bit_flip",
+      "attack_budget": 3,
+      "bits_per_file": 6,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "two_bit_flip",
+      "attack_budget": 4,
+      "bits_per_file": 8,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "two_bit_flip",
+      "attack_budget": 8,
+      "bits_per_file": 16,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "two_bit_flip",
+      "attack_budget": 16,
+      "bits_per_file": 32,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "two_bit_flip",
+      "attack_budget": 32,
+      "bits_per_file": 64,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "two_bit_flip",
+      "attack_budget": 64,
+      "bits_per_file": 128,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "two_bit_flip",
+      "attack_budget": 80,
+      "bits_per_file": 160,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "contig_flip",
+      "attack_budget": 1,
+      "bits_per_file": 8,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "contig_flip",
+      "attack_budget": 2,
+      "bits_per_file": 16,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "contig_flip",
+      "attack_budget": 3,
+      "bits_per_file": 24,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "contig_flip",
+      "attack_budget": 4,
+      "bits_per_file": 32,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "contig_flip",
+      "attack_budget": 8,
+      "bits_per_file": 64,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "contig_flip",
+      "attack_budget": 16,
+      "bits_per_file": 128,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "contig_flip",
+      "attack_budget": 32,
+      "bits_per_file": 256,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "contig_flip",
+      "attack_budget": 64,
+      "bits_per_file": 512,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    },
+    {
+      "operator": "contig_flip",
+      "attack_budget": 80,
+      "bits_per_file": 640,
+      "trials": 400,
+      "detected_count": 400,
+      "missed_count": 0,
+      "detection_rate": 1.0,
+      "miss_rate": 0.0,
+      "hamming_detector_rate": 1.0,
+      "no_op_tamper_count": 0
+    }
+  ],
+  "sensitivity_contig_run_bits": {
+    "note": "contig_flip 连续长度是唯一实现自由度；本表验证判定不随其变化（0 新设阈值）",
+    "run_4": {
+      "n": 27,
+      "n_distinct": 1,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "distinct_values": [
+        1.0
+      ]
+    },
+    "run_8": {
+      "n": 27,
+      "n_distinct": 1,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "distinct_values": [
+        1.0
+      ]
+    },
+    "run_16": {
+      "n": 27,
+      "n_distinct": 1,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "distinct_values": [
+        1.0
+      ]
+    },
+    "run_32": {
+      "n": 27,
+      "n_distinct": 1,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0,
+      "distinct_values": [
+        1.0
+      ]
+    }
+  },
+  "root_cause_test": {
+    "hypothesis": "原 P-M detection_rate == 0.0 的根因是计数语义反转（is_valid=True -> detected），而非检测能力缺失",
+    "method": "把原计数反转口径套到本次新构造的真实篡改数据上重算（legacy_inverted_recount）",
+    "legacy_inverted_recount": [
+      {
+        "operator": "one_bit_flip",
+        "attack_budget": 1,
+        "bits_per_file": 1,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "one_bit_flip",
+        "attack_budget": 2,
+        "bits_per_file": 2,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "one_bit_flip",
+        "attack_budget": 3,
+        "bits_per_file": 3,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "one_bit_flip",
+        "attack_budget": 4,
+        "bits_per_file": 4,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "one_bit_flip",
+        "attack_budget": 8,
+        "bits_per_file": 8,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "one_bit_flip",
+        "attack_budget": 16,
+        "bits_per_file": 16,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "one_bit_flip",
+        "attack_budget": 32,
+        "bits_per_file": 32,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "one_bit_flip",
+        "attack_budget": 64,
+        "bits_per_file": 64,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "one_bit_flip",
+        "attack_budget": 80,
+        "bits_per_file": 80,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "two_bit_flip",
+        "attack_budget": 1,
+        "bits_per_file": 2,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "two_bit_flip",
+        "attack_budget": 2,
+        "bits_per_file": 4,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "two_bit_flip",
+        "attack_budget": 3,
+        "bits_per_file": 6,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "two_bit_flip",
+        "attack_budget": 4,
+        "bits_per_file": 8,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "two_bit_flip",
+        "attack_budget": 8,
+        "bits_per_file": 16,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "two_bit_flip",
+        "attack_budget": 16,
+        "bits_per_file": 32,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "two_bit_flip",
+        "attack_budget": 32,
+        "bits_per_file": 64,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "two_bit_flip",
+        "attack_budget": 64,
+        "bits_per_file": 128,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "two_bit_flip",
+        "attack_budget": 80,
+        "bits_per_file": 160,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "contig_flip",
+        "attack_budget": 1,
+        "bits_per_file": 8,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "contig_flip",
+        "attack_budget": 2,
+        "bits_per_file": 16,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "contig_flip",
+        "attack_budget": 3,
+        "bits_per_file": 24,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "contig_flip",
+        "attack_budget": 4,
+        "bits_per_file": 32,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "contig_flip",
+        "attack_budget": 8,
+        "bits_per_file": 64,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "contig_flip",
+        "attack_budget": 16,
+        "bits_per_file": 128,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "contig_flip",
+        "attack_budget": 32,
+        "bits_per_file": 256,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "contig_flip",
+        "attack_budget": 64,
+        "bits_per_file": 512,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      },
+      {
+        "operator": "contig_flip",
+        "attack_budget": 80,
+        "bits_per_file": 640,
+        "trials": 400,
+        "detected_count": 0,
+        "missed_count": 0,
+        "detection_rate": 0.0,
+        "miss_rate": 0.0,
+        "hamming_detector_rate": 1.0,
+        "no_op_tamper_count": 0
+      }
+    ],
+    "legacy_inverted_detection_rate_stat": {
+      "n": 27,
+      "n_distinct": 1,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "distinct_values": [
+        0.0
+      ]
+    },
+    "reproduces_original_zero_pattern": true,
+    "disk_evidence": {
+      "source": "results/deposon_v42_v2_miss_rate_curve_2026_09_16.json §counting_inversion_recount（n_trials=2000, seed=20260916）",
+      "recorded_conclusion": "P-M 初报'漏检率 100%'系计数语义反转; 更正为: 旧 v42 对单 bit 翻转检出率 100% (单 bit 级)。旧 v42 的真实短板是覆盖仅 5 文件、单值比对无定位能力、无 manifest/链结构, v42_v2 为此而设。",
+      "recorded_correct_detection_rate": 1.0
+    },
+    "missing_artifact": "原 P-M 执行器 deposon_team/plugins/_p_m_attack_surface_cost_runner_2026_09_16.py（v42_v2 报告引用）在盘上不存在，无法逐行复核其 L30-45 / L82-87；如实登记。"
+  },
+  "legacy_dual_track": {
+    "legacy_verdict": "UNVERIFIED（判据退化：10 档 budget 的 detection_rate 全部 == 0.0，n_distinct=1，std=0，低于随机猜测 0.5；safety_budget_lower_bound 记 80，v42_safety_index 记 SECURE）",
+    "legacy_constant_degenerate": true,
+    "legacy_detection_rate_stat": {
+      "n": 10,
+      "n_distinct": 1,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "distinct_values": [
+        0.0
+      ]
+    },
+    "legacy_safety_budget_lower_bound": 80,
+    "legacy_v42_safety_index": "SECURE",
+    "legacy_random_guess_rate": 0.5
+  },
+  "verdict": {
+    "new_verdict": "PASS",
+    "new_claim_verdict": "真成立：真 attack 算子 + 真 detection 算法下 detection_rate > 0 且安全预算下界 >= 80 成立",
+    "legacy_verdict": "UNVERIFIED（判据退化：10 档 budget 的 detection_rate 全部 == 0.0，n_distinct=1，std=0，低于随机猜测 0.5；safety_budget_lower_bound 记 80，v42_safety_index 记 SECURE）",
+    "一致性": "不一致（维持原标注 + 显式登记新构造 verdict）",
+    "any_budget_detection_rate_positive": true,
+    "any_miss_observed": false,
+    "safety_budget_lower_bound_remeasured": 80,
+    "safety_budget_lower_bound_legacy": 80,
+    "safety_bound_pass": true,
+    "kill_line_pass": true,
+    "kill_line_hit": false,
+    "改判档位": "§2.3 第 2 行（PASS + 不一致）→ 维持原 V3 标注不动 + 显式登记新构造 verdict + 归「不明」分支"
+  },
+  "iron_rules": {
+    "0_LLM": true,
+    "no_proxy": true,
+    "no_key_in_prompt_json_disk": true,
+    "read_only_inputs": true,
+    "tamper_in_memory_only": true,
+    "derived_json_not_merged": true,
+    "v3_original_report_bytes_untouched": true
+  }
+}
