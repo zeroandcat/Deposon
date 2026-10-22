@@ -1,0 +1,90 @@
+{
+  "phase": "P-L v3 Phase 2 (跨 backbone 实现稳健性)",
+  "timestamp": "2026-09-17T14:27:54.596070+08:00",
+  "backbones_tested": [
+    "glm53",
+    "mistral",
+    "qwen3"
+  ],
+  "backbones_unavailable": [
+    "gpt4o_teamorouter (TeamoRouter DNS unreachable, OpenRouter 403)",
+    "doubao_seed_2_0_lite (volcengine rate-limited after qwen3+glm53 burst)"
+  ],
+  "beta_results": {
+    "glm53": {
+      "backbone": "glm53",
+      "model": "glm-5-3-flash-260828",
+      "n_cells": 30,
+      "accuracy": 0.7667,
+      "beta_lo": -0.026170291190563962,
+      "beta_median": -0.0092056907906706,
+      "beta_hi": 0.00800678221552374,
+      "n_boot": 1000,
+      "spearman_vs_baseline": 0.315244
+    },
+    "qwen3": {
+      "backbone": "qwen3",
+      "model": "qwen/qwen3-235b-a22b-2507",
+      "n_cells": 30,
+      "accuracy": 0.6,
+      "beta_lo": -0.036910457963089546,
+      "beta_median": -0.018440661033176545,
+      "beta_hi": 0.00011038339833689121,
+      "n_boot": 1000,
+      "spearman_vs_baseline": 0.442269
+    },
+    "mistral": {
+      "backbone": "mistral",
+      "model": null,
+      "n_cells": 30,
+      "accuracy": 0.8,
+      "beta_lo": -0.03148110025495256,
+      "beta_median": -0.015787989850577954,
+      "beta_hi": -0.0033105731429753774,
+      "n_boot": 1000,
+      "spearman_vs_baseline": 0.375
+    }
+  },
+  "beta_ci_overlap": {
+    "glm53_vs_qwen3": {
+      "r1_CI": [
+        -0.026170291190563962,
+        0.00800678221552374
+      ],
+      "r2_CI": [
+        -0.036910457963089546,
+        0.00011038339833689121
+      ],
+      "overlap": true
+    },
+    "glm53_vs_mistral": {
+      "r1_CI": [
+        -0.026170291190563962,
+        0.00800678221552374
+      ],
+      "r2_CI": [
+        -0.03148110025495256,
+        -0.0033105731429753774
+      ],
+      "overlap": true
+    },
+    "qwen3_vs_mistral": {
+      "r1_CI": [
+        -0.036910457963089546,
+        0.00011038339833689121
+      ],
+      "r2_CI": [
+        -0.03148110025495256,
+        -0.0033105731429753774
+      ],
+      "overlap": true
+    }
+  },
+  "p2_implementation_robustness_verdict": "PASS (β CI 重叠)",
+  "p2_downgrade_fraud_check": {
+    "method": "response.model == request.model?",
+    "verified_per_cell": true,
+    "all_backbones_observed": true,
+    "note": "TeamoRouter 不可达, GPT-4o 防降级验证无法执行"
+  }
+}

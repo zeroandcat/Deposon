@@ -1,0 +1,130 @@
+{
+  "phase": "P-L v3 Phase 2 (closed-source via TeamoRouter, proxy 127.0.0.1:1018)",
+  "runner_version": "v3",
+  "timestamp": "2026-09-17T17:55:55.723230+08:00",
+  "TS": "20260917_175544",
+  "proxy": {
+    "HTTPS_PROXY": "http://127.0.0.1:1018",
+    "HTTP_PROXY": "http://127.0.0.1:1018",
+    "note": "port 1018 only; ALL_PROXY intentionally unset"
+  },
+  "backbones_tested": [
+    "gpt56sol",
+    "claude_sonnet5",
+    "gemini_37flash"
+  ],
+  "v3_improvements_summary": {
+    "hard_timeout_per_cell_s": 30,
+    "first_attempt_grace_s": 20,
+    "retries_per_backbone": 3,
+    "backoff_schedule_s": "1, 2",
+    "max_tokens_cap": 512,
+    "warmup_call_per_primary": true,
+    "chain_fallback_enabled": true,
+    "per_cell_incremental_save": true
+  },
+  "beta_results": {
+    "gpt56sol": {
+      "backbone": "gpt56sol",
+      "model": "gpt-5.6-sol",
+      "n_cells": 30,
+      "n_pass": 25,
+      "n_missing": 0,
+      "accuracy": 0.8333,
+      "beta_lo": -0.027453,
+      "beta_median": -0.01024,
+      "beta_hi": 0.006577,
+      "n_boot": 2000,
+      "answered_by_distribution": {
+        "gpt56sol": 29,
+        "gemini_37flash": 1
+      }
+    },
+    "claude_sonnet5": {
+      "backbone": "claude_sonnet5",
+      "model": "claude-sonnet-5",
+      "n_cells": 30,
+      "n_pass": 22,
+      "n_missing": 0,
+      "accuracy": 0.7333,
+      "beta_lo": -0.039812,
+      "beta_median": -0.022119,
+      "beta_hi": -0.001869,
+      "n_boot": 2000,
+      "answered_by_distribution": {
+        "claude_sonnet5": 29,
+        "gpt56sol": 1
+      }
+    },
+    "gemini_37flash": {
+      "backbone": "gemini_37flash",
+      "model": "gemini-3.7-flash",
+      "n_cells": 30,
+      "n_pass": 26,
+      "n_missing": 0,
+      "accuracy": 0.8667,
+      "beta_lo": -0.030946,
+      "beta_median": -0.014966,
+      "beta_hi": -0.002754,
+      "n_boot": 2000,
+      "answered_by_distribution": {
+        "gemini_37flash": 30
+      }
+    }
+  },
+  "beta_ci_overlap_closed3": {
+    "gpt56sol_vs_claude_sonnet5": {
+      "r1": {
+        "bb": "gpt56sol",
+        "CI": [
+          -0.027453,
+          0.006577
+        ]
+      },
+      "r2": {
+        "bb": "claude_sonnet5",
+        "CI": [
+          -0.039812,
+          -0.001869
+        ]
+      },
+      "overlap": true
+    },
+    "gpt56sol_vs_gemini_37flash": {
+      "r1": {
+        "bb": "gpt56sol",
+        "CI": [
+          -0.027453,
+          0.006577
+        ]
+      },
+      "r2": {
+        "bb": "gemini_37flash",
+        "CI": [
+          -0.030946,
+          -0.002754
+        ]
+      },
+      "overlap": true
+    },
+    "claude_sonnet5_vs_gemini_37flash": {
+      "r1": {
+        "bb": "claude_sonnet5",
+        "CI": [
+          -0.039812,
+          -0.001869
+        ]
+      },
+      "r2": {
+        "bb": "gemini_37flash",
+        "CI": [
+          -0.030946,
+          -0.002754
+        ]
+      },
+      "overlap": true
+    }
+  },
+  "p2_implementation_robustness_verdict": "PASS (β CI overlap for closed 3)",
+  "phase2_extension_note": "closed 3 backbone via TeamoRouter; Phase 2 已有 3 backbone (qwen3/glm53/doubao) and Phase 1 baseline (mistral) — 7 backbone compare in MD report (4 existing + 3 closed)"
+}

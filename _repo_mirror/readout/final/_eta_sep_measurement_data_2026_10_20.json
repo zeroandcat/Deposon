@@ -1,0 +1,2032 @@
+{
+ "piece_kind": "eta_sep_measurement_reading",
+ "piece_nature": "一次授权之测量之读数登记件 · 纯复算 · 只出读数与逐门过否 · 0 落五终判 · 0 闭 KD · 0 宣告段毕 · 0 代 PI 裁",
+ "authorization": "PI v155-Q4『授权 sep 一次测量』；v157-Q1 口径全采生效（生效即锁）；v157-Q3『即派』",
+ "measurement_time_cst": "2026-10-20T16:04:53+0800",
+ "observation_time_cst": "2026-10-20T13:35:44",
+ "measurement_body": "worker（测量棒）· 本棒即测量本体；第三方复算面俟其果另派（v157 §3-4 复算主体＝第三方）",
+ "source_fingerprints_self_measured": {
+  "results/_eta_main_run_reading_2026_10_20.json": {
+   "sha12": "f6fa0e8934b1",
+   "bytes": 786523,
+   "mtime_cst": "2026-10-20 13:35:44+0800"
+  },
+  "results/_eta_sep_caliber_draft_2026_10_20.md": {
+   "sha12": "2383be56f28f",
+   "bytes": 68943,
+   "mtime_cst": "2026-10-20 15:46:17+0800"
+  },
+  "pi_rulings/_pi_card_answers_register_2026_10_20_v157.md": {
+   "sha12": "2842e5a6b137",
+   "bytes": 3638,
+   "mtime_cst": "2026-10-20 15:54:20+0800"
+  },
+  "tools/exp_harness.py": {
+   "sha12": "ce64b9b97489",
+   "bytes": 45590
+  },
+  "tools/llm_client.py": {
+   "sha12": "1722500da4aa",
+   "bytes": 8118
+  }
+ },
+ "caliber_frozen": {
+  "opponent_domain": {
+   "id": "域甲",
+   "tiers": [
+    "ETAC-D1",
+    "ETAC-D2",
+    "ETAC-D3",
+    "ETAC-D4"
+   ],
+   "alias_note": "E-C1 与 ETAC-D1 同三元组，按 C-ETAC-8①/C-ETAC-9 别名归一，不计入（域乙口径未采）"
+  },
+  "value_vector": {
+   "id": "η-丙-1",
+   "n_elements": 5,
+   "element_meaning": "逐族（T1..T5）M1 经验 best 命中率 = 该族 actual_choice_is_best 计数 ÷ 该族决策数（排除后）",
+   "elements": [
+    "T1_GSM8K",
+    "T2_StrategyQA",
+    "T3_Trap",
+    "T4_2x2",
+    "T5_LowResource"
+   ],
+   "mechanism_face": "M1_Deposon_TRA",
+   "denominator": "排除后（material_face.exclusion.post_exclusion_decisions_per_cell）"
+  },
+  "threshold_lock": {
+   "id": "丙-甲",
+   "s": 2,
+   "reflux": false
+  },
+  "sep_definition": "sep(v) ≡ |{ w ∈ 域甲在册候选 : w 之值向量 ≠ v 之值向量 }|",
+  "comparison_operator": "元对元相等判定（C4 之逐字段相等体例）",
+  "canonical_form": "O2 升序 sorted（读数件主口径）；并列出族序逐字段对齐之平行读以两读并出",
+  "construction_domain": "四档 ETAC-D1..-4 × M1_Deposon_TRA × 15 格 × seed 42 × 排除后构造域（T4_2x2#04 依 v147-Q2 排除）"
+ },
+ "per_tier_family": {
+  "ETAC-D1": {
+   "T1_GSM8K": {
+    "hits": 13,
+    "hits_boolcount": 13,
+    "n": 15,
+    "missing_field": 0,
+    "rate_fraction": "13/15",
+    "rate": 0.8666666666666667,
+    "rate_exact": [
+     13,
+     15
+    ]
+   },
+   "T2_StrategyQA": {
+    "hits": 10,
+    "hits_boolcount": 10,
+    "n": 15,
+    "missing_field": 0,
+    "rate_fraction": "10/15",
+    "rate": 0.6666666666666666,
+    "rate_exact": [
+     2,
+     3
+    ]
+   },
+   "T3_Trap": {
+    "hits": 13,
+    "hits_boolcount": 13,
+    "n": 15,
+    "missing_field": 0,
+    "rate_fraction": "13/15",
+    "rate": 0.8666666666666667,
+    "rate_exact": [
+     13,
+     15
+    ]
+   },
+   "T4_2x2": {
+    "hits": 13,
+    "hits_boolcount": 13,
+    "n": 14,
+    "missing_field": 0,
+    "rate_fraction": "13/14",
+    "rate": 0.9285714285714286,
+    "rate_exact": [
+     13,
+     14
+    ]
+   },
+   "T5_LowResource": {
+    "hits": 8,
+    "hits_boolcount": 8,
+    "n": 20,
+    "missing_field": 0,
+    "rate_fraction": "8/20",
+    "rate": 0.4,
+    "rate_exact": [
+     2,
+     5
+    ]
+   }
+  },
+  "ETAC-D2": {
+   "T1_GSM8K": {
+    "hits": 15,
+    "hits_boolcount": 15,
+    "n": 15,
+    "missing_field": 0,
+    "rate_fraction": "15/15",
+    "rate": 1.0,
+    "rate_exact": [
+     1,
+     1
+    ]
+   },
+   "T2_StrategyQA": {
+    "hits": 15,
+    "hits_boolcount": 15,
+    "n": 15,
+    "missing_field": 0,
+    "rate_fraction": "15/15",
+    "rate": 1.0,
+    "rate_exact": [
+     1,
+     1
+    ]
+   },
+   "T3_Trap": {
+    "hits": 12,
+    "hits_boolcount": 12,
+    "n": 15,
+    "missing_field": 0,
+    "rate_fraction": "12/15",
+    "rate": 0.8,
+    "rate_exact": [
+     4,
+     5
+    ]
+   },
+   "T4_2x2": {
+    "hits": 14,
+    "hits_boolcount": 14,
+    "n": 14,
+    "missing_field": 0,
+    "rate_fraction": "14/14",
+    "rate": 1.0,
+    "rate_exact": [
+     1,
+     1
+    ]
+   },
+   "T5_LowResource": {
+    "hits": 11,
+    "hits_boolcount": 11,
+    "n": 20,
+    "missing_field": 0,
+    "rate_fraction": "11/20",
+    "rate": 0.55,
+    "rate_exact": [
+     11,
+     20
+    ]
+   }
+  },
+  "ETAC-D3": {
+   "T1_GSM8K": {
+    "hits": 4,
+    "hits_boolcount": 4,
+    "n": 15,
+    "missing_field": 0,
+    "rate_fraction": "4/15",
+    "rate": 0.26666666666666666,
+    "rate_exact": [
+     4,
+     15
+    ]
+   },
+   "T2_StrategyQA": {
+    "hits": 3,
+    "hits_boolcount": 3,
+    "n": 15,
+    "missing_field": 0,
+    "rate_fraction": "3/15",
+    "rate": 0.2,
+    "rate_exact": [
+     1,
+     5
+    ]
+   },
+   "T3_Trap": {
+    "hits": 2,
+    "hits_boolcount": 2,
+    "n": 15,
+    "missing_field": 0,
+    "rate_fraction": "2/15",
+    "rate": 0.13333333333333333,
+    "rate_exact": [
+     2,
+     15
+    ]
+   },
+   "T4_2x2": {
+    "hits": 8,
+    "hits_boolcount": 8,
+    "n": 14,
+    "missing_field": 0,
+    "rate_fraction": "8/14",
+    "rate": 0.5714285714285714,
+    "rate_exact": [
+     4,
+     7
+    ]
+   },
+   "T5_LowResource": {
+    "hits": 4,
+    "hits_boolcount": 4,
+    "n": 20,
+    "missing_field": 0,
+    "rate_fraction": "4/20",
+    "rate": 0.2,
+    "rate_exact": [
+     1,
+     5
+    ]
+   }
+  },
+  "ETAC-D4": {
+   "T1_GSM8K": {
+    "hits": 6,
+    "hits_boolcount": 6,
+    "n": 15,
+    "missing_field": 0,
+    "rate_fraction": "6/15",
+    "rate": 0.4,
+    "rate_exact": [
+     2,
+     5
+    ]
+   },
+   "T2_StrategyQA": {
+    "hits": 6,
+    "hits_boolcount": 6,
+    "n": 15,
+    "missing_field": 0,
+    "rate_fraction": "6/15",
+    "rate": 0.4,
+    "rate_exact": [
+     2,
+     5
+    ]
+   },
+   "T3_Trap": {
+    "hits": 6,
+    "hits_boolcount": 6,
+    "n": 15,
+    "missing_field": 0,
+    "rate_fraction": "6/15",
+    "rate": 0.4,
+    "rate_exact": [
+     2,
+     5
+    ]
+   },
+   "T4_2x2": {
+    "hits": 12,
+    "hits_boolcount": 12,
+    "n": 14,
+    "missing_field": 0,
+    "rate_fraction": "12/14",
+    "rate": 0.8571428571428571,
+    "rate_exact": [
+     6,
+     7
+    ]
+   },
+   "T5_LowResource": {
+    "hits": 6,
+    "hits_boolcount": 6,
+    "n": 20,
+    "missing_field": 0,
+    "rate_fraction": "6/20",
+    "rate": 0.3,
+    "rate_exact": [
+     3,
+     10
+    ]
+   }
+  }
+ },
+ "value_vectors": {
+  "family_aligned": {
+   "ETAC-D1": [
+    [
+     13,
+     15
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     13,
+     15
+    ],
+    [
+     13,
+     14
+    ],
+    [
+     2,
+     5
+    ]
+   ],
+   "ETAC-D2": [
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     11,
+     20
+    ]
+   ],
+   "ETAC-D3": [
+    [
+     4,
+     15
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     2,
+     15
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     1,
+     5
+    ]
+   ],
+   "ETAC-D4": [
+    [
+     2,
+     5
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     3,
+     10
+    ]
+   ]
+  },
+  "family_aligned_float": {
+   "ETAC-D1": [
+    0.8666666666666667,
+    0.6666666666666666,
+    0.8666666666666667,
+    0.9285714285714286,
+    0.4
+   ],
+   "ETAC-D2": [
+    1.0,
+    1.0,
+    0.8,
+    1.0,
+    0.55
+   ],
+   "ETAC-D3": [
+    0.26666666666666666,
+    0.2,
+    0.13333333333333333,
+    0.5714285714285714,
+    0.2
+   ],
+   "ETAC-D4": [
+    0.4,
+    0.4,
+    0.4,
+    0.8571428571428571,
+    0.3
+   ]
+  },
+  "o2_sorted": {
+   "ETAC-D1": [
+    [
+     2,
+     5
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     13,
+     15
+    ],
+    [
+     13,
+     15
+    ],
+    [
+     13,
+     14
+    ]
+   ],
+   "ETAC-D2": [
+    [
+     11,
+     20
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "ETAC-D3": [
+    [
+     2,
+     15
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     4,
+     15
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "ETAC-D4": [
+    [
+     3,
+     10
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     6,
+     7
+    ]
+   ]
+  },
+  "o2_sorted_float": {
+   "ETAC-D1": [
+    0.4,
+    0.6666666666666666,
+    0.8666666666666667,
+    0.8666666666666667,
+    0.9285714285714286
+   ],
+   "ETAC-D2": [
+    0.55,
+    0.8,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "ETAC-D3": [
+    0.13333333333333333,
+    0.2,
+    0.2,
+    0.26666666666666666,
+    0.5714285714285714
+   ],
+   "ETAC-D4": [
+    0.3,
+    0.4,
+    0.4,
+    0.4,
+    0.8571428571428571
+   ]
+  }
+ },
+ "crosscheck_vs_registered_faces": {
+  "tier_aggregate": [
+   {
+    "tier": "ETAC-D1",
+    "registered_n_decisions": 79,
+    "my_n_decisions": 79,
+    "n_match": true,
+    "registered_empirical_best_hit_rate": 0.7215189873417721,
+    "my_empirical_best_hit_rate": 0.7215189873417721,
+    "rate_match_float_equal": true,
+    "rate_match_rational_equivalent": true,
+    "registered_n_actual_choice_equals_analytic_argmax": 57,
+    "my_hits": 57,
+    "hits_match": true
+   },
+   {
+    "tier": "ETAC-D2",
+    "registered_n_decisions": 79,
+    "my_n_decisions": 79,
+    "n_match": true,
+    "registered_empirical_best_hit_rate": 0.8481012658227848,
+    "my_empirical_best_hit_rate": 0.8481012658227848,
+    "rate_match_float_equal": true,
+    "rate_match_rational_equivalent": true,
+    "registered_n_actual_choice_equals_analytic_argmax": 67,
+    "my_hits": 67,
+    "hits_match": true
+   },
+   {
+    "tier": "ETAC-D3",
+    "registered_n_decisions": 79,
+    "my_n_decisions": 79,
+    "n_match": true,
+    "registered_empirical_best_hit_rate": 0.26582278481012656,
+    "my_empirical_best_hit_rate": 0.26582278481012656,
+    "rate_match_float_equal": true,
+    "rate_match_rational_equivalent": true,
+    "registered_n_actual_choice_equals_analytic_argmax": 21,
+    "my_hits": 21,
+    "hits_match": true
+   },
+   {
+    "tier": "ETAC-D4",
+    "registered_n_decisions": 79,
+    "my_n_decisions": 79,
+    "n_match": true,
+    "registered_empirical_best_hit_rate": 0.45569620253164556,
+    "my_empirical_best_hit_rate": 0.45569620253164556,
+    "rate_match_float_equal": true,
+    "rate_match_rational_equivalent": true,
+    "registered_n_actual_choice_equals_analytic_argmax": 36,
+    "my_hits": 36,
+    "hits_match": true
+   }
+  ],
+  "per_cell": [
+   {
+    "tier": "ETAC-D1",
+    "family": "T1_GSM8K",
+    "registered_empirical_best_hit_rate": 0.8666666666666667,
+    "my_rate": 0.8666666666666667,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 15,
+    "my_n": 15
+   },
+   {
+    "tier": "ETAC-D1",
+    "family": "T2_StrategyQA",
+    "registered_empirical_best_hit_rate": 0.6666666666666666,
+    "my_rate": 0.6666666666666666,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 15,
+    "my_n": 15
+   },
+   {
+    "tier": "ETAC-D1",
+    "family": "T3_Trap",
+    "registered_empirical_best_hit_rate": 0.8666666666666667,
+    "my_rate": 0.8666666666666667,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 15,
+    "my_n": 15
+   },
+   {
+    "tier": "ETAC-D1",
+    "family": "T4_2x2",
+    "registered_empirical_best_hit_rate": 0.9285714285714286,
+    "my_rate": 0.9285714285714286,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 14,
+    "my_n": 14
+   },
+   {
+    "tier": "ETAC-D1",
+    "family": "T5_LowResource",
+    "registered_empirical_best_hit_rate": 0.4,
+    "my_rate": 0.4,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 20,
+    "my_n": 20
+   },
+   {
+    "tier": "ETAC-D2",
+    "family": "T1_GSM8K",
+    "registered_empirical_best_hit_rate": 1.0,
+    "my_rate": 1.0,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 15,
+    "my_n": 15
+   },
+   {
+    "tier": "ETAC-D2",
+    "family": "T2_StrategyQA",
+    "registered_empirical_best_hit_rate": 1.0,
+    "my_rate": 1.0,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 15,
+    "my_n": 15
+   },
+   {
+    "tier": "ETAC-D2",
+    "family": "T3_Trap",
+    "registered_empirical_best_hit_rate": 0.8,
+    "my_rate": 0.8,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 15,
+    "my_n": 15
+   },
+   {
+    "tier": "ETAC-D2",
+    "family": "T4_2x2",
+    "registered_empirical_best_hit_rate": 1.0,
+    "my_rate": 1.0,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 14,
+    "my_n": 14
+   },
+   {
+    "tier": "ETAC-D2",
+    "family": "T5_LowResource",
+    "registered_empirical_best_hit_rate": 0.55,
+    "my_rate": 0.55,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 20,
+    "my_n": 20
+   },
+   {
+    "tier": "ETAC-D3",
+    "family": "T1_GSM8K",
+    "registered_empirical_best_hit_rate": 0.26666666666666666,
+    "my_rate": 0.26666666666666666,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 15,
+    "my_n": 15
+   },
+   {
+    "tier": "ETAC-D3",
+    "family": "T2_StrategyQA",
+    "registered_empirical_best_hit_rate": 0.2,
+    "my_rate": 0.2,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 15,
+    "my_n": 15
+   },
+   {
+    "tier": "ETAC-D3",
+    "family": "T3_Trap",
+    "registered_empirical_best_hit_rate": 0.13333333333333333,
+    "my_rate": 0.13333333333333333,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 15,
+    "my_n": 15
+   },
+   {
+    "tier": "ETAC-D3",
+    "family": "T4_2x2",
+    "registered_empirical_best_hit_rate": 0.5714285714285714,
+    "my_rate": 0.5714285714285714,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 14,
+    "my_n": 14
+   },
+   {
+    "tier": "ETAC-D3",
+    "family": "T5_LowResource",
+    "registered_empirical_best_hit_rate": 0.2,
+    "my_rate": 0.2,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 20,
+    "my_n": 20
+   },
+   {
+    "tier": "ETAC-D4",
+    "family": "T1_GSM8K",
+    "registered_empirical_best_hit_rate": 0.4,
+    "my_rate": 0.4,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 15,
+    "my_n": 15
+   },
+   {
+    "tier": "ETAC-D4",
+    "family": "T2_StrategyQA",
+    "registered_empirical_best_hit_rate": 0.4,
+    "my_rate": 0.4,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 15,
+    "my_n": 15
+   },
+   {
+    "tier": "ETAC-D4",
+    "family": "T3_Trap",
+    "registered_empirical_best_hit_rate": 0.4,
+    "my_rate": 0.4,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 15,
+    "my_n": 15
+   },
+   {
+    "tier": "ETAC-D4",
+    "family": "T4_2x2",
+    "registered_empirical_best_hit_rate": 0.8571428571428571,
+    "my_rate": 0.8571428571428571,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 14,
+    "my_n": 14
+   },
+   {
+    "tier": "ETAC-D4",
+    "family": "T5_LowResource",
+    "registered_empirical_best_hit_rate": 0.3,
+    "my_rate": 0.3,
+    "match_float_equal": true,
+    "match_rational_equivalent": true,
+    "registered_n_actual_decisions": 20,
+    "my_n": 20
+   }
+  ],
+  "all_tier_aggregate_match": true,
+  "all_per_cell_match": true,
+  "method_note": "比对口径＝复算之有理数命中率（hits/n）化为浮点后与在册 face 之浮点值逐位相等；并以 limit_denominator 有理等价复核"
+ },
+ "element_self_proof": [
+  {
+   "index": 0,
+   "family": "T1_GSM8K",
+   "per_tier": {
+    "ETAC-D1": {
+     "hits": 13,
+     "n": 15,
+     "rate": 0.8666666666666667,
+     "rate_fraction": "13/15"
+    },
+    "ETAC-D2": {
+     "hits": 15,
+     "n": 15,
+     "rate": 1.0,
+     "rate_fraction": "15/15"
+    },
+    "ETAC-D3": {
+     "hits": 4,
+     "n": 15,
+     "rate": 0.26666666666666666,
+     "rate_fraction": "4/15"
+    },
+    "ETAC-D4": {
+     "hits": 6,
+     "n": 15,
+     "rate": 0.4,
+     "rate_fraction": "6/15"
+    }
+   },
+   "n_distinct": 4,
+   "min": 0.26666666666666666,
+   "max": 1.0,
+   "std_population_ddof0": 0.3073181485764296,
+   "min_max_span": 0.7333333333333334,
+   "degenerate_le_1": false
+  },
+  {
+   "index": 1,
+   "family": "T2_StrategyQA",
+   "per_tier": {
+    "ETAC-D1": {
+     "hits": 10,
+     "n": 15,
+     "rate": 0.6666666666666666,
+     "rate_fraction": "10/15"
+    },
+    "ETAC-D2": {
+     "hits": 15,
+     "n": 15,
+     "rate": 1.0,
+     "rate_fraction": "15/15"
+    },
+    "ETAC-D3": {
+     "hits": 3,
+     "n": 15,
+     "rate": 0.2,
+     "rate_fraction": "3/15"
+    },
+    "ETAC-D4": {
+     "hits": 6,
+     "n": 15,
+     "rate": 0.4,
+     "rate_fraction": "6/15"
+    }
+   },
+   "n_distinct": 4,
+   "min": 0.2,
+   "max": 1.0,
+   "std_population_ddof0": 0.3,
+   "min_max_span": 0.8,
+   "degenerate_le_1": false
+  },
+  {
+   "index": 2,
+   "family": "T3_Trap",
+   "per_tier": {
+    "ETAC-D1": {
+     "hits": 13,
+     "n": 15,
+     "rate": 0.8666666666666667,
+     "rate_fraction": "13/15"
+    },
+    "ETAC-D2": {
+     "hits": 12,
+     "n": 15,
+     "rate": 0.8,
+     "rate_fraction": "12/15"
+    },
+    "ETAC-D3": {
+     "hits": 2,
+     "n": 15,
+     "rate": 0.13333333333333333,
+     "rate_fraction": "2/15"
+    },
+    "ETAC-D4": {
+     "hits": 6,
+     "n": 15,
+     "rate": 0.4,
+     "rate_fraction": "6/15"
+    }
+   },
+   "n_distinct": 4,
+   "min": 0.13333333333333333,
+   "max": 0.8666666666666667,
+   "std_population_ddof0": 0.2995366792601905,
+   "min_max_span": 0.7333333333333334,
+   "degenerate_le_1": false
+  },
+  {
+   "index": 3,
+   "family": "T4_2x2",
+   "per_tier": {
+    "ETAC-D1": {
+     "hits": 13,
+     "n": 14,
+     "rate": 0.9285714285714286,
+     "rate_fraction": "13/14"
+    },
+    "ETAC-D2": {
+     "hits": 14,
+     "n": 14,
+     "rate": 1.0,
+     "rate_fraction": "14/14"
+    },
+    "ETAC-D3": {
+     "hits": 8,
+     "n": 14,
+     "rate": 0.5714285714285714,
+     "rate_fraction": "8/14"
+    },
+    "ETAC-D4": {
+     "hits": 12,
+     "n": 14,
+     "rate": 0.8571428571428571,
+     "rate_fraction": "12/14"
+    }
+   },
+   "n_distinct": 4,
+   "min": 0.5714285714285714,
+   "max": 1.0,
+   "std_population_ddof0": 0.16268631391329108,
+   "min_max_span": 0.4285714285714286,
+   "degenerate_le_1": false
+  },
+  {
+   "index": 4,
+   "family": "T5_LowResource",
+   "per_tier": {
+    "ETAC-D1": {
+     "hits": 8,
+     "n": 20,
+     "rate": 0.4,
+     "rate_fraction": "8/20"
+    },
+    "ETAC-D2": {
+     "hits": 11,
+     "n": 20,
+     "rate": 0.55,
+     "rate_fraction": "11/20"
+    },
+    "ETAC-D3": {
+     "hits": 4,
+     "n": 20,
+     "rate": 0.2,
+     "rate_fraction": "4/20"
+    },
+    "ETAC-D4": {
+     "hits": 6,
+     "n": 20,
+     "rate": 0.3,
+     "rate_fraction": "6/20"
+    }
+   },
+   "n_distinct": 4,
+   "min": 0.2,
+   "max": 0.55,
+   "std_population_ddof0": 0.12930100540985753,
+   "min_max_span": 0.35000000000000003,
+   "degenerate_le_1": false
+  }
+ ],
+ "field_n_distinct": {
+  "family_aligned_5tuple": 4,
+  "o2_sorted_multiset": 4,
+  "threshold_in_register": ">3",
+  "gate_K-SEPCAL-5_pass_family_aligned": true,
+  "gate_K-SEPCAL-5_pass_o2_sorted": true
+ },
+ "pairwise": {
+  "family_aligned": [
+   {
+    "a": "ETAC-D1",
+    "b": "ETAC-D2",
+    "per_element": [
+     {
+      "index": 0,
+      "family": "T1_GSM8K",
+      "a": 0.8666666666666667,
+      "b": 1.0,
+      "a_frac": "13/15",
+      "b_frac": "1/1",
+      "equal": false
+     },
+     {
+      "index": 1,
+      "family": "T2_StrategyQA",
+      "a": 0.6666666666666666,
+      "b": 1.0,
+      "a_frac": "2/3",
+      "b_frac": "1/1",
+      "equal": false
+     },
+     {
+      "index": 2,
+      "family": "T3_Trap",
+      "a": 0.8666666666666667,
+      "b": 0.8,
+      "a_frac": "13/15",
+      "b_frac": "4/5",
+      "equal": false
+     },
+     {
+      "index": 3,
+      "family": "T4_2x2",
+      "a": 0.9285714285714286,
+      "b": 1.0,
+      "a_frac": "13/14",
+      "b_frac": "1/1",
+      "equal": false
+     },
+     {
+      "index": 4,
+      "family": "T5_LowResource",
+      "a": 0.4,
+      "b": 0.55,
+      "a_frac": "2/5",
+      "b_frac": "11/20",
+      "equal": false
+     }
+    ],
+    "n_elements_differing": 5,
+    "vectors_equal": false,
+    "equal": false
+   },
+   {
+    "a": "ETAC-D1",
+    "b": "ETAC-D3",
+    "per_element": [
+     {
+      "index": 0,
+      "family": "T1_GSM8K",
+      "a": 0.8666666666666667,
+      "b": 0.26666666666666666,
+      "a_frac": "13/15",
+      "b_frac": "4/15",
+      "equal": false
+     },
+     {
+      "index": 1,
+      "family": "T2_StrategyQA",
+      "a": 0.6666666666666666,
+      "b": 0.2,
+      "a_frac": "2/3",
+      "b_frac": "1/5",
+      "equal": false
+     },
+     {
+      "index": 2,
+      "family": "T3_Trap",
+      "a": 0.8666666666666667,
+      "b": 0.13333333333333333,
+      "a_frac": "13/15",
+      "b_frac": "2/15",
+      "equal": false
+     },
+     {
+      "index": 3,
+      "family": "T4_2x2",
+      "a": 0.9285714285714286,
+      "b": 0.5714285714285714,
+      "a_frac": "13/14",
+      "b_frac": "4/7",
+      "equal": false
+     },
+     {
+      "index": 4,
+      "family": "T5_LowResource",
+      "a": 0.4,
+      "b": 0.2,
+      "a_frac": "2/5",
+      "b_frac": "1/5",
+      "equal": false
+     }
+    ],
+    "n_elements_differing": 5,
+    "vectors_equal": false,
+    "equal": false
+   },
+   {
+    "a": "ETAC-D1",
+    "b": "ETAC-D4",
+    "per_element": [
+     {
+      "index": 0,
+      "family": "T1_GSM8K",
+      "a": 0.8666666666666667,
+      "b": 0.4,
+      "a_frac": "13/15",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 1,
+      "family": "T2_StrategyQA",
+      "a": 0.6666666666666666,
+      "b": 0.4,
+      "a_frac": "2/3",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 2,
+      "family": "T3_Trap",
+      "a": 0.8666666666666667,
+      "b": 0.4,
+      "a_frac": "13/15",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 3,
+      "family": "T4_2x2",
+      "a": 0.9285714285714286,
+      "b": 0.8571428571428571,
+      "a_frac": "13/14",
+      "b_frac": "6/7",
+      "equal": false
+     },
+     {
+      "index": 4,
+      "family": "T5_LowResource",
+      "a": 0.4,
+      "b": 0.3,
+      "a_frac": "2/5",
+      "b_frac": "3/10",
+      "equal": false
+     }
+    ],
+    "n_elements_differing": 5,
+    "vectors_equal": false,
+    "equal": false
+   },
+   {
+    "a": "ETAC-D2",
+    "b": "ETAC-D3",
+    "per_element": [
+     {
+      "index": 0,
+      "family": "T1_GSM8K",
+      "a": 1.0,
+      "b": 0.26666666666666666,
+      "a_frac": "1/1",
+      "b_frac": "4/15",
+      "equal": false
+     },
+     {
+      "index": 1,
+      "family": "T2_StrategyQA",
+      "a": 1.0,
+      "b": 0.2,
+      "a_frac": "1/1",
+      "b_frac": "1/5",
+      "equal": false
+     },
+     {
+      "index": 2,
+      "family": "T3_Trap",
+      "a": 0.8,
+      "b": 0.13333333333333333,
+      "a_frac": "4/5",
+      "b_frac": "2/15",
+      "equal": false
+     },
+     {
+      "index": 3,
+      "family": "T4_2x2",
+      "a": 1.0,
+      "b": 0.5714285714285714,
+      "a_frac": "1/1",
+      "b_frac": "4/7",
+      "equal": false
+     },
+     {
+      "index": 4,
+      "family": "T5_LowResource",
+      "a": 0.55,
+      "b": 0.2,
+      "a_frac": "11/20",
+      "b_frac": "1/5",
+      "equal": false
+     }
+    ],
+    "n_elements_differing": 5,
+    "vectors_equal": false,
+    "equal": false
+   },
+   {
+    "a": "ETAC-D2",
+    "b": "ETAC-D4",
+    "per_element": [
+     {
+      "index": 0,
+      "family": "T1_GSM8K",
+      "a": 1.0,
+      "b": 0.4,
+      "a_frac": "1/1",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 1,
+      "family": "T2_StrategyQA",
+      "a": 1.0,
+      "b": 0.4,
+      "a_frac": "1/1",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 2,
+      "family": "T3_Trap",
+      "a": 0.8,
+      "b": 0.4,
+      "a_frac": "4/5",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 3,
+      "family": "T4_2x2",
+      "a": 1.0,
+      "b": 0.8571428571428571,
+      "a_frac": "1/1",
+      "b_frac": "6/7",
+      "equal": false
+     },
+     {
+      "index": 4,
+      "family": "T5_LowResource",
+      "a": 0.55,
+      "b": 0.3,
+      "a_frac": "11/20",
+      "b_frac": "3/10",
+      "equal": false
+     }
+    ],
+    "n_elements_differing": 5,
+    "vectors_equal": false,
+    "equal": false
+   },
+   {
+    "a": "ETAC-D3",
+    "b": "ETAC-D4",
+    "per_element": [
+     {
+      "index": 0,
+      "family": "T1_GSM8K",
+      "a": 0.26666666666666666,
+      "b": 0.4,
+      "a_frac": "4/15",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 1,
+      "family": "T2_StrategyQA",
+      "a": 0.2,
+      "b": 0.4,
+      "a_frac": "1/5",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 2,
+      "family": "T3_Trap",
+      "a": 0.13333333333333333,
+      "b": 0.4,
+      "a_frac": "2/15",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 3,
+      "family": "T4_2x2",
+      "a": 0.5714285714285714,
+      "b": 0.8571428571428571,
+      "a_frac": "4/7",
+      "b_frac": "6/7",
+      "equal": false
+     },
+     {
+      "index": 4,
+      "family": "T5_LowResource",
+      "a": 0.2,
+      "b": 0.3,
+      "a_frac": "1/5",
+      "b_frac": "3/10",
+      "equal": false
+     }
+    ],
+    "n_elements_differing": 5,
+    "vectors_equal": false,
+    "equal": false
+   }
+  ],
+  "o2_sorted": [
+   {
+    "a": "ETAC-D1",
+    "b": "ETAC-D2",
+    "per_element": [
+     {
+      "index": 0,
+      "family": "T1_GSM8K",
+      "a": 0.4,
+      "b": 0.55,
+      "a_frac": "2/5",
+      "b_frac": "11/20",
+      "equal": false
+     },
+     {
+      "index": 1,
+      "family": "T2_StrategyQA",
+      "a": 0.6666666666666666,
+      "b": 0.8,
+      "a_frac": "2/3",
+      "b_frac": "4/5",
+      "equal": false
+     },
+     {
+      "index": 2,
+      "family": "T3_Trap",
+      "a": 0.8666666666666667,
+      "b": 1.0,
+      "a_frac": "13/15",
+      "b_frac": "1/1",
+      "equal": false
+     },
+     {
+      "index": 3,
+      "family": "T4_2x2",
+      "a": 0.8666666666666667,
+      "b": 1.0,
+      "a_frac": "13/15",
+      "b_frac": "1/1",
+      "equal": false
+     },
+     {
+      "index": 4,
+      "family": "T5_LowResource",
+      "a": 0.9285714285714286,
+      "b": 1.0,
+      "a_frac": "13/14",
+      "b_frac": "1/1",
+      "equal": false
+     }
+    ],
+    "n_elements_differing": 5,
+    "vectors_equal": false,
+    "equal": false
+   },
+   {
+    "a": "ETAC-D1",
+    "b": "ETAC-D3",
+    "per_element": [
+     {
+      "index": 0,
+      "family": "T1_GSM8K",
+      "a": 0.4,
+      "b": 0.13333333333333333,
+      "a_frac": "2/5",
+      "b_frac": "2/15",
+      "equal": false
+     },
+     {
+      "index": 1,
+      "family": "T2_StrategyQA",
+      "a": 0.6666666666666666,
+      "b": 0.2,
+      "a_frac": "2/3",
+      "b_frac": "1/5",
+      "equal": false
+     },
+     {
+      "index": 2,
+      "family": "T3_Trap",
+      "a": 0.8666666666666667,
+      "b": 0.2,
+      "a_frac": "13/15",
+      "b_frac": "1/5",
+      "equal": false
+     },
+     {
+      "index": 3,
+      "family": "T4_2x2",
+      "a": 0.8666666666666667,
+      "b": 0.26666666666666666,
+      "a_frac": "13/15",
+      "b_frac": "4/15",
+      "equal": false
+     },
+     {
+      "index": 4,
+      "family": "T5_LowResource",
+      "a": 0.9285714285714286,
+      "b": 0.5714285714285714,
+      "a_frac": "13/14",
+      "b_frac": "4/7",
+      "equal": false
+     }
+    ],
+    "n_elements_differing": 5,
+    "vectors_equal": false,
+    "equal": false
+   },
+   {
+    "a": "ETAC-D1",
+    "b": "ETAC-D4",
+    "per_element": [
+     {
+      "index": 0,
+      "family": "T1_GSM8K",
+      "a": 0.4,
+      "b": 0.3,
+      "a_frac": "2/5",
+      "b_frac": "3/10",
+      "equal": false
+     },
+     {
+      "index": 1,
+      "family": "T2_StrategyQA",
+      "a": 0.6666666666666666,
+      "b": 0.4,
+      "a_frac": "2/3",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 2,
+      "family": "T3_Trap",
+      "a": 0.8666666666666667,
+      "b": 0.4,
+      "a_frac": "13/15",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 3,
+      "family": "T4_2x2",
+      "a": 0.8666666666666667,
+      "b": 0.4,
+      "a_frac": "13/15",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 4,
+      "family": "T5_LowResource",
+      "a": 0.9285714285714286,
+      "b": 0.8571428571428571,
+      "a_frac": "13/14",
+      "b_frac": "6/7",
+      "equal": false
+     }
+    ],
+    "n_elements_differing": 5,
+    "vectors_equal": false,
+    "equal": false
+   },
+   {
+    "a": "ETAC-D2",
+    "b": "ETAC-D3",
+    "per_element": [
+     {
+      "index": 0,
+      "family": "T1_GSM8K",
+      "a": 0.55,
+      "b": 0.13333333333333333,
+      "a_frac": "11/20",
+      "b_frac": "2/15",
+      "equal": false
+     },
+     {
+      "index": 1,
+      "family": "T2_StrategyQA",
+      "a": 0.8,
+      "b": 0.2,
+      "a_frac": "4/5",
+      "b_frac": "1/5",
+      "equal": false
+     },
+     {
+      "index": 2,
+      "family": "T3_Trap",
+      "a": 1.0,
+      "b": 0.2,
+      "a_frac": "1/1",
+      "b_frac": "1/5",
+      "equal": false
+     },
+     {
+      "index": 3,
+      "family": "T4_2x2",
+      "a": 1.0,
+      "b": 0.26666666666666666,
+      "a_frac": "1/1",
+      "b_frac": "4/15",
+      "equal": false
+     },
+     {
+      "index": 4,
+      "family": "T5_LowResource",
+      "a": 1.0,
+      "b": 0.5714285714285714,
+      "a_frac": "1/1",
+      "b_frac": "4/7",
+      "equal": false
+     }
+    ],
+    "n_elements_differing": 5,
+    "vectors_equal": false,
+    "equal": false
+   },
+   {
+    "a": "ETAC-D2",
+    "b": "ETAC-D4",
+    "per_element": [
+     {
+      "index": 0,
+      "family": "T1_GSM8K",
+      "a": 0.55,
+      "b": 0.3,
+      "a_frac": "11/20",
+      "b_frac": "3/10",
+      "equal": false
+     },
+     {
+      "index": 1,
+      "family": "T2_StrategyQA",
+      "a": 0.8,
+      "b": 0.4,
+      "a_frac": "4/5",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 2,
+      "family": "T3_Trap",
+      "a": 1.0,
+      "b": 0.4,
+      "a_frac": "1/1",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 3,
+      "family": "T4_2x2",
+      "a": 1.0,
+      "b": 0.4,
+      "a_frac": "1/1",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 4,
+      "family": "T5_LowResource",
+      "a": 1.0,
+      "b": 0.8571428571428571,
+      "a_frac": "1/1",
+      "b_frac": "6/7",
+      "equal": false
+     }
+    ],
+    "n_elements_differing": 5,
+    "vectors_equal": false,
+    "equal": false
+   },
+   {
+    "a": "ETAC-D3",
+    "b": "ETAC-D4",
+    "per_element": [
+     {
+      "index": 0,
+      "family": "T1_GSM8K",
+      "a": 0.13333333333333333,
+      "b": 0.3,
+      "a_frac": "2/15",
+      "b_frac": "3/10",
+      "equal": false
+     },
+     {
+      "index": 1,
+      "family": "T2_StrategyQA",
+      "a": 0.2,
+      "b": 0.4,
+      "a_frac": "1/5",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 2,
+      "family": "T3_Trap",
+      "a": 0.2,
+      "b": 0.4,
+      "a_frac": "1/5",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 3,
+      "family": "T4_2x2",
+      "a": 0.26666666666666666,
+      "b": 0.4,
+      "a_frac": "4/15",
+      "b_frac": "2/5",
+      "equal": false
+     },
+     {
+      "index": 4,
+      "family": "T5_LowResource",
+      "a": 0.5714285714285714,
+      "b": 0.8571428571428571,
+      "a_frac": "4/7",
+      "b_frac": "6/7",
+      "equal": false
+     }
+    ],
+    "n_elements_differing": 5,
+    "vectors_equal": false,
+    "equal": false
+   }
+  ],
+  "diff_count_matrix_family_aligned": [
+   [
+    0,
+    5,
+    5,
+    5
+   ],
+   [
+    5,
+    0,
+    5,
+    5
+   ],
+   [
+    5,
+    5,
+    0,
+    5
+   ],
+   [
+    5,
+    5,
+    5,
+    0
+   ]
+  ],
+  "diff_count_matrix_o2_sorted": [
+   [
+    0,
+    5,
+    5,
+    5
+   ],
+   [
+    5,
+    0,
+    5,
+    5
+   ],
+   [
+    5,
+    5,
+    0,
+    5
+   ],
+   [
+    5,
+    5,
+    5,
+    0
+   ]
+  ]
+ },
+ "sep": {
+  "family_aligned": {
+   "ETAC-D1": {
+    "sep": 3,
+    "distinguishable_opponents": [
+     "ETAC-D2",
+     "ETAC-D3",
+     "ETAC-D4"
+    ],
+    "indistinguishable_opponents": []
+   },
+   "ETAC-D2": {
+    "sep": 3,
+    "distinguishable_opponents": [
+     "ETAC-D1",
+     "ETAC-D3",
+     "ETAC-D4"
+    ],
+    "indistinguishable_opponents": []
+   },
+   "ETAC-D3": {
+    "sep": 3,
+    "distinguishable_opponents": [
+     "ETAC-D1",
+     "ETAC-D2",
+     "ETAC-D4"
+    ],
+    "indistinguishable_opponents": []
+   },
+   "ETAC-D4": {
+    "sep": 3,
+    "distinguishable_opponents": [
+     "ETAC-D1",
+     "ETAC-D2",
+     "ETAC-D3"
+    ],
+    "indistinguishable_opponents": []
+   }
+  },
+  "o2_sorted": {
+   "ETAC-D1": {
+    "sep": 3,
+    "distinguishable_opponents": [
+     "ETAC-D2",
+     "ETAC-D3",
+     "ETAC-D4"
+    ],
+    "indistinguishable_opponents": []
+   },
+   "ETAC-D2": {
+    "sep": 3,
+    "distinguishable_opponents": [
+     "ETAC-D1",
+     "ETAC-D3",
+     "ETAC-D4"
+    ],
+    "indistinguishable_opponents": []
+   },
+   "ETAC-D3": {
+    "sep": 3,
+    "distinguishable_opponents": [
+     "ETAC-D1",
+     "ETAC-D2",
+     "ETAC-D4"
+    ],
+    "indistinguishable_opponents": []
+   },
+   "ETAC-D4": {
+    "sep": 3,
+    "distinguishable_opponents": [
+     "ETAC-D1",
+     "ETAC-D2",
+     "ETAC-D3"
+    ],
+    "indistinguishable_opponents": []
+   }
+  },
+  "values_family_aligned": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "values_o2_sorted": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "mute_family_aligned": true,
+  "mute_o2_sorted": true
+ },
+ "k_sepcal_gates": [
+  {
+   "id": "K-SEPCAL-1",
+   "name": "口径冻结门（FTFB 时序）",
+   "pass": true,
+   "frozen_text": "本草案经 PI 复核生效之落盘时点 与 任何 sep 之 eta 面读数之取得时点，二者之序可检",
+   "note": "口径件落盘 mtime=2026-10-20 15:46:17+0800 < 本测量取得时点=2026-10-20T16:04:53+0800 ⇒ 序可检；读数先于生效则整体作废之触发面未成立",
+   "owner": "worker（时序登记）＋ PI（生效宣告）",
+   "disposition_if_triggered": "违者（读数先于生效）⇒ 该面读数整体作废",
+   "status": "成就（PASS）"
+  },
+  {
+   "id": "K-SEPCAL-2",
+   "name": "对手域冻结门",
+   "pass": true,
+   "frozen_text": "对手域须测量前冻结为明示之有限集且档数>=2",
+   "note": "域甲＝{ETAC-D1,ETAC-D2,ETAC-D3,ETAC-D4}＝4 档 ≥ 2 ⇒ 成就；E-C1 已按 C-ETAC-8① 别名归一不计入（域乙口径未采）",
+   "owner": "worker（计数）＋ PI（域之裁）",
+   "disposition_if_triggered": "集为空或仅 1 档 ⇒ sep 不可测 ⇒ 判『不明』＋停手报回",
+   "status": "成就（PASS）"
+  },
+  {
+   "id": "K-SEPCAL-3",
+   "name": "值向量形冻结门",
+   "pass": true,
+   "frozen_text": "元数·逐元所指·取值域·比较算子·canonical 形·构造面 六项须测量前逐项冻结并写入读出件",
+   "note": "六项已由生效口径件冻结并于本件 §2 逐项照录 ⇒ 成就",
+   "owner": "PI（口径之裁）＋ worker（登记）",
+   "disposition_if_triggered": "缺任一项 ⇒ 不得开跑 ⇒ 判『不明』＋停手报回",
+   "status": "成就（PASS）"
+  },
+  {
+   "id": "K-SEPCAL-4",
+   "name": "注入面唯一门",
+   "pass": true,
+   "frozen_text": "值向量之每一元只可取自 M1_Deposon_TRA 之读数",
+   "note": "全部 5 元均取自 M1_Deposon_TRA|<族> 格；M2/M3 未被采（不消费 eta 三参）⇒ 成就",
+   "owner": "PI（若改）＋ worker（施用）",
+   "disposition_if_triggered": "采 M2/M3 ⇒ 该面读数整体作废",
+   "status": "成就（PASS）"
+  },
+  {
+   "id": "K-SEPCAL-5",
+   "name": "值向量场退化门",
+   "pass": true,
+   "frozen_text": "值向量场（跨四档之 5 元组集合）之 n_distinct 须 > 3",
+   "note": "实测 n_distinct（按 5 元组·族序）=4；按 O2 升序多重集口径=4；阈值取在册字面 >3（v157-Q2『另议』·门面存续·按现字面执行）",
+   "owner": "worker（实测）＋ PI（门之裁）",
+   "disposition_if_triggered": "触发 ⇒ 改口径或判『不明』＋停手报回",
+   "status": "成就（PASS）"
+  },
+  {
+   "id": "K-SEPCAL-6",
+   "name": "逐元非退化自证门",
+   "pass": true,
+   "frozen_text": "每元须给出跨四档 n_distinct/min-max/std；任一元 n_distinct<=1 ⇒ 退化",
+   "note": "逐元 n_distinct=[4, 4, 4, 4, 4]；最小=4（>1 ⇒ 无任一元恒同）",
+   "owner": "worker（实测）＋ PI（阈值之裁）",
+   "disposition_if_triggered": "触发 ⇒ 改口径或判『不明』＋停手报回",
+   "status": "成就（PASS）"
+  },
+  {
+   "id": "K-SEPCAL-7",
+   "name": "sep 哑火门（判据恒常门）",
+   "pass": false,
+   "frozen_text": "四档之 sep 若恒为同一常量 ⇒ 判据面 0 区分力 ⇒ 判『不明』+停手报回",
+   "note": "族序口径 sep=[3, 3, 3, 3]（恒常=True）；O2 升序口径 sep=[3, 3, 3, 3]（恒常=True）",
+   "owner": "worker（读出）＋ verdict-keeper（处置语之归属）",
+   "disposition_if_triggered": "⇒ 判『不明』＋停手报回",
+   "status": "触发（TRIGGERED）"
+  },
+  {
+   "id": "K-SEPCAL-8",
+   "name": "阈值锁门（不回流）",
+   "pass": true,
+   "frozen_text": "判定式之阈值沿用 s=2；本面 sep 读数 0 回流改全域 S_sep；0 事后调 s",
+   "note": "本测量仅在 eta 面内读数，未写回任何全域 S_sep 分布，未动 s=2 ⇒ 成就",
+   "owner": "PI（改线之唯一入口）＋ worker（施用）",
+   "disposition_if_triggered": "改线须经 K-ETAC-10 之 PI 明裁并区别声明",
+   "status": "成就（PASS）"
+  },
+  {
+   "id": "K-SEPCAL-9",
+   "name": "分母不动门",
+   "pass": true,
+   "frozen_text": "D13＝13 之在册锁值本面 0 改；eta 部件 1→4 是否入账归 PI 裁",
+   "note": "本面 0 改 D13；eta 部件入账未裁 ⇒ 本读数仅作 eta 面内之面内读数，不充全域汇总之读数",
+   "owner": "PI（分母之裁）",
+   "disposition_if_triggered": "未裁 ⇒ 本面读数仅作 eta 面内之面内读数",
+   "status": "成就（PASS）"
+  },
+  {
+   "id": "K-SEPCAL-10",
+   "name": "零新跑门（纯复算）",
+   "pass": true,
+   "frozen_text": "本面读数须为读数件之纯复算：0 新跑格 · 0 LLM 调用 · 0 网络请求 · 0 读 key · 0 改 tools/",
+   "note": "本棒仅读在册 JSON 并作集合运算复算；未发起任何 LLM/网络调用、未读任何 key/.env、未改 tools/ ⇒ 成就",
+   "owner": "PI（授权）＋ worker（施用）",
+   "disposition_if_triggered": "须新跑 ⇒ 具名理由＋PI 明裁",
+   "status": "成就（PASS）"
+  },
+  {
+   "id": "K-SEPCAL-11",
+   "name": "来源锚定门",
+   "pass": true,
+   "frozen_text": "复算须当场自测并声明读数件 SHA-12 + exp_harness.py + llm_client.py 之锚；0 以他件转述充复算",
+   "note": "当场自测：读数件=f6fa0e8934b1(786523 B)／exp_harness=ce64b9b97489(45590 B)／llm_client=1722500da4aa(8118 B)",
+   "owner": "worker",
+   "disposition_if_triggered": "不合 ⇒ 读数整体作废",
+   "status": "成就（PASS）"
+  },
+  {
+   "id": "K-SEPCAL-12",
+   "name": "择法与读数之分离门",
+   "pass": true,
+   "frozen_text": "值向量之定义与其读法之择须先于任何依其所取之读数冻结",
+   "note": "值向量口径（eta-丙-1）由口径件冻结并经 v157-Q1 生效（v157 登记件 mtime=2026-10-20 15:54:20+0800），本测量取得时点=2026-10-20T16:04:53+0800 ⇒ 择法先于读数",
+   "owner": "PI（口径之裁）＋ worker",
+   "disposition_if_triggered": "违者 ⇒ 该臂读数整体作废",
+   "status": "成就（PASS）"
+  },
+  {
+   "id": "K-SEPCAL-13",
+   "name": "面限与时点门",
+   "pass": true,
+   "frozen_text": "读数须带观测时点；射程＝四档 x M1 x 15 格 x seed 42 x 排除后构造域",
+   "note": "观测时点=2026-10-20T13:35:44（读数件 piece.observation_time_cst）；射程限域同左，未外推",
+   "owner": "worker ＋ verdict-keeper",
+   "disposition_if_triggered": "越面 ⇒ 读数整体作废",
+   "status": "成就（PASS）"
+  },
+  {
+   "id": "K-SEPCAL-14",
+   "name": "处置语归属门",
+   "pass": true,
+   "frozen_text": "sep 读数之判定（达标/不成就/不明）之处置语归属＝PI／verdict-keeper",
+   "note": "本件只出读数与逐门过否，未落五终判、未闭任何 KD、未宣告段毕、未择优 ⇒ 成就",
+   "owner": "verdict-keeper ＋ PI",
+   "disposition_if_triggered": "（处置语归属 PI／verdict-keeper；本棒 0 代裁）",
+   "status": "成就（PASS）"
+  },
+  {
+   "id": "K-SEPCAL-15",
+   "name": "不代拟门",
+   "pass": true,
+   "frozen_text": "0 代拟『运行分布 vs 形态』对照口径 · 0 代裁『sep 是否纳入 eta 面比较』 · 0 代裁值向量之最终采认",
+   "note": "三项皆未代拟/代裁 ⇒ 成就",
+   "owner": "PI",
+   "disposition_if_triggered": "违者 ⇒ 本面之拟案效力不成立",
+   "status": "成就（PASS）"
+  }
+ ],
+ "reading_outcome": {
+  "sep_values": {
+   "family_aligned": [
+    3,
+    3,
+    3,
+    3
+   ],
+   "o2_sorted": [
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  "sep_constant": true,
+  "triggered_gates": [
+   "K-SEPCAL-7"
+  ],
+  "reading_outcome_word": "不明",
+  "reading_outcome_basis": "K-SEPCAL-7 哑火门（判据恒常门）触发：四档之 sep 恒为同一常量 3 ⇒ 判据面 0 区分力 ⇒ 依冻结处置语文，判『不明』＋停手报回",
+  "not_claimed": [
+   "0 以『不明』充『已失败』",
+   "0 以『不明』充『未失败』之断言",
+   "0 以『不明』充『命题已死』",
+   "0 软化『不明』之措辞",
+   "0 落五终判（pass/af/kd/fail/give-up）",
+   "0 闭任何 KD（含 KD-CMP2S-4）",
+   "0 宣告任何段毕",
+   "0 择优/排序/代 PI 裁"
+  ],
+  "disposition_owner": "PI／verdict-keeper（K-SEPCAL-14）",
+  "robustness_note": "K-SEPCAL-5 之阈值『另议』（在册字面 >3 vs 改裁 >=2）挂账未决（v157-Q2）之本次实况：实测 n_distinct=4，在 >3 与 >=2 两读之下皆过门 ⇒ 该挂账不改变本面读数；且四档值向量两两全异（0 对同值对）⇒ 即使门槛改裁，K-SEPCAL-7 之哑火触发面亦不变（本条为事实登记，0 构成对门槛之裁）"
+ },
+ "source_discrepancy_register": [
+  {
+   "item": "值向量之元数",
+   "command_brief_wording": "15 元/档",
+   "effective_caliber_literal": "5 元（逐族 T1..T5；口径件 §3-2-② / 丙-1 行 / §4-1 值向量行 / §4-2 ① / §4-3-3 共五处一致）",
+   "resolution": "以生效口径件为准（PI v157-Q1『全采生效』之口径源）；15 系格数（3 机制×5 族＝15 格）而非元数",
+   "feasibility_of_the_brief_reading": "若强取 15 元/档，则该向量必含 M2_Greedy/M3_Random 之格（15 格 ＝ 3 机制 × 5 族，M1 仅供 5 格）⇒ 触 K-SEPCAL-4『注入面唯一门』与口径件之 M2/M3 排除 ⇒ 该读于本口径下不可实例化",
+   "forced_merge": false,
+   "self_adjudication": false
+  },
+  {
+   "item": "canonical 形",
+   "command_brief_wording": "O2 升序 sorted",
+   "effective_caliber_literal": "比较算子＝元对元相等判定（C4）；canonical 形＝O2 升序 sorted（口径件 §0-4 之『O2 法定形』），其施用表述于 §3-2-④/§4-1 带『若所择值向量含多重集型之元』之条件",
+   "resolution": "两读并出，不强合：主读＝O2 升序 sorted；平行读＝族序逐字段对齐",
+   "outcome_identical": true,
+   "outcome_identical_detail": "两读之 sep 值（3,3,3,3）、值向量场 n_distinct（4）、逐元 n_distinct（4,4,4,4,4）、6 对之相等判定（皆不等且皆 5/5 元相异）全同 ⇒ 该分歧不影响本次读数",
+   "forced_merge": false,
+   "self_adjudication": false
+  }
+ ],
+ "gate_summary": {
+  "n_total": 15,
+  "n_pass": 14,
+  "n_triggered": 1,
+  "triggered_ids": [
+   "K-SEPCAL-7"
+  ]
+ },
+ "conditional_declarations": [
+  "构造面 vs 外推边界：本件之读数仅及 eta 之 L-3' 构造域（四档 ETAC-D1..-4 × M1_Deposon_TRA × 15 格 × seed 42 × 排除后构造域）⇒ 0 逐字段外推 · 0 充一般性证明 · 0 及于 seed 123/456 · 0 及于 M2/M3 · 0 及于 H/max_u/键面三面。",
+  "注入面限定：M2_Greedy/M3_Random 在码载中不消费 eta 三参 ⇒ 其 40 格之 w/P 读数 0 充 eta 效应；本测量只用 M1 面（K-SEPCAL-4）。",
+  "R-6 噪声面之承接：逐族 14-20 决策之抽样噪声面在册；本件 0 以逐族面作择优之据，0 以逐格面作判据。",
+  "canonical 形之两读并出：主读＝O2 升序 sorted；平行读＝族序逐字段对齐。两读之 sep 值与哑火性均已并列给出，未强合。",
+  "本件只出读数与逐门过否；判定（达标/不成就/不明）之处置语归属＝PI／verdict-keeper（K-SEPCAL-14）。",
+  "本测量之主体＝worker（测量棒）本身；第三方复算面俟其果另派（v157 §3-4）⇒ 本件不自充第三方复算。",
+  "0 新跑格 · 0 LLM 调用 · 0 网络请求 · 0 读 key/.env · 0 改 tools/ · 0 改任何既有件一字 · 0 新立 KD 编号 · 0 闭任何 KD · 0 落五终判 · 0 宣告段毕。"
+ ]
+}
