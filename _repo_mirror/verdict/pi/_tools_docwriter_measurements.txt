@@ -1,0 +1,321 @@
+=== 遗漏面自查 · 穷举扫描（仪器：Python os.walk + str.find 穷举计数）===
+scan_dirs = pi_rulings/ + results/   (recursively, .md only)
+mtime_cutoff = 2026-10-19 00:00:00 local (inclusive)
+files_scanned = 203
+files_with_hits = 187
+sum_over_literals (overlapping counts, NOT deduped) = 5852
+--- per-literal totals ---
+  A = 候 PI           2397
+  B = 候PI            63
+  C = 俟 PI           474
+  D = 俟PI            33
+  E = 待裁             193
+  F = 待裁项            12
+  G = 候裁             2004
+  H = 候裁项            211
+  I = 待 PI           465
+--- top 40 files by hit volume ---
+results\_results_path_mapping_2026_10_21.md                10-21 10:23   274617 | A=778 B=0 C=6 D=0 E=0 F=0 G=0 H=0 I=0 | T=784
+results\_kd_family_census_2026_10_20.md                    10-20 21:24   404394 | A=1 B=14 C=4 D=0 E=1 F=0 G=246 H=0 I=5 | T=271
+results\_root_session_history_memo_main_2026_10_14.md      10-21 00:48   244512 | A=90 B=2 C=17 D=0 E=2 F=0 G=62 H=1 I=6 | T=180
+results\_root_session_history_memo_2026_10_14.md           10-21 01:21   365341 | A=90 B=2 C=6 D=0 E=0 F=0 G=23 H=1 I=7 | T=129
+results\_v165_adoption_effect_2026_10_20.md                10-20 20:59   125713 | A=11 B=0 C=8 D=0 E=0 F=0 G=48 H=47 I=7 | T=121
+results\_glm_unique_reply_117_triage_2026_10_19.md         10-19 13:57    62432 | A=21 B=0 C=0 D=0 E=0 F=0 G=76 H=6 I=13 | T=116
+results\_v139_adoption_effect_2026_10_19.md                10-19 21:14   105619 | A=20 B=2 C=5 D=0 E=6 F=0 G=79 H=0 I=3 | T=115
+results\_v164_adoption_effect_2026_10_20.md                10-20 20:47   120622 | A=36 B=0 C=17 D=0 E=2 F=0 G=44 H=11 I=1 | T=111
+results\_v145_adoption_effect_2026_10_20.md                10-20 09:49   174834 | A=27 B=2 C=3 D=0 E=0 F=0 G=61 H=0 I=10 | T=103
+results\_h5_session_census_2026_10_19_part2.md             10-19 21:53   451607 | A=21 B=24 C=0 D=0 E=11 F=0 G=32 H=2 I=3 | T=93
+results\_stage1_prereq_wave1_proposals_2026_10_20.md       10-21 00:16    77534 | A=19 B=0 C=3 D=0 E=5 F=3 G=1 H=0 I=61 | T=92
+results\_v140_adoption_effect_2026_10_19.md                10-19 21:40   119434 | A=19 B=2 C=6 D=0 E=1 F=0 G=48 H=0 I=12 | T=88
+results\_v143_v144_adoption_effect_2026_10_19.md           10-19 23:28   184744 | A=39 B=0 C=7 D=0 E=0 F=0 G=38 H=0 I=3 | T=87
+results\_v168_adoption_effect_2026_10_20.md                10-20 22:57   148244 | A=9 B=0 C=14 D=0 E=0 F=0 G=38 H=21 I=1 | T=83
+results\_v173_adoption_effect_2026_10_21.md                10-21 10:18   154726 | A=39 B=0 C=12 D=2 E=5 F=0 G=22 H=0 I=3 | T=83
+results\_v169_adoption_effect_2026_10_20.md                10-21 01:16   156752 | A=31 B=0 C=34 D=0 E=0 F=0 G=7 H=6 I=4 | T=82
+results\_v171_adoption_effect_2026_10_20.md                10-21 02:07   165524 | A=39 B=0 C=25 D=0 E=0 F=0 G=11 H=5 I=1 | T=81
+results\_v141_adoption_effect_2026_10_19.md                10-19 22:02   149571 | A=15 B=2 C=11 D=0 E=0 F=0 G=50 H=0 I=1 | T=79
+results\_v142_adoption_effect_2026_10_19.md                10-19 22:39   131781 | A=33 B=2 C=3 D=0 E=0 F=0 G=31 H=0 I=3 | T=72
+results\_v172_adoption_effect_2026_10_20.md                10-21 02:01   158273 | A=15 B=0 C=5 D=0 E=0 F=0 G=19 H=3 I=24 | T=66
+results\_kd_h5_session_history_pilot_1of10_2026_10_20.md   10-20 16:12  1000949 | A=35 B=0 C=0 D=0 E=2 F=0 G=7 H=0 I=21 | T=65
+results\_v156_adoption_effect_2026_10_20.md                10-20 16:01   101278 | A=32 B=0 C=0 D=0 E=9 F=0 G=12 H=5 I=7 | T=65
+results\_v166_adoption_effect_2026_10_20.md                10-20 21:43   129389 | A=11 B=0 C=22 D=0 E=0 F=0 G=15 H=15 I=2 | T=65
+results\_stage1_gap_exhaustive_audit_2026_10_20.md         10-20 23:30    54167 | A=12 B=0 C=7 D=27 E=0 F=0 G=12 H=0 I=5 | T=63
+results\_stage1_field_table_freeze_draft_2026_10_19.md     10-19 14:30    51152 | A=16 B=0 C=0 D=0 E=0 F=0 G=40 H=0 I=1 | T=57
+results\_kd_mda8_arm2_kill_line_freeze_draft_2026_10_19.md 10-19 20:18    73620 | A=15 B=0 C=4 D=0 E=0 F=0 G=34 H=0 I=2 | T=55
+results\_runface_vs_shape_caliber_draft_2026_10_20.md      10-20 20:41    65692 | A=17 B=0 C=0 D=0 E=0 F=0 G=18 H=4 I=15 | T=54
+results\_v153_adoption_effect_2026_10_20.md                10-20 13:52   181493 | A=25 B=0 C=13 D=0 E=1 F=0 G=13 H=0 I=2 | T=54
+results\_v137_adoption_effect_2026_10_19.md                10-19 17:25    72687 | A=9 B=2 C=15 D=0 E=1 F=0 G=25 H=0 I=0 | T=52
+results\_eta_construct_c1_c16_recommendation_2026_10_20.md 10-20 09:42    83989 | A=23 B=0 C=0 D=0 E=0 F=0 G=23 H=0 I=5 | T=51
+results\_eta_construct_face_freeze_draft_2026_10_19.md     10-19 23:39    64877 | A=10 B=0 C=0 D=0 E=0 F=0 G=36 H=0 I=5 | T=51
+results\_runface_vs_shape_multidim_supplement_2026_10_20.md 10-20 21:25    89672 | A=17 B=0 C=0 D=0 E=0 F=0 G=13 H=12 I=9 | T=51
+results\_stage1_eta_kill_line_freeze_draft_2026_10_19.md   10-19 13:44    38472 | A=19 B=0 C=0 D=0 E=0 F=0 G=29 H=0 I=3 | T=51
+results\_stage1_eta_numeric_freeze_draft_2026_10_19.md     10-19 14:49    39393 | A=7 B=0 C=0 D=0 E=1 F=0 G=39 H=0 I=3 | T=50
+results\_mda8_readlaw_o1_o4_c4_recommendation_2026_10_20.md 10-20 10:44    73898 | A=18 B=0 C=0 D=0 E=1 F=0 G=23 H=0 I=6 | T=48
+results\_kd_cluster_verdict_pack_adjudication_2026_10_19.md 10-19 22:54   113327 | A=9 B=0 C=0 D=0 E=7 F=0 G=7 H=1 I=23 | T=47
+results\_kd_false9_remedy_proposals_2026_10_20.md          10-20 22:03    85265 | A=24 B=0 C=0 D=0 E=13 F=0 G=4 H=3 I=2 | T=46
+results\_kd_mda8_arm2_remaining11_recommendation_2026_10_19.md 10-19 21:12    92280 | A=17 B=0 C=3 D=0 E=2 F=0 G=23 H=0 I=1 | T=46
+results\_v158_adoption_effect_2026_10_20.md                10-20 17:16   114409 | A=4 B=0 C=24 D=0 E=1 F=0 G=15 H=2 I=0 | T=46
+results\_ablation_design_2026_10_20.md                     10-20 20:41    98542 | A=17 B=0 C=0 D=0 E=1 F=0 G=8 H=3 I=14 | T=43
+files_listed = 40 (full list truncated to 40 for readability; total distinct hit files = 187)
+
+=== DISTINCT FILE LIST (all 187 files with >=1 hit) ===
+results\_results_path_mapping_2026_10_21.md
+results\_kd_family_census_2026_10_20.md
+results\_root_session_history_memo_main_2026_10_14.md
+results\_root_session_history_memo_2026_10_14.md
+results\_v165_adoption_effect_2026_10_20.md
+results\_glm_unique_reply_117_triage_2026_10_19.md
+results\_v139_adoption_effect_2026_10_19.md
+results\_v164_adoption_effect_2026_10_20.md
+results\_v145_adoption_effect_2026_10_20.md
+results\_h5_session_census_2026_10_19_part2.md
+results\_stage1_prereq_wave1_proposals_2026_10_20.md
+results\_v140_adoption_effect_2026_10_19.md
+results\_v143_v144_adoption_effect_2026_10_19.md
+results\_v168_adoption_effect_2026_10_20.md
+results\_v173_adoption_effect_2026_10_21.md
+results\_v169_adoption_effect_2026_10_20.md
+results\_v171_adoption_effect_2026_10_20.md
+results\_v141_adoption_effect_2026_10_19.md
+results\_v142_adoption_effect_2026_10_19.md
+results\_v172_adoption_effect_2026_10_20.md
+results\_kd_h5_session_history_pilot_1of10_2026_10_20.md
+results\_v156_adoption_effect_2026_10_20.md
+results\_v166_adoption_effect_2026_10_20.md
+results\_stage1_gap_exhaustive_audit_2026_10_20.md
+results\_stage1_field_table_freeze_draft_2026_10_19.md
+results\_kd_mda8_arm2_kill_line_freeze_draft_2026_10_19.md
+results\_runface_vs_shape_caliber_draft_2026_10_20.md
+results\_v153_adoption_effect_2026_10_20.md
+results\_v137_adoption_effect_2026_10_19.md
+results\_eta_construct_c1_c16_recommendation_2026_10_20.md
+results\_eta_construct_face_freeze_draft_2026_10_19.md
+results\_runface_vs_shape_multidim_supplement_2026_10_20.md
+results\_stage1_eta_kill_line_freeze_draft_2026_10_19.md
+results\_stage1_eta_numeric_freeze_draft_2026_10_19.md
+results\_mda8_readlaw_o1_o4_c4_recommendation_2026_10_20.md
+results\_kd_cluster_verdict_pack_adjudication_2026_10_19.md
+results\_kd_false9_remedy_proposals_2026_10_20.md
+results\_kd_mda8_arm2_remaining11_recommendation_2026_10_19.md
+results\_v158_adoption_effect_2026_10_20.md
+results\_ablation_design_2026_10_20.md
+results\_v148_adoption_effect_2026_10_20.md
+results\_v146_adoption_effect_2026_10_20.md
+results\_v167_adoption_effect_2026_10_20.md
+results\_kd_epw3_crw3_ffrep1_adjudication_2026_10_19.md
+results\_kd_eta_sep_measurement_verdict_2026_10_20.md
+results\_kd_two_gates_comparison_2026_10_20.md
+results\_v133_adoption_effect_2026_10_19.md
+results\_l2_2_duplication_criterion_adjudication_2026_10_19.md
+results\_v157_adoption_effect_2026_10_20.md
+results\_v148_four_points_erratum_draft_2026_10_20.md
+results\_kd_false9_wave0_calibers_2026_10_20.md
+results\_kd_h1_h7_disposition_draft_2026_10_20.md
+results\_kd_mda8_preexp_dispatch_spec_draft_2026_10_19.md
+results\_d13_eta_parts_1to4_caliber_2026_10_20.md
+results\_v151_adoption_effect_2026_10_20.md
+results\_v154_adoption_effect_2026_10_20.md
+results\_kd_identified_defect_attribution_caliber_2026_10_20.md
+results\_preexp_design_new_construct_mda8a24_2026_10_20.md
+results\_v163_adoption_effect_2026_10_20.md
+results\_kd_mda8_gate_resolution_and_new_exp_draft_2026_10_19.md
+results\_v155_adoption_effect_2026_10_20.md
+results\_kd_mda8_domain_readings_adjudication_2026_10_19.md
+results\_stage1_prereq_wave1_evidence_2026_10_20.md
+results\_s2_confirmation_parenthesis_correction_note_2026_10_21.md
+results\_v159_adoption_effect_2026_10_20.md
+results\_v174_adoption_effect_2026_10_21.md
+results\_kd_mda8_spec_rest_recommendation_2026_10_19.md
+results\_kd_eta_main_run_verdict_2026_10_20.md
+results\_v162_adoption_effect_2026_10_20.md
+results\_kd_h5_session_history_domain_caliber_2026_10_20.md
+results\_kd_h6_caliber_mapping_adjudication_2026_10_20.md
+results\_kd_two_gates_boundary_proposal_2026_10_21.md
+results\_kfp6_nature_and_eta_expface_adjudication_2026_10_19.md
+results\_eta_preexp_stop_register_2026_10_20.md
+results\_field_table_c6_c8_o5_recommendation_draft_2026_10_19.md
+results\_ge01_freeze_flow_execution_2026_10_20.md
+results\_kd_history_pack_adjudication_2026_10_19.md
+results\_d13_rename_candidates_2026_10_21.md
+results\_l2_2_two_arms_identity_adjudication_2026_10_19.md
+results\_preexp_design_kmda8a24_degen_2026_10_20.md
+results\_v138_adoption_effect_2026_10_19.md
+results\_v150_adoption_effect_2026_10_20.md
+results\_cluster_k_eta_blockers_adjudication_2026_10_19.md
+results\_mda8a24_release_trigger_proposals_2026_10_20.md
+results\_preexp_degen_gate_reading_2026_10_20.md
+results\_kd_crw2_beta_and_t4n05_domain_adjudication_2026_10_20.md
+results\_kd_mda8a24_clearance_verdict_2026_10_20.md
+results\_cluster_j_glm_62_adjudication_2026_10_19.md
+results\_eta_sep_caliber_draft_2026_10_20.md
+results\_kd_h1_h7_hidden_gaps_register_2026_10_19.md
+results\_experiment_face_scope_list_draft_2026_10_19.md
+results\_stage1_experiment_gap_inventory_2026_10_19.md
+results\_stage1_field_table_completion_register_2026_10_19.md
+results\_kd_mda8_f1_two_senses_adjudication_2026_10_19.md
+results\_results_split_proposal_2026_10_21.md
+results\_stage1_eta_preexp_run_register_2026_10_19.md
+pi_rulings\_pi_card_answers_register_2026_10_20_supplement_4cards.md
+results\_kd_sepcal7_final_verdict_2026_10_20.md
+results\_stage1_eta_preexp_execution_register_2026_10_19.md
+results\_eta_missing_params_literature_evidence_2026_10_19.md
+results\_experiment_face_scope_column1_supplement_draft_2026_10_19.md
+results\_independent_review_history_gaps_kd_2026_10_19_sub.md
+results\_v149_adoption_effect_2026_10_20.md
+results\_v170_adoption_effect_2026_10_20.md
+results\_pi_card_payload_extraction_2026_10_20.md
+results\_preexp_mda8a24_c1_reading_2026_10_20.md
+pi_rulings\_pi_card_answers_register_2026_10_21_v173.md
+results\_kd_mda8_first_reading_verdict_2026_10_20.md
+results\_v136_adoption_effect_2026_10_19.md
+results\_eta_missing_params_and_c1_adjudication_2026_10_19.md
+results\_kd_eta_selection_verdict_2026_10_20.md
+results\_runface_vs_shape_multidim_reading_2026_10_20.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v156.md
+results\_kd_h1_lineage_declaration_2026_10_20.md
+results\_kd_h4_fingerprint_reanchor_register_2026_10_20.md
+results\_v152_adoption_effect_2026_10_20.md
+results\_gap_and_kd_flip_master_inventory_2026_10_19.md
+results\_glm_new_gaps_directive_effect_2026_10_19.md
+results\_glm_reply_pack_intake_verification_2026_10_19.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v160.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v164.md
+pi_rulings\_pi_card_answers_register_2026_10_21_v175.md
+results\_eta_sep_measurement_reading_2026_10_20.md
+results\_f7d_today_no_open_erratum_2026_10_19.md
+results\_field_sources_lift_register_2026_10_19.md
+results\_gd03_caliber_note_2026_10_20.md
+results\_h5_session_census_2026_10_19_part1.md
+results\_results_index_2026_10_21.md
+pi_rulings\_pi_card_answers_register_2026_10_19_v132.md
+pi_rulings\_pi_card_answers_register_2026_10_19_v139.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v155.md
+results\_f3_payment_vector_reconstruction_2026_10_19.md
+results\_hidden_gaps_audit_full_history_2026_10_19.md
+results\_kd_h2_anchor_chain_erratum_2026_10_20.md
+results\_preexp_mda8a24_c2c4_reading_2026_10_20.md
+pi_rulings\_pi_card_answers_register_2026_10_19_v134.md
+pi_rulings\_pi_card_answers_register_2026_10_19_v144.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v145.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v158.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v169.md
+results\_kd_h5_background_tasks_full_scan_2026_10_20.md
+pi_rulings\_pi_card_answers_register_2026_10_19_v130.md
+pi_rulings\_pi_card_answers_register_2026_10_19_v131.md
+pi_rulings\_pi_card_answers_register_2026_10_19_v135.md
+pi_rulings\_pi_card_answers_register_2026_10_19_v137.md
+pi_rulings\_pi_card_answers_register_2026_10_19_v143.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v146.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v147.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v151.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v159.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v162.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v165.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v166.md
+pi_rulings\_pi_card_answers_register_2026_10_21_v174.md
+results\_eta_preexp_run_register_2026_10_20.md
+results\_glm_gaps_into_stage1_directive_effect_2026_10_19.md
+results\_mda8_preexp_run_register_2026_10_20.md
+results\_o1_transcription_face_erratum_2026_10_20.md
+results\_preexp_degen_gate_recalc_2026_10_20.md
+pi_rulings\_pi_card_answers_register_2026_10_19_v133.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v154.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v157.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v163.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v171.md
+results\_ge02_adoption_freeze_register_2026_10_20.md
+results\_harness_42b_drift_semantics_2026_10_19.md
+results\_preexp_mda8a24_c5_armpairs_reading_2026_10_20.md
+results\_preexp_mda8a24_c5_armpairs_recalc_2026_10_20.md
+pi_rulings\_pi_card_answers_register_2026_10_17_v57.md
+pi_rulings\_pi_card_answers_register_2026_10_19_v140.md
+pi_rulings\_pi_card_answers_register_2026_10_19_v141.md
+pi_rulings\_pi_card_answers_register_2026_10_19_v142.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v148.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v153.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v161.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v167.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v168.md
+pi_rulings\_pi_card_answers_register_2026_10_20_v172.md
+results\_ablation_reading_2026_10_20.md
+results\_deposon_full_history_sub_2026_10_19.md
+results\_eta_main_run_register_2026_10_20.md
+results\_eta_sep_measurement_recalc_2026_10_20.md
+results\_f3_payment_vector_third_party_recalc_2026_10_19.md
+results\_knock_off_directive_effect_2026_10_18.md
+results\_register_face_errata_2026_10_20.md
+results\_replies_arrival_and_stage2_restore_directive_effect_2026_10_19.md
+results\_stage1_progress_sync_directive_effect_2026_10_19.md
+
+=== HOST FINGERPRINT STATE (this measurement) ===
+path                                                                     sha12              bytes  mtime
+results/_results_index_2026_10_21.md                                     48edf1b5dd53      233679  10-21 10:26:19
+results/_results_path_mapping_2026_10_21.md                              5653b96d93c4      274617  10-21 10:23:58
+results/_kd_mda8a24_clearance_verdict_2026_10_20.md                      170ab543d941       77696  10-20 23:18:42
+results/_kd_sepcal7_final_verdict_2026_10_20.md                          c013aeb1235f       70518  10-20 22:00:56
+results/_kd_false9_remedy_proposals_2026_10_20.md                        77bc92c9d227       85265  10-20 22:03:50
+results/_kd_false9_wave0_calibers_2026_10_20.md                          97ac680345ac       76664  10-20 23:11:21
+results/_kd_identified_defect_attribution_caliber_2026_10_20.md          609943436a0d       73752  10-20 23:28:12
+results/_v172_adoption_effect_2026_10_20.md                              9c853eec100d      158273  10-21 02:01:03
+results/_v173_adoption_effect_2026_10_21.md                              9917ca76e30c      154726  10-21 10:18:17
+results/_v174_adoption_effect_2026_10_21.md                              3db2360cd03d      133729  10-21 10:47:11
+results/_d13_rename_candidates_2026_10_21.md                             9c75e1d4cd76       54962  10-21 10:45:20
+results/_kd_two_gates_boundary_proposal_2026_10_21.md                    0ef78a26f637       41462  10-21 10:44:36
+results/_stage1_prereq_wave1_proposals_2026_10_20.md                     a8a9018fd67e       77534  10-21 00:16:32
+results/_stage1_prereq_wave1_evidence_2026_10_20.md                      7c5d8cbe7ff7       55404  10-21 00:46:55
+results/_mda8a24_release_trigger_proposals_2026_10_20.md                 c7ef49e7ced3       87614  10-20 23:52:31
+results/_stage1_gap_exhaustive_audit_2026_10_20.md                       cc00c068aa50       54167  10-20 23:30:54
+results/_results_split_proposal_2026_10_21.md                            38eff36f1438       36323  10-21 02:02:10
+results/_kd_two_gates_comparison_2026_10_20.md                           45f1ea5e5b23       45929  10-20 23:51:08
+letters/_reply_to_glm_dualtrack_v156_rulings_2026_10_20.md               3ea469e5a6f3       31609  10-20 15:59:50
+pi_rulings/_pi_card_answers_register_2026_10_21_v173.md                  62be7649e05e        7398  10-21 09:51:56
+pi_rulings/_pi_card_answers_register_2026_10_21_v174.md                  3122d39e1727        6308  10-21 10:08:14
+pi_rulings/_pi_card_answers_register_2026_10_20_v171.md                  bcd42a6711c1        2993  10-20 23:43:08
+pi_rulings/_pi_card_answers_register_2026_10_20_v172.md                  fc753baf40ee        3475  10-20 23:49:27
+results/_ablation_design_2026_10_20.md                                   e1cbf00adcf8       98542  10-20 20:41:37
+results/_ablation_reading_2026_10_20.md                                  ce5548bffaf3      102663  10-20 21:02:24
+results/_runface_vs_shape_caliber_draft_2026_10_20.md                    8b07d606df7d       65692  10-20 20:41:37
+results/_runface_vs_shape_multidim_supplement_2026_10_20.md              e9467ebf6f00       89672  10-20 21:25:37
+results/_d13_eta_parts_1to4_caliber_2026_10_20.md                        ffea29afd4d8       44643  10-20 20:21:34
+results/_ge01_freeze_flow_execution_2026_10_20.md                        0d1dd9d16d8a       58027  10-21 00:14:31
+results/_ge02_adoption_freeze_register_2026_10_20.md                     f45df63a9469       29719  10-21 00:13:19
+results/_gd03_caliber_note_2026_10_20.md                                 b664e821df34       19611  10-21 00:13:19
+results/_eta_sep_caliber_draft_2026_10_20.md                             2383be56f28f       68943  10-20 15:46:17
+results/_eta_construct_face_freeze_draft_2026_10_19.md                   afdb26047b79       64877  10-19 23:39:07
+results/_eta_construct_c1_c16_recommendation_2026_10_20.md               56760f30332b       83989  10-20 09:42:40
+results/_eta_preexp_stop_register_2026_10_20.md                          ec6c023dbd6e       50188  10-20 10:53:37
+results/_kd_eta_sep_measurement_verdict_2026_10_20.md                    ceb71b3a2570       66712  10-20 16:22:28
+results/_kd_eta_main_run_verdict_2026_10_20.md                           8a5727bc4c11       64606  10-20 14:34:17
+results/_kd_eta_selection_verdict_2026_10_20.md                          80b8cafcd085       37788  10-20 12:22:23
+results/_kd_mda8_arm2_kill_line_freeze_draft_2026_10_19.md               b666077233c5       73620  10-19 20:18:15
+results/_kd_mda8_arm2_remaining11_recommendation_2026_10_19.md           30e47f1181d3       92280  10-19 21:12:24
+results/_kd_mda8_preexp_dispatch_spec_draft_2026_10_19.md                8a77b155fd64       80642  10-19 22:11:00
+results/_kd_mda8_gate_resolution_and_new_exp_draft_2026_10_19.md         ebe106d2da47       95664  10-19 22:43:03
+results/_kd_mda8_spec_rest_recommendation_2026_10_19.md                  242b7ea98eb7       69095  10-19 23:04:43
+results/_kd_mda8_domain_readings_adjudication_2026_10_19.md              42af8a6e0703       65988  10-19 21:16:41
+results/_kd_mda8_f1_two_senses_adjudication_2026_10_19.md                9a960a574260       57571  10-19 21:36:01
+results/_kd_mda8_first_reading_verdict_2026_10_20.md                     9c75b5c16676       64345  10-20 11:48:37
+results/_mda8_readlaw_o1_o4_c4_recommendation_2026_10_20.md              1046dd5d1be0       73898  10-20 10:44:13
+results/_l2_2_duplication_criterion_adjudication_2026_10_19.md           ecbf3288d791       42517  10-19 15:06:13
+results/_stage1_field_table_freeze_draft_2026_10_19.md                   c29628efe748       51152  10-19 14:30:19
+results/_stage1_eta_kill_line_freeze_draft_2026_10_19.md                 f9ab11413a94       38472  10-19 13:44:38
+results/_stage1_eta_numeric_freeze_draft_2026_10_19.md                   1d7baa667b98       39393  10-19 14:49:29
+results/_field_table_c6_c8_o5_recommendation_draft_2026_10_19.md         bbcbac292f8d       61896  10-19 15:55:08
+results/_kd_h1_h7_disposition_draft_2026_10_20.md                        42ea79ea3f06       72915  10-20 12:20:40
+results/_kd_h1_lineage_declaration_2026_10_20.md                         b17b642f1183       54662  10-20 14:27:25
+results/_kd_h2_anchor_chain_erratum_2026_10_20.md                        a23dfaf20278       39377  10-20 14:35:00
+results/_kd_h4_fingerprint_reanchor_register_2026_10_20.md               15d1279d1638       47335  10-20 14:27:44
+results/_kd_h5_session_history_domain_caliber_2026_10_20.md              8db6f947bf98       55674  10-20 14:45:38
+results/_kd_h6_caliber_mapping_adjudication_2026_10_20.md                9e853e0f259b       68036  10-20 14:53:25
+results/_kd_history_pack_adjudication_2026_10_19.md                      fce088063dbd       56575  10-19 23:16:25
+results/_kd_crw2_beta_and_t4n05_domain_adjudication_2026_10_20.md        522be8905484       77119  10-20 11:09:45
+results/_cluster_k_eta_blockers_adjudication_2026_10_19.md               4b1040954064       55977  10-19 14:55:07
+results/_cluster_j_glm_62_adjudication_2026_10_19.md                     b4252f1f736d       48997  10-19 14:46:37
+results/_glm_unique_reply_117_triage_2026_10_19.md                       1b07409d441b       62432  10-19 13:57:51
+results/_preexp_design_kmda8a24_degen_2026_10_20.md                      4dc9aaced5f7       87243  10-20 17:57:30
+results/_preexp_design_new_construct_mda8a24_2026_10_20.md               356ef2e9db1c       79800  10-20 20:21:26
+results/_preexp_mda8a24_c1_reading_2026_10_20.md                         d3115c5850cc       36891  10-20 18:56:48
+results/_eta_missing_params_literature_evidence_2026_10_19.md            31ce1f43d18f       26537  10-19 17:49:28
+results/_v148_four_points_erratum_draft_2026_10_20.md                    524865bdc941       53088  10-20 12:19:10
+results/_s2_confirmation_parenthesis_correction_note_2026_10_21.md       aee86cfebcfe      106055  10-21 10:47:11
+results/_kd_family_census_2026_10_20.md                                  69b133558795      404394  10-20 21:24:36
+results/_root_session_history_memo_main_2026_10_14.md                    431ecdbd747e      244512  10-21 00:48:38
