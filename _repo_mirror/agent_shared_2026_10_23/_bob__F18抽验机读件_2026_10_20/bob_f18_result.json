@@ -1,0 +1,143 @@
+{
+  "checks": [
+    {
+      "id": "A0",
+      "name": "pairs JSON 指纹登记值＝实测（入 45887c4316d3·132,269 B／出 69125dd78382·132,173 B·689 行）",
+      "ok": true,
+      "detail": "in 45887c4316d3·132269B → out 69125dd78382·132173B·689 行（登记＝实测）"
+    },
+    {
+      "id": "A1",
+      "name": "前态摘要独立提取＝pair.old（结构：\\begin 行后恰 2 空行·摘要单行 L76·1 空行·\\end 行）",
+      "ok": true,
+      "detail": "between 1993 B；摘要行 L76"
+    },
+    {
+      "id": "A2",
+      "name": "后态摘要独立提取＝pair.new（同构）",
+      "ok": true,
+      "detail": "between 1897 B；摘要行 L76"
+    },
+    {
+      "id": "A3",
+      "name": "正向回放：前态＋F18（old→new 单次替换）＝后态全文恒等",
+      "ok": true,
+      "detail": "重放全文＝交付 69125dd78382"
+    },
+    {
+      "id": "A4",
+      "name": "反向回放：后态－F18（new→old 单次替换）＝前态全文恒等",
+      "ok": true,
+      "detail": "重放全文＝前态 45887c4316d3"
+    },
+    {
+      "id": "A5",
+      "name": "单锚恰 1 处：old 在前态 1 次·new 在后态 1 次；new 不见于前态·old 不见于后态",
+      "ok": true,
+      "detail": "old(pre)=1 new(post)=1 new(pre)=0 old(post)=0"
+    },
+    {
+      "id": "A6",
+      "name": "行级增量（其余文本零改动的直接证明）：690 行中恰 1 行差异＝L76 摘要行，其余 689 行逐行恒等",
+      "ok": true,
+      "detail": "差行列=[75]；行数 690=690"
+    },
+    {
+      "id": "A7",
+      "name": "字符账（paste 口径＝单距空格单行）：len 1,973→1,877（Δ=96≥53）；词 291→277；raw-between 1,978→1,882；canonical 单距形态两侧成立；≤1,880 且 ≤1,920",
+      "ok": true,
+      "detail": "实测 len(new)=1877（与 JSON 登记同值）"
+    },
+    {
+      "id": "A8",
+      "name": "摘要多源一致：pair.old＝旧表粘贴值（reflow 拼接归一；戴夫 20:02 阻断项 1,973 同源）；pair.new＝交付 tex 摘要行＝元数据粘贴值（单行直取）；新摘要 0 署名信息",
+      "ok": true,
+      "detail": "old 双源（tex 提取＋旧表粘贴）＋new 三源全等；旧表登记 1,978/1,973；元数据粘贴值 1877 字符"
+    },
+    {
+      "id": "A9",
+      "name": "F18 diff 结构：恰 1 hunk（@@ -74,5 +74,5 @@）；−1 行＝old／＋1 行＝new；上下文 4 行（2 空＋1 空＋\\end{abstract}）与两 tex 实际行 L74–L78 逐行核对恒等；头注指纹对",
+      "ok": true,
+      "detail": "1 hunk·−/+ 各 1 行·L74–L78 上下文恒等·头注 45887c4316d3→69125dd78382"
+    },
+    {
+      "id": "A10",
+      "name": "复合链闭合（18 对全链＝审计链补全）：17 对 vs 改稿单 fence 逐字全等；R5＋F01–F17→45887c4316d3；＋F18→69125dd78382；反向 69125dd78382－F18－F01–F17→R5 ba2f157196f5",
+      "ok": true,
+      "detail": "sheet 17/17 等同；正向链闭合；反向链闭合（每对恰单次替换）"
+    },
+    {
+      "id": "D1",
+      "name": "保留锚串 21 段在 new 摘要各恰 1 次（独立重计＝JSON 登记值）；禁形 0：摘要内 kill/death 家族 0",
+      "ok": true,
+      "detail": "21 段全命中（含 F01 四要点与爱丽丝 5b 点逐字）"
+    },
+    {
+      "id": "D2",
+      "name": "objection 小写在 new 摘要恰 1；数字集恰 {1,5,7.4}；非 ASCII 码点集合＝登记值（仅 U+00A7/U+2013/U+2014）",
+      "ok": true,
+      "detail": "objection=1；nums=['1', '5', '7.4']；码点集 old=['0x2013', '0x2014', '0xa7'] new=['0x2013', '0x2014', '0xa7']"
+    },
+    {
+      "id": "B1",
+      "name": "池 66：References 区块字节恒等；\\item[Rxx.] 两侧各 66 且序号 R01–R66 全等",
+      "ok": true,
+      "detail": "区块 14898 B 恒等；条目 66→66"
+    },
+    {
+      "id": "B2",
+      "name": "引用实例 190→190（题录区前），多重集恒等",
+      "ok": true,
+      "detail": "190→190"
+    },
+    {
+      "id": "B3",
+      "name": "a57d7fe 冻结恰 1（前＝后）",
+      "ok": true,
+      "detail": "1→1；后态位置 L555"
+    },
+    {
+      "id": "B4",
+      "name": "匿名面恒等：\\author 两侧同值（Qihao Yuan）；KIMI 大写 0/0；kimi 2/2＝1 审计迹＋1 bukimi 子串；onewithdream 0/0；anonymized in this edition 2/2；致谢节 0/0；acknowledg 词 1/1；新摘要 0 署名",
+      "ok": true,
+      "detail": "kimi 位置：L271（bukimi 子串（Mori 术语罗马字））＋L422（审计迹（冻结路径 _kimi_ftfb_s7 之 TeX 转义形 \\\\_kimi\\\\_））"
+    },
+    {
+      "id": "B5",
+      "name": "0 诗引文：epigraph 0/0；\\begin{verse} 0/0",
+      "ok": true,
+      "detail": "两侧均 0"
+    },
+    {
+      "id": "B6",
+      "name": "题式：甲式恰 1（前＝后）；乙式 0；旧式 Death is the point 0",
+      "ok": true,
+      "detail": "甲式 L420；乙式 0；旧式 0"
+    },
+    {
+      "id": "B7",
+      "name": "词族支撑账（前＝后，替换不外溢）：position paper 1/1；position statement 4/4；Objection 小节头 4/4；[Kk]ill、[Dd]eath、[Oo]bjection 词族全等",
+      "ok": true,
+      "detail": "kill 33→33；death 1→1；objection 18→18"
+    },
+    {
+      "id": "B8",
+      "name": "体量与行数：132,269→132,173 B（Δ=−96＝摘要压缩量）；新行符 689→689（＝物理行，与登记口径同）；split 元素 690→690（含尾空元素）；末行换行收束两侧同构",
+      "ok": true,
+      "detail": "−96 B；689 新行符（wc 口径）＝690 split 元素（含尾空元素，与 R6 验收轮口径同）"
+    },
+    {
+      "id": "C1",
+      "name": "预 F18 正本多源一致：归档 tar 内件＝归档平铺件＝R5＋17 对重构（45887c4316d3）",
+      "ok": true,
+      "detail": "三源同指纹 45887c4316d3"
+    },
+    {
+      "id": "C2",
+      "name": "零触碰：shared 全部只读件（查理 R6 目录 8 件＋改稿单＋R5 tex）指纹与开工快照全等（戴夫打包目录系其重打包轮活跃写入区，不在本方扫描范围）",
+      "ok": true,
+      "detail": "10 件全等"
+    }
+  ],
+  "fail": 0
+}

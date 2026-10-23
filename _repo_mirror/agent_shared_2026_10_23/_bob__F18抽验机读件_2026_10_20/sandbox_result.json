@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "name": "S0 输入正本＝45887c4316d3·132,269 B（归档 tar 内件）",
+      "ok": true,
+      "detail": "sha12 45887c4316d3 · 132269 B"
+    },
+    {
+      "name": "S0b 输入元数据表＝戴夫 20:01 归档版（7e5e739c8b58·6,074 B）",
+      "ok": true,
+      "detail": "sha12 7e5e739c8b58"
+    },
+    {
+      "name": "S1 沙箱件生成：原脚本＋仅常量块 env 重定向补丁（7 路径）",
+      "ok": true,
+      "detail": "补丁量＝9→10 行常量块重写，逻辑零改"
+    },
+    {
+      "name": "S2 md §八前态重构：交付 md － 追加段（边界唯一命中，前态收于 19:38 签名行）",
+      "ok": true,
+      "detail": "前态 7692 B；追加段 6363 B"
+    },
+    {
+      "name": "S3 沙箱重跑执行：自检全绿零失败（rc=0）",
+      "ok": true,
+      "detail": "rc=0；stderr="
+    },
+    {
+      "name": "S4 tex 逐字节恒等：沙箱产物＝交付 69125dd78382",
+      "ok": true,
+      "detail": "沙箱 69125dd78382·132173 B ＝ 交付 69125dd78382·132173 B"
+    },
+    {
+      "name": "S5 diff 逐字节恒等：沙箱产物＝交付 6173b09acfbb",
+      "ok": true,
+      "detail": "沙箱 6173b09acfbb·4050 B ＝ 交付 6173b09acfbb·4050 B"
+    },
+    {
+      "name": "S6 JSON 恒等：归一化（private_backup_of_pre_state→登记常量）后逐字节恒等",
+      "ok": true,
+      "detail": "原始件恒等=False；除该字段外恒等（含 pair 全文/检查实测值/cuts/errata）"
+    },
+    {
+      "name": "S7 metadata 逐字节恒等：沙箱产物＝交付 ea1170c2cad1（输入＝归档 20:01 戴夫表）",
+      "ok": true,
+      "detail": "沙箱 ea1170c2cad1·4808 B ＝ 交付 ea1170c2cad1·4808 B"
+    },
+    {
+      "name": "S8 md §八复现：除时间戳行（1 行）外逐行恒等",
+      "ok": true,
+      "detail": "差异行=[146]"
+    },
+    {
+      "name": "S9 私区前态备份复现：沙箱备份＝输入正本",
+      "ok": true,
+      "detail": "备份 45887c4316d3·132269 B ＝ 输入 45887c4316d3"
+    },
+    {
+      "name": "S10 前置门有效：F18 后态（69125dd78382）重跑被拒（单轮语义）",
+      "ok": true,
+      "detail": "rc=2；门消息命中"
+    }
+  ],
+  "fail": 0
+}

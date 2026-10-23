@@ -1,0 +1,414 @@
+{
+ "fingerprints": {
+  "r5": {
+   "sha12": "ba2f157196f5",
+   "bytes": 123129,
+   "wc_lines": 666
+  },
+  "r6": {
+   "sha12": "45887c4316d3",
+   "bytes": 132269,
+   "wc_lines": 689
+  },
+  "diff": {
+   "sha12": "e131f3c85513",
+   "bytes": 37902
+  },
+  "pairs_json": {
+   "sha12": "08ac032f730b",
+   "bytes": 18043
+  },
+  "sheet": {
+   "sha12": "31c006536445",
+   "bytes": 36329
+  }
+ },
+ "checks": [
+  {
+   "name": "A0 JSON 结构：pairs 恰 17 对且编号 F01–F17 连续",
+   "ok": true,
+   "detail": "n=17"
+  },
+  {
+   "name": "A1 pairs JSON 的 17 对 old/new 与改稿单 fence 块逐字一致（独立解析器）",
+   "ok": true,
+   "detail": "解析 17 对；失配 无"
+  },
+  {
+   "name": "A2 正向回放：R5 顺序应用 17 对 → 与交付 R6 字节恒等（45887c4316d3）",
+   "ok": true,
+   "detail": "每步 count==1，终态字节恒等"
+  },
+  {
+   "name": "A3 反向回放：R6 逆序还原 17 对 → 与 R5 字节恒等（ba2f157196f5）",
+   "ok": true,
+   "detail": "每步 count==1，终态字节恒等"
+  },
+  {
+   "name": "A4 交付 JSON 自记录：reverse=True、pool66 恒等、failures=[]、product 指纹=45887c4316d3",
+   "ok": true,
+   "detail": "meta hunk=13 pairs=17"
+  },
+  {
+   "name": "B1 池 66：References 区块字节恒等（\\section*{References} 至文末）",
+   "ok": true,
+   "detail": "14898 B = 14898 B"
+  },
+  {
+   "name": "B2 池 66：\\item[Rxx.] 条目两侧各 66 且序号全等",
+   "ok": true,
+   "detail": "66→66"
+  },
+  {
+   "name": "B3 引用实例 190→190：题录区前 [Rxx] 实例计数与多重集全等",
+   "ok": true,
+   "detail": "190→190"
+  },
+  {
+   "name": "B4 a57d7fe 冻结：两侧各恰 1 处",
+   "ok": true,
+   "detail": "R5 L532 / R6 L555"
+  },
+  {
+   "name": "B5 匿名面·署名：\\author 行两侧逐字恒等（双盲红线）",
+   "ok": true,
+   "detail": "\\author{Qihao Yuan}"
+  },
+  {
+   "name": "B6 匿名面·致谢：Acknowledgments 节形两侧 0；acknowledg 词形 1→1 不变（既有正文动词，非致谢面）",
+   "ok": true,
+   "detail": "节形 0/0；词形 1→1（R5 L252/R6 L267 同位）"
+  },
+  {
+   "name": "B7 匿名面·自引/去匿名化指针：KIMI 0、onewithdream 0、与死同行 0、anonymized in this edition 2→2",
+   "ok": true,
+   "detail": "KIMI 0/0；onewithdream 0/0；与死同行 0/0；anonymized 2→2"
+  },
+  {
+   "name": "B8 kimi 词频（爱丽丝观察③口径）：两侧各恰 2 处＝1 审计迹路径＋1 bukimi 子串，0 其他",
+   "ok": true,
+   "detail": "R5: audit L[401] + bukimi L[256]；R6: audit L[422] + bukimi L[271]"
+  },
+  {
+   "name": "B9 no prediction：C-2 禁用形机器面 3 形两侧 0；inherits this paper's 1→1（R5 既有否定式允许形）",
+   "ok": true,
+   "detail": "has been generalized 0→0; will show 0→0; is expected to succeed 0→0"
+  },
+  {
+   "name": "B10 0 来源箭头：四词族两侧 0",
+   "ok": true,
+   "detail": "inspired by 0→0; originates in 0→0; traces back to 0→0; the source of 0→0"
+  },
+  {
+   "name": "B11 0 诗引文/0 epigraph：epigraph/\\begin{verse} 词形两侧 0（K-1' 弃用·诗面零增补）",
+   "ok": true,
+   "detail": "epigraph 0/0；verse 0/0"
+  },
+  {
+   "name": "B12 题式：甲式恰 1（R6）、乙式 0（两侧）、旧式 Death is the point 仅存 R5",
+   "ok": true,
+   "detail": "甲 R6=1 R5=0；乙 0/0；旧式 R5=1→R6=0"
+  },
+  {
+   "name": "B13 词族账复跑（改稿单 §九.6 字面口径全符）",
+   "ok": true,
+   "detail": "position paper 3→1; position statement 4→4; Objection 0→4; Reply 0→4; kill 31→32; Kill 1→1; Death 1→0; death 1→1；合计 kill 32→33、death 2→1"
+  },
+  {
+   "name": "C0 diff 头注：--- 行含 ba2f157196f5、+++ 行为 R6 文件名",
+   "ok": true,
+   "detail": "--- R5/fiction_that_feeds_back.tex (ba2f157196f5) | +++ R6/fiction_that_feeds_back.tex"
+  },
+  {
+   "name": "C1 diff 忠实性：13 hunks 全部 −/＋/上下文行与 R5/R6 实际行逐字一致、行数声明自洽",
+   "ok": true,
+   "detail": "13/13 hunks 全符（−9 行＋32 行）"
+  },
+  {
+   "name": "C2 F01–F17 ↔ hunk 映射：17/17 锚串定位拼回原文、old/new 各恰 1 次、均有归属 hunk",
+   "ok": true,
+   "detail": "失配：[]"
+  },
+  {
+   "name": "C3 hunk 改动行全覆盖（非空行）：17 对恰为差异全集·与 A2/A3 互证；空行 −/＋系 difflib 对齐渲染伪差",
+   "ok": true,
+   "detail": "非空 −行/＋行 100% 落入 F 区间；空行伪差 −[(11, 400)] ＋[(5, 114), (7, 178), (7, 180), (8, 218), (8, 220), (9, 250), (9, 252), (10, 294), (10, 296), (10, 300), (11, 421), (13, 538)]；声明行差合计 +23（＝690−667 split 行差）"
+  },
+  {
+   "name": "C4 摘要区红线：R5/R6 摘要块文本对比（F01 摘要重写系改稿单登记项，记差异形态）",
+   "ok": true,
+   "detail": "R5 摘要行区间 L72–L77；hunk 交叠=[2]；块文本恒等=False（F01＝登记内摘要重写位）"
+  }
+ ],
+ "fail": 0,
+ "fmap": [
+  {
+   "fid": "F01",
+   "a5": 75,
+   "b5": 75,
+   "a6": 76,
+   "b6": 76,
+   "hunks": [
+    2
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[2]"
+  },
+  {
+   "fid": "F02",
+   "a5": 83,
+   "b5": 83,
+   "a6": 84,
+   "b6": 84,
+   "hunks": [
+    3
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[3]"
+  },
+  {
+   "fid": "F03",
+   "a5": 114,
+   "b5": 114,
+   "a6": 115,
+   "b6": 117,
+   "hunks": [
+    5
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[5]"
+  },
+  {
+   "fid": "F04",
+   "a5": 97,
+   "b5": 97,
+   "a6": 98,
+   "b6": 98,
+   "hunks": [
+    4
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[4]"
+  },
+  {
+   "fid": "F05",
+   "a5": 138,
+   "b5": 138,
+   "a6": 141,
+   "b6": 141,
+   "hunks": [
+    6
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[6]"
+  },
+  {
+   "fid": "F06",
+   "a5": 174,
+   "b5": 174,
+   "a6": 177,
+   "b6": 181,
+   "hunks": [
+    7
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[7]"
+  },
+  {
+   "fid": "F07",
+   "a5": 210,
+   "b5": 210,
+   "a6": 217,
+   "b6": 221,
+   "hunks": [
+    8
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[8]"
+  },
+  {
+   "fid": "F08",
+   "a5": 238,
+   "b5": 238,
+   "a6": 249,
+   "b6": 253,
+   "hunks": [
+    9
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[9]"
+  },
+  {
+   "fid": "F09",
+   "a5": 278,
+   "b5": 278,
+   "a6": 293,
+   "b6": 297,
+   "hunks": [
+    10
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[10]"
+  },
+  {
+   "fid": "F10",
+   "a5": 282,
+   "b5": 282,
+   "a6": 301,
+   "b6": 303,
+   "hunks": [
+    10
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[10]"
+  },
+  {
+   "fid": "F11",
+   "a5": 399,
+   "b5": 399,
+   "a6": 420,
+   "b6": 420,
+   "hunks": [
+    11
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[11]"
+  },
+  {
+   "fid": "F12",
+   "a5": 401,
+   "b5": 401,
+   "a6": 422,
+   "b6": 422,
+   "hunks": [
+    11
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[11]"
+  },
+  {
+   "fid": "F13",
+   "a5": 463,
+   "b5": 463,
+   "a6": 484,
+   "b6": 484,
+   "hunks": [
+    12
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[12]"
+  },
+  {
+   "fid": "F14",
+   "a5": 463,
+   "b5": 463,
+   "a6": 484,
+   "b6": 484,
+   "hunks": [
+    12
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[12]"
+  },
+  {
+   "fid": "F15",
+   "a5": 467,
+   "b5": 467,
+   "a6": 488,
+   "b6": 488,
+   "hunks": [
+    12
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[12]"
+  },
+  {
+   "fid": "F16",
+   "a5": 514,
+   "b5": 514,
+   "a6": 535,
+   "b6": 537,
+   "hunks": [
+    13
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[13]"
+  },
+  {
+   "fid": "F17",
+   "a5": 59,
+   "b5": 59,
+   "a6": 59,
+   "b6": 60,
+   "hunks": [
+    1
+   ],
+   "ok": true,
+   "detail": "old拼回=True new拼回=True 唯一=True hunk=[1]"
+  }
+ ],
+ "blank_artifacts": {
+  "minus": [
+   [
+    11,
+    400
+   ]
+  ],
+  "plus": [
+   [
+    5,
+    114
+   ],
+   [
+    7,
+    178
+   ],
+   [
+    7,
+    180
+   ],
+   [
+    8,
+    218
+   ],
+   [
+    8,
+    220
+   ],
+   [
+    9,
+    250
+   ],
+   [
+    9,
+    252
+   ],
+   [
+    10,
+    294
+   ],
+   [
+    10,
+    296
+   ],
+   [
+    10,
+    300
+   ],
+   [
+    11,
+    421
+   ],
+   [
+    13,
+    538
+   ]
+  ],
+  "declared_line_delta": 23
+ },
+ "abstract_r5_lines": [
+  72,
+  77
+ ],
+ "abstract_text_identical": false
+}
