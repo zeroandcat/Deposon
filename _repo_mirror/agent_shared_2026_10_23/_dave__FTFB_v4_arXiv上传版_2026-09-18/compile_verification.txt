@@ -1,0 +1,51 @@
+================================================================
+Compile Verification Record (neutralized edition)
+Paper  : Fiction That Feeds Back: From Non-Euclidean Geometry to Machine Worldviews
+Build  : arXiv submission edition, 2026-09-18 (chain-head manuscript, editorial artifacts stripped, named-author title block and submission info line typeset; paper body verbatim from the manuscript)
+================================================================
+
+[1] Deliverable fingerprints (SHA-256, full)
+  typeset source (.tex) : 1e447164acc5a506472c4a1e193a659dc0d60c70d9efed495abd02f1b3102b3b
+  compiled PDF          : 555e1fe41399f5fa0369e003007f6aa1757cfc90420eb7e75f179efd3c7d626d
+      (24 pages, 388,031 bytes; producer: pdfTeX-1.40.29)
+
+[2] Toolchain and convergence
+  pdflatex, 3 passes, -interaction=nonstopmode -file-line-error;
+  final two pass logs byte-identical: YES
+
+[3] Four-zero metrics (final pass log)
+  Compile errors              : 0
+  Overfull h/vbox warnings    : 0
+  Missing character reports   : 0
+  Undefined references        : 0
+
+[4] Visual gate: abstract block ends on page 1
+  G1 source structure (environment pairs once, closes before first section,
+     no structural blocks inside)                    : PASS
+  G2 page-level narrow-column probe                 : PASS
+     total pages 24; alarmed pages: none; narrow-column signature lines:
+     page 1: 23; pages 2+: 0
+
+[5] Structural checks
+  Title renders exactly once, on page 1            : PASS
+  Five frozen hash anchors, each exactly once      : PASS (all on p16)
+  Reference pool itemized entries                  : 56
+  Unique Rnn. labels in PDF text layer             : 56
+
+[6] Submission-edition hygiene scan (named-author arXiv build)
+  Workflow/identity tokens (internal list, not reproduced): 0 hits
+  \author{Qihao Yuan}, \date{2026-09-18}; PDF /Author="Qihao Yuan" (by design)
+  Anonymized companion-study entry intact; author name absent from paper body
+  CJK characters in PDF text layer                 : 0
+  CJK characters in typeset source (comments incl.): 0
+  E-mail addresses in source or PDF                : 0
+  Hygiene scan result                              : PASS
+
+[7] Disclosures (non-blocking)
+  Underfull hbox warnings: 3 (badness 2103/5548/1990) -- content-layer line-fit
+      mismatches absorbed by the standard emergency-stretch mechanism;
+      line breaks and page flow otherwise stable.
+  Other LaTeX/package/pdfTeX/class warnings         : 0
+
+RESULT: ALL GATES PASS
+================================================================

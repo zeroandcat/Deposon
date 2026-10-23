@@ -1,0 +1,64 @@
+FTFB v2 retypeset (Coze double-review blocker fixes) - compile verification (2026-09-17)
+Baseline: chain head md 查理_FTFB全稿文献合并版_2026-09-16.md (52-reference pool), content-zero-change conversion
+Engine: TeX Live 2026 portable, pdfTeX 3.141592653-2.6-1.40.29 (workspace v8_pdflatex/texlive2026)
+Command: pdflatex -interaction=nonstopmode -file-line-error, three passes; exits: 0 / 0 / 0
+  (pass1/pass2/pass3 logs byte-identical: fully converged; each pass output 20 pages, 354174 bytes)
+Errors (lines starting with ! or file:line:err): 0
+Overfull boxes: 0 | Underfull boxes: 2, cosmetic (tex L322-323 badness 1092, §7 adjudication-layer
+  anchor paragraph; L467-468 badness 5548, reference list R37 long-URL entry. Content-inherent
+  line-fit mismatch, declared: rewording forbidden (content freeze), microtype.sty unavailable in
+  portable TL2026/2025; mitigated by \allowbreak breakpoints F3, raggedright headings F7, \url
+  hyphen breaks F8, tolerance=900 + emergencystretch=3em F10 - standard TeX mechanism, not a
+  \hbadness mask; residual badness reported above as measured)
+Missing characters: 0 | Undefined references/citations: 0
+Pages: 20 (task window 15-25) | A4 | PDF 354174 bytes
+pdfinfo: Title=Fiction That Feeds Back: From Non-Euclidean Geometry to Machine Worldviews;
+  Author=<empty> (double-blind); Creator=LaTeX with hyperref; Producer=pdfTeX-1.40.29
+First-appearance order of pool IDs (identity mapping, manuscript unchanged): R01, R52, R13, R14,
+  R42, R45, R46, R02, R03, R04, R05, R06, R07, R09, R08, R10, R43, R44, R40, R41, R11, R12, R15,
+  R37, R36, R38, R39, R32, R33, R47, R48, R49, R50, R51, R30, R31, R35, R34, R20, R16, R17, R18,
+  R19, R21, R22, R23, R24, R25, R26, R27, R28, R29
+Baseline md sha256: 76eef1dd22947e01a5d791b59390439f80297955eeed9dab39ec719cd7864d0f
+  (byte-identical to shared chain head; locked by full-SHA assertion in build_ftfb_tex_v2.py)
+
+Blocker fixes verified (Coze double-review, blocking item 2, three branches - all closed):
+  [B1] markdown # residue in tex (v1: L57 title, L257 table header): tex document-wide escaped-\#
+       count = 0; PDF text layer markdown-# lines = 0 (v1 defect paths not recurring)
+  [B2] PDF first-page title duplication: title string occurs exactly 1 time document-wide, on
+       page 1 (1/1); md H1 line consumed at conversion, title lives in \title/\maketitle only
+  [B3] §6.2 M1-M5 table header first column rendered "No." (typographic rewrite of md "#",
+       exactly 1 occurrence, declared; v1 rendered \textbf{\#})
+
+Quality gates (check_pdf_quality.py, all PASS, exit 0):
+  Z1 compile errors: 0 | Z2 Overfull: 0 | Z3 missing characters: 0 | Z4 undefined references: 0
+  S1 convergence: pass2.log == pass3.log byte-identical
+  S2 title single appearance: whole document 1 / page 1 1 (expected 1/1)
+  S3 no-# residue: PDF text layer markdown-# lines = 0; tex body \# count = 0
+  S4 five-anchor invariants: aeefb8ef6972:1 9bbe43f41fa8:1 6e9673205dc0:1 68a5b08ef007:1 6b09de9911c0:1
+  S5 table header rewrite: "No. Hard-SF criterion" rendered (old \textbf{\#} not recurring)
+  S6 double-blind: PDF /Author=""; CJK characters = 0; identity tokens 0 hits each
+     (deposon / keep-the-books / keep the books / zhipu / 智谱 / 清言)
+  tex-side supplementary scan (this delivery): identity tokens 0/6 as above, plus Qihao/Yuan 0;
+     \author{} and \date{} empty; hyperref pdfauthor={}; no email / acknowledgments / funding
+     block (15 "@" hits all LaTeX internals: \@startsection, tabularx @{} colspec, @0.5 notation);
+     GLM appears exactly 1 time = chain-head AI-disclosure sentence, retained verbatim per
+     disclosed v1 decision (drafting-model disclosure, not author-identity information)
+Disclosures (not gating): D-other warnings (LaTeX/Package/pdfTeX/Class) = 0; glyph sampling
+  τ:4 Σ:2 ×:1 –:44 —:178 §:104 (σ not in md source notation, N/A)
+
+Content-zero-change evidence (build_ftfb_tex_v2.py assertions, all passed at build time):
+  chain-head SHA256 full lock; [Rnn] citation multiset md == tex; F-C multiset md == tex;
+  reference entries 52 == 52; section sequence 1..N monotone; five anchors each exactly 1 in
+  md and tex; body title-string zero-leak; table-header rewrite count == 1; tex \# == 0.
+  Typographic-only deltas vs v1 engine (all declared above): F1 H1 consumption, F2 header
+  "No.", F3 \allowbreak breakpoints (glyph-identical), F4 five unicode mappings silenced via
+  \DeclareUnicodeCharacter, F7 raggedright section headings, F8 \url hyphen breaks, F10
+  tolerance/emergencystretch. No content-layer edit of any kind.
+
+Fingerprints (sha256, full):
+  md : 76eef1dd22947e01a5d791b59390439f80297955eeed9dab39ec719cd7864d0f
+  tex: 0713fc4f07805f7547d1b5a82471f2d185f3170968faeddd2ec485a2c83045a2
+  pdf: 77e8526ea6bb9e48997f40eafbb7f98ffba6dd1badd556ee0977502387eaf589
+
+Scope note: this round = retypeset delivery only (tex + PDF + this record). External review
+  package v2 rebuild (tar/manifest/brief) intentionally deferred pending Bob's final check.

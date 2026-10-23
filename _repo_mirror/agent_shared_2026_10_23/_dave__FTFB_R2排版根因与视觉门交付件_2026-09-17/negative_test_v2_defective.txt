@@ -1,0 +1,5 @@
+[PASS] G1a-环境配对: \begin{abstract}=1, \end{abstract}=1（期望 1/1）
+[FAIL] G1b-闭合先于首节: begin L69 → end L409 → 首个 \section L74（要求 end < section）
+[FAIL] G1c-环境内无结构块: abstract 内部结构块: ['\\section', '\\subsection', '\\begin{table}', '\\begin{itemize}', '\\begin{enumerate}', '\\item']
+[FAIL] G2-第2页起无abstract排版: 总页数=20；报警页=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]；逐页(页:行数/窄栏签名行数) p1:44行/窄34 p2:56行/窄27 p3:56行/窄37 p4:53行/窄39 p5:53行/窄28 p6:55行/窄35 p7:52行/窄38 p8:54行/窄28 p9:54行/窄39 p10:53行/窄31 p11:55行/窄25 p12:52行/窄32 p13:56行/窄46 p14:53行/窄44 p15:52行/窄40 p16:53行/窄37 p17:53行/窄28 p18:50行/窄31 p19:46行/窄0 p20:34行/窄0
+VISUAL GATE RESULT: FAIL

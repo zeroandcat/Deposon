@@ -1,0 +1,84 @@
+================================================================================
+FTFB arXiv 稿 R4 更新版（public-record citation switch 收尾）—— 编译与排版验证链全记录
+日期：2026-09-27　操作者：戴夫（格式线）
+对象：查理 R4 更新稿 tex（指纹 4f8c4231…，101,928 B，606 行；基准＝R3 重打包 tex 51f4e0c8…）
+指示依据：管理员派单 2026-09-27 02:58（R4 编译＋arXiv 合规＋视觉门＋页数登记＋验证报告）
+================================================================================
+
+一、指纹链（查理 R4 交付 → 编译副本 → PDF）
+  查理 R4 交付（shared/查理_FTFB_R4更新交付_2026-09-27/）：
+    tex  4f8c42319603fca69473ad07673f236fd0d688a043fdd23d9ebcdec0e2c9fd0a（101,928 B，606 行，独立复测吻合）
+  编译副本（本链 out/，编译后复测）：同一 SHA-256，零触碰内容。
+  PDF（本链产物）：
+    0b0d9495508f4da97b7f06dcc4f07cc6213731d173f4ef5557bbb07bcc9e87f9（411,782 B，25 页）
+  基线：R3 tex 51f4e0c8…（98,972 B）→ R3 PDF faded1e95…（408,781 B，24 页）。
+
+二、编译环境与过程（沿 09-18 R3 重打包同源工具链）
+  引擎：pdfTeX 3.141592653-2.6-1.40.29（TeX Live 2026 便携版，agents/…/v8_pdflatex/texlive2026/），
+  　format=pdflatex 2026.9.16（preloaded），历轮同源引擎（查理环境无 pdflatex／tectonic XeTeX
+  　不兼容 L27 newunicodechar 序言层——本链 pdflatex 路径不受影响）。
+  过程：三遍 pdflatex -interaction=nonstopmode，每遍 exit 0；pass2 与 pass3 stdout 逐字节相同
+  　（交叉引用收敛）。编译时刻 2026-09-27 03:00:25 CST（PDF CreationDate）。
+  序言区（L1–L61）与 R3 逐字节一致（sha256 f9c4ec0c4593… 双侧同值），引擎兼容层零改动；
+  　R4 全部改动落在 L62 起的正文层（diff 24 块 68 行，与查理申报一致）。
+
+三、四零指标（沿旧轮阈值）
+  错误（! 行）＝0　　Overfull＝0　　Missing character＝0　　未定义引用/引文＝0
+  LaTeX Warning＝0（本轮连警告类都为零）
+  Underfull \hbox＝2：badness 5548 与 1990，均位于 tex L554–555（参考文献区长 URL 条目），
+  　落点与 badness 与 R3 基线完全相同——非本轮引入，按旧轮口径作为间距提示如实披露。
+
+四、R3→R4 变更面核验（编译链独立性复核）
+  1. diff 触点 24 块全落位：日期（L62/L67）、摘要 availability 从句（L75）、R56 措辞 4 处
+  　（L132/L292/L500 等「a revised version」→「a later revised edition」）、§7 标题去匿名化（L319）、
+  　Deposon 实名恢复与仓相对路径（L321/L325ff）、Table 1 bytes 列（L336–347，tabularx 宽度
+  　0.88→0.94\textwidth＝排版参数非测量值）、§6.4/§7.1/§7.2/§8.3/附录 availability 改写
+  　（L315/L357/L381/L435/L494）、附录换锚收尾（L603）。
+  2. 数字 token 多集对比（零漂移）：全部删除仅 0.88×1（tabularx 宽度）＋18×2（日期位）；
+  　新增全部可归因（日期 2026-09-27/-26、bytes 列 19,100/16,600/7,236/3,318/6,326、
+  　§7.1×9/§7.2×4 交叉引用、排版参数）。2.220446049250313e-16、ECR 4/3、20/22、61 图、
+  　6,760 状态等测量锚在 PDF 文本层逐项在场。
+  3. verdict 区块（§Verdict and channel claim）：R3↔R4 逐字节一致（sha-16 dc3dde55b6160d06，3,198 字符）。
+  4. 引用池：\item[R01.]–[R56.] 连续 56 条无增删；全部条目被引；[R56] 引用 8 处不变；
+  　R13 NTRS 19940022856×2、R14 DOI 10.1007/s12369-022-00876-z×1 不变；55 verified＋1 anonymized 闭合。
+  5. 书签 38 条，深度序列与 R3 相同；唯一标题差异＝§7 去匿名化（申报触点 1）。
+
+五、锚点与 PDF 文本层
+  七个 SHA-12 串（五预登记锚 aeefb8ef6972/9bbe43f41fa8/6e9673205dc0/68a5b08ef007/6b09de9911c0
+  　＋仓存 23 页旧版 PDF 锚 2d9edc8c7303＋第三方复算件锚 879db0217f04）在 tex 与 PDF 文本层
+  　各恰现一次。
+  Table 1（tex tab:anchors）三列（仓相对路径/SHA-12/bytes）渲染正常，零 Overfull；
+  　hyperref URL 注解 9 处（p14/p22 仓库链接、p23–25 文献链接）在位。
+  PDF 文本层 R3↔R4 diff：342 行/48 块，逐块归因于触点区段、表格新列重排、
+  　附录/参考文献跨页级联与第 25 页溢出——无触点外内容性差异。
+
+六、页数登记与版面
+  实测 25 页（R3 为 24 页；A4 595.276×841.89 pts）。页数增长机理：Table 1 新增 bytes 列＋
+  　五区 availability 改写净增文字，附录与参考文献顺延一页；末页（p25）以 R53–R56 池收尾，
+  　页面充实非孤行页。查理 Comments 建议稿写「24 pages; …预计 24 页不变」——实测 25 页，
+  　已按实测值登记于 arxiv_metadata.txt（Comments＝25 pages）并在此披露差异；
+  　页数以本排版轮 pdflatex 实测为准。
+
+七、arXiv 合规（沿 09-18 各轮规范）
+  字体：pdffonts 17 行全 emb=yes（LM Roman/Math/Mono Type 1 子字库），无 Type 3（与 R3 行数同构）。
+  页面尺寸：A4。PDF 1.7，未加密，无 JavaScript，Form=none。
+  hyperref/元数据：Title＝论文题目，Author＝Qihao Yuan（实名单作者 preprint，设计内合规），
+  　Subject/Keywords 留白；Info 字典仅标准键，无 PTEX 自定义键、无隐蔽位作者信息；
+  　Creator＝LaTeX with hyperref，Producer＝pdfTeX-1.40.29。
+  摘要：arXiv 粘贴口径（空白归一）1,822 字符 ≤1,920，裕度 98；环境内原始（标记间）1,827；
+  　较 R3 唯一改动＝availability 从句（净 −24）；tex 跨度 L72–L77。
+  体例：首页标题块/作者/日期（2026-09-27）/subjects 行/摘要窄栏结构正常；§1 起章节流正常。
+  清洁零：anon_ 0、confidential/private channel 0、frozen handoff artifact 0（7→0）、
+  　deferred 0（4→0）、CJK 0、邮箱样模式 0；「on request」保留 6 处＝R56 条目（4）＋
+  　检索快照（2），策略性保留（查理申报一致）；@ 21 处全为 LaTeX 内部命令/数学（与 R3 同）；
+  　R56 条目仍匿名（companion study 池纪律，设计内）。
+  词数（v6 工具复用）：P 10,435→10,585（+150）；C 12,414→12,701（+287）；T 11,240→11,449（+209），
+  　详见同包 word_count_report_2026-09-27.txt。
+
+八、纪律执行
+  0 LLM API；tex 内容零触碰（编译用副本指纹复验不变；查理 R4 交付原件未动）；
+  不重算/不改任何数字与锚点；历轮 frozen 制品未动（R3 包、仓内冻结件零触碰）；
+  页数差异（24 预估→25 实测）如实登记不粉饰。若鲍勃验收打回致 tex 变更，
+  以最终裁定版为准重编（派单第 5 条，待触发）。
+================================================================================
+验证结论：R4 更新版编译链全绿（四零＋零警告），arXiv 合规项全过，可直接作为重投 PDF。

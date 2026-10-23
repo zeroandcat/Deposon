@@ -1,0 +1,137 @@
+================================================================================
+FTFB arXiv manuscript, R5 revision edition (loop-family section + declared pool
+extension) — compilation and typesetting verification record
+Date: 2026-10-20   Operator: Dave (formatting chain)
+Object: Charlie R5 final tex (fingerprint ba2f1571..., 123,129 B, 666 lines;
+baseline = R4 tex 4f8c4231..., 101,928 B, 606 lines)
+Dispatch basis: admin dispatch 2026-10-20 14:58:41 (compile-and-package round,
+executed per the R5 one-shot submission plan, steps 0-7)
+================================================================================
+
+[1] Fingerprint chain (Charlie R5 delivery -> compile copy -> PDF -> package)
+  R5 source (shared/Charlie_R5 delivery/):
+    tex  ba2f157196f575366700fe2209097f4499417412550759039dd814fe3cc51482
+         (123,129 B, 666 lines; independently re-measured on receipt, matches the
+         dispatch value and the differential-acceptance fingerprint)
+  Compile copy (this chain, out/): same SHA-256 — content zero-touch.
+  PDF (this chain product):
+    f5b985006b592f50ab8ab0c776c7e51d7a5ce17af25ae79526800c12ddf49786
+    (29 pages, 431,627 bytes; producer pdfTeX-1.40.29; A4; not encrypted)
+  Baseline R4: tex 4f8c4231... (101,928 B) -> PDF 0b0d9495... (25 pages, 411,782 B).
+  Package (this chain product): ftfb_arxiv_r5_rev_2026_10_20.tar.gz
+  (full SHA-256 in the sidecar sheet and the delivery README).
+
+[2] Toolchain and convergence
+  Engine: pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026 portable, bin/x86_64-linux;
+  same engine as the R3/R4 rounds — same-source toolchain maintained).
+  Passes: 3 (-interaction=nonstopmode -file-line-error); all three exit 0.
+  Four-zero gate: 0 errors, 0 Overfull boxes, 0 missing characters, 0 undefined
+  references; LaTeX Warning count = 0 (the R4 precedent tier: warnings also zero).
+  Underfull: 2 (badness 5548 / 1990; paragraph at source lines 592-593 = the [R37]
+  reference entry) — the identical construct at identical badness values sits at
+  lines 554-555 of the R4 source: a carried-over content-level line-fit, not a new
+  typesetting defect. Disclosed, non-blocking.
+  Page count: 29 (R4 = 25; +4). The one-shot plan's estimate was 25 -> 27+-1;
+  deviation +2, honestly registered. Drivers: Sec. 8.4 (loop family), Sec. 3.4
+  (physics companion case), Sec. 5.2 uncanny-valley case block, ten pool entries
+  [R57]-[R66], five status-sentence rewrites, the AI-use-disclosure section
+  upgrade, and the register layer (P-S1-S5).
+
+[3] arXiv compliance gates (one-shot plan checklist, item by item)
+  1. Font embedding: pdffonts 17/17 rows Type 1, emb=yes, sub=yes, uni=yes (Latin
+     Modern family) — PASS (re-measured 2026-10-20).
+  2. bbl / reference resolution: the source is self-contained — grep for
+     \input, \include, \includegraphics, \bibliography, \bibliographystyle =
+     0 hits; the reference pool is an in-text itemize list [R01]-[R66]; no .bbl
+     required — PASS.
+  3. Package structure: tar listing is flat at the package root (no directories);
+     ASCII filenames only; package contains no .aux/.log/.out intermediates —
+     PASS (listing recorded in the sidecar sheet).
+  4. File sizes: tex 123,129 B; PDF 431,627 B; package ~52 KB — orders of
+     magnitude below the arXiv per-file and total limits — PASS.
+  5. PDF integrity: gzip -t PASS; startxref present; %%EOF terminal marker;
+     Producer pdfTeX-1.40.29; Encrypted: no; PDF version 1.7 — PASS.
+  6. Metadata consistency: Comments page count 29 = PDF measured pages 29 =
+     \date{2026-10-20} = Date field 2026-10-20 = page-1 info line; hyperref
+     /Title and /Author match the form Title/Authors verbatim; /Subject and
+     /Keywords blank by design — PASS.
+  7. Abstract: environment byte-identical to R4 (zero-change decision); raw
+     (between markers) 1,827; whitespace-normalized (arXiv paste caliber) 1,822
+     <= 1,920, margin 98; tex span L72-L77; non-ASCII only U+00A7, U+2013,
+     U+2014 — PASS.
+  8. Author list: \author{Qihao Yuan} byte-identical to R4 — no author change on
+     this replace; no arXiv moderation-approval trigger — PASS.
+  9. Subjects: cs.AI (primary); physics.hist-ph; cs.CY — unchanged from all
+     prior submissions of this record — PASS.
+  10. License: CC BY 4.0 — unchanged — PASS.
+  11. Replace entry discipline: the submission is a replace on the existing
+      (on-hold) record, entered from the author's submission history — never a
+      new submission (duplicate-ID avoidance). Noted for the submitter; see the
+      submission steps sheet.
+  12. On-hold history: the record has an unresolved on-hold status (P7: no
+      editorial input received to date). R5's direction is driven by the PI's
+      revision instructions, not by any on-hold response. Editorial content-side
+      moderation is outside the format gates; registered, not gated.
+
+[4] Hygiene scans (named-author arXiv build)
+  CJK characters in source (comments incl.): 0; in PDF text layer: 0.
+  E-mail patterns in source or PDF: 0. anon_ tokens: 0. confidential / private
+  channel: 0.
+  "on request" retained at 6 spots (companion-study pool entries and retrieval
+  snapshots) — strategic retention, count identical to R4.
+  [R56] and [R57] remain anonymized (companion-study / position-statement pool
+  discipline — by design, restoration planned for a camera-ready round).
+  AI-use disclosure: upgraded to a dedicated \section*{AI use disclosure} with
+  the direct sentence "No content was generated by the AI without human review."
+  (decision D-4, A+B executed); same-line declaration appended at the section's
+  end (Sec. 8.4 / [R57] linkage).
+
+[5] Regression: pool, anchors, structure
+  Pool: 66 item[ entries; labels [R01]-[R66] contiguous, no duplicates (R4: 56;
+  the ten additions are [R57]-[R66], declared not retrieved).
+  Five pre-registration anchors: Table (tab:anchors, L368ff) present; values
+  unchanged — numeric-literal zero drift is certified independently by the
+  differential-acceptance round (81/81 PASS, 2026-10-20): byte-level
+  out-of-list zero change, numeric multiset comparison closed, verdict literals
+  identical.
+  Master table (Sec. 9.1): two new rows (Demon chain — controlled, physics
+  companion (Sec. 3.4); Uncanny-valley chain — narrative companion (Sec. 5.2));
+  the six pre-existing rows byte-identical to R4.
+  New structure: Sec. 3.4 (physics companion case), Sec. 8.4 (the loop family
+  and its wider formulation), \section*{AI use disclosure} (upgraded from a
+  paragraph-level marker); \subsection count 30 -> 32; \section* 2 -> 3.
+  Status sentences: five deposition-status rewrites landed at L335/L349/L377/
+  L401/L532 with commits and SHA-12 prefixes (9b6d80a + 9fccd007be9f;
+  3eee223 + ed5eb708f332).
+
+[6] Word counts (v6 tool, same calibers as R3/R4)
+  P 13,068 / C 15,798 / T 14,014 (R4: 10,585 / 12,701 / 11,449; deltas
+  +2,483 / +3,097 / +2,565) — see word_count_report_2026-10-20.txt.
+
+[7] Disclosures (non-blocking)
+  1. Underfull 2 (badness 5548/1990) — carried over from R4 at the same content
+     (the [R37] entry), disclosed above.
+  2. Page-count estimate deviation +2 against the one-shot plan's 27+-1 band.
+  3. The Sec. 9.1 table introduction (L477) carries the clause pair "nothing is
+     re-scored ... nothing already scored is re-scored" — a stylistic redundancy
+     inherited from the merged revision order (the slot-3 appended clause plus
+     the original sentence). Registered verbatim; the text face is the accepted
+     final (0-touch discipline); no change made.
+  4. Package form: the v4 upload-edition precedent is followed — no prebuilt PDF
+     inside the arXiv tar (the arXiv build compiles the source; the delivery-dir
+     PDF is the fingerprint baseline). The alternative form (PDF included,
+     R3-style package) remains deferred pending the web-check item already
+     listed in the one-shot plan (how arXiv treats a same-named .pdf alongside
+     the .tex).
+
+[8] Discipline
+  0 LLM API calls in this chain; tex content zero-touch (the compile copy's
+  fingerprint re-verified identical after compilation; Charlie's delivery
+  original untouched); no re-computation or alteration of any number or anchor;
+  frozen artifacts of prior rounds untouched. This record is the neutral-English
+  verification companion shipped inside the arXiv package.
+
+RESULT: ALL GATES PASS — four-zero compile, arXiv compliance checklist green,
+ready for the replace submission (submitter steps: see the submission steps
+sheet in the delivery folder).
+================================================================================

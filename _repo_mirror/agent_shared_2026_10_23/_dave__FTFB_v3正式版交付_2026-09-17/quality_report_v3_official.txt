@@ -1,0 +1,35 @@
+[PASS] Z1-编译错误: count=0
+[PASS] Z2-Overfull: count=0
+[PASS] Z3-缺字形: count=0
+[PASS] Z4-未定义引用: count=0
+[PASS] S1-编译收敛: pass2.log == pass3.log 逐字节一致
+[PASS] S2-标题单现: 全文 1 次 / 首页 1 次（期望 1/1）
+[PASS] S3-无#残留: PDF文本层 markdown # 行=0；tex 正文 \# 计数=0
+[PASS] S4-五锚不变式: aeefb8ef6972:1 9bbe43f41fa8:1 6e9673205dc0:1 68a5b08ef007:1 6b09de9911c0:1
+[PASS] S5-表头改写: M1–M5 表头首列渲染为 "No."
+[PASS] S6-双盲合规: /Author=""；CJK字符=0；身份token={'deposon': 0, 'keep-the-books': 0, 'keep the books': 0, 'zhipu': 0, '智谱': 0, '清言': 0, '〔用户U〕': 0, '〔用户U〕': 0}
+[PASS] C1-54条全列: References 列表 54 条；缺失=无 多余=无
+[PASS] C2-指针全覆盖: 正文引用 54/54；未在正文引用=无；正文有而未列=无
+[PASS] C3a-R37访问日期: R37 新访问日期格式渲染: accessed 2026-09-17 (entry updated 7 April 2025)
+[PASS] C3b-R53渲染: R53 Riemann 题录+emis URL+捕获日期
+[PASS] C3c-R54渲染: R54 Clifford 题录+wikisource URL+1876 works
+[PASS] C3d-条目标签: PDF 文本层 Rnn. 条目标签唯一数 54（期望 54；enumitem 描述列表渲染标签本体，方括号为语法定界符不渲染，与 v1/v2/试排管线一致）
+[PASS] G1-σ抽检: σ 在 md 源记法中 0 次（源即无），PDF 出现页=无，N/A 申报
+[PASS] G2-τ抽检: τ 出现页=[15]（源 4 次）
+[PASS] G3-Σ抽检: Σ 出现页=[8]（源 2 次）
+[PASS] G4-×10⁻¹⁶: 科学记数 ×10⁻¹⁶ 出现页=[15]
+[PASS] G5-五锚哈希串: aeefb8ef6972→p[15] 9bbe43f41fa8→p[15] 6e9673205dc0→p[15] 68a5b08ef007→p[15] 6b09de9911c0→p[15]
+[PASS] G6-新直引渲染: 新直引内引号渲染页：only to be deduced from experi→p[4]；Hard Again→p[11]；1876 works→p[23]
+[PASS] G7-弯引号字形: Steele 引语两端渲染为弯引号 “…”
+[PASS] D1-身份与致谢token: tex 全文命中={}
+[PASS] D2-作者/日期栏: \author{}/\date{} 均空；无致谢节
+[PASS] D3-PDF元数据: /Author=""；Creator="LaTeX with hyperref"（工具链自述，非身份信息）
+[PASS] D4-批注/附件: PDF 无注释/附件（pdfinfo 无 Annots 行）
+[PASS] D5-CJK文本层: PDF 文本层 CJK 字符 0
+[PASS] D6-邮箱零命中: 全文邮箱=无
+[DISC] D-Underfull: count=3 lines 324-325 badness 2103; lines 467-468 badness 5548; lines 467-468 badness 1990
+[DISC] D-其他警告: count=0 （无）
+[DISC] D-字形抽检: 'τ':4 'Σ':2 '×':1 '–':47 '—':190 '§':105 '“':53 '”':53（σ 源即无，N/A）
+[DISC] 页数=23；源md指纹=7a0a98289588dded…；tex指纹=d060f75dbe9ff190…；pdf指纹=2d9edc8c7303fe7c…
+
+RESULT: 全门禁 PASS（四零全绿＋结构＋54 条引用＋字形页面级＋D1–D6 双盲）

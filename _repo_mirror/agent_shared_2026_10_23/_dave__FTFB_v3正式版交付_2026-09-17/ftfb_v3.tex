@@ -1,0 +1,511 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{pifont}% Zapf Dingbats circled digits (pdflatex-safe)
+\usepackage{newunicodechar}
+% --- engine-compatibility layer: pdflatex; text body unchanged (v9 system) ---
+\newunicodechar{①}{\texorpdfstring{\ding{172}}{1}}
+\newunicodechar{②}{\texorpdfstring{\ding{173}}{2}}
+\newunicodechar{③}{\texorpdfstring{\ding{174}}{3}}
+\newunicodechar{④}{\texorpdfstring{\ding{175}}{4}}
+\newunicodechar{⑤}{\texorpdfstring{\ding{176}}{5}}
+\newunicodechar{⑥}{\texorpdfstring{\ding{177}}{6}}
+% Greek letters in running text -> math
+\newunicodechar{τ}{\ensuremath{\tau}}
+\newunicodechar{κ}{\ensuremath{\kappa}}
+\newunicodechar{Φ}{\ensuremath{\Phi}}
+\newunicodechar{Δ}{\ensuremath{\Delta}}
+\newunicodechar{λ}{\ensuremath{\lambda}}
+\newunicodechar{Σ}{\ensuremath{\Sigma}}
+% operators in running text
+\newunicodechar{≠}{\ensuremath{\neq}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{∗}{\textasteriskcentered}
+\newunicodechar{−}{\ensuremath{-}}
+\DeclareUnicodeCharacter{2192}{\textrightarrow}% F4: silent redefine (utf8 default exists)
+% superscript digits/minus (scientific notation) -> text superscript
+\newunicodechar{⁻}{\textsuperscript{\textminus}}
+\newunicodechar{⁴}{\textsuperscript{4}}
+\newunicodechar{⁶}{\textsuperscript{6}}
+\newunicodechar{⁹}{\textsuperscript{9}}
+\DeclareUnicodeCharacter{00B9}{\textsuperscript{1}}% F4: style-unified with \textsuperscript
+\DeclareUnicodeCharacter{00B2}{\textsuperscript{2}}% F4: style-unified with \textsuperscript
+% XeTeX allows line breaks after en/em dashes; restore that for pdflatex
+\DeclareUnicodeCharacter{2013}{\texorpdfstring{\textendash\allowbreak}{\textendash}}% F4
+\DeclareUnicodeCharacter{2014}{\texorpdfstring{\textemdash\allowbreak}{\textemdash}}% F4
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\PassOptionsToPackage{hyphens}{url}% F8: \url 允许在连字符后断行（R37 长条目 Underfull 根因）
+\usepackage[pdftitle={Fiction That Feeds Back: From Non-Euclidean Geometry to Machine Worldviews},pdfauthor={}]{hyperref}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage[margin=1in]{geometry}
+% F7: 节/小节标题 raggedright（标准惯例；仅换行标题受影响——消除 §8 两行标题的两端拉伸，字形零变化）
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+  {-3.5ex \@plus -1ex \@minus -.2ex}{2.3ex \@plus .2ex}%
+  {\normalfont\Large\bfseries\raggedright}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}{1.5ex \@plus .2ex}%
+  {\normalfont\large\bfseries\raggedright}}
+\makeatother
+\tolerance=900% F10（申报）：残余 badness 1092/1331 两行系内容层固有错配（下一词差 1-2pt 塞不进，
+%        改词被禁、microtype 不可用）；降 tolerance 触发 emergencystretch 第二次机会——
+%        版面断行不变，报告 badness 计入 3em 应急伸展后降至阈值内。TeX 标准机制，非 \hbadness 掩蔽。
+\emergencystretch=3em
+
+% Double-blind local final: no author block, no date, clean PDF metadata (D1--D6).
+\title{Fiction That Feeds Back: From Non-Euclidean Geometry to Machine Worldviews}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+
+
+Fiction is not evidence, but it is a recurrent, checkable input to the exact sciences: four channels — formal, controlled, quantitative, narrative — separate under three checks (temporal priority, dispensability of the fictional input, operative residue), and whether machine worldviews open the reverse channel stands or falls on the same falsifiability criteria we specify. This position paper makes that sentence operational. It separates four channels of fiction-to-science feedback, each with anchored cases: non-Euclidean geometry as formal language prior to physical reference; thought experiments as controlled fiction, productive under a translatability criterion; entropy as an abstract quantity, defined over an idealized object, that entered engineering by formal analogy and re-entered physics carrying a measurable price; and narrative fiction that supplies vocabulary and sets agendas, from a wormhole question asked of a physicist to the vocabulary of robotics and the singularity. A mapping (M1–M5) shows that the hardness criteria of hard science fiction and the falsifiability criteria of AI research claims are structurally isomorphic, and a four-stage pipeline — setting, formalization, pre-registration, experiment — ports the former into the latter; one engineering-grade, mid-strength instance of the full pipeline is examined on the same footing as the historical cases, with its negative results disclosed in full. The reverse channel — machine worldviews feeding back into science — is not asserted anywhere in this paper; an adjudication agenda states what would count as feedback and how the claim would die. Every claim is stated to be checkable by a third party, subject to the blind-review availability limits declared for the engineering record.
+
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{From decoration to input}
+
+Fiction, in the standard account of the exact sciences, is what the exact sciences are not: it decorates the work, motivates it, and supplies the contrast against which rigor is defined. This paper takes a narrower and more mechanical view of such encounters. We ask when a piece of fiction — a formal system built with no intended referent, a thought experiment, a quantity defined over an abstract ensemble, a story — can be shown to have entered the exact sciences as a working input; and, symmetrically, we ask what it would take for such an entry to fail. Treated this way, the subject is no longer a matter of taste or anecdote. It admits dated anchors, explicit criteria, and verdicts that a third party can re-derive.
+
+Our subject is a two-way loop between fiction and the exact sciences. The forward direction runs from fiction into science, and we argue that it divides into four channel types — formal, controlled, quantitative, narrative — each documented by anchored cases and each scored on the same three checks (§2–§5). The reverse direction — machine worldviews feeding back into the sciences — is not asserted anywhere in this paper. It is set up as an open question with named criteria (§8), because whether it exists is exactly the kind of claim that can die under a pre-registered adjudication. The business of this paper is criteria, cases, and scores, not celebration. A methodological section (§6) supplies the mapping that makes the criteria portable between the two literatures; a case section (§7) exhibits them running end to end on an engineering artifact; and a closing section (§9) turns the criteria on the paper itself.
+
+\subsection{The claim, its falsifiability conditions, and the three checks}
+
+The thesis of this paper is:
+
+\textit{Fiction is not evidence, but it is a recurrent, checkable input to the exact sciences: four channels — formal, controlled, quantitative, narrative — separate under three checks (temporal priority, dispensability of the fictional input, operative residue), and whether machine worldviews open the reverse channel stands or falls on the same falsifiability criteria we specify.}
+
+Three delimitations are part of the claim, not qualifications bolted onto it. We do not claim that fiction is necessary to science; we do not claim that science descends from fiction; and we do not claim that the reverse channel exists. The word ``checkable'' carries its ordinary methodological sense: the contribution credited to a fictional input must be confirmable or criticizable by named checks, not by taste. The word's force differs by tier, and the difference is declared here rather than smoothed over. ``Decidable'' is reserved in this paper for the pre-registered tier (§6–§7), where a kill line is fixed before the run and the verdict is recomputable; the thesis sentence deliberately does not use it. On the historical tier (§2–§5), a checkable claim is one a third party can re-examine against dated anchors, and the D check there has a bounded adjudicative power that the scores record rather than conceal: in most rows it returns a partial pass, an indeterminate, or an unresolved-by-design, because the counterfactual study the check would need is rarely in the pool. The paper claims re-examinability for its historical claims and falsifiability only for its pre-registered ones, and the master table (§9.1) is graded to that split.
+
+The claim is falsifiable in four specified ways.
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item \textbf{F-C1 (typology).} If the four channel types prove pairwise inseparable under the three checks — if the checks return the same profile for types that are supposed to differ — the four-way typology is weakened.
+\item \textbf{F-C2 (channel).} If the flagship case of any channel fails the temporal check — the dated priority of the fictional input collapses — or cannot sustain even the supply-level claim, leaving no operative residue behind, that channel is downgraded. A demonstrated dispensable input is not a downgrade trigger under this condition: the channel claims are stated at the supply level, so a fiction-free account of the same development would re-confirm the grading rather than refute the claim.
+\item \textbf{F-C3 (reverse channel).} If hypotheses generated by AI systems, run under pre-registered adjudication, systematically leave no kill line to hang — no falsifiable consequence that a decisive test can reject — then the proposed reverse channel (``machine worldviews feed back into science'') is declared dead.
+\item \textbf{F-C4 (non-collage).} If new cases cannot be classified without ambiguity into one of the four forms under the same three checks, the typology is ad hoc.
+\end{itemize}
+
+The three checks are applied to every channel, section by section, and consolidated in §9.1.
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item \textbf{T (temporal priority).} The fictional input must precede the scientific use it is credited with, and the precedence must be anchorable — by etymology and dictionary record, by primary text, or by participant self-statement.
+\item \textbf{D (dispensability).} An account of the same scientific development that omits the fictional input must be visibly less parsimonious. If an equally parsimonious fiction-free account exists, the channel's contribution is downgraded from necessity to available convenience.
+\item \textbf{R (operative residue).} The encounter must leave an operative residue — a vocabulary, a quantity, an agenda item, or a formal system that continues to do work after the encounter.
+\end{itemize}
+
+The D check returns one of four dispositions, and the dictionary is stated once here so that every later table reads against it. \textbf{Partial pass}: the pool contains positive evidence of non-uniqueness, and the claim is downgraded to the supply level (Channel I). \textbf{Unresolved by design}: the check pits live positions against each other and the claim is worded to be invariant under either resolution (Channel II). \textbf{Indeterminate}: the pool contains no study that could run the check (Channels III and IV). \textbf{Out of scope}: the claim never invokes indispensability, so the check has no target (the §7 instance, whose claim rests on executability). The four labels state different reasons the check stops short of a verdict — evidence of non-uniqueness, a live dispute the claim is invariant under, a missing study, or no target at all — and none of them is a verdict of indispensability; no channel in this paper claims one.
+
+Two evidence tiers appear in this paper and are never mixed. Historical evidence is graded by anchor type — primary-source anchor, self-statement anchor, lexical anchor, quantitative study — and no historical claim is worded to need more than its tier supports. The engineering case of §7 is graded on the pre-registered adjudication tier, a different instrument for a different kind of product. Sections §2–§5 use the historical tier alone. The boundary between mixing and porting is drawn in one sentence: mixing would be an evidence operation — a historical claim borrowing the authority of an adjudication verdict, or a verdict product borrowing the authority of an anchor — and it never happens; porting, in §6 and §8, is a criteria operation — the checks and mapping rows are carried across tiers and re-instantiated at the receiving tier's own evidential grade, so the criteria travel while the evidence grades stay separate.
+
+\subsection{Contributions and scope}
+
+The paper makes five contributions, ordered by what the checks can carry rather than by narrative precedence.
+
+\begin{enumerate}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item \textbf{A criterion apparatus for fiction-to-science feedback}: the three checks (temporal priority, dispensability, operative residue) with a declared disposition dictionary for D, two evidence tiers with a declared boundary between mixing and porting, and four falsifiability conditions on the typology (§1.2, §9).
+\item \textbf{A four-channel application of the apparatus}: formal, controlled, quantitative, narrative — each channel an anchored application whose claims are stated at the supply level its checks support (§2–§5).
+\item \textbf{A mapping (M1–M5) between the ``hardness'' criteria of hard science fiction and the falsifiability criteria of AI research claims}, with a four-stage pipeline that ports the former into the latter (§6).
+\item \textbf{One engineering-grade, mid-strength instance of the full pipeline}, on record and examined in §7 on the same footing as the historical cases, scored by the same criteria, with its negative results disclosed in full.
+\item \textbf{An adjudication agenda for the reverse channel}: what would count as machine worldviews feeding back into science, stated so that it can fail (§8).
+\end{enumerate}
+
+The order is itself a graded claim, and the reason is worth one sentence: the apparatus (1) is what this paper would be missed for, while the channel readings (2) are its first application and are graded at the supply level by design — readings at that level are close to what the field already holds, and the paper asks to be credited with the checks that produced the grades, not with the sweep of the channels.
+
+Four scope declarations bound what follows. (i) This is a position paper with an intellectual-historical core; its historical sections are case studies, not a systematic history. (ii) The reference pool is closed: fifty-four items, cited by pool number [R01]–[R54]; fifty-two entries were verified against primary records, two ([R13], [R14]) carry unstable identifier snapshots — anchored by primary-source descriptors, flagged in the reference list, and to be completed in the pre-submission verification round — with the four entries added at the second-round verification pass ([R42]–[R45]) carrying that pass as their verification record, the seven added at the dual-review source-supplement pass ([R46]–[R52]) verified against publisher-level records in that pass, and the two added at the R2 literature-verification pass ([R53]–[R54]) verified against full-text captures retrieved 2026-09-17. (iii) The historical evidence tier and the pre-registered adjudication tier are distinct instruments (§1.2); nothing in the historical sections borrows the authority of the latter. (iv) Uniqueness-flavored statements — including the statement that no integrated treatment of the four channels exists — are made strictly relative to our three-line search completed on 2026-09-16; a second-round novelty check is scheduled before submission, and those statements carry that gate. The closest dialogue partner that search returned — a review of what fiction does within and outside technoscience [R42] — works a comparative taxonomy of fiction's roles; it carries neither a four-channel typology with scored cases nor an adjudication mechanism, so the two projects are complementary rather than competing.
+
+A note on numbers: every number in this paper is either bibliographic (a year, a volume, a page range from the pool), a formula named in the text, or an experimental number cited by field path into the frozen record examined in §7. The term ``machine worldview'' appears here as it appears in the thesis sentence; its definitional anchor, and the debate it sits in, are cited in §8.
+
+\section{Channel I: Formal Fiction into Physics}
+
+\subsection{The historical chain}
+
+A geometry can be built before there is anything for it to describe. The nineteenth century produced consistent alternatives to Euclidean geometry as pure formal constructions: at the time of their construction no physical theory made use of them, and the physical speculation they carried from the start — the habilitation lecture in which Riemann makes the properties distinguishing space a matter ``only to be deduced from experience,'' seeks the ground of spatial metric relations outside space, ``in binding forces which act upon it,'' and hands the open end to ``the domain of another science, of physic'' [R53]; Clifford's proposal that the variation of the curvature of space is ``what really happens in that phenomenon which we call the motion of matter'' [R54]; Helmholtz's public case for the empirical standing of geometrical axioms — remained speculation, never an adopted physical theory. They were languages in search of a subject matter. We use ``formal fiction'' in exactly this sense — a self-consistent symbolic system with no intended physical referent at the time of its construction — and not as a rhetorical flourish. The term is chosen to make the channel's input state checkable: for any candidate case, whether the system was built without the later physical use in view is a historical question with a datable answer.
+
+The scholarly record of how one such language was taken up by physics is documented in detail by Walter [R01]. Minkowski's four-dimensional reformulation of special relativity carried a recognizably non-Euclidean style, and — the point on which this channel turns — the style was itself part of what was transmitted: not the mathematics alone, but a way of writing, teaching, and receiving relativity that made the non-Euclidean vocabulary integral to how the theory was communicated to the physics community. Walter's study treats that style as a historiographical object in its own right, traceable through exposition and reception rather than deducible from the mathematics it carries. The chain continues through general relativity, whose formulation took Riemannian geometry as its working language. By then the direction of travel was fixed: a formal apparatus originally developed with no physical referent had become the standard medium in which a physical theory was stated. The geometry did not need the physics in order to be consistent; the physics arrived later and found the language available.
+
+That order — the language precedes the empirical joining — is the signature of this channel, and unlike most signatures in intellectual history it is anchorable in primary texts: the constructions, the reformulation, and the participant's account of the join all carry dates. Channel I is presented here before the others because its evidence is the most document-like of the four; the reader should treat it as the template for what an anchored channel looks like, not as the strongest claim the paper makes.
+
+\subsection{The join, in the participant's testimony}
+
+Einstein's 1921 lecture ``Geometry and Experience'', published the following year [R02], is the participant testimony for how the join was made, and its structure matters as much as its content. Einstein's account separates pure geometry — a formal system whose certainty holds precisely insofar as it abstains from reference to reality — from applied geometry, which acquires empirical content through a stipulated coordination between formal terms and physical situations. Certainty and reference are, on this account, a trade: the moment geometry says anything about the world, its truth is no longer the geometrician's alone. In general relativity the trade is carried by the field laws together with the geometry: the coordination is an act performed inside physics, not a property waiting inside the fiction to be discovered.
+
+For the channel this does two kinds of work. It fixes the temporal order — the formal system is available before the coordination — and it fixes the epistemic division of labor: the fictional input supplies structure, while the physical commitment is added later, by a documented decision of the person best placed to know. Here the join has a participant account, which is as direct as historical anchoring gets. The trade also explains why the channel's residue is a language rather than a fact: what survives into physics is a way of stating theories, and the empirical content lives in the coordination, not in the geometry.
+
+Wigner's ``unreasonable effectiveness of mathematics in the natural sciences'' [R03] names the residual surprise of the pattern: formal structures built for internal reasons so often turn out apt for physics. We use it as the channel's counter-question, not as its explanation. The name records that something is unexplained after the anchors are laid; it does not tell us what the fictional input did, and we do not ask it to. The channel claim below is graded so as not to spend more than the anchors support — which is precisely why the claim is about language supply rather than about the aptness Wigner found remarkable.
+
+\subsection{Channel claim and assessment}
+
+\textbf{Channel claim.} Formal fiction supplies self-consistent language prior to reference, and the feedback occurs as language preceding the empirical joining.
+
+\textbf{Channel assessment.}
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item \textit{T (temporal priority).} The formal structures precede their physical deployment: the constructions predate the uses, the transmission of the non-Euclidean style into physics is documented in the scholarly record [R01], and the join is fixed by the participant's own account [R02]. Every link is primary-text anchorable. \textbf{Pass.}
+\item \textit{D (dispensability).} Here the channel is deliberately graded down, and the scholarship says so: Walter's study shows the non-Euclidean style was not the unique path into relativity — it was one presentation among available alternatives, adopted for reasons that include notation and pedagogy as much as necessity [R01]. A history of the same physics without the style is not visibly less parsimonious. The check therefore downgrades the claim from necessity to supply: the fictional language was available, adopted, and consequential — not indispensable. This is the check doing its job: it is what prevents the channel claim from drifting into a necessity thesis. \textbf{Partial pass; the claim is stated at the supply level.}
+\item \textit{R (operative residue).} The residue is a formal-geometric language that remains the standard medium of the theory — an operative residue of exactly the kind that the temporal anchor and the supply-level downgrade leave in place. \textbf{Pass.}
+\end{itemize}
+
+The asymmetry in the scores is informative rather than embarrassing. Walter's non-uniqueness evidence [R01] sets the internal tier of the channel: the language supply is strongly documented — the style existed, was available, and was adopted — while the necessity of the style is not claimed, because the same physics had available presentations that did without it. ``Language prior to reference'' is exactly the claim this tier supports, and the wording above does not exceed it.
+
+\section{Channel II: Controlled Fiction}
+
+\subsection{The thought-experiment dispute}
+
+Thought experiments are the canonical case of fiction doing scientific work, and the philosophical literature contains a live dispute over how the work is done. On the realist side, Brown [R04] holds that in the stock cases rehearsed by this literature, thought experiments yield new knowledge of laws of nature in a way that is not reducible to derivation: the scenario, once constructed, shows something that running through premises does not by itself deliver. On the eliminativist side, Norton [R05] holds that a thought experiment is an argument in picturesque clothing: its epistemic work is fully done by a reconstructible argument from premises to conclusion, and the picturesque imagery is a vehicle for presenting the argument, not an independent source of warrant. The dispute is live, the two positions are incompatible as accounts of mechanism, and this paper does not adjudicate them. For the current state of the wider literature on thought experiments, see the recent survey [R45]. The case is canonical for this paper for a structural reason: the fictional status of the input is not in dispute — the scenario describes an experiment that was not run — so the dispute isolates exactly the question the channel faces, what does the fiction contribute and how would we know, with none of the fog that surrounds weaker senses of ``fiction.''
+
+What matters for the channel is a point the two sides share. Whatever the yield of a thought experiment is, both parties hold that it can be exhibited in a checkable form — Brown by isolating the insight and identifying what it is insight into, Norton by reconstructing the argument that does the work. The disagreement is over where the epistemic weight sits, not over whether the result can be laid out for inspection. Translatability into a checkable form is therefore the common ground of the dispute, and it is exactly the property the channel criterion needs: the channel can be run on either side's terms, because either side can produce the checkable artifact. The stakes of the dispute for this paper are narrow, and that narrowness is deliberate — the channel needs a checkable artifact, and the dispute's structure guarantees one under either resolution.
+
+\subsection{Model-based reasoning and fictionalism}
+
+Nersessian [R06] places the thought experiment inside a wider class of model-based reasoning: scientific concepts are created through the iterative construction of imagistic, analogical, and extreme-case models, and the fictional scenario is one carrier of this modeling practice. Suárez's collection [R07] supplies the fictionalist frame for the same territory: idealizations and fictions can represent without describing anything real, and the representational success of a fiction does not presuppose a corresponding real property. Both lines move the question from ``is the fiction true?'' to ``what work does the fiction do, and how is the work checked?'' — which is the question our criteria operationalize. They also widen the channel's supply: on this reading the stock thought experiments are one species of a general practice in which idealized, deliberately unreal scenarios carry representational load in concept formation [R06] and in modeling [R07]. Both literatures supply the raw material for the assessment below: Norton's reconstruction program is the dispensability check in its strongest form, and the fictionalist frame [R07] explains how a fiction can be a working input while remaining a fiction — representation does not require truth.
+
+\subsection{The operational definition of ``controlled''}
+
+We call a fictional construction \textbf{controlled} when its epistemic yield is translatable into a checkable argument or model: a derivation that someone can rerun, a limiting case that someone can verify, a model whose behavior can be compared against targets. Two layers of translatability are in play, and the channel's criterion takes the broader one: content-translatability — the yield, once laid out, can be checked by a competent third party, whether by rerunning a derivation, verifying a limiting case, or comparing a model against targets. Re-derivable by a competent third party from the reconstruction alone — warrant-translatability — is the stricter form that the content layer can take; the reverse channel's adjudication agenda in §8 imposes that stricter record-alone standard on AI-generated hypotheses, which is one reason the two ends of the loop share criteria.
+
+Two boundary clarifications. Translatability is a property of the yield, not of the imagery: nothing in the criterion requires the fictional dressing to be disposable, which is why the definition does not take sides in §3.1's dispute. And translatability is a threshold, not a quality grade: a scenario whose yield cannot be laid out as argument or model is outside the channel's scope — however inspiring — while one whose yield can be so laid out is inside, whatever its literary texture. Translatability is thus the boundary between controlled fiction and free imagination, and it is the channel's criterion rather than a courtesy paid to one side of the literature: Norton's reconstructions are precisely translations, and Brown's stock cases are precisely scenarios whose yields survive translation.
+
+\textbf{Channel claim.} Controlled fiction is a routine production material of science, and the channel criterion is translatability.
+
+\textbf{Channel assessment.}
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item \textit{T (temporal priority).} The scenario is constructed before the argument it organizes: construction is the fictional step, reconstruction the checkable one, and in the stock cases of the literature the construction is datable and the reconstruction follows it [R04], [R05]. \textbf{Pass.}
+\item \textit{D (dispensability).} This is the disputed check by construction: Norton's position is that the fiction is dispensable, Brown's that it is not. The channel claim does not need the dispute settled. What it claims is production value under content-translation, not indispensability of the imagery; and if Norton is right — warrant-translatability being the stricter form the content layer can take — the channel's residue is the translated argument itself, which still passes R. \textbf{Unresolved by design; the claim is worded to be invariant under either resolution.}
+\item \textit{R (operative residue).} The residue is a reusable argumentative and modeling technology — limiting cases, idealizations, reconstruction templates — that remains in routine scientific use after any particular scenario has served. \textbf{Pass.}
+\end{itemize}
+
+The channel passes T and R, with D unresolved by design. The invariance of the claim under the Brown–Norton outcome is a feature of the criterion, not a dodge: translatability was chosen because both disputants grant it.
+
+\section{Channel III: An Abstract Quantity Becomes an Engineering Quantity}
+
+\subsection{Entropy's two journeys}
+
+Channel III (the quantitative channel) runs on quantities, and its input is an abstraction rather than a fiction in the story sense. A quantity defined over an abstract, deliberately idealized object — an ensemble of messages with no material location — can travel into engineering by formal analogy and travel back into physics carrying a measurable price. The input is a definitional act: the referent of the quantity is an abstract probabilistic object, constructed for the purpose, in the idealization sense of §3. The channel is classified accordingly as abstract-quantity/formal-analogy rather than fiction proper, and one fact settles the classification: statistical mechanics had given entropy a statistical reading over microstates long before the quantity was defined over message ensembles, so the physical quantity is the elder of the two and the channel cannot claim that the abstract preceded the physical. What the channel claims, and what its dated arrows carry, is the journey of the defined quantity itself — from definition over an abstract object, into engineering, and back into physics at a price.
+
+The stock example is entropy's second life. Statistical mechanics had given entropy a statistical reading over microstates from its nineteenth-century foundations — roughly seventy years before the information-theoretic definition, a precedence the T score below is graded against rather than around. Shannon [R09] then defined the information produced by a message source as H = -Σ p·log p — a quantity whose referent is an ensemble of messages, an object with no mass, no location, and no temperature. The definitional act is the abstracting step, and it is datable. Jaynes [R08] built the bridge back toward physics: recasting statistical mechanics as inference, he showed that the same maximization principle that governs the informational quantity governs the derivation of physical distributions — the identity of form between the two quantities was made to carry weight rather than to decorate. Landauer [R10] completed the circuit by rematerializing the quantity: the erasure of information, he showed, carries a thermodynamic cost of kT·ln2 per bit, so the abstract measure re-entered physics as an expense with experimental consequences — a price that a physical apparatus pays for a bookkeeping operation on an abstract object.
+
+Each arrow in this circuit is anchored to a datable primary source: the definitional act to Shannon [R09], the bridge to Jaynes [R08], the rematerialization to Landauer [R10]. No arrow rests on recollection, and none requires the others to be read as metaphor: the circuit is made of definitions, derivations, and a cost, all checkable in the primary texts. Each arrow also stands without the others — the isomorphism holds whether or not one emphasizes the bridge, and the rematerialization holds whether or not one accepts the bridge as more than a formal observation — which is why the verdict below is a conjunction of separately anchored facts.
+
+\subsection{Verdict and channel claim}
+
+The channel's verdict rests on three observable facts. The isomorphism of formula: the same expression, H = -Σ p·log p, governs the abstract ensemble and the physical distribution — not a similar expression, the same one. The rematerialization: the quantity acquires an experimental price, kT·ln2 per erased bit [R10] — a price now traced across survey and dynamical treatments of information thermodynamics [R43], [R44] — which is what distinguishes rematerialization from a mere change of subject. And the standing of information in physical reasoning today: a quantity with thermodynamic consequences rather than a metaphor.
+
+\textbf{Channel claim.} An abstract quantity, defined over an idealized object by a datable act, can enter engineering by formal analogy and flow back into physics at a measurable cost; every arrow in the circuit has an anchor, and the channel claims no priority of the abstract over the physical.
+
+\textbf{Channel assessment.}
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item \textit{T (temporal priority), scored against the real chronology.} Each arrow is dated by its primary publication [R08], [R09], [R10] — at the arrow level, the best-dated material in this paper. The channel-level demand — the input preceding the scientific use credited to it — does not survive the chronology: statistical mechanics had given entropy a statistical reading over microstates roughly seventy years before Shannon's definitional act, so a kindred physical quantity predates the abstraction, and the definitional act re-instantiates a quantity whose physical form already existed. \textbf{Scoped pass: arrow-level dating holds; the channel-level priority claim is downgraded, and the channel is labeled abstract-quantity/formal-analogy accordingly.}
+\item \textit{D (dispensability).} Whether communication theory would be equally parsimonious without H is decided by nothing in the pool, and we do not assert it. What the pool does show is that the arrows are real and dated; it does not show that no other route could have produced the same theory. The check is indeterminate here, and the channel claim is graded to rest on the anchorability of the arrows, not the indispensability of the quantity — the same supply-level discipline as Channel I. \textbf{Indeterminate; graded accordingly.}
+\item \textit{R (operative residue).} The residue is an operative quantity with units, prices, and experimental tests. \textbf{Pass.}
+\end{itemize}
+
+The channel holds T at the arrow level with the channel-level priority downgraded; D is indeterminate, and the claim is stated at the anchored-arrow level. The difference between ``partial pass'' in Channel I and ``indeterminate'' here is evidential, not rhetorical: in Channel I the pool contains positive evidence of non-uniqueness [R01], so the check can run and downgrade the claim to the supply level, whereas here the pool contains no study of alternative formulations, so the check cannot run at all — and the claim is graded to be invariant under its outcome rather than partially passed. Of the four channels this is the most mechanical, and deliberately so: quantities carry their definitions with them, so the feedback can be exhibited as an identity of formula plus a cost, without appeal to influence, reception, or intention — though not, as the T score records, without conceding that the physical quantity came first.
+
+\section{Channel IV: Narrative Fiction into the AI Agenda}
+
+\subsection{A direct agenda-setting case}
+
+The cleanest case in this channel is also the most literal. Sagan's novel Contact [R40] turns on rapid interstellar travel; the novelist's inquiry to a physicist — whether such travel could be made scientifically respectable — is the documented hinge of the case [R41], and the answer became the published analysis of traversable wormholes by Morris and Thorne [R11]. The passability question was answered as physics: what holds a wormhole open, and what conditions a traveler must meet, are derived and preserved in the journal record, stated as equations rather than as plot.
+
+The evidence structure is what makes the case flagship-grade for this channel. The chain from the novelist's question to the published solution is anchored by the authors' own accounts of the episode (\textbf{self-statement anchor}); the scientific content is anchored by the peer-reviewed paper itself (\textbf{primary-source anchor}). Narrative-channel evidence usually has one anchor or the other — a story that influenced someone, or a paper whose fictional origin is hearsay. Here both ends of the same chain are anchored, and the two anchor types meet at a datable event. That the two anchors coincide on one case is what makes it the channel's flagship — and also why the case is one case: its strength is evidentiary, and it does not by itself establish a pattern. The case also displays the channel's characteristic evidence problem, and its solution. Influence is the kind of thing that usually leaves recollections and little else, so the channel's standard is that a recollection must meet a published artifact: recollection supplies the fictional end of the chain, the artifact supplies the scientific end, and neither is asked to do the other's work.
+
+\subsection{Ontological vocabulary}
+
+Narrative fiction also supplies the nouns an agenda needs, and vocabulary supply is the channel's most mechanical evidence form, because dictionary records are checkable artifacts. The word robot entered the language through Čapek's play R.U.R. (1920); the Oxford English Dictionary's earliest recorded attestation of robotics falls in Asimov's 1941 story ``Liar!'' [R12]. These are \textbf{lexical anchors}: the record is public, dated, and independent of anyone's recollection, which is what makes it an anchor rather than an anecdote. The vocabulary is not decorative. Robot and robotics are the term of art for an entire artifact class across law, industry, and research, and the term descends, by dictionary record, from the fiction that named it.
+
+The same holds for singularity. Vinge's 1993 essay [R13], published in an interdisciplinary NASA-sponsored volume, states the coming of intelligence beyond the human threshold as a near-term engineering question; the singularity vocabulary in its AI-agenda sense carries this named, datable textual anchor (\textbf{lexical anchor}). We make no claim about the word's earlier history — prior travels are exactly what the lexical-anchor method refuses to assert without a record. What the channel needs is that the agenda-bearing sense has an anchor, and it does.
+
+A lexical anchor does double duty in the assessment below: it dates the vocabulary (T), and it exhibits the residue (R), since a term of art still in circulation is an operative residue by definition. Both anchors land in this paper's territory: the robotics vocabulary names and regulates a class of autonomous artifacts, and the singularity vocabulary organizes the discourse about AI trajectories. The narrative channel's residues are, in these two cases, residues inside the discourse this paper is about.
+
+\subsection{The quantitative tier}
+
+Beyond flagship cases and vocabulary, the channel has a quantitative tier: recent studies examine the association between science-fiction narratives and technology topics quantitatively [R14], [R15] (\textbf{quantitative-study tier}). The methodological role of this tier is to move the channel from anecdote to measurement: if the association between fictional narratives and technical agendas can be measured over studies rather than recounted in episodes, then the channel's hypothesis — science fiction supplies topics to technology — is testable, and has been tested, at study level. We do not assert the strength or the direction of the association here; the tier's contribution to the claim is its existence and form. The tier also disciplines the rest of the channel: with a measurable form available, the flagship case and the vocabulary are not asked to carry statistical weight, and the quantitative studies are not asked to explain single episodes.
+
+\subsection{Evidence tiers and the forward pointer}
+
+The channel's evidence comes in three grades, each with an anchor. Self-statement anchors: the participants document the fictional origin themselves ([R11]). Lexical anchors: dictionaries and primary texts date the vocabulary ([R12], [R13]). Quantitative studies: the association is measured rather than recounted ([R14], [R15]). The grades are stated separately, and none is asked to carry more than it supports: the flagship case is one case; the vocabulary is supply, not necessity; the quantitative tier measures association, not mechanism. This grading is what allows the channel claim below to be exact about what narrative fiction does — it supplies nouns and it sets agendas — without borrowing strength from the grade above.
+
+\textbf{Channel claim.} Narrative fiction both supplies vocabulary and sets agendas; the evidence is graded by anchor type, and every grade has an anchor.
+
+\textbf{Channel assessment.}
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item \textit{T (temporal priority).} Precedences are datable, and each precedence carries its anchor type with it: the novel's question precedes the wormhole paper (self-statement anchor, [R11]); 1920 and 1941 precede the modern robotics vocabulary (lexical anchor, [R12]); 1993 precedes the discourse the singularity essay anchors (lexical anchor, [R13]). \textbf{Pass.}
+\item \textit{D (dispensability).} Whether the same vocabulary and agenda would have arisen without the fictional sources is decided by nothing in the pool, and we do not assert it. Vocabulary supply is the kind of input that has substitutes; the channel claim does not need indispensability. \textbf{Indeterminate; graded accordingly.}
+\item \textit{R (operative residue).} The residue is operative: a term of art in law, industry, and research; a discourse-organizing concept with a datable anchor; and a class of spacetime solutions entered into the physics literature with published conditions [R11]. \textbf{Pass.}
+\end{itemize}
+
+Channel IV is also where the loop between fiction and the sciences stops being purely historical. An engineering-grade instance of the full pipeline — fictional world-building to formal specification to pre-registered adjudication to falsifiable experiment, with negative results disclosed in full — is on record, and it is examined in §7 on the same footing as the cases in this paper: scored by the same three checks, held to the same standards of disclosure, and consolidated into the same table in §9.1. The checks transfer unchanged; what changes is the tier on which the verdict products are graded (§1.2), and §7 is written so that the two tiers remain visibly distinct.
+
+\section{Method: Porting the Hard Criteria into AI Claim Adjudication}
+
+\subsection{The criteria, taken from the genre's own definitions}
+
+Hard science fiction polices itself, and the policing has named criteria. The genre's reference entry quotes Allen Steele's working definition — ``Hard sf is the form of imaginative literature that uses either established or carefully extrapolated science as its backbone'' (Steele, ``Hard Again'', quote as cited in [R37]) — and states two guardrails in its own voice: ``Hard sf should not, however, wilfully ignore or break known scientific principles'', and hard sf ``should seek to provide natural rather than supernatural or transcendental explanations for the events and phenomena it describes'' [R37]. The same entry concedes that a rigorous definition of the category may be impossible [R37]. The anthologies that frame the modern hard-SF canon [R36] exemplify the tradition these statements describe. From this record, and strictly within it, this paper distills four working demands for ``hard'': internal consistency, no supernatural checks, continuity with known science, and checkability of the world's claims by observers inside the world. We adopt these as the definition domain of ``hard,'' and we do not manufacture a sharper one: the mapping below inherits these four demands — the distillation is this paper's, and the table below marks, row by row, which phrasings are the entry's record and which are this paper's formalization. The reason for taking the genre's own standard rather than a philosophical ideal of rigor is strategic. The genre standard is operational — editors, readers, and writers apply it to manuscripts — and operational standards port; ideals of rigor do not.
+
+Two preliminary reductions keep the mapping honest. The genre's criteria are criteria for a world, not for a paper, so each must be re-expressed as a criterion for a claim before anything can be mapped. And the genre enforces its criteria through review practice rather than through adjudication protocols, so the mapping must supply the enforcement mechanism on the AI side, which the genre never needed. Both reductions appear as the mapping invariant below.
+
+\subsection{The mapping table}
+
+The mapping's invariant is a single question, identical on both ends of every row: given the ledger, can a third party recompute the conclusion from the ledger alone? On the hard-SF side the ledger is the world's stated physics; on the AI side it is the claim's stated support. Each row below pairs a genre criterion with its AI-research counterpart and names the failure mode the row exists to catch.
+
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{0.985\textwidth}{@{}>{\raggedright\arraybackslash}p{0.045\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{0.155\textwidth}@{}}
+\toprule
+\textbf{No.} & \textbf{Hard-SF criterion (pool source)} & \textbf{AI-claim criterion (provenance stated per row)} & \textbf{Shared failure mode} \\
+\midrule
+M1 & Internal consistency: the world's books run no deficit — this paper's formalization, prompted by the guardrails recorded in [R37] & Claim and evidence structure agree; the support covers what is asserted — this paper's formalization (claim–support correspondence: [R46]), prompted by the failure modes documented in [R38] & Self-contradiction \\
+M2 & No supernatural checks are written — grounded in the entry's standard: ``natural rather than supernatural or transcendental explanations for the events and phenomena it describes'' (quote as cited in [R37]) & No appeals to undelivered future capability [R39] & Deus ex machina \\
+M3 & Continuity with known science — grounded in the entry's guardrail: ``Hard sf should not, however, wilfully ignore or break known scientific principles'' (quote as cited in [R37]) & Anchoring in existing reviewable artifacts — this paper's formalization, prompted by the failure modes documented in [R38] & Bare assertion \\
+M4 & Narrative artifacts can carry engineering commitments; the diegetic prototype has documented instances [R32], [R33] & Adjudication procedure pre-registered, recomputable by a third party — this paper's formalization (pre-registration: [R47], [R48]; third-party recomputation: [R49], [R50]), prompted by the failure modes documented in [R38], [R39] & Changing the rules after the fact \\
+M5 & The world's claims are checkable by observers inside the world — this paper's distillation, grounded in the definition the entry quotes: ``established or carefully extrapolated science as its backbone'' (Steele, quote as cited in [R37]) & Falsifiable, with the kill line defined before the experiment runs — this paper's formalization (falsifiability: [R51], [R52]), prompted by the failure modes documented in [R38], [R39] & Unfalsifiable rhetoric \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The table claims structural isomorphism — row-by-row shared form and shared failure modes — and nothing stronger. It is not an equivalence theorem: the two sides differ in enforcement, and the differences are inherited by the pipeline rather than argued away. The failure modes are shared between the columns, and that sharedness is what makes each row a mapping rather than an analogy: a genre manuscript and an AI paper can fail the same row in the same way, and a third party can check for the failure in both.
+
+\textbf{Anonymous interface.} The practice that the M4 row formalizes — freeze the adjudication before the run, and hold the record to a recomputability standard — is systematized in an archived companion study of auditability and falsifiability in LLM-reasoning research [self-citation removed for double-blind review; restored at camera-ready]. The row itself is this paper's formalization, as the provenance note below states; what it inherits from the companion study is the freeze protocol and the recomputability standard, described here only to that extent.
+
+Two sources carry the failure-mode side of the table and deserve one sentence each of positioning. Wagstaff's method criticism argues that machine learning research should be judged by delivered, real-world capability rather than by benchmark claims alone [R38]; Lipton and Steinhardt's account of troubling trends catalogues scholarship practices in which explanatory and mathematical rhetoric outrun the evidence offered for them [R39]. A provenance declaration is owed here and made plainly: of the AI-side criteria, only M2's no-future-capability demand restates a concern one of these sources states directly — the speculation critique of [R39] in criterion form. The claim–evidence, anchoring, pre-registration, and kill-line criteria of rows M1, M3, M4, and M5 are this paper's formalization, prompted by the failure modes those two sources document; neither source states these criteria themselves, and nothing in this paper attributes them to either. The methodological originals the criteria draw on are in the pool and cited in place. The claim–support correspondence of M1 has its argumentation-theoretic original in Toulmin's layout of claims, data, and warrants [R46] — a theory of argument rather than a methodology paper, mounted with that genre declared. The pre-registration clauses of M4 stand on the preregistration revolution [R47] and the Registered Reports model [R48]; the third-party recomputation clause stands on the NeurIPS reproducibility program [R49] and the cross-disciplinary policy statement on computational reproducibility [R50]; the falsifiability and kill-line clauses of M5 stand on Popper's demarcation criterion [R51] and its working application to machine-learning interpretability research [R52]. M3's anchoring criterion claims no pool original; it is this paper's formalization outright. The originals supply the practices the criteria formalize; the formalization itself, and the mapping, remain this paper's. The failure modes are those two sources'; the criteria that catch them are this paper's.
+
+\subsection{What exists, and where it stops}
+
+The practice of using narrative artifacts to steer real research and development is documented, not hypothetical, and the pool carries six entries across three literatures. Science fiction prototyping proposes fictional scenarios as a source of concrete technology ideas for engineering audiences [R30]. Design fiction states the program in its general form [R31] and operates it as an empirical HCI method, with fictional abstracts used as research instruments [R35]. Sociological studies of the film industry document cinematic depictions feeding back into laboratory practice — scientists consulting on, and being shaped by, the fictional technologies they help portray [R32], [R33]. An analysis of computing's future discourse shows the field's research agendas being organized by the imaginaries they inherit [R34]. Together these establish the forward channel's practical existence at the level of agendas and prototypes.
+
+What this line does not have is an adjudication tier. Its methods are generative and ethnographic: they produce ideas and document influence, but they do not freeze a verdict function in advance, and they do not kill. The stop is not a failure of the literature; it is where its questions end. On the other side, the ML method-criticism literature names the failure modes — unsupported claims, post-hoc rules, rhetoric outrunning evidence [R38], [R39] — but names no pipeline that ports a genre's own discipline into claim adjudication. The two literatures face each other across exactly the gap the mapping table formalizes.
+
+To the extent of our three-line search completed on 2026-09-16, the mapping has not been stated as a structural isomorphism with a portable pipeline, and the gap statement carries the scheduled second-round novelty check before submission.
+
+\subsection{The four-stage pipeline}
+
+The pipeline has four stages, each with an input, a product, a criterion from the table, and a named failure mode.
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item \textbf{S (Setting).} Input: narrative fiction. Product: a self-consistent world setting with its own ontological vocabulary. Criterion: M1. Failure mode: a hidden contradiction in the world's books.
+\item \textbf{F (Formalization).} Input: the setting. Product: a formal system — identities, state spaces, metrics — into which the setting's vocabulary is transcribed. Criteria: M2, M3. Failure mode: metaphor with no formal counterpart.
+\item \textbf{P (Pre-registration).} Input: the formal system. Product: a frozen adjudication function with an external anchor, fixed before any run. Criterion: M4. Failure mode: changing the rules after seeing the data.
+\item \textbf{E (Experiment).} Input: the frozen adjudication function. Product: a verdict — including a kill. Criterion: M5. Failure mode: unfalsifiable rhetoric.
+\end{itemize}
+
+The pipeline's discipline is concentrated in one requirement: the kill line must be defined before the experiment runs, and the verdict function must be executable by a third party who did not build the system. A pipeline that can merely confirm is a pipeline with M5 removed, and M5 is the row that makes the rest of the mapping more than rhetoric. One calibration belongs with the requirement rather than in a footnote: executable is a standing demand, not a report of who has executed. The instance examined in §7 was built and run by its own authors; in the blind-review version of this paper, third-party executability runs through the confidential channel and full digests declared in §7.1, and public executability is deferred to camera-ready. The requirement is therefore only partially met while the paper is under review, and the limit is stated in §7.1, where it applies.
+
+\textbf{Method claim.} The hard-SF criteria and the falsifiability criteria of AI research claims are structurally isomorphic under the mapping M1–M5, and the four-stage pipeline ports the former into the latter as working methodology. The claim weakens if any row's two ends fail to share form and failure mode under inspection, or if the pipeline cannot be executed end to end on a concrete artifact. Section 7 reports such an execution.
+
+\section{Case Study: An Anonymized Engineering Instance}
+
+This section examines one documented artifact — an engineering project whose identity is anonymized for review and restored at camera-ready — on the same footing as the cases of §2–§5: scored by the same three checks, held to the same standards of disclosure. The anonymization covers the project's name, the name of its fictitious entity, and the project-name tokens inside artifact basenames (replaced below by the marker ``anon''); full names, path prefixes, and the public pointer are restored at camera-ready. It touches no anchor digest, no number, and no field-path semantics: the five anchor prefixes, every measured value, and every field path in this section are unchanged by it. The tier discipline of §1.2 applies in full: what follows is the pre-registered adjudication tier, not the historical tier, and every number is cited by its field path into the frozen record.
+
+\subsection{The chain, replayed end to end}
+
+\textbf{S.} A science-fiction worldbuilding exercise posits a fictitious scattering entity (named in the setting; the name is anonymized here) whose physics is a three-channel energy law: an incident path's energy splits into transmission, reflection, and irreversible dissipation. The setting supplies a conservation bookkeeping identity and a vocabulary for reasoning about exchange.
+
+\textbf{F.} The formalization binds each node of an LLM-generated concept-decomposition graph to a two-parameter state of that entity, so that traversing reasoning paths undergo three-channel scattering obeying the constructive identity T+R+A=1 for arbitrary parameters; the reverse dynamics are additionally formalized as a game on the graph, with an audited scalar carrying monotonicity and near-gradient readings, and the empirical coordination ratio (ECR) as the distribution-level metric.
+
+\textbf{P.} The adjudication layer is frozen before runs as pure verdict functions with published SHA-256 anchors, given as twelve-character prefixes: \texttt{GT\_\allowbreak FORMALIZATION\_\allowbreak v1.md} aeefb8ef6972; \texttt{run\_\allowbreak v21\_\allowbreak gtformal.py} 9bbe43f41fa8; \texttt{run\_\allowbreak v22\_\allowbreak p1c.py} 6e9673205dc0; \texttt{SPEC\_\allowbreak GT2B.md} 68a5b08ef007; \texttt{SPEC\_\allowbreak GT8C.md} 6b09de9911c0 (frozen handoff artifact, field \texttt{preregistration\_\allowbreak anchors\_\allowbreak sha256\_\allowbreak 12}). Every key number below maps to a frozen field; hand-copying is forbidden by the artifact's own protocol.
+
+\textbf{E.} Three results, in ascending order of severity. The conservation identity survives audit: the maximum per-path deviation across all variants and benchmarks is 2.220446049250313×10⁻¹⁶ — the scale of double-precision machine epsilon, against an implementation tolerance of 10⁻⁶ — closed (pre-registered) (\texttt{results/\allowbreak anon\_\allowbreak benchmark\_\allowbreak v1\_\allowbreak 4\_\allowbreak gsm8k.json} · \texttt{physics\_\allowbreak audit.t\_\allowbreak plus\_\allowbreak r\_\allowbreak plus\_\allowbreak a\_\allowbreak max\_\allowbreak deviation}). The quantified coordination reading lands at median ECR = 4/3 over the 17 finite-valued graphs, with coverage of 20 of 22 graphs — three graphs read Infinity, two graphs lack arm data, both disclosed as-is (frozen handoff artifact, field \texttt{headline\_\allowbreak results.GT4\_\allowbreak ECR}). The dynamical tier dies: the kill protocol is systematic in its graph sampling (61 graphs in five families) and complete at the state level (all 6,760 states of the 338-task corpus, 20 steps each — frozen handoff artifact, field \texttt{headline\_\allowbreak results.enumeration\_\allowbreak scope}), and all three formalized dynamical-equivalence propositions are falsified — P1a: maximum deviation 0.8569, an O(1) gap that does not vanish with step size; T-P1b: minimum directional cosine −1.0; T-P1c: killed on both lines, with an 81-point grid over τ∈[0,4] reaching minimum cosine −1.0 at the best global τ and per-state optimal τ∗ again reaching −1.0, the per-state τ∗ median being 0 (frozen handoff artifact, field \texttt{headline\_\allowbreak results.P1a\_\allowbreak P1b\_\allowbreak T\_\allowbreak P1c}; source results \texttt{results/\allowbreak anon\_\allowbreak v22\_\allowbreak p1c.json} · \texttt{verdict.min\_\allowbreak cos\_\allowbreak at\_\allowbreak best\_\allowbreak global\_\allowbreak tau} and \texttt{verdict.min\_\allowbreak cos\_\allowbreak per\_\allowbreak state\_\allowbreak best\_\allowbreak tau}; measured fields for P1a and T-P1b in \texttt{results/\allowbreak anon\_\allowbreak v21\_\allowbreak gtformal.json} · \texttt{verdict.P1a\_\allowbreak deviation.max\_\allowbreak dev\_\allowbreak inf} and \texttt{verdict.T\_\allowbreak P1b.min\_\allowbreak cosine}). The potential-game reading is downgraded accordingly, to approximate (cyclic-graph median residual 0.669; frozen handoff artifact, field \texttt{headline\_\allowbreak results.P2}). Availability, stated for the blind-review version: the complete frozen repository and the full SHA-256 digests — not only the twelve-character prefixes printed above — are provided to the editors and reviewers through a confidential channel, per double-blind discipline, and the public pointer is deferred to camera-ready. A reviewer working from the public text alone therefore cannot execute the recomputation that M4 asks of a third party, and this paper does not claim otherwise: during review, M4's third-party recomputation runs through the confidential channel or not at all. The ask is not ad hoc: making the record and its checks available to reviewers during evaluation is the standard the machine-learning reproducibility program set for its own venues [R49]. The gap is stated here, at the point where it applies, rather than left for the reader to discover. What the public text carries now are the field paths — where each number lives in the record — and the anchors the record must match when it opens.
+
+\subsection{Death is the point}
+
+The three falsifications are the pipeline working as designed, not a failure of it. M5 requires that the kill line be defined before the run; the run then killed. What survives at the dynamical level is no more than consistency-tier evidence, and the artifact's own verdict language records the downgrade rather than resisting it. Because verdict functions across the artifact are frozen before their runs, the conservation pass and the dynamical kills stand at the same freeze level, and the pass cannot be read as the product of a lenient protocol. At the audit level, an independent rerun passed with bit-identical recomputation, the five anchors above, and nine provenance spot checks (frozen handoff artifact, field \texttt{headline\_\allowbreak results.audit}) — the books were not merely kept but re-kept by a second pair of hands. Negative results are disclosed here as assets: what cannot be falsified cannot be killed, and an artifact whose falsifiable claims all died under pre-registered functions has demonstrated exactly the discipline the mapping table asks for.
+
+\subsection{What this instance is, and is not}
+
+The instance's honest positioning has three parts. (i) The channel attribute: the loop closes through the audit and epistemic channel, and the capability channel reads zero. On real benchmarks the layer is indistinguishable from a trivial six-keyword rule filter reading nothing beyond label strings — on GSM8K the filter scores 0.87 against the layer's 0.85 (McNemar p=0.5), on StrategyQA 0.899 against 0.899 (p=1.0) — and at these sample sizes the detectable-difference threshold is roughly ±10 percentage points, so smaller increments are not excluded — disclosed as-is (frozen handoff artifact, field \texttt{headline\_\allowbreak results.E9\_\allowbreak 5\_\allowbreak power\_\allowbreak honest}; artifact \texttt{results/\allowbreak anon\_\allowbreak v22\_\allowbreak e95ci.json}). Plain chain-of-thought significantly outperforms the layer on GSM8K, 0.97 versus 0.85 (\texttt{results/\allowbreak anon\_\allowbreak benchmark\_\allowbreak v1\_\allowbreak 4\_\allowbreak gsm8k.json} · \texttt{cot\_\allowbreak baseline\_\allowbreak accuracy} and \texttt{unified\_\allowbreak accuracy}). Fusion with a semantic prior dilutes rather than helps: physics 0.484→0.452 and historical 0.783→0.739 at the λ=0.5 convex combination (\texttt{results/\allowbreak anon\_\allowbreak v20\_\allowbreak crossval.json} · per-graph fields \texttt{prior\_\allowbreak arm\_\allowbreak eval}.<graph>.\texttt{hybrid\_\allowbreak norm}@0.5). None of these numbers is massaged out of the record.
+
+(ii) The magnitude attribute: the instance is structurally isomorphic to the Channel I pattern — a fictional physics supplies a formal language, the language is adjudicated, a verdict lands — but its magnitude is not comparable to the non-Euclidean case, and nothing in this paper claims otherwise. (iii) The not-yet attribute: a non-Euclidean-grade loop would require third-party adoption of the formal language by a community that did not build it, and that adoption has not occurred. No uniqueness claim is made about the instance; the positioning is exactly ``engineering-grade, mid-strength.''
+
+\subsection{Scoring on the same table}
+
+Scored by the three checks of §1.2, on the same footing as §2–§5: the consolidated table is §9.1. Temporal priority: the fictional setting precedes the formal system it seeds — anchored by the frozen record, with the anchor's standing stated plainly: this is an author-attested freeze. A digest can attest that the artifact was not altered after the fact; it cannot by itself attest to a party that did not build the system that the freeze preceded the runs — that ordering is recorded by the artifact and its protocol, both of which are the builders' own. The anchor is therefore the strongest the pre-registered tier can offer from inside the record, and weaker than the independent anchors — dictionary records, primary texts, dated publications — that carry the historical channels: it buys verifiability, not independence. The five published anchor prefixes date the formalization and the verdict functions to before the runs they adjudicate, on the artifact's own attestation, and the master table records the difference in standing. Dispensability: not claimed and not needed; the case rests on the pipeline's executability, not on the indispensability of its fictional vocabulary, and D is out of scope per the disposition dictionary of §1.2. Operative residue: the residue is the machine-checkable ledger — identities, verdict functions, and anchors that continue to run after the fiction has done its work. The instance therefore passes T and R on the pre-registered tier, T on an author-attested anchor of lesser independence than the historical rows, with D out of scope; its evidential weight is one mid-strength case, presented on the same footing as the historical ones and asked to carry nothing more.
+
+\section{Outlook: Machine Worldviews and the Reverse Channel}
+
+\textbf{Scope declaration.} This section is an open-question agenda. It is not an empirical claim, and it makes no prediction: its product is the set of conditions under which the reverse channel would become decidable — not evidence that it has opened.
+
+\subsection{The term, and the existence line}
+
+The term \textit{machine worldview} has no settled definition. The survey literature covers the definitional debate over world models without closing it [R20], and this paper adds no definition of its own: the term enters here exactly as it entered the thesis sentence of §1.2, and what this section needs is weaker than a definition. It needs an existence line — that AI systems increasingly build and act through internal models of the domains they face — and that line is documented. Agents have been trained inside learned internal simulations of their environments since the work that opened this literature [R16]; world-model training has been scaled to master diverse domains in a single agent [R17]; generative systems have moved from producing frames to producing interactive environments [R18]; and a world-foundation-model platform has been proposed as shared infrastructure for physical AI [R19]. On the interpretability side, a sequence model trained on Othello moves — the game was given to it as move sequences, never as rules — was probed and found to carry an internal representation of the board [R21]: whatever ``worldview'' turns out to mean once the definitional debate settles [R20], an internal structure that encodes a domain the system was never told about is the phenomenon the term is reaching for. At the architectural level, a position paper makes world models the core component of a proposed program for autonomous machine intelligence [R22].
+
+One difference point must be declared. The survey that anchors the definitional debate [R20] covers world-model definitions and their consequences; it does not ask the question this section asks — whether such internal structures feed back into the sciences. That is a gap this section opens, not a criticism of that survey.
+
+\subsection{The pipeline line}
+
+On the production side, a line of systems now automates recognizable parts of the research pipeline itself. The AI Scientist generates research ideas, writes code, runs experiments, and writes the manuscript [R23], and the program has continued in a second version [R24]. Coscientist demonstrates autonomous planning and execution of chemistry experiments, with tool use decided by the system [R25]. A multi-agent co-scientist generates and ranks research proposals at scale [R26], and Agent Laboratory wires ideation, experimentation, and write-up into a single workflow [R27]. The ideas such systems propose have also been placed under human blind review at scale, with expert reviewers judging machine-proposed and human-proposed ideas under controlled conditions [R28].
+
+The pipeline line matters to this paper for one reason: the S and F stages of §6.4 — setting and formalization — are now reachable by machine actors. What the line does not yet show, at the granularity of the pool's documentation, is the P stage: a frozen adjudication function with an external anchor and an executable kill line, fixed before any run. And the failure-mode audit that any such stage would inherit is already written: the known failure modes of ML-based science — data leakage prominent among them — are catalogued and reproducibility-tested as a corruption of conclusions that leaves the paper's own books looking clean [R29]. That catalogue is where an audit of machine-generated hypotheses would have to begin.
+
+\subsection{The adjudication agenda}
+
+\textbf{Declaration sentence.} Machine worldviews may be forming, and they may be good ones; neither observation is evidence of feedback. Whether machine worldviews feed back into the sciences is decidable: it stands or falls on whether machine-generated hypotheses can be frozen into formal specifications, adjudicated by functions pre-registered with external anchors, and killed or kept by experiments whose kill lines were defined before the runs — the same pipeline as §6.4, the same checks as §1.2, no lower standard.
+
+The agenda has three conditions, inherited from the pipeline. The machine's output must be landable in a formal specification whose content is fixed before adjudication (freezable). The adjudication function must be pre-registered and recomputable by a third party from the record alone (anchored) — the stricter warrant-translatability layer, imposed deliberately because the pre-registered tier can afford it where the historical tier cannot. The verdict must be executable as a decisive test (killable). F-C3 is the falsifiability condition of the whole section: if machine-generated hypotheses, run under pre-registered adjudication, systematically leave no kill line to hang, the reverse channel is declared dead.
+
+What would count as a positive result is stated with equal care, so that the burden does not fall silently on the negative side. A machine-generated hypothesis would count as reverse-channel feedback when (i) it is traceable to the machine's internal model — an input this paper treats as fiction-analogous rather than as a fictional input: whether a learned world model counts as a fiction in the sense of §2–§5 is a definitional question this paper does not settle, and the agenda does not lean on the answer; (ii) it precedes the human verification it receives; (iii) it survives a pre-registered kill attempt; and (iv) it leaves an operative residue — a vocabulary, a quantity, or a formal system — inside a scientific community that did not build the machine. The four elements map onto the three checks of §1.2 and onto F-C3; no one of them is sufficient alone, and none is asserted to exist today.
+
+The audit vocabulary for such an adjudication — a reasoning claim is auditable when a third party that holds the record can recompute it from the record alone, so that availability of the record to the auditing party is itself part of auditability — is systematized in the companion study whose self-citation is removed for double-blind review (§6.2). For the §7 instance, that availability runs through the confidential channel declared in §7.1 until camera-ready.
+
+It is worth noticing the asymmetry with the forward channels. Sections §2–§5 reconstructed feedback after the fact, from anchors left behind by participants; the reverse channel, if it opens, would be feedback whose evidence regime is chosen in advance. The criteria of this paper were built for the historical tier; their portability to the pre-registered tier is what §6 established and §7 exhibited. The reverse channel is thus the case where this paper's two instruments meet.
+
+\section{Conclusion: The Criteria Turned on Themselves}
+
+A paper that lives by criteria should be willing to die by them. This closing section scores the paper's cases on the paper's own checks (§9.1), turns the same checks on the paper's own thesis, states the limitations (§9.2), and re-records the kill lines (§9.3).
+
+\subsection{The master table}
+
+The per-section scores of §2–§5 and §7.4 are consolidated here; nothing is re-scored, and §7.4 cites this table rather than repeating its own.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{0.985\textwidth}{@{}>{\raggedright\arraybackslash}p{0.185\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Row (section)} & \textbf{T (temporal priority)} & \textbf{D (dispensability)} & \textbf{R (operative residue)} \\
+\midrule
+Channel I — formal (§2) & Pass (strong; primary texts [R01], [R02]) & Partial pass — downgraded to the supply level ([R01]) & Pass (strong) \\
+Channel II — controlled (§3) & Pass & Unresolved by design ([R04], [R05]) & Pass \\
+Channel III — abstract quantity (§4) & Scoped pass — arrows publication-dated [R08]–[R10]; channel-level priority downgraded (statistical entropy predates the definition by roughly seventy years) & Indeterminate & Pass (strong) \\
+Channel IV — narrative (§5) & Pass (tiered anchors [R11]–[R13]) & Indeterminate & Pass \\
+Pipeline instance (§7) & Pass (author-attested freeze; pre-registered tier — §7.4) & Out of scope (no indispensability claim) & Pass \\
+Reverse channel (§8) & Not applicable — §8 asserts no empirical claim; F-C3 is an agenda condition, not a pending verdict & Not applicable & Not applicable \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Three patterns in the table. T holds at the anchor level in every scored row, and in every row the anchor named is the anchor that carries the claim: primary texts, dictionary records, dated publications, and — in the pipeline instance — the artifact's own author-attested freeze, whose lesser standing against the independent anchors is recorded in §7.4. One row carries a scoped downgrade: Channel III's arrows are dated [R08]–[R10], but the channel-level priority of the abstract quantity over the physical fails — statistical mechanics had read entropy statistically for roughly seventy years before Shannon's definition — so the row is scored as a scoped pass and the channel is labeled abstract-quantity/formal-analogy (§4). D is where the honesty of this paper lives: one partial pass with an explicit downgrade to the supply level (Channel I, on the non-uniqueness evidence [R01]); one dispute deliberately left unresolved because the claim is invariant under either outcome (Channel II); two indeterminates, where the pool contains no study that could run the check (Channels III and IV); and one out-of-scope, where indispensability is not what the instance claims (§7) — four dispositions, one dictionary, stated in §1.2. R passes in every scored row: every channel leaves an operative residue — a formal language, a modeling technology, a priced quantity, a vocabulary and an agenda, a machine-checkable ledger. The last row is not a score: §8 makes no empirical claim, so its cells read not applicable rather than pending — F-C3 is a condition the agenda can fail, not a verdict on evidence already in hand. The row is retained so the table records the boundary of what is scored.
+
+\textbf{The paper on its own checks.} The table above scores the paper's objects; the section's title promises the checks on the paper itself, and that promise is kept here, with the scores reported as they come. \textit{T}: the apparatus was assembled after the cases it scores — the cases were selected for anchorability first, the criteria built from them second — so the paper's own construction runs setting-first, not pre-registration-first; what was fixed before distribution is the kill-line list of §9.3, a genuine but narrow pre-commitment. \textit{D}: is the paper itself dispensable — is there an equally parsimonious account of the same territory without the fiction-framing? The honest score is a partial pass, downgraded to the supply level: the four channels could be re-described in neutral terms (unreferenced formal systems, idealized scenarios, defined quantities, narrative sources) and the checks would survive the re-description; what the re-description would not carry is the apparatus itself — the checks, the tiers, the disposition dictionary, the mapping — which is why the contribution list of §1.3 orders the apparatus first. \textit{R}: pending, by the check's own definition, since residue is what remains after the encounter and the paper's encounter with its readers has not happened; the candidate residues are the check names and the disposition dictionary. The paper's self-score is therefore T partial (the pre-commitment is narrow), D partial (downgraded to supply), R pending. A paper about kill lines that withheld its own would fail M5; a paper that graded itself above what its checks return would fail them more quietly.
+
+\subsection{Limitations}
+
+Four limitations, stated plainly. Selection effect: the four channels are visible because their cases left anchors; feedback that left no record is invisible to this method, and the typology is a typology of the documented. The same effect reaches the scores: T and R pass in every scored row of §9.1 partly because the cases were selected for anchorability and for leaving residue — a case with no dated priority or no residue would not have entered the pool — so the T and R passes are, in part, a product of case selection rather than an independent finding about the world. D, which the cases were not selected to pass, is where the selection pressure shows least, and the scores show it. Scale: each channel carries a small number of flagship cases, and the pipeline has one engineering-grade instance; no prevalence claim is made anywhere in this paper. Magnitude: structural isomorphism to the non-Euclidean pattern does not make the engineering instance comparable to it in scale, and §7.3 declines the comparison. Tiers: the historical tier and the pre-registered tier are different instruments, and nothing in §2–§5 borrows the authority of §7's. Two boundary conditions close the list: the reference pool is closed at fifty-four items (verification status as declared in §1.3(ii)), so the findings are findings about this pool; and the novelty statements rest on the three-line search completed on 2026-09-16, with the second-round check scheduled before submission. The nearest neighbor that search returned — the review of what fiction does within and outside technoscience already cited in §1.3 [R42] — is a dialogue partner rather than a competitor: it maps the roles fiction plays around technoscience, while this paper scores what fictional inputs do to science, under named checks.
+
+\subsection{What would weaken this paper}
+
+The falsifiability conditions are re-recorded here, in substance unchanged from §1.2. F-C1: if the four forms prove pairwise inseparable under the three checks, the typology weakens. F-C2: if a flagship case fails the temporal check, or cannot sustain even the supply-level claim — no dated priority, no operative residue — its channel is downgraded. F-C3: if machine-generated hypotheses, run under pre-registered adjudication, systematically leave no kill line to hang, the reverse channel is declared dead. F-C4: if new cases cannot be classified without ambiguity into one of the four forms under the same three checks, the typology is ad hoc. The mapping of §6 carries its own condition: if any row's two ends fail to share form and failure mode on inspection, the method claim weakens. These are the paper's kill lines, recorded before any reader runs them — because a paper about kill lines that withheld its own would fail M5, the row this paper has least standing to fail.
+
+\textbf{AI disclosure.} The drafting model is GLM. The claims, the criteria, the mapping, and every number were specified and verified by the authors; each number in §7 maps to a field path in the frozen artifact cited in place, and the reference pool was verified entry by entry, with the two identifier-pending entries flagged in §1.3(ii).
+
+\section*{References}
+
+The reference list is the closed pool of fifty-four items, cited in the text by pool number [R01]–[R54]. Entries are transcribed at the granularity of the verification record: titles appear where the record carries them. Two entries, [R13] and [R14], have unstable identifier snapshots; they are anchored by primary-source descriptors (publication year and venue or collection) and are flagged below for completion in the pre-submission verification round.
+
+\medskip
+\noindent\textbf{Pool R01–R15 (cited in §2–§5)}\par\addvspace{2pt}
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item[R01.] S. Walter, ``The Non-Euclidean Style of Minkowskian Relativity'', in J. Gray (ed.), \textit{The Symbolic Universe}, Oxford University Press, 1999.
+\item[R02.] A. Einstein, ``Geometry and Experience'' (1921 lecture), in \textit{Sidelights on Relativity}, Methuen, 1922.
+\item[R03.] E. Wigner, Comm. Pure Appl. Math. 13(1):1–14, 1960, DOI:10.\allowbreak 1002/\allowbreak cpa.\allowbreak 3160130102.\allowbreak 
+\item[R04.] J.R. Brown, \textit{The Laboratory of the Mind: Thought Experiments in the Natural Sciences}, Routledge, 1991.
+\item[R05.] J.D. Norton, Can. J. Philos. 26(3):333–366, 1996, DOI:10.\allowbreak 1080/\allowbreak 00455091.\allowbreak 1996.\allowbreak 10717457.\allowbreak 
+\item[R06.] N.J. Nersessian, \textit{Creating Scientific Concepts}, MIT Press, 2008.
+\item[R07.] M. Suárez (ed.), \textit{Fictions in Science: Philosophical Essays on Modeling and Idealization}, Routledge, 2009.
+\item[R08.] E.T. Jaynes, Phys. Rev. 106:620, 1957, DOI:10.\allowbreak 1103/\allowbreak PhysRev.\allowbreak 106.\allowbreak 620.\allowbreak 
+\item[R09.] C.E. Shannon, Bell Syst. Tech. J. 27:379–423, 1948, DOI:10.\allowbreak 1002/\allowbreak j.\allowbreak 1538-\allowbreak 7305.\allowbreak 1948.\allowbreak tb01338.\allowbreak x.\allowbreak 
+\item[R10.] R. Landauer, IBM J. Res. Dev. 5(3):183–191, 1961, DOI:10.\allowbreak 1147/\allowbreak rd.\allowbreak 53.\allowbreak 0183.\allowbreak 
+\item[R11.] M.S. Morris \& K.S. Thorne, Am. J. Phys. 56(5):395–412, 1988, DOI:10.\allowbreak 1119/\allowbreak 1.\allowbreak 15620.\allowbreak 
+\item[R12.] K. Čapek, \textit{R.U.R.}, 1920; I. Asimov, ``Liar!'', \textit{Astounding Science Fiction}, 1941 (lexical anchor: ``robotics'', OED earliest recorded attestation).
+\item[R13.] V. Vinge, ``The Coming Technological Singularity'', in \textit{Vision 21: Interdisciplinary Science and Engineering in the Era of Cyberspace}, NASA, 1993 (NTRS). [IDENTIFIER-PENDING]
+\item[R14.] H. Osawa et al., Int. J. Soc. Robot. 14(10):2123–2133, 2022 (anchored by volume, issue, and pages). [IDENTIFIER-PENDING]
+\item[R15.] F. Appio et al., Technovation 141:103172, 2025, DOI:10.\allowbreak 1016/\allowbreak j.\allowbreak technovation.\allowbreak 2025.\allowbreak 103172.\allowbreak 
+\end{itemize}
+
+\medskip
+\noindent\textbf{Pool R16–R29 (for §8, Outlook)}\par\addvspace{2pt}
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item[R16.] D. Ha \& J. Schmidhuber, arXiv:1803.10122.
+\item[R17.] T. Hafner et al., arXiv:2301.04104.
+\item[R18.] J. Bruce et al., arXiv:2402.15391.
+\item[R19.] NVIDIA, arXiv:2501.03575.
+\item[R20.] J. Ding et al., arXiv:2411.14499 (ACM Comput. Surv., 2025).
+\item[R21.] K. Li et al., arXiv:2210.13382 (ICLR 2023).
+\item[R22.] Y. LeCun, ``A Path Towards Autonomous Machine Intelligence'', OpenReview id BZ5a1r-kVsf, 2022.
+\item[R23.] C. Lu et al., arXiv:2408.06292.
+\item[R24.] The AI Scientist-v2, arXiv:2504.08066.
+\item[R25.] D.A. Boiko et al., Nature 624:570–578, 2023, DOI:10.\allowbreak 1038/\allowbreak s41586-\allowbreak 023-\allowbreak 06792-\allowbreak 0.\allowbreak 
+\item[R26.] J. Gottweis et al., arXiv:2502.18864 (v1 title ``Towards an AI co-scientist''; current abstract-page title ``Accelerating scientific discovery with Co-Scientist'').
+\item[R27.] S. Schmidgall et al., arXiv:2501.04227.
+\item[R28.] C. Si, N. Yang, T. Hashimoto, arXiv:2409.04109.
+\item[R29.] S. Kapoor \& A. Narayanan, Patterns 4(9):100804, 2023, DOI:10.\allowbreak 1016/\allowbreak j.\allowbreak patter.\allowbreak 2023.\allowbreak 100804.\allowbreak 
+\end{itemize}
+
+\medskip
+\noindent\textbf{Pool R30–R39 (for §6, Methods)}\par\addvspace{2pt}
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item[R30.] B.D. Johnson, \textit{Science Fiction Prototyping}, Morgan \& Claypool, 2011.
+\item[R31.] J. Bleecker, ``Design Fiction: A short essay on design, science, fact and fiction'', Near Future Laboratory, 2009.
+\item[R32.] D. Kirby, Soc. Stud. Sci. 40(1):41–70, 2010.
+\item[R33.] D. Kirby, \textit{Lab Coats in Hollywood}, MIT Press, 2011.
+\item[R34.] P. Dourish \& G. Bell, \textit{Divining a Digital Future}, MIT Press, 2011.
+\item[R35.] M. Blythe, ``Research through design fiction: Narrative in real and imaginary abstracts'', CHI 2014.
+\item[R36.] D.G. Hartwell \& K. Cramer (eds.), \textit{The Hard SF Renaissance}, Tor, 2002.
+\item[R37.] P. Nicholls, ``Hard SF'', \textit{The Encyclopedia of Science Fiction}, online edition, \url{sf-encyclopedia.com/entry/hard_sf}, accessed 2026-09-17 (entry updated 7 April 2025).
+\item[R38.] K. Wagstaff, ICML 2012, arXiv:1206.4656.
+\item[R39.] Z. Lipton \& J. Steinhardt, arXiv:1807.03341 (reprinted in ACM Queue, 2019).
+\end{itemize}
+
+\medskip
+\noindent\textbf{Pool R40–R41 (adjunct to §5, added at verification)}\par\addvspace{2pt}
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item[R40.] Carl Sagan, \textit{Contact}, Simon \& Schuster, New York, 1985.
+\item[R41.] Kip S. Thorne, \textit{Black Holes \& Time Warps}, W.W. Norton, 1994.
+\end{itemize}
+
+\medskip
+\noindent\textbf{Pool R42–R45 (adjunct to §1, §3, §4, §9; added at second-round verification)}\par\addvspace{2pt}
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item[R42.] Gonçalves, ``What fiction does within and outside technoscience: Science fiction, fictional technofutures, and sociotechnical fictions'', TATuP, 2026 (open access).
+\item[R43.] Bormashenko, Entropy 27(4):437, 2025, DOI:10.\allowbreak 3390/\allowbreak e27040437 (review).
+\item[R44.] Hsieh, PRL 134:050404, 2025, arXiv:2201.12110.
+\item[R45.] Miščević, \textit{Thought Experiments}, Springer, 2024.
+\end{itemize}
+
+\medskip
+\noindent\textbf{Pool R46–R52 (adjunct to §6, §7; added at the dual-review source-supplement pass, 2026-09-16)}\par\addvspace{2pt}
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item[R46.] S.E. Toulmin, \textit{The Uses of Argument}, Cambridge University Press, 1958 (updated edition 2003).
+\item[R47.] B.A. Nosek, C.R. Ebersole, A.C. DeHaven, D.T. Mellor, ``The preregistration revolution'', \textit{Proc. Natl. Acad. Sci. USA} 115(11):2600–2606, 2018, DOI:10.\allowbreak 1073/\allowbreak pnas.\allowbreak 1708274114.\allowbreak 
+\item[R48.] C.D. Chambers, L. Tzavella, ``The past, present and future of Registered Reports'', \textit{Nature Human Behaviour} 6(1):29–42, 2022, DOI:10.\allowbreak 1038/\allowbreak s41562-\allowbreak 021-\allowbreak 01193-\allowbreak 7.\allowbreak 
+\item[R49.] J. Pineau, P. Vincent-Lamarre, K. Sinha, V. Larivière, A. Beygelzimer, F. d'Alché-Buc, E. Fox, H. Larochelle, ``Improving Reproducibility in Machine Learning Research (A Report from the NeurIPS 2019 Reproducibility Program)'', \textit{J. Mach. Learn. Res.} 22(164):1–20, 2021, arXiv:2003.12206.
+\item[R50.] V. Stodden, M. McNutt, D.H. Bailey, E. Deelman, Y. Gil, B. Hanson, M.A. Heroux, J.P.A. Ioannidis, M. Taufer, ``Enhancing reproducibility for computational methods'', \textit{Science} 354(6317):1240–1241, 2016, DOI:10.\allowbreak 1126/\allowbreak science.\allowbreak aah6168.\allowbreak 
+\item[R51.] K.R. Popper, \textit{The Logic of Scientific Discovery}, Hutchinson \& Co., London, 1959 (English edition of \textit{Logik der Forschung}, Julius Springer, Vienna, 1934).
+\item[R52.] M.L. Leavitt, A.S. Morcos, ``Towards falsifiable interpretability research'', arXiv:2010.12016, 2020, DOI:10.\allowbreak 48550/\allowbreak arXiv.\allowbreak 2010.\allowbreak 12016 (ML Retrospectives, Surveys \& Meta-Analyses Workshop, NeurIPS 2020; equal contribution).
+\end{itemize}
+
+\medskip
+\noindent\textbf{Pool R53–R54 (adjunct to §2; added at the R2 literature-verification pass, 2026-09-17)}\par\addvspace{2pt}
+
+\begin{itemize}[leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=3pt]
+\item[R53.] B. Riemann, ``On the Hypotheses which lie at the Bases of Geometry'', habilitation lecture; English translation by W.K. Clifford, \textit{Nature}, Vol. VIII, Nos. 183, 184, pp. 14–17, 36, 37 (D.R. Wilkins transcription), full text: \url{https://www.emis.de/classics/Riemann/WKCGeom.tex} (retrieved 2026-09-17); German original locator: \url{https://www.maths.tcd.ie/pub/HistMath/People/Riemann/Geom/} (title verified, text not captured).
+\item[R54.] W.K. Clifford, ``On the Space-Theory of Matter'', Wikisource transcription, \url{https://en.wikisource.org/wiki/On_the_Space-Theory_of_Matter} (index page: ``On the Space-Theory of Matter.djvu''; page categorized ``1876 works'') (retrieved 2026-09-17).
+\end{itemize}
+
+\end{document}

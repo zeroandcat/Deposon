@@ -1,0 +1,41 @@
+================================================================================
+FTFB R5 revision edition — word count report (three calibers, v6 tool reused)
+Date: 2026-10-20   Tool: count_words_ftfb_v6.py (byte-identical to the R3/R4 rounds)
+================================================================================
+
+Caliber definitions (unchanged from the R3/v6 rounds; same tool, same rules):
+  P (prose, tables excluded): Introduction heading .. Appendix; tables dropped.
+  C (receipt caliber):        whole document body, tables dropped, tokens with
+                              at least one ASCII letter/digit.
+  T (tables included):        as P, table environments retained.
+
+--------------------------------------------------------------------------------
+  edition      tex SHA-8    P        C        T
+--------------------------------------------------------------------------------
+  R4 (baseline) 4f8c4231   10585    12701    11449
+  R5 (this)     ba2f1571   13068    15798    14014
+  delta                    +2483    +3097    +2565
+--------------------------------------------------------------------------------
+
+Attribution of the delta (content side; all inside the 18 hunks / E01–E39 change
+map of the R4->R5 unified diff, as accepted by the differential-acceptance round
+81/81 PASS):
+  - Sec. 8.4 "The loop family and its wider formulation" (new subsection, L457ff);
+  - Sec. 3.4 "A physics companion case: the sorting demon" (new subsection, L196ff);
+  - Sec. 5.2 uncanny-valley case block (companion case, inside the vocabulary
+    subsection);
+  - reference pool [R57]-[R66]: ten new declared entries (pool 56 -> 66);
+  - five status-sentence rewrites (L335/L349/L377/L401/L532: deposition commits
+    9b6d80a / 3eee223 with SHA-12 prefixes);
+  - AI-use disclosure upgraded to a dedicated \section* (L516) with the same-line
+    declaration appended (decision D-4, A+B);
+  - register layer P-S1-S5 (whole-text argumentation register, per the revision
+    order slot 4);
+  - master table two new rows + commentary sync (Sec. 9.1) and Sec. 9.2 linkage
+    (pool-count boundary sentence, scale sentence).
+
+Measurement-anchor tokens: numeric-literal zero drift is certified by the
+independent differential acceptance (Bob, 2026-10-20, 81/81 PASS: multiset
+comparison of all numeric tokens R4 vs R5 closed; the five pre-registration
+anchors, verdict literals and all measurement readings byte-identical). This
+word-count round performs no numeric re-derivation.
