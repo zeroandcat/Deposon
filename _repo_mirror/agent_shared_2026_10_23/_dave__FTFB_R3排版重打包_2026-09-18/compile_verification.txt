@@ -1,0 +1,70 @@
+================================================================================
+FTFB arXiv 稿 R3 返修版（KIMI 二轮驳回收件返修）—— 编译与排版验证链全记录
+日期：2026-09-18　操作者：戴夫（格式线）
+对象：查理 R3 返修稿 tex（指纹 51f4e0c8…，606 行；基准＝ec3e1a15…，v6 验收返修版）
+指示依据：管理员派单 2026-09-18 16:25（S5：排版重打包＋两补件入包；回归全绿；如实披露）
+================================================================================
+
+一、指纹链（查理 R3 交付 → tex → PDF）
+  查理 R3 交付三件（shared/）：
+    tex         51f4e0c8a0f83daf2c8952f0900942d044deed350302f3c7f6627b953e612e0d（606 行）
+    对照表       3b1de099df3b9b0fe4770b37847734281e1b13ba150f21aba344ece78201822c
+    自证 diff    f315d563e949cab52df2594e3f635f3e88381521fbbcabb3b1f1d833612cd882
+  本链编译用 tex 副本：与查理件逐字节一致（编译后指纹复验仍为 51f4e0c8…，零触碰）
+  本链 PDF：faded1e9536882658464010edeb12bc1baaa36056d11f3b29263db7d10696994（408781 B，24 页）
+  基准侧：tex ec3e1a15…（其 PDF acb4eb0f…，25 页）
+
+二、触点核对（ec3→r3，本链独立 diff 复核）
+  5 个差异行＝L264 / L298 / L409 / L488 / L494，与查理对照表申报一致，零清单外改动；
+  花括号平衡 469 对（与 ec3 相同）；改动纯散文，零命令层增删。
+  触点内容：L264＝S1 §6.1 63 词句拆分；L298＝S2 §6.3 94 词句拆分；
+  　　　　　L409＝S3+m6 §7.4 57 词句拆分＋freeze 定义句压缩；L488/L494＝S5 附录披露补句。
+
+三、编译
+  引擎：TeX Live 2026 便携版 pdflatex（pdfTeX-1.40.29），三遍，exit 0；
+  　　　pass2 与 pass3 stdout 逐字节一致（交叉引用/目录收敛）。
+  注：查理侧 tectonic 冒烟所示「本机无 pdflatex」系其 PATH 环境差异；本链自备 TL2026
+  　　　便携版（agents/…/v8_pdflatex/，历轮同源引擎），非本轮引入。
+  四零指标：错误 0｜Overfull 0｜缺字（missing character）0｜未定义引用 0。
+  披露项：Underfull 2 处（badness 5548/1990，tex L554–555＝参考文献区长 URL 条目），
+  　　　　与 cb/ec3 基线同源、同落点、同 badness（非本轮引入）。
+
+四、清零 grep（14 式＋超集 8 式，-i，tex 全文）
+  double-blind / blind-review / camera-ready / confidential channel / offered to the
+  editors / IDENTIFIER-PENDING / scheduled before submission / to be completed /
+  pre-submission / double blind / anonymized for review / removed for review /
+  de-anonymiz / revised camera ＝全 0；超集 final version / upon acceptance /
+  revision pending / pending identifier / restore in the final version / version of
+  this paper / blind-review version / self-citation removed ＝全 0。
+  KIMI 批准短语 to be restored in a revised version 5 处、AUTHOR-ANONYMIZED ENTRY 1 处
+  （与 ec3 计数相同）。
+
+五、正文与结构回归
+  五锚（aeefb8ef6972 / 9bbe43f41fa8 / 6e9673205dc0 / 68a5b08ef007 / 6b09de9911c0）：
+  　tex 与 PDF 文本层各恰 1 次，逐字节一致；判死线 F-C1–F-C4（L99/L478）不在 5 个
+  　触点行内＝未触碰。
+  参考池：\item[R01.–R56.] 共 56 项，连续、唯一、无增无删（R13 NTRS 19940022856 两处、
+  　R14 DOI 10.1007/s12369-022-00876-z 一处、[R56] 被引 8 处，均与 ec3 相同）；
+  　池算术闭合 55 verified + 1 anonymized ＝ 56。
+  摘要：abstract 环境内容与 ec3 逐字节一致（原始 1851 字符；空白归一 1846＝arXiv 粘贴
+  　口径，对 1920 上限余量 74；查理申报 1867＝含 \begin{abstract} 标记 16 字符口径，
+  　1851+16 复核吻合，口径差异如实披露）。
+  词数：P 10467→10435（−32＝S1 −1＋S2 −1＋m6 −30，本链 difflib 逐块独立复算闭合）；
+  　C 12421→12414；T 11272→11240。详见同包 word_count_report_2026-09-18.txt。
+
+六、页数与版面
+  实测 24 页（ec3 基线 25 页：P 区净 −32 词后正文回收一页，如实记录）；A4。
+  pdffonts 17 行全 emb=yes（LM Roman/Math/Mono 子字库），无 Type3（与 ec3 行数相同）。
+  PDF 文本层与 ec3 PDF 逐行 diff：121 个差异行，全部落在 5 触点区段及其重排级联
+  （含第 25 页回收），无触点外内容性差异。
+
+七、双盲/元数据合规
+  本版为实名 arXiv 单作者 preprint：hyperref pdfauthor=Qihao Yuan、pdftitle＝论文题目
+  （设计内，合规）；Subject/Keywords 空白；tex/PDF 零 CJK、零 email、零密钥样式串
+  （5 触点均纯散文，无新增敏感样式）。
+
+八、纪律执行
+  0 LLM API；tex 内容零触碰（编译用副本指纹复验不变；查理 R3 交付原件未动）；
+  不重算/不改任何数字与锚点；历轮 frozen 制品未动；word_count_report 与
+  arxiv_metadata 两补件按本轮实测更新后入包（管理员派单 2026-09-18 16:25 明示
+  入包，替代 v6 轮「两补件不入包」的临时口径，如实披露口径变更）。

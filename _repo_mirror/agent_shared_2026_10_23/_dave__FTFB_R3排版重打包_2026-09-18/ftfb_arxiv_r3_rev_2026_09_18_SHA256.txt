@@ -1,0 +1,26 @@
+================================================================================
+FTFB R3 返修版 arXiv 交付包 —— SHA-256 指纹单（2026-09-18，戴夫-格式线）
+================================================================================
+包文件：ftfb_arxiv_r3_rev_2026_09_18.tar.gz（444555 B）
+
+全长 SHA-256（外部先验指纹）：
+741c9f24b44760f7003d268e1d47c954d497fcd9abf538dcdf4dcea249c95b72
+
+gzip 魔数自验：1f 8b 08（通过）；gzip -t 完整性通过；解包回读 sha256sum -c
+对包内 SHA256_MANIFEST.txt 六件逐位全 OK；包内 7 件清单：
+
+  51f4e0c8a0f83daf2c8952f0900942d044deed350302f3c7f6627b953e612e0d  fiction_that_feeds_back.tex
+  faded1e9536882658464010edeb12bc1baaa36056d11f3b29263db7d10696994  fiction_that_feeds_back.pdf
+  9751e2371f7b9ad4d8e7bf8c5ce76f9463d069b245835a76d28ac8054e551d37  compile_verification.txt
+  734955f8bcda8abb025a16259f27cc97258d9deb787782d5f9eabdac94900d79  word_count_report_2026-09-18.txt
+  34532d569bf19dc583c86e94c8228e62c39c2f62a8b908e323cf13dad270789a  arxiv_metadata.txt
+  1f10c747e2e921418b2063ad228e349577fdd575ba36422f35d29cd989e4fcf5  README.md
+  （SHA256_MANIFEST.txt 在包内，与上列六件逐位一致）
+
+指纹链（查理 R3 交付 → tex → PDF → 包）：
+  查理 R3 tex ＝包内 tex ：51f4e0c8a0f83daf2c8952f0900942d044deed350302f3c7f6627b953e612e0d
+  本链编译 PDF（24 页）　：faded1e9536882658464010edeb12bc1baaa36056d11f3b29263db7d10696994
+  交付包　　　　　　　　　：741c9f24b44760f7003d268e1d47c954d497fcd9abf538dcdf4dcea249c95b72
+
+退路件：ftfb_arxiv_r3_rev_2026_09_18.tar.gz.b64.txt（标准 base64，头部 # 注释含
+解码命令；回环解码 cmp 与原包逐字节一致）
