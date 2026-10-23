@@ -1,0 +1,1528 @@
+{
+ "seed_struct_identical": true,
+ "tiers": {
+  "ETAC-D1": {
+   "eta": "1/2",
+   "g_couple": "1",
+   "g_aether": "1/10",
+   "families": {
+    "T1_GSM8K": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 1,
+     "p_miss_set": [
+      "3/14(≈0.214286)"
+     ],
+     "w_best_options": [
+      "11/10"
+     ],
+     "details": []
+    },
+    "T2_StrategyQA": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 1,
+     "p_miss_set": [
+      "3/14(≈0.214286)"
+     ],
+     "w_best_options": [
+      "11/10"
+     ],
+     "details": []
+    },
+    "T3_Trap": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 1,
+     "p_miss_set": [
+      "7/29(≈0.241379)"
+     ],
+     "w_best_options": [
+      "11/10"
+     ],
+     "details": []
+    },
+    "T4_2x2": {
+     "n_instances": 10,
+     "n_countable": 9,
+     "n_distinct_p_miss": 3,
+     "p_miss_set": [
+      "1/12(≈0.083333)",
+      "8/41(≈0.195122)",
+      "19/63(≈0.301587)"
+     ],
+     "w_best_options": null,
+     "details": [
+      {
+       "idx": 0,
+       "p_miss": "1/12(≈0.083333)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Cooperate": "1/10"
+       }
+      },
+      {
+       "idx": 1,
+       "p_miss": "1/12(≈0.083333)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Hawk": "1/10"
+       }
+      },
+      {
+       "idx": 2,
+       "p_miss": "1/12(≈0.083333)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Do not push": "1/10"
+       }
+      },
+      {
+       "idx": 3,
+       "p_miss": "1/12(≈0.083333)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Comedy": "1/10"
+       }
+      },
+      {
+       "idx": 5,
+       "p_miss": "19/63(≈0.301587)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Hunt": "19/40"
+       }
+      },
+      {
+       "idx": 6,
+       "p_miss": "19/63(≈0.301587)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Defect": "19/40"
+       }
+      },
+      {
+       "idx": 7,
+       "p_miss": "8/41(≈0.195122)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Offload": "4/15"
+       }
+      },
+      {
+       "idx": 8,
+       "p_miss": "1/12(≈0.083333)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Home": "1/10"
+       }
+      },
+      {
+       "idx": 9,
+       "p_miss": "8/41(≈0.195122)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Buy": "4/15"
+       }
+      }
+     ]
+    },
+    "T5_LowResource": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 6,
+     "p_miss_set": [
+      "82/181(≈0.453039)",
+      "37/81(≈0.456790)",
+      "79/167(≈0.473054)",
+      "71/148(≈0.479730)",
+      "21/43(≈0.488372)",
+      "89/177(≈0.502825)"
+     ],
+     "w_best_options": null,
+     "details": [
+      {
+       "idx": 0,
+       "p_miss": "89/177(≈0.502825)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Ration": "9/40",
+        "Truck": "19/40",
+        "Cistern": "33/80"
+       }
+      },
+      {
+       "idx": 1,
+       "p_miss": "82/181(≈0.453039)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Idle": "7/45",
+        "Shed": "29/90",
+        "Rotate": "13/30"
+       }
+      },
+      {
+       "idx": 2,
+       "p_miss": "89/177(≈0.502825)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Bulk": "33/80",
+        "Wait": "9/40",
+        "Borrow": "19/40"
+       }
+      },
+      {
+       "idx": 3,
+       "p_miss": "89/177(≈0.502825)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Idle": "13/80",
+        "Batch": "33/80",
+        "Cache": "43/80"
+       }
+      },
+      {
+       "idx": 4,
+       "p_miss": "71/148(≈0.479730)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Waste": "6/35",
+        "Hold": "11/35",
+        "Release": "37/70"
+       }
+      },
+      {
+       "idx": 5,
+       "p_miss": "79/167(≈0.473054)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Hold seed": "13/80",
+        "Sow shallow": "19/40",
+        "Sow late": "7/20"
+       }
+      },
+      {
+       "idx": 6,
+       "p_miss": "82/181(≈0.453039)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Recover old": "29/90",
+        "Do nothing": "7/45",
+        "Part charge": "13/30"
+       }
+      },
+      {
+       "idx": 7,
+       "p_miss": "89/177(≈0.502825)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Wait for resupply": "9/40",
+        "Transfer stock": "33/80",
+        "One vial": "19/40"
+       }
+      },
+      {
+       "idx": 8,
+       "p_miss": "89/177(≈0.502825)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Trickle charge": "33/80",
+        "Hold for peak": "43/80",
+        "Idle": "13/80"
+       }
+      },
+      {
+       "idx": 9,
+       "p_miss": "89/177(≈0.502825)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Substitute sizes": "33/80",
+        "Stop work": "9/40",
+        "Use reserves": "19/40"
+       }
+      },
+      {
+       "idx": 10,
+       "p_miss": "79/167(≈0.473054)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Half load": "19/40",
+        "Delay sailing": "13/80",
+        "Manifest only": "7/20"
+       }
+      },
+      {
+       "idx": 11,
+       "p_miss": "89/177(≈0.502825)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Defer entirely": "9/40",
+        "Send raw": "19/40",
+        "Split over night": "33/80"
+       }
+      },
+      {
+       "idx": 12,
+       "p_miss": "79/167(≈0.473054)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Test first": "7/20",
+        "Dose at symptoms": "19/40",
+        "No dose": "13/80"
+       }
+      },
+      {
+       "idx": 13,
+       "p_miss": "21/43(≈0.488372)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Shut down": "13/80",
+        "Run part load": "43/80",
+        "Run intermittent": "7/20"
+       }
+      },
+      {
+       "idx": 14,
+       "p_miss": "89/177(≈0.502825)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Ship half packed": "19/40",
+        "Ship nothing": "9/40",
+        "Ship with ice": "33/80"
+       }
+      },
+      {
+       "idx": 15,
+       "p_miss": "37/81(≈0.456790)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Open partial kit": "19/40",
+        "Cancel list": "13/80",
+        "Reuse tray": "23/80"
+       }
+      },
+      {
+       "idx": 16,
+       "p_miss": "89/177(≈0.502825)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Send sampled trace": "33/80",
+        "Send nothing": "13/80",
+        "Send summary": "43/80"
+       }
+      },
+      {
+       "idx": 17,
+       "p_miss": "89/177(≈0.502825)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Cistern": "33/80",
+        "Ration": "9/40",
+        "Truck": "19/40"
+       }
+      },
+      {
+       "idx": 18,
+       "p_miss": "82/181(≈0.453039)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Idle": "7/45",
+        "Rotate": "13/30",
+        "Shed": "29/90"
+       }
+      },
+      {
+       "idx": 19,
+       "p_miss": "89/177(≈0.502825)",
+       "w_best": "11/10",
+       "w_nonbest": {
+        "Wait": "9/40",
+        "Borrow": "19/40",
+        "Bulk": "33/80"
+       }
+      }
+     ]
+    }
+   },
+   "K-ETAC-3": "PASS",
+   "excluded_cells": [
+    "T4_2x2#04"
+   ],
+   "layer_R-A_cross_family_n_distinct": 11,
+   "layer_R-A_cross_family_set": [
+    "1/12(≈0.083333)",
+    "8/41(≈0.195122)",
+    "3/14(≈0.214286)",
+    "7/29(≈0.241379)",
+    "19/63(≈0.301587)",
+    "82/181(≈0.453039)",
+    "37/81(≈0.456790)",
+    "79/167(≈0.473054)",
+    "71/148(≈0.479730)",
+    "21/43(≈0.488372)",
+    "89/177(≈0.502825)"
+   ],
+   "layer_R-Aplus_n_distinct": 12,
+   "main_R-Aplus_injected_full15": 10,
+   "main_R-Aplus_injected_M1only_variant": 5,
+   "sep": 3
+  },
+  "ETAC-D2": {
+   "eta": "1/4",
+   "g_couple": "2",
+   "g_aether": "0",
+   "families": {
+    "T1_GSM8K": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 1,
+     "p_miss_set": [
+      "0(≈0.000000)"
+     ],
+     "w_best_options": [
+      "5/4"
+     ],
+     "details": []
+    },
+    "T2_StrategyQA": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 1,
+     "p_miss_set": [
+      "0(≈0.000000)"
+     ],
+     "w_best_options": [
+      "5/4"
+     ],
+     "details": []
+    },
+    "T3_Trap": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 1,
+     "p_miss_set": [
+      "1/6(≈0.166667)"
+     ],
+     "w_best_options": [
+      "5/4"
+     ],
+     "details": []
+    },
+    "T4_2x2": {
+     "n_instances": 10,
+     "n_countable": 9,
+     "n_distinct_p_miss": 3,
+     "p_miss_set": [
+      "0(≈0.000000)",
+      "2/17(≈0.117647)",
+      "3/13(≈0.230769)"
+     ],
+     "w_best_options": null,
+     "details": [
+      {
+       "idx": 0,
+       "p_miss": "0(≈0.000000)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Cooperate": "0"
+       }
+      },
+      {
+       "idx": 1,
+       "p_miss": "0(≈0.000000)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Hawk": "0"
+       }
+      },
+      {
+       "idx": 2,
+       "p_miss": "0(≈0.000000)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Do not push": "0"
+       }
+      },
+      {
+       "idx": 3,
+       "p_miss": "0(≈0.000000)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Comedy": "0"
+       }
+      },
+      {
+       "idx": 5,
+       "p_miss": "3/13(≈0.230769)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Hunt": "3/8"
+       }
+      },
+      {
+       "idx": 6,
+       "p_miss": "3/13(≈0.230769)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Defect": "3/8"
+       }
+      },
+      {
+       "idx": 7,
+       "p_miss": "2/17(≈0.117647)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Offload": "1/6"
+       }
+      },
+      {
+       "idx": 8,
+       "p_miss": "0(≈0.000000)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Home": "0"
+       }
+      },
+      {
+       "idx": 9,
+       "p_miss": "2/17(≈0.117647)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Buy": "1/6"
+       }
+      }
+     ]
+    },
+    "T5_LowResource": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 6,
+     "p_miss_set": [
+      "22/67(≈0.328358)",
+      "1/3(≈0.333333)",
+      "11/31(≈0.354839)",
+      "4/11(≈0.363636)",
+      "3/8(≈0.375000)",
+      "13/33(≈0.393939)"
+     ],
+     "w_best_options": null,
+     "details": [
+      {
+       "idx": 0,
+       "p_miss": "13/33(≈0.393939)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Ration": "1/8",
+        "Truck": "3/8",
+        "Cistern": "5/16"
+       }
+      },
+      {
+       "idx": 1,
+       "p_miss": "22/67(≈0.328358)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Idle": "1/18",
+        "Shed": "2/9",
+        "Rotate": "1/3"
+       }
+      },
+      {
+       "idx": 2,
+       "p_miss": "13/33(≈0.393939)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Bulk": "5/16",
+        "Wait": "1/8",
+        "Borrow": "3/8"
+       }
+      },
+      {
+       "idx": 3,
+       "p_miss": "13/33(≈0.393939)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Idle": "1/16",
+        "Batch": "5/16",
+        "Cache": "7/16"
+       }
+      },
+      {
+       "idx": 4,
+       "p_miss": "4/11(≈0.363636)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Waste": "1/14",
+        "Hold": "3/14",
+        "Release": "3/7"
+       }
+      },
+      {
+       "idx": 5,
+       "p_miss": "11/31(≈0.354839)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Hold seed": "1/16",
+        "Sow shallow": "3/8",
+        "Sow late": "1/4"
+       }
+      },
+      {
+       "idx": 6,
+       "p_miss": "22/67(≈0.328358)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Recover old": "2/9",
+        "Do nothing": "1/18",
+        "Part charge": "1/3"
+       }
+      },
+      {
+       "idx": 7,
+       "p_miss": "13/33(≈0.393939)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Wait for resupply": "1/8",
+        "Transfer stock": "5/16",
+        "One vial": "3/8"
+       }
+      },
+      {
+       "idx": 8,
+       "p_miss": "13/33(≈0.393939)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Trickle charge": "5/16",
+        "Hold for peak": "7/16",
+        "Idle": "1/16"
+       }
+      },
+      {
+       "idx": 9,
+       "p_miss": "13/33(≈0.393939)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Substitute sizes": "5/16",
+        "Stop work": "1/8",
+        "Use reserves": "3/8"
+       }
+      },
+      {
+       "idx": 10,
+       "p_miss": "11/31(≈0.354839)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Half load": "3/8",
+        "Delay sailing": "1/16",
+        "Manifest only": "1/4"
+       }
+      },
+      {
+       "idx": 11,
+       "p_miss": "13/33(≈0.393939)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Defer entirely": "1/8",
+        "Send raw": "3/8",
+        "Split over night": "5/16"
+       }
+      },
+      {
+       "idx": 12,
+       "p_miss": "11/31(≈0.354839)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Test first": "1/4",
+        "Dose at symptoms": "3/8",
+        "No dose": "1/16"
+       }
+      },
+      {
+       "idx": 13,
+       "p_miss": "3/8(≈0.375000)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Shut down": "1/16",
+        "Run part load": "7/16",
+        "Run intermittent": "1/4"
+       }
+      },
+      {
+       "idx": 14,
+       "p_miss": "13/33(≈0.393939)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Ship half packed": "3/8",
+        "Ship nothing": "1/8",
+        "Ship with ice": "5/16"
+       }
+      },
+      {
+       "idx": 15,
+       "p_miss": "1/3(≈0.333333)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Open partial kit": "3/8",
+        "Cancel list": "1/16",
+        "Reuse tray": "3/16"
+       }
+      },
+      {
+       "idx": 16,
+       "p_miss": "13/33(≈0.393939)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Send sampled trace": "5/16",
+        "Send nothing": "1/16",
+        "Send summary": "7/16"
+       }
+      },
+      {
+       "idx": 17,
+       "p_miss": "13/33(≈0.393939)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Cistern": "5/16",
+        "Ration": "1/8",
+        "Truck": "3/8"
+       }
+      },
+      {
+       "idx": 18,
+       "p_miss": "22/67(≈0.328358)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Idle": "1/18",
+        "Rotate": "1/3",
+        "Shed": "2/9"
+       }
+      },
+      {
+       "idx": 19,
+       "p_miss": "13/33(≈0.393939)",
+       "w_best": "5/4",
+       "w_nonbest": {
+        "Wait": "1/8",
+        "Borrow": "3/8",
+        "Bulk": "5/16"
+       }
+      }
+     ]
+    }
+   },
+   "K-ETAC-3": "PASS",
+   "excluded_cells": [
+    "T4_2x2#04"
+   ],
+   "layer_R-A_cross_family_n_distinct": 10,
+   "layer_R-A_cross_family_set": [
+    "0(≈0.000000)",
+    "2/17(≈0.117647)",
+    "1/6(≈0.166667)",
+    "3/13(≈0.230769)",
+    "22/67(≈0.328358)",
+    "1/3(≈0.333333)",
+    "11/31(≈0.354839)",
+    "4/11(≈0.363636)",
+    "3/8(≈0.375000)",
+    "13/33(≈0.393939)"
+   ],
+   "layer_R-Aplus_n_distinct": 12,
+   "main_R-Aplus_injected_full15": 10,
+   "main_R-Aplus_injected_M1only_variant": 5,
+   "sep": 3
+  },
+  "ETAC-D3": {
+   "eta": "3/4",
+   "g_couple": "1/5",
+   "g_aether": "2",
+   "families": {
+    "T1_GSM8K": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 1,
+     "p_miss_set": [
+      "5/7(≈0.714286)"
+     ],
+     "w_best_options": [
+      "12/5"
+     ],
+     "details": []
+    },
+    "T2_StrategyQA": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 1,
+     "p_miss_set": [
+      "5/7(≈0.714286)"
+     ],
+     "w_best_options": [
+      "12/5"
+     ],
+     "details": []
+    },
+    "T3_Trap": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 1,
+     "p_miss_set": [
+      "83/179(≈0.463687)"
+     ],
+     "w_best_options": [
+      "12/5"
+     ],
+     "details": []
+    },
+    "T4_2x2": {
+     "n_instances": 10,
+     "n_countable": 9,
+     "n_distinct_p_miss": 3,
+     "p_miss_set": [
+      "5/11(≈0.454545)",
+      "41/89(≈0.460674)",
+      "169/361(≈0.468144)"
+     ],
+     "w_best_options": null,
+     "details": [
+      {
+       "idx": 0,
+       "p_miss": "5/11(≈0.454545)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Cooperate": "2"
+       }
+      },
+      {
+       "idx": 1,
+       "p_miss": "5/11(≈0.454545)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Hawk": "2"
+       }
+      },
+      {
+       "idx": 2,
+       "p_miss": "5/11(≈0.454545)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Do not push": "2"
+       }
+      },
+      {
+       "idx": 3,
+       "p_miss": "5/11(≈0.454545)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Comedy": "2"
+       }
+      },
+      {
+       "idx": 5,
+       "p_miss": "169/361(≈0.468144)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Hunt": "169/80"
+       }
+      },
+      {
+       "idx": 6,
+       "p_miss": "169/361(≈0.468144)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Defect": "169/80"
+       }
+      },
+      {
+       "idx": 7,
+       "p_miss": "41/89(≈0.460674)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Offload": "41/20"
+       }
+      },
+      {
+       "idx": 8,
+       "p_miss": "5/11(≈0.454545)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Home": "2"
+       }
+      },
+      {
+       "idx": 9,
+       "p_miss": "41/89(≈0.460674)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Buy": "41/20"
+       }
+      }
+     ]
+    },
+    "T5_LowResource": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 6,
+     "p_miss_set": [
+      "371/515(≈0.720388)",
+      "165/229(≈0.720524)",
+      "331/459(≈0.721133)",
+      "145/201(≈0.721393)",
+      "83/115(≈0.721739)",
+      "333/461(≈0.722343)"
+     ],
+     "w_best_options": null,
+     "details": [
+      {
+       "idx": 0,
+       "p_miss": "333/461(≈0.722343)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Ration": "163/80",
+        "Truck": "169/80",
+        "Cistern": "67/32"
+       }
+      },
+      {
+       "idx": 1,
+       "p_miss": "371/515(≈0.720388)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Idle": "121/60",
+        "Shed": "31/15",
+        "Rotate": "21/10"
+       }
+      },
+      {
+       "idx": 2,
+       "p_miss": "333/461(≈0.722343)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Bulk": "67/32",
+        "Wait": "163/80",
+        "Borrow": "169/80"
+       }
+      },
+      {
+       "idx": 3,
+       "p_miss": "333/461(≈0.722343)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Idle": "323/160",
+        "Batch": "67/32",
+        "Cache": "341/160"
+       }
+      },
+      {
+       "idx": 4,
+       "p_miss": "145/201(≈0.721393)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Waste": "283/140",
+        "Hold": "289/140",
+        "Release": "149/70"
+       }
+      },
+      {
+       "idx": 5,
+       "p_miss": "331/459(≈0.721133)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Hold seed": "323/160",
+        "Sow shallow": "169/80",
+        "Sow late": "83/40"
+       }
+      },
+      {
+       "idx": 6,
+       "p_miss": "371/515(≈0.720388)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Recover old": "31/15",
+        "Do nothing": "121/60",
+        "Part charge": "21/10"
+       }
+      },
+      {
+       "idx": 7,
+       "p_miss": "333/461(≈0.722343)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Wait for resupply": "163/80",
+        "Transfer stock": "67/32",
+        "One vial": "169/80"
+       }
+      },
+      {
+       "idx": 8,
+       "p_miss": "333/461(≈0.722343)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Trickle charge": "67/32",
+        "Hold for peak": "341/160",
+        "Idle": "323/160"
+       }
+      },
+      {
+       "idx": 9,
+       "p_miss": "333/461(≈0.722343)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Substitute sizes": "67/32",
+        "Stop work": "163/80",
+        "Use reserves": "169/80"
+       }
+      },
+      {
+       "idx": 10,
+       "p_miss": "331/459(≈0.721133)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Half load": "169/80",
+        "Delay sailing": "323/160",
+        "Manifest only": "83/40"
+       }
+      },
+      {
+       "idx": 11,
+       "p_miss": "333/461(≈0.722343)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Defer entirely": "163/80",
+        "Send raw": "169/80",
+        "Split over night": "67/32"
+       }
+      },
+      {
+       "idx": 12,
+       "p_miss": "331/459(≈0.721133)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Test first": "83/40",
+        "Dose at symptoms": "169/80",
+        "No dose": "323/160"
+       }
+      },
+      {
+       "idx": 13,
+       "p_miss": "83/115(≈0.721739)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Shut down": "323/160",
+        "Run part load": "341/160",
+        "Run intermittent": "83/40"
+       }
+      },
+      {
+       "idx": 14,
+       "p_miss": "333/461(≈0.722343)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Ship half packed": "169/80",
+        "Ship nothing": "163/80",
+        "Ship with ice": "67/32"
+       }
+      },
+      {
+       "idx": 15,
+       "p_miss": "165/229(≈0.720524)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Open partial kit": "169/80",
+        "Cancel list": "323/160",
+        "Reuse tray": "329/160"
+       }
+      },
+      {
+       "idx": 16,
+       "p_miss": "333/461(≈0.722343)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Send sampled trace": "67/32",
+        "Send nothing": "323/160",
+        "Send summary": "341/160"
+       }
+      },
+      {
+       "idx": 17,
+       "p_miss": "333/461(≈0.722343)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Cistern": "67/32",
+        "Ration": "163/80",
+        "Truck": "169/80"
+       }
+      },
+      {
+       "idx": 18,
+       "p_miss": "371/515(≈0.720388)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Idle": "121/60",
+        "Rotate": "21/10",
+        "Shed": "31/15"
+       }
+      },
+      {
+       "idx": 19,
+       "p_miss": "333/461(≈0.722343)",
+       "w_best": "12/5",
+       "w_nonbest": {
+        "Wait": "163/80",
+        "Borrow": "169/80",
+        "Bulk": "67/32"
+       }
+      }
+     ]
+    }
+   },
+   "K-ETAC-3": "PASS",
+   "excluded_cells": [
+    "T4_2x2#04"
+   ],
+   "layer_R-A_cross_family_n_distinct": 11,
+   "layer_R-A_cross_family_set": [
+    "5/11(≈0.454545)",
+    "41/89(≈0.460674)",
+    "83/179(≈0.463687)",
+    "169/361(≈0.468144)",
+    "5/7(≈0.714286)",
+    "371/515(≈0.720388)",
+    "165/229(≈0.720524)",
+    "331/459(≈0.721133)",
+    "145/201(≈0.721393)",
+    "83/115(≈0.721739)",
+    "333/461(≈0.722343)"
+   ],
+   "layer_R-Aplus_n_distinct": 12,
+   "main_R-Aplus_injected_full15": 10,
+   "main_R-Aplus_injected_M1only_variant": 5,
+   "sep": 3
+  },
+  "ETAC-D4": {
+   "eta": "9/10",
+   "g_couple": "1/2",
+   "g_aether": "1/2",
+   "families": {
+    "T1_GSM8K": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 1,
+     "p_miss_set": [
+      "10/17(≈0.588235)"
+     ],
+     "w_best_options": [
+      "21/20"
+     ],
+     "details": []
+    },
+    "T2_StrategyQA": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 1,
+     "p_miss_set": [
+      "10/17(≈0.588235)"
+     ],
+     "w_best_options": [
+      "21/20"
+     ],
+     "details": []
+    },
+    "T3_Trap": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 1,
+     "p_miss_set": [
+      "29/71(≈0.408451)"
+     ],
+     "w_best_options": [
+      "21/20"
+     ],
+     "details": []
+    },
+    "T4_2x2": {
+     "n_instances": 10,
+     "n_countable": 9,
+     "n_distinct_p_miss": 3,
+     "p_miss_set": [
+      "10/31(≈0.322581)",
+      "13/34(≈0.382353)",
+      "67/151(≈0.443709)"
+     ],
+     "w_best_options": null,
+     "details": [
+      {
+       "idx": 0,
+       "p_miss": "10/31(≈0.322581)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Cooperate": "1/2"
+       }
+      },
+      {
+       "idx": 1,
+       "p_miss": "10/31(≈0.322581)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Hawk": "1/2"
+       }
+      },
+      {
+       "idx": 2,
+       "p_miss": "10/31(≈0.322581)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Do not push": "1/2"
+       }
+      },
+      {
+       "idx": 3,
+       "p_miss": "10/31(≈0.322581)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Comedy": "1/2"
+       }
+      },
+      {
+       "idx": 5,
+       "p_miss": "67/151(≈0.443709)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Hunt": "67/80"
+       }
+      },
+      {
+       "idx": 6,
+       "p_miss": "67/151(≈0.443709)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Defect": "67/80"
+       }
+      },
+      {
+       "idx": 7,
+       "p_miss": "13/34(≈0.382353)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Offload": "13/20"
+       }
+      },
+      {
+       "idx": 8,
+       "p_miss": "10/31(≈0.322581)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Home": "1/2"
+       }
+      },
+      {
+       "idx": 9,
+       "p_miss": "13/34(≈0.382353)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Buy": "13/20"
+       }
+      }
+     ]
+    },
+    "T5_LowResource": {
+     "n_instances": 20,
+     "n_countable": 20,
+     "n_distinct_p_miss": 6,
+     "p_miss_set": [
+      "41/62(≈0.661290)",
+      "55/83(≈0.662651)",
+      "113/169(≈0.668639)",
+      "100/149(≈0.671141)",
+      "29/43(≈0.674419)",
+      "17/25(≈0.680000)"
+     ],
+     "w_best_options": null,
+     "details": [
+      {
+       "idx": 0,
+       "p_miss": "17/25(≈0.680000)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Ration": "49/80",
+        "Truck": "67/80",
+        "Cistern": "25/32"
+       }
+      },
+      {
+       "idx": 1,
+       "p_miss": "41/62(≈0.661290)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Idle": "11/20",
+        "Shed": "7/10",
+        "Rotate": "4/5"
+       }
+      },
+      {
+       "idx": 2,
+       "p_miss": "17/25(≈0.680000)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Bulk": "25/32",
+        "Wait": "49/80",
+        "Borrow": "67/80"
+       }
+      },
+      {
+       "idx": 3,
+       "p_miss": "17/25(≈0.680000)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Idle": "89/160",
+        "Batch": "25/32",
+        "Cache": "143/160"
+       }
+      },
+      {
+       "idx": 4,
+       "p_miss": "100/149(≈0.671141)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Waste": "79/140",
+        "Hold": "97/140",
+        "Release": "31/35"
+       }
+      },
+      {
+       "idx": 5,
+       "p_miss": "113/169(≈0.668639)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Hold seed": "89/160",
+        "Sow shallow": "67/80",
+        "Sow late": "29/40"
+       }
+      },
+      {
+       "idx": 6,
+       "p_miss": "41/62(≈0.661290)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Recover old": "7/10",
+        "Do nothing": "11/20",
+        "Part charge": "4/5"
+       }
+      },
+      {
+       "idx": 7,
+       "p_miss": "17/25(≈0.680000)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Wait for resupply": "49/80",
+        "Transfer stock": "25/32",
+        "One vial": "67/80"
+       }
+      },
+      {
+       "idx": 8,
+       "p_miss": "17/25(≈0.680000)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Trickle charge": "25/32",
+        "Hold for peak": "143/160",
+        "Idle": "89/160"
+       }
+      },
+      {
+       "idx": 9,
+       "p_miss": "17/25(≈0.680000)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Substitute sizes": "25/32",
+        "Stop work": "49/80",
+        "Use reserves": "67/80"
+       }
+      },
+      {
+       "idx": 10,
+       "p_miss": "113/169(≈0.668639)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Half load": "67/80",
+        "Delay sailing": "89/160",
+        "Manifest only": "29/40"
+       }
+      },
+      {
+       "idx": 11,
+       "p_miss": "17/25(≈0.680000)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Defer entirely": "49/80",
+        "Send raw": "67/80",
+        "Split over night": "25/32"
+       }
+      },
+      {
+       "idx": 12,
+       "p_miss": "113/169(≈0.668639)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Test first": "29/40",
+        "Dose at symptoms": "67/80",
+        "No dose": "89/160"
+       }
+      },
+      {
+       "idx": 13,
+       "p_miss": "29/43(≈0.674419)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Shut down": "89/160",
+        "Run part load": "143/160",
+        "Run intermittent": "29/40"
+       }
+      },
+      {
+       "idx": 14,
+       "p_miss": "17/25(≈0.680000)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Ship half packed": "67/80",
+        "Ship nothing": "49/80",
+        "Ship with ice": "25/32"
+       }
+      },
+      {
+       "idx": 15,
+       "p_miss": "55/83(≈0.662651)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Open partial kit": "67/80",
+        "Cancel list": "89/160",
+        "Reuse tray": "107/160"
+       }
+      },
+      {
+       "idx": 16,
+       "p_miss": "17/25(≈0.680000)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Send sampled trace": "25/32",
+        "Send nothing": "89/160",
+        "Send summary": "143/160"
+       }
+      },
+      {
+       "idx": 17,
+       "p_miss": "17/25(≈0.680000)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Cistern": "25/32",
+        "Ration": "49/80",
+        "Truck": "67/80"
+       }
+      },
+      {
+       "idx": 18,
+       "p_miss": "41/62(≈0.661290)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Idle": "11/20",
+        "Rotate": "4/5",
+        "Shed": "7/10"
+       }
+      },
+      {
+       "idx": 19,
+       "p_miss": "17/25(≈0.680000)",
+       "w_best": "21/20",
+       "w_nonbest": {
+        "Wait": "49/80",
+        "Borrow": "67/80",
+        "Bulk": "25/32"
+       }
+      }
+     ]
+    }
+   },
+   "K-ETAC-3": "PASS",
+   "excluded_cells": [
+    "T4_2x2#04"
+   ],
+   "layer_R-A_cross_family_n_distinct": 11,
+   "layer_R-A_cross_family_set": [
+    "10/31(≈0.322581)",
+    "13/34(≈0.382353)",
+    "29/71(≈0.408451)",
+    "67/151(≈0.443709)",
+    "10/17(≈0.588235)",
+    "41/62(≈0.661290)",
+    "55/83(≈0.662651)",
+    "113/169(≈0.668639)",
+    "100/149(≈0.671141)",
+    "29/43(≈0.674419)",
+    "17/25(≈0.680000)"
+   ],
+   "layer_R-Aplus_n_distinct": 12,
+   "main_R-Aplus_injected_full15": 10,
+   "main_R-Aplus_injected_M1only_variant": 5,
+   "sep": 3
+  }
+ },
+ "meta": {
+  "harness_sha12": "ce64b9b97489(只读导入·0 改字节)",
+  "seeds": [
+   42,
+   123,
+   456
+  ],
+  "n_per_family": {
+   "T1_GSM8K": 20,
+   "T2_StrategyQA": 20,
+   "T3_Trap": 20,
+   "T4_2x2": 10,
+   "T5_LowResource": 20
+  },
+  "construction": "w(o)=(1-eta)*1{v(o)=best}+eta*g_couple*(v(o)/best)+g_aether (d52a5d94a002 L77-L78 照录)",
+  "eta_injection": "M1 only (PI Q4; R2 §2-5 照录)",
+  "T4_N05": "best=0 ⇒ 排除（PI 2026-10-20 卡答; #20 §3 委-1 照录）"
+ },
+ "K-ETAC-13_dud": true,
+ "K-ETAC-13_note": "四档主判据恒同一常量(10; 变体口径 5) ⇒ 哑火 ⇒ 判「不明」+停手报回",
+ "E-C1_calibration_vs_R2": {
+  "T1_expected": "3/14(≈0.214286)",
+  "T3_expected": "7/29(≈0.241379)",
+  "T4_expected_R2口径(incl N05)": [
+   "1/12(≈0.083333)",
+   "8/41(≈0.195122)",
+   "1/4(≈0.250000)",
+   "19/63(≈0.301587)"
+  ],
+  "T5_expected": [
+   "≈0.453039",
+   "≈0.45679",
+   "≈0.473054",
+   "≈0.47973",
+   "≈0.488372",
+   "≈0.502825"
+  ],
+  "T1_measured": [
+   "3/14(≈0.214286)"
+  ],
+  "T2_measured": [
+   "3/14(≈0.214286)"
+  ],
+  "T3_measured": [
+   "7/29(≈0.241379)"
+  ],
+  "T4_measured(排除N05后)": [
+   "1/12(≈0.083333)",
+   "8/41(≈0.195122)",
+   "19/63(≈0.301587)"
+  ],
+  "T5_measured": [
+   "82/181(≈0.453039)",
+   "37/81(≈0.456790)",
+   "79/167(≈0.473054)",
+   "71/148(≈0.479730)",
+   "21/43(≈0.488372)",
+   "89/177(≈0.502825)"
+  ]
+ }
+}
