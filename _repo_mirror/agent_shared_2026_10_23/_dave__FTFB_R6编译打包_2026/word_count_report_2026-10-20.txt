@@ -1,0 +1,36 @@
+================================================================================
+FTFB R6-F18 edition — word count report (three calibers, v6 tool reused)
+Date: 2026-10-20   Tool: count_words_ftfb_v6.py (byte-identical to the
+R3/R4/R5/R6 rounds — same tool, same rules, no reimplementation)
+================================================================================
+
+Caliber definitions (unchanged from the R3/v6 rounds; same tool, same rules):
+  P (prose, tables excluded): Introduction heading .. References; tables dropped.
+  C (receipt caliber):        whole document body, tables dropped, tokens with
+                              at least one ASCII letter or digit.
+  T (tables included):        as P, table environments retained.
+
+--------------------------------------------------------------------------------
+  edition           tex SHA-8    P        C        T
+--------------------------------------------------------------------------------
+  R4 (base)         4f8c4231    11892    14563    12863
+  R5                ba2f1571    13068    15798    14014
+  R6 pre-F18        45887c43    14508    17233    15454
+  R6-F18 (this)     69125dd7    14508    17219    15454
+--------------------------------------------------------------------------------
+
+Deltas:
+  R6 pre-F18 -> R6-F18 (the F18 abstract amendment, 96 characters removed):
+    P: 14508 -> 14508  (0 — caliber P excludes the abstract by definition)
+    C: 17233 -> 17219  (-14 — the abstract sits inside caliber C; 96
+                        characters of compression = 14 whitespace tokens)
+    T: 15454 -> 15454  (0 — caliber T excludes the abstract by definition)
+  R5 -> R6-F18 (the full restructure): P +1440 / C +1421 / T +1440.
+
+Method notes (unchanged caliber discipline):
+  - the same v6 script measures the F18 source directly; the tool's sha8
+    column self-registers the source it measured (69125dd7);
+  - no numeric re-derivation is performed in this round; numeric drift
+    control is Bob's differential-acceptance lane (F18: abstract-only four
+    cuts; spot-check pending), reported separately.
+================================================================================

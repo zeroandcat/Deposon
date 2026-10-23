@@ -1,0 +1,204 @@
+   FROM THE FIELD                                       •
+
+
+                                                                                         The Uncanny Valley
+                                                                           By Masahiro Mori (Translated by Karl F. MacDorman and Norri Kageki)
+
+
+
+
+                                                                                                                                                    •
+   Editor’s note: More than 40 years ago, Masahiro Mori, a robotics           scientific circles as well as in popular culture. Some researchers
+   professor at the Tokyo Institute of Technology, wrote an essay [1]         have explored its implications for human–robot interaction and
+   on how he envisioned people’s reactions to robots that looked              computer-graphics animation, whereas others have investigated
+   and acted almost like a human. In particular, he hypothesized that         its biological and social roots. Now interest in the uncanny valley
+   a person’s response to a humanlike robot would abruptly shift              should only intensify, as technology evolves and researchers build
+   from empathy to revulsion as it approached, but failed to attain, a        robots that look human. Although copies of Mori’s essay have circu-
+   lifelike appearance. This descent into eeriness is known as the            lated among researchers, a complete version hasn’t been widely
+   uncanny valley. The essay appeared in an obscure Japanese jour-            available. The following is the first publication of an English transla-
+   nal called Energy in 1970, and in subsequent years, it received            tion that has been authorized and reviewed by Mori. (See “Turning
+   almost no attention. However, more recently, the concept of the            Point” in this issue for an interview with Mori.)
+   uncanny valley has rapidly attracted interest in robotics and other
+
+
+
+   A Valley in One’s                                    (y)—owing to the intervening hills            figure, the robot will start to have a
+   Sense of Affinity                                    and valleys. I have noticed that, in          roughly human-looking external form
+   The mathematical term monotonically                  climbing toward the goal of making            with a face, two arms, two legs, and a
+   increasing function describes a rela-                robots appear like a human, our affin-        torso. Children seem to feel deeply
+   tion in which the function y ¼ f ðxÞ                 ity for them increases until we come          attached to these toy robots. Hence,
+   increases continuously with the                      to a valley (Figure 1), which I call the      the toy robot is shown more than half-
+   variable x. For example, as effort x                 uncanny valley.                               way up the first hill in Figure 1.
+   grows, income y increases, or as a car’s                 Nowadays, industrial robots are               Since creating an artificial human is
+   accelerator is pressed, the car moves                increasingly recognized as the driving        itself one of the objectives of robotics,
+   faster. This kind of relation is ubiqui-             force behind reductions in factory            various efforts are underway to build
+   tous and easily understood. In fact,                 personnel. However, as is well known,         humanlike robots. (Note: Others believe
+   because such monotonically increas-                  these robots just extend, contract, and       that the true appeal of robots is their
+   ing functions cover most phenomena                   rotate their arms; without faces or legs,     potential to exceed and augment humans.)
+   of everyday life, people may fall under              they do not look human. Their design          For example, a robot’s arm may be com-
+   the illusion that they represent all                 policy is clearly based on functionality.     posed of a metal cylinder with many
+   relations. Also attesting to this false              From this standpoint, the robots must         bolts, but by covering it with skin and
+   impression is the fact that many                     perform functions similar to those of         adding a bit of fleshy plumpness, we can
+   people struggle through life by persis-              human factory workers, but whether            achieve a more humanlike appearance.
+   tently pushing without understanding                 they look similar does not matter. Thus,      As a result, we naturally respond to it
+   the effectiveness of pulling back. That              given their lack of resemblance to            with a heightened sense of affinity.
+   is why people usually are puzzled                    human beings, in general, people hardly           Many of our readers have experi-
+   when faced with some phenomenon                      feel any affinity for them. (Note: How-       ence interacting with persons with
+   that this function cannot represent.                 ever, industrial robots are considerably      physical disabilities, and all must have
+      An example of a function that does                closer in appearance to humans than           felt sympathy for those missing a hand
+   not increase continuously is climbing                general machinery, especially in their        or leg and wearing a prosthetic limb.
+   a mountain—the relation between the                  arms.) If we plot the industrial robot on     Recently, owing to great advances in
+   distance (x) traveled by a hiker toward              a graph of affinity versus human like-        fabrication technology, we cannot dis-
+   the summit and the hiker’s altitude                  ness, it lies near the origin in Figure 1.    tinguish at a glance a prosthetic hand
+                                                            In contrast, a toy robot’s designer       from a real one. Some models simulate
+                                                        may focus more on the robot’s appear-         wrinkles, veins, fingernails, and even
+   Digital Object Identifier 10.1109/MRA.2012.2192811   ance than its functions. Consequently,        fingerprints. Though similar to a real
+   Date of publication: 6 June 2012                     despite its being a sturdy mechanical         hand, the prosthetic hand’s color is
+
+98 • IEEE ROBOTICS & AUTOMATION MAGAZINE • JUNE 2012
+•
+pinker as if it had just come out of           approximate human movement.)                                           which can be detected by an electro-
+the bath.                                      Conversely, when a prosthetic hand                                     myogram. When the prosthetic hand
+    One might say that the prosthetic          that is near the bottom of the uncanny                                 detects the cur-
+hand has achieved a degree of resem-           valley starts to move, our sensation of                                rent by means of •
+blance to the human form, perhaps              eeriness intensifies.                                                  electrodes on the    I predict that it is
+on par with false teeth. However, once            Some readers may know that re-                                      skin’s surface, it
+                                                                                                                                           possible to create a
+we realize that the hand that looked           cent technology has enabled prosthetic                                 amplifies the sig-
+real at first sight is actually artificial,    hands to extend and contract their fin-                                nal to activate a    safe level of affinity by
+we experience an eerie sensation. For          gers automatically. The best commer-                                   small motor that
+                                                                                                                                           deliberately pursuing
+example, we could be startled during a         cially available model, shown in Figure                                moves its fingers.
+handshake by its limp boneless grip            3, was developed by a manufacturer in                                  As this myoelec-     a nonhuman design.
+together with its texture and coldness.        Vienna. To explain how it works, even                                  tric hand makes •
+When this happens, we lose our sense           if a person’s forearm is missing, the                                  movements,       it
+of affinity, and the hand becomes              intention to move the fingers produces                                 could make healthy people feel uneasy.
+uncanny. In mathematical terms, this           a faint current in the arm muscles,                                    If someone wearing the hand in a dark
+can be represented by a negative value.
+Therefore, in this case, the appearance
+of the prosthetic hand is quite human-
+like, but the level of affinity is negative,                   +                                                 Uncanny Valley       Healthy Person
+thus placing the hand near the bottom
+of the valley in Figure 1.
+    I don’t think that, on close inspec-                                                           Toy Robot
+                                                            Affinity (Shinwakan)
+
+
+
+
+tion, a bunraku puppet appears similar                                                                                                Bunraku Puppet
+to a human being. Its realism in terms
+                                                                                      Industrial Robot
+of size, skin texture, and so on, does not
+even reach that of a realistic prosthetic
+hand. But when we enjoy a puppet
+show in the theater, we are seated at a                                               Human Likeness       50%                 100%
+                                                                                                                                      Prosthetic Hand
+certain distance from the stage. The
+puppet’s absolute size is ignored, and
+                                                               –
+its total appearance, including hand
+and eye movements, is close to that of a
+                                               Figure 1. The graph depicts the uncanny valley, the proposed relation between the
+human being. So, given our tendency            human likeness of an entity, and the perceiver’s affinity for it. [Translators’ note: Bunraku
+as an audience to become absorbed in           is a traditional Japanese form of musical puppet theater dating to the 17th century. The
+this form of art, we might feel a high         puppets range in size but are typically a meter in height, dressed in elaborate costumes,
+                                               and controlled by three puppeteers obscured only by their black robes (see front cover).]
+level of affinity for the puppet.
+    From the preceding discussion, the
+readers should be able to understand the
+concept of the uncanny valley. Now let
+us consider in detail the relation between                           +                                        Uncanny Valley
+                                                                                              Moving                                 Healthy Person
+the uncanny valley and movement.                                                              Still
+                                                                                                         Humanoid Robot
+                                                                                                                                     Ill Person
+                                                               Affinity (Shinwakan)
+
+
+
+
+The Effect of Movement                                                                                                Death
+Movement is fundamental to ani-                                                                                                      Bunraku Puppet
+                                                                                       Industrial Robot     Stuffed
+mals—including human beings—and                                                                             Animal
+                                                                                                                                     Okina Mask
+thus to robots as well. Its presence
+changes the shape of the uncanny val-                                                                                                Ordinary Doll
+ley graph by amplifying the peaks and
+                                                                                       Human Likeness 50%                     100%
+valleys (Figure 2). For illustration,                                                 Yase Otoko Mask (Noh Play)                     Prosthetic Hand
+when an industrial robot is switched                                                                    Corpse                       Myoelectric Hand
+                                                                     –
+off, it is just a greasy machine. But                                                                                                Zombie
+once the robot is programmed to
+move its gripper like a human hand,            Figure 2. The presence of movement steepens the slopes of the uncanny valley. The
+we start to feel a certain level of affin-     arrow’s path represents the sudden death of a healthy person. [Translators’ note: Noh is
+                                               a traditional Japanese form of musical theater dating to the 14th century in which
+ity for it. (In this case, the velocity,       actors commonly wear masks. The yase otoko mask bears the face of an emaciated
+acceleration, and deceleration must            man and represents a ghost from hell. The okina mask represents an old man.]
+
+
+                                                                                                                   JUNE 2012 • IEEE ROBOTICS & AUTOMATION MAGAZINE • 99
+                                                                                                                                              •
+                                                     easily tumble down into the uncanny
+                                                     valley.
+
+                                                     Escape by Design
+                                                     We hope to design and build robots
+                                                     and prosthetic hands that will not fall
+                                                     into the uncanny valley. Thus, because
+                                                     of the risk inherent in trying to
+                                                     increase their degree of human like-
+                                                     ness to scale the second peak, I recom-
+                                                     mend that designers instead take the
+                                                     first peak as their goal, which results in
+                                                     a moderate degree of human likeness
+                                                     and a considerable sense of affinity. In
+                                                     fact, I predict that it is possible to cre-
+                                                     ate a safe level of affinity by deliber-
+                                                     ately pursuing a nonhuman design. I
+                                                     ask designers to ponder this. To illus-
+  Figure 3. A human arm (top left)                   trate the principle, consider eyeglasses.     Figure 4. A model of a hand created by a
+  controls a realistic myoelectric hand,                                                           woodcarver of Buddha statues. Reprinted
+                                                     Eyeglasses do not resemble real eye-          from [1] with permission.
+  called the “Vienna Hand.” Reprinted from
+  [1] with permission.                               balls, but one could say that their
+                                                     design has created a charming pair of         this eerie sensation? Is it essential for
+  place shook a woman’s hand with it,                new eyes. So we should follow the             human beings? I have not yet consid-
+  the woman would assuredly shriek.                  same principle in designing prosthetic        ered these questions deeply, but I have
+      Since the negative effects of move-            hands. In doing so, instead of pitiful-       no doubt it is an integral part of our
+  ment are apparent even with a pro-                 looking realistic hands, stylish ones         instinct for self-preservation. (Note:
+  sthetic hand, to build a whole robot               would likely become fashionable.              The sense of eeriness is probably a
+  would magnify the creepiness. This is                  As another example, consider this         form of instinct that protects us from
+  just one robot. Imagine a craftsman                model of a human hand created by a            proximal, rather than distal, sources
+  being awakened suddenly in the dead                woodcarver who sculpts statues of             of danger. Proximal sources of danger
+  of the night. He searches downstairs for           Buddhas (Figure 4). The fingers bend          include corpses, members of different
+  something among a crowd of manne-                  freely at the joints. The hand lacks fin-     species, and other entities we can closely
+  quins in his workshop. If the manne-               gerprints, and it retains the natural         approach. Distal sources of danger
+  quins started to move, it would be like            color of the wood, but its roundness          include windstorms and floods.)
+  a horror story.                                    and beautiful curves do not elicit any           We should begin to build an accu-
+      Movement-related effects could be              eerie sensation. Perhaps this wooden          rate map of the uncanny valley so that
+  observed at the 1970 World Exposi-                 hand could also serve as a reference          through robotics research we can begin
+  tion in Osaka, Japan. Plans for the                for design.                                   to understand what makes us human.
+  event had prompted the construction                                                              This map is also necessary to create—
+  of robots with some highly sophisti-               An Explanation of the Uncanny                 using nonhuman designs—devices to
+  cated designs. For example, one robot              As healthy persons, we are repre-             which people can relate comfortably.
+  had 29 pairs of artificial muscles in              sented at the second peak in Figure 2         (Notes given in parentheses are foot-
+  the face (the same number as a human               (moving). Then when we die, we are            notes in the original article.)
+  being) to make it smile in a humanlike             unable to move; the body goes cold,
+  fashion. According to the designer, a              and the face becomes pale. Therefore,         Reference
+  smile is a dynamic sequence of facial              our death can be regarded as a move-          [1] M. Mori, “The uncanny valley,” Energy,
+  deformations, and the speed of the                 ment from the second peak (moving)            vol. 7, no. 4, pp. 33–35, 1970 (in Japanese).
+  deformations is crucial. When the                  to the bottom of the uncanny valley
+  speed is cut in half in an attempt to              (still), as indicated by the arrow’s path     Karl F. MacDorman is an associate
+  make the robot bring up a smile more               in Figure 2. We might be glad that this       professor at the School of Informatics,
+  slowly, instead of looking happy, its              arrow leads down into the still valley        Indiana University.
+  expression turns creepy. This shows                of the corpse and not the valley ani-
+  how, because of a variation in move-               mated by the living dead.                     Norri Kageki is a business and tech-
+  ment, something that has come to                       I think this descent explains the         nology writer based in Silicon Valley
+  appear close to human—like a robot,                secret lying deep beneath the uncanny         and the founder of GetRobo.com.
+  puppet, or prosthetic hand—could                   valley. Why were we equipped with
+
+100   • IEEE ROBOTICS & AUTOMATION MAGAZINE • JUNE 2012
+

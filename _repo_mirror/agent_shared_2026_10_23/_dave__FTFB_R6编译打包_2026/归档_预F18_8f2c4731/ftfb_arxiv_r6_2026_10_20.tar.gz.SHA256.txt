@@ -1,0 +1,44 @@
+================================================================================
+FTFB R6 版 arXiv 交付包 —— SHA-256 指纹单（2026-10-20，戴夫-格式线）
+================================================================================
+包文件：ftfb_arxiv_r6_2026_10_20.tar.gz（486,297 B）
+
+全长 SHA-256（外部先验指纹）：
+8f2c4731200e2ef744e7c2f44ffc171e4707c4ef3635a8b3bcd9d9deadae1713
+
+gzip 魔数自验：1f 8b 08（通过）；gzip -t 完整性通过；解包回读 sha256sum
+对包内清单 6 件逐位全 OK（2026-10-20 实测，回读目录与打包 staging 逐字节
+一致，MANIFEST_VERIFY_CLEAN）；包结构：单层平铺——文件置于包根、零目录层
+级（tar tzf 实测七条目均无目录前缀）；ASCII 文件名×7；包内清单：
+
+  b8dd12f124f8b6e8a26d6eba322e8ff5e3ee4e8fd5399bc201bf154aeb5091f9  README.md (3,648 B)
+  7e5e739c8b58a0dcb04226abadb7662e6cf66c2724cdbf4d7fb217399a2b9a45  arxiv_metadata.txt (6,074 B)
+  61e00ea4d2581633672646dc37b0efcbfc0af1cd6c86523252cd52d610bc2166  compile_verification_2026-10-20.txt (10,171 B)
+  41da7aede38de26dcf6ff359f9f21b2e1b8e52c027e1cd8574a3acab541ebe9b  fiction_that_feeds_back.pdf (439,439 B)
+  45887c4316d3fe3e708d0d8ed819ff8e0e4799610ee6007ace26125918cbb990  fiction_that_feeds_back.tex (132,269 B)
+  a3cddd5ef61d45cc27eb411387a2063b357601980dc64e70fa61de50c463c94e  word_count_report_2026-10-20.txt (2,322 B)
+  （SHA256_MANIFEST.txt 为第 7 件，自身不入自身清单——沿 s6 制式）
+
+指纹链（查理 R6 落稿 → 编译副本 → PDF → 包）：
+  查理 R6 tex ＝包内 tex  ：45887c4316d3fe3e708d0d8ed819ff8e0e4799610ee6007ace26125918cbb990（132,269 B，690 行）
+  本链编译 PDF（31 页）　　：41da7aede38de26dcf6ff359f9f21b2e1b8e52c027e1cd8574a3acab541ebe9b（439,439 B，＝包内预编 PDF）
+  交付包　　　　　　　　　　：8f2c4731200e2ef744e7c2f44ffc171e4707c4ef3635a8b3bcd9d9deadae1713
+  metadata 件　　　　　　　：见交付目录 arxiv_metadata.txt（指纹链登记件）
+
+打包规范依据：管理员 R6 派单（0 改稿·tex 只读；按第一作完整度补齐，案 B
+结合取证证据自定）＋鲍勃取证报告《鲍勃_第一作交付包取证与鉴别_2026_10_20》
+实测：第一作上传件（包甲）实测含预编 PDF（同名 tex＋PDF 平铺包根）且被
+arXiv 接受（v1 在线）→ 本包采案 B（含预编 PDF）有直接先例实证；R5 轮悬置
+的「同名 PDF 处置」联网复核项由该实证闭合。metadata 表与词数表入载荷＝闭
+合鲍勃差距表所列真差距项；SHA256_MANIFEST 随包＝对齐第一作 s6 制式；平铺
+包根＋ASCII 文件名沿 R3/R4/R5 及第一作 e-print 先例。
+
+R5 挂起件处置（派单第 4 项）：维持不传；其传输修复线（群传二进制损坏追
+溯）随 R6 重建自然归档——R6 包即该提交记录的最新正本候选。
+
+退路件：ftfb_arxiv_r6_2026_10_20.tar.gz.b64.txt（标准 base64，头部 # 注释
+含解码命令；回环解码 sha256 与原包逐位一致——本单同日实测登记）。
+
+提交前必读：R6 摘要 1,973 字符（whitespace-normalized）超 arXiv 表单常设
+限 1,920（+53）——已按「只登记不动 tex」纪律交查理增补轮裁处；未裁处前
+本包不得提交（详见《戴夫_R6一杆进洞提交步骤单_2026_10_20.md》门槛 4）。

@@ -1,0 +1,35 @@
+[PASS] Z1 编译错误: count=0
+[PASS] Z2 溢出(Overfull): count=0
+[PASS] Z3 缺字形: count=0
+[PASS] Z4 警告/未定义: count=0
+[PASS] S1 编译收敛: pass2.stdout ≡ pass3.stdout（逐字节）
+[PASS] S2 构建器复现链: r6 构建器（R5 基准全管线）重跑输出 ≡ 交付 tex（逐字节；增量≡全量双保险；tex SHA-256 95fc9ba9a1a4…）
+[PASS] S3 标题单现: 中/英标题各恰 1 次且均在第 1 页（大字号标题字距的提取空格经空白剥离；标题区无作者行）
+[PASS] S4 d1 附录A代称: 文本层命中
+[PASS] S4 d2 双审完成体: 文本层命中
+[PASS] S4 d3 adendum拼写: 文本层命中（弯引号归一化后）
+[PASS] S4 d4 v9 overlap披露: 文本层命中
+[PASS] S4 d5 R3占位公式: 表注 sha256("P_G_V0_PLACEHOLDER_{id}_2026_09_15") 文本层命中（{ } 经 esc 转义，提取还原）
+[PASS] S4 d6 AM1落点: §7 L226 措辞同步＝授权修订①逐字落地（空白剥离比对；加粗段提取含伪影空格）；连同 §3.3 共 2 处
+[PASS] S4 d7 AM2落点: 附录 A R3 记录行＝授权修订②（补丁响应件建议文案逐字，纯溯源指针；空白剥离比对）
+[PASS] S4 d8 R3补丁token: R3 补丁 14 hunk 关键口径（构造性恒真×2／字段值原样保留×2／UNVERIFIED×12）文本层命中（空白剥离比对）
+[PASS] S4 d9 R4新句8条: A4 R4 微补丁 8 新句逐字命中（F1×4＋M1 中英＋M2＋M3＋M4；空白剥离比对）
+[PASS] S4 d11 R5穿透句: A-2 §5.5 穿透句恰 1 处逐字（六组数字＋两 SHA-12＋key\_vocab\_overlap 提取归一）
+[PASS] S4 d12 R5口径句: A-1 §7 口径句恰 1 处逐字
+[PASS] S4 d10 A3防回退: A3' 负断言：两句旧措辞在 PDF 文本层零残留（tex 层已由增量脚本＋构建器双重断言）
+[PASS] S4 零「终稿」字样: PDF 文本层与 tex 均 0
+[PASS] S5 引用44条: tex \item [{[ 计数＝44
+[PASS] S5 表头/结构: 3 表（5/3/3 列）表头串全在文本层
+[PASS] S5 摘要CJK: A5 中文摘要 CJK＝260（工作副本口径）；首尾 40 字归一化后在 PDF 文本层命中
+[PASS] S6 双盲元数据: /Author 为空（\pdfinfo 显式置空）
+[PASS] S6 身份/路径/key: 实名/协作代号/内部路径/key token 零命中
+[PASS] S6 Anonymous口径: Anonymous 恰 2 处＝参考文献 [4][5] 作者字段（口径一致）
+[PASS] S7 实测页数: pdfinfo Pages=12 ≡ log Output pages=12（R5 基准重建实测）
+[PASS] S8 字体全嵌入: pdffonts 88 行全部 emb=yes，无 Type3（gbsn 子字库＋lmodern＋lmsy/lmmi＋zapfding）
+[DISC] D1 Underfull: count=9（间距提示非溢出，不计门禁；R5 基准实测）: tex行153-154 badness 3635; tex行153-154 badness 10000; tex行153-154 badness 3386; tex行153-154 badness 1242; tex行153-154 badness 2469; tex行160-161 badness 1048; tex行195-196 badness 10000; tex行265-266 badness 1728; tex行285-286 badness 1803
+[PASS] D2 特殊字符核验: 计数账全平＋上下文全命中（σ/τ/³ 源记法为 0，N/A；⑦ 对称预留未出现＝0/0）
+[DISC] D2 特殊字符页面级抽检: × work=15 pdf=15 页=[3, 4, 6, 7, 8, 10] | ≈ work=2 pdf=2 页=[4, 6] | ρ work=3 pdf=3 页=[4, 6] | β work=17 pdf=17 页=[1, 7, 8] | π work=1 pdf=1 页=[8] | ∈ work=1 pdf=1 页=[7] | ≥ work=2 pdf=2 页=[7, 8] | → work=6 pdf=6 页=[5, 6] | ↔ work=4 pdf=4 页=[7] | ① work=3 pdf=3 页=[2, 9, 12] | ② work=2 pdf=2 页=[2, 9] | ③ work=2 pdf=2 页=[2, 9] | ④ work=2 pdf=2 页=[2, 9] | ⑤ work=1 pdf=1 页=[2] | ⑥ work=1 pdf=1 页=[2] | ⑦ work=0 pdf=0 页=[] | ⑧ work=1 pdf=1 页=[12] | ／ work=48 pdf=48 页=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12] | σ work=0（N/A，不在本稿源记法） | τ work=0（N/A） | ³ work=0（N/A） | ≠ work=1 pdf=1（\neq 字形正确，文本层为 ToUnicode 组合形态「̸=」，页=[9]） | ² work=13 上下文核验 13/13 命中（上标提取为数字，页=[1, 4, 6, 7]） | 区间负号抽检 10/10 命中（U+2212 数学负号全表程序化提取比对；− 总账：21 处 \ensuremath{-}＋2 处 textminus(10⁻¹⁶/10⁻⁶)＝文本层 23） | 上标链：10⁻¹⁶→文本层「10−16」True；10⁻⁶→「10−6」True | 花括号：{id} 文本层=True（esc 转义后提取还原）
+[DISC] D3 提取伪影登记: ①「̸=」＝\neq 的 ToUnicode 组合编码（字形正确）；② raw 模式对行尾连字符执行去连字化（ASCII - 计数亏空系提取行为非渲染缺失；layout 模式行尾「P-」等实存）；③ 页码数字在换页处以 raw 模式可插入正文流（已实证为页脚页码，非内容）。
+[DISC] 指纹链: md R5 42e4310f94837bb4…（311 行零触碰） | 工作副本 1dd271844e478a57…（A1' 逐位复现） | tex=95fc9ba9a1a497ec… | pdf=3b792178acbcc041…
+
+RESULT: 四零全绿＋结构核验全过 PASS（披露项不计门禁）

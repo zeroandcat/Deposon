@@ -1,0 +1,163 @@
+================================================================================
+FTFB arXiv manuscript, R6 edition (philosophical-register restructure) —
+compilation and typesetting verification record
+Date: 2026-10-20   Operator: Dave (formatting chain)
+Object: Charlie R6 final tex (fingerprint 45887c4316d3..., 132,269 B, 690 lines;
+baseline = R5 tex ba2f157196f5..., 123,129 B, 666 lines; lineage R3 -> R4 ->
+R5 (submission suspended) -> R6)
+Dispatch basis: admin dispatch 2026-10-20 19:52:54 (R6 compile-and-package
+round; 0-edit discipline, tex read-only)
+================================================================================
+
+[1] Fingerprint chain (Charlie R6 delivery -> compile copy -> PDF -> package)
+  R6 source (shared/Charlie R6 delivery/):
+    tex  45887c4316d3fe3e708d0d8ed819ff8e0e4799610ee6007ace26125918cbb990
+         (132,269 B, 690 lines; independently re-measured on receipt, matches
+    the delivered fingerprint in Charlie's self-check record; source original
+    untouched throughout this chain).
+  Compile copy (private build dir): sha256-256 byte-identical to the source
+    (verified before AND after compilation — zero drift under compilation).
+  Compiled PDF (this edition's typesetting baseline):
+    439,439 B, 31 pages — full sha256 in the package sidecar and manifest.
+  Package tar.gz: full sha256 in the sidecar sheet shipped alongside.
+  Baseline lineage: R4 tex 4f8c4231...; R5 tex ba2f1571... (submission
+    suspended, not transmitted); R6 tex 45887c43... — the suspended R5
+    delivery remains in place, untransmitted, per the M-4 decision.
+
+[2] Engine and pass structure (per dispatch: pdflatex + bibtex, multi-pass)
+  Engine: pdfTeX 1.40.29 (TeX Live 2026, same portable installation as the
+    R3/R4/R5 rounds); PDF 1.7, A4, not encrypted, not linearized.
+  Passes: pdflatex pass 1 (exit 0) -> bibtex probe -> pdflatex pass 2 (exit 0)
+    -> pdflatex pass 3 (exit 0). Pass 2 and pass 3 outputs are byte-identical
+    (439,439 B) — the chain is converged; no "Rerun" advice remains.
+  bibtex probe (dispatch-mandated, result: NOT APPLICABLE, recorded): the
+    manuscript is a self-contained source — the reference pool is an in-text
+    itemize list ([R01]–[R66] under \section*{References}); the source has no
+    \cite/\citation, no \bibliography, no .bib. bibtex therefore reported
+    "no \citation commands / no \bibdata / no \bibstyle" (exit 2, no .bbl
+    produced) — expected for this document family, identical to the R3/R4/R5
+    situation; the PDF chain is unaffected. Recorded here verbatim-class so
+    the dispatch wording and the reality are reconciled on the record.
+
+[3] Four-zero compile gates (pass-3 log, full-text scan)
+  LaTeX errors ("!" lines):                    0
+  Overfull \hbox/\vbox:                        0
+  Missing character warnings:                  0
+  Undefined references / citations:            0
+  LaTeX Warnings (any, incl. label changes):   0
+  Underfull \hbox: 2 (badness 5548 and 1990, source lines 615–616) — carried
+    over verbatim from R5 (same two boxes, same badness values, same content
+    = the [R37] pool entry; R5 logged them at lines 592–593; the 24-line
+    offset matches the R5->R6 net line delta). Not a new defect; registered,
+    not fixed (0-edit discipline).
+  Log lines "no UTF-8 mapping file for font encoding PD1/PU" (log lines
+    342/354): hyperref encoding-mapping infos, present at the same positions
+    in the R5 log — tool-level constant, not a document defect.
+
+[4] PDF integrity and embedded-font checks
+  qpdf --check: PASS ("no syntax or stream encoding errors found").
+  Trailer: startxref present; terminal %%EOF present.
+  Structure cross-check via object stream parse: OK.
+  (Erratum on the record: the R5 sheet's item "PDF integrity: gzip -t" was a
+  wording slip — a PDF file is not a gzip stream; gzip -t fails on ANY PDF,
+  including the R5 baseline. The R5 PDF itself is sound; only that checklist
+  wording was wrong. This round replaces it with qpdf --check, which is the
+  correct structural check.)
+  pdffonts: 17 font slots, all Type 1 (Latin Modern family), all embedded
+  (emb=yes), all subset (sub=yes), all with ToUnicode maps (uni=yes) — same
+  profile as R4/R5. No non-embedded fonts; arXiv annus checks pass.
+  pdfinfo: Title = paper title; Author = Qihao Yuan; Subject and Keywords
+  blank by design (double-blind-safe: no latent author metadata beyond the
+  paper's own title block); Producer pdfTeX-1.40.29; 31 pages.
+
+[5] Page count (the Alan-handoff registration item)
+  31 pages (A4, 11pt). R5 was 29 (suspended); the R6 plan's estimate was
+  30±2 — measured 31 is inside the band (+1 over the midpoint). Drivers per
+  the R6 restructure: abstract rewrite, register-layer sentences, the
+  argument-first order (verdicts-before-runs subsection), three-station
+  closing, and philosophical-register sentence-level rewrites — ~+1,440
+  caliber-P words over R5. Comments field uses the MEASURED 31.
+
+[6] Abstract length (arXiv web-form caliber) — DEFECT FOUND, REGISTERED,
+  NOT FIXED (0-edit discipline; routed to Charlie's amendment round)
+  Measured on the R6 abstract environment (tex L73–L78; M-3: the abstract
+  was rewritten with R6 per the R6-A5 decision):
+    raw (between markers):                     1,978 chars
+    stripped:                                  1,973 chars
+    whitespace-normalized (paste caliber):     1,973 chars  > 1,920
+    excess over the arXiv form limit:          +53 chars
+  The R5/R4 abstract was 1,822 (margin 98). The R6 rewrite overshoots the
+  standing 1,920-character form limit by 53. The source compiles cleanly and
+  the abstract renders fine in the PDF — this is a WEB-FORM compliance
+  defect only: pasting 1,973 characters into the arXiv abstract field is
+  expected to be rejected/truncated by the form.
+  Character set is otherwise form-safe: non-ASCII only U+00A7, U+2013,
+  U+2014; no TeX markup, no math delimiters, UTF-8 safe.
+  Disposition (per dispatch rule "tex defects: register only, do not touch
+  tex"): DEFECT LOGGED FOR THE CHARLIE AMENDMENT ROUND — the abstract needs
+  a >=53-character trim (or the standing limit needs re-verification online
+  before submission; both routes are listed in the submission steps sheet).
+  Until resolved, THIS PACKAGE MUST NOT BE SUBMITTED AS-IS (the web form
+  would balk at the abstract paste; see the steps sheet, gate 4).
+
+[7] Content regression (R5 -> R6, machine-measured on this chain)
+  Reference pool: 66 \item[Rxx] entries, contiguous [R01]..[R66] — PASS
+    (unchanged from R5; pool extension belongs to R5).
+  In-text citation instances: 190 [Rxx] tokens before the References block
+    — PASS (matches the R5 figure; zero drift under the restructure).
+  References block: 14,898 bytes — byte-identical to the R5 block size
+    recorded in Charlie's R6 self-check (pool block untouched by the
+    restructure).
+  Citation-frozen commit token a57d7fe: exactly 1 occurrence — PASS.
+  Anonymized-pool companion entries [R56]/[R57]: present, phrasing unchanged
+    in substance ("anonymized in this edition", "on request" x6 — same
+    count as R5). No de-anonymization drift.
+
+[8] Hygiene scans (double-blind and submission hygiene)
+  CJK characters in source: 0.  Email patterns: 0.  anon_ tokens: 0.
+  \input/\include/\includegraphics: 0 (self-contained; no external figures).
+  \bibliography/\bibliographystyle: 0 (in-text pool; see [2]).
+  PDF-level: no /Author leakage beyond the paper's own title block; no
+  annotations/attachments (qpdf clean).
+
+[9] Package form (dispatch: "case B per the forensic evidence"; first-work
+  upload-piece precedent measured by Bob 2026-10-20)
+  Payload (7 files, flat at the tar root — R3/R4/R5 and first-work e-print
+  precedent):
+    fiction_that_feeds_back.tex               (source, fingerprint above)
+    fiction_that_feeds_back.pdf               (pre-compiled PDF, case B)
+    README.md                                 (package README, R6 edition)
+    compile_verification_2026-10-20.txt       (this file)
+    arxiv_metadata.txt                        (paste-sheet, R6 edition)
+    word_count_report_2026-10-20.txt          (three-caliber word counts)
+    SHA256_MANIFEST.txt                       (payload manifest, s6 format)
+  Pre-compiled PDF inclusion — decision basis (case B confirmed by
+  forensics): the first work's ACTUAL UPLOADED package (Bob's forensic
+  exhibit A, sha256 6ad73d59...) contained a pre-compiled PDF alongside the
+  same-named .tex, and arXiv accepted that upload (v1 is live); the R3
+  round's case-B precedent likewise shipped a PDF. The R5-era open question
+  ("how does arXiv treat a same-named .pdf alongside the .tex") is thus
+  closed by direct first-work evidence: accepted, harmless. Our PDF is the
+  compile-chain baseline itself (byte-identical to pass-3 output), so the
+  uploaded PDF and the arXiv-rendered PDF differ at most by arXiv's own
+  engine — same source, same pages.
+  README/metadata/word-count inclusion: closes the two real gaps Bob's
+  forensic gap-table flagged for our packages (metadata sheet and word
+  count not previously shipped in-payload; README forward references
+  previously dangling).
+  The suspended R5 package remains untransmitted; its transmission-repair
+  line is retired by this R6 rebuild (per dispatch item 4).
+
+[10] Discipline
+  0 LLM API calls in this chain; tex content zero-touch (fingerprint
+  re-verified identical after compilation; Charlie's delivery original
+  untouched); no re-computation or alteration of any number or anchor;
+  frozen artifacts of prior rounds untouched. This record is the neutral-
+  English verification companion shipped inside the arXiv package.
+
+RESULT: COMPILE CHAIN ALL GREEN (four-zero, converged, fonts/metadata clean,
+31 pages registered). ONE SUBMISSION-BLOCKING CONTENT DEFECT REGISTERED AND
+ROUTED: abstract 1,973 > 1,920 (+53) — Charlie amendment round; do not
+submit until trimmed or the limit is re-verified online. Submitter steps:
+see the R6 one-shot submission steps sheet in the delivery folder.
+================================================================================

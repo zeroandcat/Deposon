@@ -1,0 +1,68 @@
+================================================================================
+FTFB R6-F18 版 arXiv 交付包（zip 载体）—— SHA-256 指纹单（2026-10-20，戴夫-格式线）
+================================================================================
+包文件：ftfb_arxiv_r6_f18_2026_10_20.zip（486,146 B）
+
+全长 SHA-256（外部先验指纹）：
+e9edee89da9bc85151d8ed7bd7dc58849b1be6288f461ccb47d2144871dd2efc
+
+zip 魔数自验：50 4B（通过）；unzip -t 完整性通过（No errors detected）；
+Python zipfile testzip CRC 通过；Info-ZIP unzip 解包回读与源件逐件 cmp 全
+OK（7/7），解包目录内 sha256sum -c 对包内清单 6 件逐位全 OK（2026-10-20
+实测，双工具交叉验证）；包结构：单层平铺——文件置于包根、零目录层级
+（unzip -l 实测七条目均无目录前缀）；ASCII 文件名×7；条目 Deflate 压
+缩、Unix create_system=3、权限 644、UT 扩展时间戳（0x5455）秒级恢复
+（解包件 mtime 与源件秒级一致）；包内清单（与已验收 F18 载荷逐字节一
+致，零改动）：
+
+  812d5f71948b51d5a14418910dd6ac894ebaf9f95a44093a4e269ea769d38c45  README.md (3,745 B)
+  b53ca46f37595f1aab2b083e450ddda4b9872f4219917e49af8971d4903dce02  arxiv_metadata.txt (5,717 B)
+  c64e0b0c7859c688dc15eb34724617d028285773a20ba01dd555b4e59ca4838e  compile_verification_2026-10-20.txt (8,260 B)
+  616e2a10a180b06012cf3db7f20fd30f62f34306026ced7bd425a3651b8f6e9b  fiction_that_feeds_back.pdf (439,380 B)
+  69125dd7838219cbfbda89be222b6b8ff1bb04cf0a7702041d1bea53dccb56c4  fiction_that_feeds_back.tex (132,173 B)
+  e0e6a1af2d1b1859c4031b205d2f5ba5cbf91c44b5bbd64799a65663f784ad15  word_count_report_2026-10-20.txt (2,178 B)
+  c5ef7457dbf123d5c1726e9ccbf18091587c2502e77190663a34c8f2a1da1f4f  SHA256_MANIFEST.txt（第 7 件，自身不入自身清单——沿 s6 制式）
+
+PI 上传前三步自检：①字节数＝486,146；②SHA-256 前缀＝e9edee89da9b；
+③头两字节＝50 4B（zip 魔数 PK）。
+
+指纹链（查理 R6-F18 落稿 → 编译副本 → PDF → 包）：
+  查理 R6-F18 tex＝包内 tex：69125dd7838219cbfbda89be222b6b8ff1bb04cf0a7702041d1bea53dccb56c4（132,173 B，689 行）
+  本链编译 PDF（31 页）　　　：616e2a10a180b06012cf3db7f20fd30f62f34306026ced7bd425a3651b8f6e9b（439,380 B，＝包内预编 PDF）
+  交付包（zip 载体）　　　　：e9edee89da9bc85151d8ed7bd7dc58849b1be6288f461ccb47d2144871dd2efc
+  metadata 件　　　　　　　　：b53ca46f37595f1aab2b083e450ddda4b9872f4219917e49af8971d4903dce02（arxiv_metadata.txt，全字段 paste 就绪，PI 20:17 指令）
+
+zip 化依据（PI 21:36:46 指令）：聊天通道直传二进制实测损坏、群文件夹整
+包下载可用；arXiv 接受 zip；zip 不会被下载工具自动解压成裸 tar——规避
+R5 传输事故形态。内件零改动：zip 内七件与已验收 F18 载荷逐字节一致
+（cmp 7/7＋in-zip sha256 7/7 对硬锚全 PASS）。
+
+版本沿革与归档：R3 → R4 → R5（挂起未传）→ R6（pre-F18，tex
+45887c4316d3／包 8f2c4731200e——11 件完整归档于 归档_预F18_8f2c4731/，
+不删）→ R6-F18 tar.gz（fbef35366d80，484,717 B——本轮 zip 化后连同其
+SHA256 侧车件与 b64 退路件完整归档于 归档_F18targz_fbef3536/，不删）→
+R6-F18 zip（本包，现行提交载体）。案 B 沿用（第一作上传件含同名预编
+PDF 且 v1 在线的取证实证）；M-1 沿革注记 Comments＋tex 注释双落；M-2
+Comments 不加 AI 标注语；M-3 摘要 F18 值 1,877 字符（余量 43，原超限 53
+已闭合）。
+
+包内载荷涉包形态表述差量登记（0 改稿铁律：登记不改）：
+  ① compile_verification_2026-10-20.txt [1] 节 L24–27「Package tar.gz:
+    ftfb_arxiv_r6_f18_2026_10_20.tar.gz — full sha256 in the sidecar
+    sheet and the manifest.」——该句成文于 tar.gz 载体轮，本轮 zip 化后
+    包载体已换 zip，指纹值未写死（指向 sidecar 侧车件），以本单 zip 值
+    为准；内件按零改动铁律不改。
+  ② arxiv_metadata.txt「Verification notes」节 L40「package
+    ftfb_arxiv_r6_f18_2026_10_20.tar.gz — see sidecar SHA-256 sheet」
+    ——同上，指向 sidecar，以本单 zip 值为准；其余字段（Title/Authors/
+    Subjects/Comments/License/Conflicts/Date/Abstract）均为表单粘贴值，
+    与包载体形态无关，零差量。
+  ③ README.md／word_count_report／SHA256_MANIFEST：无包形态表述（全
+    文无 tar.gz/zip 字样），零差量。
+
+退路件：ftfb_arxiv_r6_f18_2026_10_20.zip.b64.txt（标准 base64，头部 #
+注释含解码命令 grep -v '^#' 过滤后解码；回环解码 cmp 与原包逐位一致、
+双侧 sha256 同值——本单同日实测登记）。
+
+提交门：鲍勃 F18 抽验 PASS（已 35/35 达成）＋PI 放行（步骤单门槛 0.5）；
+摘要门槛 0 已闭合（F18 值合规）。
