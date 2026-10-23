@@ -1,0 +1,21 @@
+================ arXiv 提交表单元数据（submit/8086112 重提用，直接复制枯贴）================
+
+Title:
+Keep the Books: A Survey of Auditability and Falsifiability in LLM Reasoning
+
+Author (单作者，开放署名):
+Qihao Yuan
+
+Subjects:
+主分区 Primary: cs.AI
+次分区 Cross-list: cs.LG, cs.CL
+
+Comments (含页数，本次 v8 为 26 页):
+26 pages
+
+License: CC BY 4.0 (arXiv 表单选择 CC BY 4.0)
+
+Abstract (从 v8 tex 提取的纯文本，363 词):
+Reliability research on large-language-model (LLM) reasoning is regrouping around a question that performance benchmarks do not answer: when a system emits a chain of reasoning, what claim about that chain can a third party recompute? This survey organizes the answer under one axis, keep the books: a claim about reasoning is on-axis when its support is a frozen record that an auditor with stated resources can mechanically recheck. Five research lines, each with a literature of its own, are mapped onto the axis: process verification, which audits the steps; chain-of-thought faithfulness, where the explanation is not the computation; evaluation integrity, the benchmark's own books; game-theoretic verification, where incentives make honesty checkable; and conservation and physical priors, with invariants as external guarantors. The contributions are six. (i) Operational definitions: auditability as third-party recomputability, falsifiability as executability of pre-registered verdicts, and bookkeeping as the commitment–execution–verification loop. (ii) A three-axis taxonomy—organization (what is audited), attribute (how well: commitment object, tamper-spectrum coverage, recomputation cost, verifier neutrality, commitment timing, distortion boundary), and evidence strength—carrying mutual-exclusion and coverage arguments for the six attributes. (iii) A five-line survey under a uniform template that reports failure modes and negative results as first-class content, now spanning the reasoning-model era of chain-of-thought monitoring and its fragility. (iv) The assembled matrix and the cross-line lessons it supports: pre-registered kills as trust infrastructure, the economics of verification cost, the recursion bottom of every audit stack, and a documented absence of systematized escrow-style verification for capability claims, bounded by three neighboring clusters. (v) A case study of one artifact that instantiates all six attributes across the five lines, reported under full parity and the same three-tier discipline, including three falsified claims and a value proposition relocated by its own pre-registered controls. (vi) The audit outlook: machine worldviews and AI scientists as the next claimants needing books, with open problems stated in the survey's own register; machine-generated knowledge entering the human record without recomputable books is the closing problem. Its own bookkeeping follows its subject. The novelty search is completed and the positioning claim retained—still falsifiable by a single find; negative content is preserved; and no reference appears beyond the 60-entry verified base plus the disclosed self-citation.
+Keywords (PDF 内 Keywords 行，arXiv 表单无此字段，仅供核对):
+auditability; falsifiability; pre-registration; chain-of-thought; verification; reproducibility; survey

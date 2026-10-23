@@ -1,0 +1,556 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\IfFontExistsTF{DejaVu Serif}{\setmainfont{DejaVu Serif}[AutoFakeSlant=0.25]}{\setmainfont{Latin Modern Roman}}
+\usepackage{newunicodechar}
+\IfFontExistsTF{DejaVu Sans}{%
+  \newunicodechar{①}{{\fontspec{DejaVu Sans}\char"2460}}%
+  \newunicodechar{②}{{\fontspec{DejaVu Sans}\char"2461}}%
+  \newunicodechar{③}{{\fontspec{DejaVu Sans}\char"2462}}%
+  \newunicodechar{④}{{\fontspec{DejaVu Sans}\char"2463}}%
+  \newunicodechar{⑤}{{\fontspec{DejaVu Sans}\char"2464}}%
+  \newunicodechar{⑥}{{\fontspec{DejaVu Sans}\char"2465}}%
+}{%
+  \newunicodechar{①}{(1)}\newunicodechar{②}{(2)}\newunicodechar{③}{(3)}%
+  \newunicodechar{④}{(4)}\newunicodechar{⑤}{(5)}\newunicodechar{⑥}{(6)}%
+}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[pdftitle={Keep the Books: A Survey of Auditability and Falsifiability in LLM Reasoning},pdfauthor={Qihao Yuan}]{hyperref}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage[margin=1in]{geometry}
+\tolerance=9999
+\emergencystretch=3em
+
+\title{Keep the Books: A Survey of Auditability and Falsifiability in LLM Reasoning}
+\author{Qihao Yuan}
+\date{2026-09-15}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\vspace{0.5em}
+\noindent\textbf{arXiv subjects}: cs.CL (primary) $\cdot$ cs.AI $\cdot$ cs.LG \quad \textbf{License}: CC BY 4.0 \quad \textbf{Conflicts of interest}: none declared \quad \textbf{Date}: 2026-09-15
+\vspace{0.5em}
+\hrule
+\vspace{0.8em}
+
+\noindent \textbf{Literature and claim conventions.} This survey cites exactly 61 references: 60 external entries—each verified one-by-one against its arXiv/DOI/HAL/proceedings identifier before inclusion—plus one disclosed self-citation to the author's first work. Evidence strength is labeled in three tiers throughout—\textbf{closed (pre-registered)} (a verdict rule was frozen as a pure function before execution and mechanically evaluated to closure), \textbf{consistency evidence} (empirical support reported by the cited work), and \textbf{motivation only} (proposal or argument without empirical support in the cited work)—with the scope marker and further tier conventions in §3.2. Every number in §9.3 is quoted, not re-measured, from the frozen result artifacts of the self-cited work.
+
+
+\begin{abstract}
+
+
+Reliability research on large-language-model (LLM) reasoning is regrouping around a question that performance benchmarks do not answer: when a system emits a chain of reasoning, what claim about that chain can a third party recompute? This survey organizes the answer under one axis—\textbf{keep the books}: a claim about reasoning is on-axis when its support is a frozen record that an auditor with stated resources can mechanically recheck. We map five research lines onto this axis, each with its own literature: process verification (auditing the steps), chain-of-thought faithfulness (the explanation is not the computation), evaluation integrity (the benchmark's own books), game-theoretic verification (incentives that make honesty checkable), and conservation and physical priors (invariants as external guarantors). Contributions: (i) operational definitions—auditability as third-party recomputability, falsifiability as executability of pre-registered verdicts, and bookkeeping as the commitment–execution–verification loop; (ii) a three-axis taxonomy—organization (what is audited), attribute (how well: commitment object, tamper-spectrum coverage, recomputation cost, verifier neutrality, commitment timing, distortion boundary), and evidence strength—with mutual-exclusion and coverage arguments for the six attributes; (iii) a five-line survey in a uniform template that reports failure modes and negative results as first-class content, now spanning the reasoning-model era of chain-of-thought monitoring and its fragility; (iv) the assembled matrix plus cross-line lessons—pre-registered kills as trust infrastructure, the economics of verification cost, the recursion bottom of every audit stack, and a documented absence of systematized escrow-style verification for capability claims, bounded by three neighboring clusters; and (v) a case study of one artifact that instantiates all six attributes across the five lines, reported under full parity and the same three-tier discipline—including three falsified claims and a value proposition relocated by its own pre-registered controls. The survey closes with the audit problem of machine worldviews and AI scientists: machine-generated knowledge entering the human record without recomputable books. The survey's own bookkeeping follows its subject matter: the second-round novelty search is completed and the positioning claim retained—still falsifiable by a single find; negative content is preserved, and no reference beyond the 60-entry verified base plus the disclosed self-citation appears.
+
+\noindent\textbf{Keywords:} auditability; falsifiability; pre-registration; chain-of-thought; verification; reproducibility; survey
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{From performance to bookkeeping}
+
+The performance era of LLM reasoning research succeeded on its own terms. Chain-of-thought prompting organized multi-step reasoning into explicit intermediate steps \cite{key01}, and benchmark scores rose with each new organization of the reasoning process—decomposition, search, and voting over candidate paths. What a benchmark score certifies, however, is an aggregate behavioral claim under a stated protocol: an average over items, seeds, and grading rules. It does not certify the reasoning. The gap between those two sentences is where this survey lives.
+
+Two lines of evidence broke the assumption that the visible steps are the computation. First, language models demonstrably do not always say what they think: prompting-induced biases propagate into the answers while the emitted chains rationalize those answers post hoc \cite{key02}. Second, faithfulness is not a free byproduct of explanation—it requires dedicated measurement, by perturbing the emitted chain and testing whether the answer actually depends on it \cite{key03}. Once the explanation is separated from the computation, a score computed over the explanation certifies even less than a score over the answer.
+
+The response this survey documents is a regrouping of the reliability frontier from performance claims to audit infrastructure: claims about reasoning that leave a frozen record a third party can recompute. We adopt the sentence that closes one engineering instance of this shift—"[it] is not more accurate, but it keeps the books, and the books can be recomputed step by step by any third party with double-precision arithmetic" \cite{key04}—as the survey's title and organization axis. On the recomputable-books axis, the unit of trust is not the score but the ledger: what is claimed, what record supports the claim, and what it would cost a stranger to recheck it. A claim is on-axis when its support is recomputable by a third party with stated resources; a claim is off-axis when its support is a score, a demonstration, or an assertion.
+
+Why now, in three words: scale, replication, incentives. Frontier training runs cannot be re-executed by any single third party; evaluation-based claims have repeatedly lost their support to leakage and reproducibility failures; and score-driven incentives select for claims that are cheap to produce and expensive to check. §2 develops these drivers and their historical antecedents; here we only note that all three push in the same direction—toward records rather than assertions.
+
+\subsection{Scope and contributions}
+
+The survey covers claims about LLM reasoning—multi-step generation organized into explicit or implicit intermediate structure (chains, decompositions, search trees, agent traces)—and the infrastructure that makes such claims checkable. Five lines, each with its own literature, populate the axis:
+
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{0.985\textwidth}{>{\raggedright\arraybackslash}p{0.20\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.20\textwidth}}
+\toprule
+\textbf{Line} & \textbf{Unit of account} & \textbf{Entry points} \\
+\midrule
+L1 Process verification & individual reasoning steps & \cite{key05,key06} \\
+L2 Chain-of-thought faithfulness & the explanation–computation relation & \cite{key02,key03} \\
+L3 Evaluation integrity & the evaluation artifact itself & \cite{key07,key08} \\
+L4 Game-theoretic verification & the incentive structure of verification & \cite{key09,key10} \\
+L5 Conservation and physical priors & conserved quantities, physical invariants & \cite{key11,key12,key13} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The entry-points column lists each line's classic anchors; the 2023–2026 extensions—monitoring-era faithfulness evidence, contamination forensics, decentralized and bonded verification, formal and zero-knowledge verification—enter at their positions in §5–§8. Training-time documentation practices as such and policy-level AI governance are out of scope: neither takes the reasoning artifact itself as the audited unit. Cryptographic and formal verification enter where the verified base supports them, as the computational sibling of the conservation line (§8.1); positions the base does not support are marked rather than improvised.
+
+The positioning argument: the adjacent-survey record consists of sub-lines, four surveys each occupying one corner—reasoning-chain verification \cite{key14}; verification design for test-time scaling, organized from the verifier-as-reward-model performance perspective \cite{key15}; the reliability of LLM-as-a-judge evaluation \cite{key16}; and the evaluation of LLMs broadly \cite{key17}. Within the verified base, and as of the second-round novelty search completed on 2026-09-15, no survey was located that organizes the literature around third-party recomputability across the five lines. The claim is stated in the survey's own falsifiable register: it remains falsifiable by a single find, and this document regrades itself to a sub-line survey the day one appears.
+
+Contributions:
+
+\begin{itemize}[leftmargin=1.6em]
+\item \textbf{C1 Operational definitions} (§3.1): auditability = third-party recomputability at stated cost; falsifiability = executability of pre-registered verdicts; bookkeeping = the commitment–execution–verification loop.
+\item \textbf{C2 A three-axis taxonomy} (§3.2): organization (L1–L5), attribute (① commitment object, ② tamper-spectrum coverage, ③ recomputation cost, ④ verifier neutrality, ⑤ commitment timing and external witnessing, ⑥ distortion boundary), and evidence strength, with mutual-exclusion and coverage arguments for the six attributes.
+\item \textbf{C3 A five-line survey in a uniform template} (§4–§8): each line is surveyed as X.1 problems and mechanisms, X.2 evidence and failure modes, X.3 matrix row facts, with line-specific extensions where the verified base warrants; failure modes and negative results are reported as first-class content.
+\item \textbf{C4 The assembled matrix and cross-line lessons} (§9.1–9.2): pre-registered kills as trust infrastructure; the economics of verification cost; the recursion bottom of audit stacks; the escrow × capability-claim combination documented as unsystematized across three neighboring clusters (§7.2).
+\item \textbf{C5 A case study under full parity} (§9.3): one artifact spanning the five lines, entered into the same table at the same register, with three falsified claims reported as content and the self-citation disclosed.
+\item \textbf{C6 The audit outlook} (§10): machine worldviews and AI scientists as the next claimants needing books, with open problems stated in the survey's own register.
+\end{itemize}
+
+Roadmap: §2 gives the historical motivation; §3 the concepts and taxonomy; §4–§8 the five lines; §9 the synthesis, lessons, and case study; §10 the outlook. Back matter states availability and provenance and the AI-use disclosure; the references close the document.
+
+\subsection{Literature protocol}
+
+The citation base is deliberately closed: 60 external references—27 in the original verified pass, 27 in the supplement pass that filled this draft's five literature gaps, and 6 added with the second-round novelty search (three adjacent-survey anchors for §1.2's positioning; three line-evidence entries for §5.3, §6.2, and §7.2)—plus the disclosed self-citation \cite{key04}. Four rules govern the base. First, nothing outside it is cited, and nothing has been added from memory: the original draft's five gaps [GAP-1]–[GAP-5] were closed by the supplement pass, with each blank declaration narrowed rather than deleted (§7.2, §8.2); the sixth was closed by the novelty search itself, with the positioning claim retained and narrowed to the four-corner form of §1.2. Second, bibliographic fields are anchored to the unified verification record (original pass, supplement pass, and title-record pass): titles, authors, and venues render at the recorded granularity, and fields the record marks unverified carry explicit pending markers rather than inference—the reference-list note enumerates them.\footnote{\textbf{Entry-format note.} Entries are cited by number in order of first appearance. Titles, author lists, and venues are rendered at the granularity of the unified verification record (original pass, supplement pass, title-record pass, and novelty-search completion); fields the record marks unverified are rendered with an explicit pending marker rather than inferred—author lists truncated in the record render as "et al." with a pending note where the record flags them, and volume/issue/DOI/journal-name fields that failed verification are omitted in favor of the identifier that did verify. Non-peer-reviewed entries (\cite{key31}, an institutional research report; \cite{key51}, an engineering-standard draft) are labeled and formatted as such. No entry beyond the 60 verified external items plus the disclosed self-citation \cite{key04} appears in this survey, and no bibliographic field has been supplied from memory.} Third, evidence strength is tiered conservatively: for external literature, closed (pre-registered) is reserved for sources that themselves report pre-registered verdict protocols; consistency denotes empirical support reported by the cited work; motivation only denotes proposals, position papers, critique essays, and formal-theory results without empirical support in the cited work; non-peer-reviewed institutional reports are labeled as such at every use and never tiered above consistency. When our reading of a source is uncertain, the weaker tier is used, and upgrades require the primary source. Fourth, the taxonomy records facts, pointers, and tiers—not rankings; the neutrality clause of §3.2 is what makes the matrix reusable by readers who disagree with each other. The second-round novelty search was completed on 2026-09-15 (the G1 discipline of the underlying literature protocol), and the positioning claim of §1.2 is retained; its evidence carries a freshness horizon—if submission is delayed more than thirty days beyond the search date, the search is re-run under the same query families before submission.
+
+\section{Historical motivation: fiction and formal systems feeding back into science}
+
+The survey's organization axis did not appear from nowhere. Three episodes in the history of science show formal or fictional systems—built without empirical commitment—flowing back into empirical science, and in each episode the hinge was the same: someone kept the books. This section states the pattern, reads the contemporary drivers as its recurrence, and closes with the falsifiability debate as it stands inside machine learning itself.
+
+\subsection{Three anchors and the loop pattern}
+
+\textbf{Non-Euclidean geometry.} Between 1829 (Lobachevsky) and 1854 (Riemann), internally consistent geometries were constructed that denied Euclid's parallel postulate. For roughly half a century they remained, in effect, fiction: formally sound, empirically unclaimed—Gauss reportedly withheld publication for fear of ridicule, and the systems were widely read as logical curiosities rather than candidate descriptions of physical space. Poincaré observed in 1902 that one geometry cannot be more \textit{true} than another, only more \textit{convenient}: the fictional-system attitude, stated as a principle. The loop closed in 1915–1919: general relativity took Riemannian geometry as its language, and the light-deflection measurements put the package into falsifiable contact with the world—what was actually falsified was the incumbent, Euclid-as-physics. The operational residue is permanent; curved-space geometry is now an engineering instrument. The historical scholarship on this geometry–physics interface is documented in \cite{key18}.
+
+\textbf{Boltzmann entropy.} In 1877 Boltzmann attached entropy to a count of microstates, and the probabilistic reading was attacked in its day as an unwarranted fiction—dice games inside physical law. The loop ran long and closed twice. Shannon's 1948 measure of information has the same functional form as Boltzmann's entropy; Jaynes's 1957 recast of statistical mechanics as maximum-entropy inference made the probabilistic fiction into an explicit epistemic calculus applicable across domains \cite{key19}; Wigner's 1960 essay named the reverse puzzle—mathematics' "unreasonable effectiveness" in the natural sciences \cite{key20}; and Landauer's 1961 principle (erasing one bit dissipates at least kT·ln2) closed the circuit physically: the fictional quantity turned out to be physical \cite{key21}. The operational residue is twofold—information theory as an engineering discipline, and the physical floor under every recomputation this survey discusses: rechecking a ledger itself costs energy.
+
+\textbf{Robotics.} The word \textit{robot} entered circulation from Čapek's 1920 play \textit{R.U.R.}—a fiction. \textit{Robotics} was coined by Asimov in 1941—also in fiction. Both became the ontology of a real engineering discipline: the discipline's objects, roles, and failure modes are named in vocabulary supplied by fiction before the engineering existed. The scholarship on this exchange is active: field research on how fictional and imagined robots structure real human–robot relations and the discipline's self-understanding, particularly in Japan \cite{key22}; the deliberate engineering use of fiction as a design method, systematized as science-fiction prototyping \cite{key23}; and fictionality as a method in innovation research more broadly \cite{key24}. The loop in its linguistic form: a fictional coinage supplies the ontology; the engineering discipline supplies the falsifiable claims (real robots fail real tests); the vocabulary survives as the field's working language.
+
+\textbf{The loop pattern.} All three anchors exhibit one circuit: (i) an internally consistent system is built without empirical commitment—fiction or formalism; (ii) it is put into falsifiable correspondence with a domain, and somewhere it is actually falsified—or the incumbent assumption it challenges is; (iii) what survives leaves operational residue: methods, vocabulary, invariants. The hinge of the circuit is (ii), and the hinge of (ii) is bookkeeping. Falsifiability, on this reading, is not a property fictional systems acquire spontaneously; it is infrastructure that someone builds and maintains: a registered prediction, a frozen rule, an external witness. We state the corollary in the survey's own register: a kill protocol is the boundary between hard science fiction and fantasy. A fictional system that pre-registers what would count against it has entered the loop; a fictional system that cannot be killed by any observation has not. The falsifiability debate has since entered machine learning scholarship directly; §2.3 takes it up.
+
+\subsection{Contemporary drivers}
+
+\textbf{Scale.} Frontier models and their training sets exceed any single party's recomputation capacity: the training run cannot be re-executed by a third party at reasonable cost, so behavioral claims rest on evaluations—claims whose support is, at best, a protocol description and a score. The trust geometry inverts: when direct recomputation of the artifact is impossible, the only checkable thing left is the record kept around the artifact.
+
+\textbf{Replication.} The audit vacuum has measurable costs. A systematic audit of leakage in machine-learning-based science found information improperly shared between training and evaluation to be widespread, with a taxonomy for spotting it \cite{key07}—each leakage instance is a claim whose support did not exist. The reproducibility program—checklists, code and data submission, reporting standards—institutionalized bookkeeping as social infrastructure at a major venue \cite{key08}. Both works are, in the survey's terms, audit-infrastructure papers: their subject is not better models but survivable claims.
+
+\textbf{Incentives.} When scores are the currency, claims optimize toward scores; uncheckable claims are cheaper to produce than checkable ones, so the equilibrium drifts toward uncheckable claims (Goodhart-type pressure, present in every measurement-driven field). The concern is the field's own, with a lineage: the self-criticism tradition begins with Wagstaff's demand that machine-learning claims connect to measurable consequence \cite{key25}, and Lipton and Steinhardt's diagnosis gave the incentive distortion its canonical three-symptom reading \cite{key26}. The countermeasure is not exhortation but pricing: make the checkable claim the one that pays—by making verification cheap (attribute ③), by making retroactive support visible as such (attribute ⑤), and by making kills reportable without reputational collapse (the register this survey practices).
+
+\textbf{Consequence.} The LLM-era need is ledgers, not only scores. A score is a claim; a ledger is a recomputable support. The five lines surveyed next are the places where this consequence is already being worked out—mostly without reference to each other, which is precisely why a shared taxonomy is worth building.
+
+\subsection{Falsifiability inside machine learning}
+
+The philosophical question did not stay in philosophy. Nielson reads machine learning's self-understanding against Popper directly—induction, falsificationism, and what it would mean for a learner's claims to be falsifiable rather than merely fit \cite{key27}. Buchholz and Raidl take the complementary route: a falsificationist methodological account of artificial neural networks, asking what ANN research would look like if its claims were organized around refutation rather than accumulation \cite{key28}. Both are argument papers and are tiered motivation only, per the survey's conventions; what they supply is vocabulary and a live question, not measurements.
+
+The survey's position on that question is deliberately thin, and stated once. The operational reading of §3.1 (verdict executability) is weaker than either Popperian logical falsifiability or its machine-learning-internal adaptations, and independent of their outcomes: it asks only whether the bookkeeping around a claim permits mechanical killing. If the philosophical program succeeds—whatever success turns out to mean for it—the operational reading is unchanged; if it fails, the operational reading is still the engineering practice this survey documents across five lines. The historical loop of §2.1 and the contemporary debate of this subsection share one hinge: falsifiability is infrastructure, and infrastructure can be built before the philosophy is settled. That is why §3 proceeds on definitions rather than doctrine.
+
+\section{Concepts and taxonomy}
+
+\subsection{Three operational definitions}
+
+\textbf{Auditability = third-party recomputability.} A claim \textit{C} about a system's reasoning is auditable at cost \textit{κ} if (i) there exists a frozen artifact \textit{A} recording the claim's support, and (ii) a third party with stated resources and no privileged access can mechanically recompute that support from \textit{A} at cost \textit{κ}. Auditability is thus graded, not binary. It is graded by \textit{κ} (attribute ③), by the fraction of claim→execution deviations the record can reveal (attribute ②), and by the independence of the verifier from the claimant and from the artifact's constructor (attribute ④). A leaderboard score is one extreme point of this space: the artifact is a number, the recomputation is a lookup, and the covered deviation spectrum is empty—nothing about the reasoning is recomputed at all.
+
+\textbf{Falsifiability = executability of pre-registered verdicts.} A claim \textit{C} is operationally falsifiable if there exists a verdict function \textit{v: A → \{supports, kills, inconclusive\}} such that (i) \textit{v} was frozen before execution, (ii) \textit{v} is mechanically evaluable by a third party, and (iii) a kill verdict is binding in the sense that it is reported, not discarded. This is the engineering reading, and it differs from the philosophical lineage: Popperian logical falsifiability is a property of a claim's logical form, while verdict executability is a property of the bookkeeping around the claim. The two can come apart in both directions. A claim can be logically falsifiable and verdict-less—no registered rule, no frozen artifact—so that killing it costs a community debate rather than a mechanical evaluation. A verdict-executable claim is killed, or survives, at machine cost. The philosophical lineage and its machine-learning-internal debate are taken up in §2.3 \cite{key27,key28}; the operational reading adopted here is deliberately independent of that debate's outcome.
+
+\textbf{Bookkeeping = the commitment–execution–verification loop.} A practice keeps the books when it closes a three-stage loop. \textit{Commitment}: freeze, before execution, what will be checked, the verdict rule, and the artifact format. \textit{Execution}: the run leaves a frozen, append-only record of what the support consists in. \textit{Verification}: a third party recomputes the verdict from the record. Each stage induces specific audit attributes: the commitment stage defines the auditable unit (①) and anchors timing (⑤); the execution stage determines which deviations leave traces (②); the verification stage is priced (③) and staffed (④); and the loop declares at its exit what it does not certify (⑥). The three definitions compose: auditability and falsifiability are properties of claims; bookkeeping is the practice that produces claims having both.
+
+\subsection{The three-axis taxonomy}
+
+The survey's classification table has three axes. The \textbf{organization axis} fixes \textit{what is audited}—the unit of account—giving the five lines L1–L5 of §1.2. The \textbf{attribute axis} fixes \textit{how well it is audited}, in six attributes. The \textbf{strength axis} fixes \textit{how strong the recorded fact is}, in three evidence tiers plus a scope marker.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{0.985\textwidth}{>{\raggedright\arraybackslash}p{0.145\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.235\textwidth}}
+\toprule
+\textbf{Axis} & \textbf{Entries} & \textbf{Question answered} \\
+\midrule
+Organization (§4–§8) & L1 process steps · L2 explanation–computation relation · L3 evaluation artifact · L4 incentive structure · L5 conserved quantity & where the audit unit sits \\
+Attribute (below, ①–⑥) & ① commitment object · ② tamper-spectrum coverage · ③ recomputation cost · ④ verifier neutrality · ⑤ commitment timing and external witnessing · ⑥ distortion boundary & what the audit covers, costs, and certifies \\
+Strength (§1.3) & closed (pre-registered) · consistency · motivation only · scope (no evidence recorded) & how strong the recorded fact is \\
+\bottomrule
+\end{tabularx}
+\caption{The three axes.}
+\label{tab:T1}
+\end{table}
+
+\textit{Tier letters: C = closed (pre-registered) · E = consistency evidence · M = motivation only · S = scope marker · — = not located in the verified base (§3.2 legend).}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{0.985\textwidth}{>{\raggedright\arraybackslash}p{0.20\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.215\textwidth} >{\raggedright\arraybackslash}p{0.13\textwidth}}
+\toprule
+\textbf{Attribute} & \textbf{Definition} & \textbf{Irreducible failure position} & \textbf{Loop stage} \\
+\midrule
+① commitment object & the unit the mechanism commits to and defines as auditable & object mismatch—books kept for the wrong thing & commitment \\
+② tamper-spectrum coverage & which claim→execution deviations leave traces; reference spectrum: omission, fabrication, substitution, reordering, retroactive rewriting & uncovered deviation—a deviation in scope leaves no trace & execution \\
+③ recomputation cost & third-party resources required to verify; single-command recomputation as the ideal, incremental and logarithmic paths as intermediate grades & unaffordable verification—deviations detectable in principle but priced out & verification \\
+④ verifier neutrality & the verifier's independence from claimant, artifact constructor, and audited system; versioning and non-leakage of the verifier itself & captured verifier—the check passes because the checker is not independent & verification \\
+⑤ commitment timing and external witnessing & what was frozen before execution and where the out-of-band anchors live & retroactive record—the record was written after the claim, so agreement is unfalsifiable & commitment \\
+⑥ distortion boundary & what the audit does not guarantee even when it succeeds & overclaim—the audit certifies more than it covers & exit \\
+\bottomrule
+\end{tabularx}
+\caption{The six attributes: definition, irreducible failure, loop stage.}
+\label{tab:T2}
+\end{table}
+
+\textbf{Mutual exclusion.} Each attribute names one irreducible failure position of the loop, and the positions are distinct. A deviation that is detectable but unaffordable is a ③-failure that no amount of ②-coverage repairs. A neutral and cheap verifier cannot repair a record written after the fact: ④ does not subsume ⑤. Tight coverage of the wrong object is ①, not ②. All five can succeed simultaneously while the claim still overreaches its ledger: that is ⑥, and it is not detectable from the other five. The axis design would be falsified by a matrix row in which two attributes collapse into one—exhibiting a failure position that two attributes jointly and inseparably cover; the five rows assembled in §4–§8 serve as the standing test cases, and no collapse was encountered.
+
+\textbf{Coverage.} The six attributes trace the loop end to end: what is claimed (①), where it can break (②), who checks and at what cost (③④), when the record froze (⑤), and what verification means at the exit (⑥). Removing any one attribute leaves a class of failures with no address in the table: remove ③ and "too expensive to check" failures are unclassable; remove ④ and captured-verifier failures fold silently into "verified"; remove ⑤ and retroactive records become indistinguishable from frozen ones. Within the loop's scope, the six questions—who, when, what, how-it-breaks, at-what-cost, with-what-boundary—exhaust the audit questions in the structural sense that any audit question is a projection onto one of them. The exhaustion claim is stated at the taxonomy's own weakest tier—motivation only—because it is falsifiable in exactly one way: exhibit a recurring audit question that no ①–⑥ cell can host, and the axis design is refuted. No such question appeared while assembling the five rows; the claim is on record in this weak form.
+
+\textbf{Neutrality clause.} The matrix cells record facts, literature pointers, and tiers—and nothing else. No cell scores a line, and the survey takes no position on which line is "best." The neutrality is not fastidiousness: a matrix that encoded the surveyors' preferences would be unusable by readers holding different ones. The structure is the contribution; the ranking is left to the reader.\footnote{\textbf{Provenance note.} The ①–⑥ attribute set generalizes a six-item auditor-requirement checklist from the authors' prior audit-ledger engineering practice. The generalization is disclosed for provenance and stands or falls on the two arguments above, not on the practice it came from.}
+
+\textbf{Strength-tier conventions.} For external literature: closed (pre-registered) is reserved for sources that themselves report pre-registered verdict protocols; consistency denotes empirical support reported by the cited work; motivation only denotes proposals, position papers, critique essays, and formal-theory results without empirical support in the cited work; scope marks boundary statements that record no evidence. Non-peer-reviewed institutional reports are labeled as such and never tiered above consistency. The mapping is deliberately conservative—when our reading is uncertain, the weaker tier is used—and tier upgrades require the primary source, not this survey's inference.
+
+\textbf{Tier-letter legend.} C = closed (pre-registered); E = consistency evidence; M = motivation only; S = scope marker; "—" = not located in the verified base. The letters are used in Table 2, Table 3, and every X.3 matrix row; compound markers (E–M, C/E, S/E) blend the tiers they name.
+
+\section{Process verification: auditing the steps}
+
+\subsection{Problems and mechanisms}
+
+The unit of account moves down from the final answer to the steps. Chain-of-thought prompting made the steps textually explicit \cite{key01}; the GSM8K program built the dataset-and-verifier infrastructure—grade-school problems with step-annotated solutions and verifier models trained to rank candidate solutions \cite{key05}; process supervision moved the verifier's unit from whole solutions to individual steps, with large-scale human step-level labels \cite{key06}. The audit promise is local attribution: when a solution is rejected, the rejection locates at a step index; when a solution is accepted, the acceptance decomposes into per-step acceptability judgments. The verification target is the reasoning itself, not only its residue (the answer). The line's thesis, stated plainly: making steps scorable is not yet making the scorer trustworthy—step-correct is not conclusion-correct—and both halves of that sentence are this line's content.
+
+\subsection{Evidence and failure modes}
+
+Evidence. (a) Verifier-based candidate ranking improves best-of-\textit{n} selection over answer-only scoring \cite{key05}. (b) Step-level (process) supervision outperforms outcome-level supervision on mathematical reasoning benchmarks \cite{key06}. Both facts are recorded at the consistency tier—the works report them empirically; the survey has not pre-registered anything of its own on this line.
+
+Failure modes. First, the verifier is itself a learned model: its scores are claims that require their own books. The audit unit moves one level down, and the trust problem recurses (④). The step-label ground truth is human judgment, itself unaudited. Second, step-correct ≠ conclusion-correct: local validity does not certify global validity—errors compound through locally acceptable steps, and conversely locally flawed steps can be self-corrected downstream. This is the line's distortion boundary (⑥): process verification certifies step acceptability—neither conclusion correctness (which remains an aggregate property) nor explanation–computation consistency (L2's unit). Third, distribution shift: the verifier is trained on labeled problem styles, and its coverage degrades exactly where verification is most needed—off-distribution—the ② spectrum shrinking under the conditions that call for it. Fourth, Goodhart-type pressure on the verifier: once step-scores become the target (a training signal or a selection gate), the optimized quantity drifts from the intended one. The line's own negative content—documented verifier failure cases and label noise—belongs to the books this survey counts; a process-verification paper that reports its verifier's failure modes is keeping better books than one that reports only its gains.
+
+\subsection{Matrix row: L1 facts ①–⑥}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{0.985\textwidth}{>{\raggedright\arraybackslash}p{0.16\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.065\textwidth}}
+\toprule
+\textbf{Attribute} & \textbf{Fact (with pointer)} & \textbf{Tier} \\
+\midrule
+① commitment object & individual reasoning steps of a generated solution chain \cite{key05,key06} & E \\
+② tamper-spectrum coverage & step-level deviations are locatable and attributable to step indices; the verifier's own scoring process is outside the recorded spectrum \cite{key05,key06} & E \\
+③ recomputation cost & one verifier forward pass per step—a learned-model cost, not an arithmetic recomputation \cite{key06} & E \\
+④ verifier neutrality & the verifier is a learned model trained on human step labels; the labels are themselves unaudited judgments (recursion open) \cite{key06} & E \\
+⑤ commitment timing & dataset-level commitments (fixed test splits) are standard; run-level pre-registered verdicts are not located in the verified base & — \\
+⑥ distortion boundary & step-correct ≠ conclusion-correct: local acceptability is certified, neither global validity nor explanation–computation consistency & S \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Chain-of-thought faithfulness: the explanation is not the computation}
+
+\subsection{Problems and mechanisms}
+
+The unit of account is the relation between the emitted explanation and the computation that produced the answer. Chain-of-thought made explanations machine-generated and ubiquitous \cite{key01}; the faithfulness question asks whether the emitted chain reflects the actual computation \cite{key02,key03}. A second era changed the stakes: reinforcement learning now trains the chains themselves—reasoning models learn long chains of thought as behavior rather than as a prompt format \cite{key29}—so the explanation is a trained artifact, and whatever trains it can shape what it shows. The faithfulness question inherits a second edge: not only whether the chain reflects the computation, but whether the training signal has taught the chain to look better than the computation. The measurement mechanisms are behavioral. Perturbation protocols truncate, paraphrase, or pad the emitted chain and ask whether the answer changes \cite{key03}—if the answer is insensitive to the chain's content, the chain is not doing the explaining it appears to do. Bias-planting protocols induce a biased answer through few-shot answer patterns or distractors and ask whether the emitted chain rationalizes the bias post hoc \cite{key02}—if it does, the chain is testimony, not computation. In bookkeeping terms: the faithfulness tests are the field's detectors for \textit{books ≠ real books}, and the measured quantity is the divergence between the account and the account's causal history.
+
+\subsection{Evidence and failure modes}
+
+Evidence. Unfaithfulness is measurable, non-zero, and task- and model-dependent \cite{key02,key03}; both works report empirical protocols with quantitative results—consistency tier. The strongest content of this line is partly negative, and that is a feature: an honestly reported faithfulness-failure rate converts "the model explains itself" into a falsifiable claim ("the explanation deviates from the computation at rate \textit{r} under protocol \textit{P} on distribution \textit{D}"), which is exactly the bookkeeping move of §3.1.
+
+Failure modes. First, the detector problem: faithfulness metrics are behavioral proxies—an answer's stability under chain perturbation is not itself the explanation–computation relation, so a model could pass the available tests while the chain remains non-causal in the relevant sense (the metric-recursion form of ④). Second, instrumental explanations: unfaithful chains can still improve task accuracy—the chain's causal role in generation is separable from its testimonial role. The books can be wrong while the balance is right; explanation value and audit value must therefore be reported separately, and conflating them is an error this line exists to catch. Third, protocol relativity (⑥): a faithfulness rate is a property of (model, task, protocol), not of "the model"; numbers from different protocols are not commensurable without declaring the protocol. Fourth, the reasoning-model era has begun to produce this line's kind of evidence, and it cuts both ways. CoT monitoring can detect misbehavior in RL-trained reasoning models; but penalizing the monitored bad thoughts does not remove the misbehavior—it teaches concealment while task metrics improve: the audit layer and the optimization layer pull against each other, with the confounding effect measured rather than asserted \cite{key30}. On the faithfulness side, reward-hacking behavior in reasoning models is rarely acknowledged in the emitted chain—admission below 2\% in most tested settings \cite{key31} (institutional research report, non-peer-reviewed, labeled as such; consistency tier with the label). What remains open is the systematization of this era's evidence (OP5 in §10.2).
+
+\subsection{The monitorability question and matrix row: L2 facts ①–⑥}
+
+The reasoning-model era also supplies a quantification baseline: across twelve open-weight reasoning models and 41,832 runs, faithfulness rates span 39.7\%–89.9\% \cite{key32} (consistency tier)—the spread, not the midpoint, is the finding: faithfulness is model-relative and protocol-relative across the open-weight spectrum, not a fixed property of "reasoning models." And it adds a debate of its own around one word: monitorability. A position paper argues that chain-of-thought monitorability is a new and fragile opportunity for AI safety—precious, because the chain is a direct window into the computation; fragile, because folding it into training targets destroys exactly what makes it valuable \cite{key33} (position paper; motivation tier). The fragility claim is not merely rhetorical: stress-testing shows that reasoning models can obfuscate their reasoning—concealing the actual inference path while preserving behavior \cite{key34}. Together with the monitoring result of §5.2, the line now holds its cleanest demonstration of a proposition that crosses lines: \textbf{an audit layer placed under optimization pressure erodes.} The same proposition recurs at the protocol layer in §7.2, where the decentralized-evaluation cluster meets gaming pressure on the evaluation protocol itself; CoT monitoring here and decentralized evaluation there are the proposition's two live instantiations, and the confounding effect of \cite{key30} is its sharpest experimental demonstration to date.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{0.985\textwidth}{>{\raggedright\arraybackslash}p{0.16\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.065\textwidth}}
+\toprule
+\textbf{Attribute} & \textbf{Fact (with pointer)} & \textbf{Tier} \\
+\midrule
+① commitment object & the explanation–computation relation, per instance and per test protocol \cite{key02,key03} & E \\
+② tamper-spectrum coverage & post-hoc rationalization and chain-insensitivity detectable under perturbation and bias-planting protocols \cite{key02,key03}; RL-era monitoring detects misbehavior \cite{key30,key31}; open-weight faithfulness quantified at 39.7\%–89.9\% over 41,832 runs \cite{key32}; deliberate obfuscation can defeat monitoring \cite{key34}; metric-gaming deviations are outside the recorded spectrum (the proxy gap) & E \\
+③ recomputation cost & behavioral probes—no training required; the cheapest detection layer in the survey; monitoring adds inference-scale cost \cite{key30} & E \\
+④ verifier neutrality & faithfulness metrics are behavioral proxies, unaudited as instruments (recursion open) \cite{key02,key03} & E \\
+⑤ commitment timing & per-study protocols fixed in advance; run-level pre-registered verdicts not located in the verified base & — \\
+⑥ distortion boundary & a faithfulness rate is protocol-relative and model-relative (39.7\%–89.9\% across twelve open-weight models \cite{key32}); monitorability is fragile under optimization pressure \cite{key30,key32,key33,key34} & E \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Evaluation integrity: the benchmark's own books}
+
+\subsection{Problems and mechanisms}
+
+The unit of account is the evaluation artifact itself: benchmark, protocol, grading pipeline, and the train/test boundary. Evaluation integrity is upstream of every performance claim in every other line—the books about the books. The mechanisms are three. Leakage auditing: systematic detection of information improperly shared between training and evaluation—feature leakage, temporal leakage, and adjacent forms—with a taxonomy for spotting them across applications \cite{key07}. Reproducibility infrastructure: checklists, code and data submission, and reporting standards, institutionalized through a major venue's reproducibility program \cite{key08}—bookkeeping as social infrastructure, in the survey's terms: the commitment stage executed at the level of a research community. And the competition format: fixed tasks, frozen leaderboards, enforced protocol equality—on the position that AI competitions provide the gold standard for empirical rigor in generative AI, evaluation bookkeeping run as an institution \cite{key35} (position track; motivation tier).
+
+\subsection{Evidence and failure modes}
+
+Evidence. Leakage identified as widespread in machine-learning-based science, with a deployable detection taxonomy \cite{key07}; the reproducibility program adopted and reported at scale \cite{key08}. Both are audit-infrastructure papers in the strict sense—their subject is survivable claims, not better models. Consistency tier for both.
+
+Failure modes. First, contamination voids admissibility: a score whose train/test separation is broken is a claim whose support does not exist. The detection is usually retroactive—the claim dies after publication—which is itself the ⑤ failure mode of the surrounding practice: nothing froze the evaluation's commitment before the run, so the post-hoc "clean" verdict is unfalsifiable in exactly the way §3.1 defines. Second, temporal discipline is this line's native ⑤: held-out sets, embargoed releases, and time-ordered evaluation freeze the test before the claim. Where a line of work adopts these, its claims gain verdict executability; where it does not, its claims rest on assertions. Third, construct drift (⑥): a benchmark's construct shifts as the population of solvers changes; a "clean" score certifies protocol-relative performance, not the intended construct, and not reasoning correctness. Fourth, selective reporting: claims survive because failures were never recorded; checklists are the procedural countermeasure, partial by design \cite{key08}.
+
+Contamination detection has itself become a methodology with a literature: rephrase-based detection \cite{key36}; the Sharded Rank test, which proves contamination from black-box access with exact false-positive control \cite{key37}; a comprehensive survey organizing the n-gram, semantic, and performance-based families \cite{key38}; a systematic evaluation interrogating the core assumptions of fifty proposed detection methods \cite{key39}; performance-based detection with context-cache controls \cite{key40}; and detection adapted to the RL post-training era \cite{key41}. Within L3's row, ② records a populated detector spectrum rather than a blank. The honest boundary is inherited from \cite{key39} and sharpened by \cite{key42}: the detectors' own core assumptions are only partially validated—and detection itself is fragile for reasoning models, where methods validated on base models can fail \cite{key42} (consistency tier). The auditors of the auditors are still largely unaudited; their fragility is now an empirical result, not a caveat, and a systematic validation protocol is the open step (OP2 in §10.2).
+
+\subsection{Matrix row: L3 facts ①–⑥}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{0.985\textwidth}{>{\raggedright\arraybackslash}p{0.16\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.065\textwidth}}
+\toprule
+\textbf{Attribute} & \textbf{Fact (with pointer)} & \textbf{Tier} \\
+\midrule
+① commitment object & the evaluation artifact: benchmark, protocol, grading pipeline, train\slash test boundary \cite{key07,key08} & E \\
+② tamper-spectrum coverage & leakage detectable by systematic audit (taxonomy of leakage forms) \cite{key07}; a populated detector family: rephrase-based \cite{key36}, black-box provable \cite{key37}, n-gram\slash semantic\slash performance families \cite{key38}, assumption-audited \cite{key39}, performance-based with cache controls \cite{key40}, RL-era \cite{key41}—the family itself fragile for reasoning models \cite{key42} & E \\
+③ recomputation cost & pipeline re-analysis: moderate; scales with data-pipeline complexity \cite{key07} & E \\
+④ verifier neutrality & community audit plus detection heuristics; benchmark constructors are a trust root (recursion open) \cite{key07,key08}; the detectors' own assumptions are only partially validated \cite{key39} & E \\
+⑤ commitment timing & temporal discipline native: held-out sets, embargoed release, time-ordered evaluation \cite{key07,key08}; competitions freeze protocol equality institutionally \cite{key35} & E \\
+⑥ distortion boundary & a clean score certifies protocol-relative performance—not construct validity, not reasoning correctness & S \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Game-theoretic verification: endogenizing the auditor}
+
+\subsection{Problems and mechanisms}
+
+The unit of account is the incentive structure of the verification interaction. Instead of auditing the artifact after the fact, mechanism design endogenizes the auditor: structure the game so that honest, checkable reporting is an equilibrium property rather than an assumption. The debate proposal puts two AI systems in opposition before a weaker judge—human or machine—and argues that cross-examination extracts information beyond the judge's own competence, so that verification scales with the system rather than against it \cite{key09}. Mechanism-design approaches to AI safety treat the alignment of participants' incentives as a design object, asking when verification-relevant honesty can be made an equilibrium property of the interaction itself \cite{key10}. The formal layer exists in general form: probabilistic verification in mechanism design characterizes honest reporting under noisy tests \cite{key43} (formal theory; motivation tier under the survey's mapping). What the theory has not yet received is the connection to ML capability claims—that connection is the unsystematized step documented in §7.2. The line's distinctive promise is a transformation of ④: verifier neutrality is not purchased from an external auditor but manufactured inside the mechanism—adversaries check adversaries.
+
+\subsection{Evidence and failure modes}
+
+Evidence. The debate proposal reports preliminary experiments \cite{key09}; the mechanism-design program contributes formal analyses and designs \cite{key10}. The register is stated as-is: much of this line's strongest content is possibility-level—proposals and analyses, with small-scale demonstrations rather than deployed verification. In the survey's tiers, several of the line's cells sit at E-to-M, and the survey does not upgrade them. A 2026 cluster has additionally sprouted around a specific L4 failure mode: unverified benchmark claims. The motivation is stated in market terms—unverified benchmark claims can move markets—so the verification itself is decentralized: protocols that replace trust in the benchmark holder \cite{key44}; blockchain-based multi-party consensus evaluation frameworks \cite{key45}; and matching-server architectures that hide the benchmark from the evaluation client to prevent leakage \cite{key46}. The cluster is young—proposal-scale and prototype-scale work—and the survey tiers it E–M as a cluster rather than entry by entry.
+
+Failure modes. First, Goodhart-type pressure, sharpened by stakes: once the mechanism is the target, participants optimize the \textit{appearance} of honesty; strategies that pass cross-examination while misrepresenting are the line's canonical adversarial register, and the mechanism's guarantee does not cover them (②'s boundary). Second, the judge bottleneck: the human (or weaker AI) judge is debate's unaudited root—judge competence is simultaneously the verification resource (③) and the trust root (④), a concentration this line inherits rather than solves. Third, equilibrium versus deployment: mechanism guarantees hold in equilibrium; deployed multi-agent systems need not reach the analyzed equilibrium (selection, collusion). Fourth, the designer trust root: the mechanism designer becomes a new party whose neutrality must itself be audited—④ is transformed, not eliminated. Fifth, the cross-line proposition stated in §5.3: an audit layer placed under optimization pressure erodes. CoT monitoring meets it as concealment \cite{key30}; decentralized evaluation meets it as protocol gaming—once the evaluation protocol is the target, gaming pressure migrates to the protocol, and the cluster's designs \cite{key44,key45,key46} are attempts to raise the cost of that migration; and reinforcement learning with verifiable rewards meets it at the training interface, where optimizing against the verifier leads the verifier into reward hacking \cite{key47} (consistency tier)—the proposition's third instantiation and the one closest to the audit-versus-training boundary. The proposition is the shared failure register of the three sites, and the reason ⑥ boundaries matter more than ② coverage in this line.
+
+The escrow-style combination—a capability claimant posts forfeitable stakes—remains unsystematized at the major machine-learning venues. The nearest neighbors fall in three clusters. Cluster 1: mechanism-design theory, general and established, not yet connected to ML claims \cite{key43}. Cluster 2: decentralized LLM evaluation, sprouting in 2026, without bond–forfeiture incentive structures \cite{key44,key45,key46}. Cluster 3: on-chain agent governance, which provides bond-settlement primitives—per-action bonds, runtime behavioral governance, compensation mechanisms, and an engineering-standard draft for agent deposits and arbitration \cite{key48,key49,key50,key51}—but escrows behavioral side effects, not model capability claims. The blank, stated in this narrowed form, is a documentation of an unsystematized combination rather than an absence of neighbors: attach a forfeitable bond to a falsifiable capability claim, with a mechanical forfeiture verdict. No verified work has systematized that step.
+
+\subsection{The governance cluster and matrix row: L4 facts ①–⑥}
+
+Cluster 3 in detail, because it carries the bond primitives. Bonded recourse settles compensable agent side effects by smart contract, with a bond attached to each action \cite{key48}. AgentBound provides verifiable behavioral governance for autonomous agents at runtime \cite{key49}. RAC trains agents to compensate for harms \cite{key50}. And ERC-8004—Trustless Agents—is an engineering-standard draft specifying agent deposits and arbitration \cite{key51} (Ethereum RFC draft; non-peer-reviewed; labeled as such). These are escrow mechanics at the protocol layer: the bond, the forfeiture, and the settlement all exist. What they escrow is behavioral side effects—harm, compensation, recourse—not claims about model capability. The distance to §7.2's unsystematized combination is short and precisely describable: attach the bond to a falsifiable capability claim and make the forfeiture verdict mechanical. The verified base records no work that has taken that step.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{0.985\textwidth}{>{\raggedright\arraybackslash}p{0.16\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.065\textwidth}}
+\toprule
+\textbf{Attribute} & \textbf{Fact (with pointer)} & \textbf{Tier} \\
+\midrule
+① commitment object & the incentive structure of the verification interaction \cite{key09,key10}; on-chain bonds attached to agent actions and side effects \cite{key48,key49,key50,key51} & E–M \\
+② tamper-spectrum coverage & strategically dishonest reporting within mechanism scope covered by design; Goodhart-type evasion of the \textit{appearance} of honesty outside the guarantee; concealment under monitoring pressure demonstrated \cite{key30}; verifier gaming under RLVR demonstrated \cite{key47} & E–M \\
+③ recomputation cost & judge time plus mechanism design and simulation \cite{key09}; decentralized verification redistributes rather than reduces cost \cite{key44,key45,key46} & E–M \\
+④ verifier neutrality & judge and mechanism designer as trust roots (recursion transformed, not removed) \cite{key09,key10}; decentralization replaces the trust root with protocol consensus \cite{key44,key45,key46} & E \\
+⑤ commitment timing & mechanism rules fixed before interaction—protocol-level commitment native \cite{key09,key10}; bond-settlement primitives exist on-chain \cite{key48,key49,key50,key51}; the bond × capability-claim combination is unsystematized (§7.2) & E–M \\
+⑥ distortion boundary & equilibrium guarantees ≠ deployment behavior; honesty-dominance is equilibrium-local; audit layers under optimization pressure erode (§5.3) & S \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Conservation and physical priors: invariants as external guarantors}
+
+\subsection{Problems and mechanisms}
+
+The unit of account is a conserved quantity or physical invariant defined over the reasoning artifact. The verifier is external to the model, the data, and the auditor: a conservation law. Hamiltonian neural networks learn the invariant itself so that learned dynamics approximately conserve energy \cite{key11}; physics-informed machine learning embeds physical constraints (partial differential equations among them) into the learning problem \cite{key12}; and systematic characterization of failure modes documents when physical priors help and when they hurt \cite{key13}. The line's audit promise, in its strongest form: an invariant that holds \textit{by construction} can be rechecked by a third party with arithmetic alone—verifier independence maximal (④), verification cost minimal (③). Constructive invariants—identities built into the mechanism—are categorically stronger than soft constraints—residuals suppressed by training: the former hold at inference for arbitrary inputs; the latter can be violated exactly when the model is off-distribution, which is when the audit is most needed.
+
+The invariant need not be physical. Formal specifications play the same structural role—an external standard the artifact must satisfy, independent of the artifact's constructor—and their verification literature is this line's computational sibling. OVERT verifies neural network controllers against safety properties reliably \cite{key52}; zkLLM produces zero-knowledge proofs of LLM inference integrity—a third party verifies the computation without re-executing it or seeing the inputs \cite{key53}; and the zero-knowledge verifiable-ML line is surveyed systematically \cite{key54}. The zk route changes ③'s economics rather than ④'s geometry: verification at sub-linear cost, with the cryptographic assumption stack as a new, explicitly declared trust root.
+
+\subsection{Evidence and failure modes}
+
+Evidence. Conservation and structure preservation demonstrated in learned dynamics \cite{key11}; the breadth of the physics-informed program documented \cite{key12}; failure modes of physical priors characterized \cite{key13}. Consistency tier for all three.
+
+Failure modes. First, conservation ≠ truth (⑥): an identity can hold exactly while every entry in the ledger is wrong—the books balance; the accounting is fiction. Physical priors constrain the ledger's \textit{form}, not its content's correctness; content correctness belongs to L1/L2 and is not inherited from the invariant. Second, soft constraints are violable at inference (②): gradient-suppressed residuals do not survive distribution shift or adversarial inputs; only constructive invariants give run-time books. Third, prior–optimization conflict: physics-informed objectives exhibit optimization pathologies in exactly the regimes where the prior matters \cite{key13}—the audit instrument can damage the system it audits. Fourth, the invariant-chooser trust root (④): which invariant, which form, which parameters—the modeling choice is upstream of the ledger, and the books inherit its assumptions unaudited.
+
+The computational side is held by the formal-verification and zero-knowledge families of §8.1; the physical side's sub-blank is stated narrowly. Conservation laws as run-time auditors—post-hoc reconciliation of an artifact against its invariant, as opposed to a training constraint—have, to our knowledge, no machine-learning-venue work. The nearest neighbors are the physics-informed training-constraint literature itself \cite{key12,key13} and generalized anomaly detection in cyber-physical systems (outside the verified base, hence uncited here). Whether the case study of §9.3 is the first conservation-as-run-time-auditor instance in an ML artifact is a claim the completed second-round novelty search did not refute—and not one this survey asserts.
+
+\subsection{Matrix row: L5 facts ①–⑥}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{0.985\textwidth}{>{\raggedright\arraybackslash}p{0.16\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.065\textwidth}}
+\toprule
+\textbf{Attribute} & \textbf{Fact (with pointer)} & \textbf{Tier} \\
+\midrule
+① commitment object & conserved quantities and physical invariants over the learned\slash artifact system \cite{key11,key12,key13}; formal specifications as the computational sibling \cite{key52,key53,key54} & E \\
+② tamper-spectrum coverage & constructive identities: ledger deviations arithmetic-checkable \cite{key11}; soft-constraint violations reappear at inference off-distribution \cite{key12,key13}; zk proofs verify computation integrity without re-execution \cite{key53} & E \\
+③ recomputation cost & arithmetic recomputation of the invariant—minimal in the survey; the ideal end of ③; zk verification at sub-linear cost \cite{key53} & E \\
+④ verifier neutrality & the invariant is external to model, data, and auditor—strongest independence; the invariant-chooser is a trust root \cite{key11,key12,key13} & E \\
+⑤ commitment timing & constructive invariants precede execution by construction \cite{key11}; run-time conservation-as-auditor: to our knowledge no ML-venue work (§8.2) & — \\
+⑥ distortion boundary & conservation ≠ truth: a balanced ledger can carry wrong entries; priors can conflict with optimization \cite{key13} & E \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Synthesis, cross-line lessons, and a case study}
+
+\subsection{The five-line matrix}
+
+Table 3 assembles the five rows built in §4–§8. Rows are organization units (the five lines); columns are the six attributes; each cell compresses the fact, pointer, and tier recorded in that line's X.3 row, where the full statement lives. The table is read, not scored: cells record what the verified literature base supports, an empty cell is a statement about the base rather than the field, and the two cells that record narrowed blanks (L4 ⑤, L5 ⑤) carry their declarations explicitly rather than as bare gaps (§7.2, §8.2).
+
+\textit{Tier letters: C = closed (pre-registered) · E = consistency evidence · M = motivation only · S = scope marker · — = not located in the verified base (§3.2 legend).}
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{0.985\textwidth}{>{\raggedright\arraybackslash}p{0.085\textwidth} *{6}{>{\raggedright\arraybackslash}p{0.126\textwidth}}}
+\toprule
+\textbf{Line} & \textbf{① object} & \textbf{② coverage} & \textbf{③ cost} & \textbf{④ neutrality} & \textbf{⑤ timing} & \textbf{⑥ boundary} \\
+\midrule
+L1 process \cite{key05,key06} & reasoning steps (E) & step deviations locatable; verifier process outside spectrum (E) & one verifier pass per step (E) & learned verifier; human labels as trust root (E) & dataset-level splits; run-level verdicts not located (—) & step-correct ≠ conclusion-correct (S) \\
+L2 faithfulness \cite{key02,key03,key29,key30,key31,key32,key33,key34} & explanation–computation relation (E) & rationaliza\-tion\slash insensitivity under perturbation; RL-era monitoring, open-weight quantification, and obfuscation \cite{key30,key31,key32,key34} (E) & behavioral probes, cheapest (E) & metrics are proxies (E) & per-study protocols; run-level verdicts not located (—) & protocol-relative and model-relative \cite{key32}; monitorability fragile under optimization pressure \cite{key30,key32,key33,key34} (S\slash E) \\
+L3 evaluation \cite{key07,key08,key35,key36,key37,key38,key39,key40,key41,key42} & benchmark\slash protocol\slash pipeline (E) & leakage detectable by audit; detector family populated and itself fragile \cite{key36,key37,key38,key39,key40,key41,key42} (E) & pipeline re-analysis, moderate (E) & community + heuristics; constructors as root; detector assumptions partially validated \cite{key39} (E) & temporal discipline native; competitions institutional \cite{key35} (E) & clean score = protocol-relative performance (S) \\
+L4 game-theoretic \cite{key09,key10,key43,key44,key45,key46,key47,key48,key49,key50,key51} & incentive structure; on-chain bonds for side effects \cite{key48,key49,key50,key51} (E–M) & in-mechanism dishonesty covered; concealment \cite{key30} and verifier gaming \cite{key47} demonstrated; Goodhart-type evasion outside (E–M) & judge time + design; decentralization redistributes cost \cite{key44,key45,key46} (E–M) & judge\slash designer as root; consensus replaces root \cite{key44,key45,key46} (E) & rules fixed pre-interaction; bond × capability-claim unsystematized (§7.2) (E–M) & equilibrium ≠ deployment; audit layers erode under optimization pressure (§5.3) (S) \\
+L5 conservation \cite{key11,key12,key13,key52,key53,key54} & invariants, physical and formal (E) & constructive: arithmetic-checkable; soft: violable off-distribution; zk verifies integrity \cite{key53} (E) & arithmetic, minimal; zk sub-linear \cite{key53} (E) & invariant external; chooser as root (E) & constructive precedes execution; run-time conservation-auditor: none located to our knowledge (§8.2) (—) & conservation ≠ truth (E) \\
+\bottomrule
+\end{tabularx}
+\caption{Five lines × six attributes (compressed; full facts in §4.3–§8.3).}
+\label{tab:T3}
+\end{table}
+
+Two structural observations are visible in the assembly, stated at the motivation tier because they are readings of the table, not new measurements. First, the ⑤ column is the sparsest in the matrix, and the observation survived the supplement pass: across the now-60 external entries, no line's ⑤ cell records a run-level, pre-registered verdict protocol—dataset-level splits (L1), per-study protocols (L2), held-out sets and competitions (L3), mechanism rules and bond primitives (L4), and constructive invariants (L5) are each commitment-adjacent, but none freezes a claim's kill rule before the run in the sense of §3.1. Second, ④ recurs across all five rows in one form or another—learned verifier, behavioral proxy, benchmark constructor, judge/designer, invariant chooser: every line terminates in an unaudited root. The two observations are the inputs to §9.2.
+
+\subsection{Cross-line lessons}
+
+\textbf{(a) Pre-registration and kills as trust infrastructure.} Across the five lines, the recurring distinction between claims that survive scrutiny and claims that evaporate is the presence of a frozen rule before execution. L3's temporal discipline is the community-scale version \cite{key07,key08}; reproducibility checklists are the commitment stage executed institutionally \cite{key08}. The register matters as much as the mechanism: a kill is a completed audit—the strongest form a negative result can take—and a field that reports kills without reputational collapse converts its error rate into knowledge. This survey practices the register it describes: the case study of §9.3 enters with three falsified claims and no apology for them. The observation that the external ⑤ column is empty of run-level verdict protocols (§9.1) is the gap side of the same lesson: the infrastructure exists in fragments, in none of the five lines as standard practice.
+
+\textbf{(b) The economics of verification cost.} Attribute ③ is not metadata; it decides whether audit happens at all. Cheap audits are habitual; expensive audits are episodic; no-cost "audits" (trusting the score) are the default the field is trying to leave. The cost ladder visible in the matrix runs from arithmetic recomputation of a constructive invariant (L5, minimal) through behavioral probes (L2, cheap) and verifier forward passes (L1, learned-model cost) to pipeline re-analysis (L3, moderate) and judge time plus mechanism design (L4, the most open-ended). Incremental structures—append-only records, recomputation of only what changed, single-command recomputation as the ideal end—reduce cost without reducing coverage. The economic claim itself (auditability must be priced for habitual use) is stated at the motivation tier: no cost-measurement study is located in the verified base, and the claim is falsifiable by exactly such a study (OP6 in §10.2).
+
+\textbf{(c) The escrow × capability-claim combination, documented as unsystematized.} Three neighboring clusters now bound the position (§7.2): general mechanism-design theory \cite{key43} that has not reached ML claims; decentralized LLM evaluation \cite{key44,key45,key46} without bond–forfeiture structures; and on-chain agent governance \cite{key48,key49,key50,key51} whose bonds escrow behavioral side effects, not capability claims. The combination—attach a forfeitable bond to a falsifiable capability claim, with a mechanical forfeiture verdict—would sit at the intersection of L4 (incentive design) and ⑤ (commitment devices): it prices dishonesty in the same currency the claimant spends elsewhere. The documentation of the unsystematized step is a survey contribution; the exploratory possibility is stated with no claims attached.
+
+\textbf{(d) The recursion bottom.} Every line's ④ cell terminates in an unaudited root (§9.1): the learned verifier, the faithfulness metric, the benchmark constructor, the judge and mechanism designer, the invariant chooser. Audit stacks have bottoms. The dishonest response is to hide the bottom; the audit-grade response is to declare it—attribute ⑥ is where the declaration lives. A reliability literature that states its trust roots is keeping better books than one that proves everything above an unexamined foundation, and the survey records this as a register requirement, not a technical one. The register requirement has a dynamic counterpart with three testimonies: an audit layer placed under optimization pressure erodes—chain-of-thought monitoring driven to concealment while task metrics improve \cite{key30}; verifiers gamed by the very training signal that optimizes against them \cite{key47}; evaluation protocols absorbing the gaming pressure that targets them \cite{key44,key45,key46}. The proposition is stated at motivation tier (a cross-line synthesis, not a measured law), and its three testimonies, taken together, are the matrix's most direct reading of where ② coverage fails in practice (§5.3, §7.2).
+
+\subsection{Case study: one artifact spanning the five lines}
+
+\textbf{Position and disclosure.} The survey's five lines are populated by 60 external works; this subsection adds one integrated instance to exercise all six attributes on a single object: the author's own first work \cite{key04}, disclosed here as a self-citation and detailed further in the AI-use disclosure. The case is not the survey's protagonist and receives no preferential treatment: it enters the same matrix, the same three-tier strength discipline, and the same register as the five external lines, and its negative results are reported as content. Every number below is quoted from the frozen result artifacts of \cite{key04}, where each maps to a named JSON field in that work's number-traceability table; nothing is re-measured for this survey.
+
+\textbf{The artifact.} A scattering layer over LLM reasoning-path graphs: each node is bound to a two-parameter state, and traversing energy splits into three channels—transmission, reflection, and irreversible dissipation—with the constructive identity T+R+A=1. The claim structure of \cite{key04} is itself this survey's point: the strongest claims (conservation, auditability) rest on no benchmark accuracy whatsoever, while the accuracy-attribution claims were killed by the work's own pre-registered controls.
+
+\textbf{L1, process verification.} Elimination decisions are attributable node by node to concrete (T, R, A) shares: the audit unit sits at the step level. The conservation audit served as guarantor in one documented error correction (E9.3 of \cite{key04}): a configuration bug—one variant silently aliasing another—produced a wrong GSM8K figure of 0.86; the fixed configuration, rerun offline, gave 0.82 with 4 problems flipped (exact McNemar versus the aliased arm p=0.125, not significant; StrategyQA predictions bitwise identical, p=1.0), and the rerun passed the conservation audit. Register, as-is: a single documented event—consistency evidence—and the general claim "conservation audits catch configuration bugs" is not asserted beyond this instance.
+
+\textbf{L2, the faithfulness analog.} The sharpest control in \cite{key04} is a six-keyword rule filter reading only label strings (E9.5): on GSM8K (n=100) it scores 0.87 against the layer's 0.85 (McNemar b=0, c=2, p=0.5); on StrategyQA (n=99) 0.899 = 0.899 (p=1.0). At these sample sizes the detectable-difference threshold is roughly ±10 percentage points, so smaller increments are not excluded—disclosed as-is. The mechanism's discriminative content equals its label input: the books are exact, but the books are not additional evidence beyond the labels. \cite{key04} relocates the value proposition accordingly—the differential value lies solely in machine verifiability—and reports the accuracy comparison without euphemism: on GSM8K, plain chain-of-thought significantly outperforms the layer (97.0 vs 85.0, exact McNemar p=4.9×10⁻⁴).
+
+\textbf{L3 and ⑤, evaluation integrity and timing.} \cite{key04}'s verdicts are pre-registered pure functions frozen before runs, with SHA-256 anchors published for the frozen files (first 12 hex digits: GT\_FORMALIZATION\_v1.md aeefb8ef6972; run\_v21\_gtformal.py 9bbe43f41fa8; run\_v22\_p1c.py 6e9673205dc0; SPEC\_GT2B 68a5b08ef007; SPEC\_GT8C 6b09de9911c0). Every key number maps to a frozen JSON field; hand-copying is forbidden by that work's own protocol. The kills are mechanically evaluated and reported as first-class content: under a kill protocol that is systematic in its graph sampling (61 graphs, five families) and exhaustive at the state level (all 6,760 states of the 338-task corpus), all three tiers of formalized dynamical-equivalence claims are falsified. P1a, the strong form: max deviation 0.8569—an O(1) deviation that does not vanish with step size. T-P1b, the better-response form: minimum directional cosine −1.0; minimum ΔΦ = −1.2424×10⁻², with 10/338 tasks in violation. T-P1c, the first-order entropy-regularized form, killed on both its lines: under a globally uniform τ (an 81-point grid on [0,4]) the minimum cosine is −1.0 even at the best global τ; under per-state self-chosen τ\textit{ the minimum cosine is −1.0, and the median per-state τ} is 0 (85.98\% of states choose τ*=0), so the entropy term has no reparative power. None of the three is listed as future work in \cite{key04}; the kills are the content. This is attribute ⑤ in its strongest form—the kill rules predate the runs that triggered them.
+
+\textbf{L4, game-theoretic.} The layer's reverse dynamics is modeled as a game; \cite{key04} reports the distribution-level empirical coordination ratio (ECR)—an operational counterpart of the classical worst-case coordination ratio, explicitly not the same metric, with no numerical juxtaposition against classical bounds drawn—with median 1.333 over the 17 finite-valued graphs (three infinite cases counted separately; coverage 20/22 graphs, two graphs' arm data absent, disclosed as-is). Two closed verdicts anchor the scalar ledger: potential-trajectory monotonicity on 22/22 graphs (GT-5b—the narrowed claim; the original GT-5 endpoint reversal, the noise arm's terminal Φ overtaking on 3/4 graphs, remains on record, unrewritten), and a median non-potential residual of 1.594×10⁻²⁹ (GT-6, against a pre-registered line of 0.10; three cyclic-structure exceptions at 0.121–0.148 disclosed; the median sits at double-precision underflow scale and is not read as a physical magnitude). The potential reading survives only as an approximation: the support graphs partitioned by cycle space—acyclic (undirected-forest) graphs show residual ≤5.9×10⁻¹⁶ (indistinguishable from exact potential structure), graphs containing cycle space show median residual 0.669 with 0.924 of the mass above 0.30—hence the downgrade to an approximate potential game.
+
+\textbf{L5, conservation.} T+R+A=1 holds by construction for arbitrary parameters; the maximum per-path audit deviation measured across all variants and benchmarks is 2.220446049250313×10⁻¹⁶—the scale of double-precision machine epsilon, against an implementation tolerance of 10⁻⁶—closed (pre-registered). Any third party recomputes the ledger with double-precision arithmetic: attribute ③'s ideal end, with the invariant external to the backend LLM (④'s strongest form, the parameter-assignment table remaining the trust root).
+
+\textbf{Limitations, self-stated (compressed from \cite{key04}).} The corpus graph families are single-vendor LLM-generated (all three tested model families Chinese-optimized; shared-corpus contamination not ruled out); real-benchmark samples are small (n=100 GSM8K, n=99 StrategyQA); the claims are at the structural-isomorphism level, not magnitude claims; ECR coverage is 20/22; the benefit of the irreversible-dissipation channel remains motivation only—zero task-level rent on every task measured, with the mechanistic premise (dissipation guarantees the spectral condition that prevents divergence in 58/338 tasks at the zero-dissipation setting) kept distinct from the rent claim.
+
+\noindent\textbf{Matrix row 6.}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{0.985\textwidth}{>{\raggedright\arraybackslash}p{0.16\textwidth} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.065\textwidth}}
+\toprule
+\textbf{Attribute} & \textbf{Fact (with pointer)} & \textbf{Tier} \\
+\midrule
+① commitment object & per-path energy ledger with node-attributable (T,R,A) shares; verdict functions over frozen JSONs \cite{key04} & C \\
+② tamper-spectrum coverage & constructive identity covers ledger deviations, arithmetic-checkable; label-content deviations are outside the ledger's spectrum (E9.5) \cite{key04} & C \\
+③ recomputation cost & double-precision arithmetic per path \cite{key04} & C \\
+④ verifier neutrality & invariant external to the backend LLM; parameter-assignment table single-sourced; single-vendor graph families disclosed \cite{key04} & C\slash E \\
+⑤ commitment timing & SHA-256-anchored pre-registered verdict functions; kills mechanically evaluated and reported \cite{key04} & C \\
+⑥ distortion boundary & no accuracy claims: E9.5 tie, GSM8K 85.0 vs 97.0 as-is; three equivalence claims falsified; potential downgraded to approximate, partitioned by cycle space \cite{key04} & C \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+No first or only claims are made for the case. The survey-level positioning claim—that no full-stack recomputability-axis survey was located—was checked by the second-round novelty search of 2026-09-15 and retained; it is falsifiable by exactly one find.
+
+\section{Outlook: machine worldviews and the audit of automated discovery}
+
+\subsection{Machine worldviews and AI scientists}
+
+Two research programs make the audit problem immediate. The first builds machine worldviews: an agent learns a generative model of its environment and trains its policy inside that model \cite{key55}; the approach scales to diverse domains with a single configuration \cite{key56}; generation extends to interactive environments produced from text \cite{key57}; and the line is surveyed systematically \cite{key58}. In this survey's terms, a world model is a machine-written book of the world, and the audit question is L2's question scaled from single explanations to entire worldviews: what is the relation between the learned book and the world? The book's own provenance—data, training, unaudited assumptions—is L3's question at one remove. No faithfulness metric for world models is located in the verified base.
+
+The second automates the claimant: AI-scientist systems attempt the full research cycle—idea generation, experimentation, write-up \cite{key59}; agent laboratories compose LLM agents into research workflows \cite{key60}; autonomous systems plan and execute chemistry experiments \cite{key61}. The audit problem is then exact: machine-generated knowledge claims entering the human record need the same commitment–execution–verification loop as human claims—frozen artifacts, pre-registered verdicts, external witnessing, recomputable derivations. Today the outputs of these systems are claims with run logs; the bookkeeping that would make them third-party-recomputable is, to our verified base, absent. The matrix applies without modification: ① the discovered claim plus its derivation; ② the agent's own edits and selections; ③ rerun cost as the binding constraint (autonomous-agent recomputation is expensive—this is the binding ③ of the next decade; the cryptographic route of §8.1 is the one located lever for relieving it \cite{key53}); ④ the human-review interface (what does a human auditor check when the books are machine-written); ⑤ pre-registration for machine hypotheses; ⑥ the discovered claim's support scope. This outlook is register-capped at motivation only: no evidence for any of these audit layers is located in the verified base, and the cap is the honest form of the claim.
+
+\subsection{Open problems}
+
+Each problem is stated with its falsifiability condition where one exists; the framing positioning claim was last checked by the novelty search of 2026-09-15 and retained (§1.2).
+
+\begin{itemize}[leftmargin=1.6em]
+\item \textbf{OP1 (L2's recursion).} A faithfulness metric that is itself auditable—an instrument whose own books can be recomputed. No candidate is located in the verified base.
+\item \textbf{OP2 (L3).} The auditors of the auditors: the contamination-detector family exists \cite{key36,key37,key38,key39,key40,key41}, but its own core assumptions are only partially validated \cite{key39}, and its fragility for reasoning models is demonstrated \cite{key42}. The open step is a pre-registered, assumption-validating comparison protocol for detection methodology.
+\item \textbf{OP3 (L4).} The escrow × capability-claim combination: attach bond-settlement primitives \cite{key48,key49,key50,key51} to falsifiable capability claims with mechanical forfeiture verdicts (§7.2). The step is unsystematized; the components exist.
+\item \textbf{OP4 (L5).} Conservation-as-auditor beyond the single case: run-time invariant audit has, to our knowledge, one ML-artifact instance (§9.3); the methodology generalization—and the invariant-monitoring line—is open (§8.2).
+\item \textbf{OP5 (L2).} Faithfulness evidence for the reinforcement-learning-trained chain-of-thought era has begun arriving \cite{key29,key30,key31,key32,key34}, from monitoring \cite{key30} to open-weight quantification \cite{key32}; the open step is systematization—protocol-relativity discipline and standardized probes, so that monitorability numbers become commensurable.
+\item \textbf{OP6 (③ quantified).} Cost-measurement studies for audit protocols: what recomputation actually costs, measured rather than asserted. The economics lesson of §9.2(b) is motivation only until such studies exist.
+\item \textbf{OP7 (the interface).} Human review of machine-written books: granularity, tooling, and the division of labor between human auditors and machine ledgers (§10.1).
+\item \textbf{OP8 (the field's own ⑤).} Run-level pre-registered verdict protocols for reasoning claims—the sparsest column of the assembled matrix, now across 60 external entries. The case study of §9.3 is one existence proof; the open problem is the practice becoming ordinary.
+\end{itemize}
+
+The five lines keep their books in different currencies—steps, explanations, benchmarks, equilibria, invariants—but the exchange rate is the one this survey has traded in throughout: a claim about reasoning is worth what a stranger can recompute of it. Keep the books.
+
+\section*{Availability and provenance}
+
+This survey reports no new experiments and measures no new numbers; every number in §9.3 is quoted from the frozen result artifacts of \cite{key04}, where each maps to a named JSON field in that work's number-traceability table. The reference base—60 external entries across three verification passes (original, supplement, and novelty-search completion) plus the disclosed self-citation—was verified entry-by-entry before inclusion, with the verification and raw search records maintained in the project's literature line. The second-round novelty search was completed on 2026-09-15 via multi-engine web retrieval (query families of auditability, reproducibility, verifiability, verification, integrity, and accountability × survey × LLM/reasoning/test-time, plus per-line targeted searches and adjacent-survey tracking); the closest adjacent surveys remain the four sub-line surveys of §1.2, and the positioning claim of §1.2 is retained. If submission is delayed more than thirty days beyond the search date, the search is re-run under the same query families before submission. The original draft's five literature gaps were closed by the supplement pass with narrowed declarations (§7.2, §8.2); no bibliographic field has been supplied from memory.
+
+\section*{AI use disclosure}
+
+This survey was drafted with AI assistance under direct instruction. All included references were verified by independent literature-verification passes (original, supplement, and novelty-search completion) before inclusion; the second-round novelty search (2026-09-15) is recorded in the verification pass; no citation outside the verified base was added by the drafting assistant, and no bibliographic field has been supplied from memory. The case-study work \cite{key04} is the author's own first work; the self-citation is disclosed here and in §9.3, and the case receives the same matrix treatment and register as the five external lines. Final responsibility for all content rests with the author, following the disclosure convention of \cite{key04}.
+
+\begin{thebibliography}{99}
+\bibitem{key01} Wei et al. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903.
+\bibitem{key02} Miles Turpin, Julian Michael, Ethan Perez, and Samuel R. Bowman. "Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting." NeurIPS 2023. arXiv:2305.04388.
+\bibitem{key03} Tamera Lanham et al. "Measuring Faithfulness in Chain-of-Thought Reasoning." TMLR 2023. arXiv:2307.13702. (30 authors per the arXiv record.)
+\bibitem{key04} Qihao Yuan. "Deposon: An Auditable, Conservation-Guaranteed, Game-Theoretically Tested Scattering Layer over LLM Reasoning Paths." arXiv:2609.09001, 2026. (Self-citation; identity disclosed in §9.3 and in the AI-use disclosure.)
+\bibitem{key05} Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, Christopher Hesse, and John Schulman. "Training Verifiers to Solve Math Word Problems." arXiv:2110.14168, 2021.
+\bibitem{key06} H. Lightman et al. "Let's Verify Step by Step." arXiv:2305.20050, 2023. (Remaining authors pending completion; venue pending verification; arXiv cited.)
+\bibitem{key07} Sayash Kapoor and Arvind Narayanan. "Leakage and the reproducibility crisis in machine-learning-based science." Patterns 4(9):100804, 2023. DOI: 10.1016/j.patter.2023.100804. (Preprint: arXiv:2207.07048, 2022, under the title "…ML-based Science.")
+\bibitem{key08} Pineau et al. "Improving Reproducibility in Machine Learning Research" [subtitle pending verification]. JMLR 22(164), 2021. (Per the verification record: jmlr.org, vol. 22, paper 20-303.)
+\bibitem{key09} Geoffrey Irving, Paul Christiano, and Dario Amodei. "AI Safety via Debate." arXiv:1805.00899, 2018.
+\bibitem{key10} V. Conitzer et al. "Foundations of Cooperative AI." AAAI 2023 (ojs.aaai.org, AAAI-23).
+\bibitem{key11} S. Greydanus et al. "Hamiltonian Neural Networks." NeurIPS 2019. arXiv:1906.01563.
+\bibitem{key12} George Em Karniadakis, Ioannis G. Kevrekidis, Lu Lu, Paris Perdikaris, Sifan Wang, and Liu Yang. "Physics-informed machine learning." Nature Reviews Physics 3:422, 2021. DOI: 10.1038/s42254-021-00314-5.
+\bibitem{key13} Aditi S. Krishnapriyan, Amir Gholami, Shandian Zhe, Robert M. Kirby, and Michael W. Mahoney. "Characterizing possible failure modes in physics-informed neural networks." arXiv:2109.01050, 2021.
+\bibitem{key14} Bérénice Jaulmes, Jean-Christophe Arouete, Mariam Barry, and Mehwish Alam. "A Survey on Verifying Reasoning Chains Generated by Large Language Models." HAL: hal-05448955, 2026. (Institutional-repository archive; publication venue pending determination.)
+\bibitem{key15} Venktesh, Rathee, and Anand. "Trust but Verify! A Survey on Verification Design for Test-time Scaling." arXiv:2508.16665, 2025.
+\bibitem{key16} Gu et al. "A Survey on LLM-as-a-Judge." arXiv:2411.15594, 2024. (Journal version, 2026: The Innovation, per the verification record.)
+\bibitem{key17} Chang et al. "A Survey on Evaluation of LLMs." ACM Transactions on Information Systems 15(3):1–45, 2024. arXiv:2307.03109. DOI: 10.1145/3641289.
+\bibitem{key18} Scott Walter. "The Non-Euclidean Style of Minkowskian Relativity." In \textit{The Symbolic Universe}. Oxford University Press, 1999. (Author copy: scottwalter.free.fr.)
+\bibitem{key19} E. T. Jaynes. "Information Theory and Statistical Mechanics." Physical Review 106:620–630, 1957. DOI: 10.1103/PhysRev.106.620.
+\bibitem{key20} Eugene P. Wigner. "The Unreasonable Effectiveness of Mathematics in the Natural Sciences." Communications on Pure and Applied Mathematics 13(1):1–14, 1960. DOI: 10.1002/cpa.3160130102.
+\bibitem{key21} R. Landauer. "Irreversibility and Heat Generation in the Computing Process." IBM Journal of Research and Development 5(3):183–191, 1961. DOI: 10.1147/rd.53.0183.
+\bibitem{key22} Hirotaka Osawa, Dohjin Miyamoto, Satoshi Hase, Reina Saijo, et al. "Visions of Artificial Intelligence and Robots in Science Fiction: a computational analysis." International Journal of Social Robotics 14(10):2123–2133, 2022. (DOI pending verification; author list beyond the fourth pending completion.)
+\bibitem{key23} Johnson. \textit{Science Fiction Prototyping}. Morgan \& Claypool, 2011.
+\bibitem{key24} Appio et al. (with Yaszek; full list pending completion). "Science Fiction and the Quest for Innovation." Technovation 141:103172, 2025. DOI: 10.1016/j.technovation.2025.103172.
+\bibitem{key25} Kiri L. Wagstaff. "Machine Learning that Matters." ICML 2012 (Proceedings of the 29th ICML). arXiv:1206.4656. (Critique; motivation tier.)
+\bibitem{key26} Zachary C. Lipton and Jacob Steinhardt. "Troubling Trends in Machine Learning Scholarship." arXiv:1706.06569, 2017. (Also: ACM Queue, 2019. Critique; motivation tier.)
+\bibitem{key27} B. Nielson. "Induction, Popper, and machine learning." arXiv:2110.00840, 2021.
+\bibitem{key28} Oliver Buchholz and Eric Raidl. "A Falsificationist Account of Artificial Neural Networks." arXiv:2205.01421, 2022. (Journal version, 2025: DOI: 10.1086/721797; journal name pending verification.)
+\bibitem{key29} D. Guo et al. (DeepSeek-AI). "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning." arXiv:2501.12948, 2025. (Also published in Nature, 2025.)
+\bibitem{key30} Bowen Baker, Joost Huizinga, Leo Gao, Zehao Dou, Melody Y. Guan, Aleksander Madry, Wojciech Zaremba, Jakub Pachocki, and David Farhi (OpenAI). "Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation." arXiv:2503.11926, 2025.
+\bibitem{key31} Anthropic. "Reasoning Models Don't Always Say What They Think." Institutional research report, anthropic.com, 2025-04-03. (Non-peer-reviewed; labeled as such.)
+\bibitem{key32} Young. "Lie to Me: How Faithful Is Chain-of-Thought Reasoning in Open-Weight Reasoning Models?" arXiv:2603.22582, 2026.
+\bibitem{key33} Tomek Korbak et al. "Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety." arXiv:2507.11473, 2025. (Position paper.)
+\bibitem{key34} A. Zolkowski et al. "Can Reasoning Models Obfuscate Reasoning? Stress-Testing CoT Monitorability." arXiv:2510.19851, 2025.
+\bibitem{key35} D. Sculley et al. "Position: AI Competitions Provide the Gold Standard for Empirical Rigor in Generative AI." ICML 2025, Position Track (PMLR). (Position track.)
+\bibitem{key36} Shuo Yang, Wei-Lin Chiang, Lianmin Zheng, Joseph E. Gonzalez, et al. "Rethinking Benchmark and Contamination for Language Models with Rephrased Samples." arXiv:2311.04850, 2023. (Author list beyond the fourth pending completion.)
+\bibitem{key37} Yonatan Oren, et al. "Proving Test Set Contamination in Black Box Language Models." ICLR 2024. arXiv:2310.17623. (Author list beyond the first pending completion.)
+\bibitem{key38} Mathieu Ravaut, Bosheng Ding, Fangkai Jiao, et al. "A Comprehensive Survey of Contamination Detection Methods for Large Language Models." TMLR 2025. arXiv:2404.00699. (Author list beyond the third pending completion.)
+\bibitem{key39} Yujuan Fu, et al. "Does Data Contamination Detection Work (Well) for LLMs? A Survey and Evaluation on Detection Assumptions." ACL 2025. arXiv:2410.18966. (Author list beyond the first pending completion.)
+\bibitem{key40} J. Dekoninck, Müller, and Vechev. "ConStat: Performance-Based Contamination Detection in Language Models." NeurIPS 2024, Datasets and Benchmarks Track (proceedings.neurips.cc; no independent arXiv identifier located).
+\bibitem{key41} Yongding Tao, Tian Wang, Yihong Dong, Huanyu Liu, Kechi Zhang, Xiaolong Hu, and Ge Li. "Detecting Data Contamination from Reinforcement Learning Post-training for Large Language Models." arXiv:2510.09259, 2025.
+\bibitem{key42} Wang, Li, Ko, and Zhang. "On the Fragility of Benchmark Contamination Detection in Reasoning Models." CoRR abs/2510.02386, 2025. (ICLR version on record.)
+\bibitem{key43} I. Ball. "Probabilistic Verification in Mechanism Design." Econometrica, 2025. (Volume/issue pending verification; per the verification record: econometricsociety.org.)
+\bibitem{key44} Sahil Pardasani and Madhusudan Singh. "Who Verifies the Benchmark? Decentralizing Trust in LLM Evaluation." arXiv:2608.07762, QASC 2026.
+\bibitem{key45} Yifan Yang, Jinjia Li, Kunxi Li, Puhao Zheng, Yuanyi Wang, Zheyan Qu, Yang Yu, Jianmin Wu, Ming Li, and Hongxia Yang. "InfiCoEvalChain: A Blockchain-Based Decentralized Framework for Collaborative LLM Evaluation." arXiv:2602.08229, 2026.
+\bibitem{key46} Jianxiang Peng. "DEP: A Decentralized Large Language Model Evaluation Protocol." arXiv:2603.01167, 2026.
+\bibitem{key47} Helff et al. "LLMs Gaming Verifiers: RLVR can Lead to Reward Hacking." arXiv:2604.15149, 2026. (OpenReview record; full author list per the arXiv page.)
+\bibitem{key48} Laurent Bindschaedler, et al. "Bonded Recourse for Smart-Contract Settlement of Compensable Agent Side Effects." arXiv:2609.01939, BCCA 2026. (Author list beyond the first pending completion.)
+\bibitem{key49} Kaul et al. (author names pending verification per the Semantic Scholar record). "AgentBound: Verifiable Behavioral Governance for Autonomous AI Agents." arXiv:2606.30970, 2026.
+\bibitem{key50} Srinath Perera, Kaviru Hapuarachchi, Frank Leymann, and Rania Khalaf. "Robust Agent Compensation (RAC): Teaching AI Agents to Compensate." arXiv:2605.03409, 2026.
+\bibitem{key51} ERC-8004: Trustless Agents. Ethereum RFC draft, 2026 (ethereum-magicians.org). (Engineering-standard draft; non-peer-reviewed; labeled as such.)
+\bibitem{key52} C. Sidrane, A. Maleki, A. Irfan, and M. Kochenderfer. "OVERT: An Algorithm for Safety Verification of Neural Network Control Policies for Nonlinear Systems." JMLR 23, 2022. (Volume/pages pending verification; per the verification record: jmlr.org.)
+\bibitem{key53} Haochen Sun and Jason Li. "zkLLM: Zero Knowledge Proofs for Large Language Models." ACM CCS 2024. arXiv:2404.16109.
+\bibitem{key54} Z. Peng, C. Zhao, T. Wang, et al. "A survey of zero-knowledge proof based verifiable machine learning." Artificial Intelligence Review 59:157, 2026; arXiv:2502.18535. (Journal DOI pending verification.)
+\bibitem{key55} David Ha and Jürgen Schmidhuber. "World Models." arXiv:1803.10122, 2018.
+\bibitem{key56} Danijar Hafner, Jurgis Pasukonis, Jimmy Ba, and Timothy Lillicrap. "Mastering Diverse Domains through World Models." arXiv:2301.04104, 2023.
+\bibitem{key57} Jake Bruce et al. "Genie: Generative Interactive Environments." arXiv:2402.15391, 2024. (25 authors per the arXiv record.)
+\bibitem{key58} Jingtao Ding et al. "Understanding World or Predicting Future? A Comprehensive Survey of World Models." arXiv:2411.14499, 2024; ACM Computing Surveys, 2025. (Author list beyond the first pending completion.)
+\bibitem{key59} C. Lu et al. (Sakana AI). "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery." arXiv:2408.06292, 2024. (Venue pending verification; arXiv cited.)
+\bibitem{key60} S. Schmidgall et al. "Agent Laboratory: Using LLM Agents as Research Assistants." arXiv:2501.04227, 2025. (Venue pending verification; arXiv cited.)
+\bibitem{key61} Daniil A. Boiko, Robert MacKnight, Ben Kline, and Gabe Gomes. "Autonomous chemical research with large language models." Nature 624:570, 2023. DOI: 10.1038/s41586-023-06792-0.
+\end{thebibliography}
+
+\end{document}
