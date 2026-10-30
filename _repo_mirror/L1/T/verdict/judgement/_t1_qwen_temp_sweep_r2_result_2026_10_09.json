@@ -1,0 +1,1852 @@
+{
+  "metadata": {
+    "schema": "t1_r2_qwen_temp_sweep_result.v1",
+    "task": "T1 探针 · qwen 温度扫描 · r2 棒 (re-asks 2->3 + 响应提取面并修)",
+    "date_label": "2026_10_09",
+    "generated_local": "2026-10-09T18:06:16.736619+08:00",
+    "author": "worker (r2 棒); 判定归 verdict-keeper 新件",
+    "line_ending": "LF",
+    "encoding": "UTF-8 no BOM",
+    "algorithm": "SHA-256 (前 12 位)",
+    "authorization": {
+      "pi_card": "ask_52effb1125dc64e6dac3295f (2026-10-09)",
+      "main_decision": "乙 — 补构造至 >=10 对 (re-asks 2->3, ~+60 calls; T15r2 先例)",
+      "annex": "并修响应提取面 + 授权起跑",
+      "upstream_proposal": "24DA21074CC2 §2.2 乙档",
+      "upstream_verdict": "DFC858D3D930 §2.3/§4.2/§7.1"
+    },
+    "zero_derivation_merge": "⛔ 0 合并派生 JSON; ⛔ 0 覆写 r1 任一件; ⛔ 0 触 frozen (R5)",
+    "no_judgment": "本件只出读数与自证实测; ⛔ 0 判读 (无任何 PASS/FAIL/达标宣告)"
+  },
+  "constraint": {
+    "no_key_on_disk": true,
+    "key_source": "〔本地路径已脱敏〕 API.txt (slot 23)",
+    "key_value_in_artifacts": false,
+    "inter_call_sleep_s": 2.5,
+    "watchdog_s": 600,
+    "call_timeout_s": 90,
+    "endpoint_construction_fix": "响应提取面并修 (DFC858D3D930 §4.2 第 1 项字面)",
+    "n_reasks_expansion": "2 -> 3 (乙档样本量面修正)",
+    "route": "全量 180 calls (0 承接 r1 120; 依据见 inputs.route_decision)",
+    "intermediate_products": "仅 .tmp/ (checkpoint/selfcert/probe)"
+  },
+  "inputs": {
+    "input_gates": {
+      "gates": {
+        "revision": {
+          "sha12": "BDA5D5F3DFA0",
+          "expected": "BDA5D5F3DFA0",
+          "match": true,
+          "bytes": 16994
+        },
+        "anchor": {
+          "sha12": "802DECE2286A",
+          "expected": "802DECE2286A",
+          "match": true,
+          "bytes": 52942
+        },
+        "verdict_dfc858d3d930": {
+          "sha12": "DFC858D3D930",
+          "expected": "DFC858D3D930",
+          "match": true,
+          "bytes": 21672
+        },
+        "r1_executor": {
+          "sha12": "F0C845864603",
+          "expected": "F0C845864603",
+          "match": true,
+          "bytes": 32399
+        },
+        "r1_exec_register": {
+          "sha12": "7AD31E741400",
+          "expected": "7AD31E741400",
+          "match": true,
+          "bytes": 17341
+        },
+        "proposal_24da21074cc2": {
+          "sha12": "24DA21074CC2",
+          "expected": "24DA21074CC2",
+          "match": true,
+          "bytes": 34884
+        }
+      },
+      "all_match": true,
+      "failures": []
+    },
+    "captions": {
+      "path": "〔幽灵引用·未上传:strip_captions_22.json〕",
+      "sha12": "6a2656878745",
+      "expected": "6A2656878745"
+    },
+    "r1_records_state_anchor": {
+      "path": "〔幽灵引用·未上传:_t1_qwen_temp_sweep_records.json〕",
+      "sha12": "5b51af62c640",
+      "n_records": 120,
+      "contains_reasoning_content": false,
+      "reuse_decision": "⛔ 不可复用为已修提取面之度量对象 (0 reasoning_content 字段) => 全量重跑"
+    },
+    "calibration_max_tokens": {
+      "path": "〔幽灵引用·未上传:_t1_r2_calib_max_tokens_2026_10_09.json〕",
+      "sha12": "3f35aede29f6"
+    }
+  },
+  "experiment_parameters": {
+    "dimensions": [
+      "L2",
+      "L14"
+    ],
+    "temperatures": [
+      0.0,
+      0.3,
+      0.5
+    ],
+    "endpoints": [
+      {
+        "label": "qwen_plan",
+        "endpoint": "https://token-plan.maas.qianwenaiapi.com/compatible-mode/v1",
+        "model_id": "qwen3.7-max"
+      }
+    ],
+    "n_teachers": 5,
+    "n_prompts_per_cell": 2,
+    "n_reasks_per_prompt": 3,
+    "records_per_teacher_per_cell": 6,
+    "pairs_ctor_per_teacher_per_cell": 15,
+    "calls_per_cell": 30,
+    "total_calls_planned": 180,
+    "max_tokens": 500,
+    "max_tokens_basis": "实测保留 r1 原值 500: 校准 3 档 finish_reason 6/6 = stop (0 截段), usage.completion_tokens 705..4926 ≫ 请求值 => 端点 0 以 max_tokens 约束 reasoning; 上调 2000/4000 实测 content_len 恒 1..3 且抬高 latency (2000 档 completion 4926 / 75.6s)",
+    "measurement_object": "完整教师回复 (message.reasoning_content + message.content); ⛔ 0 只取 content; ⛔ 0 截段",
+    "L2_prompts": [
+      "L_biological_taxonomy",
+      "S5"
+    ],
+    "L14_prompts": [
+      "L_geography_world",
+      "L_historical_causality"
+    ],
+    "teachers": [
+      "kimi",
+      "GLM_1",
+      "GLM_2",
+      "coze",
+      "minimax"
+    ],
+    "seed": 42,
+    "thresholds_reference_only": {
+      "TH_T1_N_MIN": 10,
+      "K_N11_3_THRESHOLD": 0.85,
+      "note": "仅引用; 本棒 0 判读 0 宣告达标"
+    },
+    "jaccard_formula": "len(A∩B)/len(A∪B), A/B = set(re.findall(r'[a-z0-9]+|[\\u4e00-\\u9fff]', text.lower()))",
+    "readout_calibers": [
+      "full_reply (本棒度量对象)",
+      "content_only (r1 可比)",
+      "reasoning_only"
+    ]
+  },
+  "probe": {
+    "rationale": "即用即探 (1 call, 计入账)",
+    "log": {
+      "path": "〔幽灵引用·未上传:_t1_qwen_temp_sweep_r2_probe_log.json〕",
+      "sha12": "5182f6fdd9ef"
+    }
+  },
+  "records_summary": {
+    "n_records_total": 182,
+    "n_records_ok": 180,
+    "n_records_failed": 2,
+    "n_calls_total": 182,
+    "n_calls_ok": 180,
+    "n_calls_failed": 2,
+    "n_rerun_of_failed": 2,
+    "superseded_failed_tuples": [
+      [
+        4,
+        "kimi",
+        "L_geography_world",
+        1,
+        0.3
+      ],
+      [
+        5,
+        "GLM_2",
+        "L_geography_world",
+        2,
+        0.5
+      ]
+    ],
+    "n_finish_reason_stop": 180,
+    "n_truncated": 0,
+    "n_reasoning_present": 180,
+    "usage_completion_tokens": {
+      "min": 495,
+      "median": 981.5,
+      "max": 5767,
+      "n": 180
+    },
+    "usage_reasoning_tokens": {
+      "min": 488,
+      "median": 976.5,
+      "max": 5762,
+      "n": 180
+    },
+    "failed_tuples": [
+      {
+        "cell_idx": 4,
+        "dim": "L14",
+        "temperature": 0.3,
+        "teacher": "kimi",
+        "caption_id": "L_geography_world",
+        "reask_idx": 1,
+        "error_category": "timeout",
+        "status_code": null,
+        "latency_ms": 90153.1,
+        "superseded_by_rerun": true
+      },
+      {
+        "cell_idx": 5,
+        "dim": "L14",
+        "temperature": 0.5,
+        "teacher": "GLM_2",
+        "caption_id": "L_geography_world",
+        "reask_idx": 2,
+        "error_category": "timeout",
+        "status_code": null,
+        "latency_ms": 90981.2,
+        "superseded_by_rerun": true
+      }
+    ]
+  },
+  "self_certification": {
+    "signal_1_empty_response": {
+      "empty_rate_full_reply": 0.0,
+      "n_empty_full_reply": 0,
+      "empty_rate_content_only": 0.0,
+      "n_empty_content_only": 0,
+      "n_empty_reasoning_only": 0,
+      "note": "度量对象之空响应率 (full_reply) 为主; content_only 一并登记供 r1 可比"
+    },
+    "signal_2_pairs_reachability": {
+      "records_per_teacher_per_cell": {
+        "min": 6,
+        "max": 6,
+        "n_groups": 30
+      },
+      "pairs_ctor_C6_2": 15,
+      "TH_T1_N_MIN": 10,
+      "pairs_ctor_vs_N_min": "ctor 15 >= N_min 10 (算式事实; ⛔ 0 判读 0 宣告达标)",
+      "achieved_pairs_per_teacher_min": 15,
+      "achieved_pairs_per_teacher_max": 15
+    },
+    "signal_3_text_lengths": {
+      "full_reply_char_len": {
+        "min": 716,
+        "median": 1867.5,
+        "max": 20459
+      },
+      "content_only_char_len": {
+        "min": 1,
+        "median": 3.0,
+        "max": 9
+      },
+      "r1_comparison": "r1 度量对象 (content_only) 实测 min 1 / 中位 2 / max 9 字符"
+    },
+    "signal_4_truncation_face": {
+      "n_finish_reason_stop": 180,
+      "n_truncated": 0,
+      "truncated_rate": 0.0,
+      "note": "finish_reason = length 之截段计数; ⛔ 本棒 0 预设通过"
+    },
+    "signal_5_axis_divergence": {
+      "note": "温度轴有效性面 (t=0.3/0.5 对 t=0.0 同 teacher 同 caption 文本全同); 非本棒擅改范围, 逐档实测登记",
+      "by_caliber": {
+        "full_reply": {
+          "caliber": "full_reply",
+          "per_temp": [
+            {
+              "cell_idx": 1,
+              "dim": "L2",
+              "temperature": 0.3,
+              "base_cell_idx": 0,
+              "n_compared": 90,
+              "n_identical": 0,
+              "identical_rate": 0.0
+            },
+            {
+              "cell_idx": 2,
+              "dim": "L2",
+              "temperature": 0.5,
+              "base_cell_idx": 0,
+              "n_compared": 90,
+              "n_identical": 0,
+              "identical_rate": 0.0
+            },
+            {
+              "cell_idx": 4,
+              "dim": "L14",
+              "temperature": 0.3,
+              "base_cell_idx": 3,
+              "n_compared": 90,
+              "n_identical": 0,
+              "identical_rate": 0.0
+            },
+            {
+              "cell_idx": 5,
+              "dim": "L14",
+              "temperature": 0.5,
+              "base_cell_idx": 3,
+              "n_compared": 90,
+              "n_identical": 0,
+              "identical_rate": 0.0
+            }
+          ]
+        },
+        "content_only": {
+          "caliber": "content_only",
+          "per_temp": [
+            {
+              "cell_idx": 1,
+              "dim": "L2",
+              "temperature": 0.3,
+              "base_cell_idx": 0,
+              "n_compared": 90,
+              "n_identical": 51,
+              "identical_rate": 0.566667
+            },
+            {
+              "cell_idx": 2,
+              "dim": "L2",
+              "temperature": 0.5,
+              "base_cell_idx": 0,
+              "n_compared": 90,
+              "n_identical": 56,
+              "identical_rate": 0.622222
+            },
+            {
+              "cell_idx": 4,
+              "dim": "L14",
+              "temperature": 0.3,
+              "base_cell_idx": 3,
+              "n_compared": 90,
+              "n_identical": 51,
+              "identical_rate": 0.566667
+            },
+            {
+              "cell_idx": 5,
+              "dim": "L14",
+              "temperature": 0.5,
+              "base_cell_idx": 3,
+              "n_compared": 90,
+              "n_identical": 50,
+              "identical_rate": 0.555556
+            }
+          ]
+        },
+        "reasoning_only": {
+          "caliber": "reasoning_only",
+          "per_temp": [
+            {
+              "cell_idx": 1,
+              "dim": "L2",
+              "temperature": 0.3,
+              "base_cell_idx": 0,
+              "n_compared": 90,
+              "n_identical": 0,
+              "identical_rate": 0.0
+            },
+            {
+              "cell_idx": 2,
+              "dim": "L2",
+              "temperature": 0.5,
+              "base_cell_idx": 0,
+              "n_compared": 90,
+              "n_identical": 0,
+              "identical_rate": 0.0
+            },
+            {
+              "cell_idx": 4,
+              "dim": "L14",
+              "temperature": 0.3,
+              "base_cell_idx": 3,
+              "n_compared": 90,
+              "n_identical": 0,
+              "identical_rate": 0.0
+            },
+            {
+              "cell_idx": 5,
+              "dim": "L14",
+              "temperature": 0.5,
+              "base_cell_idx": 3,
+              "n_compared": 90,
+              "n_identical": 0,
+              "identical_rate": 0.0
+            }
+          ]
+        }
+      }
+    },
+    "signal_6_distinct_texts": {
+      "full_reply": {
+        "n_distinct": 180,
+        "n_records": 180
+      },
+      "content_only": {
+        "n_distinct": 22,
+        "n_records": 180
+      },
+      "reasoning_only": {
+        "n_distinct": 180,
+        "n_records": 180
+      }
+    }
+  },
+  "readings": {
+    "full_reply": {
+      "cells": [
+        {
+          "cell_idx": 0,
+          "dim": "L2",
+          "temperature": 0.0,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.231198,
+          "cell_j_min": 0.08046,
+          "cell_j_max": 0.321149,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.231198,
+              "j_median_nonempty": 0.231198,
+              "j_median_same_caption": 0.286391,
+              "j_median_cross_caption": 0.11509,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.148532,
+              "j_median_nonempty": 0.148532,
+              "j_median_same_caption": 0.247816,
+              "j_median_cross_caption": 0.092637,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.274854,
+              "j_median_nonempty": 0.274854,
+              "j_median_same_caption": 0.27631,
+              "j_median_cross_caption": 0.161725,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.321149,
+              "j_median_nonempty": 0.321149,
+              "j_median_same_caption": 0.659666,
+              "j_median_cross_caption": 0.318436,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.08046,
+              "j_median_nonempty": 0.08046,
+              "j_median_same_caption": 0.632545,
+              "j_median_cross_caption": 0.076404,
+              "n_ge_0_85": 0
+            }
+          ]
+        },
+        {
+          "cell_idx": 1,
+          "dim": "L2",
+          "temperature": 0.3,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.250575,
+          "cell_j_min": 0.134986,
+          "cell_j_max": 0.347826,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.25,
+              "j_median_nonempty": 0.25,
+              "j_median_same_caption": 0.2864,
+              "j_median_cross_caption": 0.154362,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.33125,
+              "j_median_nonempty": 0.33125,
+              "j_median_same_caption": 0.612992,
+              "j_median_cross_caption": 0.329154,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.134986,
+              "j_median_nonempty": 0.134986,
+              "j_median_same_caption": 0.221825,
+              "j_median_cross_caption": 0.080925,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.347826,
+              "j_median_nonempty": 0.347826,
+              "j_median_same_caption": 0.644508,
+              "j_median_cross_caption": 0.337349,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.250575,
+              "j_median_nonempty": 0.250575,
+              "j_median_same_caption": 0.546404,
+              "j_median_cross_caption": 0.235556,
+              "n_ge_0_85": 0
+            }
+          ]
+        },
+        {
+          "cell_idx": 2,
+          "dim": "L2",
+          "temperature": 0.5,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.292754,
+          "cell_j_min": 0.089474,
+          "cell_j_max": 0.320548,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.320548,
+              "j_median_nonempty": 0.320548,
+              "j_median_same_caption": 0.516551,
+              "j_median_cross_caption": 0.297368,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.296073,
+              "j_median_nonempty": 0.296073,
+              "j_median_same_caption": 0.459556,
+              "j_median_cross_caption": 0.295732,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.292754,
+              "j_median_nonempty": 0.292754,
+              "j_median_same_caption": 0.593437,
+              "j_median_cross_caption": 0.264331,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.27933,
+              "j_median_nonempty": 0.27933,
+              "j_median_same_caption": 0.501783,
+              "j_median_cross_caption": 0.274359,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.089474,
+              "j_median_nonempty": 0.089474,
+              "j_median_same_caption": 0.58026,
+              "j_median_cross_caption": 0.082447,
+              "n_ge_0_85": 0
+            }
+          ]
+        },
+        {
+          "cell_idx": 3,
+          "dim": "L14",
+          "temperature": 0.0,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.236364,
+          "cell_j_min": 0.059854,
+          "cell_j_max": 0.249505,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.059854,
+              "j_median_nonempty": 0.059854,
+              "j_median_same_caption": 0.52416,
+              "j_median_cross_caption": 0.041467,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.236364,
+              "j_median_nonempty": 0.236364,
+              "j_median_same_caption": 0.649457,
+              "j_median_cross_caption": 0.057813,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.249505,
+              "j_median_nonempty": 0.249505,
+              "j_median_same_caption": 0.610371,
+              "j_median_cross_caption": 0.247505,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.228361,
+              "j_median_nonempty": 0.228361,
+              "j_median_same_caption": 0.676869,
+              "j_median_cross_caption": 0.214936,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.246781,
+              "j_median_nonempty": 0.246781,
+              "j_median_same_caption": 0.258677,
+              "j_median_cross_caption": 0.143725,
+              "n_ge_0_85": 0
+            }
+          ]
+        },
+        {
+          "cell_idx": 4,
+          "dim": "L14",
+          "temperature": 0.3,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.159453,
+          "cell_j_min": 0.110902,
+          "cell_j_max": 0.282776,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.247748,
+              "j_median_nonempty": 0.247748,
+              "j_median_same_caption": 0.596439,
+              "j_median_cross_caption": 0.069811,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.135484,
+              "j_median_nonempty": 0.135484,
+              "j_median_same_caption": 0.219471,
+              "j_median_cross_caption": 0.089317,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.282776,
+              "j_median_nonempty": 0.282776,
+              "j_median_same_caption": 0.556538,
+              "j_median_cross_caption": 0.266272,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.159453,
+              "j_median_nonempty": 0.159453,
+              "j_median_same_caption": 0.253848,
+              "j_median_cross_caption": 0.081749,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.110902,
+              "j_median_nonempty": 0.110902,
+              "j_median_same_caption": 0.229616,
+              "j_median_cross_caption": 0.103121,
+              "n_ge_0_85": 0
+            }
+          ]
+        },
+        {
+          "cell_idx": 5,
+          "dim": "L14",
+          "temperature": 0.5,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.246269,
+          "cell_j_min": 0.243956,
+          "cell_j_max": 0.273731,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.273731,
+              "j_median_nonempty": 0.273731,
+              "j_median_same_caption": 0.532056,
+              "j_median_cross_caption": 0.240476,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.246269,
+              "j_median_nonempty": 0.246269,
+              "j_median_same_caption": 0.299485,
+              "j_median_cross_caption": 0.12362,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.243956,
+              "j_median_nonempty": 0.243956,
+              "j_median_same_caption": 0.51375,
+              "j_median_cross_caption": 0.214623,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.261745,
+              "j_median_nonempty": 0.261745,
+              "j_median_same_caption": 0.65359,
+              "j_median_cross_caption": 0.242925,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.244944,
+              "j_median_nonempty": 0.244944,
+              "j_median_same_caption": 0.624606,
+              "j_median_cross_caption": 0.234339,
+              "n_ge_0_85": 0
+            }
+          ]
+        }
+      ],
+      "axis_divergence": {
+        "caliber": "full_reply",
+        "per_temp": [
+          {
+            "cell_idx": 1,
+            "dim": "L2",
+            "temperature": 0.3,
+            "base_cell_idx": 0,
+            "n_compared": 90,
+            "n_identical": 0,
+            "identical_rate": 0.0
+          },
+          {
+            "cell_idx": 2,
+            "dim": "L2",
+            "temperature": 0.5,
+            "base_cell_idx": 0,
+            "n_compared": 90,
+            "n_identical": 0,
+            "identical_rate": 0.0
+          },
+          {
+            "cell_idx": 4,
+            "dim": "L14",
+            "temperature": 0.3,
+            "base_cell_idx": 3,
+            "n_compared": 90,
+            "n_identical": 0,
+            "identical_rate": 0.0
+          },
+          {
+            "cell_idx": 5,
+            "dim": "L14",
+            "temperature": 0.5,
+            "base_cell_idx": 3,
+            "n_compared": 90,
+            "n_identical": 0,
+            "identical_rate": 0.0
+          }
+        ]
+      }
+    },
+    "content_only": {
+      "cells": [
+        {
+          "cell_idx": 0,
+          "dim": "L2",
+          "temperature": 0.0,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.0,
+          "cell_j_min": 0.0,
+          "cell_j_max": 0.0,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            }
+          ]
+        },
+        {
+          "cell_idx": 1,
+          "dim": "L2",
+          "temperature": 0.3,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.0,
+          "cell_j_min": 0.0,
+          "cell_j_max": 0.0,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 0.75,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 3
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 6
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            }
+          ]
+        },
+        {
+          "cell_idx": 2,
+          "dim": "L2",
+          "temperature": 0.5,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.0,
+          "cell_j_min": 0.0,
+          "cell_j_max": 0.0,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 0.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 1
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 0.75,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 3
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            }
+          ]
+        },
+        {
+          "cell_idx": 3,
+          "dim": "L14",
+          "temperature": 0.0,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.0,
+          "cell_j_min": 0.0,
+          "cell_j_max": 0.0,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 0.65,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 3
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 0.5,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 3
+            }
+          ]
+        },
+        {
+          "cell_idx": 4,
+          "dim": "L14",
+          "temperature": 0.3,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.0,
+          "cell_j_min": 0.0,
+          "cell_j_max": 0.0,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 0.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 2
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 0.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 1
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            }
+          ]
+        },
+        {
+          "cell_idx": 5,
+          "dim": "L14",
+          "temperature": 0.5,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.0,
+          "cell_j_min": 0.0,
+          "cell_j_max": 0.0,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 0.65,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 3
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 0.625,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 3
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 0.714286,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 3
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 1.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 4
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.0,
+              "j_median_nonempty": 0.0,
+              "j_median_same_caption": 0.0,
+              "j_median_cross_caption": 0.0,
+              "n_ge_0_85": 1
+            }
+          ]
+        }
+      ],
+      "axis_divergence": {
+        "caliber": "content_only",
+        "per_temp": [
+          {
+            "cell_idx": 1,
+            "dim": "L2",
+            "temperature": 0.3,
+            "base_cell_idx": 0,
+            "n_compared": 90,
+            "n_identical": 51,
+            "identical_rate": 0.566667
+          },
+          {
+            "cell_idx": 2,
+            "dim": "L2",
+            "temperature": 0.5,
+            "base_cell_idx": 0,
+            "n_compared": 90,
+            "n_identical": 56,
+            "identical_rate": 0.622222
+          },
+          {
+            "cell_idx": 4,
+            "dim": "L14",
+            "temperature": 0.3,
+            "base_cell_idx": 3,
+            "n_compared": 90,
+            "n_identical": 51,
+            "identical_rate": 0.566667
+          },
+          {
+            "cell_idx": 5,
+            "dim": "L14",
+            "temperature": 0.5,
+            "base_cell_idx": 3,
+            "n_compared": 90,
+            "n_identical": 50,
+            "identical_rate": 0.555556
+          }
+        ]
+      }
+    },
+    "reasoning_only": {
+      "cells": [
+        {
+          "cell_idx": 0,
+          "dim": "L2",
+          "temperature": 0.0,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.231198,
+          "cell_j_min": 0.08046,
+          "cell_j_max": 0.321149,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.231198,
+              "j_median_nonempty": 0.231198,
+              "j_median_same_caption": 0.286391,
+              "j_median_cross_caption": 0.11509,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.148532,
+              "j_median_nonempty": 0.148532,
+              "j_median_same_caption": 0.247816,
+              "j_median_cross_caption": 0.092637,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.274854,
+              "j_median_nonempty": 0.274854,
+              "j_median_same_caption": 0.27631,
+              "j_median_cross_caption": 0.161725,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.321149,
+              "j_median_nonempty": 0.321149,
+              "j_median_same_caption": 0.659666,
+              "j_median_cross_caption": 0.318436,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.08046,
+              "j_median_nonempty": 0.08046,
+              "j_median_same_caption": 0.632545,
+              "j_median_cross_caption": 0.076404,
+              "n_ge_0_85": 0
+            }
+          ]
+        },
+        {
+          "cell_idx": 1,
+          "dim": "L2",
+          "temperature": 0.3,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.250575,
+          "cell_j_min": 0.134986,
+          "cell_j_max": 0.347826,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.25,
+              "j_median_nonempty": 0.25,
+              "j_median_same_caption": 0.2864,
+              "j_median_cross_caption": 0.154362,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.33125,
+              "j_median_nonempty": 0.33125,
+              "j_median_same_caption": 0.612992,
+              "j_median_cross_caption": 0.329154,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.134986,
+              "j_median_nonempty": 0.134986,
+              "j_median_same_caption": 0.221825,
+              "j_median_cross_caption": 0.080925,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.347826,
+              "j_median_nonempty": 0.347826,
+              "j_median_same_caption": 0.644508,
+              "j_median_cross_caption": 0.337349,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.250575,
+              "j_median_nonempty": 0.250575,
+              "j_median_same_caption": 0.546404,
+              "j_median_cross_caption": 0.235556,
+              "n_ge_0_85": 0
+            }
+          ]
+        },
+        {
+          "cell_idx": 2,
+          "dim": "L2",
+          "temperature": 0.5,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.292754,
+          "cell_j_min": 0.089474,
+          "cell_j_max": 0.320548,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.320548,
+              "j_median_nonempty": 0.320548,
+              "j_median_same_caption": 0.516551,
+              "j_median_cross_caption": 0.297368,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.296073,
+              "j_median_nonempty": 0.296073,
+              "j_median_same_caption": 0.459556,
+              "j_median_cross_caption": 0.295732,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.292754,
+              "j_median_nonempty": 0.292754,
+              "j_median_same_caption": 0.593437,
+              "j_median_cross_caption": 0.264331,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.27933,
+              "j_median_nonempty": 0.27933,
+              "j_median_same_caption": 0.501783,
+              "j_median_cross_caption": 0.274359,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.089474,
+              "j_median_nonempty": 0.089474,
+              "j_median_same_caption": 0.58026,
+              "j_median_cross_caption": 0.082447,
+              "n_ge_0_85": 0
+            }
+          ]
+        },
+        {
+          "cell_idx": 3,
+          "dim": "L14",
+          "temperature": 0.0,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.236364,
+          "cell_j_min": 0.059854,
+          "cell_j_max": 0.249505,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.059854,
+              "j_median_nonempty": 0.059854,
+              "j_median_same_caption": 0.52416,
+              "j_median_cross_caption": 0.041467,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.236364,
+              "j_median_nonempty": 0.236364,
+              "j_median_same_caption": 0.649457,
+              "j_median_cross_caption": 0.057813,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.249505,
+              "j_median_nonempty": 0.249505,
+              "j_median_same_caption": 0.610371,
+              "j_median_cross_caption": 0.247505,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.228361,
+              "j_median_nonempty": 0.228361,
+              "j_median_same_caption": 0.676869,
+              "j_median_cross_caption": 0.214936,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.246781,
+              "j_median_nonempty": 0.246781,
+              "j_median_same_caption": 0.258677,
+              "j_median_cross_caption": 0.143725,
+              "n_ge_0_85": 0
+            }
+          ]
+        },
+        {
+          "cell_idx": 4,
+          "dim": "L14",
+          "temperature": 0.3,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.159453,
+          "cell_j_min": 0.110902,
+          "cell_j_max": 0.282776,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.247748,
+              "j_median_nonempty": 0.247748,
+              "j_median_same_caption": 0.596439,
+              "j_median_cross_caption": 0.069811,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.135484,
+              "j_median_nonempty": 0.135484,
+              "j_median_same_caption": 0.219471,
+              "j_median_cross_caption": 0.089317,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.282776,
+              "j_median_nonempty": 0.282776,
+              "j_median_same_caption": 0.556538,
+              "j_median_cross_caption": 0.266272,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.159453,
+              "j_median_nonempty": 0.159453,
+              "j_median_same_caption": 0.253848,
+              "j_median_cross_caption": 0.081749,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.110902,
+              "j_median_nonempty": 0.110902,
+              "j_median_same_caption": 0.229616,
+              "j_median_cross_caption": 0.103121,
+              "n_ge_0_85": 0
+            }
+          ]
+        },
+        {
+          "cell_idx": 5,
+          "dim": "L14",
+          "temperature": 0.5,
+          "n_teachers_with_data": 5,
+          "cell_j_median": 0.246269,
+          "cell_j_min": 0.243956,
+          "cell_j_max": 0.273731,
+          "n_teachers_ge_0_85": 0,
+          "per_teacher": [
+            {
+              "teacher": "kimi",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.273731,
+              "j_median_nonempty": 0.273731,
+              "j_median_same_caption": 0.532056,
+              "j_median_cross_caption": 0.240476,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_1",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.246269,
+              "j_median_nonempty": 0.246269,
+              "j_median_same_caption": 0.299485,
+              "j_median_cross_caption": 0.12362,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "GLM_2",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.243956,
+              "j_median_nonempty": 0.243956,
+              "j_median_same_caption": 0.51375,
+              "j_median_cross_caption": 0.214623,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "coze",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.261745,
+              "j_median_nonempty": 0.261745,
+              "j_median_same_caption": 0.65359,
+              "j_median_cross_caption": 0.242925,
+              "n_ge_0_85": 0
+            },
+            {
+              "teacher": "minimax",
+              "n_records": 6,
+              "n_pairs_all": 15,
+              "n_pairs_nonempty": 15,
+              "n_pairs_empty_empty": 0,
+              "j_median_all": 0.244944,
+              "j_median_nonempty": 0.244944,
+              "j_median_same_caption": 0.624606,
+              "j_median_cross_caption": 0.234339,
+              "n_ge_0_85": 0
+            }
+          ]
+        }
+      ],
+      "axis_divergence": {
+        "caliber": "reasoning_only",
+        "per_temp": [
+          {
+            "cell_idx": 1,
+            "dim": "L2",
+            "temperature": 0.3,
+            "base_cell_idx": 0,
+            "n_compared": 90,
+            "n_identical": 0,
+            "identical_rate": 0.0
+          },
+          {
+            "cell_idx": 2,
+            "dim": "L2",
+            "temperature": 0.5,
+            "base_cell_idx": 0,
+            "n_compared": 90,
+            "n_identical": 0,
+            "identical_rate": 0.0
+          },
+          {
+            "cell_idx": 4,
+            "dim": "L14",
+            "temperature": 0.3,
+            "base_cell_idx": 3,
+            "n_compared": 90,
+            "n_identical": 0,
+            "identical_rate": 0.0
+          },
+          {
+            "cell_idx": 5,
+            "dim": "L14",
+            "temperature": 0.5,
+            "base_cell_idx": 3,
+            "n_compared": 90,
+            "n_identical": 0,
+            "identical_rate": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "key_shape_self_scan": {
+    "hits": [],
+    "status": "clean"
+  },
+  "honesty_disclosures": {
+    "zero_judgment": "本件 ⛔ 0 判读: 无 K-T1-S1/S3 裁定、无 PASS/FAIL、无达标宣告; 判定归 verdict-keeper 新件",
+    "succeeded_not_means_completed": "HTTP 200 / 0 空响应 ⛔ 不等于读数有效 (沿 DFC858D3D930 §7.1)",
+    "route_literal": "全量 180 calls; ⛔ 0 承接 r1 120 (r1 records 0 reasoning_content 字段)",
+    "max_tokens_literal": "保留 500 (实测 3 档均 finish_reason=stop, 端点 0 以 max_tokens 约束 reasoning)",
+    "caliber_literal": "full_reply 为本棒度量对象; content_only / reasoning_only 一并登记供下游择读 (0 替下游择定)",
+    "temperature_axis_untouched": "温度轴有效性面 ⛔ 本棒 0 擅改, 仅实测登记",
+    "no_key_leak": "key 0 落盘 0 明文 0 回显; 本件仅存 slot 存在性/长度/形态类别",
+    "no_derivation_merge": "⛔ 0 合并派生 JSON; ⛔ 0 覆写 r1 任一件",
+    "partial_or_failed_calls": "失败/重试逐条登记于 records_summary.failed_tuples"
+  }
+}

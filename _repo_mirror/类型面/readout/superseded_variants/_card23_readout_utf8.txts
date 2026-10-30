@@ -1,0 +1,42 @@
+request_id : ask_2dbc05cc3725c7002935ed01
+status     : answered
+created_at : 1791563500740 -> 2026-10-10 00:31:40.740 +0800
+answered_at: 1791563533949 -> 2026-10-10 00:32:13.949 +0800
+title      : 轮23 · S4 复核链＋D-07 呈裁（4 项：BC 择定复核／D-07 判断件／12-26 处置／复核方式）
+
+STEP id: bc_review | header: S4·B/C 构造择定复核（候呈 1·硬阻断）
+  Q: S4·B/C 构造择定之复核（独立判断件『e2fdb380cd3c』§7 候呈 1）。判断件判：「构造①（自身域 resample）为 K-2 判读面；构造②（全体 held-out resample）保留为敏感性面·并陈不删」。理由：estimand 同一性（合取两支同被估量）＋构造洁净度（② 退化支在 S4 面已激活·期望 3.876 次/1000）＋宽窄方向两面相反故不作择据。须 PI 复核后方生效（生效即锁）；判断件建议：先复核本择定、再给 K-1 等效门柱（次序分明）。请裁：
+    - bc_review_opt1 | 核准本择定——① 为判读面、② 为敏感性面（推荐） | 生效即锁；后续 K-1 门柱施于① 之读数（B 0.1905／C 0.4）。
+    - bc_review_opt2 | 改采构造②为判读面 | 后果：K-2 单侧界落于复合分布，须与 K-2 同批相容而落（§7 出口 2 之配套）。
+    - bc_review_opt3 | 另议 | None
+
+STEP id: d07_verdict | header: D-07 判断件呈裁（T1 温度轴）
+  Q: T1 温度轴 D 段判读线之独立判断件（『60bd9ae98640』）已出。结论（推荐路线四）：维持「0 承载」之现状处置——该处置系预登记 §3.1 在 D 段起跑前明文规定的合法处置（非事后默认），故 FTFB 未被违反；并将 D 段读数按「构造域负面事实」升格入账、在 C 段判定面列为构造前提；0 重跑、0 事后给线、0 新设阈值。另揭示一处未调和分歧：主读法（full_reply 全同率 0.0）与替代读法（答案面高度收敛·S5 组内 4 组全同 1.0）结论方向相反。请裁：
+    - d07_verdict_opt1 | 采信推荐路线四（维持 0 承载＋升格入账为构造前提）（推荐） | D 段读数按「构造域负面事实」存档；C 段判定面列为构造前提；0 重跑。
+    - d07_verdict_opt2 | 不采信 | 所取路线在 Other 说明。
+    - d07_verdict_opt3 | 另议 | None
+
+STEP id: m08 | header: 12/26 空序列素材面（M-08）
+  Q: S4 素材面候呈 4：26 件 held-out 中 12 件（46.2%）判据序列为空 ⇒ A／A′／D 读数构成近半来自「无判据文本」之件（敏感性诊断：仅取 14 件非空者，nw_sim 均值 0.5949——非任何线之读数）。当前影响：A／A′／D 之真证伪判定受阻（0 可标真证伪）。处置候选（责任面：PI／worker 补采／protocol 口径）：
+    - m08_opt1 | 补采素材（先派补采评估棒·0 改现有读数）（推荐） | 评估 12 件空序列之根因与可补性；补采属 worker 执行面。
+    - m08_opt2 | 登记为「不明」 | 该面真证伪判定挂「不明」·如实入册。
+    - m08_opt3 | 口径调整 | 另立口径件处理空序列占比（protocol 面）。
+    - m08_opt4 | 另议 | None
+
+STEP id: bc_scope | header: 择定复核方式（候呈 3＋5）
+  Q: 随本择定复核之两项配套（『e2fdb380cd3c』§7 候呈 3／5）：一是分面权限——v3 面先例 J3（『dac19ee9e66b』§4，判①但「待 PI 复核」未确认）与 S4 面本择定：分面分别裁定，抑或统一适用？（分面与否属 estimand 面）；二是先例 J3 建议与本择定同批复核。请裁复核方式：
+    - bc_scope_opt1 | 统一适用两面——本择定一并适用于 v3 面与 S4 面（J3 同批确认） | 避免「同向但未确认」长期悬置。
+    - bc_scope_opt2 | 分面分别裁定 | S4 面按本择定；v3 面 J3 另行处置。
+    - bc_scope_opt3 | 另议 | None
+
+--- reply_payload raw ---
+{"schemaVersion":2,"requestId":"ask_2dbc05cc3725c7002935ed01","answers":[{"stepId":"bc_review","selectedOptionIds":["bc_review_opt1"],"selectedOther":false},{"stepId":"d07_verdict","selectedOptionIds":["d07_verdict_opt1"],"selectedOther":false},{"stepId":"m08","selectedOptionIds":["m08_opt1"],"selectedOther":false},{"stepId":"bc_scope","selectedOptionIds":["bc_scope_opt1"],"selectedOther":false}],"submittedAt":1791563533949,"source":"user"}
+--- answers expanded ---
+bc_review => selected: ['bc_review_opt1'] | selectedOther: False | otherText: None
+      -> label: 核准本择定——① 为判读面、② 为敏感性面（推荐）
+d07_verdict => selected: ['d07_verdict_opt1'] | selectedOther: False | otherText: None
+      -> label: 采信推荐路线四（维持 0 承载＋升格入账为构造前提）（推荐）
+m08 => selected: ['m08_opt1'] | selectedOther: False | otherText: None
+      -> label: 补采素材（先派补采评估棒·0 改现有读数）（推荐）
+bc_scope => selected: ['bc_scope_opt1'] | selectedOther: False | otherText: None
+      -> label: 统一适用两面——本择定一并适用于 v3 面与 S4 面（J3 同批确认）

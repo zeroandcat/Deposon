@@ -1,0 +1,1081 @@
+{
+  "artifact": "E-13 消融施测 · 对照表（三对并取 · 支间之差 · 归因之事实底数）",
+  "produced_by": "worker（执行棒）",
+  "design_anchor": {
+    "path": "〔本地路径已脱敏〕",
+    "bytes": 86284,
+    "sha12": "b3eb8f81b6fb"
+  },
+  "three_pairs_separately_reported": [
+    {
+      "pair_id": "P1",
+      "pair_label": "H-C1 x H-C4",
+      "arm_A_tier": "H-C1",
+      "arm_B_tier": "H-C4",
+      "arm_A_values": [
+        15,
+        15,
+        15,
+        15,
+        20
+      ],
+      "arm_B_values": [
+        34,
+        33,
+        33,
+        33,
+        33
+      ],
+      "cross_tier_union_recomputed": [
+        15,
+        20,
+        33,
+        34
+      ],
+      "union_n_distinct_recomputed": 4,
+      "register_union": [
+        15,
+        20,
+        33,
+        34
+      ],
+      "register_union_match": true,
+      "register_f1_n_distinct_30cell_numeric": 4,
+      "register_f1_n_distinct_30cell_byte": 4,
+      "register_f1_n_distinct_armA_15cell": 2,
+      "register_f1_n_distinct_armB_15cell": 2,
+      "recomputed_逐臂": {
+        "A": 2,
+        "B": 2
+      },
+      "recomputed_全域_数值相等_码载面": 4,
+      "recomputed_全域_逐字节_码载面": 4
+    },
+    {
+      "pair_id": "P2",
+      "pair_label": "H-C3 x H-C4",
+      "arm_A_tier": "H-C3",
+      "arm_B_tier": "H-C4",
+      "arm_A_values": [
+        20,
+        20,
+        20,
+        10,
+        20
+      ],
+      "arm_B_values": [
+        34,
+        33,
+        33,
+        33,
+        33
+      ],
+      "cross_tier_union_recomputed": [
+        10,
+        20,
+        33,
+        34
+      ],
+      "union_n_distinct_recomputed": 4,
+      "register_union": [
+        10,
+        20,
+        33,
+        34
+      ],
+      "register_union_match": true,
+      "register_f1_n_distinct_30cell_numeric": 4,
+      "register_f1_n_distinct_30cell_byte": 4,
+      "register_f1_n_distinct_armA_15cell": 2,
+      "register_f1_n_distinct_armB_15cell": 2,
+      "recomputed_逐臂": {
+        "A": 2,
+        "B": 2
+      },
+      "recomputed_全域_数值相等_码载面": 4,
+      "recomputed_全域_逐字节_码载面": 4
+    },
+    {
+      "pair_id": "P3",
+      "pair_label": "H-C6 x H-C4",
+      "arm_A_tier": "H-C6",
+      "arm_B_tier": "H-C4",
+      "arm_A_values": [
+        25,
+        25,
+        25,
+        25,
+        20
+      ],
+      "arm_B_values": [
+        34,
+        33,
+        33,
+        33,
+        33
+      ],
+      "cross_tier_union_recomputed": [
+        20,
+        25,
+        33,
+        34
+      ],
+      "union_n_distinct_recomputed": 4,
+      "register_union": [
+        20,
+        25,
+        33,
+        34
+      ],
+      "register_union_match": true,
+      "register_f1_n_distinct_30cell_numeric": 4,
+      "register_f1_n_distinct_30cell_byte": 4,
+      "register_f1_n_distinct_armA_15cell": 2,
+      "register_f1_n_distinct_armB_15cell": 2,
+      "recomputed_逐臂": {
+        "A": 2,
+        "B": 2
+      },
+      "recomputed_全域_数值相等_码载面": 4,
+      "recomputed_全域_逐字节_码载面": 4
+    }
+  ],
+  "branch_delta_matrix": [
+    {
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "surface": "全域30格",
+      "B1_delta_same_reading": 1,
+      "B1_delta_gate": "翻",
+      "B3_code_delta_same_reading": 0,
+      "B4_armA_gate": "触发",
+      "B4_armB_gate": "触发"
+    },
+    {
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "surface": "逐臂A-15格",
+      "B1_delta_same_reading": 1,
+      "B1_delta_gate": "平",
+      "B3_code_delta_same_reading": 0,
+      "B4_armA_gate": "触发",
+      "B4_armB_gate": "触发"
+    },
+    {
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "surface": "逐臂B-15格",
+      "B1_delta_same_reading": -1,
+      "B1_delta_gate": "平",
+      "B3_code_delta_same_reading": 0,
+      "B4_armA_gate": "触发",
+      "B4_armB_gate": "触发"
+    },
+    {
+      "carrier": "照录层",
+      "reading": "逐字节",
+      "surface": "全域30格",
+      "B1_delta_same_reading": 0,
+      "B1_delta_gate": "平",
+      "B3_code_delta_same_reading": 0,
+      "B4_armA_gate": "触发",
+      "B4_armB_gate": "触发"
+    },
+    {
+      "carrier": "照录层",
+      "reading": "逐字节",
+      "surface": "逐臂A-15格",
+      "B1_delta_same_reading": 1,
+      "B1_delta_gate": "平",
+      "B3_code_delta_same_reading": 0,
+      "B4_armA_gate": "触发",
+      "B4_armB_gate": "触发"
+    },
+    {
+      "carrier": "照录层",
+      "reading": "逐字节",
+      "surface": "逐臂B-15格",
+      "B1_delta_same_reading": -1,
+      "B1_delta_gate": "平",
+      "B3_code_delta_same_reading": 0,
+      "B4_armA_gate": "触发",
+      "B4_armB_gate": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "surface": "全域30格",
+      "B1_delta_same_reading": 1,
+      "B1_delta_gate": "翻",
+      "B3_code_delta_same_reading": 0,
+      "B4_armA_gate": "触发",
+      "B4_armB_gate": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "surface": "逐臂A-15格",
+      "B1_delta_same_reading": 1,
+      "B1_delta_gate": "平",
+      "B3_code_delta_same_reading": 0,
+      "B4_armA_gate": "触发",
+      "B4_armB_gate": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "surface": "逐臂B-15格",
+      "B1_delta_same_reading": -1,
+      "B1_delta_gate": "平",
+      "B3_code_delta_same_reading": 0,
+      "B4_armA_gate": "触发",
+      "B4_armB_gate": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "逐字节",
+      "surface": "全域30格",
+      "B1_delta_same_reading": 1,
+      "B1_delta_gate": "翻",
+      "B3_code_delta_same_reading": 0,
+      "B4_armA_gate": "触发",
+      "B4_armB_gate": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "逐字节",
+      "surface": "逐臂A-15格",
+      "B1_delta_same_reading": 1,
+      "B1_delta_gate": "平",
+      "B3_code_delta_same_reading": 0,
+      "B4_armA_gate": "触发",
+      "B4_armB_gate": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "逐字节",
+      "surface": "逐臂B-15格",
+      "B1_delta_same_reading": -1,
+      "B1_delta_gate": "平",
+      "B3_code_delta_same_reading": 0,
+      "B4_armA_gate": "触发",
+      "B4_armB_gate": "触发"
+    }
+  ],
+  "r3_by_reading": {
+    "数值相等": {
+      "全部合": true,
+      "逐载体": [
+        {
+          "carrier": "照录层",
+          "B1_Δ": 1,
+          "B1_Δ门态": "翻",
+          "B1项合": true,
+          "B3_码载面Δ": 0,
+          "B3项合": true,
+          "B4_臂A门态": "触发",
+          "B4_臂B门态": "触发",
+          "B4项合": true
+        },
+        {
+          "carrier": "码载面",
+          "B1_Δ": 1,
+          "B1_Δ门态": "翻",
+          "B1项合": true,
+          "B3_码载面Δ": 0,
+          "B3项合": true,
+          "B4_臂A门态": "触发",
+          "B4_臂B门态": "触发",
+          "B4项合": true
+        }
+      ]
+    },
+    "逐字节": {
+      "全部合": false,
+      "逐载体": [
+        {
+          "carrier": "照录层",
+          "B1_Δ": 0,
+          "B1_Δ门态": "平",
+          "B1项合": false,
+          "B3_码载面Δ": 0,
+          "B3项合": true,
+          "B4_臂A门态": "触发",
+          "B4_臂B门态": "触发",
+          "B4项合": true
+        },
+        {
+          "carrier": "码载面",
+          "B1_Δ": 1,
+          "B1_Δ门态": "翻",
+          "B1项合": true,
+          "B3_码载面Δ": 0,
+          "B3项合": true,
+          "B4_臂A门态": "触发",
+          "B4_臂B门态": "触发",
+          "B4项合": true
+        }
+      ]
+    }
+  },
+  "r5_rows": [
+    {
+      "pair": "P1",
+      "carrier": "照录层",
+      "B1_读数": 4,
+      "B3_读数_于C5面": 4,
+      "同值": true
+    },
+    {
+      "pair": "P1",
+      "carrier": "码载面",
+      "B1_读数": 4,
+      "B3_读数_于C5面": 4,
+      "同值": true
+    },
+    {
+      "pair": "P2",
+      "carrier": "照录层",
+      "B1_读数": 4,
+      "B3_读数_于C5面": 4,
+      "同值": true
+    },
+    {
+      "pair": "P2",
+      "carrier": "码载面",
+      "B1_读数": 4,
+      "B3_读数_于C5面": 4,
+      "同值": true
+    },
+    {
+      "pair": "P3",
+      "carrier": "照录层",
+      "B1_读数": 4,
+      "B3_读数_于C5面": 4,
+      "同值": true
+    },
+    {
+      "pair": "P3",
+      "carrier": "码载面",
+      "B1_读数": 4,
+      "B3_读数_于C5面": 4,
+      "同值": true
+    }
+  ],
+  "carrier_diff_report": {
+    "F-0": {
+      "不一致格数": 15,
+      "cells": [
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T1_GSM8K",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T2_StrategyQA",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T3_Trap",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T4_2x2",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T5_LowResource",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T1_GSM8K",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T2_StrategyQA",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T3_Trap",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T4_2x2",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T5_LowResource",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T1_GSM8K",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T2_StrategyQA",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T3_Trap",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T4_2x2",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T5_LowResource",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        }
+      ]
+    },
+    "F-2": {
+      "不一致格数": 15,
+      "cells": [
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T1_GSM8K",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T2_StrategyQA",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T3_Trap",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T4_2x2",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T5_LowResource",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T1_GSM8K",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T2_StrategyQA",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T3_Trap",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T4_2x2",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T5_LowResource",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T1_GSM8K",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T2_StrategyQA",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T3_Trap",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T4_2x2",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T5_LowResource",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        }
+      ]
+    },
+    "F-3": {
+      "不一致格数": 15,
+      "cells": [
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T1_GSM8K",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T2_StrategyQA",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T3_Trap",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T4_2x2",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T5_LowResource",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T1_GSM8K",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T2_StrategyQA",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T3_Trap",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T4_2x2",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T5_LowResource",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T1_GSM8K",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T2_StrategyQA",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T3_Trap",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T4_2x2",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T5_LowResource",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        }
+      ]
+    },
+    "F-4": {
+      "不一致格数": 15,
+      "cells": [
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T1_GSM8K",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T2_StrategyQA",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T3_Trap",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T4_2x2",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M1_Deposon_TRA|T5_LowResource",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T1_GSM8K",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T2_StrategyQA",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T3_Trap",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T4_2x2",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M2_Greedy|T5_LowResource",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T1_GSM8K",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T2_StrategyQA",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T3_Trap",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T4_2x2",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        },
+        {
+          "cell_key": "U-C1|M3_Random|T5_LowResource",
+          "照录层": "int 1",
+          "码载面": "float 1.0"
+        }
+      ]
+    },
+    "F-1/P1": {
+      "不一致格数": 0,
+      "cells": []
+    },
+    "F-1/P2": {
+      "不一致格数": 0,
+      "cells": []
+    },
+    "F-1/P3": {
+      "不一致格数": 0,
+      "cells": []
+    }
+  },
+  "identity_selfproof_A6": [
+    {
+      "face": "F-0",
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "逐格取值集合互异数": 3,
+      "来源值向量互异数": 3,
+      "偏差": 0
+    },
+    {
+      "face": "F-0",
+      "carrier": "照录层",
+      "reading": "逐字节",
+      "逐格取值集合互异数": 4,
+      "来源值向量互异数": 4,
+      "偏差": 0
+    },
+    {
+      "face": "F-0",
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "逐格取值集合互异数": 3,
+      "来源值向量互异数": 3,
+      "偏差": 0
+    },
+    {
+      "face": "F-0",
+      "carrier": "码载面",
+      "reading": "逐字节",
+      "逐格取值集合互异数": 3,
+      "来源值向量互异数": 3,
+      "偏差": 0
+    },
+    {
+      "face": "F-1/P1",
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "逐格取值集合互异数": 4,
+      "来源值向量互异数": 4,
+      "偏差": 0
+    },
+    {
+      "face": "F-1/P1",
+      "carrier": "照录层",
+      "reading": "逐字节",
+      "逐格取值集合互异数": 4,
+      "来源值向量互异数": 4,
+      "偏差": 0
+    },
+    {
+      "face": "F-1/P1",
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "逐格取值集合互异数": 4,
+      "来源值向量互异数": 4,
+      "偏差": 0
+    },
+    {
+      "face": "F-1/P1",
+      "carrier": "码载面",
+      "reading": "逐字节",
+      "逐格取值集合互异数": 4,
+      "来源值向量互异数": 4,
+      "偏差": 0
+    },
+    {
+      "face": "F-1/P2",
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "逐格取值集合互异数": 4,
+      "来源值向量互异数": 4,
+      "偏差": 0
+    },
+    {
+      "face": "F-1/P2",
+      "carrier": "照录层",
+      "reading": "逐字节",
+      "逐格取值集合互异数": 4,
+      "来源值向量互异数": 4,
+      "偏差": 0
+    },
+    {
+      "face": "F-1/P2",
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "逐格取值集合互异数": 4,
+      "来源值向量互异数": 4,
+      "偏差": 0
+    },
+    {
+      "face": "F-1/P2",
+      "carrier": "码载面",
+      "reading": "逐字节",
+      "逐格取值集合互异数": 4,
+      "来源值向量互异数": 4,
+      "偏差": 0
+    },
+    {
+      "face": "F-1/P3",
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "逐格取值集合互异数": 4,
+      "来源值向量互异数": 4,
+      "偏差": 0
+    },
+    {
+      "face": "F-1/P3",
+      "carrier": "照录层",
+      "reading": "逐字节",
+      "逐格取值集合互异数": 4,
+      "来源值向量互异数": 4,
+      "偏差": 0
+    },
+    {
+      "face": "F-1/P3",
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "逐格取值集合互异数": 4,
+      "来源值向量互异数": 4,
+      "偏差": 0
+    },
+    {
+      "face": "F-1/P3",
+      "carrier": "码载面",
+      "reading": "逐字节",
+      "逐格取值集合互异数": 4,
+      "来源值向量互异数": 4,
+      "偏差": 0
+    }
+  ],
+  "control_B1": [
+    {
+      "face": "F-1/P1",
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "复算值": 4,
+      "与在册值 4 之差": 0,
+      "门态": "不触发"
+    },
+    {
+      "face": "F-1/P1",
+      "carrier": "照录层",
+      "reading": "逐字节",
+      "复算值": 4,
+      "与在册值 4 之差": 0,
+      "门态": "不触发"
+    },
+    {
+      "face": "F-1/P1",
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "复算值": 4,
+      "与在册值 4 之差": 0,
+      "门态": "不触发"
+    },
+    {
+      "face": "F-1/P1",
+      "carrier": "码载面",
+      "reading": "逐字节",
+      "复算值": 4,
+      "与在册值 4 之差": 0,
+      "门态": "不触发"
+    },
+    {
+      "face": "F-1/P2",
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "复算值": 4,
+      "与在册值 4 之差": 0,
+      "门态": "不触发"
+    },
+    {
+      "face": "F-1/P2",
+      "carrier": "照录层",
+      "reading": "逐字节",
+      "复算值": 4,
+      "与在册值 4 之差": 0,
+      "门态": "不触发"
+    },
+    {
+      "face": "F-1/P2",
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "复算值": 4,
+      "与在册值 4 之差": 0,
+      "门态": "不触发"
+    },
+    {
+      "face": "F-1/P2",
+      "carrier": "码载面",
+      "reading": "逐字节",
+      "复算值": 4,
+      "与在册值 4 之差": 0,
+      "门态": "不触发"
+    },
+    {
+      "face": "F-1/P3",
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "复算值": 4,
+      "与在册值 4 之差": 0,
+      "门态": "不触发"
+    },
+    {
+      "face": "F-1/P3",
+      "carrier": "照录层",
+      "reading": "逐字节",
+      "复算值": 4,
+      "与在册值 4 之差": 0,
+      "门态": "不触发"
+    },
+    {
+      "face": "F-1/P3",
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "复算值": 4,
+      "与在册值 4 之差": 0,
+      "门态": "不触发"
+    },
+    {
+      "face": "F-1/P3",
+      "carrier": "码载面",
+      "reading": "逐字节",
+      "复算值": 4,
+      "与在册值 4 之差": 0,
+      "门态": "不触发"
+    }
+  ],
+  "control_B2_numeric_scope": [
+    {
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "surface": "全域30格",
+      "复算值": 3,
+      "门态": "触发"
+    },
+    {
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "surface": "逐臂A-15格",
+      "复算值": 1,
+      "门态": "触发"
+    },
+    {
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "surface": "逐臂B-15格",
+      "复算值": 3,
+      "门态": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "surface": "全域30格",
+      "复算值": 3,
+      "门态": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "surface": "逐臂A-15格",
+      "复算值": 1,
+      "门态": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "surface": "逐臂B-15格",
+      "复算值": 3,
+      "门态": "触发"
+    }
+  ],
+  "control_B2_all_readings_scope": [
+    {
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "surface": "全域30格",
+      "复算值": 3,
+      "门态": "触发"
+    },
+    {
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "surface": "逐臂A-15格",
+      "复算值": 1,
+      "门态": "触发"
+    },
+    {
+      "carrier": "照录层",
+      "reading": "数值相等",
+      "surface": "逐臂B-15格",
+      "复算值": 3,
+      "门态": "触发"
+    },
+    {
+      "carrier": "照录层",
+      "reading": "逐字节",
+      "surface": "全域30格",
+      "复算值": 4,
+      "门态": "不触发"
+    },
+    {
+      "carrier": "照录层",
+      "reading": "逐字节",
+      "surface": "逐臂A-15格",
+      "复算值": 1,
+      "门态": "触发"
+    },
+    {
+      "carrier": "照录层",
+      "reading": "逐字节",
+      "surface": "逐臂B-15格",
+      "复算值": 3,
+      "门态": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "surface": "全域30格",
+      "复算值": 3,
+      "门态": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "surface": "逐臂A-15格",
+      "复算值": 1,
+      "门态": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "数值相等",
+      "surface": "逐臂B-15格",
+      "复算值": 3,
+      "门态": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "逐字节",
+      "surface": "全域30格",
+      "复算值": 3,
+      "门态": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "逐字节",
+      "surface": "逐臂A-15格",
+      "复算值": 1,
+      "门态": "触发"
+    },
+    {
+      "carrier": "码载面",
+      "reading": "逐字节",
+      "surface": "逐臂B-15格",
+      "复算值": 3,
+      "门态": "触发"
+    }
+  ],
+  "cross_refs": {
+    "set": "E-13 消融施测 · 派生四表（分件落盘 · 互引）",
+    "manifest_path": "〔本地路径已脱敏〕",
+    "note": "SHA-12 之互引采用『内容指纹（core_sha12 = 本表 core 体之规范化 JSON 之 SHA-256 前 12 位）』；on-disk 文件指纹载于读出件（manifest）之互引索引（on-disk 指纹之互引成哈希环 ⇒ 不可行）",
+    "core_sha12": "cf0e0a32ef2a",
+    "siblings": {
+      "逐支表": {
+        "file": "_e13_ablation_branch_table_2026_10_27.json",
+        "core_sha12": "7cf852f13d7c"
+      },
+      "逐格表": {
+        "file": "_e13_ablation_cell_table_2026_10_27.json",
+        "core_sha12": "05e704d91701"
+      },
+      "成本表": {
+        "file": "_e13_ablation_cost_table_2026_10_27.json",
+        "core_sha12": "e70c80c93070"
+      }
+    },
+    "script": {
+      "path": "〔本地路径已脱敏〕",
+      "sha12": "df1f8b4fcc9a"
+    }
+  }
+}

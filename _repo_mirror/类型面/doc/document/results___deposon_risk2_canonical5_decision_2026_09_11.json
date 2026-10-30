@@ -1,0 +1,81 @@
+{
+  "task": "DEPSON-TRAE-FIX-REQ-2026-09-11 风险2: canonical 5 值占位与 erratum 不一致",
+  "author": "Trae code (successor 派单 + reviewer-a 静态审 + reviewer-b 机械自审)",
+  "date": "2026-09-11",
+  "decision": "option_A",
+  "decision_basis": "沿 Trae R3/R4 裁定 + V0.1 JSON erratum trust_source_ruling: 5 锚 JSON 值系 100% 可独立复算(本脚本再抽验 6 项全 PASS), canonical 值链 repo 内无算法工件且 skill_d 占位已实证失真(仅 1/5 取真值) → canonical 5 值标 UNVERIFIED, 5 锚 JSON 真值作 trust_anchor, 零延迟可执行",
+  "pre_registered_algorithm": "拼接锚 = SHA-256(5 值以 | 拼接)[0:12] (计算前锁定)",
+  "data_source_label": {
+    "trust_anchor": "verifier/handoff/P_F_PREDECISION_2026_09_11_V0.1.json (含 Trae erratum)",
+    "对照_占位链": "results/skill_d_p_f_observer_result_2026_09_11.json",
+    "对照_canonical": "V7 §8.A 声明值 (repo 内无工件)"
+  },
+  "three_chain_audit": {
+    "chain_1_v7_canonical_UNVERIFIED": {
+      "values": [
+        "56adce731089",
+        "0b4ac1d2df43",
+        "c4cae1ed9ee5",
+        "60300c5a0775",
+        "2ce685e04f4b"
+      ],
+      "concat_anchor": "ae80bbba4f7b",
+      "expected_from_erratum": "ae80bbba4f7b",
+      "recompute_match": true,
+      "status": "UNVERIFIED (无算法工件; 拼接锚复算 PASS 仅证明\"先有值后拼锚\"的生成方式)"
+    },
+    "chain_2_skill_d_placeholder_INVALID": {
+      "values": [
+        "56adce731089",
+        "f7e1b3c40a92",
+        "2c9d4e7f8156",
+        "ab58d3c0e1f4",
+        "e8f4a1b6c902"
+      ],
+      "concat_anchor": "1f106f9bd465",
+      "mavis_observed": "1f106f9bd465",
+      "recompute_match": true,
+      "expected_from_erratum": "ae80bbba4f7b",
+      "match": false,
+      "analysis": {
+        "value_1_matches_v7_canonical": true,
+        "values_2_to_5_match_v7": false,
+        "diagnosis": "skill_d 占位 5 值中仅第 1 个(56adce731089)取自 V7 canonical, 后 4 个(f7e1b3c40a92 等)为自编占位 → 拼接出 1f106f9bd465, 与 erratum 期望 ae80bbba4f7b 必然不符。这不是\"两套算法差异\", 是占位值本身失真 — 印证 canonical 链在 repo 内无真实工件"
+      }
+    },
+    "chain_3_v01_true_TRUST_ANCHOR": {
+      "values": [
+        "d78c42f7bab4",
+        "0ff54f8d2f60",
+        "a8f81c98ea8a",
+        "bff8b1ce1f8c",
+        "d9a6a099b905"
+      ],
+      "concat_anchor_NEW": "79f8dfa2c296",
+      "recompute_checks": {
+        "B1_doubao-seed-2.0-lite": true,
+        "B1_kimi-k2": true,
+        "B1_deepseek-v4-pro": true,
+        "PF_BOSS_01_fingerprint_value_v01": true,
+        "PF_BOSS_05_cot_value_v01": true,
+        "B1_chain_hash": true
+      },
+      "all_recompute_pass": true,
+      "status": "TRUST_ANCHOR (100% 可复算; 本脚本抽验 6 项全 PASS, 全量 15 项见 R3 报告)"
+    }
+  },
+  "canonical_5_status": "UNVERIFIED (方案A 裁定: 工件补齐前不作真值使用)",
+  "trust_anchor_5_values": [
+    "d78c42f7bab4",
+    "0ff54f8d2f60",
+    "a8f81c98ea8a",
+    "bff8b1ce1f8c",
+    "d9a6a099b905"
+  ],
+  "concat_anchor_new": "79f8dfa2c296",
+  "concat_anchor_new_meaning": "沿 5 锚 JSON 真值的新拼接锚 = 79f8dfa2c296; 注意它是\"值拼接锚\"(同 ae80bbba4f7b 的生成方式), 不可与 V0.1 JSON 文件指纹(312d635e6259)混称 (命名勘误沿 R3 erratum)",
+  "option_B_not_taken_reason": "方案 B 需 user 提供 V7 §8.A 真实字符串, 1 周判死窗口内不可等; 且即便提供, 5 锚 JSON 仍为 100% 可复算真值, 结论不会反转",
+  "skill_d_followup_for_mavis": "skill_d_p_f_observer_result JSON 的 canonical_5_unverified 字段(占位链)应更新为: UNVERIFIED 标注 + trust_anchor 值系 ['d78c42f7bab4', '0ff54f8d2f60', 'a8f81c98ea8a', 'bff8b1ce1f8c', 'd9a6a099b905'] + 新拼接锚 79f8dfa2c296; 待 Mavis 复审后落盘",
+  "frozen_files_touched": "none (本脚本只读全部输入, 仅新写本决策 JSON)",
+  "self_check": "见脚本尾部 SELF-CHECK 块"
+}

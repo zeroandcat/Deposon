@@ -1,0 +1,188 @@
+{
+ "experiment": "deposon_v20_gt8",
+ "spec_version": "v2.0",
+ "spec": "docs/SPEC_GT8.md：「领域鉴定器 v0」hub_concentration 轴语料外预登记复现（SPEC 先于本实验数据提交，git 时间戳为证）",
+ "config": {
+  "n_steps": 50,
+  "beta_schedule": "linear",
+  "prior": "uniform_out",
+  "lr": 0.1,
+  "lam_smooth": 0.01,
+  "field_guidance": true,
+  "energy_mode": "aggregate",
+  "seed": 0
+ },
+ "preregistered": {
+  "hypothesis": "H_GT8：高 hub 新图 diff=field_named−random_named 显著大于配对低 hub 新图",
+  "pairs": [
+   [
+    "GT8_A_high",
+    "GT8_A_low"
+   ],
+   [
+    "GT8_B_high",
+    "GT8_B_low"
+   ]
+  ],
+  "seeds": {
+   "GT8_A_high": 208801,
+   "GT8_A_low": 208802,
+   "GT8_B_high": 208803,
+   "GT8_B_low": 208804
+  },
+  "arms": [
+   "field_mean",
+   "random",
+   "degree"
+  ],
+  "protocol": "run_v20_corpus_eval 同协议：全边留一、全候选 raw 口径、rng=g_seed*100003+ei、场实例种子 g_seed+ei、named Hits@3",
+  "feature_rule": "hub_concentration = max_in_degree / n_edges；real_semantics = 0（族 S 合成标签）",
+  "pass_rule": "≥2/2 对同向 ⇒ supports_H_GT8",
+  "kill_rule": "2/2 对全反 ⇒ H_GT8_dead，如实宣布",
+  "else": "inconclusive（预登记未定义区间）"
+ },
+ "per_graph": {
+  "GT8_A_high": {
+   "structure": "star_chain_double_convergence",
+   "N": 31,
+   "n_edges": 30,
+   "n_named": 24,
+   "n_filler": 6,
+   "source": 25,
+   "target": 30,
+   "seed": 208801,
+   "sha256": "28fb1c2f57a93f6f8eec0601749b6f752033ae75f4d4078b25ee312699bd1836",
+   "features": {
+    "hub_concentration": 0.5,
+    "real_semantics": 0
+   },
+   "field_named": 1.0,
+   "random_named": 0.20833333333333334,
+   "degree_named": 1.0,
+   "diff_fm_rand": 0.7916666666666666,
+   "diff_fm_deg": 0.0,
+   "invariant": [
+    31,
+    30
+   ]
+  },
+  "GT8_A_low": {
+   "structure": "caterpillar_chain",
+   "N": 31,
+   "n_edges": 30,
+   "n_named": 15,
+   "n_filler": 15,
+   "source": 0,
+   "target": 15,
+   "seed": 208802,
+   "sha256": "2ce949fbc01a65113742895a1cad36b8326c5c01a8d38a803a80ccbdccfbe312",
+   "features": {
+    "hub_concentration": 0.06666666666666667,
+    "real_semantics": 0
+   },
+   "field_named": 0.13333333333333333,
+   "random_named": 0.0,
+   "degree_named": 0.0,
+   "diff_fm_rand": 0.13333333333333333,
+   "diff_fm_deg": 0.13333333333333333,
+   "invariant": [
+    31,
+    30
+   ]
+  },
+  "GT8_B_high": {
+   "structure": "balanced_tree_superhub",
+   "N": 40,
+   "n_edges": 39,
+   "n_named": 19,
+   "n_filler": 20,
+   "source": 0,
+   "target": 21,
+   "seed": 208803,
+   "sha256": "be3dcb084cbf82b49bcd7892c66c86e369e80521571a79987a85cde28e76bbaa",
+   "features": {
+    "hub_concentration": 0.48717948717948717,
+    "real_semantics": 0
+   },
+   "field_named": 0.05263157894736842,
+   "random_named": 0.0,
+   "degree_named": 1.0,
+   "diff_fm_rand": 0.05263157894736842,
+   "diff_fm_deg": -0.9473684210526316,
+   "invariant": [
+    40,
+    39
+   ]
+  },
+  "GT8_B_low": {
+   "structure": "balanced_ternary_tree",
+   "N": 40,
+   "n_edges": 39,
+   "n_named": 12,
+   "n_filler": 27,
+   "source": 0,
+   "target": 13,
+   "seed": 208804,
+   "sha256": "5c90ebc428db0f6b795ecd1a9a7ff78bf7f7c0c22cd247e155568aff35465b26",
+   "features": {
+    "hub_concentration": 0.02564102564102564,
+    "real_semantics": 0
+   },
+   "field_named": 0.16666666666666666,
+   "random_named": 0.25,
+   "degree_named": 0.0,
+   "diff_fm_rand": -0.08333333333333334,
+   "diff_fm_deg": 0.16666666666666666,
+   "invariant": [
+    40,
+    39
+   ]
+  }
+ },
+ "per_pair": [
+  {
+   "pair": "GT8_A_high__vs__GT8_A_low",
+   "high": "GT8_A_high",
+   "low": "GT8_A_low",
+   "diff_high": 0.7916666666666666,
+   "hub_high": 0.5,
+   "diff_low": 0.13333333333333333,
+   "hub_low": 0.06666666666666667,
+   "concordant": true
+  },
+  {
+   "pair": "GT8_B_high__vs__GT8_B_low",
+   "high": "GT8_B_high",
+   "low": "GT8_B_low",
+   "diff_high": 0.05263157894736842,
+   "hub_high": 0.48717948717948717,
+   "diff_low": -0.08333333333333334,
+   "hub_low": 0.02564102564102564,
+   "concordant": true
+  }
+ ],
+ "verdict": {
+  "verdict": "supports_H_GT8",
+  "supported_H_GT8": true,
+  "n_pairs": 2,
+  "pairs_concordant": [
+   "GT8_A_high__vs__GT8_A_low",
+   "GT8_B_high__vs__GT8_B_low"
+  ],
+  "pairs_reversed": [],
+  "pairs_tied": [],
+  "thresholds": {
+   "min_pairs": 2
+  }
+ },
+ "runtime_sec": 4.751,
+ "honesty": [
+  "no LLM API calls issued：四张新图本地构造，全部实验为本地种子化 numpy 运行；语料只读加载（仅用于不同构哨兵与特征锚点复核，见 tests/test_v20_gt8.py）。",
+  "SPEC_GT8.md 先于本实验任何数据写盘并 git 提交（预登记时间戳为证）；拓扑、种子、named/filler 口径、判定规则全部冻结。",
+  "real_semantics 轴需 LLM 先验 API 预算，本轮 deferred 不测，如实声明；本实验全部新图 real_semantics=0（族 S 合成标签）。",
+  "样本仅 2 对（评审要求的下限设计）：方向性证据，非效应量估计；仅族 S，不外推至族 L。",
+  "协议与 run_v20_corpus_eval 逐行同式（三臂子集）；复用正确性由 tests/test_v20_gt8.py 锚定（S1/S2/S3 特征公式重算等于 results/v20_graph_features.csv 锚点 0.0526/0.0333/0.0625）。",
+  "判定规则为纯函数 gt8_verdict 机械求值，tests/test_v20_gt8.py 锁定；落在预登记未定义区间时报 inconclusive，不美化。",
+  "总运行 4.751s（预算 600s 内）"
+ ]
+}

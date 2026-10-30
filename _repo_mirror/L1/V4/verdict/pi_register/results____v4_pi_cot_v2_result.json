@@ -1,0 +1,353 @@
+{
+ "schema": "v4_pi_cot_v2_result/1",
+ "task": "PI 思维链蒸馏 v2.2 · 规则学习 + 检验管线 (exploratory pre-run)",
+ "generated_utc": "2026-09-24T17:38:00+08:00",
+ "prereg_ref": {
+  "path": "results/_v4_pi_cot_v2_prereg.md",
+  "sha12": "cc25c5149ce1"
+ },
+ "dataset_ref": {
+  "path": "results/_v4_pi_cot_v2_dataset.json",
+  "sha12": "7b01cd835a41",
+  "schema": "v4_pi_cot_v2_dataset/1.1",
+  "n_total": 37,
+  "n_correction_partial": 6,
+  "n_normal": 31,
+  "correction_partial_note": "6 对 R 反转 (R1a..R6a) 前半 pair_pending; 后半未闭合; 如实声明 partial 处理: 主读法 = 全 37 含 partial; 替代读法 = 剔除 partial 仅用 31 normal"
+ },
+ "constraint": {
+  "no_llm": true,
+  "no_proxy": true,
+  "no_gateway": true,
+  "hash_lib": "zlib.crc32 + hashlib.sha256 (禁内建 hash())",
+  "seed": 42,
+  "tree_depth_max": 4,
+  "n_perm": 1000,
+  "alpha": 0.05,
+  "n_boot": 1000,
+  "ci_floor": 0.5,
+  "th_similarity": 0.8,
+  "th_blind_obey": 0.1,
+  "th_critical_cov": 1.0
+ },
+ "operationalization_v1": {
+  "judgment_type_extraction": "6 类 (KILL_LINE/COST/CRITERIA/RISK/TIMING/DELEGATE); 对 reasoning_full 字符串做确定性格式扫描; 类型按关键词首现位置序排序后去重; primary = 首元素; 空序列归 UNKNOWN (相似度=0)",
+  "structural_similarity": "单事件 = |pred ∩ actual| / |actual| (实际序列召回率); 整体 = held-out per-event 均值",
+  "critical_reflection_markers": [
+   "不",
+   "却",
+   "反而",
+   "然而",
+   "但是",
+   "但",
+   "其实",
+   "区别",
+   "修正",
+   "纠",
+   "错",
+   "未必",
+   "不可",
+   "不应",
+   "误",
+   "批判",
+   "反思",
+   "避免",
+   "慎重",
+   "慎",
+   "重新",
+   "未必",
+   "未必是",
+   "可疑",
+   "重新考虑",
+   "区别于",
+   "不一定"
+  ],
+  "div_critical_coverage": "#(分歧∧含批判反思标志词) / #(分歧); 无分歧 → 1.0",
+  "blind_obey_rate": "#(一致∧不含批判反思标志词) / #(一致); 无一致 → 0.0",
+  "stratified_split": "0.30 分层: 纠偏子集 + 正常子集 各自 round(N*0.30); max(1, ...) 防 0 划分; held-out 必含纠偏事件 (6 对 R 反转前半)",
+  "permutation_test": "shuffle 标签 n=1000, 重训决策树, 计 perm_sim ≥ obs_mean 比例; p_perm = (ge+1)/(N_PERM+1)",
+  "bootstrap_ci": "percentile method; resample held-out per-event sim n=1000; CI 95% = [2.5%, 97.5%]",
+  "double_read_method": "主读法 = 全 37 含 partial; 替代读法 = 仅 31 normal (剔除 R*a_pair_pending); 两读法结果如实并报, 不合并, 不择优"
+ },
+ "main_reading": {
+  "held_out_count": 11,
+  "held_out_idx": [
+   2,
+   6,
+   10,
+   16,
+   18,
+   20,
+   24,
+   26,
+   29,
+   33,
+   36
+  ],
+  "n_correction_in_held": 2,
+  "mean_similarity": 0.1818,
+  "div_critical_coverage": 0.6667,
+  "n_divergent": 9,
+  "n_critical_among_divergent": 6,
+  "blind_obey_rate": 0.0,
+  "n_agree": 2,
+  "n_blind_obey": 0,
+  "perm_p": 0.2937,
+  "perm_n": 1000,
+  "alpha": 0.05,
+  "bootstrap_ci": [
+   0.0,
+   0.4545
+  ],
+  "bootstrap_n": 1000,
+  "label_distribution": {
+   "RISK": 5,
+   "COST": 1,
+   "UNKNOWN": 14,
+   "KILL_LINE": 2,
+   "CRITERIA": 7,
+   "TIMING": 7,
+   "DELEGATE": 1
+  },
+  "per_event": [
+   {
+    "held_idx": 2,
+    "sim": 0.0,
+    "pred": "KILL_LINE",
+    "actual": [],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 6,
+    "sim": 1.0,
+    "pred": "CRITERIA",
+    "actual": [
+     "CRITERIA"
+    ],
+    "divergent": false,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 10,
+    "sim": 1.0,
+    "pred": "TIMING",
+    "actual": [
+     "TIMING"
+    ],
+    "divergent": false,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 16,
+    "sim": 0.0,
+    "pred": "TIMING",
+    "actual": [],
+    "divergent": true,
+    "has_critical_reflection": false
+   },
+   {
+    "held_idx": 18,
+    "sim": 0.0,
+    "pred": "UNKNOWN",
+    "actual": [
+     "CRITERIA",
+     "RISK"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 20,
+    "sim": 0.0,
+    "pred": "RISK",
+    "actual": [
+     "CRITERIA"
+    ],
+    "divergent": true,
+    "has_critical_reflection": false
+   },
+   {
+    "held_idx": 24,
+    "sim": 0.0,
+    "pred": "CRITERIA",
+    "actual": [
+     "TIMING",
+     "RISK"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 26,
+    "sim": 0.0,
+    "pred": "RISK",
+    "actual": [
+     "DELEGATE"
+    ],
+    "divergent": true,
+    "has_critical_reflection": false
+   },
+   {
+    "held_idx": 29,
+    "sim": 0.0,
+    "pred": "UNKNOWN",
+    "actual": [
+     "RISK"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 33,
+    "sim": 0.0,
+    "pred": "KILL_LINE",
+    "actual": [],
+    "divergent": true,
+    "has_critical_reflection": true
+   },
+   {
+    "held_idx": 36,
+    "sim": 0.0,
+    "pred": "UNKNOWN",
+    "actual": [
+     "TIMING"
+    ],
+    "divergent": true,
+    "has_critical_reflection": true
+   }
+  ]
+ },
+ "alt_reading": {
+  "subset": "剔除 R*a_pair_pending (6 partial) → 31 normal events",
+  "held_out_count": 9,
+  "held_out_idx": [
+   1,
+   3,
+   5,
+   9,
+   18,
+   21,
+   24,
+   26,
+   34
+  ],
+  "mean_similarity": 0.0,
+  "div_critical_coverage": 0.6667,
+  "blind_obey_rate": 0.0,
+  "perm_p": 1.0,
+  "bootstrap_ci": [
+   0.0,
+   0.0
+  ],
+  "disagreement_vs_main": {
+   "mean_similarity_delta": -0.1818,
+   "blind_obey_delta": 0.0,
+   "note": "如实并报; 不合并, 不择优"
+  }
+ },
+ "kill_lines": [
+  {
+   "id": "K-V2-a",
+   "name": "学习线",
+   "rule": "结构相似度 < 0.80 → FAIL",
+   "observed": 0.1818,
+   "threshold": 0.8,
+   "hit_direction": "结构相似度 < 阈值 即触发",
+   "hit": true
+  },
+  {
+   "id": "K-V2-b1",
+   "name": "批判线-分歧批判理由覆盖率",
+   "rule": "分歧批判理由覆盖率 < 100% → FAIL",
+   "observed": 0.6667,
+   "threshold": 1.0,
+   "hit_direction": "覆盖率 < 1.00 即触发",
+   "hit": true
+  },
+  {
+   "id": "K-V2-b2",
+   "name": "批判线-盲从率",
+   "rule": "盲从率 > 0.10 → FAIL",
+   "observed": 0.0,
+   "threshold": 0.1,
+   "hit_direction": "盲从率 > 阈值 即触发",
+   "hit": false
+  },
+  {
+   "id": "K-V2-c",
+   "name": "稳健线",
+   "rule": "bootstrap CI 下界 < 0.50 → FAIL",
+   "observed_ci": [
+    0.0,
+    0.4545
+   ],
+   "threshold": 0.5,
+   "hit_direction": "CI 下界 < 0.50 即触发",
+   "hit": true
+  }
+ ],
+ "any_hit": true,
+ "verdict": "FAIL (exploratory, 探索性预跑, 非正式判定)",
+ "root_cause_3class": "命题层面被证伪（真证伪）",
+ "root_cause_per_row": [
+  {
+   "kill_line_id": "K-V2-a",
+   "kill_line_name": "学习线",
+   "hit": true,
+   "root_cause_3class": "命题层面被证伪（真证伪）"
+  },
+  {
+   "kill_line_id": "K-V2-b1",
+   "kill_line_name": "批判线-分歧批判理由覆盖率",
+   "hit": true,
+   "root_cause_3class": "命题层面被证伪（真证伪）"
+  },
+  {
+   "kill_line_id": "K-V2-b2",
+   "kill_line_name": "批判线-盲从率",
+   "hit": false,
+   "root_cause_3class": "无证据触发"
+  },
+  {
+   "kill_line_id": "K-V2-c",
+   "kill_line_name": "稳健线",
+   "hit": true,
+   "root_cause_3class": "命题层面被证伪（真证伪）"
+  }
+ ],
+ "exploratory_label": {
+  "exploratory": true,
+  "reason": "预注册起跑条件未达: TH-v2-1 N_min=50 未达 (37/50); TH-v2-3 跨日 ≥3 天 未达 (1 天); TH-v2-2 纠正/反转事件 后半未闭合 (pair_pending partial; 数量阈值满足但配对未闭合)",
+  "unmet_conditions": [
+   {
+    "id": "TH-v2-1",
+    "rule": "N_min=50",
+    "observed": 37,
+    "required": 50,
+    "met": false
+   },
+   {
+    "id": "TH-v2-3",
+    "rule": "跨日 ≥3 天, 单日占比 ≤60%",
+    "observed_days": 1,
+    "required_days": 3,
+    "met": false,
+    "note": "当前仅第 1 天 (2026-09-24) 采集, 单日占比 100% (>60%)"
+   }
+  ],
+  "partial_conditions": [
+   {
+    "id": "TH-v2-2",
+    "rule": "纠正/反转事件 ≥5",
+    "observed": 6,
+    "required": 5,
+    "met": true,
+    "status": "PARTIAL",
+    "note": "6 对 R 反转 (R1a..R6a) 前半 pair_pending 已采, 后半未闭合;数量 6 ≥ 5 满足阈值, 但配对未闭合; 如实声明 partial 处理: 主读法 = 全 37 含 partial; 替代读法 = 剔除 partial 仅用 31 normal; 禁止 silently 合并计入"
+   }
+  ],
+  "consequence": "全部数值与 kill-line 结果标注「探索性预跑, 非正式判定」;跨天第 2/3 天数据到位后才允许正式判定"
+ },
+ "boundary_statement": "v2.2 §7: 非画像 (不预测 PI 行为/不做个人模型外传); 产物=方法规则集供 AI 内化; 推理全文隐私面仅入本地件; 0 LLM 采集; key 0 相关; 生效即锁不重开; 起跑 = 补测完成 + TH-v2-1/2/3 达标"
+}

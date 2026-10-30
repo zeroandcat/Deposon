@@ -1,0 +1,216 @@
+{
+  "artifact": "E-13 消融施测 · 成本表（M-E8）",
+  "produced_by": "worker（执行棒）",
+  "llm_calls": 0,
+  "network_requests": 0,
+  "new_observations": 0,
+  "new_run_cells": 0,
+  "key_reads": 0,
+  "existing_files_touched": 0,
+  "seed": 42,
+  "seed_note": "对象域之单 seed 42 系在册之对象域定义；本棒为纯确定性演算，无随机抽样、无随机种子",
+  "script": {
+    "path": "〔本地路径已脱敏〕",
+    "bytes": 35694,
+    "sha12": "df1f8b4fcc9a"
+  },
+  "inputs_pre": {
+    "设计件": {
+      "path": "〔本地路径已脱敏〕",
+      "bytes": 86284,
+      "sha12": "b3eb8f81b6fb",
+      "expect": "b3eb8f81b6fb",
+      "match": true
+    },
+    "数据件_臂对与H_U_CAND": {
+      "path": "〔本地路径已脱敏〕",
+      "bytes": 54108,
+      "sha12": "205323631d0f",
+      "expect": "205323631d0f",
+      "match": true
+    },
+    "数据件_F3_cells_15": {
+      "path": "〔本地路径已脱敏〕",
+      "bytes": 210141,
+      "sha12": "7f80d5ae03bb",
+      "expect": "7f80d5ae03bb",
+      "match": true
+    },
+    "数据件_O1_30格形式具化": {
+      "path": "〔本地路径已脱敏〕",
+      "bytes": 145592,
+      "sha12": "56eb9db8bfd1",
+      "expect": "56eb9db8bfd1",
+      "match": true
+    }
+  },
+  "inputs_post": {
+    "设计件": {
+      "bytes": 86284,
+      "sha12": "b3eb8f81b6fb",
+      "expect": "b3eb8f81b6fb",
+      "match": true,
+      "unchanged_vs_pre": true
+    },
+    "数据件_臂对与H_U_CAND": {
+      "bytes": 54108,
+      "sha12": "205323631d0f",
+      "expect": "205323631d0f",
+      "match": true,
+      "unchanged_vs_pre": true
+    },
+    "数据件_F3_cells_15": {
+      "bytes": 210141,
+      "sha12": "7f80d5ae03bb",
+      "expect": "7f80d5ae03bb",
+      "match": true,
+      "unchanged_vs_pre": true
+    },
+    "数据件_O1_30格形式具化": {
+      "bytes": 145592,
+      "sha12": "56eb9db8bfd1",
+      "expect": "56eb9db8bfd1",
+      "match": true,
+      "unchanged_vs_pre": true
+    }
+  },
+  "all_inputs_unchanged": true,
+  "carrier_missing_scan": {
+    "root": "〔本地路径已脱敏〕",
+    "targets": {
+      "freeze_criterion_rewire_r2_probe_2026_10_17.py": "cb91e876ae7f",
+      "freeze_criterion_rewire_r2_probe_out2_2026_10_17.txt": "9953747adec5",
+      "_h_exact_domain2_runner_2026_10_22.py": "765c2204ef33",
+      "_h_exact_domain2_trace_2026_10_22.jsonl": "d88abefb756f",
+      "_h_exact_domain2_freeze_2026_10_22.json": "60b4cb1af49b"
+    },
+    "hits": {
+      "freeze_criterion_rewire_r2_probe_2026_10_17.py": 0,
+      "freeze_criterion_rewire_r2_probe_out2_2026_10_17.txt": 0,
+      "_h_exact_domain2_runner_2026_10_22.py": 0,
+      "_h_exact_domain2_trace_2026_10_22.jsonl": 0,
+      "_h_exact_domain2_freeze_2026_10_22.json": 0
+    },
+    "hit_paths": {},
+    "files_scanned_note": "实扫件数（N_obs）随仓内件之增而增（故 ⛔ 0 载于本表，以保本表字节可复算）；实测值载于运行日志与读出件之散文面"
+  },
+  "config": {
+    "object_domain": {
+      "cells_total": 30,
+      "arms": 2,
+      "cells_per_arm": 15,
+      "mechanisms": [
+        "M1_Deposon_TRA",
+        "M2_Greedy",
+        "M3_Random"
+      ],
+      "families": [
+        "T1_GSM8K",
+        "T2_StrategyQA",
+        "T3_Trap",
+        "T4_2x2",
+        "T5_LowResource"
+      ],
+      "seed": 42,
+      "seed_note": "单 seed 42 系在册之对象域定义；本棒无随机抽样、无随机种子"
+    },
+    "gate_column": {
+      "value": 3,
+      "literal": "n_distinct <= 3",
+      "source": "b666077233c5 L320（逐字冻结文）",
+      "changed": false
+    },
+    "reading_key_defs": {
+      "数值相等": "Fraction(v)",
+      "逐字节": "(type(v).__name__, repr(v))",
+      "source": "d91a11e88b95 L78（照录）"
+    },
+    "carriers": {
+      "照录层": "照录层 · O1 形式具化 30 格（56eb9db8bfd1）",
+      "码载面": "照录层 · 非当场复现（码载件 cb91e876ae7f 不在仓；本读数＝ 205323631d0f 之冻结解析复原）"
+    },
+    "faces": [
+      {
+        "face_key": "F-0",
+        "source": "U_CAND（面甲）"
+      },
+      {
+        "face_key": "F-2",
+        "source": "U_CAND（面甲）"
+      },
+      {
+        "face_key": "F-3",
+        "source": "U_CAND（面甲）"
+      },
+      {
+        "face_key": "F-4",
+        "source": "U_CAND（面甲）"
+      },
+      {
+        "face_key": "F-1/P1",
+        "source": "H_CAND 跨档并集"
+      },
+      {
+        "face_key": "F-1/P2",
+        "source": "H_CAND 跨档并集"
+      },
+      {
+        "face_key": "F-1/P3",
+        "source": "H_CAND 跨档并集"
+      }
+    ],
+    "material_source": {
+      "f2_f3_f4": "7f80d5ae03bb 之 cells_15（15 格 · 跨臂复制）",
+      "f1_照录层": "56eb9db8bfd1 之 f1_formal_materialization_O1.cells（30 条）",
+      "f1_码载面": "205323631d0f 之 U_CAND_per_tier / H_CAND_per_tier（码载件之冻结副本 · 非当场复现）"
+    },
+    "env": {
+      "python": "3.14.7",
+      "platform": "Windows-10-10.0.17763-SP0",
+      "encoding": "utf-8",
+      "network": 0,
+      "llm_calls": 0
+    }
+  },
+  "outputs": {
+    "逐支表": {
+      "path": "〔本地路径已脱敏〕",
+      "bytes": 130350,
+      "sha12": "1b40c43680f6"
+    },
+    "逐格表": {
+      "path": "〔本地路径已脱敏〕",
+      "bytes": 1095759,
+      "sha12": "f00e8efe6931"
+    },
+    "对照表": {
+      "path": "〔本地路径已脱敏〕",
+      "bytes": 23239,
+      "sha12": "fac9f5ec7931"
+    }
+  },
+  "cross_refs": {
+    "set": "E-13 消融施测 · 派生四表（分件落盘 · 互引）",
+    "manifest_path": "〔本地路径已脱敏〕",
+    "note": "SHA-12 之互引采用『内容指纹（core_sha12 = 本表 core 体之规范化 JSON 之 SHA-256 前 12 位）』；on-disk 文件指纹载于读出件（manifest）之互引索引（on-disk 指纹之互引成哈希环 ⇒ 不可行）",
+    "core_sha12": "e70c80c93070",
+    "siblings": {
+      "逐支表": {
+        "file": "_e13_ablation_branch_table_2026_10_27.json",
+        "core_sha12": "7cf852f13d7c"
+      },
+      "逐格表": {
+        "file": "_e13_ablation_cell_table_2026_10_27.json",
+        "core_sha12": "05e704d91701"
+      },
+      "对照表": {
+        "file": "_e13_ablation_compare_table_2026_10_27.json",
+        "core_sha12": "cf0e0a32ef2a"
+      }
+    },
+    "script": {
+      "path": "〔本地路径已脱敏〕",
+      "sha12": "df1f8b4fcc9a"
+    }
+  }
+}

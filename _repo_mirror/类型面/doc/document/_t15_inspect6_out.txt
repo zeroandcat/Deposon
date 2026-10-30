@@ -1,0 +1,57 @@
+﻿=== updated result.json key sections ===
+  metadata.schema: v4_t15_sensitivity_fix/1
+  metadata.constraint_locale_hard: T1.5 = T1 ����ʧ���岹���Ƚ��Ը������� (construction-failure-fix probe); ���� L2/L14 ��ʽ�ж� (�� T1.5 ��0 + ��1.3 + ��4 + ��
+  same_caption_breakdown cells count: 6
+
+=== honesty_disclosures keys ===
+  succeeded_not_means_completed
+  watchdog_limit
+  skill_absence
+  verdicts_archived_disclosure
+  small_batch_used
+  construction_fix_disclosure
+  T15_locale_constraint_disclosure
+  audit_only_metadata_disclosure
+  partial_completion_disclosure
+  same_caption_vs_cross_caption_finding
+  K-N11-N1_N_min_structural_issue
+
+=== honesty_disclosures new entries (first 300 chars) ===
+  partial_completion_disclosure:
+    ���� 6 cells ȫ������ (120 calls �ۼ� = 6 cells �� 20 calls/cell, ʵ�� 118 OK + 2 ʧ�����Գ�ʱ); ��ײ 5h ���ϵ�; 2 ʧ�ܾ�Ϊ qwen3.7-max �˵㵥����Ӧ 90s ��ʱ (cell 2 coze/S5/r0 + cell 3 GLM_1/L_geography_world/r1), ���� 18/20 calls ͬ cell ���������; ��δ�� worker ���������� (ײ 5h ����), ����� cells ������ɼǡ�T1.5 ������ɡ�ע��
+
+  same_caption_vs_cross_caption_finding:
+    ��ʵ = ���� (�� PI 2026-09-23): T1.5 ʵ���ʾ J=0.0 �ĸ����� T1 ��ͬ �� T1 verdict �Ѳ� T1 �������� PASS = ����ʧ������� (reasoning ģ�� mimo-v2.6-pro + deepseek-v4-flash + max_tokens=100 �� 49.3% ����Ӧ + 72.1% empty-empty pairs, J=0.0 ��Ҫ����'˫������'); T1.5 �ܳ��� n_empty_responses = 0 (qwen3.7-max �� reasoning + max_tokens=500 ��������ʧ���� #1 #2 �����Ӧ����), �� J_all_pooled ��λ = 0.0 �Դ�; T1.5 ��һ����� (�����¼� same_caption_breakdown �ֶ�): same-caption re-ask J ��λ = 1.0 (L2 ά��ȫ�� 3 cells) / 0.5-0.65 (L14 ά�� 3 cells) [����ʦ re-ask ͬ caption ʱ�ظ��߶�һ��, �� qwen t=0.7 baseline 0.36-0.52 ͬ��]; cross-caption J = 0.0 ȫ�� cells (����ͬ caption ������ȫ��ͬ�Ļظ���, ����ģ����Ϊ); J_al
+
+  K-N11-N1_N_min_structural_issue:
+    ��ʵ = ���� (�� PI 2026-09-23): K-N11-N1_T1relax ��� N_min = TH_T1_N_MIN = 10 ��/��ʦ (�� T1.5 ��1.4 + ��1.8 �� T1 ����); T1.5 prereg ��1.4 �ƻ� '5 ��ʦ �� 2 prompts �� 2 re-asks = 20 calls/cell' �� 4 records/��ʦ �� 6 pairs/��ʦ; ʵ�� n_pairs = 6 < TH_T1_N_MIN = 10, K-N11-N1_T1relax = FAIL per cell per teacher (5/5 teachers); ��ϵ T1.5 prereg �ڲ�һ�� (call count �ƻ� vs N_min ����); T1 executor (A7CAD9228B0B) �� T1 �������� n_pairs �� 10 ����Ϊ L2 = 4 prompts �� 2 re-asks = 8 records/��ʦ (28 pairs) �� L14 = 2 prompts �� 5 re-asks = 10 records/��ʦ (45 pairs); T1.5 ���� T1 executor д�� (2 prompts �� 2 re-asks) �� N_min=10 �����нṹ�� gap; ���� executor �ϸ���
+
+=== overall_verdict ===
+  any_t15_kill_line_hit: False
+  K-T1-S2_status:
+    �� T1 verdict �������� (any_hit: false), T1.5 ���ز�
+  primary_root_cause_classification:
+    �ж��Ƚ� (���� J<0.85) �� K-T1-S3 ̽�벻����: ȫ 6 cells J_all_pooled ��λ < 0.85; �� T1.5 same-caption breakdown ��ʾ����ṹ: (a) same-caption re-ask J ��λ = 0.5-1.0 [qwen3.7-max �� reasoning + max_tokens=500 ��������ʧ������ʦ�ȶ����źŻع�]; (b) cross-caption J = 0.0 ȫ�� cells [����ģ�����ݷ�ɢ, �ǹ���ʧ��]; (c) J_all_pooled ��λ = 0.0 �� cross-caption ���� (cross:same = 2:1); ��ʵ����: ���� PASS �� ��'��ʦ�ȶ�' ���� 'ͬ caption re-ask ��һ���� + �� caption ���ݷ�ɢ' ��Դ����
+  root_cause_note:
+    ȫ 6 cells J_all_pooled ��λ = 0.0 < 0.85 (���淽��һ��, K-N11-3 ���� hit=True); same-caption re-ask J ��λ (per cell): cell0=1.0; cell1=1.0; cell2=1.0; cell3=0.5556; cell4=0.65; cell5=0.5; cross-caption J ��λ (per cell): all = 0.0; T1 verdict ����ʧ�������ö�����: qwen3.7-max �� reasoning + max_tokens=500 ������ n_empty=0, ��ʾ��ʵ��ʦ�ȶ����ź� = same-caption re-ask J ��λ (0.5-1.0)
+  t15_overall_verdict:
+    PASS (�ж��Ƚ� + T1 verdict ��Ϣ������)
+  L2L14_formal_verdict_unchanged:
+    L2 verdict E433A06E7BFB ��11��FAIL K-N11-3 ��֤α�� + L14 verdict 764F24A21AC8 ��11��FAIL K-N11-3 ��֤α qwen ���з��һ�ֲ��� (�� T1.5 ��0 ��λӲԼ�� + ��1.3 ̽���޶� + ��5 ���������)
+  T1_verdict_sec7_unchanged:
+    T1 verdict F1B5E49F3058 ��7 ���ж���K-T1-S3 �������� (PASS) = ����ʧ�������һ�ֲ��� (�� T1.5 ��0 + ��1.3 + ��1.5.2 + ��4 + ��5 ӲԼ��); T1.5 �������ж� T1 verdict ��7 ����
+  T1_verdict_info_boundary_complement:
+    T1.5 K-T1-S3 ���� (̽�벻���� K-T1-S1/S2, ���淽��һ��) = ���� T1 verdict ��Ϣ������: ����ʧ������������ά�ַ���һ�� (J_all_pooled < 0.85); BUT ��ʵ���� (T1.5 �·���): J_all_pooled = 0.0 �� T1 ���� = empty-empty ������ (n_empty_pairs_total / n_all_pairs_total = 0.721), �� T1.5 ���� = cross-caption ���ݷ�ɢ���� (cross:same = 2:1) + same-caption J ��һ���� (0.5-1.0); T1 verdict ��7 '���� PASS = ����ʧ�������' �������ж� (һ�ֲ���); T1.5 ���� L2/L14 ���� (һ�ֲ���); T1 verdict ��Ϣ������ = 
+
+=== records_summary ===
+  n_records_total: 120
+  n_records_ok: 118
+  n_records_failed: 2
+  n_calls_total: 120
+  n_calls_ok: 118
+  n_calls_failed: 2
+  n_empty_responses: 0
+
+=== cross_temp_std_per_dim ===
+  all_pairs: {'L2': 0.0, 'L14': 0.0}
+  nonempty: {'L2': 0.0, 'L14': 0.0}

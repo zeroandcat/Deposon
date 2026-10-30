@@ -1,0 +1,372 @@
+{
+ "schema": "v4_pi_cot_v2_ruleset/1",
+ "task": "PI 思维链蒸馏 v2.2 · 判据结构规则集（替代「proxy」命名）",
+ "generated_utc": "2026-09-24T17:38:00+08:00",
+ "prereg_ref": {
+  "path": "results/_v4_pi_cot_v2_prereg.md",
+  "sha12": "cc25c5149ce1"
+ },
+ "dataset_ref": {
+  "path": "results/_v4_pi_cot_v2_dataset.json",
+  "sha12": "7b01cd835a41",
+  "schema": "v4_pi_cot_v2_dataset/1.1",
+  "n_total": 37,
+  "n_correction_partial": 6,
+  "correction_partial_note": "6 对 R 反转 (R1a..R6a) 前半 pair_pending; 后半未闭合, 不 silently 合并计入"
+ },
+ "judgment_type_taxonomy": {
+  "types": [
+   "KILL_LINE",
+   "COST",
+   "CRITERIA",
+   "RISK",
+   "TIMING",
+   "DELEGATE"
+  ],
+  "encoding": "确定性格式扫描 + 首现位置序; 关键词表见 executor 字面",
+  "operationalization_note": "v2.2 §1 '判据类型确定性编码表' 实操定义; 关键词匹配首现位置 → 序列; 0 类则 primary = UNKNOWN"
+ },
+ "seed": 42,
+ "tree_depth_limit": 4,
+ "features": [
+  "judge_type_J1",
+  "judge_type_J2",
+  "judge_type_J3",
+  "judge_type_J4",
+  "judge_type_J6",
+  "scene_bucket_8",
+  "opt_bucket_8",
+  "is_corr_pair",
+  "rf_len_bucket"
+ ],
+ "label_distribution": {
+  "RISK": 5,
+  "COST": 1,
+  "UNKNOWN": 14,
+  "KILL_LINE": 2,
+  "CRITERIA": 7,
+  "TIMING": 7,
+  "DELEGATE": 1
+ },
+ "tree_depth_observed_main": 4,
+ "rules": [
+  {
+   "if": [
+    [
+     "opt_bucket_8",
+     "<=",
+     4
+    ],
+    [
+     "rf_len_bucket",
+     "<=",
+     0
+    ],
+    [
+     "scene_bucket_8",
+     "<=",
+     5
+    ],
+    [
+     "judge_type_J1",
+     "<=",
+     0
+    ]
+   ],
+   "then": "RISK"
+  },
+  {
+   "if": [
+    [
+     "opt_bucket_8",
+     "<=",
+     4
+    ],
+    [
+     "rf_len_bucket",
+     "<=",
+     0
+    ],
+    [
+     "scene_bucket_8",
+     "<=",
+     5
+    ],
+    [
+     "judge_type_J1",
+     ">",
+     0
+    ]
+   ],
+   "then": "COST"
+  },
+  {
+   "if": [
+    [
+     "opt_bucket_8",
+     "<=",
+     4
+    ],
+    [
+     "rf_len_bucket",
+     "<=",
+     0
+    ],
+    [
+     "scene_bucket_8",
+     ">",
+     5
+    ],
+    [
+     "judge_type_J4",
+     "<=",
+     0
+    ]
+   ],
+   "then": "UNKNOWN"
+  },
+  {
+   "if": [
+    [
+     "opt_bucket_8",
+     "<=",
+     4
+    ],
+    [
+     "rf_len_bucket",
+     "<=",
+     0
+    ],
+    [
+     "scene_bucket_8",
+     ">",
+     5
+    ],
+    [
+     "judge_type_J4",
+     ">",
+     0
+    ]
+   ],
+   "then": "RISK"
+  },
+  {
+   "if": [
+    [
+     "opt_bucket_8",
+     "<=",
+     4
+    ],
+    [
+     "rf_len_bucket",
+     ">",
+     0
+    ],
+    [
+     "scene_bucket_8",
+     "<=",
+     3
+    ],
+    [
+     "judge_type_J4",
+     "<=",
+     0
+    ]
+   ],
+   "then": "TIMING"
+  },
+  {
+   "if": [
+    [
+     "opt_bucket_8",
+     "<=",
+     4
+    ],
+    [
+     "rf_len_bucket",
+     ">",
+     0
+    ],
+    [
+     "scene_bucket_8",
+     "<=",
+     3
+    ],
+    [
+     "judge_type_J4",
+     ">",
+     0
+    ]
+   ],
+   "then": "UNKNOWN"
+  },
+  {
+   "if": [
+    [
+     "opt_bucket_8",
+     "<=",
+     4
+    ],
+    [
+     "rf_len_bucket",
+     ">",
+     0
+    ],
+    [
+     "scene_bucket_8",
+     ">",
+     3
+    ],
+    [
+     "judge_type_J2",
+     "<=",
+     0
+    ]
+   ],
+   "then": "CRITERIA"
+  },
+  {
+   "if": [
+    [
+     "opt_bucket_8",
+     "<=",
+     4
+    ],
+    [
+     "rf_len_bucket",
+     ">",
+     0
+    ],
+    [
+     "scene_bucket_8",
+     ">",
+     3
+    ],
+    [
+     "judge_type_J2",
+     ">",
+     0
+    ]
+   ],
+   "then": "TIMING"
+  },
+  {
+   "if": [
+    [
+     "opt_bucket_8",
+     ">",
+     4
+    ],
+    [
+     "judge_type_J1",
+     "<=",
+     0
+    ],
+    [
+     "rf_len_bucket",
+     "<=",
+     2
+    ]
+   ],
+   "then": "UNKNOWN"
+  },
+  {
+   "if": [
+    [
+     "opt_bucket_8",
+     ">",
+     4
+    ],
+    [
+     "judge_type_J1",
+     "<=",
+     0
+    ],
+    [
+     "rf_len_bucket",
+     ">",
+     2
+    ],
+    [
+     "is_corr_pair",
+     "<=",
+     0
+    ]
+   ],
+   "then": "TIMING"
+  },
+  {
+   "if": [
+    [
+     "opt_bucket_8",
+     ">",
+     4
+    ],
+    [
+     "judge_type_J1",
+     "<=",
+     0
+    ],
+    [
+     "rf_len_bucket",
+     ">",
+     2
+    ],
+    [
+     "is_corr_pair",
+     ">",
+     0
+    ]
+   ],
+   "then": "UNKNOWN"
+  },
+  {
+   "if": [
+    [
+     "opt_bucket_8",
+     ">",
+     4
+    ],
+    [
+     "judge_type_J1",
+     ">",
+     0
+    ]
+   ],
+   "then": "KILL_LINE"
+  }
+ ],
+ "exploratory_label": {
+  "exploratory": true,
+  "reason": "预注册起跑条件未达: TH-v2-1 N_min=50 未达 (37/50); TH-v2-3 跨日 ≥3 天 未达 (1 天); TH-v2-2 纠正/反转事件 后半未闭合 (pair_pending partial; 数量阈值满足但配对未闭合)",
+  "unmet_conditions": [
+   {
+    "id": "TH-v2-1",
+    "rule": "N_min=50",
+    "observed": 37,
+    "required": 50,
+    "met": false
+   },
+   {
+    "id": "TH-v2-3",
+    "rule": "跨日 ≥3 天, 单日占比 ≤60%",
+    "observed_days": 1,
+    "required_days": 3,
+    "met": false,
+    "note": "当前仅第 1 天 (2026-09-24) 采集, 单日占比 100% (>60%)"
+   }
+  ],
+  "partial_conditions": [
+   {
+    "id": "TH-v2-2",
+    "rule": "纠正/反转事件 ≥5",
+    "observed": 6,
+    "required": 5,
+    "met": true,
+    "status": "PARTIAL",
+    "note": "6 对 R 反转 (R1a..R6a) 前半 pair_pending 已采, 后半未闭合;数量 6 ≥ 5 满足阈值, 但配对未闭合; 如实声明 partial 处理: 主读法 = 全 37 含 partial; 替代读法 = 剔除 partial 仅用 31 normal; 禁止 silently 合并计入"
+   }
+  ],
+  "consequence": "全部数值与 kill-line 结果标注「探索性预跑, 非正式判定」;跨天第 2/3 天数据到位后才允许正式判定"
+ }
+}

@@ -1,0 +1,21 @@
+核验）；§22 仅追加于 v15 末行（`*出证：Trae code · 2026-09-23 → v15 续 ...*`）之后
+- **未修改任何 V1–V3 资产**：本节为勘误追加节，0 件 V1-V3 资产触动
+- **未修改任何 V4 frozen 链 / 不动 R5 frozen 触禁件**：E-33 引用的 10 件核锚件（`6B92BBFF7180` / `98A779D61C1E` / `6F3F6FA3AB1D` / `F1B5E49F3058` / `D6CB03A4657E` / `802DECE2286A` / `79936B630015` / `A7CAD9228B0B` / `8C125E257AF8` / `E7418F47A130`） + 审计源件 1 件 `68F66904C0C8` = 共 11 件 全部只读引用，未触动；pre/post SHA 自证一致；不动 batch1_r6_result.json / mapping.md / cleanup v3 棒 / t1_verdict.md / t1_result.json / batch2_r2_result.json / batch2_r2_executor.py / batch8_r1_result.json 等任何链上件
+- **R4 key 永不明文（无例外）**：本节全文 0 件 key 明文；grep 自检 clean
+- **kill-line 字面不动**：E-33 不涉 kill-line；本节仅事实登记 + 正确映射字面追加，无 kill-line 触动
+- **不擅自调阈值**：0 阈值调整
+- **派生 JSON 不合并**：本节为勘误追加节，0 件派生 JSON 产出
+- **不覆盖既有件**：仅在 v15 末行追加 §22 + §22.5 + §22.6；既有件 0 覆盖；既有 E-1…E-32 0 触动；既有 v15 §1–§21.8 0 触动
+- **字面忠实**：E-33 引用 evidence-auditor 审计报告（`68F66904C0C8`）+ 拍板锚 `ask_57981c1bc81e03b9990a06e5` + 各核锚件 SHA 字面均按 §A row 1-4 + §B.1-B.4 + §C.1-C.4 字面草案引述；不擅自重构拍板原文；其他详见 evidence-auditor 审链报告原文
+- **succeeded ≠ 跑完**：本棒为 doc-writer 起草类，仅起草 §22 + §22.5 + §22.6 + 末行；不代表「E-33.1 batch1_r6 result 改写定案 / E-33.2 mapping 字面错 / E-33.3 v3 棒路径基准错 / E-33.4 T1 锚标互换」等已落盘核验——`68F66904C0C8` 审链报告自身「待 PI 复核生效；生效即锁；事后不重开不调」（沿证据链审链报告 §E 状态注）
+- **「待 PI 复核」/「待 PI 二选一」/「历史事实保留」状态注记**：
+  - **E-33.1**（batch1_r6 result 链/盘双漂）= **处置留 PI 二选一**（接受 `6B92BBFF7180` 为新基准更新下游链 reference / 撤回改写从备份恢复 `A4F851154551`——盘上无可恢复副本不可恢复路径），**二选一落定前下游引用沿双记**；落定即按拍板结果更新链 reference
+  - **E-33.2**（mapping L19/L20 hash 字面错）= 起草类失灵已落定（mapping 不动 + 勘误字面追加「实际盘 SHA = 8C125E257AF8 + E7418F47A130」）
+  - **E-33.3**（v3 棒路径基准错）= 历史事实保留（v3 棒产物 `6F3F6FA3AB1D` 不动）+ 根因追加（相对路径基准错）
+  - **E-33.4**（T1 verdict/result 锚标互换）= 历史事实保留（v3 棒不动）+ 正确映射字面追加（F1B5E49F3058 = T1 verdict ✓ / D6CB03A4657E = T1 result ✓ / 802DECE2286A = add_T1）
+  - **4 子条目全部状态明示，不擅自拍板**
+- **skill 缺位 fallback**（沿派工单）：本地 skill 加载器多次实录 Local skill not found —— 按 v15 §21.7-21.8 + 派工单锚 `6844BF36F762`（v15 末态）+ `68F66904C0C8` §A-§C 字面既有口径执行；**未编造 skill 不存在的虚构指令**
+
+---
+
+*出证：Trae code · 2026-09-23 → v16 续（2026-09-26 by doc-writer `agent-0032834a3e04`，勘误追加 E-33 4 疑点定案，字面源 `results/_v4_evidence_audit_reconcile_2026_09_26.md` SHA-12 `68F66904C0C8`）*

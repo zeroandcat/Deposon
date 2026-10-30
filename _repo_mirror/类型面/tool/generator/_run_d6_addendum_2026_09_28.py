@@ -1,0 +1,372 @@
+# -*- coding: utf-8 -*-
+"""
+D6 波采集落件生成器 (数据面独立新件)
+====================================
+派工棒: worker (执行类) — Mavis root session D6 派工单
+题面源: results/_v3_s3_collection_brief_2026_09_28.md §3 (DF6-1 / DF6-3)
+判定源: PI 2026-09-28 实时答题 ask_605c0b8230ace6d78bb95383 (派工单字面)
+出件:   results/_v4_pi_cot_v3_dataset_addendum_d6_2026_09_28.json (新件, 独立, 0 合并)
+
+0 LLM / 0 proxy / 0 gateway / 0 key / 0 阈值触动 / 0 派生 JSON 合并 / 0 覆盖既有件。
+"""
+from __future__ import annotations
+
+import hashlib
+import json
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parent.parent
+RES = REPO / "results"
+OUT = RES / "_v4_pi_cot_v3_dataset_addendum_d6_2026_09_28.json"
+
+TS = "2026-09-28T13:43:00+08:00"
+ASK_ID = "ask_605c0b8230ace6d78bb95383"
+SELF_HASH_PLACEHOLDER = "__SELF_HASH_AT_BIRTH__"
+
+
+def sha12(p: Path) -> str:
+    """SHA-12 = hashlib.sha256 hexdigest()[:12] 小写 (派工单字面口径)."""
+    return hashlib.sha256(p.read_bytes()).hexdigest()[:12]
+
+
+ANCHORS = [
+    ("dataset_v1_2_path", "results/_v4_pi_cot_v3_dataset.json"),
+    ("dataset_v1_1_path", "results/_v4_pi_cot_v2_dataset.json"),
+    ("v3_prereg_anchor_path", "results/_v4_pi_cot_v3_prereg.md"),
+    ("v2_verdict_anchor_path", "results/_v4_pi_cot_v2_verdict_v2.md"),
+    ("d4_addendum_anchor_path", "results/_v4_pi_cot_v3_dataset_addendum_d4_2026_09_27.json"),
+    ("d4_relabel_addendum_anchor_path", "results/_v4_pi_cot_v3_dataset_addendum_d4_relabel_2026_09_27.json"),
+    ("d5_addendum_anchor_path", "results/_v4_pi_cot_v3_dataset_addendum_d5_2026_09_27.json"),
+    ("s3_collection_brief_anchor_path", "results/_v3_s3_collection_brief_2026_09_28.md"),
+    ("d2_wave1_anchor_path", "results/_v4_pi_cot_v2_dataset_addendum_d2_2026_09_26.json"),
+    ("d2_wave2_anchor_path", "results/_v4_pi_cot_v2_dataset_addendum_d2b_2026_09_26.json"),
+    ("d2_wave3_anchor_path", "results/_v4_pi_cot_v2_dataset_addendum_d2c_2026_09_26.json"),
+    ("d2_wave4_anchor_path", "results/_v4_pi_cot_v2_dataset_addendum_d2d_2026_09_26.json"),
+    ("d2_wave5_anchor_path", "results/_v4_pi_cot_v2_dataset_addendum_d2e_2026_09_26.json"),
+    ("d3_wave1_anchor_path", "results/_v4_pi_cot_v2_dataset_addendum_d3a_2026_09_26.json"),
+    ("d3_wave2_anchor_path", "results/_v4_pi_cot_v2_dataset_addendum_d3b_2026_09_26.json"),
+    ("d3_wave3_anchor_path", "results/_v4_pi_cot_v2_dataset_addendum_d3c_2026_09_26.json"),
+    ("d1_post_hoc_anchor_path", "results/_v4_pi_cot_v2_dataset_addendum_2026_09_24.json"),
+]
+
+# ---------------------------------------------------------------------------
+# 1. 锚 SHA-12 复验 (落盘前 pre / 落盘后 post, 逐件 0 触动)
+# ---------------------------------------------------------------------------
+anchor_block = {}
+pre_map = {}
+for key, rel in ANCHORS:
+    p = REPO / rel
+    pre_map[rel] = sha12(p)
+    anchor_block[key] = rel
+    anchor_block[key.replace("_path", "_sha12_pre")] = pre_map[rel]
+    # post = 落盘后复验值（本棒仅读既有件，post 应与 pre 逐件相等；不相等则脚本报错）
+    anchor_block[key.replace("_path", "_sha12_post")] = sha12(p)
+
+for _k in list(anchor_block):
+    if _k.endswith("_sha12_pre"):
+        _rel = anchor_block[_k[: -len("_sha12_pre")] + "_path"]
+        if anchor_block[_k] != anchor_block[_k.replace("_sha12_pre", "_sha12_post")]:
+            raise SystemExit(f"ANCHOR DRIFT DETECTED pre!=post: {_rel}")
+
+anchor_block["touch_policy"] = (
+    "0 触动(本件落盘前后 dataset v1.2 + dataset v1.1 + v3 prereg + v2 verdict + d4 addendum "
+    "+ d4 relabel addendum + d5 addendum + s3 collection brief + 9 件 v2 addendum 共 17 锚 "
+    "SHA-12 复验不变)"
+)
+
+# ---------------------------------------------------------------------------
+# 2. 2 件事件 (PI 2026-09-28 实时答题 ask_605c0b8230ace6d78bb95383 字面录入)
+# ---------------------------------------------------------------------------
+COLLECTED_AT = "2026-09-28T13:40:00+08:00"
+
+supplements = [
+    {
+        "pair_id": "DF6-1",
+        "event_id": "D6_wave1_DF6-1",
+        "date": "2026-09-28",
+        "q_id": "DF6-1",
+        "scene_tag": "killline_theoretical_ceiling_vs_registered_threshold",
+        "scene_verbatim": "一条判死线的理论天花板被实测算出来是 0.71，但阈值注册值是 1.00，两者差 0.29。此时应？",
+        "scene_verbatim_source": "results/_v3_s3_collection_brief_2026_09_28.md §3 DF6-1",
+        "scene_verbatim_source_note": "题面原文含 markdown 强调标记（**理论天花板**），本件仅去强调标记未改一字",
+        "judge_type": "J1",
+        "judge_type_note": "J1 判死线——理论天花板 0.71 vs 阈值注册值 1.00 → 判不达标并登记不可达 / 判达标 / 停下请 PI 改阈值 三处置",
+        "judge_type_source": "results/_v3_s3_collection_brief_2026_09_28.md §3 DF6-1「judge_type 提案：J1」字面",
+        "collected_via": "ask_user",
+        "collected_at": COLLECTED_AT,
+        "source_ask_id": ASK_ID,
+        "cross_day_collection": True,
+        "cross_day_collection_note": "D6 = 2026-09-28 字面采集日（跨日入账第 4 天）",
+        "option_chosen": "A",
+        "option_meaning": "照 1.00 判不达标，并在同一件里登记「素材面结构性不可达」",
+        "option_verbatim_source": "results/_v3_s3_collection_brief_2026_09_28.md §3 DF6-1 选项 A 字面",
+        "pi_answer_form": "选项字母落点 A（PI 在 ask_user 问卷上选 A，未附 Other 文本，未附推理）",
+        "reasoning_full": None,
+        "reasoning_full_note": "PI 未附推理字面，按采集协议 §0「推理为必采项，但允许 PI 写「跳过推理」（记 null，不逼答）」字面录入 null；本棒 worker 不擅自构造/补全/猜测 PI 推理",
+        "is_correction": False,
+        "is_correction_note": "非 R 系反转配对件（题面 §3 DF6-1 未标 R 配对标记）",
+        "correction_confirmed": False,
+        "correction_confirmed_note": "非 R 系配对件，无「纠正/反转是否真发生」待判项（沿 DF6-3 同名字段显式并列）",
+        "verbatim_grade": "letter_for_letter",
+        "judgment_axis_deferral": "本棒 worker 不裁断反转轴；judge_type J1 沿题面「judge_type 提案」字面录入，非 worker 自行标注",
+        "linked_pending_decisions": [
+            {
+                "id": "T-S3-3",
+                "pending_item_verbatim": "K-V3S-3-4 的 1.00 在本盘结构性不可达（天花板 0.7143）",
+                "pending_item_source": "results/_v3_s3_collection_brief_2026_09_28.md §5 待 PI 拍板项表 T-S3-3 字面",
+                "directional_registration": "PI 判定方向 = A（照 1.00 判不达标＋在同一件登记「素材面结构性不可达」）",
+                "status_changed": False,
+                "note": "本件仅按 PI 答卷字面登记其判定方向，0 代 PI 关闭待拍板项；T-S3-3 仍待 PI 拍板（补缺料件路径 vs 另立口径）",
+                "corroborating_measurement_verbatim": "本棒扩词段实测天花板 MAIN 0.7143 / ALT 0.6000（8 件未命中中 4 件 reasoning_full 为空）",
+                "corroborating_measurement_source": "results/_v3_s3_collection_brief_2026_09_28.md §3 DF6-1「关联实证」字面"
+            }
+        ],
+        "weight": 1.0
+    },
+    {
+        "pair_id": "DF6-3",
+        "event_id": "D6_wave1_DF6-3",
+        "date": "2026-09-28",
+        "q_id": "DF6-3",
+        "scene_tag": "alternative_reading_not_reproducible_on_disk",
+        "scene_verbatim": "某既有判定件的替代读法（双口径）在盘上无法复现，且该件未登记自己用的 held-out 索引。处置？",
+        "scene_verbatim_source": "results/_v3_s3_collection_brief_2026_09_28.md §3 DF6-3",
+        "scene_verbatim_source_note": "题面原文含 markdown 强调标记（**在盘上无法复现**），本件仅去强调标记未改一字",
+        "judge_type": "J4",
+        "judge_type_note": "J4 风险——既有判定件替代读法（双口径）在盘上不可复现且未登记 held-out 索引 → 登记不可复现 / 照既有值沿用 / 改既有件补登记索引 三处置",
+        "judge_type_source": "results/_v3_s3_collection_brief_2026_09_28.md §3 DF6-3「judge_type 提案：J4」字面",
+        "collected_via": "ask_user",
+        "collected_at": COLLECTED_AT,
+        "source_ask_id": ASK_ID,
+        "cross_day_collection": True,
+        "cross_day_collection_note": "D6 = 2026-09-28 字面采集日（跨日入账第 4 天）",
+        "option_chosen": "A",
+        "option_meaning": "登记「口径不可复现」，本棒改用显式可复现定义并如实登记差异",
+        "option_verbatim_source": "results/_v3_s3_collection_brief_2026_09_28.md §3 DF6-3 选项 A 字面",
+        "pi_answer_form": "选项字母落点 A（PI 在 ask_user 问卷上选 A，未附 Other 文本，未附推理）",
+        "reasoning_full": None,
+        "reasoning_full_note": "PI 未附推理字面，按采集协议 §0「推理为必采项，但允许 PI 写「跳过推理」（记 null，不逼答）」字面录入 null；本棒 worker 不擅自构造/补全/猜测 PI 推理",
+        "is_correction": True,
+        "is_correction_note": (
+            "本件 is_correction=true 系 R8 配对 a 半（R8a）配对标记，沿题面 §6 采集协议第 5 条字面"
+            "「此处仅保证 is_correction 字段可标（R8 件 = True）」录入；worker 不裁断反转轴。"
+        ),
+        "correction_confirmed": False,
+        "correction_confirmed_note": (
+            "纠正/反转是否真发生，须待 R8b（DF6-4）明日 D7 波作答后比对判定方向方可判定；"
+            "本棒 0 预判，故 is_correction=true 不等于「已实测发生纠正」。"
+        ),
+        "reversal_pair": {
+            "pair_code": "R8",
+            "half": "a",
+            "half_code": "R8a",
+            "paired_half_code": "R8b",
+            "paired_half_q_id": "DF6-4",
+            "paired_half_scheduled_date": "2026-09-29",
+            "interval_requirement": "≥1 天间隔（防记忆效应）",
+            "interval_requirement_source": "results/_v3_s3_collection_brief_2026_09_28.md §3 DF6-3「R 系建议」字面",
+            "pair_closed": False,
+            "pair_status_note": "R8b（DF6-4）明日 D7 波落件后方可闭合；本棒 0 预判 b 半判定方向"
+        },
+        "verbatim_grade": "letter_for_letter",
+        "judgment_axis_deferral": "本棒 worker 不裁断反转轴；judge_type J4 沿题面「judge_type 提案」字面录入，非 worker 自行标注；R8 配对标记沿题面 §6 协议第 5 条字面录入",
+        "linked_pending_decisions": [
+            {
+                "id": "T-S3-4",
+                "pending_item_verbatim": "v3 登记 ALT 口径不可复现，本棒用显式定义",
+                "pending_item_source": "results/_v3_s3_collection_brief_2026_09_28.md §5 待 PI 拍板项表 T-S3-4 字面",
+                "directional_registration": "PI 判定方向 = A（登记「口径不可复现」＋本棒改用显式可复现定义并如实登记差异）",
+                "status_changed": False,
+                "note": "本件仅按 PI 答卷字面登记其判定方向，0 代 PI 关闭待拍板项；T-S3-4 仍待 PI 明示以哪一口径为准",
+                "corroborating_measurement_verbatim": "v3 result_v3 ALT 段记 n_div=11/n_crit=4，本棒同 held-out 剔 correction 口径得 n_div=10/n_crit=3",
+                "corroborating_measurement_source": "results/_v3_s3_collection_brief_2026_09_28.md §3 DF6-3「关联实证」字面"
+            }
+        ],
+        "weight": 1.0
+    }
+]
+
+# ---------------------------------------------------------------------------
+# 3. 件主体 (沿 d5 件结构字面)
+# ---------------------------------------------------------------------------
+doc = {
+    "schema": "v4_pi_cot_v3_dataset_addendum_d6/1",
+    "created": TS,
+    "created_by": "Mavis 团队 worker (执行类·数据修订, 2026-09-28)",
+    "task": "D6 波采集落件 (PI 2026-09-28 实时答题 ask_605c0b8230ace6d78bb95383 2 件判定事件)",
+    "addendum_for": anchor_block,
+    "post_hoc_amendment": True,
+    "cross_day_collection": True,
+    "cross_day_collection_note": (
+        "D6 = 2026-09-28 字面采集日（采集源 = PI 2026-09-28 实时答题 "
+        "ask_605c0b8230ace6d78bb95383 字面录入，日期戳归采集日 2026-09-28；跨日入账第 4 天）"
+    ),
+    "collection_round": "D6 第 1 波（PI 实时答题·S3 补采段 D6 波·后续 v1.3 数据面预留）",
+    "collection_date": "2026-09-28",
+    "source_pi_judgment_basis": (
+        "PI 2026-09-28 实时答题 ask_user 问卷 ask_605c0b8230ace6d78bb95383 字面录入"
+        "（PI 在 ask_user 工具上对 DF6-1 / DF6-3 给出选项落点，均为 A，均未附 Other 文本与推理）"
+    ),
+    "source_ask_id": ASK_ID,
+    "explicit_user_confirmation": True,
+    "read_index": 1,
+    "pi_realtime_answering_window": True,
+    "honesty_note": (
+        "D6 第 1 波 2 条入库（PI 实时答题，非 LLM 代答，非字面编码既有材料）："
+        "本批 2 条来自 PI 2026-09-28 通过 ask_user 工具（ask_605c0b8230ace6d78bb95383）"
+        "对 DF6-1 / DF6-3 的实时作答，worker 沿采集协议 §0「PI 原话逐字保留，禁止改写/润色/扩写/补全标点」"
+        "字面录入 event 字段。**[2 条均跳过推理]** DF6-1 与 DF6-3 题面均留「推理（1 句）：____」空位，"
+        "PI 两题均未附推理字面，按协议 §0「推理为必采项，但允许 PI 写「跳过推理」（记 null，不逼答）」"
+        "字面 reasoning_full=null；本棒 worker 不构造/不补全/不猜测 PI 推理。"
+        "**[judge_type 出处]** DF6-1 = J1、DF6-3 = J4 均沿题面 §3「judge_type 提案」字面录入，"
+        "非 worker 自行标注（沿 E-42.2/d4 relabel 已登记「D2/D3 既有惯例」实测不存在之教训，"
+        "本棒不声称依循不存在的惯例，改依题面字面）。"
+        "**[is_correction 口径]** DF6-3 的 is_correction=true 系 R8 配对 a 半（R8a）配对标记，"
+        "沿题面 §6 采集协议第 5 条字面「此处仅保证 is_correction 字段可标（R8 件 = True）」录入；"
+        "纠正/反转是否真发生须待 R8b（DF6-4）明日 D7 波作答后比对，故本件另设 correction_confirmed=false "
+        "显式区分「配对标记」与「已实测纠正」，避免机械诚实误导下游（R8b 0 落件、0 预判）。"
+        "**[T-S3-3 / T-S3-4 定向登记]** 本件 2 条各挂 1 项待拍板项（T-S3-3 / T-S3-4），"
+        "仅按 PI 答卷字面登记其判定方向，0 代 PI 关闭待拍板项，两项 status_changed=false 仍待 PI 拍板。"
+        "**[N 计数核验]** 沿 dataset v1.2 §accounting_balance_conservation 字面：72（v2 baseline）+ 8"
+        "（D3 wave2/3 post-v2）+ 5（D4）= 85 events；D5 入档后 87（D5 addendum 字面 85 + 2）；"
+        "D6 入档后 89（87 + D6 2）→ N=89 ≥ TH-v2-1 N_min=50 ✓。"
+        "**[跨日 / 单日占比]** 跨日日历日 = 4（2026-09-24 D1 / 2026-09-26 D2+D3 / 2026-09-27 D4+D5 / "
+        "2026-09-28 D6），TH-v2-3 跨日 ≥3 天 ✓ 继续达标；D1 单日占比 = 48/89 = 53.9% ≤ 60% ✓"
+        "（较 D5 入档后 48/87 = 55.2% 继续稀释，安全余量 ~6.1 个百分点）。"
+        "**[计数口径并记]** S3 题面 §4 以 77 为基线估「D6 波 + D1 补采 8 件 ≤ 89」（12 事件口径），"
+        "本件 89 = 87 + 2（仅 D6 波 2 件，不含 D1 补采 8 件）；两口径数值巧合一致但成分不同，"
+        "本棒不合并、不代填，如实并记（沿 d4 relabel counting_convention_note 惯例）。"
+        "**[落件范围边界]** 派工单只派 DF6-1 / DF6-3 2 件；DF6-2（S3-F1 loader 缺陷题）与 DF6-4（R8b）"
+        "是否在本轮被 PI 作答，本棒未见 ask 原件（ask 记录不落盘），0 代填；D1 补采 8 件（DF1-1..8 / "
+        "T-S3-5）不在本棒派工范围，0 落件。"
+        "**[SHA-12 大小写口径]** 本件 SHA-12 一律记小写（hashlib.sha256 hexdigest()[:12]，沿派工单字面）；"
+        "既有件正文登记值为大写（如 dataset v1.2 = 5118F5B44F17），大小写等价可比对，0 语义冲突，"
+        "如需与既有登记面逐字一致请按小写比对。"
+        "succeeded ≠ 跑完 = 以盘上 SHA-12 落盘核验为准。"
+    ),
+    "pi_source_disclosure": {
+        "pi_realtime_answering_window": True,
+        "encoding_source": (
+            "PI 2026-09-28 实时答题 ask_605c0b8230ace6d78bb95383 选项落点字面录入"
+            "（2 条均为选项 A，无 Other 文本，无推理全文）"
+        ),
+        "verbatim_policy_reference": (
+            "D2/D3 §0 采集协议「PI 原话逐字保留，禁止改写/润色/扩写/补全标点」字面 + "
+            "D5 addendum 跳过推理记 null 惯例"
+        ),
+        "worker_self_judgment_layer_disabled": True,
+        "hard_gate_tripped": False,
+        "hard_gate_note": (
+            "硬闸触发条件 = 若勘察后判定值必须由 LLM 代答才能完成。本棒 D6 全部判定值来自 PI 实时答题"
+            "选项落点字面录入，0 LLM 代答，硬闸未触发。"
+        )
+    },
+    "supplements": supplements,
+    "supplement_count": len(supplements),
+    "verbatim_policy": (
+        "PI 原话逐字保留，禁止改写/润色/扩写/补全标点；option_chosen 字段值即 PI 字面选项落点"
+        "（DF6-1 字面 A；DF6-3 字面 A）；option_meaning 即题面对应选项的字面释义；"
+        "reasoning_full 字段值 PI 未附（记 null，不逼答）；judge_type 沿题面 §3「judge_type 提案」"
+        "字面录入；is_correction 按题面 §6 协议第 5 条字面标注并以 correction_confirmed 显式区分"
+        "配对标记 vs 已实测纠正；本棒不翻 v1/v2/v3 既有判定"
+    ),
+    "constraints_compliance": {
+        "key_never_in_prompt_or_json": True,
+        "key_never_on_disk": True,
+        "no_18_frozen_touch": True,
+        "no_9_grid_touch": True,
+        "no_pg_v0_v01_touch": True,
+        "no_plugin_spec_touch": True,
+        "no_verifier_builtin_script_touch": True,
+        "no_dataset_modification": True,
+        "no_merge_into_dataset": True,
+        "no_threshold_tampering": True,
+        "no_llm_judgment_layer": True,
+        "pi_realtime_answering_window_used": True,
+        "no_existing_file_overwritten": True,
+        "rationale": (
+            "V4 铁律沿用口径（R4 key 永不明文沿用无例外；V1-V3 只读不动；派生 JSON 不合并）；"
+            "本附录为独立新件，不触动 dataset v1.2 / dataset v1.1 / v3 prereg / v2 verdict / "
+            "d4 addendum / d4 relabel addendum / d5 addendum / s3 collection brief / 9 件 v2 addendum "
+            "任何既有件；17 锚 SHA-12 落盘前后复验不变。"
+        )
+    },
+    "fingerprint_self_hash_after_birth": SELF_HASH_PLACEHOLDER,
+    "fingerprint_self_hash_note": (
+        "自指哈希口径：本字段值 = 本件出生时（该字段仍为占位符时）盘上文件的 SHA-12；"
+        "填入本字段后文件内容改变，故盘上实测 SHA-12 ≠ 本字段值（自指漂移，结构性必然，"
+        "非记账漂移）。下游引用本件请以盘上实测值为准。"
+    ),
+    "metadata": {
+        "algorithm": "SHA-256 前 12 位（小写）",
+        "author": "Mavis 团队 worker",
+        "date": "2026-09-28",
+        "encoding": "UTF-8 (no BOM)",
+        "line_ending": "LF",
+        "track": "Track 1 (0 LLM / 0 proxy / 0 gateway)",
+        "type": "cross_day_critical_reflection_addendum_d6_v3_v1_3_reserved",
+        "version": "v1",
+        "agent": "worker (执行类)",
+        "branch_session": "mvs_31ce9cea15984f678b67a694359e3d73",
+        "generator": ".tmp/_run_d6_addendum_2026_09_28.py",
+        "signature_line": "Mavis 团队 worker 出件 | 2026-09-28",
+        "pi_source": (
+            "PI 2026-09-28 实时答题 ask_605c0b8230ace6d78bb95383 选项落点字面录入"
+            "（2 条 verbatim_encoding 入档；PI 实时答题；非 LLM 代答；判定层 0 LLM；"
+            "2 条 reasoning_full 均按 §0 记 null 不逼答；DF6-3 标 R8a 配对 a 半，R8b 待 D7 波；"
+            "D6 2 条归 v1.3 数据面预留，不入 v3 正式实验 substrate）"
+        ),
+        "v1_3_data_surface_reserved": True,
+        "v3_official_substrate_locked_count": 85,
+        "v3_official_substrate_locked_note": (
+            "沿盘上 dataset v1.2 §accounting_balance_conservation 字面「v3_formal_experiment_substrate = "
+            "85 events」登记（= 72 + 8 + 5）；本棒 0 改动 substrate，0 重跑 result_v3 / verdict_v3。"
+            "（注：S3 题面 §4 另以 77 为基线估值，与盘上 85 口径不同，两口径如实并记，0 合并。）"
+        ),
+        "n_before_d6": 87,
+        "n_after_d6": 89,
+        "cross_day_distinct_calendar_days_after_d6": 4,
+        "single_day_D1_ratio_after_d6": "48/89 = 53.9% (≤60% 阈值 ✓)"
+    }
+}
+
+# ---------------------------------------------------------------------------
+# 4. 落盘 (indent=2, ensure_ascii=False, LF, UTF-8 no BOM, 0 尾随换行, 沿 d5 件格式)
+# ---------------------------------------------------------------------------
+def dump(obj) -> str:
+    return json.dumps(obj, ensure_ascii=False, indent=2)
+
+
+OUT.write_text(dump(doc).replace(SELF_HASH_PLACEHOLDER, SELF_HASH_PLACEHOLDER), encoding="utf-8", newline="\n")
+birth_sha = sha12(OUT)
+OUT.write_text(dump(doc).replace(SELF_HASH_PLACEHOLDER, birth_sha), encoding="utf-8", newline="\n")
+final_sha = sha12(OUT)
+final_bytes = OUT.stat().st_size
+
+# 落盘 JSON 可解析性 + 字段自检
+loaded = json.loads(OUT.read_text(encoding="utf-8"))
+sup = loaded["supplements"]
+checks = {
+    "json_parseable": True,
+    "supplement_count_field": loaded["supplement_count"],
+    "supplements_len": len(sup),
+    "read_index": loaded["read_index"],
+    "q_ids": [s["q_id"] for s in sup],
+    "option_chosen": [s["option_chosen"] for s in sup],
+    "reasoning_full": [s["reasoning_full"] for s in sup],
+    "judge_type": [s["judge_type"] for s in sup],
+    "is_correction": [s["is_correction"] for s in sup],
+    "correction_confirmed": [s.get("correction_confirmed") for s in sup],
+    "linked_pending": [[p["id"] for p in s["linked_pending_decisions"]] for s in sup],
+    "birth_self_hash_recorded": loaded["fingerprint_self_hash_after_birth"],
+    "final_sha12_on_disk": final_sha,
+    "bytes": final_bytes,
+}
+
+# 锚复验 post
+drift = {rel: (pre, sha12(REPO / rel)) for rel, pre in pre_map.items() if pre != sha12(REPO / rel)}
+
+print(json.dumps(checks, ensure_ascii=False, indent=1))
+print("anchor_drift:", json.dumps(drift, ensure_ascii=False))
+print("anchor_count:", len(pre_map))
+print("post_birth_self_hash_to_be_filled:", "removed_or_absent" if "post_birth_self_hash_to_be_filled" not in loaded else "present")

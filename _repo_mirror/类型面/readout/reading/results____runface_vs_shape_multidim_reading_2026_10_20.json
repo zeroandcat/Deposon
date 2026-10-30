@@ -1,0 +1,2811 @@
+{
+ "piece": {
+  "kind": "multidim_reading_data",
+  "title": "「运行分布 vs 形态」之对照口径 · 多维并取 5 维闭集之读出件（机读面）",
+  "repo": "deposon",
+  "piece_nature": "径-甲 · 各维独立读出 · 并报 · 纯复算 · 0 新跑 · 0 LLM · 0 联网 · 0 读 key",
+  "authorization": "PI v169-Q4 opt1「皆授权（推荐）」（§3-3 第 3 项：对照口径之执行面＝授权 · 读出件之产出之派出）；径-甲（v167-Q3）· 多维并取释义确认（v167-Q3）· 处置-甲／R-甲 等权／R-丁 维持排除（v168-Q4）",
+  "readout_observation_time_cst": "2026-10-20 23:09:29",
+  "material_observation_times_cst": {
+   "results/_eta_main_run_reading_2026_10_20.json": "2026-10-20 13:35:44",
+   "results/_eta_sep_measurement_data_2026_10_20.json": "2026-10-20 16:04:53"
+  },
+  "no_merge_statement": "并取之语义＝并报。各维之读数各自独立、各自留存、各自可判；⛔ 0 相加／加权／平均／打分／合成充单一判据；⛔ 0 合并为单一分数。本 JSON 之 5 维各自独立成节，⛔ 0 并入任何既有 JSON。",
+  "domain_isolation": "凡 R-甲／R-乙／R-丙 一律指「对照口径域」（8b07d606df7d §2-2）；「消融域」之同名 token 非本件之对象（K-MDSUP-7）。"
+ },
+ "d1_S_jia_tvd": {
+  "caliber": "同格同决策同选项序之 P 向量逐位比对；tvd ＝ 0.5·Σ|ΔP|；「全等」＝ 浮点逐位全等（非容差）",
+  "n_pairs": 6,
+  "n_decisions_per_pair": 237,
+  "total_groups": 1422,
+  "pairs": [
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D2",
+    "n_decisions": 237,
+    "mean_tvd": 0.1392141756013205,
+    "max_tvd": 0.21428571428571433,
+    "min_tvd": 0.07081807081807082,
+    "n_identical_P_vectors": 0
+   },
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D3",
+    "n_decisions": 237,
+    "mean_tvd": 0.3442181451325081,
+    "max_tvd": 0.5,
+    "min_tvd": 0.16655674273402807,
+    "n_identical_P_vectors": 0
+   },
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D4",
+    "n_decisions": 237,
+    "mean_tvd": 0.2577617663789794,
+    "max_tvd": 0.3739495798319328,
+    "min_tvd": 0.14212130768422163,
+    "n_identical_P_vectors": 0
+   },
+   {
+    "tier_a": "ETAC-D2",
+    "tier_b": "ETAC-D3",
+    "n_decisions": 237,
+    "mean_tvd": 0.4833588940678556,
+    "max_tvd": 0.7142857142857143,
+    "min_tvd": 0.23737481355209888,
+    "n_identical_P_vectors": 0
+   },
+   {
+    "tier_a": "ETAC-D2",
+    "tier_b": "ETAC-D4",
+    "n_decisions": 237,
+    "mean_tvd": 0.3969759419802999,
+    "max_tvd": 0.5882352941176471,
+    "min_tvd": 0.21293937850229244,
+    "n_identical_P_vectors": 0
+   },
+   {
+    "tier_a": "ETAC-D3",
+    "tier_b": "ETAC-D4",
+    "n_decisions": 237,
+    "mean_tvd": 0.09074152102158539,
+    "max_tvd": 0.13719512195121952,
+    "min_tvd": 0.024435435049806442,
+    "n_identical_P_vectors": 0
+   }
+  ],
+  "crosscheck_vs_registered_face": [
+   {
+    "pair": [
+     "ETAC-D1",
+     "ETAC-D2"
+    ],
+    "mean_tvd_bitwise_equal": true,
+    "max_tvd_bitwise_equal": true,
+    "min_tvd_bitwise_equal": true,
+    "n_identical_equal": true,
+    "n_decisions_equal": true
+   },
+   {
+    "pair": [
+     "ETAC-D1",
+     "ETAC-D3"
+    ],
+    "mean_tvd_bitwise_equal": true,
+    "max_tvd_bitwise_equal": true,
+    "min_tvd_bitwise_equal": true,
+    "n_identical_equal": true,
+    "n_decisions_equal": true
+   },
+   {
+    "pair": [
+     "ETAC-D1",
+     "ETAC-D4"
+    ],
+    "mean_tvd_bitwise_equal": true,
+    "max_tvd_bitwise_equal": true,
+    "min_tvd_bitwise_equal": true,
+    "n_identical_equal": true,
+    "n_decisions_equal": true
+   },
+   {
+    "pair": [
+     "ETAC-D2",
+     "ETAC-D3"
+    ],
+    "mean_tvd_bitwise_equal": true,
+    "max_tvd_bitwise_equal": true,
+    "min_tvd_bitwise_equal": true,
+    "n_identical_equal": true,
+    "n_decisions_equal": true
+   },
+   {
+    "pair": [
+     "ETAC-D2",
+     "ETAC-D4"
+    ],
+    "mean_tvd_bitwise_equal": true,
+    "max_tvd_bitwise_equal": true,
+    "min_tvd_bitwise_equal": true,
+    "n_identical_equal": true,
+    "n_decisions_equal": true
+   },
+   {
+    "pair": [
+     "ETAC-D3",
+     "ETAC-D4"
+    ],
+    "mean_tvd_bitwise_equal": true,
+    "max_tvd_bitwise_equal": true,
+    "min_tvd_bitwise_equal": true,
+    "n_identical_equal": true,
+    "n_decisions_equal": true
+   }
+  ],
+  "all_bitwise_equal": true,
+  "P_vector_identity_across_mechanisms": {
+   "ETAC-D1": {
+    "n_cells": 79,
+    "n_mismatch_across_mechanisms": 0
+   },
+   "ETAC-D2": {
+    "n_cells": 79,
+    "n_mismatch_across_mechanisms": 0
+   },
+   "ETAC-D3": {
+    "n_cells": 79,
+    "n_mismatch_across_mechanisms": 0
+   },
+   "ETAC-D4": {
+    "n_cells": 79,
+    "n_mismatch_across_mechanisms": 0
+   }
+  },
+  "limitation": "其 P 向量系实跑所得 ⇒ 先验成分与经验成分未分离（口径件 §2-1 自陈）⇒ C-4 不成就。"
+ },
+ "d2_S_bing_value_vector": {
+  "canonical_forms": [
+   "family_aligned（族序）",
+   "o2_sorted（O2 升序）"
+  ],
+  "two_reads_not_merged": true,
+  "value_vectors": {
+   "ETAC-D1": {
+    "family_aligned": [
+     [
+      13,
+      15
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      13,
+      15
+     ],
+     [
+      13,
+      14
+     ],
+     [
+      2,
+      5
+     ]
+    ],
+    "family_aligned_float": [
+     0.8666666666666667,
+     0.6666666666666666,
+     0.8666666666666667,
+     0.9285714285714286,
+     0.4
+    ],
+    "o2_sorted": [
+     [
+      2,
+      5
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      13,
+      15
+     ],
+     [
+      13,
+      15
+     ],
+     [
+      13,
+      14
+     ]
+    ],
+    "o2_sorted_float": [
+     0.4,
+     0.6666666666666666,
+     0.8666666666666667,
+     0.8666666666666667,
+     0.9285714285714286
+    ]
+   },
+   "ETAC-D2": {
+    "family_aligned": [
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      11,
+      20
+     ]
+    ],
+    "family_aligned_float": [
+     1.0,
+     1.0,
+     0.8,
+     1.0,
+     0.55
+    ],
+    "o2_sorted": [
+     [
+      11,
+      20
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "o2_sorted_float": [
+     0.55,
+     0.8,
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "ETAC-D3": {
+    "family_aligned": [
+     [
+      4,
+      15
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      2,
+      15
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      1,
+      5
+     ]
+    ],
+    "family_aligned_float": [
+     0.26666666666666666,
+     0.2,
+     0.13333333333333333,
+     0.5714285714285714,
+     0.2
+    ],
+    "o2_sorted": [
+     [
+      2,
+      15
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      4,
+      15
+     ],
+     [
+      4,
+      7
+     ]
+    ],
+    "o2_sorted_float": [
+     0.13333333333333333,
+     0.2,
+     0.2,
+     0.26666666666666666,
+     0.5714285714285714
+    ]
+   },
+   "ETAC-D4": {
+    "family_aligned": [
+     [
+      2,
+      5
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      6,
+      7
+     ],
+     [
+      3,
+      10
+     ]
+    ],
+    "family_aligned_float": [
+     0.4,
+     0.4,
+     0.4,
+     0.8571428571428571,
+     0.3
+    ],
+    "o2_sorted": [
+     [
+      3,
+      10
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      6,
+      7
+     ]
+    ],
+    "o2_sorted_float": [
+     0.3,
+     0.4,
+     0.4,
+     0.4,
+     0.8571428571428571
+    ]
+   }
+  },
+  "independent_recomputation": {
+   "ETAC-D1": {
+    "family_aligned": [
+     [
+      13,
+      15
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      13,
+      15
+     ],
+     [
+      13,
+      14
+     ],
+     [
+      2,
+      5
+     ]
+    ],
+    "o2_sorted": [
+     [
+      2,
+      5
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      13,
+      15
+     ],
+     [
+      13,
+      15
+     ],
+     [
+      13,
+      14
+     ]
+    ],
+    "family_aligned_unreduced": [
+     [
+      13,
+      15
+     ],
+     [
+      10,
+      15
+     ],
+     [
+      13,
+      15
+     ],
+     [
+      13,
+      14
+     ],
+     [
+      8,
+      20
+     ]
+    ]
+   },
+   "ETAC-D2": {
+    "family_aligned": [
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      11,
+      20
+     ]
+    ],
+    "o2_sorted": [
+     [
+      11,
+      20
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "family_aligned_unreduced": [
+     [
+      15,
+      15
+     ],
+     [
+      15,
+      15
+     ],
+     [
+      12,
+      15
+     ],
+     [
+      14,
+      14
+     ],
+     [
+      11,
+      20
+     ]
+    ]
+   },
+   "ETAC-D3": {
+    "family_aligned": [
+     [
+      4,
+      15
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      2,
+      15
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      1,
+      5
+     ]
+    ],
+    "o2_sorted": [
+     [
+      2,
+      15
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      4,
+      15
+     ],
+     [
+      4,
+      7
+     ]
+    ],
+    "family_aligned_unreduced": [
+     [
+      4,
+      15
+     ],
+     [
+      3,
+      15
+     ],
+     [
+      2,
+      15
+     ],
+     [
+      8,
+      14
+     ],
+     [
+      4,
+      20
+     ]
+    ]
+   },
+   "ETAC-D4": {
+    "family_aligned": [
+     [
+      2,
+      5
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      6,
+      7
+     ],
+     [
+      3,
+      10
+     ]
+    ],
+    "o2_sorted": [
+     [
+      3,
+      10
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      6,
+      7
+     ]
+    ],
+    "family_aligned_unreduced": [
+     [
+      6,
+      15
+     ],
+     [
+      6,
+      15
+     ],
+     [
+      6,
+      15
+     ],
+     [
+      12,
+      14
+     ],
+     [
+      6,
+      20
+     ]
+    ]
+   }
+  },
+  "crosscheck_vs_sep_piece": {
+   "ETAC-D1": {
+    "family_aligned_fraction_bitwise_equal": true,
+    "family_aligned_float_bitwise_equal": true,
+    "o2_sorted_fraction_bitwise_equal": true,
+    "o2_sorted_float_bitwise_equal": true
+   },
+   "ETAC-D2": {
+    "family_aligned_fraction_bitwise_equal": true,
+    "family_aligned_float_bitwise_equal": true,
+    "o2_sorted_fraction_bitwise_equal": true,
+    "o2_sorted_float_bitwise_equal": true
+   },
+   "ETAC-D3": {
+    "family_aligned_fraction_bitwise_equal": true,
+    "family_aligned_float_bitwise_equal": true,
+    "o2_sorted_fraction_bitwise_equal": true,
+    "o2_sorted_float_bitwise_equal": true
+   },
+   "ETAC-D4": {
+    "family_aligned_fraction_bitwise_equal": true,
+    "family_aligned_float_bitwise_equal": true,
+    "o2_sorted_fraction_bitwise_equal": true,
+    "o2_sorted_float_bitwise_equal": true
+   }
+  },
+  "all_bitwise_equal": true,
+  "pairwise": {
+   "family_aligned": [
+    {
+     "a": "ETAC-D1",
+     "b": "ETAC-D2",
+     "per_element": [
+      {
+       "index": 0,
+       "family": "T1_GSM8K",
+       "a": 0.8666666666666667,
+       "b": 1.0,
+       "a_frac": "13/15",
+       "b_frac": "1/1",
+       "equal": false
+      },
+      {
+       "index": 1,
+       "family": "T2_StrategyQA",
+       "a": 0.6666666666666666,
+       "b": 1.0,
+       "a_frac": "2/3",
+       "b_frac": "1/1",
+       "equal": false
+      },
+      {
+       "index": 2,
+       "family": "T3_Trap",
+       "a": 0.8666666666666667,
+       "b": 0.8,
+       "a_frac": "13/15",
+       "b_frac": "4/5",
+       "equal": false
+      },
+      {
+       "index": 3,
+       "family": "T4_2x2",
+       "a": 0.9285714285714286,
+       "b": 1.0,
+       "a_frac": "13/14",
+       "b_frac": "1/1",
+       "equal": false
+      },
+      {
+       "index": 4,
+       "family": "T5_LowResource",
+       "a": 0.4,
+       "b": 0.55,
+       "a_frac": "2/5",
+       "b_frac": "11/20",
+       "equal": false
+      }
+     ],
+     "n_elements_differing": 5,
+     "vectors_equal": false,
+     "equal": false
+    },
+    {
+     "a": "ETAC-D1",
+     "b": "ETAC-D3",
+     "per_element": [
+      {
+       "index": 0,
+       "family": "T1_GSM8K",
+       "a": 0.8666666666666667,
+       "b": 0.26666666666666666,
+       "a_frac": "13/15",
+       "b_frac": "4/15",
+       "equal": false
+      },
+      {
+       "index": 1,
+       "family": "T2_StrategyQA",
+       "a": 0.6666666666666666,
+       "b": 0.2,
+       "a_frac": "2/3",
+       "b_frac": "1/5",
+       "equal": false
+      },
+      {
+       "index": 2,
+       "family": "T3_Trap",
+       "a": 0.8666666666666667,
+       "b": 0.13333333333333333,
+       "a_frac": "13/15",
+       "b_frac": "2/15",
+       "equal": false
+      },
+      {
+       "index": 3,
+       "family": "T4_2x2",
+       "a": 0.9285714285714286,
+       "b": 0.5714285714285714,
+       "a_frac": "13/14",
+       "b_frac": "4/7",
+       "equal": false
+      },
+      {
+       "index": 4,
+       "family": "T5_LowResource",
+       "a": 0.4,
+       "b": 0.2,
+       "a_frac": "2/5",
+       "b_frac": "1/5",
+       "equal": false
+      }
+     ],
+     "n_elements_differing": 5,
+     "vectors_equal": false,
+     "equal": false
+    },
+    {
+     "a": "ETAC-D1",
+     "b": "ETAC-D4",
+     "per_element": [
+      {
+       "index": 0,
+       "family": "T1_GSM8K",
+       "a": 0.8666666666666667,
+       "b": 0.4,
+       "a_frac": "13/15",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 1,
+       "family": "T2_StrategyQA",
+       "a": 0.6666666666666666,
+       "b": 0.4,
+       "a_frac": "2/3",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 2,
+       "family": "T3_Trap",
+       "a": 0.8666666666666667,
+       "b": 0.4,
+       "a_frac": "13/15",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 3,
+       "family": "T4_2x2",
+       "a": 0.9285714285714286,
+       "b": 0.8571428571428571,
+       "a_frac": "13/14",
+       "b_frac": "6/7",
+       "equal": false
+      },
+      {
+       "index": 4,
+       "family": "T5_LowResource",
+       "a": 0.4,
+       "b": 0.3,
+       "a_frac": "2/5",
+       "b_frac": "3/10",
+       "equal": false
+      }
+     ],
+     "n_elements_differing": 5,
+     "vectors_equal": false,
+     "equal": false
+    },
+    {
+     "a": "ETAC-D2",
+     "b": "ETAC-D3",
+     "per_element": [
+      {
+       "index": 0,
+       "family": "T1_GSM8K",
+       "a": 1.0,
+       "b": 0.26666666666666666,
+       "a_frac": "1/1",
+       "b_frac": "4/15",
+       "equal": false
+      },
+      {
+       "index": 1,
+       "family": "T2_StrategyQA",
+       "a": 1.0,
+       "b": 0.2,
+       "a_frac": "1/1",
+       "b_frac": "1/5",
+       "equal": false
+      },
+      {
+       "index": 2,
+       "family": "T3_Trap",
+       "a": 0.8,
+       "b": 0.13333333333333333,
+       "a_frac": "4/5",
+       "b_frac": "2/15",
+       "equal": false
+      },
+      {
+       "index": 3,
+       "family": "T4_2x2",
+       "a": 1.0,
+       "b": 0.5714285714285714,
+       "a_frac": "1/1",
+       "b_frac": "4/7",
+       "equal": false
+      },
+      {
+       "index": 4,
+       "family": "T5_LowResource",
+       "a": 0.55,
+       "b": 0.2,
+       "a_frac": "11/20",
+       "b_frac": "1/5",
+       "equal": false
+      }
+     ],
+     "n_elements_differing": 5,
+     "vectors_equal": false,
+     "equal": false
+    },
+    {
+     "a": "ETAC-D2",
+     "b": "ETAC-D4",
+     "per_element": [
+      {
+       "index": 0,
+       "family": "T1_GSM8K",
+       "a": 1.0,
+       "b": 0.4,
+       "a_frac": "1/1",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 1,
+       "family": "T2_StrategyQA",
+       "a": 1.0,
+       "b": 0.4,
+       "a_frac": "1/1",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 2,
+       "family": "T3_Trap",
+       "a": 0.8,
+       "b": 0.4,
+       "a_frac": "4/5",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 3,
+       "family": "T4_2x2",
+       "a": 1.0,
+       "b": 0.8571428571428571,
+       "a_frac": "1/1",
+       "b_frac": "6/7",
+       "equal": false
+      },
+      {
+       "index": 4,
+       "family": "T5_LowResource",
+       "a": 0.55,
+       "b": 0.3,
+       "a_frac": "11/20",
+       "b_frac": "3/10",
+       "equal": false
+      }
+     ],
+     "n_elements_differing": 5,
+     "vectors_equal": false,
+     "equal": false
+    },
+    {
+     "a": "ETAC-D3",
+     "b": "ETAC-D4",
+     "per_element": [
+      {
+       "index": 0,
+       "family": "T1_GSM8K",
+       "a": 0.26666666666666666,
+       "b": 0.4,
+       "a_frac": "4/15",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 1,
+       "family": "T2_StrategyQA",
+       "a": 0.2,
+       "b": 0.4,
+       "a_frac": "1/5",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 2,
+       "family": "T3_Trap",
+       "a": 0.13333333333333333,
+       "b": 0.4,
+       "a_frac": "2/15",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 3,
+       "family": "T4_2x2",
+       "a": 0.5714285714285714,
+       "b": 0.8571428571428571,
+       "a_frac": "4/7",
+       "b_frac": "6/7",
+       "equal": false
+      },
+      {
+       "index": 4,
+       "family": "T5_LowResource",
+       "a": 0.2,
+       "b": 0.3,
+       "a_frac": "1/5",
+       "b_frac": "3/10",
+       "equal": false
+      }
+     ],
+     "n_elements_differing": 5,
+     "vectors_equal": false,
+     "equal": false
+    }
+   ],
+   "o2_sorted": [
+    {
+     "a": "ETAC-D1",
+     "b": "ETAC-D2",
+     "per_element": [
+      {
+       "index": 0,
+       "family": "T1_GSM8K",
+       "a": 0.4,
+       "b": 0.55,
+       "a_frac": "2/5",
+       "b_frac": "11/20",
+       "equal": false
+      },
+      {
+       "index": 1,
+       "family": "T2_StrategyQA",
+       "a": 0.6666666666666666,
+       "b": 0.8,
+       "a_frac": "2/3",
+       "b_frac": "4/5",
+       "equal": false
+      },
+      {
+       "index": 2,
+       "family": "T3_Trap",
+       "a": 0.8666666666666667,
+       "b": 1.0,
+       "a_frac": "13/15",
+       "b_frac": "1/1",
+       "equal": false
+      },
+      {
+       "index": 3,
+       "family": "T4_2x2",
+       "a": 0.8666666666666667,
+       "b": 1.0,
+       "a_frac": "13/15",
+       "b_frac": "1/1",
+       "equal": false
+      },
+      {
+       "index": 4,
+       "family": "T5_LowResource",
+       "a": 0.9285714285714286,
+       "b": 1.0,
+       "a_frac": "13/14",
+       "b_frac": "1/1",
+       "equal": false
+      }
+     ],
+     "n_elements_differing": 5,
+     "vectors_equal": false,
+     "equal": false
+    },
+    {
+     "a": "ETAC-D1",
+     "b": "ETAC-D3",
+     "per_element": [
+      {
+       "index": 0,
+       "family": "T1_GSM8K",
+       "a": 0.4,
+       "b": 0.13333333333333333,
+       "a_frac": "2/5",
+       "b_frac": "2/15",
+       "equal": false
+      },
+      {
+       "index": 1,
+       "family": "T2_StrategyQA",
+       "a": 0.6666666666666666,
+       "b": 0.2,
+       "a_frac": "2/3",
+       "b_frac": "1/5",
+       "equal": false
+      },
+      {
+       "index": 2,
+       "family": "T3_Trap",
+       "a": 0.8666666666666667,
+       "b": 0.2,
+       "a_frac": "13/15",
+       "b_frac": "1/5",
+       "equal": false
+      },
+      {
+       "index": 3,
+       "family": "T4_2x2",
+       "a": 0.8666666666666667,
+       "b": 0.26666666666666666,
+       "a_frac": "13/15",
+       "b_frac": "4/15",
+       "equal": false
+      },
+      {
+       "index": 4,
+       "family": "T5_LowResource",
+       "a": 0.9285714285714286,
+       "b": 0.5714285714285714,
+       "a_frac": "13/14",
+       "b_frac": "4/7",
+       "equal": false
+      }
+     ],
+     "n_elements_differing": 5,
+     "vectors_equal": false,
+     "equal": false
+    },
+    {
+     "a": "ETAC-D1",
+     "b": "ETAC-D4",
+     "per_element": [
+      {
+       "index": 0,
+       "family": "T1_GSM8K",
+       "a": 0.4,
+       "b": 0.3,
+       "a_frac": "2/5",
+       "b_frac": "3/10",
+       "equal": false
+      },
+      {
+       "index": 1,
+       "family": "T2_StrategyQA",
+       "a": 0.6666666666666666,
+       "b": 0.4,
+       "a_frac": "2/3",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 2,
+       "family": "T3_Trap",
+       "a": 0.8666666666666667,
+       "b": 0.4,
+       "a_frac": "13/15",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 3,
+       "family": "T4_2x2",
+       "a": 0.8666666666666667,
+       "b": 0.4,
+       "a_frac": "13/15",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 4,
+       "family": "T5_LowResource",
+       "a": 0.9285714285714286,
+       "b": 0.8571428571428571,
+       "a_frac": "13/14",
+       "b_frac": "6/7",
+       "equal": false
+      }
+     ],
+     "n_elements_differing": 5,
+     "vectors_equal": false,
+     "equal": false
+    },
+    {
+     "a": "ETAC-D2",
+     "b": "ETAC-D3",
+     "per_element": [
+      {
+       "index": 0,
+       "family": "T1_GSM8K",
+       "a": 0.55,
+       "b": 0.13333333333333333,
+       "a_frac": "11/20",
+       "b_frac": "2/15",
+       "equal": false
+      },
+      {
+       "index": 1,
+       "family": "T2_StrategyQA",
+       "a": 0.8,
+       "b": 0.2,
+       "a_frac": "4/5",
+       "b_frac": "1/5",
+       "equal": false
+      },
+      {
+       "index": 2,
+       "family": "T3_Trap",
+       "a": 1.0,
+       "b": 0.2,
+       "a_frac": "1/1",
+       "b_frac": "1/5",
+       "equal": false
+      },
+      {
+       "index": 3,
+       "family": "T4_2x2",
+       "a": 1.0,
+       "b": 0.26666666666666666,
+       "a_frac": "1/1",
+       "b_frac": "4/15",
+       "equal": false
+      },
+      {
+       "index": 4,
+       "family": "T5_LowResource",
+       "a": 1.0,
+       "b": 0.5714285714285714,
+       "a_frac": "1/1",
+       "b_frac": "4/7",
+       "equal": false
+      }
+     ],
+     "n_elements_differing": 5,
+     "vectors_equal": false,
+     "equal": false
+    },
+    {
+     "a": "ETAC-D2",
+     "b": "ETAC-D4",
+     "per_element": [
+      {
+       "index": 0,
+       "family": "T1_GSM8K",
+       "a": 0.55,
+       "b": 0.3,
+       "a_frac": "11/20",
+       "b_frac": "3/10",
+       "equal": false
+      },
+      {
+       "index": 1,
+       "family": "T2_StrategyQA",
+       "a": 0.8,
+       "b": 0.4,
+       "a_frac": "4/5",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 2,
+       "family": "T3_Trap",
+       "a": 1.0,
+       "b": 0.4,
+       "a_frac": "1/1",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 3,
+       "family": "T4_2x2",
+       "a": 1.0,
+       "b": 0.4,
+       "a_frac": "1/1",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 4,
+       "family": "T5_LowResource",
+       "a": 1.0,
+       "b": 0.8571428571428571,
+       "a_frac": "1/1",
+       "b_frac": "6/7",
+       "equal": false
+      }
+     ],
+     "n_elements_differing": 5,
+     "vectors_equal": false,
+     "equal": false
+    },
+    {
+     "a": "ETAC-D3",
+     "b": "ETAC-D4",
+     "per_element": [
+      {
+       "index": 0,
+       "family": "T1_GSM8K",
+       "a": 0.13333333333333333,
+       "b": 0.3,
+       "a_frac": "2/15",
+       "b_frac": "3/10",
+       "equal": false
+      },
+      {
+       "index": 1,
+       "family": "T2_StrategyQA",
+       "a": 0.2,
+       "b": 0.4,
+       "a_frac": "1/5",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 2,
+       "family": "T3_Trap",
+       "a": 0.2,
+       "b": 0.4,
+       "a_frac": "1/5",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 3,
+       "family": "T4_2x2",
+       "a": 0.26666666666666666,
+       "b": 0.4,
+       "a_frac": "4/15",
+       "b_frac": "2/5",
+       "equal": false
+      },
+      {
+       "index": 4,
+       "family": "T5_LowResource",
+       "a": 0.5714285714285714,
+       "b": 0.8571428571428571,
+       "a_frac": "4/7",
+       "b_frac": "6/7",
+       "equal": false
+      }
+     ],
+     "n_elements_differing": 5,
+     "vectors_equal": false,
+     "equal": false
+    }
+   ],
+   "diff_count_matrix_family_aligned": [
+    [
+     0,
+     5,
+     5,
+     5
+    ],
+    [
+     5,
+     0,
+     5,
+     5
+    ],
+    [
+     5,
+     5,
+     0,
+     5
+    ],
+    [
+     5,
+     5,
+     5,
+     0
+    ]
+   ],
+   "diff_count_matrix_o2_sorted": [
+    [
+     0,
+     5,
+     5,
+     5
+    ],
+    [
+     5,
+     0,
+     5,
+     5
+    ],
+    [
+     5,
+     5,
+     0,
+     5
+    ],
+    [
+     5,
+     5,
+     5,
+     0
+    ]
+   ]
+  },
+  "field_n_distinct": {
+   "family_aligned_5tuple": 4,
+   "o2_sorted_multiset": 4,
+   "threshold_in_register": ">3",
+   "gate_K-SEPCAL-5_pass_family_aligned": true,
+   "gate_K-SEPCAL-5_pass_o2_sorted": true
+  },
+  "element_self_proof": [
+   {
+    "index": 0,
+    "family": "T1_GSM8K",
+    "per_tier": {
+     "ETAC-D1": {
+      "hits": 13,
+      "n": 15,
+      "rate": 0.8666666666666667,
+      "rate_fraction": "13/15"
+     },
+     "ETAC-D2": {
+      "hits": 15,
+      "n": 15,
+      "rate": 1.0,
+      "rate_fraction": "15/15"
+     },
+     "ETAC-D3": {
+      "hits": 4,
+      "n": 15,
+      "rate": 0.26666666666666666,
+      "rate_fraction": "4/15"
+     },
+     "ETAC-D4": {
+      "hits": 6,
+      "n": 15,
+      "rate": 0.4,
+      "rate_fraction": "6/15"
+     }
+    },
+    "n_distinct": 4,
+    "min": 0.26666666666666666,
+    "max": 1.0,
+    "std_population_ddof0": 0.3073181485764296,
+    "min_max_span": 0.7333333333333334,
+    "degenerate_le_1": false
+   },
+   {
+    "index": 1,
+    "family": "T2_StrategyQA",
+    "per_tier": {
+     "ETAC-D1": {
+      "hits": 10,
+      "n": 15,
+      "rate": 0.6666666666666666,
+      "rate_fraction": "10/15"
+     },
+     "ETAC-D2": {
+      "hits": 15,
+      "n": 15,
+      "rate": 1.0,
+      "rate_fraction": "15/15"
+     },
+     "ETAC-D3": {
+      "hits": 3,
+      "n": 15,
+      "rate": 0.2,
+      "rate_fraction": "3/15"
+     },
+     "ETAC-D4": {
+      "hits": 6,
+      "n": 15,
+      "rate": 0.4,
+      "rate_fraction": "6/15"
+     }
+    },
+    "n_distinct": 4,
+    "min": 0.2,
+    "max": 1.0,
+    "std_population_ddof0": 0.3,
+    "min_max_span": 0.8,
+    "degenerate_le_1": false
+   },
+   {
+    "index": 2,
+    "family": "T3_Trap",
+    "per_tier": {
+     "ETAC-D1": {
+      "hits": 13,
+      "n": 15,
+      "rate": 0.8666666666666667,
+      "rate_fraction": "13/15"
+     },
+     "ETAC-D2": {
+      "hits": 12,
+      "n": 15,
+      "rate": 0.8,
+      "rate_fraction": "12/15"
+     },
+     "ETAC-D3": {
+      "hits": 2,
+      "n": 15,
+      "rate": 0.13333333333333333,
+      "rate_fraction": "2/15"
+     },
+     "ETAC-D4": {
+      "hits": 6,
+      "n": 15,
+      "rate": 0.4,
+      "rate_fraction": "6/15"
+     }
+    },
+    "n_distinct": 4,
+    "min": 0.13333333333333333,
+    "max": 0.8666666666666667,
+    "std_population_ddof0": 0.2995366792601905,
+    "min_max_span": 0.7333333333333334,
+    "degenerate_le_1": false
+   },
+   {
+    "index": 3,
+    "family": "T4_2x2",
+    "per_tier": {
+     "ETAC-D1": {
+      "hits": 13,
+      "n": 14,
+      "rate": 0.9285714285714286,
+      "rate_fraction": "13/14"
+     },
+     "ETAC-D2": {
+      "hits": 14,
+      "n": 14,
+      "rate": 1.0,
+      "rate_fraction": "14/14"
+     },
+     "ETAC-D3": {
+      "hits": 8,
+      "n": 14,
+      "rate": 0.5714285714285714,
+      "rate_fraction": "8/14"
+     },
+     "ETAC-D4": {
+      "hits": 12,
+      "n": 14,
+      "rate": 0.8571428571428571,
+      "rate_fraction": "12/14"
+     }
+    },
+    "n_distinct": 4,
+    "min": 0.5714285714285714,
+    "max": 1.0,
+    "std_population_ddof0": 0.16268631391329108,
+    "min_max_span": 0.4285714285714286,
+    "degenerate_le_1": false
+   },
+   {
+    "index": 4,
+    "family": "T5_LowResource",
+    "per_tier": {
+     "ETAC-D1": {
+      "hits": 8,
+      "n": 20,
+      "rate": 0.4,
+      "rate_fraction": "8/20"
+     },
+     "ETAC-D2": {
+      "hits": 11,
+      "n": 20,
+      "rate": 0.55,
+      "rate_fraction": "11/20"
+     },
+     "ETAC-D3": {
+      "hits": 4,
+      "n": 20,
+      "rate": 0.2,
+      "rate_fraction": "4/20"
+     },
+     "ETAC-D4": {
+      "hits": 6,
+      "n": 20,
+      "rate": 0.3,
+      "rate_fraction": "6/20"
+     }
+    },
+    "n_distinct": 4,
+    "min": 0.2,
+    "max": 0.55,
+    "std_population_ddof0": 0.12930100540985753,
+    "min_max_span": 0.35000000000000003,
+    "degenerate_le_1": false
+   }
+  ],
+  "sep_face_registered_only": {
+   "values": {
+    "family_aligned": {
+     "ETAC-D1": {
+      "sep": 3,
+      "distinguishable_opponents": [
+       "ETAC-D2",
+       "ETAC-D3",
+       "ETAC-D4"
+      ],
+      "indistinguishable_opponents": []
+     },
+     "ETAC-D2": {
+      "sep": 3,
+      "distinguishable_opponents": [
+       "ETAC-D1",
+       "ETAC-D3",
+       "ETAC-D4"
+      ],
+      "indistinguishable_opponents": []
+     },
+     "ETAC-D3": {
+      "sep": 3,
+      "distinguishable_opponents": [
+       "ETAC-D1",
+       "ETAC-D2",
+       "ETAC-D4"
+      ],
+      "indistinguishable_opponents": []
+     },
+     "ETAC-D4": {
+      "sep": 3,
+      "distinguishable_opponents": [
+       "ETAC-D1",
+       "ETAC-D2",
+       "ETAC-D3"
+      ],
+      "indistinguishable_opponents": []
+     }
+    },
+    "o2_sorted": {
+     "ETAC-D1": {
+      "sep": 3,
+      "distinguishable_opponents": [
+       "ETAC-D2",
+       "ETAC-D3",
+       "ETAC-D4"
+      ],
+      "indistinguishable_opponents": []
+     },
+     "ETAC-D2": {
+      "sep": 3,
+      "distinguishable_opponents": [
+       "ETAC-D1",
+       "ETAC-D3",
+       "ETAC-D4"
+      ],
+      "indistinguishable_opponents": []
+     },
+     "ETAC-D3": {
+      "sep": 3,
+      "distinguishable_opponents": [
+       "ETAC-D1",
+       "ETAC-D2",
+       "ETAC-D4"
+      ],
+      "indistinguishable_opponents": []
+     },
+     "ETAC-D4": {
+      "sep": 3,
+      "distinguishable_opponents": [
+       "ETAC-D1",
+       "ETAC-D2",
+       "ETAC-D3"
+      ],
+      "indistinguishable_opponents": []
+     }
+    },
+    "values_family_aligned": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "values_o2_sorted": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "mute_family_aligned": true,
+    "mute_o2_sorted": true
+   },
+   "mute": true,
+   "note": "sep 面不在并取维度集内（K-MDSUP-3）⇒ 其哑火（恒 3）不触发本件之任何面；D-2 与 sep 同底料之互含风险面不触发（登记，不裁）。"
+  },
+  "gate_summary_sep_piece": {
+   "n_total": 15,
+   "n_pass": 14,
+   "n_triggered": 1,
+   "triggered_ids": [
+    "K-SEPCAL-7"
+   ]
+  },
+  "limitation": "引用 D13 面时必注「具名面悬置」（C-D13-3／C-D13-8 仍开口）。"
+ },
+ "d3_R_jia_best_hit_rate": {
+  "weight_caliber_in_force": "等权（v168-Q4 §3-4 第 4 项：R-甲 档级聚合之权重口径＝等权）",
+  "per_tier": {
+   "ETAC-D1": {
+    "per_family_hits": [
+     13,
+     10,
+     13,
+     13,
+     8
+    ],
+    "per_family_n": [
+     15,
+     15,
+     15,
+     14,
+     20
+    ],
+    "per_family_rate": [
+     0.8666666666666667,
+     0.6666666666666666,
+     0.8666666666666667,
+     0.9285714285714286,
+     0.4
+    ],
+    "equal_weight_rate": 0.7457142857142858,
+    "pooled_rate": 0.7215189873417721,
+    "pooled_hits": 57,
+    "pooled_n": 79,
+    "n_decisions": 79,
+    "registered_empirical_best_hit_rate": 0.7215189873417721,
+    "pooled_bitwise_equal_registered": true,
+    "family_hits_bitwise_equal_sep_piece": true,
+    "analytic_mean_P_best": 0.7185143603020707,
+    "n_actual_choice_equals_analytic_argmax": 57
+   },
+   "ETAC-D2": {
+    "per_family_hits": [
+     15,
+     15,
+     12,
+     14,
+     11
+    ],
+    "per_family_n": [
+     15,
+     15,
+     15,
+     14,
+     20
+    ],
+    "per_family_rate": [
+     1.0,
+     1.0,
+     0.8,
+     1.0,
+     0.55
+    ],
+    "equal_weight_rate": 0.8699999999999999,
+    "pooled_rate": 0.8481012658227848,
+    "pooled_hits": 67,
+    "pooled_n": 79,
+    "n_decisions": 79,
+    "registered_empirical_best_hit_rate": 0.8481012658227848,
+    "pooled_bitwise_equal_registered": true,
+    "family_hits_bitwise_equal_sep_piece": true,
+    "analytic_mean_P_best": 0.8577285359033912,
+    "n_actual_choice_equals_analytic_argmax": 67
+   },
+   "ETAC-D3": {
+    "per_family_hits": [
+     4,
+     3,
+     2,
+     8,
+     4
+    ],
+    "per_family_n": [
+     15,
+     15,
+     15,
+     14,
+     20
+    ],
+    "per_family_rate": [
+     0.26666666666666666,
+     0.2,
+     0.13333333333333333,
+     0.5714285714285714,
+     0.2
+    ],
+    "equal_weight_rate": 0.2742857142857143,
+    "pooled_rate": 0.26582278481012656,
+    "pooled_hits": 21,
+    "pooled_n": 79,
+    "n_decisions": 79,
+    "registered_empirical_best_hit_rate": 0.26582278481012656,
+    "pooled_bitwise_equal_registered": true,
+    "family_hits_bitwise_equal_sep_piece": true,
+    "analytic_mean_P_best": 0.37436964183553567,
+    "n_actual_choice_equals_analytic_argmax": 21
+   },
+   "ETAC-D4": {
+    "per_family_hits": [
+     6,
+     6,
+     6,
+     12,
+     6
+    ],
+    "per_family_n": [
+     15,
+     15,
+     15,
+     14,
+     20
+    ],
+    "per_family_rate": [
+     0.4,
+     0.4,
+     0.4,
+     0.8571428571428571,
+     0.3
+    ],
+    "equal_weight_rate": 0.4714285714285714,
+    "pooled_rate": 0.45569620253164556,
+    "pooled_hits": 36,
+    "pooled_n": 79,
+    "n_decisions": 79,
+    "registered_empirical_best_hit_rate": 0.45569620253164556,
+    "pooled_bitwise_equal_registered": true,
+    "family_hits_bitwise_equal_sep_piece": true,
+    "analytic_mean_P_best": 0.46075259392309137,
+    "n_actual_choice_equals_analytic_argmax": 36
+   }
+  },
+  "order_equal_weight": [
+   "ETAC-D2",
+   "ETAC-D1",
+   "ETAC-D4",
+   "ETAC-D3"
+  ],
+  "order_pooled_decision_weighted": [
+   "ETAC-D2",
+   "ETAC-D1",
+   "ETAC-D4",
+   "ETAC-D3"
+  ],
+  "order_invariant_under_weight_caliber": true,
+  "artifact_note_mandatory": {
+   "gate": "K-MDSUP-9",
+   "text": "D2 之最高经验 best 命中率 0.8481 系 one-hot 退化之伪影（111/237 决策之 P 为 one-hot ⇒ 无内部梯度 ⇒ 命中 best 之对冲全押单点）⇒ ⛔ 0 以之充「优」；⛔ 0 改 D2 之形态面失格之状态（失格之依据＝形态质量，非判死线之违例）。",
+   "onehot_counts_measured": {
+    "ETAC-D1": 0,
+    "ETAC-D2": 111,
+    "ETAC-D3": 0,
+    "ETAC-D4": 0
+   },
+   "registered_onehot_by_tier": {
+    "ETAC-D1": {
+     "n_one_hot": 0,
+     "n_decisions": 237,
+     "n_all_nonbest_zero": 111
+    },
+    "ETAC-D2": {
+     "n_one_hot": 111,
+     "n_decisions": 237,
+     "n_all_nonbest_zero": 111
+    },
+    "ETAC-D3": {
+     "n_one_hot": 0,
+     "n_decisions": 237,
+     "n_all_nonbest_zero": 111
+    },
+    "ETAC-D4": {
+     "n_one_hot": 0,
+     "n_decisions": 237,
+     "n_all_nonbest_zero": 111
+    }
+   }
+  },
+  "limitation": "D2 之形态面失格（形态质量）存续；本件 0 改其状态。"
+ },
+ "d4_R_yi_agreement_rate": {
+  "caliber_face": "M1_Deposon_TRA（消费 η 之机制）· 档级 · 79 决策/档",
+  "by_mechanism": [
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D2",
+    "mechanism": "M1_Deposon_TRA",
+    "eta_consumed": true,
+    "n_decisions": 79,
+    "n_same_actual_choice": 55,
+    "agreement_rate": 0.6962025316455697,
+    "registered_n_same": 55,
+    "registered_rate": 0.6962025316455697,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D2",
+    "mechanism": "M2_Greedy",
+    "eta_consumed": false,
+    "n_decisions": 79,
+    "n_same_actual_choice": 79,
+    "agreement_rate": 1.0,
+    "registered_n_same": 79,
+    "registered_rate": 1.0,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D2",
+    "mechanism": "M3_Random",
+    "eta_consumed": false,
+    "n_decisions": 79,
+    "n_same_actual_choice": 26,
+    "agreement_rate": 0.3291139240506329,
+    "registered_n_same": 26,
+    "registered_rate": 0.3291139240506329,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D3",
+    "mechanism": "M1_Deposon_TRA",
+    "eta_consumed": true,
+    "n_decisions": 79,
+    "n_same_actual_choice": 21,
+    "agreement_rate": 0.26582278481012656,
+    "registered_n_same": 21,
+    "registered_rate": 0.26582278481012656,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D3",
+    "mechanism": "M2_Greedy",
+    "eta_consumed": false,
+    "n_decisions": 79,
+    "n_same_actual_choice": 79,
+    "agreement_rate": 1.0,
+    "registered_n_same": 79,
+    "registered_rate": 1.0,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D3",
+    "mechanism": "M3_Random",
+    "eta_consumed": false,
+    "n_decisions": 79,
+    "n_same_actual_choice": 29,
+    "agreement_rate": 0.3670886075949367,
+    "registered_n_same": 29,
+    "registered_rate": 0.3670886075949367,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D4",
+    "mechanism": "M1_Deposon_TRA",
+    "eta_consumed": true,
+    "n_decisions": 79,
+    "n_same_actual_choice": 33,
+    "agreement_rate": 0.4177215189873418,
+    "registered_n_same": 33,
+    "registered_rate": 0.4177215189873418,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D4",
+    "mechanism": "M2_Greedy",
+    "eta_consumed": false,
+    "n_decisions": 79,
+    "n_same_actual_choice": 79,
+    "agreement_rate": 1.0,
+    "registered_n_same": 79,
+    "registered_rate": 1.0,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D4",
+    "mechanism": "M3_Random",
+    "eta_consumed": false,
+    "n_decisions": 79,
+    "n_same_actual_choice": 20,
+    "agreement_rate": 0.25316455696202533,
+    "registered_n_same": 20,
+    "registered_rate": 0.25316455696202533,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D2",
+    "tier_b": "ETAC-D3",
+    "mechanism": "M1_Deposon_TRA",
+    "eta_consumed": true,
+    "n_decisions": 79,
+    "n_same_actual_choice": 23,
+    "agreement_rate": 0.2911392405063291,
+    "registered_n_same": 23,
+    "registered_rate": 0.2911392405063291,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D2",
+    "tier_b": "ETAC-D3",
+    "mechanism": "M2_Greedy",
+    "eta_consumed": false,
+    "n_decisions": 79,
+    "n_same_actual_choice": 79,
+    "agreement_rate": 1.0,
+    "registered_n_same": 79,
+    "registered_rate": 1.0,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D2",
+    "tier_b": "ETAC-D3",
+    "mechanism": "M3_Random",
+    "eta_consumed": false,
+    "n_decisions": 79,
+    "n_same_actual_choice": 27,
+    "agreement_rate": 0.34177215189873417,
+    "registered_n_same": 27,
+    "registered_rate": 0.34177215189873417,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D2",
+    "tier_b": "ETAC-D4",
+    "mechanism": "M1_Deposon_TRA",
+    "eta_consumed": true,
+    "n_decisions": 79,
+    "n_same_actual_choice": 33,
+    "agreement_rate": 0.4177215189873418,
+    "registered_n_same": 33,
+    "registered_rate": 0.4177215189873418,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D2",
+    "tier_b": "ETAC-D4",
+    "mechanism": "M2_Greedy",
+    "eta_consumed": false,
+    "n_decisions": 79,
+    "n_same_actual_choice": 79,
+    "agreement_rate": 1.0,
+    "registered_n_same": 79,
+    "registered_rate": 1.0,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D2",
+    "tier_b": "ETAC-D4",
+    "mechanism": "M3_Random",
+    "eta_consumed": false,
+    "n_decisions": 79,
+    "n_same_actual_choice": 38,
+    "agreement_rate": 0.4810126582278481,
+    "registered_n_same": 38,
+    "registered_rate": 0.4810126582278481,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D3",
+    "tier_b": "ETAC-D4",
+    "mechanism": "M1_Deposon_TRA",
+    "eta_consumed": true,
+    "n_decisions": 79,
+    "n_same_actual_choice": 24,
+    "agreement_rate": 0.3037974683544304,
+    "registered_n_same": 24,
+    "registered_rate": 0.3037974683544304,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D3",
+    "tier_b": "ETAC-D4",
+    "mechanism": "M2_Greedy",
+    "eta_consumed": false,
+    "n_decisions": 79,
+    "n_same_actual_choice": 79,
+    "agreement_rate": 1.0,
+    "registered_n_same": 79,
+    "registered_rate": 1.0,
+    "recompute_bitwise_equal": true
+   },
+   {
+    "tier_a": "ETAC-D3",
+    "tier_b": "ETAC-D4",
+    "mechanism": "M3_Random",
+    "eta_consumed": false,
+    "n_decisions": 79,
+    "n_same_actual_choice": 22,
+    "agreement_rate": 0.27848101265822783,
+    "registered_n_same": 22,
+    "registered_rate": 0.27848101265822783,
+    "recompute_bitwise_equal": true
+   }
+  ],
+  "pooled_237": [
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D2",
+    "n_decisions": 237,
+    "n_same_actual_choice": 160,
+    "agreement_rate": 0.6751054852320675
+   },
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D3",
+    "n_decisions": 237,
+    "n_same_actual_choice": 129,
+    "agreement_rate": 0.5443037974683544
+   },
+   {
+    "tier_a": "ETAC-D1",
+    "tier_b": "ETAC-D4",
+    "n_decisions": 237,
+    "n_same_actual_choice": 132,
+    "agreement_rate": 0.5569620253164557
+   },
+   {
+    "tier_a": "ETAC-D2",
+    "tier_b": "ETAC-D3",
+    "n_decisions": 237,
+    "n_same_actual_choice": 129,
+    "agreement_rate": 0.5443037974683544
+   },
+   {
+    "tier_a": "ETAC-D2",
+    "tier_b": "ETAC-D4",
+    "n_decisions": 237,
+    "n_same_actual_choice": 150,
+    "agreement_rate": 0.6329113924050633
+   },
+   {
+    "tier_a": "ETAC-D3",
+    "tier_b": "ETAC-D4",
+    "n_decisions": 237,
+    "n_same_actual_choice": 125,
+    "agreement_rate": 0.5274261603375527
+   }
+  ],
+  "summary": {
+   "M1_face": {
+    "n_pairs": 6,
+    "min": 0.26582278481012656,
+    "max": 0.6962025316455697,
+    "min_pair": [
+     "ETAC-D1",
+     "ETAC-D3"
+    ],
+    "max_pair": [
+     "ETAC-D1",
+     "ETAC-D2"
+    ]
+   },
+   "M2_face": {
+    "n_pairs": 6,
+    "min": 1.0,
+    "max": 1.0
+   },
+   "M3_face": {
+    "n_pairs": 6,
+    "min": 0.25316455696202533,
+    "max": 0.4810126582278481
+   },
+   "pooled_237_face": {
+    "n_pairs": 6,
+    "min": 0.5274261603375527,
+    "max": 0.6751054852320675
+   }
+  },
+  "all_recompute_bitwise_equal": true,
+  "limitation": "逐格面（14–20 决策/格）噪声大（R-6）⇒ 只可作档级聚合；⛔ 0 以逐格面作判据。M3 之差异仅来自各档格之独立 RNG 流 ⇒ ⛔ 0 充 η 之效应。"
+ },
+ "d5_R_bing_decision_level": {
+  "caliber": "每档 237 决策之实采之分布（决策级）",
+  "per_tier": {
+   "ETAC-D1": {
+    "n_decisions": 237,
+    "actual_choice_position_counts": {
+     "0": 84,
+     "1": 69,
+     "2": 48,
+     "3": 36
+    },
+    "actual_choice_position_shares": {
+     "0": 0.35443037974683544,
+     "1": 0.2911392405063291,
+     "2": 0.20253164556962025,
+     "3": 0.1518987341772152
+    },
+    "max_share": 0.35443037974683544,
+    "entropy_nats": 1.3365568068395701,
+    "normalized_entropy": 0.9641219385469181,
+    "n_distinct_actual_choice_values": 85,
+    "decision_level_best_hits": 169,
+    "decision_level_best_hit_rate": 0.7130801687763713,
+    "n_onehot_P_decisions": 0,
+    "onehot_share": 0.0,
+    "per_family_registered_only": {
+     "T1_GSM8K": {
+      "n": 45,
+      "best": 32
+     },
+     "T2_StrategyQA": {
+      "n": 45,
+      "best": 28
+     },
+     "T3_Trap": {
+      "n": 45,
+      "best": 39
+     },
+     "T4_2x2": {
+      "n": 42,
+      "best": 38
+     },
+     "T5_LowResource": {
+      "n": 60,
+      "best": 32
+     }
+    }
+   },
+   "ETAC-D2": {
+    "n_decisions": 237,
+    "actual_choice_position_counts": {
+     "0": 87,
+     "1": 63,
+     "2": 43,
+     "3": 44
+    },
+    "actual_choice_position_shares": {
+     "0": 0.3670886075949367,
+     "1": 0.26582278481012656,
+     "2": 0.18143459915611815,
+     "3": 0.18565400843881857
+    },
+    "max_share": 0.3670886075949367,
+    "entropy_nats": 1.3423747278320004,
+    "normalized_entropy": 0.9683186814289495,
+    "n_distinct_actual_choice_values": 88,
+    "decision_level_best_hits": 169,
+    "decision_level_best_hit_rate": 0.7130801687763713,
+    "n_onehot_P_decisions": 111,
+    "onehot_share": 0.46835443037974683,
+    "per_family_registered_only": {
+     "T1_GSM8K": {
+      "n": 45,
+      "best": 34
+     },
+     "T2_StrategyQA": {
+      "n": 45,
+      "best": 33
+     },
+     "T3_Trap": {
+      "n": 45,
+      "best": 34
+     },
+     "T4_2x2": {
+      "n": 42,
+      "best": 32
+     },
+     "T5_LowResource": {
+      "n": 60,
+      "best": 36
+     }
+    }
+   },
+   "ETAC-D3": {
+    "n_decisions": 237,
+    "actual_choice_position_counts": {
+     "0": 85,
+     "1": 73,
+     "2": 39,
+     "3": 40
+    },
+    "actual_choice_position_shares": {
+     "0": 0.35864978902953587,
+     "1": 0.3080168776371308,
+     "2": 0.16455696202531644,
+     "3": 0.16877637130801687
+    },
+    "max_share": 0.35864978902953587,
+    "entropy_nats": 1.3277100214341897,
+    "normalized_entropy": 0.9577403318308424,
+    "n_distinct_actual_choice_values": 101,
+    "decision_level_best_hits": 121,
+    "decision_level_best_hit_rate": 0.510548523206751,
+    "n_onehot_P_decisions": 0,
+    "onehot_share": 0.0,
+    "per_family_registered_only": {
+     "T1_GSM8K": {
+      "n": 45,
+      "best": 21
+     },
+     "T2_StrategyQA": {
+      "n": 45,
+      "best": 21
+     },
+     "T3_Trap": {
+      "n": 45,
+      "best": 22
+     },
+     "T4_2x2": {
+      "n": 42,
+      "best": 28
+     },
+     "T5_LowResource": {
+      "n": 60,
+      "best": 29
+     }
+    }
+   },
+   "ETAC-D4": {
+    "n_decisions": 237,
+    "actual_choice_position_counts": {
+     "0": 78,
+     "1": 71,
+     "2": 41,
+     "3": 47
+    },
+    "actual_choice_position_shares": {
+     "0": 0.3291139240506329,
+     "1": 0.29957805907172996,
+     "2": 0.1729957805907173,
+     "3": 0.19831223628691982
+    },
+    "max_share": 0.3291139240506329,
+    "entropy_nats": 1.3512375598398951,
+    "normalized_entropy": 0.9747118633219604,
+    "n_distinct_actual_choice_values": 99,
+    "decision_level_best_hits": 144,
+    "decision_level_best_hit_rate": 0.6075949367088608,
+    "n_onehot_P_decisions": 0,
+    "onehot_share": 0.0,
+    "per_family_registered_only": {
+     "T1_GSM8K": {
+      "n": 45,
+      "best": 21
+     },
+     "T2_StrategyQA": {
+      "n": 45,
+      "best": 26
+     },
+     "T3_Trap": {
+      "n": 45,
+      "best": 31
+     },
+     "T4_2x2": {
+      "n": 42,
+      "best": 32
+     },
+     "T5_LowResource": {
+      "n": 60,
+      "best": 34
+     }
+    }
+   }
+  },
+  "limitation": "决策级 ⇒ ⛔ 0 以逐格比较作判据（R-6）；且与 D-1 同底料 ⇒ 该对之互比降为「并列」（处置-甲）。"
+ },
+ "comparability_matrix_per_dimension": {
+  "notation": {
+   "成就": "依在册字面可机械判定为满足",
+   "不成就": "依在册字面可机械判定为不满足",
+   "未见": "在册未见该派生关系之证据（⛔ 0 由本件断言互不派生）",
+   "条件": "须另有裁方成就"
+  },
+  "rows": {
+   "D-1_S_jia": {
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "不成就",
+    "C-5": "成就",
+    "C-6": "难满足（对 D-5）｜未见（对 D-2/D-3/D-4）"
+   },
+   "D-2_S_bing": {
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "成就",
+    "C-5": "成就",
+    "C-6": "未见（对 D-3/D-4/D-5）"
+   },
+   "D-3_R_jia": {
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "成就（对 D-2）｜不成就（对 D-1）",
+    "C-5": "成就",
+    "C-6": "未见"
+   },
+   "D-4_R_yi": {
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "成就（对 D-2）",
+    "C-5": "成就",
+    "C-6": "未见"
+   },
+   "D-5_R_bing": {
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "成就（对 D-2）｜不成就（对 D-1）",
+    "C-5": "不成就",
+    "C-6": "难满足（对 D-1）"
+   }
+  }
+ },
+ "comparability_matrix_per_pair": {
+  "n_pairs": 10,
+  "rows": [
+   {
+    "pair": [
+     "D-1",
+     "D-2"
+    ],
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "不成就",
+    "C-5": "成就",
+    "C-6": "未见",
+    "disposition": "—"
+   },
+   {
+    "pair": [
+     "D-1",
+     "D-3"
+    ],
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "不成就",
+    "C-5": "成就",
+    "C-6": "未见",
+    "disposition": "—"
+   },
+   {
+    "pair": [
+     "D-1",
+     "D-4"
+    ],
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "不成就",
+    "C-5": "成就",
+    "C-6": "未见",
+    "disposition": "—"
+   },
+   {
+    "pair": [
+     "D-1",
+     "D-5"
+    ],
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "不成就",
+    "C-5": "不成就",
+    "C-6": "难满足",
+    "disposition": "处置-甲（登记注记）⇒ 该对之比较降为「并列」（不构成互比）"
+   },
+   {
+    "pair": [
+     "D-2",
+     "D-3"
+    ],
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "成就",
+    "C-5": "成就",
+    "C-6": "未见",
+    "disposition": "—"
+   },
+   {
+    "pair": [
+     "D-2",
+     "D-4"
+    ],
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "成就",
+    "C-5": "成就",
+    "C-6": "未见",
+    "disposition": "—"
+   },
+   {
+    "pair": [
+     "D-2",
+     "D-5"
+    ],
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "成就",
+    "C-5": "不成就",
+    "C-6": "未见",
+    "disposition": "D-5 之 C-5 不成就 ⇒ 该对之逐档比较不可作判据"
+   },
+   {
+    "pair": [
+     "D-3",
+     "D-4"
+    ],
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "成就",
+    "C-5": "成就",
+    "C-6": "未见",
+    "disposition": "—"
+   },
+   {
+    "pair": [
+     "D-3",
+     "D-5"
+    ],
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "成就",
+    "C-5": "不成就",
+    "C-6": "未见",
+    "disposition": "D-5 之 C-5 不成就 ⇒ 该对之逐档比较不可作判据"
+   },
+   {
+    "pair": [
+     "D-4",
+     "D-5"
+    ],
+    "C-1": "成就",
+    "C-2": "不成就",
+    "C-3": "条件",
+    "C-4": "成就",
+    "C-5": "不成就",
+    "C-6": "未见",
+    "disposition": "D-5 之 C-5 不成就 ⇒ 该对之逐档比较不可作判据"
+   }
+  ],
+  "note": "C-3 之「条件」＝ 各维之判读须共用同一族 K-* 门；本件 0 代择该族门（口径件 §7 候裁项 #4 仍开口）。"
+ },
+ "c1_material_identity_probe": {
+  "ETAC-D1|ETAC-D2": {
+   "n_a": 237,
+   "n_b": 237,
+   "identical_row_key_set": true
+  },
+  "ETAC-D1|ETAC-D3": {
+   "n_a": 237,
+   "n_b": 237,
+   "identical_row_key_set": true
+  },
+  "ETAC-D1|ETAC-D4": {
+   "n_a": 237,
+   "n_b": 237,
+   "identical_row_key_set": true
+  },
+  "ETAC-D2|ETAC-D3": {
+   "n_a": 237,
+   "n_b": 237,
+   "identical_row_key_set": true
+  },
+  "ETAC-D2|ETAC-D4": {
+   "n_a": 237,
+   "n_b": 237,
+   "identical_row_key_set": true
+  },
+  "ETAC-D3|ETAC-D4": {
+   "n_a": 237,
+   "n_b": 237,
+   "identical_row_key_set": true
+  }
+ },
+ "c6_mechanical_probe": {
+  "probe_A_D5_does_not_determine_D1": {
+   "form": "同一 actual_choice 值之下，P 向量并不唯一 ⇒ 仅凭 D-5 之读出不足以复原 P 矩阵 ⇒ D-1 不可由 D-5 计算得出。",
+   "per_tier": {
+    "ETAC-D1": {
+     "n_distinct_actual_choice_values": 85,
+     "n_groups_with_multiple_distinct_P": 13,
+     "max_distinct_P_within_one_choice_group": 3
+    },
+    "ETAC-D2": {
+     "n_distinct_actual_choice_values": 88,
+     "n_groups_with_multiple_distinct_P": 14,
+     "max_distinct_P_within_one_choice_group": 3
+    },
+    "ETAC-D3": {
+     "n_distinct_actual_choice_values": 101,
+     "n_groups_with_multiple_distinct_P": 13,
+     "max_distinct_P_within_one_choice_group": 3
+    },
+    "ETAC-D4": {
+     "n_distinct_actual_choice_values": 99,
+     "n_groups_with_multiple_distinct_P": 14,
+     "max_distinct_P_within_one_choice_group": 3
+    }
+   }
+  },
+  "probe_B_D1_does_not_determine_D5": {
+   "form": "同一 P 向量之下，actual_choice 并不唯一 ⇒ 仅凭 D-1 之 P 面不足以复原实采之抽 ⇒ D-5 不可由 D-1 计算得出。",
+   "per_tier": {
+    "ETAC-D1": {
+     "n_distinct_P_vectors": 29,
+     "n_groups_with_multiple_distinct_actual_choice": 52,
+     "max_distinct_actual_choice_within_one_P_group": 3,
+     "n_cells": 79
+    },
+    "ETAC-D2": {
+     "n_distinct_P_vectors": 29,
+     "n_groups_with_multiple_distinct_actual_choice": 61,
+     "max_distinct_actual_choice_within_one_P_group": 3,
+     "n_cells": 79
+    },
+    "ETAC-D3": {
+     "n_distinct_P_vectors": 29,
+     "n_groups_with_multiple_distinct_actual_choice": 72,
+     "max_distinct_actual_choice_within_one_P_group": 3,
+     "n_cells": 79
+    },
+    "ETAC-D4": {
+     "n_distinct_P_vectors": 29,
+     "n_groups_with_multiple_distinct_actual_choice": 65,
+     "max_distinct_actual_choice_within_one_P_group": 3,
+     "n_cells": 79
+    }
+   }
+  },
+  "status": "事实登记。二探针之结果 ⛔ 0 充 C-6 之成就（C-6 之成就之界分权属 PI · 口径件 §7 候裁项 #4 仍开口）；且因 C-1 成就（同底料）⇒ 依处置-甲该对之互比仍降为「并列」。"
+ },
+ "kill_lines_check": {
+  "source": "results/_runface_vs_shape_multidim_supplement_2026_10_20.md §6-1（K-MDSUP-1..-13）",
+  "rows": [
+   {
+    "id": "K-MDSUP-1",
+    "name": "并取语义门（并报·非合成）",
+    "status": "成就（PASS）",
+    "basis": "本件 5 维并排陈列（§2-6）· 各自独立留存 · 0 相加／加权／平均／打分／合成 · 0 合并为单一分数 · 0 以任一维充全域结论"
+   },
+   {
+    "id": "K-MDSUP-2",
+    "name": "维度集闭集冻结门",
+    "status": "成就（PASS）",
+    "basis": "本件恰 5 维（D-1…D-5）· 0 增删 · 0 以并取为由重开候选集"
+   },
+   {
+    "id": "K-MDSUP-3",
+    "name": "排除面沿续门",
+    "status": "成就（PASS）",
+    "basis": "S-乙／S-丁／R-丁 均不在本件维度集内（§6 登记）· 0 事后纳入 · 0 改其排除依据之一字"
+   },
+   {
+    "id": "K-MDSUP-4",
+    "name": "逐维可比性核门",
+    "status": "成就（PASS）",
+    "basis": "§3-1 逐维矩阵（5 维 × 6 判准）＋ §3-2 配对级矩阵（10 对）逐格落位 · 未核之维 0 充可比 · 0 以并取整体充任一维之可比性"
+   },
+   {
+    "id": "K-MDSUP-5",
+    "name": "同物之两读之登记门",
+    "status": "成就（PASS）",
+    "basis": "§3-3 显式登记 D-1 × D-5 同底料（实测 6 对行键集合逐对相同）· ⛔ 0 断言该配对必为同义反复 · ⛔ 0 以并取之多数维掩盖该登记"
+   },
+   {
+    "id": "K-MDSUP-6",
+    "name": "0 合并派生门",
+    "status": "成就（PASS）",
+    "basis": "本件 2 件均落新名 · 0 并入既有 JSON · 0 以他维之读出件覆盖本维 · 0 并入单一分数／排名／结论件"
+   },
+   {
+    "id": "K-MDSUP-7",
+    "name": "命名域隔离门",
+    "status": "成就（PASS）",
+    "basis": "本件 R-甲／R-乙／R-丙 一律指对照口径域；引消融域者必冠「消融域」三字（§0-7）· 0 将消融域之同果登记移作对照口径域之事实"
+   },
+   {
+    "id": "K-MDSUP-8",
+    "name": "权重口径未裁门",
+    "status": "成就（PI 已裁 · 悬置已解）",
+    "basis": "v168-Q4 §3-4 第 4 项已裁 R-甲 档级聚合之权重口径＝等权 ⇒ 本件 §2-3 以等权为主口径；并同时列出决策数加权面（照录在册值）并登记档序之不变性"
+   },
+   {
+    "id": "K-MDSUP-9",
+    "name": "伪影注记随行门",
+    "status": "成就（PASS）",
+    "basis": "§2-3 之 D-3 每一读出随行 D2 伪影注记（逐字）· 0 以 0.8481 充优 · 0 改 D2 之形态面失格状态"
+   },
+   {
+    "id": "K-MDSUP-10",
+    "name": "0 复算与 0 测量门",
+    "status": "部分成就 · 1 处界分（须 PI 释）",
+    "basis": "0 测量 · 0 新跑 · 0 新观测 · 0 LLM 调用 · 0 联网 · 0 读 key · 0 以他件之转述充本件之读数（读数系自盘上素材独立复算并逐位对账）｜⚠ 界分：该门之「0 复算在册读数」一款约束口径件 e9467ebf6f00 本体之照录行为；本件系 v169-Q4 授权之读出件（执行面），其产出即读数本身 ⇒ 复算为授权之内 ⇒ 但复算者与素材生成者同为 worker 棒系 ⇒ 第三方复算之面未成就（§7-1）"
+   },
+   {
+    "id": "K-MDSUP-11",
+    "name": "相容性核门",
+    "status": "成就（PASS）",
+    "basis": "本件 0 改任何已锁线之一字；与 K-RSC-1..-7／K-SEPCAL-*／K-ETAC-*／K-ABL-*／C-D13-* 之相容性（照录口径件 §5）本件 0 触发其任一违者条款"
+   },
+   {
+    "id": "K-MDSUP-12",
+    "name": "处置语归属门＋事后调整之禁＋0 回改草案",
+    "status": "成就（PASS）",
+    "basis": "本件 0 落五终判 · 0 闭任何 KD · 0 闭 J14／R-5 · 0 宣告段毕 · 0 代 PI 裁／释／择／给值 · 0 择径 · 0 择 C-组合 · 0 择处置候选；⛔ 0 回改对照口径草案之一字（8b07d606df7d 之现值未因本棒而变）"
+   },
+   {
+    "id": "K-MDSUP-13",
+    "name": "释义确认门",
+    "status": "成就（PI 已确认 · 悬置已解）",
+    "basis": "v167-Q3 §3-3 已确认「多维并取＝径定一个维度集合并各维并报（非择一·非合成为单一判据）」⇒ 本件 13 条判死线张其效力"
+   }
+  ],
+  "n_total": 13,
+  "n_pass": 13,
+  "n_conditional": 0,
+  "n_partial_with_open_boundary": 1
+ },
+ "excluded_faces_registered": {
+  "S-乙": "不在并取集内（0 区分力 · 登记为「形态面之退化对照」）",
+  "S-丁": "不在并取集内（合成面 · ⛔ 0 充 η 面之实测）",
+  "R-丁": "不在并取集内（0 档间区分力 · v168-Q4 §3-4 第 4 项：维持排除）；登记为「运行面之退化对照」；⚠ 其地位之可动径属改线（须 K-ETAC-10＋PI 明裁）"
+ },
+ "open_boundaries_reported_back": [
+  {
+   "id": "B-1",
+   "item": "复算者与生成者同为 worker 棒系（第三方复算之面未成就）",
+   "in_register_precedent": "η 判定件 8a5727bc4c11 §4 第 5 项（F4 之严格判准）：复算＝同一执行棒（worker）之独立实现 ⇒ ⛔ 不满足「复算者 ⛔ 非生成者」之字面"
+  },
+  {
+   "id": "B-2",
+   "item": "C-3 之共门之族未裁（口径件 §7 候裁项 #4 仍开口）⇒ 各维之 C-3 落「条件」",
+   "in_register_precedent": "口径件 §3-1 自陈③"
+  },
+  {
+   "id": "B-3",
+   "item": "等权口径之下 D-3 之档级值与在册值（决策数加权）不同（档序不变）",
+   "in_register_precedent": "v168-Q4 §3-4 第 4 项（等权）vs 8a5727bc4c11 J11（在册档序之值系 pooled 面）"
+  }
+ ],
+ "not_claimed": [
+  "⛔ 0 充「J14 已消解」（径-甲：J14 不因此闭）",
+  "⛔ 0 充「R-5 已闭」",
+  "⛔ 0 充「J9 已闭」",
+  "⛔ 0 充「口径已立」",
+  "⛔ 0 充「全部口径已立」",
+  "⛔ 0 充任一维为正确",
+  "⛔ 0 充「形态面／运行面／sep 面之读数可互比」",
+  "⛔ 0 充「D-1 × D-5 必为同义反复」",
+  "⛔ 0 充「η 面已死」或「η 面已活」",
+  "⛔ 0 充「D2 之形态面失格已改」",
+  "⛔ 0 充「R-丁 具档间区分力」",
+  "⛔ 0 充「对照口径之可比性成立」（本件之读出 ≠ 可比性之成立）",
+  "⛔ 0 落五终判（pass／af／kd／fail／give-up 之任一）",
+  "⛔ 0 闭任何 KD",
+  "⛔ 0 宣告任何段毕",
+  "⛔ 0 代 PI 裁／释／择／给值／界分"
+ ],
+ "write_history": {
+  "stages": [
+   {
+    "stage": 1,
+    "at_cst": "2026-10-20 23:01:58",
+    "sha12": "e1e97f9c6964",
+    "bytes": 58189,
+    "note": "本棒第一次落盘（数据件）。其 D-2 交叉核对字段为缺陷版：核对式误将「分数形（[[h,n],…]）」与「浮点形（[h/n,…]）」两异形互比 ⇒ 该字段 4/4 档报 false（**系核对式之缺陷，非数据之差**）。"
+   },
+   {
+    "stage": 2,
+    "at_cst": "2026-10-20 23:08:35",
+    "sha12": "bd95582f6c79",
+    "bytes": 59743,
+    "note": "本棒第二次落盘（自我修正①）：D-2 交叉核对式改为分形逐形核对（4 项 × 4 档 ＝ 16 项）；D-3 之 per_family_rate 改取本棒自盘之复算值（h/n）而非照录。⚠ 落盘前实测在盘指纹 ＝ e1e97f9c6964 ＝ 本棒自落之值 ⇒ 0 他棒触碰 ⇒ 属本棒自身之产出之修正（⛔ 0 覆写任何他件）。"
+   },
+   {
+    "stage": 3,
+    "at_cst": "2026-10-20 23:09:29",
+    "sha12": "(本棒自测·见回执)",
+    "bytes": "(本棒自测·见回执)",
+    "note": "本棒第三次落盘（自我修正②·D-2 之定案）：复算式改为**约分**之分数形（`sep` 件之规范形 ＝ 约分分数，例 10/15 → [2,3]）⇒ 4 项 × 4 档 之逐位核对遂全部成就。⚠ 落盘前实测在盘指纹 ＝ bd95582f6c79 ＝ 本棒第二次自落之值 ⇒ 0 他棒触碰。"
+   }
+  ],
+  "self_correction_basis": "两次自我修正之许可依据 ＝ 落盘前实测在盘 SHA-12 逐位等于本棒自报之自身落盘值（阶段 1→2：e1e97f9c6964；阶段 2→3：bd95582f6c79）⇒ 0 他棒触碰本次重写面 ⇒ 属本棒自身之产出之修正（⛔ 0 覆写任何他件）。",
+  "root_cause_of_defect": "核对式之形（分数形 vs 浮点形）与约分规范形二者皆误 ⇒ 与素材数据本身无涉。修正后 D-2 之 16 项逐位核对 ＝ 16/16 成就。"
+ }
+}

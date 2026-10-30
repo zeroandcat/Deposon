@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "date": "2026-09-09",
+    "author": "Mavis (root session)",
+    "method": "SHA-256 全文 + 前 12 位",
+    "spec_versions": {
+      "KT-A1": "V0.2",
+      "KT-B1": "V0",
+      "KT-C1": "V0"
+    },
+    "note": "V1 折中补 8-10 天阶段 4: 15 真 + 0 占位(全填)",
+    "revision": {
+      "date": "2026-09-22",
+      "authorized_by": "PI 组D第一批 ask_4caaed46acb4322f039a2903 (C7 处置=修订锚文件) + PI 微确认 ask_193da82dd431bd4c180cf250 Q1-Q4",
+      "prior_sha256_12": "03c6c01f3697",
+      "changes": [
+        "P_A_FROZEN_RUNS: v18 (62c1a41e1db8) 与 v17 (af51da229652) 移除 (本地+远端全树+远端 git 历史 0 提交, 永久不可寻回; PI Q1 拍板); object/path/field 5→3 同步",
+        "P_A_FROZEN_RUNS v20: 6edb2aec1660 → 84ce9b028b0c (远端 main 实测值, commit 6afa134348; 声明值版本从未推送远端, 3 个历史版本均不匹配; PI Q2 拍板: 锚语义改为现存远端版本)",
+        "P_A_LLM_CLIENT: 055e874ea5c1 → 1722500da4aa; P_A_HARNESS: 9f383935c00c → 275e480ba4d9 (2026-09-22 本地实测; 2026-09-15 已 DRIFT_AUTHORIZED)",
+        "KT_B1_AUDIT_FUNCTION: 3aa661cfbab5 → 4bdec2683f06 (2026-09-22 本地实测)",
+        "KT_C1_KILL_LINE 与 14 条 .mavis/scripts/* 路径: 保留原值 + not_found status 注记 (本地+远端全树均无; 远端全树 0 条 .mavis 路径; KT_C1_SPEC_V0.md 仅存同名族 V0.1 版, 名与哈希均不符)"
+      ],
+      "remote_twin_note": "远端副本 _september_workspace/verifier/handoff/KT_ABC1_anchors_sha256_12.json (sha256_12=03c6c01f3697) 未随本次修订同步"
+    }
+  },
+  "anchors": {
+    "KT-A1": {
+      "P_A_ECR_BASELINE": {
+        "object": "P-A V0 spec §3 ECR=1.333 基线",
+        "path": "docs/V3X/P_A_EQUILIBRIUM_STABILIZATION_V0_SPEC.md",
+        "algorithm": "sha256_first_12",
+        "value": "bd1caab42b4c",
+        "field": "ecr_median=1.333"
+      },
+      "P_A_KILL_LINE": {
+        "object": "P-A V0 spec §1 GT 判死裁定族",
+        "path": "docs/V3X/P_A_EQUILIBRIUM_STABILIZATION_V0_SPEC.md",
+        "algorithm": "sha256_first_12",
+        "value": "bd1caab42b4c",
+        "field": "kills=10 GT"
+      },
+      "P_A_FROZEN_RUNS": {
+        "object": "3 frozen run JSON",
+        "path": "results/deposon_v20_baselines.json + v19 + v21",
+        "algorithm": "sha256_first_12",
+        "value": [
+          "84ce9b028b0c",
+          "910c4333eead",
+          "9d9ae5001c57"
+        ],
+        "field": "runs=3 frozen",
+        "status": "2026-09-22 C7 修订: v18 62c1a41e1db8 与 v17 af51da229652 移除 (本地+远端全树+远端 git 历史均无, PI Q1 拍板); v20 改远端 main 实测值 84ce9b028b0c (commit 6afa134348; 声明值 6edb2aec1660 版本从未推送远端, PI Q2 拍板); 详见 metadata.revision"
+      },
+      "P_A_LLM_CLIENT": {
+        "object": "tools/llm_client.py",
+        "path": "tools/llm_client.py",
+        "algorithm": "sha256_first_12",
+        "value": "1722500da4aa",
+        "field": "Doubao + DeepSeek, runtime Path().read_text()",
+        "status": "2026-09-22 C7 修订: 055e874ea5c1 → 1722500da4aa (2026-09-22 本地实测; 2026-09-15 已 DRIFT_AUTHORIZED)"
+      },
+      "P_A_HARNESS": {
+        "object": "tools/exp_harness.py",
+        "path": "tools/exp_harness.py",
+        "algorithm": "sha256_first_12",
+        "value": "275e480ba4d9",
+        "field": "Mechanism M1/M2/M3 + TaskFamily T1-T4",
+        "status": "2026-09-22 C7 修订: 9f383935c00c → 275e480ba4d9 (2026-09-22 本地实测; 2026-09-15 已 DRIFT_AUTHORIZED)"
+      }
+    },
+    "KT-B1": {
+      "KT_B1_V19_BENCHMARK": {
+        "object": "v19 冻结 200 题守恒残差",
+        "path": "results/deposon_v19_benchmark_fixes.json",
+        "algorithm": "sha256_first_12",
+        "value": "910c4333eead",
+        "field": "t_plus_r_plus_a_max_deviation=2.2e-16"
+      },
+      "KT_B1_KILL_LINE": {
+        "object": "verifier/kill_lines/kt_b1_kill_decision.py",
+        "path": "verifier/kill_lines/kt_b1_kill_decision.py",
+        "algorithm": "sha256_first_12",
+        "value": "9f351078e5bf",
+        "field": "4 档 (PASS_KT_B1 / GRAY_DOWN / GRAY_UP / FAIL_KT_B1)"
+      },
+      "KT_B1_ATTACK_BANK": {
+        "object": ".mavis/scripts/kt_b1/attacker.py",
+        "path": ".mavis/scripts/kt_b1/attacker.py",
+        "algorithm": "sha256_first_12",
+        "value": "4b37a40cc984",
+        "field": "3 类攻击 × 200 次 (D2 实现)",
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      },
+      "KT_B1_AUDIT_FUNCTION": {
+        "object": "verifier/audit/conservation.py",
+        "path": "verifier/audit/conservation.py",
+        "algorithm": "sha256_first_12",
+        "value": "4bdec2683f06",
+        "field": "T+R+A=1 守恒审计 (D2 实现)",
+        "status": "2026-09-22 C7 修订: 3aa661cfbab5 → 4bdec2683f06 (2026-09-22 本地实测)"
+      },
+      "KT_B1_HARNESS": {
+        "object": ".mavis/scripts/kt_b1/harness.py",
+        "path": ".mavis/scripts/kt_b1/harness.py",
+        "algorithm": "sha256_first_12",
+        "value": "39dacb572f2e",
+        "field": "3 类攻击 × 200 次 + 守恒审计 (D2 实现)",
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      }
+    },
+    "KT-C1": {
+      "KT_C1_V21_FROZEN": {
+        "object": "v21 frozen GT 形式化",
+        "path": "results/deposon_v21_gtformal.json",
+        "algorithm": "sha256_first_12",
+        "value": "9d9ae5001c57",
+        "field": "n_graphs=61, n_tasks=338, n_states=6760"
+      },
+      "KT_C1_KILL_LINE": {
+        "object": "KT_C1_SPEC_V0 §1.1+§1.2 判死线文本",
+        "path": "docs/V3X/KT_C1_SPEC_V0.md",
+        "algorithm": "sha256_first_12",
+        "value": "77b49c0f8b54",
+        "field": "kill_line = \"R^2<0.3 OR b_CI 含 0\"",
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无 docs/V3X/KT_C1_SPEC_V0.md; 另有 KT_C1_SPEC_V0.1.md 本地+远端各一份 (31241B, 远端版 sha256=59d8f56347d5, 名与哈希均不符本声明值); 原值保留为 2026-09-09 冻结时声明值"
+      },
+      "KT_C1_LOGLOG_FIT": {
+        "object": ".mavis/scripts/kt_c1/kt_c1_loglog_fit.py",
+        "path": ".mavis/scripts/kt_c1/kt_c1_loglog_fit.py",
+        "algorithm": "sha256_first_12",
+        "value": "7df20f7b3084",
+        "field": "OLS + 95% bootstrap (D2 实现, 328 pairs 跑通, DEAD)",
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      },
+      "KT_C1_ETA_SCAN": {
+        "object": ".mavis/scripts/kt_c1/eta_scan.py",
+        "path": ".mavis/scripts/kt_c1/eta_scan.py",
+        "algorithm": "sha256_first_12",
+        "value": "b7e3c3717d11",
+        "field": "η 扫描 0.01-100 (9 档), η_crit_05=0.333 (D2 实现)",
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      },
+      "KT_C1_HARNESS": {
+        "object": ".mavis/scripts/kt_c1/harness.py",
+        "path": ".mavis/scripts/kt_c1/harness.py",
+        "algorithm": "sha256_first_12",
+        "value": "8488425898fb",
+        "field": "主 + 双跑 + BOSS-C1/C2/C3 (D2 实现)",
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      }
+    }
+  },
+  "boss_baselines": {
+    "note": "9 BOSS baseline 真实现(非占位, 替代 NotImplementedError)",
+    "KT-A1": {
+      "BOSS-A1 RBR/RM": {
+        "path": ".mavis/scripts/kt_a1/boss_a1_rbr_rm.py",
+        "sha256_12": "91a62de1fa50",
+        "size": 20538,
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      },
+      "BOSS-A2 Potential Game": {
+        "path": ".mavis/scripts/kt_a1/boss_a2_potential_game.py",
+        "sha256_12": "b6339d9f2435",
+        "size": 13475,
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      },
+      "BOSS-A3 Replicator Dynamics": {
+        "path": ".mavis/scripts/kt_a1/boss_a3_replicator_dynamics.py",
+        "sha256_12": "27d04f1e3b3e",
+        "size": 14417,
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      }
+    },
+    "KT-B1": {
+      "BOSS-B1 Sinkhorn OT": {
+        "path": ".mavis/scripts/kt_b1/boss_b1_sinkhorn_ot.py",
+        "sha256_12": "19325960b8be",
+        "size": 14956,
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      },
+      "BOSS-B2 KD": {
+        "path": ".mavis/scripts/kt_b1/boss_b2_kd.py",
+        "sha256_12": "1781ea2f742d",
+        "size": 14224,
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      },
+      "BOSS-B3 LLMLingua": {
+        "path": ".mavis/scripts/kt_b1/boss_b3_llmlingua.py",
+        "sha256_12": "c0b55e0385a4",
+        "size": 13966,
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      }
+    },
+    "KT-C1": {
+      "BOSS-C1 2D Ising": {
+        "path": ".mavis/scripts/kt_c1/boss_c1_2d_ising.py",
+        "sha256_12": "d47722a1123a",
+        "size": 3226,
+        "self_test": "FAIL (deposon 散射层与 2D Ising 行为一致, 偏差 0.9% < 20%, 主张被拍平为 2D Ising 普适类特例)",
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      },
+      "BOSS-C2 Transverse Ising": {
+        "path": ".mavis/scripts/kt_c1/boss_c2_transverse_ising.py",
+        "sha256_12": "ce2196c90cbc",
+        "size": 2325,
+        "self_test": "PASS (v1/v2 映射 g/J 差 68%, 不映射)",
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      },
+      "BOSS-C3 Reservoir": {
+        "path": ".mavis/scripts/kt_c1/boss_c3_reservoir.py",
+        "sha256_12": "506d85c37e11",
+        "size": 2399,
+        "self_test": "PASS (ESN 不展示双稳态, 抵御)",
+        "status": "not_found (2026-09-22 C7 复核): 本地+远端全树均无此文件 (远端全树 0 条 .mavis 路径); 原值保留为 2026-09-09 冻结时声明值"
+      }
+    }
+  }
+}

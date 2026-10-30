@@ -1,0 +1,40 @@
+﻿=== T1.5 PER-CELL JUDGMENT TABLE (6 cells) ===
+
+#   dim  temp   endpoint     calls   J_all_pooled   J_same_cap  J_cross_cap  n_empt   K-N11-3    K-T1-S1    K-T1-S3 
+----------------------------------------------------------------------------------------------------------------------------------
+0   L2   0.0    qwen_plan    20      0.0            1.0         0.0          0        hit=True   hit=False  PASS    
+1   L2   0.3    qwen_plan    20      0.0            1.0         0.0          0        hit=True   hit=False  PASS    
+2   L2   0.5    qwen_plan    19      0.0            1.0         0.0          0        hit=True   hit=False  PASS    
+3   L14  0.0    qwen_plan    19      0.0            0.5556      0.0          0        hit=True   hit=False  PASS    
+4   L14  0.3    qwen_plan    20      0.0            0.65        0.0          0        hit=True   hit=False  PASS    
+5   L14  0.5    qwen_plan    20      0.0            0.5         0.0          0        hit=True   hit=False  PASS    
+
+=== Hit direction explicit ===
+  K-N11-3 ����: J ��λ < 0.85 -> hit=True -> FAIL (������, �� L2/L14 verdict ��4.3 ����)
+  K-T1-S1 ����: ��һ�¶ȵ� cell J_all_pooled >= 0.85 -> hit=True (�� T1 ��1.5.2 ����)
+  K-T1-S3 ����: ȫ 6 cells J < 0.85 -> hit=False = ̽�벻���� = �ж��Ƚ� + T1 verdict ��Ϣ������
+
+=== Comparison with T1 (placeholder, T1 result.json �Ѵ���) ===
+T1 verdict F1B5E49F3058 ��1.3 ʵ��:
+  - 12 cells �� 240 calls (mimo/teamo �� temp {0.0,0.3,0.5} �� {L2,L14})
+  - n_empty_responses = 112/227 OK = 49.3% (reasoning ģ�ͺľ� max_tokens=100 Ԥ��)
+  - empty-empty pairs ռ 72.1% (n_empty_pairs_total / n_all_pairs_total)
+  - J_all_pooled ��λ = 0.0 (���淽��һ��, ������ = empty-empty)
+
+T1.5 ʵ��:
+  - 6 cells �� 120 calls (qwen_plan �� temp {0.0,0.3,0.5} �� {L2,L14}, max_tokens=500)
+  - n_empty_responses = 0/118 OK = 0.0% (qwen3.7-max �� reasoning + max_tokens=500 ��������ʧ��������Ӧ����)
+  - empty-empty pairs = 0
+  - J_all_pooled ��λ = 0.0 (���淽��һ��, ������ = cross-caption ���ݷ�ɢ����, cross:same=2:1)
+  - J_same_caption ��λ = 1.0 (L2 ȫ�� 3 cells) / 0.5-0.65 (L14 3 cells) [���ʦ�ȶ����ź�]
+
+** T1.5 ��Ҫ����: ����ʧ���� #1 (reasoning���� reasoning) + #2 (max_tokens=100��500) ������, 
+   qwen3.7-max ����Ӧ����; �� J_all_pooled ���� = 0.0 �����Դ�, ����� 'empty-empty' ��Ϊ 'cross-caption ���ݷ�ɢ'; 
+   ���ʦ�ȶ����ź� = same-caption re-ask J = 0.5-1.0 (�� qwen t=0.7 baseline 0.36-0.52 ͬ��); 
+   T1 verdict ��7 '���� PASS = ����ʧ�������' һ�ֲ��� (�������ж�); 
+   T1 verdict ��Ϣ������: ��������ʧ�������ά�����淽��һ�� (J<0.85) = ���Ƚ��뿱����; 
+   ������������ʾ��ʵ��ʦ�ȶ����ź� (same-caption J 0.5-1.0) �� ���� T1 verdict δʶ��Ķ�����Ϣ.
+
+=== T1.5 K-T1-S1 (�¶������) ���¶ȷ��� ===
+  L2: {'0.0': 0.0, '0.3': 0.0, '0.5': 0.0}, hit=False, verdict=PASS (�¶ȷ���һ��)
+  L14: {'0.0': 0.0, '0.3': 0.0, '0.5': 0.0}, hit=False, verdict=PASS (�¶ȷ���һ��)

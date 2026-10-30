@@ -1,0 +1,118 @@
+{
+  "schema": "v4_cpatomic_verify/1",
+  "date": "2026-09-28",
+  "n_tests": 22,
+  "n_pass": 22,
+  "results": [
+    {
+      "test": "T1/t15r2 原子写落盘字节 == 原非原子写",
+      "pass": true,
+      "detail": "atomic=1ce7ab9eb58a/141490B legacy=1ce7ab9eb58a/141490B"
+    },
+    {
+      "test": "T1/t15r2 0 临时件残留",
+      "pass": true,
+      "detail": "leftovers=[]"
+    },
+    {
+      "test": "T1/t15 原子写落盘字节 == 原非原子写",
+      "pass": true,
+      "detail": "atomic=1ce7ab9eb58a/141490B legacy=1ce7ab9eb58a/141490B"
+    },
+    {
+      "test": "T1/t15 0 临时件残留",
+      "pass": true,
+      "detail": "leftovers=[]"
+    },
+    {
+      "test": "T2/t15r2 双进程 exit=0",
+      "pass": true,
+      "detail": "rc=[0, 0]"
+    },
+    {
+      "test": "T2/t15r2 终态 = 某一方完整 payload（0 混合 0 截断）",
+      "pass": true,
+      "detail": "matched=['A'] bytes=1122490"
+    },
+    {
+      "test": "T2/t15r2 终态可 json.loads（0 截断）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "T2/t15r2 0 临时件残留",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "test": "T2/t15 双进程 exit=0",
+      "pass": true,
+      "detail": "rc=[0, 0]"
+    },
+    {
+      "test": "T2/t15 终态 = 某一方完整 payload（0 混合 0 截断）",
+      "pass": true,
+      "detail": "matched=['A'] bytes=1122490"
+    },
+    {
+      "test": "T2/t15 终态可 json.loads（0 截断）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "T2/t15 0 临时件残留",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "test": "T3/t15r2 中途强杀确实发生",
+      "pass": true,
+      "detail": "rc=1 err=''"
+    },
+    {
+      "test": "T3/t15r2 既有 checkpoint 逐字节不动",
+      "pass": true,
+      "detail": "seed=157c589b06d9/83090B after=157c589b06d9/83090B"
+    },
+    {
+      "test": "T3/t15r2 既有 checkpoint 仍可解析",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "T4/t15r2 对照组中途强杀确实发生",
+      "pass": true,
+      "detail": "rc=1 err=''"
+    },
+    {
+      "test": "T4/t15r2 旧写法数据被摧毁（缺陷复现 => 修复非装饰）",
+      "pass": true,
+      "detail": "after=c51af9d1cfbf/12249258B (seed 83090B) json_loads_ok=False"
+    },
+    {
+      "test": "T3/t15 中途强杀确实发生",
+      "pass": true,
+      "detail": "rc=1 err=''"
+    },
+    {
+      "test": "T3/t15 既有 checkpoint 逐字节不动",
+      "pass": true,
+      "detail": "seed=157c589b06d9/83090B after=157c589b06d9/83090B"
+    },
+    {
+      "test": "T3/t15 既有 checkpoint 仍可解析",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "T4/t15 对照组中途强杀确实发生",
+      "pass": true,
+      "detail": "rc=1 err=''"
+    },
+    {
+      "test": "T4/t15 旧写法数据被摧毁（缺陷复现 => 修复非装饰）",
+      "pass": true,
+      "detail": "after=284a0f51bfe4/9697098B (seed 83090B) json_loads_ok=False"
+    }
+  ]
+}

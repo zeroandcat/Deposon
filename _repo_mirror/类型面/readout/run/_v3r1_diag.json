@@ -1,0 +1,251 @@
+{
+ "repro_all": true,
+ "same_split": true,
+ "nond4_identical": true,
+ "lab_same": true,
+ "rf_same": true,
+ "opt_same": true,
+ "d4_idx": [
+  72,
+  73,
+  74,
+  75,
+  76
+ ],
+ "d4_in_held": [
+  72,
+  74,
+  76
+ ],
+ "d4_in_train": [
+  73,
+  75
+ ],
+ "applied": [
+  {
+   "event_idx": 72,
+   "q_id": "D4_Q1",
+   "scene_tag": "G1_cross_day_collection_directive",
+   "from": "J6",
+   "to": "J5",
+   "changed": true
+  },
+  {
+   "event_idx": 73,
+   "q_id": "D4_Q2",
+   "scene_tag": "G2_d1_missing_8_preservation_directive",
+   "from": "J6",
+   "to": "J1",
+   "changed": true
+  },
+  {
+   "event_idx": 74,
+   "q_id": "D4_Q3",
+   "scene_tag": "v3_chain_serial_execution_directive",
+   "from": "J6",
+   "to": "J5",
+   "changed": true
+  },
+  {
+   "event_idx": 75,
+   "q_id": "D4_Q4",
+   "scene_tag": "v3_sword_v4_official_separation_principle",
+   "from": "J3",
+   "to": "J4",
+   "changed": true
+  },
+  {
+   "event_idx": 76,
+   "q_id": "D4_Q5",
+   "scene_tag": "honesty_root_cause_non_misleading_principle",
+   "from": "J3",
+   "to": "J3",
+   "changed": false
+  }
+ ],
+ "feat_delta": {
+  "judge_type_J1": {
+   "n_events_changed": 1,
+   "v3_sum": 9,
+   "v3r1_sum": 10,
+   "v3_mean": 0.116883,
+   "v3r1_mean": 0.12987
+  },
+  "judge_type_J3": {
+   "n_events_changed": 1,
+   "v3_sum": 14,
+   "v3r1_sum": 13,
+   "v3_mean": 0.181818,
+   "v3r1_mean": 0.168831
+  },
+  "judge_type_J4": {
+   "n_events_changed": 1,
+   "v3_sum": 7,
+   "v3r1_sum": 8,
+   "v3_mean": 0.090909,
+   "v3r1_mean": 0.103896
+  },
+  "judge_type_J6": {
+   "n_events_changed": 3,
+   "v3_sum": 7,
+   "v3r1_sum": 4,
+   "v3_mean": 0.090909,
+   "v3r1_mean": 0.051948
+  },
+  "judge_type_J5": {
+   "n_events_changed": 2,
+   "v3_sum": 0,
+   "v3r1_sum": 2,
+   "v3_mean": 0.0,
+   "v3r1_mean": 0.025974
+  }
+ },
+ "v3r1_kill": [
+  {
+   "id": "K-V3-A",
+   "name": "学习线 (NW 主口径)",
+   "rule": "NW-sim mean (主读法) < 0.65 → FAIL",
+   "observed": 0.4665,
+   "threshold": 0.65,
+   "hit_direction": "NW-sim mean < 0.65 即触发 (k_v3_a_hit = True)",
+   "hit": true,
+   "pass": false
+  },
+  {
+   "id": "K-V3-A'",
+   "name": "学习线 (NLED 副口径)",
+   "rule": "NLED-sim mean (主读法) < 0.55 → FAIL",
+   "observed": 0.2319,
+   "threshold": 0.55,
+   "hit_direction": "NLED-sim mean < 0.55 即触发 (k_v3_a_prime_hit = True)",
+   "hit": true,
+   "pass": false
+  },
+  {
+   "id": "K-V3-B",
+   "name": "批判覆盖线",
+   "rule": "分歧批判理由覆盖率 < 1.00 → FAIL",
+   "observed": 0.6,
+   "threshold": 1.0,
+   "hit_direction": "覆盖率 < 1.00 即触发 (k_v3_b_hit = True)",
+   "hit": true,
+   "pass": false
+  },
+  {
+   "id": "K-V3-C",
+   "name": "盲从率线",
+   "rule": "盲从率 > 0.10 → FAIL",
+   "observed": 0.25,
+   "threshold": 0.1,
+   "hit_direction": "盲从率 > 0.10 即触发 (k_v3_c_hit = True)",
+   "hit": true,
+   "pass": false
+  },
+  {
+   "id": "K-V3-D",
+   "name": "稳健线 (bootstrap CI 下界)",
+   "rule": "bootstrap CI 下界 < 0.40 → FAIL",
+   "observed_ci": [
+    0.3522,
+    0.5851
+   ],
+   "threshold": 0.4,
+   "hit_direction": "CI 下界 < 0.40 即触发 (k_v3_d_hit = True)",
+   "hit": true,
+   "pass": false
+  },
+  {
+   "id": "K-V3-E",
+   "name": "双口径一致线 (构造面 sentinel)",
+   "rule": "NW-sim 与 NLED-sim 主读法判定方向不一致 (一过一否) → 消解 B 未真正消解警告; verdict-keeper 必须复核构造面而非机械判 FAIL/PASS",
+   "observed_nw_pass": false,
+   "observed_nled_pass": false,
+   "observed_nw_nled_direction_consistent": true,
+   "hit_direction": "方向不一致即触发 (k_v3_e_hit = True); 但 k_v3_e_hit 不直接判定 FAIL/PASS, 而是触发 sentinel 警告 (verdict-keeper 必须复核构造面)",
+   "hit": false,
+   "pass": true,
+   "sentinel_warning": null
+  }
+ ],
+ "v3r1_hit": {
+  "k_v3_a_hit": true,
+  "k_v3_a_prime_hit": true,
+  "k_v3_b_hit": true,
+  "k_v3_c_hit": true,
+  "k_v3_d_hit": true,
+  "k_v3_e_hit": false,
+  "k_v3_a_pass": false,
+  "k_v3_a_prime_pass": false,
+  "k_v3_b_pass": false,
+  "k_v3_c_pass": false,
+  "k_v3_d_pass": false,
+  "k_v3_e_pass": true,
+  "nw_nled_direction_consistent": true
+ },
+ "feat_dist_v3r1": {
+  "judge_type_J1": 2,
+  "judge_type_J2": 2,
+  "judge_type_J3": 2,
+  "judge_type_J4": 2,
+  "judge_type_J6": 2,
+  "scene_bucket_8": 8,
+  "opt_bucket_8": 8,
+  "is_corr_pair": 2,
+  "rf_len_bucket": 4,
+  "judge_type_J5": 2,
+  "rf_pos_density": 47,
+  "n_keywords_hit": 11
+ },
+ "feat_dist_base": {
+  "judge_type_J1": 2,
+  "judge_type_J2": 2,
+  "judge_type_J3": 2,
+  "judge_type_J4": 2,
+  "judge_type_J6": 2,
+  "scene_bucket_8": 8,
+  "opt_bucket_8": 8,
+  "is_corr_pair": 2,
+  "rf_len_bucket": 4,
+  "judge_type_J5": 1,
+  "rf_pos_density": 47,
+  "n_keywords_hit": 11
+ },
+ "alt": {
+  "base": {
+   "n_held": 18,
+   "nw_sim_mean": 0.5015873015873016,
+   "nled_sim_mean": 0.1851851851851852,
+   "div_critical_coverage": 0.6153846153846154,
+   "blind_obey_rate": 0.4,
+   "bootstrap_ci": [
+    0.39444444444444443,
+    0.6166666666666667
+   ]
+  },
+  "v3r1": {
+   "n_held": 18,
+   "nw_sim_mean": 0.5015873015873016,
+   "nled_sim_mean": 0.1851851851851852,
+   "div_critical_coverage": 0.6153846153846154,
+   "blind_obey_rate": 0.4,
+   "bootstrap_ci": [
+    0.39444444444444443,
+    0.6166666666666667
+   ]
+  }
+ },
+ "counts_v3r1": {
+  "n_held": 23,
+  "n_divergent": 15,
+  "n_critical_among_divergent": 9,
+  "n_agree": 8,
+  "n_blind_obey": 2
+ },
+ "counts_base": {
+  "n_held": 23,
+  "n_divergent": 15,
+  "n_critical_among_divergent": 9,
+  "n_agree": 8,
+  "n_blind_obey": 2
+ }
+}

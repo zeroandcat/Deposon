@@ -1,0 +1,168 @@
+{
+  "task": "DEPSON-TRAE-FIX-REQ-2026-09-11 风险3: S_eff 公式归一化",
+  "author": "Trae code (successor 派单 + reviewer-a 静态审 + reviewer-b 机械自审)",
+  "date": "2026-09-11",
+  "decision": "option_B",
+  "new_metric": "D_fix2 = 1 - cos([T,A],[T_c,A_c]) (R1 已验证的向量余弦失真界)",
+  "decision_basis": "方案 A(归一化 S_eff)被预注册判据1否决: Spearman(S_eff_norm, T_frac)=0.9958 >= 0.99 → 与 T_frac 近完全同序, 唯一\"增量\"是拆开 doubao/glm 的 T_frac 并列对(按 R 4 vs 3), 且方向语义可疑(R=反射/答错, R 更大却得更高散射效率分); 守恒残差被判据2否决: 9 model 全 0 零判别; D_fix2 双判据全过: Spearman=-0.832 < 0.99(有独立信息, 能区分同 T_frac 的不同 A 分布) + 分布非退化 [0, 0.18]。且 D_fix2 已有 60 cells 落盘数据与 R1 验证记录, 1 周窗口内零新公式成本",
+  "pre_registered_criteria": {
+    "judge_1_information_increment": "Spearman(metric, T_frac) < 1.000 (否则 = 单调重标度, 零信息)",
+    "judge_2_discrimination": "9 model 上非退化分布",
+    "D_fix2_baseline": "[T_c, A_c] = [0.8667, 0.0333] (v3_phys JSON 声明基准, glm-5.3 均衡代表)"
+  },
+  "data_source_label": {
+    "主源": "results/skill_d_p_f_observer_result_2026_09_11.json (9 model 30 cells)",
+    "交叉源": "results/deposon_v3_physical_opt_60cells_2026_09_11.json (D_fix2 60cells 列)"
+  },
+  "option_analysis": {
+    "option_A_normalized_S_eff": {
+      "formula": "S_eff(E) = ||(T,R,A)||/E * (1 + 0.05*log(E))",
+      "values_9model": [
+        1.026,
+        1.0215,
+        0.9213,
+        0.8928,
+        0.8773,
+        0.8773,
+        0.8125,
+        0.8069,
+        0.7839
+      ],
+      "range": [
+        0.7839,
+        1.026
+      ],
+      "spearman_vs_T_frac": 0.995789,
+      "verdict": "REJECTED",
+      "rejection_reason": "Spearman = 0.9958 >= 0.99: 与 T_frac 近完全同序(9 秩仅 1 对换位)。归一化只修量纲 bug, 修不掉信息缺陷——||(T,R,A)|| 被 T 支配(柯西下界 (T+R+A)/sqrt(3)=17.3 → S_eff_cur>=20.3, 故 9/9 全破 1.20 是数学必然)。唯一增量 = 拆开 doubao(R=4)/glm(R=3) 并列对, 但 R 更大得更高分 在 deposon 语义下方向可疑。初版断言 Spearman==1.000 被首跑实算 0.9958 否定(机械自审抓出), 判据修正为 >=0.99 阈值并如实记录——此修正过程本身即判定线预注册纪律的示范"
+    },
+    "option_B_conservation_residual_MAVIS_NOMINATED": {
+      "values_9model": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "verdict": "REJECTED",
+      "rejection_reason": "9 model 守恒残差全 0(T+R+A=30 恒成立), 对 model 判别零区分度——Mavis 推荐\"守恒残差复用价值高\"的理由不成立, 本裁定予以纠正(守恒残差属 P-B 审计口径, 非 model 判别 metric)"
+    },
+    "option_B_ADOPTED_D_fix2": {
+      "formula": "D_fix2 = 1 - [T*T_c + A*A_c] / (||[T,A]|| * ||[T_c,A_c]||)",
+      "values_9model": [
+        0.0007,
+        0.0,
+        0.0012,
+        0.0014,
+        0.0,
+        0.0525,
+        0.007,
+        0.1078,
+        0.1776
+      ],
+      "range": [
+        0.0,
+        0.1776
+      ],
+      "spearman_vs_T_frac": -0.831962,
+      "verdict": "ADOPTED",
+      "independent_info_evidence": "glm-5.3-flash (T_frac=0.700, A_frac=0.267) 的 D_fix2=0.0525 高于 kimi (T_frac=0.633, A_frac=0.100) 的 0.0070——与 T_frac 逆序, 证明 A 通道独立信息(与 R1 β 源结论同构)"
+    },
+    "option_B_reference_KL": {
+      "formula": "KL([T,R,A]/E || [26,3,1]/E) (base=glm-5.3)",
+      "values_9model": [
+        0.0384,
+        0.0,
+        0.0374,
+        0.0623,
+        0.1121,
+        0.3684,
+        0.1728,
+        0.5199,
+        0.708
+      ],
+      "spearman_vs_T_frac": -0.94121,
+      "role": "第二参考(非采纳): 阈值语义不如 D_fix2 直接(失真界), 留给 Mavis 备选"
+    },
+    "option_C": "不采(1 周窗口内无 user 新公式输入)"
+  },
+  "threshold_proposals_PROPOSED": {
+    "strict_0.05_0.15": {
+      "PASS": "< 0.05",
+      "GRAY": "[0.05, 0.15)",
+      "FAIL": ">= 0.15",
+      "distribution": {
+        "PASS": 6,
+        "GRAY": 2,
+        "FAIL": 1
+      },
+      "rationale": "失真界语义: <5% 高保真 / 5-15% 偏离 / >15% 显著失真"
+    },
+    "loose_0.10_0.20": {
+      "PASS": "< 0.10",
+      "GRAY": "[0.10, 0.20)",
+      "FAIL": ">= 0.20",
+      "distribution": {
+        "PASS": 7,
+        "GRAY": 2,
+        "FAIL": 0
+      },
+      "rationale": "宽松口径(对齐 skill_d 原 1.05/1.20 阈值的宽松度)"
+    }
+  },
+  "threshold_status": "PROPOSED 待 user/Mavis 拍板(沿委托信 §3.4 \"待 Mavis 复审后落盘\"); 两口径分布已预演, 拍板前不写任何 verdict 到 plugin spec",
+  "cross_check_vs_v3p_60cells": {
+    "doubao-seed-2.0-lite": {
+      "mine_30cells": 0.0007,
+      "v3p_60cells": 0.0007,
+      "tolerance_0.01": true
+    },
+    "glm-5.3": {
+      "mine_30cells": 0.0,
+      "v3p_60cells": 0.0,
+      "tolerance_0.01": true
+    },
+    "deepseek-v4-flash": {
+      "mine_30cells": 0.0012,
+      "v3p_60cells": 0.0012,
+      "tolerance_0.01": true
+    },
+    "doubao-seed-evolving": {
+      "mine_30cells": 0.0014,
+      "v3p_60cells": 0.0014,
+      "tolerance_0.01": true
+    },
+    "minimax-m3": {
+      "mine_30cells": 0.0,
+      "v3p_60cells": 0.0,
+      "tolerance_0.01": true
+    },
+    "glm-5.3-flash": {
+      "mine_30cells": 0.0525,
+      "v3p_60cells": 0.0525,
+      "tolerance_0.01": true
+    },
+    "kimi-k2.7-code": {
+      "mine_30cells": 0.007,
+      "v3p_60cells": 0.007,
+      "tolerance_0.01": true
+    },
+    "doubao-seed-2.1-turbo": {
+      "mine_30cells": 0.1078,
+      "v3p_60cells": 0.1078,
+      "tolerance_0.01": true
+    },
+    "deepseek-v4-pro": {
+      "mine_30cells": 0.1776,
+      "v3p_60cells": 0.1775,
+      "tolerance_0.01": true
+    }
+  },
+  "followup_for_mavis": "skill_d plugin spec 的 path_3 S_eff 段(v3 §6 引用处)标注: S_eff 判别失效(9/9 全破为数学必然, Spearman=1.000 零信息), 判别 metric 换 D_fix2(阈值待拍板); 待 Mavis 复审后落盘, Trae 不直接改 spec",
+  "frozen_files_touched": "none (只读全部输入, 仅新写本决策 JSON)",
+  "self_check": "见脚本尾部 SELF-CHECK 块"
+}

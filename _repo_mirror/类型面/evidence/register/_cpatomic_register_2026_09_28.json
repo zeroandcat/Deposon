@@ -1,0 +1,1011 @@
+{
+  "schema": "v4_cpatomic_register/1",
+  "date": "2026-09-28",
+  "n_files_with_nonatomic": 51,
+  "n_checkpoint_class": 5,
+  "n_terminal_class": 46,
+  "fixed_new_name": {
+    "results/_v4_supp_t15r2_executor_r2_atomic_2026_09_28.py": {
+      "source": "results/_v4_supp_t15r2_executor_r1_2026_09_28.py",
+      "role": "checkpoint 类: .tmp/_t15r2_records.json (T1.5r2 records 62 条)"
+    },
+    "results/_v4_supp_t15_executor_r2_atomic_2026_09_28.py": {
+      "source": "results/_v4_supp_t15_executor_r1_2026_09_27.py",
+      "role": "checkpoint 类: .tmp/_t15_records.json (T1.5 状态锚 120 条)"
+    }
+  },
+  "rows": [
+    {
+      "path": "results/_archive_2026_09_24/l14_runner_v2.py",
+      "bytes": 23056,
+      "sha12": "acf1cd6ccbd4",
+      "n_sites": 2,
+      "sites": [
+        {
+          "line": 153,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "CHECKPOINT"
+        },
+        {
+          "line": 168,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "CHECKPOINT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "checkpoint 类",
+      "reason": "归档件 + 被 L14 verdict §9.1 引用"
+    },
+    {
+      "path": "results/_v4_supp_t15_executor.py",
+      "bytes": 62285,
+      "sha12": "558e635f9ba6",
+      "n_sites": 3,
+      "sites": [
+        {
+          "line": 444,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "CHECKPOINT_PATH"
+        },
+        {
+          "line": 622,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "PROBE_LOG_PATH"
+        },
+        {
+          "line": 1260,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "RESULT_PATH"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "checkpoint 类",
+      "reason": "被引（T15 verdict 记 `558E635F9BA6`）"
+    },
+    {
+      "path": "results/_v4_supp_t15_executor_r1_2026_09_27.py",
+      "bytes": 67517,
+      "sha12": "6d22444c65af",
+      "n_sites": 3,
+      "sites": [
+        {
+          "line": 524,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "CHECKPOINT_PATH"
+        },
+        {
+          "line": 702,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "PROBE_LOG_PATH"
+        },
+        {
+          "line": 1340,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "RESULT_PATH"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "checkpoint 类",
+      "reason": "被引（T15 verdict `52C985429C91` 等引用）"
+    },
+    {
+      "path": "results/_v4_supp_t15r2_executor.py",
+      "bytes": 84884,
+      "sha12": "4b5b720d5cda",
+      "n_sites": 3,
+      "sites": [
+        {
+          "line": 470,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "T15R2_CHECKPOINT_PATH"
+        },
+        {
+          "line": 715,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "T15R2_PROBE_LOG_PATH"
+        },
+        {
+          "line": 1549,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "T15R2_RESULT_PATH"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "checkpoint 类",
+      "reason": "被引（R1 前身, 被 R1 与 verdict 引用）"
+    },
+    {
+      "path": "results/_v4_supp_t15r2_executor_r1_2026_09_28.py",
+      "bytes": 90390,
+      "sha12": "e0936a68fa82",
+      "n_sites": 3,
+      "sites": [
+        {
+          "line": 555,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "T15R2_CHECKPOINT_PATH"
+        },
+        {
+          "line": 800,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "T15R2_PROBE_LOG_PATH"
+        },
+        {
+          "line": 1634,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "T15R2_RESULT_PATH"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "checkpoint 类",
+      "reason": "被引（R1 告警块 L477-479 自登记缺陷 (c)「本棒只登记不修」）"
+    },
+    {
+      "path": ".tmp/_cpatomic_keyscan_2026_09_28.py",
+      "bytes": 3074,
+      "sha12": "393a8d3fa68f",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 81,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "out"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": ".tmp/_cpatomic_make_fix_2026_09_28.py",
+      "bytes": 7796,
+      "sha12": "76c822b640a0",
+      "n_sites": 3,
+      "sites": [
+        {
+          "line": 70,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "T15R2_CHECKPOINT_PATH"
+        },
+        {
+          "line": 86,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "CHECKPOINT_PATH"
+        },
+        {
+          "line": 150,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "out"
+        }
+      ],
+      "has_os_replace_elsewhere": true,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": ".tmp/_cpatomic_pycache_post_2026_09_28.py",
+      "bytes": 5164,
+      "sha12": "171b2a31c0e1",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 97,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": ".tmp/_cpatomic_pycache_pre_2026_09_28.py",
+      "bytes": 3912,
+      "sha12": "b86619676bf4",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 93,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": ".tmp/_cpatomic_register_2026_09_28.py",
+      "bytes": 6322,
+      "sha12": "98fe9fa24e80",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 128,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "out"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": ".tmp/_cpatomic_verify_2026_09_28.py",
+      "bytes": 11036,
+      "sha12": "85139011457c",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 266,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "out"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": ".tmp/_r4_key_scan_r1_files_2026_09_27.py",
+      "bytes": 4079,
+      "sha12": "cec4c1f3ff9c",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 94,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "out"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": ".tmp/_run_v3r1_relabel.py",
+      "bytes": 30875,
+      "sha12": "55d06ce42b3d",
+      "n_sites": 3,
+      "sites": [
+        {
+          "line": 303,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT_DATASET_V1P3"
+        },
+        {
+          "line": 461,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT_RESULT_V3R1"
+        },
+        {
+          "line": 464,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "DIAG"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": ".tmp/_t15_update_result.py",
+      "bytes": 9226,
+      "sha12": "ad66f242c6a1",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 141,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "RESULT_PATH"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "覆盖写被引交付件 results/_v4_supp_t15_result.json"
+    },
+    {
+      "path": "deposon_team/plugins/_v3n_cpath_live_2026_09_27.py",
+      "bytes": 19823,
+      "sha12": "5248ba7ac21c",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 139,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "OUT_JSON"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "deposon_team/plugins/_v3n_cpath_live_r1_2026_09_27.py",
+      "bytes": 28187,
+      "sha12": "321d39c7df41",
+      "n_sites": 2,
+      "sites": [
+        {
+          "line": 18,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "OUT_JSON"
+        },
+        {
+          "line": 246,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "OUT_JSON"
+        }
+      ],
+      "has_os_replace_elsewhere": true,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "deposon_team/plugins/_v3n_ktb1_distortion_bound_2026_09_27.py",
+      "bytes": 13055,
+      "sha12": "5572ef4055a5",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 237,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "OUT_JSON"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "deposon_team/plugins/_v3n_pg_boss_live_2026_09_27.py",
+      "bytes": 14223,
+      "sha12": "b6040d34f0ac",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 278,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "OUT_JSON"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "deposon_team/plugins/_verify_batch5_2026_09_18.py",
+      "bytes": 4238,
+      "sha12": "bc6cbf27a338",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 20,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "jp"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "deposon_team/plugins/boss_pc_1_2d_ising_universality.py",
+      "bytes": 7547,
+      "sha12": "bfc319808447",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 155,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "deposon_team/plugins/boss_pc_2_transverse_field_ising.py",
+      "bytes": 7053,
+      "sha12": "210105a7f29a",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 150,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "deposon_team/plugins/boss_pc_3_reservoir_computing.py",
+      "bytes": 7373,
+      "sha12": "021ea39b7193",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 170,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "llm_fetch.py",
+      "bytes": 8433,
+      "sha12": "fda22714de2d",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 188,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "path"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_archive_2026_09_24/_worker_openrouter_rag_run.py",
+      "bytes": 24113,
+      "sha12": "4458ccf3d64a",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 444,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT_JSON"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_01_executor_2026_09_27.py",
+      "bytes": 41004,
+      "sha12": "919fa909381e",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 772,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_04_executor_2026_09_27.py",
+      "bytes": 49405,
+      "sha12": "e098fa21700d",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 879,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_05_executor_2026_09_28.py",
+      "bytes": 38639,
+      "sha12": "d6c8bc163e11",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 694,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT_JSON"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_08_executor_2026_09_27.py",
+      "bytes": 15598,
+      "sha12": "21c4ba4d479e",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 291,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_08b_executor/executor_2026_09_27.py",
+      "bytes": 43901,
+      "sha12": "b292410d9a69",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 700,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_08c_preexp_data/executor_2026_09_27.py",
+      "bytes": 37775,
+      "sha12": "cb6eb9164df3",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 626,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_10_executor_2026_09_27.py",
+      "bytes": 33647,
+      "sha12": "80947906e592",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 561,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_12_executor_2026_09_27.py",
+      "bytes": 49430,
+      "sha12": "4850b1cbb010",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 822,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_19_executor_2026_09_27.py",
+      "bytes": 19215,
+      "sha12": "b133a631b1a8",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 373,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_26_executor_2026_09_27.py",
+      "bytes": 15056,
+      "sha12": "46c326c756c3",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 301,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_26_preexp_executor_2026_09_27.py",
+      "bytes": 38726,
+      "sha12": "775217a462f5",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 700,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_26b_executor_2026_09_27.py",
+      "bytes": 43171,
+      "sha12": "5c906113a210",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 795,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_27_executor_2026_09_27.py",
+      "bytes": 34084,
+      "sha12": "190cbe01d061",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 577,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_recheck_28_executor_2026_09_27.py",
+      "bytes": 17735,
+      "sha12": "4e8c0dd8f54f",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 318,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_s1_executor/executor_2026_09_27.py",
+      "bytes": 54937,
+      "sha12": "10870941c283",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 1058,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT_RESULT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_s2_executor/executor_2026_09_27.py",
+      "bytes": 84993,
+      "sha12": "f1e272a0924a",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 1553,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT_RESULT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v3_s_phrasetemplate_preexp_data/executor_2026_09_27.py",
+      "bytes": 35555,
+      "sha12": "96f491a8e2bf",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 622,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "OUT"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v4_supp_t15_executor_r2_atomic_2026_09_28.py",
+      "bytes": 70056,
+      "sha12": "9e89e021ea03",
+      "n_sites": 2,
+      "sites": [
+        {
+          "line": 744,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "PROBE_LOG_PATH"
+        },
+        {
+          "line": 1382,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "RESULT_PATH"
+        }
+      ],
+      "has_os_replace_elsewhere": true,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v4_supp_t15r2_executor_r2_atomic_2026_09_28.py",
+      "bytes": 92915,
+      "sha12": "215db16a0556",
+      "n_sites": 2,
+      "sites": [
+        {
+          "line": 840,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "T15R2_PROBE_LOG_PATH"
+        },
+        {
+          "line": 1674,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "T15R2_RESULT_PATH"
+        }
+      ],
+      "has_os_replace_elsewhere": true,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "results/_v4_supp_t1_executor.py",
+      "bytes": 60563,
+      "sha12": "91b8f70e4e18",
+      "n_sites": 3,
+      "sites": [
+        {
+          "line": 451,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "CHECKPOINT_PATH"
+        },
+        {
+          "line": 626,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "PROBE_LOG_PATH"
+        },
+        {
+          "line": 1255,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "RESULT_PATH"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "run_benchmark_v1_4_gsm8k.py",
+      "bytes": 11253,
+      "sha12": "fac50b283da5",
+      "n_sites": 5,
+      "sites": [
+        {
+          "line": 132,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "tmp"
+        },
+        {
+          "line": 199,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "tmp"
+        },
+        {
+          "line": 241,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "RESULT_FILE"
+        },
+        {
+          "line": 243,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "tmp"
+        },
+        {
+          "line": 255,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "SAMPLE_FILE"
+        }
+      ],
+      "has_os_replace_elsewhere": true,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "run_benchmark_v1_4_strategyqa.py",
+      "bytes": 14537,
+      "sha12": "f523875a15db",
+      "n_sites": 4,
+      "sites": [
+        {
+          "line": 237,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "RESULT_FILE"
+        },
+        {
+          "line": 239,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "tmp"
+        },
+        {
+          "line": 283,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "tmp"
+        },
+        {
+          "line": 310,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "tmp"
+        }
+      ],
+      "has_os_replace_elsewhere": true,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "run_g2_ensemble.py",
+      "bytes": 8907,
+      "sha12": "e3914712a984",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 158,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "fp"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "run_v20_vector_audit.py",
+      "bytes": 4717,
+      "sha12": "16a270a6bdab",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 83,
+          "kind": "json.dump(open(...,'w'))",
+          "target": "OUT_PATH"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "tests/test_llm_fetch.py",
+      "bytes": 11095,
+      "sha12": "90772f5cf41b",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 175,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "path"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "tests/test_llm_prior.py",
+      "bytes": 7701,
+      "sha12": "11c2ffa37610",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 69,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "cache"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    },
+    {
+      "path": "tests/test_v20.py",
+      "bytes": 13249,
+      "sha12": "e4712875f65d",
+      "n_sites": 1,
+      "sites": [
+        {
+          "line": 225,
+          "kind": ".write_text(json.dumps(...))",
+          "target": "json\")"
+        }
+      ],
+      "has_os_replace_elsewhere": false,
+      "disposition": "REGISTER_NO_FIX",
+      "class": "终端产出类",
+      "reason": "默认登记不修（非 checkpoint 类 / 未单列）"
+    }
+  ]
+}

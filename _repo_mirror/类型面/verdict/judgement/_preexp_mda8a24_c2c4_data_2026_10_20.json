@@ -1,0 +1,6134 @@
+{
+  "piece": {
+    "name": "results/_preexp_mda8a24_c2c4_data_2026_10_20.json",
+    "path": "〔幽灵引用·未上传:_preexp_mda8a24_c2c4_data_2026_10_20.json〕",
+    "nature": "题甲 C2/C3/C4 预实验之数据件 (构造级新跑 + 逐档读数 + 判据机械读出 · 0 新观测 · 0 LLM 调用)",
+    "author": "worker (题甲 C2-C4 预实验执行棒 · PI v161-Q1 授权新跑 (LLM<=60) + v161-Q2 C3/C4 皆开)",
+    "status": "读数产出 (⛔0 落五终判 · 0 闭任何 KD · 0 宣告段毕 · 0 代 PI 裁 · 读数不出判定)"
+  },
+  "execution": {
+    "run_started_at": "2026-10-20 19:00:29.752 UTC+8",
+    "run_finished_at": "2026-10-20 19:00:29.860 UTC+8",
+    "python": "3.14.7",
+    "platform": "win32",
+    "llm_calls_issued": 0,
+    "llm_calls_succeeded": 0,
+    "llm_calls_failed": 0,
+    "llm_calls_retried": 0,
+    "llm_hard_cap": 60,
+    "llm_hard_cap_respected": true,
+    "network_requests": 0,
+    "key_reads": 0,
+    "tools_bytes_written": 0,
+    "existing_files_touched": 0,
+    "new_observations_count": 0,
+    "new_observations_note": "本棒 0 生新观测: ① 之类型信息取自码载锚之只读实例化 (构造级), ②③④ 取自在盘 F3 载体; 无逐格逐决策之新生观测",
+    "bytecode_written": false,
+    "new_run_nature": "构造级只读实例化 (码载锚 R2 探针 cb91e876ae7f + harness ce64b9b97489) 之 ① 来源面字面量之类型实测"
+  },
+  "anchors_self_tested": [
+    {
+      "name": "design_draft",
+      "path": "〔幽灵引用·未上传:_preexp_design_kmda8a24_degen_2026_10_20.md〕",
+      "sha12_self_tested": "4dc9aaced5f7",
+      "anchor_expected": "4dc9aaced5f7",
+      "match": true,
+      "bytes": 87243
+    },
+    {
+      "name": "mda8_reading",
+      "path": "〔幽灵引用·未上传:_f3_payment_vector_reconstruction_data_2026_10_19.json〕",
+      "sha12_self_tested": "7f80d5ae03bb",
+      "anchor_expected": "7f80d5ae03bb",
+      "match": true,
+      "bytes": 210141
+    },
+    {
+      "name": "limb2_reading",
+      "path": "〔幽灵引用·未上传:_mda8_preexp_run_reading_2026_10_20.json〕",
+      "sha12_self_tested": "56eb9db8bfd1",
+      "anchor_expected": "56eb9db8bfd1",
+      "match": true,
+      "bytes": 145592
+    },
+    {
+      "name": "harness",
+      "path": "〔本地路径已脱敏〕",
+      "sha12_self_tested": "ce64b9b97489",
+      "anchor_expected": "ce64b9b97489",
+      "match": true,
+      "bytes": 45590
+    },
+    {
+      "name": "llm_client",
+      "path": "〔幽灵引用·未上传:llm_client.py〕",
+      "sha12_self_tested": "1722500da4aa",
+      "anchor_expected": "1722500da4aa",
+      "match": true,
+      "bytes": 8118
+    },
+    {
+      "name": "r2_probe_code_carrier",
+      "path": "〔幽灵引用·未上传:freeze_criterion_rewire_r2_probe_2026_10_17.py〕",
+      "sha12_self_tested": "cb91e876ae7f",
+      "anchor_expected": "cb91e876ae7f",
+      "match": true,
+      "bytes": 22764
+    }
+  ],
+  "field1_source_readings": {
+    "read_jia_zhenglulu_O1_formal": {
+      "label": "读甲 · 照录层 (O1 形式具化 30 条所载 · 56eb9db8bfd1)",
+      "U-C1_face_vector": [
+        "1",
+        "1",
+        "1",
+        "... (15 格同值)"
+      ],
+      "per_cell": [
+        {
+          "arm": "U-C1",
+          "family": "T1_GSM8K",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T1_GSM8K",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T1_GSM8K",
+          "mechanism": "M2_Greedy",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T1_GSM8K",
+          "mechanism": "M2_Greedy",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T1_GSM8K",
+          "mechanism": "M3_Random",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T1_GSM8K",
+          "mechanism": "M3_Random",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T2_StrategyQA",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T2_StrategyQA",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T2_StrategyQA",
+          "mechanism": "M2_Greedy",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T2_StrategyQA",
+          "mechanism": "M2_Greedy",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T2_StrategyQA",
+          "mechanism": "M3_Random",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T2_StrategyQA",
+          "mechanism": "M3_Random",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T3_Trap",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T3_Trap",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T3_Trap",
+          "mechanism": "M2_Greedy",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T3_Trap",
+          "mechanism": "M2_Greedy",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T3_Trap",
+          "mechanism": "M3_Random",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T3_Trap",
+          "mechanism": "M3_Random",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T4_2x2",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T4_2x2",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 4.0,
+          "value_repr": "4.0",
+          "value_type": "float"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T4_2x2",
+          "mechanism": "M2_Greedy",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T4_2x2",
+          "mechanism": "M2_Greedy",
+          "value": 4.0,
+          "value_repr": "4.0",
+          "value_type": "float"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T4_2x2",
+          "mechanism": "M3_Random",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T4_2x2",
+          "mechanism": "M3_Random",
+          "value": 4.0,
+          "value_repr": "4.0",
+          "value_type": "float"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T5_LowResource",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T5_LowResource",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 9,
+          "value_repr": "9",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T5_LowResource",
+          "mechanism": "M2_Greedy",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T5_LowResource",
+          "mechanism": "M2_Greedy",
+          "value": 9,
+          "value_repr": "9",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C1",
+          "family": "T5_LowResource",
+          "mechanism": "M3_Random",
+          "value": 1,
+          "value_repr": "1",
+          "value_type": "int"
+        },
+        {
+          "arm": "U-C3",
+          "family": "T5_LowResource",
+          "mechanism": "M3_Random",
+          "value": 9,
+          "value_repr": "9",
+          "value_type": "int"
+        }
+      ],
+      "source_statement": "① 之值系照录层 · 取自 a95605c38bac §3-2（U-C1 ＝ [1,1,1,1,1] · U-C3 ＝ [1.0,1.0,1.0,4.0,9] · 族序 T1…T5）· ⛔ 0 复核其生成面"
+    },
+    "read_yi_benzao_xinzai_code_carrier": {
+      "label": "读乙 · 本棒新跑 (码载锚 R2 探针 cb91e876ae7f 之 U_CAND 字面量之只读实例化)",
+      "U_CAND_code_face": [
+        [
+          "U-C1",
+          "二值计分 per-decision 上界(跨五族)",
+          [
+            "1.0",
+            "1.0",
+            "1.0",
+            "1.0",
+            "1.0"
+          ]
+        ],
+        [
+          "U-C2",
+          "盘上正身 distortion_calculator(max_u=1)",
+          [
+            "1.0",
+            "1.0",
+            "1.0",
+            "1.0",
+            "1.0"
+          ]
+        ],
+        [
+          "U-C3",
+          "按族基数支付上界(PI Q2 采认之主轴)",
+          [
+            "1.0",
+            "1.0",
+            "1.0",
+            "4.0",
+            "9"
+          ]
+        ],
+        [
+          "U-C4i",
+          "随计分读法分档·indicator 读法",
+          [
+            "1.0",
+            "1.0",
+            "1.0",
+            "1.0",
+            "1.0"
+          ]
+        ],
+        [
+          "U-C4v",
+          "随计分读法分档·value-gap 读法",
+          [
+            "1.0",
+            "1.0",
+            "1.0",
+            "1.0",
+            "1.0"
+          ]
+        ]
+      ],
+      "per_cell": [
+        {
+          "family": "T1_GSM8K",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T1_GSM8K",
+          "mechanism": "M2_Greedy",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T1_GSM8K",
+          "mechanism": "M3_Random",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T2_StrategyQA",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T2_StrategyQA",
+          "mechanism": "M2_Greedy",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T2_StrategyQA",
+          "mechanism": "M3_Random",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T3_Trap",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T3_Trap",
+          "mechanism": "M2_Greedy",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T3_Trap",
+          "mechanism": "M3_Random",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T4_2x2",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T4_2x2",
+          "mechanism": "M2_Greedy",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T4_2x2",
+          "mechanism": "M3_Random",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T5_LowResource",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T5_LowResource",
+          "mechanism": "M2_Greedy",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T5_LowResource",
+          "mechanism": "M3_Random",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T1_GSM8K",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T1_GSM8K",
+          "mechanism": "M2_Greedy",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T1_GSM8K",
+          "mechanism": "M3_Random",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T2_StrategyQA",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T2_StrategyQA",
+          "mechanism": "M2_Greedy",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T2_StrategyQA",
+          "mechanism": "M3_Random",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T3_Trap",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T3_Trap",
+          "mechanism": "M2_Greedy",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T3_Trap",
+          "mechanism": "M3_Random",
+          "value": 1.0,
+          "value_repr": "1.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+0"
+        },
+        {
+          "family": "T4_2x2",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 4.0,
+          "value_repr": "4.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+2"
+        },
+        {
+          "family": "T4_2x2",
+          "mechanism": "M2_Greedy",
+          "value": 4.0,
+          "value_repr": "4.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+2"
+        },
+        {
+          "family": "T4_2x2",
+          "mechanism": "M3_Random",
+          "value": 4.0,
+          "value_repr": "4.0",
+          "value_type": "float",
+          "value_hex": "0x1.0000000000000p+2"
+        },
+        {
+          "family": "T5_LowResource",
+          "mechanism": "M1_Deposon_TRA",
+          "value": 9,
+          "value_repr": "9",
+          "value_type": "int",
+          "value_hex": null
+        },
+        {
+          "family": "T5_LowResource",
+          "mechanism": "M2_Greedy",
+          "value": 9,
+          "value_repr": "9",
+          "value_type": "int",
+          "value_hex": null
+        },
+        {
+          "family": "T5_LowResource",
+          "mechanism": "M3_Random",
+          "value": 9,
+          "value_repr": "9",
+          "value_type": "int",
+          "value_hex": null
+        }
+      ]
+    },
+    "divergence_note": "两读之 ① 之类型面异 (读甲: U-C1 = int 1; 读乙: U-C1 = float 1.0) => 逐字节读法之 n_distinct 异果 => 依 K-PREXP-MDA8A2-4 0 强合, 两读并出, 报回 PI"
+  },
+  "field_material_f234_source": {
+    "carrier": "results/_f3_payment_vector_reconstruction_data_2026_10_19.json (7f80d5ae03bb) · cells_15",
+    "assumption": "②③④ 跨臂无新增互异值 (依 9c75b5c16676 §界二 之在册照录: ②③④ 之 30 格面 n_distinct ＝ 其 15 格面值) => 30 格面之 ②③④ 由 15 格材料量跨臂复制而得",
+    "cells_15": {
+      "M1_Deposon_TRA|T1_GSM8K": {
+        "f2_canonical_sorted_multiset": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "f3_ordered": [
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "f3_unordered": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "0315860bf255",
+          "0c76fc58fd20",
+          "2c8abd29b76a",
+          "6bf1c606078d",
+          "71e29171b1a1",
+          "88512ff7cd8b",
+          "8cf47788f52a",
+          "9b0c702712a7",
+          "b2f7e3ed6114",
+          "b60bdd4fa94c",
+          "c5c1b113f335",
+          "d8707f67f036",
+          "e4c1f39dba91",
+          "f57e2150496b",
+          "fcb36ccf3223"
+        ],
+        "H_decisions": 15
+      },
+      "M1_Deposon_TRA|T2_StrategyQA": {
+        "f2_canonical_sorted_multiset": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "f3_ordered": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "f3_unordered": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "04b07466b776",
+          "1702b00458e4",
+          "20b8ccba8c31",
+          "2a530cced264",
+          "2c3b008efd27",
+          "4d17aa76336b",
+          "640a610246ed",
+          "75b0e8adb1fd",
+          "87f9c55d6424",
+          "8a96a16fd45b",
+          "ab584ebe28a6",
+          "c8aa41ddd15f",
+          "d60e0792d0b4",
+          "eb001e923c9b",
+          "f05cd17d8a2c"
+        ],
+        "H_decisions": 15
+      },
+      "M1_Deposon_TRA|T3_Trap": {
+        "f2_canonical_sorted_multiset": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "f3_ordered": [
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ]
+        ],
+        "f3_unordered": [
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "0d03da2c556f",
+          "180aa741d480",
+          "23df3b2a1a09",
+          "25b4fc922497",
+          "2d138acb64a9",
+          "34c6901426da",
+          "45c1aa6e7528",
+          "6c3e7dff0ca7",
+          "71a7e415d2f1",
+          "75394574c918",
+          "7fb518ba8081",
+          "9308ce7f312c",
+          "a70cd5169fda",
+          "ac9567c79516",
+          "c63e0071b3bf"
+        ],
+        "H_decisions": 15
+      },
+      "M1_Deposon_TRA|T4_2x2": {
+        "f2_canonical_sorted_multiset": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3
+        ],
+        "f3_ordered": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -1.0,
+            0.0
+          ],
+          [
+            4.0,
+            3.0
+          ],
+          [
+            4.0,
+            3.0
+          ],
+          [
+            1.0,
+            3.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            3.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.5
+          ],
+          [
+            1.0,
+            2.0
+          ],
+          [
+            3.0,
+            2.0
+          ],
+          [
+            0.0,
+            3.0
+          ],
+          [
+            3.0,
+            2.0
+          ]
+        ],
+        "f3_unordered": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            2.0
+          ],
+          [
+            0.0,
+            3.0
+          ],
+          [
+            -1.0,
+            -1.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            1.0,
+            3.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            3.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.5
+          ],
+          [
+            1.0,
+            2.0
+          ],
+          [
+            2.0,
+            3.0
+          ],
+          [
+            0.0,
+            3.0
+          ],
+          [
+            2.0,
+            3.0
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "0a1be00fba49",
+          "17b59e386a3f",
+          "313fef7364e9",
+          "499ba3107792",
+          "4c4e32720591",
+          "5e4db6251066",
+          "6d343baab95f",
+          "7233dd9eaa06",
+          "84b894dddfaa",
+          "88febe1ec5a2",
+          "8ec8d815ba3b",
+          "96259d727be5",
+          "a3b772a8e1ad",
+          "effb07b5143d",
+          "f5e246682ee0"
+        ],
+        "H_decisions": 15
+      },
+      "M1_Deposon_TRA|T5_LowResource": {
+        "f2_canonical_sorted_multiset": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "f3_ordered": [
+          [
+            8,
+            6,
+            2,
+            5
+          ],
+          [
+            1,
+            4,
+            9,
+            6
+          ],
+          [
+            8,
+            5,
+            6,
+            2
+          ],
+          [
+            5,
+            8,
+            7,
+            1
+          ],
+          [
+            3,
+            6,
+            1,
+            7
+          ],
+          [
+            6,
+            1,
+            8,
+            4
+          ],
+          [
+            4,
+            1,
+            9,
+            6
+          ],
+          [
+            5,
+            8,
+            2,
+            6
+          ],
+          [
+            1,
+            8,
+            7,
+            5
+          ],
+          [
+            5,
+            2,
+            6,
+            8
+          ],
+          [
+            6,
+            1,
+            4,
+            8
+          ],
+          [
+            6,
+            5,
+            2,
+            8
+          ],
+          [
+            8,
+            4,
+            6,
+            1
+          ],
+          [
+            4,
+            8,
+            1,
+            7
+          ],
+          [
+            5,
+            8,
+            2,
+            6
+          ],
+          [
+            8,
+            3,
+            6,
+            1
+          ],
+          [
+            8,
+            1,
+            7,
+            5
+          ],
+          [
+            6,
+            2,
+            8,
+            5
+          ],
+          [
+            1,
+            4,
+            9,
+            6
+          ],
+          [
+            6,
+            2,
+            8,
+            5
+          ]
+        ],
+        "f3_unordered": [
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            9
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            5,
+            7,
+            8
+          ],
+          [
+            1,
+            3,
+            6,
+            7
+          ],
+          [
+            1,
+            4,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            9
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            5,
+            7,
+            8
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            8
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            7,
+            8
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            3,
+            6,
+            8
+          ],
+          [
+            1,
+            5,
+            7,
+            8
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            9
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "052d609e8ae4",
+          "086c8b154b48",
+          "1f3d67400d85",
+          "21ca360c0e54",
+          "526980f2cfb2",
+          "53d7753d720a",
+          "5588cb929e3f",
+          "5600ad7c6186",
+          "6804b551b529",
+          "7f207d2e2296",
+          "89dada61f667",
+          "90a932d8b2b0",
+          "986ba1e9e0df",
+          "c3ee1c7e5ba3",
+          "c833524c37a8",
+          "d65ff38d8d09",
+          "d866266f6543",
+          "defb675e9121",
+          "dfa62cacc45e",
+          "e7e0108f3de4"
+        ],
+        "H_decisions": 20
+      },
+      "M2_Greedy|T1_GSM8K": {
+        "f2_canonical_sorted_multiset": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "f3_ordered": [
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "f3_unordered": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "0315860bf255",
+          "0c76fc58fd20",
+          "2c8abd29b76a",
+          "6bf1c606078d",
+          "71e29171b1a1",
+          "88512ff7cd8b",
+          "8cf47788f52a",
+          "9b0c702712a7",
+          "b2f7e3ed6114",
+          "b60bdd4fa94c",
+          "c5c1b113f335",
+          "d8707f67f036",
+          "e4c1f39dba91",
+          "f57e2150496b",
+          "fcb36ccf3223"
+        ],
+        "H_decisions": 15
+      },
+      "M2_Greedy|T2_StrategyQA": {
+        "f2_canonical_sorted_multiset": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "f3_ordered": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "f3_unordered": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "04b07466b776",
+          "1702b00458e4",
+          "20b8ccba8c31",
+          "2a530cced264",
+          "2c3b008efd27",
+          "4d17aa76336b",
+          "640a610246ed",
+          "75b0e8adb1fd",
+          "87f9c55d6424",
+          "8a96a16fd45b",
+          "ab584ebe28a6",
+          "c8aa41ddd15f",
+          "d60e0792d0b4",
+          "eb001e923c9b",
+          "f05cd17d8a2c"
+        ],
+        "H_decisions": 15
+      },
+      "M2_Greedy|T3_Trap": {
+        "f2_canonical_sorted_multiset": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "f3_ordered": [
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ]
+        ],
+        "f3_unordered": [
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "0d03da2c556f",
+          "180aa741d480",
+          "23df3b2a1a09",
+          "25b4fc922497",
+          "2d138acb64a9",
+          "34c6901426da",
+          "45c1aa6e7528",
+          "6c3e7dff0ca7",
+          "71a7e415d2f1",
+          "75394574c918",
+          "7fb518ba8081",
+          "9308ce7f312c",
+          "a70cd5169fda",
+          "ac9567c79516",
+          "c63e0071b3bf"
+        ],
+        "H_decisions": 15
+      },
+      "M2_Greedy|T4_2x2": {
+        "f2_canonical_sorted_multiset": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3
+        ],
+        "f3_ordered": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -1.0,
+            0.0
+          ],
+          [
+            4.0,
+            3.0
+          ],
+          [
+            4.0,
+            3.0
+          ],
+          [
+            1.0,
+            3.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            3.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.5
+          ],
+          [
+            1.0,
+            2.0
+          ],
+          [
+            3.0,
+            2.0
+          ],
+          [
+            0.0,
+            3.0
+          ],
+          [
+            3.0,
+            2.0
+          ]
+        ],
+        "f3_unordered": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            2.0
+          ],
+          [
+            0.0,
+            3.0
+          ],
+          [
+            -1.0,
+            -1.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            1.0,
+            3.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            3.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.5
+          ],
+          [
+            1.0,
+            2.0
+          ],
+          [
+            2.0,
+            3.0
+          ],
+          [
+            0.0,
+            3.0
+          ],
+          [
+            2.0,
+            3.0
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "0a1be00fba49",
+          "17b59e386a3f",
+          "313fef7364e9",
+          "499ba3107792",
+          "4c4e32720591",
+          "5e4db6251066",
+          "6d343baab95f",
+          "7233dd9eaa06",
+          "84b894dddfaa",
+          "88febe1ec5a2",
+          "8ec8d815ba3b",
+          "96259d727be5",
+          "a3b772a8e1ad",
+          "effb07b5143d",
+          "f5e246682ee0"
+        ],
+        "H_decisions": 15
+      },
+      "M2_Greedy|T5_LowResource": {
+        "f2_canonical_sorted_multiset": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "f3_ordered": [
+          [
+            8,
+            6,
+            2,
+            5
+          ],
+          [
+            1,
+            4,
+            9,
+            6
+          ],
+          [
+            8,
+            5,
+            6,
+            2
+          ],
+          [
+            5,
+            8,
+            7,
+            1
+          ],
+          [
+            3,
+            6,
+            1,
+            7
+          ],
+          [
+            6,
+            1,
+            8,
+            4
+          ],
+          [
+            4,
+            1,
+            9,
+            6
+          ],
+          [
+            5,
+            8,
+            2,
+            6
+          ],
+          [
+            1,
+            8,
+            7,
+            5
+          ],
+          [
+            5,
+            2,
+            6,
+            8
+          ],
+          [
+            6,
+            1,
+            4,
+            8
+          ],
+          [
+            6,
+            5,
+            2,
+            8
+          ],
+          [
+            8,
+            4,
+            6,
+            1
+          ],
+          [
+            4,
+            8,
+            1,
+            7
+          ],
+          [
+            5,
+            8,
+            2,
+            6
+          ],
+          [
+            8,
+            3,
+            6,
+            1
+          ],
+          [
+            8,
+            1,
+            7,
+            5
+          ],
+          [
+            6,
+            2,
+            8,
+            5
+          ],
+          [
+            1,
+            4,
+            9,
+            6
+          ],
+          [
+            6,
+            2,
+            8,
+            5
+          ]
+        ],
+        "f3_unordered": [
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            9
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            5,
+            7,
+            8
+          ],
+          [
+            1,
+            3,
+            6,
+            7
+          ],
+          [
+            1,
+            4,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            9
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            5,
+            7,
+            8
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            8
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            7,
+            8
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            3,
+            6,
+            8
+          ],
+          [
+            1,
+            5,
+            7,
+            8
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            9
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "052d609e8ae4",
+          "086c8b154b48",
+          "1f3d67400d85",
+          "21ca360c0e54",
+          "526980f2cfb2",
+          "53d7753d720a",
+          "5588cb929e3f",
+          "5600ad7c6186",
+          "6804b551b529",
+          "7f207d2e2296",
+          "89dada61f667",
+          "90a932d8b2b0",
+          "986ba1e9e0df",
+          "c3ee1c7e5ba3",
+          "c833524c37a8",
+          "d65ff38d8d09",
+          "d866266f6543",
+          "defb675e9121",
+          "dfa62cacc45e",
+          "e7e0108f3de4"
+        ],
+        "H_decisions": 20
+      },
+      "M3_Random|T1_GSM8K": {
+        "f2_canonical_sorted_multiset": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "f3_ordered": [
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "f3_unordered": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "0315860bf255",
+          "0c76fc58fd20",
+          "2c8abd29b76a",
+          "6bf1c606078d",
+          "71e29171b1a1",
+          "88512ff7cd8b",
+          "8cf47788f52a",
+          "9b0c702712a7",
+          "b2f7e3ed6114",
+          "b60bdd4fa94c",
+          "c5c1b113f335",
+          "d8707f67f036",
+          "e4c1f39dba91",
+          "f57e2150496b",
+          "fcb36ccf3223"
+        ],
+        "H_decisions": 15
+      },
+      "M3_Random|T2_StrategyQA": {
+        "f2_canonical_sorted_multiset": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "f3_ordered": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "f3_unordered": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "04b07466b776",
+          "1702b00458e4",
+          "20b8ccba8c31",
+          "2a530cced264",
+          "2c3b008efd27",
+          "4d17aa76336b",
+          "640a610246ed",
+          "75b0e8adb1fd",
+          "87f9c55d6424",
+          "8a96a16fd45b",
+          "ab584ebe28a6",
+          "c8aa41ddd15f",
+          "d60e0792d0b4",
+          "eb001e923c9b",
+          "f05cd17d8a2c"
+        ],
+        "H_decisions": 15
+      },
+      "M3_Random|T3_Trap": {
+        "f2_canonical_sorted_multiset": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "f3_ordered": [
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.5
+          ]
+        ],
+        "f3_unordered": [
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ],
+          [
+            0.5,
+            1.0
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "0d03da2c556f",
+          "180aa741d480",
+          "23df3b2a1a09",
+          "25b4fc922497",
+          "2d138acb64a9",
+          "34c6901426da",
+          "45c1aa6e7528",
+          "6c3e7dff0ca7",
+          "71a7e415d2f1",
+          "75394574c918",
+          "7fb518ba8081",
+          "9308ce7f312c",
+          "a70cd5169fda",
+          "ac9567c79516",
+          "c63e0071b3bf"
+        ],
+        "H_decisions": 15
+      },
+      "M3_Random|T4_2x2": {
+        "f2_canonical_sorted_multiset": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3
+        ],
+        "f3_ordered": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            2.0,
+            0.0
+          ],
+          [
+            3.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -1.0,
+            0.0
+          ],
+          [
+            4.0,
+            3.0
+          ],
+          [
+            4.0,
+            3.0
+          ],
+          [
+            1.0,
+            3.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            3.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.5
+          ],
+          [
+            1.0,
+            2.0
+          ],
+          [
+            3.0,
+            2.0
+          ],
+          [
+            0.0,
+            3.0
+          ],
+          [
+            3.0,
+            2.0
+          ]
+        ],
+        "f3_unordered": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            2.0
+          ],
+          [
+            0.0,
+            3.0
+          ],
+          [
+            -1.0,
+            -1.0,
+            0.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            3.0,
+            4.0
+          ],
+          [
+            1.0,
+            3.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            1.0,
+            3.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.5
+          ],
+          [
+            1.0,
+            2.0
+          ],
+          [
+            2.0,
+            3.0
+          ],
+          [
+            0.0,
+            3.0
+          ],
+          [
+            2.0,
+            3.0
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "0a1be00fba49",
+          "17b59e386a3f",
+          "313fef7364e9",
+          "499ba3107792",
+          "4c4e32720591",
+          "5e4db6251066",
+          "6d343baab95f",
+          "7233dd9eaa06",
+          "84b894dddfaa",
+          "88febe1ec5a2",
+          "8ec8d815ba3b",
+          "96259d727be5",
+          "a3b772a8e1ad",
+          "effb07b5143d",
+          "f5e246682ee0"
+        ],
+        "H_decisions": 15
+      },
+      "M3_Random|T5_LowResource": {
+        "f2_canonical_sorted_multiset": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "f3_ordered": [
+          [
+            8,
+            6,
+            2,
+            5
+          ],
+          [
+            1,
+            4,
+            9,
+            6
+          ],
+          [
+            8,
+            5,
+            6,
+            2
+          ],
+          [
+            5,
+            8,
+            7,
+            1
+          ],
+          [
+            3,
+            6,
+            1,
+            7
+          ],
+          [
+            6,
+            1,
+            8,
+            4
+          ],
+          [
+            4,
+            1,
+            9,
+            6
+          ],
+          [
+            5,
+            8,
+            2,
+            6
+          ],
+          [
+            1,
+            8,
+            7,
+            5
+          ],
+          [
+            5,
+            2,
+            6,
+            8
+          ],
+          [
+            6,
+            1,
+            4,
+            8
+          ],
+          [
+            6,
+            5,
+            2,
+            8
+          ],
+          [
+            8,
+            4,
+            6,
+            1
+          ],
+          [
+            4,
+            8,
+            1,
+            7
+          ],
+          [
+            5,
+            8,
+            2,
+            6
+          ],
+          [
+            8,
+            3,
+            6,
+            1
+          ],
+          [
+            8,
+            1,
+            7,
+            5
+          ],
+          [
+            6,
+            2,
+            8,
+            5
+          ],
+          [
+            1,
+            4,
+            9,
+            6
+          ],
+          [
+            6,
+            2,
+            8,
+            5
+          ]
+        ],
+        "f3_unordered": [
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            9
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            5,
+            7,
+            8
+          ],
+          [
+            1,
+            3,
+            6,
+            7
+          ],
+          [
+            1,
+            4,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            9
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            5,
+            7,
+            8
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            8
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            7,
+            8
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            3,
+            6,
+            8
+          ],
+          [
+            1,
+            5,
+            7,
+            8
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ],
+          [
+            1,
+            4,
+            6,
+            9
+          ],
+          [
+            2,
+            5,
+            6,
+            8
+          ]
+        ],
+        "f4_prompt_digest_set": [
+          "052d609e8ae4",
+          "086c8b154b48",
+          "1f3d67400d85",
+          "21ca360c0e54",
+          "526980f2cfb2",
+          "53d7753d720a",
+          "5588cb929e3f",
+          "5600ad7c6186",
+          "6804b551b529",
+          "7f207d2e2296",
+          "89dada61f667",
+          "90a932d8b2b0",
+          "986ba1e9e0df",
+          "c3ee1c7e5ba3",
+          "c833524c37a8",
+          "d65ff38d8d09",
+          "d866266f6543",
+          "defb675e9121",
+          "dfa62cacc45e",
+          "e7e0108f3de4"
+        ],
+        "H_decisions": 20
+      }
+    }
+  },
+  "source_enumeration_inregister_faces": [
+    {
+      "candidate_id": "U-C1",
+      "desc": "二值计分 per-decision 上界(跨五族)",
+      "per_family_values": [
+        "1.0",
+        "1.0",
+        "1.0",
+        "1.0",
+        "1.0"
+      ],
+      "per_family_types": [
+        "float",
+        "float",
+        "float",
+        "float",
+        "float"
+      ],
+      "n_distinct_15cell_numeric": 1,
+      "n_distinct_15cell_byte": 1,
+      "max_distinct_numeric_over_inregister_sources": null
+    },
+    {
+      "candidate_id": "U-C2",
+      "desc": "盘上正身 distortion_calculator(max_u=1)",
+      "per_family_values": [
+        "1.0",
+        "1.0",
+        "1.0",
+        "1.0",
+        "1.0"
+      ],
+      "per_family_types": [
+        "float",
+        "float",
+        "float",
+        "float",
+        "float"
+      ],
+      "n_distinct_15cell_numeric": 1,
+      "n_distinct_15cell_byte": 1,
+      "max_distinct_numeric_over_inregister_sources": null
+    },
+    {
+      "candidate_id": "U-C3",
+      "desc": "按族基数支付上界(PI Q2 采认之主轴)",
+      "per_family_values": [
+        "1.0",
+        "1.0",
+        "1.0",
+        "4.0",
+        "9"
+      ],
+      "per_family_types": [
+        "float",
+        "float",
+        "float",
+        "float",
+        "int"
+      ],
+      "n_distinct_15cell_numeric": 3,
+      "n_distinct_15cell_byte": 3,
+      "max_distinct_numeric_over_inregister_sources": null
+    },
+    {
+      "candidate_id": "U-C4i",
+      "desc": "随计分读法分档·indicator 读法",
+      "per_family_values": [
+        "1.0",
+        "1.0",
+        "1.0",
+        "1.0",
+        "1.0"
+      ],
+      "per_family_types": [
+        "float",
+        "float",
+        "float",
+        "float",
+        "float"
+      ],
+      "n_distinct_15cell_numeric": 1,
+      "n_distinct_15cell_byte": 1,
+      "max_distinct_numeric_over_inregister_sources": null
+    },
+    {
+      "candidate_id": "U-C4v",
+      "desc": "随计分读法分档·value-gap 读法",
+      "per_family_values": [
+        "1.0",
+        "1.0",
+        "1.0",
+        "1.0",
+        "1.0"
+      ],
+      "per_family_types": [
+        "float",
+        "float",
+        "float",
+        "float",
+        "float"
+      ],
+      "n_distinct_15cell_numeric": 1,
+      "n_distinct_15cell_byte": 1,
+      "max_distinct_numeric_over_inregister_sources": null
+    },
+    {
+      "candidate_id": "H-C1",
+      "desc": "720面(已裁)",
+      "per_family_values": [
+        "15",
+        "15",
+        "15",
+        "15",
+        "20"
+      ],
+      "per_family_types": [
+        "int",
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      "n_distinct_15cell_numeric": 2,
+      "n_distinct_15cell_byte": 2,
+      "max_distinct_numeric_over_inregister_sources": null
+    },
+    {
+      "candidate_id": "H-C2",
+      "desc": "H_face 全族(已入锁)",
+      "per_family_values": [
+        "15",
+        "15",
+        "15",
+        "15",
+        "15"
+      ],
+      "per_family_types": [
+        "int",
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      "n_distinct_15cell_numeric": 1,
+      "n_distinct_15cell_byte": 1,
+      "max_distinct_numeric_over_inregister_sources": null
+    },
+    {
+      "candidate_id": "H-C3",
+      "desc": "H_design 域",
+      "per_family_values": [
+        "20",
+        "20",
+        "20",
+        "10",
+        "20"
+      ],
+      "per_family_types": [
+        "int",
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      "n_distinct_15cell_numeric": 2,
+      "n_distinct_15cell_byte": 2,
+      "max_distinct_numeric_over_inregister_sources": null
+    },
+    {
+      "candidate_id": "H-C4",
+      "desc": "H_glm_lock 域",
+      "per_family_values": [
+        "34",
+        "33",
+        "33",
+        "33",
+        "33"
+      ],
+      "per_family_types": [
+        "int",
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      "n_distinct_15cell_numeric": 2,
+      "n_distinct_15cell_byte": 2,
+      "max_distinct_numeric_over_inregister_sources": null
+    },
+    {
+      "candidate_id": "H-C5",
+      "desc": "spec「≈33」(已判背离·备查)",
+      "per_family_values": [
+        "33",
+        "33",
+        "33",
+        "33",
+        "33"
+      ],
+      "per_family_types": [
+        "int",
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      "n_distinct_15cell_numeric": 1,
+      "n_distinct_15cell_byte": 1,
+      "max_distinct_numeric_over_inregister_sources": null
+    },
+    {
+      "candidate_id": "H-C6",
+      "desc": "run默认25/T5默认20(未冻结)",
+      "per_family_values": [
+        "25",
+        "25",
+        "25",
+        "25",
+        "20"
+      ],
+      "per_family_types": [
+        "int",
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      "n_distinct_15cell_numeric": 2,
+      "n_distinct_15cell_byte": 2,
+      "max_distinct_numeric_over_inregister_sources": null
+    }
+  ],
+  "readings_by_source": {
+    "read_jia_zhenglulu_O1_formal": {
+      "source_reading": "read_jia_zhenglulu_O1_formal",
+      "faces": {
+        "S30_numeric": {
+          "n_cells": 30,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "1",
+            "4",
+            "9"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(1)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 5,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 57,
+            "n_ind": 7,
+            "Delta": 23,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 75,
+            "n_ind": 5,
+            "Delta": 25,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              6,
+              6
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            2,
+            3,
+            4
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 9,
+          "field_stats_minmax_std": {
+            "f1": {
+              "n": 30,
+              "min": "1",
+              "max": "9",
+              "mean_exact": "21/10",
+              "mean_float": 2.1,
+              "std_ddof0_float": 2.467792535850613,
+              "std_ddof1_float": 2.5099800796022267
+            },
+            "f2": {
+              "n": 30,
+              "min": "2",
+              "max": "4",
+              "mean_exact": "242/75",
+              "mean_float": 3.2266666666666666,
+              "std_ddof0_float": 0.9480740711803295,
+              "std_ddof1_float": 0.9642816395948697
+            },
+            "f3": {
+              "n": 30,
+              "min": "1/4",
+              "max": "403/80",
+              "mean_exact": "2487/1600",
+              "mean_float": 1.554375,
+              "std_ddof0_float": 1.7992702513797088,
+              "std_ddof1_float": 1.8300292359168322
+            },
+            "f4": {
+              "n": 30,
+              "min": "15",
+              "max": "20",
+              "mean_exact": "16",
+              "mean_float": 16.0,
+              "std_ddof0_float": 2.0,
+              "std_ddof1_float": 2.034190510862431
+            }
+          }
+        },
+        "S30_numeric_unordered_f3": {
+          "n_cells": 30,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "1",
+            "4",
+            "9"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(1)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 4,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 57,
+            "n_ind": 7,
+            "Delta": 23,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 75,
+            "n_ind": 5,
+            "Delta": 25,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              6,
+              6
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            2,
+            3
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 9
+        },
+        "U-C1_15cells_numeric": {
+          "n_cells": 15,
+          "f1_n_distinct": 1,
+          "f1_value_set": [
+            "1"
+          ],
+          "f1_value_set_repr": [
+            "int(1)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 5,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 3,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0,
+          "field_stats_minmax_std": {
+            "f1": {
+              "n": 15,
+              "min": "1",
+              "max": "1",
+              "mean_exact": "1",
+              "mean_float": 1.0,
+              "std_ddof0_float": 0.0,
+              "std_ddof1_float": 0.0
+            },
+            "f2": {
+              "n": 15,
+              "min": "2",
+              "max": "4",
+              "mean_exact": "242/75",
+              "mean_float": 3.2266666666666666,
+              "std_ddof0_float": 0.9480740711803295,
+              "std_ddof1_float": 0.9813498963405555
+            },
+            "f3": {
+              "n": 15,
+              "min": "1/4",
+              "max": "403/80",
+              "mean_exact": "2487/1600",
+              "mean_float": 1.554375,
+              "std_ddof0_float": 1.7992702513797088,
+              "std_ddof1_float": 1.8624216486395955
+            },
+            "f4": {
+              "n": 15,
+              "min": "15",
+              "max": "20",
+              "mean_exact": "16",
+              "mean_float": 16.0,
+              "std_ddof0_float": 2.0,
+              "std_ddof1_float": 2.0701966780270626
+            }
+          }
+        },
+        "U-C1_15cells_numeric_unordered_f3": {
+          "n_cells": 15,
+          "f1_n_distinct": 1,
+          "f1_value_set": [
+            "1"
+          ],
+          "f1_value_set_repr": [
+            "int(1)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 4,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 3,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0
+        },
+        "U-C3_15cells_numeric": {
+          "n_cells": 15,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "1",
+            "4",
+            "9"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 5,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0,
+          "field_stats_minmax_std": {
+            "f1": {
+              "n": 15,
+              "min": "1",
+              "max": "9",
+              "mean_exact": "16/5",
+              "mean_float": 3.2,
+              "std_ddof0_float": 3.1240998703626617,
+              "std_ddof1_float": 3.2337505867247796
+            },
+            "f2": {
+              "n": 15,
+              "min": "2",
+              "max": "4",
+              "mean_exact": "242/75",
+              "mean_float": 3.2266666666666666,
+              "std_ddof0_float": 0.9480740711803295,
+              "std_ddof1_float": 0.9813498963405555
+            },
+            "f3": {
+              "n": 15,
+              "min": "1/4",
+              "max": "403/80",
+              "mean_exact": "2487/1600",
+              "mean_float": 1.554375,
+              "std_ddof0_float": 1.7992702513797088,
+              "std_ddof1_float": 1.8624216486395955
+            },
+            "f4": {
+              "n": 15,
+              "min": "15",
+              "max": "20",
+              "mean_exact": "16",
+              "mean_float": 16.0,
+              "std_ddof0_float": 2.0,
+              "std_ddof1_float": 2.0701966780270626
+            }
+          }
+        },
+        "U-C3_15cells_numeric_unordered_f3": {
+          "n_cells": 15,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "1",
+            "4",
+            "9"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 4,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0
+        },
+        "S30_byte": {
+          "n_cells": 30,
+          "f1_n_distinct": 4,
+          "f1_value_set": [
+            "('float', '1.0')",
+            "('float', '4.0')",
+            "('int', '1')",
+            "('int', '9')"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(1)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 5,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 30,
+            "n_ind": 10,
+            "Delta": 20,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 75,
+            "n_ind": 5,
+            "Delta": 25,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              6,
+              6
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            2,
+            3,
+            4
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0,
+          "field_stats_minmax_std": {
+            "f1": {
+              "n": 30,
+              "min": "1",
+              "max": "9",
+              "mean_exact": "21/10",
+              "mean_float": 2.1,
+              "std_ddof0_float": 2.467792535850613,
+              "std_ddof1_float": 2.5099800796022267
+            },
+            "f2": {
+              "n": 30,
+              "min": "2",
+              "max": "4",
+              "mean_exact": "242/75",
+              "mean_float": 3.2266666666666666,
+              "std_ddof0_float": 0.9480740711803295,
+              "std_ddof1_float": 0.9642816395948697
+            },
+            "f3": {
+              "n": 30,
+              "min": "1/4",
+              "max": "403/80",
+              "mean_exact": "2487/1600",
+              "mean_float": 1.554375,
+              "std_ddof0_float": 1.7992702513797088,
+              "std_ddof1_float": 1.8300292359168322
+            },
+            "f4": {
+              "n": 30,
+              "min": "15",
+              "max": "20",
+              "mean_exact": "16",
+              "mean_float": 16.0,
+              "std_ddof0_float": 2.0,
+              "std_ddof1_float": 2.034190510862431
+            }
+          }
+        },
+        "S30_byte_unordered_f3": {
+          "n_cells": 30,
+          "f1_n_distinct": 4,
+          "f1_value_set": [
+            "('float', '1.0')",
+            "('float', '4.0')",
+            "('int', '1')",
+            "('int', '9')"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(1)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 4,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 30,
+            "n_ind": 10,
+            "Delta": 20,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 75,
+            "n_ind": 5,
+            "Delta": 25,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              6,
+              6
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            2,
+            3
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0
+        },
+        "U-C1_15cells_byte": {
+          "n_cells": 15,
+          "f1_n_distinct": 1,
+          "f1_value_set": [
+            "('int', '1')"
+          ],
+          "f1_value_set_repr": [
+            "int(1)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 5,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 3,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0,
+          "field_stats_minmax_std": {
+            "f1": {
+              "n": 15,
+              "min": "1",
+              "max": "1",
+              "mean_exact": "1",
+              "mean_float": 1.0,
+              "std_ddof0_float": 0.0,
+              "std_ddof1_float": 0.0
+            },
+            "f2": {
+              "n": 15,
+              "min": "2",
+              "max": "4",
+              "mean_exact": "242/75",
+              "mean_float": 3.2266666666666666,
+              "std_ddof0_float": 0.9480740711803295,
+              "std_ddof1_float": 0.9813498963405555
+            },
+            "f3": {
+              "n": 15,
+              "min": "1/4",
+              "max": "403/80",
+              "mean_exact": "2487/1600",
+              "mean_float": 1.554375,
+              "std_ddof0_float": 1.7992702513797088,
+              "std_ddof1_float": 1.8624216486395955
+            },
+            "f4": {
+              "n": 15,
+              "min": "15",
+              "max": "20",
+              "mean_exact": "16",
+              "mean_float": 16.0,
+              "std_ddof0_float": 2.0,
+              "std_ddof1_float": 2.0701966780270626
+            }
+          }
+        },
+        "U-C1_15cells_byte_unordered_f3": {
+          "n_cells": 15,
+          "f1_n_distinct": 1,
+          "f1_value_set": [
+            "('int', '1')"
+          ],
+          "f1_value_set_repr": [
+            "int(1)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 4,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 3,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0
+        },
+        "U-C3_15cells_byte": {
+          "n_cells": 15,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "('float', '1.0')",
+            "('float', '4.0')",
+            "('int', '9')"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 5,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0,
+          "field_stats_minmax_std": {
+            "f1": {
+              "n": 15,
+              "min": "1",
+              "max": "9",
+              "mean_exact": "16/5",
+              "mean_float": 3.2,
+              "std_ddof0_float": 3.1240998703626617,
+              "std_ddof1_float": 3.2337505867247796
+            },
+            "f2": {
+              "n": 15,
+              "min": "2",
+              "max": "4",
+              "mean_exact": "242/75",
+              "mean_float": 3.2266666666666666,
+              "std_ddof0_float": 0.9480740711803295,
+              "std_ddof1_float": 0.9813498963405555
+            },
+            "f3": {
+              "n": 15,
+              "min": "1/4",
+              "max": "403/80",
+              "mean_exact": "2487/1600",
+              "mean_float": 1.554375,
+              "std_ddof0_float": 1.7992702513797088,
+              "std_ddof1_float": 1.8624216486395955
+            },
+            "f4": {
+              "n": 15,
+              "min": "15",
+              "max": "20",
+              "mean_exact": "16",
+              "mean_float": 16.0,
+              "std_ddof0_float": 2.0,
+              "std_ddof1_float": 2.0701966780270626
+            }
+          }
+        },
+        "U-C3_15cells_byte_unordered_f3": {
+          "n_cells": 15,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "('float', '1.0')",
+            "('float', '4.0')",
+            "('int', '9')"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 4,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0
+        }
+      }
+    },
+    "read_yi_benzao_xinzai_code_carrier": {
+      "source_reading": "read_yi_benzao_xinzai_code_carrier",
+      "faces": {
+        "S30_numeric": {
+          "n_cells": 30,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "1",
+            "4",
+            "9"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 5,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 57,
+            "n_ind": 7,
+            "Delta": 23,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 75,
+            "n_ind": 5,
+            "Delta": 25,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              6,
+              6
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            2,
+            3,
+            4
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 9,
+          "field_stats_minmax_std": {
+            "f1": {
+              "n": 30,
+              "min": "1",
+              "max": "9",
+              "mean_exact": "21/10",
+              "mean_float": 2.1,
+              "std_ddof0_float": 2.467792535850613,
+              "std_ddof1_float": 2.5099800796022267
+            },
+            "f2": {
+              "n": 30,
+              "min": "2",
+              "max": "4",
+              "mean_exact": "242/75",
+              "mean_float": 3.2266666666666666,
+              "std_ddof0_float": 0.9480740711803295,
+              "std_ddof1_float": 0.9642816395948697
+            },
+            "f3": {
+              "n": 30,
+              "min": "1/4",
+              "max": "403/80",
+              "mean_exact": "2487/1600",
+              "mean_float": 1.554375,
+              "std_ddof0_float": 1.7992702513797088,
+              "std_ddof1_float": 1.8300292359168322
+            },
+            "f4": {
+              "n": 30,
+              "min": "15",
+              "max": "20",
+              "mean_exact": "16",
+              "mean_float": 16.0,
+              "std_ddof0_float": 2.0,
+              "std_ddof1_float": 2.034190510862431
+            }
+          }
+        },
+        "S30_numeric_unordered_f3": {
+          "n_cells": 30,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "1",
+            "4",
+            "9"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 4,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 57,
+            "n_ind": 7,
+            "Delta": 23,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 75,
+            "n_ind": 5,
+            "Delta": 25,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              6,
+              6
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            2,
+            3
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 9
+        },
+        "U-C1_15cells_numeric": {
+          "n_cells": 15,
+          "f1_n_distinct": 1,
+          "f1_value_set": [
+            "1"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 5,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 3,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0,
+          "field_stats_minmax_std": {
+            "f1": {
+              "n": 15,
+              "min": "1",
+              "max": "1",
+              "mean_exact": "1",
+              "mean_float": 1.0,
+              "std_ddof0_float": 0.0,
+              "std_ddof1_float": 0.0
+            },
+            "f2": {
+              "n": 15,
+              "min": "2",
+              "max": "4",
+              "mean_exact": "242/75",
+              "mean_float": 3.2266666666666666,
+              "std_ddof0_float": 0.9480740711803295,
+              "std_ddof1_float": 0.9813498963405555
+            },
+            "f3": {
+              "n": 15,
+              "min": "1/4",
+              "max": "403/80",
+              "mean_exact": "2487/1600",
+              "mean_float": 1.554375,
+              "std_ddof0_float": 1.7992702513797088,
+              "std_ddof1_float": 1.8624216486395955
+            },
+            "f4": {
+              "n": 15,
+              "min": "15",
+              "max": "20",
+              "mean_exact": "16",
+              "mean_float": 16.0,
+              "std_ddof0_float": 2.0,
+              "std_ddof1_float": 2.0701966780270626
+            }
+          }
+        },
+        "U-C1_15cells_numeric_unordered_f3": {
+          "n_cells": 15,
+          "f1_n_distinct": 1,
+          "f1_value_set": [
+            "1"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 4,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 3,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0
+        },
+        "U-C3_15cells_numeric": {
+          "n_cells": 15,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "1",
+            "4",
+            "9"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 5,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0,
+          "field_stats_minmax_std": {
+            "f1": {
+              "n": 15,
+              "min": "1",
+              "max": "9",
+              "mean_exact": "16/5",
+              "mean_float": 3.2,
+              "std_ddof0_float": 3.1240998703626617,
+              "std_ddof1_float": 3.2337505867247796
+            },
+            "f2": {
+              "n": 15,
+              "min": "2",
+              "max": "4",
+              "mean_exact": "242/75",
+              "mean_float": 3.2266666666666666,
+              "std_ddof0_float": 0.9480740711803295,
+              "std_ddof1_float": 0.9813498963405555
+            },
+            "f3": {
+              "n": 15,
+              "min": "1/4",
+              "max": "403/80",
+              "mean_exact": "2487/1600",
+              "mean_float": 1.554375,
+              "std_ddof0_float": 1.7992702513797088,
+              "std_ddof1_float": 1.8624216486395955
+            },
+            "f4": {
+              "n": 15,
+              "min": "15",
+              "max": "20",
+              "mean_exact": "16",
+              "mean_float": 16.0,
+              "std_ddof0_float": 2.0,
+              "std_ddof1_float": 2.0701966780270626
+            }
+          }
+        },
+        "U-C3_15cells_numeric_unordered_f3": {
+          "n_cells": 15,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "1",
+            "4",
+            "9"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 4,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0
+        },
+        "S30_byte": {
+          "n_cells": 30,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "('float', '1.0')",
+            "('float', '4.0')",
+            "('int', '9')"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 5,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 57,
+            "n_ind": 7,
+            "Delta": 23,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 75,
+            "n_ind": 5,
+            "Delta": 25,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              6,
+              6
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            2,
+            3,
+            4
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 9,
+          "field_stats_minmax_std": {
+            "f1": {
+              "n": 30,
+              "min": "1",
+              "max": "9",
+              "mean_exact": "21/10",
+              "mean_float": 2.1,
+              "std_ddof0_float": 2.467792535850613,
+              "std_ddof1_float": 2.5099800796022267
+            },
+            "f2": {
+              "n": 30,
+              "min": "2",
+              "max": "4",
+              "mean_exact": "242/75",
+              "mean_float": 3.2266666666666666,
+              "std_ddof0_float": 0.9480740711803295,
+              "std_ddof1_float": 0.9642816395948697
+            },
+            "f3": {
+              "n": 30,
+              "min": "1/4",
+              "max": "403/80",
+              "mean_exact": "2487/1600",
+              "mean_float": 1.554375,
+              "std_ddof0_float": 1.7992702513797088,
+              "std_ddof1_float": 1.8300292359168322
+            },
+            "f4": {
+              "n": 30,
+              "min": "15",
+              "max": "20",
+              "mean_exact": "16",
+              "mean_float": 16.0,
+              "std_ddof0_float": 2.0,
+              "std_ddof1_float": 2.034190510862431
+            }
+          }
+        },
+        "S30_byte_unordered_f3": {
+          "n_cells": 30,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "('float', '1.0')",
+            "('float', '4.0')",
+            "('int', '9')"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 4,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 57,
+            "n_ind": 7,
+            "Delta": 23,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 75,
+            "n_ind": 5,
+            "Delta": 25,
+            "class_sizes": [
+              6,
+              6,
+              6,
+              6,
+              6
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            2,
+            3
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 9
+        },
+        "U-C1_15cells_byte": {
+          "n_cells": 15,
+          "f1_n_distinct": 1,
+          "f1_value_set": [
+            "('float', '1.0')"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 5,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 3,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0,
+          "field_stats_minmax_std": {
+            "f1": {
+              "n": 15,
+              "min": "1",
+              "max": "1",
+              "mean_exact": "1",
+              "mean_float": 1.0,
+              "std_ddof0_float": 0.0,
+              "std_ddof1_float": 0.0
+            },
+            "f2": {
+              "n": 15,
+              "min": "2",
+              "max": "4",
+              "mean_exact": "242/75",
+              "mean_float": 3.2266666666666666,
+              "std_ddof0_float": 0.9480740711803295,
+              "std_ddof1_float": 0.9813498963405555
+            },
+            "f3": {
+              "n": 15,
+              "min": "1/4",
+              "max": "403/80",
+              "mean_exact": "2487/1600",
+              "mean_float": 1.554375,
+              "std_ddof0_float": 1.7992702513797088,
+              "std_ddof1_float": 1.8624216486395955
+            },
+            "f4": {
+              "n": 15,
+              "min": "15",
+              "max": "20",
+              "mean_exact": "16",
+              "mean_float": 16.0,
+              "std_ddof0_float": 2.0,
+              "std_ddof1_float": 2.0701966780270626
+            }
+          }
+        },
+        "U-C1_15cells_byte_unordered_f3": {
+          "n_cells": 15,
+          "f1_n_distinct": 1,
+          "f1_value_set": [
+            "('float', '1.0')"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 4,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 3,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0
+        },
+        "U-C3_15cells_byte": {
+          "n_cells": 15,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "('float', '1.0')",
+            "('float', '4.0')",
+            "('int', '9')"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 5,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0,
+          "field_stats_minmax_std": {
+            "f1": {
+              "n": 15,
+              "min": "1",
+              "max": "9",
+              "mean_exact": "16/5",
+              "mean_float": 3.2,
+              "std_ddof0_float": 3.1240998703626617,
+              "std_ddof1_float": 3.2337505867247796
+            },
+            "f2": {
+              "n": 15,
+              "min": "2",
+              "max": "4",
+              "mean_exact": "242/75",
+              "mean_float": 3.2266666666666666,
+              "std_ddof0_float": 0.9480740711803295,
+              "std_ddof1_float": 0.9813498963405555
+            },
+            "f3": {
+              "n": 15,
+              "min": "1/4",
+              "max": "403/80",
+              "mean_exact": "2487/1600",
+              "mean_float": 1.554375,
+              "std_ddof0_float": 1.7992702513797088,
+              "std_ddof1_float": 1.8624216486395955
+            },
+            "f4": {
+              "n": 15,
+              "min": "15",
+              "max": "20",
+              "mean_exact": "16",
+              "mean_float": 16.0,
+              "std_ddof0_float": 2.0,
+              "std_ddof1_float": 2.0701966780270626
+            }
+          }
+        },
+        "U-C3_15cells_byte_unordered_f3": {
+          "n_cells": 15,
+          "f1_n_distinct": 3,
+          "f1_value_set": [
+            "('float', '1.0')",
+            "('float', '4.0')",
+            "('int', '9')"
+          ],
+          "f1_value_set_repr": [
+            "float(1.0)",
+            "float(4.0)",
+            "int(9)"
+          ],
+          "f2_n_distinct": 4,
+          "f3_n_distinct": 4,
+          "f4_n_distinct": 5,
+          "conj4_four_fields": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "conj3_excl_f1": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10,
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "m_a4_indep_judgeable_fields_literal": 4,
+          "m_a4_redundant_fields_note": [
+            1,
+            2,
+            3
+          ],
+          "cross_arm_same_mech_duplicate_pairs": 0
+        }
+      }
+    }
+  },
+  "selfcheck_vs_registered": [
+    {
+      "source_reading": "read_jia_zhenglulu_O1_formal",
+      "f1_n_distinct_30cell_numeric": 3,
+      "f1_n_distinct_30cell_byte": 4,
+      "conj4_D_nind_Delta_numeric_ordered": [
+        57,
+        7,
+        23
+      ],
+      "conj4_D_nind_Delta_byte_ordered": [
+        30,
+        10,
+        20
+      ],
+      "f2_f3_f4_n_distinct_30cell": [
+        4,
+        5,
+        5
+      ],
+      "cross_arm_pairs_numeric": 9,
+      "cross_arm_pairs_byte": 0,
+      "conj3_excl_f1_D_nind_Delta": [
+        75,
+        5,
+        25
+      ]
+    },
+    {
+      "source_reading": "read_yi_benzao_xinzai_code_carrier",
+      "f1_n_distinct_30cell_numeric": 3,
+      "f1_n_distinct_30cell_byte": 3,
+      "conj4_D_nind_Delta_numeric_ordered": [
+        57,
+        7,
+        23
+      ],
+      "conj4_D_nind_Delta_byte_ordered": [
+        57,
+        7,
+        23
+      ],
+      "f2_f3_f4_n_distinct_30cell": [
+        4,
+        5,
+        5
+      ],
+      "cross_arm_pairs_numeric": 9,
+      "cross_arm_pairs_byte": 9,
+      "conj3_excl_f1_D_nind_Delta": [
+        75,
+        5,
+        25
+      ]
+    }
+  ],
+  "judgement_mechanical": {
+    "read_jia_zhenglulu_O1_formal": {
+      "grades": [
+        {
+          "candidate": "C1",
+          "source_reading": "read_jia_zhenglulu_O1_formal",
+          "face_key": "S30_numeric",
+          "f1_reading": "numeric",
+          "cond1_f1_ndistinct_ge4": {
+            "value": 3,
+            "pass": false
+          },
+          "cond2_f234_gt3": {
+            "f2": 4,
+            "f3": 5,
+            "f4": 5,
+            "pass": true
+          },
+          "cond3_m_a4_ge2": {
+            "value": 4,
+            "pass": true
+          },
+          "cond4_recomputable": {
+            "value": "本棒自算已具 (第三方复算未派)",
+            "pass": true,
+            "third_party_recompute_done": false,
+            "note": "条件④ 之第三方要件 0 成就 => 本棒只出「准可解集」(条件①②③全过者); 终定待第三方复算 + PI/verdict-keeper"
+          },
+          "level1_all_pass": false,
+          "m_a3_three": {
+            "D": 57,
+            "n_ind": 7,
+            "Delta": 23
+          },
+          "m_a5_delta_vs_current_face": {
+            "delta_D": -18,
+            "delta_n_ind": 2,
+            "delta_Delta": -2,
+            "base_face_key": "S30_numeric",
+            "note": "系假设面演算 (若 1 获准入合取) · 非 PI 之释已发生"
+          },
+          "cost": {
+            "new_run_cells": 0,
+            "llm_calls": 0,
+            "pi_writes_required": 0,
+            "code_carrier_changes": 0
+          }
+        },
+        {
+          "candidate": "C2",
+          "source_reading": "read_jia_zhenglulu_O1_formal",
+          "face_key": "S30_byte",
+          "f1_reading": "byte",
+          "cond1_f1_ndistinct_ge4": {
+            "value": 4,
+            "pass": true
+          },
+          "cond2_f234_gt3": {
+            "f2": 4,
+            "f3": 5,
+            "f4": 5,
+            "pass": true
+          },
+          "cond3_m_a4_ge2": {
+            "value": 4,
+            "pass": true
+          },
+          "cond4_recomputable": {
+            "value": "本棒自算已具 (第三方复算未派)",
+            "pass": true,
+            "third_party_recompute_done": false,
+            "note": "条件④ 之第三方要件 0 成就 => 本棒只出「准可解集」(条件①②③全过者); 终定待第三方复算 + PI/verdict-keeper"
+          },
+          "level1_all_pass": true,
+          "m_a3_three": {
+            "D": 30,
+            "n_ind": 10,
+            "Delta": 20
+          },
+          "m_a5_delta_vs_current_face": {
+            "delta_D": -45,
+            "delta_n_ind": 5,
+            "delta_Delta": -5,
+            "base_face_key": "S30_numeric",
+            "note": "系假设面演算 (若 1 获准入合取) · 非 PI 之释已发生"
+          },
+          "cost": {
+            "new_run_cells": 30,
+            "llm_calls": 0,
+            "pi_writes_required": 0,
+            "code_carrier_changes": 0
+          }
+        },
+        {
+          "candidate": "C3",
+          "source_reading": "read_jia_zhenglulu_O1_formal",
+          "face_key": "U-C3_15cells_byte",
+          "f1_reading": "byte",
+          "cond1_f1_ndistinct_ge4": {
+            "value": 3,
+            "pass": false
+          },
+          "cond2_f234_gt3": {
+            "f2": 4,
+            "f3": 5,
+            "f4": 5,
+            "pass": true
+          },
+          "cond3_m_a4_ge2": {
+            "value": 4,
+            "pass": true
+          },
+          "cond4_recomputable": {
+            "value": "本棒自算已具 (第三方复算未派)",
+            "pass": true,
+            "third_party_recompute_done": false,
+            "note": "条件④ 之第三方要件 0 成就 => 本棒只出「准可解集」(条件①②③全过者); 终定待第三方复算 + PI/verdict-keeper"
+          },
+          "level1_all_pass": false,
+          "m_a3_three": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10
+          },
+          "m_a5_delta_vs_current_face": {
+            "delta_D": 0,
+            "delta_n_ind": 0,
+            "delta_Delta": 0,
+            "base_face_key": "U-C3_15cells_numeric",
+            "note": "系假设面演算 (若 1 获准入合取) · 非 PI 之释已发生"
+          },
+          "cost": {
+            "new_run_cells": 15,
+            "llm_calls": 0,
+            "pi_writes_required": 1,
+            "code_carrier_changes": 0
+          }
+        },
+        {
+          "candidate": "C4",
+          "source_reading": "read_jia_zhenglulu_O1_formal",
+          "face_key": "S30_numeric",
+          "f1_reading": "numeric",
+          "cond1_f1_ndistinct_ge4": {
+            "value": 3,
+            "pass": false
+          },
+          "cond2_f234_gt3": {
+            "f2": 4,
+            "f3": 5,
+            "f4": 5,
+            "pass": true
+          },
+          "cond3_m_a4_ge2": {
+            "value": 4,
+            "pass": true
+          },
+          "cond4_recomputable": {
+            "value": "本棒自算已具 (第三方复算未派)",
+            "pass": true,
+            "third_party_recompute_done": false,
+            "note": "条件④ 之第三方要件 0 成就 => 本棒只出「准可解集」(条件①②③全过者); 终定待第三方复算 + PI/verdict-keeper"
+          },
+          "level1_all_pass": false,
+          "m_a3_three": {
+            "D": 57,
+            "n_ind": 7,
+            "Delta": 23
+          },
+          "m_a5_delta_vs_current_face": {
+            "delta_D": -18,
+            "delta_n_ind": 2,
+            "delta_Delta": -2,
+            "base_face_key": "S30_numeric",
+            "note": "系假设面演算 (若 1 获准入合取) · 非 PI 之释已发生"
+          },
+          "cost": {
+            "new_run_cells": 30,
+            "llm_calls": 0,
+            "pi_writes_required": 1,
+            "code_carrier_changes": 0
+          }
+        }
+      ],
+      "solvable_set": [
+        "C2"
+      ],
+      "semi_solvable_set_cond123": [
+        "C2"
+      ],
+      "level2_ranked": [
+        {
+          "candidate": "C2",
+          "key": [
+            5,
+            5
+          ]
+        }
+      ],
+      "level2_tied": [
+        "C2"
+      ],
+      "level3_cost_key_of_winner": [
+        30,
+        0,
+        0,
+        0
+      ],
+      "level3_ordered": [
+        "C2"
+      ],
+      "mechanical_order_only": [
+        "C2"
+      ],
+      "outcome_readout": "判据只产出「可解集 + 排序」; 最终之择 = PI/verdict-keeper (本棒 0 代裁)"
+    },
+    "read_yi_benzao_xinzai_code_carrier": {
+      "grades": [
+        {
+          "candidate": "C1",
+          "source_reading": "read_yi_benzao_xinzai_code_carrier",
+          "face_key": "S30_numeric",
+          "f1_reading": "numeric",
+          "cond1_f1_ndistinct_ge4": {
+            "value": 3,
+            "pass": false
+          },
+          "cond2_f234_gt3": {
+            "f2": 4,
+            "f3": 5,
+            "f4": 5,
+            "pass": true
+          },
+          "cond3_m_a4_ge2": {
+            "value": 4,
+            "pass": true
+          },
+          "cond4_recomputable": {
+            "value": "本棒自算已具 (第三方复算未派)",
+            "pass": true,
+            "third_party_recompute_done": false,
+            "note": "条件④ 之第三方要件 0 成就 => 本棒只出「准可解集」(条件①②③全过者); 终定待第三方复算 + PI/verdict-keeper"
+          },
+          "level1_all_pass": false,
+          "m_a3_three": {
+            "D": 57,
+            "n_ind": 7,
+            "Delta": 23
+          },
+          "m_a5_delta_vs_current_face": {
+            "delta_D": -18,
+            "delta_n_ind": 2,
+            "delta_Delta": -2,
+            "base_face_key": "S30_numeric",
+            "note": "系假设面演算 (若 1 获准入合取) · 非 PI 之释已发生"
+          },
+          "cost": {
+            "new_run_cells": 0,
+            "llm_calls": 0,
+            "pi_writes_required": 0,
+            "code_carrier_changes": 0
+          }
+        },
+        {
+          "candidate": "C2",
+          "source_reading": "read_yi_benzao_xinzai_code_carrier",
+          "face_key": "S30_byte",
+          "f1_reading": "byte",
+          "cond1_f1_ndistinct_ge4": {
+            "value": 3,
+            "pass": false
+          },
+          "cond2_f234_gt3": {
+            "f2": 4,
+            "f3": 5,
+            "f4": 5,
+            "pass": true
+          },
+          "cond3_m_a4_ge2": {
+            "value": 4,
+            "pass": true
+          },
+          "cond4_recomputable": {
+            "value": "本棒自算已具 (第三方复算未派)",
+            "pass": true,
+            "third_party_recompute_done": false,
+            "note": "条件④ 之第三方要件 0 成就 => 本棒只出「准可解集」(条件①②③全过者); 终定待第三方复算 + PI/verdict-keeper"
+          },
+          "level1_all_pass": false,
+          "m_a3_three": {
+            "D": 57,
+            "n_ind": 7,
+            "Delta": 23
+          },
+          "m_a5_delta_vs_current_face": {
+            "delta_D": -18,
+            "delta_n_ind": 2,
+            "delta_Delta": -2,
+            "base_face_key": "S30_numeric",
+            "note": "系假设面演算 (若 1 获准入合取) · 非 PI 之释已发生"
+          },
+          "cost": {
+            "new_run_cells": 30,
+            "llm_calls": 0,
+            "pi_writes_required": 0,
+            "code_carrier_changes": 0
+          }
+        },
+        {
+          "candidate": "C3",
+          "source_reading": "read_yi_benzao_xinzai_code_carrier",
+          "face_key": "U-C3_15cells_byte",
+          "f1_reading": "byte",
+          "cond1_f1_ndistinct_ge4": {
+            "value": 3,
+            "pass": false
+          },
+          "cond2_f234_gt3": {
+            "f2": 4,
+            "f3": 5,
+            "f4": 5,
+            "pass": true
+          },
+          "cond3_m_a4_ge2": {
+            "value": 4,
+            "pass": true
+          },
+          "cond4_recomputable": {
+            "value": "本棒自算已具 (第三方复算未派)",
+            "pass": true,
+            "third_party_recompute_done": false,
+            "note": "条件④ 之第三方要件 0 成就 => 本棒只出「准可解集」(条件①②③全过者); 终定待第三方复算 + PI/verdict-keeper"
+          },
+          "level1_all_pass": false,
+          "m_a3_three": {
+            "D": 15,
+            "n_ind": 5,
+            "Delta": 10
+          },
+          "m_a5_delta_vs_current_face": {
+            "delta_D": 0,
+            "delta_n_ind": 0,
+            "delta_Delta": 0,
+            "base_face_key": "U-C3_15cells_numeric",
+            "note": "系假设面演算 (若 1 获准入合取) · 非 PI 之释已发生"
+          },
+          "cost": {
+            "new_run_cells": 15,
+            "llm_calls": 0,
+            "pi_writes_required": 1,
+            "code_carrier_changes": 0
+          }
+        },
+        {
+          "candidate": "C4",
+          "source_reading": "read_yi_benzao_xinzai_code_carrier",
+          "face_key": "S30_numeric",
+          "f1_reading": "numeric",
+          "cond1_f1_ndistinct_ge4": {
+            "value": 3,
+            "pass": false
+          },
+          "cond2_f234_gt3": {
+            "f2": 4,
+            "f3": 5,
+            "f4": 5,
+            "pass": true
+          },
+          "cond3_m_a4_ge2": {
+            "value": 4,
+            "pass": true
+          },
+          "cond4_recomputable": {
+            "value": "本棒自算已具 (第三方复算未派)",
+            "pass": true,
+            "third_party_recompute_done": false,
+            "note": "条件④ 之第三方要件 0 成就 => 本棒只出「准可解集」(条件①②③全过者); 终定待第三方复算 + PI/verdict-keeper"
+          },
+          "level1_all_pass": false,
+          "m_a3_three": {
+            "D": 57,
+            "n_ind": 7,
+            "Delta": 23
+          },
+          "m_a5_delta_vs_current_face": {
+            "delta_D": -18,
+            "delta_n_ind": 2,
+            "delta_Delta": -2,
+            "base_face_key": "S30_numeric",
+            "note": "系假设面演算 (若 1 获准入合取) · 非 PI 之释已发生"
+          },
+          "cost": {
+            "new_run_cells": 30,
+            "llm_calls": 0,
+            "pi_writes_required": 1,
+            "code_carrier_changes": 0
+          }
+        }
+      ],
+      "solvable_set": [],
+      "semi_solvable_set_cond123": [],
+      "level2": null,
+      "level3": null,
+      "outcome_readout": "一级可解集为空 => 判「不明」+停手报回 PI (草案 §5-1 第 5 项) · 准可解集(条件①②③全过者) = []"
+    }
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "date": "2026-09-16T17:34:14.247582",
+  "task": "P-M 攻击面成本下界(沿 deposon-pf-observer README 角色边界)",
+  "agent_role": "deposon-pf-observer",
+  "elapsed_seconds": 0.012751579284667969,
+  "iron_7_compliance": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "all_results": {
+    "5_anchors_file_actual_sha12": "03c6c01f3697",
+    "attack_results": [
+      {
+        "attack_budget": 8,
+        "unit_perturbation_count": 64,
+        "detected_count": 0,
+        "missed_count": 8,
+        "detection_rate": 0.0,
+        "missed_indices_first_5": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "attack_budget": 16,
+        "unit_perturbation_count": 128,
+        "detected_count": 0,
+        "missed_count": 8,
+        "detection_rate": 0.0,
+        "missed_indices_first_5": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "attack_budget": 24,
+        "unit_perturbation_count": 192,
+        "detected_count": 0,
+        "missed_count": 8,
+        "detection_rate": 0.0,
+        "missed_indices_first_5": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "attack_budget": 32,
+        "unit_perturbation_count": 256,
+        "detected_count": 0,
+        "missed_count": 8,
+        "detection_rate": 0.0,
+        "missed_indices_first_5": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "attack_budget": 40,
+        "unit_perturbation_count": 320,
+        "detected_count": 0,
+        "missed_count": 8,
+        "detection_rate": 0.0,
+        "missed_indices_first_5": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "attack_budget": 48,
+        "unit_perturbation_count": 384,
+        "detected_count": 0,
+        "missed_count": 8,
+        "detection_rate": 0.0,
+        "missed_indices_first_5": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "attack_budget": 56,
+        "unit_perturbation_count": 448,
+        "detected_count": 0,
+        "missed_count": 8,
+        "detection_rate": 0.0,
+        "missed_indices_first_5": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "attack_budget": 64,
+        "unit_perturbation_count": 512,
+        "detected_count": 0,
+        "missed_count": 8,
+        "detection_rate": 0.0,
+        "missed_indices_first_5": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "attack_budget": 72,
+        "unit_perturbation_count": 576,
+        "detected_count": 0,
+        "missed_count": 8,
+        "detection_rate": 0.0,
+        "missed_indices_first_5": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "attack_budget": 80,
+        "unit_perturbation_count": 640,
+        "detected_count": 0,
+        "missed_count": 8,
+        "detection_rate": 0.0,
+        "missed_indices_first_5": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "cost_miss_rate_curve": [
+      {
+        "attack_budget": 8,
+        "detection_rate": 0.0,
+        "miss_rate": 1.0
+      },
+      {
+        "attack_budget": 16,
+        "detection_rate": 0.0,
+        "miss_rate": 1.0
+      },
+      {
+        "attack_budget": 24,
+        "detection_rate": 0.0,
+        "miss_rate": 1.0
+      },
+      {
+        "attack_budget": 32,
+        "detection_rate": 0.0,
+        "miss_rate": 1.0
+      },
+      {
+        "attack_budget": 40,
+        "detection_rate": 0.0,
+        "miss_rate": 1.0
+      },
+      {
+        "attack_budget": 48,
+        "detection_rate": 0.0,
+        "miss_rate": 1.0
+      },
+      {
+        "attack_budget": 56,
+        "detection_rate": 0.0,
+        "miss_rate": 1.0
+      },
+      {
+        "attack_budget": 64,
+        "detection_rate": 0.0,
+        "miss_rate": 1.0
+      },
+      {
+        "attack_budget": 72,
+        "detection_rate": 0.0,
+        "miss_rate": 1.0
+      },
+      {
+        "attack_budget": 80,
+        "detection_rate": 0.0,
+        "miss_rate": 1.0
+      }
+    ],
+    "safety_bound": {
+      "safety_budget_lower_bound": 80,
+      "random_guess_rate": 0.5,
+      "v42_safety_index": "SECURE"
+    },
+    "paper_amendment": {
+      "auditability_inequality": "可审计性 = f(篡改成本下界, 复算成本)",
+      "v42_safety_budget_lower_bound": 80,
+      "random_guess_cost": "50% (基线)",
+      "conclusion": "v42 verifier 安全预算下界 = 80 (随机猜测成本 = 50%); 如果 v42 安全预算 < 论文修正条款下界, 须重设计 v42 (非项目判死, 是强制修正案)"
+    }
+  }
+}

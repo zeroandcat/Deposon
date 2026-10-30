@@ -1,0 +1,384 @@
+{
+  "generated_by": "Mavis 团队 worker (agent: worker)",
+  "date": "2026-09-29",
+  "dispatch": "Mavis (root session)「V4 checkpoint 尾 3 件修订棒」(PI 拍板 ask_e8c605dd1d9b662df6a33923 q2)",
+  "note": "纯本地 byte 级复制 + 定点替换; 0 网络 / 0 LLM / 0 读 key / 0 跑实验 / 0 覆盖既有件。",
+  "items": [
+    {
+      "src": "results/_v4_supp_t15_executor.py",
+      "src_bytes": 62285,
+      "src_sha12_before": "558e635f9ba6",
+      "src_sha12_after": "558e635f9ba6",
+      "src_untouched": true,
+      "dst": "results/_v4_supp_t15_executor_r0_atomic_2026_09_29.py",
+      "dst_bytes": 66317,
+      "dst_sha12": "7da23c0e94cf",
+      "src_lines": 1316,
+      "dst_lines": 1367,
+      "bom": false,
+      "cr_count": 0,
+      "changed_hunks": 4,
+      "diff": [
+        {
+          "tag": "replace",
+          "src_lines_1based": [
+            3,
+            3
+          ],
+          "dst_lines_1based": [
+            3,
+            3
+          ],
+          "src_removed": [
+            "_v4_supp_t15_executor.py"
+          ],
+          "dst_added": [
+            "_v4_supp_t15_executor_r0_atomic_2026_09_29.py"
+          ]
+        },
+        {
+          "tag": "insert",
+          "src_lines_1based": [
+            5,
+            4
+          ],
+          "dst_lines_1based": [
+            5,
+            23
+          ],
+          "src_removed": [],
+          "dst_added": [
+            "# _v4_supp_t15_executor_r0_atomic_2026_09_29.py (2026-09-29 新名件: 写侧原子写补正)",
+            "# ========================================================================================",
+            "#   源件: results/_v4_supp_t15_executor.py",
+            "#         SHA-12 `558e635f9ba6` / 62,285 B  (hashlib.sha256(全文字节).hexdigest()[:12], 小写)",
+            "#         —— checkpoint 被引 / 归档三件之一 (52b3dec13e06 §2.3 REGISTER_NO_FIX)",
+            "#            且 0 改写面; **源件逐字节只读, 一字未改**。",
+            "#   本件: results/_v4_supp_t15_executor_r0_atomic_2026_09_29.py  (新名件; SHA-12 见登记件 + 落盘回报)",
+            "#   修复面: **仅 1 处** = `save_checkpoint()` (源件 L442-445), 目标 `.tmp/_t15_records.json`。",
+            "#   缺陷:   `CHECKPOINT_PATH.write_text(json.dumps(records, ensure_ascii=False), encoding=\"utf-8\")` = 非原子全量覆盖写。",
+            "#   危害:   `.tmp/_t15_records.json` = 120 条 T1.5 状态锚 (被 `load_checkpoint()` 读回决定",
+            "skip / 续跑); 崩半路 ⇒ 半写截断文件 ⇒ 续跑重复计 calls 账 / 静默丢已跑数据。",
+            "#   本件**非执行面**: t15 系执行面 = `_v4_supp_t15_executor_r3_2026_09_28.py`",
+            "(`b86cce242abe`, 见 3bc852e0d48b §9.6); 本件只补**基名代**写侧原子面。",
+            "读侧面: 本件**无 F1 响亮告警** (与源件同: `except Exception: return []` 静默);",
+            "F1 只在 r1 / r2_atomic / r3 线 ⇒ **执行面不受影响** (r3 = 读写两侧齐备)。",
+            "#   边界:   0 改实验逻辑 / 0 改调用面 / 0 改返回值 / 0 改阈值字面 (K_N11_3_THRESHOLD=0.85 /",
+            "K_N11_1_DIFF=0.05 / K_N11_2_DELTA=0.05 / TH-T1-1=10) / 0 改 cells 矩阵 / 0 改",
+            "N_REASKS / 0 改 kill-line / 0 改 records 结构 / 0 改 paths。",
+            "#           终端产出类写出面按 52b3dec13e06 §2.3 分界原则**登记不修**, 本棒 0 触动。"
+          ]
+        },
+        {
+          "tag": "insert",
+          "src_lines_1based": [
+            442,
+            441
+          ],
+          "dst_lines_1based": [
+            461,
+            493
+          ],
+          "src_removed": [],
+          "dst_added": [
+            "# ============================================================",
+            "# [写侧原子写补正 2026-09-29] 派工: Mavis (root session)「V4 checkpoint 尾 3 件修订棒」(PI 拍板 ask_e8c605dd1d9b662df6a33923 q2)",
+            "#   缺陷: `save_checkpoint(records) -> CHECKPOINT_PATH (.tmp/_t15_records.json)` 为**非原子全量覆盖写** (write_text 直接覆盖目标路径本身) ⇒",
+            "#         崩半路留半写截断文件, 而 loader 侧只报「不可读」不报「为何不可读」。",
+            "#   修法: 同目录临时件 (名带 pid) + f.flush() + os.fsync(f.fileno())",
+            "#           + os.replace(tmp, path) (同卷原子替换) —— 三段式。",
+            "#   处方: cpath_r1 同款 (deposon_team/plugins/_v3n_cpath_live_r1_2026_09_27.py L233-240),",
+            "#         实现沿 results/_v4_supp_t15_executor_r2_atomic_2026_09_28.py L546-562。",
+            "#   边界: 0 改实验逻辑 / 0 改调用面 / 0 改返回值 / 0 改阈值字面 / 0 改 records 结构 /",
+            "#         0 改 paths; 落盘字节与补正前**逐字节同构** (同 json.dumps 参数, 仅写入经由临时件)。",
+            "#   本件**非执行面** (t15 系执行面 = r3 件, 见 3bc852e0d48b §9.6);",
+            "#   读侧面沿源件 (无 F1 告警) —— 本棒**只改写出面**。",
+            "# ============================================================",
+            "def _atomic_write_json(obj, path, indent=None):",
+            "    \"\"\"原子落盘: 同目录临时件 + flush + fsync + os.replace —— 崩在半路不毁既有数据。",
+            "",
+            "    沿 deposon_team/plugins/_v3n_cpath_live_r1_2026_09_27.py L233-240 同款处方 (cpath_r1);",
+            "    实现同款沿 results/_v4_supp_t15_executor_r2_atomic_2026_09_28.py L546-562。",
+            "    临时件名带 pid ⇒ 并发进程互不踩踏 (双跑不互毁)。",
+            "    \"\"\"",
+            "    path.parent.mkdir(parents=True, exist_ok=True)",
+            "    tmp = path.with_name(f\"{path.name}.tmp_{os.getpid()}\")",
+            "    try:",
+            "        with open(tmp, \"w\", encoding=\"utf-8\") as f:",
+            "            json.dump(obj, f, ensure_ascii=False, indent=indent)",
+            "            f.flush()",
+            "            os.fsync(f.fileno())",
+            "        os.replace(tmp, path)   # 同卷原子替换: 要么全量新内容, 要么原内容",
+            "    except BaseException:",
+            "        # 写失败/被杀: 既有数据一字不动; 临时件留场供事后取证, 不静默吞。",
+            "        raise",
+            "",
+            ""
+          ]
+        },
+        {
+          "tag": "replace",
+          "src_lines_1based": [
+            443,
+            445
+          ],
+          "dst_lines_1based": [
+            495,
+            496
+          ],
+          "src_removed": [
+            "    CHECKPOINT_PATH.parent.mkdir(parents=True, exist_ok=True)",
+            "    CHECKPOINT_PATH.write_text(json.dumps(records, ensure_ascii=False),",
+            "                               encoding=\"utf-8\")"
+          ],
+          "dst_added": [
+            "    \"\"\"[写侧原子写补正 2026-09-29] 改前 = write_text 全量覆盖 (非原子); 改后 = 临时件 + flush + fsync + os.replace。\"\"\"",
+            "    _atomic_write_json(records, CHECKPOINT_PATH)"
+          ]
+        }
+      ]
+    },
+    {
+      "src": "results/_v4_supp_t15r2_executor.py",
+      "src_bytes": 84884,
+      "src_sha12_before": "4b5b720d5cda",
+      "src_sha12_after": "4b5b720d5cda",
+      "src_untouched": true,
+      "dst": "results/_v4_supp_t15r2_executor_r0_atomic_2026_09_29.py",
+      "dst_bytes": 89083,
+      "dst_sha12": "678032f726a8",
+      "src_lines": 1609,
+      "dst_lines": 1663,
+      "bom": false,
+      "cr_count": 0,
+      "changed_hunks": 4,
+      "diff": [
+        {
+          "tag": "replace",
+          "src_lines_1based": [
+            3,
+            3
+          ],
+          "dst_lines_1based": [
+            3,
+            3
+          ],
+          "src_removed": [
+            "_v4_supp_t15r2_executor.py"
+          ],
+          "dst_added": [
+            "_v4_supp_t15r2_executor_r0_atomic_2026_09_29.py"
+          ]
+        },
+        {
+          "tag": "insert",
+          "src_lines_1based": [
+            5,
+            4
+          ],
+          "dst_lines_1based": [
+            5,
+            26
+          ],
+          "src_removed": [],
+          "dst_added": [
+            "# _v4_supp_t15r2_executor_r0_atomic_2026_09_29.py (2026-09-29 新名件: 写侧原子写补正)",
+            "# ========================================================================================",
+            "#   源件: results/_v4_supp_t15r2_executor.py",
+            "#         SHA-12 `4b5b720d5cda` / 84,884 B  (hashlib.sha256(全文字节).hexdigest()[:12], 小写)",
+            "#         —— checkpoint 被引 / 归档三件之一 (52b3dec13e06 §2.3 REGISTER_NO_FIX)",
+            "#            且 0 改写面; **源件逐字节只读, 一字未改**。",
+            "#   本件: results/_v4_supp_t15r2_executor_r0_atomic_2026_09_29.py  (新名件; SHA-12 见登记件 + 落盘回报)",
+            "#   修复面: **仅 1 处** = `save_t15r2_records()` (源件 L468-471), 目标 `.tmp/_t15r2_records.json`。",
+            "#   缺陷:   `T15R2_CHECKPOINT_PATH.write_text(json.dumps(r2_records, ensure_ascii=False), ...)` = 非原子全量覆盖写。",
+            "#   危害:   `.tmp/_t15r2_records.json` = 62 条 T1.5r2 records 唯一落盘面; 崩半路 ⇒ 半写文件 ⇒",
+            "`load_t15r2_records()` 静默 `[]` ⇒ `cmd_aggregate` 照常产出 result.json, 但",
+            "`records_all` 少掉 T1.5r2 全集 ⇒ K-N11-N1_T1relax 的 N_min=10 字面 PASS 根因消除结论",
+            "被无声抽掉, 字面读起来仍像「已跑完」。",
+            "#   本件**非执行面**: t15r2 系执行面 = `_v4_supp_t15r2_executor_r3_2026_09_28.py`",
+            "(`4f514b3fb4b8`, 见 3bc852e0d48b §9.6); 本件只补**基名代**写侧原子面。",
+            "读侧面: 本件**无 F1 响亮告警** (与源件同: `load_t15_records` / `load_t15r2_records`",
+            "两处 `except Exception: return []` 静默); F1 只在 r1 / r2_atomic / r3 线 ⇒",
+            "**执行面不受影响** (r3 = 读写两侧齐备)。",
+            "#   边界:   0 改实验逻辑 / 0 改调用面 / 0 改返回值 / 0 改阈值字面 (0.85 / 0.05 / 0.05 /",
+            "TH-T1-1=10) / 0 改 N_REASKS / 0 改 cells 矩阵 / 0 改 kill-line / 0 改 records",
+            "结构 / 0 改 paths。",
+            "#           终端产出类写出面按 52b3dec13e06 §2.3 分界原则**登记不修**, 本棒 0 触动。"
+          ]
+        },
+        {
+          "tag": "insert",
+          "src_lines_1based": [
+            468,
+            467
+          ],
+          "dst_lines_1based": [
+            490,
+            522
+          ],
+          "src_removed": [],
+          "dst_added": [
+            "# ============================================================",
+            "# [写侧原子写补正 2026-09-29] 派工: Mavis (root session)「V4 checkpoint 尾 3 件修订棒」(PI 拍板 ask_e8c605dd1d9b662df6a33923 q2)",
+            "#   缺陷: `save_t15r2_records(r2_records) -> T15R2_CHECKPOINT_PATH (.tmp/_t15r2_records.json)` 为**非原子全量覆盖写** (write_text 直接覆盖目标路径本身) ⇒",
+            "#         崩半路留半写截断文件 = 读侧静默 `[]` 的触发源 (R1 件 L477-479 自述 (c) 面)。",
+            "#   修法: 同目录临时件 (名带 pid) + f.flush() + os.fsync(f.fileno())",
+            "#           + os.replace(tmp, path) (同卷原子替换) —— 三段式。",
+            "#   处方: cpath_r1 同款 (deposon_team/plugins/_v3n_cpath_live_r1_2026_09_27.py L233-240),",
+            "#         实现沿 results/_v4_supp_t15_executor_r2_atomic_2026_09_28.py L546-562。",
+            "#   边界: 0 改实验逻辑 / 0 改调用面 / 0 改返回值 / 0 改阈值字面 / 0 改 records 结构 /",
+            "#         0 改 paths; 落盘字节与补正前**逐字节同构** (同 json.dumps 参数, 仅写入经由临时件)。",
+            "#   本件**非执行面** (t15r2 系执行面 = r3 件, 见 3bc852e0d48b §9.6);",
+            "#   读侧面沿源件 (无 F1 告警) —— 本棒**只改写出面**。",
+            "# ============================================================",
+            "def _atomic_write_json(obj, path, indent=None):",
+            "    \"\"\"原子落盘: 同目录临时件 + flush + fsync + os.replace —— 崩在半路不毁既有数据。",
+            "",
+            "    沿 deposon_team/plugins/_v3n_cpath_live_r1_2026_09_27.py L233-240 同款处方 (cpath_r1);",
+            "    实现同款沿 results/_v4_supp_t15_executor_r2_atomic_2026_09_28.py L546-562。",
+            "    临时件名带 pid ⇒ 并发进程互不踩踏 (双跑不互毁)。",
+            "    \"\"\"",
+            "    path.parent.mkdir(parents=True, exist_ok=True)",
+            "    tmp = path.with_name(f\"{path.name}.tmp_{os.getpid()}\")",
+            "    try:",
+            "        with open(tmp, \"w\", encoding=\"utf-8\") as f:",
+            "            json.dump(obj, f, ensure_ascii=False, indent=indent)",
+            "            f.flush()",
+            "            os.fsync(f.fileno())",
+            "        os.replace(tmp, path)   # 同卷原子替换: 要么全量新内容, 要么原内容",
+            "    except BaseException:",
+            "        # 写失败/被杀: 既有数据一字不动; 临时件留场供事后取证, 不静默吞。",
+            "        raise",
+            "",
+            ""
+          ]
+        },
+        {
+          "tag": "replace",
+          "src_lines_1based": [
+            469,
+            471
+          ],
+          "dst_lines_1based": [
+            524,
+            525
+          ],
+          "src_removed": [
+            "    T15R2_CHECKPOINT_PATH.parent.mkdir(parents=True, exist_ok=True)",
+            "    T15R2_CHECKPOINT_PATH.write_text(json.dumps(r2_records, ensure_ascii=False),",
+            "                                     encoding=\"utf-8\")"
+          ],
+          "dst_added": [
+            "    \"\"\"[写侧原子写补正 2026-09-29] 改前 = write_text 全量覆盖 (非原子); 改后 = 临时件 + flush + fsync + os.replace。\"\"\"",
+            "    _atomic_write_json(r2_records, T15R2_CHECKPOINT_PATH)"
+          ]
+        }
+      ]
+    },
+    {
+      "src": "results/_archive_2026_09_24/l14_runner_v2.py",
+      "src_bytes": 23056,
+      "src_sha12_before": "acf1cd6ccbd4",
+      "src_sha12_after": "acf1cd6ccbd4",
+      "src_untouched": true,
+      "dst": "results/_archive_2026_09_24/l14_runner_v2_r1_atomic_2026_09_29.py",
+      "dst_bytes": 25892,
+      "dst_sha12": "b1923528ab84",
+      "src_lines": 545,
+      "dst_lines": 585,
+      "bom": false,
+      "cr_count": 0,
+      "changed_hunks": 3,
+      "diff": [
+        {
+          "tag": "insert",
+          "src_lines_1based": [
+            51,
+            50
+          ],
+          "dst_lines_1based": [
+            51,
+            90
+          ],
+          "src_removed": [],
+          "dst_added": [
+            "",
+            "# ============================================================",
+            "# [写侧原子写补正 2026-09-29] 派工: Mavis (root session)「V4 checkpoint 尾 3 件修订棒」(PI 拍板 ask_e8c605dd1d9b662df6a33923 q2)",
+            "#   源件: results/_archive_2026_09_24/l14_runner_v2.py",
+            "#         SHA-12 `acf1cd6ccbd4` / 23,056 B  (hashlib.sha256(全文字节).hexdigest()[:12], 小写)",
+            "#         —— 归档件 (52b3dec13e06 §2.3 REGISTER_NO_FIX 三件之一; 被 L14 verdict §9.1 引用);",
+            "#            **源件逐字节只读, 一字未改**。",
+            "#   本件: results/_archive_2026_09_24/l14_runner_v2_r1_atomic_2026_09_29.py  (新名件; SHA-12 见登记件 + 落盘回报)",
+            "#   缺陷面: **2 处, 同一 checkpoint 变量** = 源件 L153 (逐 call 存) + L168 (收尾存),",
+            "#           目标 `.tmp/_l14_records.json`;",
+            "#           写法 `CHECKPOINT.write_text(json.dumps(records, ...), encoding=\"utf-8\")` = 非原子全量覆盖写。",
+            "#   危害面: `.tmp/_l14_records.json` = L14 续跑状态锚 (读回决定哪些 (teacher, prompt, reask) 已跑);",
+            "#           崩半路 ⇒ 半写截断文件 ⇒ 续跑重复计 calls 账 / 静默丢已跑数据。",
+            "#   修法:   同目录临时件 (名带 pid) + f.flush() + os.fsync(f.fileno())",
+            "#           + os.replace(tmp, path) (同卷原子替换) —— 三段式。",
+            "#   处方:   cpath_r1 同款 (deposon_team/plugins/_v3n_cpath_live_r1_2026_09_27.py L233-240),",
+            "#           实现沿 results/_v4_supp_t15_executor_r2_atomic_2026_09_28.py L546-562。",
+            "#   边界:   0 改实验逻辑 / 0 改调用面 / 0 改返回值 / 0 改阈值字面 / 0 改 records 结构 /",
+            "#           0 改 paths / **0 改 L153 外层 `try/except` 与 `checkpoint FAIL` 打印 (逐字不动)** /",
+            "#           0 改 L490 `OUT_RESULT` 与 L523 `OUT_POST` 终端产出面 (登记不修, 沿 52b3dec13e06 §2.3)。",
+            "#   读侧面: 本件沿源件 (无 F1 告警); 归档件不在执行面 ⇒ 影响面 0。",
+            "# ============================================================",
+            "def _atomic_write_json(obj, path, indent=None):",
+            "    \"\"\"原子落盘: 同目录临时件 + flush + fsync + os.replace —— 崩在半路不毁既有数据。",
+            "",
+            "    沿 deposon_team/plugins/_v3n_cpath_live_r1_2026_09_27.py L233-240 同款处方 (cpath_r1);",
+            "    实现同款沿 results/_v4_supp_t15_executor_r2_atomic_2026_09_28.py L546-562。",
+            "    临时件名带 pid ⇒ 并发进程互不踩踏 (双跑不互毁)。",
+            "    \"\"\"",
+            "    path.parent.mkdir(parents=True, exist_ok=True)",
+            "    tmp = path.with_name(f\"{path.name}.tmp_{os.getpid()}\")",
+            "    try:",
+            "        with open(tmp, \"w\", encoding=\"utf-8\") as f:",
+            "            json.dump(obj, f, ensure_ascii=False, indent=indent)",
+            "            f.flush()",
+            "            os.fsync(f.fileno())",
+            "        os.replace(tmp, path)   # 同卷原子替换: 要么全量新内容, 要么原内容",
+            "    except BaseException:",
+            "        # 写失败/被杀: 既有数据一字不动; 临时件留场供事后取证, 不静默吞。",
+            "        raise"
+          ]
+        },
+        {
+          "tag": "replace",
+          "src_lines_1based": [
+            153,
+            153
+          ],
+          "dst_lines_1based": [
+            193,
+            193
+          ],
+          "src_removed": [
+            "            CHECKPOINT.write_text(json.dumps(records, ensure_ascii=False), encoding=\"utf-8\")"
+          ],
+          "dst_added": [
+            "            _atomic_write_json(records, CHECKPOINT)"
+          ]
+        },
+        {
+          "tag": "replace",
+          "src_lines_1based": [
+            168,
+            168
+          ],
+          "dst_lines_1based": [
+            208,
+            208
+          ],
+          "src_removed": [
+            "CHECKPOINT.write_text(json.dumps(records, ensure_ascii=False), encoding=\"utf-8\")"
+          ],
+          "dst_added": [
+            "_atomic_write_json(records, CHECKPOINT)"
+          ]
+        }
+      ]
+    }
+  ]
+}

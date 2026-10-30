@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-16T22:11:35.636290",
+  "task": "P-I 曲率审计探针 诚实降级版(沿 V3 §6 修 and→or + 移除 true_labels 硬编码占位)",
+  "agent_role": "deposon-physics-formula",
+  "elapsed_seconds": 4.563684940338135,
+  "iron_7_compliance": {
+    "no_llm": true,
+    "no_proxy": true,
+    "no_gateway": true,
+    "no_key_in_prompt_json_disk": true,
+    "no_18_frozen_touch": true,
+    "no_p_g_v0_touch": true,
+    "no_p_g_v01_touch": true,
+    "no_plugin_spec_touch": true,
+    "no_verifier_mavis_builtin_scripts_touch": true
+  },
+  "all_results": {
+    "d_h_auc_per_gradient": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "d_e_auc_per_gradient": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_d_h_auc": 0,
+    "max_d_e_auc": 0,
+    "d_h_excess": 0,
+    "final_dang_verdict": "UNVERIFIED(true_labels 占位, AUC 不可信) — 沿 V3 §6.7 诚实降级"
+  }
+}

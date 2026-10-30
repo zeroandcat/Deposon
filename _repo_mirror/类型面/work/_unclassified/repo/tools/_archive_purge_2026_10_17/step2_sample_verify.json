@@ -1,0 +1,87 @@
+{
+  "R_payload_sha12": "e31064337198",
+  "bin_entries_after": 67,
+  "bin_entries_before": 65,
+  "checks": [
+    {
+      "check": "op_rc_zero",
+      "detail": "rc=0",
+      "pass": true
+    },
+    {
+      "check": "not_aborted",
+      "detail": "aborted=False",
+      "pass": true
+    },
+    {
+      "check": "source_removed",
+      "detail": "〔归档件引用·未上传:docwriter_v46_card_raw.txt〕",
+      "pass": true
+    },
+    {
+      "check": "one_new_I_record",
+      "detail": "['$IMHA15T.txt']",
+      "pass": true
+    },
+    {
+      "check": "one_new_R_record",
+      "detail": "['$RMHA15T.txt']",
+      "pass": true
+    },
+    {
+      "check": "I_R_stem_paired",
+      "detail": "$IMHA15T.txt <-> $RMHA15T.txt (key=MHA15T.txt)",
+      "pass": true
+    },
+    {
+      "check": "I_path_offset_is_28",
+      "detail": "28",
+      "pass": true
+    },
+    {
+      "check": "I_decoded_path_matches_source",
+      "detail": "decoded='〔本地路径已脱敏〕'",
+      "pass": true
+    },
+    {
+      "check": "I_orig_size_matches",
+      "detail": "26 vs 26",
+      "pass": true
+    },
+    {
+      "check": "R_payload_sha12_matches_inventory",
+      "detail": "e31064337198 vs e31064337198",
+      "pass": true
+    }
+  ],
+  "checks_rejudged": true,
+  "i_decode": {
+    "declared_nchars": 89,
+    "delete_filetime": 134366844928660000,
+    "has_null_terminator": true,
+    "len": 206,
+    "orig_size": 26,
+    "path": "〔归档件引用·未上传:docwriter_v46_card_raw.txt〕",
+    "path_offset": 28,
+    "version": 2
+  },
+  "i_len": 206,
+  "i_name": "$IMHA15T.txt",
+  "new_bin_entries": [
+    "$IMHA15T.txt",
+    "$RMHA15T.txt"
+  ],
+  "ok": true,
+  "op": {
+    "aborted": false,
+    "flags": 1108,
+    "rc": 0
+  },
+  "r_name": "$RMHA15T.txt",
+  "sample_abs": "〔归档件引用·未上传:docwriter_v46_card_raw.txt〕",
+  "sample_rel": "docwriter_v46_card_raw.txt",
+  "sample_sha12_expected": "e31064337198",
+  "sample_size": 26,
+  "source_gone": true,
+  "verdict": "CHANNEL_VERIFIED"
+}

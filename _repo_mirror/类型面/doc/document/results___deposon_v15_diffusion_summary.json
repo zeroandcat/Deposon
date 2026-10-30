@@ -1,0 +1,170 @@
+{
+  "spec_version": "v1.5.1",
+  "archive": "results/deposon_v15_diffusion_maxpath_negativeresult.json (首轮 max-path 四臂负面结果, 原样归档保留)",
+  "note": "完整逐图/逐边明细未镜像(MCP 传输上限)，可用 run_v15_experiment.py 种子固定复现；首轮 max-path 负面结果归档文件同样未镜像。",
+  "experiment_A": {
+    "0.2": {
+      "n_field_active": 20,
+      "n_field_active_maxpath": 5,
+      "arms": {
+        "field_guided": {
+          "gold_path_top3_hit": 0.375,
+          "masked_edge_top3_hit": 0.25,
+          "auc": 0.5189752134439634
+        },
+        "field_guided_maxpath": {
+          "gold_path_top3_hit": 0.25,
+          "masked_edge_top3_hit": 0.2416666666666667,
+          "auc": 0.5208619378306879
+        },
+        "no_guidance": {
+          "gold_path_top3_hit": 0.25,
+          "masked_edge_top3_hit": 0.2416666666666667,
+          "auc": 0.5187554563492063
+        },
+        "random": {
+          "gold_path_top3_hit": 0.25,
+          "masked_edge_top3_hit": 0.2625,
+          "auc": 0.5016002284752284
+        },
+        "degree": {
+          "gold_path_top3_hit": 0.25,
+          "masked_edge_top3_hit": 0.2791666666666667,
+          "auc": 0.5915011423761423
+        }
+      }
+    },
+    "0.4": {
+      "n_field_active": 20,
+      "n_field_active_maxpath": 14,
+      "arms": {
+        "field_guided": {
+          "gold_path_top3_hit": 0.28125,
+          "masked_edge_top3_hit": 0.25625,
+          "auc": 0.5223404792205344
+        },
+        "field_guided_maxpath": {
+          "gold_path_top3_hit": 0.25,
+          "masked_edge_top3_hit": 0.24791666666666665,
+          "auc": 0.5155863016681033
+        },
+        "no_guidance": {
+          "gold_path_top3_hit": 0.21875,
+          "masked_edge_top3_hit": 0.2520833333333333,
+          "auc": 0.5229539066427853
+        },
+        "random": {
+          "gold_path_top3_hit": 0.40625,
+          "masked_edge_top3_hit": 0.2541666666666667,
+          "auc": 0.5022195804603893
+        },
+        "degree": {
+          "gold_path_top3_hit": 0.28125,
+          "masked_edge_top3_hit": 0.275,
+          "auc": 0.5887877971701501
+        }
+      }
+    }
+  },
+  "experiment_B": {
+    "n_field_active": 48,
+    "n_field_active_maxpath": 0,
+    "arms": {
+      "field_guided": {
+        "top3_hit": {
+          "mean": 0.32653061224489793,
+          "std": 0.4689438895133085,
+          "n": 49
+        },
+        "top3_hit_named_path": {
+          "mean": 0.17647058823529413,
+          "std": 0.3812200410828153,
+          "n": 17
+        },
+        "top3_hit_filler": {
+          "mean": 0.40625,
+          "std": 0.4911323014219285,
+          "n": 32
+        }
+      },
+      "field_guided_maxpath": {
+        "top3_hit": {
+          "mean": 0.32653061224489793,
+          "std": 0.4689438895133085,
+          "n": 49
+        },
+        "top3_hit_named_path": {
+          "mean": 0.17647058823529413,
+          "std": 0.3812200410828153,
+          "n": 17
+        },
+        "top3_hit_filler": {
+          "mean": 0.40625,
+          "std": 0.4911323014219285,
+          "n": 32
+        }
+      },
+      "no_guidance": {
+        "top3_hit": {
+          "mean": 0.32653061224489793,
+          "std": 0.4689438895133085,
+          "n": 49
+        },
+        "top3_hit_named_path": {
+          "mean": 0.17647058823529413,
+          "std": 0.3812200410828153,
+          "n": 17
+        },
+        "top3_hit_filler": {
+          "mean": 0.40625,
+          "std": 0.4911323014219285,
+          "n": 32
+        }
+      },
+      "random": {
+        "top3_hit": {
+          "mean": 0.32653061224489793,
+          "std": 0.4689438895133085,
+          "n": 49
+        },
+        "top3_hit_named_path": {
+          "mean": 0.4117647058823529,
+          "std": 0.4921529567847503,
+          "n": 17
+        },
+        "top3_hit_filler": {
+          "mean": 0.28125,
+          "std": 0.4496092053105675,
+          "n": 32
+        }
+      },
+      "degree": {
+        "top3_hit": {
+          "mean": 0.12244897959183673,
+          "std": 0.32780364090222464,
+          "n": 49
+        },
+        "top3_hit_named_path": {
+          "mean": 0.35294117647058826,
+          "std": 0.4778846120374094,
+          "n": 17
+        },
+        "top3_hit_filler": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n": 32
+        }
+      }
+    }
+  },
+  "honesty": [
+    "实验 B 源 JSON 不含逐边列表, 图为元数据约束下的确定性重建 (见 reconstruction)",
+    "全部指标由种子固定的实际运行产生, 含负面结果, 无任何手工润色",
+    "v1.5.1 修订: 场引导能量改用聚合透射率 (aggregate-T analog of v1.4 §scattering audit): E=-log(Σ_{p: s⇝t} Π t_e), DAG 拓扑序 DP (T(v)=Σ_{u→v}T(u)·t(u,v)), 含环支持图退化为闭式游走和; 任一 source⇝target 通路上的掩码边都有非零解析梯度。首轮 max-path 四臂结果原样归档于 results/deposon_v15_diffusion_maxpath_negativeresult.json。",
+    "死锁消除 (field_active=引导臂输出与消融臂有差异的实例数): aggregate 臂 实验A r=0.2: 20/20, r=0.4: 20/20, 实验B: 48/49; max_path 对照臂 r=0.2: 5/20, r=0.4: 14/20, B: 0/49 (首轮死锁如旧, 对照成立)。",
+    "金边恢复 (实验A gold_path top-3, 均值): r=0.2: aggregate gold_top3=0.375 优于全部基线 (max baseline=0.250); r=0.4: aggregate gold_top3=0.281 未优于全部基线 (max baseline=0.406)。",
+    "实验B (留一边 top-3): aggregate top3=0.327 未优于全部基线 (max baseline=0.327); 分结构: named_path aggregate=0.176 vs no_guidance=0.176 vs random=0.412 vs degree=0.353; filler aggregate=0.406 vs no_guidance=0.406 vs random=0.281 vs degree=0.000。",
+    "masked_edge top-3 (实验A 全部被掩真边): aggregate r=0.2: 0.250, r=0.4: 0.256; no_guidance 0.242/0.252, random 0.263/0.254, degree 0.279/0.275, maxpath 0.242/0.248。",
+    "结论 (如实): aggregate 能量消除了首轮 max-path 的子梯度死锁 (field_active 见上); 金边恢复是否优于基线按上两条数字直读, 未胜出项不作任何修饰。"
+  ]
+}

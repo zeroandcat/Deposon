@@ -1,0 +1,391 @@
+{
+  "schema_version": "p_b_v0_anchors_sha256_12.v1",
+  "spec_version": "P_B_DISTORTION_BOUND_V0_SPEC.md",
+  "generated_by": "verifier（successor 子代理 · 依 spec L22 逐字「D1 由 successor 子代理计算，路径 verifier/handoff/P_B_V0_anchors_sha256_12.json」）",
+  "observed_at": "2026-10-28T12:32:17+08:00",
+  "algorithm": "sha256(file bytes).hexdigest()[:12]  （stdlib hashlib / Get-FileHash -Algorithm SHA256；内建 hash() 从未使用）",
+  "status": "structural_anchor_only（结构锚）｜理论侧待肢 C｜PI 采认待｜⛔ 本件不落五终判、不宣告任何零",
+  "format_provenance": "本件之 JSON 格式系本棒自定并明书 —— spec 全文未规定 JSON schema（spec 仅给：§2 锚表 L20–L32、落位路径 L22、读法「读该件验 5 锚」L129）；自定体例沿在册 5 锚载体 results/evidence/register/_ge01_prereg_5anchor_v3.json（0c269b9558da）之字段集（name／object／path／algorithm／field／sha256_12／bytes／path_windows／role／status），并增本棒所必需之 measured（自测值＋观测时点＋落位）／match／location 面。",
+  "scope_of_this_version": "本版只锚件之存在与指纹，⛔ 不含任何理论值（u*(a_t)／L／U／max_u 之数值与公式皆不在本件内 ⇒ 理论侧待肢 C）；⛔ 不含任何五终判；⛔ 不宣告门①成就；⛔ 不宣告 V3-01 之肢 B 已解。",
+  "spec_ref": {
+    "path": "docs/V3X/P_B_DISTORTION_BOUND_V0_SPEC.md",
+    "sha256_12": "01b3fac02b5e",
+    "bytes": 16933,
+    "mtime": "2026-10-26 22:27:07",
+    "observed_at": "2026-10-28 12:31:53 +08:00",
+    "registered_value_in_carrier": {
+      "sha256_12": "423c84de20d5",
+      "bytes": 15457,
+      "source": "results/evidence/register/_ge01_prereg_5anchor_v3.json 之 spec_ref 面（PI 已裁丁之伴随面·非系结面）"
+    },
+    "anchor_table_ref": "spec §2 L20–L32（锚表 L24–L30）",
+    "landing_path_verbatim": "verifier/handoff/P_B_V0_anchors_sha256_12.json（spec L22）",
+    "read_rule_verbatim": "读 verifier/handoff/P_B_V0_anchors_sha256_12.json 验 5 锚（spec L129）",
+    "drift_clause_verbatim": "任何 ≥ 1 锚漂移 → 全 V0 撤回。（spec L32；另见 L134）"
+  },
+  "anchor_table_verbatim": {
+    "source": "spec §2 L24–L30（逐字照录·本棒开卷回读）",
+    "rows": [
+      {
+        "anchor_id": "P_B_ECR_BASELINE",
+        "object": "本文 §3 ECR=1.333 基线",
+        "algorithm": "SHA-256 全文 → 前 12 位",
+        "field": "ecr_median=1.333"
+      },
+      {
+        "anchor_id": "P_B_KILL_LINE",
+        "object": "GT 判死裁定族（10 个）",
+        "algorithm": "SHA-256 全文 → 前 12 位",
+        "field": "kills={GT-1:true, ...}"
+      },
+      {
+        "anchor_id": "P_B_FROZEN_RUNS",
+        "object": "5 个 frozen run JSON",
+        "algorithm": "SHA-256 各 → 前 12 位",
+        "field": "runs=[v20_gt, ...]"
+      },
+      {
+        "anchor_id": "P_B_LLM_CLIENT",
+        "object": "tools/llm_client.py",
+        "algorithm": "SHA-256 全文 → 前 12 位",
+        "field": "version=2026-09-11"
+      },
+      {
+        "anchor_id": "P_B_DISTORTION_CALC",
+        "object": "tools/distortion_calculator.py",
+        "algorithm": "SHA-256 全文 → 前 12 位",
+        "field": "version=2026-09-11"
+      }
+    ]
+  },
+  "anchors": {
+    "P_B_ECR_BASELINE": {
+      "name": "P_B_ECR_BASELINE",
+      "object": "本文 §3 ECR=1.333 基线（spec §2 L26 逐字）",
+      "field": "GT4_price_of_anarchy.verdict.median_poa",
+      "field_note": "依 PI 2026-10-15 卡 ask_207b060a5273ab88912e451f §1-Q2 裁丁，锚之系结面取 v3 之 value_anchor；spec 锚表 L26 之 field 格字面 ecr_median=1.333 照录于 anchor_table_verbatim（该字面于在册载体被判为禁用字面且未使用 ⇒ 本件不作 operative field）",
+      "role": "value_determining",
+      "algorithm": "sha256(file bytes).hexdigest()[:12]",
+      "registered": {
+        "carrier_path": "results/evidence/register/_ge01_prereg_5anchor_v3.json",
+        "carrier_sha256_12": "0c269b9558da",
+        "path": "results/deposon_v20_gt.json",
+        "sha256_12": "497b9c2d6746",
+        "bytes": 3803
+      },
+      "measured": {
+        "sha256_12": "497b9c2d6746",
+        "bytes": 3803,
+        "observed_at": "2026-10-28 12:31:53 +08:00",
+        "location_root": "〔归档区〕",
+        "path_relative_to_root": "_movedout_2026_10_22/doc/document/results___deposon_v20_gt.json",
+        "on_disk_path": "〔归档件引用·未上传:results___deposon_v20_gt.json〕",
+        "mtime": "2026-08-28 17:43:00",
+        "in_main_repo": false,
+        "at_registered_path_in_main_repo": false
+      },
+      "match": "MATCH",
+      "entity_on_disk": true,
+      "status": "structural_anchor_present_and_verified（实体在盘·指纹与登记值逐位相符·非主仓路径）",
+      "companion_faces": [
+        {
+          "role": "definition",
+          "registered_path": "docs/GT_FORMALIZATION_v1.md",
+          "registered_sha256_12": "aeefb8ef6972",
+          "registered_bytes": 19100,
+          "measured_sha256_12": "aeefb8ef6972",
+          "measured_bytes": 19100,
+          "observed_at": "2026-10-28 12:31:53 +08:00",
+          "location_root": "〔归档区〕",
+          "on_disk_path": "〔归档件引用·未上传:docs___GT_FORMALIZATION_v1.md〕",
+          "mtime": "2026-08-30 15:45:39",
+          "in_main_repo": false,
+          "match": "MATCH"
+        },
+        {
+          "role": "upstream",
+          "registered_path": "results/deposon_v20_corpus_eval.json",
+          "registered_sha256_12": "ca71aa6858e1",
+          "measured_sha256_12": "ca71aa6858e1",
+          "measured_bytes": 631644,
+          "observed_at": "2026-10-28 12:31:53 +08:00",
+          "location_root": "〔归档区〕",
+          "on_disk_path": "〔归档件引用·未上传:deposon_v20_corpus_eval.json〕",
+          "mtime": "2026-08-29 01:23:14",
+          "in_main_repo": false,
+          "match": "MATCH"
+        },
+        {
+          "role": "spec_registration_primary",
+          "registered_path": "docs/V3X/P_B_DISTORTION_BOUND_V0_SPEC.md",
+          "registered_sha256_12": "423c84de20d5",
+          "registered_bytes": 15457,
+          "measured_sha256_12": "01b3fac02b5e",
+          "measured_bytes": 16933,
+          "observed_at": "2026-10-28 12:31:53 +08:00",
+          "location_root": "deposon-repo",
+          "on_disk_path": "〔本地路径已脱敏〕",
+          "mtime": "2026-10-26 22:27:07",
+          "in_main_repo": true,
+          "match": "DRIFT",
+          "drift_note": "spec 本尊于 2026-10-26 22:27:07 变更（15,457／423c84de20d5 → 16,933／01b3fac02b5e）；此面为伴随面·非系结面·按 PI 裁丁其指纹变动不单独触发漂移门；本件不回改任何既有登记件"
+        },
+        {
+          "role": "spec_registration_precedent_bound",
+          "registered_path": "docs/V3X/P_A_EQUILIBRIUM_STABILIZATION_V0_SPEC.md",
+          "registered_sha256_12": "bd1caab42b4c",
+          "registered_bytes": 10351,
+          "measured_sha256_12": "bd1caab42b4c",
+          "measured_bytes": 10351,
+          "observed_at": "2026-10-28 12:32:17 +08:00",
+          "location_root": "deposon-sub",
+          "on_disk_path": "〔本地路径已脱敏〕",
+          "mtime": "2026-09-09 10:05:24",
+          "in_main_repo": false,
+          "match": "MATCH"
+        }
+      ],
+      "name_collision_warning": "归档区另有一同名件 〔归档区〕/results/readout/run/deposon_v20_gt.json（3,804 B／d3377668fcc9／mtime 2026-09-26 21:23:45）⇒ 与本锚之登记实体同名义异指（差 1 B）；以 SHA 为准则身份唯一，⛔ 0 以同名充之"
+    },
+    "P_B_KILL_LINE": {
+      "name": "P_B_KILL_LINE",
+      "object": "GT 判死裁定族（10 个）（spec §2 L27 逐字）",
+      "field": "kills=10 GT",
+      "field_note": "PI 2026-10-15 卡 ask_207b060a5273ab88912e451f §1-Q1 逐字「C-甲 kills=10 GT（推荐）」（在册载体 0c269b9558da 之 field_status）；沿 H-4（field ＝ 表征说明·⛔ 非被哈希对象）",
+      "role": "kill_line",
+      "algorithm": "sha256(file bytes).hexdigest()[:12]",
+      "registered": {
+        "carrier_path": "results/evidence/register/_ge01_prereg_5anchor_v3.json",
+        "carrier_sha256_12": "0c269b9558da",
+        "path": "verifier/kill_lines/GT_kill_line_carrier_v1.md",
+        "sha256_12": "9e09214cf088",
+        "bytes": 18905
+      },
+      "measured": {
+        "sha256_12": "9e09214cf088",
+        "bytes": 18905,
+        "observed_at": "2026-10-28 12:32:17 +08:00",
+        "location_root": "deposon-sub",
+        "path_relative_to_root": "verifier/kill_lines/GT_kill_line_carrier_v1.md",
+        "on_disk_path": "〔本地路径已脱敏〕",
+        "mtime": "2026-10-15 11:08:00",
+        "in_main_repo": false,
+        "at_registered_path_in_main_repo": false
+      },
+      "match": "MATCH",
+      "entity_on_disk": true,
+      "status": "structural_anchor_present_and_verified（实体在盘·指纹与登记值逐位相符·载体在子仓；主仓 verifier/kill_lines/ 仅存 kt_b1_kill_decision.py）",
+      "draft_variant_note": "草案态载体 verifier/kill_lines/GT_kill_line_carrier_v0.md（0f65a42e7a34／16,486 B·子仓）另行保留并列；草案态指纹不充当本锚之正式值"
+    },
+    "P_B_FROZEN_RUNS": {
+      "name": "P_B_FROZEN_RUNS",
+      "object": "5 个 frozen run JSON（spec §2 L28 逐字）",
+      "field": "runs=[v20_gt, ...]",
+      "role": "frozen_runs",
+      "algorithm": "sha256(file bytes).hexdigest()[:12]（逐成员各算·spec 逐字「SHA-256 各 → 前 12 位」）",
+      "member_count": 5,
+      "registered": {
+        "carrier_path": "results/evidence/register/_ge01_prereg_5anchor_v3.json",
+        "carrier_sha256_12": "0c269b9558da",
+        "path": [
+          "results/deposon_v20_baselines.json",
+          "results/deposon_v19_benchmark_fixes.json",
+          "results/deposon_v21_gtformal.json",
+          "results/deposon_v18_api_supplements.json",
+          "results/deposon_v17_fusion_fix.json"
+        ],
+        "sha256_12": [
+          "6edb2aec1660",
+          "910c4333eead",
+          "9d9ae5001c57",
+          "62c1a41e1db8",
+          "af51da229652"
+        ]
+      },
+      "members": [
+        {
+          "name": "deposon_v20_baselines.json",
+          "registered_path": "results/deposon_v20_baselines.json",
+          "registered_sha256_12": "6edb2aec1660",
+          "registered_bytes": 16987,
+          "measured_sha256_12": "6edb2aec1660",
+          "measured_bytes": 16987,
+          "observed_at": "2026-10-28 12:31:53 +08:00",
+          "location_root": "〔归档区〕",
+          "path_relative_to_root": "_movedout_2026_10_22/doc/document/results___deposon_v20_baselines.json",
+          "on_disk_path": "〔归档件引用·未上传:results___deposon_v20_baselines.json〕",
+          "mtime": "2026-08-29 01:17:30",
+          "in_main_repo": false,
+          "match": "MATCH"
+        },
+        {
+          "name": "deposon_v19_benchmark_fixes.json",
+          "registered_path": "results/deposon_v19_benchmark_fixes.json",
+          "registered_sha256_12": "910c4333eead",
+          "registered_bytes": 409104,
+          "measured_sha256_12": "910c4333eead",
+          "measured_bytes": 409104,
+          "observed_at": "2026-10-28 12:31:53 +08:00",
+          "location_root": "〔归档区〕",
+          "path_relative_to_root": "_movedout_2026_10_22/readout/run/results___deposon_v19_benchmark_fixes.json",
+          "on_disk_path": "〔归档件引用·未上传:results___deposon_v19_benchmark_fixes.json〕",
+          "mtime": "2026-08-24 01:11:01",
+          "in_main_repo": false,
+          "match": "MATCH"
+        },
+        {
+          "name": "deposon_v21_gtformal.json",
+          "registered_path": "results/deposon_v21_gtformal.json",
+          "registered_sha256_12": "9d9ae5001c57",
+          "registered_bytes": 69204,
+          "measured_sha256_12": "9d9ae5001c57",
+          "measured_bytes": 69204,
+          "observed_at": "2026-10-28 12:31:53 +08:00",
+          "location_root": "〔归档区〕",
+          "path_relative_to_root": "_movedout_2026_10_22/doc/document/results___deposon_v21_gtformal.json",
+          "on_disk_path": "〔归档件引用·未上传:results___deposon_v21_gtformal.json〕",
+          "mtime": "2026-08-30 15:44:09",
+          "in_main_repo": false,
+          "match": "MATCH"
+        },
+        {
+          "name": "deposon_v18_api_supplements.json",
+          "registered_path": "results/deposon_v18_api_supplements.json",
+          "registered_sha256_12": "62c1a41e1db8",
+          "registered_bytes": 80624,
+          "measured_sha256_12": "62c1a41e1db8",
+          "measured_bytes": 80624,
+          "observed_at": "2026-10-28 12:31:53 +08:00",
+          "location_root": "〔归档区〕",
+          "path_relative_to_root": "results/readout/run/deposon_v18_api_supplements.json",
+          "on_disk_path": "〔归档件引用·未上传:deposon_v18_api_supplements.json〕",
+          "mtime": "2026-08-23 23:20:04",
+          "in_main_repo": false,
+          "match": "MATCH"
+        },
+        {
+          "name": "deposon_v17_fusion_fix.json",
+          "registered_path": "results/deposon_v17_fusion_fix.json",
+          "registered_sha256_12": "af51da229652",
+          "registered_bytes": 106164,
+          "measured_sha256_12": "af51da229652",
+          "measured_bytes": 106164,
+          "observed_at": "2026-10-28 12:31:53 +08:00",
+          "location_root": "〔归档区〕",
+          "path_relative_to_root": "results/readout/run/deposon_v17_fusion_fix.json",
+          "on_disk_path": "〔归档件引用·未上传:deposon_v17_fusion_fix.json〕",
+          "mtime": "2026-08-23 21:31:41",
+          "in_main_repo": false,
+          "match": "MATCH"
+        }
+      ],
+      "match": "MATCH（5/5 逐位相符）",
+      "entity_on_disk": true,
+      "status": "structural_anchor_present_and_verified（5 成员皆在盘·5/5 逐位相符·皆不在主仓）",
+      "name_collision_warning": "归档区另有同名件 〔归档区〕/results/readout/run/deposon_v20_baselines.json（14,068 B／84ce9b028b0c／mtime 2026-09-26 21:23:42）⇒ 与本锚第 1 成员同名义异指（16,987／6edb2aec1660）；以 SHA 为准则身份唯一，⛔ 0 以同名充之",
+      "path_wording_discrepancy": "spec L10 载「deposon 仓库 verifier/runs/ 下 5 个 frozen run」；本棒实测三根之 verifier/runs/ 内 0 个 deposon_v* JSON（主仓仅 .md/.log/.txt/.jsonl；子仓 0；归档区无该目录）⇒ 5/5 落于 results/ 之实体面；SHA 为身份之记（沿在册 KD-10）"
+    },
+    "P_B_LLM_CLIENT": {
+      "name": "P_B_LLM_CLIENT",
+      "object": "tools/llm_client.py（spec §2 L29 逐字）",
+      "field": "version=2026-09-11",
+      "field_note": "spec 锚表 L29 之 field 格字面；本棒实测该件全文 0 处 version／0 处 2026-09-11 字样 ⇒ 该 field 之值无文件内容载体（沿在册 KD-11／U-2 之开口面）",
+      "role": "llm_client",
+      "algorithm": "sha256(file bytes).hexdigest()[:12]",
+      "registered": {
+        "carrier_path": "results/evidence/register/_ge01_prereg_5anchor_v3.json",
+        "carrier_sha256_12": "0c269b9558da",
+        "path": "tools/llm_client.py",
+        "sha256_12": "1722500da4aa",
+        "bytes": 8118
+      },
+      "measured": {
+        "sha256_12": "1722500da4aa",
+        "bytes": 8118,
+        "observed_at": "2026-10-28 12:31:53 +08:00",
+        "location_root": "deposon-repo",
+        "path_relative_to_root": "tools/llm_client.py",
+        "on_disk_path": "〔幽灵引用·未上传:llm_client.py〕",
+        "mtime": "2026-09-09 16:16:02",
+        "in_main_repo": true,
+        "at_registered_path_in_main_repo": true
+      },
+      "match": "MATCH",
+      "entity_on_disk": true,
+      "status": "structural_anchor_present_and_verified（在盘·在登记路径·指纹逐位相符）",
+      "historical_registered_value_note": "KT-A1 先例载体（03c6c01f3697）载 P_A_LLM_CLIENT ＝ 055e874ea5c1；该值为陈旧登记值·本件不回改之·新旧并存照旧在册（沿在册 KD-3）"
+    },
+    "P_B_DISTORTION_CALC": {
+      "name": "P_B_DISTORTION_CALC",
+      "object": "tools/distortion_calculator.py（spec §2 L30 逐字）",
+      "field": "version=2026-09-11",
+      "field_note": "spec 锚表 L30 之 field 格字面；实测该件 L86/L88 确有 VERSION＝2026-09-11／SUPPORTED_VERSION＝2026-09-11 ⇒ 本锚 field 有内容载体（与 P_B_LLM_CLIENT 之情形相异）",
+      "role": "distortion_calculator",
+      "algorithm": "sha256(file bytes).hexdigest()[:12]",
+      "registered": {
+        "carrier_path": "results/evidence/register/_ge01_prereg_5anchor_v3.json",
+        "carrier_sha256_12": "0c269b9558da",
+        "path": "tools/distortion_calculator.py",
+        "sha256_12": "410a12482eef",
+        "bytes": 40611
+      },
+      "measured": {
+        "sha256_12": "ae7ff6e0bac5",
+        "bytes": 50896,
+        "observed_at": "2026-10-28 12:31:53 +08:00",
+        "location_root": "deposon-repo",
+        "path_relative_to_root": "tools/distortion_calculator.py",
+        "on_disk_path": "〔本地路径已脱敏〕",
+        "mtime": "2026-10-17 23:55:07",
+        "in_main_repo": true,
+        "at_registered_path_in_main_repo": true
+      },
+      "match": "DRIFT_AUTHORIZED",
+      "entity_on_disk": true,
+      "status": "structural_anchor_present_but_fingerprint_drifted（实体在盘·在登记路径·现值 ≠ 登记值）",
+      "drift_note": "登记值 410a12482eef／40,611 B（2026-10-15 载体 0c269b9558da）→ 现值 ae7ff6e0bac5／50,896 B（mtime 2026-10-17 23:55:07）⇒ 锚漂移；成因之在册裁向＝「授权变更（PI 2026-10-17 卡 Q1 授权之 P-2 读侧改造）＋登记面滞后」之双成分（PI 2026-10-21 v191 Q1 甲档·登记件 pi_rulings/_pi_card_answers_register_2026_10_21_v191.md），且 v191 Q2 丙档＝「维持 v3／落位件不动·另立漂移登记面」⇒ 本件采双面标（登记值＋现值＋观测时点并列），⛔ 0 径改 v3／落位件，⛔ 0 以现值充登记值，⛔ 0 以旧登记值充现值",
+      "drift_gate_note": "spec L32「任何 ≥ 1 锚漂移 → 全 V0 撤回」之触发与否属 PI／verdict-keeper 裁面；本件不代裁、不宣告未触发、亦不宣告已触发"
+    }
+  },
+  "theory_side_boundary": {
+    "this_version_is": "结构锚（structural anchor）—— 只锚件之存在与指纹",
+    "excluded_from_this_file": [
+      "u*(a_t) 之值与公式（理论最优响应）",
+      "L(M,T)／U(M,T) 之值与公式（理论失真界）",
+      "max_u 之值与口径",
+      "任何五终判（pass／af／kd／fail／give-up）",
+      "任何宣告（门①成就／V3-01 已解／任何零）"
+    ],
+    "pending": "理论侧待肢 C（理论最优响应＋理论失真界公式之落地）",
+    "pi_awareness_needed": "单列登记件载「肢 B 之理论侧定义位可能须等理论（肢 C）⇒ 或先落不含理论值之结构锚，须 PI 一言」；本棒不代 PI 请、不代裁 ⇒ 本件先落结构锚版并明书此界，候 PI 一言"
+  },
+  "unresolved": [
+    "U-1 [本棒新开] 5 锚之实体多不在主仓（4/5 之系结实体落于 〔归档区〕 或 deposon-sub）⇒ 本件所记 path 与 on_disk_path 之分离已登记；主仓之落位复制（若 PI 意在）须另裁——本棒不复制（复制＝新增件·须 PI 逐单令）",
+    "U-2 [承在册 U-2] P_B_DISTORTION_CALC 之 version 子字段之 PI 未裁面仍开口（本件实测该件含 VERSION＝2026-09-11 之内容载体·与在册 KD-11 之「0 以文件内容复核」之历史状态相异·登记不代裁）",
+    "U-3 [本棒新开] P_B_KILL_LINE 之载体在子仓（deposon-sub）而非主仓 verifier/kill_lines/（主仓该目录仅存 kt_b1_kill_decision.py）⇒ 主仓之「读该件验 5 锚」流程若仅以主仓为根，将 0 命中该锚",
+    "U-4 [本棒新开] 同名义异指之件二例（deposon_v20_gt.json、deposon_v20_baselines.json）⇒ 验锚流程须以 SHA 而非名名为准",
+    "U-5 [本棒新开] spec 本尊已漂移（423c84de20d5／15,457 → 01b3fac02b5e／16,933）⇒ 本件之 spec_ref 面载双值；本件不回改 spec"
+  ],
+  "kd": [
+    "KD-B1 [本棒新开·已登记不代修] 锚②之载体面与锚①之 definition 面均不在主仓；五锚之「存在性」在主仓面上仅 2/5 成立（tools/llm_client.py、tools/distortion_calculator.py）",
+    "KD-B2 [本棒新开·已登记不代修] 锚⑤之指纹漂移（410a12482eef／40,611 → ae7ff6e0bac5／50,896）之授权链在册（PI v191 Q1 甲档），但 v3／落位件之登记值未更新 ⇒ 本件以双面标承载，不改任何既有件",
+    "KD-B3 [本棒新开·已登记不代修] spec L10 之「verifier/runs/ 下 5 个 frozen run」与盘面不符（三根 0 个 JSON）⇒ SHA 为身份之记（沿在册 KD-10）",
+    "KD-B4 [本棒新开·已登记不代修] spec §2 之对象栏「本文 §3 ECR=1.333 基线」之节号指针于盘上已断（ECR 于 P_B spec §3＝L34–L83 内 0 次；全文 2 次皆落于 L10／L26）⇒ 沿在册 KD-15，本件不代修 spec",
+    "KD-B5 [本棒新开·已登记不代修] spec §2 之 field 格 ecr_median=1.333 之字面精度止于 3 位小数；ecr_median 为在册禁用字面 ⇒ 沿在册 KD-17，本件仅照录于 anchor_table_verbatim，不作 operative field",
+    "KD-B6 [本棒新开·已登记不代修] 同名义异指二例（见 U-4）⇒ 验锚须以 SHA 为准"
+  ],
+  "scope_limits": [
+    "0 五终判（本件不落 pass／af／kd／fail／give-up；肢 B 之终判归 PI／verdict-keeper）",
+    "0 宣告门①成就",
+    "0 宣告 V3-01 之肢 B 已解",
+    "0 宣告任何零",
+    "0 代 PI 裁（结构锚版之采认、理论侧之界、U-1..U-5 皆候 PI）",
+    "0 跑实验（0 runner／0 experiment import／0 LLM 调用／0 网络动作）；本次一切算式系纯读＋纯哈希",
+    "0 读 .env／0 读 key／0 经手任何 key",
+    "0 改／移／重命名／删任何既有件（本件系新立之件·落盘前 Test-Path＝False）",
+    "0 读归档区之文件内容（归档区仅按名与指纹认人）",
+    "0 触 〔本地路径已脱敏〕",
+    "self_reference: none —— 本件不载自身指纹（自指悖论）；锁之载体＝本件之 SHA-12，另由登记件承载"
+  ],
+  "path_separator_note": "本件之 path 面用正斜杠（与 spec／在册载体字面一致·跨平台可移植）；on_disk_path 为本机绝对路径（亦用正斜杠·Windows 侧可直接取值）；location_root 标其所属根（deposon-repo／deposon-sub／〔归档区〕）"
+}
