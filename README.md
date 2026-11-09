@@ -2,7 +2,7 @@
 
 **An auditable, conservation-guaranteed, game-theoretically tested scattering layer over LLM reasoning paths.** · Paper: [arXiv:2609.09001](https://arxiv.org/abs/2609.09001) · License: [MIT](LICENSE)
 
-Deposon is a research program on making multi-step LLM reasoning **machine-recheckable**. Its first two lines — **V1 (mind-map)** and **V2 (game-theory explanation)** — are **published** in the paper above; two further lines — **V3 (game-theory)** and **V4 (distillation)** — are **closed** in this repository: their kill-line protocols, adversarial & equilibrium analyses, probe verdicts and negative results are all kept on disk. **V5 (mind–matter formulation)** remains an **unstarted draft direction**, not an experiment line with results.
+Deposon is a research program on making multi-step LLM reasoning **machine-recheckable**. Its first two lines — **V1 (mind-map)** and **V2 (game-theory explanation)** — are **published** in the paper above; two further lines — **V3 (game-theory)** and **V4 (distillation)** — are **closed** in this repository: their kill-line protocols, adversarial & equilibrium analyses, probe verdicts and negative results are all kept on disk. **V5 (mind–matter formulation)** is in **SPEC-precursor planning** (draft #16, work-in-progress): a plan draft exists, but **no experiment has been run, no SPEC drafted, and no result claimed** — not an experiment line with results.
 
 ## Project lines
 
@@ -12,11 +12,11 @@ Deposon is a research program on making multi-step LLM reasoning **machine-reche
 | **V2** | **博弈论解释 / Game-theory explanation** — the scattering mechanism explained and tested game-theoretically (potential game, coordination ratio, falsified dynamical-equivalence propositions) | ✅ published |
 | **V3** | **博弈论主线 / Game-theory line** — pre-registered kill protocols, adversarial & equilibrium analyses, independent verifier suites; closed on recorded verdicts | ✅ closed |
 | **V4** | **蒸馏主线 / Distillation line** — distilling human judgment *methods* into datasets for **AI critical learning** (method transfer — explicitly **not** behavioral profiling) | ✅ closed |
-| **V5** | **物心回路 / Mind–matter formulation** — SPEC-precursor planning only; no experimental program has been initiated | 📝 draft only · not started |
+| **V5** | **物心回路 / Mind–matter formulation** — SPEC-precursor planning only; no experimental program has been initiated | 📝 SPEC-precursor planning · draft #16 · not started |
 
 **V1 + V2 are published as**: *Deposon: An Auditable, Conservation-Guaranteed, Game-Theoretically Tested Scattering Layer over LLM Reasoning Paths* — Qihao Yuan, [arXiv:2609.09001](https://arxiv.org/abs/2609.09001) (cs.AI, 2026-09; 23 pages, 5 figures). This repository is the program's code, verifier and record set.
 
-> **Status wording.** `closed` means: the line's recorded work has reached a verdict and no further experiment is scheduled for it — it does **not** mean every hypothesis in the line was confirmed. A closed line may carry negative results, known defects, or a verdict that a construction failed rather than a claim. Read each line's own verdict files for what was actually decided. `draft only · not started` means that planning text exists but no SPEC or experimental program has been initiated; it implies no measurements, results, or verdicts.
+> **Status wording.** `closed` means: the line's recorded work has reached a verdict and no further experiment is scheduled for it — it does **not** mean every hypothesis in the line was confirmed. A closed line may carry negative results, known defects, or a verdict that a construction failed rather than a claim. Read each line's own verdict files for what was actually decided. `draft only · not started` means that planning text exists but no SPEC or experimental program has been initiated; it implies no measurements, results, or verdicts. Since 2026-11-09 the V5 row reads `SPEC-precursor planning · draft #16 · not started`: the plan draft has reached #16 (整改版), which is still planning text only — the freeze register (no SPEC drafting, no seed-mapping table, no kill-experiment design) is unchanged.
 
 ## The mechanism (V1 + V2 core)
 
@@ -37,11 +37,14 @@ Deposon is a research program on making multi-step LLM reasoning **machine-reche
 - **V3 · game-theory line** — the mechanism program ran under preregistration discipline: kill-line protocols, adversarial checks, equilibrium / coordination analyses and independent verification. Current specs live under [`docs/V3X/`](docs/V3X/); audit suites under [`verifier/`](verifier/); run records and verdicts under [`results/`](results/). The line's terminal verdicts (including a known-defect verdict on one hard-gap item) are recorded in `results/L1/V3/verdict/judgement/`.
 - **V4 · distillation line** — human judgment *methods* (criteria, trade-offs, stopping rules) were collected and distilled into structured datasets for **AI critical learning**: the objective is *method transfer to AI*, explicitly **not** building a behavioral profile. Collection datasets and ledgers live under [`results/`](results/) (`pi_cot` series); the line's probe and adjudication verdicts in `results/L1/V4/verdict/judgement/`.
 
-## V5 — draft only, not started
+## V5 — SPEC-precursor planning, not started (draft #16)
 
 - The V5 direction currently has a **SPEC-precursor plan draft**: it organizes the named direction, evidence and wording discipline, prerequisites, and decision points. Its claims are capped at **declaration level**.
 - The draft's own freeze register records **no SPEC drafting, no seed-mapping table, no kill-experiment design, and no literature pre-scan**. Accordingly, there are **no V5 experimental measurements, results, or verdicts** to report.
 - The `results/L1/V5/` folder is retained as a filing label and may contain mixed-line records. Its presence is not evidence that a V5 experimental program exists or that any V5 claim has been established.
+- **Cold-start pack (定义行·B 轨升格位)**: a cold-start agent pack = ① V5 plan draft #16 (main text, mirrored in-repo) + ② this repo (github.com/zeroandcat/Deposon) + ③ the baseline commit as measured by `git ls-remote` at drafting time + ④ a declaration that the annotation book and other shared/ working files are **not part of the pack and not execution-required** (execution surface has zero dependency on them; the annotation book is now mirrored in-repo for auditability — see the planning register below) + ⑤ a superseding note that `handoff_machine_readable.json` follows the plan draft where they conflict.
+- **Current planning register (2026-11-10)**: plan draft #15 `c70fa2e6fce0` (1,311 lines) → **#16 `817db4166817` (1,484 lines, PI-accepted round version)**, mirrored in this repo at `_repo_mirror/V5计划/查理_V5计划本体十六稿_2026_11_09.md`; annotation book `d435dff68e47` (780 lines) + draft-#16 annotation sheet `afb5161a8308` (91 lines), both mirrored under `_repo_mirror/V5计划/`; persistent ledger `b54bced0927a` (886 lines, P92 state; internal working file, not in this repo).
+- **TRAE→TREA erratum note**: PI ruling 2026-11-09 17:46 — "TRAE" is a misspelling of **TREA** (end-letter transposition, same type as SOAT/SOTA). All citation sites of the TRAE-named asset chain carry this note; the remote rename was executed at R30 (2026-11-10 PI order) — see the mirror governance notes below.
 
 > **On the `results/L1/` family folders.** The experiment tree groups records by family (`V3`, `V4`, `S3S4`, `G-E01`, `T`, `K-杀线`, `ηETAC`, `39词`, `K-EXP8`, `委托面`, …). Folder names are **filing labels for where a file was archived, not a claim that every file inside belongs to that experiment line** — a directory may also hold cross-line bookkeeping and archival ledgers. Read each file's own header for what it is; the tree is an index of the record, not a taxonomy of conclusions.
 
@@ -108,6 +111,7 @@ MIT — see [LICENSE](LICENSE).
 - **其他在册审计例**：S3／S4 保存了算术收敛与逐线分判，未把整族宣称为收口；T1 温度轴只在既定构造域与 `>5pp` 可辨尺度上退役，并不推出「温度普遍无效」；ηETAC 的第三方复算记录了四档 `sep` 恒为 3 的判据退化观察，射程不外推。**测量、判据结果、构造失灵与命题级终判，始终分账。**
 - **树册目录之读法**：`results/L1/` 下之族名目录是**归档归位之标签**，非「该目录内每一件皆属该实验线」之断言；跨线台账与清卷工作件亦在其中，须以各件自身之卷首为准。
 - **密钥纪律**：一切 API key **只经环境变量**、0 硬编码、0 入库。｜**许可**：MIT（见 [LICENSE](LICENSE)）。
+**V5 现态（2026-11-10）**：计划本体已至十六稿（SPEC 前置层计划·整改版·PI 采认轮版·0 实验执行·0 SPEC 本体起草·立项候 PI 终判·全文已上仓 `_repo_mirror/V5计划/`）；README/handoff 已按 2026-11-10 现态刷新。
 
 ---
 
@@ -119,3 +123,16 @@ MIT — see [LICENSE](LICENSE).
 - R27 本地 staging 预计 **4,071 = R26 READY 4,069 + 对外交付册 1 + 本特殊根 README 1**。内部线索册与全量索引不进入 staging。
 - 对外交付册公开目标：`_repo_mirror/doc/_delivery_list_external_2026_10_30_r27.md`。R26 独立验证为 PASS；READY 原始／上传 SHA-256 与 v11 snapshot SHA-256 的两类交集均为 **0**。
 - 本轮仅本地重建与核验：**upload_authorization=false；remote_write=NOT_PERFORMED**；R26 孤本来源未重采；R27 已另行完成当前远端全树精确字节拉回（HEAD 06045bceff07908aa38b8b5d3e626731b7326e7d，3,438 件），范围外非镜像文件 434 件已留档保护。
+- 2026-11-10 注：本 README 刷新前远端 HEAD＝d471b2f（R29）——见下方「镜像治理注记」。
+
+## 镜像治理注记（2026-11-10 · remote mirror governance notes）
+
+- **Current HEAD**: `d471b2f` (R29 — remove five internal process artifacts from public mirror) was the pre-update baseline of this R30 refresh (README/handoff refresh + V5-plan mirror uploads + TREA renames). The R27 ledger above was written at HEAD `06045bc`; treat both as point-in-time registers, and always measure the current HEAD post-clone (`git ls-remote origin main`).
+- **`_v5_` prefix count**: **218 files** as measured on origin/main at `d471b2f` (after the 2026-10-23 public-mirror narrowing of −166 files). The previously registered count of **235** is a **pre-narrowing historical snapshot**; executors should always measure post-clone (`git ls-tree -r origin/main --name-only | grep -c "_v5_"`).
+- **Mirror-drift register (3 MISMATCH · all "true at registration, stale vs. remote current state" — not fabrications)**:
+  1. **README registration (#8)**: draft-cited README version `a80b3db006a5` (7,279 B) was superseded by the R27 rebuild (`83485a30da0c`, 13,709 B), and again by this R30 refresh; old versions are recoverable via `git log -S` archaeology.
+  2. **B3 blob (#11)**: blob `5c47126d361b` was removed at R27 — now reachable **only via history** (`git log --find-object=5c47126d361b`, last seen at `06045bc`).
+  3. **TRAE chain file (#12)**: the locally registered v37 (`1b6ceaef0290`, 857,249 B) vs. the remote in-place copy (`62425707bfe3`, 857,116 B) differ by **133 B** — remote copy verified as the **redacted mirror variant** of the same v37; dual-anchor citation: registered anchor kept + remote measured anchor noted.
+- **TRAE→TREA rename (executed at R30 · PI order 2026-11-10 00:23「重命名」)**: per PI ruling 2026-11-09 17:46 "TRAE是误拼于TREA" (end-letter transposition, same type as SOAT/SOTA), the asset-chain file `_repo_mirror/类型面/work/_unclassified/repo/docs/V3X/TRAE_V3_ASSET_ERRATUM_2026_09_23.md` is renamed to **`TREA_V3_ASSET_ERRATUM_2026_09_23.md`** (blob unchanged, `62425707bfe3`), together with the uppercase `TRAE_`-prefixed family (8 files in total; full old→new mapping in the R30 commit message). Pre-rename paths remain recoverable via `git log --follow`. Historical references to old names inside existing mirror files are **point-in-time registers left untouched** (0 content edit beyond the registered positions); read them with the erratum note above. Lowercase `_trae` / infix usages recording the external tool "Trae code" as addressee/actor were **not** renamed this round (scope ruling provisional; PI may extend with one sentence).
+- **V5 plan upload register (2026-11-10 · PI order「皆上传」)**: `_repo_mirror/V5计划/查理_V5计划本体十六稿_2026_11_09.md` (`817db4166817`·1,484 lines), `_repo_mirror/V5计划/查理_V5计划本体注释册_2026_11_09.md` (`d435dff68e47`·780 lines), `_repo_mirror/V5计划/查理_V5计划本体十六稿注释面_2026_11_09.md` (`afb5161a8308`·91 lines) — mirrored for auditability per PI order; the cold-start execution surface still has **zero dependency** on the annotation book / annotation sheet.
+- **handoff_machine_readable.json**: updated to schema v2 alongside this README; where the handoff file and the V5 plan draft conflict, **the plan draft governs**.
