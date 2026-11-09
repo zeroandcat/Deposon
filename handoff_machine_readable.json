@@ -2,13 +2,13 @@
   "schema": "deposon-handoff/v2",
   "purpose": "机读交接文档：新会话加载本文件即可恢复全部上下文，无需读取长对话历史",
   "generated": "2026-11-10",
-  "changelog_v1_to_v2": "v1 (2026-08-30) → v2 (2026-11-10): V1–V4 收官事实全保留；repo 指针刷新为公开镜像仓；push_policy 对齐在册事实（记事实不记政策预言）；新增 v5_plan 节（决议链/底账/四月时间轴与试序/冷启动包/TRAE→TREA 注记/十六稿指纹）；新增 pending_pi_items；v1 保留于 git 历史。R30 执行（PI 令 2026-11-10 00:23）：V5 计划三件上仓 _repo_mirror/V5计划/＋TRAE_ 前缀族 8 件远端重命名 TREA_＋README 刷新",
+  "changelog_v1_to_v2": "v1 (2026-08-30) → v2 (2026-11-10): V1–V4 收官事实全保留；repo 指针刷新为公开镜像仓；push_policy 对齐在册事实（记事实不记政策预言）；新增 v5_plan 节（决议链/底账/四月时间轴与试序/冷启动包/TRAE→TREA 注记/十六稿指纹）；新增 pending_pi_items；v1 保留于 git 历史。R30 执行（PI 令 2026-11-10 00:23）：V5 计划三件上仓 _repo_mirror/V5计划/＋TRAE_ 前缀族 8 件远端重命名 TREA_＋README 刷新；R31 回改（PI 令 2026-11-10 00:56「请改回来」·P93）：TREA_ 前缀族 8 件全部回改 TRAE_ 原名＋README/handoff 治理面更正（TRAE 系正名·trae＝字节系 Agent 工具）",
   "project": {
     "name": "deposon",
     "one_liner": "守恒账/博弈论化研究项目：V1.X 主线 + V2.X 博弈论形式化已共同收束；三层级『动力学≈最优响应』(P1a/P1b/T-P1c) 全部判死；终稿中英双版已交付并通过双审；V5（物心回路）计划本体演进至十六稿（SPEC 前置层计划·心智哲学阶段草案·整改版）——0 实验执行·0 SPEC 本体起草·V5 正式立项候 PI 终判",
     "status": "V1–V4 CLOSED (wrap-up complete); V5 in SPEC-precursor planning (draft #16), formal initiation pending PI final verdict",
-    "repo": "公开镜像仓 github.com/zeroandcat/Deposon（R30 刷新前基态 main＝d471b2f·R29；本 handoff v2 随 R30 提交——README/handoff 刷新＋V5 计划三件上仓＋TRAE_→TREA_ 重命名）；本地全量态沿 330dd6b 分支注记",
-    "push_policy": "对齐在册事实：papers 已入公开仓；2026-10-22 18:10 后至 R30 前本地增量 0 push；2026-11-10 R30 经 PI 令（P92·皆上传/重命名）执行受控增量推送（README/handoff 刷新＋V5 计划三件上仓＋TRAE_→TREA_ 重命名·凭证单命令内联鉴权 0 落盘）；公开镜像经三轮收窄治理（2026-10-23 −166 文件 / R27 重建+README 刷新 / R29 移除 5 件内部过程工件）；本字段记事实不记政策预言"
+    "repo": "公开镜像仓 github.com/zeroandcat/Deposon（R31 回改前基态 main＝3c1b5dd·R30；本 handoff v2 随 R31 提交——TREA_→TRAE_ 8 件回改＋README/handoff 治理面更正·TRAE 系正名）；本地全量态沿 330dd6b 分支注记",
+    "push_policy": "对齐在册事实：papers 已入公开仓；2026-10-22 18:10 后至 R30 前本地增量 0 push；2026-11-10 R30 经 PI 令（P92·皆上传/重命名）执行受控增量推送（README/handoff 刷新＋V5 计划三件上仓＋TRAE_→TREA_ 重命名·凭证单命令内联鉴权 0 落盘）；同日 R31 经 PI 令（P93·请改回来）执行 TREA_→TRAE_ 8 件回改推送（README/handoff 治理面更正·凭证单命令内联鉴权 0 落盘）；公开镜像经三轮收窄治理（2026-10-23 −166 文件 / R27 重建+README 刷新 / R29 移除 5 件内部过程工件）；本字段记事实不记政策预言"
   },
   "security": {
     "key_rule": "两枚 API key（Kimi/Ark）永不落盘、永不进子代理提示词；仅主代理单命令内联环境变量使用；任务结束用户删除",
@@ -50,7 +50,7 @@
       "PoA": "ECR (empirical coordination ratio / 分布级协调比)",
       "已证/proven": "已闭合（预登记判定）/ closed (pre-registered)",
       "穷举": "系统采样 61 图 × 状态全穷举 6760",
-      "TRAE": "TREA（PI 裁示 2026-11-09 17:46：TRAE 系误拼——末二字母倒置·与 SOAT/SOTA 同型；全部引用位误拼注记更正；远端 TRAE_ 大写前缀族 8 件已于 R30 重命名为 TREA_——PI 令 2026-11-10 00:23）"
+      "TRAE": "TRAE（PI 2026-11-10 00:56 自更正〔P93·请改回来〕：TRAE 系正名——trae＝字节系 Agent 工具；2026-11-09 17:46「TRAE是误拼于TREA」表述经 PI 自更正撤销；R30 重命名已于 R31 全量回改 TRAE_ 原名——树内 TREA_ 前缀残留 0）"
     },
     "figure_language_rule": "插图语言必须与论文语言一致（CN 版图用中文，EN 版图用英文）"
   },
@@ -89,7 +89,7 @@
     "sha12_16th_draft": "817db4166817",
     "predecessor_15th": "c70fa2e6fce0（1,311 行·361,964 B）",
     "annotation_book": "查理_V5计划本体注释册_2026_11_09.md（d435dff68e47·780 行·213,287 B·已上仓 _repo_mirror/V5计划/·执行面 0 依赖）＋配套注释面《查理_V5计划本体十六稿注释面_2026_11_09.md》（afb5161a8308·91 行·13,017 B·同批上仓）",
-    "decision_chain": "P89（2026-11-09 16:12:40 PI 授权「4月随于v5，其余双审代裁，可预实验择优」→ A 轨三决议〔SPEC 预设档定案/D4 平局破平/试序确认＋切回四案〕＋B 轨四决议〔各候选定读/冷启动判准四门/远端引用单向对齐/落位指引与执笔序〕·全部「代 PI 裁示〔P89 授权〕」）→ P91（2026-11-09 17:46:42 PI「均持撤回权采认」·七决议全部生效·撤回权保留——PI 一句话可收回·沿 P80 机制与边界；底账 P91·早期派单字面「P90」系口径差已对齐）→ P92（2026-11-10 00:23 PI「皆上传，重命名」——README/handoff 远端更新执行＋V5 计划三件上仓＋TRAE→TREA 远端重命名·远端写凭证就绪〔R30 落地〕）",
+    "decision_chain": "P89（2026-11-09 16:12:40 PI 授权「4月随于v5，其余双审代裁，可预实验择优」→ A 轨三决议〔SPEC 预设档定案/D4 平局破平/试序确认＋切回四案〕＋B 轨四决议〔各候选定读/冷启动判准四门/远端引用单向对齐/落位指引与执笔序〕·全部「代 PI 裁示〔P89 授权〕」）→ P91（2026-11-09 17:46:42 PI「均持撤回权采认」·七决议全部生效·撤回权保留——PI 一句话可收回·沿 P80 机制与边界；底账 P91·早期派单字面「P90」系口径差已对齐）→ P92（2026-11-10 00:23 PI「皆上传，重命名」——README/handoff 远端更新执行＋V5 计划三件上仓＋TRAE→TREA 远端重命名·远端写凭证就绪〔R30 落地〕）→ P93（2026-11-10 00:56 PI「请改回来」——TRAE 系正名自更正〔trae＝字节系 Agent 工具〕·R30 重命名 R31 全量回改 TRAE_ 原名·底账入册在途·以底账现态对齐）",
     "ledger": "查理_持久化记忆底账_2026_10_20.md——现态 b54bced0927a·886 行·406,549 B（2026-11-10 P92 入册态实测·调度席已实测恒等；内部工作件·不上仓）",
     "timeline_4m": {
       "anchor": "DeposonV5 第一步＝改 Qwen4 小模型（P78 第一步决策；P89-①「4月随于v5」——周期内上市即切回；V5 启动不等 Qwen4）",
@@ -97,7 +97,7 @@
       "gate_D": "冷启动试跑验收线（鲍勃新会话冷启动验证）→数值冻结（预实验回填后·定参终权在 PI）→正式立项（呈 PI 终判）"
     },
     "cold_start_pack": "①十六稿正文（已上仓 _repo_mirror/V5计划/）＋②远端仓 URL（github.com/zeroandcat/Deposon）＋③基态 commit d471b2f（十六稿起草时 ls-remote 实测·R29 作登记快照）＋④「注释册/shared 件不在包内·执行面 0 依赖」声明（注释册/注释面已上仓仅供审计·仍非执行依赖）＋⑤「handoff 机读件与十六稿冲突时以十六稿为准」覆盖声明——B 轨升格为十六稿卷首必备件",
-    "trae_trea_note": "PI 2026-11-09 17:46:42「TRAE是误拼于TREA」——TRAE 应作 TREA（末二字母倒置·与 SOAT/SOTA 同型）；全部引用位误拼注记更正；TRAE_V3_ASSET_ERRATUM 链文件 v37：本地盘登记本 1b6ceaef0290·857,249 B·5,650 行 vs 远端在位本 62425707bfe3·857,116 B（差 133 B·diff 实测＝脱敏替换变体·同 v37 版本标注「Mavis 团队｜v37 续｜2026-09-29」·非版本演进）——版本性质判读归 PI；远端重命名已于 2026-11-10 R30 执行（TRAE_V3_ASSET_ERRATUM_2026_09_23.md → TREA_V3_ASSET_ERRATUM_2026_09_23.md·TRAE_ 大写前缀族 8 件连锁·blob 不变·git log --follow 可溯·既有文件内容引用面按「登记时点真」原则 0 触保留）"
+    "trae_trea_note": "PI 2026-11-10 00:56 自更正（P93·「请改回来」）——TRAE 系正名（trae＝字节系 Agent 工具）；2026-11-09 17:46「TRAE是误拼于TREA」表述经 PI 自更正撤销；TRAE_V3_ASSET_ERRATUM 链文件 v37：本地盘登记本 1b6ceaef0290·857,249 B·5,650 行 vs 远端在位本 62425707bfe3·857,116 B（差 133 B·diff 实测＝脱敏替换变体·同 v37 版本标注「Mavis 团队｜v37 续｜2026-09-29」·非版本演进）——版本性质判读归 PI；R30 重命名已于 2026-11-10 R31 全量回改（TREA_V3_ASSET_ERRATUM_2026_09_23.md → TRAE_V3_ASSET_ERRATUM_2026_09_23.md·TREA_ 前缀族 8 件连锁回改·blob 不变·git log --follow 跨两次重命名可溯·树内 TREA_ 前缀残留 0·既有文件内容引用面按「登记时点真」原则 0 触保留）"
   },
   "user_side_todos": [
     "任务结束后删除两枚 API key",
@@ -113,7 +113,8 @@
     "术语挪用（PoA）是拒稿级风险——改名 ECR 并保留经典锚仅一句"
   ],
   "pending_pi_items": [
-    "SPEC 数值定参与冻结终批（预实验回填后呈）",
-    "V5 正式立项（P75 等 Qwen4·呈 PI 终判）"
+    "SPEC 数值定参与冻结终批（候预实验回填后呈·定参终权在 PI）",
+    "V5 正式立项（候示维持·P75 等 Qwen4 口径·呈 PI 终判）",
+    "M0 预实验（在途注记——执行状态以底账现态为准）"
   ]
 }
