@@ -1,0 +1,12 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 9431.81it/s]
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 9403.12it/s]
+M1_embedexempt {"config": "M1_embedexempt", "embed_mode": "exempt", "ln_exempt": false, "n_quant": 309, "ED_energy": 0.717343, "lm_head_ED_single": 0.0, "cond_max": 15253.412109375, "S4_cos_layer0": 0.1645, "S4_cos_median": 0.0433, "S4_KL_lastpos": 11.72578, "S5_bacc": 0.4854, "gates_prereg": {"G1A_ED": false, "G1A_cos_layer0": false, "G1A_direction": false}, "wall_s": 57.9}
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 9725.11it/s]
+M2_lnexempt {"config": "M2_lnexempt", "embed_mode": "tern", "ln_exempt": true, "n_quant": 197, "ED_energy": 0.264707, "lm_head_ED_single": 0.283891, "cond_max": 15253.412109375, "S4_cos_layer0": 0.8473, "S4_cos_median": 0.9803, "S4_KL_lastpos": 2.47482, "S5_bacc": 0.5905, "gates_prereg": {"G1A_ED": false, "G1A_cos_layer0": true, "G1A_direction": true}, "wall_s": 58.3}
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 9514.22it/s]
+M3_int8embed {"config": "M3_int8embed", "embed_mode": "int8", "ln_exempt": false, "n_quant": 310, "ED_energy": 0.6715, "lm_head_ED_single": 6.8e-05, "cond_max": 15253.412109375, "S4_cos_layer0": 0.166, "S4_cos_median": 0.0433, "S4_KL_lastpos": 11.79097, "S5_bacc": 0.4875, "gates_prereg": {"G1A_ED": false, "G1A_cos_layer0": false, "G1A_direction": true}, "wall_s": 57.5}
+Traceback (most recent call last):
+  File "/root/autodl-tmp/runs/c1midpath/c1_midpath_pre_v11.py", line 302, in <module>
+    json.dump(RES, open(f'{OUT}/c1midpath_results_v11.json', 'w', indent=1, ensure_ascii=False), ensure_ascii=False)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'indent' is an invalid keyword argument for open()
