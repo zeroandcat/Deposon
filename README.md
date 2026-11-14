@@ -131,9 +131,9 @@ Per PI order 2026-11-12 10:34:11（「如有可观成果，利用PAT上传」）
 - **R38（2026-11-13）**：0.6B W1 容器轮读数包——五臂 JSON＋readings report＋design md（`58ea2b458d54`）＋ac_judgement（12 资产）→ 指针 `mirror-0.6B-w1-20261113`（Deposon-V5-exec·11-13 12:01）。
 - **R39（2026-11-14）**：4B SP 轮 ALL-GREEN——设计案 `b405c2df3d88`＋judgement＋corrections＋复算件＋smoke/diag（20 资产·5.7 MB）→ 指针 `mirror-4B-sp-20261114`（Deposon-V5-exec·08:47）。
 - **R40（2026-11-14）**：0.6B SP 轮 ALL-GREEN——母体案 `40b281f62a88`＋judgement＋corrections＋复算件＋五臂 JSON（21 资产·5.4 MB·tag→commit `ab0ce0a5fb55`）→ 指针 `mirror-0.6B-sp-20261114`（Deposon-V5-exec·09:25）——SP-20 生成 21/21 BIT-EXACT·suite_manifest `fc728f255c45`·双审一致「无需继续迭代」。
-- **R41（2026-11-14·候入仓位）**：生活主题 SIM 轮（同锚差表示首档·A vs A′ 键集 Tanimoto 三粒度）**ALL-GREEN 闭合**——SIM-AC 带全绿（T_id=0.4222/T_fp=0.4761/T_flat=0.5251·硬门 14/14·A 轨独立复算 64/64·实验穷尽「无需继续迭代」双审共识·L=1024 退化带首例实证）→ 读数包 5 件（工具 `ecadb06b51b1`/读数 `6c70894b6fa8`/manifest `0251edbd60cc`/日志 `86e774cbe8e8`/呈报 `41a8f0435751`·**候同步轮入 V5-exec 后指针落位**）——本地 CPU-only 窗口 ≈15 min·先斩后奏双审代裁体例首兑现。
+- **R41（2026-11-14）**：生活主题 SIM 轮（同锚差表示首档·A vs A′ 键集 Tanimoto 三粒度）**ALL-GREEN 闭合**——SIM-AC 带全绿（T_id=0.4222/T_fp=0.4761/T_flat=0.5251·硬门 14/14·A 轨独立复算 64/64·实验穷尽「无需继续迭代」双审共识·L=1024 退化带首例实证）→ 读数包 6 件（工具 `ecadb06b51b1`/读数 `6c70894b6fa8`/manifest `0251edbd60cc`/日志 `86e774cbe8e8`/呈报 `41a8f0435751`＋勘正附条 `fc83cfd31649`·**已入 V5-exec `results/sim_20261114/`（commit `2b3eb87fac2e`·指针落位）**）——本地 CPU-only 窗口 ≈15 min·先斩后奏双审代裁体例首兑现。
 
-**注记行**（R37–R41 批共 99 资产位（94 已入仓＋5 候 sync）；全量指针指私仓；主仓 releases 0 纪律沿——「主仓公开面／私仓实验面」分工·如实呈报位沿盘点件）。
+**注记行**（R37–R41 批共 100 资产位（94 已入仓＋R41 SIM 读数包 6 件〔含勘正附条〕已入 V5-exec·2026-11-14 指针转正）；全量指针指私仓；主仓 releases 0 纪律沿——「主仓公开面／私仓实验面」分工·如实呈报位沿盘点件）。
 
 ---
 
