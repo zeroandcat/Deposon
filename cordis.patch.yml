@@ -1,0 +1,14 @@
+# dsh-plugin-deposon — profile layer (dsh bundle patch).
+#
+# This is the bundle declaration dsh's plugin manager consumes
+# (`dsh.bundle.patch` in package.json). It inserts the plugin entry into
+# dsh.profile.bundles with the configuration consumed by apply(ctx, config).
+# Every key here is consumed by plugin/index.js.
+- insert:
+    - id: deposon
+      name: dsh-plugin-deposon
+      config:
+        # Python interpreter for the gates self-test. Env override wins.
+        python: !!js process.env.DEPOSON_PYTHON ?? 'python3'
+        # Self-test timeout in milliseconds. Env override wins.
+        timeoutMs: !!js Number(process.env.DEPOSON_TIMEOUT_MS ?? 120000)

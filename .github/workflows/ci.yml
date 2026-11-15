@@ -18,6 +18,11 @@ jobs:
         run: python -m compileall -q harness gates mocks scripts tests
       - name: Gate arithmetic self-test (pure math, no external data)
         run: python tests/test_gates.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: dsh plugin load smoke (mock Cordis context, includes gates self-test)
+        run: node tests/test_plugin_load.mjs
       - name: Artifacts policy check (no readings in repo)
         run: |
           ! git ls-files | grep -E '\.(jsonl|log)$|(^|/)artifacts/'

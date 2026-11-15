@@ -1,0 +1,61 @@
+{
+  "name": "dsh-plugin-deposon",
+  "version": "0.1.0-preview.1",
+  "description": "Deposon memory-probe experiment harness as a DeepSeek Harness (dsh) plugin: pre-registered gates, frozen blind faces, and recompute tooling",
+  "type": "module",
+  "main": "plugin/index.js",
+  "files": [
+    "plugin",
+    "gates",
+    "harness",
+    "scripts",
+    "frozen",
+    "mocks",
+    "tests/test_gates.py",
+    "tests/test_plugin_load.mjs",
+    "docs",
+    "README.md",
+    "README.zh.md",
+    "CONTRIBUTING.md",
+    "SAFETY.md",
+    "BENCHMARK.md",
+    "THIRD_PARTY_NOTICES.md",
+    "CITATION.cff"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "deposon",
+    "memory",
+    "evaluation",
+    "pre-registered"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.1.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeroandcat/dsh-plugin-deposon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zeroandcat/dsh-plugin-deposon/issues"
+  },
+  "homepage": "https://github.com/zeroandcat/dsh-plugin-deposon#readme"
+}
