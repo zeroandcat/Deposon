@@ -1,0 +1,157 @@
+{
+ "blind_kh_map": {
+  "frozen": [
+   5,
+   6,
+   7,
+   13,
+   16,
+   17,
+   26,
+   33,
+   35,
+   41,
+   47,
+   52,
+   63,
+   64,
+   65,
+   67,
+   79,
+   80,
+   81,
+   82,
+   85,
+   90,
+   93,
+   98,
+   101,
+   102,
+   104,
+   107,
+   110,
+   113,
+   119,
+   125
+  ],
+  "n": 32,
+  "low_half(k<64)": 13,
+  "non_prefix_0_31": [
+   5,
+   6,
+   7,
+   13
+  ],
+  "is_prefix_type": false
+ },
+ "PC+": {
+  "shares": [
+   0.083,
+   0.25,
+   0.417,
+   0.25,
+   0.5,
+   0.417,
+   0.333,
+   0.5,
+   0.5,
+   0.583
+  ],
+  "rho": 0.8273,
+  "kh_used_n": 19,
+  "G1": true,
+  "G3": true,
+  "G4": true,
+  "G6'_distinct>=11/12": true,
+  "G3阈值注记": "12 槽聚合谱噪声带宽>单选谱（k=12 聚合方差的 ρ 衰减·P0 单选 0.7→12 槽 0.55·预注册带宽校正）"
+ },
+ "PC-": {
+  "shares": [
+   0.083,
+   0.25,
+   0.417,
+   0.083,
+   0.167,
+   0.167,
+   0.583,
+   0.167,
+   0.333,
+   0.25
+  ],
+  "mean": 0.25,
+  "rho": 0.3457,
+  "G1_空档注记": "机会位持平≈0.25·非形成（空档行为·门空档）",
+  "G6'": true,
+  "G7'_low/high": [
+   7,
+   16
+  ]
+ },
+ "PC-lockin": {
+  "distinct_min": 1,
+  "kh_used_n": 1,
+  "G6'_fail-loud检出": true,
+  "note": "单键复读 12 槽同键→distinct=1<11→G6' 红＝负控检出 ✓（值 False 即门红检出）"
+ },
+ "PC-pf50r": {
+  "baseline_stripped": 0.4,
+  "v2c_main": 0.4,
+  "share不动": true,
+  "rescues": 5,
+  "invalid": 0,
+  "pf": 5
+ },
+ "PC-pf50x": {
+  "baseline_stripped": 0.4,
+  "v2c_invalid→MISS承接_main": 0.4,
+  "share不动(bit-exact)": true,
+  "invalid": 5,
+  "pf": 5
+ },
+ "PC-fake": {
+  "第六类拦截": true,
+  "hits": [
+   "f状态冒充JSON"
+  ],
+  "PR-2注记": "拦截→INVALID→V2b MISS 承接（PC-pf50x 已证 share 不动 bit-exact）·账本状态 harness 侧计算（PG-2 在册）"
+ },
+ "PC-card": {
+  "detail": {
+   "2": {
+    "raw": 0.3415,
+    "E0": 0.0016,
+    "cc": 0.3404
+   },
+   "4": {
+    "raw": 0.3333,
+    "E0": 0.0028,
+    "cc": 0.3315
+   },
+   "8": {
+    "raw": 0.3636,
+    "E0": 0.0054,
+    "cc": 0.3602
+   }
+  },
+  "G5_cc跨基数差<=0.05": true,
+  "maxdiff": 0.0287
+ },
+ "PC-text": {
+  "wd_in_form": true,
+  "dv==wd 逐字节": true,
+  "form差分从句唯一": true,
+  "dv确认行成本字段": true,
+  "非dv确认行0成本字段": true
+ },
+ "gates": {
+  "PC+": true,
+  "PC-": true,
+  "PC-lockin负控检出": true,
+  "PC-pf50r": true,
+  "PC-pf50x": true,
+  "PC-fake": true,
+  "PC-card": true,
+  "PC-text": true
+ },
+ "P0p_ALL_GREEN": true
+}

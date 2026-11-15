@@ -1,0 +1,23 @@
+name: ci
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  gates-selftest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile all Python sources
+        run: python -m compileall -q harness gates mocks scripts tests
+      - name: Gate arithmetic self-test (pure math, no external data)
+        run: python tests/test_gates.py
+      - name: Artifacts policy check (no readings in repo)
+        run: |
+          ! git ls-files | grep -E '\.(jsonl|log)$|(^|/)artifacts/'

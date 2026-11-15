@@ -1,0 +1,12 @@
+# artifacts policy: research readings never enter the repo.
+# Self-contained readings packages (data + frozen tool copies + SHAs) are
+# released as pointers/archives alongside evidence rounds, not as repo files.
+artifacts/
+*.jsonl
+*.log
+*.tar.*
+.olean
+lake-build/
+__pycache__/
+*.pyc
+.env
