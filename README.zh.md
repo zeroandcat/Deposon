@@ -8,6 +8,7 @@ harness——可在
 - **判据预注册**：门定义/阈值/失败路径先写死再跑·轮内 0 事后校准·负控必须 fail-loud。
 - **读数包自含**：每轮交付可第三方独立复算的包（MANIFEST 哈希锚＋冻结判据/工具拷贝＋逐 op 台账＋日志＋复算脚本）——不能从包内复算的数字不是读数。
 - **门算术双实现**：Python 执行位＋Lean 4 机证位（core-only·0 sorry 债）·逐轮交叉核对。
+- **记忆 harness 本体随仓（本体层＋工具接口层双位·非仅供 agent 取用的工具）**：本体层＝凝子场容器 Lean 4 形式化（`harness/NingziContainer.lean`·core-only）＋外置追加式账本实例（DR-4 渲染面语义·读取仅回渲染行·0 原始账本注入）；接口层＝独立 stdio MCP 服务器（`mcp/`·protocol `2024-11-05`）·`deposon_memory_write`/`deposon_memory_read` 工具面仅系本体薄暴露——本体 import 即用·0 传输依赖·换模/重启不丢（构造性）·自检入 CI。
 - **读数＝模型×harness 联合读数**：报告行携带 locked-baseline 自检行（模型/种子/冻结面/工具哈希）。
 
 ## 状态：v0.x 预览版
@@ -50,7 +51,7 @@ python tests/test_gates.py   # 门算术自检（纯数学·0 外部数据）
 
 ## 目录
 
-`harness/` 发射器家族（env 参数化）｜`frozen/` 冻结面（盲化 K_h 映射·种子）｜
+`harness/` 发射器家族（env 参数化）＋`NingziContainer.lean`（凝子场容器·Lean 4 形式化·core-only）｜`mcp/` 记忆 harness 本体独立实例（外置追加账本＋DR-4 渲染面＋读写工具面＋自检·入 CI）｜`frozen/` 冻结面（盲化 K_h 映射·种子）｜
 `gates/` 门规范双实现｜`plugin/` dsh 插件入口（Cordis `apply`）｜
 `cordis.patch.yml` dsh bundle 声明（插件管理器消费的 profile patch）｜
 `package.json` npm 包（`dsh.bundle.patch`·`engines.dsh` 元数据）｜

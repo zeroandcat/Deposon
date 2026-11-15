@@ -21,6 +21,16 @@ What makes this harness unusual:
 - **Joint readings.** Readings are a joint product of model x harness;
   every report line carries the locked-baseline self-check line
   (models / seed / frozen faces / tool hashes).
+- **The memory harness proper ships in-repo — two layers, not just tools.**
+  (a) *Core layer*: the condensate-field container formalized in Lean 4
+  (`harness/NingziContainer.lean`, core-only) and instantiated as an
+  append-only external ledger with DR-4 render-surface semantics (reads
+  return rendered `key: text` lines, never raw records); (b) *interface
+  layer*: a standalone stdio MCP server (`mcp/`, protocol `2024-11-05`)
+  exposing `deposon_memory_write` / `deposon_memory_read` as a thin surface
+  over the core. The core runs import-direct with zero transport
+  dependencies and survives model swaps and process restarts by
+  construction; its self-test runs in CI.
 
 ## Status: v0.x preview
 
@@ -75,7 +85,8 @@ python tests/test_gates.py
 
 | path | content |
 |---|---|
-| `harness/` | launch-family entry points (env-parameterized) |
+| `harness/` | launch-family entry points (env-parameterized) + `NingziContainer.lean` (condensate-field container, Lean 4 formalization, core-only) |
+| `mcp/` | memory harness proper as a standalone stdio MCP instance: core layer (external append-only ledger, DR-4 render surface) + `deposon_memory_write`/`deposon_memory_read` tool surface + self-test (runs in CI) |
 | `frozen/` | frozen faces (blind K_h mapping, seed) |
 | `gates/` | gate specifications: Lean + Python dual implementations |
 | `plugin/` | dsh plugin entry (Cordis `apply(ctx, config)`) |
