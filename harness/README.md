@@ -1,6 +1,7 @@
 # Launcher family
 
-This directory hosts the launch-family entry points:
+This directory hosts the launch-family entry points and the in-repo
+core formalization of the memory harness:
 
 | file | generation | notes |
 |---|---|---|
@@ -8,6 +9,8 @@ This directory hosts the launch-family entry points:
 | `p2p_launch_v4_1_exec.py` | v4.1 | rerun launcher (A main cell + KIMI cell) |
 | `p2p_launch_v4_2_switch_patch_exec.py` | v4.2 | switch-segment patch launch |
 | `g6f_launch_exec.py` | G6f | per-op key-level supplement launch |
+| `NingziContainer.lean` | core | condensate-field container formalization (Lean 4, core-only, zero mathlib; cliff/fairness theorems) |
+| `CondensateLedger.lean` | core | machine-checked semantics of the ledger core, T1–T6 (Lean 4, core-only, no `sorry`; dual-implementation cross-check: `mcp/ledger_crosscheck.py`) |
 
 Notes:
 
