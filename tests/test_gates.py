@@ -1,5 +1,6 @@
 # Gate arithmetic self-test: pure math, no external data required.
 # Vectors are the published P2'-switch-segment aggregates (see BENCHMARK.md).
+import os
 import sys
 from fractions import Fraction as F
 
@@ -31,4 +32,20 @@ assert kappa(648, 0, 2592, 0, nL, nH) == 0
 # 2x2 independence zero-locus shared by kappa and b_norm
 assert a * n * nH - b * m * nL == -12170                 # switch deviation numerator
 assert a2 * n2 * nH - b2 * m2 * nL == 128240            # KIMI deviation numerator
+
+# Judgment-line v1.1 interfaces (gauge gate / raw-full obligation / three-band
+# adjudication) — same arithmetic, asserted through the gate module itself
+# (loads gates/judgment_v11.py by path; vectors in mocks/judgment_v11_vectors.json).
+import importlib.util
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_spec = importlib.util.spec_from_file_location(
+    "judgment_v11", os.path.join(_ROOT, "gates", "judgment_v11.py"))
+_jv = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_jv)
+_ok, _g = _jv.run_gate(verbose=False)
+assert _ok, {k: v for k, v in _g.items() if v is not True}
+# hand-checked anchors (mirror the Lean vector theorems in gates/judgment_v11.lean)
+assert _jv.F("38/152") < _jv.F("13/50")                  # key-level below the line
+assert _jv.F("646/2432") > _jv.F("13/50")                # flattened mis-read above it
+assert _jv.F("620/2432") < _jv.F("13/50")                # and the mirrored flip case
 print("test_gates: all assertions passed")

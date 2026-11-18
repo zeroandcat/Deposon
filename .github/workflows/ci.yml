@@ -18,6 +18,8 @@ jobs:
         run: python -m compileall -q harness gates mocks scripts tests
       - name: Gate arithmetic self-test (pure math, no external data)
         run: python tests/test_gates.py
+      - name: Judgment-line v1.1 interfaces self-test (gauge / raw-full / three-band, zero network)
+        run: python gates/judgment_v11.py
       - name: Memory harness MCP self-test (stdio, zero network)
         run: python mcp/selftest_mcp.py
       - name: Ledger dual-implementation cross-check (Lean T1-T6 vs Python core, zero network)

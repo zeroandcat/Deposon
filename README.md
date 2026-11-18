@@ -18,6 +18,14 @@ What makes this harness unusual:
 - **Dual implementations of the gates.** Gate arithmetic exists as Python
   (execution) and as Lean 4 theorems (machine-checked adjudication,
   core-only, zero sorry debt); the two are cross-checked per round.
+- **Judgment-line v1.1 interfaces.** Three plugin-faced pins for verdict
+  hygiene: a *measure-locator gate* (a judgment must declare its measure and
+  granularity, recompute-checked — flattened-unit mis-reads are rejected
+  before adjudication), a *raw-full logging obligation* (accepted, rejected,
+  and parse-failed responses all carry verbatim text), and *three-band
+  adjudication* (only the pre-registered primary band adjudicates; reference
+  and annotation bands report side-by-side, never decide — machine-checked
+  in Lean). See `docs/judgment-v11.md`.
 - **Joint readings.** Readings are a joint product of model x harness;
   every report line carries the locked-baseline self-check line
   (models / seed / frozen faces / tool hashes).
@@ -88,7 +96,7 @@ python tests/test_gates.py
 | `harness/` | launch-family entry points (env-parameterized) + `NingziContainer.lean` (condensate-field container, Lean 4 formalization, core-only) |
 | `mcp/` | memory harness proper as a standalone stdio MCP instance: core layer (external append-only ledger, DR-4 render surface) + `deposon_memory_write`/`deposon_memory_read` tool surface + self-test (runs in CI) |
 | `frozen/` | frozen faces (blind K_h mapping, seed) |
-| `gates/` | gate specifications: Lean + Python dual implementations |
+| `gates/` | gate specifications: Lean + Python dual implementations, incl. judgment-line v1.1 interfaces (gauge / raw-full / three-band) |
 | `plugin/` | dsh plugin entry (Cordis `apply(ctx, config)`) |
 | `cordis.patch.yml` | dsh bundle declaration (profile patch consumed by dsh plugin manager) |
 | `package.json` | npm package: dsh plugin metadata (`dsh.bundle.patch`, `engines.dsh`) |

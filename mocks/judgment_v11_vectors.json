@@ -1,0 +1,80 @@
+{
+  "gauge_gate": {
+    "valid_keylevel": {
+      "measure_id": "coupling_selection",
+      "granularity": "key",
+      "value": "38/152",
+      "vectors": {"hits": 38, "population": 152}
+    },
+    "flattened_misread": {
+      "measure_id": "coupling_selection",
+      "granularity": "token",
+      "value": "646/2432",
+      "vectors": {"hits": 646, "population": 2432}
+    },
+    "wrong_value": {
+      "measure_id": "coupling_selection",
+      "granularity": "key",
+      "value": "646/2432",
+      "vectors": {"hits": 38, "population": 152}
+    },
+    "unknown_measure": {
+      "measure_id": "coupling_selection_token",
+      "granularity": "token",
+      "value": "646/2432",
+      "vectors": {"hits": 646, "population": 2432}
+    }
+  },
+  "raw_full_obligation": {
+    "manifest_full": {
+      "raw_full_obligation": {"accepted": true, "gate_rejected": true, "parse_fail": true}
+    },
+    "manifest_partial": {
+      "raw_full_obligation": {"accepted": true, "gate_rejected": true}
+    },
+    "records_full": [
+      {"disposition": "accepted", "raw_head": "w 0\nr 1\n", "raw_full": "w 0\nr 1\nr 2\nw 3\n"},
+      {"disposition": "gate_rejected", "raw_head": "w 00\nr 1\n", "raw_full": "w 00\nr 1\nr 2\nw 03\n"},
+      {"disposition": "parse_fail", "raw_head": "Yes", "raw_full": "Yes\nNo\nYes\nNo"}
+    ],
+    "records_headonly": [
+      {"disposition": "accepted", "raw_head": "w 0\nr 1\n", "raw_full": "w 0\nr 1\nr 2\nw 3\n"},
+      {"disposition": "gate_rejected", "raw_head": "w 00\nr 1\n", "raw_full": ""},
+      {"disposition": "parse_fail", "raw_head": "Yes", "raw_full": "Yes\nNo\nYes\nNo"}
+    ],
+    "records_badprefix": [
+      {"disposition": "accepted", "raw_head": "w 0\nXX\n", "raw_full": "w 0\nr 1\nr 2\nw 3\n"}
+    ]
+  },
+  "three_band": {
+    "prereg": {
+      "primary": {"measure_id": "coupling_selection", "direction": "ge", "kill_line": "13/50"},
+      "annotations": [{"id": "gate_cost_pp", "threshold": "1/10"}]
+    },
+    "reading_keylevel_pass": {
+      "measures": {"coupling_selection": "38/152"}, "references": {}, "annotations": {}
+    },
+    "reading_keylevel_kill": {
+      "measures": {"coupling_selection": "13/50"}, "references": {}, "annotations": {}
+    },
+    "reading_missing": {
+      "measures": {"coupling_selection": null}, "references": {}, "annotations": {}
+    },
+    "reading_keylevel_pass_with_loud_refs": {
+      "measures": {"coupling_selection": "38/152"},
+      "references": {"endpoint_a": "7/25", "endpoint_b": "3/10"},
+      "annotations": {}
+    },
+    "reading_keylevel_pass_with_ann": {
+      "measures": {"coupling_selection": "38/152"},
+      "references": {},
+      "annotations": {"gate_cost_pp": "1074/10000"}
+    },
+    "reading_flattened_would_kill": {
+      "measures": {"coupling_selection": "646/2432"}, "references": {}, "annotations": {}
+    },
+    "reading_flattened_would_pass": {
+      "measures": {"coupling_selection": "620/2432"}, "references": {}, "annotations": {}
+    }
+  }
+}
