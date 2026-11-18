@@ -5,9 +5,9 @@
  "changelog_v1_to_v2": "v1 (2026-08-30) → v2 (2026-11-10): V1–V4 收官事实全保留；repo 指针刷新为公开镜像仓；新增 v5_plan/pending_pi_items 节。v2 后各轮（R30–R46）登记历史＝git log 考古（本字段 2026-11-18 起覆盖式·不再堆叠轮次叙事）。",
  "project": {
   "name": "deposon",
-  "one_liner": "守恒账/博弈论化研究项目：V1.X 主线 + V2.X 博弈论形式化已共同收束；三层级『动力学≈最优响应』(P1a/P1b/T-P1c) 全部判死；终稿中英双版已交付并通过双审；V5（物心回路）计划本体演进至十七稿（SPEC 前置层计划·重制版）——执行线大面积闭合（W-3 修复轮/SP 双轮/SIM/夜弧绑定深化/五臂链/fire6/w600 定性/VW-4 判别链在册·双机无卡空闲·六档镜像 ~60 GB）·VW 系 GPU 窗队列待发（VW-1 R2/R3·VW-2 全链·E 系网关链）·V5 正式立项候项目所有者终判",
+  "one_liner": "守恒账/博弈论化研究项目：V1 主线 + V2 博弈论形式化已共同收束；三层级『动力学≈最优响应』(P1a/P1b/T-P1c) 全部判死；终稿中英双版已交付并通过双审；V5（物心回路）计划本体演进至十七稿（SPEC 前置层计划·重制版）——执行线大面积闭合（W-3 修复轮/SP 双轮/SIM/夜弧绑定深化/五臂链/fire6/w600 定性/VW-4 判别链在册·双机无卡空闲·六档镜像 ~60 GB）·VW 系 GPU 窗队列待发（VW-1 R2/R3·VW-2 全链·E 系网关链）·V5 正式立项候项目所有者终判",
   "status": "V1–V4 CLOSED; V5 execution line in progress since 2026-11-12 — closed chains: W-2→W-3 repair (4B), 0.6B W1 container, 4B+0.6B SP dual rounds, SIM round, overnight three chains (gauge-face failure spectrum on record), P2/P2', night-arc binding deepening (L1/L2/IT3/L4B), gate-B adjudication (full-binding not claimed), five-arm chain, seq3 intervention, fire6 carrier iteration (FAIL accepted), w600 qualitative three-way verdict, VW-4 gauge+discrimination gates, VW-1 R1; GPU-window queue: VW-1 R2/R3, VW-2 full chain (regen→D1/D3→D0/D2, pre-reg V1.2), E-2; gateway chain E-1/E-3 zero-GPU",
-  "repo": "公开镜像仓 github.com/zeroandcat/Deposon（R33 全重制前基态 main＝50809f9·R32；本 handoff v2 随 R33 全重制轮结构波提交——十七稿件位新增＋README/handoff 指针面重制＋今夜执行果回填位〔分波制·注释面波/终态波后续〕）；本地全量态沿 330dd6b 分支注记；R36 后 main＝d7b251d（2026-11-12）·R37 README 可观成果证据轮登记节＋handoff 本刷新",
+  "repo": "公开镜像仓 github.com/zeroandcat/Deposon（R33 全重制前基态 main＝50809f9·R32；R33 全重制轮结构波——十七稿件位新增＋README/handoff 指针面重制·执行果回填终态波已闭合）；本地全量态沿 330dd6b 分支注记；R36 main＝d7b251d（2026-11-12）→ R37＝77c7bb8（可观成果证据轮登记节＋handoff 刷新·2026-11-12）→ R41 指针轮 → R45/R46 handoff 状态轮——现行远端 main＝59bb539（2026-11-18）·后续态以 git ls-remote 为准",
   "push_policy": "对齐在册事实：papers 已入公开仓；2026-10-22 至 2026-11-10 前本地增量 0 push；2026-11-10 三轮受控增量推送（V5 计划件上仓＋TRAE 正名往返＋十六/十七稿件位·凭证单命令内联 0 落盘）；公开镜像经三轮收窄治理（2026-10-23 −166 文件 / R27 重建+README 刷新 / R29 移除 5 件内部过程工件）；本字段记事实不记政策预言；R30–R46 轮次史＝git log 考古"
  },
  "security": {
@@ -94,28 +94,22 @@
   "timeline_4m": {
    "anchor": "DeposonV5 第一步＝改 Qwen4 小模型（P78 第一步决策；P89-①「4月随于v5」——周期内上市即切回；V5 启动不等 Qwen4）",
    "order": "SPEC 框架章（十二实验位逐条过门 A/B/C）→候选并入章（底模卡 3＋候补 2＋窄谱候选卡 6）→移植规格章→目标面锚→预实验章（M0 窗＋参数清单 8 项＋五步双账制）→执行时序章（四月表＋切回四案）→三底模试点（BitNet-2B4T/Qwen3-4B/Falcon-E·按预实验择优）→Qwen4 切回（周期内上市即切回）",
-   "gate_D": "冷启动试跑验收线（实验席新会话冷启动验证）→数值冻结（预实验回填后·定参终权在 PI）→正式立项（呈 PI 终判）"
+   "gate_D": "冷启动试跑验收线（执行侧新会话冷启动验证）→数值冻结（预实验回填后·定参终权在项目所有者）→正式立项（呈项目所有者终判）"
   },
   "cold_start_pack": "①十七稿正文（已上仓 _repo_mirror/V5计划/〔R33〕·十六稿正文同位在档 0 改）＋②远端仓 URL（github.com/zeroandcat/Deposon）＋③基态 commit 50809f9（十七稿起草时远端态·R32；历史链 d471b2f〔十六稿·R29〕在册）＋④「注释册/shared 件不在包内·执行面 0 依赖」声明（注释册/注释面已上仓仅供审计·仍非执行依赖）＋⑤「handoff 机读件与十六稿冲突时以十六稿为准」覆盖声明——B 轨升格为十六稿卷首必备件",
-  "trae_trea_note": "PI 2026-11-10 00:56 自更正（P93·「请改回来」）——TRAE 系正名（trae＝字节系 Agent 工具）；2026-11-09 17:46「TRAE是误拼于TREA」表述经 PI 自更正撤销；TRAE_V3_ASSET_ERRATUM 链文件 v37：本地盘登记本 1b6ceaef0290·857,249 B·5,650 行 vs 远端在位本 62425707bfe3·857,116 B（差 133 B·diff 实测＝脱敏替换变体·同 v37 版本标注「Mavis 团队｜v37 续｜2026-09-29」·非版本演进）——版本性质判读归 PI；R30 重命名已于 2026-11-10 R31 全量回改（TREA_V3_ASSET_ERRATUM_2026_09_23.md → TRAE_V3_ASSET_ERRATUM_2026_09_23.md·TREA_ 前缀族 8 件连锁回改·blob 不变·git log --follow 跨两次重命名可溯·树内 TREA_ 前缀残留 0·既有文件内容引用面按「登记时点真」原则 0 触保留）",
-  "m0_preexperiment": "M0 预实验现态（2026-11-10 执行回执）：8 项参数 4 项可实测（G0 管线级/统计层）全过失效判据——ε 有效但过宽（建议收紧至 1e-12·max|CE_p| 实测 2.22e-16）·±10pp 差阈检测力充分（power=1.0·MDE@0.95=6.09pp·有余量可收紧候终批）·τ=1e-6 非敏区不受挑战（首触发于 1e-3）·分歧率门 1.53% 有效（BIR 实测 0.00e+00）；4 项时序未至如实登记（N 周线/稀释阈/J1 海明/D4 依赖阈）；总门 BLOCKED（无 GPU＋LLM-AggreFact 门控 403——两障碍解阻判权归项目所有者）；差异表 8 行全部候终批·0 定参；实支 0 元（本地 CPU·1000 元/月硬约束内 0 超支）；报告《鲍勃_M0预实验报告_2026_11_10.md》b6e1e6598ba4＋数据包四件在 shared/（文件名沿在册实名保留）",
+  "trae_trea_note": "2026-11-10 P93 自更正——TRAE 系正名（trae＝字节系 Agent 工具）；2026-11-09「TRAE是误拼于TREA」表述经同轮自更正撤销；TRAE_V3_ASSET_ERRATUM 链文件 v37：本地盘登记本 1b6ceaef0290·857,249 B·5,650 行 vs 远端在位本 62425707bfe3·857,116 B（差 133 B·diff 实测＝脱敏替换变体·同 v37 版本标注「Mavis 团队｜v37 续｜2026-09-29」·非版本演进）——版本性质判读归项目所有者；R30 重命名已于 2026-11-10 R31 全量回改（TREA_V3_ASSET_ERRATUM_2026_09_23.md → TRAE_V3_ASSET_ERRATUM_2026_09_23.md·TREA_ 前缀族 8 件连锁回改·blob 不变·git log --follow 跨两次重命名可溯·树内 TREA_ 前缀残留 0·既有文件内容引用面按「登记时点真」原则 0 触保留）",
+  "m0_preexperiment": "M0 预实验现态（2026-11-10 执行回执）：8 项参数 4 项可实测（G0 管线级/统计层）全过失效判据——ε 有效但过宽（建议收紧至 1e-12·max|CE_p| 实测 2.22e-16）·±10pp 差阈检测力充分（power=1.0·MDE@0.95=6.09pp·有余量可收紧候终批）·τ=1e-6 非敏区不受挑战（首触发于 1e-3）·分歧率门 1.53% 有效（BIR 实测 0.00e+00）；4 项时序未至如实登记（N 周线/稀释阈/J1 海明/D4 依赖阈）；总门 BLOCKED（无 GPU＋LLM-AggreFact 门控 403——两障碍解阻判权归项目所有者）；差异表 8 行全部候终批·0 定参；实支 0 元（本地 CPU·1000 元/月硬约束内 0 超支）；报告《鲍勃_M0预实验报告_2026_11_10.md》b6e1e6598ba4＋数据包四件（文件名沿在册实名保留·项目档案考古）",
   "sha12_17th_draft": "00f2971ae043（1,569 行·428,636 B·R33 as-is 上仓）",
-  "execution_backfill_slot": "今夜执行果回填位（R33 终态波·在途）：0.6B/4B 真机预实验干跑（新机重走链·窗 A 真 0.6B-Deposon D 系挂测→B2 荷约束→B1 4B 修复臂）——回填以执行席执行回执锚定·读数到达即回填 README/handoff；迟于 23:15 到达则以「执行在途」如实登记（不阻塞·23:30 推送硬收口）；读数属计划阶段预实验干跑记录·非 V5 线结果·正式立项候 PI 终判",
+  "execution_backfill_slot": "R33 终态波已闭合·执行果已回填（0.6B/4B 真机预实验干跑链读数入档·后续执行链现行态＝project.status 字段；读数属计划阶段预实验干跑记录·非 V5 线结果·正式立项候项目所有者终判）",
   "observable_results_evidence_2026_11_12": {
-   "order": "PI 2026-11-12「如有可观成果，利用PAT上传」",
-   "dual_track": "架构席 A 轨判定件 ac6fdae56a41（荐 8）∩ 实验席 B 轨副签（荐 3＋批次 2 补签 4）",
+   "order": "2026-11-12 上传令（可观成果经 PAT 通道上仓）",
+   "dual_track": "A 轨判定件 ac6fdae56a41（荐 8）∩ B 轨副签（荐 3＋批次 2 补签 4）",
    "R35": "remote 3bf0738 · 3 files（2cd005abe5c8 呈报 md→docs/ · fcf7c60d2479 XLSX→results/ · d0b3acb51582 v11 log→results/）",
    "R36": "remote d7b251d · 4 files（ab33c298ddcb 长表→docs/ · d0b5f7c5aa7d fig4→results/ · 3110309788ce v11 py→results/ · 26811ab5e679 SPEC 差异表→docs/）",
    "non_upload": "checkpoint 账 48faab00b0a4 双轨共识不传（审计链由长表 §六＋XLSX 承载）",
    "discipline": "两轮纯新增·既有 0 触·凭据五式扫 0 命中（fig4 裸前缀假阳结构级放行）"
   },
-  "exec_mirror_0_6b_preview": {
-   "order": "PI 2026-11-12「将0.8B-deposon镜像于远端私有仓」——「0.8B」经 PI 11:55:11 帧同位印证读作 0.6B（Qwen3 系无 0.8B 型号）",
-   "repo": "zeroandcat/Deposon-V5-exec（private·PAT HTTPS 通道实测可达·push 权限 ✓）",
-   "inventory_2026_11_12": "W1 终态 ckpt_600.pt 1.5G〔c3bdf56d8365〕＋R1 终态 ckpt_resume_950.pt 2.3G〔9f2172b4ea4f〕＋chargeQ.pt 2.7M〔38bcaf3b4d92〕＋Qwen3-0.6B 基底 9 件＋binding_spec_memory_v2.json（主件候 R3 终态定·实验席 12:04:38 盘点）",
-   "channel_precheck": "权重 >10MB 不入 git（exec 仓 §2.4 红线）——Releases＋artifacts/ 指纹登记径；2.3G ckpt 超 2GiB 单资产上限→分卷/择径候 PI；小件（chargeQ.pt 2.7M/基底 9 件/binding spec）直推可行",
-   "trigger": "R3 终态定主件＋双审共识（PI 11:55:11）→镜像上传执行轮（本轮 0 执行·预检位 only）"
-  },
+  "exec_mirror_0_6b_preview": "2026-11-12 预检态折叠指针：原始镜像令「0.8B-deposon」经同位印证读作 0.6B（Qwen3 系无 0.8B 型号）；权重 >10MB 不入 git（exec 仓红线）——Releases＋artifacts/ 指纹登记径·2.3G ckpt 超 2GiB 单资产上限（分卷/择径已判）；已被 exec_mirror_releases 六档全量登记取代（mirror-0.6B-20261112 起）·预检细节＝git log 考古",
   "exec_mirror_releases": {
    "note": "2026-11-14 登记·六档全量（Deposon-V5-exec·私有仓 releases·主仓 releases 0 纪律沿）",
    "mirror-0.6B-20261112": "16 assets · 5.4 GB — 0.6B 底模系＋binding_spec_memory_v2.json（sha16 311898d853f6ca79）＋tokenizer 系",
