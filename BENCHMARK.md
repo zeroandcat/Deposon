@@ -62,3 +62,25 @@ Evidence rounds are pointer-only: `docs/evidence-rounds.md`. Self-contained
 readings packages (data + frozen tool copies + SHAs + recompute scripts)
 are the audit chain; the recompute path is `scripts/` + `gates/` +
 `frozen/` + a readings package. CI never requires external data.
+
+## Usability ablation (LongMemEval-S × dsh shell × teamorouter)
+
+Pre-registered deathline: plugin-usable iff M − E ≥ −3pp (acc on n=92
+excluded-adjusted set; exclusions pre-registered: 2 static PI rulings +
+6 same-family double-403 auto-exclusions, ledger persisted).
+
+| arm | acc | n |
+|---|---|---|
+| M (memory plugin on) | 0.0652 | 92 |
+| E (enabling baseline) | 0.0761 | 92 |
+
+**M − E = −1.09pp ≥ −3pp ⇒ PASS (usability confirmed).**
+McNemar exact b=2, c=3, p=1.0 (no significant paired difference).
+Ledger coverage 0.7283 (67/92); read/write paths exercised; no recall
+rewrites. Build cost 67,393.9 tok/question, 599.2 s/question (gateway
+window). Full audit chain: readings package (12-file manifest, sha12
+fingerprints, recompute script `recompute_ablation.py`, raw_full.tar.gz
+1,236 artifacts) — evidence round pointer, not bundled.
+
+Note: gain note position (+5pp) not reached; marginal-cost readings as
+registered. Judgment-free reporting; final read belongs to A-track + PI.
