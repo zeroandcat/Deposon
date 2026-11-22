@@ -38,7 +38,7 @@ any of its marks adjudicate:
 |---|---|---|
 | all_same_150 | d = 1/2, lam = 1 | KILL (constant marks = chance) |
 | chance_76_of_151 | d = 76/151 | KILL |
-| healthy_137_of_151 | d = 137/151, lam = 7/76, sig = 7/80 | PASS |
+| healthy_137_of_151 | d = 137/151, lam = 7/71, sig = 7/80 | PASS |
 | boundary_exact | d = 114/152 = 3/4 | PASS (inclusive edge) |
 | boundary_minus_one | d = 113/152 | KILL |
 | all_different | d = 76/151, sig = 1 | KILL |

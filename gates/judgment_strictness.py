@@ -36,7 +36,7 @@
 #      Vector anchors (published fractions):
 #        all-same judge   (150/150 same):  d = 0        KILL (floor anchor)
 #        chance judge     (76/151 correct): d = 76/151   KILL (< 3/4)
-#        healthy judge    (136/151 + partial rejections): d = 136/151  PASS
+#        healthy judge    (137/151 + partial rejections): d = 137/151  PASS
 #        over-strict judge (all-different): d = S/(S+D)  KILL if S/(S+D) < d_lo
 #      Boundary exactness: d == d_lo -> PASS (inclusive), by cross-multiplied
 #      integer comparison (no float rounding in the band test).
