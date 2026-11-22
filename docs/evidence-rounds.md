@@ -23,3 +23,8 @@ sha256_12 of the anchor artifacts.
 Blind face (frozen, seed 20261115): `b3693a8c1804`. Reader plugin frozen
 tool copy: `088ed4f8dd9c`. Pre-registered criteria text: `65a286367577` (v7-2
 case, section 6).
+
+| usability ablation (LongMemEval-S × dsh) | 2026-11-21 | MANIFEST `30a696a84c6e` | M−E=−1.09pp vs −3pp deathline PASS; n=92 (exclusions pre-registered); McNemar p=1.0; raw bundle in release benchmark-ablation-20261121 |
+| model-swap carryover band (VW-6 dual-caliber) | 2026-11-22 | MANIFEST `15410b2fb7fb` | swap-band \|Δ\|≤0.10 PASS in three calibers; unify gate FAIL (structural: continuation-hits 3.2× key-hits, caliber semantics differ); dual-caliber split-report candidate pending PI |
+| fire8R dual-arm mechanism gate (RJ/RC) | 2026-11-22 | MANIFEST `146e322eae8a` | D2 six-core both arms PASS (viol/flips/drift 0; charge continuity = frozen anchor); path-invariance evidence (10× corr-flips delta, identical verdict) |
+| tool-face practice round (D6 isolated replay) | 2026-11-22 | MANIFEST `f9639b0f4462` | 7 gates green; write/read round-trip via real MCP process; DR-4 render line preserved; sanitization gate machine-checked |
