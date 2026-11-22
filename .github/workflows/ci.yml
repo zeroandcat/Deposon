@@ -20,6 +20,10 @@ jobs:
         run: python tests/test_gates.py
       - name: Judgment-line v1.1 interfaces self-test (gauge / raw-full / three-band, zero network)
         run: python gates/judgment_v11.py
+      - name: Judge-strictness gauge self-test (preview.5 interface D, zero network)
+        run: python gates/judgment_strictness.py
+      - name: Six-family linkage structural validator (preview.5 interface E, zero network)
+        run: python gates/family_linkage.py
       - name: Memory harness MCP self-test (stdio, zero network)
         run: python mcp/selftest_mcp.py
       - name: Ledger dual-implementation cross-check (Lean T1-T6 vs Python core, zero network)

@@ -49,3 +49,26 @@ assert _jv.F("38/152") < _jv.F("13/50")                  # key-level below the l
 assert _jv.F("646/2432") > _jv.F("13/50")                # flattened mis-read above it
 assert _jv.F("620/2432") < _jv.F("13/50")                # and the mirrored flip case
 print("test_gates: all assertions passed")
+
+# Judge-strictness gauge (preview.5 interface D) — same arithmetic, asserted
+# through the gate module (gates/judgment_strictness.py; vectors in
+# mocks/judgment_strictness_vectors.json).
+_spec = importlib.util.spec_from_file_location(
+    "judgment_strictness", os.path.join(_ROOT, "gates", "judgment_strictness.py"))
+_js = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_js)
+_ok, _g = _js.run_gate(verbose=False)
+assert _ok, {k: v for k, v in _g.items() if v is not True}
+# hand-checked anchors (published readings): constant-marks probe 150/150
+# lands at chance d = 1/2 (zero discrimination kills); healthy 137/151 passes.
+assert _js.F(75, 150) == _js.F(1, 2)
+assert _js.F("137/151") > _js.F("3/4") > _js.F("76/151")
+
+# Six-family linkage validator (preview.5 interface E)
+_spec = importlib.util.spec_from_file_location(
+    "family_linkage", os.path.join(_ROOT, "gates", "family_linkage.py"))
+_fl = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_fl)
+_ok, _g = _fl.run_gate(verbose=False)
+assert _ok, {k: v for k, v in _g.items() if v is not True}
+print("test_gates: preview.5 assertions passed")
