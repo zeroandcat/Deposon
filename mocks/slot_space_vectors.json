@@ -1,0 +1,60 @@
+{
+ "band_prereg": {
+  "share_hi": "1/2 (inclusive)",
+  "F1_center_caliber": "position-term share of the reported second moment; > 1/2 -> INVALID",
+  "F2_space_membership": "every slot in [0, space_hi]; violation -> INVALID",
+  "F3_ratio_caliber": "ratio_true = var_true / uniform_var (reference, never adjudicates); ratio_defective = moment / uniform_var reported side-by-side"
+ },
+ "d1_r1_enumeration": {
+  "source": "D1 G2/V3R3 semantic-core round (package 43ac40acbe1e): R1 12/12 calls collapse to the perfect enumeration {0..11} of the 0..127 task space",
+  "correction": "2af01f9538f7 (2026-11-24): hardcoded center 63.5 (f8j 0..127 line) vs sample mean 5.5; position term 99.6%; direction flip 2.473 -> 0.0087",
+  "slots": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+  "center": "63.5",
+  "space_hi": 127,
+  "expect": {
+   "verdict": "INVALID",
+   "share": "40368/40511",
+   "var_true": "143/12",
+   "moment": "40511/12",
+   "ratio_true": "143/16383",
+   "ratio_defective": "40511/16383",
+   "published_defective_rounding": {"slot_var_1dp": 3375.9, "ratio_3dp": 2.473},
+   "published_true_rounding": {"ratio_6dp": 0.008729}
+  }
+ },
+ "f8j_v73frozen_call04": {
+  "source": "f8j v2.2 round (readings package c5aa9cc8e73d): R1 v73frozen call 04, slots genuinely spread over 0..125; sample mean 64.25 ~ center 63.5 (caliber appropriate in the original line)",
+  "slots": [20, 96, 88, 66, 62, 89, 25, 87, 0, 69, 86, 83],
+  "center": "63.5",
+  "space_hi": 127,
+  "expect": {
+   "verdict": "VALID",
+   "share": "27/44764",
+   "var_true": "44737/48",
+   "mean": "257/4",
+   "ratio_true": "44737/65532",
+   "ratio_defective": "11191/16383"
+  }
+ },
+ "boundary_share_half": {
+  "source": "synthetic boundary vector (exact 1/2 position share)",
+  "slots": [0, 2],
+  "center": 2,
+  "space_hi": 127,
+  "expect": {"verdict": "VALID", "share": "1/2"}
+ },
+ "just_over_half": {
+  "source": "synthetic just-over vector (share 9/13)",
+  "slots": [0, 2],
+  "center": "2.5",
+  "space_hi": 127,
+  "expect": {"verdict": "INVALID", "share": "9/13"}
+ },
+ "out_of_space_member": {
+  "source": "synthetic membership violation (slot 128 outside the 0..127 space; center caliber itself fine)",
+  "slots": [62, 63, 64, 128],
+  "center": "63.5",
+  "space_hi": 127,
+  "expect": {"verdict": "INVALID"}
+ }
+}

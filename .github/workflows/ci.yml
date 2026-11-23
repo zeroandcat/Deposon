@@ -24,6 +24,8 @@ jobs:
         run: python gates/judgment_strictness.py
       - name: Six-family linkage structural validator (preview.5 interface E, zero network)
         run: python gates/family_linkage.py
+      - name: Slot-space caliber gauge self-test (preview.7 interface F, zero network)
+        run: python gates/slot_space_caliber.py
       - name: Memory harness MCP self-test (stdio, zero network)
         run: python mcp/selftest_mcp.py
       - name: Ledger dual-implementation cross-check (Lean T1-T6 vs Python core, zero network)
