@@ -72,3 +72,18 @@ _spec.loader.exec_module(_fl)
 _ok, _g = _fl.run_gate(verbose=False)
 assert _ok, {k: v for k, v in _g.items() if v is not True}
 print("test_gates: preview.5 assertions passed")
+
+# Slot-space caliber gauge (preview.7 interface F) — same arithmetic, asserted
+# through the gate module (gates/slot_space_caliber.py; vectors in
+# mocks/slot_space_vectors.json). preview.8 N1 pin: the F1 share is
+# pos_term / moment (the reported second moment), NOT pos_term / uniform_var.
+_spec = importlib.util.spec_from_file_location(
+    "slot_space_caliber", os.path.join(_ROOT, "gates", "slot_space_caliber.py"))
+_sc = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_sc)
+_ok, _g = _sc.run_gate(verbose=False)
+assert _ok, {k: v for k, v in _g.items() if v is not True}
+assert _sc.F(40368, 40511) > _sc.F(1, 2)            # gate-line share on the D1 anchor -> INVALID
+assert _sc.F(3364) / (_sc.F(16383, 12)) > 2          # wrong-denominator read (~2.46): reference face only
+assert _sc.F(3364) / (_sc.F(16383, 12)) != _sc.F(40368, 40511)  # different denominators, never the gate line
+print("test_gates: preview.8 assertions passed (slot-space caliber gate + N1 denominator pin)")

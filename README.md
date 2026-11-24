@@ -26,13 +26,18 @@ What makes this harness unusual:
   adjudication* (only the pre-registered primary band adjudicates; reference
   and annotation bands report side-by-side, never decide — machine-checked
   in Lean). See `docs/judgment-v11.md`.
-- **Judge-strictness and slot-space caliber gauges (preview.5/7).** A judge
+- **Judge-strictness and slot-space caliber gauges (preview.5/7/8).** A judge
   must be calibrated before its marks adjudicate (interface D,
   `docs/judgment-v12-strictness.md`); a reused dispersion statistic must
   survive the center-caliber decomposition `E[(x-c)^2] = Var(x) + (mean-c)^2`
   — the position term must not dominate it (interface F,
   `docs/slot-space-caliber.md`, published case: a direction flip 2.473 ->
-  0.0087 from one stowaway cross-line center constant).
+  0.0087 from one stowaway cross-line center constant; preview.8 closes the
+  denominator declaration: the share is `pos_term / moment`, never
+  `pos_term / uniform_var`). The six-family linkage table
+  (`docs/family-linkage.md`, interface E) is fully linked as of preview.8 —
+  every iteration family's readings package anchor is registered in
+  `docs/evidence-rounds.md`, with the per-row judgment logged.
 - **Joint readings.** Readings are a joint product of model x harness;
   every report line carries the locked-baseline self-check line
   (models / seed / frozen faces / tool hashes).
@@ -103,7 +108,7 @@ python tests/test_gates.py
 | `harness/` | launch-family entry points (env-parameterized) + `NingziContainer.lean` (condensate-field container, Lean 4 formalization, core-only) |
 | `mcp/` | memory harness proper as a standalone stdio MCP instance: core layer (external append-only ledger, DR-4 render surface) + `deposon_memory_write`/`deposon_memory_read` tool surface + self-test (runs in CI) |
 | `frozen/` | frozen faces (blind K_h mapping, seed) |
-| `gates/` | gate specifications: Lean + Python dual implementations, incl. judgment-line v1.1 interfaces (gauge / raw-full / three-band), the preview.5 judge-strictness gauge + six-family linkage validator, and the preview.7 slot-space caliber gauge (see `docs/judgment-v12-strictness.md`, `docs/family-linkage.md`, `docs/slot-space-caliber.md`) |
+| `gates/` | gate specifications: Lean + Python dual implementations, incl. judgment-line v1.1 interfaces (gauge / raw-full / three-band), the preview.5 judge-strictness gauge + six-family linkage validator, and the preview.7 slot-space caliber gauge (six-family table fully linked in preview.8; see `docs/judgment-v12-strictness.md`, `docs/family-linkage.md`, `docs/slot-space-caliber.md`) |
 | `plugin/` | dsh plugin entry (Cordis `apply(ctx, config)`) |
 | `cordis.patch.yml` | dsh bundle declaration (profile patch consumed by dsh plugin manager) |
 | `package.json` | npm package: dsh plugin metadata (`dsh.bundle.patch`, `engines.dsh`) |

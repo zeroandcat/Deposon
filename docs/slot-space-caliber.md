@@ -1,4 +1,4 @@
-# Slot-space caliber gauge (preview.7 interface F, judgment-line v1.3 candidate)
+# Slot-space caliber gauge (preview.7 interface F, judgment-line v1.3 candidate; N1 denominator declaration closed in preview.8)
 
 Executable face: `gates/slot_space_caliber.py` (library + self-test gate,
 exit code 0 = ALL PASS). Vectors: `mocks/slot_space_vectors.json`
@@ -39,6 +39,15 @@ recomputes, as exact rationals:
 - `pos_term = (mean - c)^2` — the center-offset artifact;
 - `moment = E[(x - c)^2]` — what the reported statistic actually was;
 - `share = pos_term / moment` — position-term dominance.
+
+**Denominator declaration (N1, closed in preview.8).** The share that F1
+adjudicates is `pos_term / moment` — the position term over the *reported
+second moment*, the quantity the reading actually was. It is **not** the
+position term over the uniform-space variance: on the D1 anchor that other
+ratio is `3364 / (16383/12) = 3364/1365.25 ~= 2.46`, a reference-only
+quantity that belongs to the F3 face and never adjudicates. Same numerator,
+different denominators, different semantics; only `pos_term / moment` is
+the gate line.
 
 Checks:
 
