@@ -26,6 +26,12 @@ jobs:
         run: python gates/family_linkage.py
       - name: Slot-space caliber gauge self-test (preview.7 interface F, zero network)
         run: python gates/slot_space_caliber.py
+      - name: Slot-space caliber dual-implementation cross-check (preview.9 interface F close-out, zero network)
+        run: python gates/slot_space_crosscheck.py
+      - name: f3 judge calibration face self-test (preview.9, zero network)
+        run: python gates/descrev_calibration.py
+      - name: Readings-package completeness validator self-test (preview.9 interface G, zero network)
+        run: python gates/readout_completeness.py
       - name: Memory harness MCP self-test (stdio, zero network)
         run: python mcp/selftest_mcp.py
       - name: Ledger dual-implementation cross-check (Lean T1-T6 vs Python core, zero network)

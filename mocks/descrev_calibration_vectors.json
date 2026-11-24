@@ -1,0 +1,461 @@
+{
+ "_note": "f3 calibration face vectors (preview.9). Numbers transcribed from the published N9 DR-2 describability reverse-solve readings package; package names replaced by neutral ids in discovery order (class labels kept: carrier names are part of the experiment spec). Zero network.",
+ "dr2_published": {
+  "source": {
+   "package": "N9 DR-2 describability reverse-solve (17068, 2026-11-23)",
+   "manifest_sha12": "12acb114f695",
+   "readout_sha12": "65c8f6426bdb",
+   "stats_sha12": "b10bf07cc41f",
+   "status_sha12": "502faa607144"
+  },
+  "pkgs": [
+   {
+    "id": "p01",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p02",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p03",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p04",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p05",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p06",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p07",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p08",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p09",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p10",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p11",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p12",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p13",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p14",
+    "cls": "unknown",
+    "stats": false
+   },
+   {
+    "id": "p15",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p16",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p17",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p18",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p19",
+    "cls": "api-qwen4max",
+    "stats": true
+   },
+   {
+    "id": "p20",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p21",
+    "cls": "api-qwen4max",
+    "stats": true
+   },
+   {
+    "id": "p22",
+    "cls": "4b-w3",
+    "stats": true
+   },
+   {
+    "id": "p23",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p24",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p25",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p26",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p27",
+    "cls": "api-qwen4max",
+    "stats": true
+   },
+   {
+    "id": "p28",
+    "cls": "api-qwen4max",
+    "stats": true
+   },
+   {
+    "id": "p29",
+    "cls": "api-qwen4max",
+    "stats": false
+   },
+   {
+    "id": "p30",
+    "cls": "api-qwen4max",
+    "stats": false
+   },
+   {
+    "id": "p31",
+    "cls": "06b-it3",
+    "stats": false
+   },
+   {
+    "id": "p32",
+    "cls": "06b-it3",
+    "stats": false
+   }
+  ],
+  "attributions": {
+   "p19": "api-qwen4max",
+   "p21": "api-qwen4max",
+   "p27": "api-qwen4max",
+   "p28": "api-qwen4max"
+  },
+  "main1_attribution_acc": 1.0,
+  "main1_threshold": 0.75,
+  "main3_format_blind_acc": 1.0,
+  "main2_attr_stability": {
+   "passed": 4,
+   "total": 5,
+   "rate": 0.8,
+   "threshold_rate": 0.8
+  },
+  "expect": {
+   "verdict": "INCONCLUSIVE",
+   "reason_code": "ZERO_CONTRAST",
+   "n_probes": 4,
+   "faces_per_probe": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "s_pairs": 4,
+   "d_pairs": 0,
+   "lam": null
+  }
+ },
+ "two_class_all_correct": {
+  "pkgs": [
+   {
+    "id": "a0",
+    "cls": "A",
+    "stats": true
+   },
+   {
+    "id": "a1",
+    "cls": "A",
+    "stats": true
+   },
+   {
+    "id": "a2",
+    "cls": "A",
+    "stats": true
+   },
+   {
+    "id": "b0",
+    "cls": "B",
+    "stats": true
+   },
+   {
+    "id": "b1",
+    "cls": "B",
+    "stats": true
+   }
+  ],
+  "attributions": {
+   "a0": "A",
+   "a1": "A",
+   "a2": "A",
+   "b0": "B",
+   "b1": "B"
+  },
+  "expect": {
+   "verdict": "PASS",
+   "reason_code": "FULL_CONTRAST",
+   "n_probes": 5,
+   "faces_per_probe": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "s_pairs": 5,
+   "d_pairs": 5,
+   "tp": 5,
+   "tn": 5,
+   "fd": 0,
+   "fs": 0,
+   "d": "1",
+   "lam": "0",
+   "sig": "0"
+  }
+ },
+ "two_class_one_misattributed": {
+  "pkgs": [
+   {
+    "id": "a0",
+    "cls": "A",
+    "stats": true
+   },
+   {
+    "id": "a1",
+    "cls": "A",
+    "stats": true
+   },
+   {
+    "id": "a2",
+    "cls": "A",
+    "stats": true
+   },
+   {
+    "id": "b0",
+    "cls": "B",
+    "stats": true
+   },
+   {
+    "id": "b1",
+    "cls": "B",
+    "stats": true
+   }
+  ],
+  "attributions": {
+   "a0": "B",
+   "a1": "A",
+   "a2": "A",
+   "b0": "B",
+   "b1": "B"
+  },
+  "expect": {
+   "verdict": "PASS",
+   "reason_code": "FULL_CONTRAST",
+   "s_pairs": 5,
+   "d_pairs": 5,
+   "tp": 4,
+   "tn": 4,
+   "fd": 1,
+   "fs": 1,
+   "d": "4/5",
+   "lam": "1/5",
+   "sig": "1/5",
+   "attribution_acc": "4/5"
+  }
+ },
+ "two_class_two_misattributed": {
+  "pkgs": [
+   {
+    "id": "a0",
+    "cls": "A",
+    "stats": true
+   },
+   {
+    "id": "a1",
+    "cls": "A",
+    "stats": true
+   },
+   {
+    "id": "a2",
+    "cls": "A",
+    "stats": true
+   },
+   {
+    "id": "b0",
+    "cls": "B",
+    "stats": true
+   },
+   {
+    "id": "b1",
+    "cls": "B",
+    "stats": true
+   }
+  ],
+  "attributions": {
+   "a0": "B",
+   "a1": "B",
+   "a2": "A",
+   "b0": "B",
+   "b1": "B"
+  },
+  "expect": {
+   "verdict": "KILL",
+   "reason_code": "FULL_CONTRAST",
+   "s_pairs": 5,
+   "d_pairs": 5,
+   "tp": 3,
+   "tn": 3,
+   "fd": 2,
+   "fs": 2,
+   "d": "3/5",
+   "lam": "2/5",
+   "sig": "2/5",
+   "attribution_acc": "3/5"
+  }
+ },
+ "three_class_one_misattributed": {
+  "pkgs": [
+   {
+    "id": "a0",
+    "cls": "A",
+    "stats": true
+   },
+   {
+    "id": "a1",
+    "cls": "A",
+    "stats": true
+   },
+   {
+    "id": "b0",
+    "cls": "B",
+    "stats": true
+   },
+   {
+    "id": "b1",
+    "cls": "B",
+    "stats": true
+   },
+   {
+    "id": "c0",
+    "cls": "C",
+    "stats": true
+   },
+   {
+    "id": "c1",
+    "cls": "C",
+    "stats": true
+   }
+  ],
+  "attributions": {
+   "a0": "A",
+   "a1": "B",
+   "b0": "B",
+   "b1": "B",
+   "c0": "C",
+   "c1": "C"
+  },
+  "expect": {
+   "verdict": "PASS",
+   "reason_code": "FULL_CONTRAST",
+   "s_pairs": 6,
+   "d_pairs": 12,
+   "tp": 11,
+   "tn": 5,
+   "fd": 1,
+   "fs": 1,
+   "d": "8/9",
+   "attribution_acc": "5/6"
+  }
+ },
+ "single_class_with_stats": {
+  "pkgs": [
+   {
+    "id": "x0",
+    "cls": "X",
+    "stats": true
+   },
+   {
+    "id": "x1",
+    "cls": "X",
+    "stats": true
+   },
+   {
+    "id": "x2",
+    "cls": "X",
+    "stats": true
+   },
+   {
+    "id": "y0",
+    "cls": "Y",
+    "stats": false
+   },
+   {
+    "id": "y1",
+    "cls": "Y",
+    "stats": false
+   }
+  ],
+  "attributions": {
+   "x0": "X",
+   "x1": "X",
+   "x2": "X"
+  },
+  "expect": {
+   "verdict": "INCONCLUSIVE",
+   "reason_code": "ZERO_CONTRAST",
+   "n_probes": 3,
+   "faces_per_probe": [
+    1,
+    1,
+    1
+   ],
+   "s_pairs": 3,
+   "d_pairs": 0,
+   "lam": null
+  }
+ }
+}

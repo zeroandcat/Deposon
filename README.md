@@ -38,6 +38,19 @@ What makes this harness unusual:
   (`docs/family-linkage.md`, interface E) is fully linked as of preview.8 —
   every iteration family's readings package anchor is registered in
   `docs/evidence-rounds.md`, with the per-row judgment logged.
+- **Readings-package completeness validator + Lean mirror close-out
+  (preview.9).** `gates/readout_completeness.py` (interface G) scores any
+  readings package against the eight required contents of
+  `docs/readings-package-spec.md` (MANIFEST sha256_12 + mtime with the
+  zero-post-delivery-modification red line, frozen criteria, frozen tool
+  copy, blind faces, per-round logs, key-level per-op ledger, readout JSON,
+  recompute script with identity check); a missing key-level ledger makes
+  key-level gates **UNDECIDABLE**, never silently passed. The Lean mirror of
+  the slot-space caliber gate is cross-checked statement by statement
+  (`gates/slot_space_crosscheck.py`), and the f3 solve-judge carries a
+  calibration face (`gates/descrev_calibration.py`): the published DR-2
+  judge reading is INCONCLUSIVE for strictness (no D-marginal) while its
+  pre-registered main-1 face stands side by side.
 - **Joint readings.** Readings are a joint product of model x harness;
   every report line carries the locked-baseline self-check line
   (models / seed / frozen faces / tool hashes).
@@ -95,6 +108,14 @@ self-test).
 ## Quickstart (recompute)
 
 ```bash
+# one shot, no clone (fetches this repo via npm's git resolver, runs every
+# gate self-test + the plugin-load smoke + packaging integrity):
+npx -y github:zeroandcat/dsh-plugin-deposon#v0.1.0-preview.9
+
+# score a readings package against the 8 required contents (exit 0 = complete):
+python gates/readout_completeness.py /path/to/readings-package            # JSON verdict
+python gates/readout_completeness.py /path/to/readings-package --run-recompute   # + identity check
+
 # with a readings package directory at hand:
 READINGS_PACKAGE_DIR=/path/to/readings-package python scripts/g6f_recalc.py
 # gate arithmetic self-test (pure math, no data needed):

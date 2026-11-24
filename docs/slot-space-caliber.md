@@ -94,3 +94,16 @@ the flattened-unit mis-read rejected by the v1.1 measure locator — the
 unit survives, the center does not. The frozen readings face of the
 affected round stays untouched (0-modification); corrections register as
 separate files anchored to the package fingerprint.
+
+## Dual-implementation cross-check (preview.9)
+
+`gates/slot_space_crosscheck.py` closes the "Lean mirror candidate" item left
+open by the preview.7/8 review: X0 text-level invariants of
+`gates/slot_space_caliber.lean` (0 sorry in proof and body positions, 0
+import lines, exactly one axiom-audit line per theorem, required theorem
+names present, vector block placement), X1 every vector theorem re-verified by
+the Python integer mirror (26 statements), X2 universally quantified theorems
+spot-checked over 3000 cases each (20 theorems), X3 the published vectors agree
+across mirror and executable face. The Lean file is machine-checked locally
+(lean 4.15.0 core-only); CI carries no Lean toolchain, so the CI step is the
+cross-check, never a re-compile.

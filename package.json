@@ -1,12 +1,14 @@
 {
   "name": "dsh-plugin-deposon",
-  "version": "0.1.0-preview.8",
-  "description": "Deposon memory-probe experiment harness as a DeepSeek Harness (dsh) plugin: pre-registered gates, frozen blind faces, and recompute tooling",
+  "version": "0.1.0-preview.9",
+  "description": "Deposon memory-probe experiment harness as a DeepSeek Harness (dsh) plugin: pre-registered gates, frozen blind faces, and recompute tooling, with a one-shot quickcheck entry (npx)",
   "type": "module",
   "main": "plugin/index.js",
   "files": [
+    "cordis.patch.yml",
     "plugin",
     "gates",
+    "mcp",
     "harness",
     "scripts",
     "frozen",
@@ -57,5 +59,8 @@
   "bugs": {
     "url": "https://github.com/zeroandcat/dsh-plugin-deposon/issues"
   },
-  "homepage": "https://github.com/zeroandcat/dsh-plugin-deposon#readme"
+  "homepage": "https://github.com/zeroandcat/dsh-plugin-deposon#readme",
+  "bin": {
+    "deposon-quickcheck": "scripts/quickcheck.mjs"
+  }
 }

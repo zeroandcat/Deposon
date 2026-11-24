@@ -87,3 +87,53 @@ assert _sc.F(40368, 40511) > _sc.F(1, 2)            # gate-line share on the D1 
 assert _sc.F(3364) / (_sc.F(16383, 12)) > 2          # wrong-denominator read (~2.46): reference face only
 assert _sc.F(3364) / (_sc.F(16383, 12)) != _sc.F(40368, 40511)  # different denominators, never the gate line
 print("test_gates: preview.8 assertions passed (slot-space caliber gate + N1 denominator pin)")
+
+# Slot-space caliber dual-implementation cross-check (preview.9 closes the
+# "Lean mirror candidate" item): the core-only Lean mirror (0 sorry; axiom
+# audit transcribed in docs/slot-space-caliber.md) is re-verified statement by
+# statement against the Python integer mirror, the executable face, and the
+# published vectors. CI carries no Lean toolchain -> the cross-check is textual
+# + arithmetic, never a re-compile.
+_sc = importlib.util.module_from_spec(importlib.util.spec_from_file_location(
+    "slot_space_crosscheck", os.path.join(_ROOT, "gates", "slot_space_crosscheck.py")))
+_sc.__spec__.loader.exec_module(_sc)
+_ok, _g = _sc.run_crosscheck()
+assert _ok, {k: v for k, v in _g.items() if v is not True}
+print("test_gates: preview.9 interface F cross-check assertions passed (%d checks)" % len(_g))
+
+# f3 calibration face (preview.9): a judge is calibrated before its marks
+# adjudicate. The published N9 DR-2 judge reading is INCONCLUSIVE for
+# strictness (every probe sees one face -> no D-marginal), while its
+# pre-registered main-1 face is reported side by side, never replaced.
+_dc = importlib.util.module_from_spec(importlib.util.spec_from_file_location(
+    "descrev_calibration", os.path.join(_ROOT, "gates", "descrev_calibration.py")))
+_dc.__spec__.loader.exec_module(_dc)
+_ok, _g = _dc.run_gate(verbose=False)
+assert _ok, {k: v for k, v in _g.items() if v is not True}
+import json as _json
+_dr2 = _json.load(open(_dc.VECTORS_PATH, encoding="utf-8"))["dr2_published"]
+_r = _dc.calibration_face(_dr2["pkgs"], _dr2["attributions"])
+assert _r["verdict"] == "INCONCLUSIVE" and _r["reason_code"] == "ZERO_CONTRAST" and _r["d_pairs"] == 0
+assert _dr2["main1_attribution_acc"] >= _dr2["main1_threshold"]   # pre-registered face stands
+print("test_gates: preview.9 f3 calibration-face assertions passed (%d checks)" % len(_g))
+
+# Readings-package completeness validator (preview.9 interface G): a complete
+# package scores 8/8; the granularity trap (a ledger row without a key-level
+# field, e.g. a flattened evict_seq) is NOT a key-level ledger -> key-level
+# gates UNDECIDABLE, never silently passed.
+_rc = importlib.util.module_from_spec(importlib.util.spec_from_file_location(
+    "readout_completeness", os.path.join(_ROOT, "gates", "readout_completeness.py")))
+_rc.__spec__.loader.exec_module(_rc)
+_ok, _g = _rc.run_gate(verbose=False)
+assert _ok and _g["all_pass"], _g
+import tempfile as _tf
+with _tf.TemporaryDirectory() as _td:
+    _pkg = _rc.build_fixture(_td, "tg_complete", None, False)
+    _r = _rc.score_package(_pkg, run_recompute=True)
+    assert _r["score"] == 8 and _r["verdict"] == "COMPLETE" and _r["key_level"] == "DECIDABLE", _r
+    _ops = [f for f in os.listdir(_pkg) if "ledger" in f]
+    assert len(_ops) == 1
+    open(os.path.join(_pkg, _ops[0]), "w", encoding="utf-8").write('{"evict_seq": [[1, 2], [3, 4]], "token_sim": 0.3}\n')
+    _r2 = _rc.score_package(_pkg, run_recompute=True)
+    assert _r2["items"][6]["status"] == "FAIL" and _r2["key_level"] == "UNDECIDABLE", _r2
+print("test_gates: preview.9 interface G completeness-validator assertions passed")

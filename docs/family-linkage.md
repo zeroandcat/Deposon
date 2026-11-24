@@ -14,7 +14,7 @@ are now `linked`, and the `pending` vocabulary stays for future families.
 |---|---|---|---|---|
 | f1 | fire8 RED three-arm follow-up (ES5-bacc custodial vs 300-step dose) | `gates/judgment_v11.py` three-band adjudication; evidence-rounds row `fire8R` | fire8R 48-piece readings package anchor in `docs/evidence-rounds.md` | linked |
 | f2 | A8 w500/w600 platform continuation (PW-1 marginal-gain deathline) | `gates/judgment_v11.py` three-band adjudication (reference band: marginal-gain readings) | A8 w600 readings package (verdict / train-summary / gates anchors, s0 = w500 verdict) registered in `docs/evidence-rounds.md` | linked |
-| f3 | describability reverse-solve engineering | `gates/judgment_strictness.py` judge-strictness gauge (calibration face for the solve-judge) | N9 DR-2 readings package (MANIFEST anchor + readout/stats/status anchors) registered in `docs/evidence-rounds.md` | linked |
+| f3 | describability reverse-solve engineering | `gates/judgment_strictness.py` judge-strictness gauge; calibration face `gates/descrev_calibration.py` (preview.9: DR-2 -> INCONCLUSIVE / ZERO_CONTRAST, main-1 face reported side by side) | N9 DR-2 readings package (MANIFEST anchor + readout/stats/status anchors) registered in `docs/evidence-rounds.md` | linked |
 | f4 | E-2 / E-3 restart candidates (R2 perm derivative line) | `gates/judgment_v11.py` measure-locator gate (key-level locator discipline) | E-2 R2 readings package (MANIFEST anchor) registered in `docs/evidence-rounds.md`; E-3 not launched, no pointer | linked |
 | f5 | Lean L4-L9 rear-window theorem debt | `gates/judgment_v11.lean` core-only zero-sorry chain (style precedent for L4-L9 face) | L4-L9 implementation packages shared 2026-11-22 (four lean files, 50 theorems) | linked |
 | f6 | plugin iteration candidates (this preview line) | `gates/judgment_strictness.py` + `gates/family_linkage.py` (this gate) | this bump | linked |
@@ -46,6 +46,12 @@ registration (zero modification of any readings package).
   the verdict file name — that value is the sha12 of the terminal-account
   markdown; the verdict JSON itself measures `be22957b3d94`, which is what
   the evidence-rounds row carries.
+- **f3 -> calibration face (preview.9).** Running the DR-2 attributions
+  through `gates/descrev_calibration.py` gives `INCONCLUSIVE /
+  ZERO_CONTRAST`: every probe has exactly one computable face (S=4, D=0),
+  so the judge has no D-marginal and cannot be scored for strictness; the
+  pre-registered main-1 face (acc >= threshold) is reported side by side
+  and is never replaced by the calibration verdict.
 - **f3 -> linked.** The N9 DR-2 (describability reverse-solve, second
   iteration) readings package is on record: MANIFEST anchor `12acb114f695`,
   with readout / stats / status anchors re-measured and equal to the B-seat

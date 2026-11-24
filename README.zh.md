@@ -11,6 +11,7 @@ harness——可在
 - **判死线 v1.1 三接口**：裁决卫生三件套——量具判别门（判断须申报测度与粒度·复算核对·展平错读在裁决前被拒）＋全量原文落盘义务（接受/被拒/解析失败三类响应全带逐字原文）＋三层带裁决（仅预注册主判带裁决·参照带与注记带并列呈报 0 代裁——Lean 机检）。见 `docs/judgment-v11.md`。
 - **判官严格度与 slot 空间口径门（preview.5/7/8）**：判官先校准后裁决（接口 D·`docs/judgment-v12-strictness.md`）；跨线复用的离散统计须过中心口径分解 `E[(x-c)^2] = Var(x) + (mean-c)^2`——位置项不得主导（接口 F·`docs/slot-space-caliber.md`·在册案例：单个跨线中心常量致方向翻转 2.473→0.0087；preview.8 闭 N1 分母声明：份额恒为 `pos_term / moment`·非 `pos_term / uniform_var`）。六族链接表（`docs/family-linkage.md`·接口 E）自 preview.8 起六行全链接——各族读数包锚均已登记 `docs/evidence-rounds.md`·逐行判定附由。
 - **记忆 harness 本体随仓（本体层＋工具接口层双位·非仅供 agent 取用的工具）**：本体层＝凝子场容器 Lean 4 形式化（`harness/NingziContainer.lean`·core-only）＋外置追加式账本实例（DR-4 渲染面语义·读取仅回渲染行·0 原始账本注入）；接口层＝独立 stdio MCP 服务器（`mcp/`·protocol `2024-11-05`）·`deposon_memory_write`/`deposon_memory_read` 工具面仅系本体薄暴露——本体 import 即用·0 传输依赖·换模/重启不丢（构造性）·自检入 CI。
+- **读数包完备性校验器＋Lean 镜像收口（preview.9）**：`gates/readout_completeness.py`（接口 G）按 `docs/readings-package-spec.md` 八项必备内容给任一读数包打分（MANIFEST sha256_12＋mtime·交付后 0 改动红线／冻结判据／冻结工具拷贝／盲面／逐轮日志／键级逐 op 账本／读数 JSON／复算脚本＋恒等核）；**键级账本缺位＝键级门 UNDECIDABLE·绝不静默放过**。slot 空间口径门 Lean 镜像逐命题交叉核（`gates/slot_space_crosscheck.py`）；f3 解题判官配校准面（`gates/descrev_calibration.py`）——在册 DR-2 判官读数对严格度为 INCONCLUSIVE（无 D 边际）·预注册 main-1 面并列呈报不替代。
 - **读数＝模型×harness 联合读数**：报告行携带 locked-baseline 自检行（模型/种子/冻结面/工具哈希）。
 
 ## 状态：v0.x 预览版
@@ -47,6 +48,13 @@ dsh plugin add path:./dsh-plugin-deposon
 ## 快速开始（复算）
 
 ```bash
+# 一键免克隆（npm git 解析拉取本仓·跑全部门自检＋插件加载冒烟＋打包完整性）：
+npx -y github:zeroandcat/dsh-plugin-deposon#v0.1.0-preview.9
+
+# 给读数包按八项必备内容打分（exit 0 ＝完备）：
+python gates/readout_completeness.py /path/to/readings-package                  # JSON 判定
+python gates/readout_completeness.py /path/to/readings-package --run-recompute  # 加复算恒等核
+
 READINGS_PACKAGE_DIR=/path/to/readings-package python scripts/g6f_recalc.py
 python tests/test_gates.py   # 门算术自检（纯数学·0 外部数据）
 ```

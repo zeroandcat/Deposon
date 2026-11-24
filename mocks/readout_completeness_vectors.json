@@ -1,0 +1,15 @@
+{
+ "interface": "G (preview.9) readings-package completeness validator",
+ "spec": "docs/readings-package-spec.md (8 required contents)",
+ "note": "fixtures are built deterministically by gates/readout_completeness.py::build_fixture; expected outcomes below are asserted by the self-test. Case 'flattened_token_granularity' encodes the granularity trap (evict_seq token-as-key): a ledger row without a key-level field is NOT a key-level ledger -> key-level gates UNDECIDABLE, never silently passed.",
+ "cases": [
+  {"name": "complete", "score": 8, "verdict": "COMPLETE", "key_level": "DECIDABLE", "failed_items": []},
+  {"name": "complete_roles_override", "roles_override": true, "score": 8, "verdict": "COMPLETE", "key_level": "DECIDABLE", "failed_items": []},
+  {"name": "post_delivery_touch", "mutate": "touch", "score": 7, "verdict": "PARTIAL", "key_level": "DECIDABLE", "failed_items": [1]},
+  {"name": "sha_tamper", "mutate": "sha", "score": 7, "verdict": "PARTIAL", "key_level": "DECIDABLE", "failed_items": [1]},
+  {"name": "no_per_op_ledger", "mutate": "noops", "score": 6, "verdict": "PARTIAL", "key_level": "UNDECIDABLE", "failed_items": [6, 8]},
+  {"name": "no_recompute_script", "mutate": "norec", "score": 7, "verdict": "PARTIAL", "key_level": "DECIDABLE", "failed_items": [8]},
+  {"name": "ledger_tampered_identity", "mutate": "tamper", "score": 6, "verdict": "PARTIAL", "key_level": "DECIDABLE", "failed_items": [1, 8]},
+  {"name": "flattened_token_granularity", "mutate": "flattened", "score": 6, "verdict": "PARTIAL", "key_level": "UNDECIDABLE", "failed_items": [6, 8]}
+ ]
+}
