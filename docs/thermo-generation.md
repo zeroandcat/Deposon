@@ -5,7 +5,7 @@
 > 账本以事件流重放自解结算，守恒核 E⁰=Φ+R+D+U 逐位 fail-loud，单元终核 U→0。
 > 同一冻结 500 步操作迹对照：利用率 0% → 69.23%，期末在场行 152 → 61，单读渲染 1647 → 292 字符；
 > 代价：特定键命中率 50.31% → 47.85%（另 2.45% 以幻肢行如实回射；78+4=82，无静默丢失）。
-> 真机验收：驱动器修复前的 02:05 轮（L0）读数在案但幕一退化；修复后一轮（L1）被 OpenRouter 端点 400 阻断（08:25–08:33 换路径／换模型／定向路由复测 44 例同一报文；09:46–09:59 第三轮分诊：换新 key 仍 400，新 key 与旧 key 同账户；拒中继只落在实时生成族路径、发生在鉴权之后与请求校验之前，账户级与出口级仍未分辨），模型侧读数挂「待测」（状态见 §8）。未实测项一律标「待测」。
+> 真机验收：驱动器修复前的 02:05 轮（L0）读数在案但幕一退化；修复后一轮（L1）被 OpenRouter 端点 400 阻断（08:25–08:33 换路径／换模型／定向路由复测 44 例同一报文；09:46–09:59 第三轮分诊：换新 key 仍 400，新 key 与旧 key 同账户；拒中继只落在实时生成族路径、发生在鉴权之后与请求校验之前，账户级与出口级仍未分辨；(b) 非 CN 出口探针 10:27 奉令执行，本席无第二条出口、未能执行），模型侧读数挂「待测」（状态见 §8）。未实测项一律标「待测」。
 
 Change note for the preview.10 generation of `dsh-plugin-deposon`. It records
 why the memory ledger of preview.9 could not dissipate at all, what was built
@@ -24,7 +24,7 @@ are, and what they cost. Executable faces: `mcp/thermo_core.py` (core),
 | ledger self-test incl. unit close-out U→0, replay determinism, forged-event fail-loud | **measured** (25/25 assertions) | `python mcp/selftest_mcp.py` |
 | plugin face (tool registration, belief block, real ledger round trip through the dsh entry) | **measured** (34 checks) | `node tests/test_plugin_load.mjs` |
 | real-model round, pre-fix driver (2026-11-25 02:05, `deepseek/deepseek-v3.2-exp`) | **measured, act 1 degenerate** — see §8 | `harness/thermo_live_round.py` readings file (not in repo) |
-| real-model round, fixed driver | **pending** — blocked upstream (third triage 09:46–09:59: OpenRouter's gateway refuses the realtime-generation path family for this account/egress pair; account vs egress not distinguished) — see §8 | `harness/thermo_live_round.py` |
+| real-model round, fixed driver | **pending** — blocked upstream (third triage 09:46–09:59: OpenRouter's gateway refuses the realtime-generation path family for this account/egress pair; account vs egress not distinguished; the non-CN-egress probe ordered at 10:27 could not be run from this seat) — see §8 | `harness/thermo_live_round.py` |
 | hit-rate price / benchmark ablation on a real workload with this generation | **not measured** (待测) — §10 | — |
 
 ## 2. Diagnosis: utilisation was zero by construction
@@ -336,6 +336,39 @@ and the credits did not move. A dry run at
 09:55:04 on `66b53fc` is identical to the 08:32 one in every field but the
 timestamps. A background probe (one request every two minutes, at most 90,
 second key in its environment only) relaunches the round on the first 200.
+
+**Experiment (b), the same key from a non-CN egress (ordered by the PI at
+10:07, dispatched 10:27, attempted 10:27–10:36 +08:00): not run — this seat
+has no second egress.**
+
+- One way out only: a single interface (`eth0`); two independent echo
+  services (ipinfo.io, ifconfig.co) return the same address, geolocated
+  Beijing / CN / Alibaba Cloud (AS37963); Cloudflare's own trace for
+  `openrouter.ai` says `colo=LAX`, `loc=CN`; no IPv6 route.
+- No proxy of any kind: no proxy or CA-bundle variable, no proxy listener, no
+  `ssh` client, no global `git` proxy, no second interface, no acceleration
+  switch. The sandbox's command policy answers `403 Forbidden` to a command
+  that does no more than name a tunnelling tool (isolated test:
+  `which cloudflared`); that guard was not circumvented.
+- What is left would either hand the key to a third party (a code-execution
+  or request-relay service; a CI runner holding the key as a secret) or push
+  to the public repository, which this round forbids. None was taken without
+  the PI's explicit authorisation. A keyless hand-off — the probe and the
+  ignition, both one command — is in the delivery package for whoever holds
+  such an egress.
+- Control from the CN egress in the same minutes: the background probe is
+  still refused (16/16 at 10:30:58).
+
+So the determination is unchanged — account-level vs egress-level **not
+distinguished** — the round stays **BLOCKED**, and the seventeen slots of the
+ignition sheet stay **pending**. Its step 0, which needs no key, passes on
+`1e27d7c` (10:32:31–39): `thermo_demo --check` 13/13, `thermo_crosscheck`
+15/15, `lean_axiom_audit` 27/27, `selftest_mcp` 25/25, plugin load 34 checks.
+The freeze list was verified read-only against the current files — memory
+tree 12/12, experiment tree 23/23, both RAGs 6/6; the generator itself was
+not run, since it rewrites the frozen file. One pointer there is stale: the
+frozen `launch-v5preR2.md` (`221a454c81e9`) is version 2, while version 3
+(`8d7b1727a3b1`) has been current since 10:05.
 
 ## 9. Machine-checked and self-test faces
 
