@@ -5,7 +5,7 @@
 > 账本以事件流重放自解结算，守恒核 E⁰=Φ+R+D+U 逐位 fail-loud，单元终核 U→0。
 > 同一冻结 500 步操作迹对照：利用率 0% → 69.23%，期末在场行 152 → 61，单读渲染 1647 → 292 字符；
 > 代价：特定键命中率 50.31% → 47.85%（另 2.45% 以幻肢行如实回射；78+4=82，无静默丢失）。
-> 真机验收：驱动器修复前的 02:05 轮（L0）读数在案但幕一退化；修复后一轮（L1）被 OpenRouter 端点 400 阻断（08:25–08:33 换路径／换模型／定向路由复测 44 例同一报文；09:46–09:59 第三轮分诊：换新 key 仍 400，新 key 与旧 key 同账户；拒中继只落在实时生成族路径、发生在鉴权之后与请求校验之前，账户级与出口级仍未分辨；(b) 非 CN 出口探针 10:27 奉令执行，本席无第二条出口、未能执行；开源限定后 10:50 重试点火仍被挡（载体 `deepseek/deepseek-v3.2-exp`·MIT）），模型侧读数挂「待测」（状态见 §8）。未实测项一律标「待测」。
+> 真机验收：驱动器修复前的 02:05 轮（L0）读数在案但幕一退化；修复后一轮（L1）被 OpenRouter 端点 400 阻断（08:25–08:33 换路径／换模型／定向路由复测 44 例同一报文；09:46–09:59 第三轮分诊：换新 key 仍 400，新 key 与旧 key 同账户；拒中继只落在实时生成族路径、发生在鉴权之后与请求校验之前，账户级与出口级仍未分辨；(b) 非 CN 出口探针 10:27 奉令执行，本席无第二条出口、未能执行；开源限定后 10:50 重试点火仍被挡（载体 `deepseek/deepseek-v3.2-exp`·MIT）；载体按用户令 10:53 换为正式版 `deepseek/deepseek-v3.2`（MIT）后 10:57 重点火仍被挡），模型侧读数挂「待测」（状态见 §8）。未实测项一律标「待测」。
 
 Change note for the preview.10 generation of `dsh-plugin-deposon`. It records
 why the memory ledger of preview.9 could not dissipate at all, what was built
@@ -24,7 +24,7 @@ are, and what they cost. Executable faces: `mcp/thermo_core.py` (core),
 | ledger self-test incl. unit close-out U→0, replay determinism, forged-event fail-loud | **measured** (25/25 assertions) | `python mcp/selftest_mcp.py` |
 | plugin face (tool registration, belief block, real ledger round trip through the dsh entry) | **measured** (34 checks) | `node tests/test_plugin_load.mjs` |
 | real-model round, pre-fix driver (2026-11-25 02:05, `deepseek/deepseek-v3.2-exp`) | **measured, act 1 degenerate** — see §8 | `harness/thermo_live_round.py` readings file (not in repo) |
-| real-model round, fixed driver | **pending** — blocked upstream (third triage 09:46–09:59: OpenRouter's gateway refuses the realtime-generation path family for this account/egress pair; account vs egress not distinguished; the non-CN-egress probe ordered at 10:27 could not be run from this seat; the open-source-only ignition retried at 10:50 was refused the same way) — see §8 | `harness/thermo_live_round.py` |
+| real-model round, fixed driver | **pending** — blocked upstream (third triage 09:46–09:59: OpenRouter's gateway refuses the realtime-generation path family for this account/egress pair; account vs egress not distinguished; the non-CN-egress probe ordered at 10:27 could not be run from this seat; the open-source-only ignition retried at 10:50 was refused the same way, and so was the retry at 10:57 after the carrier was changed on the PI's instruction to `deepseek/deepseek-v3.2`) — see §8 | `harness/thermo_live_round.py` |
 | hit-rate price / benchmark ablation on a real workload with this generation | **not measured** (待测) — §10 | — |
 
 ## 2. Diagnosis: utilisation was zero by construction
@@ -405,6 +405,44 @@ So the round stays **BLOCKED**: S1–S13 pending, S14 BLOCKED, S16
 `deepseek/deepseek-v3.2-exp` (MIT), S16b true, S17 true — nothing estimated.
 Three things, and only these, would change the state: a non-CN egress for
 probe (b), a key from another account, or the gateway lifting the refusal.
+
+**Carrier changed on the PI's instruction (10:53: do not ignite a delisted
+model; dispatched 10:54, checked 10:55–10:58 +08:00): the ignition is refused
+just the same — still BLOCKED.**
+
+- Listing check, the website first (the PI's rule: the model square, not the
+  command's return). The square's search, rendered through a channel outside
+  this sandbox at 10:56, returns both `DeepSeek: DeepSeek V3.2 Exp` (Sep 29,
+  2025; 12.6 B tokens) and `DeepSeek: DeepSeek V3.2` (Dec 1, 2025; 309 B
+  tokens), neither tagged deprecated; the Exp page says "hosted by one
+  provider", 99.62 % availability over three days. The API agrees
+  (`GET /models` at 10:55:00, cached 5 s: listed, no expiration date; the
+  Endpoints API: one provider, status 0). So the pre-registered carrier is
+  **not delisted** — but its own description calls it "experimental …
+  primarily a research-oriented model", and it has a single provider left.
+- New carrier, chosen by a rule stated before the check (same family, final
+  release, listed, no expiration date, tool calling, open-source):
+  `deepseek/deepseek-v3.2`. Listing: on the square at 10:56 (Dec 1, 2025,
+  164 K context); `GET /models` at 10:55:00; three providers on the Endpoints
+  API at 10:55, all status 0 (SiliconFlow, DeepInfra, Baidu). Open-source:
+  `deepseek-ai/DeepSeek-V3.2` declares MIT, holds 163 weight shards, is not
+  gated, and ships the same MIT `LICENSE` file (10:56:32–45, through the
+  model hub's mirror). No closed-source model was considered.
+- Pre-ignition probe with the new carrier, 10:57:32: egress `loc=CN`,
+  `/auth/key` 200, **400 `Request path cannot be relayed`**. Ignition attempt,
+  exactly one (10:57:37–38): refused at the first model call; the driver's
+  stderr is byte-identical to the attempt with the previous carrier (same
+  sha12, `d96ab9b7438e`), which is what a refusal issued before the model is
+  read looks like.
+- The background probe was moved to the new carrier (v1 stopped at 10:57:10
+  after 29/29 refusals; v2 started at 10:57:59 with the new carrier and was
+  refused on its first probe).
+
+So the round stays **BLOCKED**: S1–S13 pending, S14 BLOCKED, S16
+`deepseek/deepseek-v3.2` (MIT), S16b true, S17 true — nothing estimated. The
+carrier change was ordered for hygiene and does not touch the cause; the
+three things that would change the state are unchanged (a non-CN egress for
+probe (b), a key from another account, or the gateway lifting the refusal).
 
 ## 9. Machine-checked and self-test faces
 
