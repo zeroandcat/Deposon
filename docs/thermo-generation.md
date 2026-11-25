@@ -283,7 +283,7 @@ as the first.**
 | this side | env, DNS, TLS, Cloudflare trace (09:46) | no proxy or CA-bundle variable set; `openrouter.ai` resolves to public Cloudflare addresses (no hijack); peer certificate issued by Google Trust Services for `openrouter.ai`, verified against the default trust store (no interception); Cloudflare sees `colo=LAX`, `loc=CN`, a Hangzhou Alibaba Cloud address |
 | second key | `/auth/key`, `/credits` (09:48:12) | 200, 200 — limit 7, spend 0, expires 2026-11-26T01:37Z |
 | second key | 1-token `POST /chat/completions`, `deepseek/deepseek-v3.2-exp`, then a `:free` model | **400 `Request path cannot be relayed`**, both |
-| first key | the same three probes (09:48:23–31) | 200, 200, **400, same message** |
+| first key | the same three probes (09:48:19–24) | 200, 200, **400, same message** |
 | account identity | full `/auth/key` of both keys (09:54) | same creator and workspace identifiers, same credits (20 total, 11.31307307 used) ⇒ **one account**; no disabled or restricted flag, budgets not exhausted |
 | controls | synthetic invalid key on `/auth/key` and `/chat/completions`; no `Authorization` | 401 `User not found.` ×2, 401 `No cookie auth credentials found` — none carries `x-openrouter-release` |
 | path table | 55 requests, 52 with a valid key (09:48–09:59) | below |
@@ -329,8 +329,10 @@ exactly that reason. Two one-request experiments separate them: a key from
 another OpenRouter account probed from this sandbox (relayed ⇒ account-level,
 refused ⇒ egress-level), or this key probed from a non-CN egress (relayed ⇒
 egress-level, refused ⇒ account-level). The block held from 07:58:56 to
-09:59:31 without a gap (background probes 08:03–08:49: 45/45; this triage:
-28/28 on the refused family), and the credits did not move. A dry run at
+09:59:27 without a gap (background probes 08:03–08:49: 45/45; this triage:
+28/28 on the refused family; the last refused request left at 09:59:26 and
+the last two controls, `/auth/key` 200 and `/credits` 200, at 09:59:28–31),
+and the credits did not move. A dry run at
 09:55:04 on `66b53fc` is identical to the 08:32 one in every field but the
 timestamps. A background probe (one request every two minutes, at most 90,
 second key in its environment only) relaunches the round on the first 200.
