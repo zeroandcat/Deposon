@@ -1,0 +1,6 @@
+# 接入子包的本地产物与依赖：不进仓
+node_modules/
+dist/
+# key 永不落盘；万一有人 export 到文件也挡在仓外
+.env
+*.key

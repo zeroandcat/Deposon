@@ -1,0 +1,22 @@
+{
+  "name": "@deposon/openrouter-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OpenRouter access for dsh-plugin-deposon: official @openrouter/sdk, key read from OPENROUTER_API_KEY only, typed failure classification (401 / 400 relay refusal vs other 400 / 429 / 5xx / network).",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test dist/gateway.test.js",
+    "e2e": "node dist/e2e.js"
+  },
+  "dependencies": {
+    "@openrouter/sdk": "1.5.139"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.7",
+    "typescript": "7.0.2"
+  }
+}

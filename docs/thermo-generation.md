@@ -617,6 +617,52 @@ pre-registration.**
   SDK; what would change it is unchanged: a non-CN egress, a key from
   another account, the gateway lifting the refusal — or the PI switching
   the two 4090 servers on for a local carrier of the registered size class.
+- **12:21–12:50, both servers booted without a GPU; their egress measured.**
+  The two instances came up without a card at 12:10:45 / 12:10:52 (PID 1
+  start) and were inventoried read-only over the key path
+  (`connect.nmb1.seetacloud.com:17068`, `:41995`; no credential written or
+  echoed). Both egresses are **CN** (12:26): Cloudflare trace `loc=CN`,
+  `colo=LAX`; ipinfo "Hohhot, Inner Mongolia, AS4837 CHINA UNICOM China169
+  Backbone"; ip-api "China / China Unicom" (egress IPs kept as sha12 only).
+  The non-CN-egress probe was therefore **not** run on the servers and the
+  key was not sent to them — these two machines cannot test the refusal
+  away. Keyless reachability from both: `GET /models` 200, `POST
+  /chat/completions` without a key 401. A client new to the project
+  (`openrouter/`, TypeScript, official `@openrouter/sdk` 1.5.139, key read
+  from `OPENROUTER_API_KEY` only; new files, verified code untouched) was
+  run from the CN egress: read path `GET /credits` 200 (12:41:08);
+  generation 400 "Request path cannot be relayed", release
+  `api;3e05b712-d9f7-4400-993a-7cb63338fd89`, `x-openrouter-error-origin:
+  client`, PoP LAX — in both runs (12:41:08 and 12:42:43). Three of the
+  eight requests in the four runs met a transport-level `fetch failed`
+  (classified `NETWORK`, retryable). An invalid key gives 401 "User not
+  found." with no release header (12:41:05). Nothing estimated; S1–S13
+  stay pending, S14 BLOCKED.
+- **Correction to the handoff probe.** `or_noncn_probe_v3.py` (delivered
+  11:2x) carries a file path where the model slug belongs, in its `MODEL`
+  default (three places), so the pre-ignition probe record of 11:25:53
+  logged a path in its `model` field. The refusal precedes model parsing,
+  so that probe's 400 verdict stands; the record's model field does not. A
+  corrected `or_noncn_probe_v4.py` (only those three places changed;
+  self-tested with no key → exit 3, with a dummy key → the request body
+  carries the slug) is in the delivery package; the delivered v3 is left
+  as it was.
+- **Experiment preparation on the two servers (CPU stand-in, no GPU).**
+  The verified code tree `1e27d7c` (`git archive`, 72 files) and Bob's
+  stand-in harness (a path-patched copy; diff in the package) were placed
+  under `/root/autodl-tmp/prep_eg_1125/` on both. The four D0 gates pass on
+  both (`thermo_demo --check` 13/13, crosscheck 15/15, selftest 25/25,
+  live-round `--dry-run`), and the seven CPU blocks plus a 20-seed ×
+  k_max ∈ {1, 2, 4, 8} extension of D4b ran to completion (17068
+  12:34:29–12:43:13, 41995 12:34:29–12:41:22). Against a snapshot
+  (12:46:22) of Bob's readings every non-environment, non-timing leaf is
+  bit-identical: 10,140 leaves equal, 0 reading differences. Timing under
+  the 0.5-core no-GPU quota differs and is reported as such (D1 original
+  arm at N = 1000: 48.19 s and 36.60 s, against 20.27 s on two cores). The
+  Qwen3-4B weights on 17068 match the hub revision `1cfa9a72…` (three LFS
+  sha256 values plus `config.json` and the index; Apache-2.0); 41995 has
+  no 4B weights. No GPU arm exists yet (the E-G1–E-G3 ledger, the E-G4
+  learnable gate), so a GPU boot now would idle: not switched on.
 
 ## 9. Machine-checked and self-test faces
 
