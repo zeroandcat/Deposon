@@ -11,6 +11,7 @@ core formalization of the memory harness:
 | `g6f_launch_exec.py` | G6f | per-op key-level supplement launch |
 | `NingziContainer.lean` | core | condensate-field container formalization (Lean 4, core-only, zero mathlib; cliff/fairness theorems) |
 | `CondensateLedger.lean` | core | machine-checked semantics of the ledger core, T1–T6 (Lean 4, core-only, no `sorry`; dual-implementation cross-check: `mcp/ledger_crosscheck.py`) |
+| `DeposonThermo.lean` | core (preview.10) | thermodynamic ledger conservation: per-transition first law `e0 = phi + refl + diss + us.sum` (inject / dissipate / transmit / reflect / deposit), second-law direction anchor (`diss` monotone), pool monotonicity, hand-computed settlement vector (`settle_close`, `settle_conserved`, by `decide`, axiom-free) — 15 theorems, one `#print axioms` each, axioms ⊆ {propext, Quot.sound}, no `sorryAx`; `lean_axiom_audit.py` audits the compile log; dual-implementation cross-check: `mcp/thermo_crosscheck.py` |
 
 Notes:
 

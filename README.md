@@ -64,6 +64,27 @@ What makes this harness unusual:
   over the core. The core runs import-direct with zero transport
   dependencies and survives model swaps and process restarts by
   construction; its self-test runs in CI.
+- **Thermodynamic ledger + phantom limb (preview.10).** The memory ledger
+  now carries a thermodynamic layer (`mcp/thermo_core.py`): every injected
+  row holds integer exergy that is attributed to exactly four accounts — Φ
+  (transmitted), R (reflected), D (dissipated), U (in presence) — with the
+  conservation core `E⁰ = Φ + R + D + U` checked fail-loud after every
+  operation and the settlement being a pure event-stream replay (**self-
+  settling, no external reconciler**). Reads pass a gate: accepted rows are
+  transmitted, rejected rows pay their own exergy into D (entropy output),
+  and dissipated memory is reflected as `⟨幻肢⟩` phantom-limb lines (felt,
+  never recovered, zero source text replayed). The dissipation channel
+  utilisation `D / E⁰_rows` moves from 0 % by construction to 69.23 % on
+  the frozen 500-op trace (decay / horizon / evict / supersede / gate
+  rejection), the price being a 50.31 % -> 47.85 % specific-key hit rate
+  (another 2.45 % honestly reflected as phantom lines). The Lean mirror
+  `harness/DeposonThermo.lean` machine-checks conservation per transition
+  (15 theorems, 0 sorry, axioms ⊆ {propext, Quot.sound}; per-theorem
+  `#print axioms` audited by `harness/lean_axiom_audit.py`), cross-checked
+  against the Python core on the same hand-computed settlement vector
+  (`mcp/thermo_crosscheck.py`). The dsh plugin face hosts the MCP server
+  and injects the phantom-limb belief block as a system-prompt section
+  (protocol text only, zero memory data). See `docs/thermo-generation.md`.
 
 ## Status: v0.x preview
 
@@ -93,11 +114,31 @@ surface (`deposon_gate_check` / `/deposon-gate-check`). Configuration keys
 (`python`, `timeoutMs`) are consumed via the patch config or `DEPOSON_*`
 environment variables.
 
+**Thermo face (preview.10).** The same bundle entry hosts the memory organ:
+the living-water tools `deposon_memory_write` / `deposon_memory_read`, the
+self-settling `deposon_thermo_audit` (read-only) and `deposon_thermo_settle`
+(`close=true` = unit close-out, U→0) are forwarded to `mcp/mcp_server.py`
+over stdio JSON-RPC (one lazily spawned child, respawned if it exits); the
+phantom-limb belief block (`mcp/phantom_limb.zh.txt` / `.en.txt`, protocol
+text only) is injected as a system-prompt section and a counts-only brief
+(live rows / phantom limbs) as runtime context; `/deposon-belief` prints the
+block, `/deposon-thermo-audit` runs the audit. Every write/read receipt
+carries a thermodynamic footer (Φ / R / D / U · dissipation utilisation).
+Configuration keys: `ledger` (default `~/.deposon/ledger.jsonl`, survives
+model swaps), `lang` (`zh|en|both`), `belief`, `brief`, `footer`, `thermo`
+(JSON parameter override), `toolTimeoutMs`; env overrides
+`DEPOSON_LEDGER`, `DEPOSON_PL_LANG`, `DEPOSON_BELIEF`,
+`DEPOSON_THERMO_BRIEF`, `DEPOSON_THERMO_FOOTER`, `DEPOSON_THERMO`,
+`DEPOSON_TOOL_TIMEOUT_MS`. The gate-check surface is untouched.
+
 Desk-level install verification (no network beyond GitHub): `npm pack
 --dry-run` (packaged bundle integrity), `git ls-remote` (the reachability
 precheck dsh's plugin manager runs before installing), and
 `node tests/test_plugin_load.mjs` (loads the plugin on a mock Cordis context
-and actually invokes the tool body — 14 checks, includes running the gates
+carrying the dsh-native `ctx.tools.register` / `ctx.systemPrompt` registries,
+asserts tool-schema parity against the live MCP `tools/list`, and actually
+invokes the tool bodies — 34 checks, including a real ledger round trip
+write → read → audit → settle close → phantom limb, and running the gates
 self-test).
 
 > Preview-era note: dsh is a developer preview with announced
@@ -110,7 +151,7 @@ self-test).
 ```bash
 # one shot, no clone (fetches this repo via npm's git resolver, runs every
 # gate self-test + the plugin-load smoke + packaging integrity):
-npx -y github:zeroandcat/dsh-plugin-deposon#v0.1.0-preview.9
+npx -y github:zeroandcat/dsh-plugin-deposon#v0.1.0-preview.10
 
 # score a readings package against the 8 required contents (exit 0 = complete):
 python gates/readout_completeness.py /path/to/readings-package            # JSON verdict
@@ -120,22 +161,30 @@ python gates/readout_completeness.py /path/to/readings-package --run-recompute  
 READINGS_PACKAGE_DIR=/path/to/readings-package python scripts/g6f_recalc.py
 # gate arithmetic self-test (pure math, no data needed):
 python tests/test_gates.py
+
+# thermodynamic ledger (preview.10): before/after on the same frozen 500-op trace
+# (utilisation 0 % -> 69.23 %, hit rate 50.31 % -> 47.85 %, phantom lines 2.45 %):
+python mcp/thermo_demo.py
+# Lean <-> Python conservation cross-check on the hand-computed settlement vector:
+python mcp/thermo_crosscheck.py
+# per-theorem axiom audit (compiles DeposonThermo.lean when `lean` is on PATH):
+python harness/lean_axiom_audit.py
 ```
 
 ## Repository layout
 
 | path | content |
 |---|---|
-| `harness/` | launch-family entry points (env-parameterized) + `NingziContainer.lean` (condensate-field container, Lean 4 formalization, core-only) |
-| `mcp/` | memory harness proper as a standalone stdio MCP instance: core layer (external append-only ledger, DR-4 render surface) + `deposon_memory_write`/`deposon_memory_read` tool surface + self-test (runs in CI) |
+| `harness/` | launch-family entry points (env-parameterized) + `NingziContainer.lean` (condensate-field container, Lean 4 formalization, core-only) + `DeposonThermo.lean` (thermodynamic ledger conservation, 15 theorems, per-theorem `#print axioms`; `lean_axiom_audit.py` audits the compile log) |
+| `mcp/` | memory harness proper as a standalone stdio MCP instance: core layer (external append-only ledger, DR-4 render surface) + thermodynamic layer (`thermo_core.py`: four-account exergy, gate, phantom limb, self-settling) + `deposon_memory_write`/`deposon_memory_read`/`deposon_thermo_audit`/`deposon_thermo_settle` tool surface + phantom-limb belief block (`phantom_limb.*.txt`) + `thermo_cli.py` + before/after demo (`thermo_demo.py`) + self-test and cross-checks (all run in CI) |
+| `plugin/` | dsh plugin entry (Cordis `apply(ctx, config)`): gate-check surface + thermo face (hosts the MCP server over stdio, registers the four tools on `ctx.tools`, injects the belief block on `ctx.systemPrompt`) |
 | `frozen/` | frozen faces (blind K_h mapping, seed) |
 | `gates/` | gate specifications: Lean + Python dual implementations, incl. judgment-line v1.1 interfaces (gauge / raw-full / three-band), the preview.5 judge-strictness gauge + six-family linkage validator, and the preview.7 slot-space caliber gauge (six-family table fully linked in preview.8; see `docs/judgment-v12-strictness.md`, `docs/family-linkage.md`, `docs/slot-space-caliber.md`) |
-| `plugin/` | dsh plugin entry (Cordis `apply(ctx, config)`) |
 | `cordis.patch.yml` | dsh bundle declaration (profile patch consumed by dsh plugin manager) |
 | `package.json` | npm package: dsh plugin metadata (`dsh.bundle.patch`, `engines.dsh`) |
 | `mocks/` | mock certifications incl. PC-lockin negative control |
 | `scripts/` | recompute script family |
-| `docs/` | evidence-round pointers, locked-baseline spec, package spec, alignment map |
+| `docs/` | evidence-round pointers, locked-baseline spec, package spec, alignment map, thermodynamic-generation change note (`thermo-generation.md`) |
 | `BENCHMARK.md` | gate table & joint-readings disclosure |
 | `SAFETY.md` | run-safety clauses (PR-1/2/3, stop-loss semantics) |
 
@@ -148,6 +197,7 @@ Readings data never enters this repository (artifacts policy, see
 - [SAFETY.md](SAFETY.md) - protection clauses & stop-loss semantics
 - [CONTRIBUTING.md](CONTRIBUTING.md) - ground rules for contributions
 - [README.zh.md](README.zh.md) - Chinese README (中文说明)
+- [docs/thermo-generation.md](docs/thermo-generation.md) - preview.10 change note: dissipation-channel utilisation, self-settling ledger path, the hit-rate price and phantom-limb readback
 - [docs/](docs/) - evidence rounds, specs, alignment map
 
 ## License

@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # thermo_demo --check runs the preview.9 memory face from git history (4ee12b6)
+          # as the before-reading; shallow clones would silently fall back to the simulator.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -32,10 +36,29 @@ jobs:
         run: python gates/descrev_calibration.py
       - name: Readings-package completeness validator self-test (preview.9 interface G, zero network)
         run: python gates/readout_completeness.py
-      - name: Memory harness MCP self-test (stdio, zero network)
+      - name: Memory harness MCP self-test (stdio, zero network; preview.10 thermo segments 5-7 included)
         run: python mcp/selftest_mcp.py
       - name: Ledger dual-implementation cross-check (Lean T1-T6 vs Python core, zero network)
         run: python mcp/ledger_crosscheck.py
+      - name: Thermodynamic ledger dual-implementation cross-check (Lean DeposonThermo vs Python core, hand-computed settlement vector)
+        run: python mcp/thermo_crosscheck.py
+      - name: Thermo before/after demo (frozen 500-op trace; utilisation 0 -> 69.23 %, hit rate 50.31 -> 47.85 %)
+        run: python mcp/thermo_demo.py --check
+      - name: DeposonThermo.lean axiom audit (static coverage; compiles when lean is on PATH)
+        run: python harness/lean_axiom_audit.py
+      - name: Packaging sanity (bundle patch + thermo face ship in the npm files)
+        run: |
+          npm pack --dry-run --json > /tmp/pack.json
+          python - <<'EOF'
+          import json
+          files = [f["path"] for f in json.load(open("/tmp/pack.json"))[0]["files"]]
+          for need in ["cordis.patch.yml", "plugin/index.js", "mcp/mcp_server.py", "mcp/thermo_core.py",
+                       "mcp/thermo_cli.py", "mcp/phantom_limb.py", "mcp/phantom_limb.zh.txt", "mcp/phantom_limb.en.txt",
+                       "harness/DeposonThermo.lean", "harness/lean_axiom_audit.py", "mcp/thermo_crosscheck.py",
+                       "mcp/thermo_demo.py", "tests/test_plugin_load.mjs"]:
+              assert need in files, need
+          print("packaged files OK:", len(files))
+          EOF
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

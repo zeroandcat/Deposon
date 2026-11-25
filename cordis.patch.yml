@@ -8,7 +8,24 @@
     - id: deposon
       name: dsh-plugin-deposon
       config:
-        # Python interpreter for the gates self-test. Env override wins.
+        # Python interpreter for the gates self-test and the thermodynamic
+        # ledger (mcp/mcp_server.py, mcp/thermo_cli.py). Env override wins.
         python: !!js process.env.DEPOSON_PYTHON ?? 'python3'
         # Self-test timeout in milliseconds. Env override wins.
         timeoutMs: !!js Number(process.env.DEPOSON_TIMEOUT_MS ?? 120000)
+        # ---- thermo face (preview.10: living-water memory + phantom limb) ----
+        # Ledger path (JSONL event stream, the single source of truth).
+        # null -> env DEPOSON_LEDGER -> ~/.deposon/ledger.jsonl (survives model swaps).
+        ledger: !!js process.env.DEPOSON_LEDGER ?? null
+        # Phantom-limb belief block language: zh | en | both (mcp/phantom_limb.*.txt).
+        lang: !!js process.env.DEPOSON_PL_LANG ?? 'zh'
+        # Inject the belief block as a system-prompt section (0 memory data).
+        belief: !!js process.env.DEPOSON_BELIEF ?? true
+        # Counts-only runtime context (live rows / phantom limbs), refreshed after tool calls.
+        brief: !!js process.env.DEPOSON_THERMO_BRIEF ?? true
+        # Thermodynamic footer on write/read receipts (Φ/R/D/U · dissipation utilisation).
+        footer: !!js process.env.DEPOSON_THERMO_FOOTER ?? true
+        # Thermodynamic parameters override as a JSON string (defaults: mcp/thermo_core.load_cfg).
+        thermo: !!js process.env.DEPOSON_THERMO ?? null
+        # Per MCP request timeout in milliseconds.
+        toolTimeoutMs: !!js Number(process.env.DEPOSON_TOOL_TIMEOUT_MS ?? 60000)

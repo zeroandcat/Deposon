@@ -17,7 +17,7 @@ const PY = process.env.DEPOSON_PYTHON || (has("python3") ? "python3" : "python")
 const quiet = process.argv.includes("--quiet");
 const steps = [
   ["packaging integrity (npm pack --dry-run)", "npm", ["pack", "--dry-run"], true],
-  ["compile all Python sources", PY, ["-m", "compileall", "-q", "harness", "gates", "mocks", "scripts", "tests"], true],
+  ["compile all Python sources", PY, ["-m", "compileall", "-q", "harness", "gates", "mcp", "mocks", "scripts", "tests"], true],
   ["gate arithmetic self-test (incl. preview.5/7/8/9 interfaces)", PY, ["tests/test_gates.py"]],
   ["judgment-line v1.1 interfaces", PY, ["gates/judgment_v11.py"]],
   ["judge-strictness gauge", PY, ["gates/judgment_strictness.py"]],
@@ -26,9 +26,12 @@ const steps = [
   ["slot-space caliber Lean mirror cross-check", PY, ["gates/slot_space_crosscheck.py"]],
   ["f3 judge calibration face", PY, ["gates/descrev_calibration.py"]],
   ["readings-package completeness validator", PY, ["gates/readout_completeness.py"]],
-  ["memory harness MCP self-test (stdio)", PY, ["mcp/selftest_mcp.py"]],
+  ["memory harness MCP self-test (stdio; preview.10 thermo segments)", PY, ["mcp/selftest_mcp.py"]],
   ["ledger dual-implementation cross-check", PY, ["mcp/ledger_crosscheck.py"]],
-  ["dsh plugin load smoke (mock Cordis context)", process.execPath, ["tests/test_plugin_load.mjs"]],
+  ["thermo ledger Lean<->Python cross-check (preview.10)", PY, ["mcp/thermo_crosscheck.py"]],
+  ["thermo before/after frozen readings (preview.10, --check)", PY, ["mcp/thermo_demo.py", "--check"], true],
+  ["DeposonThermo.lean axiom audit (static; compiles if lean on PATH)", PY, ["harness/lean_axiom_audit.py"], true],
+  ["dsh plugin load smoke (mock Cordis context; thermo face round trip)", process.execPath, ["tests/test_plugin_load.mjs"]],
 ];
 
 let failed = 0;
