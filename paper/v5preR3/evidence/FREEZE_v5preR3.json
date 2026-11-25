@@ -1,0 +1,268 @@
+{
+ "freeze": "FREEZE_v5preR3",
+ "version": 1,
+ "index_slot": "S-07（候立转立·2026-11-26）",
+ "lineage": {
+  "branch": "private/v5preR3",
+  "repo_head_at_freeze": "d924707",
+  "parent_anchor_rev2": "d924707",
+  "parent_anchor_rev1": "67a86e0",
+  "fork_point_R2_terminal": "ac04a4b",
+  "push": "0",
+  "r2_freeze_reused": false
+ },
+ "compile_state": {
+  "engine": "tectonic 0.15.0",
+  "pages": 22,
+  "undefined_references": 0,
+  "errors": 0,
+  "overfull_inherited": "§4 标题行 6.37pt（与 rev2 同·§4/§5 0 改）",
+  "cjk_warnings": "标题行 19 字·ptmb8t 无 CJK 字形·R2 同款既有状态·正文 0 CJK",
+  "todo_markers": 0,
+  "absorption_slots": 1
+ },
+ "absorption_slot": {
+  "section": "§2.8 Thermodynamic reconstruction: absorption slot (label sec:absorption)",
+  "status": "OPEN",
+  "owner": "爱丽丝（热力学重构·同期在做）",
+  "closure_rule": "其件到达后走 rev3 吸收→重冻 FREEZE_v5preR3 v2（加入重构件自身指纹）"
+ },
+ "frozen": [
+  {
+   "sha12": "c0a80e4febe6",
+   "lines": 449,
+   "bytes": 88265,
+   "label": "论文 tex（rev3 全稿）",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/v5preR3_论文.tex",
+   "kind": "frozen",
+   "status": "ok",
+   "note": "§1–§7 合流·0 TODO·§4/§5 块 sha12 dc2665f05529 与 rev2 字节同一"
+  },
+  {
+   "sha12": "d832d1ab414c",
+   "lines": 970,
+   "bytes": 164954,
+   "label": "论文 pdf（tectonic 0.15.0）",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/v5preR3_论文.pdf",
+   "kind": "frozen",
+   "status": "ok",
+   "note": "22 页·0 未定义引用·0 错误"
+  },
+  {
+   "sha12": "b5160e1df576",
+   "lines": 1508,
+   "bytes": 56741,
+   "label": "bib（R2 91 键整继承＋34 条）",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/v5preR3_related_work.bib",
+   "kind": "frozen",
+   "status": "ok",
+   "note": "166 条·0 重键·65 条被引"
+  },
+  {
+   "sha12": "2e5735f29923",
+   "lines": 58,
+   "bytes": 5559,
+   "label": "点火件（立项件）",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/v5preR3_点火件.md",
+   "kind": "frozen",
+   "status": "ok",
+   "note": "rev2 原件·0 动"
+  },
+  {
+   "sha12": "37563ab073de",
+   "lines": 33,
+   "bytes": 2842,
+   "label": "版本谱系对照表",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/v5preR3_版本谱系对照表.md",
+   "kind": "frozen",
+   "status": "ok",
+   "note": "rev3 更新：R3 状态＝全稿合流·S-07 候立转立"
+  },
+  {
+   "sha12": "57e846918d44",
+   "lines": 184,
+   "bytes": 12129,
+   "label": "冻结生成器",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/tools/gen_freeze_r3.py",
+   "kind": "frozen",
+   "status": "ok",
+   "note": "本件"
+  },
+  {
+   "sha12": "0b67c81b55c2",
+   "lines": 84,
+   "bytes": 3709,
+   "label": "冻结比对器",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/tools/compare_freeze_r3.py",
+   "kind": "frozen",
+   "status": "ok",
+   "note": "沿 R2 compare_freeze 链·R3 口径"
+  },
+  {
+   "sha12": "35c6858af9a5",
+   "lines": 34,
+   "bytes": 4147,
+   "label": "kimi round10 问单",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/evidence/kimi_round10_prompt.txt",
+   "kind": "frozen",
+   "status": "ok",
+   "note": "F7/L2 原文贴入·逐字"
+  },
+  {
+   "sha12": "85189b55b1c5",
+   "lines": 83,
+   "bytes": 9274,
+   "label": "kimi round10 答复（逐字）",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/evidence/kimi_round10_answer_逐字.txt",
+   "kind": "frozen",
+   "status": "ok",
+   "note": "finish=stop·model kimi-k3.1-pro·0 代庖"
+  },
+  {
+   "sha12": "345d7a91bcc5",
+   "lines": 25,
+   "bytes": 518,
+   "label": "kimi round10 元数据",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/evidence/kimi_round10_answer_逐字.txt.meta.json",
+   "kind": "frozen",
+   "status": "ok",
+   "note": "usage/finish/model 原样"
+  }
+ ],
+ "r2_voided": [
+  {
+   "sha12": "a6371ed71099",
+   "lines": 458,
+   "bytes": 84678,
+   "label": "R2 论文 tex（VOIDED·0 删）",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR2_论文.tex",
+   "kind": "frozen",
+   "status": "ok",
+   "note": "6 行 VOIDED 头注·其余 0 动"
+  },
+  {
+   "sha12": "7428c110a23d",
+   "lines": 40,
+   "bytes": 3046,
+   "label": "R2 作废标注",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR2_作废标注.md",
+   "kind": "frozen",
+   "status": "ok",
+   "note": ""
+  },
+  {
+   "sha12": "da8dc34085e6",
+   "lines": 663,
+   "bytes": 21539,
+   "label": "R2 冻结（不沿用·留档）",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/evidence/FREEZE_v5preR2.json",
+   "kind": "frozen",
+   "status": "ok",
+   "note": "S-06 旧位·R3 不建双冻结"
+  }
+ ],
+ "external_inputs": [
+  {
+   "sha12": "d8fc8fa798c9",
+   "lines": 390,
+   "bytes": 102343,
+   "label": "S-A 本体源·对话集 docx",
+   "path": "/home/z/my-project/upload/6b06e69a9f9cb7db60712f58_ai思考与量子突破.docx",
+   "kind": "external",
+   "status": "ok",
+   "note": "M1–M4 原文"
+  },
+  {
+   "sha12": "c11d7007f857",
+   "lines": 443,
+   "bytes": 687460,
+   "label": "S-B 定稿源·统一场论 v1 PDF",
+   "path": "/home/z/my-project/upload/6a9e8687e7db4e2eabbaa67f_deposon_凝子_统一场论研究报告_v1.pdf",
+   "kind": "external",
+   "status": "ok",
+   "note": "T-CONGELON-003"
+  },
+  {
+   "sha12": "cfd7ed7f9934",
+   "lines": 16,
+   "bytes": 1419,
+   "label": "阿兰 Lean 审读件包",
+   "path": "/home/z/my-project/shared/阿兰_文献面收尾_T4勘误_引文补核_Lean审读_交付包_20261126",
+   "kind": "external",
+   "status": "ok",
+   "note": "目录·v3.1 独立复现·目录按 MANIFEST.sha256 记"
+  },
+  {
+   "sha12": "0decb3a4059f",
+   "lines": 773,
+   "bytes": 40866,
+   "label": "爱丽丝 v3.1 Lean 件",
+   "path": "/home/z/my-project/shared/爱丽丝_裁位件_记录键入墓碑可读表_双审代裁_工程包_20261126/IrreversibleDeposon.lean",
+   "kind": "external",
+   "status": "ok",
+   "note": "§4.7 引 0decb3a4059f"
+  },
+  {
+   "sha12": "277f63bff1ca",
+   "lines": 609,
+   "bytes": 30534,
+   "label": "爱丽丝 v3.1.1 Lean 件",
+   "path": "/home/z/my-project/shared/爱丽丝_v3.1代裁落地与双审_工程包_20261126/IrreversibleDeposon.lean",
+   "kind": "external",
+   "status": "ok",
+   "note": "§4.7 引 277f63bff1ca"
+  },
+  {
+   "sha12": "58fe2c0fbca8",
+   "lines": 591,
+   "bytes": 33671,
+   "label": "爱丽丝 v3.1.1 执行器",
+   "path": "/home/z/my-project/shared/爱丽丝_v3.1代裁落地与双审_工程包_20261126/irreversible_executor.py",
+   "kind": "external",
+   "status": "ok",
+   "note": "工程包·0 动"
+  },
+  {
+   "sha12": "61fadba07043",
+   "lines": 68,
+   "bytes": 6312,
+   "label": "爱丽丝 v3.1.1 自测日志",
+   "path": "/home/z/my-project/shared/爱丽丝_v3.1代裁落地与双审_工程包_20261126/selftest_log.txt",
+   "kind": "external",
+   "status": "ok",
+   "note": "D7a/D7b 否证探针两向"
+  },
+  {
+   "sha12": "5727b4d39e48",
+   "lines": 69,
+   "bytes": 7411,
+   "label": "爱丽丝 定形件·两臂配对性（round9）",
+   "path": "/home/z/my-project/shared/爱丽丝_定形件_两臂配对性_paired_双审代裁_工程包_20261126/爱丽丝_定形件_两臂配对性_paired_双审代裁_20261126.md",
+   "kind": "external",
+   "status": "ok",
+   "note": "§6.4 paired"
+  },
+  {
+   "sha12": "f3c59c956a87",
+   "lines": 350,
+   "bytes": 20504,
+   "label": "鲍勃 判据收口 v1.1",
+   "path": "/home/z/my-project/shared/鲍勃_实验线增量_裁位件与P4重钉_工程包_20261126/鲍勃_判据收口_不可逆口径_v1.1.md",
+   "kind": "external",
+   "status": "ok",
+   "note": "F1–F8·L1/L2/L3"
+  },
+  {
+   "sha12": "f9ca8e9aaac1",
+   "lines": 226,
+   "bytes": 22980,
+   "label": "鲍勃 实验线全谱系清点",
+   "path": "/home/z/my-project/shared/鲍勃_实验线重编_不可逆口径_工程包_20261125/鲍勃_实验线全谱系清点_不可逆口径_20261125.md",
+   "kind": "external",
+   "status": "ok",
+   "note": "H1/H2/H4·C01–C17 重述"
+  }
+ ],
+ "generated_at": "2026-11-26 07:40:38",
+ "order_source": "群管理员 2026-11-26 07:21:08 派单（R3 全稿覆写·立 FREEZE_v5preR3·S-07 候立转立·含 rev2 中间锚 d924707）"
+}

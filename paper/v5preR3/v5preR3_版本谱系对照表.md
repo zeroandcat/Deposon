@@ -4,17 +4,30 @@
 |---|---|---|---|---|
 | v5pre（R1.3 及前） | 历史线 | 已被 R2 沿袭／重构 | 外部记忆层热力学账本 | 归档·只读 |
 | v5preR2 | `private/v5preR2` HEAD `ac04a4b` | **作废**（范畴错位·2026-11-26） | 热力学账本（第一律四账·自解结算） | 0 删·头注 VOIDED·`paper/v5preR2_作废标注.md`；数据级资产（bib／读数／工具链）被 R3 继承 |
-| **v5preR3** | `private/v5preR3`（自 `ac04a4b` 分出）／`paper/v5preR3/` | **立项**（2026-11-26） | 仿物理散射-耗散理论（T+R+A=1·(g_couple, g_aether)·D 单调） | 七节骨架落位·§4／§5 正文起草（v1·经 kimi 第三轮审读 R6-1~R6-18 回修）→ **rev2（2026-11-26 01:5x）**：稿面三改（E3 拆两条／键可见性边界陈述／aux-CI_key 策略层）＋F3 升格＋A3「存储层」＋`phantom_budget` 一跳＋L136 分挂·依爱丽丝 `19dbb34fddf8` §三与阿兰 `4739bcf10846`·§1–§3／§6／§7 候窗 |
+| **v5preR3** rev1 | `private/v5preR3` commit `67a86e0` | 骨架＋§4／§5 v1（kimi round6 回修） | 仿物理散射-耗散理论（T+R+A=1·(g_couple, g_aether)·D 单调） | 七节骨架·§4／§5 正文·其余 TODO |
+| **v5preR3** rev2 | commit `d924707` | **中间锚**（E3 拆两定理·键可见性边界句·aux-CI 策略层·F3 升格） | 同上 | 10 页·0 未定义·§1–§3／§6／§7 仍 TODO |
+| **v5preR3** rev3 | `private/v5preR3`（本轮提交） | **全稿合流**（2026-11-26） | 同上 | abstract／§1／§2／§3／§6／§7／Reproduction 七处成文·§1–§7 一篇·0 TODO·§4／§5 字节同一（块 sha12 `dc2665f05529`）·22 页·0 未定义引用·**1 吸收位 OPEN（§2.8）** |
 
 ## 取代对照
 
 | 位 | 旧 | 新 | 性质 |
 |---|---|---|---|
-| S-05 | `查理_v5preR3骨架案头件_v2_20261125.md`（P474 包） | 本目录 tex（骨架案头件 v2 的节位→tex 节位一一对应） | 升版（非取代·案头件仍可引） |
-| S-06（戴夫表编号 S-07） | R2 冻结 `FREEZE_v5preR2` v5 | `FREEZE_v5preR3`（**候立**·依点火件 §6 待 §1–§7 全稿合流后一次立·rev2 中间锚＝commit） | 新立冻结事件·不沿用 |
+| S-05 | `查理_v5preR3骨架案头件_v2_20261125.md`（P474 包） | `paper/v5preR3/v5preR3_论文.tex`（骨架案头件 v2 的节位→tex 节位一一对应） | 升版（非取代·案头件仍可引） |
+| S-06 | R2 冻结 `FREEZE_v5preR2` v5 | — | 旧位留档·不沿用·不建双冻结 |
+| **S-07** | `FREEZE_v5preR3`（候立） | **`paper/v5preR3/evidence/FREEZE_v5preR3.json/.md` v1（候立转立）** | 新立冻结事件·含 rev2 中间锚 `d924707`·工具 `paper/v5preR3/tools/gen_freeze_r3.py`／`compare_freeze_r3.py`（沿 R2 链） |
 
-## 编译态
+## 编译态（rev3）
 
-- **rev2**：tectonic 0.15.0·exit 0·**12 页**·0 未定义引用·bbl 33 条·Overfull 1（§4 节标题 6.4pt·v1 既有）·Underfull 22。v1 复核（本席重编）：10 页·Overfull 实为 4（节标题 6.4pt／表 1 首列 90pt／§4.5 `ether_archive` 103pt／§5.1 `miss_correct` 9.4pt）·前版「0 Overfull」记法有误·rev2 已修其后三处（`\thm` 宏可断行＋表列 l→p）。tex 侧 CJK 警告仅来自中文标题（ptmb8t 无 CJK 字形）＝R2 同款既有状态·非本轮范围。
+- tectonic 0.15.0·**22 页**·0 未定义引用·0 错误·0 TODO·65 条被引（bib 166 条·0 重键·0 缺键）。
+- Overfull 1 处＝§4 标题行 6.37pt（与 rev2 同款·§4／§5 0 改·非本轮范围）。
+- tex 侧 CJK 警告仅来自中文标题行（ptmb8t 无 CJK 字形）＝R2 同款既有状态；**正文 0 CJK**（词源以罗马字 ning／ningzi／ninghua／ninggu 书写）。
 
-*查理-论文主笔 · 2026-11-26 · 版本谱系对照表*
+## 吸收位
+
+- §2.8「Thermodynamic reconstruction: absorption slot」（label `sec:absorption`）**OPEN**：爱丽丝热力学重构件到达后走 rev3 吸收→`FREEZE_v5preR3` v2 重冻；本轮不等。
+
+## kimi round10
+
+- F7／L2 多重性一问已办（贴原文·`kimi-k3.1-pro`·finish=stop·逐字见 `paper/v5preR3/evidence/`）：F7/L2 与 G-A2 同一检验标签层（是）；G-A2／G-B 须重登（荐固定序列门控）；配对下 F7 文本不改；0 冲突。采位归 PI。
+
+*查理-论文主笔 · 2026-11-26 · 版本谱系对照表（rev3）*
