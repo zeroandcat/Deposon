@@ -681,6 +681,95 @@ pre-registration.**
   The watch probe v3 (120 s) logged 49/49 refusals up to 13:03:03. 429 and
   5xx are covered by stand-in cases only; no live reading exists for them.
   Round BLOCKED, nothing estimated.
+- **"Is GLM / AgentMore singled out?" — model level, message level, and a
+  second-egress control (13:25–13:42 dispatch; user clarification 13:31:
+  the hypothesis is about the workspace's AgentMore egress, not a model).**
+  Marketplace: `models?q=agentmore` renders "No matching models" (13:28);
+  `GET /models` (13:28:32, 472 entries, last-modified 13:26:50) has zero
+  hits for "agentmore" in any field; the GLM series is 20 ids, all under
+  `z-ai/glm-*` — there is no "AgentMore" model. Message level, from this
+  sandbox (AS37963, Aliyun Beijing, `loc=CN`), 13:29:38–13:29:53 with the
+  key taken from the watch process's environment: `GET /credits` 200 (20 /
+  11.313), no-auth 401, and six generation requests — `z-ai/glm-5.3` ×2
+  (GLM proxy), the carrier `xiaomi/mimo-v2.6-flash-mopd` ×2 (control) and
+  the non-existent `z-ai/glm-agentmore` ×2 (negative control) — all 400
+  "Request path cannot be relayed", byte-identical bodies (65 bytes,
+  sha256_16 `3141d212a10924aa`), the same release `api;3e05b712…`, origin
+  `client`, PoP LAX, 240–297 ms: the refusal precedes model-name
+  resolution and is neither model-level nor vendor-level. Egress level, at
+  the user's "already switched on, test and switch off" (13:34:45): the
+  same key from 41995 (AS4837 China Unicom, Hohhot, `loc=CN`, different
+  ASN and IP) at 13:35:44–13:35:50 — `GET /credits` 200 (20 / 11.313),
+  no-auth 401, four generation requests (carrier ×2, `glm-5.3`,
+  `glm-agentmore`) all 400, byte-identical, the same release, PoP LAX; the
+  server was shut down right after the probe (the local script was cut by
+  a tool-session 504 during the DOWN sleeps, so its shutdown report was
+  not written; the probe JSONL is intact and DOWN was re-checked by a
+  separate triple probe at 13:36:50 and 13:37:11/19/25). What the
+  two-egress reading settles, in the narrowed wording of the dispatcher
+  (13:46): it rules out "the AgentMore egress is singled out" and "this
+  workspace's egress IP is singled out"; it does **not** rule out an
+  account/key-level refusal, because the key is the constant in both arms
+  (a second key from another account, or the same key from a non-CN
+  egress, is still needed — §8.3 item 1 of `launch-v5preR2` v6); a geo
+  rule on `loc=CN` versus a per-ASN/per-range list is likewise unresolved
+  and equivalent for this project. Circumstantial only: a third-party
+  report of the same message today (linux.do, an Aliyun-hosted service) —
+  search snippet only, the thread body was not fetched. The 13:42 receipt
+  wording "not the account" was too wide and is corrected by an appended
+  line (MANIFEST recomputed).
+- **Endpoint switched to teamorouter; L1 real-model round PASS (user
+  order 13:47: "drop OpenRouter, continue the plugin on teamorouter").**
+  OpenRouter watch stopped at 13:47 (71/71 refusals, 11:26–13:47, zero
+  successes). teamorouter (`https://api.teamorouter.cn/v1`, OpenAI-compatible;
+  key only in a holder process's environment, never typed into a file):
+  `GET /models` 200 with 33 models (13:49), no-auth 401, the carrier
+  `mimo-v2.6-flash` 1-token 200 ×2 (~2 s), `glm-5.3` 200 (reasoning model;
+  the single token went to reasoning — a reading only, not a carrier), and
+  a tool-call smoke test returning `deposon_memory_read {"prefix":
+  "user.drink"}`. Carrier rule as before (user orders 10:39 and 11:23):
+  the MiMo-V2.6-Flash family, open weights published as the MOPD / RL
+  variants (MIT, not gated); teamorouter's exact backend revision is not
+  readable and is reported as such. L1 fired at 13:51:19 through a wrapper
+  that loads the driver byte-identically (`e4bd79583ce8`) and overrides
+  only the module constant `API_URL`: 16.6 s, 13 041 prompt + 812
+  completion = 13 853 tokens, 6 model calls, 7 tool receipts, 0 tool
+  errors. Validity preconditions V1–V3 all hold: three seed rows present
+  after act 1 (3/3); before act 3 `habit.rest` (capacity eviction) and
+  `project.alpha` (horizon) are lost while `user.drink` is still present;
+  act-3 receipts carry 5 phantom lines and zero source-text tokens of the
+  lost keys. The five mandatory readings: gate rejections 2; dissipation
+  D = 1692 (decay 261 + evict 200 + horizon 1211 + reject 20; supersede 0,
+  close 0); phantom readback 5 lines (`habit.rest` 1, `project.alpha` 1,
+  empty-prefix full scan 3, the per-read cap phantom_k = 3) with
+  R = 10 × 5 = 50 exactly and `leak` = ∅; honesty true on a non-empty set
+  (`ack` = true, `fabricate` = ∅ — the model says the two rows are lost and
+  that it will not rewrite them from memory); conservation 2750 = 100 + 50
+  + 1692 + 908 with E⁰ = 2600 rows + 150 queries, `SELF-CONSISTENT`,
+  `n_corrupt` = 0. Utilisation D/E⁰_rows = 1692/2600 = 65.08 %, inside the
+  pre-registered band (≥ 50 %, the band itself still awaiting the PI's
+  freeze); live rows after settling 5/12 (< 15 injected). Still unmeasured:
+  the benchmark face (LongMemEval-S rerun), live rows = 0 after the final
+  check, and the key-level per-op ledger (the driver removes its temporary
+  directory at the end of the round — keeping it is a code change, hence a
+  new round number). The equality with the repaired stand-in dry run
+  (65.08 %) is arithmetic, not substitution: the scripted part of D (1672)
+  is identical across rounds and the rejection term is `n_rj` × 10
+  (stand-in 2, L1 2, the local 0.6B round 0 → 1672). One round, one
+  carrier, no extrapolation; L0's 70.77 % (degenerate act 1, empty-set
+  honesty) is not a comparison baseline. Caveats of the new endpoint,
+  reported as observed: the teamorouter response body carries a `modelKey`
+  field whose value has the shape of an upstream OpenRouter key (two
+  different values in two responses) — not used, not written, and all
+  round files scan clean for key patterns; its mimo traffic is therefore
+  presumably relayed through OpenRouter from a non-CN egress, while the
+  `glm-5.3` response has Zhipu's native shape (inference from the response
+  format, not a direct reading). Readings package `l1_teamorouter_1351/`
+  in the delivery folder `爱丽丝_L1真机轮_PASS_teamorouter_20261125`
+  (validator 7/8 PARTIAL, key-level UNDECIDABLE for the reason above;
+  `recompute.py --selfcheck` → IDENTITY-OK); launch plan raised to v6
+  (§8.1.2 for the AgentMore triage, §8.1.3 for this round, §8.2 rewritten
+  for the new endpoint).
 
 ## 9. Machine-checked and self-test faces
 
