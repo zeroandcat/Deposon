@@ -14,7 +14,10 @@
 %   v73 载体更替复测缺位稿注（0.9415 系 qwen4-max 读数·新载体未复读·补测候）
 %   ⑧b legacy 同键重写如实注（preview.9 覆盖语义·重放 fail-loud·不改码）
 %   ⑥ teamorouter modelKey 风险注一行  ② 本地 0.6B 轮＝退化轮指针行（追认）
-%   注：全文 \citep 键尚无接线 bib（现状沿 001f052·[?]）——阿兰 48 条 bib 接线系另案·不在本裁决内
+%   注：bib 接线已落（阿兰·2026-11-25·PI 18:08 ⑨前半）：48 条五主题研件 bib（783f5f1064fd）入 paper/
+%       ＝v5preR2_related_work.bib；正文 \citep 58 处 91 键中 6 键接线（deposon2026·rooke2026·sudo2026·wuFDS1·uchida·clark1998·
+%       P468 新增四邻居键全接）；余 85 键无 bib 条目·0 硬接·编译仍 [?]；bib 未用 42 条不进参考文献表（0 nocite）；
+%       逐键对表＋缺键清单＋未用清单随交付包（shared/阿兰_48条bib接线_交付包_20261125）。只接线·未编译。
 % 纪律：数字一律来自实跑（thermo_demo --check 13/13·crosscheck 15/15·lean 27/27·selftest 25/25）
 %       未实测项一律标「待测」·不填估值·代价项入稿
 % ============================================================================
@@ -394,5 +397,13 @@ The lines this paper reports are: the thermodynamic before/after on the frozen t
 \section{Engineering record}
 \label{app:engineering}
 The plugin releases carry their own gates. The thermodynamic generation is \texttt{v0.1.0-preview.10} at commit \texttt{0e93cc1}; the previous memory face is \texttt{v0.1.0-preview.9} at \texttt{4ee12b6}. A packaging note is recorded: the published file list includes directories, so an \texttt{npm pack} from a working tree that has run Python includes \texttt{\_\_pycache\_\_/*.pyc}; installs from a git ref or a clean checkout are unaffected, and a desk-level pack should be made from a clean tree. The rollback line is three points: the code tag, the ledger generation (a ledger belongs to one generation, and a rollback or a roll-forward changes the ledger or returns to the pre-switch snapshot), and the parameter switch (a \texttt{DEPOSON\_THERMO} closed configuration, which is a degraded position and not an equivalent rollback). A forward roll is not a normalisation, and the legacy face's same-key rewrite is recorded as it is: a ledger written by the previous face that contains a same-key rewrite carries no supersede event, because that face overwrote the row silently; replayed under the thermodynamic generation it fails loud with a same-key-present-without-prior-supersede reading, and replays only after per-key deduplication that keeps the last row per key. The code is not changed to normalise this, and a forward roll therefore uses a new ledger or a deduplicated copy. A relay risk is recorded for the \texttt{teamorouter} relay used in the real-model round: its response body carries a \texttt{modelKey} field whose value has the form of an upstream provider key; the field was never used, the probe log was written with the field replaced by a placeholder, and the readings packages carry no residue of it. The relay stays in use and the risk stands as a note. The compliance check requires that no post-delivery modification exists in a readings package, that a tampered ledger fails loud under the recompute script, and that no key-level gate is scored on a flattened row.
+
+% ---- bibliography wiring (Alan 2026-11-25, PI 18:08 item 9 first half): 48-entry bib
+% ---- landed at paper/v5preR2_related_work.bib (783f5f1064fd); 6 of 91 \citep keys wired
+% ---- (deposon2026 / rooke2026 / sudo2026 / wuFDS1 / uchida / clark1998; the four P468
+% ---- neighbour keys all wired); the other 85 keys have no bib entry and stay [?] - 0 hard-wired;
+% ---- the 42 unused bib entries are not forced into the reference list (no \nocite). Not compiled.
+\bibliographystyle{unsrt}
+\bibliography{v5preR2_related_work}
 
 \end{document}
