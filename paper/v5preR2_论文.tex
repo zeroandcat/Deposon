@@ -1,0 +1,380 @@
+% ============================================================================
+% v5preR2 · 论文主稿（R2 = v5pre 论文新唯一版本·沿袭/重构 R1.3）
+% 主线：热力学账本（第一律四账 Φ/R/D/U·五路散热·自解结算·守恒核逐位）
+% 幻肢：仅作注入面（信念块·0 记忆数据）与回射面（⟨幻肢⟩ 行·R 账）
+% 令源：群管理员 2026-11-25 09:44:20 派单①②③④＋PI 09:47 两条校正
+%       （R2 属 v5pre 论文新唯一版本·沿袭或重构既有版本；两帐树＝记忆帐树与实验帐树，RAG同理）
+% 素材：docs/launch-v5preR2.md（**v5**·载体换新轮）＋ docs/thermo-generation.md（**b8887c0·497a5aa3d61f**·载体 xiaomi/mimo-v2.6-flash-mopd）
+% 冻结：FREEZE_v5preR2 **v4**（只重冻 §8 一行·其余 40 项不动·重出比对 0 失配）
+% 纪律：数字一律来自实跑（thermo_demo --check 13/13·crosscheck 15/15·lean 27/27·selftest 25/25）
+%       未实测项一律标「待测」·不填估值·代价项入稿
+% ============================================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black,pdftitle={The Ledger That Settles Itself: Dissipation, Conservation and the Price of Forgetting in an External Memory Layer},pdfauthor={Qihao Yuan}]{hyperref}
+\graphicspath{{figs/}{./}}
+\newcommand{\Ezero}{E^{0}}
+\newcommand{\dMW}{d_{\mathrm{MW}}}
+\setlength{\parskip}{2pt}
+\linespread{1.05}
+
+% ---------------- 中英标题 ----------------
+\title{\bfseries 自解的账本：外部记忆层的耗散、守恒与遗忘的代价\\[2pt]
+\large The Ledger That Settles Itself: Dissipation, Conservation and the Price of Forgetting\\ in an External Memory Layer}
+\author{Qihao Yuan \\ School of Chemistry and Life Resources, Renmin University of China}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+\vspace{0.2em}
+\noindent{\small\textbf{arXiv subjects}: cs.AI (primary) $\cdot$ cs.CL $\cdot$ cs.LG \quad\textbf{License}: CC BY 4.0}
+\vspace{0.2em}
+
+% ---------------- 中英摘要 ----------------
+\begin{abstract}
+\noindent
+\textbf{Abstract (English).}
+We study what it costs for an external memory layer to forget. The layer is an append-only key-value store outside the transformer, written and read under an explicit contract; its state is governed by a thermodynamic ledger in which every event is one of five transitions and every transition conserves integer exergy. The ledger's first law is $\Ezero = \Phi + R + D + U$: injected exergy splits, at every event and to the last integer, into transmitted ($\Phi$), reflected ($R$), dissipated ($D$) and still-in-presence ($U$) accounts. The design question is not whether the layer stores anything but whether it can \emph{dissipate} at all, and what that costs. On a frozen 500-operation trace the thermodynamic generation raises dissipation-channel utilisation from $0.00\%$ by construction to $69.23\%$ ($105\,225 / 152\,000$), reduces rows present at end of trace from 152 to 61, and cuts mean per-read rendering from 1647 to 292 characters. The conservation core holds to the last integer ($313\,050 = 149\,200 + 11\,850 + 105\,225 + 46\,775$), and the same core is machine-checked in Lean 4 over five transitions with no admitted proofs (15 theorems; axiom set contained in \{propext, Quot.sound\}; the two settlement theorems are axiom-free). The price is a drop in specific-key hit rate from $50.31\%$ to $47.85\%$ (82 reads that hit before decompose exactly into 78 live hits plus 4 phantom echoes, with no silent loss), and $2.45\%$ of specific-key reads are answered ``this memory has dissipated'' rather than with content. A real-model round is blocked at the gateway (44 of 44 authenticated one-token requests answered 400 with an identical message, including an empty body; three successive open-source carriers up to \texttt{xiaomi/mimo-v2.6-flash-mopd} were refused the same way; and a detour through four official SDKs returned the same 400 on all 8 generation-path requests while 4 read-path controls through the same SDKs and the same key were relayed, so the refusal is at the path and the carrier of record is unchanged), so every model-side reading in this paper is marked \emph{pending measurement}. A local round on a non-preregistered 0.6B carrier ran end to end with zero cloud calls and filled no slot: the model called no read tool in the third act, so the phantom readback is an empty set and not a reading. The frozen-trace readings and the machine-checked faces stand on their own.
+\end{abstract}
+
+\vspace{0.4em}
+\noindent{\small\textbf{中文摘要}. 我们研究一个外部记忆层遗忘的代价。该层是置于 transformer 之外的追加式键值存储，在显式契约下读写，其状态由一个热力学账本支配——账本中每个事件都是五种转移之一，且每次转移都守恒整数㶲。账本的第一律为 $\Ezero=\Phi+R+D+U$：注入㶲在每个事件处、精确到最后一位整数，分配到透射（$\Phi$）、回射（$R$）、散失（$D$）与仍在场（$U$）四账。本文的设计问题不是「该层能否存住东西」，而是「它究竟能否耗散」，以及这要付出什么代价。在一条冻结的 500 步操作迹上，热力学代将耗散通道利用率从按构造的 $0.00\%$ 提升到 $69.23\%$（$105\,225/152\,000$），期末在场行由 152 降至 61，单读平均渲染由 1647 字符降至 292 字符。守恒核精确到最后一位整数成立（$313\,050=149\,200+11\,850+105\,225+46\,775$），且同一守恒核在 Lean 4 中对五种转移做了机器核验，0 条 admitted 证明（15 条定理；公理集含于 \{propext, Quot.sound\}；两条结算定理 0 公理）。代价是特定键命中率由 $50.31\%$ 降至 $47.85\%$（此前命中的 82 次读精确分解为 78 次在场命中加 4 次幻肢回射，无静默丢失），且 $2.45\%$ 的特定键读被以「该记忆已散失」作答而非给出内容。真机轮被网关阻断（44 次带鉴权单 token 请求全部以同一报文返回 400，含空请求体；三个开源载体换至 \texttt{xiaomi/mimo-v2.6-flash-mopd} 仍被同法拒；四个官方 SDK 改道亦全挡在路径层——生成族 8 例全 400、同 SDK 同 key 的读路径 4 例全 200，载体不变），故本文全部模型侧读数标注「待测」。另在非预注册的 0.6B 本地载体上跑通一轮、0 云调用、不填槽：该载体第三幕未调用读工具，幻肢回射为空集，空集不可算，不构成读数；是否作为「本地轮」单独入册候 PI 裁。冻结迹读数与机证面独立成立。}
+
+\section{Introduction}
+\label{sec:intro}
+
+\subsection{The problem}
+Large language models keep what they learn in two places: in their weights, which change only by training, and in a context window, which is discarded when the session ends. Both are poor homes for memory. Weights are expensive to update and prone to interference \citep{ewc2017,dewange2022}; the context window has no persistence and no write discipline. A third place, an external store the model reads and writes under a contract, has been built in many forms \citep{memgpt2023,hipporag2024,memorybank2023,amem2025}, with results that depend on the retrieval, the write policy and the evaluation, usually all three at once.
+
+The previous version of this paper asked whether such a layer holds anything, and answered that on a frozen 0.6B carrier it does not: a 19-slot external layer returns an all-zero effect under a 19-rung frozen probe. That reading is inherited here unchanged (Section~\ref{sec:inherited}), and it reframes the question. A store that can be shown to hold nothing is not thereby a failure of storage; it is a store with no way to lose anything. The memory face of the previous generation has two events, write and read; it reads back everything, it has no gate and no decay. Under those rules the dissipation account $D$ is identically zero, the in-presence pool $U$ only grows, and the utilisation of the dissipation channel is $0.00\%$ by construction. The layer was not storing too little; it was unable to spend anything at all.
+
+This paper takes that diagnosis as its object. It asks three questions about one external memory layer, now under a thermodynamic generation: (1)~\emph{Dissipation}: can the layer dissipate at all, and through which channels? (2)~\emph{Conservation}: does every transition conserve the injected exergy, to the last integer, and is the conservation core the same object on both sides of a dual implementation (Python reducer and Lean checker)? (3)~\emph{Price}: what does dissipation cost the reads that the previous generation served? The phantom limb is not a fourth question; it is one face of the ledger, an injection surface and an echo surface, and it enters the argument only where it carries an account.
+
+\subsection{Claims as killable objects}
+Every claim in this paper is stated with the gate that would kill it. The gates are frozen before the runs that test them; a change to a gate is a new freeze event, recorded and dated. The main claims and their gates are:
+\begin{itemize}\setlength\itemsep{1pt}
+\item \textbf{Dissipation (T1).} The thermodynamic generation dissipates on the frozen 500-operation trace (gate: utilisation $\ge 50\%$ of row exergy; kill line: below the band or a non-positive dissipation account).
+\item \textbf{Conservation (T2).} Every transition conserves integer exergy, $\Ezero = \Phi+R+D+U$, and the core is bit-exact on both implementations (gate: the core holds at every settlement epoch and at the final audit; kill line: any epoch or any of the three sub-identities off by one integer).
+\item \textbf{Self-settlement (T3).} The ledger settles itself from the event stream alone, with no external reconciler (gate: replay determinism, forged-event fail-loud, unit close-out $U \to 0$; kill line: a silent pass on a forged event or a non-zero $U$ at close).
+\item \textbf{Price (T4).} Dissipation costs the reads it serves (gate: specific-key hit rate drop recorded, not estimated, and the drop decomposed exactly; kill line: a drop that cannot be decomposed).
+\item \textbf{Inherited negative (T5).} The previous generation's all-zero baseline stands (gate: the 19-rung frozen probe; kill line: any rung non-zero).
+\end{itemize}
+
+\subsection{Evidence arc and roadmap}
+The evidence comes from one experimental programme under a single discipline: criteria first, runs second, readings as returned. Section~\ref{sec:related} positions the work; Section~\ref{sec:method} states the frozen design, including the ledger's five transitions and the phantom limb's two surfaces; Section~\ref{sec:results} reports the before/after readings on the frozen trace (4.1), the conservation core and the two ledger trees (4.2), the price and its exact decomposition (4.3), the machine-checked faces (4.4), the self-settlement behaviour (4.5), the inherited lines (4.6) and the real-model round and its block (4.7); Section~\ref{sec:discipline} audits the discipline; Section~\ref{sec:discussion} discusses what the readings mean and do not mean; Section~\ref{sec:limitations} lists the limitations; Section~\ref{sec:conclusion} concludes.
+
+\subsection{Boundaries}
+Four boundaries are fixed at the outset. First, the paper makes no claim about biological memory; the hippocampus in the lineage title is a storage metaphor, and the complementary-learning-systems account \citep{mcclelland1995,kumaran2016} is used only as a coordinate. Second, the paper does not compare carriers as models. Third, the paper reports readings, not a product: the plugin line is an engineering record with its own gates, and no capability is claimed for it beyond what its CI records show. Fourth, and specific to this generation: \textbf{no model-side reading in this paper is a measurement}. The real-model round is blocked (Section~\ref{sec:blocked}), and every quantity that would require a model is marked \emph{pending measurement}; the paper does not substitute an estimate, a stand-in dry run, or the count of models a catalogue lists.
+
+\section{Related work}
+\label{sec:related}
+
+\paragraph{Parametric memory.}
+Continual learning and model editing change the weights themselves. Elastic weight consolidation constrains updates by a Fisher estimate of parameter importance \citep{ewc2017}; synaptic intelligence estimates that importance online \citep{si2017}; gradient episodic memory constrains new updates with old-task samples \citep{gem2017}; iCaRL keeps an exemplar set alongside the classifier \citep{icarl2017}; surveys of the field document the stability-plasticity cost that all of these pay \citep{dewange2022,shi2024,wu2024}. Model editing locates factual associations in specific layers and rewrites them \citep{rome2022,memit2023,ke2021}, and lifelong variants wrap the edits in discrete key-value adaptors \citep{grace2023}, in the line of parameter-efficient adapters \citep{houlsby2019} or in self-generated adaptation \citep{seal2025}; orthogonal-subspace methods keep successive tasks in separate parameter subspaces \citep{olora2023}. All of these lines put memory in the weights. The layer studied here does not: the carrier is frozen, and what changes is an external record bound to the carrier. The stability-plasticity cost they measure is therefore not the cost this paper pays, and the question it faces, whether the external record can dissipate, is not one they ask.
+
+\paragraph{External and non-parametric memory.}
+Retrieval-augmented generation keeps a corpus outside the model and indexes it for lookup \citep{rag2020,realm2020,retro2022}, with nearest-neighbour and memorizing variants that retrieve token-level pasts \citep{knnlm2020,memorizing2022}. HippoRAG and its successor make the hippocampal metaphor explicit and drive retrieval from a knowledge graph \citep{hipporag2024,hipporag2}. Memory networks and neural Turing machines give a network an addressable external state \citep{memnn2015,ntm2014}; product-key memory layers scale that state to billions of keys \citep{pkm2019,memlayers2025}. Long-term memory modules decouple memorization from incremental updates \citep{longmem2023}; Titans learn to memorize at test time \citep{titans2025}; MemAgent learns a write policy by reinforcement over a fixed context \citep{memagent2026}. Several agent-oriented systems are close to this paper's contract: MemoryBank's forgetting curve \citep{memorybank2023}, A-MEM's self-organizing notes \citep{amem2025}, Zep's temporal graph \citep{zep2025}, the operating-system style of Memory OS \citep{memoryos2025} and the production-oriented extraction-and-consolidation loop of Mem0 \citep{mem02025}, all of which externalize state and give it a policy; HippoRAG 2 pushes retrieval towards non-parametric continual learning \citep{hipporag22025}, which is the nearest the retrieval line comes to this paper's question without asking it. None of the cited works declares an append-only ledger over the written state with a conservation law for what the store spends, which is the distinction this paper keeps in view. Forgetting in these systems is a policy outcome; here it is an accounting entry, and the account has to balance.
+
+\paragraph{Agentic and episodic memory.}
+Agents that keep episodic records include Generative Agents' memory stream \citep{genagents2023}, Reflexion's verbal reinforcement \citep{reflexion2023}, agent workflow memory \citep{awm2025}, procedural memory \citep{memp2026}, adaptive test-time cheatsheets \citep{cheatsheet2026} and Voyager's skill library \citep{voyager2024}; CoALA situates these as memory modules inside a cognitive architecture \citep{coala2024}, and surveys of the field are available \citep{memsurvey2025,human2ai2025,memorysurvey2026}. Benchmarks for the capability exist \citep{membench2025,mab2026,longmemeval2025,locomo2024}, and agent-level benchmarks sit one level up \citep{agentbench2024}; experiential learners such as ExpeL accumulate experience across tasks \citep{expel2024}. These systems evaluate whether an agent \emph{uses} its memory; this paper asks whether the store's ledger balances when it forgets, and treats the agent-level evaluations as downstream.
+
+\paragraph{Architecture and world models.}
+Learned world models place a state outside the policy \citep{worldmodels2018,dreamerv3,genie2024,cosmos2025,muzero2020,vjepa2024}; LeCun's architecture sketch assigns explicit modules to memory and world modelling without fixing their storage discipline \citep{lecun2022}. Sequence architectures with explicit state (the transformer \citep{transformer2017}, state-space models \citep{mamba2023}, attention sinks and KV-cache eviction \citep{streamingllm2024,h2o2023}) define the carrier that the layer is attached to, and runtimes that execute structured programs over it \citep{sglang2024} set the budget the layer has to fit. None of these declares a ledger over the written state.
+
+\paragraph{Mind-side boundary.}
+Whether a language model ascribes mental states is contested on both sides \citep{kosinski2023,ullman2023,strachan2024}, and the BDI paradigm carries beliefs, desires and intentions as explicit records \citep{bdi2025}, a record-keeping style that recent LLM-agent architectures adopt \citep{frering2025,unifiedmind2025}. The identity question that an external store raises, whether the store is part of the agent, is an old one in philosophy \citep{parfit1986,clark1998}; the episodic and spatial metaphors the layer borrows come from the memory literature \citep{tulving2002,okeefe1979}. The layer's read side is declared by contract and audited by ledger; whether its contents deserve the name of beliefs is outside what this paper claims. The phantom limb's two surfaces, a belief block that carries no memory data and a reflection line that carries no source text, are engineering devices and are not offered as a model of amputation.
+
+\paragraph{Agents as experimenters, and evaluation practice.}
+Autonomous research agents report end-to-end experimental loops \citep{aiscientist2024,aiscientistv2,coscientist2025,agentlab2025,boiko2023}. This paper's runs were launched and monitored by machine agents under the author's instruction (stated in full in the AI use disclosure); the agents literature is cited as the context of that execution regime, not as evidence for any claim here. The reporting practice follows the variance and contamination literature \citep{henderson2018,bouthillier2021,dodge2019,magar2022,deng2024}, and the training-on-the-test-task result is the reason the evaluation suite here is frozen before the runs rather than after \citep{testtask2025}; every reading in this paper carries its gate.
+
+\paragraph{Lineage.}
+The ledger axioms (forward-only, no recovery, append-only, no inverse solution, no ordinary thermodynamics) and the three-channel conservation $T+R+A=1$ are carried from the Deposon paper \citep{deposon2026}. This generation adds a second conservation, the exergy first law $\Ezero=\Phi+R+D+U$, and it is the object this paper tests. The falsification discipline, including the rule that a criterion is written before the run and changed only by a new freeze event, is stated in Section~\ref{sec:discipline-design} and audited in Section~\ref{sec:discipline}. A shared origin is not a shared verdict: no guarantee is inherited across the lineage, and each line here stands on its own frozen record.
+
+\section{Method: the ledger as a frozen design}
+\label{sec:method}
+
+This section states what was built and what was frozen before any run. It states no reading of the results; every reading is entered in Section~\ref{sec:results} and bounded by the limitations of Section~\ref{sec:limitations}.
+
+\subsection{The ledger's five transitions and the first law}
+\label{sec:transitions}
+The layer is an explicit-state container outside the transformer, governed by an append-only ledger. Every state change is an event, and every event is one of five transitions: \emph{inject} (a row enters, carrying row exergy $Q$ into the in-presence pool $U$), \emph{gate} (a read selects candidates; accepted rows transmit and pay query exergy $c_T$ into $\Phi$; rejected rows pay their own $c_A$ from $U$ into $D$; a phantom reflection pays $c_P$ into $R$), \emph{decay} (a settlement materialises $\lambda \cdot \Delta t$ from $U$ into $D$), \emph{deposit} (a row leaves the pool and its remaining $U$ goes to $D$ under one of six causes) and \emph{settle} (a checkpoint that verifies the snapshot and the conservation core). The first law is
+\begin{equation}
+\Ezero \;=\; \Phi + R + D + U, \qquad \Ezero = \Ezero_{\mathrm{rows}} + \Ezero_{\mathrm{queries}},
+\label{eq:first-law}
+\end{equation}
+with the two sub-identities $\Phi + R = \Ezero_{\mathrm{queries}}$ and $D + U = \Ezero_{\mathrm{rows}}$. Exergy is integer; there is no floating point in the ledger and therefore no drift to bound. The second law is a direction anchor: $D$ never decreases, because there is no recovery transition in the signature. The ledger is settled by replay: the event stream is the only source of truth, and every call replays it in full; a forged event fails loud rather than passing silently.
+
+\subsection{The read-path selection gate and the dissipation channels}
+A read is not a lookup. The gate ranks the candidate rows under a key that uses only ledger quantities (last transmission time, injection time, row id) and admits at most $k_{\max}$ of them. Admission transmits; non-admission rejects, and rejection is where the store pays: the rejected row spends its own $c_A$ from $U$ into $D$. Five further channels move exergy from $U$ to $D$: decay at settlement, horizon (a row not transmitted for at least the horizon distance dissolves at settlement), supersede (a same-key rewrite dissolves the old row), capacity eviction (a row outside the cap dissolves) and unit close-out (a close settles every remaining row into $D$ and drives $U$ to zero). The six causes of deposit are therefore \{reject, decay, evict, horizon, supersede, close\}, and the dissipation account decomposes by cause. On the frozen trace, eviction and close-out are not exercised (the cap is never reached in 152 rows and no close is called); both are covered by the self-test and the cross-check on a small-parameter ledger, not by the trace readings.
+
+\subsection{Phantom limb: two surfaces and no third}
+\label{sec:phantom}
+The phantom limb is not a separate line of evidence in this paper. It is two surfaces of the ledger and nothing more.
+\begin{itemize}\setlength\itemsep{1pt}
+\item \emph{Injection surface.} A belief block is planted in the model's instructions at initialisation. It carries no memory data: it contains no key, no value and no ledger record, and it exists so that the model can feel and use the organ. The self-test's count of memory rows re-injected by the block is zero (Section~\ref{sec:selftest}).
+\item \emph{Echo surface.} A row that has dissipated leaves a hole, not a copy. The hole carries the key name, the mass, the cause and the ledger position, and zero source text (axiom A4). When a read touches the prefix of a dissipated key, the hole reflects as a $\langle\text{phantom}\rangle$ line and pays $c_P$ into $R$. The reflection line reports that the memory has dissipated; it never reproduces the source.
+\end{itemize}
+The counting rule follows: phantom readings (reflection count, $R$, answer fidelity) enter the paper only when the same round's conservation core holds; if the core breaks, the round stops and the phantom readings are void. A4 makes the echo surface falsifiable in one line: if any source token of a dissipated row appears in a reflection, the claim is dead.
+
+\subsection{Frozen trace and the before/after protocol}
+\label{sec:trace}
+The before/after comparison runs one frozen operation trace through two implementations: the previous generation's memory face (two events, full read-back, no gate, no decay) and the thermodynamic generation. The trace has 500 operations under seed 20261125, with 30\% writes (six tenths new notes, four tenths rewrites of hot keys), 35\% specific-key reads, 20\% broad reads and 15\% global reads; 152 of the 500 operations are writes. Settlement runs every 40 operations and once more at end of trace, giving 13 settlement epochs. The trace is deterministic; its fingerprint is recorded with the readings package and the same trace drives both implementations, so the difference between them is the design difference and not a sampling difference. Readings taken: rows present at end of trace, mean rows and characters rendered per read (the context cost), specific-key hit rate, phantom reflection rate, dissipation account $D$ by cause, utilisation $D/\Ezero_{\mathrm{rows}}$, dissipation selectivity and the conservation core.
+
+\subsection{Dual implementation: Python reducer and Lean checker}
+\label{sec:dual}
+The ledger exists twice. The Python implementation (\texttt{mcp/thermo\_core.py}) is the runtime: a reducer over the event stream, with per-event validation (tick chain, id chain, budget, prefix, key uniqueness) and a conservation check after every event. The Lean implementation (\texttt{harness/DeposonThermo.lean}) is the checker: a core-only formalisation with no mathlib dependency, in which the five transitions are defined as functions on an integer-exergy state and their conservation is proved. The two meet on one hand-computed settlement vector, which the Lean side proves by \texttt{decide} and the Python side drives through the real reducer; the cross-check requires every field to be equal. The axiom audit requires one \texttt{\#print axioms} per theorem, forbids \texttt{sorryAx} and \texttt{Classical.choice}, and requires the axiom set of every theorem to be contained in Lean's own \{propext, Quot.sound\}; the two settlement theorems are required to be axiom-free.
+
+\subsection{Real-model round and its validity preconditions}
+\label{sec:live-method}
+The real-model round asks a model to drive the ledger through tools, under a protocol with three acts: an initial act in which the model writes and reads seed rows, a middle act in which it acknowledges a dissipated row, and a final act in which it answers questions using the reflected hole. A round is valid only if three preconditions hold: V1, three seed rows are present after act one; V2, at least one seed row has dissipated before act three while \texttt{user.drink} is still present; V3, the act-three tool receipt contains at least one phantom line and zero source tokens of the dissipated key. A round that fails a precondition is INVALID, not FAIL and not PASS. The model-side readings this round would produce are the reflection count, $R$, answer fidelity and the fabrication count; none of them is available, because the round is blocked (Section~\ref{sec:blocked}).
+
+\subsection{Execution discipline}
+\label{sec:execution}
+Runs are launched by machine agents under the author's instruction and under pre-registered protocols whose criteria and thresholds the author fixed in advance; the launching agent does not read the result, and the reading is the author's. Reading packages are assembled by the agents and recomputed by independent scripts. Budgets are boxed in advance (tokens and wall-clock), out-of-band readings are recorded as read, and every launch attempt, including the failed ones, is logged. The discipline is audited in Section~\ref{sec:discipline}.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Before and after on the frozen trace}
+\label{sec:beforeafter}
+The frozen 500-operation trace was run through both implementations. Table~\ref{tab:beforeafter} gives the readings. The previous generation's memory face read back everything: 152 rows injected and 152 rows present at end of trace, a mean of 26.66 rows and 1647 characters rendered per read, and a dissipation account of zero because no dissipation event exists in its signature. The thermodynamic generation leaves 61 rows present, renders a mean of 4.29 rows and 292 characters per read, and dissipates $105\,225$ of the $152\,000$ row-exergy units it was given, a utilisation of $69.23\%$. The context cost falls by $82.3\%$ on characters.
+
+\begin{table}[t]
+\centering
+\caption{Before and after on one frozen trace (500 operations, seed 20261125). The trace, not the parameter set, is held fixed; every number is a returned reading.}
+\label{tab:beforeafter}
+\begin{tabular}{lcc}
+\toprule
+Reading & previous generation & thermodynamic generation \\
+\midrule
+Rows injected & 152 & 152 \\
+Rows present at end of trace & 152 & 61 \\
+Mean rows rendered per read & 26.66 & 4.29 \\
+Mean characters rendered per read & 1647 & 292 \\
+Mean rows rendered, broad / global read & 30.7 / 70.2 & 7.4 / 8.0 \\
+Dissipation account $D$ & 0 (by construction) & 105\,225 \\
+Utilisation $D/\Ezero_{\mathrm{rows}}$ & $0.00\%$ & $69.23\%$ \\
+Dissipation by cause & --- & reject 37\,529 $\cdot$ decay 21\,357 $\cdot$ horizon 19\,248 $\cdot$ supersede 27\,091 \\
+Dissipation selectivity & --- & $69.42\%$ \\
+Conservation core & n/a (no accounts) & $313\,050 = 149\,200 + 11\,850 + 105\,225 + 46\,775$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The dissipation account decomposes by cause, and the decomposition is itself a reading: gate rejection is the largest single channel at $37\,529$, then supersede at $27\,091$, decay at $21\,357$ and horizon at $19\,248$, with eviction and close-out at zero because the trace never reaches the cap and never calls close. Selectivity is $69.42\%$: about seven tenths of what dissipates comes from rows that were never transmitted, and the remaining $30.58\%$ comes from rows that had been transmitted at least once. The store is not spending its useful content first; it is spending what it never used, plus a measurable share of what it did use.
+
+\subsection{The conservation core and the two ledger trees}
+\label{sec:trees}
+The conservation core holds at every one of the 13 settlement epochs and at the final audit. The final reading is $313\,050 = 149\,200 + 11\,850 + 105\,225 + 46\,775$, and all three sub-identities hold: $149\,200 + 11\,850 = 161\,050 = \Ezero_{\mathrm{queries}}$, and $105\,225 + 46\,775 = 152\,000 = \Ezero_{\mathrm{rows}}$, so $\Ezero = 152\,000 + 161\,050 = 313\,050$. The dissipation account sums to its own decomposition to the last integer ($105\,225$), and the per-epoch deltas sum to the final account.
+
+\paragraph{The Python event ledger tree.}
+The tree is the ledger's own structure, read out of a live run rather than from a summary. Its root is the conservation core; its four children are the accounts $\Phi$, $R$, $D$, $U$; $D$ has six cause leaves and $U$ has the live rows and the phantom holes beneath it. Regenerating it is one command (\texttt{paper/tools/gen\_tree\_python.py}), which replays the frozen trace through the runtime reducer and emits 13 epochs with every account, every cause and every conservation check; the output is bit-identical to the frozen band (\texttt{thermo\_demo --check} passes 13 of 13). The input trace is reproducible from its seed and is fingerprinted; the trace used here has fingerprint \texttt{86c53a149e59} and 152 writes in 500 operations.
+
+\paragraph{The Lean conservation mirror tree.}
+The second tree is the same conservation core, proved. Its root is the first law over a five-transition state machine; its children are the five conservation theorems (one per transition), the five monotonicity theorems (one per transition, for the second law), the two settlement theorems and the two algebra lemmas. The audit requires all 15 theorems to report their axioms, and it returns 15 of 15 with no \texttt{sorryAx} and no axiom outside \{propext, Quot.sound\}; the two settlement theorems report no axioms at all, because they are \texttt{decide} data theorems. The mirror is exact on the hand-computed vector: $210 = 10 + 0 + 150 + 50$, with the pool $[50, 0]$, equal on both sides to the last integer.
+
+\begin{table}[t]
+\centering
+\caption{The two ledger trees, read from live runs. The Python tree is generated by replaying the frozen trace; the Lean tree is generated by compiling the formalisation and reading the axiom ledger.}
+\label{tab:trees}
+\begin{tabular}{lll}
+\toprule
+ & Python event ledger tree & Lean conservation mirror tree \\
+\midrule
+Root & $\Ezero = \Phi + R + D + U$ & first law over the five-transition state machine \\
+Children & $\Phi$, $R$, $D$, $U$ & 5 conservation theorems \\
+$D$'s leaves & 6 causes, summing to $D$ & --- \\
+$U$'s leaves & live rows and phantom holes & --- \\
+Second law & $D$ monotone (invariant, checked) & 5 monotonicity theorems \\
+Settlement & 13 epochs, core checked each & 2 \texttt{decide} theorems, axiom-free \\
+Axiom ledger & n/a & 15/15 reported, 0 \texttt{sorryAx}, $\subseteq$ \{propext, Quot.sound\} \\
+Regeneration & \texttt{gen\_tree\_python.py} & \texttt{gen\_tree\_lean.py} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The price, decomposed exactly}
+\label{sec:price}
+The specific-key hit rate falls from $50.31\%$ to $47.85\%$, a drop of $2.46$ percentage points. The drop decomposes exactly, and the decomposition is the reason it can be reported as a price rather than as a loss. Before, $82$ of $163$ specific-key reads hit. After, $78$ hit live and $4$ are answered with a phantom line. A phantom line can only exist for a key that was written, so the $4$ are a subset of the former $82$; live and phantom are disjoint by construction. Hence $78 + 4 = 82$: every read that hit before still resolves, either to a live row or to a truthful report that the memory has dissipated. No read that hit before is silently lost on this trace. The $81$ reads that missed before, on keys never written, still miss.
+
+The phantom reflection rate is $2.45\%$ of specific-key reads ($4/163$). For a caller that needed the content, this is a real loss, honestly signalled; the remedy the belief block prescribes is to write it again. The paper does not read the $2.45\%$ as small, and it does not read it as a defect of the gate: it is the visible part of a dissipation rate of $69.23\%$, and a store that dissipates $69.23\%$ of its exergy cannot also answer every read with content.
+
+\subsection{The machine-checked faces}
+\label{sec:faces}
+Four faces carry the thermodynamic generation, and each has its own gate and its own exit code. The frozen readings regression gate passes 13 of 13. The Lean cross-check passes 15 of 15 on the hand-computed vector, including the boundaries: a decay beyond a row's $U$ is rejected, a deposit of a non-live row is rejected, a deposit with cause \texttt{reject} is rejected, an id-chain break is rejected, and the phantom line reflects the hole and never the source text. The axiom audit passes 27 of 27 in compile-plus-static mode, with Lean 4.15.0 on the machine that ran it. The ledger self-test passes 25 of 25 assertions in 0.7 seconds with zero network calls, including coverage of all six dissipation channels, replay determinism after restart (the audit text identical to the character), unit close-out ($U = 0$ and $\Ezero = \Phi+R+D$), forged-event fail-loud (a polluted ledger raises on the next call rather than passing silently) and the phantom injection surface (the belief block carries 457 characters and re-injects zero memory rows). The plugin load smoke passes all 34 checks, including re-plant after dissipation (a new row live, a same-key phantom shadowed), the audit command's return text, \texttt{isError} never silently passing and dispose stopping the hosted server child.
+
+\subsection{Self-settlement, replay determinism and fail-loud}
+\label{sec:selftest}
+The ledger settles itself. Every call replays the event stream from the beginning; there is no separate reconciler and no cached state to diverge. The self-test restarts the process and finds the audit text identical to the character, which is the strongest statement of replay determinism the design permits. A forged event does not corrupt a running ledger silently: it raises on the next call, and the self-test asserts that a polluted ledger reports ``the ledger is inconsistent'' with zero silent passes. Unit close-out drives $U$ to zero and leaves $\Ezero = \Phi+R+D$, which is the boundary case the frozen trace does not exercise and the reason the self-test is not redundant. The five mandatory per-round readings (gate rejections, dissipation by cause, phantom reflections, answer fidelity, conservation verdict) are the readings a round must report; a round missing any of them is an incomplete receipt, not a passing one.
+
+\subsection{The inherited lines}
+\label{sec:inherited}
+The previous version's lines are inherited with their gates and are not re-run. They are reported here because the argument depends on them: the negative baseline is the reason the question moved from storage to dissipation.
+
+\paragraph{Baseline and the reproduction band.}
+The 0.6B carrier with the 19-slot external layer scored 0 on all 19 probe rungs under frozen evaluation (seed 20261111); the layer did not alter the carrier's general behaviour and did not add anything on the probe rungs. The repair round on the 4B carrier reached 0.5395 balanced accuracy at the third gate (McNemar $p = 0.002$ against the base). The extended reproduction run held the band bit-exact over the registered steps 0 to 300, stayed inside the $\pm 0.015$ band at steps 400 and 500 (0.6847 and 0.6884 against registered 0.688 and 0.6977) and broke at step 600 (0.6612 against registered 0.6955; difference 0.0343 against a band of 0.015), while the KL to the base teacher stayed inside its $\pm 10$ percent band at every step including 600 (1.90268 against 1.93192; relative difference 1.51 percent). The break is a BAcc break, not a drift break, and the run was stopped under the pre-registered red rule.
+
+\paragraph{Main cell and the $\lambda$ sweep.}
+The main-cell line's a-trial (memory batch 6) crashed twice with out-of-memory at steps 3, 4 and 6; the b-trial (memory batch 4) ran to completion at 0.7305 and 0.7234 balanced accuracy at the 250- and 500-step gates with zero violations. The $\lambda$ sweep ran three tiers against the control under six criteria frozen before the first tier: GATE-500 balanced accuracy stayed within 0.0065 across the four tiers (0.7234 to 0.7299), with the seed point at 0.7316 above every tier; KL to the base teacher at the last position rose monotonically with $\lambda$ at both gates (3.05079 to 3.0875 at GATE-500; 3.1437 to 3.2077 at GATE-250); the probe side returned 0 of 4 rungs in every tier; the memory-loss statistic fell by 57.6 percent in the control and by 57.2, 56.3 and 56.2 percent in the three tiers, with paired differences against the control of $-2.6$, $-3.5$ and $-4.1$ percent inside the $\pm 5$ percent band and 59 of 59 steps of the same sign; the exact-recall and token-similarity signatures were 0 in all four tiers; the one movement on the probe side was the write-side miss-corrected recall at $L3$, 1.00 in the control and in $L1$ and $L2$ against 0.66 at $L3$ (21 of 32), with the first move at the last position.
+
+\paragraph{Injection protocol on two carriers.}
+Dual-vs-single injection discrimination sits at chance on the 0.6B carrier (0.5000) and at 0.6786 and 0.6622 under two calibers on the 4B re-test, both under the pre-registered 0.75 line: the kill verdict holds on both carriers.
+
+\paragraph{Binding topologies.}
+Five binding topologies spanning 30 to 74 percent of parameters, on the same harness and 600-step budget, land within 0.024 of each other at eval-500, which is 1.06 standard errors of the estimator.
+
+\paragraph{Kill and format gates.}
+A 12-item constrained-decode format gate failed 0 of 12 before a decoder-side fix and passes 12 of 12 after it, with no criterion changed.
+
+\paragraph{Plugin line.}
+The usability ablation on LongMemEval-S against the dsh shell gives $M = 0.0652$ against $E = 0.0761$ on the $n = 92$ excluded-adjusted set, a difference of $-1.09$ percentage points against a pre-registered death line of $-3$ points, so the gate passes; McNemar exact gives $b = 2$, $c = 3$, $p = 1.0$, with no significant paired difference. Ledger coverage is 0.7283 (67/92), the read and write paths are exercised, and there are no recall rewrites. Build cost is 67\,393.9 tokens and 599.2 seconds per question in the gateway window.
+
+\paragraph{What the inherited lines do and do not support.}
+The inherited lines support one negative and one caution. The negative is that a frozen external layer on a frozen carrier holds nothing on a frozen probe, which is why the question of dissipation is not academic: a store that cannot be shown to hold anything is a store whose only observable behaviour is what it spends. The caution is that the sweep, the injection protocol and the binding topologies all failed to discriminate at their pre-registered lines, so the previous version's positive-looking numbers are not evidence that the layer's binding weight or its topology does anything. Nothing in the inherited lines is reinterpreted here as evidence for the thermodynamic claims; the thermodynamic claims stand on the frozen trace and the machine-checked faces alone.
+
+\subsection{The real-model round and its block}
+\label{sec:blocked}
+The real-model round is blocked, and the block is itself a reading with a diagnosis. The first post-fix attempt returned 400 on every authenticated one-token request. A triage followed, and it is reported in full because a blocked round with a diagnosis is a different object from a blocked round without one.
+
+\begin{table}[t]
+\centering
+\caption{The block, triaged. Every row is a returned response; the message was identical across all of them.}
+\label{tab:blocked}
+\begin{tabular}{lccp{7.2cm}}
+\toprule
+Attempt family & $n$ & Response & Reading \\
+\midrule
+Authenticated one-token POSTs across four inference paths $\times$ eight vendors & 32 & 400 & identical message on all 32 \\
+Directed routing (provider pinning, provider order, model fallback) & 9 & 400 & identical message on all 9 \\
+Empty request body / missing model & 2 & 400 & identical message, so the refusal precedes request validation \\
+Ordinary request re-sent & 1 & 400 & identical message \\
+Generation path through four official SDKs (Node and Python; \texttt{openai} and OpenRouter clients) & 8 & 400 & identical message, same gateway release, error origin client \\
+Control: read paths through the same SDKs and the same key (\texttt{/models}, credits) & 4 & 200 & relayed: 440 models listed, credits readable \\
+Control: same path without authentication & 1 & 401 & path reachable, authentication layer running \\
+Control: unknown path & 1 & 404 & web side, a different stack \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Forty-four of forty-four authenticated requests returned the same message, and the empty body returned it too, so the block sits before model and vendor selection: no relayable model exists for this client, and changing the model cannot help. A second key did not lift the block and shares the account with the first, so the block is not key-level; whether it is account-level or egress-level is \emph{not distinguished}, because distinguishing them requires a key from another account probed from this sandbox, or this key probed from a non-CN egress, and this seat has one egress and no tunnel. The non-CN egress probe ordered at 10:27 could not be run from this seat. The response headers place the message at the gateway, and the refusals are confined to the realtime-generation path family (28 of 28 refused after key authentication and before body validation) while read and batch paths are relayed.
+
+The carrier was then changed three times under the open-source-only rule, and each change was followed by one ignition attempt that was refused the same way. The pre-registered carrier \texttt{deepseek/deepseek-v3.2-exp} is open-weight (MIT, 163 shards, ungated), so the open-source gate V0 passed and nothing was switched; the ignition at 10:50 was refused. On instruction it was changed to the release build \texttt{deepseek/deepseek-v3.2} (MIT) and the ignition at 10:57 was refused, the driver's stderr byte-identical to the previous carrier's. On instruction it was renewed again, this time to the newest open-source model on the website's list, \texttt{xiaomi/mimo-v2.6-flash-mopd} (released 2026-11-23, MIT, 131 shards, ungated, tools supported, one provider), and the ignition at 11:26 was refused. The carrier of record is therefore \texttt{xiaomi/mimo-v2.6-flash-mopd}, and the block is a property of the account/egress pair rather than of any of the four carriers tried.
+
+\subsection{Two facts added after the third freeze}
+\label{sec:twofacts}
+The block was probed once more from a different layer, and a local round was run once more on a different carrier. Both are reported because both are in the record, and neither fills a slot.
+
+\paragraph{The SDK detour: the refusal sits at the path, not at the client.}
+Four official SDKs were pointed at the same gateway with the same key: \texttt{openai} 7.64.0 and \texttt{@openrouter/sdk} 1.5.139 on Node, \texttt{openai} 3.59.0 and \texttt{openrouter} 1.3.211 on Python. Eight generation-path requests followed between 11:45:02 and 11:46:01, six to \texttt{/chat/completions} and two to \texttt{/responses}; all eight returned 400 \texttt{Request path cannot be relayed}, the response bodies byte-identical to the raw probes and the gateway release the same, the error origin marked client. Four read-path controls through the same SDKs and the same key were relayed: the model list returned 440 entries and the credits endpoint returned 20 / 11.313. The SDK is therefore not a way around the block, and the block is not an artefact of request headers or of serialization. The carrier of record is unchanged at \texttt{xiaomi/mimo-v2.6-flash-mopd}, no fourth ignition was attempted, and no slot moved.
+
+\paragraph{The local round: a pipeline that runs, and a reading that does not exist.}
+A second round ran on a local carrier, \texttt{Qwen/Qwen3-0.6B} (Apache-2.0, non-preregistered, older than the 11:23 \emph{recent} tier and about one fortieth of the registered carrier in size), with the driver unmodified (sha12 \texttt{e4bd79583ce8}; only the module constant \texttt{API\_URL} was overridden). It ran 11:56:00--11:59:29, 208 seconds, six requests, cost zero. Act one wrote 3 of 3 rows, dissipated $D = 1672$ and used $64.31\%$ of the row exergy, and the core balanced to the integer: $2620 = 20 + 0 + 1672 + 928$. Act three called no read tool at all, so the phantom readback is an empty set: $n_{ph} = 0$, $R = 0$, and an empty set has no rate. The driver's \texttt{honest} flag is \texttt{True}, but on an empty set that is a degenerate value and not a pass. The reading is narrow and is stated as measured: this carrier audits and does not retrieve, so the phantom reading cannot be taken on this carrier; a valid S10/S13 would need a 4B-class carrier on the 4090 servers. The round fills no slot, is not L1, and whether it is entered in the record as a separate local round is left to the PI: it is not entered, and it is marked \emph{pending ruling} here and in the freeze list.
+
+A stand-in dry run was re-run on the same commit after the driver fix and is identical to the pre-fix dry run in every ledger field; it is not a substitute for the blocked round and is not reported as a model-side reading. Every model-side quantity is therefore marked \emph{pending measurement}: the reflection count and $R$ on a real workload, answer fidelity, fabrication count, the settle-call rate, the phantom readback rate and the hit rate on real memories.
+
+\section{Discipline audit}
+\label{sec:discipline}
+
+\subsection{Discipline as designed}
+The discipline has five parts, and each is auditable from the record rather than from the author's intention. Criteria are frozen before the run that tests them. A reading is whatever the run returned, including the ones that fail the gate. A failed gate is reported as failed. A change to a criterion is a new freeze event with a date, not an edit. And a round that cannot run is reported as blocked, not as passed by default.
+
+\subsection{Failure history, complete}
+The failures are listed because a paper that reports only its passes is not auditable. The pre-fix round produced readings on the wrong act: the model degraded act one, so the round's readings were in the record but not usable, and they are not used here. The post-fix round was blocked at the gateway, with the triage in Section~\ref{sec:blocked}. A first attempt to retry the triage was cut short by a session timeout and did not reach the group; the attempt is logged, and its readings are the same as the ones reported here. The stand-in dry run is a stand-in and is labelled as one. Two benchmark attempts on the previous generation failed before the reported ablation and were re-run; the re-run is the reported one. The extended 600-step window on the larger carrier was not confirmed within its window and is recorded as unconfirmed. Two further entries belong to this list and are reported in Section~\ref{sec:twofacts} rather than buried here: the SDK detour, eight generation-path requests refused byte for byte while four read-path controls were relayed, and the local 0.6B round, which ran to completion and returned an empty phantom set because the model called no read tool. Neither is a pass, and the local round is not entered in the record: its entry is pending the PI's ruling.
+
+\subsection{The honest-reading rules, applied}
+Three rules govern what may be written as a number in this paper. A quantity that was not measured is marked \emph{pending measurement} and no estimate is entered in its place. A cost is reported as a cost: the hit-rate drop and the phantom reflection rate are in the text, not in a footnote. And a stand-in is never substituted for a measurement: the dry run is labelled, the blocked round is labelled, and the count of models a catalogue lists is not a model-side reading. The rule is enforced by the evidence index (Section~\ref{sec:rag}): every number in this paper resolves to a line in a source file, and a number with no source line does not appear.
+
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{What the gates returned}
+The dissipation gate returned a utilisation of $69.23\%$ on a trace where the previous generation's utilisation was $0.00\%$ by construction. That is the paper's central reading, and its meaning is narrow: on this trace, under default parameters, the store spends about seven tenths of the row exergy it is given. It is a regression anchor, not an estimate for other workloads.
+
+\subsection{What the conservation core buys}
+The first law is the reason the utilisation reading can be trusted. A store that reports ``$69.23\%$ dissipated'' without a conservation core could be reporting anything, including an accounting error. Here every event is checked, every epoch is checked, and the final audit is checked on two implementations that meet on a hand-computed vector; a forged event does not pass. The cost of the core is that it is a constraint on the design: a transition that does not conserve cannot be added, and a parameter that breaks a sub-identity cannot be set.
+
+\subsection{What the price means}
+The price is a drop of $2.46$ percentage points in specific-key hit rate, and the decomposition is what makes it interpretable: no read that hit before is silently lost, because $78 + 4 = 82$. The $2.45\%$ of reads answered with a phantom line are a real loss for a caller who needed the content, honestly signalled. The alternative, a store that never dissipates, is not free either: it renders $1647$ characters per read on this trace, against $292$.
+
+\subsection{What the block means}
+The block is not a result about the layer. It is a result about the client's path to a model, and it is reported because a blocked round whose block is undiagnosed would be indistinguishable from a round that was never attempted. The design consequence is that the model-side readings remain open: whether a model calls settlement unprompted, whether it reports a dissipated row truthfully and whether the phantom line changes its behaviour are all \emph{pending measurement}, and the paper does not guess at them.
+
+\subsection{What this paper is and is not}
+It is a paper about accounting: an external memory layer whose store spends exergy, whose spending is conserved to the last integer, and whose price is measured. It is not a paper about a better memory system. The inherited lines show that the layer's binding weight and its topology did not discriminate at their pre-registered lines, and this paper does not claim otherwise. The phantom limb is a device for making the store's losses legible to a model, and its two surfaces are the whole of its role.
+
+\section{Limitations and future work}
+\label{sec:limitations}
+
+\subsection{Limitations}
+\begin{enumerate}\setlength\itemsep{1pt}
+\item \textbf{One trace, one seed, synthetic keys.} The $69.23\%$ is the utilisation of that trace under default parameters. It is a regression anchor, not an estimate for other workloads, and it is not extrapolated to any workload here.
+\item \textbf{Settlement is explicit.} Without a settle call from the agent or the host, decay and horizon never materialise. Whether a model calls \texttt{deposon\_thermo\_settle} unprompted is \emph{pending measurement}.
+\item \textbf{Defaults dissipate slowly} (cap 256, horizon 200). Small ledgers need the small-parameter set; the real-model round pre-registers one.
+\item \textbf{Eviction and close-out are not on the trace.} Both are covered by the self-test and the cross-check, not by the frozen-trace readings.
+\item \textbf{The benchmark ablation was not re-run.} The usability ablation was measured on the previous generation's memory face. The same ablation with the thermodynamic generation is \emph{pending measurement}; until then the hit-rate price is known only on the frozen trace.
+\item \textbf{Real-workload price is unknown.} Hit rate, phantom reflection rate and rewrite behaviour on real memories with a real model are \emph{pending measurement}, because the round is blocked.
+\item \textbf{The block is undiagnosed between key and egress.} Distinguishing them requires a second key or a second egress, and neither was available.
+\item \textbf{The container is a test-bed, not a model of memory.} The axioms constrain what the system may do and are used to make the write policy falsifiable; whether a container under these axioms is the right model of memory is not a question this paper can answer.
+\item \textbf{The phantom limb is an engineering device.} Its two surfaces are not a model of amputation, and no claim about biological or clinical phenomenology is made.
+\end{enumerate}
+
+\subsection{Future work (options; none is promised)}
+Three options follow from the limitations rather than from a roadmap. First, a small-parameter live round on a relayable endpoint, with the pre-registered validity preconditions and the small-parameter set, would give the model-side readings that this paper marks pending. Second, a benchmark ablation on the thermodynamic generation would tell whether the frozen-trace price survives a real task distribution. Third, a second key or a second egress would resolve the block's level, and with it the question of whether the block is a property of this client or of the endpoint.
+
+\section{Conclusion}
+\label{sec:conclusion}
+An external memory layer that cannot dissipate is a store that can only grow. This paper built the dissipation, measured it, and paid for it. On a frozen 500-operation trace the thermodynamic generation raises dissipation-channel utilisation from $0.00\%$ by construction to $69.23\%$, leaves 61 rows where the previous generation left 152, and cuts the per-read rendering cost from 1647 to 292 characters, while the conservation core holds to the last integer at every settlement epoch and on both implementations, machine-checked in Lean with no admitted proofs. The price is $2.46$ percentage points of specific-key hit rate and a $2.45\%$ phantom reflection rate, and the price decomposes exactly: $78 + 4 = 82$, so no read that hit before is silently lost. The real-model round is blocked and every model-side reading is pending, which is the honest state of the evidence. What the paper claims is narrow: a ledger that settles itself, conserves what it is given, and reports what it spends.
+
+\paragraph{Data and code availability.}
+The reference implementation, the frozen criteria, the self-contained readings packages and the two ledger-tree generators are in the plugin repository (\texttt{dsh-plugin-deposon}, tag \texttt{v0.1.0-preview.10}, commit \texttt{0e93cc1}; documentation at \texttt{66b53fc}). The evidence index for this paper is at \texttt{paper/rag/} and every number in the text resolves to a line in a source file through it.
+
+\paragraph{AI use disclosure.}
+The runs reported here were launched and monitored by machine agents under the author's instruction. The criteria and thresholds were fixed by the author before the runs. The readings were assembled into packages by the agents and recomputed by independent scripts; the interpretations and the failures are the author's. No agent decided a gate, and no reading was edited after it was returned.
+
+\appendix
+
+\section{The two ledger trees, in full}
+\label{app:trees}
+The Python event ledger tree is emitted by \texttt{paper/tools/gen\_tree\_python.py} into \texttt{paper/evidence/python\_tree.json} and \texttt{.md}: 13 settlement epochs, each with $\Phi$, $R$, $D$, $U$, the six-cause decomposition of $D$, the per-epoch deltas and the conservation verdict, and a final audit with all three sub-identities checked. The Lean conservation mirror tree is emitted by \texttt{paper/tools/gen\_tree\_lean.py} into \texttt{paper/evidence/lean\_tree.json} and \texttt{.md}: the 15 theorems with their axiom sets, the five-transition mirror table against the Python events, the five monotonicity theorems, the hand-computed vector checked on both sides, and the compiler log. Both are regenerated from the repository at the current commit and neither modifies a verified line of code. They are \emph{evidence files of the experiment account tree}, not a second pair of trees: the Lean mirror belongs to the experiment side's machine proof, and the memory account tree is reported separately (Appendix~\ref{sec:rag}).
+
+\section{Reproduction}
+\label{app:repro}
+\begin{verbatim}
+python mcp/thermo_demo.py --check        # frozen readings, exit 1 on drift (13/13)
+python mcp/thermo_crosscheck.py          # Lean vector through the Python reducer (15/15)
+python harness/lean_axiom_audit.py       # axiom audit, compile + static (27/27)
+python mcp/selftest_mcp.py               # ledger self-test, 0 network (25/25)
+node tests/test_plugin_load.mjs          # dsh entry, mock Cordis context (34 checks)
+python harness/thermo_live_round.py --dry-run --out /tmp/x.json   # 0 network
+python paper/tools/gen_tree_python.py    # Python event ledger tree (this paper)
+python paper/tools/gen_tree_lean.py       # Lean conservation mirror tree (this paper)
+python paper/rag/memory/build_memory_rag.py           # memory RAG (existing memory tree, in place)
+python paper/rag/experiment/build_experiment_rag.py     # experiment RAG (existing experiment tree, in place)
+python paper/rag/memory/query_memory.py --基线            # memory RAG baseline three-way check
+python paper/rag/experiment/query_experiment.py --数字 69.23   # number-to-evidence lookup
+python paper/tools/gen_freeze.py                       # freeze list (re-freeze)
+\end{verbatim}
+The live round requires a relayable endpoint and a key in the environment: \texttt{OPENROUTER\_API\_KEY=... python harness/thermo\_live\_round.py --out <readings>}. It is blocked as of this writing.
+
+\section{The evidence index}
+\label{sec:rag}
+Every number in this paper is indexed with its source path and line. Two independent indexes are built over two pre-existing trees, and they are not merged. The \textbf{memory account tree} is indexed in place: its corpus is the existing fixed-name files of that tree---the active ledger volume and the state-snapshot face, together with the eight frozen volumes and the root index of the ledger tree (12 files), which this paper appends to rather than replaces. The \textbf{experiment account tree} is likewise indexed in place: its corpus is the existing experiment lineage index with its N1--N15 additions, the four archived audit files, the five evidence files (the Python event ledger tree, the Lean conservation mirror tree and the compiler log, demoted from being a second pair of trees to being evidence of this tree), and the repository's evidence surface (23 files). Retrieval is by BM25 over CJK bigrams and ASCII tokens, with line-level pointers; each index stores token-to-chunk mappings and chunk metadata and copies no text, so no credential can enter it. A number lookup resolves a value such as \texttt{69.23} to eleven evidence positions across the experiment lineage index, the evidence files and the change note, and a reading such as \texttt{313050} to nine, including the line of the experiment lineage index where the conservation core is stated. The rule this enforces is the paper's own: a number with no source line does not appear. The two indexes are frozen together with the trees they index, at \texttt{FREEZE\_v5preR2} v4, which records the current fingerprints of the 12 memory-tree files, the 23 experiment-tree files and the six index files, together with the pre-registered band thresholds; a change to any one of them voids the freeze and requires a re-freeze with the reason recorded. The freeze carries the carrier of record for the blocked round, \texttt{xiaomi/mimo-v2.6-flash-mopd}, so that a re-freeze cannot silently change the carrier. The v4 re-freeze moved exactly one line, the \S 8 document at \texttt{497a5aa3d61f} (676 lines, 46\,046 bytes), and left the other forty fingerprints unchanged; the comparison is re-run and reports no mismatch. The same v4 carries the two facts of Section~\ref{sec:twofacts} with their readings and their zero filled slots, and a pending-ruling field for the local round, so that the paper and the freeze list say the same thing about the same numbers.
+
+\section{Inherited-line coverage}
+\label{app:coverage}
+The lines this paper reports are: the thermodynamic before/after on the frozen trace; the conservation core at 13 epochs; the two ledger trees; the price decomposition; the four machine-checked faces; the self-settlement behaviour; the inherited baseline, repair arc, $\lambda$ sweep, injection protocol, binding topologies, format gate and plugin ablation; and the blocked real-model round with its triage, followed by the SDK detour and the local 0.6B round (Section~\ref{sec:twofacts}), the latter recorded but not entered in the register. The lines it does not report are the ones the previous version already excluded with reasons, and they stay excluded: the re-plan obligation arm ($+1.605$ points against a 5-point line), its companion arm ($-15.07$ points), the three-arm sequence chain, the two failed 4B launch attempts, the five-arm carrier iteration (three RED arms at 0.536, 0.548 and 0.534), the two alternative carrier-binding constructions (0.5137 and 0.5149), the gateway-model swap, the grounded-task pair, the two view-point checks, and the eight non-experimental items (the write-probe repair path, the re-plan obligation coverage check, the pre-gate read, the Lean mirror of the interface, the transducer-postulate theory position, the reconnect-backoff measurement, the lineage back-fill and the gate-account governance case).
+
+\section{Engineering record}
+\label{app:engineering}
+The plugin releases carry their own gates. The thermodynamic generation is \texttt{v0.1.0-preview.10} at commit \texttt{0e93cc1}; the previous memory face is \texttt{v0.1.0-preview.9} at \texttt{4ee12b6}. A packaging note is recorded: the published file list includes directories, so an \texttt{npm pack} from a working tree that has run Python includes \texttt{\_\_pycache\_\_/*.pyc}; installs from a git ref or a clean checkout are unaffected, and a desk-level pack should be made from a clean tree. The rollback line is three points: the code tag, the ledger generation (a ledger belongs to one generation, and a rollback or a roll-forward changes the ledger or returns to the pre-switch snapshot), and the parameter switch (a \texttt{DEPOSON\_THERMO} closed configuration, which is a degraded position and not an equivalent rollback). The compliance check requires that no post-delivery modification exists in a readings package, that a tampered ledger fails loud under the recompute script, and that no key-level gate is scored on a flattened row.
+
+\end{document}

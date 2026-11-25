@@ -1,0 +1,259 @@
+{
+ "head": "1e27d7c",
+ "lean_exit": 0,
+ "n_theorems": 15,
+ "n_reported": 15,
+ "allowed_axioms": [
+  "Quot.sound",
+  "propext"
+ ],
+ "sorry_count": 0,
+ "outside_allowed": [],
+ "axiom_free": [
+  "diss_monotone_inject",
+  "diss_monotone_transmit",
+  "diss_monotone_reflect",
+  "settle_close",
+  "settle_conserved"
+ ],
+ "settle_axiom_free": true,
+ "nodes": [
+  {
+   "theorem": "sum_set",
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ],
+   "axiom_free": false,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "algebra"
+  },
+  {
+   "theorem": "conserved_inject",
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ],
+   "axiom_free": false,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "conservation"
+  },
+  {
+   "theorem": "conserved_dissipate",
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ],
+   "axiom_free": false,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "conservation"
+  },
+  {
+   "theorem": "conserved_transmit",
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ],
+   "axiom_free": false,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "conservation"
+  },
+  {
+   "theorem": "conserved_reflect",
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ],
+   "axiom_free": false,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "conservation"
+  },
+  {
+   "theorem": "conserved_deposit",
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ],
+   "axiom_free": false,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "conservation"
+  },
+  {
+   "theorem": "diss_monotone_inject",
+   "axioms": [],
+   "axiom_free": true,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "monotone"
+  },
+  {
+   "theorem": "diss_monotone_dissipate",
+   "axioms": [
+    "propext"
+   ],
+   "axiom_free": false,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "monotone"
+  },
+  {
+   "theorem": "diss_monotone_transmit",
+   "axioms": [],
+   "axiom_free": true,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "monotone"
+  },
+  {
+   "theorem": "diss_monotone_reflect",
+   "axioms": [],
+   "axiom_free": true,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "monotone"
+  },
+  {
+   "theorem": "diss_monotone_deposit",
+   "axioms": [
+    "propext"
+   ],
+   "axiom_free": false,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "monotone"
+  },
+  {
+   "theorem": "pool_monotone",
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ],
+   "axiom_free": false,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "algebra"
+  },
+  {
+   "theorem": "settle_close",
+   "axioms": [],
+   "axiom_free": true,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "settle"
+  },
+  {
+   "theorem": "settle_conserved",
+   "axioms": [],
+   "axiom_free": true,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "settle"
+  },
+  {
+   "theorem": "sum_drop_zero",
+   "axioms": [
+    "propext"
+   ],
+   "axiom_free": false,
+   "within_allowed": true,
+   "has_sorry": false,
+   "kind": "algebra"
+  }
+ ],
+ "mirror": [
+  {
+   "lean": "conserved_inject",
+   "python": "inject",
+   "lean_side": "注入 E⁰+=q",
+   "python_side": "E⁰ += q；U += q"
+  },
+  {
+   "lean": "conserved_dissipate",
+   "python": "decay",
+   "lean_side": "散失 U→D（i,a 越界即炸）",
+   "python_side": "U -= a；D += a"
+  },
+  {
+   "lean": "conserved_transmit",
+   "python": "gate.tx",
+   "lean_side": "透射 Φ+=c（询㶲支付）",
+   "python_side": "Φ += c_T×|tx|"
+  },
+  {
+   "lean": "conserved_reflect",
+   "python": "gate.ph",
+   "lean_side": "幻肢回射 R+=c",
+   "python_side": "R += c_P×|ph|"
+  },
+  {
+   "lean": "conserved_deposit",
+   "python": "deposit",
+   "lean_side": "散失 deposit：U 全额→D·i 断链即炸",
+   "python_side": "U → 0；D += U"
+  }
+ ],
+ "monotone": [
+  {
+   "lean": "diss_monotone_inject",
+   "python": "inject"
+  },
+  {
+   "lean": "diss_monotone_dissipate",
+   "python": "decay"
+  },
+  {
+   "lean": "diss_monotone_transmit",
+   "python": "tx"
+  },
+  {
+   "lean": "diss_monotone_reflect",
+   "python": "ph"
+  },
+  {
+   "lean": "diss_monotone_deposit",
+   "python": "deposit"
+  }
+ ],
+ "log_path": "paper/evidence/lean_build_66b53fc.log",
+ "lean_version": "Lean (version 4.15.0, x86_64-unknown-linux-gnu, commit 11651562caae, Release)",
+ "vector": {
+  "lean": {
+   "e0": 210,
+   "phi": 10,
+   "refl": 0,
+   "diss": 150,
+   "us": [
+    50,
+    0
+   ]
+  },
+  "python": {
+   "e0": 210,
+   "phi": 10,
+   "refl": 0,
+   "diss": 150,
+   "us": [
+    50,
+    0
+   ]
+  },
+  "conserved": true,
+  "equal": true
+ },
+ "checks": {
+  "lean_exit_0": true,
+  "no_error": true,
+  "no_sorry": true,
+  "all_reported": true,
+  "within_allowed": true,
+  "settle_axiom_free": true,
+  "vector_equal": true
+ },
+ "all_pass": true
+}
