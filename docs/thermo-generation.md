@@ -5,7 +5,7 @@
 > 账本以事件流重放自解结算，守恒核 E⁰=Φ+R+D+U 逐位 fail-loud，单元终核 U→0。
 > 同一冻结 500 步操作迹对照：利用率 0% → 69.23%，期末在场行 152 → 61，单读渲染 1647 → 292 字符；
 > 代价：特定键命中率 50.31% → 47.85%（另 2.45% 以幻肢行如实回射；78+4=82，无静默丢失）。
-> 真机验收：驱动器修复前的 02:05 轮（L0）读数在案但幕一退化；修复后一轮（L1）被 OpenRouter 端点 400 阻断（08:25–08:33 换路径／换模型／定向路由复测 44 例同一报文；09:46–09:59 第三轮分诊：换新 key 仍 400，新 key 与旧 key 同账户；拒中继只落在实时生成族路径、发生在鉴权之后与请求校验之前，账户级与出口级仍未分辨；(b) 非 CN 出口探针 10:27 奉令执行，本席无第二条出口、未能执行），模型侧读数挂「待测」（状态见 §8）。未实测项一律标「待测」。
+> 真机验收：驱动器修复前的 02:05 轮（L0）读数在案但幕一退化；修复后一轮（L1）被 OpenRouter 端点 400 阻断（08:25–08:33 换路径／换模型／定向路由复测 44 例同一报文；09:46–09:59 第三轮分诊：换新 key 仍 400，新 key 与旧 key 同账户；拒中继只落在实时生成族路径、发生在鉴权之后与请求校验之前，账户级与出口级仍未分辨；(b) 非 CN 出口探针 10:27 奉令执行，本席无第二条出口、未能执行；开源限定后 10:50 重试点火仍被挡（载体 `deepseek/deepseek-v3.2-exp`·MIT）），模型侧读数挂「待测」（状态见 §8）。未实测项一律标「待测」。
 
 Change note for the preview.10 generation of `dsh-plugin-deposon`. It records
 why the memory ledger of preview.9 could not dissipate at all, what was built
@@ -24,7 +24,7 @@ are, and what they cost. Executable faces: `mcp/thermo_core.py` (core),
 | ledger self-test incl. unit close-out U→0, replay determinism, forged-event fail-loud | **measured** (25/25 assertions) | `python mcp/selftest_mcp.py` |
 | plugin face (tool registration, belief block, real ledger round trip through the dsh entry) | **measured** (34 checks) | `node tests/test_plugin_load.mjs` |
 | real-model round, pre-fix driver (2026-11-25 02:05, `deepseek/deepseek-v3.2-exp`) | **measured, act 1 degenerate** — see §8 | `harness/thermo_live_round.py` readings file (not in repo) |
-| real-model round, fixed driver | **pending** — blocked upstream (third triage 09:46–09:59: OpenRouter's gateway refuses the realtime-generation path family for this account/egress pair; account vs egress not distinguished; the non-CN-egress probe ordered at 10:27 could not be run from this seat) — see §8 | `harness/thermo_live_round.py` |
+| real-model round, fixed driver | **pending** — blocked upstream (third triage 09:46–09:59: OpenRouter's gateway refuses the realtime-generation path family for this account/egress pair; account vs egress not distinguished; the non-CN-egress probe ordered at 10:27 could not be run from this seat; the open-source-only ignition retried at 10:50 was refused the same way) — see §8 | `harness/thermo_live_round.py` |
 | hit-rate price / benchmark ablation on a real workload with this generation | **not measured** (待测) — §10 | — |
 
 ## 2. Diagnosis: utilisation was zero by construction
@@ -369,6 +369,42 @@ tree 12/12, experiment tree 23/23, both RAGs 6/6; the generator itself was
 not run, since it rewrites the frozen file. One pointer there is stale: the
 frozen `launch-v5preR2.md` (`221a454c81e9`) is version 2, while version 3
 (`8d7b1727a3b1`) has been current since 10:05.
+
+**Open-source-only ignition, retried on the one egress there is (ordered
+10:39, dispatched 10:42, run 10:49–10:51 +08:00): refused the same way —
+still BLOCKED.**
+
+- Gate V0 of the ignition sheet: the carrier must be open-source (weights
+  downloadable, license verifiable). The pre-registered carrier passes, so
+  nothing was switched: OpenRouter lists `deepseek/deepseek-v3.2-exp` as
+  `deepseek-ai/DeepSeek-V3.2-Exp`; the model card declares MIT, the
+  repository holds 163 weight shards and is not gated, and its `LICENSE`
+  file reads "MIT License, Copyright (c) 2023 DeepSeek" (read at 10:49
+  through a mirror of the model hub, because the hub itself times out from
+  this egress; card data, README and LICENSE agree).
+- Pre-ignition probe, same path and minimal body, 10:50:00: egress `loc=CN`,
+  `/auth/key` 200, **400 `Request path cannot be relayed`**.
+- Ignition attempt, exactly one (10:50:06–07; driver unchanged since
+  `0e93cc1`): its first model call is refused with that message —
+  `OpenRouter 调用失败: HTTP 400: {"error":{"message":"Request path cannot be
+  relayed","code":400}}` — exit 1, no readings file.
+- Control: the background probe, same carrier, is still refused (25/25 at
+  10:49:07).
+- Closed-source exclusion (slot S16b): every authenticated request made
+  since the order — the pre-ignition probe, the single ignition attempt and
+  the background probe — names that carrier and nothing else. Before the
+  order, the diagnostic probes above named closed-source models among their
+  one-token targets; each was refused at the gateway before any provider was
+  contacted.
+- Freeze list v2 (10:41:00, head `c323a7c`), verified read-only at 10:50:44:
+  41/41 rows match the current files, and both pointers reported earlier
+  were resolved by the freeze's owner. This paragraph changes one of the
+  frozen files again, so that row needs a new freeze.
+
+So the round stays **BLOCKED**: S1–S13 pending, S14 BLOCKED, S16
+`deepseek/deepseek-v3.2-exp` (MIT), S16b true, S17 true — nothing estimated.
+Three things, and only these, would change the state: a non-CN egress for
+probe (b), a key from another account, or the gateway lifting the refusal.
 
 ## 9. Machine-checked and self-test faces
 
