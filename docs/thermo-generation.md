@@ -5,7 +5,7 @@
 > 账本以事件流重放自解结算，守恒核 E⁰=Φ+R+D+U 逐位 fail-loud，单元终核 U→0。
 > 同一冻结 500 步操作迹对照：利用率 0% → 69.23%，期末在场行 152 → 61，单读渲染 1647 → 292 字符；
 > 代价：特定键命中率 50.31% → 47.85%（另 2.45% 以幻肢行如实回射；78+4=82，无静默丢失）。
-> 真机验收：驱动器修复前的 02:05 轮（L0）读数在案但幕一退化；修复后一轮（L1）被 OpenRouter 端点 400 阻断（08:25–08:33 换路径／换模型／定向路由复测 44 例同一报文；09:46–09:59 第三轮分诊：换新 key 仍 400，新 key 与旧 key 同账户；拒中继只落在实时生成族路径、发生在鉴权之后与请求校验之前，账户级与出口级仍未分辨；(b) 非 CN 出口探针 10:27 奉令执行，本席无第二条出口、未能执行；开源限定后 10:50 重试点火仍被挡（载体 `deepseek/deepseek-v3.2-exp`·MIT）；载体按用户令 10:53 换为正式版 `deepseek/deepseek-v3.2`（MIT）后 10:57 重点火仍被挡），模型侧读数挂「待测」（状态见 §8）。未实测项一律标「待测」。
+> 真机验收：驱动器修复前的 02:05 轮（L0）读数在案但幕一退化；修复后一轮（L1）被 OpenRouter 端点 400 阻断（08:25–08:33 换路径／换模型／定向路由复测 44 例同一报文；09:46–09:59 第三轮分诊：换新 key 仍 400，新 key 与旧 key 同账户；拒中继只落在实时生成族路径、发生在鉴权之后与请求校验之前，账户级与出口级仍未分辨；(b) 非 CN 出口探针 10:27 奉令执行，本席无第二条出口、未能执行；开源限定后 10:50 重试点火仍被挡（载体 `deepseek/deepseek-v3.2-exp`·MIT）；载体按用户令 10:53 换为正式版 `deepseek/deepseek-v3.2`（MIT）后 10:57 重点火仍被挡；再按用户令 11:23 换为官网广场最新一档开源模型 `xiaomi/mimo-v2.6-flash-mopd`（2026-11-23 发布·MIT）后 11:26 重点火仍被挡），模型侧读数挂「待测」（状态见 §8）。未实测项一律标「待测」。
 
 Change note for the preview.10 generation of `dsh-plugin-deposon`. It records
 why the memory ledger of preview.9 could not dissipate at all, what was built
@@ -24,7 +24,7 @@ are, and what they cost. Executable faces: `mcp/thermo_core.py` (core),
 | ledger self-test incl. unit close-out U→0, replay determinism, forged-event fail-loud | **measured** (25/25 assertions) | `python mcp/selftest_mcp.py` |
 | plugin face (tool registration, belief block, real ledger round trip through the dsh entry) | **measured** (34 checks) | `node tests/test_plugin_load.mjs` |
 | real-model round, pre-fix driver (2026-11-25 02:05, `deepseek/deepseek-v3.2-exp`) | **measured, act 1 degenerate** — see §8 | `harness/thermo_live_round.py` readings file (not in repo) |
-| real-model round, fixed driver | **pending** — blocked upstream (third triage 09:46–09:59: OpenRouter's gateway refuses the realtime-generation path family for this account/egress pair; account vs egress not distinguished; the non-CN-egress probe ordered at 10:27 could not be run from this seat; the open-source-only ignition retried at 10:50 was refused the same way, and so was the retry at 10:57 after the carrier was changed on the PI's instruction to `deepseek/deepseek-v3.2`) — see §8 | `harness/thermo_live_round.py` |
+| real-model round, fixed driver | **pending** — blocked upstream (third triage 09:46–09:59: OpenRouter's gateway refuses the realtime-generation path family for this account/egress pair; account vs egress not distinguished; the non-CN-egress probe ordered at 10:27 could not be run from this seat; the open-source-only ignition retried at 10:50 was refused the same way, and so were the retry at 10:57 after the carrier was changed on the PI's instruction to `deepseek/deepseek-v3.2` and the retry at 11:26 after it was renewed to the newest open-source model on the website's list, `xiaomi/mimo-v2.6-flash-mopd`) — see §8 | `harness/thermo_live_round.py` |
 | hit-rate price / benchmark ablation on a real workload with this generation | **not measured** (待测) — §10 | — |
 
 ## 2. Diagnosis: utilisation was zero by construction
@@ -443,6 +443,48 @@ So the round stays **BLOCKED**: S1–S13 pending, S14 BLOCKED, S16
 carrier change was ordered for hygiene and does not touch the cause; the
 three things that would change the state are unchanged (a non-CN egress for
 probe (b), a key from another account, or the gateway lifting the refusal).
+
+**Carrier renewed on the PI's instruction (11:23: a recently released or
+updated open-source model from the website's current list; done 11:24–11:26
++08:00): the ignition is refused a third time, byte for byte — still
+BLOCKED.**
+
+- The list, from the website: its "Newest" view, rendered through a channel
+  outside this sandbox at 11:24, starts with Upstage Solar Pro 4 Contributor
+  and Solar Mini 4.5 (Nov 24; proprietary), Xiaomi MiMo-V2.6-Flash-MOPD (Nov
+  23), Thinking Machines Inkling 2 Mini and RadixArk DaisyRose 27B (Nov 21),
+  then embedding, decision, speech and video models (Nov 20–17), Gemini 4
+  Neon (Nov 18; closed) and Pixtral Large 2502 — listed Nov 20 but, in the
+  site's own words, "the February 2025 version". The API's `created` field
+  (472 models at 11:24:21, cached 5 s) served only to shortlist.
+- Rule, stated before choosing: a text-generation model on that view; released
+  or updated recently by the model's own date, not the listing date;
+  open-source (weights downloadable, license declared); tool calling. The
+  newest tier is Nov 21–24 and holds three open-source models — MiMo (Nov 23,
+  MIT), Inkling 2 Mini and DaisyRose 27B (Nov 21, both Apache-2.0). The
+  newest of them is the carrier.
+- Carrier `xiaomi/mimo-v2.6-flash-mopd`: the site's model page (same channel,
+  11:25) says "Released Nov 23, 2026", links the weights, lists one provider
+  (Featherless; 98.07 % uptime, availability 95.71 % over three days), a
+  1 048 576-token context, and "accepts `tools` and `tool_choice`". On the
+  model hub (11:25, through its mirror): `license: mit` on the card and in
+  the README, 131 weight shards, not gated; the repository carries no
+  separate `LICENSE` file, which is noted rather than glossed over. Its
+  README calls it "the MOPD upgrade of the MiMo-V2.6-Flash-RL checkpoint",
+  whose added distillation pass "reduces repeated tool calls in agentic
+  workflows" — the failure the degenerate first act of round L0 showed.
+- Pre-ignition probe, 11:25:53: egress `loc=CN`, `/auth/key` 200, **400
+  `Request path cannot be relayed`**. Ignition attempt, exactly one
+  (11:25:59–11:26:00): refused at the first model call; the driver's stderr
+  has the same sha12 as with the two carriers before it (`d96ab9b7438e`).
+- The background probe was moved again (v2 stopped at 11:24:14 after 14/14
+  refusals; v3 started at 11:26:11 with the new carrier and was refused on
+  its first probe).
+
+So the round stays **BLOCKED**: S1–S13 pending, S14 BLOCKED, S16
+`xiaomi/mimo-v2.6-flash-mopd` (MIT), S16b true, S17 true — nothing
+estimated. Three carriers in one morning have drawn the same refusal; the
+carrier is not the cause.
 
 ## 9. Machine-checked and self-test faces
 
