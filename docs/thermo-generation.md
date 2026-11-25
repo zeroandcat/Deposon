@@ -5,7 +5,7 @@
 > 账本以事件流重放自解结算，守恒核 E⁰=Φ+R+D+U 逐位 fail-loud，单元终核 U→0。
 > 同一冻结 500 步操作迹对照：利用率 0% → 69.23%，期末在场行 152 → 61，单读渲染 1647 → 292 字符；
 > 代价：特定键命中率 50.31% → 47.85%（另 2.45% 以幻肢行如实回射；78+4=82，无静默丢失）。
-> 真机验收：驱动器修复前的 02:05 轮（L0）读数在案但幕一退化；修复后一轮（L1）被 OpenRouter 端点 400 阻断（08:25–08:33 换路径／换模型／定向路由复测 44 例同一报文），模型侧读数挂「待测」（状态见 §8）。未实测项一律标「待测」。
+> 真机验收：驱动器修复前的 02:05 轮（L0）读数在案但幕一退化；修复后一轮（L1）被 OpenRouter 端点 400 阻断（08:25–08:33 换路径／换模型／定向路由复测 44 例同一报文；09:46–09:59 第三轮分诊：换新 key 仍 400，新 key 与旧 key 同账户；拒中继只落在实时生成族路径、发生在鉴权之后与请求校验之前，账户级与出口级仍未分辨），模型侧读数挂「待测」（状态见 §8）。未实测项一律标「待测」。
 
 Change note for the preview.10 generation of `dsh-plugin-deposon`. It records
 why the memory ledger of preview.9 could not dissipate at all, what was built
@@ -24,7 +24,7 @@ are, and what they cost. Executable faces: `mcp/thermo_core.py` (core),
 | ledger self-test incl. unit close-out U→0, replay determinism, forged-event fail-loud | **measured** (25/25 assertions) | `python mcp/selftest_mcp.py` |
 | plugin face (tool registration, belief block, real ledger round trip through the dsh entry) | **measured** (34 checks) | `node tests/test_plugin_load.mjs` |
 | real-model round, pre-fix driver (2026-11-25 02:05, `deepseek/deepseek-v3.2-exp`) | **measured, act 1 degenerate** — see §8 | `harness/thermo_live_round.py` readings file (not in repo) |
-| real-model round, fixed driver | **pending** — blocked upstream at the time of writing — see §8 | `harness/thermo_live_round.py` |
+| real-model round, fixed driver | **pending** — blocked upstream (third triage 09:46–09:59: OpenRouter's gateway refuses the realtime-generation path family for this account/egress pair; account vs egress not distinguished) — see §8 | `harness/thermo_live_round.py` |
 | hit-rate price / benchmark ablation on a real workload with this generation | **not measured** (待测) — §10 | — |
 
 ## 2. Diagnosis: utilisation was zero by construction
@@ -272,6 +272,68 @@ capacity eviction 200 · horizon 1 211 · gate rejection 20), utilisation
 65.08 %, phantom readbacks 5 (R = 50), conservation
 2 750 = 100 + 50 + 1 692 + 908, `honest = False` because the stand-in does
 not acknowledge a loss — not a model reading.
+
+**Third triage (dispatched 09:44, probes 09:46–09:59 +08:00, with a second
+key issued for this purpose): the second key does not lift the block, and it
+cannot separate account from egress, because it belongs to the same account
+as the first.**
+
+| face | probe | result |
+|---|---|---|
+| this side | env, DNS, TLS, Cloudflare trace (09:46) | no proxy or CA-bundle variable set; `openrouter.ai` resolves to public Cloudflare addresses (no hijack); peer certificate issued by Google Trust Services for `openrouter.ai`, verified against the default trust store (no interception); Cloudflare sees `colo=LAX`, `loc=CN`, a Hangzhou Alibaba Cloud address |
+| second key | `/auth/key`, `/credits` (09:48:12) | 200, 200 — limit 7, spend 0, expires 2026-11-26T01:37Z |
+| second key | 1-token `POST /chat/completions`, `deepseek/deepseek-v3.2-exp`, then a `:free` model | **400 `Request path cannot be relayed`**, both |
+| first key | the same three probes (09:48:23–31) | 200, 200, **400, same message** |
+| account identity | full `/auth/key` of both keys (09:54) | same creator and workspace identifiers, same credits (20 total, 11.31307307 used) ⇒ **one account**; no disabled or restricted flag, budgets not exhausted |
+| controls | synthetic invalid key on `/auth/key` and `/chat/completions`; no `Authorization` | 401 `User not found.` ×2, 401 `No cookie auth credentials found` — none carries `x-openrouter-release` |
+| path table | 55 requests, 52 with a valid key (09:48–09:59) | below |
+
+The path table splits cleanly. **Refused with the same 400** (28/28, typically
+0.7–0.9 s): `/chat/completions`, `/responses`, `/completions`,
+`/messages`, `/embeddings`, `/rerank`, `/audio/speech`, `/videos`,
+`/images/generations` — the realtime-generation family — whatever the method
+(`GET /chat/completions`), the body (absent, `{}`, non-JSON, valid), the
+headers (the driver's; an undocumented `Originator` header named in `vary`,
+two dummy values) or the path spelling (percent-encoded, trailing slash,
+query string; `//` and upper-case → 404), and on three hostnames
+(`openrouter.ai`, `www.`, `onprem.`). **Relayed to their backends and answered
+genuinely** (2.2–3.6 s): `/models` 200, `/auth/key` 200, `/credits` 200,
+`/key` 200, `/generation` 400 `Invalid generation ID`, `/activity` 403
+(management key), `/keys` 401, `/batches` 400 (`Batch body ended before a
+requests array was found` — batch inference is relayed),
+`/presets/{slug}/chat/completions` 401 (management key); unknown paths 404.
+Every 400 carries `x-openrouter-error-origin: client` and
+`x-openrouter-release: api;3e05b712-…`: it is produced by OpenRouter's API
+layer, after the key has been accepted and before the body is read.
+
+Two public signals argue against a platform-wide outage: the public usage
+counter (`GET /api/frontend/v1/public/stats/rankings/models?view=day`, a
+cached snapshot, identical at 09:57 and 09:59) already lists
+1 665 839 090 requests for the 2026-11-25 UTC bucket across 613 models, and a
+third-party latency monitor (llmlatency.dev, four regions) reports OpenRouter
+answering in 55–97 ms. The message appears in none of OpenRouter's error
+documentation (which specifies 403 with a reason for guardrail and
+provider-terms blocks), of the API changelog (the entries of 11-24 and 11-25
+cover BYOK, batch, TTS, video and guardrail schemas only) or of public search.
+
+**Determination.** (1) Not key-level: two valid keys, identical refusal.
+(2) Not produced on this side: no proxy, no DNS hijack, no TLS interception;
+the answer is OpenRouter's. (3) Mechanism: a path-level refusal at OpenRouter's
+gateway, confined to the realtime-generation path family, after authentication
+and before request validation — which is why no model, provider pin, header or
+hostname can help. (4) Not a global outage. (5) The refusal is bound to this
+client class, i.e. to the pair (account, egress), and the two are **not
+distinguished**: both keys are one account, and this seat has one egress. The
+earlier inference "a second key that still fails ⇒ egress-level" was wrong for
+exactly that reason. Two one-request experiments separate them: a key from
+another OpenRouter account probed from this sandbox (relayed ⇒ account-level,
+refused ⇒ egress-level), or this key probed from a non-CN egress (relayed ⇒
+egress-level, refused ⇒ account-level). The block held from 07:58:56 to
+09:59:31 without a gap (background probes 08:03–08:49: 45/45; this triage:
+28/28 on the refused family), and the credits did not move. A dry run at
+09:55:04 on `66b53fc` is identical to the 08:32 one in every field but the
+timestamps. A background probe (one request every two minutes, at most 90,
+second key in its environment only) relaunches the round on the first 200.
 
 ## 9. Machine-checked and self-test faces
 
