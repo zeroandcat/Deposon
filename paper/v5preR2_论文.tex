@@ -23,6 +23,9 @@
 %       ＝v5preR2_related_work.bib；正文 \citep 58 处 91 键中 6 键接线（deposon2026·rooke2026·sudo2026·wuFDS1·uchida·clark1998·
 %       P468 新增四邻居键全接）；余 85 键无 bib 条目·0 硬接·编译仍 [?]；bib 未用 42 条不进参考文献表（0 nocite）；
 %       逐键对表＋缺键清单＋未用清单随交付包（shared/阿兰_48条bib接线_交付包_20261125）。只接线·未编译。
+%       ［P472·PI 20:07 A①②③ 2026-11-25 更新］85 缺键中 84 键核实入 bib（四源核验·0 编造·逐键出处随交付包）；
+%       A③ 裁定：原书版权页 © 1984（First published 1984·OUP DOI 元数据 1986 为 paperback/在线年）→ tex 侧键改名 parfit1986→parfit1984 接通既有条目；
+%       现 91/91 键全接线；bib 未用 42→41 条仍 0 nocite；未编译·待查理合流本 bundle 后一次编译。
 % 纪律：数字一律来自实跑（thermo_demo --check 13/13·crosscheck 15/15·lean 27/27·selftest 25/25）
 %       未实测项一律标「待测」·不填估值·代价项入稿
 % ============================================================================
@@ -111,7 +114,7 @@ Agents that keep episodic records include Generative Agents' memory stream \cite
 Learned world models place a state outside the policy \citep{worldmodels2018,dreamerv3,genie2024,cosmos2025,muzero2020,vjepa2024}; LeCun's architecture sketch assigns explicit modules to memory and world modelling without fixing their storage discipline \citep{lecun2022}. Sequence architectures with explicit state (the transformer \citep{transformer2017}, state-space models \citep{mamba2023}, attention sinks and KV-cache eviction \citep{streamingllm2024,h2o2023}) define the carrier that the layer is attached to, and runtimes that execute structured programs over it \citep{sglang2024} set the budget the layer has to fit. None of these declares a ledger over the written state.
 
 \paragraph{Mind-side boundary.}
-Whether a language model ascribes mental states is contested on both sides \citep{kosinski2023,ullman2023,strachan2024}, and the BDI paradigm carries beliefs, desires and intentions as explicit records \citep{bdi2025}, a record-keeping style that recent LLM-agent architectures adopt \citep{frering2025,unifiedmind2025}. The identity question that an external store raises, whether the store is part of the agent, is an old one in philosophy \citep{parfit1986,clark1998}; the episodic and spatial metaphors the layer borrows come from the memory literature \citep{tulving2002,okeefe1979}. The layer's read side is declared by contract and audited by ledger; whether its contents deserve the name of beliefs is outside what this paper claims. The phantom limb's two surfaces, a belief block that carries no memory data and a reflection line that carries no source text, are engineering devices and are not offered as a model of amputation.
+Whether a language model ascribes mental states is contested on both sides \citep{kosinski2023,ullman2023,strachan2024}, and the BDI paradigm carries beliefs, desires and intentions as explicit records \citep{bdi2025}, a record-keeping style that recent LLM-agent architectures adopt \citep{frering2025,unifiedmind2025}. The identity question that an external store raises, whether the store is part of the agent, is an old one in philosophy \citep{parfit1984,clark1998}; the episodic and spatial metaphors the layer borrows come from the memory literature \citep{tulving2002,okeefe1979}. The layer's read side is declared by contract and audited by ledger; whether its contents deserve the name of beliefs is outside what this paper claims. The phantom limb's two surfaces, a belief block that carries no memory data and a reflection line that carries no source text, are engineering devices and are not offered as a model of amputation.
 
 \paragraph{Agents as experimenters, and evaluation practice.}
 Autonomous research agents report end-to-end experimental loops \citep{aiscientist2024,aiscientistv2,coscientist2025,agentlab2025,boiko2023}. This paper's runs were launched and monitored by machine agents under the author's instruction (stated in full in the AI use disclosure); the agents literature is cited as the context of that execution regime, not as evidence for any claim here. The reporting practice follows the variance and contamination literature \citep{henderson2018,bouthillier2021,dodge2019,magar2022,deng2024}, and the training-on-the-test-task result is the reason the evaluation suite here is frozen before the runs rather than after \citep{testtask2025}; every reading in this paper carries its gate.
@@ -439,6 +442,10 @@ The plugin releases carry their own gates. The thermodynamic generation is \text
 % ---- neighbour keys all wired); the other 85 keys have no bib entry and stay [?] - 0 hard-wired;
 % ---- the 42 unused bib entries are not forced into the reference list (no \nocite). Compiled in the same window
 % ---- (tectonic, 20 pages; 6 wired keys resolve and are the whole References; 85 distinct keys stay [?] as expected).
+% ---- P472 (阿兰, 2026-11-25, PI 20:07 A①②③): +84 verified bib entries appended (bib 48 -> 132); 91/91 tex keys now resolve;
+% ---- parfit1986 renamed to parfit1984 on the tex side (copyright page (c) 1984); unused bib entries 41, still no \nocite.
+% ---- Not compiled here - 查理 merges this bundle and compiles once.
+
 \bibliographystyle{unsrt}
 \bibliography{v5preR2_related_work}
 
