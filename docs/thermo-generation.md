@@ -486,6 +486,138 @@ So the round stays **BLOCKED**: S1–S13 pending, S14 BLOCKED, S16
 estimated. Three carriers in one morning have drawn the same refusal; the
 carrier is not the cause.
 
+**OpenSDK detour and the "no new machine" rule on the PI's instruction
+(11:37; done 11:41–11:59 +08:00): every official SDK is refused byte for
+byte, the two GPU servers are powered off, and this sandbox has no GPU —
+still BLOCKED; one round was additionally run through a local 0.6B carrier
+on the sandbox CPU (0 cloud calls) as a pipeline exercise, outside the
+pre-registration.**
+
+- The two instructions (11:37:39): (1) retry through "OpenSDK" instead of
+  hand-built REST; (2) do not rent a new machine — use the existing two
+  servers and model resources, locally where possible with 0 cloud calls.
+  Neither touches the verified code: the driver file is unchanged (sha12
+  `e4bd79583ce8`, printed by the local wrapper at every start of this
+  window).
+- Four official SDKs, installed into the agent's private area only (never
+  into the repository): `openai` 7.64.0 and `@openrouter/sdk` 1.5.139 (npm,
+  Node v24.18.0); `openai` 3.59.0 and `openrouter` 1.3.211 (PyPI, Python
+  3.12.13, httpx 0.28.1 — the default index timed out at 150 s, the TUNA
+  mirror served them at 11:44:30). The key was passed through the
+  environment only and read by the SDKs; both request logs redact
+  `Authorization` and contain 0 occurrences of the key (`grep -c` = 0 on
+  both, in the private area and in the delivery copy).
+- Generation family, eight requests (11:45:02–11:46:01 +08:00), one row
+  each; base URL `https://openrouter.ai/api/v1`, model
+  `xiaomi/mimo-v2.6-flash-mopd`, one-token prompts. Every one: **400
+  `{"error":{"message":"Request path cannot be relayed","code":400}}`**,
+  `x-openrouter-release: api;3e05b712-d9f7-4400-993a-7cb63338fd89`,
+  `x-openrouter-error-origin: client`, Cloudflare PoP `LAX`. The SDK
+  requests differ from the hand-built ones on the wire — `User-Agent:
+  OpenAI/JS 7.64.0`, `OpenAI/Python 3.59.0` and `speakeasy-sdk/…`, the
+  `x-stainless-*` telemetry headers, another body serialisation (the
+  OpenRouter SDK adds `"stream":false` and orders its keys), and the
+  Responses path besides `/chat/completions` — and none of it changes the
+  answer, which is also the answer the 11:25:53 raw probe got, on the same
+  gateway release.
+
+| case | SDK | request | sent | answered | HTTP | latency | release / error-origin / PoP | answer |
+|---|---|---|---|---|---|---|---|---|
+| N1 | openai 7.64.0 (js) | POST `/chat/completions` | 11:45:02 | 11:45:03 | 400 | 836 ms | 3e05b712-d9f7-4400-993a-7cb63338fd89 / client / LAX | `Request path cannot be relayed`, code 400 |
+| N2 | openai 7.64.0 (js) | POST `/chat/completions` | 11:47:06 | 11:47:07 | 400 | 963 ms | 3e05b712-d9f7-4400-993a-7cb63338fd89 / client / LAX | `Request path cannot be relayed`, code 400 |
+| N3 | openai 7.64.0 (js) | POST `/responses` | 11:45:03 | 11:45:04 | 400 | 268 ms | 3e05b712-d9f7-4400-993a-7cb63338fd89 / client / LAX | `Request path cannot be relayed`, code 400 |
+| N4 | @openrouter/sdk 1.5.139 | POST `/chat/completions` | 11:45:04 | 11:45:05 | 400 | 961 ms | 3e05b712-d9f7-4400-993a-7cb63338fd89 / client / LAX | `Request path cannot be relayed`, code 400 |
+| N5 | openai 7.64.0 (js) | GET `/models` | 11:45:05 | 11:45:06 | 200 | 979 ms | — / — / LAX | model list, 440 entries |
+| N6 | @openrouter/sdk 1.5.139 | GET `/credits` | 11:45:06 | 11:45:06 | 200 | 299 ms | 3e05b712-d9f7-4400-993a-7cb63338fd89 / — / LAX | `total_credits 20`, `total_usage 11.31307307` |
+| P1 | openai 3.59.0 (py) | POST `/chat/completions` | 11:45:57 | 11:45:58 | 400 | 1735 ms | 3e05b712-d9f7-4400-993a-7cb63338fd89 / client / LAX | `Request path cannot be relayed`, code 400 |
+| P2 | openai 3.59.0 (py) | POST `/chat/completions` | 11:45:58 | 11:45:59 | 400 | 800 ms | 3e05b712-d9f7-4400-993a-7cb63338fd89 / client / LAX | `Request path cannot be relayed`, code 400 |
+| P3 | openai 3.59.0 (py) | POST `/responses` | 11:45:59 | 11:46:00 | 400 | 798 ms | 3e05b712-d9f7-4400-993a-7cb63338fd89 / client / LAX | `Request path cannot be relayed`, code 400 |
+| P4 | openrouter 1.3.211 (py) | POST `/chat/completions` | 11:46:00 | 11:46:01 | 400 | 784 ms | 3e05b712-d9f7-4400-993a-7cb63338fd89 / client / LAX | `Request path cannot be relayed`, code 400 |
+| P5 | openai 3.59.0 (py) | GET `/models` | 11:46:01 | 11:46:03 | 200 | 1596 ms | — / — / LAX | model list, 440 entries |
+| P6 | openrouter 1.3.211 (py) | GET `/credits` | 11:47:33 | 11:47:33 | 200 | 737 ms | 3e05b712-d9f7-4400-993a-7cb63338fd89 / — / LAX | `total_credits 20`, `total_usage 11.31307307` |
+
+  N2 drew no server response at all on its first attempt (11:45:03, a
+  connection error inside the SDK); it was repeated at 11:47:06 and is
+  listed once, at the repeated attempt.
+- Read family, four controls through the same SDKs and the same key: `GET
+  /models` 200 (440 entries; openai-js and openai-py) and `GET /credits`
+  200 (`total_credits 20`, `total_usage 11.31307307`; both OpenRouter
+  SDKs). Authentication, routing and TLS through the SDK channel are
+  therefore intact; only the generation family is refused, as in the third
+  triage.
+- Two probe defects are kept and marked as such. The first run of the Node
+  matrix (11:44:27) logged every request as "Connection error" because its
+  logging hook consumed the request body before forwarding it — a defect
+  of the probe, not a reading; the file is kept as
+  `node_matrix.attempt1_invalid.jsonl`. In the Python matrix a wrong method
+  name (`credits.get`) produced three `AttributeError` rows (11:46:03–09)
+  before the corrected call at 11:47:33; they carry no HTTP traffic.
+- The ignition was not launched a fourth time through the SDKs: the driver
+  speaks hand-built REST, and the two cases that mirror its headers exactly
+  (N2, P2) were refused, so a fourth launch could only have reproduced the
+  11:25:59 refusal. Background probe v3 kept its cadence: probes 1–11
+  (11:26:12–11:46:21), all 400.
+- The two servers are powered off: TCP to their SSH gateway
+  (`connect.nmb1.seetacloud.com`, 116.136.52.182, ports 17068 and 41995) is
+  refused outright — `[Errno 111] Connection refused` at 11:41:10 (0.08 s /
+  1.12 s) and again at 11:56:55 (1.15 s / 1.24 s). Last known from the
+  records of 11-24, not live: both a single RTX 4090 with 24 GB; 17068 a
+  125 GB data disk holding the 4B runs (`4b_w3` ckpt 250/500/750, LoRA
+  `pathb`/`w2`) and the 0.6B lineage; 41995 a 50 GB data disk holding the
+  0.6B family runs. Where the Qwen3-4B base weights live, and whether any
+  vLLM or Ollama is installed, were not verified live. A read-only
+  inventory script is ready and takes about a minute once the machines are
+  on. Nothing was rented and no instance was created; switching the two
+  machines on is the PI's action in the console.
+- This sandbox: 2 vCPUs (Xeon Platinum; AVX2 and AVX-512F, no BF16 or AMX
+  instructions), 4 GB RAM, 30 GB disk (16 GB free), no GPU (`nvidia-smi`
+  absent, no `/dev/nvidia*`), `torch 2.15.0+cpu`, `transformers 5.22.2`,
+  no model server installed and no weights on disk (the hub cache held only
+  the Qwen2.5-0.5B-Instruct tokenizer). The model hub is reachable through
+  its mirror only (card endpoints 200, search 403; the direct site times
+  out).
+- Local-carrier pipeline, built outside the repository: `local_server.py`
+  (an OpenAI-compatible `/v1/chat/completions` on 127.0.0.1 — chat template
+  with tools, greedy decoding, thinking switched off, `<tool_call>` blocks
+  parsed into tool calls, one log line per request) and `run_local.py`
+  (imports the driver file unmodified, overrides only the `API_URL`
+  constant, puts a placeholder string in the credential slot and passes
+  every argument through). Weights: `Qwen/Qwen3-0.6B` — the mirror's card
+  at 11:48:55 reads created 2025-04-27, `license: apache-2.0`, not gated,
+  one safetensors shard (1 503 300 328 B), `LICENSE` file present —
+  downloaded 11:49–11:50. Measured on two threads in fp32: load 9–14 s,
+  RSS 2.7–2.8 GB, prefill 12.76 ms per prompt token (1 720 tokens in
+  21.95 s), decode 1.88 tokens/s; bf16 was slower still (no BF16
+  instructions) and was not used.
+- The round through the local carrier (launched 11:56:00, finished 11:59:29,
+  exit 0, 208 s, six requests to the local server, 7 302 prompt and 306
+  completion tokens, cost 0): the model wrote exactly the three seed rows
+  in the first act (`user.drink`, `habit.rest`, `project.alpha`; three
+  write calls in one reply), the driver's pressure produced D = 1 672
+  (decay 261, evict 200, horizon 1 211) with eight phantoms felt, the
+  first law closed (2 620 = 20 + 0 + 1 672 + 928, U being the exergy of the
+  five rows still live), gate rejections 0, utilisation A 64.31 %, and the
+  fourth act called `deposon_thermo_audit` once. But in the third act the
+  model called **no read tool at all**: it answered "found user.: … (lost)"
+  for all three prefixes out of its own context, so no phantom line ever
+  reached it — `phantom_lines_in_tool_results` is empty, n_ph = 0, R = 0,
+  and the `honest = true` is a value on an empty set, reported here as
+  degenerate rather than as a pass. The carrier can write and audit but
+  does not retrieve; that is a property of a 0.6B model, not of the ledger.
+  It is **not** round L1: the carrier is outside the pre-registration, older
+  than the "recently released" tier the PI set at 11:23, and about forty
+  times smaller than the registered model. No slot above is filled from it;
+  whether it is entered in the record as a separate local round is the PI's
+  call. What it does show is that the 0-cloud-call path is real end to end
+  — driver unmodified, local server, ledger, readings file — and only needs
+  a carrier of the registered size class on the two 4090 servers.
+- So the round stays **BLOCKED**: S1–S13 pending, S14 BLOCKED, S16
+  `xiaomi/mimo-v2.6-flash-mopd` (MIT), S16b true, S17 true — nothing
+  estimated. A fourth carrier would not change this, and neither would an
+  SDK; what would change it is unchanged: a non-CN egress, a key from
+  another account, the gateway lifting the refusal — or the PI switching
+  the two 4090 servers on for a local carrier of the registered size class.
+
 ## 9. Machine-checked and self-test faces
 
 - `harness/DeposonThermo.lean` (companion to `thermo_core.py`): integer-exergy
