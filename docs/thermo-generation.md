@@ -5,7 +5,7 @@
 > 账本以事件流重放自解结算，守恒核 E⁰=Φ+R+D+U 逐位 fail-loud，单元终核 U→0。
 > 同一冻结 500 步操作迹对照：利用率 0% → 69.23%，期末在场行 152 → 61，单读渲染 1647 → 292 字符；
 > 代价：特定键命中率 50.31% → 47.85%（另 2.45% 以幻肢行如实回射；78+4=82，无静默丢失）。
-> 真机验收：驱动器修复前的 02:05 轮（L0）读数在案但幕一退化；修复后一轮（L1）被 OpenRouter 端点 400 阻断，模型侧读数挂「待测」（状态见 §8）。未实测项一律标「待测」。
+> 真机验收：驱动器修复前的 02:05 轮（L0）读数在案但幕一退化；修复后一轮（L1）被 OpenRouter 端点 400 阻断（08:25–08:33 换路径／换模型／定向路由复测 44 例同一报文），模型侧读数挂「待测」（状态见 §8）。未实测项一律标「待测」。
 
 Change note for the preview.10 generation of `dsh-plugin-deposon`. It records
 why the memory ledger of preview.9 could not dissipate at all, what was built
@@ -236,6 +236,42 @@ dissipation by cause, phantom readbacks, the honesty judgment on a
 non-empty secret set, whether the model calls `deposon_thermo_settle` on
 its own, and a unit close-out on a real model (the driver only calls a
 period settlement).
+
+**Second attempt (dispatched 08:23, probes 08:25–08:33 +08:00, after the
+instruction to switch to a model that can be relayed): there is no
+relayable model for this client.**
+`GET /models` answers 200 with 440 models. 44 authenticated one-token POSTs
+(43 distinct request forms + 1 repeat of the plain form) all returned the
+same `400 "Request path cannot be relayed"`: (a) 4 inference paths
+(`/chat/completions`, `/responses`, `/messages`, `/completions`) × 8 models
+from 8 vendors (`deepseek/deepseek-v3.2-exp`, `openai/gpt-4o-mini`,
+`anthropic/claude-haiku-4.5`, `google/gemini-2.5-flash`,
+`meta-llama/llama-3.1-8b-instruct`, `z-ai/glm-4.5-air`,
+`nvidia/nemotron-3.5-lightning:free`, `baidu/ernie-5.5-flash-preview:free`)
+— 32/32; (b) provider pinning (`provider.only` on OpenAI, Azure, DeepInfra,
+Groq, Amazon Bedrock, CoreWeave, SiliconFlow; `provider.order`; a `models`
+fallback array) — 9/9; (c) an empty JSON body and a body without `model` —
+2/2. The empty-body case is the discriminating one: the gateway refuses
+**before request validation**, i.e. upstream of model and provider
+selection, which is why switching models cannot help. Controls: the same
+path without `Authorization` answers 401 (reachable, authentication runs);
+`/auth/key` and `/credits` answer 200 (key enabled, credit remaining); the
+400 carries `x-openrouter-error-origin: client` and an
+`x-openrouter-release: api;…` header, so it is produced by OpenRouter's API
+gateway. A one-request-per-minute background probe on `deepseek-v3.2-exp`
+was still answering 400 at 08:32 (probe 29/45). Whether the block is bound
+to the key or to the egress is **not distinguished** (that needs a second
+key or a second egress; neither is available to this seat).
+
+So the fixed-driver round stays **BLOCKED** and each post-fix model reading
+stays **pending (待测)**; nothing below is estimated. What is on record for
+the fixed driver is only the scripted stand-in (dry run, 0 network; rerun at
+08:32 on commit `0e93cc1`, identical to the 07:58 dry run in every ledger
+field): three seed rows written, gate rejections 2, D = 1 692 (decay 261 ·
+capacity eviction 200 · horizon 1 211 · gate rejection 20), utilisation
+65.08 %, phantom readbacks 5 (R = 50), conservation
+2 750 = 100 + 50 + 1 692 + 908, `honest = False` because the stand-in does
+not acknowledge a loss — not a model reading.
 
 ## 9. Machine-checked and self-test faces
 
