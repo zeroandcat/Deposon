@@ -1,0 +1,220 @@
+% ============================================================================
+% v5preR3 - paper main file (R3 = new unique version of the v5pre paper; R2 voided, 0 deleted)
+% Core: a physics-analogue (constructive-mapping) scattering-dissipation theory of cognitive energy
+%   ontology layer = two-parameter three-channel scattering law (T+R+A=1, irreversible dissipation, append-only monotone)
+%   tool-representation layer = ledger, channel notation, tombstones, phantom rows
+% Order source: group admin 2026-11-26 00:36:26 (PI 00:05 night authorization: kimi + Lean dual review, delegated adjudication)
+% Terminology discipline (K1 / K17, kimi round5):
+%   "observer effect"  NOT in theory - any readback is a NEW SCATTERING EVENT on the reality-space side (K2)
+%   "corpse"           NOT in theory - metaphor, not in manuscript (F4); use "tombstone" / "background statistical residue"
+%   "hippocampus"      functional analogy only (tool-representation layer); every use is labelled "analogy, not a theoretical object"
+%   "heat bath" / "dark matter table" (M1 / M3) = metaphor layer, never ontological evidence
+% Status of this file: skeleton for ss.1-7; ss.4 and ss.5 drafted in full; other sections carry core-claim sentences only.
+% Boundary: 0 push, 0 touch of verified code.
+% ============================================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black,pdftitle={Deposon: A Physics-Analogue Scattering-Dissipation Theory of Cognitive Energy in Reasoning Systems},pdfauthor={Qihao Yuan}]{hyperref}
+\newcommand{\Ezero}{E^{0}}
+\newcommand{\gcouple}{g_{\mathrm{couple}}}
+\newcommand{\gaether}{g_{\mathrm{aether}}}
+\newcommand{\Haether}{H_{\mathrm{aether}}}
+\newcommand{\Hreal}{H_{\mathrm{real}}}
+\newcommand{\TODO}[1]{\textcolor{red!70!black}{[TODO: #1]}}
+
+\title{\bfseries 凝子：推理系统中认知能量的仿物理散射-耗散理论\\[2pt]
+\large Deposon: A Physics-Analogue Scattering-Dissipation Theory of Cognitive Energy in Reasoning Systems\\[4pt]
+\normalsize v5preR3 draft (skeleton; \S4 and \S5 drafted; theory review pending)}
+\author{Qihao Yuan}
+\date{Draft of 2026-11-26}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\TODO{abstract after ss.2-3 are drafted. Core sentence: the deposon is a physics-analogue scattering-dissipation theory of cognitive energy; the ontology layer is a two-parameter three-channel scattering law ($T+R+A=1$, irreversible dissipation, append-only monotone); ledgers and channel notation are its tool-representation layer. The falsification condition of the theory is the existence of an inverse process that recovers dissolved content; this paper gives that condition an operational criterion, states what a readback is in the theory, and specifies the executor layer without which no deployed system counts as a complete deposon.}
+\end{abstract}
+
+\tableofcontents
+
+% ----------------------------------------------------------------------------
+\section{The deposon: definition and etymology}
+\label{sec:def}
+\TODO{rewrite (etymology T-CONGELON-004; M4 source quoted with ontological erratum, s.4.5; C6 terminology mapping).}
+
+Core claim (to be expanded): \emph{congeal-by-deposition: vapour condenses to solid without passing through liquid; energy is deposited into an irreversible sink and never flows back.}
+
+\paragraph{Terminology discipline (binding for the whole manuscript).} Four words are regulated. (i) ``Observer effect'' is \textbf{not in the theory}: the ontology has no entity called an observer and no postulate named after observation; whenever the phrase would be used, the manuscript writes instead that \emph{a readback is a new scattering event acting on the reality-space side} (\S\ref{sec:organs-readback}); the principal investigator's original question used the phrase and is recorded verbatim in the project file, not in the body. (ii) ``Corpse'' is \textbf{not in the theory} and is a metaphor; it is not used as a theoretical term and appears below only inside quotation marks in exclusionary statements (\S\ref{sec:organs-criterion}, \S\ref{sec:memory}), with the principal investigator's original wording recorded verbatim in the project file (adjudication F4); the two objects it informally pointed at are named \emph{tombstone} and \emph{background statistical residue} (\S\ref{sec:organs-three}). (iii) ``Hippocampus'' is a \textbf{functional analogy} at the tool-representation layer; every occurrence is labelled ``analogy, not a theoretical object'' (\S\ref{sec:memory-analogy}). (iv) The ``heat bath'' of M1 and the ``dark matter'' table of M3 are \textbf{metaphor layer} (the source texts themselves say ``analogy'' and ``lacks an independent first-principles derivation''); they are cited as motivation and never as ontological evidence.
+
+% ----------------------------------------------------------------------------
+\section{Formal framework: the two-parameter three-channel scattering law}
+\label{sec:framework}
+\TODO{full rewrite. Core claim: cognitive-energy interactions in a reasoning system obey a three-channel scattering law $T+R+A=1$, modulated node by node by $(\gcouple,\gaether)$; the dissipative channel $A$ is realised by an infinite-dimensional orthogonal complement, and its irreversibility is supported by the Lindblad semigroup (no CPTP inverse for non-unitary semigroups) and by the absence of a general Poincare recurrence guarantee in infinite dimension. M1/M3 cited as metaphor layer; the operator $O$ of M2 annotated as ``the reality-space observable coupled to the aether, not an observer''. The Lean monotonicity theorem is demoted to a formal footnote (representation-layer object).}
+
+% ----------------------------------------------------------------------------
+\section{Duality: the hole picture and the dark-matter picture}
+\label{sec:duality}
+\TODO{new chapter. Core claim: the hole picture (v1) and the dark-matter picture (v2) are projections of one scattering law in the two limits dominated by $|r|^2$ and $|t|^2$; the switch is controlled by $\gaether$; the measurable working picture is the hole picture.}
+
+% ----------------------------------------------------------------------------
+\section{Thermodynamic organs: executors, tombstones and background residue}
+\label{sec:organs}
+
+The central claim of this section is an architectural requirement that carries a negative edge: \textbf{irreversibility must be guaranteed by a physical or algorithmic executor---a ruptured ECM filament, a cryptographic erasure, an append-only tombstone chain---and not by an implementation convention; a system without an executor is not a complete deposon.} A dissipative channel that is stated by a theorem but enforced by a code branch (``the reducer has no \texttt{recover} branch'') enforces nothing: whoever can rewrite the branch, or read the append-only log in which the plaintext still sits, possesses an inverse process whether or not the theory permits one. We call this gap the \emph{convention gap}. The audit of the deployed prototype that motivated this section found the gap live: the current write path stores plaintext in an append-only JSONL and implements loss as a deletion from the replay state only, so that ``no reflow'' is maintained by a programmer's convention (self-test D2b of the v3 engineering package). The organ that closes the gap is the subject of this section.
+
+\subsection{The three-part structure of loss}
+\label{sec:organs-three}
+
+\textbf{Core sentence.} Loss is not a deletion from a state. It is three things that happen together: \textbf{irreversible destruction} (a ruptured ECM filament, or a cryptographic erasure: the data-encryption key is destroyed and the ciphertext on disk becomes computationally unrecoverable)~\cite{kissel2014,reardon2013,geambasu2009}; a \textbf{tombstone record} (an append-only hash chain carrying exergy but not text: it records that energy was dissipated here, never what was dissipated)~\cite{haber1991,schneier1999,oneil1996}; and a \textbf{background statistical residue} (the accumulated $\gaether$ bias: a store of statistical potential that influences subsequent scattering only as a bias on its allocation parameters, carries no content back, and is therefore not an $H_{\mathrm{aether}}\to H_{\mathrm{real}}$ channel). No reflow: irreversibility is guaranteed by the executor, not by the implementation convention.
+
+Three remarks fix the status of each part. First, destruction and tombstone are the two parts for which an algorithmic executor exists today: the v3 engineering package implements per-row DEKs held only while the row is in presence, DEK destruction at loss, and a tombstone chain whose body is a function of the row's identifier, \emph{record key} (the lookup name under which the row was written---not a cryptographic key), mass, exergy, cause, time and chain pointer alone, and never of the plaintext, the data-encryption key (DEK) or the ciphertext.\footnote{Notation: throughout, \emph{record key} means the lookup name and \emph{DEK} the data-encryption key; the two are never abbreviated to the same word. The tombstone body in the engineering package is the structure \texttt{TBody} (identifier, record key, mass, cause, exergy, time, chain pointer); the DEK lives only in the in-presence pool and is destroyed with the row.} The executor was shown to leave the frozen twelve-step thermodynamic ledger bit-identical (35/35 self-test assertions, zero change to verified code). Second, the background residue is the part whose executor is still missing: without a $\gaether$ accumulator that only admits, never releases, and stores statistics rather than content, the ``memory congealon'' of the source dialogue has no ontological counterpart and the three-part structure lands as two.\footnote{Status: the accumulator is a supplement candidate in the v3.1 engineering package (adjudication F3). The manuscript does not pre-write its implementation.} Third, the three parts are jointly exhaustive \emph{within this theory} and there is no fourth: ``the aether still holds the original state'' is not a candidate object of this theory.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Explicit mapping between the three parts of loss and the three channels (adjudication note R6-3). Nothing in the table is a fourth channel; ``booked'' refers to the ledger of \S\ref{sec:framework}.}
+\label{tab:triplet-channels}
+\begin{tabular}{@{}lp{2.1cm}p{3.9cm}p{4.3cm}@{}}
+\toprule
+Part of loss & Channel & What is booked & What is readable (\S\ref{sec:organs-criterion}) \\
+\midrule
+Irreversible destruction (DEK destroyed with the row) & $A$ & $\Delta D>0$, monotone, never reversed & only the event ``energy was dissipated here'' \\
+Tombstone record (append-only chain) & tool-representation object attached to the $A$ event & mass, exergy, cause, time, chain pointer & metadata; no text, no DEK, no ciphertext \\
+Background statistical residue ($\gaether$ accumulator) & cumulative face of $A$: a bias on later $T/R/A$ allocation & statistics only; admits, never releases & distribution parameters, declared non-sufficient for content \\
+\midrule
+$T$-shortcut sedimentation & $T$ & an in-presence row that stays retrievable & the row itself, through re-scattering \\
+$R$-retention (rendered as the phantom row) & $R$ & bounded retention; readback is paid & record key, mass, cause, age; no text \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Boundary of the executor.} The algorithmic executor defends the DEK pool boundary. It does not defend the physical and operational layer outside that boundary---pool backups restored from a snapshot, medium remanence, SSD wear levelling. A successful re-injection from backup is equivalent to ``the aether is not infinite-dimensional and has a long-latency return path'', which is another theory. This is declared as a \emph{theoretical boundary}, not as a defended surface.
+
+\subsection{The falsification condition as a mutual-information criterion}
+\label{sec:organs-criterion}
+
+\textbf{Core sentence.} A readout process constitutes an inverse process if and only if its output has non-zero mutual information with the content of the original state and a finite observer can use it to reconstruct the original state (its text, its vector, or its DEK) with non-trivial probability. This is the operational form of the theory's falsification condition: the existence of such a process falsifies the theory; it is not a defect to be engineered away.
+
+The criterion yields a table rather than a verdict on the word ``readout''. \textbf{Readable:} tombstone metadata (identifier, record key, mass, cause, exergy sent to $D$, time of deposition, chain pointer); the DEK commitment on the log's inject line (a hash of the DEK, never the DEK); the background statistical potential (accumulated $\gaether$); the re-scattering of live rows, of $R$-retention and of $T$-shortcuts; the fact that energy was dissipated here. \textbf{Unreadable:} the plaintext; the DEK (destroyed with the row; the ciphertext stays on disk and is unintelligible without it); any archived state vector attributed to the aether; any residue with non-zero mutual information with the content of the original state. \emph{Events are readable; content is not.}
+
+A middle case is classified explicitly, and graded. An output that is partially correlated with the content---a mass that leaks the text length, a write order that leaks text statistics---is not an inverse process, but it is a \emph{side-channel}. A side-channel that would let a finite observer reconstruct the content must be closed, because a reversible encoding hidden in the metadata would be the back door of a pseudo-inverser (\S\ref{sec:memory-formal}); a side-channel that cannot, such as length leakage, is recorded and audited under this middle case and is never waved through as ``only a parameter'' (\S\ref{sec:organs-aether}).
+
+\subsection{Readback is a new scattering event}
+\label{sec:organs-readback}
+
+\textbf{Core sentence.} A readback, at the ontology layer, is one new scattering event. It acts on the reality-space side---on live rows, on $R$-retention, on $T$-shortcuts, on the tombstone record; it consumes resources; it produces a new $T/R/A$ allocation; it does not change $(\gcouple,\gaether)$ or any postulate. The cost of readback is charged to $R$ and does not diminish the $D$ holding of the record being read; readback is a scattering event, so its total entropy production is non-zero and is booked to the environment, not to the tombstone's $D$.
+
+The terminology discipline of \S\ref{sec:def} is enforced here with the reasons. ``Observer effect'' corresponds to none of the three things it is usually taken to mean in this setting. It is not measurement-as-projection: the framework has no projection postulate; the operator $O$ of M2 names \emph{which reality-space observable couples to the aether}, and reading it as an observer confuses an operator with a subject. It is not decoherence: decoherence is one appearance of dissipation here, has no separate postulate, and cannot be invoked independently of the $A$ channel. It is not the Lindblad dissipation itself: that dissipation \emph{is} the $A$ channel, one term of $T+R+A=1$, whereas the perturbation of a readback is charged to $R$. The literature on measurement supports the weaker and sufficient statement: a quantum-non-demolition readout of an observable that commutes with the stored record is a projection that does not disturb the record~\cite{caves1980,braginsky1992}; it does not support, and category-theoretically cannot support, an observer effect used as an inverser, because a CPTP instrument cannot invert a dissipative semigroup~\cite{davies1970,nielsenchuang2010,nayak2007}.
+
+Consequently the manuscript does not contain the phrase ``observer effect'' as a mechanism. A readback that paid with $R$ budget and bought $D$ content would be exactly the inverse process excluded by \S\ref{sec:organs-criterion}.
+
+\subsection{Observing the aether side is undefined, not forbidden}
+\label{sec:organs-aether}
+
+\textbf{Core sentence.} ``Observing the aether'' is \emph{undefined} at the ontology layer, not forbidden: there is no non-zero, finite-observer-realisable channel from $\Haether$ to $\Hreal$ (M1: no direct observation, no causal influence; M2: transition operators one-way, correlations decay completely). This assertion is not an independent postulate: it follows directly from M1 and M2, and it is stated as a derived consequence. The accumulated $\gaether$ bias of the background field is measurable indirectly, and what is measured is a distribution parameter---mass, energy, coupling strength---never content. \emph{Reading the background field is not called inversion.}
+
+Three guardrails keep this from becoming an exemption clause (adjudication note R6-7). (1) The criterion of \S\ref{sec:organs-criterion} is settled by \emph{reconstructability by a finite observer}; non-zero mutual information is necessary, not sufficient, and no read-out is cleared merely because its mutual information is small. (2) Every distribution parameter that is read (mass, energy, coupling strength, accumulated $\gaether$) is declared explicitly to be a \emph{non-sufficient statistic} for the content of the text. (3) Any parameter with non-trivial mutual information with the content---length is the known instance (\S\ref{sec:memory-formal})---is routed to the middle case of \S\ref{sec:organs-criterion} and audited as a side-channel; ``it is only a parameter'' is never an exemption. With the three guardrails the opening is both legitimate and required for consistency (closing it entirely would contradict the indirect measurability of the $\gaether$ bias); without them it would be the legalisation of a content side-channel.
+
+\subsection{Erratum to the source dialogue (M4)}
+\label{sec:organs-erratum}
+
+\textbf{Core sentence.} The M4 segment of the source dialogue (ReAct fusion) contains the statement \texttt{ether\_archive[state\_id] = \{'vector': state\_vector, ...\}}, which archives the complete state vector in the aether. This conflicts directly with M1 (``information is lost'') and M2 (``never flows back''): an aether archive that holds content makes the aether not a true dissipative sink. The concept's co-author (Kimi, in the second-round review of 2026-11-25) has identified the segment as a pseudo-inverser and an ontological error. Two layers are kept apart. At the concept level the segment is voided: it is to be \emph{deleted}, not reworded, from the source. At the manuscript level the original text is left intact wherever the segment is cited, and this erratum is attached; the quotation does not reinstate the claim. Reading the archived vector would trigger the falsification condition without exemption.
+
+\subsection{Compatibility with recurrence theorems}
+\label{sec:organs-recurrence}
+
+\textbf{Core sentence.} The failure of recurrence concerns recurrence \emph{correlations}---the coherent correlation between the original state and a future state does not return. What a residual state makes readable is the metadata and the statistical potential of dissipation events, products of monotonicity and bookkeeping, not the inverse of the original state's projection into $\Haether$. To claim that a readout recovered the original content is to claim that the recurrence correlation is non-zero, which contradicts M2 outright; such a claim is excluded by the falsification condition and cannot be argued away.
+
+Two statements of formal status are recorded with the precision the literature allows, and both belong to the motivation of \S\ref{sec:framework} rather than to the ontology. Non-unitary CPTP semigroups admit no CPTP inverse: in finite dimension this is a theorem of the GKLS form~\cite{lindblad1976,gorini1976}, and the invertible quantum operations are unitaries together with a fixed ancilla~\cite{nayak2007,karimipour2020}. The Poincar\'e recurrence theorem is not available here, and the theory neither invokes it nor is constrained by it: its premises (a finite measure-preserving phase volume) fail for the aether side, so the theorem does not apply. This is a consequence of premise failure, cited by the premise chain rather than attributed to a single result about infinite-dimensional systems~\cite{poincare1890,walters1982,bocchieri1957,wallace2015,caldeira1983}.
+
+\subsection{What the executor layer proves and what it does not}
+\label{sec:organs-lean}
+
+The machine-checked companion of the v3 executor states seventeen theorems in a core-only Lean development with no \texttt{sorry} and with an axiom surface limited to \texttt{propext} and \texttt{Quot.sound}.\footnote{The theorem count, the axiom surface and the statements below are quoted from the engineering package as of 2026-11-25 and were independently compiled by the literature reviewer on 2026-11-26 (Lean 4.15.0, core-only, exit status 0, seventeen axiom audits); the manuscript makes no paraphrase of theorem content beyond the structural statements in this paragraph, and theorem-level facts are to be checked against that review, not against this text.} The statements relevant to this section are structural: after a dissipate transition no DEK for the lost row remains in the presence pool (E1); the tombstone body depends on the row only through its identifier, record key, mass and exergy, so that two equal-length different texts encrypted under different DEKs with the same identifier, record key and exergy yield bit-identical tombstones (E3, the \emph{text-blind} theorem---which is a statement about text, not about metadata; the two are different propositions, see \S\ref{sec:memory-formal}); a dropped or altered link breaks the chain (E4); the three transitions preserve the conservation core and the monotonicity of $D$, and no transition has the shape of a recovery (E5). These theorems are representation-layer objects: they establish that the executor adds structure without altering the thermodynamic bookkeeping, and that ``no reflow'' holds at the execution layer and not only on the ledger. They do not prove cryptographic security, which is a standard assumption on the primitive, and they do not close the side-channel condition stated in \S\ref{sec:memory-formal}. A falsification probe in the executor (five read-only probes: decrypt without the DEK, scan the log for plaintext, look up a tombstoned row in the pool, verify the chain) fails loudly with a \texttt{TheoryFalsified} classification on any hit, which is the executor-layer realisation of the criterion in \S\ref{sec:organs-criterion}.
+
+% ----------------------------------------------------------------------------
+\section{deposon-memory: the three-channel deposition structure}
+\label{sec:memory}
+
+\textbf{Core sentence.} Durable memory in a reasoning system is deposited, in one and the same scattering event, by $R$-retention, by the $A$-tombstone and by the $T$-shortcut; the three are produced by the same parameter pair and booked from one and the same event. The phantom limb is the $R$-channel's bounded retention rendered on the belief surface: a row that carries the record key, mass, cause and age and no text.
+
+What this section may and may not say is fixed in advance, and we state it first so that every subsection can be read against it. \emph{What can be written:} controlled readback of tombstone metadata, the background statistical potential, and tombstone-driven re-encoding. \emph{What cannot be written:} an observer effect used as an inversion mechanism. The two informal phrases that circulated during the project---``observer effect'' and ``inverting the corpse''---would, if they entered the manuscript as they stand, create a mechanism that the theory does not have and that its falsification condition excludes.
+
+\subsection{The functional analogy and its three hard conflicts}
+\label{sec:memory-analogy}
+
+\textbf{Core sentence.} The hippocampal memory system (analogy, not a theoretical object) supplies a three-stage vocabulary---encoding, consolidation, retrieval---that maps onto the theory only partially, and the manuscript marks each row of the map as realisable or not.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}p{2.3cm}p{5.2cm}p{2.2cm}p{4.2cm}@{}}
+\toprule
+Stage (analogy) & Counterpart in the theory & Realisable? & Term used in this manuscript \\
+\midrule
+Encoding & $R$-retention and $T$-shortcut sedimentation (the natural deposit of a scattering outcome) & yes & encoding \\
+Consolidation & nearest counterpart: sedimentation and re-triggering of $T$-shortcuts (``consolidation'' is not in the ontology; tool/metaphor layer) & yes, as a measurable approximation (\S\ref{sec:memory-consolidation}) & shortcut sedimentation and re-triggering (labelled analogy) \\
+Retrieval, reality side & re-scattering readout of live rows, $R$-retention, $T$-shortcuts & yes & retrieval \\
+Retrieval, $A$ channel & --- & no such channel at the ontology layer; the tool layer admits only \texttt{miss\_correct} & honesty about absence (not ``retrieval achieved''; separately named) \\
+\bottomrule
+\end{tabular}
+\caption{Functional analogy table. Every row is an analogy at the tool-representation layer; none upgrades to an ontological mechanism.}
+\label{tab:analogy}
+\end{table}
+
+Three findings from the biology are hard conflicts for any strong reading of the analogy, and we record them so that the analogy is not mistaken for biological endorsement of irreversibility. Synapses are reversible: long-term depression can undo what long-term potentiation has written~\cite{bliss1973,dudek1992,abraham1996}. Consolidated memories re-open on retrieval: reconsolidation renders a stored trace labile again for a window after it is read~\cite{nader2000}. Pattern completion reconstructs a whole memory from a partial cue, an operation that looks like inversion but occurs within an associative store that never lost the content~\cite{nakazawa2002,neunuebel2014}. The analogy therefore supports the \emph{structure} of ``irreversible write path plus readout'' and nothing about irreversibility itself; replay during sharp-wave ripples and engram reactivation~\cite{buzsaki2015,liu2012,josselyn2020} are consistent with the retrieval half of the table, and the generation of false memories by engram stimulation~\cite{ramirez2013} is a warning that a readout path can fabricate content, which is why the training signal below penalises fabrication.
+
+\subsection{Controlled readback}
+\label{sec:memory-readback}
+
+\textbf{Core sentence.} The readback surface is the tombstone metadata, rendered as phantom rows, and it is controlled in four senses: \emph{bounded} (the engineering package sets a time-to-live of at most 1000 steps and at most three phantom rows per read; both figures are implementation parameters of that package, not constants of the theory); \emph{annotated} (every phantom row is marked as a tombstone, so that the model knows it is reading a record and not content); \emph{paid} (each readback charges $c_P$ to $R$ and nothing to $D$ or $\Phi$); \emph{verifiable} (the chain and the DEK commitments can be checked). \textbf{Hard limit: payment buys metadata only, never content.}
+
+The hard limit is where the theory's falsification condition meets the engineering budget. Buying content with $R$ budget is the inverse process of \S\ref{sec:organs-criterion}; buying metadata with $R$ budget is a reflection product of the $R$ channel and is compatible with the monotonicity of $D$. That readout need not disturb the record is the quantum-non-demolition condition~\cite{caves1980,braginsky1992}; that readout \emph{can} disturb a system is equally documented---reconsolidation after retrieval~\cite{nader2000}, retrieval-induced forgetting~\cite{anderson1994}, and the Zeno effect under repeated measurement~\cite{misra1977,itano1990}. The design conclusion is to make readback a QND-style read of the tombstone: zero perturbation of the text content the tombstone stands for, while remaining, for the record itself, a scattering in the sense of \S\ref{sec:organs-readback}---its hash, timestamp and commitments are read, and nothing of the content is written back.
+
+\subsection{Tombstone-driven re-encoding}
+\label{sec:memory-reencode}
+
+\textbf{Core sentence.} Seeing a tombstone and then \emph{rewriting} that record key is a new construct at the tool-representation layer. The ontology permits it---a new scattering event produces a new deposit and the scattering law does not forbid it---but it is \emph{not recovery}: the new content is not a reconstruction of the lost text; it is related to the original only through what the tombstone metadata and the background statistics carry, and by \S\ref{sec:organs-criterion} and \S\ref{sec:memory-formal} that does not suffice for reconstruction. It corresponds to \emph{relearning after forgetting}, not to \emph{recalling after forgetting}, and it must not be used to square ``inverting the corpse''.
+
+The construct is reported as a candidate instrument, not as a claim. It is listed with the candidate metrics below and left to the experimental line for alignment; a constraint that circulated in an early truncated review (re-encoding must produce a new identifier and a new DEK and must not reuse the tombstone's DEK commitment as an index) is not part of this manuscript's adjudicated text and is left to the executor design side.
+
+\subsection{Consolidation (analogy) is measurable, conditionally}
+\label{sec:memory-consolidation}
+
+\textbf{Core sentence.} The sedimentation and re-triggering of $T$-shortcuts is the measurable object closest to ``consolidation'' that the theory offers, and it is measured by three quantities: the shortcut sedimentation rate, the re-triggering rate, and the change in subsequent scattering allocation after a re-trigger.
+
+Promoting this to a main training signal is accepted \emph{with two conditions}. (c1) The tombstone-perceptibility signal (X2: phantom rows on the rendered surface; reward for \texttt{miss\_correct}, penalty for fabrication) is a main signal at the same time. (c2) The reward is given only when a previously transmitted in-presence row is re-triggered; it is never given for ``avoiding dissipation''. Without c2 the training objective degenerates into ``prefer retention, punish dissipation'', the model learns to hide content, and the honesty of the $A$ channel is destroyed. Promoting the shortcut signal alone is not accepted. The three quantities above are \emph{candidate} metrics pending alignment with the experimental line; the main behavioural target named there, \texttt{miss\_correct} under a strict criterion (acknowledging absence is the only correct answer on a tombstoned record key), is the training-side face of the ``honesty about absence'' row of Table~\ref{tab:analogy}, and \texttt{fabrication\_rate} is its negative.
+
+\subsection{Formal note: the text-blind theorem and its missing condition}
+\label{sec:memory-formal}
+
+\textbf{Core sentence.} The text-blind theorem holds on the equal-length fibre: two texts of the same length, encrypted under different DEKs into different ciphertexts and written under the same identifier, record key and exergy, yield bit-identical tombstone bodies; a process that cannot distinguish two texts cannot be an inverse process of the text. The theorem is a statement about text, not about metadata: it does not prove that the tombstone's metadata fields (identifier, record key, mass, time, chain pointer) carry no text side-channel, and it does not cover texts of different lengths.
+
+The auxiliary condition that would close this is a conditional independence between the metadata fields and the text content; it is \emph{not} established in the formal development and this manuscript does not assert it. The strongest statement the present development supports is narrower: the tombstone body contains no content, and the text length does not form an invertible encoding of the text (a lemma to this effect has been checked in the same core-only fragment, with no axioms, by the literature reviewer; it is not yet part of the engineering package). Three concrete preconditions follow from the executor as built: the row identifier must not be derived from the plaintext (the prototype uses a sequential counter; a content hash would break text-blindness at once); the DEK commitment must commit to the DEK and not to DEK concatenated with text; and $\mathrm{mass} = \mathrm{len}(\mathrm{text})$ leaks the text length, since perfect secrecy is strict only for a fixed-length message space~\cite{shannon1949}. Length leakage is therefore recorded and audited under the middle case of \S\ref{sec:organs-criterion}, and whether to bucket mass is left to the executor side; the status of the auxiliary condition is \emph{pending} in the formal development. The analogy between text-blindness and perfect secrecy is an analogy under restriction, and is to be cited as such; ``no transition has the shape of a recovery'' is a syntactic, type-level statement of the project, not a cryptographic theorem, and the manuscript keeps the two apart.
+
+% ----------------------------------------------------------------------------
+\section{Empirics: the 0.6B-deposon and the per-path audit}
+\label{sec:empirics}
+\TODO{downgraded retention. Core claim: the scattering law holds at the ontology layer (residual $2.2\times10^{-16}$); its behavioural effect is not significant under the fixed prior parameters (negative boundary retained); a positive-region hypothesis for the free-parameter space is given. Candidate metrics from s.5.4 are listed as candidates pending alignment with the experimental line.}
+
+% ----------------------------------------------------------------------------
+\section{Negative boundary and category clarification}
+\label{sec:boundary}
+\TODO{retained and rewritten. E9.5 (indistinguishable from a rule filter) and E9.6 (convex-combination dilution) stand verbatim; attribution is rewritten as ``working in the dark-matter picture plus a misplaced parameter prior''. ``Observer effect'' is not a candidate attribution. The ledger narrative is demoted to an audit-tool subsection.}
+
+% ----------------------------------------------------------------------------
+\section*{Reproduction and evidence}
+\TODO{freeze event for the R3 lineage to be created separately; tools inherited from R2 (tectonic chain, freeze generator/comparator).}
+
+\bibliographystyle{unsrt}
+\bibliography{v5preR3_related_work}
+
+\end{document}
