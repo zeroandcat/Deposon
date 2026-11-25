@@ -83,7 +83,7 @@ try {
 | 缺省 slug | `xiaomi/mimo-v2.6-flash-mopd`（`DEFAULT_MODEL`，只许用 `--model` 覆盖） |
 | 许可 | **MIT**——模型卡 `cardData.license`、`LICENSE` 原文、README 三源一致（11-25 11:2x 经模型枢纽镜像站读取；非 gated） |
 | 发布日 | 2026-11-23（官网模型页「Released」；接口 `created=1795456634` 仅作对照） |
-| 在架证据 | 官网模型页 11-25 **12:45（平台侧渲染）**：在列·1 个供应商（Featherless）·近 3 天可用率 100%／可服务率 95.71%；Endpoints API 12:45:34：`status 0` |
+| 在架证据 | 官网模型页 11-25 **13:03（平台侧渲染，刷新帧；12:45 首帧同）**：在列·1 个供应商（Featherless）·近 3 天可用率 100%／可服务率 95.71%；Endpoints API 12:45:34：`status 0`。页面渲染文本不显示许可字段，许可名取自模型卡三源 |
 | 闭源排除 | 用户示例 `anthropic/claude-opus-5.5` 属闭源，按「闭源一律排除」不选 |
 
 「在架」以官网模型广场 / 模型页为准，接口返回值只作对照。
@@ -97,10 +97,11 @@ try {
 | 12:41:08 | 真 key | **200**（`total_credits` / `total_usage` 两字段读回·659 ms） | **400** `Request path cannot be relayed` → `GATEWAY_RELAY_REFUSED`（release `api;3e05b712-d9f7-4400-993a-7cb63338fd89`·error-origin `client`·cf-ray LAX·244 ms） | 1 |
 | 12:42:40 | 错 key（复跑） | **401** `User not found.` → `AUTH` | 传输层抖动 `fetch failed` → `NETWORK` | 4 |
 | 12:42:43 | 真 key（复跑） | 传输层抖动 `fetch failed` → `NETWORK` | **400** 同上（release 同·error-origin `client`·1093 ms） | 1 |
+| 13:03:57–13:04:01 | 三条件再复跑（key 取自值守进程环境·0 落盘） | 未设：不发请求；错 key：`fetch failed` → `NETWORK`；真 key：**200**（20 / 11.313·958 ms） | 错 key：**401** `User not found.` → `AUTH`；真 key：**400** 同上（release 同·error-origin `client`·cf-ray LAX·321 ms） | 3／2／1 |
 
 - **结论：生成路径在 CN 出口被网关拒中继（BLOCKED），与 11-25 全天各轮逐字相同；读路径通。** 不填估值。
 - 两台 GPU 服务器出口实测同为 CN（见交付包盘点表），所以本子包在服务器上跑结论相同，未把 key 送去复证。
-- 传输层抖动：真/错 key 四轮共 8 个请求里 **3 个**遇 `TypeError: fetch failed`（SDK 归 `ConnectionError`·被本子包判 `NETWORK`）——本子包缺省 `retries: "none"` 是为诊断读数逐例可对表；**生产调用请设 `retries: "backoff"`**。
+- 传输层抖动：真/错 key 六轮共 12 个请求里 **4 个**遇 `TypeError: fetch failed`（SDK 归 `ConnectionError`·被本子包判 `NETWORK`）——本子包缺省 `retries: "none"` 是为诊断读数逐例可对表；**生产调用请设 `retries: "backoff"`**。
 - 替身测试 8/8 通过（未设 key / 400 拒中继 / 400 其它 / 401·404·429 / 500·502·504 / 连接失败 / 200 解析 / 脱敏）。
 
 ## 纪律

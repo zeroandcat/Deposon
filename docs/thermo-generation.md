@@ -663,6 +663,24 @@ pre-registration.**
   sha256 values plus `config.json` and the index; Apache-2.0); 41995 has
   no 4B weights. No GPU arm exists yet (the E-G1–E-G3 ledger, the E-G4
   learnable gate), so a GPU boot now would idle: not switched on.
+- **OpenRouter integration delivered (13:00 dispatch).** The client built
+  at 12:35–12:50 (`openrouter/`, commit `28bf95b`) had not reached the
+  group before the previous round timed out; it was re-verified at 13:02:30
+  (build rc 0, stand-in tests 8/8) and delivered in batches from 13:02
+  (code, README, evidence, private-repo commit record; local branch
+  `private/v5preR2`, not pushed). The website's model page rendered at
+  13:03 still lists the carrier (released Nov 23 2026, one provider,
+  3-day uptime 100 %, availability 95.71 %); the rendered page shows no
+  licence field, the licence name (MIT) comes from the hub card. A third
+  three-condition run at 13:03:57–13:04:01 with the key taken from the
+  watch process's environment (not typed, not written): no key → exit 3;
+  invalid key → 401 "User not found." (no release header) on generation
+  and a transport `fetch failed` on the read path; real key → `GET
+  /credits` 200 (20 / 11.313) and generation 400 "Request path cannot be
+  relayed", the same release `api;3e05b712…`, origin `client`, PoP LAX.
+  The watch probe v3 (120 s) logged 49/49 refusals up to 13:03:03. 429 and
+  5xx are covered by stand-in cases only; no live reading exists for them.
+  Round BLOCKED, nothing estimated.
 
 ## 9. Machine-checked and self-test faces
 
