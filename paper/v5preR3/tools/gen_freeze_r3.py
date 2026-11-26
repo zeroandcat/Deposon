@@ -80,19 +80,21 @@ def compile_state(tex_path):
 
 
 def main():
+    import re as _re
     version = arg("--version", int, 1)
     out_dir = arg("--out-dir", str, None)          # dry-run：输出到别处·不覆盖在册冻结件
     draft_label = arg("--draft-label", str, "全稿")  # 稿次标签（如 rev4·吸收位已闭）
     # ---- R3 谱系对象（repo 相对路径·frozen）----
     rel = lambda p: os.path.join(REPO, p)
     pages, undefined, todo_calls = compile_state(rel("paper/v5preR3/v5preR3_论文.tex"))
+    _absorption_calls = len(re.findall(r"\\ABSORPTION{", open(rel("paper/v5preR3/v5preR3_论文.tex"), encoding="utf-8").read()))
     frozen = [
-        row(f"论文 tex（{draft_label}）", rel("paper/v5preR3/v5preR3_论文.tex"), "frozen", "§1–§7 合流·§4/§5 块 sha12 dc2665f05529 与 rev2 字节同一（稿次号见版本谱系对照表·本行不记）"),
+        row(f"论文 tex（{draft_label}）", rel("paper/v5preR3/v5preR3_论文.tex"), "frozen", "rev4 态：§1–§7 合流·rev3.1 勘误吸收＋rev3.2 阿兰三处（§4.4 限定句／§2.6 原典三引／自引锁 v2）＋rev4 §2.8 吸收位闭合；§4/§5 块 rev3.1 基线 dc2665f05529a9d6 复算恒等·块内变更实测仅 L270（令面点名豁免位）·现块 sha12 6a724a0013f22381（L218-365·漂移 +6）·全文窗口扫描实测恒等"),
         row("论文 pdf（tectonic 0.15.0）", rel("paper/v5preR3/v5preR3_论文.pdf"), "frozen", f"{pages if pages is not None else '—'} 页·0 未定义引用·0 错误（按 pdf/log 实算）"),
-        row("bib（R2 132 条整继承·逐字同一＋34 条新增）", rel("paper/v5preR3/v5preR3_related_work.bib"), "frozen", "合计 166 条·0 重键·被引条数按 tex 实算；注：91 系 R2 被引键数·非继承条数（v1 行勘误·v2 承接）"),
+        row("bib（R2 132 条整继承·逐字同一＋34 条新增）", rel("paper/v5preR3/v5preR3_related_work.bib"), "frozen", "合计 171 条（R2 132 条整继承·逐字同一＋34 条新增＋rev3.2 原典五条 feshbach1958/feshbach1962/fano1961/sagawa2008/sagawa2009）·0 重键·被引条数按 tex 实算；注：91 系 R2 被引键数·非继承条数（v1 行勘误·v2 承接）·deposon2026 自引锁 v2（arXiv:2609.09001v2 (2026-11-03)）"),
         row("点火件（立项件）", rel("paper/v5preR3/v5preR3_点火件.md"), "frozen", "rev2 原件·0 动"),
         row("版本谱系对照表", rel("paper/v5preR3/v5preR3_版本谱系对照表.md"), "frozen", "稿次与冻结状态的登记源（S-05／S-06／S-07 行）"),
-        row("冻结生成器", rel("paper/v5preR3/tools/gen_freeze_r3.py"), "frozen", "本件"),
+        row("冻结生成器", rel("paper/v5preR3/tools/gen_freeze_r3.py"), "frozen", "本件（v2：v1→v2 修订 a–e 承接·rev4 吸收位闭合口径·外部输入 +5）"),
         row("冻结比对器", rel("paper/v5preR3/tools/compare_freeze_r3.py"), "frozen", "沿 R2 compare_freeze 链·R3 口径"),
         row("kimi round10 问单", rel("paper/v5preR3/evidence/kimi_round10_prompt.txt"), "frozen", "F7/L2 原文贴入·逐字"),
         row("kimi round10 答复（逐字）", rel("paper/v5preR3/evidence/kimi_round10_answer_逐字.txt"), "frozen", "finish=stop·model kimi-k3.1-pro·0 代庖"),
@@ -119,6 +121,14 @@ def main():
         ("爱丽丝 定形件·两臂配对性（round9）", os.path.join(SHARED, "爱丽丝_定形件_两臂配对性_paired_双审代裁_工程包_20261126/爱丽丝_定形件_两臂配对性_paired_双审代裁_20261126.md"), "§6.4 paired"),
         ("鲍勃 判据收口 v1.1", os.path.join(SHARED, "鲍勃_实验线增量_裁位件与P4重钉_工程包_20261126/鲍勃_判据收口_不可逆口径_v1.1.md"), "F1–F8·L1/L2/L3"),
         ("鲍勃 实验线全谱系清点", os.path.join(SHARED, "鲍勃_实验线重编_不可逆口径_工程包_20261125/鲍勃_实验线全谱系清点_不可逆口径_20261125.md"), "H1/H2/H4·C01–C17 重述"),
+    ]
+    ext += [
+        ("爱丽丝 热力学重构件 v2.1（三层与边界·继承对表）", os.path.join(SHARED, "爱丽丝_热力学重构与双象绑定案头_工程包_20261126/爱丽丝_热力学重构件_三层与边界_继承对表_20261126.md"), "§2.8 吸收位输入·5bd9c32ae67e"),
+        ("爱丽丝 重构 Lean 件 v2（round12 吸收版）", os.path.join(SHARED, "爱丽丝_热力学重构与双象绑定案头_工程包_20261126/DeposonThermoRecon.lean"), "479 行·32 定理·0 sorry·45c56f1e5487"),
+        ("爱丽丝 round12 审读逐字节件", os.path.join(SHARED, "爱丽丝_热力学重构与双象绑定案头_工程包_20261126/kimi_round12_kimi_r12_reply_v5_逐字节.md"), "kimi-k3.1-pro·finish=stop·9 项硬伤吸收源"),
+        ("爱丽丝 round12 审读元数据", os.path.join(SHARED, "爱丽丝_热力学重构与双象绑定案头_工程包_20261126/kimi_round12_kimi_r12_reply_v5.meta.json"), "usage/finish/model 原样"),
+        ("查理 rev3.2 交付包（阿兰三处）", os.path.join(SHARED, "查理_rev3.2吸收_阿兰三处_20261126"), "目录·rev3.2 输入·MANIFEST 9 件"),
+        ("戴夫 INDEX 第 12 刷", os.path.join(SHARED, "INDEX_shared_现行索引_第12刷_20261126.md"), "现行索引·v1 时代第 9 刷已被后续刷版取代（shared 旧文件撤·变动登记）·第 12 刷含 rev3.2/rev4 待刷注"),
     ]
     external = []
     for label, path, note in ext:
@@ -156,20 +166,23 @@ def main():
             "overfull_inherited": "§4 标题行 6.37pt（与 rev2 同·§4/§5 0 改）",
             "cjk_warnings": "标题行 19 字·ptmb8t 无 CJK 字形·R2 同款既有状态·正文 0 CJK",
             "todo_macro_calls": todo_calls,
-            "absorption_slots": 1,
+            "absorption_slots": todo_calls if False else _absorption_calls,
         },
         "absorption_slot": {
-            "section": "§2.8 Thermodynamic reconstruction: absorption slot (label sec:absorption)",
-            "status": "OPEN",
-            "owner": "爱丽丝（热力学重构·同期在做）",
-            "closure_rule": "其件到达后走 rev4 吸收（稿次：rev3＝全稿合流 2a579b8·rev3.1＝勘误吸收·rev4＝热力学吸收）→重冻 FREEZE_v5preR3 v2（加入重构件自身指纹）",
+            "section": "§2.8 Thermodynamic reconstruction: the ledger layer absorbed (label sec:absorption)",
+            "status": "CLOSED",
+            "closed_at": "rev4（本冻结对应稿次）",
+            "owner": "爱丽丝（热力学重构·已交付）",
+            "absorbed_into": "rev4 稿面 §2.8 四段承接（What was absorbed／readback 族读法／What was deliberately not absorbed／Status note）",
+            "companion_fp": "DeposonThermoRecon.lean 45c56f1e5487（v2·round12 吸收版）·吸收记录 5bd9c32ae67e（v2.1）",
+            "closure_rule": "其件到达后走 rev4 吸收（稿次：rev3＝全稿合流 2a579b8·rev3.1＝勘误吸收·rev3.2＝阿兰三处吸收·rev4＝热力学吸收·本冻结）→已执行",
         },
         "frozen": frozen,
         "r2_voided": r2,
         "external_inputs": external,
         "external_count_note": f"external_inputs 共 {len(external)} 项·json 与 md 同源同数（v1 回执「11 件」系笔误·实为 10）",
         "generated_at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "order_source": "群管理员 2026-11-26 07:21:08 派单（R3 全稿覆写·立 FREEZE_v5preR3·S-07 候立转立·含 rev2 中间锚 d924707）＋08:00:14 派单勘误吸收（本轮不重冻·v2 随 rev4）",
+        "order_source": "群管理员 2026-11-26 07:21:08 派单（R3 全稿覆写·立 FREEZE_v5preR3·S-07 候立转立·含 rev2 中间锚 d924707）＋08:00:14 派单勘误吸收（v2 随 rev4）＋15:05:04 催派接续（A4 甲 rev4 收口即开·PI 12:47:01 P476 A4 甲已裁·前置已成）",
     }
     target_dir = out_dir or EVID
     os.makedirs(target_dir, exist_ok=True)
@@ -205,10 +218,11 @@ def main():
     L.append("1. **现役为准**：冻结以当前现役版本为准；旧版指纹作废留档，不两版并存。")
     L.append("2. **失效即重冻**：任一 frozen 件指纹变动 ⇒ 冻结失效，须重跑 `tools/gen_freeze_r3.py --version N+1` 并记变动原因。")
     L.append("3. **比对**：`python3 tools/compare_freeze_r3.py evidence/FREEZE_v5preR3.json` 重算现态并逐位比对；任一 frozen 件 content_changed ⇒ 失配·须处置（退出码 1）；实测输出随冻结件留存（`evidence/compare_v1_output.txt` 之例）。")
-    L.append("4. **吸收位**：§2.8 OPEN；爱丽丝热力学重构件到达 → rev4 吸收 → v2 重冻并加入重构件指纹（稿次号统一：rev3＝全稿合流·rev3.1＝勘误吸收·rev4＝热力学吸收）。")
+    L.append("4. **吸收位**：§2.8 **CLOSED**（rev4 已闭合）——重构件 DeposonThermoRecon.lean `45c56f1e5487` 与吸收记录 `5bd9c32ae67e` 入外部输入；稿次号统一：rev3＝全稿合流·rev3.1＝勘误吸收·rev3.2＝阿兰三处吸收·rev4＝热力学吸收（本冻结）。")
     L.append("5. **认证范围**：本冻结只证明「所名之件即所比之件·指纹如记」；不证明任何读数（读数在各席证据包·本稿引用不重测）。")
     if version >= 2:
         L.append("6. **v1 勘误承接**：v1 冻结件 0 动；其行勘误（bib 继承条数／HEAD 语义／稿次号）与 rev3→rev3.1 的 tex/pdf 变动见 `evidence/FREEZE_v5preR3_v1_errata.md`，本版起按修订口径登记。")
+        L.append("7. **v2 对 v1 变动登记**：①稿次 rev3→rev4（rev3.1 勘误吸收·rev3.2 阿兰三处·rev4 §2.8 吸收位闭合）；②absorption_slot OPEN→CLOSED（重构件指纹入外部输入）；③外部输入 12→17 项（+爱丽丝热力学件 v2.1／DeposonThermoRecon.lean／round12 审读逐字节与 meta／查理 rev3.2 交付包／戴夫 INDEX 第 11 刷）；④frozen 行注更新（tex 现块 6a724a0013f22381／bib 171 条／生成器 v2）；⑤比对基线 v1→v2（v1 留档 0 动·比对 v1 报预期变动·现行比对基线＝v2）。")
     L.append("\n## 戊｜边界\n")
     L.append("- 0 推·0 动已验代码（harness/ mcp/ plugin/ tests/ scripts/ paper/tools/ paper/rag/ paper/evidence/ 中 R2 件 0 动；R3 工具为新增件·置于 paper/v5preR3/tools/）·0 改他席在册件。")
     L.append(f"\n*查理-论文主笔 · {doc['generated_at'][:10]} · FREEZE_v5preR3 v{version}*")
