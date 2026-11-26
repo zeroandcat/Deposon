@@ -1,0 +1,8 @@
+# 实测输出·compare_freeze_r3.py 对 FREEZE_v5preR3 v1（rev3.1 勘误吸收后·2026-11-26 08:xx）·rev3 时点（07:40:38）同器比对结果为「0 失配」·当时未留存 stdout（本席如实注·自此留存）
+== compare against FREEZE_v5preR3.json v1 (FREEZE_v5preR3) ==
+[content_changed] frozen         论文 tex（rev3 全稿）  c0a80e4febe6 -> 72d91d8b0249
+[content_changed] frozen         论文 pdf（tectonic 0.15.0）  d832d1ab414c -> 73e5b9e78636
+[content_changed] frozen         冻结生成器  57e846918d44 -> ad3d60fe2653
+
+verdict: 失配·须处置（frozen 或 r2_voided 件有 content_changed / MISSING）
+exit=1
