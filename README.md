@@ -86,12 +86,36 @@ What makes this harness unusual:
   and injects the phantom-limb belief block as a system-prompt section
   (protocol text only, zero memory data). See `docs/thermo-generation.md`.
 
-## Status: v0.x preview
+## Status: v0.x preview — aligned baseline (2026-11-27, morning register)
 
 **This is an early preview.** Expect compatibility-breaking changes without
 notice. The core chain runner module is staged for a following release; the
 recompute path is fully functional. No public verdict claims are made from
-this repository until the terminal review of the experiment series.
+this repository until the terminal review of the experiment series; negative
+results are registered as-is (no gate tuning, no re-run to fill).
+
+The project's three repositories are aligned on one baseline:
+
+| Component | Baseline | Where |
+|---|---|---|
+| Release (stable) | tag `v0.1.0-preview.11` → commit `5efc158` (CI green; the commit the paper's Access section cites) | the plugin repository `zeroandcat/dsh-plugin-deposon` |
+| Development frontier | commit `9219e78` (preview.12) on branch `b/organ-v311-preview11`, on top of `6110448` (executor-integrated driver `harness/deepen_r33.py`, CPU self-test `harness/selftest_p3_driver.py`, horizon slot calculator `harness/horizon_slot_calc_v2.py`; verified code unchanged, diff 0 bytes): adds the update/upgrade path, the ledger-era handshake server half, lazy executor imports and re-pinned self-tests; the README "Update / upgrade" section ships with it; local-commit-only — its push and any tag movement await a project-owner decision | the plugin repository |
+| Pinned ignition components | `irreversible_executor.py` `d2189f2c4f1e585e` · `thermo_core.py` `f47d4ab7700c4533` · executor self-test, pinned copy `62cb86c40a805b56` · Lean companion `IrreversibleDeposon.lean` `0decb3a4059fd9e4` (58 theorems) | the plugin repository / registered in the criteria file |
+| Experiment criteria | `criteria_v3` v1.2 frozen (`9d10c2b3b4c577f7`) plus the numeric backfill v1.2.1 (`horizon.value = 12`, `46e057711035e9b3`); gates G-C1 / G-A2 / G-A3 / G-B; validator verdicts registered 2026-11-27 morning (see Experiment status) | registered in the experiment receipt packs; not stored in this repository |
+| Manuscript | revision 4.17 (commit `2c8252f`, tex `582031697650be00`, 530 lines, 30 pages) of the v5preR3 manuscript, frozen as FREEZE v13 at the branch tip `dea75bc`, on branch `private/v5preR3` of the public repository `zeroandcat/Deposon` (77 commits; not merged into that repository's `main` — unrelated histories, editorial decision pending) | the public repository |
+| Experiment status | the two-host three-arm chain (A: executor + honest signal · B: executor + inverse signal · C: frozen / legacy backend) completed on both hosts (six arms, exit 0, guard 0 ALERT, automatic shutdown after the chain); the readings validator (criteria v1.2.1) verdicts are registered as-is: main gate G-A2 not passed (probe hits 0/256 on both executor arms — negative result), G-A3 / G-B not passed, the structural (true dual-binding) positions all pass, G-C1 out-of-band and registered in parallel to the confirmation rounds (re-judgement requires a new criteria freeze, pending); same seed replicated across hosts (probe hits 0 on all six machine-arms) | — |
+| dsh compatibility | implemented in the development frontier `9219e78` (preview.12): `node plugin/update.mjs selfcheck|plan|apply|rollback` under the four-pillar contract (version single-source, capped engines ranges, additive-only config, append-only ledger data never migrated, code-face rollback snapshots); the MCP server self-reports its ledger era (`initialize` → `era` / `executorConfigDigest`), era mismatch fail-louds (anti crosstalk) | the plugin repository |
+
+Point-in-time handoff: [HANDOFF.md](HANDOFF.md).
+
+> **Companion plugin (dsh)**: the memory-probe harness ships as a DeepSeek Harness
+> plugin — [`zeroandcat/dsh-plugin-deposon`](https://github.com/zeroandcat/dsh-plugin-deposon)
+> (tag `v0.1.0-preview.11`, branch `b/organ-v311-preview11` ahead at `9219e78` = preview.12,
+> local-commit-only). Install: `dsh plugin add https://github.com/zeroandcat/dsh-plugin-deposon`;
+> update/upgrade follows the four-pillar contract (`node plugin/update.mjs plan|apply|rollback` —
+> version single-source, capped engines ranges, additive-only config, append-only ledger data
+> never migrated, code-face rollback snapshots). The MCP server self-reports its ledger era
+> (`initialize` → `era: "executor" | "preview.10"`); era mismatch fail-louds (anti crosstalk).
 
 ## Install as a dsh plugin
 
@@ -197,6 +221,7 @@ Readings data never enters this repository (artifacts policy, see
 - [SAFETY.md](SAFETY.md) - protection clauses & stop-loss semantics
 - [CONTRIBUTING.md](CONTRIBUTING.md) - ground rules for contributions
 - [README.zh.md](README.zh.md) - Chinese README (中文说明)
+- [HANDOFF.md](HANDOFF.md) - point-in-time handoff (2026-11-27)
 - [docs/thermo-generation.md](docs/thermo-generation.md) - preview.10 change note: dissipation-channel utilisation, self-settling ledger path, the hit-rate price and phantom-limb readback
 - [docs/](docs/) - evidence rounds, specs, alignment map
 

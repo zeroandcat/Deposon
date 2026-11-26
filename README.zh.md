@@ -15,9 +15,30 @@ harness——可在
 - **读数＝模型×harness 联合读数**：报告行携带 locked-baseline 自检行（模型/种子/冻结面/工具哈希）。
 - **热力学账本＋幻肢（preview.10·幻肢代）**：诊断＝deposon-memory 不及预期·根因在**耗散通道利用率低**——改造前 write/read 两事件追加式读回全量·无门无衰减 ⇒ 散失账 D≡0·在场池只增不减（死水）·利用率按构造 0。改造后（`mcp/thermo_core.py`）：每条注入行持整数㶲·恰四账 Φ 透射／R 反射／D 散失／U 在场·守恒核 `E⁰=Φ+R+D+U` 每次操作后 fail-loud·结算＝事件流重放（**自解帐本·0 外部对账器**）；读路装门——接受＝透射·拒绝＝行自付㶲散失（熵输出）·衰减/视界/容量淘汰/覆盖/终核五路散热；散失的记忆以「⟨幻肢⟩」行回射（可感·不可复原·0 原文回注）。冻结 500 步同一操作迹对照：**利用率 D/E⁰行 0.00%→69.23%**（门拒 37529·衰减 21357·视界 19248·覆盖 27091）·期末在场行 152→61·单读渲染 1647→292 字符；**代价**：特定键命中率 50.31%→47.85%·另 2.45% 以幻肢行如实回射「已散失」（`mcp/thermo_demo.py`）。Lean 镜像 `harness/DeposonThermo.lean` 逐转移机证守恒（15 定理·0 sorry·公理 ⊆ {propext, Quot.sound}·逐定理 `#print axioms` 由 `harness/lean_axiom_audit.py` 审计）·与 Python 核在同一手算结算向量上交叉核（`mcp/thermo_crosscheck.py`）。dsh 插件面托管 MCP 服务器·幻肢信念块注入系统提示段（只述协议·0 记忆数据）。改造说明见 `docs/thermo-generation.md`。
 
-## 状态：v0.x 预览版
+## 状态：v0.x 预览版 — 对齐基线（2026-11-27·晨间登记）
 
-**早期预览**：接口随时破坏性变更。核心链路 runner 模块候下版发布；复算路径已完整可用。本仓不做任何公开裁定声明——终审前只发布指针与规范。
+**早期预览**：接口随时破坏性变更。核心链路 runner 模块候下版发布；复算路径已完整可用。本仓不做任何公开裁定声明——终审前只发布指针与规范；负结果按原样登记（0 调门、0 补跑）。
+
+项目三仓对齐于同一基线：
+
+| 部件 | 基线 | 位置 |
+|---|---|---|
+| 发布版（稳定） | tag `v0.1.0-preview.11` → 提交 `5efc158`（CI 绿·论文 Access 段所引提交） | 插件仓 `zeroandcat/dsh-plugin-deposon` |
+| 开发前沿 | 分支 `b/organ-v311-preview11` 提交 `9219e78`（preview.12，父 `6110448`＝执行器集成驱动器 `harness/deepen_r33.py`＋CPU 自检 `harness/selftest_p3_driver.py`＋horizon 槽位计算器 `harness/horizon_slot_calc_v2.py`·已验代码 0 动）：新增 update／upgrade 路径、账本时代握手服务端半、执行器 lazy import 与三处自检重钉；README「Update / upgrade」节随该提交发布；仅本地提交——推送与 tag 移动候项目所有者一行 | 插件仓 |
+| 点火面钉定件 | `irreversible_executor.py` `d2189f2c4f1e585e` · `thermo_core.py` `f47d4ab7700c4533` · 执行器自检钉定副本 `62cb86c40a805b56` · Lean 伴随件 `IrreversibleDeposon.lean` `0decb3a4059fd9e4`（58 定理） | 插件仓／判据件登记 |
+| 实验判据 | `criteria_v3` v1.2 冻结件（`9d10c2b3b4c577f7`）＋数值回填 v1.2.1（`horizon.value = 12`，`46e057711035e9b3`）；门 G-C1 / G-A2 / G-A3 / G-B；校验器判定已于 2026-11-27 晨登记（见实验现态行） | 登记于实验回执包，不入本仓 |
+| 论文 | v5preR3 稿 rev4.17（提交 `2c8252f`·tex `582031697650be00`·530 行·30 页），FREEZE v13 冻于分支尖 `dea75bc`，在公开仓 `zeroandcat/Deposon` 分支 `private/v5preR3`（77 提交；未并入该仓 `main`——历史无关，合并编辑决策候裁） | 公开仓 |
+| 实验现态 | 双机三臂链（A：执行器＋honest 信号 · B：执行器＋inverse 信号 · C：冻结／legacy 后端）两机全部完成（六臂 exit 0·守护 0 ALERT·链毕自动关机）；读数校验器（判据 v1.2.1）判定按原样登记：主门 G-A2 未过（两执行器臂探针 hits 0/256——负结果），G-A3／G-B 未过，结构位（真双绑机制面）全过，G-C1 带外·与确证轮并列登记（改判须新判据冻结事件·候裁）；同 seed 跨机复现（六机臂探针 hits 全 0） | — |
+| dsh 兼容 | 已随开发前沿 `9219e78`（preview.12）实现：`node plugin/update.mjs selfcheck|plan|apply|rollback` 四支柱契约（版本单源·engines 封顶·配置只增·账本数据 append-only 绝不迁移·代码面快照回滚）；MCP 服务端自报账本时代（`initialize` → `era`／`executorConfigDigest`）·不等即 fail-loud（防臂串线） | 插件仓 |
+
+时点交接见 [HANDOFF.md](HANDOFF.md)。
+
+> **伴生插件（dsh）**：记忆探针实验装具以 DeepSeek Harness 插件发布——
+> [`zeroandcat/dsh-plugin-deposon`](https://github.com/zeroandcat/dsh-plugin-deposon)
+> （tag `v0.1.0-preview.11`·分支 `b/organ-v311-preview11` 前沿 `9219e78`＝preview.12·仅本地提交）。
+> 安装：`dsh plugin add https://github.com/zeroandcat/dsh-plugin-deposon`；更新/升级沿四支柱契约
+> （`node plugin/update.mjs plan|apply|rollback`——版本单源·engines 封顶·配置只增·账本数据 append-only
+> 绝不适地迁移·代码面快照回滚）。MCP 服务端自报账本时代（`initialize` → `era`）·不等即 fail-loud（防臂串线）。
 
 ## 作为 dsh 插件安装
 
