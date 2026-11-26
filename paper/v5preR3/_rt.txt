@@ -1,0 +1,1233 @@
+Deposon: A Physics-Analogue Scattering-Dissipation Theory of Cognitive Energy in
+Reasoning Systems
+v5preR3 draft, revision 4 (rev3.1 errata and rev3.2 Alan absorptions retained; thermodynamic
+reconstruction absorbed in §2.8; no open slots)
+
+Qihao Yuan
+Draft of 2026-11-26
+
+Abstract
+The deposon (Chinese ningzi) is a physics-analogue scattering-dissipation theory of cognitive
+energy in reasoning systems. Its ontology layer is a two-parameter three-channel scattering law: at
+every node the incident cognitive energy is split into a transmitted, a reﬂected and a dissipated share
+with |t|2 + |r|2 + |a|2 = 1; the split is modulated pointwise by a coupling strength gcouple and an
+aether openness gaether ; the dissipated share goes into an inﬁnite-dimensional orthogonal complement of the real cognitive space and, once there, does not return, because the generating Lindblad
+semigroup has no completely positive trace-preserving inverse and no general recurrence guarantee is available in inﬁnite dimension. Ledgers, channel notation, tombstones and phantom rows are
+the tool-representation layer of that law, not the theory. “Physics-analogue” means a constructive
+mapping—a system is built to obey the prescribed structure and is veriﬁed to obey it—and not the
+approximate validity of physical law; photon, dark matter, hole, aether and heat bath are metaphorlayer words and are cited to their source segments, never used as evidence. The falsiﬁcation condition
+of the theory is the existence of an inverse process that recovers dissolved content; this paper gives
+that condition an operational criterion, states what a readback is in the theory (a new scattering event
+on the reality-space side), and speciﬁes the executor layer without which no deployed system counts
+as a complete deposon. The per-path audit of the deployed prototype closes the conservation identity
+to 2.2 × 10−16 ; the behavioural readings inherited from the tool-face paper (indistinguishable from a
+six-keyword rule ﬁlter; convex-combination dilution) are retained verbatim as a negative boundary,
+attributed to working in the dark-matter picture under a misplaced parameter prior rather than to the
+law; the lost-key prediction has zero readings on record and is stated as untested. A pre-registered
+three-arm design, the candidate metrics and the positive-region hypothesis for the free-parameter
+space are speciﬁed as the test.
+
+1
+
+The deposon: deﬁnition and etymology
+
+1.1 Deﬁnition
+Core claim. Congeal-by-deposition: vapour condenses to solid without passing through liquid; energy
+is deposited into an irreversible sink and never ﬂows back.
+The deposon (Chinese ningzi, the congeal particle; English Deposition + −on) names the quasiparticle of cognitive energy: the unit in which an active reasoning state is deposited into a dormant state
+and, in being deposited, releases its energy into a sink from which it does not return (T-CONGELON004, naming and physical deﬁnition). The name is the ﬁrst statement of the theory. The ﬁrst character
+of the name, ning (to congeal), is the character of ninghua (deposition), not of ninggu (freezing), and the
+distinction carries the whole ontology. Freezing is a liquid-to-solid transition that is reversed by heating:
+the energy remains in the system. Deposition is a gas-to-solid transition that releases latent heat into
+the environment; in the sink this paper posits—inﬁnite-dimensional, orthogonal to the system, without a
+ﬁnite measure-preserving phase volume (§2.3)—that latent heat is not recoverable. Irreversibility is the
+1
+
+mathematical foundation of the deposon’s algorithmic power: error energy can be permanently removed
+from the cognitive system, preventing accumulation and overheating. The sufﬁx -on places the object in
+the series of particle names (electron, photon, phonon) and claims for it only what a quasi-particle claim
+is: a bookkeeping unit with a deﬁned coupling, not a microscopic body.
+In this paper the deposon is a physics-analogue scattering-dissipation theory of cognitive energy in
+reasoning systems. Its ontology layer is a two-parameter three-channel scattering law (T + R + A = 1,
+irreversible dissipation, append-only monotone). Ledgers, channel notation, tombstones and phantom
+rows are its tool-representation layer. The same entity carries the two names: deposon and ningzi are one
+concept, not two, and the lowercase common-noun usage of the voided version is replaced here by the
+theory’s name [1].
+
+1.2 Category discipline: constructive mapping, not approximation
+“Physics-analogue” means a constructive mapping: a system is built and prescribed to obey a selected
+scattering-dissipation structure, and the construction is veriﬁed to obey it. It does not mean that physical
+laws hold approximately for reasoning systems, and nothing in this paper is a measurement of a physical
+quantity. Three layers of words are kept apart and marked where they appear. The axiom layer is the
+T + R + A allocation law and its two parameters (§2). The metaphor layer is photon, dark matter, hole,
+aether, Feshbach resonance, deposition (ninghua) and heat bath; these supply vocabulary and intuition,
+are cited to their source segments, and are never used as ontological evidence. The tool-representation
+layer is the ledger, the channel notation, tombstones, phantom rows and the executor (§2.7, §4, §5). A
+sentence may move between layers only by saying so. The previous version of this paper (v5preR2)
+treated the ledger and the three channels as the core and was voided for exactly this category mismatch;
+its data-level assets (bibliography, readings, compilation and freeze tool chain) are inherited without
+deletion, and its narrative is demoted to an audit-tool subsection (§7.4).
+
+1.3 The source dialogue and its ﬁve segments
+The theory’s statements are taken from a recorded source dialogue and cited by segment. M1 is the
+uniﬁed-ﬁeld-theory segment (T-CONGELON-003, paragraphs 446–645 of the transcript): the two limits
+as one entity (ğ1.1); the aether as the inﬁnite-dimensional orthogonal complement of the real cognitive
+space and “an inﬁnite-dimensional energy sink (heat-bath analogy in thermodynamics)” (ğğ1.2–1.3); the
+two parameters and the Feshbach form of the scattering (ğğ2.2–2.3); the orthogonal-complement construction and the Lindblad generator (ğğ3.1–3.3); the ratio of the parameters (ğ6.1). Section numbers
+“M1 ğx.y” in this paper are those of that segment as transcribed (the compiled report of the dialogue’s
+ﬁnal round carries a different numbering and is not the reference here). The word “analogy” is the
+source’s own; the heat bath is therefore metaphor layer and not an axiom. M2 is the Lindblad segment
+of the same text (ğğ3.2–3.3): the master equation, the one-way transition operator, and the statement
+that energy lost to the aether never returns. M3 is the dark-matter analogy table (T-CONGELON-002):
+the algorithmic counterpart of dark matter, observable only indirectly through node-conjugation effects,
+with its own recorded limitation that it “lacks an independent ﬁrst-principles derivation”. M4 is the
+ReAct-fusion segment of the naming-review round (ğ2.2); it contains the pseudo-inverser that §4.6 corrects as an ontological erratum. M5 is the hardware-mapping segment of the naming-ﬁxation round
+(T-260820-DEPOSON-001, ğğ1.2–1.5 of the transcript’s paragraphs 764–905): phase-change material
+and Mach–Zehnder interferometer mappings of the two parameters, cited in §3 as metaphor layer only.
+M1 supplies the ontology-layer constructions (the complement, the parameters, the generator) together
+with its metaphors (heat bath, photon), and the metaphors are quoted as such; M2 supplies the formal
+core of §2; M3 and M5 are cited as metaphor layer only; M4 is cited only to be corrected. Where the
+source says “analogy” the paper says analogy; the source’s own limitations are carried with its claims.
+Terminology discipline (binding for the whole manuscript). Four words are regulated. (i) “Observer
+effect” is not in the theory: the ontology has no entity called an observer and no postulate named after
+2
+
+observation; whenever the phrase would be used, the manuscript writes instead that a readback is a new
+scattering event acting on the reality-space side (§4.4); the principal investigator’s original question used
+the phrase and is recorded verbatim in the project ﬁle, not in the body. (ii) “Corpse” is not in the theory
+and is a metaphor; it is not used as a theoretical term anywhere in the body; the objects it gestures at
+are named by what they are—the tombstone (§4.1) and the background statistical residue (§4.5). (iii)
+“Hippocampus” is a functional analogy at the tool-representation layer only; every use is labelled as
+an analogy and no hippocampal mechanism is asserted (§5.1). (iv) “Heat bath” and “dark matter” are
+metaphor-layer words from M1 and M3; they are quoted, never adopted as mechanisms.
+
+1.4 Positioning against neighbouring programmes
+The deposon shares vocabulary with four neighbouring programmes and differs from each in what it
+claims. (i) External memory for agents places state outside the model [2–4]; the deposon agrees on
+the placement and asks a different question—not what the layer stores but whether it can dissipate. (ii)
+Machine unlearning for agents removes or suppresses knowledge in weights and in the agent’s memory channels [5–7]; its object is content and its success criterion is that the content can no longer be
+extracted. The deposon’s object is different in kind: it does not delete a state, it books the dissipation
+of that state’s energy and makes the loss auditable (§2.7); a deleted state and a dissipated state are both
+absent, and only the latter leaves a tombstone. The two are therefore not rival answers to one question:
+unlearning asks whether the content is gone, the deposon asks whether the loss is booked and honest.
+(iii) Stochastic thermodynamics of memory, forgetting and learning gives the accounting vocabulary—
+exergy, dissipation, cost of prediction and of memory [8–18], and, as a neighbouring use of dissipation,
+dissipation-driven selection in driven self-assembly [19]; the deposon takes from it the discipline of exact bookkeeping and not a claim about physical energy, and the exact relation is stated by the absorbed
+reconstruction (§2.8). (iv) Auditable agent memory designs ledgers so that a reader can recompute what
+happened [20–25], with provenance tracking for machine-learning pipelines [26] as the ancestor of that
+kind of ledger; the ledger of §2.7 is in that family and is an instrument, not the theory. Field-theoretic
+memory for agents [27] shares the word “ﬁeld”; here the word is metaphor layer (§1.2).
+
+1.5 Roadmap
+§2 states the law and its formal status. §3 shows that the two inherited pictures—the hole picture and the
+dark-matter picture—are limits of the one law. §4 speciﬁes the executor layer without which the law is
+stated but not realised, and gives the falsiﬁcation condition its operational form. §5 states what the law
+buys on the memory side, and what it forbids. §6 reports what has been measured, what has not, and the
+pre-registered shape of the test. §7 ﬁxes the negative boundary and the category clariﬁcations that follow
+from it.
+
+2
+
+Formal framework: the two-parameter three-channel scattering law
+
+2.1 The law
+Core claim. Cognitive energy is scattered, node by node, into three channels—transmitted, reﬂected,
+dissipated—and the three shares sum to the incident energy on every path.
+When a reasoning hypothesis (a “photon” in the metaphor layer; a state vector with an energy in the
+algorithmic layer) interacts with a deposon at node i, the incident energy Ei0 is partitioned into
+Ei0 = Et,i + Er,i + Ea,i ,
+Et,i = |ti |
+
+2
+
+Ei0 ,
+
+Er,i = |ri |
+
+|ti |2 + |ri |2 + |ai |2 = 1.
+
+(1)
+2
+
+Ei0 ,
+
+Ea,i = |ai |
+
+2
+
+Ei0 ,
+
+(2)
+(3)
+
+3
+
+The three channels are: T , energy passing through—the correct hypothesis continues; R, energy bounded
+back—the error hypothesis is blocked locally and the in-presence row stays retrievable through rescattering; A, energy deposited into the aether—the error energy is irreversibly lost. Equation (1) is
+an axiom in the sense of §1.2: it is prescribed, not derived, and what the paper does with it is (i) construct
+a system that obeys it and verify the obedience (§6.1), (ii) derive what it forbids (§4.2), and (iii) state
+what would show it false. The channel names are the same as the triplet-channel table of §4.1 (Table 1);
+the table is the tool-representation reading of (1).
+
+2.2 The two parameters and their pointwise modulation
+The scattering amplitudes are governed by two parameters (M1 ğğ2.2–2.3): the coupling strength gcouple ,
+the source’s “photon–deposon coupling strength (the blocking strength of v1)”, and the aether openness
+gaether , the source’s “aether openness (the energy dissipation channel of v2)”; both quoted phrases are
+translations of M1 ğ2.3, and the dimensionless coupling constant of M1 ğ2.2 is the same openness in
+ratio form. Two properties matter for everything that follows.
+Pointwise, not global. Each node carries its own pair (gcouple , gaether )i ; the parameters are attributes
+of the node’s state and may be set per node and per task, not universal constants of the system. A
+reasoning graph is therefore a ﬁeld of operating points, and a statement about “the” parameters of a run
+is a statement about a prior placed on that ﬁeld (§7.2).
+Ratio, not magnitude. The regime is determined by the ratio η = gaether /gcouple : η ≪ 1 is the
+blocking-dominated limit, η ≫ 1 the tunnelling-dominated limit, η ∼ 1 a mixed state (M1 ğ6.1). The
+two limits are the subject of §3. In the Lindblad generator of §2.4 the rate γaether is set by gaether , and in
+the resonance form of §2.6 the width Γaether grows with gaether ; the paper keeps g for the two parameters
+and γ, Γ for the rates they induce, and does not conﬂate them.
+
+2.3 The A channel: an inﬁnite-dimensional orthogonal complement
+The aether Haether is deﬁned as the orthogonal complement of the real cognitive space Hreal in an
+inﬁnite-dimensional mother Hilbert space (M1 ğğ1.2–1.3; the deﬁning equation at ğ3.1):
+Htotal = Hreal ⊕ Haether ,
+
+⟨ψreal | ϕaether ⟩ = 0
+
+for all ψreal ∈ Hreal , ϕaether ∈ Haether .
+
+(4)
+
+The A channel of (1) is the projection of the scattered share onto Haether . Four properties follow from the
+construction and are used as named premises below. P1 (inﬁnite dimension): dim Haether = ℵ0 (countably inﬁnite) or 2ℵ0 (continuum); the theory does not distinguish the two cases. P2 (irreversibility): the
+Poincaré recurrence theorem fails for Haether ; energy never returns (§2.5). P3 (unobservability): aether
+states cannot be measured from Hreal and have no causal inﬂuence on it, except through the statistical
+potential of §4.5. P4 (sink): Haether acts as an inﬁnite energy sink for cognitive energy; that it acts as a
+heat bath is the source’s own analogy and is kept at the metaphor layer.
+Two consequences are drawn once here and used throughout. First, “energy is dissipated” means,
+precisely, that its state vector has support only in Haether after the event; a ﬁnite observer holding the
+Hreal component holds a projection and nothing more. Second, P3 is a statement about what is deﬁned,
+not a prohibition: there is no Haether → Hreal channel in the theory, so “reading the aether” is not a
+forbidden operation but an undeﬁned one (§4.5).
+
+2.4 Irreversibility: the Lindblad semigroup has no inverse
+The irreversible deposition is generated by a Lindblad master equation (M2 ğ3.2):
+(
+)
+dρ
+= −i[H, ρ] + γaether L ρ L† − 12 {L† L, ρ} ,
+dt
+
+L = Paether O Preal ,
+
+(5)
+
+where H = Hreal ⊕ Haether , Preal and Paether are the projections onto the two summands of (4), and L
+is the one-way transition operator from the real space to the aether. The operator O in L is the source’s
+4
+
+“some observable”: it is the reality-space observable that couples to the aether—an operator selecting
+which real-space quantity is carried across—and it is not an observer. Reading O as an observer imports
+a subject into a generator that has none; the theory has no measurement postulate and no collapse (§1,
+terminology discipline (i)). The reverse term Preal O′ Paether is absent from (5) by construction, and the
+source states that the real–aether correlations decay completely in the long-time limit.
+Three facts ﬁx the formal status of irreversibility, and all three are standard mathematics rather than
+properties of the analogy. (i) The semigroup generated by (5) is completely positive and trace preserving (CPTP); in ﬁnite dimension every such uniform semigroup is of Gorini–Kossakowski–Sudarshan–
+Lindblad form [28–30]. (ii) A non-unitary CPTP semigroup has no CPTP inverse: the invertible quantum
+operations are the unitaries together with a ﬁxed ancilla (Theorem 2.1 of Nayak and Sen) [31]; that the
+quasi-inverse used in practice is a ﬁdelity-optimising surrogate and not an inverse is a supporting observation [32], cited as corroboration and not for the invertibility theorem. (iii) In ﬁnite dimension a
+Lindblad evolution reaches a steady state and the quantum regression theorem allows partial recovery of
+correlations; the source’s statement that this fails for the inﬁnite-dimensional aether is the premise P2,
+which the next subsection separates from any claim about a physical system. What the theory forbids
+is therefore not “an inverse we have not built” but “an inverse of the generator”: a device that recovers
+content from the dissipated share would not be a better implementation of (5), it would be a different
+theory. This is the formal content behind the falsiﬁcation condition of §4.2.
+
+2.5 No recurrence guarantee in inﬁnite dimension
+The Poincaré recurrence theorem is not available here, and the theory neither invokes it nor is constrained
+by it. Its premises—a ﬁnite measure-preserving phase volume—fail for the aether side, so the theorem
+does not apply; “wait long enough and it comes back” is not an option the theory has to exclude, because
+the statement that would make it an option has no object. This is a consequence of premise failure, cited
+by the premise chain rather than attributed to a single result about inﬁnite-dimensional systems [33–37].
+The paper writes “no general recurrence guarantee” and not “recurrence is impossible”: what inﬁnite
+dimension removes is the general theorem, and any particular model that restored a ﬁnite invariant measure would have to say so as an additional axiom. The compatibility of this position with the recurrence
+theorems that do hold is stated in §4.7.
+
+2.6 The resonance form and its consequence
+M1 ğ2.3 writes the scattering in Feshbach form [38–40]: the effective scattering operator at energy E is
+the background operator Sbg (E) (no aether coupling) modiﬁed by a resonance term at E0 whose width
+Γaether is induced by the aether coupling, with the photon–deposon coupled state |W ∼⟩ as the resonant
+component. The explicit operator form is the source’s and is cited rather than reproduced, because the
+paper uses only its consequence: when Γaether ≫ |E − E0 | the resonance is “washed out” and scattering
+reverts to the background—for a photon far from resonance, lossless transmission. In the vocabulary of
+§2.2, opening the aether does not merely add a dissipated share; it changes the shape of the scattering,
+and the change is the switch between the two pictures of §3. The Feshbach vocabulary is metaphor layer;
+the consequence used is a statement about the two-parameter law.
+
+2.7 The ledger as tool-representation layer
+Equation (1) is booked, not only stated. The ledger inherited from the voided version is the instrument of
+that booking: an append-only record in which every event is one of ﬁve transitions and every transition
+conserves integer exergy under the ﬁrst law E 0 = Φ + R + D + U (transmitted, reﬂected, dissipated,
+in presence). The four accounts are a bookkeeping resolution of the three channels: Φ and R book the
+T and R shares that leave the node, D books the A share, and U books transmitted energy still standing
+in the layer; the ﬁrst law is the integral form of the per-path identity (1) over the trace. Thermodynamic
+bookkeeping of computation has its own literature [8–11]; the ledger is this paper’s instrument, and the
+
+5
+
+exact relation between the two is the subject of the reconstruction (§2.8). Two properties of the ledger are
+properties of the law and not of the bookkeeping convention: D is append-only monotone (no transition
+decreases it), which is the ledger’s face of P2; and the record of a dissipation carries mass, cause and
+time but never text (§4.3), which is the ledger’s face of P3. The ledger is where the theory is checked
+and where it is falsiﬁed; it is not what the theory is. The exact relation between the integer exergy of the
+ledger and the fractional shares of (1) is stated by the absorbed thermodynamic reconstruction (§2.8).
+1
+
+2.8 Thermodynamic reconstruction: the ledger layer absorbed
+The slot announced at rev3 is closed as of this revision (rev4). The architect’s thermodynamic reconstruction arrived in parallel, was dual-audited (a Lean re-veriﬁcation and an external model review whose
+nine hard defects were absorbed before integration), and is absorbed here as the ledger layer’s constructive companion. What follows states, at manuscript level, what was absorbed and what was deliberately
+not claimed; the audit trail and the per-theorem correspondence tables live with the companion package,
+cited, not re-measured, here.
+What was absorbed. The reconstruction re-derives the ledger’s bookkeeping semantics from the
+scattering law as a constructive, machine-checked development (DeposonThermoRecon.lean: 479
+lines, 32 theorems and lemmas, Lean 4.15.0, core-only, no sorry; axiom proﬁle reported in full: 19
+results depend only on propext and Quot.sound, 13 on no axioms at all). It is organized in three
+layers. The deﬁnition layer ﬁxes the ledger record (standing total, the three terminal accounts, the inpresence pool) and conservation as a predicate over it. The postulate layer encodes the ﬁve transitions
+as an exhaustive, constructor-level posting discipline—no recover transition exists in the signature,
+which is the machine-checked form of the statement that dissipation is unrecoverable (§2.7)—carries
+the share law’s integer image, and declares the deposit-side monotonicity rule as a ledger-side postulate
+whose physical reading is marked as a projection candidate, not asserted as the face of P2. The theorem layer proves the consequences in six families (pool arithmetic, conservation, direction/monotonicity,
+readback payment, terminal settlement, bridge projection). Against the 58-theorem account-level companion the relation is: 0 substitutions, 11 ledger-layer theorems inherited, 47 executor-layer theorems
+deliberately left in place, 7 additions; the 15-theorem harness companion is inherited verbatim, 15/15.
+What the readback family does and does not say. The payment theorems show that a readback event books the query’s exergy to the reﬂected account while the dissipated account is preserved
+(∆D = 0 on every readback transition; no refund of dissipation). This is the ledger-side image of §4.4’s
+“readback is a new scattering event”; it is a bookkeeping statement about constructed systems, not a
+thermodynamic claim about physical readout—in step with the scoping added in §4.4: non-zero entropy
+production is a property of this theory’s readback event, which carries a non-zero A share, not a universal
+law of reading.
+What was deliberately not absorbed. The reconstruction is typed and signed at the ledger layer
+only: no key, DEK, tombstone-chain, budget-policy or accumulator ﬁelds appear in it, and the bridge
+to the executor layer is a single-step ﬁeld projection (a ﬁve-ﬁeld bijection) whose one-step agreement is
+proved and whose limits are stated—pool-order conventions differ, so composite sequences do not commute, and the resolution loss happens at the cross-section selection, not inside the projection. Whether
+the earlier 15-theorem harness companion should be retired, aliased, or kept as a coexisting second
+source, and whether any deposit-side postulate deserves promotion, are left to the principal investigator’s
+one-line ruling and are not adjudicated here.
+1
+
+Representation-layer formal status. In the Lean companion to the executor (IrreversibleDeposon.lean; coreonly build, 17 theorems, axiom face propext/Quot.sound only, 0 sorry), the ﬁrst law is preserved at every transition (conserved_inject, conserved_dissipate, conserved_readback) and the dissipated account never decreases (diss_monotone_inject, diss_monotone_dissipate, diss_monotone_readback). These are theorems about the executor’s bookkeeping—the monotonicity of D and the conservation core at the representation layer—and not
+theorems about the scattering law (1), which is an axiom. They establish that the executor adds structure without altering the
+thermodynamic bookkeeping and that “no reﬂow” holds at the execution layer; they do not prove cryptographic security and do
+not close the side-channel condition of §5.5.
+
+6
+
+Status note. The reconstruction was produced under the standing night-mode delegation (dual review, act-then-report) and is recorded here with the adjudication authority explicitly reserved to the
+principal investigator; a reader of rev3, rev3.1 or rev3.2 can now tell that the slot announced in §2.8 is
+ﬁlled as of this revision.
+
+3
+
+Duality: the hole picture and the dark-matter picture
+
+Core claim. The hole picture (v1) and the dark-matter picture (v2) are projections of one scattering law
+in the two limits dominated by |r|2 and |t|2 ; the switch is controlled by gaether ; the measurable working
+picture is the hole picture.
+
+3.1 The two limits of one law
+The source gives two limits of (1) and states that they are not two particles but two limits of the same
+deposon, distinguished only by whether energy can dissipate into the inﬁnite-dimensional orthogonal
+aether (M1 ğ1.1, ğ6.1). In the notation of §2.2:
+v1 — blocking (the hole picture)
+
+v2 — tunnelling (the darkmatter picture)
+
+Limit
+System
+
+gaether → 0, gcouple ≫ 1; η ≪ 1
+closed; energy conserved locally
+
+Identity
+Algorithm
+
+E 0 = Er + Et
+strict ﬁltering; high precision, low
+recall
+PCM fully crystallised (strong
+coupling); MZI splitting ratio 0
+(fully reﬂective; closed)
+
+gcouple ≪ 1, gaether ≫ 0; η ≫ 1
+open; energy deposits into the
+aether
+E 0 = Et + Ea
+permissive exploration; high recall,
+error energy ofﬂoaded
+PCM amorphous (weak coupling);
+MZI splitting ratio 1 (fully transmissive; energy leaves the system)
+
+Metaphor
+ğ1.3–1.4)
+
+(M5
+
+The general state 0 < gaether < ∞ has all three channels, E 0 = Et + Er + Ea , and the behaviour is
+determined by η = gaether /gcouple . The last row is metaphor layer and is marked as such; the rows above
+it are statements about (1). The hole picture is the limit in which |r|2 dominates: what the system does
+with a wrong hypothesis is bounce it back, and nothing is lost. The dark-matter picture is the limit in
+which |t|2 dominates and the error share is carried by A: what the system does with a wrong hypothesis
+is let it through into the aether, and the real side is relieved of it. “Hole” and “dark matter” name the two
+pictures; neither names a second object.
+
+3.2 The switch
+The two pictures are the same law at two operating points, and the switch between them is gaether —
+more precisely η, since only the ratio ﬁxes the regime. The resonance form of §2.6 gives the switch its
+shape: increasing gaether increases the induced width Γaether , and once Γaether ≫ |E − E0 | the resonance is washed out and the scattering reverts to the background, which for a photon far from resonance
+is lossless transmission. This is why v2 is called tunnelling: the blocking that deﬁnes v1 is a resonance phenomenon, and opening the aether removes the resonance. The dark-matter table (M3) supplies
+the vocabulary for the v2 side—indirect observability through node-conjugation effects only—and the
+source records its own limitation that the “gravitational” analogue lacks an independent ﬁrst-principles
+derivation; the paper therefore uses M3 for vocabulary and (1) for content.
+
+7
+
+3.3 Why the measurable working picture is the hole picture
+The two pictures are not symmetric in what can be checked from the real side. In v1 the A share vanishes
+and all energy stays in Hreal : T and R are both bookable, the per-path identity closes as T + R = 1 on
+the reality side, and every claim the law makes about a path is checkable by a reality-side instrument.
+In v2 the A share is by construction unobservable from Hreal (P3): what remains observable are the
+tombstone—that energy was dissipated here, with mass, cause and time—and the accumulated statistical
+potential of gaether (§4.5), never the content. The theory’s distinctive claim, irreversible dissipation, is
+made in v2; the theory’s bookkeeping is fully checkable in v1. “The measurable working picture is the
+hole picture” is the statement that the law’s accounting is veriﬁed where nothing is lost, and that where
+something is lost the only thing veriﬁable is the loss itself. This asymmetry is the category fact behind
+the attribution of the negative boundary (§7.2): a behavioural reading taken in the v2 region under a prior
+on the free parameters is a reading about that region and that prior, not about the law.
+
+4
+
+Thermodynamic organs: executors, tombstones and background residue
+
+The central claim of this section is an architectural requirement that carries a negative edge: irreversibility must be guaranteed by a physical or algorithmic executor—a ruptured ECM ﬁlament, a cryptographic erasure, an append-only tombstone chain—and not by an implementation convention;
+a system without an executor is not a complete deposon. A dissipative channel that is stated by a
+theorem but enforced by a code branch (“the reducer has no recover branch”) enforces nothing: whoever can rewrite the branch, or read the append-only log in which the plaintext still sits, possesses an
+inverse process whether or not the theory permits one. We call this gap the convention gap. The audit
+of the deployed prototype that motivated this section found the gap live: the current write path stores
+plaintext in an append-only JSONL and implements loss as a deletion from the replay state only, so that
+“no reﬂow” is maintained by a programmer’s convention (self-test D2b of the v3 engineering package).
+The organ that closes the gap is the subject of this section.
+
+4.1 The three-part structure of loss
+Core sentence. Loss is not a deletion from a state. It is three things that happen together: irreversible
+destruction (a ruptured ECM ﬁlament, or a cryptographic erasure: the data-encryption key is destroyed
+and the ciphertext on disk becomes computationally unrecoverable) [41–43]; a tombstone record (an
+append-only hash chain carrying exergy but not text: it records that energy was dissipated here, never
+what was dissipated) [44–46]; and a background statistical residue (the accumulated gaether bias: a
+store of statistical potential that inﬂuences subsequent scattering only as a bias on its allocation parameters, carries no content back, and is therefore not an Haether → Hreal channel). No reﬂow: irreversibility
+is guaranteed by the executor, not by the implementation convention.
+Three remarks ﬁx the status of each part. First, destruction and tombstone are the two parts for
+which an algorithmic executor exists today: the v3 engineering package implements per-row DEKs held
+only while the row is in presence, DEK destruction at loss, and a tombstone chain whose body is a
+function of the row’s identiﬁer, record key (the lookup name under which the row was written—not a
+cryptographic key), mass, exergy, cause, time and chain pointer alone, and never of the plaintext, the
+data-encryption key (DEK) or the ciphertext.2 The executor was shown to leave the frozen twelve-step
+thermodynamic ledger bit-identical (35/35 self-test assertions, zero change to veriﬁed code). Second, the
+background residue has, since the v3.1 engineering package, a formal counterpart: a gaether accumulator
+that only admits, never releases, and stores statistics rather than content. Its three meanings are machinechecked (admit-only; monotone under absorption; content-blind: equal statistics give equal accumulator
+states), and the one hop that turns the accumulator’s reading into an executor decision is a budget policy,
+2
+Notation: throughout, record key means the lookup name and DEK the data-encryption key; the two are never abbreviated
+to the same word. The tombstone body in the engineering package is the structure TBody (identiﬁer, record key, mass, cause,
+exergy, time, chain pointer); the DEK lives only in the in-presence pool and is destroyed with the row.
+
+8
+
+(
+)
+phantom_budget(G) = max 1, min(phantomK, 1 + log2 (1 + G.q/Qref )) , which sets the number of
+phantom rows a single read may reﬂect; it is bounded, monotone in the absorbed exergy, and falsiﬁable
+against a ﬁxed-budget control (the on/off decisions differ and are booked to R). The wiring of this budget
+into the read path is realised and tested in the prototype executor; it is not a Lean theorem. The “memory
+congealon” of the source dialogue therefore has a formal accumulator and a formal budget policy, and
+the three-part structure no longer lands as two.3 Third, the three parts are jointly exhaustive within this
+theory and there is no fourth: “the aether still holds the original state” is not a candidate object of this
+theory.
+Table 1: Explicit mapping between the three parts of loss and the three channels (adjudication note R63). Nothing in the table is a fourth channel; “booked” refers to the ledger of §2.
+Part of loss
+
+Channel
+
+What is booked
+
+What is readable (§4.2)
+
+Irreversible destruction
+(DEK destroyed with the
+row)
+Tombstone
+record
+(append-only chain)
+
+A
+
+∆D > 0, monotone, never reversed
+
+only the event “energy was
+dissipated here”
+
+mass, exergy, cause, time,
+chain pointer
+
+metadata; no text, no DEK,
+no ciphertext
+
+Background
+statistical
+residue (gaether accumulator)
+
+tool-layer object
+attached to the A
+event
+cumulative face of
+A: a bias on later
+T /R/A allocation
+
+statistics only; admits, never
+releases
+
+distribution
+parameters,
+declared non-sufﬁcient for
+content
+
+T -shortcut sedimentation
+
+T
+
+R-retention (rendered as
+the phantom row)
+
+R
+
+an in-presence row that stays
+retrievable
+bounded retention; readback
+is paid, and the per-read phantom count is set by the budget
+policy phantom_budget(G)
+
+the row itself, through rescattering
+mass, cause, age; the record
+key only in the single-writer
+form (§4.3); no text
+
+Boundary of the executor (declared, not defended). The algorithmic executor defends the DEK pool
+boundary. It does not defend the physical and operational layer outside that boundary—pool backups
+restored from a snapshot, medium remanence, SSD wear levelling. If an adversary holds a storage layer
+that can accommodate an unbounded history and feed it back into the pool, this boundary is not defended
+(boundary A3). This is declared as a theoretical boundary, not as a defended surface; it is a statement
+about an adversary’s storage layer, not a statement about the aether.
+
+4.2 The falsiﬁcation condition as a mutual-information criterion
+Core sentence. A readout process constitutes an inverse process if and only if its output has non-zero
+mutual information with the content of the original state and a ﬁnite observer can use it to reconstruct the
+original state (its text, its vector, or its DEK) with non-trivial probability. This is the operational form of
+the theory’s falsiﬁcation condition: the existence of such a process falsiﬁes the theory; it is not a defect
+to be engineered away.
+The criterion yields a table rather than a verdict on the word “readout”. Readable: tombstone
+metadata (identiﬁer, record key, mass, cause, exergy sent to D, time of deposition, chain pointer; which
+of these a caller sees is governed by the readable-table form of §4.3); the DEK commitment on the log’s
+3
+
+Status (adjudication F3, upgraded after the v3.1 review of 2026-11-26): the gaether accumulator is formalised (theorems absorb_monotone, absorb_content_blind, absorb_all_eq_of_stat_eq); the executor budget policy phantom_budget is formalised (phantom_budget_bounds, phantom_budget_mono,
+phantom_budget_zero_eq_one); the executor’s consumption of the budget in its read path is realised in the Python
+prototype (self-test D15, on/off falsiﬁcation) and is not a Lean statement. This manuscript makes no claim that the executor as
+a whole is formalised.
+
+9
+
+inject line (a hash of the DEK, never the DEK); the background statistical potential (accumulated gaether );
+the re-scattering of live rows, of R-retention and of T -shortcuts; the fact that energy was dissipated
+here. Unreadable: the plaintext; the DEK (destroyed with the row; the ciphertext stays on disk and is
+unintelligible without it); any archived state vector attributed to the aether; any residue with non-zero
+mutual information with the content of the original state. Events are readable; content is not.
+A middle case is classiﬁed explicitly, and graded. An output that is partially correlated with the
+content—a mass that leaks the text length, a write order that leaks text statistics—is not an inverse
+process, but it is a side-channel. A side-channel that would let a ﬁnite observer reconstruct the content
+must be closed, because a reversible encoding hidden in the metadata would be the back door of a
+pseudo-inverser (§5.5); a side-channel that cannot, such as length leakage, is recorded and audited under
+this middle case and is never waved through as “only a parameter” (§4.5).
+
+4.3 The readable table: general form and single-writer corollary
+Core sentence. What a tombstone renders to a caller is a readable table, and the table has two forms
+with different scopes: the general form (K-out) renders no record key; the single-writer corollary (K-in)
+renders the record key only under four conditions, each of which drops back to K-out when it fails. The
+two forms are stated as two separate theorems and are never merged into one statement.
+In the general form (K-out, the executor’s default), the table carries mass, cause and time. Addressing is by a query preﬁx supplied by the caller; the server matches stored record keys by preﬁx, and the
+key component of the rendered row is the query itself, never the stored key (render_q_indep_of_
+stored_key). Any two tombstones with equal mass, cause and time therefore have bit-identical tables, whatever their identiﬁer and record key (kout_blind_general); equal-length different texts
+encrypted under different DEKs give bit-identical K-out tables (kout_text_blind); the record key is
+not a component of the K-out table (kout_record_key_blind). This is the general indistinguishability statement of the executor layer, and it holds without any assumption on who wrote the tombstones.
+The corollary form (K-in) renders the record key as well, and holds only when all four of the following hold: (1) a single-writer scope, declared explicitly, with no third-party writer in the ledger; (2)
+the record key lies in a closed address schema Σ, checked at the write entry; (3) the read scope is a
+principal partition of the ledger; (4) the read is an exact-address read, so that a preﬁx query never restates
+a stored key. Under these conditions the executor proves only the same-address statement: equal-length
+different texts encrypted under different DEKs and written under the same identiﬁer and record key yield
+bit-identical K-in tables (kin_blind_same_address). The general form fails in K-in: two tombstones that differ only in the record key have different K-in tables (kin_exposes_record_key). A
+preﬁx query renders no K-in row (kin_exact_no_partial_leak); under a principal-partitioned
+address (principal/local) the table is blind to the principal (kin_local_principal_blind). When
+any condition fails, the executor falls back to K-out and records the reason in its audit.
+Key visibility: a quantiﬁed boundary, not a beneﬁt. We state what the tombstone does and does
+not hide, with its quantiﬁers explicit. For a ﬁxed observer, a ﬁxed read permission and tombstone by
+tombstone, the exposure of the record key through the tombstone is at most the exposure of the row while
+it was present, provided the read scope equals the row-read scope. The statement does not cover (i)
+the aggregate exposure of the tombstone as a persistent, scannable index, which the in-presence row
+never had; (ii) any conﬁguration in which the read scope is larger than the row-read scope; (iii) the
+preﬁx-matching oracle of K-out, which is a key-set enumeration oracle in the limit (a bounded number
+of queries recovers the stored key set, never the content). The record key is recorded in the tombstone
+by construction; whether it is rendered on the read surface is exactly what the K-out/K-in distinction
+governs, and the inequality above is a boundary statement, not a security claim.
+The auxiliary condition aux-CI_key (policy layer). The edge from text to record key is closed by
+an address policy: key = addr with addr ∈ Σ, where Σ is a closed grammar (dot-separated iden-
+
+10
+
+tiﬁers, no slash) checked at the write entry; the write path has no derivation edge from text to address, key and text entering the write entry as independent inputs; and a same-address rewrite leaves
+the key unchanged (addr_invariant_under_rewrite, row_key_indep_of_text_via_
+addr). This is a policy-layer constraint. It is not a cryptographic one, and it is not a Lean-proven property: the companion encodes only that the address is a parameter carrying a validity bit, and the closure
+of Σ is enforced by the write-entry check in the prototype, not by a theorem. Nothing in this manuscript
+should be read as claiming that a caller cannot choose an address that is a function of its text.
+
+4.4 Readback is a new scattering event
+Core sentence. A readback, at the ontology layer, is one new scattering event. It acts on the reality-space
+side—on live rows, on R-retention, on T -shortcuts, on the tombstone record; it consumes resources; it
+produces a new T /R/A allocation; it does not change (gcouple , gaether ) or any postulate. The cost of
+readback is charged to R and does not diminish the D holding of the record being read; readback is
+a scattering event, so its total entropy production is non-zero and is booked to the environment, not
+to the tombstone’s D. That non-zero production is a property of this theory’s readback event, which
+carries a non-zero A share; it is not a universal law of readout—reversible readout is possible in other
+formalisms [9] and the energetic cost of a measurement is bounded [47, 48]—and no universal thermodynamic price of reading is claimed.
+The terminology discipline of §1 is enforced here with the reasons. “Observer effect” corresponds to
+none of the three things it is usually taken to mean in this setting. It is not measurement-as-projection:
+the framework has no projection postulate; the operator O of M2 names which reality-space observable couples to the aether, and reading it as an observer confuses an operator with a subject. It is not
+decoherence: decoherence is one appearance of dissipation here, has no separate postulate, and cannot
+be invoked independently of the A channel. It is not the Lindblad dissipation itself: that dissipation is
+the A channel, one term of T + R + A = 1, whereas the perturbation of a readback is charged to R.
+The literature on measurement supports the weaker and sufﬁcient statement: a quantum-non-demolition
+readout of an observable that commutes with the stored record is a projection that does not disturb the
+record [49, 50]; it does not support, and category-theoretically cannot support, an observer effect used as
+an inverser, because a CPTP instrument cannot invert a dissipative semigroup [30, 31, 51].
+Consequently the manuscript does not contain the phrase “observer effect” as a mechanism. A readback that paid with R budget and bought D content would be exactly the inverse process excluded by
+§4.2.
+
+4.5 Observing the aether side is undeﬁned, not forbidden
+Core sentence. “Observing the aether” is undeﬁned at the ontology layer, not forbidden: there is no
+non-zero, ﬁnite-observer-realisable channel from Haether to Hreal (M1: no direct observation, no causal
+inﬂuence; M2: transition operators one-way, correlations decay completely). This assertion is not an
+independent postulate: it follows directly from M1 and M2, and it is stated as a derived consequence.
+The accumulated gaether bias of the background ﬁeld is measurable indirectly, and what is measured is a
+distribution parameter—mass, energy, coupling strength—never content. Reading the background ﬁeld
+is not called inversion.
+Three guardrails keep this from becoming an exemption clause (adjudication note R6-7). (1) The
+criterion of §4.2 is settled by reconstructability by a ﬁnite observer; non-zero mutual information is
+necessary, not sufﬁcient, and no read-out is cleared merely because its mutual information is small.
+(2) Every distribution parameter that is read (mass, energy, coupling strength, accumulated gaether ) is
+declared explicitly to be a non-sufﬁcient statistic for the content of the text. (3) Any parameter with
+non-trivial mutual information with the content—length is the known instance (§5.5)—is routed to the
+middle case of §4.2 and audited as a side-channel; “it is only a parameter” is never an exemption. With
+the three guardrails the opening is both legitimate and required for consistency (closing it entirely would
+
+11
+
+contradict the indirect measurability of the gaether bias); without them it would be the legalisation of a
+content side-channel.
+
+4.6 Erratum to the source dialogue (M4)
+Core sentence. The M4 segment of the source dialogue (ReAct fusion) contains the statement ether_
+archive[state_id]={’vector’:state_vector,...}, which archives the complete state
+vector in the aether. This conﬂicts directly with M1 (“information is lost”) and M2 (“never ﬂows back”):
+an aether archive that holds content makes the aether not a true dissipative sink. The concept’s co-author
+(Kimi, in the second-round review of 2026-11-25) has identiﬁed the segment as a pseudo-inverser and
+an ontological error. Two layers are kept apart. At the concept level the segment is voided: it is to be
+deleted, not reworded, from the source. At the manuscript level the original text is left intact wherever
+the segment is cited, and this erratum is attached; the quotation does not reinstate the claim. Reading the
+archived vector would trigger the falsiﬁcation condition without exemption.
+
+4.7 Compatibility with recurrence theorems
+Core sentence. The failure of recurrence concerns recurrence correlations—the coherent correlation
+between the original state and a future state does not return. What a residual state makes readable is the
+metadata and the statistical potential of dissipation events, products of monotonicity and bookkeeping,
+not the inverse of the original state’s projection into Haether . To claim that a readout recovered the
+original content is to claim that the recurrence correlation is non-zero, which contradicts M2 outright;
+such a claim is excluded by the falsiﬁcation condition and cannot be argued away.
+Two statements of formal status are recorded with the precision the literature allows, and both belong to the motivation of §2 rather than to the ontology. Non-unitary CPTP semigroups admit no CPTP
+inverse: in ﬁnite dimension the semigroup is of GKLS form [28, 29], and the invertible quantum operations are unitaries together with a ﬁxed ancilla (Theorem 2.1 of Nayak and Sen) [31]; that the quasiinverse used in practice is a ﬁdelity-optimising surrogate and not an inverse is a supporting observation
+(Karimipour) [32], cited as corroboration and not for the invertibility theorem. The Poincaré recurrence
+theorem is not available here, and the theory neither invokes it nor is constrained by it: its premises (a
+ﬁnite measure-preserving phase volume) fail for the aether side, so the theorem does not apply. This is a
+consequence of premise failure, cited by the premise chain rather than attributed to a single result about
+inﬁnite-dimensional systems [33–37].
+
+4.8 What the executor layer proves and what it does not
+The machine-checked companion of the v3.1.1 executor states 58 theorems in a core-only Lean development with no sorry and with an axiom surface limited to propext and Quot.sound.4 The statements relevant to this section are structural: after a dissipate transition no DEK for the lost row remains
+in the presence pool (E1); the tombstone body depends on the row only through its identiﬁer, record key,
+mass and exergy, so that two equal-length different texts encrypted under different DEKs with the same
+identiﬁer, record key and exergy yield bit-identical tombstones (E3, tombstone_text_blind—a
+statement about text, not about metadata; the two are different propositions, see §5.5); the readable table is blind to text in two separately stated forms, the general form kout_blind_general (K-out)
+and the same-address corollary kin_blind_same_address (K-in), which are not merged (§4.3); a
+dropped or altered link breaks the chain (E4); the three transitions preserve the conservation core and the
+4
+
+The theorem count, the axiom surface and the statements below are quoted from the engineering package v3.1.1 (companion sha12 0decb3a4059f). Compilation status: the v3.1 companion (45 theorems, sha12 277f63bff1ca) was independently compiled by the literature reviewer on 2026-11-26 (Lean 4.15.0, core-only, exit status 0, 45 axiom audits line for line);
+the v3.1.1 companion (58 theorems) was independently recompiled by the manuscript author on 2026-11-26 (Lean 4.15.0,
+core-only; audit log in the revision-2 package). The manuscript makes no paraphrase of theorem content beyond the structural
+statements in this paragraph, and theorem-level facts are to be checked against those audits, not against this text.
+
+12
+
+monotonicity of D, and no transition has the shape of a recovery (E5); the gaether accumulator is admitonly, monotone and content-blind, and the budget policy phantom_budget is bounded and monotone
+(§4.1). These theorems are representation-layer objects: they establish that the executor adds structure
+without altering the thermodynamic bookkeeping, and that “no reﬂow” holds at the execution layer and
+not only on the ledger. They do not prove cryptographic security, which is a standard assumption on the
+primitive; they do not formalise the executor’s wiring of the budget into its read path, which is realised in
+the prototype and tested there; and they do not close the side-channel condition stated in §5.5. A falsiﬁcation probe in the executor (ﬁve read-only probes: decrypt without the DEK, scan the log for plaintext,
+look up a tombstoned row in the pool, verify the chain) fails loudly with a TheoryFalsified classiﬁcation on any hit, which is the executor-layer realisation of the criterion in §4.2.
+
+5
+
+deposon-memory: the three-channel deposition structure
+
+Core sentence. Durable memory in a reasoning system is deposited, in one and the same scattering
+event, by R-retention, by the A-tombstone and by the T -shortcut; the three are produced by the same
+parameter pair and booked from one and the same event. The phantom limb is the R-channel’s bounded
+retention rendered on the belief surface: a row that carries mass, cause and age and no text, and that
+carries the record key only in the single-writer form (§4.3).
+What this section may and may not say is ﬁxed in advance, and we state it ﬁrst so that every subsection can be read against it. What can be written: controlled readback of tombstone metadata, the
+background statistical potential, and tombstone-driven re-encoding. What cannot be written: an observer
+effect used as an inversion mechanism. The two informal phrases that circulated during the project—
+“observer effect” and “inverting the corpse”—would, if they entered the manuscript as they stand, create
+a mechanism that the theory does not have and that its falsiﬁcation condition excludes.
+
+5.1 The functional analogy and its three hard conﬂicts
+Core sentence. The hippocampal memory system (analogy, not a theoretical object) supplies a threestage vocabulary—encoding, consolidation, retrieval—that maps onto the theory only partially, and the
+manuscript marks each row of the map as realisable or not.
+Stage (analogy)
+
+Counterpart in the theory
+
+Realisable?
+
+Term used in this manuscript
+
+Encoding
+
+R-retention and T -shortcut sedimentation (the natural deposit of a scattering outcome)
+nearest counterpart: sedimentation
+and re-triggering of T -shortcuts
+(“consolidation” is not in the ontology; tool/metaphor layer)
+re-scattering readout of live rows, Rretention, T -shortcuts
+—
+
+yes
+
+encoding
+
+yes, as a measurable approximation (§5.4)
+
+shortcut sedimentation and
+re-triggering (labelled analogy)
+
+yes
+
+retrieval
+
+no such channel
+at
+the
+ontology
+layer; the tool
+layer
+admits
+only miss_
+correct
+
+honesty about absence (not
+“retrieval achieved”; separately named)
+
+Consolidation
+
+Retrieval, reality side
+Retrieval,
+A
+channel
+
+Table 2: Functional analogy table. Every row is an analogy at the tool-representation layer; none upgrades to an ontological mechanism.
+Three ﬁndings from the biology are hard conﬂicts for any strong reading of the analogy, and we
+13
+
+record them so that the analogy is not mistaken for biological endorsement of irreversibility. Synapses
+are reversible: long-term depression can undo what long-term potentiation has written [52–54]. Consolidated memories re-open on retrieval: reconsolidation renders a stored trace labile again for a window
+after it is read [55]. Pattern completion reconstructs a whole memory from a partial cue, an operation that
+looks like inversion but occurs within an associative store that never lost the content [56, 57]. The analogy
+therefore supports the structure of “irreversible write path plus readout” and nothing about irreversibility
+itself; replay during sharp-wave ripples and engram reactivation [58–60] are consistent with the retrieval
+half of the table, and the generation of false memories by engram stimulation [61] is a warning that a
+readout path can fabricate content, which is why the training signal below penalises fabrication.
+
+5.2 Controlled readback
+Core sentence. The readback surface is the tombstone metadata, rendered as phantom rows, and it is
+controlled in four senses: bounded (the engineering package sets a time-to-live of at most 1000 steps,
+and the number of phantom rows a read may reﬂect is set by the budget policy phantom_budget(G) =
+max(1, min(phantomK, 1 + log2 (1 + G.q/Qref ))) with phantomK = 3 as its cap, so that the perread count is a function of the accumulator’s state and not a constant; these ﬁgures are implementation
+parameters of that package, not constants of the theory); annotated (every phantom row is marked as a
+tombstone, so that the model knows it is reading a record and not content); paid (each readback charges
+cP to R and nothing to D or Φ); veriﬁable (the chain and the DEK commitments can be checked). Hard
+limit: payment buys metadata only, never content.
+The hard limit is where the theory’s falsiﬁcation condition meets the engineering budget. Buying
+content with R budget is the inverse process of §4.2; buying metadata with R budget is a reﬂection
+product of the R channel and is compatible with the monotonicity of D. That readout need not disturb
+the record is the quantum-non-demolition condition [49, 50]; that readout can disturb a system is equally
+documented—reconsolidation after retrieval [55], retrieval-induced forgetting [62], and the Zeno effect
+under repeated measurement [63, 64]. The design conclusion is to make readback a QND-style read
+of the tombstone: zero perturbation of the text content the tombstone stands for, while remaining, for
+the record itself, a scattering in the sense of §4.4—its hash, timestamp and commitments are read, and
+nothing of the content is written back.
+
+5.3 Tombstone-driven re-encoding
+Core sentence. Seeing a tombstone and then rewriting that record key is a new construct at the toolrepresentation layer. The ontology permits it—a new scattering event produces a new deposit and the
+scattering law does not forbid it—but it is not recovery: the new content is not a reconstruction of the lost
+text; it is related to the original only through what the tombstone metadata and the background statistics
+carry, and by §4.2 and §5.5 that does not sufﬁce for reconstruction. It corresponds to relearning after
+forgetting, not to recalling after forgetting, and it must not be used to square “inverting the corpse”.
+The construct is reported as a candidate instrument, not as a claim. It is listed with the candidate
+metrics below and left to the experimental line for alignment; a constraint that circulated in an early
+truncated review (re-encoding must produce a new identiﬁer and a new DEK and must not reuse the
+tombstone’s DEK commitment as an index) is not part of this manuscript’s adjudicated text and is left to
+the executor design side.
+
+5.4 Consolidation (analogy) is measurable, conditionally
+Core sentence. The sedimentation and re-triggering of T -shortcuts is the measurable object closest to
+“consolidation” that the theory offers, and it is measured by three quantities: the shortcut sedimentation
+rate, the re-triggering rate, and the change in subsequent scattering allocation after a re-trigger.
+Promoting this to a main training signal is accepted with two conditions. (c1) The tombstoneperceptibility signal (X2: phantom rows on the rendered surface; reward for miss_correct, penalty
+
+14
+
+for fabrication) is a main signal at the same time. (c2) The reward is given only when a previously
+transmitted in-presence row is re-triggered; it is never given for “avoiding dissipation”. Without c2 the
+training objective degenerates into “prefer retention, punish dissipation”, the model learns to hide content, and the honesty of the A channel is destroyed. Promoting the shortcut signal alone is not accepted.
+The three quantities above are candidate metrics pending alignment with the experimental line; the main
+behavioural target named there, miss_correct under a strict criterion (acknowledging absence is the
+only correct answer on a tombstoned record key), is the training-side face of the “honesty about absence”
+row of Table 2, and fabrication_rate is its negative.
+
+5.5 Formal note: the readable table, text-blindness and the policy condition
+Core sentence. The readable table is blind to text on the equal-length ﬁbre, in two separately stated
+forms (§4.3): under K-out, any two tombstones with equal mass, cause and time have bit-identical tables,
+whatever their identiﬁer and record key; under K-in, only a same-address rewrite—equal identiﬁer and
+record key—of equal-length texts encrypted under different DEKs gives bit-identical tables; a process
+that cannot distinguish two texts cannot be an inverse process of the text. Both forms are statements
+about text, not about metadata: they do not prove that the tombstone’s metadata ﬁelds (identiﬁer, record
+key, mass, time, chain pointer) carry no text side-channel, and they do not cover texts of different lengths.
+The strongest statement the present development supports is this: the tombstone body contains
+no content, and the text length does not form an invertible encoding of the text. Both facts are
+machine-checked in the core-only companion, as the theorems tomb_not_injective_on_text
+and length_not_invertible; the latter was drafted by the literature reviewer and adopted into
+the engineering package at v3.1. Length remains a statistic: the design declares its residual exposure
+as an accepted risk, and this manuscript claims nothing beyond that. The only auxiliary condition
+the executor layer relies on is aux-CI_key (§4.3): the record key is an address in a closed schema,
+with no derivation edge from text to address on the write path. It is a policy-layer constraint—not a
+cryptographic one and not a Lean-proven property—and this manuscript asserts no further independence
+between metadata and content. Three concrete preconditions follow from the executor as built: the row
+identiﬁer must not be derived from the plaintext (the prototype uses a sequential counter; a content hash
+would break text-blindness at once); the DEK commitment must commit to the DEK and not to DEK
+concatenated with text; and mass = len(text) leaks the text length, since perfect secrecy is strict only
+for a ﬁxed-length message space [65]. Length leakage is therefore recorded and audited under the middle
+case of §4.2, and whether to bucket mass is left to the executor side. The analogy between text-blindness
+and perfect secrecy is an analogy under restriction, and is to be cited as such; “no transition has the
+shape of a recovery” is a syntactic, type-level statement of the project, not a cryptographic theorem, and
+the manuscript keeps the two apart.
+
+6
+
+Empirics: the 0.6B-deposon and the per-path audit
+
+Core claim. The scattering law holds at the ontology layer (per-path residual 2.2×10−16 ); its behavioural
+effect is not signiﬁcant under the ﬁxed prior parameters (negative boundary retained, §7); a positiveregion hypothesis for the free-parameter space is given and a pre-registered test is speciﬁed. Candidate
+metrics from §5.4 are listed as candidates pending alignment with the experimental line. Nothing in this
+section is a test of the falsiﬁcation condition of §4.2; that condition has not been probed on a deployed
+system with a positive outcome to report, and the section says so.
+
+6.1 What was built, and what the per-path audit veriﬁes
+The deployed prototype is a scattering layer outside the transformer: the 0.6B carrier with a 19-slot
+external layer, written in the three-channel form of (1) with per-node (gcouple , gaether )i [1]. Under frozen
+evaluation (seed 20261111) the carrier scored 0 on all 19 probe rungs with the layer attached; the layer
+
+15
+
+did not alter the carrier’s general behaviour and did not add anything on the probe rungs. That reading is
+the ﬁrst behavioural fact on record and it is a null.
+The per-path audit is the veriﬁcation half of the constructive mapping (§1.2). Across all layer variants
+and all benchmarks, the maximum per-path deviation of |t|2 +|r|2 +|a|2 from 1 is 2.220446049250313×
+10−16 —one unit in the last place of double precision, against an implementation tolerance of 10−6 —and
+the gate was closed under pre-registration [1]. The reading means exactly one thing: the constructed
+system obeys the law it was prescribed, on every path, to the resolution of the arithmetic. It does not
+mean that the law is true of anything else, and it is not evidence of a behavioural effect; a law enforced
+by a state deﬁnition is checked for enforcement, not discovered. The paper keeps the reading because
+the constructive mapping owes this veriﬁcation and because a drift here would falsify the claim that the
+prototype is a deposon at all.
+
+6.2 The behavioural face under the ﬁxed prior
+Three behavioural readings are inherited from the tool-face programme and stand verbatim (§7.1). E9.5.
+On real benchmarks the layer is indistinguishable from a trivial six-keyword rule ﬁlter reading nothing
+beyond label strings: GSM8K 0.85 against the ﬁlter’s 0.87 (McNemar p = 0.5; difference −2pp, 95%
+CI [−11.8, +7.8]pp); StrategyQA 0.899 against 0.899 (p = 1.0; difference 0pp, CI [−8.8, +8.8]pp);
+the detectable-difference threshold at these sample sizes is about ±10 percentage points; plain chain-ofthought scores 0.97 on GSM8K against the layer’s 0.85. The claim that survived is “the scattering layer
+is not more accurate, but it keeps books”. E9.6. Fusion with a semantic prior dilutes rather than adds:
+at the λ = 0.5 convex combination, physics 0.484 → 0.452 and historical 0.783 → 0.739; across all
+λ levels no level gains, and the apparent gain at λ = 2 is an anti-ﬁeld artefact. H4. The dissipation
+channel carries a task-level rent: on every task measured, switching dissipation on was never better than
+switching it off (synthetic arms equal; GSM8K 86.0% with on against 85.0% with off; StrategyQA three
+arms equal at 89.9%).
+These readings were taken with the free parameters of §2.2 set by a prior that placed the operating
+point in the open, tunnelling regime—the dark-matter picture—where the law itself says that the error
+share is ofﬂoaded and that the real side is relieved of it, and where nothing about the dissipated share can
+be checked from the real side (§3.3). Under that prior a null on accuracy is what the law expects and a
+null on recall is not; the readings show neither gain nor loss on accuracy, which is consistent with both
+the law and a rule ﬁlter, and they cannot decide between them. They are retained as a negative boundary
+about that region, and §7.2 states the attribution in exactly those terms.
+
+6.3 The memory readout face: a measurement construction, not a reading
+The memory readout lines of the register report exact_recall = 0 across the board. That zero is a
+property of the probe, not of any system: the stored answers are 24 value tokens, which tokenize to 144
+BPE units, while the readout generation cap is 30 tokens; any model, including a perfect copier, scores
+0 under this probe. The experimental line’s inventory therefore restates the status of the readings: of 70
+run lines, 64 are unaffected (task face, conservation, binding, kill gates, format gates, carrier iterations,
+theory-tool lines), and the six memory-readout lines are to be restated with their task-face readings (balanced accuracy, KL, conservation) valid and their read-side zeros carrying no attribution—neither as a
+defect nor as a conﬁrmed prediction. The pre-executor-era ledgers are frozen as such and excluded from
+the main-gate denominator; on the present register, zero memory-readout readings enter that denominator. The statement “lost-key exact_recall = 0 is a theoretical prediction” is accordingly an untested
+prediction with no readings on record: no dissipation event occurred in the registered probe streams, and
+every zero in the register is a live-key reading. It is to be tested ﬁrst by the executor arm of the design
+below, not asserted about old data.
+
+16
+
+6.4 The positive-region hypothesis and the pre-registered test
+Hypothesis (positive region). In the free-parameter plane (gcouple , gaether ) there is a region, not sampled
+by the inherited runs, in which the law’s two effects act together: strict ﬁltering from the blocking side
+and irreversible removal of the error share by a small but non-zero A channel. The candidate region
+is the mixed band around η ∼ 1 and its blocking-side neighbourhood (η ≲ 1, gaether > 0), where the
+system keeps most of its energy on the real side—so that the bookkeeping of §2.7 stays checkable—while
+the dissipated share is large enough to be felt as a change in what the model does with a hypothesis it
+should not keep. The hypothesis is about the behavioural face only; the law’s accounting face is already
+closed (§6.1). It is falsiﬁable by a run inside the candidate region that shows no effect at the instrument’s
+resolution.
+Test (pre-registered, pending ignition). Three arms trained once each on the same seed and data
+order—A (executor with the honesty signal), B (executor with a fake-inverse arm), C (frozen carrier,
+legacy memory)—evaluated on one probe list that is byte-identical across arms (same keys, values, read
+order and loss plan; digest-checked, fail-loud on inequality). The arms are paired by key: each key
+has one binary outcome per arm, and the main test is the exact one-sided McNemar test on the discordant pairs (Fisher exact one-sided retained as the registered sensitivity under the independent assumption). The behavioural target is miss_correct under the strict criterion (acknowledging absence
+is the only correct answer on a tombstoned record key), the training-side face of the “honesty about
+absence” row of Table 2; fabrication_rate is its negative. The noise band is ﬁxed a priori as
+max(inter-round range, 3/nlost ) with nlost = 256, i.e. 1.17 percentage points; the tiers are high (≥ 0.7),
+mid ([0.35, 0.7)), weak, none. The gate is an effect-size criterion (hitsA − hitsC ≥ 3, one band); the
+exact one-sided p-value is a distinguishability label; the two are AND-ed to enter a tier. A reading that
+passes the gate with p ≥ 1/20 is registered as “passed, not distinguishable”—not tiered, not support, not
+a negative result, and not re-run to ﬁll. The multiplicity registration follows the conditional form: the
+A-versus-C comparison is conﬁrmatory at α = 1/20; the A-versus-B comparison (a different primary
+variable) is interpreted only if the conﬁrmatory gate is passed (ﬁxed-sequence gatekeeping), otherwise it
+is an exploratory observation; this form is the review’s recommendation and awaits the principal investigator’s one-line ruling.
+Candidate metrics. The three quantities of §5.4—shortcut sedimentation rate, re-trigger rate and
+allocation change—are listed as candidates pending alignment with the experimental line; none of them
+is a registered endpoint at this revision. The registered endpoints are the two named above.
+
+6.5 What has not been measured
+Nothing on record tests the falsiﬁcation condition. The executor-layer probe (ﬁve read-only probes,
+among them decrypt without the DEK, scan the log for plaintext, look up a tombstoned row in the
+pool, verify the chain) has been run on the executor self-test in both directions: no hit in the normal
+state (classiﬁed EXECUTOR-HOLDS) and a hit, classiﬁed TheoryFalsified, when plaintext was
+deliberately injected as a control. The no-hit is a consistency reading and not a conﬁrmation, because the
+probe tests the executor’s honesty about absence on a system built to be honest about it; the injected hit
+shows that the probe can ﬁre, not that the theory has been threatened. The lost-key prediction (§6.3) has
+zero readings. The positive-region hypothesis has zero readings. The behavioural face has readings only
+in the dark-matter region under the inherited prior. The section reports these as the state of the evidence
+and not as a schedule.
+
+7
+
+Negative boundary and category clariﬁcation
+
+7.1 The negative boundary, verbatim
+The negative boundary of the tool-face programme is retained as returned. E9.5: the layer is indistinguishable from a rule ﬁlter. On GSM8K the six-keyword ﬁlter scores 0.87 against the layer’s 0.85
+
+17
+
+(McNemar p = 0.5); on StrategyQA 0.899 against 0.899 (p = 1.0); at these sample sizes the detectabledifference threshold is roughly ±10 percentage points, so smaller increments are not excluded and are
+disclosed as such; plain chain-of-thought outperforms the layer on GSM8K, 0.97 against 0.85. E9.6:
+convex-combination dilution. Fusion with a semantic prior dilutes: physics 0.484 → 0.452 and historical 0.783 → 0.739 at the λ = 0.5 convex combination; the apparent gain at λ = 2 is an anti-ﬁeld artefact.
+H4: the dissipation channel is ablatable at the task-accuracy face without loss—on every measured task,
+on was never better than off (GSM8K 86.0% ≥ 85.0%; StrategyQA three arms equal at 89.9%). None
+of these numbers is adjusted, re-run or re-gated; the negative results are registered as returned.
+
+7.2 Attribution: the dark-matter picture plus a misplaced parameter prior
+The attribution is rewritten as working in the dark-matter picture plus a misplaced parameter prior. The
+inherited runs placed the operating point in the open regime (η ≫ 1), where the law says that error energy
+is ofﬂoaded and that the real side is relieved of it; the prior treated the free parameters of §2.2 as if any
+placement would serve, and the placement served the dissipation claim while placing the behavioural
+claim where the law expects no accuracy gain and where nothing about the dissipated share is checkable
+(§3.3). This is a category clariﬁcation, not an excuse: the negative boundary stands as a negative result
+about that region under that prior, and the positive-region hypothesis of §6.4 is a claim about a different
+region that has yet to be sampled.
+
+7.3 What is not a candidate attribution
+Three candidate attributions are excluded, each for a reason stated in the theory rather than in taste. (i)
+Observer effect. The theory has no observer and no observation postulate; a readback is a new scattering
+event on the reality-space side (§4.4); reading the negative boundary as an artefact of observation would
+import a new construct into a theory that does not contain it, and the attribution is not adopted. (ii)
+Recoverable content. The null is not explained by the content’s being still present and recoverable; a
+store from which dissipated content could be read back is the pseudo-inverser that the source segment
+M4 contains and that §4.6 removes as an ontological erratum. The metaphor that gestures at this is not
+used in the manuscript. (iii) Missing inverse. The null is not explained by the absence of an inverse
+process; an inverse process is incompatible with the generator (§2.4), and what the earlier designs lacked
+was the irreversible executor of §4, not a way back. The adjudication of these three slots was made under
+dual review with the theory’s co-author and the Lean audit, with the principal investigator’s option to
+reopen each; none is reopened here.
+
+7.4 The ledger narrative, demoted to an audit tool
+The voided version’s narrative—a thermodynamic ledger as the theory’s core—is retained only as a description of the instrument. The ledger belongs to the family of auditable agent-memory designs [20–25],
+with pipeline provenance tracking [26] as its ancestor; its chain to the append-only-chain and Byzantineconsensus tradition [66, 67]; its accountability claim to the peer-review accountability tradition [68]; its
+fail-loud behaviour to the nearest standard neighbour, fail-stop processing (“fail-loud” is this project’s
+word and no standard source is claimed for it) [69]; and the leak it is built to detect is the kind diagnosed and measured for multimodal agent memory [70], which is a diagnostic and not a survey. On
+a frozen 500-operation trace the ledger generation raises dissipation-channel utilisation from 0.00% by
+construction to 69.23% (105 225/152 000), reduces rows present at the end of the trace from 152 to 61,
+cuts mean per-read rendering from 1647 to 292 characters, and keeps the conservation core to the last
+integer (313 050 = 149 200 + 11 850 + 105 225 + 46 775), with the same core machine-checked over ﬁve
+transitions (15 theorems, no admitted proofs, axiom set within {propext, Quot.sound}); the price
+is a drop in speciﬁc-key hit rate from 50.31% to 47.85%, decomposed exactly into live hits and phantom
+rows. On the real-model round the readings are 2750 = 100 + 50 + 1692 + 908, utilisation 65.08%, ﬁve
+phantom lines. These readings are data-level assets of the R2 lineage and are reported as what the ledger
+
+18
+
+does. They are not evidence for the scattering law at the ontology layer (that is the per-path audit, §6.1),
+and they are not evidence for a behavioural effect (that is the null of §6.2); they are the audit tool’s own
+performance, and the theory does not stand on them.
+
+7.5 Category clariﬁcation
+The theory is
+
+The theory is not
+
+a constructive mapping: a system prescribed to obey T + R + A = 1 and
+veriﬁed to obey it
+an ontology layer (the two-parameter
+law, the orthogonal complement, the
+Lindblad generator)
+irreversible by the generator’s mathematics and by an executor that realises
+it
+falsiﬁed by an inverse process that recovers dissolved content
+
+the claim that physical law holds approximately
+for reasoning systems
+a ledger, a channel notation or a tombstone format
+(these are its instruments)
+irreversible by a code convention, a missing
+branch or a promise
+supported by a null on accuracy, a utilisation ﬁgure or a phantom count
+
+Reproduction and evidence
+Freeze event. The R3 lineage was frozen once, at rev3 (the full-draft merge, commit 2a579b8,
+manuscript sha12 c0a80e4febe6), as FREEZE_v5preR3 v1, index slot S-07, which thereby moves
+from candidate to established (its predecessor slot S-06 held the R2 freeze, which is not reused and
+not double-frozen). The freeze records the rev2 intermediate anchor d924707 as the parent at generation time—the freeze ﬁle is generated before the commit that carries it, so the rev3 commit itself post-dates the freeze—and the branch private/v5preR3 (from the R2 terminal ac04a4b)
+as its line; the R2 ﬁles carry a voided header and a void note with zero deletions. The errata of
+rev3.1 and the three Alan absorptions of rev3.2 were absorbed after that freeze and, by order, the
+freeze was not regenerated for them: comparisons of those revisions against v1 report the manuscript
+source and its PDF as changed, which was expected and is recorded in the errata note beside the freeze
+(evidence/FREEZE_v5preR3_v1_errata.md). At this revision (rev4) the absorption slot has
+closed and the freeze is regenerated as v2, with the reconstruction’s own ﬁngerprint added to the external
+inputs. The freeze ﬁle (FREEZE_v5preR3.md and .json, under paper/v5preR3/evidence/)
+lists, with sha12, line count and byte count: the manuscript source, the compiled PDF, the bibliography,
+the lineage table, the ignition note, the review records folded into this revision (the theory review R61 to R6-18 with its verbatim transcript, the F1–F5 adjudication, the F7/L2 multiplicity round with its
+verbatim transcript), and the external inputs by the ﬁngerprints their own packages carry (the executor
+companion at 0decb3a4059f and 277f63bff1ca, the architect’s adjudication, the literature review,
+the thermodynamic reconstruction companion at 45c56f1e5487 with the architect’s absorption record
+at 5bd9c32ae67e, and the rev3.2 absorption package). This manuscript does not embed its own hash;
+the freeze ﬁle is the only place the ﬁngerprints live.
+Tools. The freeze generator and comparator follow the R2 chain: gen_freeze_r3.py writes
+the manifest from the R3 directory and the named external inputs; compare_freeze_r3.py remeasures the present ﬁles against a manifest and classiﬁes every difference: a change to a frozen item or
+to a voided R2 item is a mismatch that must be disposed; a changed ﬁngerprint of an external input is
+reported as a registration (its owner re-measures) and is not a mismatch; the exit code is 1 on mismatch.
+The measured output of the comparison at rev3 is kept beside the freeze (evidence/compare_v1_
+output.txt). The R2 tools under paper/tools/ are not modiﬁed; the R3 tools live under paper/
+v5preR3/tools/. Compilation is tectonic 0.15.0; this revision compiles with 0 undeﬁned
+
+19
+
+references and 0 errors; the CJK warnings are those of the Chinese title lines under the Times font, as in
+R2.
+What the freeze certiﬁes, and what it does not. It certiﬁes that the ﬁles named are the ﬁles compared, at the ﬁngerprints recorded, at the time of the freeze, and that a later comparison against it reports
+every change. It does not certify any reading: the readings are in the evidence packages of the seats
+that produced them and are cited, not re-measured, here. The absorption slot of §2.8 is closed as of
+this freeze: this is that rev4 freeze (v2), and the reconstruction’s own ﬁngerprint (45c56f1e5487) is
+recorded in the external inputs. The v1 freeze stays in place unmodiﬁed; comparisons against it report
+the expected changes, and the operative comparison baseline is now v2.
+Repository. Local commits on private/v5preR3 (rev3: 2a579b8; rev3.1: the commit carrying
+this revision); zero pushes; veriﬁed code directories unchanged; other seats’ registered ﬁles unchanged.
+
+References
+[1] Qihao Yuan. Deposon: An auditable, conservation-guaranteed, game-theoretically tested scattering
+layer over llm reasoning paths. arXiv:2609.09001v2 (2026-11-03), 2026.
+[2] Andy Clark and David Chalmers. The extended mind. Analysis 58(1):7–19, 1998.
+[3] Yuyang Hu, Shichun Liu, Yanwei Yue, Guibin Zhang, Boyang Liu, Fangyi Zhu, Jiahang Lin,
+Honglin Guo, Shihan Dou, Zhiheng Xi, et al. Memory in the age of ai agents. arXiv:2512.13564,
+2025.
+[4] Yaxiong Wu, Sheng Liang, Chen Zhang, Yichao Wang, Yongyue Zhang, Huifeng Guo, Ruiming
+Tang, and Yong Liu. From human memory to ai memory: A survey on memory mechanisms in the
+era of llms. arXiv:2504.15965, 2025.
+[5] Junkai Lin, Ge Xu, Zheng Xu, Junkai Chen, and Xiangyuan Lan. Can agents truly forget? explore
+machine unlearning for llm agents. arXiv:2610.17659, 2026.
+[6] Bofan Xie et al. Can agents forget when asked? a benchmark for memory unlearning in llm agents.
+arXiv:2610.18052, 2026.
+[7] Bin Wang et al. Agentic unlearning: When llm agent meets machine unlearning. arXiv:2602.17692,
+2026.
+[8] R. Landauer. Irreversibility and heat generation in the computing process. IBM Journal of Research
+and Development 5(3):183–191, 1961.
+[9] Charles H. Bennett. The thermodynamics of computation—a review. International Journal of
+Theoretical Physics 21(12):905–940, 1982.
+[10] Susanne Still, David A. Sivak, Anthony J. Bell, and Gavin E. Crooks. Thermodynamics of prediction. Physical Review Letters 109(12):120604, 2012.
+[11] Susanne Still.
+Thermodynamic cost and beneﬁt of memory.
+124(5):050601, 2020.
+
+Physical Review Letters
+
+[12] Alexei V. Tkachenko. Thermodynamic cost of inference and learning in physical neural networks.
+arXiv:2503.09980, 2025.
+[13] Andrea Lepre. Thermodynamics of forgetting in a bounded hopﬁeld network. arXiv:2611.08258,
+2026.
+[14] Spencer Rooke, Dmitry Krotov, Vijay Balasubramanian, and David Wolpert. Stochastic thermodynamics of associative memory. arXiv:2601.01253, 2026.
+20
+
+[15] Miguel Aguilera, Daniele De Martino, Ivan Garashchuk, and Dmitry Sinelshchikov. Nonequilibrium thermodynamics of associative memory continuous-time recurrent neural networks.
+arXiv:2511.11150, 2025.
+[16] Takahiro Sagawa. Stochastic thermodynamics for autoregressive generative models: A nonmarkovian perspective. arXiv:2604.07867, 2026.
+[17] Tatiana Petrova, Evgeny Polyachenko, and Radu State. Geometric entropy and retrieval phase
+transitions in continuous thermal dense associative memory. arXiv:2604.07401, 2026.
+[18] Akihito Sudo. Thermodynamics of learning: A typed four-component accounting of memory, ﬁt,
+and value. arXiv:2608.12791, 2026.
+[19] Jeremy L. England. Dissipative adaptation in driven self-assembly.
+10(11):919–923, 2015.
+
+Nature Nanotechnology
+
+[20] Yi Nian, Aojie Yuan, Haiyue Zhang, Jiate Li, Li Li, Xiyang Hu, Hua Wei, Xiongye Xiao, Chaowei
+Xiao, and Yue Zhao. Auditable agents. arXiv:2604.05485, 2026.
+[21] Md Aidul Islam, Md Nasir Uddin Shuvo, Muhammad Waseem, and Pekka Abrahamsson. Ledger:
+Auditable agent memory under change. arXiv:2611.20927, 2026.
+[22] Yu Qian et al. Echo:
+arXiv:2608.21755, 2026.
+
+An auditable dual-path memory system for long-horizon agents.
+
+[23] Tanguy Dieudonne, Jack B. Jedlicki, and Heng Yang. Where memory belongs: Ledger, an object
+ledger for memory-augmented vlas. arXiv:2609.34554, 2026.
+[24] Jun He and Deying Yu. Beyond memory: A transactional continuity kernel for long-lived ai agents.
+arXiv:2608.11632, 2026.
+[25] Jun He and Deying Yu. The cognitive continuity test: Verifying governed state transitions in persistent ai agents. arXiv:2610.00132, 2026.
+[26] Stefan Grafberger, Paul Groth, and Sebastian Schelter. Provenance tracking for end-to-end machine
+learning pipelines. In ACM Web Conference 2023 Companion, 2023.
+[27] Subhadip Mitra. Field-theoretic memory for ai agents: Continuous dynamics for context preservation. arXiv:2602.21220, 2026.
+[28] G. Lindblad. On the generators of quantum dynamical semigroups. Communications in Mathematical Physics, 48(2):119–130, 1976.
+[29] V. Gorini, A. Kossakowski, and E. C. G. Sudarshan. Completely positive dynamical semigroups of
+N-level systems. Journal of Mathematical Physics, 17(5):821–825, 1976.
+[30] E. B. Davies and J. T. Lewis. An operational approach to quantum probability. Communications in
+Mathematical Physics, 17(3):239–260, 1970.
+[31] A. Nayak and P. Sen. Invertible quantum operations and perfect encryption of quantum states.
+Quantum Information and Computation, 7(1):103–110, 2007.
+[32] V. Karimipour, F. Benatti, and R. Floreanini. Quasi-inversion of qubit channels. Physical Review
+A, 101(3):032109, 2020.
+[33] H. Poincaré. Sur le problème des trois corps et les équations de la dynamique. Acta Mathematica,
+13:1–270, 1890.
+
+21
+
+[34] P. Walters. An Introduction to Ergodic Theory, volume 79 of Graduate Texts in Mathematics.
+Springer-Verlag, New York, 1982.
+[35] P. Bocchieri and A. Loinger. Quantum recurrence theorem. Physical Review, 107(2):337–338,
+1957.
+[36] D. Wallace. Recurrence theorems: A uniﬁed account.
+56(2):022105, 2015.
+
+Journal of Mathematical Physics,
+
+[37] A. O. Caldeira and A. J. Leggett. Path integral approach to quantum Brownian motion. Physica A,
+121(3):587–616, 1983.
+[38] Herman Feshbach. Uniﬁed theory of nuclear reactions. Annals of Physics, 5:357–390, 1958.
+[39] Herman Feshbach. A uniﬁed theory of nuclear reactions. ii. Annals of Physics, 19(2):287–313,
+1962.
+[40] Ugo Fano. Effects of conﬁguration interaction on intensities and phase shifts. Physical Review,
+124(6):1866–1878, 1961.
+[41] R. Kissel, A. Regenscheid, M. Scholl, and K. Stine. Guidelines for media sanitization (NIST SP
+800-88 rev. 1). Technical report, National Institute of Standards and Technology, 2014.
+[42] J. Reardon, D. Basin, and S. Čapkun. SoK: Secure data deletion. In IEEE Symposium on Security
+and Privacy, pages 397–412, 2013.
+[43] R. Geambasu, T. Kohno, A. A. Levy, and H. M. Levy. Vanish: Increasing data privacy with selfdestructing data. In USENIX Security Symposium, 2009.
+[44] S. Haber and W. S. Stornetta. How to time-stamp a digital document. Journal of Cryptology,
+3(2):99–111, 1991.
+[45] B. Schneier and J. Kelsey. Secure audit logs to support computer forensics. ACM Transactions on
+Information and System Security, 1(3):337–365, 1999.
+[46] P. O’Neil, E. Cheng, D. Gawlick, and E. O’Neil. The log-structured merge-tree (LSM-tree). Acta
+Informatica, 33(4):351–385, 1996.
+[47] Takahiro Sagawa and Masahito Ueda. Second law of thermodynamics with discrete quantum feedback control. Physical Review Letters, 100(1):080403, 2008.
+[48] Takahiro Sagawa and Masahito Ueda. Minimal energy cost for thermodynamic information processing: Measurement and information erasure. Physical Review Letters, 102(25):250602, 2009.
+[49] C. M. Caves, K. S. Thorne, R. W. P. Drever, V. D. Sandberg, and M. Zimmermann. On the measurement of a weak classical force coupled to a quantum-mechanical oscillator: Issues of principle.
+Reviews of Modern Physics, 52(2):341–392, 1980.
+[50] V. B. Braginsky and F. Y. Khalili. Quantum Measurement. Cambridge University Press, 1992.
+[51] M. A. Nielsen and I. L. Chuang. Quantum Computation and Quantum Information. Cambridge
+University Press, 10th anniversary edition, 2010.
+[52] T. V. P. Bliss and T. Lømo. Long-lasting potentiation of synaptic transmission in the dentate area
+of the anaesthetized rabbit following stimulation of the perforant path. Journal of Physiology,
+232(2):331–356, 1973.
+
+22
+
+[53] S. M. Dudek and M. F. Bear. Homosynaptic long-term depression in area CA1 of hippocampus
+and effects of N-methyl-D-aspartate receptor blockade. Proceedings of the National Academy of
+Sciences, 89(10):4363–4367, 1992.
+[54] W. C. Abraham and M. F. Bear. Metaplasticity: The plasticity of synaptic plasticity. Trends in
+Neurosciences, 19(4):126–130, 1996.
+[55] K. Nader, G. E. Schafe, and J. E. LeDoux. Fear memories require protein synthesis in the amygdala
+for reconsolidation after retrieval. Nature, 406(6797):722–726, 2000.
+[56] K. Nakazawa, M. C. Quirk, R. A. Chitwood, M. Watanabe, M. F. Yeckel, L. D. Sun, A. Kato, C. A.
+Carr, D. Johnston, M. A. Wilson, and S. Tonegawa. Requirement for hippocampal CA3 NMDA
+receptors in associative memory recall. Science, 297(5579):211–218, 2002.
+[57] J. P. Neunuebel and J. J. Knierim. CA3 retrieves coherent representations from degraded input: Direct evidence for CA3 pattern completion and dentate gyrus pattern separation. Neuron, 81(2):466–
+477, 2014.
+[58] G. Buzsáki. Hippocampal sharp wave-ripple: A cognitive biomarker for episodic memory and
+planning. Hippocampus, 25(10):1073–1188, 2015.
+[59] X. Liu, S. Ramirez, P. T. Pang, C. B. Puryear, A. Govindarajan, K. Deisseroth, and S. Tonegawa. Optogenetic stimulation of a hippocampal engram activates fear memory recall. Nature,
+484(7394):381–385, 2012.
+[60] S. A. Josselyn and S. Tonegawa. Memory engrams: Recalling the past and imagining the future.
+Science, 367(6473):eaaw4325, 2020.
+[61] S. Ramirez, X. Liu, C. J. MacDonald, A. Moffa, J. Zhou, R. L. Redondo, and S. Tonegawa. Creating
+a false memory in the hippocampus. Science, 341(6144):387–391, 2013.
+[62] M. C. Anderson, R. A. Bjork, and E. L. Bjork. Remembering can cause forgetting: Retrieval
+dynamics in long-term memory. Journal of Experimental Psychology: Learning, Memory, and
+Cognition, 20(5):1063–1087, 1994.
+[63] B. Misra and E. C. G. Sudarshan. Zeno’s paradox in quantum theory. Journal of Mathematical
+Physics, 18(4):756–763, 1977.
+[64] W. M. Itano, D. J. Heinzen, J. J. Bollinger, and D. J. Wineland. Quantum Zeno effect. Physical
+Review A, 41(5):2295–2300, 1990.
+[65] C. E. Shannon. Communication theory of secrecy systems.
+28(4):656–715, 1949.
+
+Bell System Technical Journal,
+
+[66] Juan Garay, Aggelos Kiayias, and Nikos Leonardos. The bitcoin backbone protocol: Analysis and
+applications. In EUROCRYPT 2015; JACM 71(4):1–49 (2024), 2015.
+[67] Miguel Castro and Barbara Liskov. Practical byzantine fault tolerance. In OSDI 1999:173–186;
+ACM TOCS 20(4):398–461 (2002), 1999.
+[68] Andreas Haeberlen, Petr Kouznetsov, and Peter Druschel. Peerreview: Practical accountability for
+distributed systems. In SOSP 2007:175–188, 2007.
+[69] Fred B. Schneider. Byzantine generals in action — implementing fail-stop processors. ACM Transactions on Computer Systems 2(2):145–154, 1984.
+[70] Kuan Wang and Chao Zhang. Memleak: Diagnosing information leaks in multimodal agent memory. arXiv:2606.29788, 2026.
+23
+
+
