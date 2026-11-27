@@ -99,7 +99,7 @@ The project's three repositories are aligned on one baseline:
 | Component | Baseline | Where |
 |---|---|---|
 | Release (stable) | tag `v0.1.0-preview.11` → commit `5efc158` (CI green; the commit the paper's Access section cites) | the plugin repository `zeroandcat/dsh-plugin-deposon` |
-| Development frontier | commit `9219e78` (preview.12) on branch `b/organ-v311-preview11`, on top of `6110448` (executor-integrated driver `harness/deepen_r33.py`, CPU self-test `harness/selftest_p3_driver.py`, horizon slot calculator `harness/horizon_slot_calc_v2.py`; verified code unchanged, diff 0 bytes): adds the update/upgrade path, the ledger-era handshake server half, lazy executor imports and re-pinned self-tests; the README "Update / upgrade" section ships with it; local-commit-only — its push and any tag movement await a project-owner decision | the plugin repository |
+| Development frontier | commit `9219e78` (preview.12) on branch `b/organ-v311-preview11`, on top of `6110448` (executor-integrated driver `harness/deepen_r33.py`, CPU self-test `harness/selftest_p3_driver.py`, horizon slot calculator `harness/horizon_slot_calc_v2.py`; verified code unchanged, diff 0 bytes): adds the update/upgrade path, the ledger-era handshake server half, lazy executor imports and re-pinned self-tests; the README "Update / upgrade" section ships with it; merged and pushed 2026-11-27 (ort auto-merge 0 conflicts = `15613c1`, w5 fix `dd441be`; tag `v0.1.0-preview.12` stamped — P481 C3) | the plugin repository |
 | Pinned ignition components | `irreversible_executor.py` `d2189f2c4f1e585e` · `thermo_core.py` `f47d4ab7700c4533` · executor self-test, pinned copy `62cb86c40a805b56` · Lean companion `IrreversibleDeposon.lean` `0decb3a4059fd9e4` (58 theorems) | the plugin repository / registered in the criteria file |
 | Experiment criteria | `criteria_v3` v1.2 frozen (`9d10c2b3b4c577f7`) plus the numeric backfill v1.2.1 (`horizon.value = 12`, `46e057711035e9b3`); gates G-C1 / G-A2 / G-A3 / G-B; validator verdicts registered 2026-11-27 morning (see Experiment status) | registered in the experiment receipt packs; not stored in this repository |
 | Manuscript | revision 4.17 (commit `2c8252f`, tex `582031697650be00`, 530 lines, 30 pages) of the v5preR3 manuscript, frozen as FREEZE v13 at the branch tip `dea75bc`, on branch `private/v5preR3` of the public repository `zeroandcat/Deposon` (77 commits; not merged into that repository's `main` — unrelated histories, editorial decision pending) | the public repository |
@@ -110,8 +110,8 @@ Point-in-time handoff: [HANDOFF.md](HANDOFF.md).
 
 > **Companion plugin (dsh)**: the memory-probe harness ships as a DeepSeek Harness
 > plugin — [`zeroandcat/dsh-plugin-deposon`](https://github.com/zeroandcat/dsh-plugin-deposon)
-> (tag `v0.1.0-preview.11`, branch `b/organ-v311-preview11` ahead at `9219e78` = preview.12,
-> local-commit-only). Install: `dsh plugin add https://github.com/zeroandcat/dsh-plugin-deposon`;
+> (tags `v0.1.0-preview.11` and `v0.1.0-preview.12`; branch `b/organ-v311-preview11` at
+> `dd441be` after the preview.12 merge + w5 fix, both pushed). Install: `dsh plugin add https://github.com/zeroandcat/dsh-plugin-deposon`;
 > update/upgrade follows the four-pillar contract (`node plugin/update.mjs plan|apply|rollback` —
 > version single-source, capped engines ranges, additive-only config, append-only ledger data
 > never migrated, code-face rollback snapshots). The MCP server self-reports its ledger era
