@@ -1,10 +1,12 @@
 {
  "freeze": "FREEZE_v5preR3",
- "version": 1,
+ "version": 14,
  "index_slot": "S-07（候立转立·2026-11-26）",
  "lineage": {
   "branch": "private/v5preR3",
-  "repo_head_at_freeze": "d924707",
+  "repo_head_at_freeze": "82061cc",
+  "head_semantics": "生成时 HEAD＝承载本冻结件之提交的父提交（冻结件先生成、后随提交入库）；所记 HEAD 为永久提交·可在 git log 直接核",
+  "draft_numbering": "rev3＝全稿合流 2a579b8；rev3.1＝勘误吸收 dc45d43；rev3.2＝阿兰三处 3b3b8cb；rev4＝热力学吸收 23e2423（v2 冻结）；rev4.1＝负结果节 07b310a；rev4.2＝r12 二采 65c81f9；rev4.3＝A6 自择 041bb1a；rev4.4＝W 吸收 b66a0f2（rev4.4.1 登记面勘正 184b00c）；rev4.5＝C1/C6 两句 6eff4ab；rev4.6＝蒸馏失败记载＋ηETAC 状态句（C2/C3 自择·C4 重冻·v3 冻结）；rev4.7＝外审 Major 四修（M2/M3/M5/M6 自择·v4 冻结）；rev4.8＝外审 Minor／Questions／Reproduction 余项自择（块外·PI 22:43 自择令·v5 冻结）；rev4.9＝双审吸收（阿兰严审＋鲍勃 C5＋kimi round2＋戴夫③·bib 变动·v6 冻结）；rev4.10＝戴夫② Table 2 表注具名豁免（块内·块指纹重算）＋阿兰 B13 commit 回填／B25 bib 拆字段（v7 冻结）；rev4.11＝C-26 甲＝阿兰 B26 sagawa2008 精度注（块内·块指纹重算·C-26 自择·群管理员 23:42 派单）（v8 冻结）；rev4.12＝终稿收口（阿兰 N1 {Explore}／B17 两键全名／N4 回填＋标题副行剥离〔自择甲〕＋Access 现行可及位＋头注元对话清除·§4/§5 块 0 动·群管理员 2026-11-27 00:02 派单）（v9 冻结）；rev4.13＝AI 披露节（PI 00:18:27·源对话／智能体分角色／MiniMax V3·V4／kimi 审校／范围·块外·§4/§5 块 0 动）（v10 冻结）；rev4.14＝kimi round3 闭合修（PI 00:04 round3 上位替代严审＋00:10 清除元对话·标题副行／Access／AI 披露节／§1 说明／正文过程语清除·块外·§4/§5 块 0 动·中间稿·沿 rev4.4.1 先例不单独冻结）；rev4.15＝Lean 双审吸收＋round3b 余项（爱丽丝 00:47 意见件·PI 00:02 夜间全代裁·块外 17 条＋块内 6 行 8 项第五处具名豁免·块 70e49fc8d6a6fe1d→24288e1f900ac743）（v11 冻结）；rev4.16＝两处一行收口（群管理员 01:29:03 派单「rev4.16 一行收口」·PI 01:13:22「维持现状·立即打包」：AI 披露 (ii) 具名 GitHub Copilot／Reproduction (iii) 自测括注改脚本指纹 3b19207a5292＋钉定副本 62cb86c40a805b56〔爱丽丝 Lean delta 核 P3a〕·全部块外·§4/§5 块 24288e1f900ac743 恒等）（v12 冻结）；rev4.17＝Access 段与 Repository 行对齐推送态（群管理员 2026-11-27 02:10:30 派单「rev4.17（自择甲·PI 晚安·先斩后奏）」（「Access 段改「public repo branch private/v5preR3（main-line release pending）」＋「on that branch, not on main」＋Repository 行「pushed as branch private/v5preR3；main 0 动」；一次编译＋FREEZE v13＋bundle 增量 ^3d2562a＋送审包 v6；回执只报指纹」：稿链在公开仓分支 private/v5preR3·main-line release pending／on that branch, not on main／pushed as the branch private/v5preR3·main line unchanged·rev4.16 回填 123ffb0·全部块外·§4/§5 块 24288e1f900ac743 恒等）（v13 冻结）；rev4.18＝预注册检验执行与读数登记（PI 2026-11-27 12:36:00 裁定批 A⑤ 甲·群管理员 12:54:22 派单：检验头注收口＋Registered readings 段〔主门负结果 0/256·机制面两机逐位·跨机限于机制面·双轨 criteria v1.3〕＋§5.6 zero readings 句收口·全部块外·§4/§5 块 24288e1f900ac743 恒等）（v14 冻结）",
   "parent_anchor_rev2": "d924707",
   "parent_anchor_rev1": "67a86e0",
   "fork_point_R2_terminal": "ac04a4b",
@@ -13,50 +15,53 @@
  },
  "compile_state": {
   "engine": "tectonic 0.15.0",
-  "pages": 22,
+  "pages": 31,
   "undefined_references": 0,
   "errors": 0,
-  "overfull_inherited": "§4 标题行 6.37pt（与 rev2 同·§4/§5 0 改）",
-  "cjk_warnings": "标题行 19 字·ptmb8t 无 CJK 字形·R2 同款既有状态·正文 0 CJK",
-  "todo_markers": 0,
-  "absorption_slots": 1
+  "overfull_inherited": "Overfull 14／Underfull 203（控制台累计口径·7 趟×每趟 2：rev4.14 以路径断行修 §6.4 继承 125pt 与 Access 新句 71pt 两处·余 2 处继承〔块内表行 6.37pt／Repository 行 9.47pt〕·Underfull 203 与 rev4.13 恒等·rev4.15 同·rev4.16 同·rev4.17 实测恒等 Overfull 14／Underfull 203〔新增 5 处 Overfull 以路径断行与 Access 开头重排清除〕·rev4.18 底层 log 口径实测 Overfull 2／Underfull 29〔两条 Overfull＝rev4.17 继承对·块内表行 6.37pt／Repository 行 9.47pt·0 新增〕）",
+  "cjk_warnings": "标题中文行已于 rev4.9 删除（戴夫③ CJK 丙·中文题入 arXiv comments）·Missing character 154→0·正文 0 CJK·拉丁字体 0 变（v6 行注沿用旧态·v7 勘正）",
+  "todo_macro_calls": 0,
+  "absorption_slots": 0
  },
  "absorption_slot": {
-  "section": "§2.8 Thermodynamic reconstruction: absorption slot (label sec:absorption)",
-  "status": "OPEN",
-  "owner": "爱丽丝（热力学重构·同期在做）",
-  "closure_rule": "其件到达后走 rev3 吸收→重冻 FREEZE_v5preR3 v2（加入重构件自身指纹）"
+  "section": "§2.8 Thermodynamic reconstruction: the ledger layer absorbed (label sec:absorption)",
+  "status": "CLOSED",
+  "closed_at": "rev4（v2 冻结对应稿次）；v3 对应 rev4.6；v4 对应 rev4.7；v5 对应 rev4.8；v6 对应 rev4.9；v7 对应 rev4.10；v8 对应 rev4.11；v9 对应 rev4.12；v10对应 rev4.13；v11对应 rev4.15；v12对应 rev4.16；v13对应 rev4.17；v14对应 rev4.18（本冻结对应稿次·rev4.14 中间稿不单独冻结）",
+  "owner": "爱丽丝（热力学重构·已交付）",
+  "absorbed_into": "rev4 稿面 §2.8 四段承接（What was absorbed／readback 族读法／What was deliberately not absorbed／Status note）",
+  "companion_fp": "DeposonThermoRecon.lean 45c56f1e5487（v2·round12 吸收版）·吸收记录 5bd9c32ae67e（v2.1）",
+  "closure_rule": "其件到达后走 rev4 吸收（稿次：rev3＝全稿合流 2a579b8·rev3.1＝勘误吸收·rev3.2＝阿兰三处吸收·rev4＝热力学吸收＝v2 冻结；rev4.9＝v6；rev4.10＝v7；rev4.11＝v8；rev4.12＝v9；rev4.13＝v10；rev4.15＝v11；rev4.16＝v12；rev4.17＝v13；rev4.18＝本冻结 v14）→已执行"
  },
  "frozen": [
   {
-   "sha12": "c0a80e4febe6",
-   "lines": 449,
-   "bytes": 88265,
-   "label": "论文 tex（rev3 全稿）",
+   "sha12": "30bd74597eba",
+   "lines": 540,
+   "bytes": 139436,
+   "label": "论文 tex（rev4.18）",
    "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/v5preR3_论文.tex",
    "kind": "frozen",
    "status": "ok",
-   "note": "§1–§7 合流·0 TODO·§4/§5 块 sha12 dc2665f05529 与 rev2 字节同一"
+   "note": "rev4.17 态：§1–§7 合流·rev3.1 勘误吸收＋rev3.2 阿兰三处＋rev4 §2.8 吸收位闭合＋rev4.1 负结果节＋rev4.2 r12 二采＋rev4.3 A6 自择＋rev4.4 W 吸收＋rev4.5 C1/C6 两句＋rev4.6 蒸馏失败记载小节（C2 自择）＋ηETAC 状态句（C3 自择）＋rev4.7 外审 Major 四修（M2 归因降为候选解释／M3 记忆分链引证／M5 形式收紧／M6 τ* 中位校核）＋rev4.8 外审 Minor／Questions／Reproduction 余项自择（块外 24 处）＋rev4.9 双审吸收（阿兰严审 P0/P1/P2 块外＋鲍勃 C5 校准口径＋kimi 外审 round2 §6.4 可取性＋戴夫③ CJK 删中文题行·bib 花括号保护／双 venue 拆分／全名）＋rev4.10 戴夫② Table 2 表注具名豁免（块内 caption/label 上移·0 增 0 删）＋阿兰 B13 commit 回填／B25 bib 17 条 vol/pp 拆字段＋rev4.11 C-26 甲＝阿兰 B26 sagawa2008 精度注（块内 §4.4 读回核心句·引证层级 2009 主证／2008 参见·块内第四处具名豁免·0 增 0 删）＋rev4.12 终稿收口（阿兰 N1 {Explore}／B17 echo2026·xie2026 全名／N4 commit 回填＋标题副行剥离＋Access 现行可及位＋Tools 段 CJK 句现态＋头注元对话清除·全部块外）＋rev4.13 AI 披露节（新增 \\section*{Use of AI tools}·块外·源对话／智能体分角色协作／MiniMax＝V3·V4 实验线／kimi 全程审校／范围声明）＋rev4.14 kimi round3 闭合修（PI 00:04 round3 上位替代严审＋00:10 清除元对话：标题副行「Preprint, revision」／Access 段随插件仓 tag 推送回执改写／AI 披露节三处事实与措辞／§1 内部编号说明段／正文过程语块外清除／两处路径断行排版·全部块外）＋rev4.15 Lean 双审吸收（爱丽丝 00:47 意见件·PI 00:02 夜间全代裁：块外 17 条——公理面档数 7/3/13 与 12/7/13、postulate 层＝plain definitions·签名级无 recover·穷尽＝建模约定、harness 伴件 by transcription、bridge agreement 对件内复刻像·非形式桥、§2.7 脚注 v3.1.1／58 定理、P-σ 定义承载＋不变性定理、单调族无 P-σ 前提、DPI 账面＝相对读数、第二边界、两步样板、计数器表示、定理重述、执行器指纹 v3.1／v3.1.1 配对；块内 6 行 8 项第五处具名豁免——K-in 定理前提全写＋部署门注、rewrite 定理前提、E1／E4 重述、§5.5 K-in 核心句、墓碑内容句、「co-author」→审者称谓；AI 披露 Lean 范围句＋V3／V4 分写；kimi round3b P2×2／P3×1）＋rev4.16 两处一行收口（群管理员 01:29:03 派单·PI 01:13:22「维持现状·立即打包」·全部块外——AI 披露 (ii) 具名 GitHub Copilot＝harness 与校验器脚本编码助手〔戴夫 01:12 流水线披露覆盖 3/4→4/4〕／Reproduction (iii) 自测括注改脚本指纹＋钉定副本〔爱丽丝 01:24 Lean delta 核 P3a：3b19207a5292＝v3.1.1 自测脚本非日志·v3.1 自测日志 61fadba07043 沿·钉定点火副本 62cb86c40a805b56〕／freeze event v12 重冻句／certifies 基线 v11→v12＋块外登记／Repository 行 rev4.15 回填 d2145f3·rev4.16 占位／头注 rev4.16 条·标题块 revision 4.16）＋rev4.17 Access 段与 Repository 行对齐推送态（群管理员 2026-11-27 02:10:30 派单「rev4.17（自择甲·PI 晚安·先斩后奏）」（「Access 段改「public repo branch private/v5preR3（main-line release pending）」＋「on that branch, not on main」＋Repository 行「pushed as branch private/v5preR3；main 0 动」；一次编译＋FREEZE v13＋bundle 增量 ^3d2562a＋送审包 v6；回执只报指纹」·全部块外——Access 首句改「稿链在公开仓分支 private/v5preR3（repository zeroandcat/Deposon·main-line release pending）·文件在 Repository 行所引提交解析」＋「private…zero pushes」「cannot at present fetch」两句删＋主线内容改「What is on that repository's main line…」／「on no remote」→「on that branch, not on main」／Repository 行「Local commits」→「Commits」·rev4.16 回填 123ffb0·rev4.17 占位·「zero pushes」→「pushed as the branch private/v5preR3 of the public repository, its main line unchanged」／freeze event 段 v13 重冻句／certifies 基线 v12→v13＋块外登记／头注 rev4.17 条·标题块 revision 4.17／排版两处 \\allowbreak 路径断行＋Access 开头分支先于仓名〔新增 5 处 Overfull 1.7/31.5/69.4/76.6/26.8pt→0 新增·Overfull 14／Underfull 203 恒等〕）＋rev4.18 预注册检验执行与读数登记（PI 2026-11-27 12:36:00 裁定批 A⑤ 甲·群管理员 12:54:22 派单·全部块外——检验头注「Test (pre-registered, pending ignition)」→「Test (pre-registered; executed 2026-11-27, readings registered)」＋检验段后新增「Registered readings」段〔主门负结果 0/256 两机登记为 returned·0 调门 0 补跑·真双绑机制面两机逐位（面3/面4 结构位·tombstone set／pending-erase 空／无明文／witness／utilization identity Φ=12800·R=12800）·跨机主张限于机制面沿 kimi round14 句二登记语·B 臂 FAB_VAL 两机形态分裂 24/0 限缩登记·双轨条款 criteria v1.3 87271f5c51f86402＋validator d5e6fd7f859a99b0＋登记件 e7b4b67a9fba3235·读数件指纹引证 manifest ff1175afcdae5adb＋classification note 9c1e261b5982·0 重算 0 新主张〕＋§5.6「The positive-region hypothesis has zero readings」句收口为已执行登记负结果＋freeze event v14 重冻句／certifies 基线 v13→v14＋块外登记／Repository 行 rev4.17 回填 2c8252f·rev4.18 占位／头注 rev4.18 条·标题块 revision 4.18）；§4/§5 块 24288e1f900ac743（rev4.18 逐字节恒等·0 行变·区间 L260–409→L268–417 系头注增 8 行位移·150 行·脚本实证；rev4.17 逐字节恒等·0 行变；rev4.15 第五处具名豁免·6 行变·0 增 0 删·其余 144 行逐行同一；70e49fc8d6a6fe1d＝rev4.11–4.14 块·区间 L248–397→L254–403 系头注增 6 行位移）·31 页"
   },
   {
-   "sha12": "d832d1ab414c",
-   "lines": 970,
-   "bytes": 164954,
+   "sha12": "f79591e5b70f",
+   "lines": 1185,
+   "bytes": 211240,
    "label": "论文 pdf（tectonic 0.15.0）",
    "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/v5preR3_论文.pdf",
    "kind": "frozen",
    "status": "ok",
-   "note": "22 页·0 未定义引用·0 错误"
+   "note": "31 页·0 未定义引用·0 错误（按 pdf/log 实算）"
   },
   {
-   "sha12": "b5160e1df576",
-   "lines": 1508,
-   "bytes": 56741,
-   "label": "bib（R2 91 键整继承＋34 条）",
+   "sha12": "0ca259ef3f1f",
+   "lines": 1615,
+   "bytes": 59367,
+   "label": "bib（R2 132 条整继承·逐字同一＋34 条新增）",
    "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/v5preR3_related_work.bib",
    "kind": "frozen",
    "status": "ok",
-   "note": "166 条·0 重键·65 条被引"
+   "note": "合计 171 条（R2 132 条整继承·逐字同一＋34 条新增＋rev3.2 原典五条 feshbach1958/feshbach1962/fano1961/sagawa2008/sagawa2009）·0 重键·被引条数按 tex 实算；注：91 系 R2 被引键数·非继承条数（v1 行勘误·v2 承接）·deposon2026 自引锁 v2（arXiv:2609.09001v2 (2026-11-03)）"
   },
   {
    "sha12": "2e5735f29923",
@@ -69,24 +74,24 @@
    "note": "rev2 原件·0 动"
   },
   {
-   "sha12": "37563ab073de",
-   "lines": 33,
-   "bytes": 2842,
+   "sha12": "ec7ecc2d28ac",
+   "lines": 43,
+   "bytes": 7820,
    "label": "版本谱系对照表",
    "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/v5preR3_版本谱系对照表.md",
    "kind": "frozen",
    "status": "ok",
-   "note": "rev3 更新：R3 状态＝全稿合流·S-07 候立转立"
+   "note": "稿次与冻结状态的登记源（S-05／S-06／S-07 行）"
   },
   {
-   "sha12": "57e846918d44",
-   "lines": 184,
-   "bytes": 12129,
+   "sha12": "8dafac84c871",
+   "lines": 312,
+   "bytes": 57000,
    "label": "冻结生成器",
    "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/tools/gen_freeze_r3.py",
    "kind": "frozen",
    "status": "ok",
-   "note": "本件"
+   "note": "本件（v14：v13→v14 修订·rev4.18 预注册检验执行与读数登记〔PI 12:36:00 裁定 A⑤ 甲〕·全部块外·外部输入维持 30〔0 增减〕·overfull 行注 rev4.18 实测底层 log 口径 Overfull 2／Underfull 29·0 新增）"
   },
   {
    "sha12": "0b67c81b55c2",
@@ -127,6 +132,16 @@
    "kind": "frozen",
    "status": "ok",
    "note": "usage/finish/model 原样"
+  },
+  {
+   "sha12": "b513ccb3f3d4",
+   "lines": 49,
+   "bytes": 5562,
+   "label": "FREEZE v1 勘误注",
+   "path": "/home/z/my-project/agents/6af678a0a4cfe601fbc337d2/R2_work/repo/paper/v5preR3/evidence/FREEZE_v5preR3_v1_errata.md",
+   "kind": "frozen",
+   "status": "ok",
+   "note": "rev3.1 承接戴夫 5 条如实注＋阿兰对表勘误·v1 件 0 动"
   }
  ],
  "r2_voided": [
@@ -170,7 +185,7 @@
    "path": "/home/z/my-project/upload/6b06e69a9f9cb7db60712f58_ai思考与量子突破.docx",
    "kind": "external",
    "status": "ok",
-   "note": "M1–M4 原文"
+   "note": "M1–M5 原文·段号按转写编号（§1.3 明示）"
   },
   {
    "sha12": "c11d7007f857",
@@ -180,10 +195,10 @@
    "path": "/home/z/my-project/upload/6a9e8687e7db4e2eabbaa67f_deposon_凝子_统一场论研究报告_v1.pdf",
    "kind": "external",
    "status": "ok",
-   "note": "T-CONGELON-003"
+   "note": "T-CONGELON-003 产物件·其节号非稿面 M1 节号"
   },
   {
-   "sha12": "cfd7ed7f9934",
+   "sha12": "14b0bbfe31c0",
    "lines": 16,
    "bytes": 1419,
    "label": "阿兰 Lean 审读件包",
@@ -191,6 +206,23 @@
    "kind": "external",
    "status": "ok",
    "note": "目录·v3.1 独立复现·目录按 MANIFEST.sha256 记"
+  },
+  {
+   "sha12": "8b12e5cde5b4",
+   "lines": 106,
+   "bytes": 11228,
+   "label": "阿兰 R3 稿面引文与对话集源引用对表件",
+   "path": "/home/z/my-project/shared/阿兰_R3稿面引文与对话集源引用对表_勘误与确认_20261126/阿兰_R3稿面引文与对话集源引用对表_勘误与确认_20261126.md",
+   "kind": "external",
+   "status": "ok",
+   "note": "rev3.1 输入·硬勘误 3／软勘误 6／确认 9"
+  },
+  {
+   "label": "戴夫 INDEX 第 9 刷",
+   "path": "/home/z/my-project/shared/INDEX_shared_现行索引_第9刷_20261126.md",
+   "kind": "external",
+   "status": "MISSING",
+   "note": "rev3.1 输入·如实注四条＋MANIFEST 三栏"
   },
   {
    "sha12": "0decb3a4059f",
@@ -253,16 +285,194 @@
    "note": "F1–F8·L1/L2/L3"
   },
   {
-   "sha12": "f9ca8e9aaac1",
-   "lines": 226,
-   "bytes": 22980,
+   "sha12": "3c161897e1ca",
+   "lines": 241,
+   "bytes": 24737,
    "label": "鲍勃 实验线全谱系清点",
    "path": "/home/z/my-project/shared/鲍勃_实验线重编_不可逆口径_工程包_20261125/鲍勃_实验线全谱系清点_不可逆口径_20261125.md",
    "kind": "external",
    "status": "ok",
    "note": "H1/H2/H4·C01–C17 重述"
+  },
+  {
+   "sha12": "5bd9c32ae67e",
+   "lines": 112,
+   "bytes": 15595,
+   "label": "爱丽丝 热力学重构件 v2.1（三层与边界·继承对表）",
+   "path": "/home/z/my-project/shared/爱丽丝_热力学重构与双象绑定案头_工程包_20261126/爱丽丝_热力学重构件_三层与边界_继承对表_20261126.md",
+   "kind": "external",
+   "status": "ok",
+   "note": "§2.8 吸收位输入·5bd9c32ae67e"
+  },
+  {
+   "sha12": "45c56f1e5487",
+   "lines": 479,
+   "bytes": 26271,
+   "label": "爱丽丝 重构 Lean 件 v2（round12 吸收版）",
+   "path": "/home/z/my-project/shared/爱丽丝_热力学重构与双象绑定案头_工程包_20261126/DeposonThermoRecon.lean",
+   "kind": "external",
+   "status": "ok",
+   "note": "479 行·32 定理·0 sorry·45c56f1e5487"
+  },
+  {
+   "sha12": "c51dc67b682a",
+   "lines": 163,
+   "bytes": 24774,
+   "label": "爱丽丝 round12 审读逐字节件",
+   "path": "/home/z/my-project/shared/爱丽丝_热力学重构与双象绑定案头_工程包_20261126/kimi_round12_kimi_r12_reply_v5_逐字节.md",
+   "kind": "external",
+   "status": "ok",
+   "note": "kimi-k3.1-pro·finish=stop·9 项硬伤吸收源"
+  },
+  {
+   "sha12": "840dc1feff81",
+   "lines": 27,
+   "bytes": 573,
+   "label": "爱丽丝 round12 审读元数据",
+   "path": "/home/z/my-project/shared/爱丽丝_热力学重构与双象绑定案头_工程包_20261126/kimi_round12_kimi_r12_reply_v5.meta.json",
+   "kind": "external",
+   "status": "ok",
+   "note": "usage/finish/model 原样"
+  },
+  {
+   "sha12": "aad1074410a1",
+   "lines": 9,
+   "bytes": 872,
+   "label": "查理 rev3.2 交付包（阿兰三处）",
+   "path": "/home/z/my-project/shared/查理_rev3.2吸收_阿兰三处_20261126",
+   "kind": "external",
+   "status": "ok",
+   "note": "目录·rev3.2 输入·MANIFEST 9 件·目录按 MANIFEST.sha256 记"
+  },
+  {
+   "label": "戴夫 INDEX 第 12 刷",
+   "path": "/home/z/my-project/shared/INDEX_shared_现行索引_第12刷_20261126.md",
+   "kind": "external",
+   "status": "MISSING",
+   "note": "现行索引·v1 时代第 9 刷已被后续刷版取代（shared 旧文件撤·变动登记）·第 12 刷含 rev3.2/rev4 待刷注"
+  },
+  {
+   "sha12": "940d675609f4",
+   "lines": 10,
+   "bytes": 694,
+   "label": "爱丽丝 A5 W 求证件包",
+   "path": "/home/z/my-project/shared/爱丽丝_A5_lean求证_sigma_W2_W5_工程包_20261126",
+   "kind": "external",
+   "status": "ok",
+   "note": "§2.9 W 吸收输入·DeposonThermoReconW.lean daf39e5e3cab·23 定理·0 sorry·0 新增 axiom·目录按 MANIFEST.sha256 记"
+  },
+  {
+   "sha12": "e73e1e42b6b5",
+   "lines": 14,
+   "bytes": 1007,
+   "label": "查理 kimi round13 实录包",
+   "path": "/home/z/my-project/shared/查理_kimi_round13实录_20261126",
+   "kind": "external",
+   "status": "ok",
+   "note": "rev4.6 C2/C3 自择入料源·四问逐字·finish=stop·目录按 MANIFEST.sha256 记"
+  },
+  {
+   "sha12": "60556830d981",
+   "lines": 13,
+   "bytes": 818,
+   "label": "查理 kimi 外审 round1 包",
+   "path": "/home/z/my-project/shared/查理_kimi外审_round1_20261126",
+   "kind": "external",
+   "status": "ok",
+   "note": "rev4.6 C2/C3 自择外审面·六问·判「大修后送」·0 代裁·目录按 MANIFEST.sha256 记"
+  },
+  {
+   "sha12": "cb16e99ba446",
+   "lines": 107,
+   "bytes": 11037,
+   "label": "鲍勃 对表件第四版（deposon 仓实锤版）",
+   "path": "/home/z/my-project/shared/鲍勃_对表件第四版_deposon仓实锤版_r27全量与V3V4全貌_20261126.md",
+   "kind": "external",
+   "status": "ok",
+   "note": "rev4.6 §6.4 V4 三窄判词与仓面锚源·r27 全量×deposon 仓 @06045bce"
+  },
+  {
+   "sha12": "80fec0c4b08b",
+   "lines": 10,
+   "bytes": 786,
+   "label": "阿兰 论文严审件包（rev4.5 严审→rev4.7 复审）",
+   "path": "/home/z/my-project/shared/阿兰_论文rev4.5严审与rev4.6delta复审_交付包_20261126",
+   "kind": "external",
+   "status": "ok",
+   "note": "rev4.9 双审吸收源·P0×2／P1×6／P2×6·70 键对表 TSV·目录按 MANIFEST.sha256 记·目录按 MANIFEST.sha256 记"
+  },
+  {
+   "sha12": "1085551c3c33",
+   "lines": 7,
+   "bytes": 808,
+   "label": "鲍勃 C5 零检出件 commit 史处置件包",
+   "path": "/home/z/my-project/shared/鲍勃_C5_十四条零检出件commit史处置件_工程包_20261126",
+   "kind": "external",
+   "status": "ok",
+   "note": "rev4.9 §6.4 例外清单校准源·15 条严格复算·A2/B1/C1 3/C2 9·目录按 MANIFEST.sha256 记·目录按 MANIFEST.sha256 记"
+  },
+  {
+   "sha12": "1ba5cac8b4ec",
+   "lines": 9,
+   "bytes": 571,
+   "label": "戴夫 三项候裁自择落定件（给查理 rev4.6）",
+   "path": "/home/z/my-project/shared/戴夫_三项候裁自择落定_给查理rev4.6_20261126",
+   "kind": "external",
+   "status": "ok",
+   "note": "rev4.9 戴夫③ CJK 丙采认源·①1647 锚维持·②Table 2 表注块内候豁免·目录按 MANIFEST.sha256 记·目录按 MANIFEST.sha256 记"
+  },
+  {
+   "sha12": "6e47136711a7",
+   "lines": 6,
+   "bytes": 708,
+   "label": "鲍勃 Reproduction 证据包（rev4.8 Reproduction 段引证·arXiv 投稿包随附）",
+   "path": "/home/z/my-project/shared/鲍勃_Reproduction证据包_rev48引证_工程包_20261126",
+   "kind": "external",
+   "status": "ok",
+   "note": "原始件定位表／unretrieved 状态表（15 条·9 unretrieved）／per-path 明细／Lean 源快照指纹／差异清单·目录按 MANIFEST.sha256 记·目录按 MANIFEST.sha256 记"
+  },
+  {
+   "sha12": "2ead2ca8dffb",
+   "lines": 9,
+   "bytes": 638,
+   "label": "阿兰 rev4.10 delta 复审·双严审结论包",
+   "path": "/home/z/my-project/shared/阿兰_rev4.10delta复审_双严审结论_交付包_20261126",
+   "kind": "external",
+   "status": "ok",
+   "note": "rev4.12 输入·N1 {Explore}／B17 两键全名／N3 伪影驳回／N4 回填·目录按 MANIFEST.sha256 记·目录按 MANIFEST.sha256 记"
+  },
+  {
+   "sha12": "3ac2a2415a5a",
+   "lines": 17,
+   "bytes": 1692,
+   "label": "鲍勃 W1 推送窗与 W2 前置回执包",
+   "path": "/home/z/my-project/shared/鲍勃_W1推送窗与W2前置_回执包_20261126",
+   "kind": "external",
+   "status": "ok",
+   "note": "rev4.12 Access 段现行可及位锚源·公开仓 main 36d94a0→297c3d3·链 bundle 指令·目录按 MANIFEST.sha256 记·目录按 MANIFEST.sha256 记"
+  },
+  {
+   "sha12": "46102c24f0f5",
+   "lines": 22,
+   "bytes": 2025,
+   "label": "查理 kimi round3 严审实录包（审 rev4.13＋闭合核验 rev4.14）",
+   "path": "/home/z/my-project/shared/查理_kimi_round3严审实录_20261127",
+   "kind": "external",
+   "status": "ok",
+   "note": "rev4.14 输入·P1×8/P2/P3 逐条·判 rev4.13 不通过→rev4.14 通过·目录按 MANIFEST.sha256 记·目录按 MANIFEST.sha256 记"
+  },
+  {
+   "sha12": "c6aed1ddb263",
+   "lines": 10,
+   "bytes": 1175,
+   "label": "爱丽丝 Lean 双审工程包（论文形式面×三 Lean 件）",
+   "path": "/home/z/my-project/shared/爱丽丝_Lean双审_论文形式面对表三Lean件_工程包_20261127",
+   "kind": "external",
+   "status": "ok",
+   "note": "rev4.15 输入·P1×4／P2×11／P3×9·块外 17 全采＋块内 6 行第五处具名豁免·目录按 MANIFEST.sha256 记·目录按 MANIFEST.sha256 记"
   }
  ],
- "generated_at": "2026-11-26 07:40:38",
- "order_source": "群管理员 2026-11-26 07:21:08 派单（R3 全稿覆写·立 FREEZE_v5preR3·S-07 候立转立·含 rev2 中间锚 d924707）"
+ "external_count_note": "external_inputs 共 30 项·json 与 md 同源同数（v1 回执「11 件」系笔误·实为 10）",
+ "generated_at": "2026-11-27 13:03:00",
+ "order_source": "群管理员 2026-11-26 07:21:08 派单（R3 全稿覆写·立 FREEZE_v5preR3·S-07 候立转立·含 rev2 中间锚 d924707）＋08:00:14 派单勘误吸收（v2 随 rev4）＋15:05:04 催派接续（A4 甲 rev4 收口即开·PI 12:47:01 P476 A4 甲已裁·前置已成）＋22:07:15 派单论文主线（送审包＋kimi 外审）＋PI 22:13:32 裁定批 C4「采」（FREEZE v2 重冻 v3·随 rev4.6）＋PI 22:32:00「本轮及下轮候裁均自择，update，upgrade」（rev4.7 外审 Major 四修·v4 重冻）＋PI 22:43:44「通过双严审的论文打包完成前均自择以提效增质，update，upgrade」（rev4.8 外审余项自择·v5 重冻）＋同帧续（rev4.9 双审吸收·v6 重冻）＋群管理员 23:10:51 派单论文主线第 1 项（「Table 2 表注甲·冻结块内自择落并重算块指纹」·rev4.10·v7 重冻）＋群管理员 23:42:41 派单论文主线·arXiv 收口第 1 项（「C-26 自择（荐甲＝sagawa2008 精度注·块内具名豁免）→ rev4.11 一次编译＋FREEZE v8」·本席自择甲·rev4.11·v8 重冻）＋群管理员 2026-11-27 00:02:02 派单论文主线·终稿收口第 2 项（「rev4.12：收阿兰 N1＋B17 两键全名＋N4 占位回填；自择 3 位＝标题副行剥离／分类 cs.AI＋q-bio.NC／license 默认；Access 段按鲍勃推送后仓址（未回则现行可及位如实注）；一次编译＋FREEZE v9」·本席自择甲／cs.AI＋q-bio.NC／默认·rev4.12·v9 重冻）＋PI 2026-11-27 00:04「kimi round3 上位替代严审席」＋PI 00:10:37「是要清除元对话」（头注过程性元对话清除）＋PI 2026-11-27 00:18:27「AI披露补上minimax贡献（V3V4实验），kimi贡献（审核校正）等」（rev4.13 AI 披露节·v10 重冻）＋PI 2026-11-27 00:02:59「夜间kimi+lean双审全代裁不卡链，先斩后奏自行推进。既有资源全开放」＋PI 00:04:28「round3上位替代」＋PI 00:10:37「是要清除元对话」＋群管理员 00:33:34 派单论文终稿·夜间自择链第 2 项（「kimi round3（替代阿兰·全代裁）：对 rev4.12 全稿出审意见·逐字留档·0 代裁；按意见自择落稿至通过」·本席按 round3 意见自择落 rev4.14·round3b 闭合核验通过）＋第 3 项（「Lean 双审回传后吸收定稿」·爱丽丝 00:47 回传·本席自择吸收落 rev4.15·块内 6 行作第五处具名豁免·v11 重冻）＋PI 00:45「尽量这轮出终稿」＋PI 2026-11-27 01:13:22「维持现状，立即打包」（对格式席·窗口保持）＋群管理员 2026-11-27 01:29:03 派单论文主线「rev4.16 一行收口」（「AI 披露节补 Copilot 一句（GitHub Copilot was used as a coding assistant in the harness and validator scripts.）＋Reproduction (iii) self-test 指纹括注改脚本指纹/钉定副本（爱丽丝 P3a）；一次编译＋FREEZE v12＋bundle 增量＋送审包 v5。回执只报指纹。若 2 点前未落·rev4.15 包为准」·本席两处落 rev4.16·块外·块恒等·v12 重冻）＋群管理员 2026-11-27 02:10:30 派单「rev4.17（自择甲·PI 晚安·先斩后奏）」（「Access 段改「public repo branch private/v5preR3（main-line release pending）」＋「on that branch, not on main」＋Repository 行「pushed as branch private/v5preR3；main 0 动」；一次编译＋FREEZE v13＋bundle 增量 ^3d2562a＋送审包 v6；回执只报指纹」·本席三处落 rev4.17·块外·块恒等·v13 重冻）＋PI 2026-11-27 12:36:00 裁定批（A⑤｜rev4.18 入稿与否｜甲＝入稿（L451 stale 收口＋夜链读数登记·链路在册可控）等十二位）＋群管理员 12:54:22 派单「P482 裁定执行批（你席位·论文面）」（「A⑤ 甲＝rev4.18 入稿：①L451 stale 收口〔措辞沿 kimi round14 句二口径：机制面逐位复现／读数面不主张逐位〕②夜链 r33 读数登记入稿〔引证在册读数件与 v1.3 冻结件·0 重算 0 新主张：G-A2 主门负结果 F1 登记＋真双绑机制面达成＋G-C1 双轨 v1.3 引用＋B 臂 FAB_VAL 限缩登记沿 C7 甲〕·入稿位置与措辞自择；③一次编译＋FREEZE v14＋送审包 v7＋arXiv 包重出」·本席四处落 rev4.18·块外·块恒等·v14 重冻）"
 }
